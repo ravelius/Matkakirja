@@ -9,11 +9,11 @@
   },
   "sourceReadInFull": true,
   "backingReportReadInFull": true,
-  "generationCalls": 14,
+  "generationCalls": 20,
   "generationLimit": 22,
   "requestedUniqueSurfaces": 22,
   "requestedFinalPNGs": 23,
-  "imageCount": 6,
+  "imageCount": 17,
   "partialDelivery": true,
   "sourceImagePixelsUsed": false,
   "assets": [
@@ -67,12 +67,13 @@
         "alphaMethod": "native generated alpha preserved; spatial resampling only",
         "seamMethod": "none yet; native wrapping inspected via 2×2 QA",
         "colorSpace": "embedded sRGB ICC profile",
-        "creativePostEditing": false
+        "creativePostEditing": false,
+        "finalNativeGeometry": "Full frame preserved, exact aspect ratio retained; no crop"
       },
       "QA": {
-        "nativeViewed": false,
-        "preview480Viewed": false,
-        "alphaLightDarkViewed": false,
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "alphaLightDarkViewed": true,
         "tile2x2Viewed": null,
         "alphaStats": {
           "extrema": [
@@ -87,8 +88,23 @@
         },
         "seamMetrics": {},
         "editorialReviewPending": true,
-        "limitations": []
+        "limitations": [
+          "Historical/heraldic acceptance remains pending the editor; QA checks the production-order geometry."
+        ],
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileVerified": true,
+        "descriptionAndSourceVerified": true,
+        "byteExactOriginalVerified": true,
+        "textOrPeopleDetected": false,
+        "flatFrontalDiffuseLighting": true,
+        "contentReview": "pass",
+        "alphaReview": "transparent exterior and worn pigment holes visible on both light and dark backgrounds; no broad halo or opaque background patch detected",
+        "heraldryReview": "four plain fields correct: viewer upper-left/lower-right red and upper-right/lower-left gold-yellow; helmet above with exactly two horns; no extra field motifs"
       },
+      "state": "candidate-ready-for-root-qa",
+      "generationMode": "builtin image_gen; new text-only generation",
+      "outputProduced": true,
       "visualReview": {
         "approvedForDelivery": true,
         "sha256": "de9bc3e4f4a21f44a796091bb24aca0c49d1ab4cd729a8a6c99d42584b82314e",
@@ -160,18 +176,33 @@
         "alphaMethod": "opaque RGB conversion",
         "seamMethod": "none yet; native wrapping inspected via 2×2 QA",
         "colorSpace": "embedded sRGB ICC profile",
-        "creativePostEditing": false
+        "creativePostEditing": false,
+        "finalNativeGeometry": "Full frame preserved, exact aspect ratio retained; no crop"
       },
       "QA": {
-        "nativeViewed": false,
-        "preview480Viewed": false,
+        "nativeViewed": true,
+        "preview480Viewed": true,
         "alphaLightDarkViewed": null,
         "tile2x2Viewed": null,
         "alphaStats": {},
         "seamMetrics": {},
         "editorialReviewPending": true,
-        "limitations": []
+        "limitations": [
+          "Historical/heraldic acceptance remains pending the editor; relief is pictured on a flat texture although the model may already include geometric relief."
+        ],
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileVerified": true,
+        "descriptionAndSourceVerified": true,
+        "byteExactOriginalVerified": true,
+        "textOrPeopleDetected": false,
+        "flatFrontalDiffuseLighting": true,
+        "contentReview": "pass",
+        "heraldryReview": "exactly three heart-like water-lily leaves, pointed down, arranged 2+1; unpainted gray shallow worn stone relief"
       },
+      "state": "candidate-ready-for-root-qa",
+      "generationMode": "builtin image_gen; new text-only generation",
+      "outputProduced": true,
       "visualReview": {
         "approvedForDelivery": true,
         "sha256": "2e84b35f8bdf122cb5a96d6b9f3bcceaf8c36c59bafe774aa7d21fd17ab89de0",
@@ -188,6 +219,748 @@
       "published": false,
       "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/sture-vaakuna-laatta.png",
       "bytes": 2387151,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "kuvakudos-sali",
+      "number": "4",
+      "file": "kuvakudos-sali.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/kuvakudos-sali.png",
+      "sha256": "beada5ddad5f5e252a67b9da27913395f323b7c98c90f1718e96d77b4059f244",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-a217b8ee-fec3-4610-9ac6-165b7519a450.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/original-generation.png",
+      "originalSha256": "5c4a605745fef69df481c2cc99a0148e3cf3a8a9b95cc6e223cb4778961c44c8",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: game material base-color surface texture, new original historical textile, not an existing museum work.\nPrimary request: photorealistic perpendicular surface photograph of a Flemish-style wool verdure wall tapestry circa 1490 for a bailiff's hall at Olavinlinna in 1499.\nSubject: an original woven woodland design with lush foliage, a few small birds and small forest animals. No people.\nComposition: flat textile fills the entire 2:1 landscape image edge to edge, 2048 by 1024 target; orthographic frontal view; every part at the same scale and in focus. The woven image shows a woodland composition, but the cloth itself has absolutely no camera perspective, folds or draped volume. Slight wear at the extreme woven edges, without any surrounding wall, mounting, frame or blank margin.\nMaterials: very fine visible wool warp and weft, small irregular yarn fibers, thin weathered weave, subtly abraded and faded medieval wool. Depicted animals and vegetation must look woven into the textile, not photographic living animals on a background.\nColor: muted faded blues, greens and reddish browns, natural late-medieval dyes; no vivid modern colors.\nLighting: completely even neutral diffuse surface-documentation lighting, no directional shadows, gradients, vignette or specular highlights.\nConstraints: newly invented original tapestry composition from text only; no source-image pixels, no copy of a real museum tapestry; no humans, human faces, letters, numbers, text, labels, logos or watermark. Surface texture only, no objects outside the textile.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 4",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Voudin salin kuvitteellinen villainen verduuriseinäverho noin vuodelta 1490: lehvästöä, lintuja ja pieniä metsäneläimiä haalistuneessa kudoksessa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1774,
+            887
+          ],
+          "to": [
+            2048,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": null,
+        "tile2x2Path": null,
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": null,
+        "visualNotes": [
+          "Kudottu lehvästö, linnut ja pienet metsäneläimet; ei ihmishahmoja tai tekstiä. Haalistunut sini-vihreä-punaruskea väritys ja ohut kulunut kudos. Äärilaidoissa kapea kulunut kudosreuna tilauksen mukaisesti."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "beada5ddad5f5e252a67b9da27913395f323b7c98c90f1718e96d77b4059f244",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/kuvakudos-sali.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/kuvakudos-sali.png",
+      "bytes": 4271188,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "villa-punainen",
+      "number": "5",
+      "file": "villa-punainen.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/villa-punainen/villa-punainen.png",
+      "sha256": "59271590ea8960f754b4c5fb31d219e45e78a9840b030b06b676efbd5d8c789f",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-80360464-fbca-4bd9-ae8f-02bd5d29018e.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/villa-punainen/original-generation.png",
+      "originalSha256": "d60e5c4a1d65bd1f7445189c780740872ec48e1593490213248ef8e97198f37f",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: tileable game material base-color wool surface texture.\nPrimary request: photorealistic macro surface photograph of coarse worn red-dyed wool cloth suitable for a late-15th-century bailiff's cloak and bench cushions.\nComposition: square 1024 by 1024 target, flat cloth fills every pixel edge to edge; orthographic camera perpendicular to cloth; warp and weft aligned to image axes; same thread scale and sharp focus everywhere.\nMaterials: distinctly woven coarse wool, slightly uneven handmade yarn, a little short wool fiber fuzz, subtle natural abrasion. Muted dark madder-like brick red, faded late-medieval natural dye, small yarn-scale variations only.\nTiling: seamless periodic texture in BOTH X and Y; left edge must continue naturally into right edge and top into bottom, consistent weave phase, scale and color across every edge. No selvedges, stitch borders, hems or corners.\nLighting: uniform neutral diffuse lighting, no cast shadows, no folds, no draping, no spotlight, gradient, vignette, specular highlight or baked ambient occlusion.\nConstraints: new original text-only production; no lettering, numbers, symbols, logos, watermark, humans, faces, decorative embroidery, modern synthetic fibers, scene or extra objects.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 5",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Kulunut karkea punaiseksi värjätty villakangas, jonka kudos ja vähäinen kuitukarva erottuvat tasaisessa valossa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        },
+        {
+          "method": "half-frame-cyclic-offset-and-original-paired-seam-cover-blend-restored-offset",
+          "axes": [
+            "x",
+            "y"
+          ],
+          "edgeBandPixelsEachSide": 20,
+          "totalCenterBlendBandPixels": 40,
+          "falloff": "cosine",
+          "donor": "mean of symmetrically paired pixels from the same generated material",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 15.46997,
+            "y": 28.378378
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/tiilaus-villa-punainen.jpg",
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": true,
+        "visualNotes": [
+          "Punaiseksi värjätty karkea villakudos, kuitukarvaa, tasainen väri/valo. 20 px saumakaistassa vähäistä kudoksen pehmenemistä symmetrisestä sekoituksesta; ei terävää väri- tai materiaalikatkoa 2x2-näytteessä."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "59271590ea8960f754b4c5fb31d219e45e78a9840b030b06b676efbd5d8c789f",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/villa-punainen.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/villa-punainen.png",
+      "bytes": 2142944,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "villa-sininen",
+      "number": "5b",
+      "file": "villa-sininen.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/villa-sininen/villa-sininen.png",
+      "sha256": "3a088be0db160891adc9978ec7d6238dd8494c5c4d7f026524fe62235ea86401",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-7ca54e4c-63e3-4dd7-8eb1-67a50f3960af.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/villa-sininen/original-generation.png",
+      "originalSha256": "29807feac41bcf1af5bb3e13e9923ade40ee6e43a5f18f24bb352c8a01539863",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: tileable game material base-color wool surface texture.\nPrimary request: photorealistic macro surface photograph of coarse worn blue wool cloth suitable for late-15th-century clothes and bench cushions.\nComposition: square 1024 by 1024 target; flat cloth covers every pixel; perpendicular orthographic view, warp and weft aligned to image axes, same thread scale and focus everywhere.\nMaterials: distinct plain coarse wool weave with uneven handmade yarn, slight short wool fiber fuzz and gentle abrasion. Faded pale indigo and muted greyish woad blue, natural medieval dyed wool, small yarn-scale color variation only.\nTiling: seamlessly periodic in BOTH X and Y; opposing edges continue with consistent weave phase, thread scale and color. No selvedges, seams, hems or corners.\nLighting: completely uniform neutral diffuse lighting; no folds, draping, directional shadow, spotlight, gradient, vignette, specular shine or ambient occlusion.\nConstraints: newly invented text-only original material; no source-image pixels, no decorative embroidery, lettering, numerals, symbols, logos, watermark, humans, faces, synthetic fibers or other objects.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 5b",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Kulunut karkea sininen villakangas, jonka haalea indigon sävy, kudos ja vähäinen kuitukarva erottuvat. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        },
+        {
+          "method": "half-frame-cyclic-offset-and-original-paired-seam-cover-blend-restored-offset",
+          "axes": [
+            "x",
+            "y"
+          ],
+          "edgeBandPixelsEachSide": 20,
+          "totalCenterBlendBandPixels": 40,
+          "falloff": "cosine",
+          "donor": "mean of symmetrically paired pixels from the same generated material",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 25.104664,
+            "y": 34.693979
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/tiilaus-villa-sininen.jpg",
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": true,
+        "visualNotes": [
+          "Haalea indigon/harmaansininen karkea villakudos, kuitukarvaa. 20 px saumakaistassa vähäistä kudoksen pehmenemistä ja säikeiden symmetriaa; 2x2-näytteessä ei terävää värisaumaa."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "3a088be0db160891adc9978ec7d6238dd8494c5c4d7f026524fe62235ea86401",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/villa-sininen.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/villa-sininen.png",
+      "bytes": 2343102,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "villa-ruskea",
+      "number": "5c",
+      "file": "villa-ruskea.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/villa-ruskea/villa-ruskea.png",
+      "sha256": "b2bf1758e66c50d0af97e422a55a668b09df967ed450ce7c67147363537bec8f",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-b8d8939d-a7f8-48c6-8409-3f4678332b95.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/villa-ruskea/original-generation.png",
+      "originalSha256": "d27a4e8843802069d771650e3f82399f24cf8e38ba760223f34b7e7ed604fcfe",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: tileable game material base-color wool surface texture.\nPrimary request: photorealistic macro surface photograph of coarse worn undyed natural dark-brown wool cloth for late-15th-century clothes and cushions.\nComposition: square 1024 by 1024 target, flat textile fills entire image edge to edge; camera perfectly perpendicular with orthographic framing; warp and weft aligned to image axes, same thread scale and focus throughout.\nMaterials: evident coarse handmade wool weave, uneven natural yarn, a little short wool fiber fuzz, subtle abrasion. Muted warm grey-brown to dark natural sheep-wool brown, low-contrast yarn-scale variations.\nTiling: seamlessly periodic in BOTH X and Y; opposing edges match weave phase, thread scale, material and color. No selvedges, sewn seams, hems or corners.\nLighting: perfectly even neutral diffuse surface lighting, no folds, draping, strong shadows, spotlight, gradient, vignette, gloss or baked ambient occlusion.\nConstraints: brand-new original text-only production; no source pixels, letters, numerals, symbols, patterns, embroidery, logos, watermark, humans, faces, synthetic fibers or other objects.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 5c",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Kulunut karkea luonnonruskea villakangas, jossa on selvä kudos ja hieman kuitukarvaa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        },
+        {
+          "method": "half-frame-cyclic-offset-and-original-paired-seam-cover-blend-restored-offset",
+          "axes": [
+            "x",
+            "y"
+          ],
+          "edgeBandPixelsEachSide": 20,
+          "totalCenterBlendBandPixels": 40,
+          "falloff": "cosine",
+          "donor": "mean of symmetrically paired pixels from the same generated material",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 22.237495,
+            "y": 21.968624
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/tiilaus-villa-ruskea.jpg",
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": true,
+        "visualNotes": [
+          "Luonnonruskea karkea villakudos, kuitukarvaa ja kulumaa. 20 px saumakaistassa vähäistä kudoksen pehmenemistä ja säikeiden symmetriaa; 2x2-näytteessä ei terävää värisaumaa."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "b2bf1758e66c50d0af97e422a55a668b09df967ed450ce7c67147363537bec8f",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/villa-ruskea.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/villa-ruskea.png",
+      "bytes": 2232496,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "brokadi-alttari",
+      "number": "6",
+      "file": "brokadi-alttari.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/brokadi-alttari/brokadi-alttari.png",
+      "sha256": "de28ae23bd7a7594f0d1ee86f8de35f305e7495bfb5948623493469868b41b0e",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-37f241b7-5ed9-4422-aaa6-ed40de68be49.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/brokadi-alttari/original-generation.png",
+      "originalSha256": "fcdf7b64a161c13a39a56b9bdda0e80449ec9505be54bcfc9f50c4cab3f31f28",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original game material base-color surface of a chapel altar frontal, antependium.\nPrimary request: photorealistic perpendicular surface photograph of a worn late-15th-century deep red textile embroidered with tarnished gold thread, for Olavinlinna's chapel in 1499.\nComposition: flat fabric fills the entire 2:1 landscape image edge to edge, 2048 by 1024 target. At the center a SIMPLE CROWNED O MONOGRAM for Saint Olaf: one oval letter O made of gold-thread embroidery, a small simple medieval crown immediately above it. The decorative O and crown are surrounded by modest gold-thread scrolling vines and foliage, balanced across the width.\nMaterials: old muted deep crimson textile with visible fine weave; genuinely raised but low-profile hand-embroidered gold thread, worn and slightly dulled, minor yarn fraying. All decoration is stitched into fabric, no printed graphics, no metal objects or gems.\nLighting: flat perfectly even neutral diffuse documentation lighting; perpendicular orthographic camera, no perspective, no folds or draping, no strong shadow, vignette, spotlight, gradient or dramatic reflections.\nConstraints: new original invented design from text only, no replica of any actual museum object. Only the expressly requested decorative O is allowed: no other letters, words, numbers, inscriptions, logos or watermark. No humans, faces, saints, animals, objects, background or added picture frame.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 6",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen kulunut alttarivaate: syvänpunaisella tekstiilillä himmeää kultalankaköynnöstä ja keskellä yksinkertainen kruunattu O-monogrammi. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1774,
+            887
+          ],
+          "to": [
+            2048,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": null,
+        "tile2x2Path": null,
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": null,
+        "visualNotes": [
+          "Syvänpunainen tekstiili, himmeää kultalankaköynnöstä; vain yksi sallittu kruunattu O-monogrammi. Ei muuta luettavaa tekstiä eikä hahmoja."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "de28ae23bd7a7594f0d1ee86f8de35f305e7495bfb5948623493469868b41b0e",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/brokadi-alttari.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/brokadi-alttari.png",
+      "bytes": 4423120,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "pellava-liina",
+      "number": "7",
+      "file": "pellava-liina.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/pellava-liina/pellava-liina.png",
+      "sha256": "624baadef8c17536869767387741a12e10a9012c8154830417beff2301d475ed",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-f77bd545-c2f2-4e60-bd75-9ac3276c04b9.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/pellava-liina/original-generation.png",
+      "originalSha256": "31e6e4d77218c7dac9fdb905684bfff568a957dab470601dcdc2722650fd8d9b",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: horizontally tileable game material base-color textile surface.\nPrimary request: photorealistic perpendicular surface photograph of a bleached linen tablecloth, worn and slightly yellowed, suitable for a late-15th-century castle common-room table.\nComposition: square 1024 by 1024 target, flat linen fills every pixel. One narrow straight sewn lower edge and a modest red cross-stitch embroidery band near that lower edge, running horizontally all the way across the image. Simple repeating geometric red cross-stitch pattern only. Linen above the band is plain. No visible left or right cloth edge, no background around cloth, no folded corner.\nMaterials: natural off-white slightly yellowed handmade flax linen with distinct fine warp and weft, modest wear and faded reddish natural-dye embroidery stitched with X-shaped stitches.\nTiling: seamless repeat ONLY in X. Left/right edges must match thread phase, linen color and the red cross-stitch repeat exactly, without a break. The top and bottom need not match. Preserve the embroidery band at the lower edge.\nLighting: perfectly uniform neutral diffuse documentation lighting, no folds, wrinkles, draping, cast shadows, perspective, vignetting, gloss or spotlight.\nConstraints: entirely new original text-only textile, no lettering, numerals, symbols resembling words, logo, watermark, humans, faces or other objects.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 7",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Kulunut hieman keltaistunut valkaistu pellavaliina, jonka reunassa kulkee punainen geometrinen ristipistokirjonta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x"
+      ],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        },
+        {
+          "method": "half-frame-cyclic-offset-and-original-paired-seam-cover-blend-restored-offset",
+          "axes": [
+            "x"
+          ],
+          "edgeBandPixelsEachSide": 24,
+          "totalCenterBlendBandPixels": 48,
+          "falloff": "cosine",
+          "donor": "mean of symmetrically paired pixels from the same generated material",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 28.993247
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0
+          }
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/tiilaus-pellava-liina.jpg",
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": true,
+        "visualNotes": [
+          "Hieman keltaistunut pellava ja punainen geometrinen ristipistokirjonta lähellä alareunaa. Vain X-sauma vaaditaan; 2x2-koosteen vaakasuora pellavaliinan alareuna on tarkoituksellinen, Y-saumatonta ei ole vaadittu. X-sauman 24 px kaistassa vähäistä kudoksen ja kirjonnan sekoituspehmenemistä. Alapäärmeessä hyvin heikko paikallinen reunavarjo, ei voimakasta pintavalaistusta."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "624baadef8c17536869767387741a12e10a9012c8154830417beff2301d475ed",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/pellava-liina.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/pellava-liina.png",
+      "bytes": 2273636,
       "http": 200,
       "mime": "image/png",
       "cors": "https://matkakirja.app",
@@ -429,6 +1202,1003 @@
       "byteExactReadback": true
     },
     {
+      "id": "tilikirja-aukeama",
+      "number": "11",
+      "file": "tilikirja-aukeama.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tilikirja-aukeama/tilikirja-aukeama.png",
+      "sha256": "eb7130cb88e2b34e72a6f1c0fe1a8e2281c5e5ed2702a3c91e1c458eec2d2424",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-cf86f030-67cd-4552-aee2-43117cc2b370.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tilikirja-aukeama/original-generation.png",
+      "preservedOriginalSHA256": "a793662c70552915ac5b8d1a8b4f6c3f888e776c7a4e8ef17563ebd732609722",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationCallShared": false,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic flat surface texture for a game prop, Olavinlinna in 1499. One NEW image, text-only generation, no source image pixels.\nPrimary request: an open bailiff's account book spread from the late fifteenth century, aged parchment and rag-paper pages with hand-applied dark brown ink marks arranged in bookkeeping columns, and scattered small ink stains.\nComposition/framing: exactly a wide 2:1 canvas, two equal pages forming an open spread, left page in left half and right page in right half. The parchment pages fill the entire image from edge to edge, with a subtle straight vertical inner fold at the middle. Camera orthogonal straight at the flat surface, no perspective, no surrounding table, no visible outside environment. Page margins remain part of the parchment texture.\nMaterials/textures: worn muted warm ivory parchment and slightly yellowed rag paper, fine fibers, natural creases and worn edges within the page surface, muted dark brown ink and a few irregular small blotches. Late 1400s materials only.\nThe ink markings are entirely INVENTED ABSTRACT NON-LETTER PEN STROKES: short uneven disconnected curves, broken slashes, small dashes, fuzzy irregular scribbles and smudges, laid into narrow columns and rows. They must NOT form any letters in any alphabet, numbers, words, signatures, real text, recognizable script or readable characters. These are marks suggesting old accounting without containing writing.\nLighting: perfectly uniform diffuse lighting suitable as an albedo surface texture, flat frontal photoreal material photography, no directional shadows, no vignette, no spotlight, no HDR or cinematic grading.\nConstraints: opaque RGB image, natural modest wear, fine material detail; no people, faces, objects, modern materials, printed words, symbols that read as letters, logo, border, decorative frame, watermark. Original new artwork, no museum-object replica. Produce a wide 2048x1024 image.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "text": "Voudin tilikirja auki: pergamentti-/paperisivut, käsin kirjoitettu keskiaikainen teksti sarakkeina, MUTTA täysin epäselvä ja luettamaton (kirjoitusta muistuttavia viivoja, ei oikeita kirjaimia), mustetahroja, kulunut."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "text": "Voudin tilikirja auki: käsin kirjoitettua ruotsia/latinaa, sarakkeet, mustetahrat (1490-luku); teksti epäselväksi, ei luettavaa sisältöä."
+        }
+      ],
+      "kuvateksti": "Voudin kulunut tilikirjan aukeama, pergamentti- ja paperipinta, sarakkeisiin sijoitettuja keksittyjä musteviivoja sekä mustetahroja vuoden 1499 käyttöä varten. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame resize",
+          "from": [
+            1774,
+            887
+          ],
+          "to": [
+            2048,
+            1024
+          ],
+          "filter": "Lanczos",
+          "creativeContentChanges": false
+        },
+        {
+          "method": "sRGB profile assignment and PNG text metadata",
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      ],
+      "QA": {
+        "visualPass": true,
+        "checked": [
+          "native original displayed and inspected",
+          "480px preview",
+          "invented non-letter strokes and ink stains",
+          "orthogonal full-frame spread",
+          "muted photoreal period material"
+        ],
+        "limitations": [
+          "Non-letter marks include slash groups and curves that suggest bookkeeping; no readable words or recognizable real script observed."
+        ],
+        "originalByteExactVerified": true,
+        "previewPaths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tilikirja-aukeama/qa-preview-480.png"
+        ],
+        "inspectionComplete": true
+      },
+      "builtInTool": true,
+      "productionStatus": "candidate_ready_for_root_independent_QA",
+      "createdAt": "2026-10-09T06:08:31.757727+00:00",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "eb7130cb88e2b34e72a6f1c0fe1a8e2281c5e5ed2702a3c91e1c458eec2d2424",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tilikirja-aukeama.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tilikirja-aukeama.png",
+      "bytes": 3450393,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "kirja-kansi",
+      "number": "12",
+      "file": "kirja-kansi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kirja-kansi/kirja-kansi.png",
+      "sha256": "e18765920cc3fbef4700ded58046140ea80619c11b609be122cdf6ea7c369120",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-494deea7-54af-459e-a640-a85a3ea22dc7.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kirja-kansi/original-generation.png",
+      "preservedOriginalSHA256": "5602fd324e70fb20e9f09145e822d264c5b41c79c51fac18af3bd10cade1919c",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationCallShared": false,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic orthogonal flat material surface map for a late-fifteenth-century book game prop, Olavinlinna in 1499.\nPrimary request: brown leather book cover plus spine in the SAME square image, laid perfectly flat as one unfolded texture atlas. EXACT layout: the cover occupies the LEFT 80 percent of the square canvas, and the spine is a separate straight rectangular vertical strip occupying the RIGHT 20 percent. The dividing seam is at x=80% of the image width. Both surfaces face the camera directly as flat rectangles. This is a material surface map, with no visible depth or perspective, not a picture of a standing book.\nCover: naturally aged muted medium brown leather with a blind-pressed decorative rectangular border and a small abstract symmetrical geometric rosette at its center. Worn hand-worked brass corner fittings on the four corners of the LEFT cover rectangle, and two modest worn brass clasp fittings aligned near its right edge. All brass fittings lie visually flat on the surface and are appropriate to the late 1400s. No letters anywhere.\nSpine: the rightmost 20 percent strip, brown leather matching the cover, narrow and vertical, with subtle worn horizontal binding ridges and no words or letters. The entire right strip must face the camera directly.\nComposition/framing: square 1024x1024 image; rectangular cover fills left 80% edge to edge, rectangular spine fills right 20% edge to edge; no background, no table, no surrounding objects, no decorative picture frame. Camera orthogonal straight at surface, parallel edges, no foreshortening, no visible book thickness.\nMaterials: faded brown vegetable-tanned leather with fine pores, shallow cracks and wear; dull tarnished brass with modest patina. Photoreal fine surface detail; restrained original medieval decoration.\nLighting: uniform diffuse frontal illumination, no directional or cast shadows, no highlight glare, no vignette, no HDR, no cinematic grading; useful as albedo texture.\nConstraints: fully opaque RGB; original new artwork, no museum collection reproduction; no people, no faces, no text in any language or alphabet, no numbers, no logos, no watermark, no modern materials, no plastic, no glossy modern leather.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "text": "Nahkakantinen kirja: ruskea nahka, prässätyt koristeet (kehys ja pieni keskusmuoto), messinkihelat kulmissa ja soljet, kansi + selkä samaan kuvaan (kansi vasemmalla ~80 %, selkä oikealla ~20 %); ei tekstiä."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "text": "Nahkakantinen kirja, prässätyt koristeet, messinkihelat (kansi + selkä samaan kuvaan)."
+        }
+      ],
+      "kuvateksti": "Kuluneen ruskean nahkakirjan prässätty kansi, messinkihelat ja soljet sekä kuvan oikeassa viidenneksessä selkä vuoden 1499 käyttöä varten. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "filter": "Lanczos",
+          "creativeContentChanges": false
+        },
+        {
+          "method": "sRGB profile assignment and PNG text metadata",
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      ],
+      "QA": {
+        "visualPass": true,
+        "checked": [
+          "native original displayed and inspected",
+          "480px preview",
+          "cover left approximately80 percent and spine right20 percent",
+          "four brass corner fittings and two clasps",
+          "blind-pressed frame and small central abstract motif",
+          "no text"
+        ],
+        "limitations": [
+          "Small local material relief shadows are present in fittings and spine binding ridges; no directional cast shadow or perspective."
+        ],
+        "originalByteExactVerified": true,
+        "previewPaths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kirja-kansi/qa-preview-480.png"
+        ],
+        "inspectionComplete": true
+      },
+      "builtInTool": true,
+      "productionStatus": "candidate_ready_for_root_independent_QA",
+      "createdAt": "2026-10-09T06:08:31.858721+00:00",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "e18765920cc3fbef4700ded58046140ea80619c11b609be122cdf6ea7c369120",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/kirja-kansi.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/kirja-kansi.png",
+      "bytes": 2216102,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "asiakirja-sinetti",
+      "number": "13",
+      "file": "asiakirja-sinetti.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/asiakirja-sinetti.png",
+      "sha256": "d81de88f34b30752fb07e1e45e2d0d75ad798c34d6b031cd065e175d831ecc09",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-1e5b3048-11d5-4934-a8c4-33299ae3283b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/original-generation.png",
+      "preservedOriginalSHA256": "73ca6fae05c54f0640b6193559ae30f35d47bf9e495b76ea6896012f8fbfa70e",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationCallShared": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one original paired-component RGBA master texture, Olavinlinna game props in 1499.\nPrimary request: Generate EXACTLY ONE wide 2:1 RGBA image, ideally 2048x1024, containing TWO square component panels side by side. This single image will be technically cropped at its exact vertical midpoint into two square assets. No gap, separator or label.\nLEFT SQUARE PANEL (x=0 to 50%): completely OPAQUE cream parchment paper across EVERY pixel of this left square. A folded late-fifteenth-century parchment letter fills the square edge to edge. Show overlapping folded parchment flaps and creases, naturally aged creamy beige fibers and muted wear, with a single dull red wax seal centered over the fold. The parchment surface itself MUST cover all four edges of the left square, so there is absolutely no transparency anywhere in this left half. Flat orthographic frontal view of folded letter surface, no external tabletop or background. The letter contains no writing or marks resembling letters.\nRIGHT SQUARE PANEL (x=50% to 100%): ONE SEPARATE standalone COPY of that same red wax seal, centered in the right square, about 50 percent of the right square's width, with ample completely TRANSPARENT empty space on all four sides. Nothing except this wax seal in the right half. The empty surroundings have REAL generated alpha=0, never painted black/white/gray/checkerboard. The wax has full opacity and clean natural irregular edges, with gently antialiased transparent boundary, no halo. No drop shadow, no parchment, no paper, no opaque panel in this right square.\nWax seal in both halves: the same original abstract symmetrical medieval heraldic relief, a simple small four-point geometric device within one shallow circular rim, entirely non-letter and non-number. Irregular slightly chipped handmade wax disk, deep muted brick red, soft weathered wax detail, shallow pressed relief. Matching appearance and front-facing orientation in both panels, no letters, no initials, no motto.\nStyle/materials: photorealistic frontal surface photography, muted late-1400s parchment and sealing wax, fine natural material texture, modest worn age. Original new creation, not a replica of an actual historical museum letter or seal.\nComposition: exact 2:1 wide canvas, exact equal square halves. Left parchment fills and is opaque to the center cut; right seal stays entirely in the right half with transparent background. Both surfaces face camera directly; no perspective, no lens distortion, no oblique viewing, no cast shadows.\nLighting: even diffuse uniform frontal illumination, no vignette, no directional shadows, no shiny modern effect, no HDR, no cinematic grading.\nConstraints: TRUE RGBA transparency on the right side only. Completely opaque parchment left side. No text of any kind, no letters or numbers, no labels, no extra objects, no humans or faces, no modern materials, no logos, no watermark.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "text": "Taitettu pergamenttikirje punaisella vahasinetillä, kirjeen päällä; sinetti erillisenä alfalla myös: asiakirja-sinetti.png läpinäkymätön ja asiakirja-sinetti-vaha.png vain sinetti alfalla. Ei tekstiä, sinetin kuvio abstrakti/heraldinen ilman kirjaimia."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "text": "Taitettu pergamenttikirje punaisella vahasinetillä; esine; sinetti erikseen alfalla."
+        }
+      ],
+      "kuvateksti": "Taitetun pergamenttikirjeen pinta ja abstraktilla kuviolla painettu punainen vahasinetti vuoden 1499 käyttöä varten. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "exact midpoint component crop of single paired RGBA master",
+          "masterSize": [
+            1774,
+            887
+          ],
+          "masterAspectRatio": "2:1",
+          "nativeComponentSize": [
+            887,
+            887
+          ],
+          "creativeContentChanges": false,
+          "cropBox": [
+            0,
+            0,
+            887,
+            887
+          ]
+        },
+        {
+          "method": "drop alpha via RGB conversion for explicitly opaque letter",
+          "compositing": false,
+          "manualMask": false
+        },
+        {
+          "method": "full-frame component resize",
+          "from": [
+            887,
+            887
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "filter": "Lanczos"
+        },
+        {
+          "method": "sRGB profile assignment and PNG text metadata",
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      ],
+      "QA": {
+        "visualPass": true,
+        "checked": [
+          "native original displayed and inspected",
+          "480px letter preview",
+          "two square halves with folded opaque final letter and separate wax seal",
+          "matching abstract non-letter four-point device",
+          "seal on light and dark backgrounds",
+          "generated alpha statistics"
+        ],
+        "limitations": [
+          "Master left parchment alpha ranges145–255 and is mostly252–253, with no alpha=0 holes; RGB conversion drops this unwanted slight global translucency for the requested opaque letter.",
+          "Seal RGBA preserves the generated near-opaque interior alpha, mostly252–253, and faint partial-alpha edge pixels; no thresholding or manual mask was used.",
+          "Both generated seals share the same abstract relief but their irregular wax edge shapes differ slightly."
+        ],
+        "originalByteExactVerified": true,
+        "inspectionComplete": true,
+        "previewPaths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-dark-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-light-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-alpha.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480-asiakirja-sinetti-vaha.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-dark.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-light.jpg"
+        ]
+      },
+      "builtInTool": true,
+      "productionStatus": "candidate_ready_for_root_independent_QA",
+      "createdAt": "2026-10-09T06:08:31.964158+00:00",
+      "pairedFiles": true,
+      "outputAssets": [
+        {
+          "id": "asiakirja-sinetti",
+          "number": "13",
+          "file": "asiakirja-sinetti.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/asiakirja-sinetti.png",
+          "sha256": "d81de88f34b30752fb07e1e45e2d0d75ad798c34d6b031cd065e175d831ecc09",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-1e5b3048-11d5-4934-a8c4-33299ae3283b.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/original-generation.png",
+          "preservedOriginalSHA256": "73ca6fae05c54f0640b6193559ae30f35d47bf9e495b76ea6896012f8fbfa70e",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationCallShared": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one original paired-component RGBA master texture, Olavinlinna game props in 1499.\nPrimary request: Generate EXACTLY ONE wide 2:1 RGBA image, ideally 2048x1024, containing TWO square component panels side by side. This single image will be technically cropped at its exact vertical midpoint into two square assets. No gap, separator or label.\nLEFT SQUARE PANEL (x=0 to 50%): completely OPAQUE cream parchment paper across EVERY pixel of this left square. A folded late-fifteenth-century parchment letter fills the square edge to edge. Show overlapping folded parchment flaps and creases, naturally aged creamy beige fibers and muted wear, with a single dull red wax seal centered over the fold. The parchment surface itself MUST cover all four edges of the left square, so there is absolutely no transparency anywhere in this left half. Flat orthographic frontal view of folded letter surface, no external tabletop or background. The letter contains no writing or marks resembling letters.\nRIGHT SQUARE PANEL (x=50% to 100%): ONE SEPARATE standalone COPY of that same red wax seal, centered in the right square, about 50 percent of the right square's width, with ample completely TRANSPARENT empty space on all four sides. Nothing except this wax seal in the right half. The empty surroundings have REAL generated alpha=0, never painted black/white/gray/checkerboard. The wax has full opacity and clean natural irregular edges, with gently antialiased transparent boundary, no halo. No drop shadow, no parchment, no paper, no opaque panel in this right square.\nWax seal in both halves: the same original abstract symmetrical medieval heraldic relief, a simple small four-point geometric device within one shallow circular rim, entirely non-letter and non-number. Irregular slightly chipped handmade wax disk, deep muted brick red, soft weathered wax detail, shallow pressed relief. Matching appearance and front-facing orientation in both panels, no letters, no initials, no motto.\nStyle/materials: photorealistic frontal surface photography, muted late-1400s parchment and sealing wax, fine natural material texture, modest worn age. Original new creation, not a replica of an actual historical museum letter or seal.\nComposition: exact 2:1 wide canvas, exact equal square halves. Left parchment fills and is opaque to the center cut; right seal stays entirely in the right half with transparent background. Both surfaces face camera directly; no perspective, no lens distortion, no oblique viewing, no cast shadows.\nLighting: even diffuse uniform frontal illumination, no vignette, no directional shadows, no shiny modern effect, no HDR, no cinematic grading.\nConstraints: TRUE RGBA transparency on the right side only. Completely opaque parchment left side. No text of any kind, no letters or numbers, no labels, no extra objects, no humans or faces, no modern materials, no logos, no watermark.",
+          "viitteet": [
+            {
+              "source": "sources/01-tilaus.md",
+              "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä, kirjeen päällä; sinetti erillisenä alfalla myös: asiakirja-sinetti.png läpinäkymätön ja asiakirja-sinetti-vaha.png vain sinetti alfalla. Ei tekstiä, sinetin kuvio abstrakti/heraldinen ilman kirjaimia."
+            },
+            {
+              "source": "sources/02-linnanrakentajan-raportti.md",
+              "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä; esine; sinetti erikseen alfalla."
+            }
+          ],
+          "kuvateksti": "Taitetun pergamenttikirjeen pinta ja abstraktilla kuviolla painettu punainen vahasinetti vuoden 1499 käyttöä varten. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "mode": "RGB",
+          "alpha": false,
+          "seamAxes": [],
+          "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "sourceReadInFull": true,
+          "backingReportReadInFull": true,
+          "sourceImagePixelsUsed": false,
+          "technicalProcessing": [
+            {
+              "method": "exact midpoint component crop of single paired RGBA master",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "masterAspectRatio": "2:1",
+              "nativeComponentSize": [
+                887,
+                887
+              ],
+              "creativeContentChanges": false,
+              "cropBox": [
+                0,
+                0,
+                887,
+                887
+              ]
+            },
+            {
+              "method": "drop alpha via RGB conversion for explicitly opaque letter",
+              "compositing": false,
+              "manualMask": false
+            },
+            {
+              "method": "full-frame component resize",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                1024,
+                1024
+              ],
+              "filter": "Lanczos"
+            },
+            {
+              "method": "sRGB profile assignment and PNG text metadata",
+              "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+              "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            }
+          ],
+          "QA": {
+            "visualPass": true,
+            "checked": [
+              "native original displayed and inspected",
+              "480px letter preview",
+              "two square halves with folded opaque final letter and separate wax seal",
+              "matching abstract non-letter four-point device",
+              "seal on light and dark backgrounds",
+              "generated alpha statistics"
+            ],
+            "limitations": [
+              "Master left parchment alpha ranges145–255 and is mostly252–253, with no alpha=0 holes; RGB conversion drops this unwanted slight global translucency for the requested opaque letter.",
+              "Seal RGBA preserves the generated near-opaque interior alpha, mostly252–253, and faint partial-alpha edge pixels; no thresholding or manual mask was used.",
+              "Both generated seals share the same abstract relief but their irregular wax edge shapes differ slightly."
+            ],
+            "originalByteExactVerified": true,
+            "inspectionComplete": true,
+            "previewPaths": [
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-dark-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-light-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-alpha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480-asiakirja-sinetti-vaha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-dark.jpg",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-light.jpg"
+            ]
+          },
+          "builtInTool": true,
+          "productionStatus": "candidate_ready_for_root_independent_QA",
+          "createdAt": "2026-10-09T06:08:31.964158+00:00"
+        },
+        {
+          "id": "asiakirja-sinetti-vaha",
+          "number": "13",
+          "file": "asiakirja-sinetti-vaha.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/asiakirja-sinetti-vaha.png",
+          "sha256": "a71f79cb67d39f32ee1ace0d653c94560e3dcb268e7cf923cd22b24aa34872a9",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-1e5b3048-11d5-4934-a8c4-33299ae3283b.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/original-generation.png",
+          "preservedOriginalSHA256": "73ca6fae05c54f0640b6193559ae30f35d47bf9e495b76ea6896012f8fbfa70e",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationCallShared": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one original paired-component RGBA master texture, Olavinlinna game props in 1499.\nPrimary request: Generate EXACTLY ONE wide 2:1 RGBA image, ideally 2048x1024, containing TWO square component panels side by side. This single image will be technically cropped at its exact vertical midpoint into two square assets. No gap, separator or label.\nLEFT SQUARE PANEL (x=0 to 50%): completely OPAQUE cream parchment paper across EVERY pixel of this left square. A folded late-fifteenth-century parchment letter fills the square edge to edge. Show overlapping folded parchment flaps and creases, naturally aged creamy beige fibers and muted wear, with a single dull red wax seal centered over the fold. The parchment surface itself MUST cover all four edges of the left square, so there is absolutely no transparency anywhere in this left half. Flat orthographic frontal view of folded letter surface, no external tabletop or background. The letter contains no writing or marks resembling letters.\nRIGHT SQUARE PANEL (x=50% to 100%): ONE SEPARATE standalone COPY of that same red wax seal, centered in the right square, about 50 percent of the right square's width, with ample completely TRANSPARENT empty space on all four sides. Nothing except this wax seal in the right half. The empty surroundings have REAL generated alpha=0, never painted black/white/gray/checkerboard. The wax has full opacity and clean natural irregular edges, with gently antialiased transparent boundary, no halo. No drop shadow, no parchment, no paper, no opaque panel in this right square.\nWax seal in both halves: the same original abstract symmetrical medieval heraldic relief, a simple small four-point geometric device within one shallow circular rim, entirely non-letter and non-number. Irregular slightly chipped handmade wax disk, deep muted brick red, soft weathered wax detail, shallow pressed relief. Matching appearance and front-facing orientation in both panels, no letters, no initials, no motto.\nStyle/materials: photorealistic frontal surface photography, muted late-1400s parchment and sealing wax, fine natural material texture, modest worn age. Original new creation, not a replica of an actual historical museum letter or seal.\nComposition: exact 2:1 wide canvas, exact equal square halves. Left parchment fills and is opaque to the center cut; right seal stays entirely in the right half with transparent background. Both surfaces face camera directly; no perspective, no lens distortion, no oblique viewing, no cast shadows.\nLighting: even diffuse uniform frontal illumination, no vignette, no directional shadows, no shiny modern effect, no HDR, no cinematic grading.\nConstraints: TRUE RGBA transparency on the right side only. Completely opaque parchment left side. No text of any kind, no letters or numbers, no labels, no extra objects, no humans or faces, no modern materials, no logos, no watermark.",
+          "viitteet": [
+            {
+              "source": "sources/01-tilaus.md",
+              "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä, kirjeen päällä; sinetti erillisenä alfalla myös: asiakirja-sinetti.png läpinäkymätön ja asiakirja-sinetti-vaha.png vain sinetti alfalla. Ei tekstiä, sinetin kuvio abstrakti/heraldinen ilman kirjaimia."
+            },
+            {
+              "source": "sources/02-linnanrakentajan-raportti.md",
+              "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä; esine; sinetti erikseen alfalla."
+            }
+          ],
+          "kuvateksti": "Erillinen kulunut punainen vahasinetti, abstrakti kirjaimeton kuvio ja generoitu läpinäkyvyys vuoden 1499 käyttöä varten. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "mode": "RGBA",
+          "alpha": true,
+          "seamAxes": [],
+          "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "sourceReadInFull": true,
+          "backingReportReadInFull": true,
+          "sourceImagePixelsUsed": false,
+          "technicalProcessing": [
+            {
+              "method": "exact midpoint component crop of single paired RGBA master",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "masterAspectRatio": "2:1",
+              "nativeComponentSize": [
+                887,
+                887
+              ],
+              "creativeContentChanges": false,
+              "cropBox": [
+                887,
+                0,
+                1774,
+                887
+              ]
+            },
+            {
+              "method": "full-frame RGBA component resize preserving generated alpha",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                1024,
+                1024
+              ],
+              "filter": "Lanczos",
+              "manualMask": false,
+              "chromakey": false,
+              "alphaThresholding": false
+            },
+            {
+              "method": "sRGB profile assignment and PNG text metadata",
+              "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+              "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            }
+          ],
+          "QA": {
+            "visualPass": true,
+            "checked": [
+              "native original displayed and inspected",
+              "480px letter preview",
+              "two square halves with folded opaque final letter and separate wax seal",
+              "matching abstract non-letter four-point device",
+              "seal on light and dark backgrounds",
+              "generated alpha statistics"
+            ],
+            "limitations": [
+              "Master left parchment alpha ranges145–255 and is mostly252–253, with no alpha=0 holes; RGB conversion drops this unwanted slight global translucency for the requested opaque letter.",
+              "Seal RGBA preserves the generated near-opaque interior alpha, mostly252–253, and faint partial-alpha edge pixels; no thresholding or manual mask was used.",
+              "Both generated seals share the same abstract relief but their irregular wax edge shapes differ slightly."
+            ],
+            "alphaStatistics": {
+              "extrema": [
+                0,
+                255
+              ],
+              "zeroPixels": 794658,
+              "fullyOpaquePixels": 438,
+              "partialAlphaPixels": 253480,
+              "totalPixels": 1048576
+            },
+            "originalByteExactVerified": true,
+            "inspectionComplete": true,
+            "previewPaths": [
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-dark-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-light-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-alpha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480-asiakirja-sinetti-vaha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-dark.jpg",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-light.jpg"
+            ]
+          },
+          "builtInTool": true,
+          "productionStatus": "candidate_ready_for_root_independent_QA",
+          "createdAt": "2026-10-09T06:08:32.026797+00:00"
+        }
+      ],
+      "alphaGeneratedNatively": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "d81de88f34b30752fb07e1e45e2d0d75ad798c34d6b031cd065e175d831ecc09",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/asiakirja-sinetti.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/asiakirja-sinetti.png",
+      "bytes": 1815068,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "asiakirja-sinetti-vaha",
+      "number": "13",
+      "file": "asiakirja-sinetti-vaha.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/asiakirja-sinetti-vaha.png",
+      "sha256": "a71f79cb67d39f32ee1ace0d653c94560e3dcb268e7cf923cd22b24aa34872a9",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-1e5b3048-11d5-4934-a8c4-33299ae3283b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/original-generation.png",
+      "preservedOriginalSHA256": "73ca6fae05c54f0640b6193559ae30f35d47bf9e495b76ea6896012f8fbfa70e",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationCallShared": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one original paired-component RGBA master texture, Olavinlinna game props in 1499.\nPrimary request: Generate EXACTLY ONE wide 2:1 RGBA image, ideally 2048x1024, containing TWO square component panels side by side. This single image will be technically cropped at its exact vertical midpoint into two square assets. No gap, separator or label.\nLEFT SQUARE PANEL (x=0 to 50%): completely OPAQUE cream parchment paper across EVERY pixel of this left square. A folded late-fifteenth-century parchment letter fills the square edge to edge. Show overlapping folded parchment flaps and creases, naturally aged creamy beige fibers and muted wear, with a single dull red wax seal centered over the fold. The parchment surface itself MUST cover all four edges of the left square, so there is absolutely no transparency anywhere in this left half. Flat orthographic frontal view of folded letter surface, no external tabletop or background. The letter contains no writing or marks resembling letters.\nRIGHT SQUARE PANEL (x=50% to 100%): ONE SEPARATE standalone COPY of that same red wax seal, centered in the right square, about 50 percent of the right square's width, with ample completely TRANSPARENT empty space on all four sides. Nothing except this wax seal in the right half. The empty surroundings have REAL generated alpha=0, never painted black/white/gray/checkerboard. The wax has full opacity and clean natural irregular edges, with gently antialiased transparent boundary, no halo. No drop shadow, no parchment, no paper, no opaque panel in this right square.\nWax seal in both halves: the same original abstract symmetrical medieval heraldic relief, a simple small four-point geometric device within one shallow circular rim, entirely non-letter and non-number. Irregular slightly chipped handmade wax disk, deep muted brick red, soft weathered wax detail, shallow pressed relief. Matching appearance and front-facing orientation in both panels, no letters, no initials, no motto.\nStyle/materials: photorealistic frontal surface photography, muted late-1400s parchment and sealing wax, fine natural material texture, modest worn age. Original new creation, not a replica of an actual historical museum letter or seal.\nComposition: exact 2:1 wide canvas, exact equal square halves. Left parchment fills and is opaque to the center cut; right seal stays entirely in the right half with transparent background. Both surfaces face camera directly; no perspective, no lens distortion, no oblique viewing, no cast shadows.\nLighting: even diffuse uniform frontal illumination, no vignette, no directional shadows, no shiny modern effect, no HDR, no cinematic grading.\nConstraints: TRUE RGBA transparency on the right side only. Completely opaque parchment left side. No text of any kind, no letters or numbers, no labels, no extra objects, no humans or faces, no modern materials, no logos, no watermark.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "text": "Taitettu pergamenttikirje punaisella vahasinetillä, kirjeen päällä; sinetti erillisenä alfalla myös: asiakirja-sinetti.png läpinäkymätön ja asiakirja-sinetti-vaha.png vain sinetti alfalla. Ei tekstiä, sinetin kuvio abstrakti/heraldinen ilman kirjaimia."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "text": "Taitettu pergamenttikirje punaisella vahasinetillä; esine; sinetti erikseen alfalla."
+        }
+      ],
+      "kuvateksti": "Erillinen kulunut punainen vahasinetti, abstrakti kirjaimeton kuvio ja generoitu läpinäkyvyys vuoden 1499 käyttöä varten. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGBA",
+      "alpha": true,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "exact midpoint component crop of single paired RGBA master",
+          "masterSize": [
+            1774,
+            887
+          ],
+          "masterAspectRatio": "2:1",
+          "nativeComponentSize": [
+            887,
+            887
+          ],
+          "creativeContentChanges": false,
+          "cropBox": [
+            887,
+            0,
+            1774,
+            887
+          ]
+        },
+        {
+          "method": "full-frame RGBA component resize preserving generated alpha",
+          "from": [
+            887,
+            887
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "filter": "Lanczos",
+          "manualMask": false,
+          "chromakey": false,
+          "alphaThresholding": false
+        },
+        {
+          "method": "sRGB profile assignment and PNG text metadata",
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      ],
+      "QA": {
+        "visualPass": true,
+        "checked": [
+          "native original displayed and inspected",
+          "480px letter preview",
+          "two square halves with folded opaque final letter and separate wax seal",
+          "matching abstract non-letter four-point device",
+          "seal on light and dark backgrounds",
+          "generated alpha statistics"
+        ],
+        "limitations": [
+          "Master left parchment alpha ranges145–255 and is mostly252–253, with no alpha=0 holes; RGB conversion drops this unwanted slight global translucency for the requested opaque letter.",
+          "Seal RGBA preserves the generated near-opaque interior alpha, mostly252–253, and faint partial-alpha edge pixels; no thresholding or manual mask was used.",
+          "Both generated seals share the same abstract relief but their irregular wax edge shapes differ slightly."
+        ],
+        "alphaStatistics": {
+          "extrema": [
+            0,
+            255
+          ],
+          "zeroPixels": 794658,
+          "fullyOpaquePixels": 438,
+          "partialAlphaPixels": 253480,
+          "totalPixels": 1048576
+        },
+        "originalByteExactVerified": true,
+        "inspectionComplete": true,
+        "previewPaths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-dark-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-light-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-alpha.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480-asiakirja-sinetti-vaha.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-dark.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-light.jpg"
+        ]
+      },
+      "builtInTool": true,
+      "productionStatus": "candidate_ready_for_root_independent_QA",
+      "createdAt": "2026-10-09T06:08:32.026797+00:00",
+      "pairedFiles": true,
+      "outputAssets": [
+        {
+          "id": "asiakirja-sinetti",
+          "number": "13",
+          "file": "asiakirja-sinetti.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/asiakirja-sinetti.png",
+          "sha256": "d81de88f34b30752fb07e1e45e2d0d75ad798c34d6b031cd065e175d831ecc09",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-1e5b3048-11d5-4934-a8c4-33299ae3283b.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/original-generation.png",
+          "preservedOriginalSHA256": "73ca6fae05c54f0640b6193559ae30f35d47bf9e495b76ea6896012f8fbfa70e",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationCallShared": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one original paired-component RGBA master texture, Olavinlinna game props in 1499.\nPrimary request: Generate EXACTLY ONE wide 2:1 RGBA image, ideally 2048x1024, containing TWO square component panels side by side. This single image will be technically cropped at its exact vertical midpoint into two square assets. No gap, separator or label.\nLEFT SQUARE PANEL (x=0 to 50%): completely OPAQUE cream parchment paper across EVERY pixel of this left square. A folded late-fifteenth-century parchment letter fills the square edge to edge. Show overlapping folded parchment flaps and creases, naturally aged creamy beige fibers and muted wear, with a single dull red wax seal centered over the fold. The parchment surface itself MUST cover all four edges of the left square, so there is absolutely no transparency anywhere in this left half. Flat orthographic frontal view of folded letter surface, no external tabletop or background. The letter contains no writing or marks resembling letters.\nRIGHT SQUARE PANEL (x=50% to 100%): ONE SEPARATE standalone COPY of that same red wax seal, centered in the right square, about 50 percent of the right square's width, with ample completely TRANSPARENT empty space on all four sides. Nothing except this wax seal in the right half. The empty surroundings have REAL generated alpha=0, never painted black/white/gray/checkerboard. The wax has full opacity and clean natural irregular edges, with gently antialiased transparent boundary, no halo. No drop shadow, no parchment, no paper, no opaque panel in this right square.\nWax seal in both halves: the same original abstract symmetrical medieval heraldic relief, a simple small four-point geometric device within one shallow circular rim, entirely non-letter and non-number. Irregular slightly chipped handmade wax disk, deep muted brick red, soft weathered wax detail, shallow pressed relief. Matching appearance and front-facing orientation in both panels, no letters, no initials, no motto.\nStyle/materials: photorealistic frontal surface photography, muted late-1400s parchment and sealing wax, fine natural material texture, modest worn age. Original new creation, not a replica of an actual historical museum letter or seal.\nComposition: exact 2:1 wide canvas, exact equal square halves. Left parchment fills and is opaque to the center cut; right seal stays entirely in the right half with transparent background. Both surfaces face camera directly; no perspective, no lens distortion, no oblique viewing, no cast shadows.\nLighting: even diffuse uniform frontal illumination, no vignette, no directional shadows, no shiny modern effect, no HDR, no cinematic grading.\nConstraints: TRUE RGBA transparency on the right side only. Completely opaque parchment left side. No text of any kind, no letters or numbers, no labels, no extra objects, no humans or faces, no modern materials, no logos, no watermark.",
+          "viitteet": [
+            {
+              "source": "sources/01-tilaus.md",
+              "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä, kirjeen päällä; sinetti erillisenä alfalla myös: asiakirja-sinetti.png läpinäkymätön ja asiakirja-sinetti-vaha.png vain sinetti alfalla. Ei tekstiä, sinetin kuvio abstrakti/heraldinen ilman kirjaimia."
+            },
+            {
+              "source": "sources/02-linnanrakentajan-raportti.md",
+              "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä; esine; sinetti erikseen alfalla."
+            }
+          ],
+          "kuvateksti": "Taitetun pergamenttikirjeen pinta ja abstraktilla kuviolla painettu punainen vahasinetti vuoden 1499 käyttöä varten. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "mode": "RGB",
+          "alpha": false,
+          "seamAxes": [],
+          "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "sourceReadInFull": true,
+          "backingReportReadInFull": true,
+          "sourceImagePixelsUsed": false,
+          "technicalProcessing": [
+            {
+              "method": "exact midpoint component crop of single paired RGBA master",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "masterAspectRatio": "2:1",
+              "nativeComponentSize": [
+                887,
+                887
+              ],
+              "creativeContentChanges": false,
+              "cropBox": [
+                0,
+                0,
+                887,
+                887
+              ]
+            },
+            {
+              "method": "drop alpha via RGB conversion for explicitly opaque letter",
+              "compositing": false,
+              "manualMask": false
+            },
+            {
+              "method": "full-frame component resize",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                1024,
+                1024
+              ],
+              "filter": "Lanczos"
+            },
+            {
+              "method": "sRGB profile assignment and PNG text metadata",
+              "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+              "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            }
+          ],
+          "QA": {
+            "visualPass": true,
+            "checked": [
+              "native original displayed and inspected",
+              "480px letter preview",
+              "two square halves with folded opaque final letter and separate wax seal",
+              "matching abstract non-letter four-point device",
+              "seal on light and dark backgrounds",
+              "generated alpha statistics"
+            ],
+            "limitations": [
+              "Master left parchment alpha ranges145–255 and is mostly252–253, with no alpha=0 holes; RGB conversion drops this unwanted slight global translucency for the requested opaque letter.",
+              "Seal RGBA preserves the generated near-opaque interior alpha, mostly252–253, and faint partial-alpha edge pixels; no thresholding or manual mask was used.",
+              "Both generated seals share the same abstract relief but their irregular wax edge shapes differ slightly."
+            ],
+            "originalByteExactVerified": true,
+            "inspectionComplete": true,
+            "previewPaths": [
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-dark-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-light-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-alpha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480-asiakirja-sinetti-vaha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-dark.jpg",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-light.jpg"
+            ]
+          },
+          "builtInTool": true,
+          "productionStatus": "candidate_ready_for_root_independent_QA",
+          "createdAt": "2026-10-09T06:08:31.964158+00:00"
+        },
+        {
+          "id": "asiakirja-sinetti-vaha",
+          "number": "13",
+          "file": "asiakirja-sinetti-vaha.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/asiakirja-sinetti-vaha.png",
+          "sha256": "a71f79cb67d39f32ee1ace0d653c94560e3dcb268e7cf923cd22b24aa34872a9",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f42-5892-7711-9279-8a7bbb9786d4/exec-1e5b3048-11d5-4934-a8c4-33299ae3283b.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/original-generation.png",
+          "preservedOriginalSHA256": "73ca6fae05c54f0640b6193559ae30f35d47bf9e495b76ea6896012f8fbfa70e",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationCallShared": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one original paired-component RGBA master texture, Olavinlinna game props in 1499.\nPrimary request: Generate EXACTLY ONE wide 2:1 RGBA image, ideally 2048x1024, containing TWO square component panels side by side. This single image will be technically cropped at its exact vertical midpoint into two square assets. No gap, separator or label.\nLEFT SQUARE PANEL (x=0 to 50%): completely OPAQUE cream parchment paper across EVERY pixel of this left square. A folded late-fifteenth-century parchment letter fills the square edge to edge. Show overlapping folded parchment flaps and creases, naturally aged creamy beige fibers and muted wear, with a single dull red wax seal centered over the fold. The parchment surface itself MUST cover all four edges of the left square, so there is absolutely no transparency anywhere in this left half. Flat orthographic frontal view of folded letter surface, no external tabletop or background. The letter contains no writing or marks resembling letters.\nRIGHT SQUARE PANEL (x=50% to 100%): ONE SEPARATE standalone COPY of that same red wax seal, centered in the right square, about 50 percent of the right square's width, with ample completely TRANSPARENT empty space on all four sides. Nothing except this wax seal in the right half. The empty surroundings have REAL generated alpha=0, never painted black/white/gray/checkerboard. The wax has full opacity and clean natural irregular edges, with gently antialiased transparent boundary, no halo. No drop shadow, no parchment, no paper, no opaque panel in this right square.\nWax seal in both halves: the same original abstract symmetrical medieval heraldic relief, a simple small four-point geometric device within one shallow circular rim, entirely non-letter and non-number. Irregular slightly chipped handmade wax disk, deep muted brick red, soft weathered wax detail, shallow pressed relief. Matching appearance and front-facing orientation in both panels, no letters, no initials, no motto.\nStyle/materials: photorealistic frontal surface photography, muted late-1400s parchment and sealing wax, fine natural material texture, modest worn age. Original new creation, not a replica of an actual historical museum letter or seal.\nComposition: exact 2:1 wide canvas, exact equal square halves. Left parchment fills and is opaque to the center cut; right seal stays entirely in the right half with transparent background. Both surfaces face camera directly; no perspective, no lens distortion, no oblique viewing, no cast shadows.\nLighting: even diffuse uniform frontal illumination, no vignette, no directional shadows, no shiny modern effect, no HDR, no cinematic grading.\nConstraints: TRUE RGBA transparency on the right side only. Completely opaque parchment left side. No text of any kind, no letters or numbers, no labels, no extra objects, no humans or faces, no modern materials, no logos, no watermark.",
+          "viitteet": [
+            {
+              "source": "sources/01-tilaus.md",
+              "originalSourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä, kirjeen päällä; sinetti erillisenä alfalla myös: asiakirja-sinetti.png läpinäkymätön ja asiakirja-sinetti-vaha.png vain sinetti alfalla. Ei tekstiä, sinetin kuvio abstrakti/heraldinen ilman kirjaimia."
+            },
+            {
+              "source": "sources/02-linnanrakentajan-raportti.md",
+              "originalSourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+              "text": "Taitettu pergamenttikirje punaisella vahasinetillä; esine; sinetti erikseen alfalla."
+            }
+          ],
+          "kuvateksti": "Erillinen kulunut punainen vahasinetti, abstrakti kirjaimeton kuvio ja generoitu läpinäkyvyys vuoden 1499 käyttöä varten. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "mode": "RGBA",
+          "alpha": true,
+          "seamAxes": [],
+          "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "sourceReadInFull": true,
+          "backingReportReadInFull": true,
+          "sourceImagePixelsUsed": false,
+          "technicalProcessing": [
+            {
+              "method": "exact midpoint component crop of single paired RGBA master",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "masterAspectRatio": "2:1",
+              "nativeComponentSize": [
+                887,
+                887
+              ],
+              "creativeContentChanges": false,
+              "cropBox": [
+                887,
+                0,
+                1774,
+                887
+              ]
+            },
+            {
+              "method": "full-frame RGBA component resize preserving generated alpha",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                1024,
+                1024
+              ],
+              "filter": "Lanczos",
+              "manualMask": false,
+              "chromakey": false,
+              "alphaThresholding": false
+            },
+            {
+              "method": "sRGB profile assignment and PNG text metadata",
+              "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+              "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            }
+          ],
+          "QA": {
+            "visualPass": true,
+            "checked": [
+              "native original displayed and inspected",
+              "480px letter preview",
+              "two square halves with folded opaque final letter and separate wax seal",
+              "matching abstract non-letter four-point device",
+              "seal on light and dark backgrounds",
+              "generated alpha statistics"
+            ],
+            "limitations": [
+              "Master left parchment alpha ranges145–255 and is mostly252–253, with no alpha=0 holes; RGB conversion drops this unwanted slight global translucency for the requested opaque letter.",
+              "Seal RGBA preserves the generated near-opaque interior alpha, mostly252–253, and faint partial-alpha edge pixels; no thresholding or manual mask was used.",
+              "Both generated seals share the same abstract relief but their irregular wax edge shapes differ slightly."
+            ],
+            "alphaStatistics": {
+              "extrema": [
+                0,
+                255
+              ],
+              "zeroPixels": 794658,
+              "fullyOpaquePixels": 438,
+              "partialAlphaPixels": 253480,
+              "totalPixels": 1048576
+            },
+            "originalByteExactVerified": true,
+            "inspectionComplete": true,
+            "previewPaths": [
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-dark-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-alpha-light-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-alpha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480-asiakirja-sinetti-vaha.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-preview-480.png",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-dark.jpg",
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/asiakirja-sinetti/qa-master-light.jpg"
+            ]
+          },
+          "builtInTool": true,
+          "productionStatus": "candidate_ready_for_root_independent_QA",
+          "createdAt": "2026-10-09T06:08:32.026797+00:00"
+        }
+      ],
+      "alphaGeneratedNatively": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "a71f79cb67d39f32ee1ace0d653c94560e3dcb268e7cf923cd22b24aa34872a9",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/asiakirja-sinetti-vaha.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/asiakirja-sinetti-vaha.png",
+      "bytes": 618430,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
       "id": "lippu-sture",
       "number": "18",
       "file": "lippu-sture.png",
@@ -478,18 +2248,33 @@
         "alphaMethod": "opaque RGB conversion",
         "seamMethod": "none yet; native wrapping inspected via 2×2 QA",
         "colorSpace": "embedded sRGB ICC profile",
-        "creativePostEditing": false
+        "creativePostEditing": false,
+        "finalNativeGeometry": "Full frame preserved, exact aspect ratio retained; no crop"
       },
       "QA": {
-        "nativeViewed": false,
-        "preview480Viewed": false,
+        "nativeViewed": true,
+        "preview480Viewed": true,
         "alphaLightDarkViewed": null,
         "tile2x2Viewed": null,
         "alphaStats": {},
         "seamMetrics": {},
         "editorialReviewPending": true,
-        "limitations": []
+        "limitations": [
+          "Dark navy and pale silver/off-white color scheme is explicitly an interpretation requiring editorial acceptance."
+        ],
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileVerified": true,
+        "descriptionAndSourceVerified": true,
+        "byteExactOriginalVerified": true,
+        "textOrPeopleDetected": false,
+        "flatFrontalDiffuseLighting": true,
+        "contentReview": "pass",
+        "heraldryReview": "exactly three pale heart-like downward-pointing leaves, 2+1 on dark blue worn woven cloth; no modern cross flag"
       },
+      "state": "candidate-ready-for-root-qa",
+      "generationMode": "builtin image_gen; new text-only generation",
+      "outputProduced": true,
       "visualReview": {
         "approvedForDelivery": true,
         "sha256": "8e767b8b0073bc2d99a41f119305dccaceb4ee58378216f54beaf7317f8e47bd",
@@ -628,20 +2413,213 @@
       "mime": "image/png",
       "cors": "https://matkakirja.app",
       "byteExactReadback": true
+    },
+    {
+      "id": "kangas-saakki",
+      "number": "20",
+      "file": "kangas-saakki.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kangas-saakki/kangas-saakki.png",
+      "sha256": "03f34b66c73d3db6fc1b4ef123877f9fe8d8cfaee3373e304d68363afbe540f0",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-c2a0-7eb1-a4d0-c1f967ac999f/exec-e4de2cad-1c27-4cb2-bb37-b736450327ae.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kangas-saakki/original-generation.png",
+      "originalSha256": "67196ff4b19d4c54520197162fe00d0fe762ac94477f17e7b632a18fe0242a4c",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: tileable game material base-color hemp sack surface texture.\nPrimary request: photorealistic perpendicular surface photograph of coarse grey-brown hemp sacking for a late-15th-century castle supply sack.\nComposition: square 1024 by 1024 target, entirely flat hemp cloth fills every pixel with no sack silhouette, opening, folds or background. A single small simple faded dark abstract merchant mark near the center: a plain triangle inside a plain circle, with NO letters and NO numbers. One narrow straight hand-sewn horizontal construction seam crosses the fabric a little below center; natural coarse hemp stitches, modest wear.\nMaterials: rough matte grey-brown natural hemp yarn, evident coarse woven grid, slightly irregular strands and short fibers, worn faded hand-stamped pigment for the abstract mark.\nTiling: seamless periodic texture in BOTH X and Y; opposing edges match weave phase, material color and fiber scale. The seam continues across the left/right edges. The centered mark stays wholly inside the tile, away from the edges. No top or bottom hems, no vertical side seam, no cut fabric edges.\nLighting: perfectly even neutral diffuse illumination, no directional shadows, perspective, vignette, gradient, drape or gloss.\nConstraints: newly invented original material from text only; no modern print, letters, numerals, words, logo, watermark, human or face, source-image pixels, museum object copy or extra objects.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 20",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Karkea harmaanruskea hamppusäkkikangas, jossa on ommeltu sauma ja abstrakti kirjaimeton kauppamerkki. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "opaqueRGB": true
+        },
+        {
+          "method": "half-frame-cyclic-offset-and-original-paired-seam-cover-blend-restored-offset",
+          "axes": [
+            "x",
+            "y"
+          ],
+          "edgeBandPixelsEachSide": 20,
+          "totalCenterBlendBandPixels": 40,
+          "falloff": "cosine",
+          "donor": "mean of symmetrically paired pixels from the same generated material",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 28.742045,
+            "y": 33.438814
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/tiilaus-kangas-saakki.jpg",
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "opaqueRGBVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-QA-passed-with-notes",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preview480Method": "Each 480px preview viewed at native display size in qa-preview-set-480.png",
+        "preview480SetPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/kuvakudos-sali/qa-preview-set-480.png",
+        "originalBytesVerified": true,
+        "opposingRequiredEdgesIdentical": true,
+        "visualNotes": [
+          "Karkea harmaanruskea hamppukudos, ommeltu vaakasauma sekä kulunut abstrakti kolmio ympyrässä; ei kirjaimia tai numeroita. 20 px saumakaistassa vähäistä kudoksen pehmenemistä; merkki pysyy kokonaan tile-alueen sisällä."
+        ],
+        "readyForIndependentRootQA": true
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "03f34b66c73d3db6fc1b4ef123877f9fe8d8cfaee3373e304d68363afbe540f0",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-next10.jpg",
+          "qa/root-cloth-tiles.jpg",
+          "production/tilikirja-aukeama/tilikirja-aukeama.png",
+          "production/asiakirja-sinetti/qa-alpha-dark-480.png"
+        ],
+        "visualNotes": "Original muted frontal material and requested subject geometry. Cloth repeats reviewed; mild seam softening disclosed. Paper contains synthetic strokes, no readable words. Pair13 uses generated seal alpha and opaque RGB letter; wax rim shapes differ slightly."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/kangas-saakki.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/kangas-saakki.png",
+      "bytes": 2452127,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
     }
   ],
   "comparison": {
-    "file": "toimitetut-osa-6.jpg",
-    "r2Key": "julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-6.jpg",
-    "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-6.jpg",
-    "sha256": "2ce606d9fab83317a05f78f2d8550a6fe8649326da0cb6f0864c8fce84bfa54a",
-    "bytes": 127341,
+    "file": "toimitetut-osa-17.jpg",
+    "r2Key": "julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-17.jpg",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-17.jpg",
+    "sha256": "e44aa2d26a01cfffc7ce0eade347bf1e440a37b805b6adeae6356a8e8422da15",
+    "bytes": 416331,
     "http": 200,
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",
     "byteExactReadback": true
   },
-  "tileProofs": [],
+  "tileProofs": [
+    {
+      "id": "villa-punainen",
+      "file": "tiilaus-villa-punainen.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-villa-punainen.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tiilaus-villa-punainen.jpg",
+      "sha256": "d37a35afb2b177b721a417f45a87e41ef523f2bcc59ee19505d0aab3a2cce172",
+      "bytes": 2598476,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "villa-sininen",
+      "file": "tiilaus-villa-sininen.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-villa-sininen.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tiilaus-villa-sininen.jpg",
+      "sha256": "5c967620d7e85cf29b6ee643c443b64f379bd41ed27332476a226130ea4ae45b",
+      "bytes": 2885069,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "villa-ruskea",
+      "file": "tiilaus-villa-ruskea.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-villa-ruskea.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tiilaus-villa-ruskea.jpg",
+      "sha256": "0d13c329408a07c7d3cde88dea265ee03d364975bebb57cf7e135f2e19eed757",
+      "bytes": 2602655,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "pellava-liina",
+      "file": "tiilaus-pellava-liina.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-pellava-liina.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tiilaus-pellava-liina.jpg",
+      "sha256": "a430ce21bc8100d4abdfbf1bf93e18ed216993fa855010ef4ab390114401f720",
+      "bytes": 2665258,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "kangas-saakki",
+      "file": "tiilaus-kangas-saakki.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-kangas-saakki.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tiilaus-kangas-saakki.jpg",
+      "sha256": "4edf7cf3ae0dd9fcbd63cbe23f5923e7761333f6cd596ee34493c574e2bbe58e",
+      "bytes": 3069514,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
   "item13Resolution": {
     "method": "one new pairedcomponentRGBA master for item13; opaque left letter/seal panel and right isolated truealpha waxseal; technicalcrops/resizes produce two1024squarePNGfiles",
     "extraGeneration": false,
@@ -656,29 +2634,34 @@
   "gameIntegrated": false,
   "published": false,
   "pendingItems": [
-    "holvi-lehvasto",
-    "tott-vaakuna-maalattu",
-    "sture-vaakuna-laatta",
-    "kuvakudos-sali",
-    "villa-punainen",
-    "villa-sininen",
-    "villa-ruskea",
-    "brokadi-alttari",
-    "pellava-liina",
-    "ovi-tammi-heloin",
     "helat-decal",
-    "arkku-kansi",
-    "tilikirja-aukeama",
-    "kirja-kansi",
-    "asiakirja-sinetti",
     "alttarikaappi",
     "tyrma-raapustukset",
     "takka-noki",
-    "lasitetut-laatat",
-    "lippu-sture",
-    "pelikortit-noppa",
-    "kangas-saakki"
+    "lasitetut-laatat"
   ],
-  "omittedItems": [],
-  "updatedAt": "2026-10-09T06:04:30.951422+00:00"
+  "omittedItems": [
+    {
+      "number": "1",
+      "id": "holvi-lehvasto",
+      "brief": "Kappelin ristiholvin **lehvä- ja kukkakuvioinen maalaus** (1400-luvun loppu): ohuet punaruskeat, okran- ja vihreänsävyiset lehvävinjetit ja pienet kukat toistuvana kuviona rappauksen päällä; **haalistunut, rapautunut, paikoin rappaus näkyy läpi**.",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "filename": "holvi-lehvasto.png",
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "alpha": true,
+      "pairedFiles": false,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/holvi-lehvasto",
+      "state": "omitted",
+      "omissionReason": "Generated alpha leaves low-opacity background film. Permitted seam blending introduces visible ghost/cut paint marks in repeat; cannot deliver as a natural seamless paint-only decal under one-call cap. Original and technical proofs preserved; no retry."
+    }
+  ],
+  "updatedAt": "2026-10-09T06:11:16.292951+00:00"
 }
