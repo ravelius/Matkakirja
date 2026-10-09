@@ -152,6 +152,25 @@ namespace Matkakirja.Linssit.Dioraama
 
         public double VaiheenAlku(int i) => alut[i];
 
+        /// <summary>Kivilinnan rakentuminen (arvio 3 9.10.: linna ilmestyi vuonna 1477 kerralla ja puuvarustus seisoi vedessä vuonna 1476,
+        /// kun tyhjä saari oli jo piilossa): kuori nousee vedestä ylös RakennusS sekunnissa ja valmistuu kivilinnan kohtauksen alkuun.</summary>
+        public const double RakennusS = 6;
+        /// <summary>Ensimmäisen kivilinnan kohtauksen (Vuosi ≥ KivilinnaVuosi) alku: rakentuminen valmis.</summary>
+        public double RakennusValmisT
+        {
+            get { for (int i = 0; i < Vaiheet.Count; i++) if (Vaiheet[i].Vuosi >= KivilinnaVuosi) return alut[i]; return 0; }
+        }
+        /// <summary>Rakentumisen osuus 0…1 hetkellä t (smootherstep; 0 ennen alkua, 1 kivilinnan kohtauksesta alkaen).</summary>
+        public double Rakennus(double t) => Kameraliike.Smootherstep((t - (RakennusValmisT - RakennusS)) / RakennusS);
+        /// <summary>Linnan kuori näkyvissä (rakentuminen alkanut).</summary>
+        public bool LinnaNakyyT(double t) => t >= RakennusValmisT - RakennusS;
+        /// <summary>Rakentumisen leikkausraja (glTF y, m): kuori näkyy tämän alapuolella; RakennusAla (veden alla) → RakennusYla (tornien yli).</summary>
+        public const double RakennusAla = -8, RakennusYla = 60, MaanPinta = 2;
+        public double RakennusKorkeus(double t) => RakennusAla + Rakennus(t) * (RakennusYla - RakennusAla);
+        /// <summary>Maavaihemalli (ei vuodesta-kenttää, tyhjä saari) näkyy, kunnes kuoren kallio on noussut maan pinnan yli (ei
+        /// päällekkäisiä pintoja), vaikka sen vuoteen olisi aiemmin (puuvarustus seisoi vedessä vuonna 1476).</summary>
+        public bool MaaNakyy(double t) => !LinnaNakyyT(t) || RakennusKorkeus(t) < MaanPinta;
+
         /// <summary>Vuosi hetkellä t: vaiheen vuodesta seuraavan vaiheen vuoteen (viimeinen: LoppuVuosi) lineaarisesti ankkureiden kautta.</summary>
         public double Vuosi(double t)
         {

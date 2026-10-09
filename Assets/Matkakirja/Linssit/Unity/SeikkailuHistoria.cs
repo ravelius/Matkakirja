@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
         /// koko näkymässä (myös seikkailun juuret näyttämön ulkopuolella). Ajetaan joka ruutu linnan ollessa piilossa (Update jälkeen):
         /// lykätyt kävelyosat, SeikkailuEsineiden huonelataus ja kynttilät kytkivät renderöijiä takaisin, ja ne näkyivät valopisteinä
         /// tyhjän saaren yllä (arvio 2 ja 3 9.10., t = 0–37).</summary>
-        void PiilotaLinna()
+        void PiilotaLinna(bool leikattavatNakyviin = false)
         {
             var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
             // Piiloon: näyttämön lapset paitsi ympäristö, vaihemallit ja vesi; näyttämön ulkopuolelta vain seikkailun juuret ("Seikkailu …").
@@ -124,7 +124,10 @@ namespace Matkakirja.Natiivi
                 return seikkailu;
             }
             foreach (var r in FindObjectsByType<Renderer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+            {
+                if (leikattavatNakyviin && Leikattava(r)) { if (!r.enabled && piilotetut.Remove(r)) r.enabled = true; continue; }   // rakentuva kuori
                 if (r.enabled && Piiloon(r.transform)) { r.enabled = false; piilotetut.Add(r); }
+            }
             foreach (var l in FindObjectsByType<Light>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
                 if (l.enabled && l.type != LightType.Directional && Piiloon(l.transform)) { l.enabled = false; sammutetut.Add(l); }
         }
@@ -146,6 +149,13 @@ namespace Matkakirja.Natiivi
             }
         }
         readonly HashSet<Renderer> kavelyPiilossa = new HashSet<Renderer>();
+
+        /// <summary>Renderöijä, jonka varjostin tottelee kävelyleikkauksia (kuori ja leivotut kävelyosat): se voi rakentua leikkausrajan alta.</summary>
+        static bool Leikattava(Renderer r)
+        {
+            var m = r.sharedMaterial; var sh = m != null ? m.shader : null; if (sh == null) return false;
+            return sh.name.EndsWith("DioraamaKuori", StringComparison.Ordinal) || sh.name.EndsWith("DioraamaLeivottu", StringComparison.Ordinal);
+        }
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
 
@@ -177,19 +187,29 @@ namespace Matkakirja.Natiivi
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
                 if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
-                LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
-                if (linnaPiilossa) PiilotaLinna();   // joka ruutu: huonelataus ja kynttilät kytkevät renderöijiä takaisin (arvio 3)
+                // Kivilinna rakentuu (arvio 3): kuori ja kävelyosat (leikattavat varjostimet) nousevat vedestä leikkausrajan alta, muu linna
+                // (esineet, hahmot, liekit, valot) pysyy piilossa, kunnes linna on valmis.
+                bool linnaNakyy = h.LinnaNakyyT(t), rakentuu = linnaNakyy && h.Rakennus(t) < 1;
+                if (rakentuu) { if (!linnaPiilossa) LinnaNakyviin(false); PiilotaLinna(true); }
+                else { LinnaNakyviin(linnaNakyy); if (linnaPiilossa) PiilotaLinna(); }   // joka ruutu: huonelataus ja kynttilät (arvio 3)
                 List<KavelyLeikkaus> vl = null;
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
                     {
-                        bool nakyy = vm.Nakyy(vuosi);
+                        bool maa = vm.Malli.Vuodesta == null && h.MaaNakyy(t);   // tyhjä saari kunnes kuoren kallio on noussut (arvio 3)
+                        bool nakyy = maa || vm.Nakyy(vuosi);
                         if (vm.Go != null && vm.Go.activeSelf != nakyy) kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})");
-                        vm.Nayta(vuosi);
+                        if (maa) { if (vm.Go != null && !vm.Go.activeSelf) vm.Go.SetActive(true); } else vm.Nayta(vuosi);
                         if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;
                     }
                 SeikkailuKavely.VainVuosileikkaukset = true;
                 PiilotaKavelyosat();
+                if (rakentuu)
+                {
+                    double raja = h.RakennusKorkeus(t), r = SeikkailuNousu.LinnaSade * 1.3;
+                    vl = vl != null ? new List<KavelyLeikkaus>(vl) : new List<KavelyLeikkaus>();
+                    vl.Add(new KavelyLeikkaus("rakentuminen", keski.X, (raja + Historiajana.RakennusYla) / 2, keski.Z, 2 * r, Historiajana.RakennusYla - raja, 2 * r, 0));
+                }
                 if (kasvu) SeikkailuKavely.AsetaHistoriaLeikkaukset(vl);
                 if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 var (i, _) = h.Kohta(t);

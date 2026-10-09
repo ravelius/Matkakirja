@@ -222,6 +222,26 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>LIIKESÄÄNNÖT (Raamattu LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA, juna 174; liikesaannot.md): katsesuunta kääntyy
         /// enintään 2,5°/s, korkeuskulma 1,5°/s, etäisyys 6 %/s; nopeus jatkuva (kiihtyvyys rajattu, ei nykäyksiä kohtausten rajoilla);
         /// alku ja loppu pysähtyvät pehmeästi.</summary>
+        /// <summary>Arvio 3 (9.10.): kivilinna rakentuu 6 s ennen kivilinnan kohtausta (ei ilmesty kerralla) ja tyhjä saari kantaa puuvarustusta,
+        /// kunnes kuoren kallio on noussut maan pinnan yli (puuvarustus ei seiso vedessä).</summary>
+        [Testi] static void KivilinnaRakentuuJaSaariKantaa()
+        {
+            var h = Historiajana.Olavinlinna;
+            double valmis = h.RakennusValmisT;
+            Oleta.Tosi(valmis > Historiajana.RakennusS, $"kivilinnan kohtaus alkaa {valmis:F1} s");
+            Oleta.Tosi(h.Vuosi(valmis) >= Historiajana.KivilinnaVuosi, "valmis kivilinnan vuonna");
+            Oleta.Sama(0.0, h.Rakennus(valmis - Historiajana.RakennusS - 0.1));
+            Oleta.Sama(1.0, h.Rakennus(valmis));
+            double ed = -1;
+            for (double t = valmis - Historiajana.RakennusS; t <= valmis; t += 0.1) { double r = h.Rakennus(t); Oleta.Tosi(r >= ed - 1e-12, $"rakentuminen ei peräänny ({t:F1} s)"); ed = r; }
+            Oleta.Tosi(!h.LinnaNakyyT(valmis - Historiajana.RakennusS - 0.1) && h.LinnaNakyyT(valmis - Historiajana.RakennusS), "kuori näkyviin rakentumisen alussa");
+            // Saari: näkyy koko ajan ennen rakentumista ja kunnes raja on maan pinnan yllä; sen jälkeen ei.
+            for (double t = 0; t < valmis - Historiajana.RakennusS; t += 0.5) Oleta.Tosi(h.MaaNakyy(t), $"saari näkyy {t:F1} s");
+            Oleta.Tosi(!h.MaaNakyy(valmis), "saari pois, kun linna valmis");
+            for (double t = valmis - Historiajana.RakennusS; t <= valmis; t += 0.1)
+                if (!h.MaaNakyy(t)) Oleta.Tosi(h.RakennusKorkeus(t) >= Historiajana.MaanPinta, $"saari pois vasta kallion noustua ({t:F1} s)");
+        }
+
         [Testi] static void Liikesaannot()
         {
             var h = Historiajana.Olavinlinna; var keski = new V3(-20, 15, 0); const double dt = 1 / 30.0;
