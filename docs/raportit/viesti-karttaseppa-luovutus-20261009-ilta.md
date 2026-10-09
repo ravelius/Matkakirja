@@ -38,6 +38,9 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **RIDDARHOLMEN (PT 01.xx: B, LR:n OK):** ohjauskuvat `proto-3d/_tyo/karttaseppa/ohje-riddarholmen/` (ortho_ohje.py-kopio + malli rh, `ortho_ohje.diff`; merkinnät ja syötteet LR:n työkaluilla muuttamattomina). Tekoälypinnat `tulokset/rh_<näkymä>_v1/v2.png`. **v2 suositeltu** (tumma tiili). Spiira otetaan spiira_v2:sta ja katot sekä kupolit katot_v2:sta, koska julkisivuissa ne jäivät väärän värisiksi. Projisoinnin rh-tapaus (projisoi_tekseli.py, tekoaly_koko.zsh) on LR:llä. Valmis 02.50, /free tehty.
+- **Olavinlinnan 5 pahinta kohtaa + 225°:n punatiili:** odottaa LR:n syötteitä (LR tekee ne v46p:n jälkeen). Ajo samalla `aja-olavinlinna.py`-linjalla.
+
 - **YÖVALOT (PT 10.10. 00.2x, LS1:lle):** `proto-3d/_tyo/karttaseppa/yovalot-20261010/` (LUEMINUT.md). OSM-PBF → katuvalot, valaistut tiet ja sillat, kohteet, kentät ja rantavalot (heijastukseen), maa_m omasta korkeusmallista. Työkalut T7 `vesimaski/yovalot.mjs` ja `yovalot-rikasta.py`. Valmis 00.30. KL-, ND- ja Olavinlinna-pintoja ei tehdä (PT), ja KL:n sävyt odottavat omistajaa (LS2 v6j).
 
 - **Kaukomaa (PT päätös B, 9.10. ilta):** S2-kaukomaata (v1p, yo-v1p) ei tuoda Googlen laattojen näkymään ("samassa näkymässä ei muuta karttaa"). Ämpärin kaukomaa-tiedostot jätettiin paikalleen, eikä niitä kytketä. Aluskerroksen täyte hoidetaan utu-taulukoilla.
