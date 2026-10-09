@@ -4,6 +4,8 @@
 //    liike: r = ajoneuvo − kamera, v = ajoneuvon nopeus − kameran nopeus), kun lähin etäisyys < KuuluuM. Enintään yksi kerrallaan,
 //    alkujen väli ValiMinS–ValiMaxS, sama ajoneuvo ei uudelleen UusintaS:n sisällä. Raitiovaunu → raitiovaunu-ohi, auto → auto-ohi,
 //    harvoin (BussiOsuus) bussi-ohi. Taso: täysi TaysiM:ssä, hiljaa KuuluuM:ssä (neliöllinen).
+//    VESI (juna 173, Pelikoodarin pallo-kaupunki-v1): oma Ohiajot(siemen, vesi: true) pienille veneille (VeneTyypit) → vene-ohi,
+//    huippu ~4,5 s (ennakko VeneEnnakkoS), väli VeneValiMinS–VeneValiMaxS, sama vene ei uudelleen VeneUusintaS:n sisällä.
 //  POLTIN: muun pallon poltin syttyy (MuutPallot.Poltin 0 → 1), pallo näkyvissä (yli lahinM: ElavaKaupunki piilottaa alle 400 m:n
 //    pallot, joten ääni ei tule näkymättömästä) ja alle KuuluuM:n; sama pallo enintään PalloValiS välein, kaikki ValiS välein.
 //  IHMISET: OSM-paikat elava-<id>.json:sta (aukiot: tyokalut/elava_ihmiset.py; kadut ja vesiliikenteen reittien päät = laiturit).
@@ -30,8 +32,12 @@ namespace Matkakirja.Linssit.Elava
 
     public sealed class Ohiajot
     {
-        public enum Laji { Auto, Bussi, Raitiovaunu }
+        public enum Laji { Auto, Bussi, Raitiovaunu, Vene }
         public const double KuuluuM = 250, TaysiM = 60, ValiMinS = 4, ValiMaxS = 8, BussiOsuus = 0.15, EnnakkoS = 3.8, UusintaS = 30;   // ennakko ≥ suurin huippu (PalloElavaAanet.Huippu)
+        public const double VeneEnnakkoS = 5.0, VeneValiMinS = 10, VeneValiMaxS = 20, VeneUusintaS = 60;   // ennakko ≥ vene-ohin huippu 4,5 s
+        /// <summary>Pienet veneet (VeneMallit.Tyypit), joille vene-ohi soi; isommilla on jo VeneAanet-silmukka eikä ohiajoa.
+        /// "vene" = moottorivene (myös VeneAanet moottorivene-silmukka kaukaa); pikkulautat (Pariisissa sähköiset navetit) eivät.</summary>
+        public static readonly string[] VeneTyypit = { "vene" };
         public sealed class Ohiajo { public int Avain; public Laji Laji; public string Tunnus; public double Taso, LahinM, AikaS; }
 
         readonly Random rnd;
@@ -41,7 +47,13 @@ namespace Matkakirja.Linssit.Elava
         string edellinen;
         int pAvain = -1; bool pRaitio; double pLahin, pAika;
 
-        public Ohiajot(int siemen) { rnd = new Random(siemen); }
+        readonly bool vesi; readonly double valiMin, valiMax, uusinta, ennakko;
+
+        public Ohiajot(int siemen, bool vesi = false)
+        {
+            rnd = new Random(siemen); this.vesi = vesi;
+            valiMin = vesi ? VeneValiMinS : ValiMinS; valiMax = vesi ? VeneValiMaxS : ValiMaxS; uusinta = vesi ? VeneUusintaS : UusintaS; ennakko = vesi ? VeneEnnakkoS : EnnakkoS;
+        }
 
         /// <summary>Lähin kohta suoraviivaisessa suhteellisessa liikkeessä: aika (s, negatiivinen = jo ohi) ja etäisyys (m).</summary>
         public static (double AikaS, double EtaisyysM) Lahin(double rx, double ry, double rz, double vx, double vy, double vz)
@@ -59,11 +71,11 @@ namespace Matkakirja.Linssit.Elava
         public void Aloita(double nytS) { nyt = nytS; pAvain = -1; }
 
         /// <summary>Ajoneuvo ehdokkaaksi (avain yksilöi ajoneuvon; r ja v kuten Lahin). Lähin tuleva ohitus voittaa.</summary>
-        public void Ehdokas(int avain, bool raitio, double rx, double ry, double rz, double vx, double vy, double vz, double ennakkoS = EnnakkoS)
+        public void Ehdokas(int avain, bool raitio, double rx, double ry, double rz, double vx, double vy, double vz, double ennakkoS = double.NaN)
         {
             var (t, d) = Lahin(rx, ry, rz, vx, vy, vz);
-            if (t < 0 || t > ennakkoS || d >= KuuluuM) return;
-            if (soitettu.TryGetValue(avain, out var s) && nyt - s < UusintaS) return;
+            if (t < 0 || t > (double.IsNaN(ennakkoS) ? ennakko : ennakkoS) || d >= KuuluuM) return;
+            if (soitettu.TryGetValue(avain, out var s) && nyt - s < uusinta) return;
             if (pAvain >= 0 && d >= pLahin) return;
             pAvain = avain; pRaitio = raitio; pLahin = d; pAika = t;
         }
@@ -76,17 +88,18 @@ namespace Matkakirja.Linssit.Elava
             // 1,2–3,6 s alusta), jolloin huippu osuu ohitukseen.
             if (varattuAvain != pAvain)
             {
-                varattuLaji = pRaitio ? Laji.Raitiovaunu : rnd.NextDouble() < BussiOsuus ? Laji.Bussi : Laji.Auto;
-                var sarja0 = varattuLaji == Laji.Raitiovaunu ? PalloElavaAanet.RaitioOhi : varattuLaji == Laji.Bussi ? PalloElavaAanet.BussiOhi : PalloElavaAanet.AutoOhi;
+                varattuLaji = vesi ? Laji.Vene : pRaitio ? Laji.Raitiovaunu : rnd.NextDouble() < BussiOsuus ? Laji.Bussi : Laji.Auto;
+                var sarja0 = varattuLaji == Laji.Vene ? PalloKaupunkiAanet.VeneOhi : varattuLaji == Laji.Raitiovaunu ? PalloElavaAanet.RaitioOhi
+                    : varattuLaji == Laji.Bussi ? PalloElavaAanet.BussiOhi : PalloElavaAanet.AutoOhi;
                 varattuTunnus = ElavaValinta.Vaihtoehto(sarja0, rnd, edellinen); varattuAvain = pAvain;
             }
-            if (pAika > PalloElavaAanet.Huippu(varattuTunnus) + 0.05) return null;
+            if (pAika > (varattuLaji == Laji.Vene ? PalloKaupunkiAanet.VeneHuippuS : PalloElavaAanet.Huippu(varattuTunnus)) + 0.05) return null;
             var laji = varattuLaji; string tunnus = varattuTunnus; varattuAvain = -1;
             edellinen = tunnus;
-            seuraava = nyt + ValiMinS + (ValiMaxS - ValiMinS) * rnd.NextDouble();
-            if (soitettu.Count > 64) { var vanhat = new List<int>(); foreach (var kv in soitettu) if (nyt - kv.Value >= UusintaS) vanhat.Add(kv.Key); foreach (var k in vanhat) soitettu.Remove(k); }
+            seuraava = nyt + valiMin + (valiMax - valiMin) * rnd.NextDouble();
+            if (soitettu.Count > 64) { var vanhat = new List<int>(); foreach (var kv in soitettu) if (nyt - kv.Value >= uusinta) vanhat.Add(kv.Key); foreach (var k in vanhat) soitettu.Remove(k); }
             soitettu[pAvain] = nyt;
-            double kerroin = laji == Laji.Raitiovaunu ? PalloElavaAanet.RaitioTaso : laji == Laji.Bussi ? PalloElavaAanet.BussiTaso : PalloElavaAanet.AutoTaso;
+            double kerroin = laji == Laji.Vene ? PalloKaupunkiAanet.VeneTaso : laji == Laji.Raitiovaunu ? PalloElavaAanet.RaitioTaso : laji == Laji.Bussi ? PalloElavaAanet.BussiTaso : PalloElavaAanet.AutoTaso;
             return new Ohiajo { Avain = pAvain, Laji = laji, Tunnus = tunnus, Taso = kerroin * Taso(pLahin), LahinM = pLahin, AikaS = pAika };
         }
     }

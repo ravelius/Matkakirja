@@ -8,6 +8,8 @@
 //    ajoneuvoa tai palloa tai on OSM-paikassa. 3D = Unityn oma panorointi (spatialBlend 1, doppler 0); vaimennus Custom tasaisena,
 //    koska etäisyyden taso lasketaan Ytimessä (testattava) eikä sitä kerrota kahdesti. Taso joka kehys: OpasAanitasot.Maisema(perus,
 //    väistö kertojan alla) × mikserin Kerroin(ryhmä, tunnus).
+// KAUPUNKIÄÄNET v1 (juna 173; Ydin PalloKaupunkiAanet): toinen manifesti aanet/pallo-kaupunki-v1/manifest.json samalla tavalla
+//  (oma haku, oma 404-lokirivi; tunnukset eivät mene päällekkäin v2:n kanssa, joten Klippi ja Kerroin palvelevat molempia).
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -20,10 +22,30 @@ namespace Matkakirja.Natiivi
     public static class ElavaAaniPankki
     {
         const float UusintaS = 600f;
-        static PalloElavaAanet manifesti;
         static readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>();
-        static bool haussa, puuttuiKirjattu; static float yritys = -9999f;
         static Isanta isanta;
+
+        /// <summary>Manifestin lähde: osoite, jäsennys (tunnus → osoite) ja ladattavat tunnukset; tila haulle ja lokille.</summary>
+        sealed class Lahde
+        {
+            public string Nimi, Osoite; public System.Func<string, Dictionary<string, string>> Lue; public System.Func<IEnumerable<string>> Tunnukset;
+            public bool Valmis, Haussa, PuuttuiKirjattu; public float Yritys = -9999f; public int Ladattu, Puuttuu;
+        }
+        static readonly Lahde[] lahteet =
+        {
+            new Lahde { Nimi = "elävät äänet v2", Osoite = PalloElavaAanet.ManifestiOsoite, Tunnukset = PalloElavaAanet.Tunnukset,
+                Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloElavaAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
+            new Lahde { Nimi = "kaupunkiäänet v1", Osoite = PalloKaupunkiAanet.ManifestiOsoite, Tunnukset = PalloKaupunkiAanet.Tunnukset,
+                Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloKaupunkiAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
+        };
+
+        /// <summary>Diagnoosi: manifestien tila (opas kaupunkiaanet tila).</summary>
+        public static string Tila()
+        {
+            var t = new List<string>();
+            foreach (var l in lahteet) t.Add($"{l.Nimi}: " + (l.Valmis ? $"{l.Ladattu} ladattu, {l.Puuttuu} puuttuu" : l.Haussa ? "haussa" : l.PuuttuiKirjattu ? "manifesti puuttuu" : "ei haettu"));
+            return string.Join("; ", t);
+        }
         sealed class Isanta : MonoBehaviour { }
 
         static bool rekisteroity;
@@ -33,12 +55,14 @@ namespace Matkakirja.Natiivi
             if (rekisteroity) return;
             rekisteroity = true;
             foreach (var m in PalloElavaAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
+            foreach (var m in PalloKaupunkiAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
         }
 
         /// <summary>Mikserin kerroin tunnukselle (ryhmän taso nykyisessä kontekstissa × äänen oma kerroin).</summary>
         public static float Kerroin(string tunnus)
         {
             var (id, ryhma) = PalloElavaAanet.MikseriAani(tunnus);
+            if (id == null) (id, ryhma) = PalloKaupunkiAanet.MikseriAani(tunnus);
             return id != null ? Aanimikseri.Yhteinen.Kerroin(ryhma, id) : 0f;
         }
 
@@ -49,47 +73,56 @@ namespace Matkakirja.Natiivi
             return tunnus != null && klipit.TryGetValue(tunnus, out var c) ? c : null;
         }
 
-        /// <summary>Manifestin haku (kerran; epäonnistunut uudelleen UusintaS:n päästä).</summary>
+        /// <summary>Manifestien haku (kerran; epäonnistunut uudelleen UusintaS:n päästä).</summary>
         public static void Kaynnista()
         {
             Rekisteroi();
-            if (manifesti != null || haussa || Time.unscaledTime - yritys < UusintaS) return;
+            foreach (var l in lahteet)
+            {
+                if (l.Valmis || l.Haussa || Time.unscaledTime - l.Yritys < UusintaS) continue;
+                Isannoi();
+                l.Haussa = true; l.Yritys = Time.unscaledTime;
+                isanta.StartCoroutine(Hae(l));
+            }
+        }
+
+        static void Isannoi()
+        {
             if (isanta == null)
             {
                 var g = new GameObject("Elävät äänet v2") { hideFlags = HideFlags.HideInHierarchy };
                 Object.DontDestroyOnLoad(g);
                 isanta = g.AddComponent<Isanta>();
             }
-            haussa = true; yritys = Time.unscaledTime;
-            isanta.StartCoroutine(Hae());
         }
 
-        static IEnumerator Hae()
+        static IEnumerator Hae(Lahde l)
         {
             long ikkuna = System.DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
-            using (var r = UnityWebRequest.Get(PalloElavaAanet.ManifestiOsoite + "?t=" + ikkuna))
+            Dictionary<string, string> osoitteet;
+            using (var r = UnityWebRequest.Get(l.Osoite + "?t=" + ikkuna))
             {
                 r.timeout = 15;
                 yield return r.SendWebRequest();
                 if (r.result != UnityWebRequest.Result.Success)
                 {
-                    if (!puuttuiKirjattu) { puuttuiKirjattu = true; Debug.Log($"MATKAKIRJA kaupunki: elävät äänet v2: manifesti ei saatavilla ({r.responseCode}), äänet ennallaan"); }
-                    haussa = false; yield break;
+                    if (!l.PuuttuiKirjattu) { l.PuuttuiKirjattu = true; Debug.Log($"MATKAKIRJA kaupunki: {l.Nimi}: manifesti ei saatavilla ({r.responseCode}), äänet ennallaan"); }
+                    l.Haussa = false; yield break;
                 }
-                try { manifesti = PalloElavaAanet.Lue(r.downloadHandler.text); }
-                catch (System.Exception e) { Debug.Log("MATKAKIRJA kaupunki: elävät äänet v2: manifesti virheellinen: " + e.Message); haussa = false; yield break; }
+                try { osoitteet = l.Lue(r.downloadHandler.text); }
+                catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: {l.Nimi}: manifesti virheellinen: " + e.Message); l.Haussa = false; yield break; }
             }
-            int ok = 0, puuttuu = 0;
-            foreach (var t in PalloElavaAanet.Tunnukset())
+            l.Valmis = true;
+            foreach (var t in l.Tunnukset())
             {
-                if (!manifesti.Aanet.TryGetValue(t, out var a)) { puuttuu++; continue; }
+                if (!osoitteet.TryGetValue(t, out var osoite)) { l.Puuttuu++; continue; }
                 AudioClip c = null;
-                yield return Lataa(a.Osoite, x => c = x);
-                if (c != null) { c.name = t; klipit[t] = c; ok++; }
-                else { puuttuu++; Debug.Log($"MATKAKIRJA kaupunki: elävät äänet v2: {t} ei latautunut"); }
+                yield return Lataa(osoite, x => c = x);
+                if (c != null) { c.name = t; klipit[t] = c; l.Ladattu++; }
+                else { l.Puuttuu++; Debug.Log($"MATKAKIRJA kaupunki: {l.Nimi}: {t} ei latautunut"); }
             }
-            haussa = false;
-            Debug.Log($"MATKAKIRJA kaupunki: elävät äänet v2: {ok} ääntä ladattu, {puuttuu} puuttuu");
+            l.Haussa = false;
+            Debug.Log($"MATKAKIRJA kaupunki: {l.Nimi}: {l.Ladattu} ääntä ladattu, {l.Puuttuu} puuttuu");
         }
 
         static IEnumerator Lataa(string url, System.Action<AudioClip> valmis)
@@ -133,6 +166,7 @@ namespace Matkakirja.Natiivi
 
         public ElavaSilmukka(Transform isanta, string tunnus, bool kolmeD) { this.isanta = isanta; this.tunnus = tunnus; this.kolmeD = kolmeD; }
         public float Taso => taso;
+        public string Tunnus => tunnus;
 
         AudioSource Uusi()
         {
