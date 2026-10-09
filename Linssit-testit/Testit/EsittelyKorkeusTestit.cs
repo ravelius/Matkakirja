@@ -34,6 +34,22 @@ namespace Matkakirja.Linssit.Testit
             finally { OpasSilmukka.PalloLento = vanha; }
         }
 
+        /// <summary>Pitkä matala rakennus (PT 9.10., Orsay 190 m / 24 m): silmä vähintään 0,25 × koko, ei 28 m:ssä kadun yllä.</summary>
+        [Testi] static void PitkaMatalaRakennusKorkeammalta()
+        {
+            bool vanha = OpasSilmukka.PalloLento;
+            try
+            {
+                OpasSilmukka.PalloLento = true;
+                var orsay = new OpasKohde { Id = "Q23402", Nimi = "Orsayn taidemuseo", Lat = 48.86, Lon = 2.3265, KokoM = 190, KorkeusM = 24, Luokka = "rakennus", YmparysM = 16 };
+                var p = OpasKuvaus.Kehysta(orsay, 35, 0);
+                Oleta.Tosi(Silma(p) >= 0.25 * 190 - 1, $"Orsay: silmä {Silma(p):F0} m ≥ 0,25 × 190");
+                var nd = new OpasKohde { Id = "nd", Nimi = "Notre-Dame", Lat = 48.853, Lon = 2.3499, KokoM = 128, KorkeusM = 96, Luokka = "kirkko", YmparysM = 5 };
+                Oleta.Tosi(Math.Abs(Silma(OpasKuvaus.Kehysta(nd, 35, 0)) - 0.6 * 96) < 1, "korkea kohde ennallaan (0,6 × korkeus)");
+            }
+            finally { OpasSilmukka.PalloLento = vanha; }
+        }
+
         /// <summary>Alue (kuva-arkki 9.10., P3/T3): korkeudeton suuri kohde viistosti kattojen yläpuolelta, ei 64°:n kartta-asennossa.</summary>
         [Testi] static void AlueViistostiKattojenYlapuolelta()
         {

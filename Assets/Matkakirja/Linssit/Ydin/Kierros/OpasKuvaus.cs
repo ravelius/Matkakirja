@@ -115,7 +115,10 @@ namespace Matkakirja.Linssit.Kierros
                     // viistosti, kallistus enintään AlueEsittelyKallistus (koko alue pysyy kuvassa; spiraali laskee loppua kohti).
                     double tavoite = l == Luokka.Alue
                         ? Math.Max(kattoYla, nosto + vaaka / Math.Tan(AlueEsittelyKallistus * A))
-                        : Math.Max(kattoYla, korkeus > 0 ? EsittelyOsuus * korkeus : kattoYla);
+                        : Math.Max(Math.Max(kattoYla, korkeus > 0 ? EsittelyOsuus * korkeus : kattoYla),
+                            // PITKÄ MATALA RAKENNUS (PT 9.10., LS2:n tarvearvio: Orsayn pysähdyksessä silmä 28 m:ssä viereisen kadun yllä,
+                            // museo reunassa): silmä vähintään PitkaKokoOsuus × koko, kun koko > PitkaSuhde × korkeus.
+                            koko > PitkaSuhde * korkeus ? PitkaKokoOsuus * koko : 0);
                     if (tavoite < silma)
                     {
                         double h = Math.Max(tavoite - nosto, vaaka / Math.Tan((OpasOhjaus.KallistusMax - 1) * A));
@@ -237,6 +240,8 @@ namespace Matkakirja.Linssit.Kierros
         public const double EsittelyOsuus = 0.6, KattoVaraM = 12, PalloKattoMinM = 15;
         /// <summary>Alueen (suuri kohde, ei korkeutta) esittelyn kallistus pystysuorasta (°): kattojen yläpuolella, viistosti.</summary>
         public const double AlueEsittelyKallistus = 75;
+        /// <summary>Pitkä matala rakennus (koko > PitkaSuhde × korkeus): esittelyn silmä vähintään PitkaKokoOsuus × koko maasta.</summary>
+        public const double PitkaSuhde = 4, PitkaKokoOsuus = 0.25;
         public const double KaariNopeusMS = 10, KaariAlkuS = 3, KaariMaxAstS = 5, SpiraaliAikaS = 14, SpiraaliLahesty = 0.0, SpiraaliLasku = 0.35, SpiraaliLaskuPallo = 0.5, SpiraaliMinKorkeusM = 60, SpiraaliMaxMS = 2.5, KaariOsuusSeuraavaan = 0.5;
 
         /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
