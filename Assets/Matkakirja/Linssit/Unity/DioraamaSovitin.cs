@@ -1456,7 +1456,7 @@ namespace Matkakirja.Natiivi
         Vector3? puolilahiRinta;
         const float PuolilahiVapaaM = 0.9f, PuolilahiLeikkausMaxM = 1.2f;
         const double PuolilahiSivu = 35, PuolilahiMaxKierto = 60, PuolilahiKohdeY = 1.35, PuolilahiKorkeusM = 1.5, PuolilahiMinM = 1.7,
-            PuolilahiKorkeusAst = 22;
+            PuolilahiKorkeusAst = 12;   // PT 9.10. vouti v4: 22° katsoi hupun lipan yli, ilme jäi varjoon; 12° lähes silmien tasolta
         const double PuhujaSiirtyma = 0.9, PuhujanPaino = 0.65, HahmonKeski = 0.9, HahmonKorkeus = 1.75,
             HahmonOsuusKorkeudesta = 0.4, RuudunSuhde = 2.0, KuulijaMaxM = 4.0;
 
