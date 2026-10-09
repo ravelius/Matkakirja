@@ -1475,5 +1475,728 @@
    "Mitä muita kansallismaisemia Suomessa on?",
    "Miten maisemaa suojellaan?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-merenkurkku",
+  "kysymys": "Miksi maa nousee Merenkurkussa yhä edelleen ylös vedestä?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Maa siellä nimittäin oikeasti nousee. Viimeisen jääkauden aikana paksu [[mannerjäätikkö]] painoi [[maankuorta]] alaspäin, ja kun jäätikkö suli ja vetäytyi noin 9 600 vuotta sitten, kuori alkoi hitaasti palautua entiselle tasolleen. Palautuminen on yhä kesken, koska maan sisuksen aines liikkuu vain vähitellen takaisin sille alueelle, jonka päältä paino poistui. Merenkurkussa [[maankohoaminen]] on lähes 10 millimetriä vuodessa, joten rantaviiva siirtyy ajan myötä merta kohti. Hidasta hommaa, mut kyl se lopulta näkyy.",
+  "linkit": [
+   "mannerjäätikkö",
+   "maankuorta",
+   "maankohoaminen"
+  ],
+  "jatkot": [
+   "Mikä on jääkausi ja miten se vaikutti Suomen maisemaan?",
+   "Kuinka nopeasti maa nousee muualla Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-merenkurkku",
+  "kysymys": "Mitä Merenkurkun alueelle tapahtuu noin 2 000 vuoden kuluttua?",
+  "uusi": false,
+  "vastaus": "No niin, tähän on olemassa arvio. Arvion mukaan noin 2 000 vuoden kuluttua alueen merenpohja kohoaa vedestä, koska maa nousee edelleen lähes 10 millimetriä vuodessa ja vesi on vain noin 25 metriä syvää. Laskutoimitus on yksinkertainen: kahdessa tuhannessa vuodessa kohoamista kertyy suunnilleen 20 metriä, mikä on lähellä veden syvyyttä. Tällöin [[Pohjanlahti]] jakautuu kahtia, ja [[Perämeri]] erkanee omaksi vesialueekseen [[Selkämerestä]]. Kyse on kuitenkin ennusteesta, ja todellinen ajankohta voi poiketa arviosta.\n\nMinun suvullani on pitkä muisti, mutta kahdentuhannen vuoden päähän en ole vielä lentänyt. Ihan uteliaaksi tulee, mihin kohtaan sitten laskeudun.",
+  "linkit": [
+   "Pohjanlahti",
+   "Perämeri",
+   "Selkämerestä"
+  ],
+  "jatkot": [
+   "Mitä Perämerelle tapahtuu, kun Pohjanlahti jakautuu?",
+   "Miten merenpinnan nousu vaikuttaa maankohoamiseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-merenkurkku",
+  "kysymys": "Mitä De Geer -moreenit ovat ja miten ne syntyivät?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Annas ku mietin. De Geer -moreenit ovat matalia, toistensa suuntaisia harjanteita, joita syntyi [[jäätikön]] reunalle sen vetäytyessä. Tulkinnan mukaan kukin harjanne kertyi jäätikön reunan eteen, kun reuna oli hetken paikallaan, ja harjanteet jäivät sen jälkeen näkyviin. Nimi tulee ruotsalaisen geologin [[Gerard De Geerin]] mukaan, ja yksityiskohdista, kuten siitä syntyikö harjanne täsmälleen vuodessa, tutkijat ovat olleet eri mieltä. Merenkurkun säännölliset moreenit ovat yksi syy alueen [[maailmanperintökohteen]] arvoon. Kyl tää meni ihan hyvin.",
+  "linkit": [
+   "jäätikön",
+   "Gerard De Geerin",
+   "maailmanperintökohteen"
+  ],
+  "jatkot": [
+   "Mikä on moreeni?",
+   "Miten jäätiköt muokkaavat maisemaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-merenkurkku",
+  "kysymys": "Miksi Merenkurkun saaristo kuuluu Unescon maailmanperintöön?",
+  "uusi": true,
+  "vastaus": "Ai se, hyvä kysymys tuo. Merenkurkun saaristoon kuuluva alue liitettiin [[Unescon]] maailmanperintökohteeseen vuonna 2006 sen geologisten ominaisuuksien vuoksi. Alueella on yli 5 600 pientä saarta sekä säännöllisiä [[De Geer -moreeneja]], ja siellä jääkauden jälkeinen maankohoaminen näkyy erityisen selvästi, sillä se muokkaa maisemaa yhä. Kohde on laajennus [[Korkean rannikon]] kohteeseen Ruotsin puolella, joten yhteinen maailmanperintö kattaa molemmat rannat. Tuli taas todistettua, että kyyhky osaa lukea.",
+  "linkit": [
+   "Unescon",
+   "De Geer -moreeneja",
+   "Korkean rannikon"
+  ],
+  "jatkot": [
+   "Mitä muita luontokohteita Suomessa on Unescon listalla?",
+   "Mikä on Korkea rannikko Ruotsissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-merenkurkku",
+  "kysymys": "Miten Merenkurkkuun syntyy uusia saaria maan noustessa?",
+  "uusi": true,
+  "vastaus": "Kas vaan, maa kasvaa. Kun maa nousee noin 10 millimetriä vuodessa, matalat kohdat [[merenpohjan]] muodostelmissa nousevat vähitellen pinnalle ja muuttuvat ensin [[kareiksi]] ja sitten saariksi. Merenkurkussa vesi on vain noin 25 metriä syvää, joten pienikin kohoaminen muuttaa rantaviivaa selvästi. Saaria on yli 5 600, ja monet niistä ovat pieniä ja matalia. Ajan mittaan saaret myös kasvavat ja voivat yhdistyä toisiinsa, kun maa jatkaa nousuaan. Ylhäältä se näyttää kyl komealta.",
+  "linkit": [
+   "merenpohjan",
+   "kareiksi"
+  ],
+  "jatkot": [
+   "Mitä kasveja uusille saarille alkaa kasvaa ensimmäisenä?",
+   "Miten maankohoaminen vaikuttaa satamiin ja veneilyyn?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pallas",
+  "kysymys": "Miksi Pallaksen tunturit ovat pyöreitä eivätkä teräviä vuorenhuippuja?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Pallaksen tunturijono on muinaisen [[poimuvuoriston]] kulunut juuri, eli se oli aikoinaan huomattavasti korkeampaa vuoristoa. Hyvin pitkän ajan kuluessa sää ja vesi ovat hionneet huiput pyöreiksi, ja jääkausien [[jäätiköt]] tasoittivat maisemaa edelleen. Nuoret vuoristot, kuten [[Alpit]], ovat vielä teräviä, koska kuluttavat voimat eivät ole ehtineet pyöristää niitä. Lapissa tunturin pyöreää, puutonta huippua kutsutaan keroksi. Pyöreys on kyl vanhuuden merkki, ei huono asia.",
+  "linkit": [
+   "poimuvuoriston",
+   "jäätiköt",
+   "Alpit"
+  ],
+  "jatkot": [
+   "Mistä Alpit ovat syntyneet?",
+   "Miten jäätiköt muokkaavat vuoristoa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pallas",
+  "kysymys": "Mitä sana kero tarkoittaa ja mistä sen tunnistaa tunturilla?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo, vaikka Pöllö on taas matkoilla. Kero tarkoittaa tunturin pyöreää, puutonta huippua. Sen tunnistaa siitä, että huipulla ei kasva puita vaan siellä on paljasta kiveä ja matalaa kasvillisuutta, ja muoto on loiva ja kupera eikä terävä. Pallas-Yllästunturin kansallispuiston korkein kohta on [[Taivaskero]], joka kuuluu Pallastunturien jonoon ja kohoaa 809 metriin merenpinnan yläpuolelle. Koko [[tunturijono]] on noin 100 kilometriä pitkä. Pyöreä huippu on kyl kyyhkylle mukava laskeutumispaikka.",
+  "linkit": [
+   "Taivaskero",
+   "tunturijono"
+  ],
+  "jatkot": [
+   "Millainen kasvillisuus tunturin huipulla on?",
+   "Mikä on metsäraja ja missä se kulkee Lapissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pallas",
+  "kysymys": "Mikä Hetta–Pallas-reitti on ja kuinka pitkä se on?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Hetta–Pallas-reitti on Pallas-Yllästunturin kansallispuiston tunnetuin vaellusreitti ja Suomen vanhin merkitty vaellusreitti: se on merkitty vuonna 1934. Reitti kulkee [[Enontekiön]] [[Hetasta]] Pallakselle, ja sen pituus on noin 55 kilometriä. Reitti kuljetaan tunturijonon halki, ja matkalla ohitetaan useita keroja. Se on yksi syy siihen, että [[Pallas-Yllästunturin kansallispuisto]] on vierailijamäärillä mitattuna Suomen suosituin. Se on kyl kyyhkylle yks aamulento.",
+  "linkit": [
+   "Enontekiön",
+   "Hetasta",
+   "Pallas-Yllästunturin kansallispuisto"
+  ],
+  "jatkot": [
+   "Mitä Hetta–Pallas-reitillä kannattaa ottaa mukaan?",
+   "Missä Enontekiö sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pallas",
+  "kysymys": "Miksi lehdet muuttuvat syksyllä keltaisiksi ja punaisiksi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on syksyn parhaita juttuja. Kasvukauden aikana lehtien vihreä väri peittää alleen muut värit. Syksyllä öiset pakkaset pysäyttävät [[lehtivihreän]] tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset pigmentit pääsevät näkyviin; punaisia pigmenttejä muodostuu osin vasta syksyllä. Lapin [[tunturikoivikot]] ja -kanervikot värjäytyvät keltaisiksi, oransseiksi ja tulipunaisiksi muutaman viikon ajaksi, yleensä syyskuun alussa, ja ajankohta vaihtelee vuosittain sään mukaan. Ilmiötä kutsutaan [[ruskaksi]], ja tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä.\n\nSyksyllä katson Lappia mielelläni korkealta, ja koko tunturi näyttää siivin nähtynä sytytetyltä. Retkieväistä puuttuu vain pulla, mut ei se haittaa.",
+  "linkit": [
+   "lehtivihreän",
+   "tunturikoivikot",
+   "ruskaksi"
+  ],
+  "jatkot": [
+   "Miksi ruska on joinakin vuosina värikkäämpi kuin toisina?",
+   "Milloin ruska on Lapissa parhaimmillaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pallas",
+  "kysymys": "Mikä ero on tunturilla ja vaaralla?",
+  "uusi": true,
+  "vastaus": "Tuota niin, sanat ovat kinkkisiä. Tunturi on Lapissa korkea kohouma, jonka huippu nousee [[metsärajan]] yläpuolelle, joten huippu on yleensä puuton. Vaara puolestaan on metsäinen kumpu tai selänne, jonka huipulla kasvaa yleensä puita. Esimerkiksi [[Pallasin]] tunturijonon huiput ovat puuttomia ja pyöreitä keroja, kun taas [[Aavasaksa]] on 242 metriä korkea vaara Tornionjoen varrella. Kyyhky ei kyl välitä kumpaan istuu, kunhan on kallio alla.",
+  "linkit": [
+   "metsärajan",
+   "Pallasin",
+   "Aavasaksa"
+  ],
+  "jatkot": [
+   "Mikä on metsäraja?",
+   "Mitä kasveja tunturissa kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oulanka",
+  "kysymys": "Miksi Oulangan luonnossa kohtaavat pohjoiset, eteläiset ja itäiset lajit?",
+  "uusi": false,
+  "vastaus": "Mmm— tähän on monta syytä. Oulangan kansallispuisto sijaitsee Suomen itärajan tuntumassa, ja siellä pohjoisen ja idän [[taigan]] sekä eteläisemmän luonnon piirteet yhdistyvät. Alueella on laajoja soita, koskia, hiekkarantaisia jokilaaksoja ja koskematonta havumetsää, joten elinympäristöjä on monenlaisia. Ravinteikas maaperä on tehnyt alueesta harvinaisten kasvien kodin, ja siellä kasvaa yli 500 [[putkilokasvilajia]]. Puisto rajautuu lisäksi Venäjän [[Paanajärven]] kansallispuistoon. Tarkkoja syitä kullekin lajille en ole varma, joten tämä on yleiskuva. Moni laji samassa paikassa, siit minä tykkään.",
+  "linkit": [
+   "taigan",
+   "putkilokasvilajia",
+   "Paanajärven"
+  ],
+  "jatkot": [
+   "Mikä on taiga?",
+   "Mitä eläimiä Oulangan alueella elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oulanka",
+  "kysymys": "Mitä Karhunkierrokselta voi nähdä ja kokea vuoden ympäri?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tähän minä tiedän. Karhunkierros on 80 kilometrin vaellusreitti Oulangan kansallispuistossa, ja se on kuljettavissa ympäri vuoden. Reitiltä näkee puiston monipuolista luontoa: [[koskia]], hiekkarantaisia jokilaaksoja, laajoja [[soita]] ja koskematonta havumetsää. Ravinteikkaan maaperän ansiosta kasvillisuus on rikasta, ja puistossa kasvaa yli 500 [[putkilokasvilajia]]. Vuodenajat muuttavat maiseman ilmettä, mutta tarkkoja tietoja siitä, mitkä osuudet ovat talvella parhaiten kuljettavissa, minulla ei ole. Retkieväänä ottaisin kyl pullaa mukaan.",
+  "linkit": [
+   "koskia",
+   "soita",
+   "putkilokasvilajia"
+  ],
+  "jatkot": [
+   "Millaista Karhunkierroksella on talvella?",
+   "Miten Oulangan kosket ovat syntyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oulanka",
+  "kysymys": "Miksi ravinteikas maaperä tekee alueesta kasvien kodin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kasvit tarvitsevat maaperästä [[ravinteita]], ja vaateliaat lajit viihtyvät vain siellä, missä niitä on riittävästi. Siksi Oulangan ravinteikkaassa maaperässä kasvaa harvinaisiakin kasveja, ja kaikkiaan alueella on yli 500 putkilokasvilajia. Ravinteiden runsaus liittyy maaperän ja [[kallioperän]] koostumukseen, mutta en ole varma, mistä mineraaleista Oulangalla tarkalleen on kyse. Eri lajit tarvitsevat erilaisia olosuhteita, joten monipuolinen maaperä tukee monipuolista kasvillisuutta.\n\nMinä olen kaupunkilintu, ja minulle ravinteikas maa tarkoittaa lähinnä leivänmuruja torin kulmassa. Kasveille se on ihan eri juttu, sen verran minä ymmärrän.",
+  "linkit": [
+   "ravinteita",
+   "kallioperän"
+  ],
+  "jatkot": [
+   "Mitä kasveja Oulangalla kasvaa?",
+   "Mikä tekee maaperästä ravinteikasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oulanka",
+  "kysymys": "Mitä tarkoittaa, että Oulanka rajautuu Paanajärven puistoon?",
+  "uusi": true,
+  "vastaus": "Katotaas. Oulangan kansallispuisto rajautuu idässä Venäjän [[Paanajärven]] kansallispuistoon, eli kaksi suojelualuetta sijaitsee samalla seudulla valtionrajan eri puolilla. Paanajärvi on Venäjän puolella [[Karjalan tasavallassa]], ja puistojen sijainti vierekkäin tarkoittaa, että laaja yhtenäinen luontoalue on suojeltu, vaikka valtionraja kulkee välissä. Rajavyöhykkeen vuoksi liikkuminen rajan yli ei ole vapaata, eikä minulla ole tarkkaa tietoa siitä, miten puistojen yhteistyö käytännössä toimii. Raja on kyl kyyhkylle lähinnä viiva kartalla.",
+  "linkit": [
+   "Paanajärven",
+   "Karjalan tasavallassa"
+  ],
+  "jatkot": [
+   "Mikä on Paanajärvi?",
+   "Mitä Karjalan tasavalta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oulanka",
+  "kysymys": "Mikä on putkilokasvi?",
+  "uusi": true,
+  "vastaus": "Ai se, kasvitiedettä. Putkilokasvi on kasvi, jolla on [[johtojänteitä]], eli putkimaisia kudoksia, joita pitkin vesi ja ravinteet kulkevat juuristosta lehtiin ja sokerit lehdistä muualle kasviin. Putkilokasveja ovat esimerkiksi kukkakasvit, havupuut ja [[saniaiset]]. [[Sammalet]] eivät ole putkilokasveja, koska niillä ei ole tällaisia johtojänteitä. Oulangan kansallispuistossa kasvaa yli 500 putkilokasvilajia, mikä kertoo alueen kasvillisuuden rikkaudesta. Sammalet jäi ulos kerhosta, mut ne pärjää silti.",
+  "linkit": [
+   "johtojänteitä",
+   "saniaiset",
+   "Sammalet"
+  ],
+  "jatkot": [
+   "Mitkä kasvit eivät ole putkilokasveja?",
+   "Miten sammalet kasvavat ilman johtojänteitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aavasaksa",
+  "kysymys": "Miksi Ranskan tiedeakatemia lähetti tutkijoita mittaamaan juuri Aavasaksalla?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Ranskan tiedeakatemia lähetti [[Maupertuis'n]] johtaman retkikunnan Tornionjoen laaksoon vuosina 1736–1737 mittaamaan [[meridiaanikaaren]] pituutta lähellä napapiiriä. Tarkoituksena oli selvittää Maan muoto: oliko Maa napojen kohdalta litistynyt, kuten [[Newtonin]] teoria ennusti, vai pitkänomainen. Vertailua varten lähetettiin toinen retkikunta lähelle päiväntasaajaa. Aavasaksa oli yksi mittauspaikoista, ja se kohoaa ympäristöään selvästi korkeammalle, joten sieltä näkyi kauas. Tulokset tukivat Newtonin käsitystä litistyneestä Maasta. Hyvä, että joku mittasi eikä vain arvannut, kyl.",
+  "linkit": [
+   "Maupertuis'n",
+   "meridiaanikaaren",
+   "Newtonin"
+  ],
+  "jatkot": [
+   "Millainen Maan muoto on tarkemmin?",
+   "Kuka oli Isaac Newton?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aavasaksa",
+  "kysymys": "Miksi Aavasaksalle rakennettiin Keisarinmaja, vaikka keisari ei koskaan tullut käymään?",
+  "uusi": false,
+  "vastaus": "No jopas. Keisarinmajan rakentaminen aloitettiin keisari [[Aleksanteri II:n]] vierailua ajatellen, ja koristeellinen maja haluttiin saada valmiiksi arvovieraan käyttöön. Vierailu ei kuitenkaan koskaan toteutunut, joten rakennus ei palvellut alkuperäistä tarkoitustaan. Maja on silti jäänyt [[Aavasaksan]] huipulle, joka kohoaa 242 metrin korkeuteen [[Tornionjoen]] varrella. Tarkkaa syytä sille, miksi vierailu raukesi, en ole varma. Kyl se siinä komeana seisoo ilman vierastakin.",
+  "linkit": [
+   "Aleksanteri II:n",
+   "Aavasaksan",
+   "Tornionjoen"
+  ],
+  "jatkot": [
+   "Mihin Aleksanteri II:n matkat Suomessa suuntautuivat?",
+   "Millainen Keisarinmaja on rakennuksena?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aavasaksa",
+  "kysymys": "Mikä on Struven ketju ja mitä sillä mitattiin?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Struven ketju on Euroopan halki kulkeva [[kolmiomittausten]] verkko, jonka avulla mitattiin maapallon muotoa ja kokoa. Ketju ulottuu Norjan [[Hammerfestista]] [[Mustallemerelle]], ja sen pituus on noin 2 800 kilometriä. Mittaukset tehtiin 1800-luvun alkupuoliskolla tähtitieteilijä Struven johdolla, ja yksi ketjun mittauspisteistä oli [[Aavasaksa]]. Ketju on Unescon maailmanperintökohde.\n\nMinun sukuni on navigoinut pelkillä silmillä jo vuosisatoja, mutta pakko myöntää, että tuollainen ketju on vaikuttava. Se vain on tehty jaloilla eikä siivillä.",
+  "linkit": [
+   "kolmiomittausten",
+   "Hammerfestista",
+   "Mustallemerelle",
+   "Aavasaksa"
+  ],
+  "jatkot": [
+   "Missä muualla Struven ketjun pisteitä on?",
+   "Kuka oli Friedrich Georg Wilhelm von Struve?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aavasaksa",
+  "kysymys": "Mitä keskiyön aurinko on ja miksi se näkyy Aavasaksalla?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Keskiyön aurinko tarkoittaa ilmiötä, jossa aurinko ei laske horisontin alapuolelle, vaan se näkyy taivaalla keskiyölläkin. Ilmiö johtuu maapallon akselin kallistuksesta: kesällä [[napapiirin]] pohjoispuolella aurinko pysyy taivaalla yhtäjaksoisesti. Aavasaksa sijaitsee [[Ylitornion]] kunnassa napapiirin tuntumassa, ja koska huipulta on esteetön näkymä, siltä aurinko nähdään keskiyölläkin. Aavasaksaa pidetään Suomen eteläisimpänä paikkana, jossa keskiyön aurinko näkyy. Pitkä päivä sielläkin, kyl.",
+  "linkit": [
+   "napapiirin",
+   "Ylitornion"
+  ],
+  "jatkot": [
+   "Missä muualla Suomessa keskiyön aurinko näkyy?",
+   "Mikä on kaamos?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aavasaksa",
+  "kysymys": "Mikä Tornionjoki on ja miten se liittyy Suomen ja Ruotsin rajaan?",
+  "uusi": true,
+  "vastaus": "Just niin, hyvä joki. Tornionjoki virtaa Lapista Pohjanlahteen ja muodostaa suurelta osin Suomen ja Ruotsin välisen valtakunnanrajan. Raja vedettiin joen ja sen sivujoen [[Muonionjoen]] mukaan vuonna 1809, kun Ruotsi luovutti Suomen Venäjälle [[Haminan rauhassa]]. Joen suulla sijaitsevat kaupungit [[Tornio]] ja [[Haaparanta]], jotka ovat vierekkäin rajan eri puolilla. Myös Aavasaksa kohoaa joen varrella Ylitorniolla. Jokiraja on kyl kyyhkylle helppo, seuraa vaan vettä.",
+  "linkit": [
+   "Muonionjoen",
+   "Haminan rauhassa",
+   "Tornio",
+   "Haaparanta"
+  ],
+  "jatkot": [
+   "Mitä Haminan rauha tarkoitti Suomelle?",
+   "Miten Tornio ja Haaparanta tekevät yhteistyötä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-imatra",
+  "kysymys": "Mitä Imatrankoskelle tapahtui vuonna 1929, ja miksi se kuohuu nykyään vain tiettyinä hetkinä?",
+  "uusi": false,
+  "vastaus": "Tuttu juttu. Vuonna 1929 [[Imatran voimalaitos]] aloitti toimintansa, ja [[Vuoksen]] koski padottiin sähköntuotantoa varten. Padotun joen vesi ohjataan voimalaitoksen kautta, joten koski ei enää kuohu jatkuvasti entiseen tapaan. Pato avataan kesäisin, ja silloin vesi virtaa koskessa uudelleen ja koski kuohuu jälleen. Tarkat ajankohdat kannattaa tarkistaa paikalliselta toimijalta, sillä en ole niistä varma.\n\nMinä pidän siitä, että pato avataan kesäisin: kuohuva vesi on komea näky ylhäältä katsottuna. Padottu joki on vähän kuin kyyhky häkissä, joten hyvä että se pääsee välillä vapaaksi.",
+  "linkit": [
+   "Imatran voimalaitos",
+   "Vuoksen"
+  ],
+  "jatkot": [
+   "Miten Imatran voimalaitos vaikutti alueen kehitykseen?",
+   "Milloin Imatrankosken pato avataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-imatra",
+  "kysymys": "Miksi Imatrankoskella vieraili niin arvovaltaisia matkailijoita?",
+  "uusi": false,
+  "vastaus": "Mmm— tästä riittää kerrottavaa. Imatrankoski oli 1700-luvun lopulla jo kuuluisa matkailukohde, ja sen maine veti vieraita kauas. Matkailun katsotaan alkaneen vuonna 1772, kun Venäjän keisarinna [[Katariina Suuri]] vieraili koskella. Suomen vanhin luonnonpuisto, [[Kruununpuisto]], perustettiin vuonna 1842 keisari [[Nikolai I:n]] aikana, ja 1800-luvun lopulla koski oli yksi Euroopan tunnetuimmista luontonähtävyyksistä. Tarkkoja syitä yksittäisille vierailuille en ole varma, mutta korkean vieraan käynti kasvatti kohteen mainetta. Arvovieraat tulee ja menee, kyl koski jää.",
+  "linkit": [
+   "Katariina Suuri",
+   "Kruununpuisto",
+   "Nikolai I:n"
+  ],
+  "jatkot": [
+   "Kuka oli Katariina Suuri?",
+   "Miten matkailu Imatralla kehittyi 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-imatra",
+  "kysymys": "Miten Saimaan vedet murtautuivat Salpausselän läpi?",
+  "uusi": true,
+  "vastaus": "Katotaas. Noin 5 000 vuotta sitten [[Saimaan]] vedet murtautuivat [[Salpausselän]] reunamuodostuman läpi, ja näin syntyivät [[Vuoksi]] ja Imatrankoski. Syynä oli jääkauden jälkeinen maankohoaminen: yleisen selityksen mukaan maa nousi eri puolilla Saimaan aluetta eri tahtia, ja vedenpinta nousi, kunnes vesi löysi tiensä harjanteen läpi. Salpausselkä on jäätikön reunan edessä syntynyt reunamuodostuma, ja tapahtumasta muodostui uusi virtausreitti. Tapahtuman yksityiskohdista en ole varma. Vesi löytää aina reitin, ihan kuin kyyhky.",
+  "linkit": [
+   "Saimaan",
+   "Salpausselän",
+   "Vuoksi"
+  ],
+  "jatkot": [
+   "Mikä on Salpausselkä?",
+   "Mikä on Saimaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-imatra",
+  "kysymys": "Mikä Kruununpuisto on ja miksi se perustettiin?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on historiaa. Kruununpuisto on Imatrankosken ympärille perustettu luonnonpuisto, jota pidetään Suomen vanhimpana. Se perustettiin vuonna 1842 keisari [[Nikolai I:n]] aikana, jolloin [[Imatrankoski]] oli jo tunnettu matkailukohde. Tarkkaa perustamisen syytä en ole varma, mutta puisto liittyy luultavasti koskelle virranneeseen matkailuun ja alueen luonnon arvostukseen. Yli sata vuotta puistona, siit sopii kehua.",
+  "linkit": [
+   "Nikolai I:n",
+   "Imatrankoski"
+  ],
+  "jatkot": [
+   "Mikä on kansallispuiston ja luonnonpuiston ero?",
+   "Kuka oli Nikolai I?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-imatra",
+  "kysymys": "Miten vesivoimalaitos tuottaa sähköä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Vesivoimalaitoksessa joen vesi johdetaan padon kautta [[turbiiniin]], ja virtaava vesi pyörittää turbiinia. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi. Mitä suurempi putouskorkeus on ja mitä enemmän vettä virtaa, sitä enemmän sähköä voidaan tuottaa. [[Imatran voimalaitos]] aloitti toimintansa vuonna 1929, ja sen vuoksi Imatrankoski on ollut padottu. Kyl se vaan on niin, että vesi tekee työt.",
+  "linkit": [
+   "turbiiniin",
+   "generaattoriin",
+   "Imatran voimalaitos"
+  ],
+  "jatkot": [
+   "Mitä on vesivoima?",
+   "Mitä muita sähköntuotantotapoja Suomessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paijanne",
+  "kysymys": "Mistä Päijänteen nimi voisi olla peräisin, kun kukaan ei tiedä sen merkitystä varmasti?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tää on hankala. Päijänteen nimen alkuperää ei tiedetä varmasti, ja tutkijat ovat esittäneet siitä vain arvailuja. Yleisimmin on arveltu, että nimi periytyy jostakin hyvin vanhasta kielestä, joka on puhuttu alueella jo ennen suomalais-ugrilaista kantakieltä. Tällaisia nimiä on Suomessa muitakin, ja ne ovat usein vesistöjen ja suurten järvien nimiä, koska ne säilyvät kielenvaihdoksista huolimatta. Nimen merkitystä ei kuitenkaan pystytä johtamaan nykykielistä, eikä varmaa selitystä ole. Samalla tavoin tuntemattomia ovat monien muidenkin [[Päijät-Hämeen]] ja [[Keski-Suomen]] järvien nimet. Siksi sanon suoraan, että varmaa vastausta ei ole, enkä ala keksiä.",
+  "linkit": [
+   "Päijät-Hämeen",
+   "Keski-Suomen"
+  ],
+  "jatkot": [
+   "Mitä muita Suomen vanhoja nimiä on, joiden alkuperä on epäselvä?",
+   "Mikä on Päijänteen pituus ja syvyys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paijanne",
+  "kysymys": "Miksi laivat olivat pitkään tärkein tapa kulkea Päijänteen rantakylien ja -kaupunkien välillä?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän, tost on kuultu paljon laiturilta. Päijänne on yli sata kilometriä pitkä järvi, ja sen ympäristössä tiet olivat pitkään huonoja ja harvoja, joten vesi oli luontevin kulkureitti. Laivalla matka taittui nopeammin ja kevyemmin kuin hevosella metsäteitä pitkin, ja samalla rantojen välillä pystyttiin kuljettamaan sekä matkustajia että tavaraa kuten halkoja ja viljaa. [[Höyrylaivat]] yleistyivät järvillä 1800-luvulla, ja aina 1940-luvulle asti Päijänne oli Keski-Suomen tärkeä [[kulkuväylä]]. Vasta rautatiet ja maantiet sekä autoliikenne siirsivät matkustajat ja rahdin pois vesiltä.",
+  "linkit": [
+   "Höyrylaivat",
+   "kulkuväylä"
+  ],
+  "jatkot": [
+   "Milloin höyrylaivaliikenne alkoi Suomen sisävesillä?",
+   "Mitkä ovat Suomen pisimmät vesireitit?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paijanne",
+  "kysymys": "Mikä on Päijänteen vesitunneli ja mihin se vie vettä?",
+  "uusi": true,
+  "vastaus": "Kato, tää on hieno juttu ja minä tykkään siitä. Päijänne-tunneli on pitkä, kallioon louhittu vesitunneli, joka kuljettaa järven vettä [[Helsingin]] seudulle juomavedeksi. Tunneli kulkee järven alta ja sen jälkeen maan alla [[pääkaupunkiseudulle]] asti, ja se on yksi maailman pisimmistä yhtäjaksoisista kalliotunneleista. Päijänteen vesi on erittäin puhdasta, ja siksi järven pohjoisosista otettu vesi kelpaa juomavedeksi suhteellisen vähäisellä käsittelyllä. Tarkkaa pituutta en muista, joten jätän sen mainitsematta, mutta se on kymmeniä kilometrejä.",
+  "linkit": [
+   "Helsingin",
+   "pääkaupunkiseudulle"
+  ],
+  "jatkot": [
+   "Miten kalliotunneli louhitaan?",
+   "Mistä muualta Suomessa juomavesi otetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paijanne",
+  "kysymys": "Mitä Päijänteen kansallispuistossa voi tehdä ja nähdä?",
+  "uusi": true,
+  "vastaus": "No niin, tää on retkeilijän unelma. Päijänteen eteläosassa sijaitsevassa [[kansallispuistossa]] on noin viisikymmentä rakentamatonta saarta, ja ne ovat avointa, luonnonmukaista järvimaisemaa. Alueella voi [[meloa]], soutaa tai veneillä saaresta toiseen, ja monilla saarilla on laavuja ja nuotiopaikkoja retkeilijöitä varten. Maisemaa hallitsevat kalliot, kangasmetsä ja kirkkaat selät, ja linnut kuten [[kalatiira]] ja [[kuikka]] viihtyvät vesillä. Puisto on suosittu paikka kesäretkille, mutta sen luonnon kuluminen halutaan estää, joten merkityillä reiteillä ja paikoilla pysyminen on suositeltavaa. Ja tän kaiken minä katselin ylhäältä.",
+  "linkit": [
+   "kansallispuistossa",
+   "meloa",
+   "kalatiira",
+   "kuikka"
+  ],
+  "jatkot": [
+   "Millaisia lintuja Suomen järvillä pesii?",
+   "Mitä jokamiehenoikeudet Suomessa sallivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paijanne",
+  "kysymys": "Mitä reittiä Päijänteen vesi päätyy mereen asti?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin, vesi kulkee kiltisti alamäkeen. Päijänteen vedet virtaavat järven eteläpäästä [[Kymijokea]] pitkin Suomenlahteen. Joki lähtee liikkeelle Päijänteen Kalkkisten seudulta, kulkee Kymenlaakson halki ja laskee mereen Kotkan seudulla. Kymijoki on Suomen vesivoimatuotannon kannalta merkittävä joki, ja sen varrella on ollut vuosisatojen ajan sahoja, myllyjä sekä paperiteollisuutta. Aikoinaan tukkeja uitettiin Päijänteeltä ja sen ympäristöstä jokea pitkin sahoille, ja [[uitto]] oli suuri osa seudun elinkeinoa. Reitistä en muista kaikkia yksityiskohtia, mutta suunta on varma.",
+  "linkit": [
+   "Kymijokea",
+   "uitto"
+  ],
+  "jatkot": [
+   "Mikä on Kymijoen merkitys Suomen teollisuudelle?",
+   "Miten tukkeja uitettiin Suomen joilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lemmenjoki",
+  "kysymys": "Miksi koneellinen kullanhuuhdonta kiellettiin Lemmenjoen kansallispuistossa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän, ei kai kukaan halua jokea sotkea. Koneellinen kullanhuuhdonta kiellettiin Lemmenjoen kansallispuistossa vuonna 2020 ympäristöhaittojen vuoksi. Kielto koskee [[Lemmenjoen]] aluetta ja sen jokia. Koneet muokkaavat jokien rantoja ja pohjaa, samentavat vettä ja tuhoavat eläinten elinympäristöjä. Kultaa etsitään nykyään vain käsityönä, esimerkiksi pannulla ja lapiolla, ja huuhdontaa saa harjoittaa vain sille varatuilla alueilla. Perinteinen kullankaivu kuuluu silti alueen historiaan ja [[Lapin]] kulttuuriin. Ei paha kyyhkyltä tämäkään.",
+  "linkit": [
+   "Lemmenjoen",
+   "Lapin"
+  ],
+  "jatkot": [
+   "Miten kultaa huuhdotaan pannulla?",
+   "Milloin Lapin kultaa löydettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lemmenjoki",
+  "kysymys": "Mitä Kultareitin varrella voi oppia kullankaivusta ja alueen tarinoista?",
+  "uusi": false,
+  "vastaus": "No jopas, tää kuulostaa mukavalta retkeltä. Kultareitti on vaellusreitti Lemmenjoen kansallispuistossa, ja sen varrella voi tutustua alueen [[kullankaivun]] historiaan. Reitin varrella on vanhoja kulta-alueita ja mökkejä, joissa kullankaivajat ovat asuneet ja työskennelleet. Reitillä näkee, miten kaivostoiminta on muokannut maisemaa, ja miten ihmiset elivät erämaassa vaikeissa oloissa. Samalla vaeltaja pääsee tutustumaan [[Lapin]] luontoon ja erämaan rauhaan. Retken yksityiskohdista, kuten pituudesta, en ole varma, joten ne kannattaa tarkistaa puiston omista tiedoista. Kyllä minä kiertäisin tän lentäen.",
+  "linkit": [
+   "kullankaivun",
+   "Lapin"
+  ],
+  "jatkot": [
+   "Miten Lapin erämaassa vaelletaan turvallisesti?",
+   "Mitä kullankaivajat muuten söivät erämaassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lemmenjoki",
+  "kysymys": "Miten kultaa huuhdotaan pannulla?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny, tän minä kyllä osaan. Pannulla huuhtoessa jokihiekkaa ja vettä kaadetaan matalaan, leveään [[pannuun]], jota kierretään ja kallistellaan veden alla. Kulta on hiekkaa ja kiviä paljon painavampaa, joten se vajoaa pohjalle, kun kevyempi aines huuhtoutuu veden mukana pois. Kun pannuun jää vain tummaa raskasta hiekkaa, jäljelle jääneestä aineksesta voi löytää pieniä kultahippuja. Työ vaatii kärsivällisyyttä ja harjoitusta, ja saalis on usein hyvin vähäinen. Suomessa käsin tehtävää [[kullanhuuhdontaa]] harrastetaan Lapissa, ja alueesta riippuu, tarvitaanko siihen lupa. Minä en jaksaisi seistä joessa.",
+  "linkit": [
+   "pannuun",
+   "kullanhuuhdontaa"
+  ],
+  "jatkot": [
+   "Tarvitseeko kullanhuuhdontaan Suomessa lupaa?",
+   "Miksi kulta painaa niin paljon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lemmenjoki",
+  "kysymys": "Mikä on Anárjohkan kansallispuisto ja missä se on?",
+  "uusi": true,
+  "vastaus": "Ai se, tost minä osaan kertoo vähän. Anárjohkan kansallispuisto sijaitsee Norjan pohjoisosassa, [[Finnmarkin]] alueella, ja se rajoittuu Suomen puolella Lemmenjoen kansallispuistoon. Nimi on saamenkielinen, ja se tarkoittaa Inarinjokea. Alue on erämaista, metsäistä ja tunturista, ja se on osa laajaa suojeltua kokonaisuutta, joka ulottuu rajan yli. Alueella elää myös [[saamelaisia]], joiden kulttuuri ja poronhoito ovat sidoksissa tähän maisemaan. Tarkkoja lukuja alueesta en muista.",
+  "linkit": [
+   "Finnmarkin",
+   "saamelaisia"
+  ],
+  "jatkot": [
+   "Keitä saamelaiset ovat ja missä he asuvat?",
+   "Miten poronhoito toimii Lapissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lemmenjoki",
+  "kysymys": "Mitä eroa on kansallispuistolla ja luonnonpuistolla?",
+  "uusi": true,
+  "vastaus": "Kas vaan, hyvä kysymys, tän ero unohtuu helposti. Suomessa [[kansallispuisto]] on suojeltu luontoalue, joka on tarkoitettu sekä luonnon suojeluun että retkeilyyn ja virkistykseen. Siellä saa yleensä liikkua merkityillä reiteillä, ja vierailijoille on tarjolla polkuja, tupia ja opasteita. [[Luonnonpuisto]] on tiukemmin suojeltu alue, jonne pääsy on usein kielletty tai sallittu vain luvalla, koska sen tarkoitus on suojella luontoa häiriöiltä ja tehdä tutkimusta. Lemmenjoki on kansallispuisto, joten siellä saa vaeltaa, mutta erityisiä rajoituksia noudatetaan. Kyl minä muistin tän tarkemmin kuin odotin.",
+  "linkit": [
+   "kansallispuisto",
+   "Luonnonpuisto"
+  ],
+  "jatkot": [
+   "Mitä jokamiehenoikeudet Suomessa sallivat?",
+   "Montako kansallispuistoa Suomessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porvoo",
+  "kysymys": "Miksi Porvoon vanha kaupunki on säilynyt niin hyvin, vaikka sen purkamista suunniteltiin?",
+  "uusi": false,
+  "vastaus": "Ai tota, tää on oikeasti hieno tarina. Porvoon vanha kaupunki on säilynyt, koska kaupunki rakennettiin tulipalon jälkeen uudelleen vanhoille perustuksille ja entistä katuverkkoa muuttamatta. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot nousivat vanhojen tilalle, ja keskiaikainen katuverkko säilyi. Kaupungin purkamista on tosiaan suunniteltu, mutta tietoni siitä, milloin ja miksi, ovat epävarmat, joten en lähde arvailemaan. Tällä hetkellä vanha kaupunki tunnetaan tiiviistä, pääosin puisista 1600- ja 1700-luvun taloistaan ja 1400-luvulla rakennetusta [[tuomiokirkosta]]. Kaupunki on [[Suomen kuuden keskiaikaisen kaupungin]] joukossa.",
+  "linkit": [
+   "tuomiokirkosta",
+   "Suomen kuuden keskiaikaisen kaupungin"
+  ],
+  "jatkot": [
+   "Mitkä ovat Suomen kuusi keskiaikaista kaupunkia?",
+   "Miksi Porvoon rantaa kutsutaan punaisten aittojen rannaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porvoo",
+  "kysymys": "Mitä Porvoossa tapahtui vuonna 1809, ja miksi se muutti Suomen aseman?",
+  "uusi": false,
+  "vastaus": "Selvä juttu, tää on tärkeä käännekohta. Vuonna 1809 Porvoossa kokoontuivat valtiopäivät, joilla tsaari Aleksanteri I teki Suomesta autonomisen [[suuriruhtinaskunnan]]. Suomi oli ollut vuosisatoja osa Ruotsia, mutta Suomen sodan jälkeen se liitettiin Venäjän keisarikuntaan. Tsaari lupasi valtiopäivillä säilyttää maan perustuslait ja uskonnon, ja Suomi sai oman hallintonsa ja lakinsa. Muutos oli suuri, koska Suomesta tuli ensimmäistä kertaa oma valtiollinen kokonaisuus, vaikka se kuului edelleen keisarikunnan yhteyteen. Tämä loi pohjan myöhemmälle [[itsenäistymiselle]]. Aika pitkä sepustus tuli taas.",
+  "linkit": [
+   "suuriruhtinaskunnan",
+   "itsenäistymiselle"
+  ],
+  "jatkot": [
+   "Millaista Suomen autonomia oli Venäjän vallan aikana?",
+   "Miten Suomen sota käytiin 1808 ja 1809?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porvoo",
+  "kysymys": "Mikä on Porvoon tuomiokirkko ja miksi se on tunnettu?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tän minä näin ylhäältä monesti. Porvoon tuomiokirkko on vanhan kaupungin keskipisteenä oleva [[Porvoon]] 1400-luvulla rakennettu kivikirkko. Se on suomalaisen historian kannalta tärkeä, koska siellä pidettiin vuoden 1809 valtiopäivien avajaisjumalanpalvelus, jossa tsaari Aleksanteri I oli läsnä. Kirkko on kärsinyt tulipaloista ja kunnostuksista vuosisatojen aikana, mutta se on yhä tärkeä [[luterilainen]] kirkko ja Porvoon hiippakunnan keskus. Kirkon yksityiskohtaisista rakennusvaiheista en ole varma, mutta rakennus on ollut keskeinen osa kaupungin historiaa. Sen maine on vain kasvanut, ja minäkin tykkään.",
+  "linkit": [
+   "Porvoon",
+   "luterilainen"
+  ],
+  "jatkot": [
+   "Mikä on hiippakunta ja mitä piispa tekee?",
+   "Miten Aleksanteri I suhtautui Suomeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porvoo",
+  "kysymys": "Miksi Porvoonjoen rannan punaiset aitat ovat niin tunnettuja?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän, kaikki ottavat niistä kuvan. Porvoonjoen rannalla seisovat punamullalla maalatut puiset [[aitat]] ovat yksi Porvoon tunnetuimmista maisemista. Aitat olivat alun perin varastoja, joissa säilytettiin kaupan tavaroita, ja ne rakennettiin joen varrelle, koska tavarat kulkivat jokea pitkin laivoilla. Punamulta oli perinteinen ja edullinen maali, ja sitä käytettiin Suomessa laajasti puutalojen suojaamiseen. Nykyään aitat kuuluvat vanhan kaupungin romanttiseen kuvaan ja ovat suosittu matkailukohde. Joen ja [[Porvoon vanhan kaupungin]] yhdistelmä on kuvauksellinen. Ruokapaikoista en sentään muista mitään.",
+  "linkit": [
+   "aitat",
+   "Porvoon vanhan kaupungin"
+  ],
+  "jatkot": [
+   "Mitä punamulta on ja mistä sitä saadaan?",
+   "Millaisia kauppatavaroita jokea pitkin kuljetettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porvoo",
+  "kysymys": "Mitä kieltä Porvoossa puhutaan?",
+  "uusi": true,
+  "vastaus": "No niin, tää on kiva kysymys. Porvoossa puhutaan suomea ja ruotsia, ja kaupunki on virallisesti kaksikielinen. Suurin osa asukkaista puhuu äidinkielenään suomea, mutta kaupungissa on myös merkittävä [[ruotsinkielinen]] vähemmistö, ja ruotsi kuuluu vahvasti kaupungin historiaan ja arkeen. Kyltit ja palvelut ovat usein molemmilla kielillä. Koko [[Uudenmaan]] rannikkoalueella on perinteisesti ollut ruotsinkielistä väestöä, ja Porvoo on yksi alueen vanhimmista kaupungeista. Tarkkoja asukasmääriä en muista, joten jätän ne sanomatta. Ja pullatkin ovat varmasti kaksikielisiä.",
+  "linkit": [
+   "ruotsinkielinen",
+   "Uudenmaan"
+  ],
+  "jatkot": [
+   "Miksi Suomessa on kaksi virallista kieltä?",
+   "Mikä on suomenruotsalaisten historia Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hamina",
+  "kysymys": "Miksi Haminan linnoitus ja kaupunki on rakennettu tähden ja ympyrän muotoon?",
+  "uusi": false,
+  "vastaus": "Odotas vähän, tää on ihan oikeasti siisti juttu. Haminan tähtimäinen linnoitus ja ympyränmuotoinen katuverkko liittyvät siihen, että kaupunki rakennettiin uudelleen vuosina 1722–1724 sen jälkeen, kun Viipuri oli joutunut Venäjälle vuonna 1721. Haminasta tehtiin Viipurin korvaaja, ja se sai laajat ulkomaankaupan oikeudet. Kaupungin suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten [[renessanssin]] mallien mukaan. Tähtimuotoinen linnoitus oli aikansa sotatekniikan mukainen ratkaisu, koska sen kulmikkaat muurit mahdollistivat tehokkaan puolustuksen. Ympyränmuotoinen katuverkko puolestaan oli ihanteellisen kaupungin ajatusta noudattava suunnitelma. Tällaiset kaupungit ovat harvinaisia, ja Hamina on [[Axel Löwenin]] työn tulos. Ylhäältä se kyllä näyttää hienolta.",
+  "linkit": [
+   "renessanssin",
+   "Axel Löwenin"
+  ],
+  "jatkot": [
+   "Mikä on bastioni ja miten tähtilinnoitus toimi?",
+   "Mikä on ihannekaupunki renessanssin ajatuksissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hamina",
+  "kysymys": "Mitä vuonna 1809 Haminassa sovittiin, ja miksi se oli Suomelle niin tärkeää?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tää on tärkeä. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle. Sopimus päätti Suomen sodan, ja sen seurauksena Suomi erosi Ruotsista, johon se oli kuulunut vuosisatojen ajan. Suomesta tuli Venäjän keisarikunnan sisällä autonominen [[suuriruhtinaskunta]], jolla oli oma hallintonsa ja lakinsa. Tämä oli Suomen kehityksen kannalta käänteentekevä vaihe, koska se loi pohjaa omalle valtiolliselle identiteetille ja myöhemmälle [[itsenäisyydelle]]. Sopimus tunnetaan [[Haminan rauhana]]. Vuosiluvun muistin hyvin, mutta pidempi aikajana jäi vähemmälle.",
+  "linkit": [
+   "suuriruhtinaskunta",
+   "itsenäisyydelle",
+   "Haminan rauhana"
+  ],
+  "jatkot": [
+   "Mitä Suomen sodassa tapahtui 1808–1809?",
+   "Miten Suomi itsenäistyi vuonna 1917?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hamina",
+  "kysymys": "Mikä on Haminan ympyräkaupungin keskipiste?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän, mutta annas ku mietin. Haminan ympyränmuotoisen kaupunkisuunnitelman keskipisteenä on tori, jonka laidalla on [[raatihuone]]. Katuverkko on suunniteltu niin, että kadut lähtevät keskustorilta säteittäin kohti ympyrän reunaa, ja niitä yhdistävät kaarevat kadut. Tämä suunnitelma tekee kaupungista omaleimaisen, ja se on harvinainen ratkaisu Suomessa ja koko [[Pohjois-Euroopassa]]. Suunnitelman ovat laatineet Axel Löwen ja hänen työtoverinsa, ja tarkkoja yksityiskohtia, kuten torin mittoja, en muista, joten jätän ne sanomatta. Hyvä on, kyllä tästä pääsee kävelemään.",
+  "linkit": [
+   "raatihuone",
+   "Pohjois-Euroopassa"
+  ],
+  "jatkot": [
+   "Mitä muita ympyränmuotoisia kaupunkeja Euroopassa on?",
+   "Kuka Axel Löwen oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hamina",
+  "kysymys": "Mikä on Haminan reserviupseerikoulu ja mitä siellä opetetaan?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tää on mielenkiintoinen. Haminassa toimii Reserviupseerikoulu, joka koulutti ensimmäiset oppilaansa vuonna 1920 samoissa tiloissa, joissa aiemmin toimi vuonna 1819 perustettu kadettikoulu. Koulussa koulutetaan [[reserviupseereita]] Suomen puolustusvoimille, eli varusmiehiä, jotka suorittavat johtajakoulutuksen ja saavat reservin upseerin tai aliupseerin pätevyyden. Koulutukseen kuuluu sotilaallisen osaamisen lisäksi johtamista ja vastuunkantoa. Tarkemmasta koulutusohjelmasta, kuten kurssien pituudesta, en ole varma, joten ne kannattaa tarkistaa puolustusvoimilta. Haminan [[kadettikoulu]] on osa kaupungin pitkää sotilashistoriaa. Ja minä lensin paikan ylitse ilman ylennystä.",
+  "linkit": [
+   "reserviupseereita",
+   "kadettikoulu"
+  ],
+  "jatkot": [
+   "Miten Suomen asevelvollisuus toimii?",
+   "Mikä ero on upseerilla ja aliupseerilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hamina",
+  "kysymys": "Mikä on Haminan Tattoo -tapahtuma?",
+  "uusi": true,
+  "vastaus": "Ai se, tän minä muistan, siinä on rumpuja. Haminan Tattoo on kansainvälinen sotilasmusiikkitapahtuma, joka järjestetään Haminassa joka toinen vuosi. Tapahtumaan osallistuu sotilassoittokuntia ja -esityksiä eri puolilta maailmaa, ja esitykset pidetään linnoituksen alueella. Sana tattoo viittaa sotilasmusiikin perinteeseen, jossa soitettiin iltasignaali tai iltarummutus. Haminan [[Tattoo]] on tunnettu suuresta yleisöstä ja näyttävistä esityksistä. Tapahtuma on näyttävä [[sotilasmusiikin]] kokonaisuus, mutta tarkkoja kävijämääriä en muista. Soitto kuuluu varmasti taivaalle asti.",
+  "linkit": [
+   "Tattoo",
+   "sotilasmusiikin"
+  ],
+  "jatkot": [
+   "Mikä on sotilassoittokunta ja mitä siinä soitetaan?",
+   "Mistä sana tattoo on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tornio",
+  "kysymys": "Mitä ranskalaiset tutkijat mittasivat Tornionlaaksossa 1730-luvulla, ja mitä he halusivat sillä todistaa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tää on hieno tiedejuttu. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Tarkoituksena oli selvittää maapallon muoto: mittaus kertoi, kuinka pitkä yhden asteen pituinen kaari on napaseudulla, ja tulosta verrattiin eteläisemmällä retkikunnalla saatuun tulokseen. Mittaustulos tuki Isaac Newtonin teoriaa, jonka mukaan maapallo on navoilta litistynyt. Retkikunta oli tärkeä tapahtuma [[tähtitieteen]] ja [[geodesian]] historiassa. Tarkoista vuosiluvuista ja tuloksista en ole varma, joten jätän ne sanomatta. Kyyhkynkin täytyy tunnustaa, että tää oli hieno saavutus.",
+  "linkit": [
+   "tähtitieteen",
+   "geodesian"
+  ],
+  "jatkot": [
+   "Kuka oli Isaac Newton ja mitä hän tutki?",
+   "Mikä on pituuspiiri ja miten sitä mitataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tornio",
+  "kysymys": "Miksi Tornion satamaa piti siirtää joen varrella alavirtaan kahdesti?",
+  "uusi": false,
+  "vastaus": "Mmm— tää on vähän hankala, enkä ole ihan varma. Satamaa on Tornionjoen suulla siirretty ajan mittaan, ja syynä on yleensä ollut se, että veden syvyys ja laivojen koko eivät enää sopineet yhteen. Pohjanlahden rannikolla [[maankohoaminen]] madaltaa merenlahtia ja jokisuita vuosi vuodelta, ja se on pakottanut monet Perämeren sataman siirtymään lähemmäs avomerta. Tornion nykyinen [[Röyttän satama]] on merenrannalla kaukana vanhasta kaupunkikeskustasta, mikä sopii tähän. Siitä, montako kertaa ja milloin satamaa siirrettiin, en ole varma, joten en vahvista väitettä kahdesta siirrosta. Onneksi kyyhkyn ei tarvitse etsiä satamaa, vaan vain laituri.",
+  "linkit": [
+   "maankohoaminen",
+   "Röyttän satama"
+  ],
+  "jatkot": [
+   "Mitä maankohoaminen on ja miksi sitä tapahtuu?",
+   "Mitkä ovat Suomen suurimpia satamia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tornio",
+  "kysymys": "Miten raja kulkee Tornion ja Haaparannan välillä arjessa?",
+  "uusi": true,
+  "vastaus": "No niin, tää on minun lempijuttuni. Tornio ja Haaparanta muodostavat rajat ylittävän kaksoiskaupungin, ja raja kulkee Tornionjoessa kaupunkien välissä. Ihmiset liikkuvat kaupunkien välillä päivittäin, koska matka on lyhyt, ja palvelut sekä työpaikat jakautuvat molemmille puolille. Rajaa ylittäessä kellot ovat eri ajassa, sillä Suomessa kello on tunnin edellä Ruotsia, ja maissa on eri valuutat: Suomessa käytetään euroa ja Ruotsissa kruunua. Tämä [[Tornion–Haaparannan]] yhteistyö on esimerkki siitä, miten [[Pohjoismaiden]] rajat voivat olla arjessa hyvin avoimia. Tarkemmasta kaupunkien yhteistyömuodoista en ole varma. Aika luontevaa lentää tuosta ylitse.",
+  "linkit": [
+   "Tornion–Haaparannan",
+   "Pohjoismaiden"
+  ],
+  "jatkot": [
+   "Miksi Suomen ja Ruotsin välillä on aikaero?",
+   "Mitä Pohjoismaiden passiunioni tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tornio",
+  "kysymys": "Millainen joki Tornionjoki on, ja mitä siitä pyydetään?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän, ainakin lohesta puhutaan. Tornionjoki on Suomen ja Ruotsin välisen rajan muodostava joki, joka laskee Perämereen. Se on Euroopan harvoja suuria jokia, joita ei ole padottu, ja siksi sen vesistö on säilynyt luonnonmukaisena. Joessa nousee merestä [[lohi]], ja Tornionjoki tunnetaan lohijokena, jossa kalastetaan perinteisesti myös muita kaloja. Jokea käytetään kalastukseen ja virkistykseen, ja sen rannoilla on vanhoja kalastusperinteitä. Tarkkoja lohimääriä ja joen pituutta en muista, joten jätän ne sanomatta. [[Tornionlaakson]] elämä on kiinteästi sidoksissa jokeen. Itse söisin mieluummin pullaa.",
+  "linkit": [
+   "lohi",
+   "Tornionlaakson"
+  ],
+  "jatkot": [
+   "Miksi suuria jokia on harvoin jäänyt padottomiksi?",
+   "Miten lohi nousee jokeen kutemaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tornio",
+  "kysymys": "Kuka oli Kustaa II Aadolf?",
+  "uusi": true,
+  "vastaus": "Kato, tän minä tiedän, kaikki Pohjolan kuninkaat tulevat tutuiksi. Kustaa II Aadolf oli Ruotsin kuningas 1600-luvun alkupuoliskolla, ja hän hallitsi aikana, jolloin Ruotsista kehittyi merkittävä suurvalta. Hän johti maansa mukaan [[kolmikymmenvuotiseen sotaan]], jossa hän kaatui Lützenin taistelussa vuonna 1632. Hän tunnetaan sotataidon uudistajana ja hallinnon kehittäjänä, ja hänen aikanaan perustettiin useita kaupunkeja, myös Tornio vuonna 1621. Hänen kuolemansa oli suuri isku [[Ruotsille]], ja siitä on kulunut jo yli neljäsataa vuotta. Lyhyt vastaus olisi riittänyt, mutta ei se kyyhkyltä onnistu.",
+  "linkit": [
+   "kolmikymmenvuotiseen sotaan",
+   "Ruotsille"
+  ],
+  "jatkot": [
+   "Mitä kolmikymmenvuotisessa sodassa tapahtui?",
+   "Mikä oli Ruotsin suurvaltakausi?"
+  ]
  }
 ]
