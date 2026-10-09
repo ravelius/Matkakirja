@@ -13,8 +13,8 @@
 // vain liikkeen muutoksissa (kiihtyvyys ylittää NarinaKiihtyvyyden, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
 // alussa kankaan huokaus. Kaupungin äänimaisema korkeuden mukaan Siirtosepän KaupunkiAanimaisemaSoitin.Kamera-Funcilla
 // (heijastus, kunnes siirtoseppa/aanimaisema on mainissa). Leikkeet Resources/Aanet/Pallokori: eleven-* (ElevenLabs-ääniefektit,
-// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
-// eleven|kirjasto` (puuttuva kirjastoääni → eleven).
+// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md; korin narina 8.10. alkaen
+// Freesound 264306 "Floor Creak 1", olliehahn12, CC0); A/B `opas kori aanet eleven|kirjasto` (puuttuva → toinen sarja).
 // KUPU (Linssiseppä 8.10.2026, Linnanrakentajan kupu_nakyma.glb, _valmiit/ilmapallo-v1/kupu): sama origo kuin korilla (korin pohjan
 // keskellä, +Y ylös), mutta kupu riippuu maailman pystysuunnassa kameran (silmä 1,5 m korin pohjasta) yläpuolella eikä käänny katseen
 // mukana: näkyy, kun katse nousee (~35° ylös), suun läpi sisäpinta. Kangas ja nauhat kaksipuolisia, auringon läpikuulto; polttimen
@@ -237,7 +237,9 @@ namespace Matkakirja.Natiivi
         {
             AudioClip c = null;
             if (AaniSarja == "kirjasto") c = Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
-            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+            // Kumpi tahansa sarja kelpaa varana (korin narina on vain kirjastossa: Freesound 264306, CC0, Pelikoodari PR #4255).
+            if (c == null) c = Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
         }
 
         void Soita(string nimi, float taso)
@@ -539,6 +541,7 @@ namespace Matkakirja.Natiivi
                 var lm = new Material(sp != null ? sp : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Kompassin lasi", renderQueue = 3000 };
                 float al = osa.Vari != null && osa.Vari.Length >= 4 ? osa.Vari[3] : 0.16f;
                 lm.color = new Color(0.9f, 0.93f, 0.96f, Mathf.Clamp(al, 0.08f, 0.35f));
+                lasiMat = lm; lasiPerus = lm.color;   // valoisuus AsetaValossa (yöllä valaisematon lasi hehkui valkoisena levynä)
                 r.sharedMaterial = lm; return;
             }
             var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
@@ -764,7 +767,16 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdAla, V(k.TaivasAla));
             var s = KaupunkiKuva.KoriSuodin; float e = Mathf.Pow(2f, KaupunkiKuva.KoriValotusEV);
             Shader.SetGlobalVector(IdValotus, new Vector4(s.r * e, s.g * e, s.b * e, 1f));
+            // Kompassin lasi (Päätoimittaja 9.10.: yöllä valkoinen levy): valaisematon lasi saa taivaan ja auringon valoisuuden ja valotuksen.
+            if (lasiMat != null)
+            {
+                Vector3 valo = V(k.TaivasYla) + V(k.AurinkoVari) * Mathf.Clamp01((float)k.AurinkoY);
+                float l = Mathf.Clamp(0.2126f * valo.x + 0.7152f * valo.y + 0.0722f * valo.z, 0f, 1.2f) * e;
+                l = Mathf.Clamp(l, 0.04f, 1f);
+                lasiMat.color = new Color(lasiPerus.r * l, lasiPerus.g * l, lasiPerus.b * l, lasiPerus.a * Mathf.Lerp(0.5f, 1f, l));
+            }
         }
+        Material lasiMat; Color lasiPerus;
 
         // POLTIN (Linssiseppä 8.10., pallo Unreal-tasolle kohdat 2 ja 7): Ydin Poltin pystynopeudesta (vain nousussa), lämmin valo
         // korin reunaan ylhäältä (_KoriPoltin) ja liekkikuva hehkuineen kuvan yläreunaan (PalloLiekki).

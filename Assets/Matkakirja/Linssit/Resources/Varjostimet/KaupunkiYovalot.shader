@@ -30,6 +30,12 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
             #include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
+            // Kaupunkikameran käänteinen näkymä-projektio ja paikka (KaupunkiPassi asettaa): passi on jälkikäsittelyn jälkeen, jolloin
+            // URP:n UNITY_MATRIX_I_VP ja _WorldSpaceCameraPos eivät enää ole kaupunkikameran (9.10. simu: maailmanpaikka tyhjä).
+            float4x4 _KaupunkiInvVP;
+            float4 _KaupunkiKamera;
+            TEXTURE2D(_KaupunkiSyvyys);   // kameran syvyyden kopio läpinäkyvien jälkeen (KaupunkiPassi)
+            float KaupunkiSyvyys(float2 uv) { return SAMPLE_TEXTURE2D_LOD(_KaupunkiSyvyys, sampler_PointClamp, uv, 0).r; }
 
             TEXTURE2D(_Valot); SAMPLER(sampler_Valot);
             float4x4 _MaailmaPaikallinen;   // Unityn maailma → paikallinen ENU (m): x itä, y ylös, z pohjoinen
@@ -46,6 +52,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float4 _KameraP;                // kamera paikallisessa ENU:ssa (m)
             float4 _Maamerkit[8];           // xyz = maapiste paikallisessa ENU:ssa, w = säde (m); w = 0 tyhjä
             float4 _MaamerkkiParam;         // x = määrä, y = voima
+            float4 _ValoDebug;              // x: 0 = normaali, 1 = passin tunniste (violetti), 2 = maailmanpaikka, 3 = Black Marble, 4 = lisävalo × 5; y = valotuksen kompensointi
 
             float3 Hash32(float2 p)
             {
@@ -82,23 +89,36 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
 
             float3 Paikka(float2 uv)
             {
-                float d = SampleSceneDepth(uv);
-                return mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, d, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                float d = KaupunkiSyvyys(uv);
+                return mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, d, _KaupunkiInvVP), 1.0)).xyz;
             }
+
+            // NaN/inf bittitasolla (Metalin nopea matematiikka poistaa isnan-tarkistukset; 9.10. simu: yö mustana suojasta huolimatta).
+            bool Huono(float3 x) { return any((asuint(x) & 0x7fffffffu) >= 0x7f800000u); }
+            half4 Merkki(float3 x) { return Huono(x) ? half4(1.0h, 0.0h, 0.0h, 1.0h) : half4(0.0h, 1.0h, 0.0h, 1.0h); }   // diagnoosi 10–18
 
             half4 frag(Varyings i) : SV_Target
             {
                 UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
                 float2 uv = i.texcoord, px = _BlitTexture_TexelSize.xy;
                 half4 c = SAMPLE_TEXTURE2D_X_LOD(_BlitTexture, sampler_PointClamp, uv, 0);
-                float syvyys = SampleSceneDepth(uv);
+                if (_ValoDebug.x > 8.5 && _ValoDebug.x < 9.5) return c;   // 9: läpivienti (onko kaupunki jo ennen passia musta)
+                if (_ValoDebug.x > 0.5 && _ValoDebug.x < 1.5) return half4(c.rgb * 0.5h + half3(0.5h, 0.0h, 0.5h), 1.0h);
+                float syvyys = KaupunkiSyvyys(uv);
+                if (_ValoDebug.x > 4.5 && _ValoDebug.x < 5.5) return half4(syvyys > 1e-7 && syvyys < 1.0 - 1e-7 ? half3(0.0h, 1.0h, 0.0h) : half3(1.0h, 0.0h, 0.0h), 1.0h);   // 5: syvyys (vihreä = on)
+                if (_ValoDebug.x > 5.5 && _ValoDebug.x < 6.5) return half4((half3)frac(syvyys * 200.0), 1.0h);   // 6: syvyyden arvo
                 #if UNITY_REVERSED_Z
                 if (syvyys <= 1e-7) return c;
                 #else
                 if (syvyys >= 1.0 - 1e-7) return c;
                 #endif
-                float3 p = mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                float3 pw = ComputeWorldSpacePosition(uv, syvyys, _KaupunkiInvVP);
+                if (distance(pw, _KaupunkiKamera.xyz) < 30.0) return c;   // päällyskameran kori ja kupu (v8: passi myös niille)
+                float3 p = mul(_MaailmaPaikallinen, float4(pw, 1.0)).xyz;
+                if (_ValoDebug.x > 9.5 && _ValoDebug.x < 10.5) return Merkki(p);
+                if (_ValoDebug.x > 1.5 && _ValoDebug.x < 2.5) return half4((half3)frac(float3(p.x / 200.0, p.y / 50.0, p.z / 200.0)), 1.0h);
                 float bm = BlackMarble(p);
+                if (_ValoDebug.x > 2.5 && _ValoDebug.x < 3.5) return half4((half3)saturate(bm * 2.0), 1.0h);
                 if (bm <= 0.01 && _KohdeP.w < 0.5 && _MaamerkkiParam.x < 0.5) return c;
 
                 // Naapurit: lyhyempi ero kummaltakin akselilta (reunalla pitkä ero on toisen pinnan puolella).
@@ -106,9 +126,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 float3 pu = Paikka(uv + float2(0, px.y)), pd = Paikka(uv - float2(0, px.y));
                 float3 dx = length(pr - p) < length(p - pl) ? pr - p : p - pl;
                 float3 dy = length(pu - p) < length(p - pd) ? pu - p : p - pd;
-                float3 n = normalize(cross(dy, dx));
+                float3 nr = cross(dy, dx);   // rappeutunut (naapurit samassa pisteessä) → ylös, ei NaN:ia (9.10. simu: yö mustana)
+                float3 n = dot(nr, nr) > 1e-12 ? nr * rsqrt(dot(nr, nr)) : float3(0.0, 1.0, 0.0);
                 if (n.y < 0.0) n = -n;                                   // ylöspäin (kamera on yleensä yläpuolella)
                 float jalanjalki = max(length(dx), length(dy));          // pikselin koko pinnalla (m)
+                if (_ValoDebug.x > 10.5 && _ValoDebug.x < 11.5) return Merkki(n + jalanjalki);
                 // Tasaisuus (v3, simu 22.2x: puiden latvoihin syttyi ikkunoita, nurmelle katuvaloja): seinä ja katu ovat tasaisia
                 // (peräkkäiset erot samansuuntaisia), lehvästö ja reunat eivät. Valot vain tasaisille pinnoille.
                 float sx = dot(normalize(pr - p + 1e-6), normalize(p - pl + 1e-6)), sy = dot(normalize(pu - p + 1e-6), normalize(p - pd + 1e-6));
@@ -122,6 +144,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 // säteily piirretään valopisteiden keskiarvona (lamput + ikkunat yhteensä), joten kaupunki hehkuu horisonttiin asti.
                 float kauko = saturate((jalanjalki - 2.0) / 8.0);
                 lisa += _ValoVari.rgb * bm * kauko * _ValoParam.z * 0.35;
+                if (_ValoDebug.x > 11.5 && _ValoDebug.x < 12.5) return Merkki(lisa + tasainen);
 
                 // Katuvalot OSM-katujen mukaan (v4): maski kaduista; vaakapinnoilla valonauha (katu valaistu) ja lamput nauhan keskellä.
                 float vaaka = saturate((n.y - 0.82) / 0.1) * tasainen;
@@ -158,6 +181,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     }
                 }
 
+                if (_ValoDebug.x > 12.5 && _ValoDebug.x < 13.5) return Merkki(lisa);   // katuvalojen jälkeen
                 // Kohteen paino (valonheitto alla); kohteessa ei ikkunoita (v5: Eiffelin ristikkoon syttyi ikkunoita).
                 float wKohde = 0.0;
                 if (_KohdeP.w > 0.5)
@@ -185,6 +209,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     iv = lerp(iv, nv * 1.8 * valke, neon);
                     lisa += iv * pysty * tasainen * _IkkunaParam.x * (0.6 + 0.4 * h.z) * lerp(keski, palaa * ikkuna, terava);
                 }
+                if (_ValoDebug.x > 13.5 && _ValoDebug.x < 14.5) return Merkki(lisa + wKohde);   // ikkunoiden jälkeen
                 // v6 veden heijastukset: vaakapinta vesimaskissa; rantavalot ja maamerkit katsesuunnassa juovina.
                 float vesi = _VesiAlue.w > 0.0 ? Vesi(p) * saturate((n.y - 0.9) / 0.08) : 0.0;
                 if (vesi > 0.01)
@@ -224,13 +249,16 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     }
                     lisa += heij * vesi * fresnel * valke * _VesiAlue.w;
                 }
-                float3 tulos = c.rgb + lisa * _ValoParam.x;
+                if (_ValoDebug.x > 14.5 && _ValoDebug.x < 15.5) return Merkki(lisa + vesi);   // veden jälkeen
+                if (_ValoDebug.x > 3.5 && _ValoDebug.x < 4.5) return half4((half3)saturate(lisa * 5.0), 1.0h);
+                float3 tulos = c.rgb + lisa * _ValoParam.x * max(1.0, _ValoDebug.y);
                 // Kohteen valaistus (v4): lämmin valonheitto kohteen ympärille maasta ylöspäin (Eiffel kultaisena).
                 if (wKohde > 0.0)
                 {
                     float3 kulta = float3(1.0, 0.74, 0.36);
                     tulos = tulos * (1.0 + _KohdeParam.y * wKohde * _ValoParam.x * kulta) + kulta * 0.03 * wKohde * _ValoParam.x;
                 }
+                if (_ValoDebug.x > 15.5 && _ValoDebug.x < 16.5) return Merkki(tulos);   // kohteen jälkeen
                 // v6 maamerkkien julkisivuvalo: lämmin valo maasta ylöspäin (heikkenee korkeuden mukana), ei vedelle.
                 int nmv = (int)_MaamerkkiParam.x;
                 for (int mi = 0; mi < 8; mi++)
@@ -243,6 +271,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float3 julkisivu = float3(1.0, 0.82, 0.55);
                     tulos = tulos * (1.0 + _MaamerkkiParam.y * w * _ValoParam.x * julkisivu) + julkisivu * 0.02 * w * _ValoParam.x;
                 }
+                if (_ValoDebug.x > 16.5 && _ValoDebug.x < 17.5) return Merkki(tulos);   // maamerkkien jälkeen
+                if (Huono(tulos)) tulos = c.rgb;   // varmistus bittitasolla: virheellinen pikseli ei musta ruutua
                 return half4((half3)tulos, c.a);
             }
             ENDHLSL

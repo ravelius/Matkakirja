@@ -106,5 +106,27 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
             half frag(V v) : SV_Target { Leikkaa(v.leik); return 0; }
             ENDHLSL
         }
+        Pass
+        {
+            Name "DepthNormals"
+            Tags { "LightMode" = "DepthNormals" }
+            ZWrite On
+            // URP:n DepthNormals-esipassi (Ultra-renderöijän SSAO, lähde DepthNormals) tuottaa kameran syvyystekstuurin: ilman tätä passia
+            // kohde puuttuu _CameraDepthTexturesta (9.10. simu: yövalot ja muotokorostus näkivät tyhjän syvyyden).
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            struct A { float4 p : POSITION; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; float2 uv2 : TEXCOORD2; float2 uv3 : TEXCOORD3; };
+            struct V { float4 p : SV_POSITION; float3 pw : TEXCOORD0; float2 leik : TEXCOORD1; };
+            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.pw = TransformObjectToWorld(a.p.xyz); v.leik = Kanava(a.uv0, a.uv1, a.uv2, a.uv3, _overlayTextureCoordinateIndex_Clipping); return v; }
+            half4 frag(V v) : SV_Target
+            {
+                Leikkaa(v.leik);
+                float3 n = normalize(cross(ddy(v.pw), ddx(v.pw)));   // laatoissa ei normaaleja (unlit): pinnan normaali derivaatoista
+                if (dot(n, GetCameraPositionWS() - v.pw) < 0.0) n = -n;
+                return half4(n, 0.0);
+            }
+            ENDHLSL
+        }
     }
 }
