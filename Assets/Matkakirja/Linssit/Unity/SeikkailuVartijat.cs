@@ -500,6 +500,7 @@ namespace Matkakirja.Natiivi
                 if (askelMatka < pituus) return;
                 askelMatka = 0f;
                 var k = SeikkailuAanet.Askel(pintaN, marka);
+                SeikkailuAanet.KirjaaPankki("askel-" + (marka ? "marka" : pintaN), k);
                 float taso = voima * SeikkailuAanet.Taso("tehosteet", PelaajanAskeleet);
                 omatAskeleet.volume = 1f; omatAskeleet.pitch = 1f;
                 omatAskeleet.PlayOneShot(k, taso * UnityEngine.Random.Range(0.85f, 1f));

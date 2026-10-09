@@ -120,6 +120,7 @@ namespace Matkakirja.Natiivi
             var s = Aktiivinen; if (s == null) return;
             var klippi = Muunnelma(tunnus);
             if (klippi == null) { if (!s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return; klippi = a.Klippi; }
+            else KirjaaPankki(tunnus, klippi);
             var l = SeikkailuKuulija.Lahde("Tehoste:" + tunnus, 2f, 25f);
             SeikkailuKuulija.Aseta(l, paikka); l.clip = klippi; l.volume = voimakkuus * MikserinTaso(tunnus); l.pitch = savel; l.Play();
             Destroy(l.gameObject, klippi.length / Mathf.Max(0.1f, savel) + 0.2f);
@@ -141,6 +142,14 @@ namespace Matkakirja.Natiivi
             ["uinti"] = new[] { "vesi-03", "vesi-04", "vesi-08" }, ["sukellus"] = Sarja("vesi", 5, 7),
         };
         static string[] Sarja(string pohja, int a, int b) { var t = new string[b - a + 1]; for (int i = a; i <= b; i++) t[i - a] = $"{pohja}-{i:00}"; return t; }
+
+        /// <summary>Lokiin kerran tunnusta kohden, että Soundly-pankki soi (kuva-arkin äänitarkistus: pankki eikä vara-ääni).</summary>
+        public static void KirjaaPankki(string tunnus, AudioClip klippi)
+        {
+            var s = Aktiivinen; if (s == null || klippi == null || !s.pankkiKirjattu.Add(tunnus)) return;
+            s.kirjaa?.Invoke($"seikkailu: soundly {tunnus} → {klippi.name}");
+        }
+        readonly HashSet<string> pankkiKirjattu = new HashSet<string>(StringComparer.Ordinal);
 
         /// <summary>Satunnainen ladattu Soundly-muunnelma tunnukselle, tai null.</summary>
         public static AudioClip Muunnelma(string tunnus) => tunnus != null && Korvaavat.TryGetValue(tunnus, out var v) ? Jokin(v) : null;
@@ -193,6 +202,7 @@ namespace Matkakirja.Natiivi
                 if (!paalla) return;
                 var klippi = Muunnelma(tunnus);   // Soundly-silmukka (sydän, tuulen rako), valitaan kerran
                 if (klippi == null) { if (!s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return; klippi = a.Klippi; }
+                else KirjaaPankki(tunnus, klippi);
                 l = SeikkailuKuulija.Lahde("Silmukka:" + tunnus, 2f, 25f); l.clip = klippi; l.loop = true; s.silmukat[tunnus] = l;
             }
             SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus * MikserinTaso(tunnus); l.pitch = savel;
