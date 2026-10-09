@@ -934,6 +934,30 @@ namespace Matkakirja.Natiivi
                    $"meshejä {Resources.FindObjectsOfTypeAll<Mesh>().Length}, kaupungin laattoja {laattoja}, äänileikkeitä {Resources.FindObjectsOfTypeAll<AudioClip>().Length}";
         }
 
+        /// <summary>Suurimmat tekstuurit lokiin (juna 173, iPad-jetsam: kaupungin avauksessa +760 Mt tekstuureja ennen laattoja): tyypeittäin
+        /// summat (Texture2D, RenderTexture, Texture3D, Cubemap, muut) ja n suurinta (nimi, koko, mitat, muoto, MSAA). Komento "opas tekstuurit [n]".</summary>
+        public static string Tekstuurit(int n = 20)
+        {
+            var kaikki = Resources.FindObjectsOfTypeAll<Texture>();
+            var rivit = new System.Collections.Generic.List<(long Tavut, string Kuvaus)>(kaikki.Length);
+            var tyypit = new System.Collections.Generic.Dictionary<string, long>();
+            foreach (var t in kaikki)
+            {
+                if (t == null) continue;
+                long b = UnityEngine.Profiling.Profiler.GetRuntimeMemorySizeLong(t);
+                string tyyppi = t.GetType().Name;
+                tyypit[tyyppi] = (tyypit.TryGetValue(tyyppi, out var v) ? v : 0) + b;
+                string muoto = t is RenderTexture rt ? $"{rt.graphicsFormat}/{rt.depthStencilFormat} msaa{rt.antiAliasing}" : t is Texture2D t2 ? t2.format.ToString() : t.graphicsFormat.ToString();
+                rivit.Add((b, $"{(t.name.Length > 0 ? t.name : "(nimetön)")} {t.width}×{t.height} {muoto} {b >> 20} Mt"));
+            }
+            rivit.Sort((x, y) => y.Tavut.CompareTo(x.Tavut));
+            var sb = new System.Text.StringBuilder($"tekstuurit: {kaikki.Length} kpl, ");
+            foreach (var kv in System.Linq.Enumerable.OrderByDescending(tyypit, x => x.Value)) sb.Append($"{kv.Key} {kv.Value >> 20} Mt, ");
+            sb.Append($"currentTextureMemory {(long)Texture.currentTextureMemory >> 20} Mt; suurimmat:");
+            for (int i = 0; i < Mathf.Min(n, rivit.Count); i++) sb.Append(" | ").Append(rivit[i].Kuvaus);
+            return sb.ToString();
+        }
+
         public void Sulje()
         {
             if (!auki) return;
