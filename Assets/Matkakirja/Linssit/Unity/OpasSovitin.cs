@@ -486,7 +486,8 @@ namespace Matkakirja.Natiivi
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
             // Kohde vasta korostuksen syttyessä (video4 14,3–16,2 s: varjostin muutti kohdealuetta nollavoimallakin lennon alussa).
-            KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 && !KohdeKorostus.Kaytossa ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
+            // EIFFEL (Päätoimittaja 9.10.): ei kultaista valaistusta eikä kimallusta (SETE:n suojaama valaistus), korkeintaan himmeä yleisvalo.
+            KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 && !KohdeKorostus.Kaytossa && !OnEiffel(yk.Lat, yk.Lon) ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
             KohdeKorostus.Paivita(kaupunki.Georef);
             // Yövalot v6 (kehityskaupungit): kierroksen muut kohteet valaistuina, maa omasta korkeusmallista (päivitys kerran sekunnissa).
             if (Time.unscaledTime - maamerkitAika > 1f)
@@ -498,6 +499,7 @@ namespace Matkakirja.Natiivi
                     foreach (var t in mk)
                     {
                         if (yk != null && Math.Abs(t.Lat - yk.Lat) < 1e-5 && Math.Abs(t.Lon - yk.Lon) < 1e-5) continue;   // nykyinen kohde: oma valo
+                        if (OnEiffel(t.Lat, t.Lon)) continue;   // ei Eiffelin julkisivuvaloa
                         double h = MaaPisteessa(t.Lat, t.Lon);   // kehyksen maa (kehän näytteistä), jos kohteessa on käyty
                         if (double.IsNaN(h)) h = OmaMaaKehalla(t.Lat, t.Lon);
                         if (!double.IsNaN(h)) KaupunkiYovalot.Maamerkit.Add((t.Lat, t.Lon, h, 60));
@@ -715,16 +717,71 @@ namespace Matkakirja.Natiivi
         // PalloSaaVaikutus → KaupunkiKuva (sävy ja sumu) ja PalloSaaKerros (sade, lumi, salama); ukkosen kumahdus kirjastosta.
         readonly PalloSaaVaikutus saaVaikutus = new PalloSaaVaikutus();
         PalloSaaKerros saaKerros;
+        // Sadekuurot itsestään (omistaja TF 168, Päätoimittaja juna 170; Ydin PalloKuurot): kehityskaupungeissa selkeällä tai pilvisellä
+        // säällä harvoin kuuro, osa ukkoskuuroja (alussa kaukainen jyrinä, Pelikoodarin elava-kaupunki-v1); KuuroVoima Linssiseppä 2:lle.
+        readonly PalloKuurot kuurot = new PalloKuurot(Environment.TickCount);
+        /// <summary>Itsestään tulevan kuuron voima 0–1 (Linssiseppä 2:n KaupunkiKuuro.Voima: pilvet ja märät kadut).</summary>
+        public static double KuuroVoima => Viimeisin?.kuurot.Voima ?? 0;
+        AudioClip jyrinaKlippi; bool jyrinaLadataan;
+        IEnumerator SoitaJyrina()
+        {
+            if (jyrinaKlippi == null && !jyrinaLadataan)
+            {
+                jyrinaLadataan = true;
+                using var r = UnityWebRequestMultimedia.GetAudioClip("https://media.matkakirja.app/aanet/elava-kaupunki-v1/ukkonen-kaukainen.mp3", AudioType.MPEG);
+                r.timeout = 20;
+                yield return r.SendWebRequest();
+                if (r.result == UnityWebRequest.Result.Success) jyrinaKlippi = DownloadHandlerAudioClip.GetContent(r);
+                jyrinaLadataan = false;
+            }
+            if (jyrinaKlippi == null || !Asetukset.Paalla(Kytkin.Aanimaisema)) yield break;
+            if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
+            ukkosLahde.volume = UkkosenTavoite();
+            ukkosLahde.PlayOneShot(jyrinaKlippi, 0.8f);
+            o.Kirjaa("opas: ukkoskuuro alkaa (kaukainen jyrinä)");
+        }
+
         void SaaTehosteet()
         {
             float dt = Time.unscaledDeltaTime;
-            saaVaikutus.Paivita(tauolla ? 0 : dt, nakymaAuki ? Saatila.Saa : PalloSaa.Pois, Saatila.Live ? SaaTiedot : null);
+            bool kuuroSallittu = nakymaAuki && OpasSilmukka.PalloLento && Kehityskaupungit.On(NykyinenKaupunkiId) && (Saatila.Saa == PalloSaa.Selkea || Saatila.Saa == PalloSaa.Pilvinen);
+            var kuuro = kuurot.Paivita(tauolla ? 0 : dt, kuuroSallittu);
+            if (kuurot.UkkonenAlkoi && !Testi) o.StartCoroutine(SoitaJyrina());
+            saaVaikutus.Paivita(tauolla ? 0 : dt, nakymaAuki ? Saatila.Saa : PalloSaa.Pois, Saatila.Live ? SaaTiedot : null, kuuro);
             KaupunkiKuva.Saa = saaVaikutus.Nyt; KaupunkiKuva.Salama = saaVaikutus.Salama;
+            KaukaisetSalamat(tauolla ? 0 : dt);
             if (saaKerros == null && saaVaikutus.Nyt.Tyhja) return;
             saaKerros ??= new PalloSaaKerros();
             saaKerros.Aseta(kaupunki.Kamera, saaVaikutus.Nyt, saaVaikutus.Salama, SaaTiedot?.TuuliMs ?? 4, Time.unscaledTime);
             if (saaVaikutus.Nyt.Ukkonen > 0.01 && ukkosKlipit == null) { ukkosKlipit = new List<AudioClip>(); o.StartCoroutine(LataaUkkonen()); }
             if (saaVaikutus.Kumahdus) SoitaUkkonen();
+        }
+
+        // KAUKAISET SALAMAT (Päätoimittaja 9.10., junan 171 erä; Ydin KaukoSalamat, Unity KaupunkiSalamat): ukkosella (sää tai ukkoskuuro)
+        // pultit horisonttiin 4–14 km:iin, pilvien välähdys (LS2) ja pieni valotusvälähdys etäisyyden mukaan; lähimpien jyrinä viiveellä.
+        readonly KaukoSalamat salamat = new KaukoSalamat(Environment.TickCount ^ 0x5a1a);
+        /// <summary>Diagnoosi (opas salama N): ukkonen päällä N sekuntia sään ja kuurojen ohi.</summary>
+        public static float SalamaPakkoS;
+        /// <summary>Diagnoosi (opas salama pito 1|0): pultti katsesuuntaan 6 km:iin täydellä kirkkaudella kuvaa varten.</summary>
+        public static bool SalamaPito;
+        void KaukaisetSalamat(float dt)
+        {
+            if (SalamaPakkoS > 0) SalamaPakkoS -= Time.unscaledDeltaTime;
+            double ukkonen = !nakymaAuki ? 0 : SalamaPakkoS > 0 ? 1 : Math.Max(saaVaikutus.Nyt.Ukkonen, kuurot.Ukkoskuuro ? kuurot.Voima : 0);
+            salamat.Paivita(dt, ukkonen);
+            var g = kaupunki.Georef; var kam = kaupunki.Kamera;
+            float mt = g != null ? Mathf.Max(1e-6f, g.transform.lossyScale.x) : 1f;
+            float kork = g != null && kam != null ? Mathf.Max(0f, (kam.transform.position.y - g.transform.position.y) / mt) : 300f;
+            KaukoSalamat.Isku? nakyva = salamat.Nykyinen;
+            if (SalamaPito && kam != null) nakyva = new KaukoSalamat.Isku { Suunta = kam.transform.eulerAngles.y, EtaisyysM = 6000, Aika = 0.001, Siemen = 4242, Haara = true };
+            KaupunkiSalamat.Paivita(nakymaAuki ? nakyva : null, kam, kork, mt);
+            if (salamat.Nykyinen is KaukoSalamat.Isku i)
+            {
+                double lahella = 1 - (i.EtaisyysM - KaukoSalamat.EtMinM) / (KaukoSalamat.EtMaxM - KaukoSalamat.EtMinM);
+                KaupunkiKuva.Salama = Math.Max(KaupunkiKuva.Salama, 0.25 * lahella * KaukoSalamat.Kirkkaus(i.Aika, i.Siemen));
+            }
+            if (ukkonen > 0.3 && ukkosKlipit == null) { ukkosKlipit = new List<AudioClip>(); o.StartCoroutine(LataaUkkonen()); }
+            if (salamat.Kumahdus > 0) SoitaUkkonen((float)salamat.Kumahdus * 0.8f);
         }
 
         /// <summary>Ukkosen kumahdukset kirjastosta (Pelikoodari: CC0, aanet/tehosteet/ukkonen/); puuttuva tiedosto ohitetaan.</summary>
@@ -763,6 +820,9 @@ namespace Matkakirja.Natiivi
             if (kelloLahde != null && kelloLahde.isPlaying) kelloLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(kelloLahde.volume, KellojenTavoite(), Time.unscaledDeltaTime);
         }
 
+        /// <summary>Eiffel-torni (alle 200 m tornista): yövalaistusta ei jäljitellä (SETE), Päätoimittaja 9.10.</summary>
+        public static bool OnEiffel(double lat, double lon) => KierrosLento.EtaisyysM(lat, lon, 48.858296, 2.294479) < 200;
+
         // ---- KIRKONKELLOT (Päätoimittaja 9.10., juna 170; Pelikoodari aanet/sonniss-aanet-v2/kirkonkellot-kyla.mp3, Sonniss, 30 s
         // silmukka, −23 LUFS): kun pallo pysähtyy kehityskaupungin kirkkokohteeseen, kellot soivat kerran kierroksella kaupunkia kohti
         // KelloS sekuntia pehmeästi häivyttäen, etäisyyden mukaan hiljaa ja kertojan alla väistäen (OpasAanitasot.Maisema). ----
@@ -778,7 +838,7 @@ namespace Matkakirja.Natiivi
             float t = Time.unscaledTime - kelloAlku;
             float haivytys = Mathf.Clamp01(t / KelloHaivytysS) * Mathf.Clamp01((KelloS - t) / KelloHaivytysS);
             float etaisyys = Mathf.Clamp(KelloVertailuM / Mathf.Max(1f, kelloEtaisyys), 0.25f, 1f);
-            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? 1f : 0f);
+            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(Voima.Tausta) : 0f);
         }
 
         IEnumerator SoitaKellot(OpasKohde k)
@@ -800,12 +860,12 @@ namespace Matkakirja.Natiivi
             if (kelloLahde != null) kelloLahde.Stop();
         }
 
-        void SoitaUkkonen()
+        void SoitaUkkonen(float voima = 1f)
         {
             if (ukkosKlipit == null || ukkosKlipit.Count == 0 || !Asetukset.Paalla(Kytkin.Aanimaisema)) return;
             if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
             ukkosLahde.volume = UkkosenTavoite();
-            ukkosLahde.PlayOneShot(ukkosKlipit[UnityEngine.Random.Range(0, ukkosKlipit.Count)]);
+            ukkosLahde.PlayOneShot(ukkosKlipit[UnityEngine.Random.Range(0, ukkosKlipit.Count)], voima);
         }
 
         IEnumerator HaeSaa(double lat, double lon, string kaup)

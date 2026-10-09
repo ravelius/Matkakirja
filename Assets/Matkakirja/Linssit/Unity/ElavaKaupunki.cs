@@ -11,6 +11,8 @@
 // (OpasSovitin.OmaMaa; maa kolmen pisteen pienimmästä, ettei katupuu nosta autoa); oikea kaista kaksisuuntaisilla, päissä piilossa.
 // Näkyvyys: veneet NakyvaM ja parvet ParviNakyvaM kameran ympäriltä. Määrä muistin mukaan (15 / 40 / 100). Krediitti: Krediitti
 // (© OpenStreetMap contributors, ODbL) Lähteet-näkymään. Kytkin: asetukset.json "elava.Paalla" (oletus 1), komento `opas elava 0|1`.
+// SAVU JA LIPUT (B8, juna 171; ElavaSavuLiput + Ydin SavuJaLiput): savu lähimmistä savuavista piipuista ja liput lähimmistä tangoista
+// (10 / 30 / 80 muistin mukaan), tuuli LIVE-säästä tai muiden pallojen varatuulesta; kytkimet `opas savu|liput 0|1`, tila Tila().
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -45,9 +47,10 @@ namespace Matkakirja.Natiivi
         string katuJson; KatuLiikenne katu; int autoRaja; float katuYritys = -9f; double lat0, lon0;
         static readonly Dictionary<int, Mesh> autoVerkot = new Dictionary<int, Mesh>(); static Mesh raitioVerkko;
         readonly List<Transform> autoT = new List<Transform>(), raitioT = new List<Transform>();
+        SavuJaLiput savuData; ElavaSavuLiput savuLiput; int taso; double varaTuuliAst;
 
         VesiLiikenne liikenne;
-        sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe; }
+        sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe, Pituus; }
         readonly List<VeneOlio> veneet = new List<VeneOlio>();
         sealed class ParviOlio { public Parvi P; public VesiLiikenne.ParviPaikka Paikka; public GameObject Juuri; public Transform[] Lokit, Vasen, Oikea; public double Pinta = double.NaN; public float Haettu = -9f; }
         readonly List<ParviOlio> parvet = new List<ParviOlio>();
@@ -103,9 +106,15 @@ namespace Matkakirja.Natiivi
             e2.maaM = (float)gr.height;
             int siemen = Mathf.Abs((int)(lat * 1000) * 31 + (int)(lon * 1000));
             e2.pallot = new MuutPallot(new[] { 2, 4, 6 }[taso], PallotSadeM, siemen % 360, 3.0, siemen);
+            e2.taso = taso; e2.varaTuuliAst = siemen % 360;   // savu ja liput samaan suuntaan kuin muut pallot, kun LIVE-säätä ei ole
+            if (kj != null && (kj.Contains("\"piiput\"") || kj.Contains("\"liput\"")))
+            {
+                try { e2.savuData = SavuJaLiput.Lue(kj, 20261009); }
+                catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: savu ja liput virheellinen ({e.Message})"); }
+            }
             e2.Rakenna();
             Nykyinen = e2; Krediitti = l?.Krediitti;
-            Debug.Log($"MATKAKIRJA kaupunki: elävä {id ?? "-"}: {l?.Liike.Kulkijat.Count ?? 0} venettä {l?.Reitteja ?? 0} reitillä (raja {raja}), {l?.Parvet.Count ?? 0} lokkiparvea, {e2.pallot.Maara} muuta palloa");
+            Debug.Log($"MATKAKIRJA kaupunki: elävä {id ?? "-"}: {l?.Liike.Kulkijat.Count ?? 0} venettä {l?.Reitteja ?? 0} reitillä (raja {raja}), {l?.Parvet.Count ?? 0} lokkiparvea, {e2.pallot.Maara} muuta palloa, {e2.savuData?.Savuavia ?? 0}/{e2.savuData?.Piiput.Count ?? 0} savuavaa piippua, {e2.savuData?.Liput.Count ?? 0} lipputankoa");
         }
 
         static Mesh Verkko(VeneVerkko v, string nimi)
@@ -156,6 +165,11 @@ namespace Matkakirja.Natiivi
                 palloT[j] = Olio("muu pallo", transform, pm, kohdeMat).transform;
             }
             RakennaTaivas();
+            if (savuData != null)
+            {
+                savuLiput = new ElavaSavuLiput(savuData, MaaAlla, SavuJaLiput.Maarat[taso]);
+                savuLiput.Rakenna(transform, kerros, kohdeMat, Olio);
+            }
             if (liikenne == null) return;
             int i = 0;
             foreach (var k in liikenne.Liike.Kulkijat)
@@ -163,13 +177,24 @@ namespace Matkakirja.Natiivi
                 int t = liikenne.Tyyppi(k);
                 if (!veneVerkot.TryGetValue(t, out var m))
                 {
-                    var vv = VeneMallit.Luo(VeneMallit.Tyypit[t]);
+                    // LS2 9.10. (omistaja TF 168, juna 170): tarkemmat mallit Tukholman tyypeille (TarkatVeneet), muut VeneMalleista.
+                    string nimi = VeneMallit.Tyypit[t];
+                    var vv = TarkatVeneet.Tukee(nimi) ? TarkatVeneet.Luo(nimi) : VeneMallit.Luo(nimi);
                     veneVerkot[t] = m = Verkko(vv, "Vene " + VeneMallit.Tyypit[t]);
                     vanaVerkot[t] = Verkko(VeneMallit.Vana(vv.Pituus, vv.Leveys), "Vana " + VeneMallit.Tyypit[t]);
                 }
                 var g = Olio("vene " + VeneMallit.Tyypit[t], transform, m, kohdeMat);
                 if (vanaMat != null) Olio("vana", g.transform, vanaVerkot[t], vanaMat).transform.localPosition = new Vector3(0, 0.12f, 0);
-                veneet.Add(new VeneOlio { T = g.transform, K = k, Vaihe = (i++ * 2.399f) % 6.283f });
+                // LS2: savu piipusta (VeneSavu; lapsi vanan jälkeen, GetChild(0) pysyy vanana).
+                var piippuP = TarkatVeneet.Piippu(VeneMallit.Tyypit[t]);
+                if (piippuP != null)
+                {
+                    var piippu = new GameObject("piippu").transform; piippu.SetParent(g.transform, false);
+                    piippu.localPosition = new Vector3(piippuP[0], piippuP[1], piippuP[2]);
+                    VeneSavu.Liita(piippu, VeneMallit.Tyypit[t]);
+                }
+                VeneAanet.Liita(this, g, VeneMallit.Tyypit[t]);   // LS2: laivan ääni (Pelikoodarin elava-kaupunki-v1)
+                veneet.Add(new VeneOlio { T = g.transform, K = k, Vaihe = (i++ * 2.399f) % 6.283f, Pituus = m.bounds.size.z });
             }
             int s = 1;
             foreach (var pp in liikenne.Parvet)
@@ -219,6 +244,24 @@ namespace Matkakirja.Natiivi
             return double.IsNaN(h) ? h : h - (x * x + z * z) / (2 * 6371000.0);
         }
 
+        /// <summary>Maa kohteen alla (piippu, lipputanko): pienin keskeltä ja kuudesta pisteestä 25 m:n kehältä (piipun tai katon
+        /// huippu ei ole maa); NaN, jos oma korkeusmalli ei ole muistissa.</summary>
+        double MaaAlla(double x, double z)
+        {
+            double h = Maa(x, z);
+            if (double.IsNaN(h)) return h;
+            for (int i = 0; i < 6; i++)
+            {
+                double hk = Maa(x + 25 * System.Math.Cos(i * System.Math.PI / 3), z + 25 * System.Math.Sin(i * System.Math.PI / 3));
+                if (!double.IsNaN(hk)) h = System.Math.Min(h, hk);
+            }
+            return h;
+        }
+
+        /// <summary>Diagnoosi (`opas savu|liput`): paketti, savu ja liput näkyvissä, tuuli.</summary>
+        public static string Tila() => Nykyinen == null ? "elävä kaupunki: ei auki"
+            : $"elävä kaupunki {Nykyinen.paketti ?? "-"}: " + (Nykyinen.savuLiput?.Tila() ?? "ei savua eikä lippuja paketissa");
+
         void RakennaKatu()
         {
             if (katuJson == null || katu != null || Time.unscaledTime - katuYritys < 2f) return;
@@ -260,8 +303,14 @@ namespace Matkakirja.Natiivi
             if (kamera == null || !kamera.isActiveAndEnabled) kamera = Camera.main;
             float dt = Time.deltaTime, t = Time.time;
             AsetaValo();
+            VeneAanet.Paivita();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
             RakennaKatu();
+            if (savuLiput != null)
+            {
+                var st = Saatila.Live ? OpasSovitin.SaaTiedot : null;   // LIVE-sää: tuulen mistä-suunta ja nopeus (MET Norway)
+                savuLiput.Paivita(c, st?.TuulenSuuntaAst, st?.TuuliMs, varaTuuliAst);
+            }
             if (katu != null)
             {
                 katu.Autot.Paivita(dt); katu.Raitiot.Paivita(dt);
@@ -297,7 +346,10 @@ namespace Matkakirja.Natiivi
                 float nyokkays = 0.6f * Mathf.Sin(t * 0.9f + v.Vaihe) - 0.5f * liikkuu, kallistus = 0.9f * Mathf.Sin(t * 0.7f + v.Vaihe * 1.7f);
                 v.T.localPosition = new Vector3((float)k.X, (float)k.Y + nosto + 0.05f * Mathf.Sin(t * 1.1f + v.Vaihe), (float)k.Z);
                 v.T.localRotation = Quaternion.Euler(nyokkays, (float)k.Suuntima, kallistus);
-                if (v.T.childCount > 0) { var vana = v.T.GetChild(0).gameObject; if (vana.activeSelf != (liikkuu > 0)) vana.SetActive(liikkuu > 0); }
+                // LS2: vana omalla vesipinnalla (KaupunkiVesi.Vana); oma vanaverkko vain, kun omaa vettä ei ole.
+                bool omaVesi = KaupunkiVesi.Nakyvissa;
+                if (v.T.childCount > 0) { var vana = v.T.GetChild(0).gameObject; bool nk = liikkuu > 0 && !omaVesi; if (vana.activeSelf != nk) vana.SetActive(nk); }
+                if (omaVesi && liikkuu > 0) { var f = v.T.forward; KaupunkiVesi.Vana(veneet.IndexOf(v), v.T.position, new Vector2(f.x, f.z).normalized, (float)k.Nopeus, v.Pituus); }
             }
             foreach (var p in parvet)
             {
@@ -498,8 +550,9 @@ namespace Matkakirja.Natiivi
             if (lokkiLahde == null) { lokkiLahde = gameObject.AddComponent<AudioSource>(); lokkiLahde.loop = true; lokkiLahde.playOnAwake = false; lokkiLahde.spatialBlend = 0; lokkiLahde.volume = 0; }
             if (kertaLahde == null) { kertaLahde = gameObject.AddComponent<AudioSource>(); kertaLahde.playOnAwake = false; kertaLahde.spatialBlend = 0; }
             bool vaisto = OpasSovitin.OpasAaniSoi;
+            float tausta = (float)Matkakirja.Natiivi.Asetukset.Taso(Matkakirja.Natiivi.Voima.Tausta);   // TF 169: kaikki pallon äänet mikserin ryhmiin
             float lokkiOsuus = Mathf.Clamp01(1f - lokkiD / LokkiKuuluuM);
-            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) : 0f;
+            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) * tausta : 0f;
             if (lokkiTavoite > 0.001f && !lokkiLahde.isPlaying) { lokkiLahde.clip = lokkiKlippi; lokkiLahde.Play(); }
             lokkiLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(lokkiLahde.volume, lokkiTavoite, Time.unscaledDeltaTime);
             if (lokkiLahde.isPlaying && lokkiLahde.volume < 0.0005f && lokkiTavoite <= 0) lokkiLahde.Stop();
@@ -508,14 +561,14 @@ namespace Matkakirja.Natiivi
             {
                 seuraavaKyyhky = tu + UnityEngine.Random.Range(15f, 35f);
                 var klippi = kyyhky1Klippi != null && UnityEngine.Random.value < 0.3f ? kyyhky1Klippi : kyyhky2Klippi;
-                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto));
+                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto) * tausta);
             }
             if (tu > seuraavaKone && !vaisto)
             {
                 // Lentokone näkyy ja kuuluu yhdessä (ElavaTaivas.AloitaKone); ääni vain Äänimaisema-kytkimellä.
                 seuraavaKone = tu + UnityEngine.Random.Range(240f, 420f);
                 taivas?.AloitaKone(Time.time, c.x, c.z);
-                if (paalla && koneKlippi != null) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false));
+                if (paalla && koneKlippi != null && tausta > 0.001f) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false) * tausta);
             }
         }
 

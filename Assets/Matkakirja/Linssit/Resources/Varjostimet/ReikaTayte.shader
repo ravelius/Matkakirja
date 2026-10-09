@@ -21,13 +21,47 @@ Shader "Matkakirja/Linssit/ReikaTayte"
             #pragma fragment frag
             #pragma multi_compile_fog
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Ilmakeha.hlsl"
             CBUFFER_START(UnityPerMaterial)
             half4 _Vari;
             CBUFFER_END
             struct A { float4 p : POSITION; };
-            struct V { float4 p : SV_POSITION; float sumu : TEXCOORD0; };
-            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.sumu = ComputeFogFactor(v.p.z); return v; }
-            half4 frag(V v) : SV_Target { return half4(MixFog(_Vari.rgb, v.sumu), 1); }
+            struct V { float4 p : SV_POSITION; float sumu : TEXCOORD0; float3 w : TEXCOORD1; };
+            V vert(A a) { V v; v.w = TransformObjectToWorld(a.p.xyz); v.p = TransformWorldToHClip(v.w); v.sumu = ComputeFogFactor(v.p.z); return v; }
+            half4 frag(V v) : SV_Target
+            {
+                // Loppuillan sininen hetki (LS2 9.10., PT: Tukholman sahalaita mustaa taivasta vasten): täyte taivaanrannan sävyyn.
+                float3 c = _Vari.rgb;
+                if (_IlmHamara.x > 0.001)
+                {
+                    float3 dv = normalize(v.w - _WorldSpaceCameraPos);
+                    c = lerp(c, IlmSininenHetki(normalize(float3(dv.x, 0.02, dv.z))) / _IlmHamara.x, _IlmHamara.x);
+                }
+                return half4(MixFog((half3)c, v.sumu), 1);
+            }
+            ENDHLSL
+        }
+        Pass
+        {
+            Name "DepthNormals"
+            Tags { "LightMode" = "DepthNormals" }
+            Cull Back
+            ZWrite On
+            // URP:n DepthNormals-esipassi (Ultra-renderöijän SSAO, lähde DepthNormals) tuottaa kameran syvyystekstuurin: ilman tätä passia
+            // kohde puuttuu _CameraDepthTexturesta (9.10. simu: yövalot ja muotokorostus näkivät tyhjän syvyyden).
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            struct A { float4 p : POSITION; };
+            struct V { float4 p : SV_POSITION; float3 pw : TEXCOORD0; };
+            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.pw = TransformObjectToWorld(a.p.xyz); return v; }
+            half4 frag(V v) : SV_Target
+            {
+                float3 n = normalize(cross(ddy(v.pw), ddx(v.pw)));
+                if (dot(n, GetCameraPositionWS() - v.pw) < 0.0) n = -n;
+                return half4(n, 0.0);
+            }
             ENDHLSL
         }
     }

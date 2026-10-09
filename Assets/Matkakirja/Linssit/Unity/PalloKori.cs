@@ -13,8 +13,8 @@
 // vain liikkeen muutoksissa (kiihtyvyys ylittää NarinaKiihtyvyyden, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
 // alussa kankaan huokaus. Kaupungin äänimaisema korkeuden mukaan Siirtosepän KaupunkiAanimaisemaSoitin.Kamera-Funcilla
 // (heijastus, kunnes siirtoseppa/aanimaisema on mainissa). Leikkeet Resources/Aanet/Pallokori: eleven-* (ElevenLabs-ääniefektit,
-// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
-// eleven|kirjasto` (puuttuva kirjastoääni → eleven).
+// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md; korin narina 8.10. alkaen
+// Freesound 264306 "Floor Creak 1", olliehahn12, CC0); A/B `opas kori aanet eleven|kirjasto` (puuttuva → toinen sarja).
 // KUPU (Linssiseppä 8.10.2026, Linnanrakentajan kupu_nakyma.glb, _valmiit/ilmapallo-v1/kupu): sama origo kuin korilla (korin pohjan
 // keskellä, +Y ylös), mutta kupu riippuu maailman pystysuunnassa kameran (silmä 1,5 m korin pohjasta) yläpuolella eikä käänny katseen
 // mukana: näkyy, kun katse nousee (~35° ylös), suun läpi sisäpinta. Kangas ja nauhat kaksipuolisia, auringon läpikuulto; polttimen
@@ -222,6 +222,7 @@ namespace Matkakirja.Natiivi
             punos = Materiaali(sh, new Color(0.55f, 0.40f, 0.24f), 1, new Vector4(60, 6, 0, 0));
             nahka = Materiaali(sh, new Color(0.30f, 0.17f, 0.09f), 0, Vector4.one);
             koysi = Materiaali(sh, new Color(0.62f, 0.52f, 0.36f), 2, new Vector4(1, 40, 0, 0));
+            punos.SetFloat(IdOsa, OsaKori); nahka.SetFloat(IdOsa, OsaKori); koysi.SetFloat(IdOsa, OsaKoysi);
             juuri = new GameObject("Kori") { layer = Kerros }.transform;
             juuri.SetParent(go.transform, false);
             koriKaanto = new GameObject("Korin kääntö") { layer = Kerros }.transform;
@@ -237,7 +238,9 @@ namespace Matkakirja.Natiivi
         {
             AudioClip c = null;
             if (AaniSarja == "kirjasto") c = Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
-            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+            // Kumpi tahansa sarja kelpaa varana (korin narina on vain kirjastossa: Freesound 264306, CC0, Pelikoodari PR #4255).
+            if (c == null) c = Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
         }
 
         void Soita(string nimi, float taso)
@@ -343,6 +346,7 @@ namespace Matkakirja.Natiivi
                 else if (nimi.StartsWith("koysi")) { malliKoydet.Add(solmut[i]); malliKoysiAlku.Add(solmut[i].localRotation); }
             }
             RakennaKoysiVerkot();
+            MerkitseOsat();   // ennen kompassia: kompassi jää ilman korin tummennusta
             RakennaKompassi(malliJuuri);
         }
 
@@ -539,6 +543,7 @@ namespace Matkakirja.Natiivi
                 var lm = new Material(sp != null ? sp : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Kompassin lasi", renderQueue = 3000 };
                 float al = osa.Vari != null && osa.Vari.Length >= 4 ? osa.Vari[3] : 0.16f;
                 lm.color = new Color(0.9f, 0.93f, 0.96f, Mathf.Clamp(al, 0.08f, 0.35f));
+                lasiMat = lm; lasiPerus = lm.color;   // valoisuus AsetaValossa (yöllä valaisematon lasi hehkui valkoisena levynä)
                 r.sharedMaterial = lm; return;
             }
             var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
@@ -764,6 +769,61 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdAla, V(k.TaivasAla));
             var s = KaupunkiKuva.KoriSuodin; float e = Mathf.Pow(2f, KaupunkiKuva.KoriValotusEV);
             Shader.SetGlobalVector(IdValotus, new Vector4(s.r * e, s.g * e, s.b * e, 1f));
+            // Kompassin lasi (Päätoimittaja 9.10.: yöllä valkoinen levy): valaisematon lasi saa taivaan ja auringon valoisuuden ja valotuksen.
+            if (lasiMat != null)
+            {
+                Vector3 valo = V(k.TaivasYla) + V(k.AurinkoVari) * Mathf.Clamp01((float)k.AurinkoY);
+                float l = Mathf.Clamp(0.2126f * valo.x + 0.7152f * valo.y + 0.0722f * valo.z, 0f, 1.2f) * e;
+                l = Mathf.Clamp(l, 0.04f, 1f);
+                lasiMat.color = new Color(lasiPerus.r * l, lasiPerus.g * l, lasiPerus.b * l, lasiPerus.a * Mathf.Lerp(0.5f, 1f, l));
+            }
+        }
+        Material lasiMat; Color lasiPerus;
+
+        // KORI TUMMUU ALASPÄIN, KÖYDET VASTAVALOSSA (omistaja TF 169, PT 9.10.: "köysi pitäisi olla tumma keskeltä, koska valo tulee
+        // edestä päin. Ja samoin tuo kori pitäisi olla vaalein ylhäältä ja sitten tummua jo alaspäin. Sillä tavalla myös ne eivät
+        // veisi niin paljon huomiota"): PalloKori.shader _Osa (1 kori, 2 köysi) ja globaalit _KoriReunaV, _KoriPystyV (korin reunan
+        // piste ja pysty korin kameran näkymäavaruudessa, joka kehys keinunnan jälkeen), _KoriTummuus, _KoysiSiluetti.
+        /// <summary>Korin pystygradientti: x = täyden valon osuus näkyvän kaistaleen yläosasta, y = valo kaistaleen alalaidassa,
+        /// z = taivaan ambientin lisäkerroin alhaalla (ambient alhaalla y × z).</summary>
+        public static Vector4 KoriTummuus = new Vector4(0.15f, 0.5f, 0.8f, 0f);
+        /// <summary>Köysien vastavalo: x = kameraan päin olevan pinnan tummennus (× 0,6–1 auringon edessäolon mukaan), y = pituussuunnan
+        /// tummennus kuvan keskikorkeudella, z = vastavalon reunavalo.</summary>
+        public static Vector4 KoysiSiluetti = new Vector4(0.7f, 0.3f, 0.6f, 0f);
+        const float OsaKori = 1f, OsaKoysi = 2f;
+        /// <summary>Korimallin etureunan etäisyys kamerasta (m; SovitaMalli Z).</summary>
+        const float MalliReunaZ = 0.881f;
+        static readonly int IdOsa = Shader.PropertyToID("_Osa"), IdReunaV = Shader.PropertyToID("_KoriReunaV"),
+            IdPystyV = Shader.PropertyToID("_KoriPystyV"), IdTummuus = Shader.PropertyToID("_KoriTummuus"), IdSiluetti = Shader.PropertyToID("_KoysiSiluetti");
+
+        /// <summary>Korimallin materiaalit: köysisolmujen alla köysi, muut kori (kompassi rakennetaan myöhemmin ja jää 0:ksi).</summary>
+        void MerkitseOsat()
+        {
+            if (malliJuuri == null) return;
+            var koydet = new System.Collections.Generic.HashSet<Renderer>();
+            foreach (var k in malliKoydet) if (k != null) foreach (var r in k.GetComponentsInChildren<Renderer>(true)) koydet.Add(r);
+            foreach (var r in malliJuuri.GetComponentsInChildren<Renderer>(true))
+            {
+                var m = r.sharedMaterial;
+                if (m == null || !m.HasProperty(IdOsa)) continue;
+                m.SetFloat(IdOsa, koydet.Contains(r) ? OsaKoysi : OsaKori);
+            }
+        }
+
+        /// <summary>Korin reunan piste ja pysty näkymäavaruudessa (reunan yläreuna SovitaMallin / paikkamerkin mukaan ReunaOsuus
+        /// ruudun alalaidasta etureunan etäisyydellä), näkyvä kaistale reunasta ruudun alalaitaan; köysien parametrit.</summary>
+        void AsetaKoriKorkeus()
+        {
+            if (overlay == null || perus == null || juuri == null) return;
+            float t = Mathf.Tan(perus.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            float z = malliJuuri != null ? MalliReunaZ : EtaisyysM;
+            var reuna = juuri.TransformPoint(new Vector3(0f, (-1f + 2f * ReunaOsuus) * t * z, z));
+            var nakyma = overlay.worldToCameraMatrix;
+            var rv = nakyma.MultiplyPoint(reuna); var yv = nakyma.MultiplyVector(juuri.up).normalized;
+            Shader.SetGlobalVector(IdReunaV, new Vector4(rv.x, rv.y, rv.z, Mathf.Max(0.01f, 2f * ReunaOsuus * t * z)));
+            Shader.SetGlobalVector(IdPystyV, new Vector4(yv.x, yv.y, yv.z, 1f));
+            Shader.SetGlobalVector(IdTummuus, KoriTummuus);
+            Shader.SetGlobalVector(IdSiluetti, KoysiSiluetti);
         }
 
         // POLTIN (Linssiseppä 8.10., pallo Unreal-tasolle kohdat 2 ja 7): Ydin Poltin pystynopeudesta (vain nousussa), lämmin valo
@@ -883,6 +943,7 @@ namespace Matkakirja.Natiivi
             if (malliKori != null) malliKori.localRotation = kKori * malliKoriAlku;
             VasenKoysiNorm = LaskeVasenKoysi();
             for (int i = 0; i < malliKoydet.Count; i++) if (malliKoydet[i] != null) malliKoydet[i].localRotation = kKoysi * malliKoysiAlku[i];
+            AsetaKoriKorkeus();
         }
     }
 }

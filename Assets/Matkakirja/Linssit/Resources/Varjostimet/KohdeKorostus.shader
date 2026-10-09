@@ -18,6 +18,12 @@ Shader "Matkakirja/Linssit/KohdeKorostus"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
             #include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
+            // Kaupunkikameran käänteinen näkymä-projektio ja paikka (KaupunkiPassi asettaa): passi on jälkikäsittelyn jälkeen, jolloin
+            // URP:n UNITY_MATRIX_I_VP ja _WorldSpaceCameraPos eivät enää ole kaupunkikameran (9.10. simu: maailmanpaikka tyhjä).
+            float4x4 _KaupunkiInvVP;
+            float4 _KaupunkiKamera;
+            TEXTURE2D(_KaupunkiSyvyys);   // kameran syvyyden kopio läpinäkyvien jälkeen (KaupunkiPassi)
+            float KaupunkiSyvyys(float2 uv) { return SAMPLE_TEXTURE2D_LOD(_KaupunkiSyvyys, sampler_PointClamp, uv, 0).r; }
 
             TEXTURE2D(_Maski); SAMPLER(sampler_Maski);
             float4x4 _MaailmaKohde;      // Unityn maailma → kohteen paikallinen ENU (m): x itä, y ylös (maa = 0), z pohjoinen
@@ -30,13 +36,15 @@ Shader "Matkakirja/Linssit/KohdeKorostus"
                 float2 uv = i.texcoord;
                 half4 c = SAMPLE_TEXTURE2D_X_LOD(_BlitTexture, sampler_PointClamp, uv, 0);
                 if (_MaskiAlue.w < 0.5 || _KorostusParam.x <= 0.001) return c;
-                float syvyys = SampleSceneDepth(uv);
+                float syvyys = KaupunkiSyvyys(uv);
                 #if UNITY_REVERSED_Z
                 if (syvyys <= 1e-7) return c;
                 #else
                 if (syvyys >= 1.0 - 1e-7) return c;
                 #endif
-                float3 p = mul(_MaailmaKohde, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                float3 pw = ComputeWorldSpacePosition(uv, syvyys, _KaupunkiInvVP);
+                if (distance(pw, _KaupunkiKamera.xyz) < 30.0) return c;   // päällyskameran kori ja kupu
+                float3 p = mul(_MaailmaKohde, float4(pw, 1.0)).xyz;
                 float2 muv = (p.xz - _MaskiAlue.xy) / _MaskiAlue.z;
                 if (any(muv < 0.0) || any(muv > 1.0)) return c;
                 float m = SAMPLE_TEXTURE2D_LOD(_Maski, sampler_Maski, muv, 0).r;

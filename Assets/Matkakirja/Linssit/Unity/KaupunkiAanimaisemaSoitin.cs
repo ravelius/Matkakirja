@@ -8,6 +8,8 @@
 //  - puhe: Aanisoitin-tilan Voimassa < 1 (kertoja/Pulu) tai OpasSovitin.OpasAaniSoi (William, siltalause) → väistö; Äänimaisema-
 //    kytkin ja testimykistys hiljentävät.
 // Syötteet asetetaan ulkoa: Kamera (LS1: korkeus, nopeus, kohteen lat/lon), Aanikartta ja SilmukanUrl (Pelikoodari), Sade (COZY).
+//  - lähikerrokset (9.10., Ydin KaupunkiMaisema): kehityskaupungeissa raitiovaunu, metro, tori, lapset, kahvila ja laituri
+//    kaupunkimaisema-v1/-v2:sta tasolla Tausta × maiseman Taso × kerroin × paino × korkeus; Pariisin raitiovaunu kerta-ohiajona. Muualla ennallaan.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -95,12 +97,69 @@ namespace Matkakirja.Natiivi
         // ja oikea ladataan seuraavassa kehyksessä. Tarkistus kerran sekunnissa.
         readonly string[] lahdeUrl = new string[KaupunkiAanimaisema.Kerrokset.Length];
         float urlTarkistettu;
-        string KerroksenUrl(string kerros) => SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
+        string KerroksenUrl(string kerros)
+        {
+            if (Lahi && KaupunkiMaisema.On(kerros)) return maisema.Url(nykyId, kerros);
+            // Uudet kerrokset vain kehityskaupungeissa (aanimaisema-v2:ssa ei niitä: ei hakuja olemattomiin).
+            if (kerros == KaupunkiAanimaisema.Lapset || kerros == KaupunkiAanimaisema.Metro || kerros == KaupunkiAanimaisema.Laituri) return null;
+            return SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
+        }
+
+        // LÄHIKERROKSET (Pelikoodari 9.10.): manifestit haetaan vasta kehityskaupungissa, kerran istunnossa (epäonnistunut 60 s päästä).
+        public const string MaisemaV1 = Juuri + "kaupunkimaisema-v1/", MaisemaV2 = Juuri + "kaupunkimaisema-v2/";
+        static KaupunkiMaisema maisema; static float maisemaYritys = -999f;
+        string nykyId;
+        bool Lahi => maisema != null && Matkakirja.Linssit.Kehityskaupungit.On(nykyId);
+        readonly Dictionary<string, double> lahiPainot = new Dictionary<string, double>();
+        Func<string, bool> onSilmukka;
+
+        static IEnumerator HaeMaisema()
+        {
+            maisemaYritys = Time.unscaledTime;
+            using var r1 = UnityWebRequest.Get(MaisemaV1 + "manifest.json"); r1.timeout = 20;
+            yield return r1.SendWebRequest();
+            using var r2 = UnityWebRequest.Get(MaisemaV2 + "manifest.json"); r2.timeout = 20;
+            yield return r2.SendWebRequest();
+            if (r1.result != UnityWebRequest.Result.Success || r2.result != UnityWebRequest.Result.Success)
+            { Debug.Log($"MATKAKIRJA äänimaisema: kaupunkimaisema ei latautunut ({r1.responseCode}/{r2.responseCode})"); yield break; }
+            try { maisema = KaupunkiMaisema.Lue(r1.downloadHandler.text, MaisemaV1, r2.downloadHandler.text, MaisemaV2); Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema v1+v2 ladattu"); }
+            catch (Exception e) { Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema virheellinen: " + e.Message); }
+        }
+
+        // PARIISIN RAITIOVAUNU (v2, kerta-ohiajo 36 s): kun raitiovaunun paino > 0, ohiajo 1–3 min välein (PalloAanimaisema.Vali);
+        // taso (kerroin × paino × korkeus × vuorokausi × väistö × maiseman Taso × Tausta) seuraa soinnin ajan.
+        AudioSource kertaLahde; AudioClip kertaKlippi; string kertaUrl; bool kertaLadataan; double kertaSeuraava = -1;
+        readonly System.Random kertaRnd = new System.Random(20261009);
+
+        void Kerta(double tunti, double korkeusM, float tausta, bool soi)
+        {
+            const string R = KaupunkiAanimaisema.Raitiovaunu;
+            var a = Lahi ? maisema.KertaAani(nykyId, R) : null;
+            double paino = a != null ? KaupunkiMaisema.Paino(R, painot, tunti, korkeusM) * KaupunkiAanimaisema.Vuorokausi(R, tunti) : 0;
+            float taso = (float)(paino * mikseri.Kokonais) * Taso * tausta;
+            if (kertaLahde != null && kertaLahde.isPlaying) kertaLahde.volume = taso;
+            if (a == null || paino <= 0 || !soi) { kertaSeuraava = -1; return; }
+            if (kertaUrl != a.Osoite) { kertaUrl = a.Osoite; kertaKlippi = null; }
+            if (kertaKlippi == null)
+            {
+                if (kertaLadataan || (epaonnistunut.TryGetValue(kertaUrl, out float milloin) && Time.unscaledTime - milloin < UusintaS)) return;
+                kertaLadataan = true; string u = kertaUrl;
+                StartCoroutine(Lataa(u, c => { kertaLadataan = false; if (c == null) epaonnistunut[u] = Time.unscaledTime; else if (u == kertaUrl) kertaKlippi = c; }));
+                return;
+            }
+            double nyt = Time.unscaledTimeAsDouble;
+            if (kertaSeuraava < 0) { kertaSeuraava = nyt + PalloAanimaisema.Vali(a.Tunnus, kertaRnd) * 0.5; return; }
+            if (nyt < kertaSeuraava || (kertaLahde != null && kertaLahde.isPlaying)) return;
+            kertaSeuraava = nyt + PalloAanimaisema.Vali(a.Tunnus, kertaRnd);
+            if (kertaLahde == null) { kertaLahde = gameObject.AddComponent<AudioSource>(); kertaLahde.playOnAwake = false; kertaLahde.spatialBlend = 0; kertaLahde.loop = false; }
+            kertaLahde.clip = kertaKlippi; kertaLahde.volume = taso; kertaLahde.Play();
+            Debug.Log($"MATKAKIRJA äänimaisema: raitiovaunu ohi ({nykyId}, {taso:F2})");
+        }
         readonly HashSet<string> ladataan = new HashSet<string>();
         IReadOnlyDictionary<string, double> painot;
         double karttaLat = double.NaN, karttaLon = double.NaN;
         int edellinenTunti = -1;
-        Suhina suhina;
+        Suhina suhina; AudioSource suhinaLahde;
         AudioClip kello;
         (double KorkeusM, double NopeusMs, double Lat, double Lon)? viimeK;
         const double SiirtymaNopeusMs = 250, LentoKorkeusM = 1500;
@@ -120,9 +179,10 @@ namespace Matkakirja.Natiivi
         void Awake()
         {
             var sg = new GameObject("suhina"); sg.transform.SetParent(transform, false);
-            var sl = sg.AddComponent<AudioSource>(); sl.playOnAwake = false; sl.spatialBlend = 0; sl.loop = true;
+            var sl = sg.AddComponent<AudioSource>(); suhinaLahde = sl; sl.playOnAwake = false; sl.spatialBlend = 0; sl.loop = true;
             sl.clip = AudioClip.Create("suhina", 1, 1, AudioSettings.outputSampleRate, false); sl.Play();
             suhina = sg.AddComponent<Suhina>();
+            onSilmukka = k => !string.IsNullOrEmpty(KerroksenUrl(k));
             if (!string.IsNullOrEmpty(KelloUrl)) StartCoroutine(Lataa(KelloUrl, c => kello = c));
         }
 
@@ -148,6 +208,8 @@ namespace Matkakirja.Natiivi
             string nyk = KaupunkiId == null ? NykyinenKaupunki() : null;
             string id = KaupunkiId != null ? KaupunkiId() : !string.IsNullOrEmpty(nyk) ? nyk : Tunnus(OpasSovitin.Aloituskaupunki);
             if (!string.IsNullOrEmpty(id) && id != karttaId && id != karttaLadataan) StartCoroutine(LataaKartta(id));
+            nykyId = id;
+            if (maisema == null && Matkakirja.Linssit.Kehityskaupungit.On(id) && Time.unscaledTime - maisemaYritys > 60f) StartCoroutine(HaeMaisema());
             var tila = Aanisoitin.Instanssi?.Tila;
             bool paalla = (tila?.Aanimaisema ?? Asetukset.Paalla(Kytkin.Aanimaisema)) && !(TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa);
             if (k.HasValue && !eiPaikkaa && (double.IsNaN(karttaLat) || Etaisyys(k.Value.Lat, k.Value.Lon, karttaLat, karttaLon) > 80))
@@ -157,9 +219,11 @@ namespace Matkakirja.Natiivi
             }
             double tunti = k.HasValue && !eiPaikkaa ? Matkakirja.Linssit.Kierros.KaupunkiValo.PaikallinenTunti(DateTime.UtcNow, k.Value.Lon)
                 : edellinenTunti >= 0 ? edellinenTunti + 0.5 : 12;   // lennolla ilman paikkaa ei tuntia eikä lyöntejä
+            bool lahi = Lahi;
+            double korkeus = k?.KorkeusM ?? 100;
             mikseri.Paivita(new KaupunkiAanimaisema.Syote
             {
-                Painot = painot, KorkeusM = k?.KorkeusM ?? 100, NopeusMs = k?.NopeusMs ?? 0, Tunti = tunti,
+                Painot = lahi ? KaupunkiMaisema.Painot(painot, tunti, korkeus, onSilmukka, lahiPainot) : painot, Lahiaanet = lahi, KorkeusM = k?.KorkeusM ?? 100, NopeusMs = k?.NopeusMs ?? 0, Tunti = tunti,
                 Sade = Sade?.Invoke() ?? 0, Puhe = (tila != null && tila.Voimassa < 0.999) || OpasSovitin.OpasAaniSoi, Paalla = paalla && k.HasValue,
             }, Time.unscaledDeltaTime);
             float kokonais = (float)mikseri.Kokonais * Taso;
@@ -168,6 +232,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < lahteet.Length; i++)
             {
                 string kerros = KaupunkiAanimaisema.Kerrokset[i];
+                // Lähikerrokset: kerroin (painossa) suhteellinen samaan maisemaan, joten myös maiseman Taso (Pelikoodari 9.10.: muuten ~5 dB yli).
                 float t = (float)mikseri.Tasot[i] * kokonais * (kerros == KaupunkiAanimaisema.Sade || kerros == KaupunkiAanimaisema.Tuuli ? saa : tausta);
                 var l = lahteet[i];
                 if (t > 0.001f && l == null) { Avaa(i); continue; }
@@ -177,7 +242,9 @@ namespace Matkakirja.Natiivi
                 if (t <= 0.001f) { if (hiljaaAlkaen[i] <= 0) hiljaaAlkaen[i] = Time.unscaledTime; else if (Time.unscaledTime - hiljaaAlkaen[i] > VapautusS) Vapauta(i); }
                 else hiljaaAlkaen[i] = 0;
             }
-            suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais);
+            suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais) * saa;   // TF 169: nopeuden suhina tuulen kanssa Sää-ryhmään
+            if (suhinaLahde != null) suhinaLahde.volume = suhina.Taso > 0.0005f ? 1f : 0f;   // opas aanet näkee hiljaisen suhinan hiljaisena
+            Kerta(tunti, korkeus, tausta, paalla && k.HasValue && !eiPaikkaa);
             for (int ki = kellot.Count - 1; ki >= 0; ki--)
             {
                 var kl = kellot[ki].Lahde;
@@ -187,7 +254,7 @@ namespace Matkakirja.Natiivi
                 // Lyönnistä soitetaan vain ensimmäinen isku: LyontiS, sitten häivytys HaivytysS ja lähde pois.
                 float f = Mathf.Clamp01(1f - (kl.time - LyontiS) / LyontiHaivytysS);
                 if (f <= 0f || !kl.isPlaying) { Destroy(kl); kellot.RemoveAt(ki); continue; }
-                kl.volume = kellot[ki].Perus * (float)mikseri.Kokonais * f;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
+                kl.volume = kellot[ki].Perus * (float)mikseri.Kokonais * f * tausta;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
             }
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
@@ -255,7 +322,7 @@ namespace Matkakirja.Natiivi
             yield return new WaitForSecondsRealtime((float)viive);
             if (kello == null) yield break;
             var l = gameObject.AddComponent<AudioSource>(); l.spatialBlend = 0; l.clip = kello; l.loop = false;
-            l.volume = perus * (float)mikseri.Kokonais; l.Play();
+            l.volume = perus * (float)mikseri.Kokonais * Asetukset.Taso(Voima.Tausta); l.Play();
             kellot.Add((l, perus));
             Destroy(l, Mathf.Min(kello.length, LyontiS + LyontiHaivytysS) + 0.5f);   // varmistus: yksi isku
         }

@@ -38,6 +38,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(KaupunkiYovalot.OsuusTunnista(5.25) > 0 && KaupunkiYovalot.OsuusTunnista(5.25) < 1);
         }
 
+        [Testi] static void IltaikkunatSyttyvatEnnenKatuvaloja()
+        {
+            Oleta.Sama(0.0, KaupunkiYovalot.IkkunatAuringosta(20));
+            Oleta.Sama(1.0, KaupunkiYovalot.IkkunatAuringosta(-3));
+            Oleta.Tosi(KaupunkiYovalot.IkkunatAuringosta(1) > 0.5 && KaupunkiYovalot.OsuusAuringosta(1) == 0, "auringonlaskussa ikkunat, ei katuvaloja");
+            Oleta.Tosi(Math.Abs(KaupunkiYovalot.IkkunatTunnista(18.5) - 0.6) < 1e-9, "illan valinta: ikkunat 60 %");
+            Oleta.Sama(0.0, KaupunkiYovalot.IkkunatTunnista(12));
+            Oleta.Sama(1.0, KaupunkiYovalot.IkkunatTunnista(23));
+            for (double h = 0; h < 24; h += 0.25) Oleta.Tosi(KaupunkiYovalot.IkkunatTunnista(h) >= KaupunkiYovalot.OsuusTunnista(h) - 1e-9, $"ikkunat vähintään katuvalot klo {h}");
+        }
+
         [Testi] static void RuudukkoVaihtuuVastaKeskilaatanVaihtuessa()
         {
             var k = KaupunkiYovalot.Kulma(48.857, 2.352);

@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         public static bool NostoAsetettu;
         static bool nostoIndeksista;
         /// <summary>Uusia paloja enintään näin monta kehyksessä (ei nykäystä pallon lennossa; LS1:n katselmointi).</summary>
-        public const int PalojaKehyksessa = 2;
+        public const int PalojaKehyksessa = 4;   // 9.10.: 2 jätti lähipaloja puuttumaan vielä 15 s:n kohdalla (Googlen vesi näkyi terävinä monikulmioina)
         readonly Queue<(bool, int)> jono = new Queue<(bool, int)>();
         /// <summary>Veden juuri (paikalliset akselit itä, ylös, pohjoinen; m), null ennen latausta (LS1:n veneet).</summary>
         public Transform Juuri => juuri != null ? juuri.transform : null;
@@ -48,6 +48,26 @@ namespace Matkakirja.Natiivi
         public static string KrediittiNyt { get; private set; }
         /// <summary>Vettä piirretään (KaupunkiIlmakeha pitää taivaan arvot ajan tasalla veden heijastukselle, vaikka ilmakehä olisi pois).</summary>
         public static bool Nakyvissa;
+
+        // VANAT (PT 9.10., omistaja TF 168): LS1:n ElavaKaupunki kutsuu joka kehys jokaiselle näkyvälle veneelle; VesiPinta piirtää
+        // kameraa lähimmät 16 (Ydin VesiVanat: kiila, keskivana, keula-aalto; vanhentuneet 0,5 s:n jälkeen pois).
+        static readonly VesiVanat vanat = new VesiVanat();
+        static readonly Vector4[] vanaA = new Vector4[VesiVanat.VanojaMax], vanaB = new Vector4[VesiVanat.VanojaMax];
+        static readonly int IdVana = Shader.PropertyToID("_VesiVana"), IdVanaB = Shader.PropertyToID("_VesiVanaB"), IdVanaMaara = Shader.PropertyToID("_VesiVanaMaara");
+        /// <summary>Vene i: paikka ja kulkusuunta maailmassa (xz), nopeus m/s, veneen pituus m.</summary>
+        public static void Vana(int i, Vector3 paikka, Vector2 suunta, float nopeusMs, float pituusM) =>
+            vanat.Aseta(i, paikka.x, paikka.z, suunta.x, suunta.y, nopeusMs, pituusM, Time.time);
+
+        static void LahetaVanat(Camera kamera)
+        {
+            var p = kamera.transform.position; var l = vanat.Valitse(p.x, p.z, Time.time);
+            for (int i = 0; i < l.Count; i++)
+            {
+                vanaA[i] = new Vector4((float)l[i].X, (float)l[i].Z, (float)l[i].Dx, (float)l[i].Dz);
+                vanaB[i] = new Vector4((float)l[i].Nopeus, (float)l[i].Pituus, 0f, 0f);
+            }
+            Shader.SetGlobalVectorArray(IdVana, vanaA); Shader.SetGlobalVectorArray(IdVanaB, vanaB); Shader.SetGlobalFloat(IdVanaMaara, l.Count);
+        }
 
         public void Avaa(Transform vanhempi, double lat, double lon, int kerros)
         {
@@ -77,7 +97,9 @@ namespace Matkakirja.Natiivi
             // Kohde indexistä: lähin, jonka säteellä kaupunki on.
             // index-v2.json (Tukholma + Pariisi; Karttaseppä 8.10.: uudet kohteet uuteen versioon, vanha ei ylikirjoitu), varana index.json.
             string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false;
-            foreach (var nimi in new[] { "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
+            // v4 (Karttaseppä 9.10., LS1 + PT: Tuileries'n altaan päällä leijuva kiekko): pienet erilliset altaat ja suihkulähteet poistettu
+            // aineistosta, kanava-altaat (Saint-Martin, Ourcq) suojattu OSM:n vesiväylillä; muoto sama kuin v3.
+            foreach (var nimi in new[] { "index-v4.json", "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
             {
                 using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
                 r0.timeout = 15; yield return r0.SendWebRequest();
@@ -152,6 +174,7 @@ namespace Matkakirja.Natiivi
             if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);
             if (!nakyy) return;
             Nakyvissa = true;
+            LahetaVanat(kamera);
             for (int n = 0; n < PalojaKehyksessa && jono.Count > 0; n++)
             {
                 var h = jono.Dequeue();
