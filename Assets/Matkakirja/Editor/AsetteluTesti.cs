@@ -38,7 +38,8 @@ namespace Matkakirja.Editori
             "Mikä tehtävä katedraalin gargoileilla on?",
         };
 
-        enum Vaihe { Aloita, OdotaPelia, Kysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Lopeta, OdotaLoppua, Valmis }
+        enum Vaihe { Aloita, OdotaPelia, Kysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Linna, OdotaLinna, Loyto, OdotaLoyto,
+            Lopeta, OdotaLoppua, Valmis }
 
         static int kokoNro, kehyksia;
         static double vaiheAlku;
@@ -116,10 +117,37 @@ namespace Matkakirja.Editori
                     // Sää odottaa enintään NytRivi.SaanOdotusS; rivi näkyy ~3 s (Nimikyltti).
                     if (Kulunut < Matkakirja.Natiivi.NytRivi.SaanOdotusS + 0.8) return;
                     TarkistaNytRivi();
+                    Siirry(Vaihe.Linna);
+                    break;
+                case Vaihe.Linna:
+                    // Linnan HUD ilman SeikkailuPelaajaa: tapit näkyviin ja toimintonappi poimi-tilaan (testikytkimet).
+                    SeikkailuTapit.TestiNakyy = true;
+                    SeikkailuTapit.TestiToiminto = "poimi";
+                    Siirry(Vaihe.OdotaLinna);
+                    break;
+                case Vaihe.OdotaLinna:
+                    // Toimintonappi häivyttäen (Tyylikirja.Kesto.Sulku).
+                    if (kehyksia < 20 || Kulunut < 0.8) return;
+                    TarkistaLinna();
+                    Siirry(Vaihe.Loyto);
+                    break;
+                case Vaihe.Loyto:
+                    SeikkailuTapit.NaytaLoyto("Liinanyytti", "Liinaan kääritty nyytti, jonka joku jätti muurin rakoon kauan sitten.",
+                        null, "+5 tp");
+                    Siirry(Vaihe.OdotaLoyto);
+                    break;
+                case Vaihe.OdotaLoyto:
+                    var paljastus = UiNakymat.Hae().Paljastus;
+                    if (!paljastus.TestiJatkaEsilla && Kulunut < 15) return;
+                    if (kehyksia < 10) return;
+                    TarkistaLoyto(paljastus);
+                    paljastus.Sulje();
                     Siirry(Vaihe.Lopeta);
                     break;
                 case Vaihe.Lopeta:
                     OpasValikko.TestiKysymykset = null;
+                    SeikkailuTapit.TestiNakyy = null;
+                    SeikkailuTapit.TestiToiminto = null;
                     if (EditorApplication.isPlaying) EditorApplication.ExitPlaymode();
                     Siirry(Vaihe.OdotaLoppua);
                     break;
@@ -177,12 +205,50 @@ namespace Matkakirja.Editori
             }
         }
 
+        static void TarkistaLinna()
+        {
+            var juuri = OpasValikko.Hae().TestiJuuri;
+            if (juuri?.panel == null) { Virhe("oppaan paneeli puuttuu"); return; }
+            var turva = TurvaAlue(juuri);
+            var napit = Nakyvat(OpasValikko.Hae().TestiAvainnapit()).ToList();
+            foreach (var (nimi, e) in Nakyvat(SeikkailuTapit.TestiAvainnapit()))
+            {
+                Kokonaan(e, turva, "linna: " + nimi);
+                foreach (var (n2, e2) in napit)
+                    if (e.worldBound.Overlaps(e2.worldBound))
+                        Virhe($"linna: {nimi} {Laatikko(e.worldBound)} on päällekkäin: {n2} {Laatikko(e2.worldBound)}");
+            }
+            if (!Nakyvat(SeikkailuTapit.TestiAvainnapit()).Any(t => t.Nimi == "toimintonappi")) Virhe("linna: toimintonappi ei näkyvissä");
+        }
+
+        static void TarkistaLoyto(Paljastus p)
+        {
+            if (!p.TestiJatkaEsilla) { Virhe("löytö: Jatka matkaa ei tullut esiin 15 s:ssa"); return; }
+            var jatka = p.TestiJatka;
+            if (jatka?.panel == null) { Virhe("löytö: paneeli puuttuu"); return; }
+            var turva = TurvaAlue(jatka, UiKerros.Valikot);
+            Kokonaan(jatka, turva, "löytö: Jatka matkaa");
+            var nimi = Etsi(jatka, "Liinanyytti");
+            if (nimi == null) Virhe("löytö: nimi puuttuu"); else Kokonaan(nimi, turva, "löytö: nimi");
+        }
+
         // --- apurit ---------------------------------------------------------------------------------------------------
 
-        static Rect TurvaAlue(VisualElement e)
+        static IEnumerable<(string Nimi, VisualElement E)> Nakyvat(IEnumerable<(string Nimi, VisualElement E)> napit) =>
+            napit.Where(n => n.E != null && n.E.panel != null && n.E.resolvedStyle.display != DisplayStyle.None
+                && n.E.resolvedStyle.visibility != Visibility.Hidden && Nakyvissa(n.E));
+
+        /// <summary>Elementti ja kaikki sen esivanhemmat display ≠ None (piilotetun ryhmän lapsen oma tyyli on Flex).</summary>
+        static bool Nakyvissa(VisualElement e)
+        {
+            for (var p = e; p != null; p = p.parent) if (p.resolvedStyle.display == DisplayStyle.None) return false;
+            return true;
+        }
+
+        static Rect TurvaAlue(VisualElement e, int kerros = LinssiUi.RadioKerros)
         {
             var koko = e.panel.visualTree.layout;
-            var r = UiKerros.Hae().Reunat(LinssiUi.RadioKerros);
+            var r = UiKerros.Hae().Reunat(kerros);
             return Rect.MinMaxRect(r.x, r.y, koko.width - r.z, koko.height - r.w);
         }
 

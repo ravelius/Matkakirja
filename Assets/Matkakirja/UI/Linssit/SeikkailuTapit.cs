@@ -62,6 +62,13 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
         public static string TestiToiminto;
+        /// <summary>Asettelutesti: tapit (levossa näkymättöminä paikallaan) ja toimintonappi nimineen.</summary>
+        public static IEnumerable<(string Nimi, VisualElement E)> TestiAvainnapit()
+        {
+            yield return ("liiketappi", vasen?.Juuri);
+            yield return ("katsetappi", oikea?.Juuri);
+            yield return ("toimintonappi", viimeisin?.toimintoNappi);
+        }
         readonly UiKerros kerros;
         readonly int kerrosNro;
 
