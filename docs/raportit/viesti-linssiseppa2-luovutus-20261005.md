@@ -35,7 +35,15 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 05.4x (uusin)
+## TILA 9.10. klo 06.5x (uusin)
+- ÄMPÄRI v4 (Julkaisija 06.55): uusin-2 → v4 (Giza, Riddarholmen + korjattu tekijärivi, Kuninkaanlinna v1.2, Concorde v2.2);
+  uusin → v2/mallit-giza.json (vanhat appit). Julkaisija selvittää, miksi uusin-2 palasi välillä v2:een (ei LS2).
+- Juna 170: 52c736c4d (leikkaus) mukana käännöksessä dc6128c8f; välkekorjaus fb3b9f27a Natiivisepälle (PT: junaan 170).
+- Kuvat lokit/linssiseppa2-170g-*: Concorde puhdas. Notre-Dame: seinät tummat (normaalit?), Googlen nosturipuomit polygonin ulkopuolella,
+  sahalaitainen rantahelma → LR. Vasa v1: mastot OK, kattoalue liian vaalea + musta seinälaatikko → LR. Kuninkaanlinnan pahvimaisuus LR:n jonoon.
+- Putki: concorde-putki/glb/sijainnit.json (9 kohdetta, vasamuseet lisätty), viimeisin vienti13; kuvausskripti scratchpad aja-170g.sh (A=appi).
+
+## TILA 9.10. klo 05.4x
 - ÄMPÄRI: omat mallit v3 (Giza + Riddarholmen + Kuninkaanlinna v1.1) ja uusin-2.json → v3 (Julkaisija 05.23). Vain juna 170+ lukee uusin-2.
 - GIZA PUUTTUI 168/169:STÄ: uusin.json ja giza-v1 olivat 404 (ei varapolkua StreamingAssetsissa). Paketti _valmiit/omat-mallit-vienti-20261009c
   (uusin.json → v2/mallit-giza.json, vain 4 Giza-kohdetta) Julkaisijalla. Ei kaupunkeja uusin.json:iin (169 leikkaa käänteisesti TKL/PAR).
