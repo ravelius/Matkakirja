@@ -1,0 +1,1000 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Mikä La Granjilla de La Fresneda on?
+AIEMPI VASTAUS (Livia):
+Ai tota. La Granjilla de La Fresneda kuuluu El Escorialin kompleksiin ja sijaitsee noin viiden kilometrin päässä siitä. Se oli kuninkaan metsästysmaja ja samalla [[hieronymiittimunkkien]] retriitti eli hiljentymispaikka, ja se liittyy [[Filip II:n]] aikaan, jolloin El Escorial rakennettiin vuosina 1563–1584. Pieni paikka ison naapurin varjossa.
+KYSYMYS: Kerro lisää: Filip II:n
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Miksi Kaarle V luopui vallasta?
+AIEMPI VASTAUS (Livia):
+Mmm— Syytä ei voi tiivistää varmasti yhteen lauseeseen, ja lähteet painottavat eri asioita, joten en ole varma kaikesta. Yleisesti mainitaan keisarin heikentynyt terveys ja laajan valtakunnan hallinnoinnin raskaus. Hän jakoi vallan niin, että vuonna 1556 Espanjan kruunu siirtyi pojalle [[Filip II:lle]] ja keisarikruunu veljelle [[Ferdinand I:lle]]. Sen jälkeen hän vetäytyi [[Yusten luostariin]] rukoilemaan. Kyllä minäkin väsyisin, jos kantaisin noin paljon postia.
+KYSYMYS: Kerro lisää: Filip II:lle
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+AIEMPI KYSYMYS: Miksi Kaarle V luopui vallasta?
+AIEMPI VASTAUS (Livia):
+Mmm— Syytä ei voi tiivistää varmasti yhteen lauseeseen, ja lähteet painottavat eri asioita, joten en ole varma kaikesta. Yleisesti mainitaan keisarin heikentynyt terveys ja laajan valtakunnan hallinnoinnin raskaus. Hän jakoi vallan niin, että vuonna 1556 Espanjan kruunu siirtyi pojalle [[Filip II:lle]] ja keisarikruunu veljelle [[Ferdinand I:lle]]. Sen jälkeen hän vetäytyi [[Yusten luostariin]] rukoilemaan. Kyllä minäkin väsyisin, jos kantaisin noin paljon postia.
+KYSYMYS: Kerro lisää: Ferdinand I:lle
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+AIEMPI KYSYMYS: Miksi Kaarle V luopui vallasta?
+AIEMPI VASTAUS (Livia):
+Mmm— Syytä ei voi tiivistää varmasti yhteen lauseeseen, ja lähteet painottavat eri asioita, joten en ole varma kaikesta. Yleisesti mainitaan keisarin heikentynyt terveys ja laajan valtakunnan hallinnoinnin raskaus. Hän jakoi vallan niin, että vuonna 1556 Espanjan kruunu siirtyi pojalle [[Filip II:lle]] ja keisarikruunu veljelle [[Ferdinand I:lle]]. Sen jälkeen hän vetäytyi [[Yusten luostariin]] rukoilemaan. Kyllä minäkin väsyisin, jos kantaisin noin paljon postia.
+KYSYMYS: Kerro lisää: Yusten luostariin
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / San Juan: Vapaus vuonna 1873] Isoisän matkavuonna 1873 Espanjan kansalliskokous päätti 22. maaliskuuta lakkauttaa orjuuden Puerto Ricossa. Päätös vapautti noin 29 000 orjaa, mikä oli tuolloin noin viisi prosenttia koko saaren väestöstä. Vapaus ei ollut ehdoton: entiset omistajat saivat korvauksen, ja vapautetut velvoitettiin jatkamaan työtä entisillä tiloillaan vielä kolme vuotta, minkä lisäksi täysiä kansalaisoikeuksia sai odottaa viisi vuotta. Päätöstä ajoi pitkäjänteinen orjuudenvastainen liike, ja lopullinen sysäys tuli, kun Espanjaan julistettiin tasavalta pari kuukautta aiemmin. Puerto Rico on sittemmin muistanut tapahtumaa vuosittaisena juhlapäivänä.
+AIEMPI KYSYMYS: Mitä Yusten luostarille tapahtui vuonna 1809?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ranskalaisten joukot polttivat luostarin vuonna 1809, aikana, jolloin Espanjassa käytiin [[Espanjan vapaussodan]] taisteluja Napoleonin sotien yhteydessä. Rakennus jäi raunioksi aina vuoteen 1949 asti, jolloin Espanjan valtio kunnosti sen. Luostarin oli perustanut vuonna 1402 [[hieronymiittimunkit]], mutta tarkemmista palon vaiheista en ole varma. Hyvä, että joku sen lopulta kunnosti.
+KYSYMYS: Kerro lisää: Espanjan vapaussodan
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+AIEMPI KYSYMYS: Mitä Yusten luostarille tapahtui vuonna 1809?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ranskalaisten joukot polttivat luostarin vuonna 1809, aikana, jolloin Espanjassa käytiin [[Espanjan vapaussodan]] taisteluja Napoleonin sotien yhteydessä. Rakennus jäi raunioksi aina vuoteen 1949 asti, jolloin Espanjan valtio kunnosti sen. Luostarin oli perustanut vuonna 1402 [[hieronymiittimunkit]], mutta tarkemmista palon vaiheista en ole varma. Hyvä, että joku sen lopulta kunnosti.
+KYSYMYS: Kerro lisää: hieronymiittimunkit
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Kuka Kaarle V oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaarle V oli [[Habsburgien]] hallitsijasukuun kuulunut [[Pyhän saksalais-roomalaisen keisarikunnan]] keisari ja Espanjan kuningas. Hän luopui vuonna 1556 Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi, minkä jälkeen hän vetäytyi [[Yusten luostariin]] Extremaduraan ja kuoli siellä syyskuussa 1558.
+
+Kahden kruunun mies vietti viimeiset vuotensa hiljaisessa luostarissa. Siinä on jotain lempeää.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Kuka Kaarle V oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaarle V oli [[Habsburgien]] hallitsijasukuun kuulunut [[Pyhän saksalais-roomalaisen keisarikunnan]] keisari ja Espanjan kuningas. Hän luopui vuonna 1556 Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi, minkä jälkeen hän vetäytyi [[Yusten luostariin]] Extremaduraan ja kuoli siellä syyskuussa 1558.
+
+Kahden kruunun mies vietti viimeiset vuotensa hiljaisessa luostarissa. Siinä on jotain lempeää.
+KYSYMYS: Kerro lisää: Pyhän saksalais-roomalaisen keisarikunnan
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Klementinum] Isoisäsi kirjaa ilmanpuntarin lukemat, koska hän ei luota muistiin. Prahassa on talo, joka on tehnyt saman kauemmin kuin yksikään suku. Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina, vaurioitui hussilaissodissa 1420 ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston, jollaista harvassa kaupungissa on. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Vuonna 1791 siellä …
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Kuka oli Ferdinand I?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ferdinand I oli Kaarle V:n veli, jolle Kaarle luovutti keisarikruunun vuonna 1556. Hän oli myös [[Böömin]] ja [[Unkarin]] kuningas ja kuului veljensä tavoin [[Habsburgeihin]]. Veljesten työnjako oli kai selvä.
+KYSYMYS: Kerro lisää: Böömin
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Kuka oli Ferdinand I?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ferdinand I oli Kaarle V:n veli, jolle Kaarle luovutti keisarikruunun vuonna 1556. Hän oli myös [[Böömin]] ja [[Unkarin]] kuningas ja kuului veljensä tavoin [[Habsburgeihin]]. Veljesten työnjako oli kai selvä.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+AIEMPI KYSYMYS: Kuka oli Ferdinand I?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ferdinand I oli Kaarle V:n veli, jolle Kaarle luovutti keisarikruunun vuonna 1556. Hän oli myös [[Böömin]] ja [[Unkarin]] kuningas ja kuului veljensä tavoin [[Habsburgeihin]]. Veljesten työnjako oli kai selvä.
+KYSYMYS: Kerro lisää: Habsburgeihin
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mikä Habsburg-suku oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Habsburgit olivat eurooppalainen hallitsijasuku, jonka jäseniä istui monien maiden valtaistuimilla vuosisatojen ajan. Heitä olivat sekä [[Kaarle V]] että hänen poikansa [[Filip II]], ja suvun Espanjan haara hallitsi Espanjaa 1700-luvun alkuun saakka. Suvun toinen haara hallitsi muun muassa [[Itävaltaa]]. Pitkä suku, pitkä vastaus.
+KYSYMYS: Kerro lisää: Kaarle V
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Mikä Habsburg-suku oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Habsburgit olivat eurooppalainen hallitsijasuku, jonka jäseniä istui monien maiden valtaistuimilla vuosisatojen ajan. Heitä olivat sekä [[Kaarle V]] että hänen poikansa [[Filip II]], ja suvun Espanjan haara hallitsi Espanjaa 1700-luvun alkuun saakka. Suvun toinen haara hallitsi muun muassa [[Itävaltaa]]. Pitkä suku, pitkä vastaus.
+KYSYMYS: Kerro lisää: Filip II
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+AIEMPI KYSYMYS: Mikä Habsburg-suku oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Habsburgit olivat eurooppalainen hallitsijasuku, jonka jäseniä istui monien maiden valtaistuimilla vuosisatojen ajan. Heitä olivat sekä [[Kaarle V]] että hänen poikansa [[Filip II]], ja suvun Espanjan haara hallitsi Espanjaa 1700-luvun alkuun saakka. Suvun toinen haara hallitsi muun muassa [[Itävaltaa]]. Pitkä suku, pitkä vastaus.
+KYSYMYS: Kerro lisää: Itävaltaa
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Miksi taistelua sanottiin ristiretkeksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Taistelua kutsuttiin [[ristiretkeksi]], koska kristittyjen sotaretki almohadien valtaa vastaan nähtiin uskonnollisena yrityksenä eikä pelkästään kuningaskuntien välisenä kiistana. Siksi mukaan tuli ritareita eri puolilta Eurooppaa, vaikka joukkoja johtivat Iberian omat hallitsijat: Kastilian kuningas [[Alfonso VIII]], Navarran Sancho VII ja Aragonian Pedro II. Taistelu oli tärkeä käännekohta [[Reconquistassa]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: ristiretkeksi
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Minareetti, joka valmistui voitonriemuun] Kalifi Abu Ya'qub Yusuf käski 1184 rakentaa suurmoskeijalle minareetin, mutta työ pysähtyi samana vuonna: ensin kuoli arkkitehti ja puolitoista kuukautta myöhemmin kalifi itse. Rakentaminen jatkui vasta 1188 ja kulki kolmen arkkitehdin käsien läpi. Torni valmistui 10. maaliskuuta 1198, kun sen huippuun nostettiin neljä kultaista tai pronssista palloa muistoksi voitosta Kastilian Alfonso VIII:sta neljä vuotta aiemmin. Sisällä ei ole portaita vaan 35 loivaa ramppia: aikalaiskronikan mukaan ne tehtiin niin leveiksi, että juhtaeläimetkin pääsivät ylös.
+AIEMPI KYSYMYS: Miksi taistelua sanottiin ristiretkeksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Taistelua kutsuttiin [[ristiretkeksi]], koska kristittyjen sotaretki almohadien valtaa vastaan nähtiin uskonnollisena yrityksenä eikä pelkästään kuningaskuntien välisenä kiistana. Siksi mukaan tuli ritareita eri puolilta Eurooppaa, vaikka joukkoja johtivat Iberian omat hallitsijat: Kastilian kuningas [[Alfonso VIII]], Navarran Sancho VII ja Aragonian Pedro II. Taistelu oli tärkeä käännekohta [[Reconquistassa]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Alfonso VIII
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+AIEMPI KYSYMYS: Miksi taistelua sanottiin ristiretkeksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Taistelua kutsuttiin [[ristiretkeksi]], koska kristittyjen sotaretki almohadien valtaa vastaan nähtiin uskonnollisena yrityksenä eikä pelkästään kuningaskuntien välisenä kiistana. Siksi mukaan tuli ritareita eri puolilta Eurooppaa, vaikka joukkoja johtivat Iberian omat hallitsijat: Kastilian kuningas [[Alfonso VIII]], Navarran Sancho VII ja Aragonian Pedro II. Taistelu oli tärkeä käännekohta [[Reconquistassa]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Reconquistassa
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+AIEMPI KYSYMYS: Mitä taistelun jälkeen tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Taistelun välittömät sotilaalliset seuraukset jäivät rajallisiksi, vaikka sitä pidetään tärkeänä käännekohtana. [[Guadalquivirin]] laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin, kun kristityt valtakunnat työntyivät etelään [[almohadien]] hallitsemalle alueelle. Taistelun merkitys onkin enemmän siinä, mihin kehitys sen jälkeen johti, kuin siinä, mitä tapahtui heti seuraavina vuosina. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Guadalquivirin
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Bab Agnaou] 1190 Bab Agnaou oli kuninkaallisen kasbahin pääportti, ja sen rakennutti almohadikalifi Ya'qub al-Mansur; portti valmistui noin 1188–1190. Kasbah on medinan eteläosassa, ja saman muurin sisällä ovat Kasbahin moskeija, saadilaisten haudat, El Badin palatsi ja kuninkaan nykyinen residenssi. Portti on kaupunginmuurin sisäpuolella, joten sen tehtävä oli ensisijaisesti näyttävyys. Alun perin porttia reunusti kaksi bastionitornia, ja käytävä kääntyi holvatussa eteisessä yhdeksänkymmentä astetta — sama ratkaisu kuin Rabatin Bab er-Rouahissa. Tornit ja eteinen ovat kadonneet, ja kaariaukko on muurattu osittain umpeen pienemmäksi tiilikaareksi todennäköisesti Sidi Muhammad ibn Abdallahin aikana. Jul…
+- [Marrakech — kohdekartta / Kohdekartta: Saadilaisten haudat] 1603 Kasbahin moskeijan eteläseinän takana on puutarha, jossa on haudattu saadilaissuvun hallitsijoita. Paikka on ollut hautausmaa jo almohadien aikaan, ja marinidisulttaani Abu al-Hasan haudattiin tänne väliaikaisesti 1351 kuoltuaan maanpaossa Korkeassa Atlaksessa; hänen marmorinen hautakivensä on yhä yhdessä kammiossa, vaikka ruumis siirrettiin muutamaa kuukautta myöhemmin Chellahiin. Itäinen mausoleumi rakennettiin ensin: Abdallah al-Ghalib pystytti sen vuosien 1557 ja 1574 välillä isänsä Muhammad al-Shaykhin muistoksi. Kokonaisuus sai nykyisen laajuutensa Ahmad al-Mansurin aikana. Tärkeimmät haudat on merkitty hienosti kaiverretuin marmorilaatoin, muut on peitetty värikkäällä zellijillä…
+AIEMPI KYSYMYS: Mitä taistelun jälkeen tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Taistelun välittömät sotilaalliset seuraukset jäivät rajallisiksi, vaikka sitä pidetään tärkeänä käännekohtana. [[Guadalquivirin]] laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin, kun kristityt valtakunnat työntyivät etelään [[almohadien]] hallitsemalle alueelle. Taistelun merkitys onkin enemmän siinä, mihin kehitys sen jälkeen johti, kuin siinä, mitä tapahtui heti seuraavina vuosina. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: almohadien
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kaupunkilehti / Marrakech: Punainen muuri ja Koutoubia] Almoravidit muurittivat kaupungin 1100-luvulla, ja muuri kiertää medinaa yhä noin yhdeksäntoista kilometriä. Se on tehty paikallisesta oranssinpunaisesta savesta ja kalkista — siitä kaupungin lisänimi punainen kaupunki — ja siinä on kaksikymmentä porttia ja kaksisataa tornia. Almohadit valtasivat kaupungin 1147 usean kuukauden piirityksen jälkeen, ja Abd al-Mu'min perusti samana vuonna Koutoubian moskeijan. Sen minareetti on maasta huipun koristeeseen noin 77 metriä ja yhä kaupungin korkein rakennus; se vaikutti todennäköisesti Sevillan Giraldaan ja Rabatin Hassanin torniin.
+AIEMPI KYSYMYS: Keitä almohadit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Almohadit]] olivat muslimihallitsijoiden dynastia, jonka valta ulottui 1200-luvun alussa Iberian niemimaan eteläpuoliskolle ja Marokkoon. Heidän johtajansa, kalifi al-Nasir, johti armeijaa [[Las Navas de Tolosan]] taistelussa kristittyjä liittoutuneita vastaan. Taistelun jälkeen kristittyjen valtakuntien eteneminen etelään kiihtyi, ja [[Guadalquivirin]] laakson valtaus alkoi noin kolmekymmentä vuotta myöhemmin. Tarkemmat hallitusvuodet minun pitää jättää historiankirjoille.
+KYSYMYS: Kerro lisää: Almohadit
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+AIEMPI KYSYMYS: Keitä almohadit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Almohadit]] olivat muslimihallitsijoiden dynastia, jonka valta ulottui 1200-luvun alussa Iberian niemimaan eteläpuoliskolle ja Marokkoon. Heidän johtajansa, kalifi al-Nasir, johti armeijaa [[Las Navas de Tolosan]] taistelussa kristittyjä liittoutuneita vastaan. Taistelun jälkeen kristittyjen valtakuntien eteneminen etelään kiihtyi, ja [[Guadalquivirin]] laakson valtaus alkoi noin kolmekymmentä vuotta myöhemmin. Tarkemmat hallitusvuodet minun pitää jättää historiankirjoille.
+KYSYMYS: Kerro lisää: Las Navas de Tolosan
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+AIEMPI KYSYMYS: Mitä Reconquista tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Reconquista]] tarkoittaa espanjaksi takaisinvaltausta, ja sillä viitataan siihen pitkään ajanjaksoon, jonka kuluessa Iberian niemimaan kristityt valtakunnat valtasivat alueita muslimihallitsijoilta. Las Navas de Tolosan taistelu vuonna 1212 oli tärkeä käännekohta tässä kehityksessä. Se kesti vuosisatoja ja päättyi [[Granadan]] valtaukseen vuonna 1492. Taisin kiirehtiä nuo vuosisadat parissa virkkeessä.
+KYSYMYS: Kerro lisää: Reconquista
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Mitä Reconquista tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Reconquista]] tarkoittaa espanjaksi takaisinvaltausta, ja sillä viitataan siihen pitkään ajanjaksoon, jonka kuluessa Iberian niemimaan kristityt valtakunnat valtasivat alueita muslimihallitsijoilta. Las Navas de Tolosan taistelu vuonna 1212 oli tärkeä käännekohta tässä kehityksessä. Se kesti vuosisatoja ja päättyi [[Granadan]] valtaukseen vuonna 1492. Taisin kiirehtiä nuo vuosisadat parissa virkkeessä.
+KYSYMYS: Kerro lisää: Granadan
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+AIEMPI KYSYMYS: Mitä Don Quijote tuulimyllyille teki?
+AIEMPI VASTAUS (Livia):
+Kas vaan, klassikko. Don Quijote luuli tuulimyllyjä jättiläisiksi ja ryntäsi niitä vastaan keihäs ojossa, vaikka hänen aseenkantajansa [[Sancho Panza]] varoitti, että kyse oli vain myllyistä. Kohtaus on [[Cervantesin]] romaanin kahdeksannen luvun alussa, jossa kerrotaan tasangolla seisovista kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä. Keihäs tarttui myllyn lapaan, ja Don Quijote sinkoutui maahan. [[Campo de Criptanan]] myllyrivi on yksi tunnetuimmista paikoista, joiden äärellä kohtausta muistellaan. Espanjan museot ovat lisäksi vieneet romaanin ensipainoksen verkkoon, joten sen voi katsoa ilman lippujonoa. Minä en tosin lukenut sitä kokonaan, vain kirjeet.
+KYSYMYS: Kerro lisää: Sancho Panza
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kohdekartta / Kohdekartta: Gran Teatro Cervantes] 1913 Kansainvälistyvässä Tangerissa espanjalaisyhteisö halusi oman teatterin. Peruskivi laskettiin juhlallisessa seremoniassa 2. huhtikuuta 1911, ja talo valmistui ja vihittiin 1913. Se nimettiin Miguel de Cervantesin mukaan. Rakennustyötä johtivat Esperanza Orellana ja hänen miehensä Manuel Peña, ja omistajana oli Antonio Gallego. Katsomoon mahtuu 1400 ihmistä — mittakaava kertoo, kuinka suureksi kaupungin tulevaisuus tuolloin arvioitiin. Teatteri kuuluu samaan vuosikymmeneen kuin muu muurien ulkopuolelle noussut uusi kaupunki. Samoihin vuosiin osuvat saksalaisliikemiehen rakennuttama Renschhausenin talo noin 1913 ja syrjäytetyn sulttaani Abdelhafidin palatsi 1914; rautatie Fèsiin rakennet…
+AIEMPI KYSYMYS: Mitä Don Quijote tuulimyllyille teki?
+AIEMPI VASTAUS (Livia):
+Kas vaan, klassikko. Don Quijote luuli tuulimyllyjä jättiläisiksi ja ryntäsi niitä vastaan keihäs ojossa, vaikka hänen aseenkantajansa [[Sancho Panza]] varoitti, että kyse oli vain myllyistä. Kohtaus on [[Cervantesin]] romaanin kahdeksannen luvun alussa, jossa kerrotaan tasangolla seisovista kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä. Keihäs tarttui myllyn lapaan, ja Don Quijote sinkoutui maahan. [[Campo de Criptanan]] myllyrivi on yksi tunnetuimmista paikoista, joiden äärellä kohtausta muistellaan. Espanjan museot ovat lisäksi vieneet romaanin ensipainoksen verkkoon, joten sen voi katsoa ilman lippujonoa. Minä en tosin lukenut sitä kokonaan, vain kirjeet.
+KYSYMYS: Kerro lisää: Cervantesin
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+AIEMPI KYSYMYS: Mitä Don Quijote tuulimyllyille teki?
+AIEMPI VASTAUS (Livia):
+Kas vaan, klassikko. Don Quijote luuli tuulimyllyjä jättiläisiksi ja ryntäsi niitä vastaan keihäs ojossa, vaikka hänen aseenkantajansa [[Sancho Panza]] varoitti, että kyse oli vain myllyistä. Kohtaus on [[Cervantesin]] romaanin kahdeksannen luvun alussa, jossa kerrotaan tasangolla seisovista kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä. Keihäs tarttui myllyn lapaan, ja Don Quijote sinkoutui maahan. [[Campo de Criptanan]] myllyrivi on yksi tunnetuimmista paikoista, joiden äärellä kohtausta muistellaan. Espanjan museot ovat lisäksi vieneet romaanin ensipainoksen verkkoon, joten sen voi katsoa ilman lippujonoa. Minä en tosin lukenut sitä kokonaan, vain kirjeet.
+KYSYMYS: Kerro lisää: Campo de Criptanan
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Geraldton — kaupunkilehti / Geraldton: Kaupunki jota tuuli ei jätä rauhaan] Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.
+AIEMPI KYSYMYS: Miten myllyt toimivat?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä minä tiedän. Perinteisessä tuulimyllyssä tuuli pyörittää myllyn lapoja, ja lapojen pyöriminen välittyy akselin ja hammaspyörien kautta myllynkiville, jotka jauhavat viljaa. Campo de Criptanan myllyistä osa on säilynyt alkuperäisine rakenteineen ja koneistoineen, ja jotkin on muutettu museoiksi. Nykyaikaiset [[tuulivoimalat]] käyttävät samaa periaatetta sähköntuotantoon: Tanskassa opettaja [[Poul la Cour]] rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Ihan hyvä, että tuuli tekee töitä, kun minä lennän sen mukana.
+KYSYMYS: Kerro lisää: tuulivoimalat
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+AIEMPI KYSYMYS: Miten myllyt toimivat?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä minä tiedän. Perinteisessä tuulimyllyssä tuuli pyörittää myllyn lapoja, ja lapojen pyöriminen välittyy akselin ja hammaspyörien kautta myllynkiville, jotka jauhavat viljaa. Campo de Criptanan myllyistä osa on säilynyt alkuperäisine rakenteineen ja koneistoineen, ja jotkin on muutettu museoiksi. Nykyaikaiset [[tuulivoimalat]] käyttävät samaa periaatetta sähköntuotantoon: Tanskassa opettaja [[Poul la Cour]] rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Ihan hyvä, että tuuli tekee töitä, kun minä lennän sen mukana.
+KYSYMYS: Kerro lisää: Poul la Cour
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+AIEMPI KYSYMYS: Kuinka monta tuulimyllyä Campo de Criptanassa on?
+AIEMPI VASTAUS (Livia):
+No niin, lasketaanpa. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen. [[Markiisi de la Ensenadan]] tilaamaan maarekisteriin oli kuitenkin merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978, ja myllyt seisovat [[Sierra de los Molinosin]] rinteillä. Ei huono lasku kyyhkyn päästä.
+KYSYMYS: Kerro lisää: Markiisi de la Ensenadan
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+AIEMPI KYSYMYS: Kuinka monta tuulimyllyä Campo de Criptanassa on?
+AIEMPI VASTAUS (Livia):
+No niin, lasketaanpa. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen. [[Markiisi de la Ensenadan]] tilaamaan maarekisteriin oli kuitenkin merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978, ja myllyt seisovat [[Sierra de los Molinosin]] rinteillä. Ei huono lasku kyyhkyn päästä.
+KYSYMYS: Kerro lisää: Sierra de los Molinosin
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+AIEMPI KYSYMYS: Mikä on La Mancha?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[La Mancha]] on historiallinen alue Espanjan sisäosissa, ja Campo de Criptana sijaitsee sen alueella Ciudad Realin maakunnassa. Alue on tunnettu laajoista tasangoista ja tuulimyllyistä. Se on tullut maailmankuuluksi myös [[Don Quijoten]] kautta, sillä romaanin koko nimessä sankari on La Manchan hidalgo eli alempaan aatelistoon kuuluva herra. Tarkkaa rajausta en lähde arvailemaan. Tasanko näyttää ylhäältä loputtomalta.
+KYSYMYS: Kerro lisää: La Mancha
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+AIEMPI KYSYMYS: Mikä on La Mancha?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[La Mancha]] on historiallinen alue Espanjan sisäosissa, ja Campo de Criptana sijaitsee sen alueella Ciudad Realin maakunnassa. Alue on tunnettu laajoista tasangoista ja tuulimyllyistä. Se on tullut maailmankuuluksi myös [[Don Quijoten]] kautta, sillä romaanin koko nimessä sankari on La Manchan hidalgo eli alempaan aatelistoon kuuluva herra. Tarkkaa rajausta en lähde arvailemaan. Tasanko näyttää ylhäältä loputtomalta.
+KYSYMYS: Kerro lisää: Don Quijoten
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Antofagasta: Kaupunki vaihtoi maata] 1879—1904 — Vuoden 1874 rajasopimus lupasi, ettei chileläisille yrityksille aseteta uusia veroja kahteenkymmeneenviiteen vuoteen. Bolivian lukutavan mukaan vuoden 1873 sopimus ei ollut voimassa, joten kongressi saattoi asettaa kymmenen sentin veron vietyä salpietarikvintaalia kohti; Chilen lukutavan mukaan juuri se rikkoi sopimusta. Vero peruttiin, otettiin uudelleen käyttöön ja yhtiön omaisuus määrättiin huutokaupattavaksi. 14. helmikuuta 1879 chileläiset joukot ottivat Antofagastan haltuunsa estääkseen huutokaupan, ja siitä alkoi Tyynenmeren sota. Vuoden 1884 välirauha antoi alueen Chilen hallintoon, ja 20. lokakuuta 1904 solmittu rauhan ja ystävyyden sopimus teki rajasta lopullisen: Chil…
+- [Bolivia — maalehti / Musiikki: Neljä soitinta, joita ei ollut soitettu yhdessä] 1965– — Vuonna 1965 laulaja Edgar Jofré kokosi La Pazin peña Naira -kahvilaan kvartetin nimeltä Los Jairas. Mukaan tulivat Ernesto Cavour, kitaristi Julio Godoy ja sveitsiläinen Gilbert Favre, entinen dixieland-klarinetisti, joka oli kuullut quena-huilun vasta Euroopassa. Kokoonpano oli uusi: soittimet olivat kukin oman kylänsä perinnettä eikä niitä ollut ennen yhdistetty. Neljän hengen yhtye mahtui kiertueelle, ja ulkomainen huomio sai bolivialaiset arvostamaan soittimia, joita oli siihen asti pidetty vain maalaisten tavarana. Mallia seurasivat muun muassa Savia Andina ja Grupo Aymara.
+AIEMPI KYSYMYS: Mitä Sierra de los Molinos tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Espanjan kielessä sierra tarkoittaa vuoristoa tai kukkulaketjua ja molinos tarkoittaa myllyjä, joten nimi tarkoittaa vapaasti myllyjen vuoristoa tai myllyjen harjannetta. Nimi sopii hyvin paikkaan, sillä [[Campo de Criptanan]] tunnusmaisema on tuulimyllyjen rivi sen ja [[Cerro de la Pazin]] rinteillä. Tuuli puhaltaa kukkuloilla hyvin, ja siksi myllyt on rakennettu juuri sinne. Pitkä nimi, lyhyt selitys.
+KYSYMYS: Kerro lisää: Cerro de la Pazin
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+AIEMPI KYSYMYS: Miksi riisiä viljellään laguunin rannalla?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Riisi tarvitsee viljelyssään runsaasti vettä, ja [[Albuferan]] laguuni on makeanvetinen: kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Riisinviljely alkoi alueella 1700-luvulta lähtien, joten se on nuorempi perinne kuin kalastus, joka tunnustettiin laillisesti vuonna 1250. Riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista. Valencian lähistö tunnetaan riisiruoista, kuten [[paellasta]]. Pulla on parempaa, mutta tämä käy kai myös.
+KYSYMYS: Kerro lisää: Albuferan
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Oikeassa paellassa ei ole kalaa] Paella on Valencian riisipeltojen ruokaa, ja alkuperäinen valencialainen paella tehdään siitä, mitä pellon laidalta sai: kanaa, kaniinia, leveää vihreää papua ja joskus etanoita. Merenelävät ovat myöhempi, rannikon versio — valencialaiselle chorizopaella on loukkaus, josta on kirjoitettu sanomalehtiin asti. Ruoka syötiin suoraan pannusta puulusikoilla, jokainen omalta sektoriltaan, ja parasta on socarrat: pohjaan paahtunut rapea riisi.
+AIEMPI KYSYMYS: Miksi riisiä viljellään laguunin rannalla?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Riisi tarvitsee viljelyssään runsaasti vettä, ja [[Albuferan]] laguuni on makeanvetinen: kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Riisinviljely alkoi alueella 1700-luvulta lähtien, joten se on nuorempi perinne kuin kalastus, joka tunnustettiin laillisesti vuonna 1250. Riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista. Valencian lähistö tunnetaan riisiruoista, kuten [[paellasta]]. Pulla on parempaa, mutta tämä käy kai myös.
+KYSYMYS: Kerro lisää: paellasta
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+AIEMPI KYSYMYS: Mitä lintuja Albuferalla näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Albuferan]] laguuni ja sen riisipellot ovat vesilintujen suosimaa aluetta, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista. Haikaroita ja ankkoja alueella yleensä mainitaan, mutta en ole varma tarkasta lajilistasta enkä uskalla luetella lajeja muistista. [[Albuferan luonnonpuisto]] on joka tapauksessa lintuharrastajille kiinnostava kohde. Itse olen tyytyväinen, kun saan seurata alhaalta tovereita.
+KYSYMYS: Kerro lisää: Albuferan luonnonpuisto
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+AIEMPI KYSYMYS: Kuinka suuri Albufera on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Albuferan]] luonnonpuiston pinta-ala on 21 120 hehtaaria eli noin 211 neliökilometriä, ja laguuni on sen pääosa. [[Albufera de València]] on makeanveden laguuni ja jokisuisto [[Valencian]] lahden rannikolla Itä-Espanjassa. Laguunin osuutta koko pinta-alasta en tiedä tarkasti. Mittakaava on lintuperspektiivistä aika mukava.
+KYSYMYS: Kerro lisää: Albufera de València
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Oikeassa paellassa ei ole kalaa] Paella on Valencian riisipeltojen ruokaa, ja alkuperäinen valencialainen paella tehdään siitä, mitä pellon laidalta sai: kanaa, kaniinia, leveää vihreää papua ja joskus etanoita. Merenelävät ovat myöhempi, rannikon versio — valencialaiselle chorizopaella on loukkaus, josta on kirjoitettu sanomalehtiin asti. Ruoka syötiin suoraan pannusta puulusikoilla, jokainen omalta sektoriltaan, ja parasta on socarrat: pohjaan paahtunut rapea riisi.
+AIEMPI KYSYMYS: Kuinka suuri Albufera on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Albuferan]] luonnonpuiston pinta-ala on 21 120 hehtaaria eli noin 211 neliökilometriä, ja laguuni on sen pääosa. [[Albufera de València]] on makeanveden laguuni ja jokisuisto [[Valencian]] lahden rannikolla Itä-Espanjassa. Laguunin osuutta koko pinta-alasta en tiedä tarkasti. Mittakaava on lintuperspektiivistä aika mukava.
+KYSYMYS: Kerro lisää: Valencian
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Miten Albufera muuttui makeanvetiseksi?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Albuferan]] laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet sekä kasvavat hiekkasärkät muuttivat sen makeanvetiseksi jo 1600-luvulla. Hiekkasärkät erottivat laguunin merestä, ja makea vesi tuli viljelysten kastelun ja kanavien kautta. Kalastus tunnustettiin laillisesti vuonna 1250, ja [[riisinviljely]] alkoi 1700-luvulta lähtien. Vesi sanoo tässä viimeisen sanan.
+KYSYMYS: Kerro lisää: riisinviljely
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Laguuni, joka on nimensä toisinto] Lagosin laguuni on yli viisikymmentä kilometriä pitkä ja kolmesta kolmeentoista kilometriä leveä, ja sen erottaa Atlantista pitkä hiekkasärkkä. Se on Guineanlahden suurin laguuni ja pinta-alaltaan noin 6 355 neliökilometriä, mutta niin matala, ettei valtamerialus pääse sinne — vain proomut ja veneet. Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu mereen Lagosin sataman kautta, joka on puolesta kilometristä kilometriin leveä ja kymmenen kilometriä pitkä väylä keskellä kaupunkia. Nimi on huvittava toisinto itsestään: Lagos tarkoittaa portugaliksi järviä, joten Lagosin laguuni on kaksi kertaa sama sana.
+AIEMPI KYSYMYS: Mikä on laguuni?
+AIEMPI VASTAUS (Livia):
+No jopas, perusasia. [[Laguuni]] on matala vesialue, jonka erottaa merestä hiekkasärkkä tai muu kapea maakaistale. Siihen voi virrata makeaa vettä joista ja kanavista, ja suolapitoisuus voi vaihdella. [[Albufera]] Valencian rannikolla on makeanvetinen laguuni ja jokisuisto, jonka vesi on ollut makeaa 1600-luvulta lähtien. Pelkkä vesilätäkkö tämä ei ole, mutta kyyhkylle kelpaa sekin.
+KYSYMYS: Kerro lisää: Laguuni
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+AIEMPI KYSYMYS: Mikä on laguuni?
+AIEMPI VASTAUS (Livia):
+No jopas, perusasia. [[Laguuni]] on matala vesialue, jonka erottaa merestä hiekkasärkkä tai muu kapea maakaistale. Siihen voi virrata makeaa vettä joista ja kanavista, ja suolapitoisuus voi vaihdella. [[Albufera]] Valencian rannikolla on makeanvetinen laguuni ja jokisuisto, jonka vesi on ollut makeaa 1600-luvulta lähtien. Pelkkä vesilätäkkö tämä ei ole, mutta kyyhkylle kelpaa sekin.
+KYSYMYS: Kerro lisää: Albufera
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+AIEMPI KYSYMYS: Miksi tomaatteja heitetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Perinne sai alkunsa elokuun viimeisenä keskiviikkona vuonna 1945 [[Buñolin]] kylässä, kun nuoret seurasivat [[jättiläishahmojen]] kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Alkuperäistä syytä siis ei ollut, vain sattuma. Ihmiset keksivät kyllä hauskoja tapoja tuhlata tomaatteja.
+KYSYMYS: Kerro lisää: Buñolin
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Miksi tomaatteja heitetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Perinne sai alkunsa elokuun viimeisenä keskiviikkona vuonna 1945 [[Buñolin]] kylässä, kun nuoret seurasivat [[jättiläishahmojen]] kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Alkuperäistä syytä siis ei ollut, vain sattuma. Ihmiset keksivät kyllä hauskoja tapoja tuhlata tomaatteja.
+KYSYMYS: Kerro lisää: jättiläishahmojen
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Dores-kirkko] 1807–1904 Dores-kirkko on Porto Alegren vanhin pystyssä oleva katolinen kirkko, ja se rakennettiin lähes sadassa vuodessa. Veljeskunta päätti kirkosta 1. toukokuuta 1806, peruskivi laskettiin 1807 ja kuningattaren lupa saatiin 1809. Kuorin seinät sortuivat 1810. Vuonna 1813 kappeli vihittiin, mutta työ pysähtyi taas Farroupilha-kapinan ajaksi, ja vuoteen 1846 asti rakennus oli käytännössä pelkkä kuori, jonka eteen oli pystytetty vaja kirkkosaliksi. Vasta kun Caxiasin kreivi lahjoitti neljä contoa réistä, sivuseinien perustukset päästiin tekemään. Seinät nousivat 1857, ja João do Couto e Silva teki katon, holvin ja julkisivun. Kirkko vihittiin 10. toukokuuta 1868. Edessä oleva monumentaalipo…
+- [Kongo — maalehti / Musiikki: Levypakkaaja, josta tuli kitaran velho] 1938–1989 — Franco Luambo Makiadi jäi 11-vuotiaana ilman isää, ja koulu loppui siihen. Äiti myi munkkeja Ngiri-Ngirin torilla, ja poika sai paikan levyjen pakkaajana Ngoma-levy-yhtiöllä. Siellä hän opetteli kitaraa salaa aina, kun muusikot olivat lopettaneet äänityksensä. Vuonna 1953 hän soitti koekuuntelun ja sai sopimuksen sekä kitaran, jota kutsuttiin nimellä Libaku ya nguma, boakäärmeen pää — se oli yhtä iso kuin viisitoistavuotias soittaja. OK Jazz perustettiin 1956, ja Franco siirsi sebenen kappaleen loppuun ja soitti sen peukalolla ja etusormella. Rolling Stone sijoitti hänet 2023 kaikkien aikojen kitaristien listalla sijalle 71.
+AIEMPI KYSYMYS: Miksi Franco kielsi La Tomatinan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Franco]] kielsi tapahtuman 1950-luvun alussa, mutta syystä en ole varma enkä halua arvailla. Tiedetään, että kielto päättyi vuonna 1957, kun pidettiin tomaattien hautajaiskulkue, ja sen jälkeen tapahtuma sallittiin uudelleen. Franco hallitsi Espanjaa diktaattorina vuoteen 1975. La Tomatina sallittiin uudelleen [[tomaattien hautajaiskulkueen]] jälkeen. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Franco
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Ruoka: Liha, joka kypsyy maan alla] Lammas on Libyan syödyin liha, ja etelässä syödään myös kamelia. Gideed on ikivanha säilöntätapa: lampaan- tai kamelinlihapalat suolataan, kuivataan auringossa ja pannaan oliiviöljyyn odottamaan kylmiä kuukausia tai aikaa, jolloin tuoretta lihaa ei ole; sitä lisätään keittoihin, kuskusiin ja patoihin. Juhlien ruoka on bourdeem, jossa lammas kypsyy hitaasti maahan kaivetussa kuopassa hehkuvien hiilten päällä sipulien, tomaattien ja perunoiden kanssa; tulos on savuinen ja niin mureaa, että liha hajoaa sormissa. Kolmas tapa on shwaya, grillaus vartaassa tai pienen avotulen päällä — sekin kuuluu erityisesti uhrijuhlaan.
+AIEMPI KYSYMYS: Miksi Franco kielsi La Tomatinan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Franco]] kielsi tapahtuman 1950-luvun alussa, mutta syystä en ole varma enkä halua arvailla. Tiedetään, että kielto päättyi vuonna 1957, kun pidettiin tomaattien hautajaiskulkue, ja sen jälkeen tapahtuma sallittiin uudelleen. Franco hallitsi Espanjaa diktaattorina vuoteen 1975. La Tomatina sallittiin uudelleen [[tomaattien hautajaiskulkueen]] jälkeen. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: tomaattien hautajaiskulkueen
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+AIEMPI KYSYMYS: Mikä on tomaattien hautajaiskulkue?
+AIEMPI VASTAUS (Livia):
+Kas vaan, outo nimi. Tomaattien hautajaiskulkue oli vuonna 1957 pidetty kulkue, jonka jälkeen [[La Tomatina]] sallittiin uudelleen, kun [[Franco]] oli kieltänyt tapahtuman 1950-luvun alussa. Kulkue oli symbolinen: tomaatit "haudattiin" ikään kuin juhlan kuoleman merkiksi, ja sen jälkeen perinne pääsi jatkumaan. Tarkkoja yksityiskohtia kulkueesta en ole varma. Hautajaiset tomaateille, mikä ajatus.
+KYSYMYS: Kerro lisää: La Tomatina
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+AIEMPI KYSYMYS: Millainen paikka Buñol on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Buñol]] on kylä Espanjassa, ja se tunnetaan La Tomatina -festivaalista, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Kylä sijaitsee Valencian alueella, mutta tarkkaa etäisyyttä en ole varma. Festivaali sai alkunsa vuonna 1945, ja [[Franco]] kielsi sen 1950-luvun alussa, kunnes se sallittiin uudelleen vuonna 1957. Kylä on pieni ja tomaatit suuret.
+KYSYMYS: Kerro lisää: Buñol
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mikä tekee Haron viinistä tunnettua?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Haro]] on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut [[Rioja-viinialueen]] tärkein viinikaupunki. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu [[Bodegas Bilbaínas]]. Kaupungin vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Haistan sen jo ylhäältä.
+KYSYMYS: Kerro lisää: Haro
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mikä tekee Haron viinistä tunnettua?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Haro]] on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut [[Rioja-viinialueen]] tärkein viinikaupunki. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu [[Bodegas Bilbaínas]]. Kaupungin vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Haistan sen jo ylhäältä.
+KYSYMYS: Kerro lisää: Rioja-viinialueen
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mikä tekee Haron viinistä tunnettua?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Haro]] on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut [[Rioja-viinialueen]] tärkein viinikaupunki. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu [[Bodegas Bilbaínas]]. Kaupungin vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Haistan sen jo ylhäältä.
+KYSYMYS: Kerro lisää: Bodegas Bilbaínas
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mitä bodega tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bodega on espanjankielinen sana, joka tarkoittaa viinikellaria tai viinitilaa eli paikkaa, jossa viiniä valmistetaan ja varastoidaan. [[Haron]] Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1877 perustettu [[R. López de Heredia]] ja vuoden 1879 CVNE. Sana viittaa joskus myös yleisemmin varastoon. Latinan sukua tämäkin, kuten minä.
+KYSYMYS: Kerro lisää: Haron
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mitä bodega tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bodega on espanjankielinen sana, joka tarkoittaa viinikellaria tai viinitilaa eli paikkaa, jossa viiniä valmistetaan ja varastoidaan. [[Haron]] Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1877 perustettu [[R. López de Heredia]] ja vuoden 1879 CVNE. Sana viittaa joskus myös yleisemmin varastoon. Latinan sukua tämäkin, kuten minä.
+KYSYMYS: Kerro lisää: R. López de Heredia
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mikä on Rioja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Rioja]] on viinialue Pohjois-Espanjassa, ja alueen nimi viittaa myös La Riojan maakuntaan. [[Haro]] on kaupunki maakunnan luoteisosassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Alueen tunnetuimpia tuotteita on punaviini, jota juhlitaan Haron vuosittaisilla viinifestivaaleilla. Tarkkaa viinialueen rajausta en lähde arvailemaan. Pullaa ei kysytty, mutta ajattelin sitä.
+KYSYMYS: Kerro lisää: Rioja
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Milloin Haron bodegat on perustettu?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Barrio Estación]] -kaupunginosan bodegoista Bodegas Bilbaínas perustettiin vuonna 1859, Martínez Lacuesta vuonna 1873, R. López de Heredia vuonna 1877 ja CVNE vuonna 1879. Ne ovat siis kaikki 1800-luvun lopulta. [[Haro]] on ollut Rioja-viinialueen tärkein viinikaupunki 1800-luvun alusta lähtien. Pitkä perinne, pitkä lista.
+KYSYMYS: Kerro lisää: Barrio Estación
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+AIEMPI KYSYMYS: Mitä muuta Harossa on kuin viiniä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Haro oli ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, mikä on todellinen erikoisuus. Kaupungin vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi vuonna 1975. [[Haro]] on silti ennen kaikkea viinikaupunki, jonka vuosittaisilla viinifestivaaleilla juhlitaan [[punaviiniä]]. Katuvalot olisivat auttaneet iltalennoilla, mutta ei kai niitä silloin osattu ajatella.
+KYSYMYS: Kerro lisää: punaviiniä
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Miksi ibérico-kinkku on niin arvostettua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Arvostus perustuu pitkälti siihen, mitä siat syövät: mustat [[ibérico-siat]] laiduntavat [[dehesa]]-metsissä ja syövät ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan [[jamón ibérico de bellota]] -kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Lisäksi Jabugo-niminen kinkku on alkuperäsuojattu, ja sen tuotantoalue on [[Sierra de Aracenan]] ja Picos de Arochen luonnonpuistossa. Tammenterhot kuulostavat kyllä kyyhkyn korvaan melkein pullalta.
+KYSYMYS: Kerro lisää: ibérico-siat
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Sika, joka syö vain tammenterhoja] Espanjan kalleimman kinkun salaisuus on kolme viimeistä kuukautta. Mustasorkkainen iberiansika päästetään lokakuussa dehesaan, harvaan tammimetsälaitumeen, ja se saa syödä siellä vain tammenterhoja ja ruohoa. Terhojen rasva imeytyy lihaan ja tekee siitä pehmeän ja pähkinäisen. Yksi sika tarvitsee useamman hehtaarin laidunta, ja kinkkua kuivataan sen jälkeen kolmesta neljään vuotta. Dehesa on ihmisen tekemä maisema, joka on säilynyt satoja vuosia juuri siksi, että se kannattaa.
+AIEMPI KYSYMYS: Miksi ibérico-kinkku on niin arvostettua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Arvostus perustuu pitkälti siihen, mitä siat syövät: mustat [[ibérico-siat]] laiduntavat [[dehesa]]-metsissä ja syövät ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan [[jamón ibérico de bellota]] -kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Lisäksi Jabugo-niminen kinkku on alkuperäsuojattu, ja sen tuotantoalue on [[Sierra de Aracenan]] ja Picos de Arochen luonnonpuistossa. Tammenterhot kuulostavat kyllä kyyhkyn korvaan melkein pullalta.
+KYSYMYS: Kerro lisää: dehesa
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Miksi ibérico-kinkku on niin arvostettua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Arvostus perustuu pitkälti siihen, mitä siat syövät: mustat [[ibérico-siat]] laiduntavat [[dehesa]]-metsissä ja syövät ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan [[jamón ibérico de bellota]] -kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Lisäksi Jabugo-niminen kinkku on alkuperäsuojattu, ja sen tuotantoalue on [[Sierra de Aracenan]] ja Picos de Arochen luonnonpuistossa. Tammenterhot kuulostavat kyllä kyyhkyn korvaan melkein pullalta.
+KYSYMYS: Kerro lisää: jamón ibérico de bellota
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Miksi ibérico-kinkku on niin arvostettua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Arvostus perustuu pitkälti siihen, mitä siat syövät: mustat [[ibérico-siat]] laiduntavat [[dehesa]]-metsissä ja syövät ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan [[jamón ibérico de bellota]] -kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Lisäksi Jabugo-niminen kinkku on alkuperäsuojattu, ja sen tuotantoalue on [[Sierra de Aracenan]] ja Picos de Arochen luonnonpuistossa. Tammenterhot kuulostavat kyllä kyyhkyn korvaan melkein pullalta.
+KYSYMYS: Kerro lisää: Sierra de Aracenan
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Sika, joka syö vain tammenterhoja] Espanjan kalleimman kinkun salaisuus on kolme viimeistä kuukautta. Mustasorkkainen iberiansika päästetään lokakuussa dehesaan, harvaan tammimetsälaitumeen, ja se saa syödä siellä vain tammenterhoja ja ruohoa. Terhojen rasva imeytyy lihaan ja tekee siitä pehmeän ja pähkinäisen. Yksi sika tarvitsee useamman hehtaarin laidunta, ja kinkkua kuivataan sen jälkeen kolmesta neljään vuotta. Dehesa on ihmisen tekemä maisema, joka on säilynyt satoja vuosia juuri siksi, että se kannattaa.
+AIEMPI KYSYMYS: Mitä tarkoittaa jamón de bellota?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Ilmaus tarkoittaa suomeksi tammenterhokinkkua, sillä jamón on espanjaksi kinkku ja bellota tammenterho. Nimitystä käytetään [[ibérico-kinkun]] parhaasta luokasta: sen siat laiduntavat vapaasti ja syövät viimeisinä kuukausinaan pelkkiä [[tammenterhoja]]. Tällaista kinkkua valmistetaan muun muassa [[Jabugon]] seudulla. Onneksi tämä oli lyhyt, ei tarvinnut kääntää kuin kaksi sanaa.
+KYSYMYS: Kerro lisää: ibérico-kinkun
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Sika, joka syö vain tammenterhoja] Espanjan kalleimman kinkun salaisuus on kolme viimeistä kuukautta. Mustasorkkainen iberiansika päästetään lokakuussa dehesaan, harvaan tammimetsälaitumeen, ja se saa syödä siellä vain tammenterhoja ja ruohoa. Terhojen rasva imeytyy lihaan ja tekee siitä pehmeän ja pähkinäisen. Yksi sika tarvitsee useamman hehtaarin laidunta, ja kinkkua kuivataan sen jälkeen kolmesta neljään vuotta. Dehesa on ihmisen tekemä maisema, joka on säilynyt satoja vuosia juuri siksi, että se kannattaa.
+AIEMPI KYSYMYS: Mitä tarkoittaa jamón de bellota?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Ilmaus tarkoittaa suomeksi tammenterhokinkkua, sillä jamón on espanjaksi kinkku ja bellota tammenterho. Nimitystä käytetään [[ibérico-kinkun]] parhaasta luokasta: sen siat laiduntavat vapaasti ja syövät viimeisinä kuukausinaan pelkkiä [[tammenterhoja]]. Tällaista kinkkua valmistetaan muun muassa [[Jabugon]] seudulla. Onneksi tämä oli lyhyt, ei tarvinnut kääntää kuin kaksi sanaa.
+KYSYMYS: Kerro lisää: tammenterhoja
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Mitä tarkoittaa jamón de bellota?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Ilmaus tarkoittaa suomeksi tammenterhokinkkua, sillä jamón on espanjaksi kinkku ja bellota tammenterho. Nimitystä käytetään [[ibérico-kinkun]] parhaasta luokasta: sen siat laiduntavat vapaasti ja syövät viimeisinä kuukausinaan pelkkiä [[tammenterhoja]]. Tällaista kinkkua valmistetaan muun muassa [[Jabugon]] seudulla. Onneksi tämä oli lyhyt, ei tarvinnut kääntää kuin kaksi sanaa.
+KYSYMYS: Kerro lisää: Jabugon
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Mikä on dehesa?
+AIEMPI VASTAUS (Livia):
+Kato, dehesa. Sana on tuttu. Dehesa on espanjalainen laidunmetsä, jossa mustat [[ibérico-siat]] liikkuvat vapaasti. Niiden ravintoa ovat ruoho, yrtit, [[tammenterhot]], [[kastanjat]] ja juuret, ja kinkun laatu rakentuu pitkälti juuri tästä ravinnosta. Seutu on [[Huelvan]] maakunnassa, Jabugon ympäristössä. Lintuperspektiivistä sellainen metsä on kyllä mieluinen paikka.
+KYSYMYS: Kerro lisää: tammenterhot
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Mikä on dehesa?
+AIEMPI VASTAUS (Livia):
+Kato, dehesa. Sana on tuttu. Dehesa on espanjalainen laidunmetsä, jossa mustat [[ibérico-siat]] liikkuvat vapaasti. Niiden ravintoa ovat ruoho, yrtit, [[tammenterhot]], [[kastanjat]] ja juuret, ja kinkun laatu rakentuu pitkälti juuri tästä ravinnosta. Seutu on [[Huelvan]] maakunnassa, Jabugon ympäristössä. Lintuperspektiivistä sellainen metsä on kyllä mieluinen paikka.
+KYSYMYS: Kerro lisää: kastanjat
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Mikä on dehesa?
+AIEMPI VASTAUS (Livia):
+Kato, dehesa. Sana on tuttu. Dehesa on espanjalainen laidunmetsä, jossa mustat [[ibérico-siat]] liikkuvat vapaasti. Niiden ravintoa ovat ruoho, yrtit, [[tammenterhot]], [[kastanjat]] ja juuret, ja kinkun laatu rakentuu pitkälti juuri tästä ravinnosta. Seutu on [[Huelvan]] maakunnassa, Jabugon ympäristössä. Lintuperspektiivistä sellainen metsä on kyllä mieluinen paikka.
+KYSYMYS: Kerro lisää: Huelvan
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Mitä Jabugon alkuperäsuoja tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys. Alkuperäsuojattua nimeä saa käyttää vain tuotteesta, joka on peräisin määritetyltä alueelta ja valmistettu siihen kuuluvien sääntöjen mukaan. Jabugo-nimisen kinkun tuotantoalue on [[Sierra de Aracenan]] ja [[Picos de Arochen]] luonnonpuistossa, ja Jabugo itse on kaupunki [[Huelvan]] maakunnassa. Aika tiukka nimikilpi, sanoisin.
+KYSYMYS: Kerro lisää: Picos de Arochen
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Millainen paikka Jabugo on?
+AIEMPI VASTAUS (Livia):
+Mmm— Jabugo, kyllä. Se on pieni paikka, mutta maine on suuri. Jabugo on noin 2 200 asukkaan kaupunki [[Huelvan]] maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, [[jamón ibéricosta]]. Kinkun tuotantoalue on [[Sierra de Aracenan]] ja Picos de Arochen luonnonpuistossa, ja kaupungin pääaukio on nimeltään [[Kinkkuaukio]].
+
+Sen verran minä sanon, että aukio, joka on nimetty kinkun mukaan, on jo melkein pullakahvilan veroinen idea.
+KYSYMYS: Kerro lisää: jamón ibéricosta
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+AIEMPI KYSYMYS: Millainen paikka Jabugo on?
+AIEMPI VASTAUS (Livia):
+Mmm— Jabugo, kyllä. Se on pieni paikka, mutta maine on suuri. Jabugo on noin 2 200 asukkaan kaupunki [[Huelvan]] maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, [[jamón ibéricosta]]. Kinkun tuotantoalue on [[Sierra de Aracenan]] ja Picos de Arochen luonnonpuistossa, ja kaupungin pääaukio on nimeltään [[Kinkkuaukio]].
+
+Sen verran minä sanon, että aukio, joka on nimetty kinkun mukaan, on jo melkein pullakahvilan veroinen idea.
+KYSYMYS: Kerro lisää: Kinkkuaukio
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Miten Puente Nuevo on rakennettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Silta ylittää [[Tajo-rotkon]] ja yhdistää kaupungin kaksi puolta, rotkon pohjalla virtaa [[Guadalevín]]-joki. Kyseessä on kivinen kaarisilta, joka valmistui 1700-luvun lopulla, lähteiden mukaan noin vuonna 1793; en ole varma tarkasta vuodesta enkä sillan korkeudesta. Suunnittelijana mainitaan yleensä [[José Martín de Aldehuela]]. Jos luvut heittävät, älkää kertoko Pöllölle.
+KYSYMYS: Kerro lisää: Tajo-rotkon
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Miten Puente Nuevo on rakennettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Silta ylittää [[Tajo-rotkon]] ja yhdistää kaupungin kaksi puolta, rotkon pohjalla virtaa [[Guadalevín]]-joki. Kyseessä on kivinen kaarisilta, joka valmistui 1700-luvun lopulla, lähteiden mukaan noin vuonna 1793; en ole varma tarkasta vuodesta enkä sillan korkeudesta. Suunnittelijana mainitaan yleensä [[José Martín de Aldehuela]]. Jos luvut heittävät, älkää kertoko Pöllölle.
+KYSYMYS: Kerro lisää: Guadalevín
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Miten Puente Nuevo on rakennettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Silta ylittää [[Tajo-rotkon]] ja yhdistää kaupungin kaksi puolta, rotkon pohjalla virtaa [[Guadalevín]]-joki. Kyseessä on kivinen kaarisilta, joka valmistui 1700-luvun lopulla, lähteiden mukaan noin vuonna 1793; en ole varma tarkasta vuodesta enkä sillan korkeudesta. Suunnittelijana mainitaan yleensä [[José Martín de Aldehuela]]. Jos luvut heittävät, älkää kertoko Pöllölle.
+KYSYMYS: Kerro lisää: José Martín de Aldehuela
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Mitä corridas goyescas tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tuosta minä tiedän vähän. Nimi viittaa espanjalaiseen taidemaalariin [[Francisco Goyaan]]: tapahtumassa tavataan käyttää Goyan ajan vaatetusta, mutta tarkemmista yksityiskohdista en ole varma. Härkätaistelu on Espanjassa sekä arvostettu perinne että paljon kiistelty, ja [[Rondassa]] sitä esitellään matkailijoille nimenomaan kulttuurina. Tämän enempää en lupaa.
+KYSYMYS: Kerro lisää: Francisco Goyaan
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Mitä corridas goyescas tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tuosta minä tiedän vähän. Nimi viittaa espanjalaiseen taidemaalariin [[Francisco Goyaan]]: tapahtumassa tavataan käyttää Goyan ajan vaatetusta, mutta tarkemmista yksityiskohdista en ole varma. Härkätaistelu on Espanjassa sekä arvostettu perinne että paljon kiistelty, ja [[Rondassa]] sitä esitellään matkailijoille nimenomaan kulttuurina. Tämän enempää en lupaa.
+KYSYMYS: Kerro lisää: Rondassa
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Mikä Ronda oli islamilaisen vallan aikana?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Siitä löytyy vastaus. Islamilaisen vallan aikana Ronda oli oman hallintoalueensa pääkaupunki. Paikka tunnistetaan antiikin [[Arundaksi]], ja [[Kastilian]] kruunu valtasi sen väkisin vuonna 1485. Kaupungin kerrokset näkyvät kyllä ylhäältä hyvin.
+KYSYMYS: Kerro lisää: Arundaksi
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Mikä Ronda oli islamilaisen vallan aikana?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Siitä löytyy vastaus. Islamilaisen vallan aikana Ronda oli oman hallintoalueensa pääkaupunki. Paikka tunnistetaan antiikin [[Arundaksi]], ja [[Kastilian]] kruunu valtasi sen väkisin vuonna 1485. Kaupungin kerrokset näkyvät kyllä ylhäältä hyvin.
+KYSYMYS: Kerro lisää: Kastilian
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Historia: Vehnäntähkä turbaanissa] 1747 — Kun Persian hallitsija Nader Shah murhattiin kesäkuussa 1747, hänen afgaanikaartinsa päällikkö Ahmad Khan Abdali otti vainajan sormuksen ja Koh-i-Noor-timantin ja marssi joukkoineen Kandahariin. Tarun mukaan heimopäälliköiden jirga valitsi hänet yksimielisesti kuninkaaksi ja hänen turbaaniinsa asetettiin vehnäntähkä. Historioitsijat ovat toista mieltä: vallan antoi yhdeksän miehen sotilasneuvosto, ja neuvonantaja Sabir Shah kiinnitti lakkiin vain vihreän oksan. Ahmad Shah otti liikanimen Durr-i Durran, helmien helmi, ja vaihtoi heimonsa nimen abdaleista durraneiksi. Afganistanissa häntä sanotaan yhä nimellä Ahmad Shah Baba, isä.
+- [Vietnam — maalehti / Ruoka: Patonki keveni riisijauhosta] Ranskalaiset toivat patongin Vietnamiin 1800-luvun puolivälissä, ja pohjoisessa sitä kutsuttiin nimellä banh tay eli lännen leipä. Ensimmäisen maailmansodan aikana vehnän tuonti takkuili, ja leipurit alkoivat sekoittaa taikinaan halpaa riisijauhoa. Siitä tuli sattumalta vietnamilaisen patongin tuntomerkki: kuori on ohut ja rapea, sisus kevyt ja kuohkea. Vuonna 1958 saigonilainen Hoa Ma -leipomo alkoi ensimmäisten joukossa myydä täytettyä banh mi thitiä. Täytteet sekoittavat kaksi keittiötä: maksapateeta, siankinkkua, etikkaporkkanaa, korianteria ja chiliä.
+AIEMPI KYSYMYS: Millainen maasto Rondan ympärillä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kaupunki sijaitsee mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii [[vehnän]], [[oliivien]] ja [[viinin]] viljelyyn, ja kaupungin halkaisee syvä [[Tajo-rotko]]. Lintuperspektiivistä sellainen paikka on kyllä mieluinen.
+KYSYMYS: Kerro lisää: vehnän
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Millainen maasto Rondan ympärillä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kaupunki sijaitsee mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii [[vehnän]], [[oliivien]] ja [[viinin]] viljelyyn, ja kaupungin halkaisee syvä [[Tajo-rotko]]. Lintuperspektiivistä sellainen paikka on kyllä mieluinen.
+KYSYMYS: Kerro lisää: oliivien
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Millainen maasto Rondan ympärillä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kaupunki sijaitsee mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii [[vehnän]], [[oliivien]] ja [[viinin]] viljelyyn, ja kaupungin halkaisee syvä [[Tajo-rotko]]. Lintuperspektiivistä sellainen paikka on kyllä mieluinen.
+KYSYMYS: Kerro lisää: viinin
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Millainen maasto Rondan ympärillä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kaupunki sijaitsee mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii [[vehnän]], [[oliivien]] ja [[viinin]] viljelyyn, ja kaupungin halkaisee syvä [[Tajo-rotko]]. Lintuperspektiivistä sellainen paikka on kyllä mieluinen.
+KYSYMYS: Kerro lisää: Tajo-rotko
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+AIEMPI KYSYMYS: Mikä Tajo-rotko on?
+AIEMPI VASTAUS (Livia):
+Just niin, rotko. Se on kaupungin tunnusmerkki. Tajo-rotko on syvä rotko, jonka pohjalla virtaa [[Guadalevín]]-joki ja joka halkaisee [[Rondan]] kahtia. Sen yli ulottuu [[Puente Nuevo]] -silta, jota tullaan katsomaan eri puolilta maailmaa. Ylhäältä katsottuna tuo on melkein liian jyrkkä minun makuuni.
+KYSYMYS: Kerro lisää: Rondan

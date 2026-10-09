@@ -1,0 +1,1024 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tabernasin autiomaa (luonto · vuori)
+Tietoruudun teksti: Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista Almeríasta pohjoiseen. Sitä pidetään Euroopan ainoana aavikkona, koska suurimmalla osalla aluetta vallitsee aavikkoilmasto. Korkean ja vuorisen sijaintinsa vuoksi siellä sataa rannikkoa enemmän, yli 220 millimetriä vuodessa. Luonnonsuojelualue on 280 neliökilometrin laajuinen, ja sitä rajaavat pohjoisessa Sierra de los Filabres, kaakossa Sierra Alhamilla ja lännessä Sierra Nevada. Alueella on kuvattu 1950-luvun lopulta lähtien yli 300 elokuvaa, useimmat lännenelokuvia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [Kolumbia — maalehti / Musiikki: Kolme soitinta, kolme maanosaa] Vallenato tarkoittaa laaksossa syntynyttä, ja laakso on Sierra Nevada de Santa Martan ja Serranía de Periján välissä Valleduparin ympärillä. Laji sai alkunsa laulajista, jotka kulkivat karjan kanssa kylästä toiseen ja veivät samalla uutiset — he lauloivat viestinsä. Kokoonpanon kolme soitinta tulevat kolmelta mantereelta: nappihaitari Saksasta, caja-rumpu Afrikasta ja guacharaca-raaputin alkuperäiskansoilta. Rytmejä eli "ilmoja" on neljä: son, paseo, merengue ja puya. Unesco pitää lajia kiireellistä suojelua vaativana perintönä.
+AIEMPI KYSYMYS: Missä Tabernasin autiomaa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista [[Almeríasta]] pohjoiseen. Sitä rajaavat pohjoisessa [[Sierra de los Filabres]] ja lännessä [[Sierra Nevada]]. Pohjoiseen siis, suoraan siivellä.
+KYSYMYS: Kerro lisää: Sierra Nevada
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tabernasin autiomaa (luonto · vuori)
+Tietoruudun teksti: Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista Almeríasta pohjoiseen. Sitä pidetään Euroopan ainoana aavikkona, koska suurimmalla osalla aluetta vallitsee aavikkoilmasto. Korkean ja vuorisen sijaintinsa vuoksi siellä sataa rannikkoa enemmän, yli 220 millimetriä vuodessa. Luonnonsuojelualue on 280 neliökilometrin laajuinen, ja sitä rajaavat pohjoisessa Sierra de los Filabres, kaakossa Sierra Alhamilla ja lännessä Sierra Nevada. Alueella on kuvattu 1950-luvun lopulta lähtien yli 300 elokuvaa, useimmat lännenelokuvia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Sahara: Maailman suurin kuuma aavikko] Sahara peittää yli 9 miljoonaa neliökilometriä Pohjois-Afrikkaa – alueen kokoinen soisi koko Yhdysvallat. Se on maailman suurin kuuma aavikko, vain Etelämanner ja arktiset seudut ovat sitä laajempia kylminä autiomaina. Yleisestä mielikuvasta poiketen suurin osa Saharasta ei ole hiekkadyynejä vaan kivistä hamada-tasankoa ja paljasta kalliota; hiekkamerten eli ergien osuus koko pinta-alasta on vain murto-osa. Isoisän matkapäiväkirjassa vuodelta 1873 aavikko kuvataan äärettömänä tyhjyytenä, mutta sen halki kulki tuolloinkin vuosisataisia karavaanireittejä kaupungista toiseen.
+- [Chile — maalehti / Luonto: Aavikko, jossa sadetta ei ole mitattu] Atacama on maailman kuivin ei-polaarinen aavikko ja maailman suurin sumuaavikko. Kuivuus syntyy kahdesta sadevarjosta: Andit pysäyttävät Atlantin kosteuden ja rannikkovuoret Tyynenmeren, ja kylmä Humboldtin merivirta viilentää ilman niin, ettei se enää sada. Keskimääräinen vuosisade on noin viisitoista millimetriä, ja joillakin sääasemilla sadetta ei ole mitattu koskaan; aineisto viittaa siihen, ettei aavikko saanut merkittävää sadetta vuosina 1570–1971. Sama kuiva ilma tekee taivaasta maailman parhaan tähtitieteelle.
+- [Egypti — maalehti / Luonto: Aavikko täynnä sieniä] Valkoisessa autiomaassa Saharan keskellä nousee hiekasta liituvalkoisia torneja ja sienen muotoisia patsaita, jotka hiekkaa kantava tuuli on veistänyt. Liitu syntyi merieliöiden kuorista — koko aavikko oli kerran meren pohjaa, ja kalliosta löytyy simpukoiden jälkiä keskellä kuivinta hiekkaa. Täysikuun valossa valkoiset muodot hohtavat niin aavemaisesti, että retkeilijät leiriytyvät niiden keskelle varta vasten.
+AIEMPI KYSYMYS: Kuinka paljon Tabernasissa sataa vuodessa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tabernasissa sataa yli 220 millimetriä vuodessa, mikä on rannikkoa enemmän, koska alue on korkealla ja vuorten ympäröimä. Luku on silti pieni, ja se sopii yhteen [[aavikkoilmaston]] kanssa, joka vallitsee suurimmalla osalla aluetta. Pohjoisessa aluetta rajaa [[Sierra de los Filabres]]. Kuivaa, kuivaa, jopa kyyhkylle.
+KYSYMYS: Kerro lisää: aavikkoilmaston
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tabernasin autiomaa (luonto · vuori)
+Tietoruudun teksti: Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista Almeríasta pohjoiseen. Sitä pidetään Euroopan ainoana aavikkona, koska suurimmalla osalla aluetta vallitsee aavikkoilmasto. Korkean ja vuorisen sijaintinsa vuoksi siellä sataa rannikkoa enemmän, yli 220 millimetriä vuodessa. Luonnonsuojelualue on 280 neliökilometrin laajuinen, ja sitä rajaavat pohjoisessa Sierra de los Filabres, kaakossa Sierra Alhamilla ja lännessä Sierra Nevada. Alueella on kuvattu 1950-luvun lopulta lähtien yli 300 elokuvaa, useimmat lännenelokuvia.
+AIEMPI KYSYMYS: Kuinka suuri suojelualue Tabernasissa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tabernasin luonnonsuojelualue on 280 neliökilometrin laajuinen. Sitä rajaavat pohjoisessa [[Sierra de los Filabres]], kaakossa [[Sierra Alhamilla]] ja lännessä [[Sierra Nevada]], ja se sijaitsee noin 30 kilometriä Almeríasta pohjoiseen. Siinä on tilaa lentää, vaikka vettä on vähän.
+KYSYMYS: Kerro lisää: Sierra Alhamilla
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Mistä Guadalquivirin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on hauska. Nimi juontuu arabian kielen sanoista al-wadi al-kabir, jotka tarkoittavat suurta jokea, ja roomalaiset tunsivat joen nimellä [[Baetis]]. Joki alkaa Cazorlan vuorten laaksoista, kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia, ja suistoon jää [[Doñanan]] kosteikko. Vanhat nimet pysyvät, vaikka joet kulkevat omia teitään.
+KYSYMYS: Kerro lisää: Baetis
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+AIEMPI KYSYMYS: Mistä Guadalquivirin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on hauska. Nimi juontuu arabian kielen sanoista al-wadi al-kabir, jotka tarkoittavat suurta jokea, ja roomalaiset tunsivat joen nimellä [[Baetis]]. Joki alkaa Cazorlan vuorten laaksoista, kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia, ja suistoon jää [[Doñanan]] kosteikko. Vanhat nimet pysyvät, vaikka joet kulkevat omia teitään.
+KYSYMYS: Kerro lisää: Doñanan
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Mitä eläimiä puistossa elää?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puiston tunnettuihin eläimiin lasketaan yleensä muun muassa [[punahirvi]], kuusipeura ja [[iberianvuohi]] sekä useat [[petolinnut]], mutta tarkkoja lajilistoja en ole varma. Alue kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, jonka pinta-ala on 2 099 neliökilometriä.
+
+Petolinnut ovat seuraa, josta kyyhkyn on parasta pysytellä kaukana. Siksi katselen vuoria mieluummin kartalta kuin siipien alta.
+KYSYMYS: Kerro lisää: punahirvi
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Mitä eläimiä puistossa elää?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puiston tunnettuihin eläimiin lasketaan yleensä muun muassa [[punahirvi]], kuusipeura ja [[iberianvuohi]] sekä useat [[petolinnut]], mutta tarkkoja lajilistoja en ole varma. Alue kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, jonka pinta-ala on 2 099 neliökilometriä.
+
+Petolinnut ovat seuraa, josta kyyhkyn on parasta pysytellä kaukana. Siksi katselen vuoria mieluummin kartalta kuin siipien alta.
+KYSYMYS: Kerro lisää: iberianvuohi
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Eläimet: Sadattuhannet linnut kiertävät saman mutkan] Syksyisin Euroopan haikarat ja petolinnut lentävät Afrikkaan, ja matkalla ne kaikki puristuvat samaan kapeaan kohtaan Suezinlahden pohjukassa. Syy on ilmassa: liitävä lintu ei jaksa räpytellä koko matkaa, vaan se nousee maan yltä kohoavan lämpimän ilman mukana korkealle ja liukuu sieltä eteenpäin. Avomeren yllä sellaista nousevaa ilmaa ei synny, joten linnut kiertävät lahden ympäri maata pitkin. Hyvänä päivänä yhden kukkulan yli voi lentää tuhansia lintuja, ja niitä lasketaan joka syksy.
+AIEMPI KYSYMYS: Mitä eläimiä puistossa elää?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puiston tunnettuihin eläimiin lasketaan yleensä muun muassa [[punahirvi]], kuusipeura ja [[iberianvuohi]] sekä useat [[petolinnut]], mutta tarkkoja lajilistoja en ole varma. Alue kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, jonka pinta-ala on 2 099 neliökilometriä.
+
+Petolinnut ovat seuraa, josta kyyhkyn on parasta pysytellä kaukana. Siksi katselen vuoria mieluummin kartalta kuin siipien alta.
+KYSYMYS: Kerro lisää: petolinnut
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Kuinka suuri Cazorlan luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Cazorlan, Segura ja Las Villasin luonnonpuisto on pinta-alaltaan 2 099 neliökilometriä, ja lähteiden mukaan se on Espanjan suurin ja Euroopan toiseksi suurin suojelualue. Puisto perustettiin 1986, ja se sijaitsee [[Jaénin]] maakunnassa Etelä-Espanjassa. Puisto tunnetaan nimellä [[Cazorlan, Segura ja Las Villasin luonnonpuisto]]. Päästä päähän lentäisi kyllä pitkään.
+KYSYMYS: Kerro lisää: Jaénin
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Kuinka suuri Cazorlan luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Cazorlan, Segura ja Las Villasin luonnonpuisto on pinta-alaltaan 2 099 neliökilometriä, ja lähteiden mukaan se on Espanjan suurin ja Euroopan toiseksi suurin suojelualue. Puisto perustettiin 1986, ja se sijaitsee [[Jaénin]] maakunnassa Etelä-Espanjassa. Puisto tunnetaan nimellä [[Cazorlan, Segura ja Las Villasin luonnonpuisto]]. Päästä päähän lentäisi kyllä pitkään.
+KYSYMYS: Kerro lisää: Cazorlan, Segura ja Las Villasin luonnonpuisto
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Mikä on Cazorlan korkein huippu?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä muistan. Cazorlan vuorijonon korkein huippu on 1 847 metrin korkuinen [[Gilillo]]. Vuorijono kuuluu [[Prebaetic-järjestelmään]] ja sijaitsee Jaénin maakunnassa Etelä-Espanjassa. Ei korkea, mutta eipä minunkaan tarvitse sinne kiivetä.
+KYSYMYS: Kerro lisää: Gilillo
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Mikä on Cazorlan korkein huippu?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä muistan. Cazorlan vuorijonon korkein huippu on 1 847 metrin korkuinen [[Gilillo]]. Vuorijono kuuluu [[Prebaetic-järjestelmään]] ja sijaitsee Jaénin maakunnassa Etelä-Espanjassa. Ei korkea, mutta eipä minunkaan tarvitse sinne kiivetä.
+KYSYMYS: Kerro lisää: Prebaetic-järjestelmään
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+AIEMPI KYSYMYS: Mistä Cazorlan vuoristo on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Ai se. Sierra de Cazorla on nimetty [[Cazorlan]] kaupungin mukaan, ja se kuuluu Prebaetic-järjestelmään [[Jaénin]] maakunnassa Etelä-Espanjassa. Korkein huippu on 1 847 metrin Gilillo. Tarkempaa kaupungin nimen alkuperää en ole varma.
+
+Kaupungin mukaan nimetty vuori, ihan hyvä idea. Minut on nimetty koko suvun mukaan, mikä on kyllä vielä arvokkaampaa.
+KYSYMYS: Kerro lisää: Cazorlan
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+AIEMPI KYSYMYS: Mikä Homo antecessor oli?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä. Homo antecessor oli varhaisihmislaji, joka kuuluu Atapuercan alueella asuneiden ihmislajien joukkoon, ja muita ovat [[Homo erectus]], [[Homo heidelbergensis]] ja [[neandertalinihminen]]. Atapuercan löydöt ovat Länsi-Euroopan vanhimpia tunnettuja ihmisasukkaiden jäänteitä. Lajin tarkasta iästä tai ominaisuuksista en ole varma.
+
+Edeltäjä, tarkoittaa nimi. Minun suvussani edeltäjiä ei ole tarvinnut erikseen nimetä, kaikki ovat kantaneet postia.
+KYSYMYS: Kerro lisää: Homo erectus
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+AIEMPI KYSYMYS: Mikä Homo antecessor oli?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä. Homo antecessor oli varhaisihmislaji, joka kuuluu Atapuercan alueella asuneiden ihmislajien joukkoon, ja muita ovat [[Homo erectus]], [[Homo heidelbergensis]] ja [[neandertalinihminen]]. Atapuercan löydöt ovat Länsi-Euroopan vanhimpia tunnettuja ihmisasukkaiden jäänteitä. Lajin tarkasta iästä tai ominaisuuksista en ole varma.
+
+Edeltäjä, tarkoittaa nimi. Minun suvussani edeltäjiä ei ole tarvinnut erikseen nimetä, kaikki ovat kantaneet postia.
+KYSYMYS: Kerro lisää: Homo heidelbergensis
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+AIEMPI KYSYMYS: Mikä Homo antecessor oli?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä. Homo antecessor oli varhaisihmislaji, joka kuuluu Atapuercan alueella asuneiden ihmislajien joukkoon, ja muita ovat [[Homo erectus]], [[Homo heidelbergensis]] ja [[neandertalinihminen]]. Atapuercan löydöt ovat Länsi-Euroopan vanhimpia tunnettuja ihmisasukkaiden jäänteitä. Lajin tarkasta iästä tai ominaisuuksista en ole varma.
+
+Edeltäjä, tarkoittaa nimi. Minun suvussani edeltäjiä ei ole tarvinnut erikseen nimetä, kaikki ovat kantaneet postia.
+KYSYMYS: Kerro lisää: neandertalinihminen
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+- [Kapkaupunki — kohdekartta / Kohdekartta: Iziko Etelä-Afrikan museo] 1825 Iziko Etelä-Afrikan museo perustettiin 1825, ja se on maan ensimmäinen museo. Perustaja oli Kapin siirtomaan kuvernööri lordi Charles Somerset, joka hoiti virkaa vuosina 1814–1826. Nykyisellä paikallaan Company's Gardenin eteläpäässä museo on ollut vuodesta 1897. Sana Iziko on xhosaa ja tarkoittaa tulisijaa; nimi otettiin käyttöön syyskuussa 2012, kun museo liitettiin Iziko-museoiden joukkoon. Museo alkoi yleismuseona, jossa oli sekä luonnonhistoriaa että esineistöä lähialueilta ja kauempaa. Vähitellen kokoelmat järjestettiin samaan tapaan kuin Euroopan ja Amerikan museoissa 1800-luvun lopulla ja 1900-luvun alussa. Nykyään museossa on yli puolitoista miljoonaa tieteellistä näytettä: fo…
+AIEMPI KYSYMYS: Mitä luolista on löydetty?
+AIEMPI VASTAUS (Livia):
+No jopas. Atapuercan yhä jatkuvissa kaivauksissa on löytynyt [[fossiileja]] ja [[kivityökaluja]], jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Osa löydöistä on esillä lähellä Burgosin [[Ihmisen evoluution museossa]]. Kaivaukset eivät ole vieläkään valmiit.
+KYSYMYS: Kerro lisää: fossiileja
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Iziko Etelä-Afrikan museo] 1825 Iziko Etelä-Afrikan museo perustettiin 1825, ja se on maan ensimmäinen museo. Perustaja oli Kapin siirtomaan kuvernööri lordi Charles Somerset, joka hoiti virkaa vuosina 1814–1826. Nykyisellä paikallaan Company's Gardenin eteläpäässä museo on ollut vuodesta 1897. Sana Iziko on xhosaa ja tarkoittaa tulisijaa; nimi otettiin käyttöön syyskuussa 2012, kun museo liitettiin Iziko-museoiden joukkoon. Museo alkoi yleismuseona, jossa oli sekä luonnonhistoriaa että esineistöä lähialueilta ja kauempaa. Vähitellen kokoelmat järjestettiin samaan tapaan kuin Euroopan ja Amerikan museoissa 1800-luvun lopulla ja 1900-luvun alussa. Nykyään museossa on yli puolitoista miljoonaa tieteellistä näytettä: fo…
+- [Lhasa — kohdekartta / Kohdekartta: Tiibetin museo] avattu 1999 Museo avattiin 5. lokakuuta 1999, ja se on alueen ensimmäinen suuri nykyaikainen museo. Rakennus on L-kirjaimen muotoinen ja seisoo Potalan alapuolella Norbulingkan tien kulmassa. Julkisivu on harmaata tiiltä, räystäät tummanruskeat ja valkoiset ja katto kullattu — yhdistelmä perinteistä tiibetiläistä rakennustapaa ja nykyarkkitehtuuria. Tontti on runsaat viisi hehtaaria ja rakennettua alaa on 23 508 neliömetriä, josta näyttelytilaa 10 451. Kokonaisuus jakautuu kolmeen osaan: päänäyttelyhalliin, kansankulttuurin puutarhaan ja hallinto-osaan. Keskellä on sisäpiha, jonka valkoinen lattia ja kattoikkunat jäljittelevät luostarien pihoja. Kokoelmassa on yli puoli miljoonaa esinettä, …
+AIEMPI KYSYMYS: Mitä luolista on löydetty?
+AIEMPI VASTAUS (Livia):
+No jopas. Atapuercan yhä jatkuvissa kaivauksissa on löytynyt [[fossiileja]] ja [[kivityökaluja]], jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Osa löydöistä on esillä lähellä Burgosin [[Ihmisen evoluution museossa]]. Kaivaukset eivät ole vieläkään valmiit.
+KYSYMYS: Kerro lisää: kivityökaluja
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktoria Nyanza — kaupunkilehti / Evoluution laboratorio] Viktorianjärvi kätkee vedenalaisen ihmeen: sadat ainutlaatuiset kirjoahvenlajit syntyivät järvessä vain muutamassa tuhannessa vuodessa. Yksi ihmisen istuttama peto lähes pyyhkäisi koko ihmeen pois 1900-luvun jälkipuoliskolla.
+AIEMPI KYSYMYS: Mitä luolista on löydetty?
+AIEMPI VASTAUS (Livia):
+No jopas. Atapuercan yhä jatkuvissa kaivauksissa on löytynyt [[fossiileja]] ja [[kivityökaluja]], jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Osa löydöistä on esillä lähellä Burgosin [[Ihmisen evoluution museossa]]. Kaivaukset eivät ole vieläkään valmiit.
+KYSYMYS: Kerro lisää: Ihmisen evoluution museossa
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+AIEMPI KYSYMYS: Missä Atapuerca sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Atapuerca sijaitsee [[Burgosin]] maakunnassa Pohjois-Espanjassa, Atapuercan kylän lähellä. Alue koostuu [[karstikukkuloiden]] ryhmästä. Pohjoiseen siis, taas kerran.
+KYSYMYS: Kerro lisää: Burgosin
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+AIEMPI KYSYMYS: Missä Atapuerca sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Atapuerca sijaitsee [[Burgosin]] maakunnassa Pohjois-Espanjassa, Atapuercan kylän lähellä. Alue koostuu [[karstikukkuloiden]] ryhmästä. Pohjoiseen siis, taas kerran.
+KYSYMYS: Kerro lisää: karstikukkuloiden
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+AIEMPI KYSYMYS: Kuinka vanhoja Atapuercan vanhimmat löydöt ovat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Atapuercan varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Ne kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille, ja alueella ovat asuneet [[Homo erectus]], [[Homo antecessor]], [[Homo heidelbergensis]] ja [[neandertalinihminen]]. Onpas siinä aikaa kulunut.
+KYSYMYS: Kerro lisää: Homo antecessor
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Kuka Pelayo oli?
+AIEMPI VASTAUS (Livia):
+Ai tota, tuo nimi kulkee ajan läpi. Pelayo oli [[Asturian]] kristittyjen johtaja, jonka visigootit valitsivat johtajakseen mozarabikirjoitusten mukaan vuonna 718. Hän aloitti kapinan pääpaikkanaan [[Cangas de Onís]] ja johti joukkonsa voittoon [[Covadongan taistelussa]] vuonna 722. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Asturian
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Kuka Pelayo oli?
+AIEMPI VASTAUS (Livia):
+Ai tota, tuo nimi kulkee ajan läpi. Pelayo oli [[Asturian]] kristittyjen johtaja, jonka visigootit valitsivat johtajakseen mozarabikirjoitusten mukaan vuonna 718. Hän aloitti kapinan pääpaikkanaan [[Cangas de Onís]] ja johti joukkonsa voittoon [[Covadongan taistelussa]] vuonna 722. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Cangas de Onís
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Kuka Pelayo oli?
+AIEMPI VASTAUS (Livia):
+Ai tota, tuo nimi kulkee ajan läpi. Pelayo oli [[Asturian]] kristittyjen johtaja, jonka visigootit valitsivat johtajakseen mozarabikirjoitusten mukaan vuonna 718. Hän aloitti kapinan pääpaikkanaan [[Cangas de Onís]] ja johti joukkonsa voittoon [[Covadongan taistelussa]] vuonna 722. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Covadongan taistelussa
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Mikä Reconquista oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Reconquista tarkoittaa kristittyjen takaisinvalloitusta Iberian niemimaalla sen jälkeen, kun [[umayyadit]] olivat vallanneet Iberian vuonna 711. Sen alkupisteenä pidetään perinteisesti Covadongan taistelua vuonna 722, jonka voittivat Pelayon joukot ja jota pidetään [[Asturian kuningaskunnan]] perustavana hetkenä. Reconquistan katsotaan päättyneen Granadan valtaukseen vuonna 1492, ja se kesti siis vuosisatoja. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: umayyadit
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Mikä Reconquista oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Reconquista tarkoittaa kristittyjen takaisinvalloitusta Iberian niemimaalla sen jälkeen, kun [[umayyadit]] olivat vallanneet Iberian vuonna 711. Sen alkupisteenä pidetään perinteisesti Covadongan taistelua vuonna 722, jonka voittivat Pelayon joukot ja jota pidetään [[Asturian kuningaskunnan]] perustavana hetkenä. Reconquistan katsotaan päättyneen Granadan valtaukseen vuonna 1492, ja se kesti siis vuosisatoja. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Asturian kuningaskunnan
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Missä Covadonga sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sehän on Pohjois-Espanjassa. Covadonga sijaitsee [[Picos de Europan]] vuoristossa, jossa Covadongan taistelu käytiin vuonna 722, ja alue kuuluu [[Asturiaan]]. Pelayon pääpaikka Cangas de Onís oli samalla seudulla. Siitä on yli 1 300 vuotta, mutta paikka on yhä kartalla.
+KYSYMYS: Kerro lisää: Picos de Europan
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Missä Covadonga sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sehän on Pohjois-Espanjassa. Covadonga sijaitsee [[Picos de Europan]] vuoristossa, jossa Covadongan taistelu käytiin vuonna 722, ja alue kuuluu [[Asturiaan]]. Pelayon pääpaikka Cangas de Onís oli samalla seudulla. Siitä on yli 1 300 vuotta, mutta paikka on yhä kartalla.
+KYSYMYS: Kerro lisää: Asturiaan
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Keitä olivat Alqama ja Munuza?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alqama ja Munuza olivat [[Umayyad-kalifaatin]] komentajia, joiden armeija kohtasi Pelayon joukot Covadongan taistelussa vuonna 722 [[Picos de Europan]] vuoristossa. Kristityt voittivat. Heistä en ole varma muuta kuin tämän. Siitä on yli 1 300 vuotta.
+KYSYMYS: Kerro lisää: Umayyad-kalifaatin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / San Juan: Ponce de Leónin hauta] Catedral de San Juan Bautista on Amerikan mantereen vanhimpia yhä käytössä olevia kirkkorakennuksia; sen juuret ulottuvat 1520-luvulle, vaikka hirmumyrskyt ja tulipalot ovat pakottaneet rakentamaan sitä uudelleen vuosisatojen kuluessa. Kirkon sisällä lepää San Juanin perustajan, Juan Ponce de Leónin, marmorinen hautaholvi — hänen jäännöksensä siirrettiin tänne 1900-luvun alussa aiemmasta haudastaan. Katedraalissa säilytetään myös vuosisatoja vanhaa espanjalaista veistotaidetta ja mumioitunutta pyhäinjäännöstä. Rakennuksen yksinkertainen, paksuseinäinen ulkoasu kertoo ajasta, jolloin kirkkojen piti kestää sekä myrskyjä että hyökkäyksiä.
+AIEMPI KYSYMYS: Mikä oli Asturian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Asturian kuningaskunta oli kristittyjen valtio Pohjois-Espanjassa, jonka perustavana hetkenä pidetään perinteisesti Covadongan taistelua vuonna 722. Pelayon pääpaikka oli [[Cangas de Onís]], ja myöhemmin sen perillisenä pidetään [[Leónin kuningaskuntaa]], mutta tarkempia vuosilukuja en ole varma. Valtio syntyi aikana, jolloin [[Pelayon]] johtama kapina oli vasta alkanut. Siitä on yli 1 300 vuotta.
+KYSYMYS: Kerro lisää: Leónin kuningaskuntaa
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+AIEMPI KYSYMYS: Mikä oli Asturian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Asturian kuningaskunta oli kristittyjen valtio Pohjois-Espanjassa, jonka perustavana hetkenä pidetään perinteisesti Covadongan taistelua vuonna 722. Pelayon pääpaikka oli [[Cangas de Onís]], ja myöhemmin sen perillisenä pidetään [[Leónin kuningaskuntaa]], mutta tarkempia vuosilukuja en ole varma. Valtio syntyi aikana, jolloin [[Pelayon]] johtama kapina oli vasta alkanut. Siitä on yli 1 300 vuotta.
+KYSYMYS: Kerro lisää: Pelayon
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka Roland oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Roland oli [[Kaarle Suuren]] sotapäällikkö, joka sai surmansa vuonna 778 Pyreneillä, kun [[baskiheimot]] hyökkäsivät frankkien jälkijoukon kimppuun Roncesvallesin lähellä. Historiallisesti hänestä tiedetään hyvin vähän, mutta legenda kasvatti hänestä sankarin: keskiaikainen runoelma [[Rolandin laulu]] kertoo hänen viimeisestä taistelustaan, ja siinä vihollisina ovat baskien sijaan muslimit. Tarinaa on kerrottu uudelleen ympäri Eurooppaa vuosisatojen ajan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Kaarle Suuren
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+AIEMPI KYSYMYS: Kuka Roland oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Roland oli [[Kaarle Suuren]] sotapäällikkö, joka sai surmansa vuonna 778 Pyreneillä, kun [[baskiheimot]] hyökkäsivät frankkien jälkijoukon kimppuun Roncesvallesin lähellä. Historiallisesti hänestä tiedetään hyvin vähän, mutta legenda kasvatti hänestä sankarin: keskiaikainen runoelma [[Rolandin laulu]] kertoo hänen viimeisestä taistelustaan, ja siinä vihollisina ovat baskien sijaan muslimit. Tarinaa on kerrottu uudelleen ympäri Eurooppaa vuosisatojen ajan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: baskiheimot
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+AIEMPI KYSYMYS: Kuka Roland oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Roland oli [[Kaarle Suuren]] sotapäällikkö, joka sai surmansa vuonna 778 Pyreneillä, kun [[baskiheimot]] hyökkäsivät frankkien jälkijoukon kimppuun Roncesvallesin lähellä. Historiallisesti hänestä tiedetään hyvin vähän, mutta legenda kasvatti hänestä sankarin: keskiaikainen runoelma [[Rolandin laulu]] kertoo hänen viimeisestä taistelustaan, ja siinä vihollisina ovat baskien sijaan muslimit. Tarinaa on kerrottu uudelleen ympäri Eurooppaa vuosisatojen ajan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Rolandin laulu
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Espanjan korkein vuori on Afrikan edustalla] Espanjan korkein kohta ei ole Pyreneillä vaan Teneriffalla: Teide nousee 3 715 metriin, ja merenpohjasta mitattuna se on yli seitsemän kilometriä korkea eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon Marsia, että Euroopan avaruusjärjestö on koekäyttänyt siellä mönkijöitään. Vuori purkautui viimeksi 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, sata kilometriä Marokon rannikolta.
+AIEMPI KYSYMYS: Miksi pyhiinvaellus alkaa täältä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Roncesvalles sijaitsee [[Pyreneillä]] noin 900 metrin korkeudessa, vain muutaman kilometrin päässä Ranskan rajasta, joten se on yksi ensimmäisistä pysähdyspaikoista vuorten ylityksen jälkeen. Paikalla toimi pyhiinvaeltajia varten [[hospitaali]], joka tarjosi vaeltajille majoitusta ja hoivaa, ja kylä kuuluu tunnetun [[Camino Francés]] -reitin varrelle. Nykyäänkin tuhannet vaeltajat aloittavat täältä matkansa [[Santiago de Compostelaan]].
+
+Siivin vuoret ylittää helposti, mutta jalan kulkevalle majapaikka on varmasti ollut tervetullut näky. Jos täällä on oma paikallinen pullansa, en vain tiedä sen nimeä enkä uskalla keksiä.
+KYSYMYS: Kerro lisää: Pyreneillä
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+AIEMPI KYSYMYS: Miksi pyhiinvaellus alkaa täältä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Roncesvalles sijaitsee [[Pyreneillä]] noin 900 metrin korkeudessa, vain muutaman kilometrin päässä Ranskan rajasta, joten se on yksi ensimmäisistä pysähdyspaikoista vuorten ylityksen jälkeen. Paikalla toimi pyhiinvaeltajia varten [[hospitaali]], joka tarjosi vaeltajille majoitusta ja hoivaa, ja kylä kuuluu tunnetun [[Camino Francés]] -reitin varrelle. Nykyäänkin tuhannet vaeltajat aloittavat täältä matkansa [[Santiago de Compostelaan]].
+
+Siivin vuoret ylittää helposti, mutta jalan kulkevalle majapaikka on varmasti ollut tervetullut näky. Jos täällä on oma paikallinen pullansa, en vain tiedä sen nimeä enkä uskalla keksiä.
+KYSYMYS: Kerro lisää: hospitaali
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kohdekartta / Kohdekartta: Santa Anan kirkko] 1733 Vuonna 1726 Yucatánin kuvernööri ja kenraalikapteeni Antonio de Figueroa y Silva määräsi rakennettavaksi suoran kadun piispantalolta pohjoiseen. Katu jatkoi sitä väylää, joka siihen asti oli päättynyt Santa Lucían kaupunginosaan, ja sen varrelle tehtiin kaksi kivikaarta. Näin työläisten ja käsityöläisten asuttama Santa Ana liitettiin osaksi keskustaa. Sama kuvernööri rakennutti Santa Anan kirkon esikolumbiaanisen mayaperustuksen päälle siihen kohtaan, jossa oli vuosisataa aiemmin rakennettu avokappeli. Työhön kuului myös pieni puistikko, jota kutsuttiin ensin nimellä Paseo de Santa Ana ja joka on nykyinen puisto. Kokonaisuus valmistui 1733, mutta Figueroa y Silva ei ehtinyt nähdä sitä:…
+AIEMPI KYSYMYS: Miksi pyhiinvaellus alkaa täältä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Roncesvalles sijaitsee [[Pyreneillä]] noin 900 metrin korkeudessa, vain muutaman kilometrin päässä Ranskan rajasta, joten se on yksi ensimmäisistä pysähdyspaikoista vuorten ylityksen jälkeen. Paikalla toimi pyhiinvaeltajia varten [[hospitaali]], joka tarjosi vaeltajille majoitusta ja hoivaa, ja kylä kuuluu tunnetun [[Camino Francés]] -reitin varrelle. Nykyäänkin tuhannet vaeltajat aloittavat täältä matkansa [[Santiago de Compostelaan]].
+
+Siivin vuoret ylittää helposti, mutta jalan kulkevalle majapaikka on varmasti ollut tervetullut näky. Jos täällä on oma paikallinen pullansa, en vain tiedä sen nimeä enkä uskalla keksiä.
+KYSYMYS: Kerro lisää: Camino Francés
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+AIEMPI KYSYMYS: Miksi pyhiinvaellus alkaa täältä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Roncesvalles sijaitsee [[Pyreneillä]] noin 900 metrin korkeudessa, vain muutaman kilometrin päässä Ranskan rajasta, joten se on yksi ensimmäisistä pysähdyspaikoista vuorten ylityksen jälkeen. Paikalla toimi pyhiinvaeltajia varten [[hospitaali]], joka tarjosi vaeltajille majoitusta ja hoivaa, ja kylä kuuluu tunnetun [[Camino Francés]] -reitin varrelle. Nykyäänkin tuhannet vaeltajat aloittavat täältä matkansa [[Santiago de Compostelaan]].
+
+Siivin vuoret ylittää helposti, mutta jalan kulkevalle majapaikka on varmasti ollut tervetullut näky. Jos täällä on oma paikallinen pullansa, en vain tiedä sen nimeä enkä uskalla keksiä.
+KYSYMYS: Kerro lisää: Santiago de Compostelaan
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Dublin — kaupunkilehti / Dublin: Romaani, joka kestää yhden päivän] James Joycen romaani Odysseus kertoo yhden ainoan päivän: torstain 16. kesäkuuta 1904 Dublinissa. Joyce valitsi juuri sen päivän, koska silloin hän oli ollut ensi kertaa kävelyllä tulevan vaimonsa Nora Barnaclen kanssa. Nyt joka 16. kesäkuuta dublinilaiset pukeutuvat vuoden 1904 vaatteisiin ja kulkevat kirjan reitit läpi. Ensimmäinen sellainen retki tehtiin 1954 vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 tuntia.
+AIEMPI KYSYMYS: Mikä Sancti Spiritus -kappeli on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sancti Spiritus -kappeli on Roncesvallesin vanhin rakennus. Se on [[romaaninen]], eli sitä luonnehtivat tälle keskiajan tyylille tyypilliset pyöreät kaaret ja paksut muurit, ja sitä kutsutaan myös [[Kaarle Suuren siiloksi]]. Santa María de Roncesvallesin [[kollegiaattikirkko]], entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa. Pieni kappeli, iso nimi.
+KYSYMYS: Kerro lisää: romaaninen
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+AIEMPI KYSYMYS: Mikä Sancti Spiritus -kappeli on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sancti Spiritus -kappeli on Roncesvallesin vanhin rakennus. Se on [[romaaninen]], eli sitä luonnehtivat tälle keskiajan tyylille tyypilliset pyöreät kaaret ja paksut muurit, ja sitä kutsutaan myös [[Kaarle Suuren siiloksi]]. Santa María de Roncesvallesin [[kollegiaattikirkko]], entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa. Pieni kappeli, iso nimi.
+KYSYMYS: Kerro lisää: Kaarle Suuren siiloksi
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+AIEMPI KYSYMYS: Mikä Sancti Spiritus -kappeli on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sancti Spiritus -kappeli on Roncesvallesin vanhin rakennus. Se on [[romaaninen]], eli sitä luonnehtivat tälle keskiajan tyylille tyypilliset pyöreät kaaret ja paksut muurit, ja sitä kutsutaan myös [[Kaarle Suuren siiloksi]]. Santa María de Roncesvallesin [[kollegiaattikirkko]], entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa. Pieni kappeli, iso nimi.
+KYSYMYS: Kerro lisää: kollegiaattikirkko
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat: Minareetti joka kutsui pyhiinvaeltajia] Kun pohjoisempana sijainnut pyhiinvaellussatama Aydhab hylättiin 1400-luvulla, Suakinista tuli tärkein lähtösatama muslimeille, jotka matkasivat Länsi- ja Keski-Afrikasta laivalla Punaisenmeren yli Mekkaan. Shafi'in moskeijan minareetista kuulutettiin rukoukset päivittäin, ja se opasti saapuvat pyhiinvaeltajat kaupungin sydämeen ennen laivaan nousua. Osa pyhiinvaeltajista jäi kaupunkiin viikoiksi tai kuukausiksi odottamaan suotuisia tuulia tai vapaata laivapaikkaa, mikä piti Suakinin majatalot ja torit jatkuvasti täynnä matkalaisia.
+- [Espanja — maalehti / Historia] Espanjan historia on kerroksia päällekkäin: jääkauden maalarit, roomalaiset insinöörit, kahdeksansataa vuotta arabiankielistä valtakuntaa ja tuhat vuotta pyhiinvaeltajia samalla tiellä.
+AIEMPI KYSYMYS: Mikä on hospitaali keskiajan pyhiinvaellusreiteillä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Keskiajalla hospitaali ei tarkoittanut pelkkää sairaalaa vaan laajemmin kristillistä hoivalaitosta, joka otti vastaan matkalaisia, köyhiä ja sairaita. Pyhiinvaellusreiteillä se toimi majatalona, jossa vaeltaja sai yösijan, ruokaa ja tarvittaessa hoitoa. Roncesvallesin hospitaali palveli [[pyhiinvaeltajia]] vuorten ylityksen jälkeen [[Pyhän Jaakobin tien]] alkupäässä. Tällaisen paikan lähelle minäkin laskeutuisin.
+KYSYMYS: Kerro lisää: pyhiinvaeltajia
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+AIEMPI KYSYMYS: Mikä on hospitaali keskiajan pyhiinvaellusreiteillä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Keskiajalla hospitaali ei tarkoittanut pelkkää sairaalaa vaan laajemmin kristillistä hoivalaitosta, joka otti vastaan matkalaisia, köyhiä ja sairaita. Pyhiinvaellusreiteillä se toimi majatalona, jossa vaeltaja sai yösijan, ruokaa ja tarvittaessa hoitoa. Roncesvallesin hospitaali palveli [[pyhiinvaeltajia]] vuorten ylityksen jälkeen [[Pyhän Jaakobin tien]] alkupäässä. Tällaisen paikan lähelle minäkin laskeutuisin.
+KYSYMYS: Kerro lisää: Pyhän Jaakobin tien
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kohdekartta / Kohdekartta: Kanon suurmoskeija] 1400-luku Kanon perjantaimoskeija on Nigerian vanhin moskeija. Se rakennettiin 1400-luvulla Muhammad Rumfalle, ja se oli savesta ja soro- eli tornityyppinen. Moskeija on kaupungin sydämessä. Rakennus on siirtynyt ja noussut uudelleen useasti. Muhammad Zaki siirsi sen uudelle paikalle 1582, ja Abdullahi Dan Dabo rakensi sen uudelleen 1800-luvun puolivälissä. Sokoton jihadin jälkeen emiiri Suleiman, jota pidettiin Kanon imaamina, johti perjantairukoukset itse; myöhemmät emiirit ovat antaneet tehtävän nimitetylle imaamille. Nykyinen talo on nuori mutta paikka vanha: moskeija tuhoutui 1950-luvulla ja rakennettiin uudelleen brittien tuella. Kaupunkilaiselle se on silti sama moskeija, jonka Rumfa…
+AIEMPI KYSYMYS: Mitä kollegiaattikirkko tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kollegiaattikirkko on kirkko, jonka jumalanpalveluksista vastaa [[kanonikkien]] yhteisö eli kollegio ja joka ei ole piispan päätöskirkko eli [[katedraali]]. Roncesvallesissa [[Santa María de Roncesvallesin]] kollegiaattikirkko on samalla entinen pyhiinvaeltajien hospitaali, ja se rakennettiin 1100-luvun lopulla ja 1200-luvun alussa. Sanana aika pitkä kyyhkyn kielelle.
+KYSYMYS: Kerro lisää: kanonikkien
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä kollegiaattikirkko tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kollegiaattikirkko on kirkko, jonka jumalanpalveluksista vastaa [[kanonikkien]] yhteisö eli kollegio ja joka ei ole piispan päätöskirkko eli [[katedraali]]. Roncesvallesissa [[Santa María de Roncesvallesin]] kollegiaattikirkko on samalla entinen pyhiinvaeltajien hospitaali, ja se rakennettiin 1100-luvun lopulla ja 1200-luvun alussa. Sanana aika pitkä kyyhkyn kielelle.
+KYSYMYS: Kerro lisää: katedraali
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+AIEMPI KYSYMYS: Mitä kollegiaattikirkko tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kollegiaattikirkko on kirkko, jonka jumalanpalveluksista vastaa [[kanonikkien]] yhteisö eli kollegio ja joka ei ole piispan päätöskirkko eli [[katedraali]]. Roncesvallesissa [[Santa María de Roncesvallesin]] kollegiaattikirkko on samalla entinen pyhiinvaeltajien hospitaali, ja se rakennettiin 1100-luvun lopulla ja 1200-luvun alussa. Sanana aika pitkä kyyhkyn kielelle.
+KYSYMYS: Kerro lisää: Santa María de Roncesvallesin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+AIEMPI KYSYMYS: Kuinka monta asukasta Numanciassa oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa asukasmäärää en tiedä, ja arviot vaihtelevat, joten en ole varma mistään yksittäisestä luvusta. Varmaa on, että [[Scipio Aemilianus]] sulki kaupungin yhdeksän kilometrin pituisen [[saartomuurin]] sisään ja että piirityksen lopussa suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi. Kaupungin lopulta polttaneita oli enää muutama sata. Siitä on onneksi yli kaksituhatta vuotta.
+KYSYMYS: Kerro lisää: Scipio Aemilianus
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Historia: Saarto jonka kestoa lasketaan kahdella tavalla] Manuel Oriben joukot piirittivät Montevideota Guerra Granden aikana, ja kaupungin puolustus lepäsi vasta vapautettujen orjien 5 000 hengen joukko-osaston ja ulkomaisten pakolaisten varassa: italialaista legioonaa johti Giuseppe Garibaldi, ja rinnalla toimivat ranskalainen ja baskilaisten legioona sekä brittiläis-ranskalainen laivastotuki. Vuonna 1843 kaupungin 30 000 asukkaasta uruguaylaisia oli vain kolmasosa. Saarron kesto riippuu laskutavasta: Montevideo-artikkeli puhuu kahdeksan vuoden piirityksestä 1843–1851, mutta päivämäärien mukaan saarto alkoi jo joulukuussa 1842 ja purkautui vasta helmikuussa 1852.
+AIEMPI KYSYMYS: Kuinka monta asukasta Numanciassa oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa asukasmäärää en tiedä, ja arviot vaihtelevat, joten en ole varma mistään yksittäisestä luvusta. Varmaa on, että [[Scipio Aemilianus]] sulki kaupungin yhdeksän kilometrin pituisen [[saartomuurin]] sisään ja että piirityksen lopussa suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi. Kaupungin lopulta polttaneita oli enää muutama sata. Siitä on onneksi yli kaksituhatta vuotta.
+KYSYMYS: Kerro lisää: saartomuurin
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tasavallan vuosi] Se huuto, jonka kuulit kahviloissa, oli aiheellista. Tasavallan johdossa vaihtui isoisäsi matkavuonna neljä miestä. Estanislao Figueras kesti helmikuusta kesäkuuhun. Francisco Pi y Margall aloitti 11. kesäkuuta ja kesti 37 päivää: hän kieltäytyi tukahduttamasta etelän kapinoita aseilla, koska kapinalliset noudattivat hänen omaa oppiaan. Nicolás Salmerón aloitti 18. heinäkuuta, ja kun kenraalit vaativat häntä vahvistamaan karkureiden kuolemantuomiot, hän erosi 6. syyskuuta — hän oli oikeusministerinä itse poistanut kuolemanrangaistuksen, ja hänen mausoleuminsa seinään on kirjoitettu, että hän luopui vallasta, jottei allekirjoittaisi kuolemantuomiota. Emilio Castelar aloitti 7. syyskuuta ja v…
+AIEMPI KYSYMYS: Kuka Scipio Aemilianus oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Scipio Aemilianus oli roomalainen sotapäällikkö ja valtiomies [[Rooman tasavallan]] ajalta. Rooman senaatti antoi hänelle vuonna 133 eaa. tehtäväksi tuhota Numancia, ja hän rakensi kaupungin ympärille [[saartomuurin]] torneineen ja vallihautoineen. Voitetun kaupungin mukaan hän sai lisänimen Numantinus, ja hänet tunnetaan myös Karthagon tuhoajana vuonna 146 eaa. Hyvin kaukaista aikaa, kun sitä ajattelee.
+KYSYMYS: Kerro lisää: Rooman tasavallan
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Maurit ja kristityt samassa padassa] Moros y cristianos tarkoittaa maureja ja kristittyjä: moros ovat mustia papuja ja cristianos valkoista riisiä. Nimi viittaa Iberian niemimaan muslimihallintoon, joka kesti 700-luvulta reconquistan päättymiseen 1400-luvulla. Pohjana on sofrito eli sipulin, valkosipulin ja paprikan kuullotus, mausteina kumina, oregano ja laakerinlehti. Ero tavalliseen papu-riisiruokaan on se, että papu ja riisi kypsennetään samassa padassa papujen keitinveteen. Saaren itäosassa sama ruoka punaisista pavuista on congrí.
+- [Granada — kaupunkilehti / Granada: Aamulla hiihtoa, iltapäivällä merta] Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä Välimeren rannalle, joten saman päivän aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli kolmen kilometrin korkeuteen, ja vieressä kohoaa Mulhacén, 3 479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
+- [Granada — kaupunkilehti / Granada: Palatsi, jota ei purettu] Alhambra oli Granadan emiirikunnan hallintokeskus ja Iberian niemimaan viimeisen muslimivaltion sydän. Kun se luovutettiin vuonna 1492, uudet hallitsijat eivät purkaneet palatsia vaan muuttivat siihen — siksi sen kipsikoristelu ja arabiankieliset kirjoitukset ovat yhä paikoillaan. Sama lause toistuu seinillä uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja se kuuluu "ei ole voittajaa paitsi Jumala".
+AIEMPI KYSYMYS: Keitä keltiberialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, keltiberialaiset olivat [[Iberian niemimaan]] sisäosissa asunut kansa, jonka kulttuuri yhdisti keltiläisiä ja paikallisia iberialaisia piirteitä; nimikin viittaa tähän yhdistelmään. Heidän asutuksiaan oli Numancia, jonka rauniot ovat Sorian maakunnassa [[Cerro de la Muela]] -kukkulalla. Rooman ja keltiberialaisten väliset yhteenotot tunnetaan [[keltiberisotina]]. Rauniot ovat vieläkin paikallaan, vaikka aikaa on kulunut paljon.
+KYSYMYS: Kerro lisää: Iberian niemimaan
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+AIEMPI KYSYMYS: Keitä keltiberialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, keltiberialaiset olivat [[Iberian niemimaan]] sisäosissa asunut kansa, jonka kulttuuri yhdisti keltiläisiä ja paikallisia iberialaisia piirteitä; nimikin viittaa tähän yhdistelmään. Heidän asutuksiaan oli Numancia, jonka rauniot ovat Sorian maakunnassa [[Cerro de la Muela]] -kukkulalla. Rooman ja keltiberialaisten väliset yhteenotot tunnetaan [[keltiberisotina]]. Rauniot ovat vieläkin paikallaan, vaikka aikaa on kulunut paljon.
+KYSYMYS: Kerro lisää: Cerro de la Muela
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+AIEMPI KYSYMYS: Keitä keltiberialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, keltiberialaiset olivat [[Iberian niemimaan]] sisäosissa asunut kansa, jonka kulttuuri yhdisti keltiläisiä ja paikallisia iberialaisia piirteitä; nimikin viittaa tähän yhdistelmään. Heidän asutuksiaan oli Numancia, jonka rauniot ovat Sorian maakunnassa [[Cerro de la Muela]] -kukkulalla. Rooman ja keltiberialaisten väliset yhteenotot tunnetaan [[keltiberisotina]]. Rauniot ovat vieläkin paikallaan, vaikka aikaa on kulunut paljon.
+KYSYMYS: Kerro lisää: keltiberisotina
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Luxembourgin puisto] 1612 Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä viihtynyt Louvressa. Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, joka jäljitteli hänen kotikaupunkinsa Firenzen Palazzo Pittiä. Puistoon istutettiin 2 000 jalavaa, ja firenzeläinen suihkulähdemestari Tommaso Francini muotoili maisemasta sellaisen, jollaisen kuningatar oli lapsena tuntenut. Puisto on kasvanut ja kutistunut vallanpitäjien mukana. Alun kahdeksasta hehtaarista se laajeni kolmeenkymmeneen 1630-luvulla ja vallankumouksen jälkeen neljäänkymmeneen, kun naapuriluostarin maat takavarikoitiin. Napoleon III:n katutyöt veivät 1…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Vanha katedraali Antiga Sé] 1761–1770 Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta noin 1761, ja työtä johti todennäköisesti portugalilainen arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 julkisivu vielä keskeneräisenä, ja sisustuksen kullatun rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira Pinto, aikansa parhaita veistäjiä kaupungissa. Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen talot otettiin käyttöön: kuningatar Maria I majoitettiin konventtiin ja viereisestä kirkosta tehtiin ensin kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João VI julistettiin kuni…
+AIEMPI KYSYMYS: Mitä keltiberisodat olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keltiberisodat olivat Rooman ja Iberian niemimaan keskiosien keltiberialaisheimojen välisiä sotia, jotka ajoittuvat pääosin 100-luvulle eaa. Ensimmäinen vakava yhteenotto Rooman kanssa oli Numancian kohdalla vuonna 153 eaa., ja vuonna 133 eaa. [[Rooman senaatti]] antoi [[Scipio Aemilianukselle]] tehtäväksi tuhota kaupungin. Varsin vanhaa historiaa tämä.
+KYSYMYS: Kerro lisää: Rooman senaatti
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+AIEMPI KYSYMYS: Mitä keltiberisodat olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keltiberisodat olivat Rooman ja Iberian niemimaan keskiosien keltiberialaisheimojen välisiä sotia, jotka ajoittuvat pääosin 100-luvulle eaa. Ensimmäinen vakava yhteenotto Rooman kanssa oli Numancian kohdalla vuonna 153 eaa., ja vuonna 133 eaa. [[Rooman senaatti]] antoi [[Scipio Aemilianukselle]] tehtäväksi tuhota kaupungin. Varsin vanhaa historiaa tämä.
+KYSYMYS: Kerro lisää: Scipio Aemilianukselle
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kohdekartta / Kohdekartta: Gran Teatro Cervantes] 1913 Kansainvälistyvässä Tangerissa espanjalaisyhteisö halusi oman teatterin. Peruskivi laskettiin juhlallisessa seremoniassa 2. huhtikuuta 1911, ja talo valmistui ja vihittiin 1913. Se nimettiin Miguel de Cervantesin mukaan. Rakennustyötä johtivat Esperanza Orellana ja hänen miehensä Manuel Peña, ja omistajana oli Antonio Gallego. Katsomoon mahtuu 1400 ihmistä — mittakaava kertoo, kuinka suureksi kaupungin tulevaisuus tuolloin arvioitiin. Teatteri kuuluu samaan vuosikymmeneen kuin muu muurien ulkopuolelle noussut uusi kaupunki. Samoihin vuosiin osuvat saksalaisliikemiehen rakennuttama Renschhausenin talo noin 1913 ja syrjäytetyn sulttaani Abdelhafidin palatsi 1914; rautatie Fèsiin rakennet…
+AIEMPI KYSYMYS: Miksi Numancia on tärkeä espanjalaisille?
+AIEMPI VASTAUS (Livia):
+Mmm— Numancia muistetaan Espanjassa usein vastarinnan ja sinnikkyyden vertauskuvana, koska sen asukkaat eivät alistuneet vaan päättivät kuolla mieluummin kuin joutua orjiksi. Aihe on innoittanut kirjailijoita: [[Miguel de Cervantes]] kirjoitti Numancian piirityksestä näytelmän [[El cerco de Numancia]]. Kaupungin rauniot ovat Garrayn kunnassa Sorian maakunnassa. Hiljainen paikka nykyisin, kuten kai pitääkin.
+KYSYMYS: Kerro lisää: Miguel de Cervantes
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+AIEMPI KYSYMYS: Miksi Numancia on tärkeä espanjalaisille?
+AIEMPI VASTAUS (Livia):
+Mmm— Numancia muistetaan Espanjassa usein vastarinnan ja sinnikkyyden vertauskuvana, koska sen asukkaat eivät alistuneet vaan päättivät kuolla mieluummin kuin joutua orjiksi. Aihe on innoittanut kirjailijoita: [[Miguel de Cervantes]] kirjoitti Numancian piirityksestä näytelmän [[El cerco de Numancia]]. Kaupungin rauniot ovat Garrayn kunnassa Sorian maakunnassa. Hiljainen paikka nykyisin, kuten kai pitääkin.
+KYSYMYS: Kerro lisää: El cerco de Numancia
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+AIEMPI KYSYMYS: Kuka Francisco Pizarro oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Francisco Pizarro oli espanjalainen [[conquistador]], joka syntyi Trujillossa ja on kaupungin tunnetuin poika; hänen ratsastajapatsaansa seisoo kaupungin [[Plaza Mayorilla]]. Hän johti espanjalaisten valloitusretkeä Etelä-Amerikassa, mikä johti inkojen valtakunnan kukistumiseen ja merkitsi suurta kärsimystä alkuperäisväestölle, ja hän perusti Liman kaupungin tammikuussa 1535. Kaukainen aika ja kaukainen maa.
+KYSYMYS: Kerro lisää: conquistador
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+AIEMPI KYSYMYS: Kuka Francisco Pizarro oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Francisco Pizarro oli espanjalainen [[conquistador]], joka syntyi Trujillossa ja on kaupungin tunnetuin poika; hänen ratsastajapatsaansa seisoo kaupungin [[Plaza Mayorilla]]. Hän johti espanjalaisten valloitusretkeä Etelä-Amerikassa, mikä johti inkojen valtakunnan kukistumiseen ja merkitsi suurta kärsimystä alkuperäisväestölle, ja hän perusti Liman kaupungin tammikuussa 1535. Kaukainen aika ja kaukainen maa.
+KYSYMYS: Kerro lisää: Plaza Mayorilla
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+- [Lima — kaupunkilehti / Lima: Loppiaisen kaupunki] Francisco Pizarro valitsi kaupungin paikan Rímac-joen laaksosta ja perusti sen 6. tammikuuta 1535. Päivä oli loppiainen, ja siitä tuli nimi Ciudad de los Reyes, Kuninkaiden kaupunki. Pizarro mittasi Plaza Mayorin ja koko ruutukaavan itse kolmen avustajansa kanssa ja laski omin käsin tuomiokirkon peruskiven. Virallinen nimi jäi asiakirjoihin, mutta arkikielessä kaupunkia sanottiin pian Limaksi – nimi juontuu joko ketšuan sanasta limaq, "puhuja", joka oli laakson oraakkelin nimi, tai aimaran sanoista lima-limaq, "keltainen kukka". Ruutukaava rakennettiin paikallisen kuraakan Taulichuscon maille.
+AIEMPI KYSYMYS: Mikä Plaza Mayor on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Plaza Mayor tarkoittaa espanjaksi pääaukiota, ja sellainen on monissa espanjalaisissa kaupungeissa kaupungin kokoontumispaikka. Trujillossa Plaza Mayorilla seisoo [[Francisco Pizarron]] ratsastajapatsas. Tunnetuin esimerkki lienee [[Madridin Plaza Mayor]], joka valmistui vuonna 1619 arkkitehti [[Juan Gómez de Moran]] suunnitelmien mukaan; se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on 237 parveketta.
+
+Yhdelle aukiolle se on paljon yleisöpaikkoja. Kyyhkynä arvostan hyvää tarkkailupaikkaa.
+KYSYMYS: Kerro lisää: Francisco Pizarron
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+AIEMPI KYSYMYS: Mikä Plaza Mayor on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Plaza Mayor tarkoittaa espanjaksi pääaukiota, ja sellainen on monissa espanjalaisissa kaupungeissa kaupungin kokoontumispaikka. Trujillossa Plaza Mayorilla seisoo [[Francisco Pizarron]] ratsastajapatsas. Tunnetuin esimerkki lienee [[Madridin Plaza Mayor]], joka valmistui vuonna 1619 arkkitehti [[Juan Gómez de Moran]] suunnitelmien mukaan; se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on 237 parveketta.
+
+Yhdelle aukiolle se on paljon yleisöpaikkoja. Kyyhkynä arvostan hyvää tarkkailupaikkaa.
+KYSYMYS: Kerro lisää: Madridin Plaza Mayor
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+AIEMPI KYSYMYS: Mikä Plaza Mayor on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Plaza Mayor tarkoittaa espanjaksi pääaukiota, ja sellainen on monissa espanjalaisissa kaupungeissa kaupungin kokoontumispaikka. Trujillossa Plaza Mayorilla seisoo [[Francisco Pizarron]] ratsastajapatsas. Tunnetuin esimerkki lienee [[Madridin Plaza Mayor]], joka valmistui vuonna 1619 arkkitehti [[Juan Gómez de Moran]] suunnitelmien mukaan; se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on 237 parveketta.
+
+Yhdelle aukiolle se on paljon yleisöpaikkoja. Kyyhkynä arvostan hyvää tarkkailupaikkaa.
+KYSYMYS: Kerro lisää: Juan Gómez de Moran
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Milloin Trujillo vallattiin takaisin muslimeilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Trujillo vallattiin lopullisesti takaisin muslimeilta vuonna 1232, tammikuun lopulla. Legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään [[Neitsyt Marian]] linnan tornien välissä. Tapahtuma kuuluu [[Reconquistaan]], eli kristittyjen valtakuntien vuosisatoja kestäneeseen Iberian niemimaan takaisinvaltaukseen. Roomalaisaikana paikka tunnettiin nimellä [[Turgalium]]. Linnakukkula näyttää ylhäältä aika vaikuttavalta.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+AIEMPI KYSYMYS: Milloin Trujillo vallattiin takaisin muslimeilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Trujillo vallattiin lopullisesti takaisin muslimeilta vuonna 1232, tammikuun lopulla. Legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään [[Neitsyt Marian]] linnan tornien välissä. Tapahtuma kuuluu [[Reconquistaan]], eli kristittyjen valtakuntien vuosisatoja kestäneeseen Iberian niemimaan takaisinvaltaukseen. Roomalaisaikana paikka tunnettiin nimellä [[Turgalium]]. Linnakukkula näyttää ylhäältä aika vaikuttavalta.
+KYSYMYS: Kerro lisää: Reconquistaan
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+AIEMPI KYSYMYS: Milloin Trujillo vallattiin takaisin muslimeilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Trujillo vallattiin lopullisesti takaisin muslimeilta vuonna 1232, tammikuun lopulla. Legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään [[Neitsyt Marian]] linnan tornien välissä. Tapahtuma kuuluu [[Reconquistaan]], eli kristittyjen valtakuntien vuosisatoja kestäneeseen Iberian niemimaan takaisinvaltaukseen. Roomalaisaikana paikka tunnettiin nimellä [[Turgalium]]. Linnakukkula näyttää ylhäältä aika vaikuttavalta.
+KYSYMYS: Kerro lisää: Turgalium
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kaupunkilehti / Mérida: Viiden kukkulan kaupunki] Ennen Méridaa paikalla oli mayakaupunki Tʼhó, jota kutsuttiin myös nimellä Ichcaanzihó, viiden kukkulan kaupunki — nimi viittasi sen pyramideihin. Kaupungin perustivat 1542 espanjalaiset valloittajat, joiden joukossa olivat Francisco de Montejo nuorempi ja Juan de la Cámara. Nimen he ottivat Extremaduran Méridasta, koska Tʼhón rauniot muistuttivat heitä Rooman Augusta Emeritan raunioista. Uudet rakennukset tehtiin vanhan kaupungin veistetyistä kivistä, ja niitä näkee yhä katedraalin seinissä. Kiviä otettiin mayatemppelistä nimeltä Yajam Cumu, ja työn tekivät mayat itse — kahden heistä nimet tunnetaan, Francisco Pool ja Diego Can.
+- [Monterrey — kaupunkilehti / Monterrey: Kolmas yritys jäi pystyyn] Laaksoa kutsuttiin 1500-luvulla Extremaduran laaksoksi. Ensimmäisenä sinne tuli Alberto del Canto, joka nimesi paikan Santa Luciaksi; yritys kaatui. Toisen teki Luis Carvajal y de la Cueva, joka oli neuvotellut kuningas Filip II:n kanssa oman kuningaskunnan pohjoiseen ja perusti 1582 asutuksen San Luis Rey de Francia. Sekin autioitui, ja Nuevo León oli kahdeksan vuotta tyhjä. Kolmannen yrityksen teki Diego de Montemayor kolmentoista perheen retkikunnalla 20. syyskuuta 1596. Hän valitsi paikan Santa Lucían lähteen viereltä — siitä kohdasta lähtee nykyään keskustan kanava.
+AIEMPI KYSYMYS: Millainen kaupunki Trujillo on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Trujillo on kunta Cáceresin maakunnassa [[Extremaduran]] alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Pääaukio on [[Plaza Mayor]], jolla seisoo conquistador Francisco Pizarron ratsastajapatsas, ja roomalaisaikana paikka tunnettiin nimellä [[Turgalium]]. Kiviä riittää, sen verran näkee ylhäältä.
+KYSYMYS: Kerro lisää: Extremaduran
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+AIEMPI KYSYMYS: Millainen kaupunki Trujillo on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Trujillo on kunta Cáceresin maakunnassa [[Extremaduran]] alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Pääaukio on [[Plaza Mayor]], jolla seisoo conquistador Francisco Pizarron ratsastajapatsas, ja roomalaisaikana paikka tunnettiin nimellä [[Turgalium]]. Kiviä riittää, sen verran näkee ylhäältä.
+KYSYMYS: Kerro lisää: Plaza Mayor
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+AIEMPI KYSYMYS: Mikä Extremadura on?
+AIEMPI VASTAUS (Livia):
+Just niin, Extremadura on autonominen alue Espanjan länsiosassa, Portugalin rajan tuntumassa. Siihen kuuluu muun muassa [[Cáceresin maakunta]], jossa [[Trujillo]] sijaitsee. Alueelta on lähtöisin useita [[conquistadoreja]], kuten Francisco Pizarro. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Cáceresin maakunta
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+AIEMPI KYSYMYS: Mikä Extremadura on?
+AIEMPI VASTAUS (Livia):
+Just niin, Extremadura on autonominen alue Espanjan länsiosassa, Portugalin rajan tuntumassa. Siihen kuuluu muun muassa [[Cáceresin maakunta]], jossa [[Trujillo]] sijaitsee. Alueelta on lähtöisin useita [[conquistadoreja]], kuten Francisco Pizarro. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Trujillo
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+AIEMPI KYSYMYS: Mikä Extremadura on?
+AIEMPI VASTAUS (Livia):
+Just niin, Extremadura on autonominen alue Espanjan länsiosassa, Portugalin rajan tuntumassa. Siihen kuuluu muun muassa [[Cáceresin maakunta]], jossa [[Trujillo]] sijaitsee. Alueelta on lähtöisin useita [[conquistadoreja]], kuten Francisco Pizarro. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: conquistadoreja
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Miksi Filip II rakennutti El Escorialin?
+AIEMPI VASTAUS (Livia):
+No jopas. Yleisen käsityksen mukaan Filip II teki lupauksen rakentaa luostarin Pyhän Laurentiuksen kunniaksi voitettuaan [[Saint-Quentinin taistelun]] vuonna 1557, ja hän halusi samalla isälleen Kaarle V:lle ja suvulleen sopivan hautapaikan. Kompleksi onkin samalla luostari, basilika, palatsi ja [[hautakammio]]. En ole varma, kuinka suuri osuus kullakin syyllä oli, ja lähteet painottavat niitä eri tavoin. Jopa kyyhky miettii, mihin yksi mies tarvitsee näin paljon seiniä.
+KYSYMYS: Kerro lisää: Saint-Quentinin taistelun
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Miksi Filip II rakennutti El Escorialin?
+AIEMPI VASTAUS (Livia):
+No jopas. Yleisen käsityksen mukaan Filip II teki lupauksen rakentaa luostarin Pyhän Laurentiuksen kunniaksi voitettuaan [[Saint-Quentinin taistelun]] vuonna 1557, ja hän halusi samalla isälleen Kaarle V:lle ja suvulleen sopivan hautapaikan. Kompleksi onkin samalla luostari, basilika, palatsi ja [[hautakammio]]. En ole varma, kuinka suuri osuus kullakin syyllä oli, ja lähteet painottavat niitä eri tavoin. Jopa kyyhky miettii, mihin yksi mies tarvitsee näin paljon seiniä.
+KYSYMYS: Kerro lisää: hautakammio
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mitä kaikkea El Escorialissa on?
+AIEMPI VASTAUS (Livia):
+Kato, El Escorial on monitoiminen kokonaisuus: se on samalla luostari, [[basilika]], palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Filip II:n käskystä vuosina 1563–1584 rakennettua kokonaisuutta kuvataan maailman suurimmaksi renessanssirakennukseksi. Siihen kuuluu myös noin viiden kilometrin päässä oleva [[La Granjilla de La Fresneda]], kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat [[hieronymiittimunkit]], ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+Yhdelle rakennukselle se on aikamoinen määrä tehtäviä. Minä pärjään yhdellä ikkunalaudalla, kunhan siellä on pullaa.
+KYSYMYS: Kerro lisää: basilika
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Mitä kaikkea El Escorialissa on?
+AIEMPI VASTAUS (Livia):
+Kato, El Escorial on monitoiminen kokonaisuus: se on samalla luostari, [[basilika]], palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Filip II:n käskystä vuosina 1563–1584 rakennettua kokonaisuutta kuvataan maailman suurimmaksi renessanssirakennukseksi. Siihen kuuluu myös noin viiden kilometrin päässä oleva [[La Granjilla de La Fresneda]], kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat [[hieronymiittimunkit]], ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+Yhdelle rakennukselle se on aikamoinen määrä tehtäviä. Minä pärjään yhdellä ikkunalaudalla, kunhan siellä on pullaa.
+KYSYMYS: Kerro lisää: La Granjilla de La Fresneda
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Mitä kaikkea El Escorialissa on?
+AIEMPI VASTAUS (Livia):
+Kato, El Escorial on monitoiminen kokonaisuus: se on samalla luostari, [[basilika]], palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Filip II:n käskystä vuosina 1563–1584 rakennettua kokonaisuutta kuvataan maailman suurimmaksi renessanssirakennukseksi. Siihen kuuluu myös noin viiden kilometrin päässä oleva [[La Granjilla de La Fresneda]], kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat [[hieronymiittimunkit]], ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+Yhdelle rakennukselle se on aikamoinen määrä tehtäviä. Minä pärjään yhdellä ikkunalaudalla, kunhan siellä on pullaa.
+KYSYMYS: Kerro lisää: hieronymiittimunkit
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Keitä hieronymiittimunkit olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hieronymiittimunkit olivat Espanjassa 1300-luvulla syntyneen [[Pyhän Hieronymuksen ritarikunnan]] jäseniä. El Escorialin luostarin perustivat juuri he, ja nykyisin se on [[augustinolaisen ritarikunnan]] luostari. Sanana aika pitkä kyyhkyn kielelle.
+KYSYMYS: Kerro lisää: Pyhän Hieronymuksen ritarikunnan
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Keitä hieronymiittimunkit olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hieronymiittimunkit olivat Espanjassa 1300-luvulla syntyneen [[Pyhän Hieronymuksen ritarikunnan]] jäseniä. El Escorialin luostarin perustivat juuri he, ja nykyisin se on [[augustinolaisen ritarikunnan]] luostari. Sanana aika pitkä kyyhkyn kielelle.
+KYSYMYS: Kerro lisää: augustinolaisen ritarikunnan
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+- [Lissabon — kohdekartta / Kohdekartta: Kauppatori] 1755–1775 Kauppatori eli Praça do Comércio on yksi Euroopan suurimmista aukioista - se on lähes neliön muotoinen ja mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä myös nimellä Terreiro do Paço, "palatsin piha", sillä täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, jonka kirjastossa oli yli 200 000 kirjaa. Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto tuhosivat palatsin täysin. Tilalle rakennettiin avara, jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle pystytettiin komea ratsastajapatsas kuningas Joosef I:stä. Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 valmistuneen suuren riemukaaren ali. Aukiolla on nähty myös synkkiä hetkiä: vuonna 1908 kuningas…
+AIEMPI KYSYMYS: Keitä El Escorialiin on haudattu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. El Escorialin hautakammio on Espanjan kuninkaallisen perheen hautapaikka. Sinne on haudattu Espanjan monarkkeja [[Kaarle V:stä]] alkaen, ja myös [[Filip II]] itse lepää siellä, mutta en ole varma tarkasta luettelosta enkä siitä, ketkä kaikki sinne kuuluvat. Hiljainen paikka, kuten hautapaikat yleensä.
+KYSYMYS: Kerro lisää: Kaarle V:stä
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Keitä El Escorialiin on haudattu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. El Escorialin hautakammio on Espanjan kuninkaallisen perheen hautapaikka. Sinne on haudattu Espanjan monarkkeja [[Kaarle V:stä]] alkaen, ja myös [[Filip II]] itse lepää siellä, mutta en ole varma tarkasta luettelosta enkä siitä, ketkä kaikki sinne kuuluvat. Hiljainen paikka, kuten hautapaikat yleensä.
+KYSYMYS: Kerro lisää: Filip II
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+AIEMPI KYSYMYS: Mikä La Granjilla de La Fresneda on?
+AIEMPI VASTAUS (Livia):
+Ai tota. La Granjilla de La Fresneda kuuluu El Escorialin kompleksiin ja sijaitsee noin viiden kilometrin päässä siitä. Se oli kuninkaan metsästysmaja ja samalla [[hieronymiittimunkkien]] retriitti eli hiljentymispaikka, ja se liittyy [[Filip II:n]] aikaan, jolloin El Escorial rakennettiin vuosina 1563–1584. Pieni paikka ison naapurin varjossa.
+KYSYMYS: Kerro lisää: hieronymiittimunkkien

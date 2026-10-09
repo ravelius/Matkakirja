@@ -1,0 +1,686 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Goya maalasi madridilaisten vapaapäivät
+Tietoruudun teksti: Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Kuvataide: Maalaaja maalasi itsensä maalaamassa] 1656 — Diego Velázquez maalasi Las Meninas -teoksensa 1656 hovimaalarina kuningas Filip IV:n palveluksessa. Maalauksessa nähdään prinsessa Margarita Teresa hovinaistensa ympäröimänä, mutta kuvan keskiössä on itse Velázquez: hän on maalannut itsensä suureen kankaaseen sivellin ja paletti kädessä, ikään kuin katsoja seisoisi kuninkaan ja kuningattaren paikalla, joiden peilikuva näkyy taustan seinällä. Teos herätti kysymyksen, jota pohditaan yhä: kenen näkökulmasta kohtausta oikeastaan katsotaan?
+AIEMPI KYSYMYS: Kuka maalasi Las Meninas -teoksen ja milloin?
+AIEMPI VASTAUS (Livia):
+Ai se. Teoksen maalasi [[Diego Velázquez]], ja se ajoitetaan yleensä vuoteen 1656. Maalaus on Pradossa, ja siinä nähdään pieni prinsessa [[Margarita Teresa]] seuralaisineen, ja maalari itsekin on kuvassa. Yksi Velázquezin maalaus tuhoutui jouluaattona 1734 vanhan [[Alcázarin]] palossa. Hieno työ, sen sanon vaikka oon vain kyyhky.
+KYSYMYS: Kerro lisää: Margarita Teresa
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Goya maalasi madridilaisten vapaapäivät
+Tietoruudun teksti: Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Ankkuri torilla] Kapteeni Luis Alcázarin aukiolla lepää valtava, mustaksi maalattu laivan ankkuri korokkeella, jonka portaat kiertävät koko patsaan ympäri - muistomerkki kaupungin merenkulku- ja kalastusperinteelle. Puerto Montt on 1800-luvulta asti ollut Pohjois-Patagonian tärkein kauppasatama: sen kautta kulki puuta, villaa ja karjaa etelän harvaan asutuilta seuduilta, ja samaa reittiä siirtolaiset ja tavara kulkivat sisämaahan Llanquihuen järvelle asti. Aukion takana kohoava kukkula ja sen huipulla siintävä valkoinen risti kuuluvat Isla Tenglon maisemaan salmen toisella puolella. Ankkuri on suosittu tapaamispaikka ja yksi kaupungin tunnetuimmista veistoksista.
+AIEMPI KYSYMYS: Kuka maalasi Las Meninas -teoksen ja milloin?
+AIEMPI VASTAUS (Livia):
+Ai se. Teoksen maalasi [[Diego Velázquez]], ja se ajoitetaan yleensä vuoteen 1656. Maalaus on Pradossa, ja siinä nähdään pieni prinsessa [[Margarita Teresa]] seuralaisineen, ja maalari itsekin on kuvassa. Yksi Velázquezin maalaus tuhoutui jouluaattona 1734 vanhan [[Alcázarin]] palossa. Hieno työ, sen sanon vaikka oon vain kyyhky.
+KYSYMYS: Kerro lisää: Alcázarin
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Mistä chotis tuli Madridiin ja miten se muuttui perillä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen nähnyt katolta. Chotis tuli Madridiin vuonna 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo, vaan pyörii paikallaan, ja nainen kiertää hänen ympärillään. Tanssia säestää [[organillo]], kadulla työnnettävä kampiurku, ja se kuuluu [[verbena-juhliin]], joista suurin on [[San Isidro]] 15. toukokuuta. Pyörimisessä olen kyllä itsekin ihan hyvä.
+KYSYMYS: Kerro lisää: organillo
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Mistä chotis tuli Madridiin ja miten se muuttui perillä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen nähnyt katolta. Chotis tuli Madridiin vuonna 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo, vaan pyörii paikallaan, ja nainen kiertää hänen ympärillään. Tanssia säestää [[organillo]], kadulla työnnettävä kampiurku, ja se kuuluu [[verbena-juhliin]], joista suurin on [[San Isidro]] 15. toukokuuta. Pyörimisessä olen kyllä itsekin ihan hyvä.
+KYSYMYS: Kerro lisää: verbena-juhliin
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Mistä chotis tuli Madridiin ja miten se muuttui perillä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen nähnyt katolta. Chotis tuli Madridiin vuonna 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo, vaan pyörii paikallaan, ja nainen kiertää hänen ympärillään. Tanssia säestää [[organillo]], kadulla työnnettävä kampiurku, ja se kuuluu [[verbena-juhliin]], joista suurin on [[San Isidro]] 15. toukokuuta. Pyörimisessä olen kyllä itsekin ihan hyvä.
+KYSYMYS: Kerro lisää: San Isidro
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Mitä verbena-juhlissa tapahtuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Verbena-juhliin kuuluu [[chotis]], jonka tahdit antaa [[organillo]], ja suurin juhlista on San Isidro 15. toukokuuta, sama juhla jonka [[Goya]] maalasi. Tarkemmasta ohjelmasta en ole varma. Toukokuussa olis kyl hyvä olla Madridissa.
+KYSYMYS: Kerro lisää: chotis
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Yö, jota Goya ei kaunistellut] Toukokuun 2. päivänä 1808 madridilaiset nousivat kapinaan Napoleonin joukkoja vastaan. Seuraavana yönä kapinalliset teloitettiin kaupungin laidalla. Goya maalasi tapahtuman kuusi vuotta myöhemmin, ja hän teki jotain, mitä sotataiteessa ei ollut ennen tehty: sankari ei ole ratsain eikä komea, vaan valkopaitainen mies polvillaan kädet levällään, kasvot kauhusta vääntyneinä. Ampujilla ei näy kasvoja lainkaan. Maalauksesta tuli malli lähes kaikelle sotaa kuvaavalle taiteelle sen jälkeen.
+AIEMPI KYSYMYS: Mitä verbena-juhlissa tapahtuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Verbena-juhliin kuuluu [[chotis]], jonka tahdit antaa [[organillo]], ja suurin juhlista on San Isidro 15. toukokuuta, sama juhla jonka [[Goya]] maalasi. Tarkemmasta ohjelmasta en ole varma. Toukokuussa olis kyl hyvä olla Madridissa.
+KYSYMYS: Kerro lisää: Goya
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Historia: Lippu parvekkeella Madridissa] 1873 — José Martí syntyi Havannassa 28. tammikuuta 1853. Poliittisesta toiminnasta hänet karkotettiin Espanjaan tammikuussa 1871, ja heinäkuussa ilmestyi hänen pamflettinsa Kuuban poliittisesta vankeudesta. Helmikuussa 1873 Kuuban lippu liehui ensimmäisen kerran Madridissa — hänen parvekkeellaan Concepción Jerónima -kadulla. Kun Espanjan ensimmäinen tasavalta julistettiin 11. helmikuuta 1873 ja vahvisti Kuuban erottamattomaksi osakseen, 20-vuotias opiskelija vastasi esseellä ja lähetti sen pääministerille. Hän kaatui Dos Ríosissa 1895.
+AIEMPI KYSYMYS: Mikä erottaa zarzuelan oopperasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zarzuelassa laulu ja puhe vuorottelevat, kun ooppera yleensä lauletaan alusta loppuun, joskin poikkeuksia on. Zarzuela syntyi [[Madridissa]], ja sitä esitetään kaupungin omassa [[Zarzuela-teatterissa]] yhä. Minä en laula, mut kurnutan kyl.
+KYSYMYS: Kerro lisää: Madridissa
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Mikä erottaa zarzuelan oopperasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zarzuelassa laulu ja puhe vuorottelevat, kun ooppera yleensä lauletaan alusta loppuun, joskin poikkeuksia on. Zarzuela syntyi [[Madridissa]], ja sitä esitetään kaupungin omassa [[Zarzuela-teatterissa]] yhä. Minä en laula, mut kurnutan kyl.
+KYSYMYS: Kerro lisää: Zarzuela-teatterissa
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Kuka on Madridin suojeluspyhimys?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: yksi Madridin suojeluspyhimyksistä on [[San Isidro]], talonpoikaispyhimys. Hänen juhlaansa vietetään 15. toukokuuta, ja se on suurin [[verbena-juhlista]]. Saman juhlan maalasi myös [[Goya]]. Toukokuussa kannattaa lentää Madridiin.
+KYSYMYS: Kerro lisää: verbena-juhlista
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kaksi joukkuetta] Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti. Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voit…
+AIEMPI KYSYMYS: Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi. Kaukalot ajetaan sivuun ja lasketaan [[hydraulisella hissillä]] kolmenkymmenen metrin syvyyteen, jossa on kasvihuone: ruoho saa siellä valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia, ja sen jälkeen [[Real Madridin]] stadionille mahtuu konsertti. Kuusi tuntia on pitkä aika myös kyyhkylle.
+KYSYMYS: Kerro lisää: hydraulisella hissillä
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kaksi joukkuetta] Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti. Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voit…
+- [Madrid — kohdekartta / Kohdekartta: Cibeleen aukio] 1780 Aukion keskellä kohoava Cibeles-suihkulähde on Madridin tunnetuimpia näkymiä. Arkkitehti Ventura Rodríguez suunnitteli sen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Sitä ympäröi neljä komeaa rakennusta kolmesta eri kaupunginosasta, joista suurin on entinen postipalatsi — nykyään Madridin kaupungintalo. Suihkulähteestä on tullut myös jalkapallon juhlapaikka: kun Real Madrid voittaa mestaruuden, joukkueen kapteeni ripustaa lipun patsaan kaulaan. Innostus on mennyt liiallisuuksiin kahdesti — jumalattarelta katkesi käsi sekä 1994 että 2002.
+AIEMPI KYSYMYS: Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi. Kaukalot ajetaan sivuun ja lasketaan [[hydraulisella hissillä]] kolmenkymmenen metrin syvyyteen, jossa on kasvihuone: ruoho saa siellä valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia, ja sen jälkeen [[Real Madridin]] stadionille mahtuu konsertti. Kuusi tuntia on pitkä aika myös kyyhkylle.
+KYSYMYS: Kerro lisää: Real Madridin
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kaksi joukkuetta] Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti. Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voit…
+AIEMPI KYSYMYS: Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Atlético Madridin]] kannattajat kiipesivät suihkulähteen päälle ensimmäisinä jo vuonna 1962, sillä seuran toimisto oli naapurikadulla. Sitten [[Real Madridin]] väki omaksui tavan, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhlineet [[Neptunuksen]] suihkulähteellä. Reviiririidat on kyyhkyillekin tuttuja.
+KYSYMYS: Kerro lisää: Atlético Madridin
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kaksi joukkuetta] Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti. Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voit…
+AIEMPI KYSYMYS: Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Atlético Madridin]] kannattajat kiipesivät suihkulähteen päälle ensimmäisinä jo vuonna 1962, sillä seuran toimisto oli naapurikadulla. Sitten [[Real Madridin]] väki omaksui tavan, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhlineet [[Neptunuksen]] suihkulähteellä. Reviiririidat on kyyhkyillekin tuttuja.
+KYSYMYS: Kerro lisää: Neptunuksen
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+AIEMPI KYSYMYS: Mitä muuta suurilla stadioneilla tehdään kuin pelataan jalkapalloa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suurilla stadioneilla järjestetään jalkapallon lisäksi konsertteja ja muita suuria yleisötapahtumia. [[Real Madridin]] stadionilla tämä on tehty helpoksi, sillä nurmikenttä voidaan laskea [[hydraulisen hissin]] avulla maan alle, jolloin konsertille jää tilaa. Tarkempaa luetteloa tapahtumista en ole varma. Minä lentäisin mieluummin katsomoon kuin kentälle.
+KYSYMYS: Kerro lisää: hydraulisen hissin
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Cibeleen aukio] 1780 Aukion keskellä kohoava Cibeles-suihkulähde on Madridin tunnetuimpia näkymiä. Arkkitehti Ventura Rodríguez suunnitteli sen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Sitä ympäröi neljä komeaa rakennusta kolmesta eri kaupunginosasta, joista suurin on entinen postipalatsi — nykyään Madridin kaupungintalo. Suihkulähteestä on tullut myös jalkapallon juhlapaikka: kun Real Madrid voittaa mestaruuden, joukkueen kapteeni ripustaa lipun patsaan kaulaan. Innostus on mennyt liiallisuuksiin kahdesti — jumalattarelta katkesi käsi sekä 1994 että 2002.
+AIEMPI KYSYMYS: Kuka suunnitteli Cibeleen suihkulähteen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Arkkitehti [[Ventura Rodríguez]] suunnitteli suihkulähteen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Aukiota ympäröi neljä komeaa rakennusta, joista suurin on entinen [[postipalatsi]], nykyään Madridin kaupungintalo. Hieno työ, sen sanon vaikka oon vain kyyhky.
+KYSYMYS: Kerro lisää: Ventura Rodríguez
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Guatemala — kohdekartta / Kohdekartta: Postipalatsi] 1940 Postin ja lennätinlaitoksen palatsi rakennettiin 1937–1940, ja sen suunnittelivat Rafael Pérez de León ja Enrique Riera. Tyyli on uussiirtomaatyylinen: paksut seinät, kaaret ja koristeltu julkisivu. Rakennuksen tunnusmerkki on 12. kadun yli kaartuva holvikaari, joka yhdistää kaksi rakennusosaa toisiinsa. Sen esikuva on Antigua Guatemalan Santa Catalinan kaari, joka rakennettiin aikanaan siksi, että nunnat pääsivät kadun yli näkymättä. Ensimmäinen vaihe vihittiin 10. marraskuuta 1940 kello neljä iltapäivällä, ja loput valmistuivat seuraavina vuosina. Palatsi julistettiin kansallismonumentiksi marraskuussa 1981 ja kansalliseksi kulttuuriperinnöksi elokuussa 1998. Talossa toimii yhä maan …
+- [Mexico City — kohdekartta / Kohdekartta: Postipalatsi] 1902–1907 Vuonna 1901 postilaitoksesta tehtiin oma virastonsa, ja kun se käsitteli noin 130 miljoonaa lähetystä vuodessa, päätettiin että sillä pitää olla oma talo. Suunnittelijaksi valittiin italialainen arkkitehti Adamo Boari ja rakennustöiden valvojaksi sotilasinsinööri Gonzalo Garita y Frontera. Tontilla oli ollut fransiskaanien kolmannen sääntökunnan sairaala, joka purettiin 1902. Peruskivi laskettiin 14. syyskuuta 1902, ja työ kesti siitä viisi vuotta. Presidentti Porfirio Díaz vihki talon 1907 pudottamalla laatikkoon kaksi postikorttia: toinen oli osoitettu Mexico Cityyn, toinen muualle maahan. Perustus tehtiin uudella menetelmällä, jota kutsuttiin Chicagoksi: 70 senttiä paksu betoni…
+AIEMPI KYSYMYS: Kuka suunnitteli Cibeleen suihkulähteen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Arkkitehti [[Ventura Rodríguez]] suunnitteli suihkulähteen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Aukiota ympäröi neljä komeaa rakennusta, joista suurin on entinen [[postipalatsi]], nykyään Madridin kaupungintalo. Hieno työ, sen sanon vaikka oon vain kyyhky.
+KYSYMYS: Kerro lisää: postipalatsi
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Cibeleen aukio] 1780 Aukion keskellä kohoava Cibeles-suihkulähde on Madridin tunnetuimpia näkymiä. Arkkitehti Ventura Rodríguez suunnitteli sen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Sitä ympäröi neljä komeaa rakennusta kolmesta eri kaupunginosasta, joista suurin on entinen postipalatsi — nykyään Madridin kaupungintalo. Suihkulähteestä on tullut myös jalkapallon juhlapaikka: kun Real Madrid voittaa mestaruuden, joukkueen kapteeni ripustaa lipun patsaan kaulaan. Innostus on mennyt liiallisuuksiin kahdesti — jumalattarelta katkesi käsi sekä 1994 että 2002.
+AIEMPI KYSYMYS: Mitä tarkoittaa Madridin derby?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Madridin derby tarkoittaa kaupungin kahden seuran, [[Real Madridin]] ja [[Atlético Madridin]], keskinäistä ottelua. Derby on yleisesti paikallisten kilpailijoiden välinen ottelu, ja kun Real Madrid voittaa mestaruuden, juhlitaan perinteisesti [[Cibeleen]] suihkulähteellä. Minä pysyn puolueettomana, ku kirjekyyhkyn kuuluukin.
+KYSYMYS: Kerro lisää: Cibeleen
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Palatsi, jonka seinät puhuvat kahta kieltä] Kastilian kuningas Pedro I rakennutti 1360-luvulla Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366 — todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä "Sultan Don Bidru". Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen Muhammad V, Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua Alhambraa.
+- [Madrid — kohdekartta / Kohdekartta: Kuninkaanlinna] 1755 Jouluaattona 1734 vanha Alcázar-linna paloi neljä vuorokautta, ja suuri osa siitä tuhoutui kokonaan. Osa taideaarteista oli onneksi jo siirretty toiseen palatsiin, mutta yksi Velázquezin maalaus katosi liekeissä. Kuningas Filip V käski rakentaa palon paikalle upouuden linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli sille ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua — hänen oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta rakennetun linnan, ja työt kestivät vuodesta 1738 vuoteen 1755. Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. Nykyään siellä pidetään valtiovierailuja, ja kokoelmiin kuul…
+AIEMPI KYSYMYS: Miten 1700-luvun rakentaja teki talosta palamattoman?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kun vanha [[Alcázar]] paloi, kuningas [[Filip V]] käski rakentaa tilalle linnan, joka ei voisi palaa. Seinät tehtiin kivestä ja tiilestä, katot holvattiin, ja puuta käytettiin vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Palamaton talo olisi kyllä kyyhkynkin mieleen.
+KYSYMYS: Kerro lisää: Alcázar
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+AIEMPI KYSYMYS: Miten 1700-luvun rakentaja teki talosta palamattoman?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kun vanha [[Alcázar]] paloi, kuningas [[Filip V]] käski rakentaa tilalle linnan, joka ei voisi palaa. Seinät tehtiin kivestä ja tiilestä, katot holvattiin, ja puuta käytettiin vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Palamaton talo olisi kyllä kyyhkynkin mieleen.
+KYSYMYS: Kerro lisää: Filip V
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Kuvataide: Maalari kirjasi arvonimensä maalaukseen jälkikäteen] Velázquezin rinnassa Las Meninas-teoksessa näkyy Santiagon ritarikunnan risti — mutta Velázquez sai ritarikunnan jäsenyyden vasta 1659, kolme vuotta maalauksen valmistumisen jälkeen. Perimätiedon mukaan joko kuningas itse maalasi ristin lisää jälkikäteen tai Velázquez lisäsi sen itse saatuaan arvonimen — kumpikaan ei ole varmuudella todistettu, mutta risti on joka tapauksessa myöhempi lisäys alkuperäiseen maalaukseen.
+AIEMPI KYSYMYS: Mitä vanhan Alcázarin palossa menetettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Vanha [[Alcázar]]-linna paloi jouluaattona 1734 neljä vuorokautta, ja suuri osa rakennuksesta tuhoutui kokonaan. Osa taideaarteista oli ehditty siirtää toiseen palatsiin, mutta yksi [[Velázquezin]] maalaus katosi liekkeihin. Täydellistä luetteloa menetyksistä en osaa antaa. Kuningas [[Filip V]] käski rakentaa palon paikalle uuden linnan. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Velázquezin
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Kuvataide: Maalaaja maalasi itsensä maalaamassa] 1656 — Diego Velázquez maalasi Las Meninas -teoksensa 1656 hovimaalarina kuningas Filip IV:n palveluksessa. Maalauksessa nähdään prinsessa Margarita Teresa hovinaistensa ympäröimänä, mutta kuvan keskiössä on itse Velázquez: hän on maalannut itsensä suureen kankaaseen sivellin ja paletti kädessä, ikään kuin katsoja seisoisi kuninkaan ja kuningattaren paikalla, joiden peilikuva näkyy taustan seinällä. Teos herätti kysymyksen, jota pohditaan yhä: kenen näkökulmasta kohtausta oikeastaan katsotaan?
+- [Madrid — kohdekartta / Kohdekartta: Kuninkaanlinna] 1755 Jouluaattona 1734 vanha Alcázar-linna paloi neljä vuorokautta, ja suuri osa siitä tuhoutui kokonaan. Osa taideaarteista oli onneksi jo siirretty toiseen palatsiin, mutta yksi Velázquezin maalaus katosi liekeissä. Kuningas Filip V käski rakentaa palon paikalle upouuden linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli sille ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua — hänen oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta rakennetun linnan, ja työt kestivät vuodesta 1738 vuoteen 1755. Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. Nykyään siellä pidetään valtiovierailuja, ja kokoelmiin kuul…
+AIEMPI KYSYMYS: Miksi kuningas ei asu Länsi-Euroopan suurimmassa palatsissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Kuninkaanlinna]] on 135 000 neliömetrillään Länsi-Euroopan suurimpana palatsina pidetty rakennus, mutta kuningas asuu pienemmässä talossa kaupungin laidalla. Syytä asumisratkaisuun en osaa kertoa varmasti. Linnassa pidetään nykyään valtiovierailuja, ja sen rakennutti [[Filip V]]. Pieni talo kuulostaa kyyhkyn mielestä ihan järkevältä.
+KYSYMYS: Kerro lisää: Kuninkaanlinna
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kuninkaanlinna] 1755 Jouluaattona 1734 vanha Alcázar-linna paloi neljä vuorokautta, ja suuri osa siitä tuhoutui kokonaan. Osa taideaarteista oli onneksi jo siirretty toiseen palatsiin, mutta yksi Velázquezin maalaus katosi liekeissä. Kuningas Filip V käski rakentaa palon paikalle upouuden linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli sille ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua — hänen oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta rakennetun linnan, ja työt kestivät vuodesta 1738 vuoteen 1755. Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. Nykyään siellä pidetään valtiovierailuja, ja kokoelmiin kuul…
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen Kuninkaanlinnan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Italialainen arkkitehti [[Filippo Juvarra]] teki linnasta ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua. Lopulta rakennetun linnan suunnitteli hänen oppilaansa [[Giovanni Battista Sacchetti]]. Työt kestivät vuodesta 1738 vuoteen 1755, ja ensimmäinen kuningas muutti sisään 1764. Italialaista työtä, meikäläisten kotiseutua.
+KYSYMYS: Kerro lisää: Filippo Juvarra
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kuninkaanlinna] 1755 Jouluaattona 1734 vanha Alcázar-linna paloi neljä vuorokautta, ja suuri osa siitä tuhoutui kokonaan. Osa taideaarteista oli onneksi jo siirretty toiseen palatsiin, mutta yksi Velázquezin maalaus katosi liekeissä. Kuningas Filip V käski rakentaa palon paikalle upouuden linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli sille ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua — hänen oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta rakennetun linnan, ja työt kestivät vuodesta 1738 vuoteen 1755. Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. Nykyään siellä pidetään valtiovierailuja, ja kokoelmiin kuul…
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen Kuninkaanlinnan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Italialainen arkkitehti [[Filippo Juvarra]] teki linnasta ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua. Lopulta rakennetun linnan suunnitteli hänen oppilaansa [[Giovanni Battista Sacchetti]]. Työt kestivät vuodesta 1738 vuoteen 1755, ja ensimmäinen kuningas muutti sisään 1764. Italialaista työtä, meikäläisten kotiseutua.
+KYSYMYS: Kerro lisää: Giovanni Battista Sacchetti
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Saudi-Arabian kansallismuseo] 1999 Museo avattiin 23. tammikuuta 1999 osaksi Kuningas Abdulazizin historiallista keskusta, noin 360 000 neliömetrin aluetta Murabban kaupunginosassa. Päivä ei ollut museon valinta: alue rakennettiin satavuotisjuhliin, joissa muistettiin Riadin valtausta 1902, ja suunnitteluun ja rakentamiseen jäi 26 kuukautta. Talon piirsi kanadalainen Raymond Moriyama. Esikuvana olivat Riadin ulkopuolisten Punaisten hiekkojen dyynit: Murabban aukion puoleinen länsijulkisivu myötäilee dyynin loivaa kaarta, ja pohjakaava kaartuu puolikuuksi, jonka kärki osoittaa Mekkaan. Näyttely kulkee kahdeksassa salissa, kolme pohjakerroksessa ja viisi ylhäällä. Ensimmäisenä on rautameteoriitti Rub al-Khalin Wabarin kra…
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Mistä sana Alcázar on peräisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arabiaa. Sana alcázar tulee [[arabian]] sanasta al-qaṣr, joka tarkoittaa linnaa tai palatsia, ja arabian sanan taustalla pidetään [[latinan]] sanaa castrum. Espanjassa on useita alcázareja, esimerkiksi [[Sevillassa]] ja [[Toledossa]]. Arabiaa en puhu, mut linnat tunnistan ylhäältä.
+KYSYMYS: Kerro lisää: arabian
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+AIEMPI KYSYMYS: Mistä sana Alcázar on peräisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arabiaa. Sana alcázar tulee [[arabian]] sanasta al-qaṣr, joka tarkoittaa linnaa tai palatsia, ja arabian sanan taustalla pidetään [[latinan]] sanaa castrum. Espanjassa on useita alcázareja, esimerkiksi [[Sevillassa]] ja [[Toledossa]]. Arabiaa en puhu, mut linnat tunnistan ylhäältä.
+KYSYMYS: Kerro lisää: latinan
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Viikko, jolloin Sevilla pukeutuu] Sevillan huhtikuun feria on viikon mittainen juhla, jota varten kaupungin laitaan pystytetään tuhat juhlatelttaa omine katuineen ja lyhtyineen. Siellä tanssitaan sevillanoja: neljä lyhyttä osaa, joilla on kiinteät askeleet, joten kuka tahansa espanjalainen osaa tanssia ne kenen tahansa kanssa. Sevillanat eivät ole flamencoa vaan kansantanssia — ero on sama kuin oopperan ja yhteislaulun. Naisten traje de gitana on ainoa espanjalainen kansanpuku, jonka muoti muuttuu joka vuosi.
+AIEMPI KYSYMYS: Mistä sana Alcázar on peräisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arabiaa. Sana alcázar tulee [[arabian]] sanasta al-qaṣr, joka tarkoittaa linnaa tai palatsia, ja arabian sanan taustalla pidetään [[latinan]] sanaa castrum. Espanjassa on useita alcázareja, esimerkiksi [[Sevillassa]] ja [[Toledossa]]. Arabiaa en puhu, mut linnat tunnistan ylhäältä.
+KYSYMYS: Kerro lisää: Sevillassa
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Kreikkalainen, joka maalasi Toledossa] Doménikos Theotokópoulos syntyi Kreetalla, opiskeli Venetsiassa ja päätyi Toledoon, jossa häntä sanottiin yksinkertaisesti El Grecoksi, kreikkalaiseksi. Hänen hahmonsa venyvät pitkiksi ja värit hehkuvat kylmästi — aikalaiset pitivät sitä outona, ja vuosisatoja myöhemmin siitä tuli syy pitää häntä nykytaiteen esi-isänä. Orgazin kreivin hautaus on yhä siinä kirkossa, jota varten se maalattiin 1586: alaosassa Toledon herrat mustissa kauluksissaan, yläosassa taivas.
+AIEMPI KYSYMYS: Mistä sana Alcázar on peräisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arabiaa. Sana alcázar tulee [[arabian]] sanasta al-qaṣr, joka tarkoittaa linnaa tai palatsia, ja arabian sanan taustalla pidetään [[latinan]] sanaa castrum. Espanjassa on useita alcázareja, esimerkiksi [[Sevillassa]] ja [[Toledossa]]. Arabiaa en puhu, mut linnat tunnistan ylhäältä.
+KYSYMYS: Kerro lisää: Toledossa
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+AIEMPI KYSYMYS: Miten 312 talon asukkaille kävi, kun katu murrettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost en oikein osaa sanoa. Varmasti tiedän vain sen, että [[Gran Vían]] vuoksi purettiin 312 taloa ja 48 katua katosi tai muuttui toiseksi, ja että hankkeen aloitti 4. huhtikuuta 1910 kuningas [[Alfonso XIII]] lyömällä hopeisella hakulla ensimmäisen reiän papin talon seinään [[San Josén kirkon]] vieressä. Asukkaiden kohtalosta en ole varma: tällaisissa kaupunkien uudistushankkeissa talot yleensä lunastettiin ja asukkaat muuttivat muualle, mutta korvauksista ja uudelleenasuttamisesta en voi luotettavasti kertoa mitään tarkempaa. Ei kyyhky kaikkea tiedä.
+KYSYMYS: Kerro lisää: Gran Vían
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+AIEMPI KYSYMYS: Miten 312 talon asukkaille kävi, kun katu murrettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost en oikein osaa sanoa. Varmasti tiedän vain sen, että [[Gran Vían]] vuoksi purettiin 312 taloa ja 48 katua katosi tai muuttui toiseksi, ja että hankkeen aloitti 4. huhtikuuta 1910 kuningas [[Alfonso XIII]] lyömällä hopeisella hakulla ensimmäisen reiän papin talon seinään [[San Josén kirkon]] vieressä. Asukkaiden kohtalosta en ole varma: tällaisissa kaupunkien uudistushankkeissa talot yleensä lunastettiin ja asukkaat muuttivat muualle, mutta korvauksista ja uudelleenasuttamisesta en voi luotettavasti kertoa mitään tarkempaa. Ei kyyhky kaikkea tiedä.
+KYSYMYS: Kerro lisää: Alfonso XIII
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+AIEMPI KYSYMYS: Miten 312 talon asukkaille kävi, kun katu murrettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost en oikein osaa sanoa. Varmasti tiedän vain sen, että [[Gran Vían]] vuoksi purettiin 312 taloa ja 48 katua katosi tai muuttui toiseksi, ja että hankkeen aloitti 4. huhtikuuta 1910 kuningas [[Alfonso XIII]] lyömällä hopeisella hakulla ensimmäisen reiän papin talon seinään [[San Josén kirkon]] vieressä. Asukkaiden kohtalosta en ole varma: tällaisissa kaupunkien uudistushankkeissa talot yleensä lunastettiin ja asukkaat muuttivat muualle, mutta korvauksista ja uudelleenasuttamisesta en voi luotettavasti kertoa mitään tarkempaa. Ei kyyhky kaikkea tiedä.
+KYSYMYS: Kerro lisää: San Josén kirkon
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Portugalista tuotu kuorrutus] Kun portugalilaiset asettuivat São Luísiin, he toivat mukanaan maurien Iberian niemimaalle jättämän perinteen: lasitetut keraamiset laatat, asulejot. Kaupungista tuli Brasilian laatoitetuin – Rua Portugalin varrella on enemmän laatoitettuja kauppahuoneiden julkisivuja kuin missään muualla Latinalaisessa Amerikassa. Laatat eivät olleet pelkkää koristelua: niiden lasitettu pinta kestää päiväntasaajan auringon, sadekauden kosteuden ja meren suolaisen ilman paremmin kuin rappaus, ja ne toimivat lämmöneristeenä kivitalojen seinissä. Kadulla kävely on kuin näytekirjan selaamista – jokainen talo kilpailee naapuriaan komeammalla kuvioinnilla.
+AIEMPI KYSYMYS: Miksi vanhan keskustan kadut olivat niin kapeita ja mutkaisia?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan kertoo. Madridin vanha keskusta kasvoi vuosisatojen kuluessa vähitellen, ilman yhtenäistä kaupunkisuunnitelmaa, ja kadut seurasivat vanhoja kulkureittejä ja tontinrajoja. Kaupungin juuret ulottuvat lähteiden mukaan keskiajan [[maurien]] aikaiseen linnoitukseen, mutta ajoituksesta en ole aivan varma. Juuri tällainen kapea ja mutkainen katuverkko oli syynä siihen, että sen läpi päätettiin murtaa leveä katu, [[Gran Vía]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: maurien
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+AIEMPI KYSYMYS: Miksi vanhan keskustan kadut olivat niin kapeita ja mutkaisia?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan kertoo. Madridin vanha keskusta kasvoi vuosisatojen kuluessa vähitellen, ilman yhtenäistä kaupunkisuunnitelmaa, ja kadut seurasivat vanhoja kulkureittejä ja tontinrajoja. Kaupungin juuret ulottuvat lähteiden mukaan keskiajan [[maurien]] aikaiseen linnoitukseen, mutta ajoituksesta en ole aivan varma. Juuri tällainen kapea ja mutkainen katuverkko oli syynä siihen, että sen läpi päätettiin murtaa leveä katu, [[Gran Vía]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Gran Vía
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+AIEMPI KYSYMYS: Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?
+AIEMPI VASTAUS (Livia):
+No niin. Kadun korkeimman talon ylimmissä kerroksissa oli [[tähystyspaikka]], ja [[tykit]] ampuivat sitä kohti, minkä vuoksi katu sai nimen Kranaattikatu. Tapahtumat sijoittuvat Espanjan sisällissotaan 1930-luvun lopulle, eli niistä on yli kahdeksankymmentä vuotta, ja [[Madrid]] oli sodan aikana yksi sen keskeisistä paikoista. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: tähystyspaikka
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Historia: Linnoitus, jota tykit eivät murtaneet] 1864 — Uuden-Seelannin sodat eivät olleet yksi sota vaan sarja konflikteja vuodesta 1845 vuoteen 1872, ja niiden ytimessä oli maa. Huippuvuosina 1860-luvulla noin 18 000 brittisotilasta tykistöineen oli liikkeellä noin 4 000:ta māorisoturia vastaan, eikä ylivoima ratkaissut. Huhtikuun 29. päivänä 1864 kenraali Duncan Cameron lähetti 300 miestä rynnäkköön Pukehinahinan pā:han Taurangassa. Tykit olivat jauhaneet varustusta koko päivän, mutta puolustajat olivat katetuissa kaivannoissa. Hyökkääjistä kaatui 31 ja haavoittui 80 — yli kolmasosa joukosta.
+AIEMPI KYSYMYS: Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?
+AIEMPI VASTAUS (Livia):
+No niin. Kadun korkeimman talon ylimmissä kerroksissa oli [[tähystyspaikka]], ja [[tykit]] ampuivat sitä kohti, minkä vuoksi katu sai nimen Kranaattikatu. Tapahtumat sijoittuvat Espanjan sisällissotaan 1930-luvun lopulle, eli niistä on yli kahdeksankymmentä vuotta, ja [[Madrid]] oli sodan aikana yksi sen keskeisistä paikoista. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: tykit
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid] Euroopan unionin korkeimmalla sijaitseva pääkaupunki, jonka kuninkaat perustivat keskelle tyhjää ylätasankoa ja jonka asukkaat päättivät valvoa myöhempään kuin kukaan muu.
+AIEMPI KYSYMYS: Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?
+AIEMPI VASTAUS (Livia):
+No niin. Kadun korkeimman talon ylimmissä kerroksissa oli [[tähystyspaikka]], ja [[tykit]] ampuivat sitä kohti, minkä vuoksi katu sai nimen Kranaattikatu. Tapahtumat sijoittuvat Espanjan sisällissotaan 1930-luvun lopulle, eli niistä on yli kahdeksankymmentä vuotta, ja [[Madrid]] oli sodan aikana yksi sen keskeisistä paikoista. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Madrid
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Espanjan korkein vuori on Afrikan edustalla] Espanjan korkein kohta ei ole Pyreneillä vaan Teneriffalla: Teide nousee 3 715 metriin, ja merenpohjasta mitattuna se on yli seitsemän kilometriä korkea eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon Marsia, että Euroopan avaruusjärjestö on koekäyttänyt siellä mönkijöitään. Vuori purkautui viimeksi 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, sata kilometriä Marokon rannikolta.
+AIEMPI KYSYMYS: Kuka oli kuningas Alfonso XIII?
+AIEMPI VASTAUS (Livia):
+Ai se. Alfonso XIII oli [[Espanjan]] kuningas, joka hallitsi aina vuoteen 1931 asti, jolloin maa muuttui tasavallaksi. Hänen aikanaan Madridissa aloitettiin [[Gran Vían]] rakentaminen, ja hän löi itse hopeisella hakulla ensimmäisen reiän papin talon seinään 4. huhtikuuta 1910. Hänen syntymä- ja kuolinvuosistaan en ole varma, joten jätän ne mainitsematta. Ja tän kaiken minä muistin ihan päästä.
+KYSYMYS: Kerro lisää: Espanjan
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Dores-kirkko] 1807–1904 Dores-kirkko on Porto Alegren vanhin pystyssä oleva katolinen kirkko, ja se rakennettiin lähes sadassa vuodessa. Veljeskunta päätti kirkosta 1. toukokuuta 1806, peruskivi laskettiin 1807 ja kuningattaren lupa saatiin 1809. Kuorin seinät sortuivat 1810. Vuonna 1813 kappeli vihittiin, mutta työ pysähtyi taas Farroupilha-kapinan ajaksi, ja vuoteen 1846 asti rakennus oli käytännössä pelkkä kuori, jonka eteen oli pystytetty vaja kirkkosaliksi. Vasta kun Caxiasin kreivi lahjoitti neljä contoa réistä, sivuseinien perustukset päästiin tekemään. Seinät nousivat 1857, ja João do Couto e Silva teki katon, holvin ja julkisivun. Kirkko vihittiin 10. toukokuuta 1868. Edessä oleva monumentaalipo…
+- [Kongo — maalehti / Musiikki: Levypakkaaja, josta tuli kitaran velho] 1938–1989 — Franco Luambo Makiadi jäi 11-vuotiaana ilman isää, ja koulu loppui siihen. Äiti myi munkkeja Ngiri-Ngirin torilla, ja poika sai paikan levyjen pakkaajana Ngoma-levy-yhtiöllä. Siellä hän opetteli kitaraa salaa aina, kun muusikot olivat lopettaneet äänityksensä. Vuonna 1953 hän soitti koekuuntelun ja sai sopimuksen sekä kitaran, jota kutsuttiin nimellä Libaku ya nguma, boakäärmeen pää — se oli yhtä iso kuin viisitoistavuotias soittaja. OK Jazz perustettiin 1956, ja Franco siirsi sebenen kappaleen loppuun ja soitti sen peukalolla ja etusormella. Rolling Stone sijoitti hänet 2023 kaikkien aikojen kitaristien listalla sijalle 71.
+AIEMPI KYSYMYS: Milloin Espanjan sisällissota oli ja miten se päättyi?
+AIEMPI VASTAUS (Livia):
+Mmm— painava aihe. Espanjan sisällissota käytiin vuosina 1936–1939 tasavaltalaisen hallituksen ja kapinaan nousseiden kenraalien joukkojen välillä. Sodan voittivat kenraali [[Francisco Franco]] ja hänen kannattajansa, ja Franco hallitsi maata kuolemaansa asti, vuoteen 1975. Sota jätti syvät jäljet koko maahan ja myös [[Madridiin]], jonka asukkaat kärsivät sodasta pahoin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Francisco Franco
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Casa de Fieras] Retiron puistossa oli kuninkaallinen eläintarha, Casa de Fieras. Kaarle III käski rakentaa sen 1774, ja Wienin jälkeen se oli Euroopan toiseksi vanhin. Filippiinien varakuningas lähetti kuninkaan suosiota tavoitellakseen norsun, joka käveli Cádizista Madridiin — sinne se oli purettu laivasta. Häkkirykelmää sanottiin nimellä La Leonera: alakerrassa tiikereitä, pantteri, kaksi hyeenaa ja sakaali, yläkerrassa huoneet kuninkaalliselle perheelle. Muualla oli apinakioski, norsutarha, karhukuoppa ja häkkejä, joissa asui riikinkukkoja, laamoja ja gaselleja. Vuoden 1868 vallankumouksen jälkeen puisto avattiin yleisölle ja kaupunki otti tarhan hoitoonsa, joten isoisäsi pääsi sisään maksamatta hoville…
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Milloin Espanjan sisällissota oli ja miten se päättyi?
+AIEMPI VASTAUS (Livia):
+Mmm— painava aihe. Espanjan sisällissota käytiin vuosina 1936–1939 tasavaltalaisen hallituksen ja kapinaan nousseiden kenraalien joukkojen välillä. Sodan voittivat kenraali [[Francisco Franco]] ja hänen kannattajansa, ja Franco hallitsi maata kuolemaansa asti, vuoteen 1975. Sota jätti syvät jäljet koko maahan ja myös [[Madridiin]], jonka asukkaat kärsivät sodasta pahoin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Madridiin

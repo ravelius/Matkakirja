@@ -1,0 +1,1084 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kohdekartta / Kohdekartta: Nuevo Leónin hallintopalatsi] 1895 Vanha hallintopalatsi seisoi Morelosin ja Escobedon kulmassa ja toimi osavaltion hallintotalona vuodesta 1817 1900-luvun alkuun. Se oli myös Benito Juárezin työhuone, ja se kärsi vaurioita Monterreyn taistelussa — siitä syntyi ajatus uudesta palatsista. Kuvernööri Bernardo Reyes valitsi uudelle talolle tontin, joka oli ollut kaupungin alkuperäinen pääaukio. Työt alkoivat 8. elokuuta 1895 insinööri Francisco Beltránin suunnitelmalla ja Martín Peñan työnjohdolla. Rahaa ei ollut: osa saatiin myymällä vanha palatsi 1897 seitsemälläkymmenellätuhannella pesolla. Arvioitu kulu oli satatuhatta pesoa ja rakennusaika viisi vuotta — todellisuudessa siihen meni kolmetoista. Rakennus on 51 metriä l…
+AIEMPI KYSYMYS: Mikä Tajo-rotko on?
+AIEMPI VASTAUS (Livia):
+Just niin, rotko. Se on kaupungin tunnusmerkki. Tajo-rotko on syvä rotko, jonka pohjalla virtaa [[Guadalevín]]-joki ja joka halkaisee [[Rondan]] kahtia. Sen yli ulottuu [[Puente Nuevo]] -silta, jota tullaan katsomaan eri puolilta maailmaa. Ylhäältä katsottuna tuo on melkein liian jyrkkä minun makuuni.
+KYSYMYS: Kerro lisää: Puente Nuevo
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+AIEMPI KYSYMYS: Miksi joki on punainen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Rio Tinton joen punertava väri johtuu raudasta ja happamuudesta: alue kuuluu [[Iberian pyriittivyöhykkeeseen]], ja sulfidimineraalien rapautuessa vesi muuttuu happamaksi ja liuottaa [[raudan]] itseensä. Alueella on louhittu jo roomalaisajoista lähtien, ja louhinta on lisännyt ilmiötä; en ole varma, kuinka suuri osa värityksestä on luontaista. Punainen on kyllä hämmentävä väri joelle, katolta katsoen.
+KYSYMYS: Kerro lisää: Iberian pyriittivyöhykkeeseen
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Raudan paikka] Philby etsi samaa kadonnutta kaupunkia ja löysi jotain aivan muuta. Beduiinit puhuivat paikasta nimeltä Al Hadida, raudan paikka, jossa oli kerran nähty kamelin kokoinen rautamöhkäle. Kuukauden matkan jälkeen — osa kameleista kuoli tiellä — Philby seisoi 2. helmikuuta 1932 puolen neliökilometrin alalla, joka oli täynnä valkoista hiekkakiveä, mustaa lasia ja rautaa. Hän luuli sitä tulivuoreksi, mutta Lontoossa British Museumin tutkija tunnisti näytteistä meteoriitin törmäyspaikan. Kraattereista suurin on 116 metriä leveä. Aramcon nostoryhmä punnitsi lokakuussa 1966 suurimman talteen saadun kappaleen: 2 045 kiloa.
+AIEMPI KYSYMYS: Miksi joki on punainen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Rio Tinton joen punertava väri johtuu raudasta ja happamuudesta: alue kuuluu [[Iberian pyriittivyöhykkeeseen]], ja sulfidimineraalien rapautuessa vesi muuttuu happamaksi ja liuottaa [[raudan]] itseensä. Alueella on louhittu jo roomalaisajoista lähtien, ja louhinta on lisännyt ilmiötä; en ole varma, kuinka suuri osa värityksestä on luontaista. Punainen on kyllä hämmentävä väri joelle, katolta katsoen.
+KYSYMYS: Kerro lisää: raudan
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+AIEMPI KYSYMYS: Miksi britit ostivat kaivoksen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tarkasti ottaen [[Rothschildien]] pankkiirisuku osti esiintymät vuonna 1873 Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle [[Rio Tinto Company Limitedille]]. Samana vuonna alkoi Huelvaan johtavan [[Riotinton rautatien]] rakennus. Ostajien tarkkoja motiiveja en osaa varmasti kertoa, mutta mineraalirikas alue ja teollisuuden raaka-aineiden kysyntä ovat todennäköinen selitys. Rahaa liikkui, ja minä vain lentelin.
+KYSYMYS: Kerro lisää: Rothschildien
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio de Aguas Corrientes] 1887–1894 Kaupungin ensimmäinen vesilaitos oli brittiomisteinen Buenos Aires Water Supply and Drainage Company Limited, ja se avattiin 1869. Sen ensimmäinen johtaja oli insinööri Guillermo Villanueva, jonka rintakuva seisoo talon puutarhassa. Yhtiön arkisto perustettiin isoisän matkavuonna 1873, ja se on yhä ainoa kokoelma, jossa on täydelliset tiedot kaupungin vesihuollon suunnittelusta — vanhimmat piirustukset ovat vuodelta 1870. Talon suunnittelivat 1877 norjalainen arkkitehti Olaf Boye, ruotsalainen insinööri Carlos Nyströmer ja brittiläinen rakennusinsinööri John Bateman. Rakentaminen alkoi 1887 ja talo vihittiin 1894. Sisällä oli kolmessa kerroksessa kaksitoista vesisäiliötä, joihin m…
+- [Manaus — kaupunkilehti / Kumibuumi: Tullitalo joka jäljitteli Lontoota] Sataman uudistus alkoi 1899, ja 1900 liittovaltio siirsi urakan englantilaiselle Manaos Harbour Limitedille. Sopimus velvoitti yhtiön rakentamaan myös tullitalon. Piirustukset olivat valmiit 1903, työt alkoivat 1906, ja Edmund Fisherin, H. M. Fletcherin ja G. Pinkertonin suunnittelema rakennus tehtiin eklektiseen tyyliin keskiaikaisin ja renessanssiaiheisin yksityiskohdin. Esivalmistetut tiilielementit tuotiin Englannista, koska niillä jäljiteltiin 1900-luvun alun Lontoon rakennuksia. Viereinen vartiotalo Guardamoria sai torniinsa teräksisen majakan ja avattiin 17. tammikuuta 1909.
+AIEMPI KYSYMYS: Miksi britit ostivat kaivoksen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tarkasti ottaen [[Rothschildien]] pankkiirisuku osti esiintymät vuonna 1873 Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle [[Rio Tinto Company Limitedille]]. Samana vuonna alkoi Huelvaan johtavan [[Riotinton rautatien]] rakennus. Ostajien tarkkoja motiiveja en osaa varmasti kertoa, mutta mineraalirikas alue ja teollisuuden raaka-aineiden kysyntä ovat todennäköinen selitys. Rahaa liikkui, ja minä vain lentelin.
+KYSYMYS: Kerro lisää: Rio Tinto Company Limitedille
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+AIEMPI KYSYMYS: Miksi britit ostivat kaivoksen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tarkasti ottaen [[Rothschildien]] pankkiirisuku osti esiintymät vuonna 1873 Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle [[Rio Tinto Company Limitedille]]. Samana vuonna alkoi Huelvaan johtavan [[Riotinton rautatien]] rakennus. Ostajien tarkkoja motiiveja en osaa varmasti kertoa, mutta mineraalirikas alue ja teollisuuden raaka-aineiden kysyntä ovat todennäköinen selitys. Rahaa liikkui, ja minä vain lentelin.
+KYSYMYS: Kerro lisää: Riotinton rautatien
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+AIEMPI KYSYMYS: Mihin Riotinton rautatie johti?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Huelva. Rautatien rakennus alkoi vuonna 1873, ja rata johti [[Huelvaan]]. Radan kerrotaan palvelleen kaivosalueen tuotteiden kuljetusta, mutta yksityiskohdista en ole varma. Aikakausi liittyy [[brittiyhtiön]] huippukauteen, joka kesti 1800-luvun lopulta 1900-luvun puoliväliin. Rautatiet ovat kyllä kyyhkyn pahin kilpailija.
+KYSYMYS: Kerro lisää: Huelvaan
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+AIEMPI KYSYMYS: Mihin Riotinton rautatie johti?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Huelva. Rautatien rakennus alkoi vuonna 1873, ja rata johti [[Huelvaan]]. Radan kerrotaan palvelleen kaivosalueen tuotteiden kuljetusta, mutta yksityiskohdista en ole varma. Aikakausi liittyy [[brittiyhtiön]] huippukauteen, joka kesti 1800-luvun lopulta 1900-luvun puoliväliin. Rautatiet ovat kyllä kyyhkyn pahin kilpailija.
+KYSYMYS: Kerro lisää: brittiyhtiön
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Ruoka: Portugali jäi ruokapöytään] Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja chorizoa — on sama pata kuin muissakin entisissä Portugalin siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, koska niistä tuotiin sotilaita Timorille.
+AIEMPI KYSYMYS: Mikä on Iberian pyriittivyöhyke?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Iberian pyriittivyöhyke on Iberian niemimaan lounaisosan geologinen vyöhyke, jossa on runsaasti sulfidimalmiesiintymiä. Vyöhyke ulottuu [[Portugalin]] puolelle, mutta tarkasta laajuudesta en ole varma. [[Huelvan maakunnan]] koillisosassa sijaitseva Riotinto-Nervan kaivosalue kuuluu siihen, ja louhinta alkoi alueella [[roomalaisaikana]]. Kivet ovat kyllä vähän tylsempiä kuin leivonnaiset.
+KYSYMYS: Kerro lisää: Portugalin
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+AIEMPI KYSYMYS: Mikä on Iberian pyriittivyöhyke?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Iberian pyriittivyöhyke on Iberian niemimaan lounaisosan geologinen vyöhyke, jossa on runsaasti sulfidimalmiesiintymiä. Vyöhyke ulottuu [[Portugalin]] puolelle, mutta tarkasta laajuudesta en ole varma. [[Huelvan maakunnan]] koillisosassa sijaitseva Riotinto-Nervan kaivosalue kuuluu siihen, ja louhinta alkoi alueella [[roomalaisaikana]]. Kivet ovat kyllä vähän tylsempiä kuin leivonnaiset.
+KYSYMYS: Kerro lisää: Huelvan maakunnan
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Kyproksen museo] Punaiseksi maalatun seinän edessä seisoo porrastetulla kivialustalla noin kaksituhatta terrakottahahmoa puolikaaressa. Ne kaivettiin Agia Irinin pyhäköstä marraskuussa 1929 puolen metrin syvyydestä hiekasta, ja ne olivat maassa juuri samassa puoliympyrässä — kaivajien mielestä asetelma muistutti teatteria. Museo on toistanut sen: kämmenen kokoiset hahmot ovat eturiveissä, taaimpana lähes luonnollisen kokoisia. Joukossa on pappeja, sotureita, härkiä ja hevosvaljakoita. Yksi tunnetaan uhripappina: pitkä viitta, turbaani ja kohotettu vasen käsi, jossa on luultavasti ollut uhriveitsi. Roomalaisajan salissa seisoo pyöreän kivipaaden päällä pronssinen Septimius Severus, luonnollista kokoa suuremp…
+- [Jerusalem — kohdekartta / Kohdekartta: Pyhän haudan kirkko] Pyhän haudan kirkko ei ole yksi rakennus vaan monta päällekkäistä: kirkkoa on rakennettu, poltettu, korjattu ja laajennettu vuosisatojen ajan, ja lopputulos on sokkelo, jossa eri kristilliset yhteisöt hallitsevat kukin omaa osaansa. Rakennuksen kohdalla oli roomalaisaikana Venuksen temppeli, jonka keisari Hadrianus rakennutti perustaessaan kaupungin uudelleen nimellä Aelia Capitolina. Kirkon sisällä on kaksi erillistä pyhää paikkaa saman katon alla. Golgatan kappeli on yläkerrassa, kallion päällä johon noustaan portaita; alakerrassa on itse hauta pienessä kappelissa keskellä pyöreää salia. Päälaivan yllä kaartuu katolikonin kupoli, jonka keskellä on kultapohjainen Kristus-mosaiikki ja reuno…
+AIEMPI KYSYMYS: Mikä on Iberian pyriittivyöhyke?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Iberian pyriittivyöhyke on Iberian niemimaan lounaisosan geologinen vyöhyke, jossa on runsaasti sulfidimalmiesiintymiä. Vyöhyke ulottuu [[Portugalin]] puolelle, mutta tarkasta laajuudesta en ole varma. [[Huelvan maakunnan]] koillisosassa sijaitseva Riotinto-Nervan kaivosalue kuuluu siihen, ja louhinta alkoi alueella [[roomalaisaikana]]. Kivet ovat kyllä vähän tylsempiä kuin leivonnaiset.
+KYSYMYS: Kerro lisää: roomalaisaikana
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mihin elohopeaa käytettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Yksi tärkeä käyttö oli hopean erottaminen malmista. Esimerkiksi [[Habsburgien]] aikana [[Idrijan]] elohopeaa kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. [[Almadénin]] esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta. Myöhemmin elohopeaa käytettiin muun muassa lämpömittareissa. Hurjaa, mitä kaikkea metallilla on tehty.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Križanke] 1228 Križanke on entinen Pyhän ristin luostari. Saksalaisen ritarikunnan luostarin rakentamisen uskotaan alkaneen vuonna 1228. Vuoden 1511 Idrijan maanjäristys vaurioitti rakennuksia pahoin, ja niitä rakennettiin osin uudelleen 1567–1579. Luostarikirkko rakennettiin kokonaan uudelleen barokkiin 1714–1715 venetsialaisen Domenico Rossin piirustuksilla. Sen pohja on kreikkalainen risti, ja se oli ensimmäinen laatuaan Sloveniassa; julkisivua korostavat pilasterit ja aaltoileva kupoli. Työssä oli mukana paikallisia mestareita, kuten Gregor Maček vanhempi, joka suunnitteli myös nykyisen kaupungintalon. Kirkon alkuperäinen pienoismalli on yhä Ljubljanan kaupunginmuseossa, ja luostarin Ritarisali r…
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+AIEMPI KYSYMYS: Mihin elohopeaa käytettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Yksi tärkeä käyttö oli hopean erottaminen malmista. Esimerkiksi [[Habsburgien]] aikana [[Idrijan]] elohopeaa kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. [[Almadénin]] esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta. Myöhemmin elohopeaa käytettiin muun muassa lämpömittareissa. Hurjaa, mitä kaikkea metallilla on tehty.
+KYSYMYS: Kerro lisää: Idrijan
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+AIEMPI KYSYMYS: Mihin elohopeaa käytettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Yksi tärkeä käyttö oli hopean erottaminen malmista. Esimerkiksi [[Habsburgien]] aikana [[Idrijan]] elohopeaa kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. [[Almadénin]] esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta. Myöhemmin elohopeaa käytettiin muun muassa lämpömittareissa. Hurjaa, mitä kaikkea metallilla on tehty.
+KYSYMYS: Kerro lisää: Almadénin
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+AIEMPI KYSYMYS: Miksi kaivos suljettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Almadénin kaivos suljettiin vuonna 2002 [[EU:n]] elohopeakaivoskiellon vuoksi. Taustalla ovat yleensä elohopean haitat terveydelle ja ympäristölle. Vuonna 2012 Almadén julistettiin yhdessä Slovenian [[Idrijan]] kanssa [[maailmanperintökohteeksi]]. Vähän haikeaa, kun kaivos oli niin pitkään toiminnassa.
+KYSYMYS: Kerro lisää: EU:n
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi kaivos suljettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Almadénin kaivos suljettiin vuonna 2002 [[EU:n]] elohopeakaivoskiellon vuoksi. Taustalla ovat yleensä elohopean haitat terveydelle ja ympäristölle. Vuonna 2012 Almadén julistettiin yhdessä Slovenian [[Idrijan]] kanssa [[maailmanperintökohteeksi]]. Vähän haikeaa, kun kaivos oli niin pitkään toiminnassa.
+KYSYMYS: Kerro lisää: maailmanperintökohteeksi
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Saudi-Arabian kansallismuseo] 1999 Museo avattiin 23. tammikuuta 1999 osaksi Kuningas Abdulazizin historiallista keskusta, noin 360 000 neliömetrin aluetta Murabban kaupunginosassa. Päivä ei ollut museon valinta: alue rakennettiin satavuotisjuhliin, joissa muistettiin Riadin valtausta 1902, ja suunnitteluun ja rakentamiseen jäi 26 kuukautta. Talon piirsi kanadalainen Raymond Moriyama. Esikuvana olivat Riadin ulkopuolisten Punaisten hiekkojen dyynit: Murabban aukion puoleinen länsijulkisivu myötäilee dyynin loivaa kaarta, ja pohjakaava kaartuu puolikuuksi, jonka kärki osoittaa Mekkaan. Näyttely kulkee kahdeksassa salissa, kolme pohjakerroksessa ja viisi ylhäällä. Ensimmäisenä on rautameteoriitti Rub al-Khalin Wabarin kra…
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Mistä Almadénin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nimi tulee [[arabian]] sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas [[Alfonso VII]] valtasi sen kristityille vuonna 1151 ja antoi sen [[Calatravan ritarikunnalle]]. Nimessä on siis ilmaistu kaikki olennainen. Siinä oli varsin suoraviivaista nimeämistä.
+KYSYMYS: Kerro lisää: arabian
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Oikeuspalatsi] 1985 Oikeuspalatseja on ollut kolme. Ensimmäinen oli Pablo de la Cruzin piirtämä uusklassinen talo, joka toimi 1920-luvulta alkaen Calle 11:n ja Carrera 6:n kulmassa; se tuhoutui tulipalossa 9. huhtikuuta 1948 mellakoissa, jotka tunnetaan nimellä Bogotazo. Toisen suunnitteli Roberto Londoño 1960-luvulla, ja se nousi Plaza de Bolívarin pohjoislaidalle vastapäätä kongressin taloa, korttelin päähän presidentinlinnasta. Tuo toinen talo tuhoutui 6. marraskuuta 1985. M-19-liikkeen sissiosasto valtasi rakennuksen ja otti panttivangeiksi noin 350 ihmistä, joukossa korkeimman oikeuden tuomareita, virkamiehiä ja vierailijoita; ryhmä aikoi järjestää oikeudenkäynnin presidentti Belisario Betancuria vas…
+- [Liberia — maalehti / Ruoka: Mauste, joka antoi rannikolle nimen] 1461– — Portugalilaiset saapuivat rannikolle 1461 ja nimesivät sen Costa da Pimentaksi, pippurirannikoksi; myöhemmin nimi kääntyi muotoon Grain Coast, jyvärannikko. Kyse oli maniguetista, inkiväärin sukuisesta kasvista, jonka viiden sentin palossa on kymmeniä punaruskeita siemeniä. Maku on pistävä kuin mustapippurissa mutta sitrusmainen. Kuningas Alfonso V myönsi 1469 Fernão Gomesille yksinoikeuden Guineanlahden kauppaan sadantuhannen realin vuosimaksusta ja lupauksesta tutkia 160 kilometriä uutta rannikkoa vuodessa. Keskiajan Euroopassa jyvät korvasivat kalliin pippurin, ja Pariisin talousopas suositteli niitä ummehtuneen viinin parantamiseen.
+AIEMPI KYSYMYS: Mistä Almadénin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nimi tulee [[arabian]] sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas [[Alfonso VII]] valtasi sen kristityille vuonna 1151 ja antoi sen [[Calatravan ritarikunnalle]]. Nimessä on siis ilmaistu kaikki olennainen. Siinä oli varsin suoraviivaista nimeämistä.
+KYSYMYS: Kerro lisää: Alfonso VII
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+AIEMPI KYSYMYS: Mistä Almadénin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nimi tulee [[arabian]] sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas [[Alfonso VII]] valtasi sen kristityille vuonna 1151 ja antoi sen [[Calatravan ritarikunnalle]]. Nimessä on siis ilmaistu kaikki olennainen. Siinä oli varsin suoraviivaista nimeämistä.
+KYSYMYS: Kerro lisää: Calatravan ritarikunnalle
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liberia — maalehti / Ruoka: Mauste, joka antoi rannikolle nimen] 1461– — Portugalilaiset saapuivat rannikolle 1461 ja nimesivät sen Costa da Pimentaksi, pippurirannikoksi; myöhemmin nimi kääntyi muotoon Grain Coast, jyvärannikko. Kyse oli maniguetista, inkiväärin sukuisesta kasvista, jonka viiden sentin palossa on kymmeniä punaruskeita siemeniä. Maku on pistävä kuin mustapippurissa mutta sitrusmainen. Kuningas Alfonso V myönsi 1469 Fernão Gomesille yksinoikeuden Guineanlahden kauppaan sadantuhannen realin vuosimaksusta ja lupauksesta tutkia 160 kilometriä uutta rannikkoa vuodessa. Keskiajan Euroopassa jyvät korvasivat kalliin pippurin, ja Pariisin talousopas suositteli niitä ummehtuneen viinin parantamiseen.
+- [Grönlanti — maalehti / Historia: Kartta, joka salakuljetettiin Lissabonista] 1500–1502 — Ferraran herttua lähetti Alberto Cantinon Portugaliin muka hevoskauppiaaksi, ja tämä keräsi salaa tietoa löytöretkistä. Marraskuussa 1502 Cantino kirjoitti herttualleen maksaneensa kaksitoista kultadukaattia kartasta, jonka oli saanut Lissabonista pois. Se on vanhin säilynyt kartta, jossa näkyvät Portugalin löydöt sekä idässä että lännessä — ja siinä on Grönlannin eteläinen rannikko. Saaren eurooppalaisen uudelleenlöydön tekivät João Fernandes Lavrador ja Pedro de Barcelos vuosina 1495–98, ja kuningas Manuel I lähetti Gaspar Corte-Realin sinne 1500 etsimään Luoteisväylää. Meri oli jäässä, joten retki kääntyi etelään.
+AIEMPI KYSYMYS: Kuinka paljon elohopeaa Almadénista on louhittu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaupunki sijaitsee [[Ciudad Realin]] maakunnassa [[Sierra Morenan]] vuorilla 589 metrin korkeudessa. Kaivos suljettiin vuonna 2002. Pitkä aika, ja paljon metallia.
+KYSYMYS: Kerro lisää: Ciudad Realin
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+AIEMPI KYSYMYS: Kuinka paljon elohopeaa Almadénista on louhittu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaupunki sijaitsee [[Ciudad Realin]] maakunnassa [[Sierra Morenan]] vuorilla 589 metrin korkeudessa. Kaivos suljettiin vuonna 2002. Pitkä aika, ja paljon metallia.
+KYSYMYS: Kerro lisää: Sierra Morenan
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+AIEMPI KYSYMYS: Mikä yhdistää Almadénin ja Idrijan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaksi kaivoskaupunkia, yksi aine. Kummassakin on louhittu elohopeaa. Idrijan löytö juontuu legendan mukaan vuoteen 1490, kun saavinvalmistaja huomasi lähteessä kimaltavan nestemäisen metallin, ja [[Habsburgien]] aikana sen elohopeaa kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille. Vuonna 2012 kaupungit julistettiin yhdessä [[Unescon]] maailmanperintökohteeksi, ja Idrija sijaitsee [[Slovenian]] vuoristossa. Pienistä kylistä isoja tarinoita.
+KYSYMYS: Kerro lisää: Unescon
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Mikä yhdistää Almadénin ja Idrijan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaksi kaivoskaupunkia, yksi aine. Kummassakin on louhittu elohopeaa. Idrijan löytö juontuu legendan mukaan vuoteen 1490, kun saavinvalmistaja huomasi lähteessä kimaltavan nestemäisen metallin, ja [[Habsburgien]] aikana sen elohopeaa kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille. Vuonna 2012 kaupungit julistettiin yhdessä [[Unescon]] maailmanperintökohteeksi, ja Idrija sijaitsee [[Slovenian]] vuoristossa. Pienistä kylistä isoja tarinoita.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kaupunkilehti / Nykytaide: Museo joka louhittiin kallioon] David Walshin kokoelma avautui yleisölle Berriedalen niemellä 21. tammikuuta 2011; edeltäjä, Moorillan antiikkimuseo, oli toiminut samalla viinitilalla vuodesta 2001. MONA on eteläisen pallonpuoliskon suurin yksityisrahoitteinen museo, ja se on rakennettu kallion sisään: katutasolla näkyy vain vähän, ja kävijä laskeutuu ensin portaita alas ja kiertää sitten takaisin pintaan. Ikkunoita ei ole lainkaan. Useimmat tulevat lautalla jokea ylös. Vaikutusta matkailuun on verrattu Bilbaon Guggenheimiin, ja vuoteen 2022 mennessä kävijöitä oli ollut 2,5 miljoonaa.
+AIEMPI KYSYMYS: Miten siirtosilta toimii?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuo on hieno rakennelma. Vizcayan sillassa on korkealla oleva kantava rakenne, jonka varassa gondoli liikkuu joen yli lähellä vedenpintaa. Näin rannat yhdistyvät ilman, että [[Bilbaon]] sataman laivaliikenne häiriintyy, eikä siltaa tarvita pitkine ramppeineen. Gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa, mutta voimansiirron yksityiskohdista en ole varma. Suunnittelija [[Alberto Palacio]] oli [[Gustave Eiffelin]] oppilas. Ei paha kyyhkyltä tämä selitys.
+KYSYMYS: Kerro lisää: Bilbaon
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio Barolo] 1923 Talon tilasi italialainen siirtolainen Luis Barolo, joka oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja sen suunnitteli italialainen arkkitehti Mario Palanti. Rakennus noudattaa Danten Jumalaisen näytelmän maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen osaan niin, että kellari ja katutaso ovat helvetti, kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on sata metriä, yksi metri runoelman jokaista laulua kohden, ja huipun majakka vastaa enkelien yhdeksää kuoroa. Kärkikoriste esittää Etelän ristiä. Valmistuessaan 1923 talo oli sekä kaupungin että koko Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle — Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Aveni…
+AIEMPI KYSYMYS: Miten siirtosilta toimii?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuo on hieno rakennelma. Vizcayan sillassa on korkealla oleva kantava rakenne, jonka varassa gondoli liikkuu joen yli lähellä vedenpintaa. Näin rannat yhdistyvät ilman, että [[Bilbaon]] sataman laivaliikenne häiriintyy, eikä siltaa tarvita pitkine ramppeineen. Gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa, mutta voimansiirron yksityiskohdista en ole varma. Suunnittelija [[Alberto Palacio]] oli [[Gustave Eiffelin]] oppilas. Ei paha kyyhkyltä tämä selitys.
+KYSYMYS: Kerro lisää: Alberto Palacio
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle] elokuu 1888 — Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave…
+- [Pariisi — kohdekartta / Kohdekartta: Eiffel-torni] 1889 Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna 1889, insinööri Gustave Eiffelin toimisto pystytti Champ de Mars -puistoon noin 300 metriä korkean rautatornin vain reilussa kahdessa vuodessa. Torniin käytettiin 18 038 metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko rakennustyön aikana sattui vain yksi kuolemantapaus. Moni pariisilainen taiteilija vihasi tornia aluksi: kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti vetoomuksen, jossa torni tuomittiin rumaksi ja hyödyttömäksi. Kirjailija Guy de Maupassant väitti syövänsä lounasta tornin ravintolassa joka päivä juuri siksi, että se oli ainoa paikka Pariisissa, josta tornia ei näkynyt. Torni oli tarkoitus purkaa jo …
+AIEMPI KYSYMYS: Miten siirtosilta toimii?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuo on hieno rakennelma. Vizcayan sillassa on korkealla oleva kantava rakenne, jonka varassa gondoli liikkuu joen yli lähellä vedenpintaa. Näin rannat yhdistyvät ilman, että [[Bilbaon]] sataman laivaliikenne häiriintyy, eikä siltaa tarvita pitkine ramppeineen. Gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa, mutta voimansiirron yksityiskohdista en ole varma. Suunnittelija [[Alberto Palacio]] oli [[Gustave Eiffelin]] oppilas. Ei paha kyyhkyltä tämä selitys.
+KYSYMYS: Kerro lisää: Gustave Eiffelin
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+AIEMPI KYSYMYS: Miksi siltaa sanotaan Puente Colgantiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Espanjaa. Puente tarkoittaa siltaa ja colgante riippuvaa, ja nimi viittaa gondoliin, joka riippuu sillan kantavasta rakenteesta. Rakenne ei kuitenkaan ole varsinainen riippusilta vaan siirtosilta. Silta yhdistää [[Portugaleten]] ja [[Las Arenasin]] Nervión-joen suulla. Kyllä nimi sopii hyvin sillalle, joka ei koskaan lennä.
+KYSYMYS: Kerro lisää: Portugaleten
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Braun-Menéndezin palatsi] 1903 Hernando de Magallanes -kadun varrella on talo, joka rakennettiin 1903 Mauricio Braunin ja Josefina Menéndezin asunnoksi. Se on kansallismonumentti vuodesta 1974, ja siinä toimii Magallanesin aluemuseo, jota hoitaa valtion kulttuuriperintöpalvelu. Museo syntyi 1982 ja on toiminut talossa helmikuusta 1983. Kokoelmaan kuuluu lähes 1 800 esinettä, ja se kertoo Magallanesin ja etenkin Punta Arenasin historian 1500-luvun löytöretkistä 1900-luvun alkuun. Enrique Campos Menéndez neuvotteli suvun palatsin lahjoituksesta valtiolle sillä ehdolla, että talo kunnostetaan kokonaan ja muutetaan museoksi. Näyttely jakautuu kolmeen osaan: Aikakausi esittelee eurooppalaista huonekalustoa uusklassismist…
+- [Punta Arenas — kohdekartta / Kohdekartta: Sagrado Corazónin katedraali] 1892–1901 Aukion laidalla oleva katedraali on salesiaanien perustama, ja sen renessanssitorni erottuu keskustan kattojen yli. Rakennustyö alkoi 28. joulukuuta 1892 salesiaani-isä Juan Bernabén piirustusten mukaan, ja kirkko valmistui 1. kesäkuuta 1901. Se oli aikanaan alueella virstanpylväs jo materiaalinsa takia: tästä talosta tuli tiilirakentamisen esimerkki. Sisätila on basilikamainen ja kolmilaivainen. Laivat erottaa toisistaan korinttilainen pylväsrivi, holvit ovat romaaniset, ja mitat ovat 46 metriä pitkä, 18 leveä ja 30,60 korkea. Kellotorni nostettiin 1898, ja se on kolmekymmentä metriä ristiin asti. Kirkko on omistettu Jeesuksen pyhälle sydämelle, ja se vihittiin 4. joulukuuta 1977…
+AIEMPI KYSYMYS: Miksi siltaa sanotaan Puente Colgantiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Espanjaa. Puente tarkoittaa siltaa ja colgante riippuvaa, ja nimi viittaa gondoliin, joka riippuu sillan kantavasta rakenteesta. Rakenne ei kuitenkaan ole varsinainen riippusilta vaan siirtosilta. Silta yhdistää [[Portugaleten]] ja [[Las Arenasin]] Nervión-joen suulla. Kyllä nimi sopii hyvin sillalle, joka ei koskaan lennä.
+KYSYMYS: Kerro lisää: Las Arenasin
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+AIEMPI KYSYMYS: Kuka Vizcayan sillan suunnitteli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sillan suunnitteli [[Alberto Palacio]], joka oli [[Gustave Eiffelin]] oppilas, ja se rakennettiin vuonna 1893. Silta sijaitsee [[Biskajan]] maakunnassa Nervión-joen suulla. Se on yhä käytössä. Oppilaan työ on pysynyt pystyssä yli sata vuotta.
+KYSYMYS: Kerro lisää: Biskajan
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+AIEMPI KYSYMYS: Kuinka paljon sillan gondoli kuljettaa kerralla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia, ja yhden ylityksen kestoksi mainitaan puolitoista minuuttia. Sillan mitaksi ilmoitetaan 164 metriä. Silta yhdistää [[Portugaleten]] ja [[Las Arenasin]] [[Nervión-joen]] suulla. Joka tapauksessa nopeampi kuin kävellen.
+KYSYMYS: Kerro lisää: Nervión-joen
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Miksi Vizcayan silta on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[UNESCO]] julisti sillan maailmanperintökohteeksi vuonna 2006. Silta rakennettiin vuonna 1893, ja sitä sanotaan maailman vanhimmaksi siirtosillaksi. Ratkaisu yhdisti rannat ilman, että [[Bilbaon]] sataman laivaliikenne häiriintyi. Silta on yhä käytössä. Pitkä ikä ja toimiva tekniikka ovat harvinainen yhdistelmä, etenkin sillalle.
+KYSYMYS: Kerro lisää: UNESCO
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Kuka rakennutti sillan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Sillan rakennutti [[Rooman]] keisari [[Trajanus]], jonka määräyksestä se valmistui vuosina 104–106 [[Tejo]]-joen yli. Kyseessä on kivikaarisilta, joka sijaitsee Extremaduran Alcántarassa, ja kaupungin nimi tulee arabian sanasta al-Qanṭarah, joka tarkoittaa kaarta. Ei huono työmaa, vaikken minä ollut siel kantamassa kiviä.
+KYSYMYS: Kerro lisää: Rooman
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Kuka rakennutti sillan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Sillan rakennutti [[Rooman]] keisari [[Trajanus]], jonka määräyksestä se valmistui vuosina 104–106 [[Tejo]]-joen yli. Kyseessä on kivikaarisilta, joka sijaitsee Extremaduran Alcántarassa, ja kaupungin nimi tulee arabian sanasta al-Qanṭarah, joka tarkoittaa kaarta. Ei huono työmaa, vaikken minä ollut siel kantamassa kiviä.
+KYSYMYS: Kerro lisää: Trajanus
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Kaupunki kaatui pyhäinpäivänä 1755] Lauantaina 1. marraskuuta 1755 oli pyhäinpäivä ja kirkot olivat täynnä väkeä, kun maa alkoi täristä noin kello 9.40. Kaatuneista kynttilöistä syttyi palo, ja noin 40 minuutin kuluttua Tejo-joesta nousi tsunami. Karmeliittikirkon kivikatto romahti eikä sitä rakennettu enää koskaan. Uusi alakaupunki nousi suorien katujen ristikoksi, ja seinien sisään piilotettiin puinen häkki, jonka piti joustaa tärinässä. Kehikkoa kokeiltiin pienoismalleilla: sotilaat marssivat mallin ympärillä, jotta maa tärisisi.
+AIEMPI KYSYMYS: Kuka rakennutti sillan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Sillan rakennutti [[Rooman]] keisari [[Trajanus]], jonka määräyksestä se valmistui vuosina 104–106 [[Tejo]]-joen yli. Kyseessä on kivikaarisilta, joka sijaitsee Extremaduran Alcántarassa, ja kaupungin nimi tulee arabian sanasta al-Qanṭarah, joka tarkoittaa kaarta. Ei huono työmaa, vaikken minä ollut siel kantamassa kiviä.
+KYSYMYS: Kerro lisää: Tejo
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Maurit ja kristityt samassa padassa] Moros y cristianos tarkoittaa maureja ja kristittyjä: moros ovat mustia papuja ja cristianos valkoista riisiä. Nimi viittaa Iberian niemimaan muslimihallintoon, joka kesti 700-luvulta reconquistan päättymiseen 1400-luvulla. Pohjana on sofrito eli sipulin, valkosipulin ja paprikan kuullotus, mausteina kumina, oregano ja laakerinlehti. Ero tavalliseen papu-riisiruokaan on se, että papu ja riisi kypsennetään samassa padassa papujen keitinveteen. Saaren itäosassa sama ruoka punaisista pavuista on congrí.
+AIEMPI KYSYMYS: Miksi siltaa on räjäytetty monta kertaa?
+AIEMPI VASTAUS (Livia):
+No jopas. Silta on kärsinyt sodista enemmän kuin säästä, ja se on ollut sotilaallisesti tärkeä paikka [[Tejo]]-joen ylityksessä. [[Maurit]] tuhosivat yhden pienimmistä kaarista vuonna 1214, ja espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset. Myös [[Wellingtonin]] joukot vuonna 1809 ja [[karlistit]] vuonna 1836 vaurioittivat siltaa, ja se rakennettiin uudelleen laastimuurauksella vuonna 1860. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Maurit
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Wellingtonin museo] 1892 Museo asuu vuonna 1892 valmistuneessa Bond Store -makasiinissa Queens Wharfilla. Talo rakennettiin tullivarastoksi: siellä säilytettiin tavaraa, josta tullia ei ollut vielä maksettu. Museon oma historia alkaa vasta 1972, jolloin sataman hallintoneuvosto perusti kaupunkiin merenkulkumuseon. Vuonna 1989 museo siirtyi kaupungille ja sen aihepiiri laajeni koko seudun yhteiskuntahistoriaan. Talo avattiin 1999 nimellä Museum of Wellington City & Sea, ja heinäkuussa 2015 nimi lyheni Wellingtonin museoksi. Neljä kerrosta käyvät läpi kaupungin historian, ja kolmen alimman kerroksen läpi nousee jättimäinen elokuvakangas. Yhdessä kolmesta teatteritilasta māorien tarinat esitetään Pepperin haamu -…
+AIEMPI KYSYMYS: Miksi siltaa on räjäytetty monta kertaa?
+AIEMPI VASTAUS (Livia):
+No jopas. Silta on kärsinyt sodista enemmän kuin säästä, ja se on ollut sotilaallisesti tärkeä paikka [[Tejo]]-joen ylityksessä. [[Maurit]] tuhosivat yhden pienimmistä kaarista vuonna 1214, ja espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset. Myös [[Wellingtonin]] joukot vuonna 1809 ja [[karlistit]] vuonna 1836 vaurioittivat siltaa, ja se rakennettiin uudelleen laastimuurauksella vuonna 1860. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Wellingtonin
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+AIEMPI KYSYMYS: Miksi siltaa on räjäytetty monta kertaa?
+AIEMPI VASTAUS (Livia):
+No jopas. Silta on kärsinyt sodista enemmän kuin säästä, ja se on ollut sotilaallisesti tärkeä paikka [[Tejo]]-joen ylityksessä. [[Maurit]] tuhosivat yhden pienimmistä kaarista vuonna 1214, ja espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset. Myös [[Wellingtonin]] joukot vuonna 1809 ja [[karlistit]] vuonna 1836 vaurioittivat siltaa, ja se rakennettiin uudelleen laastimuurauksella vuonna 1860. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: karlistit
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kaupunkilehti / Mérida: Viiden kukkulan kaupunki] Ennen Méridaa paikalla oli mayakaupunki Tʼhó, jota kutsuttiin myös nimellä Ichcaanzihó, viiden kukkulan kaupunki — nimi viittasi sen pyramideihin. Kaupungin perustivat 1542 espanjalaiset valloittajat, joiden joukossa olivat Francisco de Montejo nuorempi ja Juan de la Cámara. Nimen he ottivat Extremaduran Méridasta, koska Tʼhón rauniot muistuttivat heitä Rooman Augusta Emeritan raunioista. Uudet rakennukset tehtiin vanhan kaupungin veistetyistä kivistä, ja niitä näkee yhä katedraalin seinissä. Kiviä otettiin mayatemppelistä nimeltä Yajam Cumu, ja työn tekivät mayat itse — kahden heistä nimet tunnetaan, Francisco Pool ja Diego Can.
+- [Monterrey — kaupunkilehti / Monterrey: Kolmas yritys jäi pystyyn] Laaksoa kutsuttiin 1500-luvulla Extremaduran laaksoksi. Ensimmäisenä sinne tuli Alberto del Canto, joka nimesi paikan Santa Luciaksi; yritys kaatui. Toisen teki Luis Carvajal y de la Cueva, joka oli neuvotellut kuningas Filip II:n kanssa oman kuningaskunnan pohjoiseen ja perusti 1582 asutuksen San Luis Rey de Francia. Sekin autioitui, ja Nuevo León oli kahdeksan vuotta tyhjä. Kolmannen yrityksen teki Diego de Montemayor kolmentoista perheen retkikunnalla 20. syyskuuta 1596. Hän valitsi paikan Santa Lucían lähteen viereltä — siitä kohdasta lähtee nykyään keskustan kanava.
+AIEMPI KYSYMYS: Mistä Alcántara on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Ai se. Alcántaran nimi tulee arabian sanasta al-Qanṭarah, joka tarkoittaa kaarta. Nimi sopii hyvin paikkaan, jonka tunnetuin nähtävyys on [[Tejo]]-joen ylittävä kivikaarisilta. Kaupunki sijaitsee [[Extremaduran]] alueella Espanjassa. Eikä kyyhky tarvinnut edes karttaa.
+KYSYMYS: Kerro lisää: Extremaduran
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+AIEMPI KYSYMYS: Kuinka pitkä silta on nykyisin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sillan nykyinen pituus on 181,7 metriä, kun alkuperäinen pituus oli 190 metriä. Silta rakennettiin [[Trajanuksen]] määräyksestä vuosina 104–106 [[Tejo]]-joen yli, ja sitä on korjattu useaan kertaan sotien jälkeen. En ole varma, mistä pituuksien ero tarkalleen johtuu.
+
+Kyyhkylle muutama metri ei ole mitään, mutta sillalle se on kokonainen aikakausi.
+KYSYMYS: Kerro lisää: Trajanuksen
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Kuka Trajanus oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Trajanus oli [[Rooman valtakunnan]] keisari, joka syntyi [[Hispaniassa]] eli nykyisen Espanjan alueella. Hänen määräyksestään rakennettiin Alcántaran silta vuosina 104–106. Hänen valtakautensa vuosilukuja en ole varma, joten jätän ne pois. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Rooman valtakunnan
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Kuka Trajanus oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Trajanus oli [[Rooman valtakunnan]] keisari, joka syntyi [[Hispaniassa]] eli nykyisen Espanjan alueella. Hänen määräyksestään rakennettiin Alcántaran silta vuosina 104–106. Hänen valtakautensa vuosilukuja en ole varma, joten jätän ne pois. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Hispaniassa
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Historia: Vehnäntähkä turbaanissa] 1747 — Kun Persian hallitsija Nader Shah murhattiin kesäkuussa 1747, hänen afgaanikaartinsa päällikkö Ahmad Khan Abdali otti vainajan sormuksen ja Koh-i-Noor-timantin ja marssi joukkoineen Kandahariin. Tarun mukaan heimopäälliköiden jirga valitsi hänet yksimielisesti kuninkaaksi ja hänen turbaaniinsa asetettiin vehnäntähkä. Historioitsijat ovat toista mieltä: vallan antoi yhdeksän miehen sotilasneuvosto, ja neuvonantaja Sabir Shah kiinnitti lakkiin vain vihreän oksan. Ahmad Shah otti liikanimen Durr-i Durran, helmien helmi, ja vaihtoi heimonsa nimen abdaleista durraneiksi. Afganistanissa häntä sanotaan yhä nimellä Ahmad Shah Baba, isä.
+- [Vietnam — maalehti / Ruoka: Patonki keveni riisijauhosta] Ranskalaiset toivat patongin Vietnamiin 1800-luvun puolivälissä, ja pohjoisessa sitä kutsuttiin nimellä banh tay eli lännen leipä. Ensimmäisen maailmansodan aikana vehnän tuonti takkuili, ja leipurit alkoivat sekoittaa taikinaan halpaa riisijauhoa. Siitä tuli sattumalta vietnamilaisen patongin tuntomerkki: kuori on ohut ja rapea, sisus kevyt ja kuohkea. Vuonna 1958 saigonilainen Hoa Ma -leipomo alkoi ensimmäisten joukossa myydä täytettyä banh mi thitiä. Täytteet sekoittavat kaksi keittiötä: maksapateeta, siankinkkua, etikkaporkkanaa, korianteria ja chiliä.
+AIEMPI KYSYMYS: Miksi vehnä kuljetettiin kanavalla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kastilian kanava rakennettiin helpottamaan [[vehnän]] kuljetusta Kastiliasta [[Biskajanlahden]] satamiin vientiä varten. Kanava on 207 kilometriä pitkä, ja se sijaitsee Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Rakennustyö kesti 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle. Onpas tuo kauas vehnä matkannut.
+KYSYMYS: Kerro lisää: vehnän
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Neula, joka ei ole Kleopatran] Victoria Embankmentin rantakadulla seisoo obeliski, jonka faarao Thutmosis III pystytti Egyptiin noin vuonna 1450 eaa. eli lähes 1 400 vuotta ennen Kleopatran syntymää, vaikka kivi on nimetty tämän mukaan. Se lähti Aleksandriasta syyskuussa 1877 maaten 28 metriä pitkän rautasylinterin sisällä, ja Biskajanlahden myrskyssä hukkui kuusi pelastusveneeseen lähtenyttä miestä, joiden nimet on kaiverrettu jalustan pronssilaattaan. Kivi pystytettiin paikalleen vasta syyskuussa 1878, ja kun viereen putosi pommi vuonna 1917, sirpaleiden jäljet jätettiin tahallaan korjaamatta.
+AIEMPI KYSYMYS: Miksi vehnä kuljetettiin kanavalla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kastilian kanava rakennettiin helpottamaan [[vehnän]] kuljetusta Kastiliasta [[Biskajanlahden]] satamiin vientiä varten. Kanava on 207 kilometriä pitkä, ja se sijaitsee Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Rakennustyö kesti 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle. Onpas tuo kauas vehnä matkannut.
+KYSYMYS: Kerro lisää: Biskajanlahden
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Mihin kanavaa käytetään nyt?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nykyisin osa [[Kastilian kanavasta]] on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa. Purjehdus kanavalla loppui vuonna 1959. Kanavaa käytettiin eniten vuosina 1850–1870, mutta [[rautateiden]] kilpailu muutti sen käytön 1800-luvun lopulla kasteluun ja myllyjen voimanlähteeksi. Kyl se vaan kannattaa pitää vettä liikkeessä.
+KYSYMYS: Kerro lisää: Kastilian kanavasta
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Karachi Cityn rautatieasema] 1861–1864 Scinde Railway -yhtiö perustettiin maaliskuussa 1855, ja työt Karachin pääteasemalla alkoivat huhtikuussa 1858. Rata vei Kotriin, 174 kilometrin päähän Induksen varteen, ja se avattiin yleisölle 13. toukokuuta 1861 — seudun ensimmäinen yleisölle avattu rautatie. Itse asemarakennus valmistui toukokuussa 1864. Asema oli aluksi nimeltään McLeod Station sen kadun mukaan, jonka eteläreunalle se rakennettiin; katu on nykyään I. I. Chundrigar Road. 1880-luvulla asemasta rakennettiin uusi versio hieman lännemmäksi, ja vuoteen 1905 mennessä brittihallinnon papereissa puhuttiin Karachi Cityn asemasta. Ratapihat järjestettiin uusiksi 1908. Nykyinen keltaisesta Gizrin hiekkakivestä muurattu a…
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Hiili nousee vuoren uumenista] Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.
+AIEMPI KYSYMYS: Mihin kanavaa käytetään nyt?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nykyisin osa [[Kastilian kanavasta]] on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa. Purjehdus kanavalla loppui vuonna 1959. Kanavaa käytettiin eniten vuosina 1850–1870, mutta [[rautateiden]] kilpailu muutti sen käytön 1800-luvun lopulla kasteluun ja myllyjen voimanlähteeksi. Kyl se vaan kannattaa pitää vettä liikkeessä.
+KYSYMYS: Kerro lisää: rautateiden
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Kuinka pitkä Kastilian kanava on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kastilian kanava on 207 kilometriä pitkä, ja se kulkee Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakuntien halki. Kanavan tarkoitus oli kuljettaa [[Kastilian]] vehnää [[Biskajanlahden]] satamiin. Rakennustyö kesti 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle. Pitkä matka, ja minä lentäisin sen nopeammin.
+KYSYMYS: Kerro lisää: Kastilian
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Milloin kanavaa käytettiin eniten?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kanavaa käytettiin eniten vuosina 1850–1870. Sen jälkeen [[rautateiden]] kilpailu alkoi syrjäyttää vesitiekuljetuksia, ja 1800-luvun lopulla käyttö muuttui kasteluksi ja myllyjen voimanlähteeksi. Purjehdus [[Kastilian kanavalla]] loppui vuonna 1959. Ei paha muisti, vaikka kyyhky onkin.
+KYSYMYS: Kerro lisää: Kastilian kanavalla
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Trinity Church] 1839–1846 Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui 1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, jossa George Washington kävi jumalanpalveluksessa virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, kun talven 1838–1839 lumet olivat heikentäneet sen rakenteita. Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin helatorstaina 1. toukokuuta 1846. Torni ristiineen y…
+- [Mandalay — kohdekartta / Kohdekartta: Zegyo-tori] perustettu 1860-luvulla Zegyo on kaupungin vanhin ja tärkein tori. Se perustettiin Mindonin hallituskaudella ja on ollut siitä asti samalla paikalla 84. kadulla 24. ja 26. kadun välissä. Aluetta on kaksitoista eekkeriä eli vajaat viisi hehtaaria. Torin kautta kulki Ylä-Burman maatalous: papuja, sitrushedelmiä, puuvillaa, pähkinöitä, sipulia, riisiä, tupakkaa ja vehnää. Se oli samalla seudun tärkein korujen ja käsityön markkinapaikka, ja erityisesti hopea- ja kultakirjonta myytiin täällä. Tavarapaljous selittää kaupungin kaksoisroolin: Mandalay on ollut kuninkaankaupunki mutta ennen kaikkea Ylä-Burman kauppapaikka. Rakennus on vaihtunut kolmesti. Tori paloi vuonna 1897, ja tilalle nousi 1903…
+AIEMPI KYSYMYS: Miksi rautatiet syrjäyttivät kanavan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kanavaa käytettiin eniten vuosina 1850–1870, mutta [[rautateiden]] kilpailu muutti sen käytön 1800-luvun lopulla kasteluun ja myllyjen voimanlähteeksi. Rautatiet kilpailivat samasta tavaraliikenteestä, jota kanavalla oli ennen kuljetettu, kun [[vehnää]] vietiin Kastiliasta satamiin. Tarkempia syitä en ala arvailla. Vaikka toisaalta, ihan kokonaan se kanava ei kadonnut minnekään.
+
+Kyllä minä tykkään nopeista kuljetuksista, mutta junalla ei saa pullaa mukaan niin kuin kanavalla.
+KYSYMYS: Kerro lisää: vehnää
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+AIEMPI KYSYMYS: Miksi tammi on baskeille tärkeä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Guernican tammi eli [[Gernikako Arbola]] symboloi biskajalaisten ja laajemmin koko [[baskien]] perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja [[Guernican yleiskokouksen]] aikana tammesta tuli symboli. Vaikuttava puu, vaikken minä ole koskaan saanut istua sen oksalla.
+KYSYMYS: Kerro lisää: Gernikako Arbola
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Vizcaínas-koulu] 1734 Koulun perusti baskien veljeskunta Nuestra Señora de Aránzazu, johon kuului Vizcayasta, Álavasta, Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; hanketta johti kolme jäsentä, Francisco de Echeveste, Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin tonttia sieltä, missä nykyään kulkee Avenida Juárez, mutta pyyntö evättiin. Tilalle tarjottiin San Juanin kaupunginosan entistä toripaikkaa, josta oli tullut kaatopaikka ja jota pidettiin hyvin huonona seutuna. Tontti otettiin vastaan, vaikka se piti kuivattaa. Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, baskien…
+- [Labrador — kaupunkilehti / Labrador: Baskit keittivät valasta öljyksi] Kauan ennen brittiläisiä tai ranskalaisia siirtokuntia Red Bayn satamassa kiehuivat baskien valaanpyytäjien padat: 1530-luvulta 1600-luvun alkuun baskilaiset laivastot pyysivät alueella grönlanninvalaita ja sulattivat rasvan öljyksi Euroopan lamppuihin. Arkeologit ovat löytäneet paikalta uponneita laivoja ja baskityylisiä punaisia kattotiiliä, jotka todistavat asutuksen olleen aikanaan Pohjois-Amerikan suurin eurooppalainen teollisuuslaitos. Red Bay julistettiin Kanadan kansalliseksi historialliseksi kohteeksi 1979 ja Unescon maailmanperintökohteeksi 2013 parhaiten säilyneenä todisteena eurooppalaisesta valaanpyyntiperinteestä.
+AIEMPI KYSYMYS: Miksi tammi on baskeille tärkeä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Guernican tammi eli [[Gernikako Arbola]] symboloi biskajalaisten ja laajemmin koko [[baskien]] perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja [[Guernican yleiskokouksen]] aikana tammesta tuli symboli. Vaikuttava puu, vaikken minä ole koskaan saanut istua sen oksalla.
+KYSYMYS: Kerro lisää: baskien
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Guernica maksoi parin saappaita] 1938 — Whitechapelin galleria avattiin vuonna 1901, jotta itäisen Lontoon työläiset pääsisivät näkemään taidetta. Vuonna 1938 siellä oli esillä Picasson Guernica, joka kiersi Britanniaa keräämässä apua Espanjan sisällissodan uhreille — Lontoon jälkeen se nähtiin Leedsissä, Liverpoolissa ja Manchesterissa. Pääsymaksuksi kelpasi pari kunnollisia saappaita, jotka lähetettiin Espanjan sisällissodan tasavaltalaisille. Kahdessa viikossa maalauksen eteen kertyi satoja saapaspareja ja galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, ja sisään pääsee ilmaiseksi.
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, "lakikalliolla", josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+AIEMPI KYSYMYS: Miksi tammi on baskeille tärkeä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Guernican tammi eli [[Gernikako Arbola]] symboloi biskajalaisten ja laajemmin koko [[baskien]] perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja [[Guernican yleiskokouksen]] aikana tammesta tuli symboli. Vaikuttava puu, vaikken minä ole koskaan saanut istua sen oksalla.
+KYSYMYS: Kerro lisää: Guernican yleiskokouksen
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Guernica maksoi parin saappaita] 1938 — Whitechapelin galleria avattiin vuonna 1901, jotta itäisen Lontoon työläiset pääsisivät näkemään taidetta. Vuonna 1938 siellä oli esillä Picasson Guernica, joka kiersi Britanniaa keräämässä apua Espanjan sisällissodan uhreille — Lontoon jälkeen se nähtiin Leedsissä, Liverpoolissa ja Manchesterissa. Pääsymaksuksi kelpasi pari kunnollisia saappaita, jotka lähetettiin Espanjan sisällissodan tasavaltalaisille. Kahdessa viikossa maalauksen eteen kertyi satoja saapaspareja ja galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, ja sisään pääsee ilmaiseksi.
+AIEMPI KYSYMYS: Mitä tapahtui vuonna 1937?
+AIEMPI VASTAUS (Livia):
+Kääk. Vuonna 1937 [[Guernica]] joutui [[Espanjan sisällissodan]] aikana ilmapommituksen kohteeksi. Isku oli tuhoisa, ja kaupunki tunnetaan siitä laajasti ympäri maailmaa. Uhrien määristä lähteet eroavat toisistaan, enkä ole varma luvuista, joten jätän ne pois. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Guernica
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Guernica maksoi parin saappaita] 1938 — Whitechapelin galleria avattiin vuonna 1901, jotta itäisen Lontoon työläiset pääsisivät näkemään taidetta. Vuonna 1938 siellä oli esillä Picasson Guernica, joka kiersi Britanniaa keräämässä apua Espanjan sisällissodan uhreille — Lontoon jälkeen se nähtiin Leedsissä, Liverpoolissa ja Manchesterissa. Pääsymaksuksi kelpasi pari kunnollisia saappaita, jotka lähetettiin Espanjan sisällissodan tasavaltalaisille. Kahdessa viikossa maalauksen eteen kertyi satoja saapaspareja ja galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, ja sisään pääsee ilmaiseksi.
+- [Granada — kaupunkilehti / Kirjallisuus: Kesähuvila, jossa syntyivät viimeiset näytelmät] Huerta de San Vicente oli Lorcan perheen kesähuvila silloisen Granadan laidalla, ja siellä hän kirjoitti muun muassa näytelmänsä Verenhäät ja Bernarda Alban talo. Talo on nyt museo kaupungin oman puiston keskellä — kaupunki kasvoi huvilan ympärille vuosikymmenten aikana. Lorca vietti täällä viimeiset rauhalliset kesänsä ennen Espanjan sisällissodan syttymistä 1936.
+AIEMPI KYSYMYS: Mitä tapahtui vuonna 1937?
+AIEMPI VASTAUS (Livia):
+Kääk. Vuonna 1937 [[Guernica]] joutui [[Espanjan sisällissodan]] aikana ilmapommituksen kohteeksi. Isku oli tuhoisa, ja kaupunki tunnetaan siitä laajasti ympäri maailmaa. Uhrien määristä lähteet eroavat toisistaan, enkä ole varma luvuista, joten jätän ne pois. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Espanjan sisällissodan
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+AIEMPI KYSYMYS: Mikä Guernican yleiskokous oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Guernican yleiskokous perustettiin vuonna 1512, ja sen aikana tammesta tuli symboli. Kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. [[Biskajan]] herrat ja kuninkaat vannoivat [[tammen]] alla kunnioittavansa biskajalaisten oikeuksia. Tarkempaa sääntöjen sisältöä en ole varma, joten jätän sen ihan arvailematta.
+
+Kokous puun alla kuulostaa kyyhkylle ihan järkevältä: oksalla istuu mielellään jo valmiiksi.
+KYSYMYS: Kerro lisää: Biskajan
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Sika, joka syö vain tammenterhoja] Espanjan kalleimman kinkun salaisuus on kolme viimeistä kuukautta. Mustasorkkainen iberiansika päästetään lokakuussa dehesaan, harvaan tammimetsälaitumeen, ja se saa syödä siellä vain tammenterhoja ja ruohoa. Terhojen rasva imeytyy lihaan ja tekee siitä pehmeän ja pähkinäisen. Yksi sika tarvitsee useamman hehtaarin laidunta, ja kinkkua kuivataan sen jälkeen kolmesta neljään vuotta. Dehesa on ihmisen tekemä maisema, joka on säilynyt satoja vuosia juuri siksi, että se kannattaa.
+AIEMPI KYSYMYS: Mikä Guernican yleiskokous oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Guernican yleiskokous perustettiin vuonna 1512, ja sen aikana tammesta tuli symboli. Kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. [[Biskajan]] herrat ja kuninkaat vannoivat [[tammen]] alla kunnioittavansa biskajalaisten oikeuksia. Tarkempaa sääntöjen sisältöä en ole varma, joten jätän sen ihan arvailematta.
+
+Kokous puun alla kuulostaa kyyhkylle ihan järkevältä: oksalla istuu mielellään jo valmiiksi.
+KYSYMYS: Kerro lisää: tammen
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+AIEMPI KYSYMYS: Kuka vannoi tammen alla viimeisenä espanjalaishallitsijana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Viimeinen espanjalaishallitsija, joka vannoi valan [[tammen]] alla, oli regentti [[María Cristina]] vuonna 1839. Valassa hallitsija lupasi kunnioittaa [[biskajalaisten]] oikeuksia, kuten aiemmin Kastilian kuninkaat olivat tehneet. Tammi nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa. Ihan jees muistettu.
+KYSYMYS: Kerro lisää: María Cristina
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+AIEMPI KYSYMYS: Kuka vannoi tammen alla viimeisenä espanjalaishallitsijana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Viimeinen espanjalaishallitsija, joka vannoi valan [[tammen]] alla, oli regentti [[María Cristina]] vuonna 1839. Valassa hallitsija lupasi kunnioittaa [[biskajalaisten]] oikeuksia, kuten aiemmin Kastilian kuninkaat olivat tehneet. Tammi nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa. Ihan jees muistettu.
+KYSYMYS: Kerro lisää: biskajalaisten
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+AIEMPI KYSYMYS: Mitä karlistisodat olivat?
+AIEMPI VASTAUS (Livia):
+Ai jaa, nuo. [[Karlistisodat]] olivat 1800-luvun Espanjan sisäisiä sotia, joihin liittyi kiista kruunun perimyksestä. Niissä [[karlistien]] kruununvaatijat tavoittelivat valtaa. Guernican tammi tuli tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa. Vuosilukuja en ole varma, joten jätän ne pois. Onpas ollu pitkä selitys.
+KYSYMYS: Kerro lisää: Karlistisodat
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+AIEMPI KYSYMYS: Mitä karlistisodat olivat?
+AIEMPI VASTAUS (Livia):
+Ai jaa, nuo. [[Karlistisodat]] olivat 1800-luvun Espanjan sisäisiä sotia, joihin liittyi kiista kruunun perimyksestä. Niissä [[karlistien]] kruununvaatijat tavoittelivat valtaa. Guernican tammi tuli tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa. Vuosilukuja en ole varma, joten jätän ne pois. Onpas ollu pitkä selitys.
+KYSYMYS: Kerro lisää: karlistien
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+AIEMPI KYSYMYS: Mitä Tordesillasin sopimus jakoi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Tordesillasin sopimus]] allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494. Se jakoi Euroopan ulkopuoliset äskettäin löydetyt maat [[Portugalin]] kuningaskunnan ja [[Kastilian]] kruunun kesken meridiaania pitkin. Rajaviiva kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella: itäpuoli kuului Portugalille ja länsipuoli Kastilialle. Tuo oli iso viiva, ja kyyhky ei olisi ehtinyt sitä lentää.
+KYSYMYS: Kerro lisää: Tordesillasin sopimus
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Ruoka: Portugali jäi ruokapöytään] Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja chorizoa — on sama pata kuin muissakin entisissä Portugalin siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, koska niistä tuotiin sotilaita Timorille.
+AIEMPI KYSYMYS: Mitä Tordesillasin sopimus jakoi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Tordesillasin sopimus]] allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494. Se jakoi Euroopan ulkopuoliset äskettäin löydetyt maat [[Portugalin]] kuningaskunnan ja [[Kastilian]] kruunun kesken meridiaania pitkin. Rajaviiva kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella: itäpuoli kuului Portugalille ja länsipuoli Kastilialle. Tuo oli iso viiva, ja kyyhky ei olisi ehtinyt sitä lentää.
+KYSYMYS: Kerro lisää: Portugalin
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Mitä Tordesillasin sopimus jakoi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Tordesillasin sopimus]] allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494. Se jakoi Euroopan ulkopuoliset äskettäin löydetyt maat [[Portugalin]] kuningaskunnan ja [[Kastilian]] kruunun kesken meridiaania pitkin. Rajaviiva kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella: itäpuoli kuului Portugalille ja länsipuoli Kastilialle. Tuo oli iso viiva, ja kyyhky ei olisi ehtinyt sitä lentää.
+KYSYMYS: Kerro lisää: Kastilian
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+AIEMPI KYSYMYS: Mitä alkuperäiskansat sopimuksesta ajattelivat?
+AIEMPI VASTAUS (Livia):
+No niin. Amerikan alkuperäiskansat eivät tunnustaneet [[Tordesillasin sopimusta]] eivätkä sen jälkeistä [[Zaragozan sopimusta]]. Kyse oli Portugalin ja Kastilian välisestä jaosta, johon alkuperäiskansoja ei kysytty. Tarkempia kannanottoja yksittäisiltä kansoilta en osaa kertoa, koska niitä ei ole kirjattu minulle tiedossa olevalla tavalla. Hiljaa tuo jää mieleen.
+KYSYMYS: Kerro lisää: Tordesillasin sopimusta
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+AIEMPI KYSYMYS: Mitä alkuperäiskansat sopimuksesta ajattelivat?
+AIEMPI VASTAUS (Livia):
+No niin. Amerikan alkuperäiskansat eivät tunnustaneet [[Tordesillasin sopimusta]] eivätkä sen jälkeistä [[Zaragozan sopimusta]]. Kyse oli Portugalin ja Kastilian välisestä jaosta, johon alkuperäiskansoja ei kysytty. Tarkempia kannanottoja yksittäisiltä kansoilta en osaa kertoa, koska niitä ei ole kirjattu minulle tiedossa olevalla tavalla. Hiljaa tuo jää mieleen.
+KYSYMYS: Kerro lisää: Zaragozan sopimusta
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+AIEMPI KYSYMYS: Mikä Zaragozan sopimus oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Zaragozan sopimus]] vuodelta 1529 jakoi maapallon toisen puolen vuosikymmeniä [[Tordesillasin sopimuksen]] jälkeen. Se täydensi aiempaa jakoa, joka koski vain Atlantin yli kulkenutta meridiaania. Tarkempia kohtia en ala arvailla, koska en ole varma niistä.
+
+Kyyhkynä minä arvostan sitä, että maapallolla riittää lennettävää molemmin puolin.
+KYSYMYS: Kerro lisää: Zaragozan sopimus
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+AIEMPI KYSYMYS: Mikä Zaragozan sopimus oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Zaragozan sopimus]] vuodelta 1529 jakoi maapallon toisen puolen vuosikymmeniä [[Tordesillasin sopimuksen]] jälkeen. Se täydensi aiempaa jakoa, joka koski vain Atlantin yli kulkenutta meridiaania. Tarkempia kohtia en ala arvailla, koska en ole varma niistä.
+
+Kyyhkynä minä arvostan sitä, että maapallolla riittää lennettävää molemmin puolin.
+KYSYMYS: Kerro lisää: Tordesillasin sopimuksen
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Paavin kosto] Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+AIEMPI KYSYMYS: Mitä paavin bulla sopimuksen taustalla oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Tordesillasin sopimus]] muutti aiempaa [[paavin]] bullaa, joka oli jakanut uusia maita Portugalin ja Kastilian välillä. Sopimuksessa raja siirrettiin meridiaaniksi, joka kulki 370 leguaa Kap Verden saarten länsipuolella. Bullan tarkkaa sisältöä ja päivämäärää en ole varma, joten jätän ne pois. Tämä oli niitä kysymyksiä, joissa kyyhky osaa vain puolet.
+KYSYMYS: Kerro lisää: paavin
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Angola — maalehti / Musiikki: Kotibileistä syntyi semba] Vuonna 1947 joukko nuoria miehiä kokoontui Luandassa Manuel dos Passosin kotiin ja perusti yhtyeen Ngola Ritmos. He lauloivat kimbunduksi aikana, jolloin siirtomaahallinto ei sitä suosinut: Liceu Vieira Dias soitti kitaraa, muut rumpuja ja akasiakepeistä tehtyjä helistimiä. Pariskuntien tanssima massemba oli kansanhuvia, mutta yhtyeen kitaroissa siitä tuli semba, jonka nimi tarkoittaa navan kosketusta. Sembassa kerrotaan arjen tarinoita nokkelin sanakääntein, ja sitä soitetaan yhtä lailla hautajaisissa kuin juhlissa. Liceu pidätettiin 1959 ja karkotettiin Kap Verden Tarrafaliin; hän palasi vasta kymmenen vuoden kuluttua.
+AIEMPI KYSYMYS: Kuinka pitkä 370 leguaa on kilometreinä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tordesillasin sopimuksessa raja kulki 370 leguaa eli noin 2 100 kilometriä [[Kap Verden]] saarten länsipuolella. Legua oli vanha matkamitta, jonka tarkka pituus on vaihdellut aikojen ja maiden mukaan, joten luku on vain suuntaa antava. Se oli osa [[Tordesillasin sopimusta]], joka jakoi löydetyt maat Portugalille ja Kastilialle. Ei paha laskutaito kyyhkyltä.
+KYSYMYS: Kerro lisää: Kap Verden
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+AIEMPI KYSYMYS: Mitä Aranjuezin kapinassa tapahtui?
+AIEMPI VASTAUS (Livia):
+No niin. [[Aranjuezin kapina]] tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä. Sotilaat, talonpojat ja kansa hyökkäsivät [[Manuel Godoyn]] asunnolle ja vangitsivat hänet. Kapinalliset pakottivat [[Kaarle IV:n]] erottamaan Godoyn, ja kaksi päivää myöhemmin kuninkaan itsensä täytyi luopua kruunusta. Kyl se oli melkoinen viikko.
+KYSYMYS: Kerro lisää: Aranjuezin kapina
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+AIEMPI KYSYMYS: Mitä Aranjuezin kapinassa tapahtui?
+AIEMPI VASTAUS (Livia):
+No niin. [[Aranjuezin kapina]] tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä. Sotilaat, talonpojat ja kansa hyökkäsivät [[Manuel Godoyn]] asunnolle ja vangitsivat hänet. Kapinalliset pakottivat [[Kaarle IV:n]] erottamaan Godoyn, ja kaksi päivää myöhemmin kuninkaan itsensä täytyi luopua kruunusta. Kyl se oli melkoinen viikko.
+KYSYMYS: Kerro lisää: Manuel Godoyn
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mitä Aranjuezin kapinassa tapahtui?
+AIEMPI VASTAUS (Livia):
+No niin. [[Aranjuezin kapina]] tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä. Sotilaat, talonpojat ja kansa hyökkäsivät [[Manuel Godoyn]] asunnolle ja vangitsivat hänet. Kapinalliset pakottivat [[Kaarle IV:n]] erottamaan Godoyn, ja kaksi päivää myöhemmin kuninkaan itsensä täytyi luopua kruunusta. Kyl se oli melkoinen viikko.
+KYSYMYS: Kerro lisää: Kaarle IV:n
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+AIEMPI KYSYMYS: Mikä Godoy oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Manuel Godoy oli [[Kaarle IV:n]] aikana korkeassa asemassa, sillä sotilaat, talonpojat ja kansa hyökkäsivät hänen asunnolleen [[Aranjuezin kapinassa]] 17. maaliskuuta 1808. Hänet vangittiin, ja kuningas joutui erottamaan hänet. Tarkkaa virkanimikettä en ole varma, joten en ala arvailla. Kuulostaa mieheltä, jota kyyhky ei olisi halunnut suututtaa.
+KYSYMYS: Kerro lisää: Aranjuezin kapinassa
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+AIEMPI KYSYMYS: Mikä Concierto de Aranjuez on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Concierto de Aranjuez]] on kitarakonsertto, jonka [[Joaquín Rodrigo]] kirjoitti vuonna 1939. Sen aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella. Rodrigo oli sokea, eikä hän ollut nähnyt puutarhoja. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Vähän se kyyhkyäkin liikuttaa.
+KYSYMYS: Kerro lisää: Concierto de Aranjuez
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+AIEMPI KYSYMYS: Mikä Concierto de Aranjuez on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Concierto de Aranjuez]] on kitarakonsertto, jonka [[Joaquín Rodrigo]] kirjoitti vuonna 1939. Sen aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella. Rodrigo oli sokea, eikä hän ollut nähnyt puutarhoja. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Vähän se kyyhkyäkin liikuttaa.
+KYSYMYS: Kerro lisää: Joaquín Rodrigo
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Miksi Aranjuez on UNESCOn maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[UNESCO]] julisti Aranjuezin kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Kaupunki tuli Espanjan kruunun [[kuninkaalliseksi tilaksi]] vuonna 1560 [[Filip II:n]] aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. Se sijaitsee Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. UNESCOn tarkat perustelut en ole varma, joten en ala ne luetella. Hieno paikka, ainakin ylhäältä.
+KYSYMYS: Kerro lisää: UNESCO
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Kansallisruoka, jonka lehdet keitetään kolmesti] Ndolé on doualalainen pata, jossa on jauhettuja maapähkinöitä, rapuja, valkosipulia, sipulia ja ndoleh-lehtiä, ja sitä pidetään laajalti Kamerunin kansallisruokana. Työ alkaa lehdistä: ne keitetään kaksi tai kolme kertaa suolatussa vedessä vuorisuolan kanssa, jotta kitkeryys lähtee. Vasta sitten ne sekoitetaan tuoreesta maapähkinätahnasta ja survotuista mausteista tehtyyn kastikkeeseen. Mukaan tulee lihaa, savustettua kalaa tai katkarapuja — katkarapuversiota sanotaan kuninkaalliseksi. Lisukkeena on plantaanibanaania ja bobolo, hapatettua maniokkitahnaa, joka höyrytetään marantalehdissä spiraaliksi kierrettynä.
+- [Valko-Venäjä — maalehti / Historia: Metsä joka pelasti biisonin] 1929 alkaen — Metsästä on kirjallisia mainintoja jo 900-luvulta, ja 1400-luvulla suurruhtinaat rauhoittivat sen kuninkaalliseksi metsästysmaaksi - suojelu jatkui liettualaisista ruhtinaista Puolan kuninkaisiin ja Venäjän tsaareihin asti. Juuri tämä vuosisatoja jatkunut rauhoitus pelasti Euroopan raskaimman maanisän: villi biisonikanta hävisi metsästyksen takia täysin ensimmäisen maailmansodan jälkeen, mutta eläintarhoihin selvinneistä yksilöistä aloitettu paluu vuodesta 1929 alkaen on kasvattanut Belovežan Puščan kannan yli 1200 biisoniin - Euroopan suurimmaksi vapaana laiduntavaksi laumaksi.
+AIEMPI KYSYMYS: Miksi Aranjuez on UNESCOn maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[UNESCO]] julisti Aranjuezin kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Kaupunki tuli Espanjan kruunun [[kuninkaalliseksi tilaksi]] vuonna 1560 [[Filip II:n]] aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. Se sijaitsee Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. UNESCOn tarkat perustelut en ole varma, joten en ala ne luetella. Hieno paikka, ainakin ylhäältä.
+KYSYMYS: Kerro lisää: kuninkaalliseksi tilaksi
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Miksi Aranjuez on UNESCOn maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[UNESCO]] julisti Aranjuezin kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Kaupunki tuli Espanjan kruunun [[kuninkaalliseksi tilaksi]] vuonna 1560 [[Filip II:n]] aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. Se sijaitsee Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. UNESCOn tarkat perustelut en ole varma, joten en ala ne luetella. Hieno paikka, ainakin ylhäältä.
+KYSYMYS: Kerro lisää: Filip II:n
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Espanjan korkein vuori on Afrikan edustalla] Espanjan korkein kohta ei ole Pyreneillä vaan Teneriffalla: Teide nousee 3 715 metriin, ja merenpohjasta mitattuna se on yli seitsemän kilometriä korkea eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon Marsia, että Euroopan avaruusjärjestö on koekäyttänyt siellä mönkijöitään. Vuori purkautui viimeksi 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, sata kilometriä Marokon rannikolta.
+AIEMPI KYSYMYS: Kuka Filip II oli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Filip II oli Espanjan kuningas, jonka aikana Aranjuez tuli vuonna 1560 [[Espanjan kruunun]] kuninkaalliseksi tilaksi. Hän oli 1500-luvun hallitsija, ja hänen aikanaan [[Aranjuez]] alkoi kuninkaallisena tilana. Hallituskauden vuosilukuja en ole varma, joten jätän ne pois.
+
+Kuninkaalla oli oma tila puutarhoineen, minulla vain ikkunalauta, ja silti arvostan molempia.
+KYSYMYS: Kerro lisää: Espanjan kruunun
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+AIEMPI KYSYMYS: Kuka Filip II oli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Filip II oli Espanjan kuningas, jonka aikana Aranjuez tuli vuonna 1560 [[Espanjan kruunun]] kuninkaalliseksi tilaksi. Hän oli 1500-luvun hallitsija, ja hänen aikanaan [[Aranjuez]] alkoi kuninkaallisena tilana. Hallituskauden vuosilukuja en ole varma, joten jätän ne pois.
+
+Kuninkaalla oli oma tila puutarhoineen, minulla vain ikkunalauta, ja silti arvostan molempia.
+KYSYMYS: Kerro lisää: Aranjuez
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobletin luostari (historia)
+Tietoruudun teksti: Pobletin kuninkaallinen luostari on vuonna 1151 perustettu kistertsiläisluostari Prades-vuorten juurella Katalonian Conca de Barberàssa. Sen perustivat Ranskasta tulleet kistertsiläismunkit, ja pääarkkitehti oli Arnau Bargués. Poblet oli yksi Aragonian kruunun kuninkaiden hautapaikoista Jaakko I:stä alkaen, ja suurimmillaan luostarissa asui yli 300 munkkia. Vuonna 1835 Mendizábalin kirkonomaisuuden pakkolunastus päätti luostarielämän: 24. heinäkuuta luostari ryöstettiin ja osin poltettiin, ja kuninkaiden haudat häpäistiin. Luostari perustettiin uudelleen vuonna 1940 italialaisten munkkien voimin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Herkut: Leivos kaupungista, joka rakennettiin piiritystä varten] 1491 — Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian ja Aragonian hallitsijat rakennuttivat vuonna 1491 sotaleiriksi Granadan piiritystä varten: suorakulmainen ruudukko, kaksi katua ristissä ja neljä porttia. Siellä allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan aivan muusta: sieltä on kotoisin pionono, pieni siirappiin kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, siitä pionono.
+AIEMPI KYSYMYS: Keitä Pobletiin on haudattu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kuninkaita. Tost minä osaan kertoo. Pobletiin on haudattu [[Aragonian kruunun]] kuninkaita, ja perinne alkoi [[Jaakko I:stä]]. Luostari oli siis hallitsijoiden hautapaikka, ja sen perustivat Ranskasta tulleet [[kistertsiläismunkit]]. Vuoden 1835 ryöstössä kuninkaiden haudat häpäistiin, ja luostari perustettiin uudelleen vuonna 1940. Enempää nimiä en uskalla luetella, kun en oo ihan varma.
+KYSYMYS: Kerro lisää: Aragonian kruunun
