@@ -1,8 +1,10 @@
 // KUUMAILMAPALLON ELOKUVAMAINEN JÄLKIKÄSITTELY: arvot (omistaja 9.10.2026 "pehmennys ja rae ja värien tummennus"; Natiiviseppä,
 // juna 170). Moottoriton valinta päivä/yö ja lämmön mukaan; KaupunkiFilmi (Unity) vie ne URP-volyymiin. Yksi profiili, ei säätimiä
 // pelaajalle. ShadowsMidtonesHighlights: rgb = sävy (1 = neutraali), w = valotuksen siirto (negatiivinen tummentaa).
-//   päivä: varjot viileät ja −0,08, keskisävyt −0,04, valot lämpimät; saturaatio −8; rae 0,22; pehmennys kaukana; hehku 0,25; vinjetti 0,18
-//   yö:    kevyempi tummennus (−0,04 / −0,02), saturaatio −4, rae 0,28 (yörae luonteva), hehku 0,4 (valot), vinjetti 0,22
+// VAHVISTUS 9.10. 03.0x (Päätoimittaja: ensimmäinen kuvapari liian hienovarainen, omistaja ei näe eroa; maltillisesti lisää):
+//   päivä: varjot viileämmät (0,88 / 0,94 / 1,10) ja −0,16, keskisävyt −0,09, valot lämpimät; saturaatio −12; rae 0,45 (karkeampi
+//          Medium4, näkyy tabletin katseluetäisyydellä); hehku 0,25; vinjetti 0,24
+//   yö:    kevyempi tummennus (−0,08 / −0,05), saturaatio −6, rae 0,5 (yörae luonteva), hehku 0,4 (valot), vinjetti 0,26
 //   kuuma: rae, pehmennys ja hehku pois (koko ruudun passeja); sävytys ja vinjetti jäävät (uber-passissa, lähes ilmaisia)
 namespace Matkakirja.Linssit.Kierros
 {
@@ -19,14 +21,14 @@ namespace Matkakirja.Linssit.Kierros
         {
             var a = new FilmiArvot
             {
-                VarjoR = 0.94f, VarjoG = 0.97f, VarjoB = 1.04f,
-                ValoR = 1.04f, ValoG = 1.01f, ValoB = 0.95f,
-                VarjoTummennus = yo ? -0.04f : -0.08f,
-                KeskiTummennus = yo ? -0.02f : -0.04f,
-                Saturaatio = yo ? -4f : -8f,
-                Rae = yo ? 0.28f : 0.22f,
+                VarjoR = 0.88f, VarjoG = 0.94f, VarjoB = 1.10f,
+                ValoR = 1.05f, ValoG = 1.01f, ValoB = 0.93f,
+                VarjoTummennus = yo ? -0.08f : -0.16f,
+                KeskiTummennus = yo ? -0.05f : -0.09f,
+                Saturaatio = yo ? -6f : -12f,
+                Rae = yo ? 0.5f : 0.45f,
                 Hehku = yo ? 0.4f : 0.25f,
-                Vinjetti = yo ? 0.22f : 0.18f,
+                Vinjetti = yo ? 0.26f : 0.24f,
                 // Kaukainen pehmennys (DoF Gaussian ≥ 4 km) POIS 9.10. 02.1x: kuvaparissa koko kuva sumeni (reunatiheys 16,8 → 2,7 myös
                 // lähellä; pallokameran syvyysalue ei sovi Gaussian-DoF:lle). Pehmeys tulee hehkusta ja rakeesta; kaukoutu LS2:n ilmakehästä.
                 Pehmennys = false,

@@ -5,7 +5,8 @@
 // (WhiteBalance, ColorAdjustments-valotus/kontrasti, SplitToning) jää voimaan:
 //  1) tummennus ja sävy: ShadowsMidtonesHighlights (varjot ja keskisävyt hieman tummemmiksi, viileät varjot, lämmin valo) +
 //     ColorAdjustments.saturation maltillisemmaksi; yöllä kevyempi (KaupunkiKuva.Nyt == "yo")
-//  2) kevyt liikkuva filmirae (FilmGrain Medium1) peittää laattojen pakkausjäljet ja sulaneet kohdat
+//  2) liikkuva filmirae peittää laattojen pakkausjäljet ja sulaneet kohdat; 9.10. 03.0x Medium1 → Medium4 ja vaste 0,8 → 0,5, jotta
+//     rae näkyy tabletin katseluetäisyydellä myös kirkkaalla taivaalla (Päätoimittaja: ensimmäinen kuvapari liian hienovarainen)
 //  3) kevyt hehku (Bloom); kaukainen pehmennys (DepthOfField Gaussian ≥ 4 km) kokeiltiin ja otettiin POIS 9.10. 02.1x: pallokameran
 //     syvyysalueella se sumensi koko kuvan (kuvapari) — komponentti jää profiiliin passiivisena (KaupunkiFilmiArvot.Pehmennys = false)
 //  4) kevyt vinjetti
@@ -57,8 +58,8 @@ namespace Matkakirja.Natiivi
             smh = profiili.Add<ShadowsMidtonesHighlights>(true);
             varit = profiili.Add<ColorAdjustments>(false);   // vain saturaatio ohitetaan (muut KaupunkiKuvalta)
             rae = profiili.Add<FilmGrain>(false);
-            rae.type.Override(FilmGrainLookup.Medium1);
-            rae.response.Override(0.8f);
+            rae.type.Override(FilmGrainLookup.Medium4);
+            rae.response.Override(0.5f);
             pehmennys = profiili.Add<DepthOfField>(false);
             pehmennys.mode.Override(DepthOfFieldMode.Gaussian);
             pehmennys.gaussianStart.Override(PehmennysAlkuM);
