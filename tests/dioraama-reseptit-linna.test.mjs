@@ -7,7 +7,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  kiekko, kierreportaat, kierrePiste, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys,
+  kiekko, kierreportaat, kierrePiste, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys, sokkelikivet,
   RESEPTIT as LINNA, OLETUSPINNAT,
 } from '../tools/dioraama/reseptit-linna.mjs';
 import { RESEPTIT, sijoita } from '../tools/dioraama/reseptit.mjs';
@@ -51,8 +51,9 @@ const OLETUKSET = {
   kupoli: { sade: 5, korkeus: 2.5 },
   tynnyriholvi: { pituus: 6, leveys: 4, nousu: 1.5, paadyt: true },
   kivikehys: { leveys: 1.05, korkeus: 2.0, kaari: 0.4, seinan_sade: 3.88, siemen: 300 },
+  sokkelikivet: { pituus: 6.0, korkeus: 0.4, ulkonema: 0.1, siemen: 700, valit: [[-0.6, 0.6]], kynnykset: [{ u0: -0.55, u1: 0.55, syvyys: 1.6 }] },
 };
-const FUNKTIOT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys };
+const FUNKTIOT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys, sokkelikivet };
 
 /* ==================== Kaikille yhteiset ==================== */
 for (const [nimi, param] of Object.entries(OLETUKSET)) {
@@ -70,13 +71,13 @@ for (const [nimi, param] of Object.entries(OLETUKSET)) {
   });
 }
 
-test('reseptit.mjs:n RESEPTIT sisältää kaikki 11 linnareseptiä ja ne ovat samat funktiot', () => {
+test('reseptit.mjs:n RESEPTIT sisältää kaikki 12 linnareseptiä ja ne ovat samat funktiot', () => {
   for (const nimi of Object.keys(FUNKTIOT)) {
     assert.equal(typeof RESEPTIT[nimi], 'function', `puuttuu: ${nimi}`);
     assert.equal(RESEPTIT[nimi], FUNKTIOT[nimi]);
   }
   assert.deepEqual(Object.keys(LINNA).sort(), Object.keys(FUNKTIOT).sort());
-  assert.equal(Object.keys(FUNKTIOT).length, 11);
+  assert.equal(Object.keys(FUNKTIOT).length, 12);
 });
 
 test('OLETUSPINNAT: jokaiselle reseptille kaikki tuotetut roolit on kartoitettu, pinnat speksin mukaiset', () => {
@@ -503,4 +504,21 @@ test('kivikehys: suora kamana ilman kaarta, kaaressa pariton määrä holvikivi�
   const kaareva = kivikehys({ leveys: 1.05, korkeus: 2.0, kaari: 0.4, siemen: 7, seinan_sade: 3.88 });
   assert.ok(etuW(kaareva) > etuW(tasainen) + 0.05, 'kaarevalla seinällä reunakivet tuodaan seinän pintaan');
   for (const k of kaari) assert.equal(k.rooli, 'kivi');
+});
+
+test('sokkelikivet: kivet pysyvät seinän juuressa ja pituuden sisällä, ovien välit jäävät tyhjiksi ja kynnys menee seinän läpi', () => {
+  const param = { pituus: 6.0, korkeus: 0.4, ulkonema: 0.1, siemen: 700, valit: [[-0.6, 0.6]], kynnykset: [{ u0: -0.55, u1: 0.55, syvyys: 1.6 }] };
+  const k = sokkelikivet(param), P = k.flatMap((t) => t.p);
+  assert.ok(k.length > 0);
+  for (const [u, y, w] of P) {
+    assert.ok(u >= -3.0001 && u <= 3.0001, `u ${u} pituuden sisällä`);
+    assert.ok(y >= -1e-9 && y <= 0.4 * 1.6 + 0.02, `y ${y} juuressa`);
+    assert.ok(w >= -1.6001 && w <= 0.14 * 1.2 + 0.001, `w ${w}`);
+  }
+  // ovenvälissä vain kynnys (y ≤ 0,12)
+  for (const t of k) if (t.p.every(([u]) => u > -0.59 && u < 0.59)) assert.ok(t.p.every(([, y]) => y <= 0.1201));
+  assert.ok(Math.min(...P.map((p) => p[2])) < -1.59, 'kynnys seinän läpi');
+  assert.equal(JSON.stringify(sokkelikivet(param)), JSON.stringify(k), 'deterministinen');
+  assert.notEqual(JSON.stringify(sokkelikivet({ ...param, siemen: 701 })), JSON.stringify(k));
+  for (const t of k) assert.equal(t.rooli, 'kivi');
 });

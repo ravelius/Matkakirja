@@ -30,6 +30,8 @@ const RESEPTIT = new Set([
   'kiekko', 'kierreportaat', 'sakarat', 'paalu', 'laiturikansi', 'vene', 'lippu', 'rako', 'kupoli',
   // 9.10.2026 (Thief-vertailun #4): aukkojen kivikehys (reseptit-linna.mjs).
   'kivikehys',
+  // 9.10.2026 (#4): seinien juuren sokkelikivet ja kynnykset (reseptit-linna.mjs).
+  'sokkelikivet',
   'alttari', 'vihkimisristi', 'kirkonpenkki', 'kynttilakruunu', 'seinasoihtu', 'arkku', 'keihasteline', 'kilpi',
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
   'jalkajousi', 'nuolitynnyri',

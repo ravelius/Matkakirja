@@ -511,6 +511,34 @@ export function kivikehys(param) {
   return puhdista(k);
 }
 
+// Sokkelikivet (Linnanrakentaja 9.10.2026, Thief-vertailun #4 "kiviaineksen kohokuva seinien reunoissa"): epäsäännöllinen
+// kivirivi seinän juuressa. Paikallinen kehys kuten kivikehyksessä: u pitkin seinää (−pituus/2 … +pituus/2), y ylös lattiasta,
+// w seinästä huoneeseen. Kivet 0,35–0,8 m leveitä, 0,45–1 × korkeus, ulkonema 0,5–1,2 × ulkonema; joka kolmannen päällä
+// pienempi toinen kivi. `valit` [[u0, u1], …] jätetään tyhjiksi (ovet); `kynnykset` [{ u0, u1, syvyys }] = kynnyskivi
+// 0,12 m seinän läpi (syvyys = seinän paksuus) ja 0,14 m huoneeseen.
+export function sokkelikivet(param) {
+  const L = param.pituus, H = param.korkeus ?? 0.4, U = param.ulkonema ?? 0.1, rnd = mulberry32(param.siemen ?? 1477), k = [];
+  const valit = param.valit ?? [], sauma = 0.012, P5 = { yla: 'kivi', ala: 'kivi', etu: 'kivi', vasen: 'kivi', oikea: 'kivi' };
+  const vapaa = (u0, u1) => valit.every(([a, b]) => u1 <= a || u0 >= b);
+  let u = -L / 2, i = 0;
+  while (u < L / 2 - 0.15) {
+    const lev = Math.min(0.35 + 0.45 * rnd(), L / 2 - u), h = H * (0.45 + 0.55 * rnd()), w = U * (0.5 + 0.7 * rnd());
+    const u0 = u + sauma / 2, u1 = u + lev - sauma / 2;
+    if (vapaa(u0, u1) && lev > 0.12) {
+      k.push(...laatikko({ u0, u1, y0: 0, y1: h, w0: 0, w1: w }, P5));
+      if (i % 3 === 2 && h < H * 0.8) {
+        const l2 = lev * (0.4 + 0.3 * rnd()), a2 = u0 + (lev - l2) * rnd();
+        k.push(...laatikko({ u0: a2, u1: a2 + l2, y0: h + sauma, y1: h + sauma + H * (0.3 + 0.3 * rnd()), w0: 0, w1: w * 0.7 }, P5));
+      }
+    }
+    u += lev; i++;
+  }
+  for (const ky of param.kynnykset ?? []) {
+    k.push(...laatikko({ u0: ky.u0, u1: ky.u1, y0: 0, y1: 0.12, w0: -(ky.syvyys ?? 0.9), w1: 0.14 }, P5));
+  }
+  return puhdista(k);
+}
+
 // Rooli → oletuspinta. Instanssin oma `pinnat`-kenttä (reseptit.mjs:n sijoita) ohittaa nämä.
 export const OLETUSPINNAT = {
   kiekko: { yla: 'lankku', ala: 'rappaus', sivu: 'leikkaus', leikkaus: 'leikkaus' },
@@ -524,6 +552,7 @@ export const OLETUSPINNAT = {
   kupoli: { holvi: 'rappaus', ulko: 'kivi', leikkaus: 'leikkaus' },
   tynnyriholvi: { holvi: 'rappaus', ulko: 'kivi', paaty: 'rappaus' },
   kivikehys: { kivi: 'kivi' },
+  sokkelikivet: { kivi: 'kivi' },
 };
 
-export const RESEPTIT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys };
+export const RESEPTIT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys, sokkelikivet };

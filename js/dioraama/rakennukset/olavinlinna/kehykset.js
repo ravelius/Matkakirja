@@ -17,3 +17,17 @@ export function kehyksetSeinasta(seina, { puoli = 'taka', siemen = 1, kaari = 0.
     };
   });
 }
+
+// Seinä → resepti 'sokkelikivet' seinän juureen huoneen puolelle (Thief-vertailun #4: kiviaineksen kohokuva seinien reunoissa)
+// ja kynnyskivi jokaiseen oveen (aukko lattiatasossa). Puolella 'taka' kehys kääntyy 180°, joten aukkojen u peilataan.
+// `lattia` = lattian korkeus, jos seinä alkaa lattian alta (keittiön kehämuuri y −0,5).
+export function sokkeliSeinasta(seina, { puoli = 'taka', siemen = 1, korkeus = 0.4, ulkonema = 0.1, lattia } = {}) {
+  const s = seina.suunta * RAD, [px, py, pz] = seina.paikka, m = puoli === 'taka' ? -1 : 1, wPinta = m * seina.paksuus / 2;
+  const ovet = (seina.aukot ?? []).filter((a) => a.y < 0.01).map((a) => [r3(m * a.u - a.leveys / 2), r3(m * a.u + a.leveys / 2)]);
+  return {
+    resepti: 'sokkelikivet', paikka: [r3(px + wPinta * Math.sin(s)), lattia ?? py, r3(pz - wPinta * Math.cos(s))], suunta: r3(seina.suunta + (puoli === 'taka' ? 180 : 0)),
+    pituus: seina.pituus, korkeus, ulkonema, siemen,
+    valit: ovet.map(([a, b]) => [r3(a - 0.05), r3(b + 0.05)]),
+    kynnykset: ovet.map(([a, b]) => ({ u0: a, u1: b, syvyys: seina.paksuus })),
+  };
+}

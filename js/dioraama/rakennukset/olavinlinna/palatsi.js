@@ -11,7 +11,7 @@
 // KOORDINAATIT: paikallinen x poikki siiven (+x = itä-koillinen, ison pihan puoli), z pitkin siipeä (−z = Kirkkotorni,
 // +z = etelä-kaakko), y = maailman korkeus. sijoitus suunta 333 kääntää paikallisen −z:n kompassiin 333 (kohti tornia).
 // Paikallinen origo = siiven keskilinja (maailma −10,56; 5,38). Tornin keskipiste paikallisesti (4,73; −19,62).
-import { kehyksetSeinasta } from './kehykset.js';
+import { kehyksetSeinasta, sokkeliSeinasta } from './kehykset.js';
 const r3 = (v) => Math.round(v * 1000) / 1000;
 
 const LEV = 7.0, Z0 = -12.3, Z1 = 4.7, ZK = (Z0 + Z1) / 2; // sisämitat
@@ -60,6 +60,11 @@ const TUPA_SEINAT = seinat(YT, TUPA.yla - YT + 0.1, {
 const TUPA_PALKIT = Array.from({ length: 17 }, (_, i) => ({
   resepti: 'laatta', paikka: [0, 7.3, r3(Z0 + 0.5 + i)], suunta: 0, leveys: LEV + 0.2, syvyys: 0.24, paksuus: 0.3, pinnat: PUU3,
 }));
+// 9.10. (#4): palkkien päiden kivikonsolit (kaksi porrasta) seinissä palkin alla.
+const TUPA_KONSOLIT = Array.from({ length: 17 }, (_, i) => [-1, 1].flatMap((sx) => [
+  { resepti: 'laatta', paikka: [r3(sx * (LEV / 2 - 0.17)), 7.0, r3(Z0 + 0.5 + i)], suunta: 0, leveys: 0.34, syvyys: 0.32, paksuus: 0.3, pinnat: KIVI3 },
+  { resepti: 'laatta', paikka: [r3(sx * (LEV / 2 - 0.1)), 6.7, r3(Z0 + 0.5 + i)], suunta: 0, leveys: 0.2, syvyys: 0.26, paksuus: 0.18, pinnat: KIVI3 },
+])).flat();
 const TUPA_KATTO = { resepti: 'laatta', paikka: [0, TUPA.yla, ZK], suunta: 0, leveys: LEV + 0.2, syvyys: 17.2, paksuus: 0.2, pinnat: { yla: 'lankku', ala: 'lankku', sivu: 'puu' } };
 const TUPA_LATTIA = { resepti: 'laatta', paikka: [0, YT, ZK], suunta: 0, leveys: LEV + 0.1, syvyys: 17.1, paksuus: 0.2, pinnat: { yla: 'lankku', ala: 'puu', sivu: 'puu' } };
 
@@ -113,7 +118,8 @@ export const TILA_LINNANTUPA = {
     { paikka: [r3(XW + 0.4), r3(YT + 2.1), -7.0], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
     { paikka: [r3(XE - 0.4), r3(YT + 2.1), -8.5], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
   ],
-  palikat: [TUPA_LATTIA, TUPA_KATTO, ...TUPA_PALKIT, ...TUPA_SEINAT, ...TUPA_SEINAT.flatMap((s, i) => kehyksetSeinasta(s, { siemen: 70 + i })), ...TUPA_AUKOT, ...TUPA_KALUSTEET],
+  palikat: [TUPA_LATTIA, TUPA_KATTO, ...TUPA_PALKIT, ...TUPA_KONSOLIT, ...TUPA_SEINAT, ...TUPA_SEINAT.flatMap((s, i) => kehyksetSeinasta(s, { siemen: 70 + i })),
+    ...TUPA_SEINAT.map((s, i) => sokkeliSeinasta(s, { siemen: 700 + i })), ...TUPA_AUKOT, ...TUPA_KALUSTEET],
 };
 
 /* ==================== Voudin sali (3. krs) ==================== */
@@ -169,5 +175,6 @@ export const TILA_VOUDIN_SALI = {
     { paikka: [r3(XW + 0.4), r3(YS + 2.3), -9.0], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
     { paikka: [r3(XE - 0.4), r3(YS + 2.3), 3.0], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
   ],
-  palikat: [SALI_LATTIA, ...SALI_SEINAT, ...SALI_SEINAT.flatMap((s, i) => kehyksetSeinasta(s, { siemen: 80 + i })), SALI_HOLVI, ...SALI_AUKOT, ...SALI_KALUSTEET],
+  palikat: [SALI_LATTIA, ...SALI_SEINAT, ...SALI_SEINAT.flatMap((s, i) => kehyksetSeinasta(s, { siemen: 80 + i })),
+    ...SALI_SEINAT.map((s, i) => sokkeliSeinasta(s, { siemen: 800 + i, korkeus: 0.32 })), SALI_HOLVI, ...SALI_AUKOT, ...SALI_KALUSTEET],
 };
