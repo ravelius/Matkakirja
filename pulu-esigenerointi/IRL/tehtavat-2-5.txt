@@ -1,0 +1,993 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä on Irlannin läntisin mantereen piste?
+AIEMPI VASTAUS (Livia):
+Ai tota. Irlannin läntisin mantereen piste on [[Dunmore Head]], joka päättää [[Dinglen niemimaan]] Kerryn kreivikunnassa. Niemimaan irlanninkielinen nimi on Corca Dhuibhne. Sen edustalla ovat [[Blasketinsaaret]], jotka ovat olleet asumattomia 1950-luvulta lähtien. Tästä ei kyl pidemmälle mantereella pääse.
+KYSYMYS: Kerro lisää: Dunmore Head
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä on Irlannin läntisin mantereen piste?
+AIEMPI VASTAUS (Livia):
+Ai tota. Irlannin läntisin mantereen piste on [[Dunmore Head]], joka päättää [[Dinglen niemimaan]] Kerryn kreivikunnassa. Niemimaan irlanninkielinen nimi on Corca Dhuibhne. Sen edustalla ovat [[Blasketinsaaret]], jotka ovat olleet asumattomia 1950-luvulta lähtien. Tästä ei kyl pidemmälle mantereella pääse.
+KYSYMYS: Kerro lisää: Dinglen niemimaan
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä on Irlannin läntisin mantereen piste?
+AIEMPI VASTAUS (Livia):
+Ai tota. Irlannin läntisin mantereen piste on [[Dunmore Head]], joka päättää [[Dinglen niemimaan]] Kerryn kreivikunnassa. Niemimaan irlanninkielinen nimi on Corca Dhuibhne. Sen edustalla ovat [[Blasketinsaaret]], jotka ovat olleet asumattomia 1950-luvulta lähtien. Tästä ei kyl pidemmälle mantereella pääse.
+KYSYMYS: Kerro lisää: Blasketinsaaret
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä vuori on Dinglen niemimaan korkein?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dinglen niemimaan korkein vuori on [[Mount Brandon]], joka kohoaa 951 metriin. Niemimaalla kulkee myös [[Conor Pass]], Irlannin korkein vuoriylikulku. Niemimaan länsipää kuuluu irlanninkieliseen [[gaeltacht]]-alueeseen. Aika korkea kiipeiltäväksi, mut lentäen se käy.
+KYSYMYS: Kerro lisää: Mount Brandon
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä vuori on Dinglen niemimaan korkein?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dinglen niemimaan korkein vuori on [[Mount Brandon]], joka kohoaa 951 metriin. Niemimaalla kulkee myös [[Conor Pass]], Irlannin korkein vuoriylikulku. Niemimaan länsipää kuuluu irlanninkieliseen [[gaeltacht]]-alueeseen. Aika korkea kiipeiltäväksi, mut lentäen se käy.
+KYSYMYS: Kerro lisää: Conor Pass
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä vuori on Dinglen niemimaan korkein?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dinglen niemimaan korkein vuori on [[Mount Brandon]], joka kohoaa 951 metriin. Niemimaalla kulkee myös [[Conor Pass]], Irlannin korkein vuoriylikulku. Niemimaan länsipää kuuluu irlanninkieliseen [[gaeltacht]]-alueeseen. Aika korkea kiipeiltäväksi, mut lentäen se käy.
+KYSYMYS: Kerro lisää: gaeltacht
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä on gaeltacht?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Gaeltacht on Irlannissa alue, jolla [[irlantia]] puhutaan yhä yhteisön arkikielenä, ja valtio on tunnustanut tällaiset alueet virallisesti. Niitä on pääasiassa maan länsi- ja luoteisrannikolla, muun muassa [[Galwayn]] ja [[Donegalin]] kreivikunnissa sekä Kerryssä. Dinglen niemimaan länsipää kuuluu niihin, vaikka irlannin osuus koko maan väestöstä on pieni. Ei oo helppoo opetella uutta kieltä, ku jo kyyhkyn kuhina riittää.
+KYSYMYS: Kerro lisää: irlantia
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Käsityö: Kolme merkkiä yhdessä sormuksessa] 1700-luku — Claddagh oli kalastajakylä Galwayn kaupungin laidalla, ja siitä on saanut nimensä sormus, jossa on kolme merkkiä: kaksi kättä, sydän ja kruunu. Kädet tarkoittavat ystävyyttä, sydän rakkautta ja kruunu uskollisuutta. Sormusta luetaan myös siitä, miten sitä pidetään. Oikeassa kädessä sydämen kärki ulospäin kertoo, ettei kantaja ole varattu, ja kärki sisäänpäin kertoo päinvastaista. Vasemmassa kädessä kärki sisäänpäin tarkoittaa avioliittoa. Vanhimmat säilyneet sormukset ovat 1700-luvulta.
+AIEMPI KYSYMYS: Mikä on gaeltacht?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Gaeltacht on Irlannissa alue, jolla [[irlantia]] puhutaan yhä yhteisön arkikielenä, ja valtio on tunnustanut tällaiset alueet virallisesti. Niitä on pääasiassa maan länsi- ja luoteisrannikolla, muun muassa [[Galwayn]] ja [[Donegalin]] kreivikunnissa sekä Kerryssä. Dinglen niemimaan länsipää kuuluu niihin, vaikka irlannin osuus koko maan väestöstä on pieni. Ei oo helppoo opetella uutta kieltä, ku jo kyyhkyn kuhina riittää.
+KYSYMYS: Kerro lisää: Galwayn
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä on gaeltacht?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Gaeltacht on Irlannissa alue, jolla [[irlantia]] puhutaan yhä yhteisön arkikielenä, ja valtio on tunnustanut tällaiset alueet virallisesti. Niitä on pääasiassa maan länsi- ja luoteisrannikolla, muun muassa [[Galwayn]] ja [[Donegalin]] kreivikunnissa sekä Kerryssä. Dinglen niemimaan länsipää kuuluu niihin, vaikka irlannin osuus koko maan väestöstä on pieni. Ei oo helppoo opetella uutta kieltä, ku jo kyyhkyn kuhina riittää.
+KYSYMYS: Kerro lisää: Donegalin
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Keitä kirjailijoita Blasketinsaarilta on tullut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nyt muistan: Blasketinsaarilta tunnetuimpia kirjoittajia ovat [[Tomás Ó Criomhthain]], jonka muistelmateos An tOileánach tunnetaan englanniksi nimellä The Islandman, [[Peig Sayers]], joka oli tunnettu kertoja, sekä [[Muiris Ó Súilleabháin]], jonka kirja Fiche Blian ag Fás on englanniksi Twenty Years A-Growing. Kaikki kirjoittivat irlanniksi ja kuvasivat saarten arkea ja perinnettä. Saaret ovat olleet asumattomia 1950-luvulta lähtien. Pienestä saaresta moinen kirjahylly, ei paha ollenkaan.
+KYSYMYS: Kerro lisää: Tomás Ó Criomhthain
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Keitä kirjailijoita Blasketinsaarilta on tullut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nyt muistan: Blasketinsaarilta tunnetuimpia kirjoittajia ovat [[Tomás Ó Criomhthain]], jonka muistelmateos An tOileánach tunnetaan englanniksi nimellä The Islandman, [[Peig Sayers]], joka oli tunnettu kertoja, sekä [[Muiris Ó Súilleabháin]], jonka kirja Fiche Blian ag Fás on englanniksi Twenty Years A-Growing. Kaikki kirjoittivat irlanniksi ja kuvasivat saarten arkea ja perinnettä. Saaret ovat olleet asumattomia 1950-luvulta lähtien. Pienestä saaresta moinen kirjahylly, ei paha ollenkaan.
+KYSYMYS: Kerro lisää: Peig Sayers
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Keitä kirjailijoita Blasketinsaarilta on tullut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nyt muistan: Blasketinsaarilta tunnetuimpia kirjoittajia ovat [[Tomás Ó Criomhthain]], jonka muistelmateos An tOileánach tunnetaan englanniksi nimellä The Islandman, [[Peig Sayers]], joka oli tunnettu kertoja, sekä [[Muiris Ó Súilleabháin]], jonka kirja Fiche Blian ag Fás on englanniksi Twenty Years A-Growing. Kaikki kirjoittivat irlanniksi ja kuvasivat saarten arkea ja perinnettä. Saaret ovat olleet asumattomia 1950-luvulta lähtien. Pienestä saaresta moinen kirjahylly, ei paha ollenkaan.
+KYSYMYS: Kerro lisää: Muiris Ó Súilleabháin
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Millainen tie Conor Pass on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Joo, tän minä tiedän. Conor Pass on Irlannin korkein vuoriylikulku, ja tie nousee [[Dinglen]] ja niemimaan pohjoisrannikon välillä vuorten yli noin 400 metrin korkeuteen. Ylimmässä osassa tie on kapea ja paikoin vain yhden ajoneuvon levyinen, joten vastaantulijoita väistellään tilaa antavissa kohdissa. Näkymät aukeavat laaksoihin ja merelle, ja [[Mount Brandonin]] vuoristo kohoaa lähellä. Suuria ajoneuvoja ei yleensä suositella tielle. Kyyhky lentää suoraan, ei tarvii väistellä ketään.
+KYSYMYS: Kerro lisää: Dinglen
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+AIEMPI KYSYMYS: Millainen tie Conor Pass on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Joo, tän minä tiedän. Conor Pass on Irlannin korkein vuoriylikulku, ja tie nousee [[Dinglen]] ja niemimaan pohjoisrannikon välillä vuorten yli noin 400 metrin korkeuteen. Ylimmässä osassa tie on kapea ja paikoin vain yhden ajoneuvon levyinen, joten vastaantulijoita väistellään tilaa antavissa kohdissa. Näkymät aukeavat laaksoihin ja merelle, ja [[Mount Brandonin]] vuoristo kohoaa lähellä. Suuria ajoneuvoja ei yleensä suositella tielle. Kyyhky lentää suoraan, ei tarvii väistellä ketään.
+KYSYMYS: Kerro lisää: Mount Brandonin
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+AIEMPI KYSYMYS: Mikä on Irlannin tasavallan suurin järvi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hyvä kysymys. Irlannin tasavallan suurin järvi on [[Lough Corrib]], jonka pinta-ala on 176 neliökilometriä. Koko Irlannin saarella se on toiseksi suurin [[Lough Neaghin]] jälkeen. Järvi sijaitsee Länsi-Irlannissa, ja [[Corrib-joki]] yhdistää sen mereen Galwayssa. Kartoituksissa järvestä on löytynyt muun muassa pronssi- ja rautakautisia puuveneitä, joten se on merkittävä meriarkeologinen kohde. Järvi, jolla on oma joki mereen asti, kyl kelpaa.
+KYSYMYS: Kerro lisää: Lough Corrib
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+AIEMPI KYSYMYS: Mikä on Irlannin tasavallan suurin järvi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hyvä kysymys. Irlannin tasavallan suurin järvi on [[Lough Corrib]], jonka pinta-ala on 176 neliökilometriä. Koko Irlannin saarella se on toiseksi suurin [[Lough Neaghin]] jälkeen. Järvi sijaitsee Länsi-Irlannissa, ja [[Corrib-joki]] yhdistää sen mereen Galwayssa. Kartoituksissa järvestä on löytynyt muun muassa pronssi- ja rautakautisia puuveneitä, joten se on merkittävä meriarkeologinen kohde. Järvi, jolla on oma joki mereen asti, kyl kelpaa.
+KYSYMYS: Kerro lisää: Lough Neaghin
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+AIEMPI KYSYMYS: Mikä on Irlannin tasavallan suurin järvi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hyvä kysymys. Irlannin tasavallan suurin järvi on [[Lough Corrib]], jonka pinta-ala on 176 neliökilometriä. Koko Irlannin saarella se on toiseksi suurin [[Lough Neaghin]] jälkeen. Järvi sijaitsee Länsi-Irlannissa, ja [[Corrib-joki]] yhdistää sen mereen Galwayssa. Kartoituksissa järvestä on löytynyt muun muassa pronssi- ja rautakautisia puuveneitä, joten se on merkittävä meriarkeologinen kohde. Järvi, jolla on oma joki mereen asti, kyl kelpaa.
+KYSYMYS: Kerro lisää: Corrib-joki
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+AIEMPI KYSYMYS: Mikä joki yhdistää järven mereen?
+AIEMPI VASTAUS (Livia):
+Mmm— joo. Järven ja meren yhdistää [[Corrib-joki]], jota kutsutaan myös Galway-joeksi ja joka laskee mereen [[Galwayssa]]. Veneiden pääsyä järveltä mereen on helpottanut kanava [[Friar's Cut]], jonka lähteiden mukaan kaivettiin 1100-luvulla ja joka oli saaren ensimmäinen kanava.
+
+Yksi joki ja kaksi nimeä. Minulla on sentään vain yksi, joskin kaksiosainen ja latinaa.
+KYSYMYS: Kerro lisää: Galwayssa
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+AIEMPI KYSYMYS: Mikä joki yhdistää järven mereen?
+AIEMPI VASTAUS (Livia):
+Mmm— joo. Järven ja meren yhdistää [[Corrib-joki]], jota kutsutaan myös Galway-joeksi ja joka laskee mereen [[Galwayssa]]. Veneiden pääsyä järveltä mereen on helpottanut kanava [[Friar's Cut]], jonka lähteiden mukaan kaivettiin 1100-luvulla ja joka oli saaren ensimmäinen kanava.
+
+Yksi joki ja kaksi nimeä. Minulla on sentään vain yksi, joskin kaksiosainen ja latinaa.
+KYSYMYS: Kerro lisää: Friar's Cut
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kaupunkilehti / Dublin] Kaupunki, jossa yhden kesäkuisen päivän tapahtumia juhlitaan joka vuosi uudestaan ja jonka valtiontunnus seisoo lasikaapissa yliopiston kirjastossa.
+AIEMPI KYSYMYS: Mitä viikingit tekivät Irlannissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Viikingit saapuivat Irlantiin lähteiden mukaan 790-luvulla, ja ensimmäiset iskut kohdistuivat rannikon luostareihin. Myöhemmin osa jäi asumaan, ja heidän perustamistaan tukikohdista kehittyivät kaupungit, kuten [[Dublin]], [[Waterford]] ja Limerick. Viikinkien vallan kausi päättyi suurelta osin [[Clontarfin taisteluun]] vuonna 1014, jossa irlantilaisia johti [[Brian Boru]]. Kaikki tämä tapahtui yli tuhat vuotta sitten, ja maailma on sen jälkeen muuttunut täysin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Dublin
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+AIEMPI KYSYMYS: Mitä viikingit tekivät Irlannissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Viikingit saapuivat Irlantiin lähteiden mukaan 790-luvulla, ja ensimmäiset iskut kohdistuivat rannikon luostareihin. Myöhemmin osa jäi asumaan, ja heidän perustamistaan tukikohdista kehittyivät kaupungit, kuten [[Dublin]], [[Waterford]] ja Limerick. Viikinkien vallan kausi päättyi suurelta osin [[Clontarfin taisteluun]] vuonna 1014, jossa irlantilaisia johti [[Brian Boru]]. Kaikki tämä tapahtui yli tuhat vuotta sitten, ja maailma on sen jälkeen muuttunut täysin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Waterford
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+AIEMPI KYSYMYS: Mitä viikingit tekivät Irlannissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Viikingit saapuivat Irlantiin lähteiden mukaan 790-luvulla, ja ensimmäiset iskut kohdistuivat rannikon luostareihin. Myöhemmin osa jäi asumaan, ja heidän perustamistaan tukikohdista kehittyivät kaupungit, kuten [[Dublin]], [[Waterford]] ja Limerick. Viikinkien vallan kausi päättyi suurelta osin [[Clontarfin taisteluun]] vuonna 1014, jossa irlantilaisia johti [[Brian Boru]]. Kaikki tämä tapahtui yli tuhat vuotta sitten, ja maailma on sen jälkeen muuttunut täysin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Clontarfin taisteluun
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki: Kolikon harppu on väärän muotoinen] 1300-luku — Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva seisoo Trinity Collegen kirjastossa: 1300- tai 1400-luvulla tehty harppu, jonka kaulassa on messinkitapit 29 kielelle. Sitä sanotaan Brian Borun harpuksi, vaikka kuningas Brian kuoli vuonna 1014 — satoja vuosia ennen kuin soitin veistettiin. Kolikoihin painettu harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on paljon leveämpi.
+AIEMPI KYSYMYS: Mitä viikingit tekivät Irlannissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Viikingit saapuivat Irlantiin lähteiden mukaan 790-luvulla, ja ensimmäiset iskut kohdistuivat rannikon luostareihin. Myöhemmin osa jäi asumaan, ja heidän perustamistaan tukikohdista kehittyivät kaupungit, kuten [[Dublin]], [[Waterford]] ja Limerick. Viikinkien vallan kausi päättyi suurelta osin [[Clontarfin taisteluun]] vuonna 1014, jossa irlantilaisia johti [[Brian Boru]]. Kaikki tämä tapahtui yli tuhat vuotta sitten, ja maailma on sen jälkeen muuttunut täysin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Brian Boru
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+AIEMPI KYSYMYS: Miksi voi säilyy Irlannin soissa tuhansia vuosia?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä minä pidän. Suovoita on löydetty Irlannin soista puuastioista, ja osa löydöistä on tuhansia vuosia vanhaa. Suo säilyttää voin, koska [[rahkasammal]] tekee veden happamaksi ja hapettomaksi, jolloin pilaantuminen hidastuu, ja lisäksi suo on viileä. Tuhannessa vuodessa syntyy noin metri [[turvetta]], ja suo säilyttää myös puisia teitä ja jopa kirjoja. Syytä siihen, miksi voi on haudattu suohon, ei tiedetä varmasti: ehdotuksia ovat varastointi ja uhrilahja. Mieluummin voi pullan päällä ku tuhat vuotta suossa.
+KYSYMYS: Kerro lisää: rahkasammal
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Luonto: Turvetta kaivaessa löytyi kokonainen kivikausi] 1875 — Kaksi vuotta isoisän matkan jälkeen, vuonna 1875, suomologi Karel Dežman löysi Ljubljanan suolta ensimmäiset merkit paalukylistä turvetta kaivaessaan. Myöhemmät kaivaukset paljastivat, että ihmiset olivat asuttaneet suon reunoja jo noin 4600–2000 eaa.: he rakensivat mökkinsä puupaalujen varaan veden ja kosteuden yläpuolelle. Ljubljanan suon paalukylät kuuluvat nykyään Unescon Alppien ympäristön esihistoriallisten paalukylien maailmanperintökohteeseen yhdessä satojen muiden löytöpaikkojen kanssa kuudessa maassa.
+AIEMPI KYSYMYS: Miksi voi säilyy Irlannin soissa tuhansia vuosia?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä minä pidän. Suovoita on löydetty Irlannin soista puuastioista, ja osa löydöistä on tuhansia vuosia vanhaa. Suo säilyttää voin, koska [[rahkasammal]] tekee veden happamaksi ja hapettomaksi, jolloin pilaantuminen hidastuu, ja lisäksi suo on viileä. Tuhannessa vuodessa syntyy noin metri [[turvetta]], ja suo säilyttää myös puisia teitä ja jopa kirjoja. Syytä siihen, miksi voi on haudattu suohon, ei tiedetä varmasti: ehdotuksia ovat varastointi ja uhrilahja. Mieluummin voi pullan päällä ku tuhat vuotta suossa.
+KYSYMYS: Kerro lisää: turvetta
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+AIEMPI KYSYMYS: Kuka oli Gráinne Ní Mháille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tästä naisesta kyyhky puhuu mielellään. Gráinne Ní Mháille oli 1500-luvulla elänyt merenkulkusuvun perijä, joka johti laivastoa Länsi-Irlannin rannikolla ja piti hallussaan linnoja ja aluksia. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar [[Elisabet I:tä]], koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin [[latinaksi]], ja Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+Latinaa. Se on sentään minun sukuni kieli, joten minusta tämä on elämän suurin diplomaattinen onnistuminen.
+KYSYMYS: Kerro lisää: Elisabet I:tä
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+AIEMPI KYSYMYS: Kuka oli Gráinne Ní Mháille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tästä naisesta kyyhky puhuu mielellään. Gráinne Ní Mháille oli 1500-luvulla elänyt merenkulkusuvun perijä, joka johti laivastoa Länsi-Irlannin rannikolla ja piti hallussaan linnoja ja aluksia. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar [[Elisabet I:tä]], koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin [[latinaksi]], ja Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+Latinaa. Se on sentään minun sukuni kieli, joten minusta tämä on elämän suurin diplomaattinen onnistuminen.
+KYSYMYS: Kerro lisää: latinaksi
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+AIEMPI KYSYMYS: Mikä on Irlannin saarista suurin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Irlannin saarista suurin on [[Achill]], joka sijaitsee [[Mayon]] kreivikunnan edustalla länsirannikolla ja jonka pinta-ala on noin 148 neliökilometriä. Saarella on asuttu ainakin neoliittisesta kivikaudesta lähtien, ja länsipäässä kohoavat [[Croaghaunin kalliot]], jotka ovat Euroopan kolmanneksi korkeimmat merikalliot. Iso saari, mut kyyhky lentää sen päästä päähän ennen aamupalaa.
+KYSYMYS: Kerro lisää: Achill
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kaupunkilehti / Historia: Ensimmäinen Teatro Colón seisoi eri paikassa] Ennen nykyistä oopperataloa kaupungissa oli toinen Teatro Colón, joka seisoi suoraan Plaza de Mayon laidalla ja oli isoisän vierailun aikaan kuudentoista vuoden ikäinen. Se avattiin 27. huhtikuuta 1857 Verdin La traviatalla, vain neljä vuotta oopperan italialaisen kantaesityksen jälkeen, ja sen kahdentuhannenviidensadan paikan joukossa oli oma aitiorivi suruvaatteisille vieraille. Talo suljettiin 13. syyskuuta 1888 uuden teatterin tieltä, mutta nykyinen Teatro Colón avattiin vasta kaksikymmentä vuotta myöhemmin, 25. toukokuuta 1908.
+- [Filippiinit — maalehti / Luonto: Kartio, jonka sade veistää] Mayon on maan aktiivisin tulivuori: purkauksia on kirjattu yli viisikymmentä viidensadan vuoden ajalta. Kartio tunnetaan tasaisuudestaan, ja muoto syntyy tasapainosta — purkaus kasaa tuhkaa rinteille, sade ja virtaava vesi kuluttavat sitä pois. Ylärinne on jyrkkä, alaosa lähes tasainen, ja huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin 1938 maan ensimmäiseksi kansallispuistoksi.
+AIEMPI KYSYMYS: Mikä on Irlannin saarista suurin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Irlannin saarista suurin on [[Achill]], joka sijaitsee [[Mayon]] kreivikunnan edustalla länsirannikolla ja jonka pinta-ala on noin 148 neliökilometriä. Saarella on asuttu ainakin neoliittisesta kivikaudesta lähtien, ja länsipäässä kohoavat [[Croaghaunin kalliot]], jotka ovat Euroopan kolmanneksi korkeimmat merikalliot. Iso saari, mut kyyhky lentää sen päästä päähän ennen aamupalaa.
+KYSYMYS: Kerro lisää: Mayon
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+AIEMPI KYSYMYS: Mikä on Irlannin saarista suurin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Irlannin saarista suurin on [[Achill]], joka sijaitsee [[Mayon]] kreivikunnan edustalla länsirannikolla ja jonka pinta-ala on noin 148 neliökilometriä. Saarella on asuttu ainakin neoliittisesta kivikaudesta lähtien, ja länsipäässä kohoavat [[Croaghaunin kalliot]], jotka ovat Euroopan kolmanneksi korkeimmat merikalliot. Iso saari, mut kyyhky lentää sen päästä päähän ennen aamupalaa.
+KYSYMYS: Kerro lisää: Croaghaunin kalliot
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+AIEMPI KYSYMYS: Minä vuonna silta yhdisti Achillin mantereeseen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Achill on ollut siltayhteydessä mantereeseen vuodesta 1887. Silta, [[Michael Davittin silta]], kulkee [[Achill Soundin]] ja Polrannyn kylien välillä, mutta sillan nykyinen rakenne voi olla uudempi kuin itse yhteys, enkä ole siitä varma. Siltoja kyyhky ei tarvitse, mut kiitos silti.
+KYSYMYS: Kerro lisää: Michael Davittin silta
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+AIEMPI KYSYMYS: Minä vuonna silta yhdisti Achillin mantereeseen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Achill on ollut siltayhteydessä mantereeseen vuodesta 1887. Silta, [[Michael Davittin silta]], kulkee [[Achill Soundin]] ja Polrannyn kylien välillä, mutta sillan nykyinen rakenne voi olla uudempi kuin itse yhteys, enkä ole siitä varma. Siltoja kyyhky ei tarvitse, mut kiitos silti.
+KYSYMYS: Kerro lisää: Achill Soundin
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+AIEMPI KYSYMYS: Mikä on Aution kylä Achillilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä että kysyit. Autio kylä sijaitsee [[Slievemore-vuoren]] juurella, ja siellä on 80–100 raunioitunutta yhden huoneen kivitaloa. Joidenkin lähteiden mukaan osa taloista liittyi kesälaidunnukseen, jossa karjaa siirrettiin kesäksi vuorille, mutta en ole varma, kuinka suuri osa. Saaren historiaan kuuluu myös [[Suuri nälänhätä]], joka iski Achilliin erityisen kovasti. Kivitalo ilman kattoa on kyl hyvä paikka istua.
+KYSYMYS: Kerro lisää: Slievemore-vuoren
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Historia: Nälänhätä pani opit palmunlehdille] 1. vuosisata eaa. — Buddhalaiset opit kulkivat vuosisatoja pelkkänä puheena: munkit opettelivat ne ulkoa ja lausuivat toisilleen sukupolvesta toiseen. Kuningas Walagamban aikana saarta koetteli kaksitoista vuotta kestänyt nälänhätä, jonka aikana munkit jäivät ilman almuja ja söivät juuria ja puiden lehtiä; noin kuusikymmentä heistä siirtyi ylängölle Mahaweli-joen varteen ja selvisi siellä koko ajan. Kun nälkävuodet päättyivät, munkit olivat nähneet, miten ohuen muistin varassa opit lepäsivät. Noin viisisataa oppinutta kokoontui Aluviharan kalliotemppeliin Matalessa, lausui tekstit ääneen, sopi hyväksytystä sanamuodosta ja kaiversi ne metallipuikolla palmunlehtiin.
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+AIEMPI KYSYMYS: Mikä on Aution kylä Achillilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä että kysyit. Autio kylä sijaitsee [[Slievemore-vuoren]] juurella, ja siellä on 80–100 raunioitunutta yhden huoneen kivitaloa. Joidenkin lähteiden mukaan osa taloista liittyi kesälaidunnukseen, jossa karjaa siirrettiin kesäksi vuorille, mutta en ole varma, kuinka suuri osa. Saaren historiaan kuuluu myös [[Suuri nälänhätä]], joka iski Achilliin erityisen kovasti. Kivitalo ilman kattoa on kyl hyvä paikka istua.
+KYSYMYS: Kerro lisää: Suuri nälänhätä
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Eden Park] 1900 Stadionin paikalla oli suo, jota ruokkivat Maungawhaun ja Mount Albertin laavaonkalot yli 30 000 vuoden takaa. Tāmakin maorit keräsivät suolta ruokaa ja tarveaineita. Vuonna 1845 alueen osti cornwallilainen maanviljelijä John Walters, eli isoisän aikaan tässä oli maatila. Urheilukenttänä paikka on ollut vuodesta 1900 ja krikettikenttänä 1903 alkaen, ja siitä saa kiittää Harry Ryania, joka vuokrasi innostuneena palan Waltersin maata. Kenttä oli kivinen ja kallioinen laidun, jonka notko täyttyi sateella ja pysyi veden alla koko talven. Vuonna 1907 kenttä oli kahdesti viikon ajan veden alla. Ylläpito kävi kalliiksi, ja 1910 paikallinen krikettiseura pyysi Aucklandin krikettiliittoa ottama…
+- [Miami — kaupunkilehti / Miami: Pastellikorttelit, jotka melkein purettiin] South Beachin pastellinväriset hotellit ovat maailman suurin art deco -kokoelma. Suurin osa taloista nousi lamavuosien ja 1940-luvun alun välillä: tyyli saapui Miamiin vasta sen jälkeen, kun kiinteistömarkkinat romahtivat 1925 ja vuoden 1926 hurrikaani jätti seudulla 25 000 ihmistä kodittomiksi. Sitä ennen rakennettiin välimerellistä tyyliä, jota korttelissa on yhä jäljellä. Kun taloja alettiin purkaa, sisustussuunnittelija Barbara Baer Capitman perusti 1976 tovereineen Miami Design Preservation Leaguen. Alue merkittiin kansalliseen rekisteriin 14. toukokuuta 1979, ja siihen kuuluu 960 historiallista rakennusta.
+AIEMPI KYSYMYS: Kuka oli Michael Davitt, jonka mukaan silta on nimetty?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Michael Davitt syntyi vuonna 1846 [[Mayon]] kreivikunnassa, ja hänen perheensä häädettiin kodistaan lapsuudessa, minkä jälkeen se muutti Englantiin. Nuorena hän menetti kätensä tehdastapaturmassa, mutta ryhtyi myöhemmin aktiiviksi, ja vuonna 1879 hän perusti [[Land Leaguen]], joka ajoi irlantilaisten vuokraviljelijöiden oikeuksia. Hänen nimeään kantaa Achillin ja mantereen yhdistävä silta Achill Soundin ja Polrannyn välillä. Kyl silta kantaa nimensä ansiolla.
+KYSYMYS: Kerro lisää: Land Leaguen
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+AIEMPI KYSYMYS: Miksi nälänhätä iski Irlantiin 1840-luvulla niin kovaa?
+AIEMPI VASTAUS (Livia):
+Tähän pitää vastata rauhassa. Suuri nälänhätä alkoi Irlannissa vuonna 1845, ja siitä on yli 180 vuotta. Syynä oli [[perunarutto]], joka tuhosi satoja useana vuonna peräkkäin, ja köyhä väestö oli lähes täysin perunan varassa, myös Achillilla, jossa maaperä oli huonoa. Tuon ajan maanomistusolot ja poliittiset päätökset vaikuttivat tilanteeseen, ja historioitsijat arvioivat niiden painoa eri tavoin. Arvioiden mukaan noin miljoona ihmistä kuoli ja toinen miljoona lähti maasta, mikä käynnisti pitkän [[siirtolaisuuden]]. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: perunarutto
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+- [Melbourne — kohdekartta / Kohdekartta: Siirtolaisuusmuseo] 1873–1876 Talo ei ole alun perin museo vaan tullikamari. Ensimmäinen tullikamari tällä paikalla joen vanhan sataman vieressä oli teltta; se korvattiin 1841 kaksikerroksisella basalttitalolla. Kultavuosien vaurastuminen 1850-luvulla vaati komeampaa: Peter Kerrin suunnitelmassa oli portaiden päällä mahtava pylväikkö, ja työ aloitettiin 1856–1858, mutta sitä ei koskaan viety loppuun sellaisenaan. Loppuosa rakennettiin 1873–1876 — juuri isoisän matkan vuosina — yksinkertaisemmalla uusrenessanssijulkisivulla, jonka piirsivät Kerr sekä julkisten töiden viraston J. J. Clark ja A. E. Johnson. Tullivirkailijat muuttivat pois 1965, minkä jälkeen talossa pitivät toimistoaan liittovaltion kansanedustaj…
+AIEMPI KYSYMYS: Miksi nälänhätä iski Irlantiin 1840-luvulla niin kovaa?
+AIEMPI VASTAUS (Livia):
+Tähän pitää vastata rauhassa. Suuri nälänhätä alkoi Irlannissa vuonna 1845, ja siitä on yli 180 vuotta. Syynä oli [[perunarutto]], joka tuhosi satoja useana vuonna peräkkäin, ja köyhä väestö oli lähes täysin perunan varassa, myös Achillilla, jossa maaperä oli huonoa. Tuon ajan maanomistusolot ja poliittiset päätökset vaikuttivat tilanteeseen, ja historioitsijat arvioivat niiden painoa eri tavoin. Arvioiden mukaan noin miljoona ihmistä kuoli ja toinen miljoona lähti maasta, mikä käynnisti pitkän [[siirtolaisuuden]]. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: siirtolaisuuden
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Kuinka korkea Powerscourtin vesiputous on?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on luku. Powerscourtin vesiputous on 121 metriä korkea, ja se on Irlannin toiseksi korkein vesiputous. Se sijaitsee [[Wicklowin]] kreivikunnassa Enniskerryn lähellä [[Dargle-joessa]], ja sen yllä kohoavat [[Djouce]] ja Maulin. Putous virtaa koko vuoden hevosenhännän muotoisena viuhkana. Minä kyl mieluummin laskeudun kuin putoan.
+KYSYMYS: Kerro lisää: Wicklowin
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Kuinka korkea Powerscourtin vesiputous on?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on luku. Powerscourtin vesiputous on 121 metriä korkea, ja se on Irlannin toiseksi korkein vesiputous. Se sijaitsee [[Wicklowin]] kreivikunnassa Enniskerryn lähellä [[Dargle-joessa]], ja sen yllä kohoavat [[Djouce]] ja Maulin. Putous virtaa koko vuoden hevosenhännän muotoisena viuhkana. Minä kyl mieluummin laskeudun kuin putoan.
+KYSYMYS: Kerro lisää: Dargle-joessa
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Kuinka korkea Powerscourtin vesiputous on?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on luku. Powerscourtin vesiputous on 121 metriä korkea, ja se on Irlannin toiseksi korkein vesiputous. Se sijaitsee [[Wicklowin]] kreivikunnassa Enniskerryn lähellä [[Dargle-joessa]], ja sen yllä kohoavat [[Djouce]] ja Maulin. Putous virtaa koko vuoden hevosenhännän muotoisena viuhkana. Minä kyl mieluummin laskeudun kuin putoan.
+KYSYMYS: Kerro lisää: Djouce
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Minkä joen vesiputous se on?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä tiedän. Powerscourtin vesiputous on [[Dargle-joen]] putous. Joki saa alkunsa [[Tonduff-vuoren]] etelärinteeltä ja virtaa [[Glensoulanin riippulaakson]] läpi jyrkkään kuoppaan, jossa putous on. Paikka on Wicklowin kreivikunnassa Enniskerryn lähellä. Nimiä riittää, mut joki on onneksi vain yksi.
+KYSYMYS: Kerro lisää: Dargle-joen
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Minkä joen vesiputous se on?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä tiedän. Powerscourtin vesiputous on [[Dargle-joen]] putous. Joki saa alkunsa [[Tonduff-vuoren]] etelärinteeltä ja virtaa [[Glensoulanin riippulaakson]] läpi jyrkkään kuoppaan, jossa putous on. Paikka on Wicklowin kreivikunnassa Enniskerryn lähellä. Nimiä riittää, mut joki on onneksi vain yksi.
+KYSYMYS: Kerro lisää: Tonduff-vuoren
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Minkä joen vesiputous se on?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä tiedän. Powerscourtin vesiputous on [[Dargle-joen]] putous. Joki saa alkunsa [[Tonduff-vuoren]] etelärinteeltä ja virtaa [[Glensoulanin riippulaakson]] läpi jyrkkään kuoppaan, jossa putous on. Paikka on Wicklowin kreivikunnassa Enniskerryn lähellä. Nimiä riittää, mut joki on onneksi vain yksi.
+KYSYMYS: Kerro lisää: Glensoulanin riippulaakson
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Mikä on riippulaakso?
+AIEMPI VASTAUS (Livia):
+Mmm— joo, tän minä tiedän. Riippulaakso on sivulaakso, joka päättyy korkealle päälaakson reunaan. Se syntyy yleensä [[jääkauden]] aikana, kun suuri [[jäätikkö]] kaivaa päälaakson syvemmäksi kuin pienemmän sivujäätikön laakson, ja jäätikön sulettua sivulaakson vesi putoaa päälaakson seinämältä alas. Powerscourtin vesiputoukseen liittyy tällainen laakso, [[Glensoulanin riippulaakso]]. Joki putoaa tyylikkäästi, kyyhky vain laskeutuu.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Mikä on riippulaakso?
+AIEMPI VASTAUS (Livia):
+Mmm— joo, tän minä tiedän. Riippulaakso on sivulaakso, joka päättyy korkealle päälaakson reunaan. Se syntyy yleensä [[jääkauden]] aikana, kun suuri [[jäätikkö]] kaivaa päälaakson syvemmäksi kuin pienemmän sivujäätikön laakson, ja jäätikön sulettua sivulaakson vesi putoaa päälaakson seinämältä alas. Powerscourtin vesiputoukseen liittyy tällainen laakso, [[Glensoulanin riippulaakso]]. Joki putoaa tyylikkäästi, kyyhky vain laskeutuu.
+KYSYMYS: Kerro lisää: jäätikkö
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Mikä on riippulaakso?
+AIEMPI VASTAUS (Livia):
+Mmm— joo, tän minä tiedän. Riippulaakso on sivulaakso, joka päättyy korkealle päälaakson reunaan. Se syntyy yleensä [[jääkauden]] aikana, kun suuri [[jäätikkö]] kaivaa päälaakson syvemmäksi kuin pienemmän sivujäätikön laakson, ja jäätikön sulettua sivulaakson vesi putoaa päälaakson seinämältä alas. Powerscourtin vesiputoukseen liittyy tällainen laakso, [[Glensoulanin riippulaakso]]. Joki putoaa tyylikkäästi, kyyhky vain laskeutuu.
+KYSYMYS: Kerro lisää: Glensoulanin riippulaakso
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+- [Dublin — kaupunkilehti / Historia: Dublinin leijona Hollywoodissa] Phoenix Parkin eläintarha avattiin yleisölle 1. syyskuuta 1831. Ensimmäinen leijonapari ostettiin 1855 ja se sai poikasia 1857. Siitä alkoi maine: Dublinin leijonat olivat 1800-luvulla maailmankuuluja. Maaliskuun 20. päivänä 1919 siellä syntyi poikanen, jolle annettiin nimeksi Cairbre, iiriksi vaunumies. Amerikassa hänet nimettiin uudestaan Slatsiksi, ja hänestä tuli vastaperustetun Metro-Goldwyn-Mayerin ensimmäinen tunnusleijona vuosina 1924–1928. Kausi osui mykkäelokuvan aikaan: toisin kuin yksikään seuraajansa hän ei tunnuksessa karjaise, vaan katselee ympärilleen.
+AIEMPI KYSYMYS: Mitä ovat Wicklowin vuoret?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Wicklowin vuoret ovat [[Dublinin]] eteläpuolella Irlannin itärannikolla kohoava vuoristoalue, ja ne kuuluvat maan laajimpiin yhtenäisiin ylänköalueisiin. Vuoret ovat pääosin graniittia, ja korkein huippu on [[Lugnaquilla]], noin 925 metriä. Alueella on laaksoja, järviä ja luostarikylä [[Glendalough]], ja osa vuorista kuuluu kansallispuistoon. Myös Powerscourtin putouksen yllä kohoava Djouce on osa tätä aluetta. Kyyhky ei kiipeä, kyyhky lentää.
+KYSYMYS: Kerro lisää: Dublinin
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+AIEMPI KYSYMYS: Mitä ovat Wicklowin vuoret?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Wicklowin vuoret ovat [[Dublinin]] eteläpuolella Irlannin itärannikolla kohoava vuoristoalue, ja ne kuuluvat maan laajimpiin yhtenäisiin ylänköalueisiin. Vuoret ovat pääosin graniittia, ja korkein huippu on [[Lugnaquilla]], noin 925 metriä. Alueella on laaksoja, järviä ja luostarikylä [[Glendalough]], ja osa vuorista kuuluu kansallispuistoon. Myös Powerscourtin putouksen yllä kohoava Djouce on osa tätä aluetta. Kyyhky ei kiipeä, kyyhky lentää.
+KYSYMYS: Kerro lisää: Lugnaquilla
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Mitä ovat Wicklowin vuoret?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Wicklowin vuoret ovat [[Dublinin]] eteläpuolella Irlannin itärannikolla kohoava vuoristoalue, ja ne kuuluvat maan laajimpiin yhtenäisiin ylänköalueisiin. Vuoret ovat pääosin graniittia, ja korkein huippu on [[Lugnaquilla]], noin 925 metriä. Alueella on laaksoja, järviä ja luostarikylä [[Glendalough]], ja osa vuorista kuuluu kansallispuistoon. Myös Powerscourtin putouksen yllä kohoava Djouce on osa tätä aluetta. Kyyhky ei kiipeä, kyyhky lentää.
+KYSYMYS: Kerro lisää: Glendalough
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+AIEMPI KYSYMYS: Mitä hevosenhännän muotoinen vesiputous tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hevosenhäntä on vesiputouksen muotoa kuvaava luokka: vesi laskeutuu koko matkan [[kallioseinämää]] pitkin pysyen kosketuksessa kallioon ja levittäytyy alaspäin mentäessä viuhkamaiseksi hevosen hännän tapaan. Se eroaa putouksesta, jossa vesi irtoaa reunasta ja putoaa vapaasti. Powerscourtin vesiputous kuuluu tähän tyyppiin, sillä [[Dargle-joen]] vesi virtaa viuhkana koko vuoden, ja korkeutta putouksella on 121 metriä. Kyyhkyn hännästä ei kyl vesiputousta saa.
+KYSYMYS: Kerro lisää: kallioseinämää
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Mitä nimi Sliabh Liag tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän. Irlanninkielinen nimi Sliabh Liag tarkoittaa yleensä kivipylväiden vuorta, ja siitä on peräisin myös englanninkielinen nimi [[Slieve League]]. Vuori kohoaa [[Donegalin]] kreivikunnan Atlantin rannikolla, ja sen [[merikalliot]] nousevat 601 metrin korkeuteen. Nimen osien tarkka kirjaimellinen käännös vaihtelee lähteestä riippuen, joten pysyn tässä yleisimmässä tulkinnassa. Kivi ja tuuli, siin on koko vuoren luonne.
+KYSYMYS: Kerro lisää: Slieve League
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Mitä nimi Sliabh Liag tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän. Irlanninkielinen nimi Sliabh Liag tarkoittaa yleensä kivipylväiden vuorta, ja siitä on peräisin myös englanninkielinen nimi [[Slieve League]]. Vuori kohoaa [[Donegalin]] kreivikunnan Atlantin rannikolla, ja sen [[merikalliot]] nousevat 601 metrin korkeuteen. Nimen osien tarkka kirjaimellinen käännös vaihtelee lähteestä riippuen, joten pysyn tässä yleisimmässä tulkinnassa. Kivi ja tuuli, siin on koko vuoren luonne.
+KYSYMYS: Kerro lisää: Donegalin
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Mitä nimi Sliabh Liag tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän. Irlanninkielinen nimi Sliabh Liag tarkoittaa yleensä kivipylväiden vuorta, ja siitä on peräisin myös englanninkielinen nimi [[Slieve League]]. Vuori kohoaa [[Donegalin]] kreivikunnan Atlantin rannikolla, ja sen [[merikalliot]] nousevat 601 metrin korkeuteen. Nimen osien tarkka kirjaimellinen käännös vaihtelee lähteestä riippuen, joten pysyn tässä yleisimmässä tulkinnassa. Kivi ja tuuli, siin on koko vuoren luonne.
+KYSYMYS: Kerro lisää: merikalliot
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Mikä on Slieve Leaguen tunnettu vaellusharjanne?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vaelluskysymys. Slieve Leaguen tunnetuin vaellusreitti on [[One Man's Path]] -harjanne, joka kulkee vuoren huipulla veitsenterävänä, kapeana selänteenä. Luonnontieteilijä [[Robert Lloyd Praeger]] kirjoitti vuonna 1937 ilmestyneissä muistelmissaan vuoren pohjoispuolen jyrkänteestä ja tästä harjanteesta, ja reittiä pidetään yhtenä Irlannin merkittävimmistä vaelluksista. Harjanne edellyttää tasapainoa, sopivia jalkineita ja hyvää säätä.
+
+Harjanteen yli kulkeminen on ihmiselle iso saavutus, mutta minulle se on tavallinen tiistai-iltapäivä. Siivet ovat kyllä vaellusvarusteista parhaat.
+KYSYMYS: Kerro lisää: One Man's Path
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Mikä on Slieve Leaguen tunnettu vaellusharjanne?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vaelluskysymys. Slieve Leaguen tunnetuin vaellusreitti on [[One Man's Path]] -harjanne, joka kulkee vuoren huipulla veitsenterävänä, kapeana selänteenä. Luonnontieteilijä [[Robert Lloyd Praeger]] kirjoitti vuonna 1937 ilmestyneissä muistelmissaan vuoren pohjoispuolen jyrkänteestä ja tästä harjanteesta, ja reittiä pidetään yhtenä Irlannin merkittävimmistä vaelluksista. Harjanne edellyttää tasapainoa, sopivia jalkineita ja hyvää säätä.
+
+Harjanteen yli kulkeminen on ihmiselle iso saavutus, mutta minulle se on tavallinen tiistai-iltapäivä. Siivet ovat kyllä vaellusvarusteista parhaat.
+KYSYMYS: Kerro lisää: Robert Lloyd Praeger
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Miten Slieve Leaguen kalliot näkee parhaiten?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Slieve Leaguen merikallioita kuvataan usein [[Bunglassin]] näköalapaikalta, jonne pääsee kapeaa tietä pitkin [[Teelinistä]]. Tien viimeiset kilometrit kulkevat jyrkänteen reunaa, joten ajaminen vaatii varovaisuutta. Toinen tapa on vaeltaa huipun [[One Man's Path]] -harjanteelle, jolta jyrkänne avautuu ylhäältä päin. Minä tykkään ylhäältä katsomisesta, se on ammattitaitoa.
+KYSYMYS: Kerro lisää: Bunglassin
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Miten Slieve Leaguen kalliot näkee parhaiten?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Slieve Leaguen merikallioita kuvataan usein [[Bunglassin]] näköalapaikalta, jonne pääsee kapeaa tietä pitkin [[Teelinistä]]. Tien viimeiset kilometrit kulkevat jyrkänteen reunaa, joten ajaminen vaatii varovaisuutta. Toinen tapa on vaeltaa huipun [[One Man's Path]] -harjanteelle, jolta jyrkänne avautuu ylhäältä päin. Minä tykkään ylhäältä katsomisesta, se on ammattitaitoa.
+KYSYMYS: Kerro lisää: Teelinistä
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Kuinka korkeat Slieve Leaguen merikalliot ovat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Slieve Leaguen merikalliot ovat 601 metriä korkeat. Ne ovat Irlannin toiseksi korkeimmat [[Croaghaunin]] jälkeen ja Euroopan korkeimpien merikallioiden joukossa. Vertailun vuoksi suositut [[Moherin kalliot]] Clarein kreivikunnassa ovat korkeimmillaan noin 200 metriä, joten Slieve Leaguen kalliot nousevat niitä selvästi korkeammalle. Siitä korkeudesta minä en kyl pudottais mitään, paitsi pullan.
+KYSYMYS: Kerro lisää: Croaghaunin
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Kuinka korkeat Slieve Leaguen merikalliot ovat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Slieve Leaguen merikalliot ovat 601 metriä korkeat. Ne ovat Irlannin toiseksi korkeimmat [[Croaghaunin]] jälkeen ja Euroopan korkeimpien merikallioiden joukossa. Vertailun vuoksi suositut [[Moherin kalliot]] Clarein kreivikunnassa ovat korkeimmillaan noin 200 metriä, joten Slieve Leaguen kalliot nousevat niitä selvästi korkeammalle. Siitä korkeudesta minä en kyl pudottais mitään, paitsi pullan.
+KYSYMYS: Kerro lisää: Moherin kalliot
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+AIEMPI KYSYMYS: Kuka Robert Lloyd Praeger oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Robert Lloyd Praeger oli irlantilainen luonnontieteilijä, joka tunnettiin Irlannin kasvillisuuden ja luonnon tutkijana. Hän kirjoitti vuonna 1937 ilmestyneissä muistelmissaan myös [[Slieve Leaguen]] pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä [[One Man's Path]] -harjanteesta. Hänen uransa muut yksityiskohdat jätän kertomatta, koska en ole niistä aivan varma. Hyvä muistelija on kuin hyvä kyyhky, kyl se reitin tietää.
+KYSYMYS: Kerro lisää: Slieve Leaguen
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+AIEMPI KYSYMYS: Mikä on Irlannin mantereen pohjoisin kohta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Irlannin mantereen pohjoisin kohta on [[Malin Head]] [[Donegalin]] kreivikunnan [[Inishowenin]] niemimaalla. Tarkemmin sanottuna pohjoisin piste on Dunalderagh, jonka leveysaste on noin 55,38 pohjoista. Niemeltä on saanut nimensä myös Malinin merialue, joka tunnetaan merisäätiedotuksista. Pohjoisemmaksi ei Irlannin mantereella pääse, mut lintu pääsee ihan minne vaan.
+KYSYMYS: Kerro lisää: Malin Head
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Mikä on Irlannin mantereen pohjoisin kohta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Irlannin mantereen pohjoisin kohta on [[Malin Head]] [[Donegalin]] kreivikunnan [[Inishowenin]] niemimaalla. Tarkemmin sanottuna pohjoisin piste on Dunalderagh, jonka leveysaste on noin 55,38 pohjoista. Niemeltä on saanut nimensä myös Malinin merialue, joka tunnetaan merisäätiedotuksista. Pohjoisemmaksi ei Irlannin mantereella pääse, mut lintu pääsee ihan minne vaan.
+KYSYMYS: Kerro lisää: Donegalin
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Mikä on Irlannin mantereen pohjoisin kohta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Irlannin mantereen pohjoisin kohta on [[Malin Head]] [[Donegalin]] kreivikunnan [[Inishowenin]] niemimaalla. Tarkemmin sanottuna pohjoisin piste on Dunalderagh, jonka leveysaste on noin 55,38 pohjoista. Niemeltä on saanut nimensä myös Malinin merialue, joka tunnetaan merisäätiedotuksista. Pohjoisemmaksi ei Irlannin mantereella pääse, mut lintu pääsee ihan minne vaan.
+KYSYMYS: Kerro lisää: Inishowenin
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Macapá: Nollapiiri keskellä kaupunkia] Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".
+- [St. John’s — kaupunkilehti / Viesti valtameren yli: Kirjain S kukkulalla] Guglielmo Marconi vastaanotti 12. joulukuuta 1901 ensimmäisen langattoman viestin Atlantin yli. Vastaanottopaikka oli Signal Hillillä lähellä Cabot Toweria, lähetys tuli Poldhusta Cornwallista, ja koko viesti oli morsen kirjain S — kolme pistettä. Kukkula oli valittu siksi, mihin sitä oli käytetty jo kahdensadan vuoden ajan: siellä katsottiin merelle. Cabot Toweriin avattiin 1933 Marconi-asema, joka toimi vuoteen 1960, ja jo 1920 sieltä tehtiin yksi ensimmäisistä langattomista ihmisäänen lähetyksistä valtameren yli: aseman miehet puhuivat Englannista lähteneen höyrylaivan kanssa.
+AIEMPI KYSYMYS: Minä vuonna Malin Headin torni rakennettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Malin Headin Tower Hillillä oleva torni rakennettiin vuonna 1805. Noin vuonna 1902 sen läheisyyteen rakennettiin lisäksi [[Marconi]]-yhtiön käyttämä [[merkinantoasema]]. Molemmat kertovat paikan pitkästä merkityksestä merenkululle ja viestiliikenteelle, ja [[Tower Hillillä]] sijaitseva torni on näistä vanhempi. Merkinantoasema kuulostaa vähän kilpailijalta, minä sanon vaan sen.
+KYSYMYS: Kerro lisää: Marconi
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kohdekartta / Kohdekartta: Tropiikin museo] 1987— Museo avattiin 1987 Ross Creekin varrelle nimellä Queensland Museum, North Queensland Branch, ja sai 1990 nimen Museum of Tropical Queensland; nykyään se on Queensland Museum Tropics. Uusi, varta vasten rakennettu talo nousi vanhan paikalle, koska yhden hylyn löydöille tarvittiin tila. Se hylky on HMS Pandora, laiva, joka lähetettiin nappaamaan Bountyn kapinalliset ja upposi itse paluumatkalla. Museo hoitaa myös toista hylkypaikkaa: SS Yongalaa, joka lähti Mackaysta 23. maaliskuuta 1911 kello 13.40 kohti Townsvilleä. Pian lähdön jälkeen merkinantoasema sai sähkeen hirmumyrskystä ja nosti liput, mutta Yongala ei nähnyt niitä — ja sille Englannista lähetetty langattoman lennättimen lait…
+AIEMPI KYSYMYS: Minä vuonna Malin Headin torni rakennettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Malin Headin Tower Hillillä oleva torni rakennettiin vuonna 1805. Noin vuonna 1902 sen läheisyyteen rakennettiin lisäksi [[Marconi]]-yhtiön käyttämä [[merkinantoasema]]. Molemmat kertovat paikan pitkästä merkityksestä merenkululle ja viestiliikenteelle, ja [[Tower Hillillä]] sijaitseva torni on näistä vanhempi. Merkinantoasema kuulostaa vähän kilpailijalta, minä sanon vaan sen.
+KYSYMYS: Kerro lisää: merkinantoasema
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kaupunkilehti / Viesti valtameren yli: Kirjain S kukkulalla] Guglielmo Marconi vastaanotti 12. joulukuuta 1901 ensimmäisen langattoman viestin Atlantin yli. Vastaanottopaikka oli Signal Hillillä lähellä Cabot Toweria, lähetys tuli Poldhusta Cornwallista, ja koko viesti oli morsen kirjain S — kolme pistettä. Kukkula oli valittu siksi, mihin sitä oli käytetty jo kahdensadan vuoden ajan: siellä katsottiin merelle. Cabot Toweriin avattiin 1933 Marconi-asema, joka toimi vuoteen 1960, ja jo 1920 sieltä tehtiin yksi ensimmäisistä langattomista ihmisäänen lähetyksistä valtameren yli: aseman miehet puhuivat Englannista lähteneen höyrylaivan kanssa.
+AIEMPI KYSYMYS: Minä vuonna Malin Headin torni rakennettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Malin Headin Tower Hillillä oleva torni rakennettiin vuonna 1805. Noin vuonna 1902 sen läheisyyteen rakennettiin lisäksi [[Marconi]]-yhtiön käyttämä [[merkinantoasema]]. Molemmat kertovat paikan pitkästä merkityksestä merenkululle ja viestiliikenteelle, ja [[Tower Hillillä]] sijaitseva torni on näistä vanhempi. Merkinantoasema kuulostaa vähän kilpailijalta, minä sanon vaan sen.
+KYSYMYS: Kerro lisää: Tower Hillillä
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Miksi Malin Headin sääasema on tunnettu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Malin Headin]] sääasema on yksi 22 asemasta, jotka kuuluvat [[BBC:n]] [[merisäätiedotukseen]]. Säähavainnot alkoivat siellä vuonna 1885, joten havaintoja on kertynyt yli 140 vuoden ajalta. Niemeltä on nimensä saanut myös Malinin merialue, joka mainitaan merisäätiedotuksessa.
+
+Sääasema on sellainen paikka, jota kyyhky kunnioittaa, sillä tuuli on meidän ammattikunnan oikea työnjohtaja. Yli sata neljäkymmentä vuotta tuulen kirjaamista on kunnioitettava saavutus.
+KYSYMYS: Kerro lisää: Malin Headin
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Päärautatieasema] 1919 Nykyinen asemarakennus syntyi arkkitehti Eliel Saarisen kilpailuehdotuksesta, jonka nimi oli "Siivekäs pyörä maapallon päällä". Rakennustyöt alkoivat vuonna 1912, mutta ensimmäinen maailmansota hidasti niitä — kesken rakennustöiden asema toimi jopa venäläisten sotilassairaalana vuosina 1915–1916. Uusi asema avattiin lopulta 5. maaliskuuta 1919. Pääsisäänkäyntiä vartioi neljä kivijättiläistä, niin kutsuttua lyhdynkantajaa, jotka kuvanveistäjä Emil Wikström loi — jokainen patsas pitelee kädessään valaistua palloa. Kellotorniin kellot asennettiin vasta vuonna 1922, ja julkisivun punainen graniitti tuotiin kaukaa Hangosta. Nykyään asemalla vilisee vilkkaimpina päivinä yli 200 000 ihmistä. …
+- [Caracas — kaupunkilehti / Musiikki: Orkesteri joka lähti Caracasista maailmalle] Ohjelman huipulle syntyi 12. helmikuuta 1978 Simón Bolívar -sinfoniaorkesteri. Sen taiteellisena johtajana on vuodesta 1999 toiminut Gustavo Dudamel, ja sen edessä ovat seisoneet muun muassa Claudio Abbado, Simon Rattle ja Daniel Barenboim. Elokuussa 2007 orkesteri debytoi Lontoon BBC Promsissa ja esiintyi samana vuonna Carnegie Hallissa; ylimääräisenä soitetusta Bernsteinin Mambosta tuli sen tunnusnumero. Kotinsa orkesteri vaihtoi 2007 Teresa Carreño -kulttuurikeskuksesta viereiseen musiikin keskukseen. Soittajia on 180, eikä se ole enää nuoriso-orkesteri: vuoteen 2011 mennessä keski-ikä oli noussut yli kahdenkymmenen.
+AIEMPI KYSYMYS: Miksi Malin Headin sääasema on tunnettu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Malin Headin]] sääasema on yksi 22 asemasta, jotka kuuluvat [[BBC:n]] [[merisäätiedotukseen]]. Säähavainnot alkoivat siellä vuonna 1885, joten havaintoja on kertynyt yli 140 vuoden ajalta. Niemeltä on nimensä saanut myös Malinin merialue, joka mainitaan merisäätiedotuksessa.
+
+Sääasema on sellainen paikka, jota kyyhky kunnioittaa, sillä tuuli on meidän ammattikunnan oikea työnjohtaja. Yli sata neljäkymmentä vuotta tuulen kirjaamista on kunnioitettava saavutus.
+KYSYMYS: Kerro lisää: BBC:n
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Miksi Malin Headin sääasema on tunnettu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Malin Headin]] sääasema on yksi 22 asemasta, jotka kuuluvat [[BBC:n]] [[merisäätiedotukseen]]. Säähavainnot alkoivat siellä vuonna 1885, joten havaintoja on kertynyt yli 140 vuoden ajalta. Niemeltä on nimensä saanut myös Malinin merialue, joka mainitaan merisäätiedotuksessa.
+
+Sääasema on sellainen paikka, jota kyyhky kunnioittaa, sillä tuuli on meidän ammattikunnan oikea työnjohtaja. Yli sata neljäkymmentä vuotta tuulen kirjaamista on kunnioitettava saavutus.
+KYSYMYS: Kerro lisää: merisäätiedotukseen
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+AIEMPI KYSYMYS: Mitä Ballyhillionin nousseet rannat kertovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, koska sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun [[jäätiköt]] alkoivat sulaa noin 15 000 vuotta sitten. Yleisesti ottaen jääkauden painosta vapautunut maankamara kohosi, ja entiset rantaviivat jäivät nykyisen merenpinnan yläpuolelle. Kyse on siis [[maankohoamisen]] jättämistä jäljistä, ja [[nousseet rannat]] ovat luonnon oma tallenne ilmaston ja jäätiköiden historiasta. Kiviin on kirjoitettu pitkä tarina, ja minä vaan luen sen.
+KYSYMYS: Kerro lisää: jäätiköt
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Mitä Ballyhillionin nousseet rannat kertovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, koska sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun [[jäätiköt]] alkoivat sulaa noin 15 000 vuotta sitten. Yleisesti ottaen jääkauden painosta vapautunut maankamara kohosi, ja entiset rantaviivat jäivät nykyisen merenpinnan yläpuolelle. Kyse on siis [[maankohoamisen]] jättämistä jäljistä, ja [[nousseet rannat]] ovat luonnon oma tallenne ilmaston ja jäätiköiden historiasta. Kiviin on kirjoitettu pitkä tarina, ja minä vaan luen sen.
+KYSYMYS: Kerro lisää: maankohoamisen
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Historia: Kapinaan nousseet oppineet] Tammikuussa 1835 Salvadorissa nousi kapinaan joukko orjuutettuja ja vapautettuja muslimeja, joita kutsuttiin Bahiassa nimellä malê. He osasivat lukea ja kirjoittaa arabiaa ja opettivat taitoa toisilleen kadunkulmissa ja vuokraamissaan rukoushuoneissa. Kapina ajoitettiin juhlapäivän yöhön, jolloin viranomaiset olivat Bonfimissa, mutta se paljastui etukäteen ja kukistettiin saman yön aikana; taistelu eteni Palatsiaukiolle, nykyiselle Praça Municipalille. Noin kaksisataa selvinnyttä karkotettiin takaisin Länsi-Afrikkaan, ja heidän jälkeläisiään on yhä muun muassa Lagosissa ja Ghanassa.
+AIEMPI KYSYMYS: Mitä Ballyhillionin nousseet rannat kertovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, koska sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun [[jäätiköt]] alkoivat sulaa noin 15 000 vuotta sitten. Yleisesti ottaen jääkauden painosta vapautunut maankamara kohosi, ja entiset rantaviivat jäivät nykyisen merenpinnan yläpuolelle. Kyse on siis [[maankohoamisen]] jättämistä jäljistä, ja [[nousseet rannat]] ovat luonnon oma tallenne ilmaston ja jäätiköiden historiasta. Kiviin on kirjoitettu pitkä tarina, ja minä vaan luen sen.
+KYSYMYS: Kerro lisää: nousseet rannat
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Mikä Inishowenin niemimaa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Donegalin]] kreivikunnan pohjoisosassa oleva Inishowen on niemimaa, jonka kärjessä on Malin Head. Sen itäpuolella on [[Lough Foyle]] ja länsipuolella [[Lough Swilly]]. Nimen irlanninkielinen muoto Inis Eoghain tarkoittaa Eoghanin saarta, vaikka alue onkin niemimaa. Saari, joka ei oo saari, vähän kuin pulla ilman rusinoita.
+KYSYMYS: Kerro lisää: Lough Foyle
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+AIEMPI KYSYMYS: Mikä Inishowenin niemimaa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Donegalin]] kreivikunnan pohjoisosassa oleva Inishowen on niemimaa, jonka kärjessä on Malin Head. Sen itäpuolella on [[Lough Foyle]] ja länsipuolella [[Lough Swilly]]. Nimen irlanninkielinen muoto Inis Eoghain tarkoittaa Eoghanin saarta, vaikka alue onkin niemimaa. Saari, joka ei oo saari, vähän kuin pulla ilman rusinoita.
+KYSYMYS: Kerro lisää: Lough Swilly
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+AIEMPI KYSYMYS: Mitä nimi Ceann Léime tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Irlanninkielinen nimi Ceann Léime tarkoittaa hyppyniemeä: sana ceann merkitsee päätä tai niemen kärkeä ja léim hyppyä. [[Loop Head]] on [[Shannon-joen]] suun pohjoispuolella [[Clarein]] kreivikunnassa Länsi-Irlannissa oleva niemi. Englanninkielinen nimi on todennäköisesti kehittynyt irlantilaisesta nimestä, mutta sen tarkasta syntytavasta en ole varma. Hyppyniemi kuulostaa kyl kyyhkyn mielestä oikealta paikalta lähteä lentoon.
+KYSYMYS: Kerro lisää: Loop Head
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+AIEMPI KYSYMYS: Mitä nimi Ceann Léime tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Irlanninkielinen nimi Ceann Léime tarkoittaa hyppyniemeä: sana ceann merkitsee päätä tai niemen kärkeä ja léim hyppyä. [[Loop Head]] on [[Shannon-joen]] suun pohjoispuolella [[Clarein]] kreivikunnassa Länsi-Irlannissa oleva niemi. Englanninkielinen nimi on todennäköisesti kehittynyt irlantilaisesta nimestä, mutta sen tarkasta syntytavasta en ole varma. Hyppyniemi kuulostaa kyl kyyhkyn mielestä oikealta paikalta lähteä lentoon.
+KYSYMYS: Kerro lisää: Shannon-joen
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Mitä nimi Ceann Léime tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Irlanninkielinen nimi Ceann Léime tarkoittaa hyppyniemeä: sana ceann merkitsee päätä tai niemen kärkeä ja léim hyppyä. [[Loop Head]] on [[Shannon-joen]] suun pohjoispuolella [[Clarein]] kreivikunnassa Länsi-Irlannissa oleva niemi. Englanninkielinen nimi on todennäköisesti kehittynyt irlantilaisesta nimestä, mutta sen tarkasta syntytavasta en ole varma. Hyppyniemi kuulostaa kyl kyyhkyn mielestä oikealta paikalta lähteä lentoon.
+KYSYMYS: Kerro lisää: Clarein
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Tanger — kaupunkilehti / Tanger] Tanger seisoo Afrikan luoteiskulmassa kahden meren rajalla: kaupungin edustalla Atlantti kohtaa Välimeren. Salmi on kapeimmillaan 14,2 kilometriä, ja siksi tämä satama on aina ollut portti — ja kaikkien haluama.
+- [St. John’s — kaupunkilehti / Viesti valtameren yli] St. John’s on Pohjois-Amerikan itäisin kaupunki, ja siksi se on ollut mantereen ensimmäinen pysäkki aina, kun joku on keksinyt uuden tavan ylittää Atlantti.
+AIEMPI KYSYMYS: Mikä merkitsee Loop Headin kärkeä?
+AIEMPI VASTAUS (Livia):
+Just niin, majakka. Loop Headin kärkeä merkitsee näkyvä majakka. Niemen toisella puolella on [[Atlantti]] ja toisella [[Shannonin]] suisto, ja vastapäätä Shannonin toisella puolella on [[Kerry Head]]. Majakka toimii siten merenkulkijoille tärkeänä maamerkkinä joen suun tuntumassa. Minä tykkään majakoista, ne on kuin merelle pystytettyjä kiitoratoja.
+KYSYMYS: Kerro lisää: Atlantti
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+AIEMPI KYSYMYS: Mikä merkitsee Loop Headin kärkeä?
+AIEMPI VASTAUS (Livia):
+Just niin, majakka. Loop Headin kärkeä merkitsee näkyvä majakka. Niemen toisella puolella on [[Atlantti]] ja toisella [[Shannonin]] suisto, ja vastapäätä Shannonin toisella puolella on [[Kerry Head]]. Majakka toimii siten merenkulkijoille tärkeänä maamerkkinä joen suun tuntumassa. Minä tykkään majakoista, ne on kuin merelle pystytettyjä kiitoratoja.
+KYSYMYS: Kerro lisää: Shannonin
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+AIEMPI KYSYMYS: Mikä merkitsee Loop Headin kärkeä?
+AIEMPI VASTAUS (Livia):
+Just niin, majakka. Loop Headin kärkeä merkitsee näkyvä majakka. Niemen toisella puolella on [[Atlantti]] ja toisella [[Shannonin]] suisto, ja vastapäätä Shannonin toisella puolella on [[Kerry Head]]. Majakka toimii siten merenkulkijoille tärkeänä maamerkkinä joen suun tuntumassa. Minä tykkään majakoista, ne on kuin merelle pystytettyjä kiitoratoja.
+KYSYMYS: Kerro lisää: Kerry Head

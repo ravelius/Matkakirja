@@ -1,0 +1,1039 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Aurinko käy sisällä kerran vuodessa] 3200 eaa — Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain parillekymmenelle.
+AIEMPI KYSYMYS: Mitä sana megaliitti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Megaliitti tulee kreikan sanoista, jotka tarkoittavat suurta ja kiveä. Sillä tarkoitetaan suurista kivilohkareista rakennettua esihistoriallista monumenttia, kuten hautaa, kiviympyrää tai pystykiveä. Megaliittirakennelmia on Euroopassa laajalti, tunnetuimpia esimerkiksi englantilainen [[Stonehenge]] ja ranskalaisen Bretagnen [[Carnacin]] kivirivit. Kivi on kivi, mutta kyl nämä olivat isoja.
+KYSYMYS: Kerro lisää: Stonehenge
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+AIEMPI KYSYMYS: Mitä sana megaliitti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Megaliitti tulee kreikan sanoista, jotka tarkoittavat suurta ja kiveä. Sillä tarkoitetaan suurista kivilohkareista rakennettua esihistoriallista monumenttia, kuten hautaa, kiviympyrää tai pystykiveä. Megaliittirakennelmia on Euroopassa laajalti, tunnetuimpia esimerkiksi englantilainen [[Stonehenge]] ja ranskalaisen Bretagnen [[Carnacin]] kivirivit. Kivi on kivi, mutta kyl nämä olivat isoja.
+KYSYMYS: Kerro lisää: Carnacin
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+AIEMPI KYSYMYS: Kuka oli kuningatar Medb irlantilaisessa tarustossa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Medb eli Meadhbh oli [[Connachtin]] kuningatar irlantilaisessa mytologiassa ja tarustossa. Hänet tunnetaan erityisesti eepoksesta [[Táin Bó Cúailnge]], jossa hän johtaa sotaretkeä Ulsterin härkiä vastaan ja kohtaa sankarin nimeltä [[Cú Chulainn]]. Perimätiedon mukaan hänet on haudattu Knocknarean huipulle. Tarut on kirjattu muistiin keskiajalla, mutta niiden aines on todennäköisesti vanhempaa. Kuningattaren hauta on kyl hyvällä paikalla.
+KYSYMYS: Kerro lisää: Connachtin
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+AIEMPI KYSYMYS: Kuka oli kuningatar Medb irlantilaisessa tarustossa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Medb eli Meadhbh oli [[Connachtin]] kuningatar irlantilaisessa mytologiassa ja tarustossa. Hänet tunnetaan erityisesti eepoksesta [[Táin Bó Cúailnge]], jossa hän johtaa sotaretkeä Ulsterin härkiä vastaan ja kohtaa sankarin nimeltä [[Cú Chulainn]]. Perimätiedon mukaan hänet on haudattu Knocknarean huipulle. Tarut on kirjattu muistiin keskiajalla, mutta niiden aines on todennäköisesti vanhempaa. Kuningattaren hauta on kyl hyvällä paikalla.
+KYSYMYS: Kerro lisää: Táin Bó Cúailnge
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+AIEMPI KYSYMYS: Kuka oli kuningatar Medb irlantilaisessa tarustossa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Medb eli Meadhbh oli [[Connachtin]] kuningatar irlantilaisessa mytologiassa ja tarustossa. Hänet tunnetaan erityisesti eepoksesta [[Táin Bó Cúailnge]], jossa hän johtaa sotaretkeä Ulsterin härkiä vastaan ja kohtaa sankarin nimeltä [[Cú Chulainn]]. Perimätiedon mukaan hänet on haudattu Knocknarean huipulle. Tarut on kirjattu muistiin keskiajalla, mutta niiden aines on todennäköisesti vanhempaa. Kuningattaren hauta on kyl hyvällä paikalla.
+KYSYMYS: Kerro lisää: Cú Chulainn
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+AIEMPI KYSYMYS: Mitä nimi Slieve na Calliagh tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi on kyllä mielenkiintoinen. Slieve na Calliagh tarkoittaa suunnilleen akan vuorta, tarkemmin [[Cailleachin]] vuorta, ja Cailleach on irlantilaisen mytologian jumalallinen akka. Nimi koskee [[Loughcrewin]] kukkuloita ja niiden hautoja, jotka ovat [[Meathin]] kreivikunnan korkein kohta. Hautoja on yli kolmekymmentä neljällä kukkulalla, ja ne ajoitetaan noin vuoteen 3300 eaa.
+
+Uskon, että kivet ovat tällaisen akan hartioille helppo kuorma; minulle riittää jo kirjekääre.
+KYSYMYS: Kerro lisää: Cailleachin
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+AIEMPI KYSYMYS: Mitä nimi Slieve na Calliagh tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi on kyllä mielenkiintoinen. Slieve na Calliagh tarkoittaa suunnilleen akan vuorta, tarkemmin [[Cailleachin]] vuorta, ja Cailleach on irlantilaisen mytologian jumalallinen akka. Nimi koskee [[Loughcrewin]] kukkuloita ja niiden hautoja, jotka ovat [[Meathin]] kreivikunnan korkein kohta. Hautoja on yli kolmekymmentä neljällä kukkulalla, ja ne ajoitetaan noin vuoteen 3300 eaa.
+
+Uskon, että kivet ovat tällaisen akan hartioille helppo kuorma; minulle riittää jo kirjekääre.
+KYSYMYS: Kerro lisää: Loughcrewin
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Urheilu: Rata, joka on meren pohja] 1868 — Laytownissa Meathin kreivikunnassa ajetaan laukkakilpailut hiekkarannalla. Kilpailua on järjestetty vuodesta 1868, ja se on Euroopan ainoa virallinen kilparata, joka on samalla meren pohja. Aikataulu ei riipu kellosta vaan siitä, milloin vuorovesi on matalimmillaan: rata voidaan merkitä vasta kun vesi on vetäytynyt, ja kaikki on purettava ennen kuin se palaa. Varsinaista katsomoa ei ole, vaan yleisö seisoo rannalla aitojen takana. Tallialueena toimii yhden päivän ajan läheinen pelto.
+AIEMPI KYSYMYS: Mitä nimi Slieve na Calliagh tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi on kyllä mielenkiintoinen. Slieve na Calliagh tarkoittaa suunnilleen akan vuorta, tarkemmin [[Cailleachin]] vuorta, ja Cailleach on irlantilaisen mytologian jumalallinen akka. Nimi koskee [[Loughcrewin]] kukkuloita ja niiden hautoja, jotka ovat [[Meathin]] kreivikunnan korkein kohta. Hautoja on yli kolmekymmentä neljällä kukkulalla, ja ne ajoitetaan noin vuoteen 3300 eaa.
+
+Uskon, että kivet ovat tällaisen akan hartioille helppo kuorma; minulle riittää jo kirjekääre.
+KYSYMYS: Kerro lisää: Meathin
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+AIEMPI KYSYMYS: Millaista taidetta Loughcrewin hautoihin on kaiverrettu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Loughcrewin hautojen kiviin on kaiverrettu harvinaisia [[megaliittitaiteen]] kuvioita, kuten kierteitä, ympyröitä, säteitä ja kukkamaisia muotoja. Kuvioiden merkitystä ei varmasti tunneta, ja tutkijoilla on useita arvauksia. Tunnettu on [[Cairn T]], jonka sisäkammion kuvioita aamuaurinko kerrotaan valaisevan [[päiväntasauksen]] aikaan. Hyvä jälki, kun ottaa huomioon että kivi on kovaa.
+KYSYMYS: Kerro lisää: megaliittitaiteen
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Cairns — kohdekartta / Kohdekartta: Cairnsin rautatieasema] 1891 Ensimmäinen Cairnsin rautatieasema valmistui 1891, kun ylängölle vievän radan ensimmäinen osa avattiin. Asemarakennus oli kaksikerroksinen ja puinen, ja siinä oli koristeelliset parvekkeet — juuri sellainen trooppinen puuarkkitehtuuri, josta pohjoinen Queensland tunnettiin. Radasta haarautui vuosien mittaan uusia linjoja, jotka palvelivat puutavaraa, kaivoksia, karjataloutta ja tupakanviljelyä. Radalla oli seuraus, jota harvoin muistetaan: se ratkaisi kilpailun pohjoisen satamien välillä. Cooktown ja Port Douglas kutistuivat, kun Cairns sai yhteyden sisämaahan. Puinen ratapiha ulottui laiturille asti, ja vuonna 1886 rakennettu puinen rautatielaituri yhdisti sataman suoraan rataan. Asem…
+- [Cairns — kaupunkilehti / Cairns: Gimuy oli täällä ennen Cairnsia] Ennen brittiläistä asutusta seutua asuttivat gimuy-walubarra-yidinjit, ja yidinyn kielellä alue on yhä nimeltään Gimuy. Kieltä on tutkinut perusteellisesti kielitieteilijä R. M. W. Dixon, jonka Yidinyn kielioppi ilmestyi 1977. Seutu on edelleen neljän tunnustetun perinteisten omistajien ryhmän kotimaata: Dawul Wuru eli yirrganydjit Cairnsin ja Port Douglasin välillä, djabugayt Barron Gorgen kansallispuistossa, gunggandjit yli 7 500 hehtaarilla Yarrabahin niemimaalla ja yidinjiklaanit. Vuoden 2021 väestönlaskennassa alkuperäiskansojen osuus kaupungin väestöstä oli 9,7 prosenttia.
+- [Cairns — kaupunkilehti / Cairns] Cairnsia ei ollut vielä olemassa, kun isoisä matkusti: vuonna 1873 paikalla oli retkikunnan leiri Trinity Bayn rannalla, ja kaupunki perustettiin vasta kolme vuotta myöhemmin kultakenttien satamaksi.
+AIEMPI KYSYMYS: Millaista taidetta Loughcrewin hautoihin on kaiverrettu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Loughcrewin hautojen kiviin on kaiverrettu harvinaisia [[megaliittitaiteen]] kuvioita, kuten kierteitä, ympyröitä, säteitä ja kukkamaisia muotoja. Kuvioiden merkitystä ei varmasti tunneta, ja tutkijoilla on useita arvauksia. Tunnettu on [[Cairn T]], jonka sisäkammion kuvioita aamuaurinko kerrotaan valaisevan [[päiväntasauksen]] aikaan. Hyvä jälki, kun ottaa huomioon että kivi on kovaa.
+KYSYMYS: Kerro lisää: Cairn T
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+AIEMPI KYSYMYS: Millaista taidetta Loughcrewin hautoihin on kaiverrettu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Loughcrewin hautojen kiviin on kaiverrettu harvinaisia [[megaliittitaiteen]] kuvioita, kuten kierteitä, ympyröitä, säteitä ja kukkamaisia muotoja. Kuvioiden merkitystä ei varmasti tunneta, ja tutkijoilla on useita arvauksia. Tunnettu on [[Cairn T]], jonka sisäkammion kuvioita aamuaurinko kerrotaan valaisevan [[päiväntasauksen]] aikaan. Hyvä jälki, kun ottaa huomioon että kivi on kovaa.
+KYSYMYS: Kerro lisää: päiväntasauksen
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Radiohiiliajoitus perustuu [[hiili-14-isotoopin]] hajoamiseen. Elävät olennot ottavat sitä itseensä koko elämänsä ajan, mutta kuoleman jälkeen määrä alkaa vähentyä tunnetulla vauhdilla; [[puolintumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä oleva määrä esimerkiksi luusta, puuhiilestä tai puusta voidaan laskea näytteen ikä. Menetelmä toimii parhaiten enintään noin 50 000 vuotta vanhoille orgaanisille näytteille, ja sillä ajoitetaan myös kivikautisia hautoja. Kivi ei kerro ikäänsä, mutta hiili kyl kertoo.
+KYSYMYS: Kerro lisää: hiili-14-isotoopin
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Radiohiiliajoitus perustuu [[hiili-14-isotoopin]] hajoamiseen. Elävät olennot ottavat sitä itseensä koko elämänsä ajan, mutta kuoleman jälkeen määrä alkaa vähentyä tunnetulla vauhdilla; [[puolintumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä oleva määrä esimerkiksi luusta, puuhiilestä tai puusta voidaan laskea näytteen ikä. Menetelmä toimii parhaiten enintään noin 50 000 vuotta vanhoille orgaanisille näytteille, ja sillä ajoitetaan myös kivikautisia hautoja. Kivi ei kerro ikäänsä, mutta hiili kyl kertoo.
+KYSYMYS: Kerro lisää: puolintumisaika
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Katolinen yliopisto] 1928 Yliopisto perustettiin maaliskuussa 1928 Isabel Caces de Brownin runsaan lahjoituksen turvin. Sitäkin vanhempi on oikeustieteellinen tiedekunta: pyhien sydänten isät perustivat sen 1894 itsenäiseksi korkeakouluksi, ja se liitettiin myöhemmin yliopistoon, koska molemmat olivat katolisen kirkon yksiköitä. Ensimmäiset tutkinnot olivat sähkötekniikka, rakentaminen, kemia, kaivostoiminta, liikkeenjohto, konetekniikka, koristetaiteet ja kauppamerenkulku. Casa Central on keskustassa muutaman korttelin päässä kongressitalosta, metrosta ja merestä, ja juuri se on kaupunkiyliopiston ongelma: alkuperäisellä paikalla ei ole tilaa kasvaa. Osa yksiköistä on siksi hajallaan Valparaísossa, Viña del Ma…
+AIEMPI KYSYMYS: Miten muinaiset ihmiset saivat suuret kivet paikoilleen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarkkaa varmuutta menetelmistä ei ole, mutta arkeologit pitävät todennäköisenä, että kivet siirrettiin ihmisvoimin. Kiviä vedettiin luultavasti kelkoilla ja puurullien päällä, ja pystytyksessä käytettiin vipuja, köysiä ja kuoppia, joihin kivi laskettiin. Menetelmiä on testattu [[kokeellisen arkeologian]] kokeissa, esimerkiksi [[Stonehengen]] kaltaisten kohteiden osalta. Työhön tarvittiin paljon väkeä, mikä viittaa vahvaan yhteisölliseen järjestäytymiseen.
+
+Minä en jaksa nostaa edes leipäpalaa kauas, joten kunnioitan tätä ihan tosissani. Moni käsipari yhteen hiileen toimii, ja se on viestinviejänkin oppi.
+KYSYMYS: Kerro lisää: kokeellisen arkeologian
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Historia: Kivet kiskottiin 250 kilometrin päästä] n. 2500 eaa. — Stonehengen suurimmat kivet painavat 25 tonnia, mutta hämmästyttävimpiä ovat pienemmät siniset kivet: ne louhittiin Walesin Preselivuorilta, noin 250 kilometrin päästä. Kukaan ei tiedä varmasti, miten ne siirrettiin — pyörää ei vielä ollut. Kehä on rakennettu niin, että keskikesän auringonnousu osuu täsmälleen sisäänkäynnin akselille, joten se toimii jättimäisenä kalenterina. Rakentamiseen meni yli tuhat vuotta ja monta sukupolvea: ne jotka aloittivat, eivät nähneet sitä valmiina.
+AIEMPI KYSYMYS: Miten muinaiset ihmiset saivat suuret kivet paikoilleen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarkkaa varmuutta menetelmistä ei ole, mutta arkeologit pitävät todennäköisenä, että kivet siirrettiin ihmisvoimin. Kiviä vedettiin luultavasti kelkoilla ja puurullien päällä, ja pystytyksessä käytettiin vipuja, köysiä ja kuoppia, joihin kivi laskettiin. Menetelmiä on testattu [[kokeellisen arkeologian]] kokeissa, esimerkiksi [[Stonehengen]] kaltaisten kohteiden osalta. Työhön tarvittiin paljon väkeä, mikä viittaa vahvaan yhteisölliseen järjestäytymiseen.
+
+Minä en jaksa nostaa edes leipäpalaa kauas, joten kunnioitan tätä ihan tosissani. Moni käsipari yhteen hiileen toimii, ja se on viestinviejänkin oppi.
+KYSYMYS: Kerro lisää: Stonehengen
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Merchandise Mart] 1930 Kun Marshall Field & Co. ilmoitti 1927 rakentavansa Chicago-joen pohjoisrannalle, tontti oli vanhaa ratapihaa: siinä oli seissyt Chicago and North Western -radan Wells Streetin asema, joka hylättiin 1911. Sitä ennen samalla kohdalla oli ollut alkuperäiskansojen kauppapaikka. Ratapihan purkaminen sopi kaupungin kaavakomissiolle, joka halusi siistiä jokivarren, ja radan ilmatilaoikeuksien kanssa tontti oli tarpeeksi iso maailman suurimmalle rakennukselle. Työmaa aloitettiin 16. elokuuta 1928, ja se muistutti enemmän patotyömaata kuin talonrakennusta. Sementti saapui laivalla ja nostettiin paineilmalla siiloihin kahdenkymmenen metrin korkeuteen, sora ja hiekka tulivat junavaunuissa kuljet…
+- [Christchurch — kohdekartta / Kohdekartta: Kaupungintalo] 1972 Christchurchin kaupungintalo ei ole hallintorakennus vaan konserttitalo. Paikasta kiisteltiin 1920-luvulta asti, ja lopullinen tontti Avonin rannalla Victoria Squarea vastapäätä valittiin kaupungin johtavien arkkitehtien yksimielisellä suosituksella. Talo avattiin 30. syyskuuta 1972, ja sen suunnittelivat christchurchilaiset Miles Warren ja Maurice Mahoney. Kuuluisimmaksi talon tekee akustiikka. Professori Harold Marshall oli mukana suunnittelussa, ja kun yksikään kilpailuehdotus ei ollut sitä pitkänomaista suorakaidetta, jota konserttisalilta siihen aikaan odotettiin, hän otti mallia Lontoon Royal Festival Hallista ja ripusti soikean salin seinille heijastuslevyt, jotka ohjaavat äänen…
+AIEMPI KYSYMYS: Kuka rakennutti sillan, jonka ympärille New Ross kasvoi?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen minä muistan. Sillan rakennutti ritari [[William Marshall]], joka tuli vaimonsa [[Isabella de Clare]] kanssa alueelle normannien valloituksen jälkeen, ja kaupunki kasvoi sillan ympärille [[Barrow-joen]] rannalle. Rossin kronikan mukaan Isabella ryhtyi rakentamaan kaupunkia vuonna 1189. Siltoja minä arvostan, vaikka en niitä tarvitsekaan.
+KYSYMYS: Kerro lisää: William Marshall
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Kuka rakennutti sillan, jonka ympärille New Ross kasvoi?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen minä muistan. Sillan rakennutti ritari [[William Marshall]], joka tuli vaimonsa [[Isabella de Clare]] kanssa alueelle normannien valloituksen jälkeen, ja kaupunki kasvoi sillan ympärille [[Barrow-joen]] rannalle. Rossin kronikan mukaan Isabella ryhtyi rakentamaan kaupunkia vuonna 1189. Siltoja minä arvostan, vaikka en niitä tarvitsekaan.
+KYSYMYS: Kerro lisää: Isabella de Clare
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Kuka rakennutti sillan, jonka ympärille New Ross kasvoi?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen minä muistan. Sillan rakennutti ritari [[William Marshall]], joka tuli vaimonsa [[Isabella de Clare]] kanssa alueelle normannien valloituksen jälkeen, ja kaupunki kasvoi sillan ympärille [[Barrow-joen]] rannalle. Rossin kronikan mukaan Isabella ryhtyi rakentamaan kaupunkia vuonna 1189. Siltoja minä arvostan, vaikka en niitä tarvitsekaan.
+KYSYMYS: Kerro lisää: Barrow-joen
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Minkä laivan jäljennös on New Rossin laiturilla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Laiturilla on [[Dunbrody]]-nälänhätälaivan jäljennös, ja sen lähellä palaa [[Siirtolaisliekki]] nälänhädän aikana lähteneiden siirtolaisten muistoksi. Alkuperäinen Dunbrody oli purjelaiva, joka lähteiden mukaan kuljetti siirtolaisia Pohjois-Amerikkaan. Nälänhätä, johon laiva liittyy, oli 1840-luvun [[Suuri nälänhätä]], jolloin Irlanti kuului vielä Yhdistyneeseen kuningaskuntaan. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Dunbrody
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+AIEMPI KYSYMYS: Minkä laivan jäljennös on New Rossin laiturilla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Laiturilla on [[Dunbrody]]-nälänhätälaivan jäljennös, ja sen lähellä palaa [[Siirtolaisliekki]] nälänhädän aikana lähteneiden siirtolaisten muistoksi. Alkuperäinen Dunbrody oli purjelaiva, joka lähteiden mukaan kuljetti siirtolaisia Pohjois-Amerikkaan. Nälänhätä, johon laiva liittyy, oli 1840-luvun [[Suuri nälänhätä]], jolloin Irlanti kuului vielä Yhdistyneeseen kuningaskuntaan. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Siirtolaisliekki
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Historia: Nälänhätä pani opit palmunlehdille] 1. vuosisata eaa. — Buddhalaiset opit kulkivat vuosisatoja pelkkänä puheena: munkit opettelivat ne ulkoa ja lausuivat toisilleen sukupolvesta toiseen. Kuningas Walagamban aikana saarta koetteli kaksitoista vuotta kestänyt nälänhätä, jonka aikana munkit jäivät ilman almuja ja söivät juuria ja puiden lehtiä; noin kuusikymmentä heistä siirtyi ylängölle Mahaweli-joen varteen ja selvisi siellä koko ajan. Kun nälkävuodet päättyivät, munkit olivat nähneet, miten ohuen muistin varassa opit lepäsivät. Noin viisisataa oppinutta kokoontui Aluviharan kalliotemppeliin Matalessa, lausui tekstit ääneen, sopi hyväksytystä sanamuodosta ja kaiversi ne metallipuikolla palmunlehtiin.
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+AIEMPI KYSYMYS: Minkä laivan jäljennös on New Rossin laiturilla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Laiturilla on [[Dunbrody]]-nälänhätälaivan jäljennös, ja sen lähellä palaa [[Siirtolaisliekki]] nälänhädän aikana lähteneiden siirtolaisten muistoksi. Alkuperäinen Dunbrody oli purjelaiva, joka lähteiden mukaan kuljetti siirtolaisia Pohjois-Amerikkaan. Nälänhätä, johon laiva liittyy, oli 1840-luvun [[Suuri nälänhätä]], jolloin Irlanti kuului vielä Yhdistyneeseen kuningaskuntaan. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Suuri nälänhätä
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Mikä oli normannien valloitus Irlannissa?
+AIEMPI VASTAUS (Livia):
+No niin, sepä on pitkä tarina. Normannit olivat Englannin vuonna 1066 valloittaneiden normannien jälkeläisiä ja seuraajia, ja Irlantiin he saapuivat 1100-luvun lopulla, ensimmäisten maihinnousujen tapahtuessa noin vuonna 1169 kaakkoisrannikolla. Tunnettu johtaja oli ritari [[Strongbow]], jonka tytär Isabella de Clare meni naimisiin William Marshallin kanssa, ja Englannin kuningas [[Henrik II]] seurasi perässä noin vuonna 1171. Valloitus muutti hallintoa, linnarakentamista ja kaupunkeja, ja Marshallin kautta [[Leinsterin]] herruus liittyi myös New Rossin kaupungin syntyyn.
+
+Suvun perimätiedon mukaan uusia isäntiä on katoilta nähty ennenkin: valtiaat vaihtuvat, mutta kyyhkyt jäävät.
+KYSYMYS: Kerro lisää: Strongbow
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Mikä oli normannien valloitus Irlannissa?
+AIEMPI VASTAUS (Livia):
+No niin, sepä on pitkä tarina. Normannit olivat Englannin vuonna 1066 valloittaneiden normannien jälkeläisiä ja seuraajia, ja Irlantiin he saapuivat 1100-luvun lopulla, ensimmäisten maihinnousujen tapahtuessa noin vuonna 1169 kaakkoisrannikolla. Tunnettu johtaja oli ritari [[Strongbow]], jonka tytär Isabella de Clare meni naimisiin William Marshallin kanssa, ja Englannin kuningas [[Henrik II]] seurasi perässä noin vuonna 1171. Valloitus muutti hallintoa, linnarakentamista ja kaupunkeja, ja Marshallin kautta [[Leinsterin]] herruus liittyi myös New Rossin kaupungin syntyyn.
+
+Suvun perimätiedon mukaan uusia isäntiä on katoilta nähty ennenkin: valtiaat vaihtuvat, mutta kyyhkyt jäävät.
+KYSYMYS: Kerro lisää: Henrik II
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Mikä oli normannien valloitus Irlannissa?
+AIEMPI VASTAUS (Livia):
+No niin, sepä on pitkä tarina. Normannit olivat Englannin vuonna 1066 valloittaneiden normannien jälkeläisiä ja seuraajia, ja Irlantiin he saapuivat 1100-luvun lopulla, ensimmäisten maihinnousujen tapahtuessa noin vuonna 1169 kaakkoisrannikolla. Tunnettu johtaja oli ritari [[Strongbow]], jonka tytär Isabella de Clare meni naimisiin William Marshallin kanssa, ja Englannin kuningas [[Henrik II]] seurasi perässä noin vuonna 1171. Valloitus muutti hallintoa, linnarakentamista ja kaupunkeja, ja Marshallin kautta [[Leinsterin]] herruus liittyi myös New Rossin kaupungin syntyyn.
+
+Suvun perimätiedon mukaan uusia isäntiä on katoilta nähty ennenkin: valtiaat vaihtuvat, mutta kyyhkyt jäävät.
+KYSYMYS: Kerro lisää: Leinsterin
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Mihin Barrow-joki laskee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Barrow virtaa etelään ja yhtyy [[Nore]]-jokeen ja [[Suir]]-jokeen, joita yhdessä kutsutaan kolmeksi sisarjoeksi. Yhdessä ne laskevat Waterfordin suiston kautta [[Kelttimeren]] puolelle, mutta suiston tarkasta rajasta en ole varma. New Ross sijaitsee Barrow'n varrella, vähän matkaa ennen tuota yhtymäkohtaa. Ylhäältä katsoen joet näyttävät hopeanauhoilta.
+KYSYMYS: Kerro lisää: Nore
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Mihin Barrow-joki laskee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Barrow virtaa etelään ja yhtyy [[Nore]]-jokeen ja [[Suir]]-jokeen, joita yhdessä kutsutaan kolmeksi sisarjoeksi. Yhdessä ne laskevat Waterfordin suiston kautta [[Kelttimeren]] puolelle, mutta suiston tarkasta rajasta en ole varma. New Ross sijaitsee Barrow'n varrella, vähän matkaa ennen tuota yhtymäkohtaa. Ylhäältä katsoen joet näyttävät hopeanauhoilta.
+KYSYMYS: Kerro lisää: Suir
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+AIEMPI KYSYMYS: Mihin Barrow-joki laskee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Barrow virtaa etelään ja yhtyy [[Nore]]-jokeen ja [[Suir]]-jokeen, joita yhdessä kutsutaan kolmeksi sisarjoeksi. Yhdessä ne laskevat Waterfordin suiston kautta [[Kelttimeren]] puolelle, mutta suiston tarkasta rajasta en ole varma. New Ross sijaitsee Barrow'n varrella, vähän matkaa ennen tuota yhtymäkohtaa. Ylhäältä katsoen joet näyttävät hopeanauhoilta.
+KYSYMYS: Kerro lisää: Kelttimeren
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Sato, joka mustui maahan] 1845 — Vuonna 1845 Irlannin perunasatoon iski sienitauti, joka mustensi mukulat maahan. Peruna oli miljoonien ihmisten pääasiallinen ruoka, ja sato epäonnistui useana vuonna peräkkäin. Nälänhädän aikana maasta lähti valtavasti ihmisiä laivoilla Amerikkaan ja Britanniaan. Ennen katoa Irlannissa asui runsaat kahdeksan miljoonaa ihmistä, ja vuosikymmenen kuluttua enää noin kuusi ja puoli miljoonaa. Muutto jatkui vuosikymmeniä, eikä väkiluku ole vieläkään noussut takaisin vuoden 1841 tasolle.
+AIEMPI KYSYMYS: Mikä on kreivikunta Irlannissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kreivikunta on Irlannissa perinteinen alueellinen jakoyksikkö ja hallinnon pohja, jonka englantilaiset hallitsijat ottivat käyttöön keskiajalla. Koko saarella on perinteisesti 32 kreivikuntaa, joista 26 kuuluu Irlannin tasavaltaan ja kuusi [[Pohjois-Irlannissa]] Yhdistyneeseen kuningaskuntaan. Wexford on yksi tasavallan kreivikunnista ja kuuluu [[Leinsterin]] maakuntaan. Kolmekymmentäkaksi aluetta kyl riittää yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: Pohjois-Irlannissa
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Milloin Grianán of Aileachin merkittävä kunnostus tehtiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Merkittävät kunnostustyöt tehtiin vuonna 1870, ja nykyinen päärakenne on 1800-luvun jälleenrakennus alkuperäisestä kivisestä [[ringfortista]]. Pohjoisen [[Uí Néillin]] suvun arvellaan rakentaneen alkuperäisen linnoituksen 500- tai 600-luvulla, ja irlantilaisen kirjallisuuden mukaan Munsterin kuningas [[Muirchertach Ua Briain]] tuhosi sen suurelta osin vuonna 1101. Kyl sinne kannattaisi lentää, ihan vaan terassien takia.
+KYSYMYS: Kerro lisää: ringfortista
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Milloin Grianán of Aileachin merkittävä kunnostus tehtiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Merkittävät kunnostustyöt tehtiin vuonna 1870, ja nykyinen päärakenne on 1800-luvun jälleenrakennus alkuperäisestä kivisestä [[ringfortista]]. Pohjoisen [[Uí Néillin]] suvun arvellaan rakentaneen alkuperäisen linnoituksen 500- tai 600-luvulla, ja irlantilaisen kirjallisuuden mukaan Munsterin kuningas [[Muirchertach Ua Briain]] tuhosi sen suurelta osin vuonna 1101. Kyl sinne kannattaisi lentää, ihan vaan terassien takia.
+KYSYMYS: Kerro lisää: Uí Néillin
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Milloin Grianán of Aileachin merkittävä kunnostus tehtiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Merkittävät kunnostustyöt tehtiin vuonna 1870, ja nykyinen päärakenne on 1800-luvun jälleenrakennus alkuperäisestä kivisestä [[ringfortista]]. Pohjoisen [[Uí Néillin]] suvun arvellaan rakentaneen alkuperäisen linnoituksen 500- tai 600-luvulla, ja irlantilaisen kirjallisuuden mukaan Munsterin kuningas [[Muirchertach Ua Briain]] tuhosi sen suurelta osin vuonna 1101. Kyl sinne kannattaisi lentää, ihan vaan terassien takia.
+KYSYMYS: Kerro lisää: Muirchertach Ua Briain
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Minkä kuningaskunnan istuin linnoitus oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitus on tunnistettu [[Ailechin]] kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Se sijaitsee 244 metriä korkean Greenan-vuoren huipulla [[Inishowenin]] niemimaalla [[Donegalin]] kreivikunnassa. Kuninkaat valitsivat aina parhaat näköalapaikat, ja minä ymmärrän heitä.
+KYSYMYS: Kerro lisää: Ailechin
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Minkä kuningaskunnan istuin linnoitus oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitus on tunnistettu [[Ailechin]] kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Se sijaitsee 244 metriä korkean Greenan-vuoren huipulla [[Inishowenin]] niemimaalla [[Donegalin]] kreivikunnassa. Kuninkaat valitsivat aina parhaat näköalapaikat, ja minä ymmärrän heitä.
+KYSYMYS: Kerro lisää: Inishowenin
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Minkä kuningaskunnan istuin linnoitus oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitus on tunnistettu [[Ailechin]] kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Se sijaitsee 244 metriä korkean Greenan-vuoren huipulla [[Inishowenin]] niemimaalla [[Donegalin]] kreivikunnassa. Kuninkaat valitsivat aina parhaat näköalapaikat, ja minä ymmärrän heitä.
+KYSYMYS: Kerro lisää: Donegalin
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Miksi Irlannissa on rakennettu pyöreitä kivilinnakkeita?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pyöreät [[ringfortit]] olivat varhaiskeskiajan Irlannin tavallisia asumuksia: pyöreän muurin tai vallin sisään sijoitettiin maatila, ja valli suojasi sekä ihmisiä että karjaa. Niitä on arviolta kymmeniätuhansia, ja suurin osa on tehty mullasta, kun taas kivestä rakennettuja kutsutaan nimellä [[cashel]]. Grianán of Aileach on tästä tyypistä kivinen ja kuninkaallinen esimerkki.
+
+Pyöreä on minusta fiksu muoto, sillä kulmiin ei jää mitään puolustettavaa. Pesäni on sama idea, vaikka pienemmässä mittakaavassa.
+KYSYMYS: Kerro lisää: ringfortit
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kohdekartta / Kohdekartta: Muistosilta] 1924 Silta itse on paljon vanhempi kuin muistomerkki. Insinööri ja urakoitsija Edward George Wright rakensi Cashel Streetin sillan Avonin yli ja sai sen valmiiksi toukokuussa 1873; työstä maksettiin 509 puntaa. Sillan itäpäästä alkaa keskustan kävelykatu. Ajatus muistoholvista sillan päälle esitettiin ensimmäisen kerran 24. heinäkuuta 1919 The Pressissä julkaistussa yleisönosastokirjeessä, jonka kirjoitti rouva Wyn Irwin. Ajatus sai kannatusta, rakennustyö alkoi tammikuussa 1923, ja peruskiven laski Anzac-päivänä 25. huhtikuuta 1923 kenraalikuvernööri, amiraali lordi Jellicoe. Hän myös paljasti valmiin holvin aselepopäivänä 11. marraskuuta 1924. Suunnittelukilpailun voitti toimisto Prouse a…
+AIEMPI KYSYMYS: Miksi Irlannissa on rakennettu pyöreitä kivilinnakkeita?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pyöreät [[ringfortit]] olivat varhaiskeskiajan Irlannin tavallisia asumuksia: pyöreän muurin tai vallin sisään sijoitettiin maatila, ja valli suojasi sekä ihmisiä että karjaa. Niitä on arviolta kymmeniätuhansia, ja suurin osa on tehty mullasta, kun taas kivestä rakennettuja kutsutaan nimellä [[cashel]]. Grianán of Aileach on tästä tyypistä kivinen ja kuninkaallinen esimerkki.
+
+Pyöreä on minusta fiksu muoto, sillä kulmiin ei jää mitään puolustettavaa. Pesäni on sama idea, vaikka pienemmässä mittakaavassa.
+KYSYMYS: Kerro lisää: cashel
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Mitä eroa on irlannilla ja skottilaisella gaelilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Irlanti ja skottilainen gaeli kuuluvat molemmat [[goidelisiin kieliin]], samoin kuin [[Man-saaren]] kieli. Skottilainen gaeli on kehittynyt irlannin kielestä, kun gaelinkielisiä asukkaita siirtyi Irlannista Skotlantiin. Kielet ovat läheistä sukua toisilleen, mutta kirjoitus ja ääntäminen eroavat, eivätkä ne ole keskenään täysin ymmärrettäviä; tarkasta asteesta en ole varma. Pöllö on kuulemma kielten ystävä, mut parantelee ny siipeään, joten tämä jäi minulle.
+KYSYMYS: Kerro lisää: goidelisiin kieliin
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Mitä eroa on irlannilla ja skottilaisella gaelilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Irlanti ja skottilainen gaeli kuuluvat molemmat [[goidelisiin kieliin]], samoin kuin [[Man-saaren]] kieli. Skottilainen gaeli on kehittynyt irlannin kielestä, kun gaelinkielisiä asukkaita siirtyi Irlannista Skotlantiin. Kielet ovat läheistä sukua toisilleen, mutta kirjoitus ja ääntäminen eroavat, eivätkä ne ole keskenään täysin ymmärrettäviä; tarkasta asteesta en ole varma. Pöllö on kuulemma kielten ystävä, mut parantelee ny siipeään, joten tämä jäi minulle.
+KYSYMYS: Kerro lisää: Man-saaren
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Mistä Donegalin kreivikunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Donegal sijaitsee Irlannin luoteisosassa, ja se on tunnettu karusta Atlantin rannikostaan ja jyrkistä merenkallioista, kuten [[Slieve League]]. Alueen nimeä kantaa myös [[Donegal tweed]] -villakangas, ja osassa kreivikuntaa irlantia puhutaan arkikielenä; tällaisia alueita kutsutaan [[Gaeltachtiksi]]. Tuulta siellä varmasti riittää.
+KYSYMYS: Kerro lisää: Slieve League
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Mistä Donegalin kreivikunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Donegal sijaitsee Irlannin luoteisosassa, ja se on tunnettu karusta Atlantin rannikostaan ja jyrkistä merenkallioista, kuten [[Slieve League]]. Alueen nimeä kantaa myös [[Donegal tweed]] -villakangas, ja osassa kreivikuntaa irlantia puhutaan arkikielenä; tällaisia alueita kutsutaan [[Gaeltachtiksi]]. Tuulta siellä varmasti riittää.
+KYSYMYS: Kerro lisää: Donegal tweed
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+AIEMPI KYSYMYS: Mistä Donegalin kreivikunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Donegal sijaitsee Irlannin luoteisosassa, ja se on tunnettu karusta Atlantin rannikostaan ja jyrkistä merenkallioista, kuten [[Slieve League]]. Alueen nimeä kantaa myös [[Donegal tweed]] -villakangas, ja osassa kreivikuntaa irlantia puhutaan arkikielenä; tällaisia alueita kutsutaan [[Gaeltachtiksi]]. Tuulta siellä varmasti riittää.
+KYSYMYS: Kerro lisää: Gaeltachtiksi
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Kuka osti linnan Sir Walter Raleighilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on selvä asia. Sir Walter Raleigh myi linnan vuonna 1602 [[Richard Boylelle]], josta tuli vuonna 1620 [[Corkin]] ensimmäinen jaarli. Linna kuului sen jälkeen Corkin jaarleille ja siirtyi vuonna 1753 [[Cavendishin]] suvulle; nykyään se on [[Devonshiren herttuan]] Irlannin koti.
+
+Vankeudesta käsin myyminen kuulostaa minusta kovin kiireiseltä kaupalta. Minä en myisi pesääni edes lupauksesta pullasta.
+KYSYMYS: Kerro lisää: Richard Boylelle
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Kuka osti linnan Sir Walter Raleighilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on selvä asia. Sir Walter Raleigh myi linnan vuonna 1602 [[Richard Boylelle]], josta tuli vuonna 1620 [[Corkin]] ensimmäinen jaarli. Linna kuului sen jälkeen Corkin jaarleille ja siirtyi vuonna 1753 [[Cavendishin]] suvulle; nykyään se on [[Devonshiren herttuan]] Irlannin koti.
+
+Vankeudesta käsin myyminen kuulostaa minusta kovin kiireiseltä kaupalta. Minä en myisi pesääni edes lupauksesta pullasta.
+KYSYMYS: Kerro lisää: Corkin
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Kuka osti linnan Sir Walter Raleighilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on selvä asia. Sir Walter Raleigh myi linnan vuonna 1602 [[Richard Boylelle]], josta tuli vuonna 1620 [[Corkin]] ensimmäinen jaarli. Linna kuului sen jälkeen Corkin jaarleille ja siirtyi vuonna 1753 [[Cavendishin]] suvulle; nykyään se on [[Devonshiren herttuan]] Irlannin koti.
+
+Vankeudesta käsin myyminen kuulostaa minusta kovin kiireiseltä kaupalta. Minä en myisi pesääni edes lupauksesta pullasta.
+KYSYMYS: Kerro lisää: Cavendishin
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Kuka osti linnan Sir Walter Raleighilta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on selvä asia. Sir Walter Raleigh myi linnan vuonna 1602 [[Richard Boylelle]], josta tuli vuonna 1620 [[Corkin]] ensimmäinen jaarli. Linna kuului sen jälkeen Corkin jaarleille ja siirtyi vuonna 1753 [[Cavendishin]] suvulle; nykyään se on [[Devonshiren herttuan]] Irlannin koti.
+
+Vankeudesta käsin myyminen kuulostaa minusta kovin kiireiseltä kaupalta. Minä en myisi pesääni edes lupauksesta pullasta.
+KYSYMYS: Kerro lisää: Devonshiren herttuan
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Mikä luostari oli paikalla ennen linnaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli oppineiden paikka. Paikalla oli aiemmin [[Lismoren luostari]], joka perustettiin 600-luvun alussa ja josta tuli tärkeä oppineisuuden keskus. Vuonna 1185 Irlannin herra, Englannin [[prinssi John]], rakennutti ensimmäisen linnan vartioimaan joen ylityspaikkaa. Nykyisen ulkoasunsa linna sai 1800-luvun puolivälissä, kun se rakennettiin suurelta osin uudelleen goottilaiseen tyyliin. Onpas tässä aikaa mahtunut väliin.
+KYSYMYS: Kerro lisää: Lismoren luostari
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Historia: Tongalainen prinssi, josta tuli Laun kuningas] 1848–1869 — Enele Ma’afu oli tongalainen prinssi ja kuningas George Tupou I:n serkku. Kuningas halusi hänet pois kotoa mahdollisena vallantavoittelijana, ja niin Ma’afu asettui 1848 Lakeban saarelle Fidžin itäisessä Lau-ryhmässä tongalaisyhteisön johtajaksi. Hän toi itäiselle Fidžille metodistisen kristinuskon, sai 1850 Vanua Balavun saaren lahjaksi kanootista ja ulotti valtansa Vanua Levun pohjoisosaan asti. Kun Tonga luopui kesäkuussa 1868 kaikista vaatimuksistaan Fidžin alueisiin, Laun päälliköt kokoontuivat Lakebaan ja antoivat hänelle helmikuussa 1869 arvonimen Tui Lau, Laun kuningas.
+- [Pakistan — maalehti / Kuvataide: Ihmemuseo ja paastoava prinssi] Lahoren museon urdunkielinen nimi on Ajaib Ghar, ihmetalo. Nykyinen rakennus avattiin 1894, ja sen suunnittelivat Bhai Ram Singh ja John Lockwood Kipling, joka oli museon ensimmäisiä hoitajia. Hänen poikansa Rudyard Kipling aloitti romaaninsa Kim tämän museon edustalta, vanhan Zamzama-tykin päältä. Vuoden 1948 jaossa kokoelma puolitettiin, ja noin 60 prosenttia jäi Lahoreen. Tunnetuin esine on gandharalainen kiviveistos paastoavasta Siddharthasta: kylkiluut, suonet ja kuopalle painuneet posket kertovat vuosista, jotka hän eli äärimmäisessä kieltäymyksessä ennen kuin hylkäsi sen tien.
+AIEMPI KYSYMYS: Mikä luostari oli paikalla ennen linnaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli oppineiden paikka. Paikalla oli aiemmin [[Lismoren luostari]], joka perustettiin 600-luvun alussa ja josta tuli tärkeä oppineisuuden keskus. Vuonna 1185 Irlannin herra, Englannin [[prinssi John]], rakennutti ensimmäisen linnan vartioimaan joen ylityspaikkaa. Nykyisen ulkoasunsa linna sai 1800-luvun puolivälissä, kun se rakennettiin suurelta osin uudelleen goottilaiseen tyyliin. Onpas tässä aikaa mahtunut väliin.
+KYSYMYS: Kerro lisää: prinssi John
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Mikä on goottilainen tyyli rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän on helppo vastata. Goottilainen tyyli syntyi Ranskassa noin 1100-luvun puolivälissä ja tunnetaan [[suippokaarista]], [[ristiholveista]], korkeista ikkunoista ja kaaria tukevista tukirakenteista. Alun perin se liittyi katedraaleihin, mutta 1800-luvulla se herätettiin henkiin [[uusgotiikkana]], ja Lismoren linnan uudelleenrakennus kuuluu tähän aaltoon. Suippokaarien alla viihtyisin kyl itsekin.
+KYSYMYS: Kerro lisää: suippokaarista
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mikä on goottilainen tyyli rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän on helppo vastata. Goottilainen tyyli syntyi Ranskassa noin 1100-luvun puolivälissä ja tunnetaan [[suippokaarista]], [[ristiholveista]], korkeista ikkunoista ja kaaria tukevista tukirakenteista. Alun perin se liittyi katedraaleihin, mutta 1800-luvulla se herätettiin henkiin [[uusgotiikkana]], ja Lismoren linnan uudelleenrakennus kuuluu tähän aaltoon. Suippokaarien alla viihtyisin kyl itsekin.
+KYSYMYS: Kerro lisää: ristiholveista
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+AIEMPI KYSYMYS: Mikä on goottilainen tyyli rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän on helppo vastata. Goottilainen tyyli syntyi Ranskassa noin 1100-luvun puolivälissä ja tunnetaan [[suippokaarista]], [[ristiholveista]], korkeista ikkunoista ja kaaria tukevista tukirakenteista. Alun perin se liittyi katedraaleihin, mutta 1800-luvulla se herätettiin henkiin [[uusgotiikkana]], ja Lismoren linnan uudelleenrakennus kuuluu tähän aaltoon. Suippokaarien alla viihtyisin kyl itsekin.
+KYSYMYS: Kerro lisää: uusgotiikkana
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Quinta de Anauco] 1797 Juan Javier Mijares de Solórzano y Pacheco osti joulukuussa 1796 maapalan sadallakahdellakymmenelläviidellä pesolla juuri tätä tarkoitusta varten, ja talo valmistui seuraavana vuonna. Sitä kutsuttiin aluksi yksinkertaisesti Solórzanon taloksi. Se kesti vuoden 1812 maanjäristyksen ja pysyi rakentajan pojan omistuksessa vuoteen 1821, jolloin poika pakeni äitinsä kanssa Curaçaolle tasavaltalaisarmeijan voitettua Carabobon taistelun. Talo siirtyi valtiolle. Se vuokrattiin 1825 Pedro Zarazalle, joka kuoli seitsemän päivää myöhemmin, ja sen jälkeen Francisco Rodríguez del Toro e Ibarralle, neljännelle Toron markiisille ja itsenäisyyssodan divisioonankenraalille. Simón Bolívar yöpyi markiisin…
+- [Lima — kohdekartta / Kohdekartta: Torre Taglen palatsi] 1735 Palatsi valmistui 1735 José Bernardo de Tagle Brachon kodiksi. Kuningas Filip V oli antanut hänelle 26. marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 neliömetriä. Julkisivu on andalusialaista barokkia ja tarkoituksella epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista setri- ja mahonkipuusta veistettyä parveketta, ja niiden jaotus on eri: oikeanpuoleisessa on kolme osaa ja vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun vaakuna ja teksti "Tagle se llamó el que la sierpe mató y con la infanta casó" — Tagleksi kutsuttiin sitä, joka tappoi käärmeen ja na…
+AIEMPI KYSYMYS: Mikä on jaarli?
+AIEMPI VASTAUS (Livia):
+Just niin, arvonimiä riittää. Jaarli on brittiläisen ja irlantilaisen aatelin arvonimi, joka vastaa suunnilleen mantereen kreiviä. Arvojärjestyksessä se on [[markiisin]] alapuolella ja [[varakreivin]] yläpuolella, ja jaarlin vaimo on kreivitär. Esimerkiksi Corkin jaarlin arvonimi on yksi Lismoren linnan omistajien historian arvonimistä. Minulla ei ole arvonimeä, vain täysi nimi.
+KYSYMYS: Kerro lisää: markiisin
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Historia: Salmi sai nimen varakreivin mukaan] 1690 — Tammikuussa 1690 englantilainen kapteeni John Strong purjehti Welfare-laivallaan kahden pääsaaren välistä salmea pitkin ja nimesi sen Falklandin kanavaksi kunniaksi Anthony Carylle, 5. Falklandin varakreiville, joka oli rahoittanut matkan laivaston rahastonhoitajana mutta ei koskaan itse käynyt saarilla. Nimi Falkland Sound periytyi myöhemmin koko saariryhmälle. Kuvan kartta on peräisin vuonna 1773 julkaistusta teoksesta, joka kertoo komentaja John Byronin 1760-luvun tutkimusmatkasta samalle salmelle: brittiläiset kartoittivat rannikkoa tarkemmin vasta seuraavan vuosisadan aikana.
+AIEMPI KYSYMYS: Mikä on jaarli?
+AIEMPI VASTAUS (Livia):
+Just niin, arvonimiä riittää. Jaarli on brittiläisen ja irlantilaisen aatelin arvonimi, joka vastaa suunnilleen mantereen kreiviä. Arvojärjestyksessä se on [[markiisin]] alapuolella ja [[varakreivin]] yläpuolella, ja jaarlin vaimo on kreivitär. Esimerkiksi Corkin jaarlin arvonimi on yksi Lismoren linnan omistajien historian arvonimistä. Minulla ei ole arvonimeä, vain täysi nimi.
+KYSYMYS: Kerro lisää: varakreivin
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+- [Toronto — kohdekartta / Kohdekartta: Ontarion kuninkaallinen museo] 1914 Museo perustettiin 16. huhtikuuta 1912, ja sen avasi yleisölle 19. maaliskuuta 1914 Connaughtin herttua, silloinen Kanadan kenraalikuvernööri. Hallinto oli jaettu Ontarion provinssin ja Toronton yliopiston kesken, ja käytännössä museo oli yliopiston suorassa ohjauksessa vuoteen 1968, jolloin siitä tuli itsenäinen provinssin laitos. Paikka valittiin yliopiston läheisyyden takia, vaikka se oli tuolloin kaupungin rakennetun alueen laidalla kaukana liikekeskustasta. Vanhimman osan — nykyisen länsisiiven — piirsivät torontolaiset arkkitehdit Frank Darling ja John A. Pearson, ja tyyli on italialaisvaikutteisen ja uusromaanisen sekoitus: raskaita massoja, pyöreitä ja kaarevia ikkunoita paksui…
+AIEMPI KYSYMYS: Mistä Waterfordin kreivikunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän on paljon sanottavaa. Waterford on Irlannin kaakkoisosan kreivikunta, ja sen samanniminen kaupunki on tunnettu [[Waterford Crystal]] -kristallilasista; kaupungin perimätiedon mukaan perustivat [[viikinkien]] siirtolaiset 900-luvun alussa. Rannikolla kulkee [[Kuparirannikko]], jonka kallioista louhittiin 1800-luvulla kuparia. Kristallilasi on kyyhkyn silmin vaarallista: kiiltävää, mutta ei syötävää.
+KYSYMYS: Kerro lisää: Waterford Crystal
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Mistä Waterfordin kreivikunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän on paljon sanottavaa. Waterford on Irlannin kaakkoisosan kreivikunta, ja sen samanniminen kaupunki on tunnettu [[Waterford Crystal]] -kristallilasista; kaupungin perimätiedon mukaan perustivat [[viikinkien]] siirtolaiset 900-luvun alussa. Rannikolla kulkee [[Kuparirannikko]], jonka kallioista louhittiin 1800-luvulla kuparia. Kristallilasi on kyyhkyn silmin vaarallista: kiiltävää, mutta ei syötävää.
+KYSYMYS: Kerro lisää: viikinkien
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Mistä Waterfordin kreivikunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän on paljon sanottavaa. Waterford on Irlannin kaakkoisosan kreivikunta, ja sen samanniminen kaupunki on tunnettu [[Waterford Crystal]] -kristallilasista; kaupungin perimätiedon mukaan perustivat [[viikinkien]] siirtolaiset 900-luvun alussa. Rannikolla kulkee [[Kuparirannikko]], jonka kallioista louhittiin 1800-luvulla kuparia. Kristallilasi on kyyhkyn silmin vaarallista: kiiltävää, mutta ei syötävää.
+KYSYMYS: Kerro lisää: Kuparirannikko
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Juhla, jossa nälälle nauretaan] Homowo on ga-kansan sadonkorjuujuhla, ja nimi tarkoittaa nälälle huutamista tai sen pilkkaamista. Perimätieto kertoo suuresta nälänhädästä, jonka jälkeen selvinneet juhlivat pilkaten nälkää. Juhlavuosi alkaa touko-kesäkuussa, kun seitsemän pappia kylvää hirssin sovitussa järjestyksessä. Sen jälkeen alkaa koninfemo, melunteon kielto: neljään viikkoon ja kahteen päivään ei saa pitää kovaa ääntä, jotta vilja kasvaa rauhassa. Kiellon päättymisen ilmoittavat erityiset rummutukset. Huipennuksessa keitetään palmupähkinäkeittoa ja kpokpoita, hirssitaikinaa palmuöljyn ja okran kanssa.
+AIEMPI KYSYMYS: Millä nimellä nälänhätää kutsutaan irlanniksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Irlanniksi nälänhätää kutsutaan nimellä an Gorta Mór, joka tarkoittaa suurta nälkää; suomeksi puhutaan myös [[Suuresta nälänhädästä]]. Se koetteli maata vuosina 1845–1852, ja pääsyynä oli [[perunarutto]], joka tuhosi suuren osan perunasadosta. Tuolloin Irlanti kuului vielä Yhdistyneeseen kuningaskuntaan, ja monet lähtivät maasta [[siirtolaisiksi]]. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Suuresta nälänhädästä
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+AIEMPI KYSYMYS: Millä nimellä nälänhätää kutsutaan irlanniksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Irlanniksi nälänhätää kutsutaan nimellä an Gorta Mór, joka tarkoittaa suurta nälkää; suomeksi puhutaan myös [[Suuresta nälänhädästä]]. Se koetteli maata vuosina 1845–1852, ja pääsyynä oli [[perunarutto]], joka tuhosi suuren osan perunasadosta. Tuolloin Irlanti kuului vielä Yhdistyneeseen kuningaskuntaan, ja monet lähtivät maasta [[siirtolaisiksi]]. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: perunarutto
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+- [Tampere — kohdekartta / Kohdekartta: Amurin työläismuseokortteli] 1882–1973 Amuri rakennettiin 1860-luvulta alkaen työväen asuinalueeksi tehtaiden länsipuolelle. Nimi on aikalaisten vertaus: samaan aikaan suomalaisia lähti siirtolaisiksi kaukaiselle Amurinmaalle Venäjän itälaidalle, ja uusi kaupunginosa tuntui yhtä kaukaiselta keskustasta katsottuna. Talot olivat yksikerroksisia puutaloja ja asunnot yhteiskeittiöasuntoja: kahdella tai neljällä huoneella oli yksi yhteinen keittiö, ja jokaisessa huoneessa asui oma perheensä. 1960-luvulla Amurin puutalot purettiin ja tilalle nousivat kerrostalot. Yksi kortteli säästettiin ja siitä tehtiin museo: viisi asuintaloa ja neljä piharakennusta, joiden huoneet on sisustettu eri vuosikymmenten näköisiksi vuodesta 1882…
+AIEMPI KYSYMYS: Millä nimellä nälänhätää kutsutaan irlanniksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Irlanniksi nälänhätää kutsutaan nimellä an Gorta Mór, joka tarkoittaa suurta nälkää; suomeksi puhutaan myös [[Suuresta nälänhädästä]]. Se koetteli maata vuosina 1845–1852, ja pääsyynä oli [[perunarutto]], joka tuhosi suuren osan perunasadosta. Tuolloin Irlanti kuului vielä Yhdistyneeseen kuningaskuntaan, ja monet lähtivät maasta [[siirtolaisiksi]]. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: siirtolaisiksi
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+AIEMPI KYSYMYS: Mikä komitea toimi Skibbereenissä nälänhädän aikana?
+AIEMPI VASTAUS (Livia):
+Ai tota. Skibbereenissä toimi paikallinen [[avustuskomitea]], joka koordinoi vapaaehtoista avustustyötä; sen tarkasta nimestä en ole varma. Komitea antoi mallin [[keittiöavustuksille]] eli ruoan jakamiselle sekä [[siirtolaisohjelmille]], ja kaupunki tunnetaan edelleen tästä roolistaan. Siitä avusta puhutaan Skibbereenissä yhä.
+KYSYMYS: Kerro lisää: avustuskomitea
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Ruoka: Kolmen mantereen keittiö] Bahian keittiö kertoo samaa tarinaa kuin kaupungin väestö: viiden vuosisadan sekoittumista. Afrikkalaista perua ovat mausteiset äyriäisruoat, kuten kookosmaitoon keitetty moqueca ja tahnamainen vatapá. Portugalilaisesta lihapadasta jäänyt kastike sekoitettiin maniokkijauhoon, ja siitä syntyi puuro, joka jatkaa alkuperäiskansojen perinnettä. Sokeriruo'on puristusjätteestä, melassista ja rapadura-sokerista tehtiin kookosmakeiset cocada branca ja cocada preta. Kaikki kolme perinnettä ovat yhä samalla lautasella.
+- [Aleppo — kaupunkilehti / Arki ja keittiö] Aleppon keittiö nojaa kolmeen ainekseen: kaupungin omaan pippuriin, saksanpähkinään ja granaattiomenasiirappiin. Kaikki kolme päätyvät samalle pöydälle, ja lautaselta katsottuna kaupunki on punainen.
+AIEMPI KYSYMYS: Mikä komitea toimi Skibbereenissä nälänhädän aikana?
+AIEMPI VASTAUS (Livia):
+Ai tota. Skibbereenissä toimi paikallinen [[avustuskomitea]], joka koordinoi vapaaehtoista avustustyötä; sen tarkasta nimestä en ole varma. Komitea antoi mallin [[keittiöavustuksille]] eli ruoan jakamiselle sekä [[siirtolaisohjelmille]], ja kaupunki tunnetaan edelleen tästä roolistaan. Siitä avusta puhutaan Skibbereenissä yhä.
+KYSYMYS: Kerro lisää: keittiöavustuksille
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+AIEMPI KYSYMYS: Mikä komitea toimi Skibbereenissä nälänhädän aikana?
+AIEMPI VASTAUS (Livia):
+Ai tota. Skibbereenissä toimi paikallinen [[avustuskomitea]], joka koordinoi vapaaehtoista avustustyötä; sen tarkasta nimestä en ole varma. Komitea antoi mallin [[keittiöavustuksille]] eli ruoan jakamiselle sekä [[siirtolaisohjelmille]], ja kaupunki tunnetaan edelleen tästä roolistaan. Siitä avusta puhutaan Skibbereenissä yhä.
+KYSYMYS: Kerro lisää: siirtolaisohjelmille
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+AIEMPI KYSYMYS: Mikä aiheutti perunaruton Irlannissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Perunaruttoa aiheuttaa [[Phytophthora infestans]] -niminen eliö, joka kuuluu [[munasieniin]] ja leviää kosteissa oloissa. Se saapui Eurooppaan 1840-luvun puolivälissä, ja Irlannissa vaikutus oli erityisen kova, koska köyhä väestö oli hyvin riippuvainen perunasta ravinnonlähteenä. Tautia esiintyy yhä, ja sitä torjutaan nykyään torjunta-aineilla ja kestävillä lajikkeilla. Pienestä eliöstä tuli iso suru.
+KYSYMYS: Kerro lisää: Phytophthora infestans
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+AIEMPI KYSYMYS: Mikä aiheutti perunaruton Irlannissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Perunaruttoa aiheuttaa [[Phytophthora infestans]] -niminen eliö, joka kuuluu [[munasieniin]] ja leviää kosteissa oloissa. Se saapui Eurooppaan 1840-luvun puolivälissä, ja Irlannissa vaikutus oli erityisen kova, koska köyhä väestö oli hyvin riippuvainen perunasta ravinnonlähteenä. Tautia esiintyy yhä, ja sitä torjutaan nykyään torjunta-aineilla ja kestävillä lajikkeilla. Pienestä eliöstä tuli iso suru.
+KYSYMYS: Kerro lisää: munasieniin
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kaupunkilehti / Siirtolaisuus] Yli seitsemänkymmentä kansallisuutta kulki Hospedaria dos Imigrantesin portista sisään. Heidän jälkeläisensä eivät ole kaupungin historiaa vaan sen kortteleita, keittiöitä ja juhlakalentereita tänään.
+AIEMPI KYSYMYS: Miksi Irlannin väkiluku väheni nälänhädän jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Väkiluku väheni, koska nälänhätä ja siihen liittyvät taudit veivät hengen suurelta joukolta ihmisiä ja koska hyvin moni lähti maasta. Ennen nälänhätää saarella asui noin kahdeksan miljoonaa ihmistä, ja [[siirtolaisuus]] Pohjois-Amerikkaan ja [[Britanniaan]] jatkui vuosikymmeniä. Se on raskas luku, ja ymmärrän, miksi sitä muistetaan.
+KYSYMYS: Kerro lisää: siirtolaisuus
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Sato, joka mustui maahan] 1845 — Vuonna 1845 Irlannin perunasatoon iski sienitauti, joka mustensi mukulat maahan. Peruna oli miljoonien ihmisten pääasiallinen ruoka, ja sato epäonnistui useana vuonna peräkkäin. Nälänhädän aikana maasta lähti valtavasti ihmisiä laivoilla Amerikkaan ja Britanniaan. Ennen katoa Irlannissa asui runsaat kahdeksan miljoonaa ihmistä, ja vuosikymmenen kuluttua enää noin kuusi ja puoli miljoonaa. Muutto jatkui vuosikymmeniä, eikä väkiluku ole vieläkään noussut takaisin vuoden 1841 tasolle.
+- [Filippiinit — maalehti / Historia: Kaikkien karttojen äiti] 1734 — Jesuiitta Pedro Murillo Velarde laati vuonna 1734 kartan, jota kutsutaan kaikkien Filippiinien karttojen äidiksi. Kaiverruksen teki tagalogilainen Nicolás de la Cruz Bagay, joka merkitsi nimensä viereen sanat "Indio Tagalo". Reunoilla on kaksitoista kuvaa: kaupunkien ja saarten karttoja sekä saarilla asuvia väkiä sangleyeistä aetoihin. Kuparilaatat vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää vedoksia ennen kuin metalli sulatettiin merikarttojen tarpeisiin. Alkuperäispainoksia tunnetaan alle viisikymmentä.
+AIEMPI KYSYMYS: Miksi Irlannin väkiluku väheni nälänhädän jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Väkiluku väheni, koska nälänhätä ja siihen liittyvät taudit veivät hengen suurelta joukolta ihmisiä ja koska hyvin moni lähti maasta. Ennen nälänhätää saarella asui noin kahdeksan miljoonaa ihmistä, ja [[siirtolaisuus]] Pohjois-Amerikkaan ja [[Britanniaan]] jatkui vuosikymmeniä. Se on raskas luku, ja ymmärrän, miksi sitä muistetaan.
+KYSYMYS: Kerro lisää: Britanniaan
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+AIEMPI KYSYMYS: Miten nälänhätää muistetaan Irlannissa nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on tärkeä asia. Nälänhätää muistetaan muistomerkeillä ja kansallisella muistopäivällä, jota vietetään eri paikkakunnilla; Skibbereen oli yksi sen järjestyspaikoista vuonna 2009. Lähellä olevalla [[Abbeystrewery]]-hautausmaalla on perintökeskuksen arvion mukaan hautakuopissa 8 000–10 000 nälänhädän uhria, ja Skibbereenin [[perintökeskuksessa]] on pysyvä näyttely heidän muistokseen. Myös New Rossin satamassa palaa [[Siirtolaisliekki]]. Hautausmaalla on hiljaista, ja niin kuuluu ollakin.
+KYSYMYS: Kerro lisää: Abbeystrewery
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nigeria — maalehti / Ruoka: Vartaat, joissa mauste on maapähkinää] Suya on hausalainen katuruoka, alun perin nimeltään tsire. Ohuiksi viipaloitu naudan-, lampaan- tai vuohenliha pujotetaan puuvartaisiin ja marinoidaan yaji-mausteseoksessa, jossa on chiliä, inkivääriä, kuivattua sipulia ja kuli-kulia eli maapähkinäpuristetta. Kahta samanlaista yajia ei ole: jokainen myyjä sekoittaa omansa. Vartaat kastellaan öljyllä ja grillataan hiilillä, ja valmis liha leikataan suupaloiksi, joiden päälle ripotellaan lisää mausteseosta sekä sipulia ja tomaattia. Myyjää kutsutaan nimellä mai suya, suyan omistaja.
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Miten nälänhätää muistetaan Irlannissa nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on tärkeä asia. Nälänhätää muistetaan muistomerkeillä ja kansallisella muistopäivällä, jota vietetään eri paikkakunnilla; Skibbereen oli yksi sen järjestyspaikoista vuonna 2009. Lähellä olevalla [[Abbeystrewery]]-hautausmaalla on perintökeskuksen arvion mukaan hautakuopissa 8 000–10 000 nälänhädän uhria, ja Skibbereenin [[perintökeskuksessa]] on pysyvä näyttely heidän muistokseen. Myös New Rossin satamassa palaa [[Siirtolaisliekki]]. Hautausmaalla on hiljaista, ja niin kuuluu ollakin.
+KYSYMYS: Kerro lisää: perintökeskuksessa
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+AIEMPI KYSYMYS: Miten nälänhätää muistetaan Irlannissa nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on tärkeä asia. Nälänhätää muistetaan muistomerkeillä ja kansallisella muistopäivällä, jota vietetään eri paikkakunnilla; Skibbereen oli yksi sen järjestyspaikoista vuonna 2009. Lähellä olevalla [[Abbeystrewery]]-hautausmaalla on perintökeskuksen arvion mukaan hautakuopissa 8 000–10 000 nälänhädän uhria, ja Skibbereenin [[perintökeskuksessa]] on pysyvä näyttely heidän muistokseen. Myös New Rossin satamassa palaa [[Siirtolaisliekki]]. Hautausmaalla on hiljaista, ja niin kuuluu ollakin.
+KYSYMYS: Kerro lisää: Siirtolaisliekki
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Minä vuonna Knockin ilmestyksen kerrotaan tapahtuneen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ilmestyksen kerrotaan tapahtuneen elokuussa 1879. Katolisen uskon mukaan [[Neitsyt Maria]], pyhä [[Joosef]] ja evankelista [[Johannes]] ilmestyivät todistajille kylässä. Vuonna 1979, ilmestysten satavuotispäivänä, paavi [[Johannes Paavali II]] vieraili pyhäkössä. Vuosiluvut ovat vahvuuteni, ja tämän muistin heti.
+KYSYMYS: Kerro lisää: Neitsyt Maria
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+AIEMPI KYSYMYS: Minä vuonna Knockin ilmestyksen kerrotaan tapahtuneen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ilmestyksen kerrotaan tapahtuneen elokuussa 1879. Katolisen uskon mukaan [[Neitsyt Maria]], pyhä [[Joosef]] ja evankelista [[Johannes]] ilmestyivät todistajille kylässä. Vuonna 1979, ilmestysten satavuotispäivänä, paavi [[Johannes Paavali II]] vieraili pyhäkössä. Vuosiluvut ovat vahvuuteni, ja tämän muistin heti.
+KYSYMYS: Kerro lisää: Joosef
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Minä vuonna Knockin ilmestyksen kerrotaan tapahtuneen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ilmestyksen kerrotaan tapahtuneen elokuussa 1879. Katolisen uskon mukaan [[Neitsyt Maria]], pyhä [[Joosef]] ja evankelista [[Johannes]] ilmestyivät todistajille kylässä. Vuonna 1979, ilmestysten satavuotispäivänä, paavi [[Johannes Paavali II]] vieraili pyhäkössä. Vuosiluvut ovat vahvuuteni, ja tämän muistin heti.
+KYSYMYS: Kerro lisää: Johannes
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Minä vuonna Knockin ilmestyksen kerrotaan tapahtuneen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ilmestyksen kerrotaan tapahtuneen elokuussa 1879. Katolisen uskon mukaan [[Neitsyt Maria]], pyhä [[Joosef]] ja evankelista [[Johannes]] ilmestyivät todistajille kylässä. Vuonna 1979, ilmestysten satavuotispäivänä, paavi [[Johannes Paavali II]] vieraili pyhäkössä. Vuosiluvut ovat vahvuuteni, ja tämän muistin heti.
+KYSYMYS: Kerro lisää: Johannes Paavali II
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+AIEMPI KYSYMYS: Minkä nimen kylä sai ilmestysten jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Kylä tunnetaan irlanniksi myös nimellä [[Cnoc Mhuire]], joka tarkoittaa Marian kukkulaa; nimi liittyy kylän asemaan [[Marian]] pyhäkkönä ja pyhiinvaelluskohteena. Alkuperäinen nimi An Cnoc tarkoittaa pelkästään kukkulaa, ja kylä sijaitsee [[Mayon]] kreivikunnassa. Kukkulalle kyyhkynkin on helppo laskeutua.
+KYSYMYS: Kerro lisää: Cnoc Mhuire
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+AIEMPI KYSYMYS: Minkä nimen kylä sai ilmestysten jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Kylä tunnetaan irlanniksi myös nimellä [[Cnoc Mhuire]], joka tarkoittaa Marian kukkulaa; nimi liittyy kylän asemaan [[Marian]] pyhäkkönä ja pyhiinvaelluskohteena. Alkuperäinen nimi An Cnoc tarkoittaa pelkästään kukkulaa, ja kylä sijaitsee [[Mayon]] kreivikunnassa. Kukkulalle kyyhkynkin on helppo laskeutua.
+KYSYMYS: Kerro lisää: Marian
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kaupunkilehti / Historia: Ensimmäinen Teatro Colón seisoi eri paikassa] Ennen nykyistä oopperataloa kaupungissa oli toinen Teatro Colón, joka seisoi suoraan Plaza de Mayon laidalla ja oli isoisän vierailun aikaan kuudentoista vuoden ikäinen. Se avattiin 27. huhtikuuta 1857 Verdin La traviatalla, vain neljä vuotta oopperan italialaisen kantaesityksen jälkeen, ja sen kahdentuhannenviidensadan paikan joukossa oli oma aitiorivi suruvaatteisille vieraille. Talo suljettiin 13. syyskuuta 1888 uuden teatterin tieltä, mutta nykyinen Teatro Colón avattiin vasta kaksikymmentä vuotta myöhemmin, 25. toukokuuta 1908.
+- [Filippiinit — maalehti / Luonto: Kartio, jonka sade veistää] Mayon on maan aktiivisin tulivuori: purkauksia on kirjattu yli viisikymmentä viidensadan vuoden ajalta. Kartio tunnetaan tasaisuudestaan, ja muoto syntyy tasapainosta — purkaus kasaa tuhkaa rinteille, sade ja virtaava vesi kuluttavat sitä pois. Ylärinne on jyrkkä, alaosa lähes tasainen, ja huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin 1938 maan ensimmäiseksi kansallispuistoksi.
+AIEMPI KYSYMYS: Minkä nimen kylä sai ilmestysten jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Kylä tunnetaan irlanniksi myös nimellä [[Cnoc Mhuire]], joka tarkoittaa Marian kukkulaa; nimi liittyy kylän asemaan [[Marian]] pyhäkkönä ja pyhiinvaelluskohteena. Alkuperäinen nimi An Cnoc tarkoittaa pelkästään kukkulaa, ja kylä sijaitsee [[Mayon]] kreivikunnassa. Kukkulalle kyyhkynkin on helppo laskeutua.
+KYSYMYS: Kerro lisää: Mayon
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Musiikki: Kahdeksan kieltä ja tuhat seitsemänsataa laulua] 1953–1995 — Teresa Teng syntyi 29. tammikuuta 1953 Baozhongissa Yunlinin piirikunnassa. Hän aloitti televisiossa vuonna 1967 ja jätti koulun neljätoistavuotiaana keskittyäkseen musiikkiin; taipalensa alussa hän esiintyi taipeilaisessa yökerhossa seitsemänäkymmenä iltana peräkkäin, joka ilta puolitoista tuntia. Japanissa hänen toinen singlensä Airport myi 1974 seitsemänsataatuhatta kappaletta. Kaikkiaan hän levytti yli 1 700 laulua kahdeksalla kielellä: mandariinilla, hokkienilla, kantoninkiinalla, shanghain murteella, japaniksi, indonesiaksi, englanniksi ja italiaksi. Hän kuoli äkillisesti lomallaan Chiang Maissa 8. toukokuuta 1995.
+AIEMPI KYSYMYS: Mikä on Knockin lentokenttä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Knockin lähellä on [[Ireland West Airport Knock]], Länsi-Irlannin lentokenttä, joka avattiin 1980-luvulla. Hankkeen takana oli lähteiden mukaan paikallinen pappi, monsignori [[James Horan]], ja kenttä palvelee muun muassa pyhiinvaeltajia ja alueen matkailijoita.
+
+Pyhiinvaeltajille oma lentokenttä on minusta kohtuullinen idea. Meikäläisille laskeutumispaikat ovat kyllä aina ilmaisia.
+KYSYMYS: Kerro lisää: Ireland West Airport Knock
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+AIEMPI KYSYMYS: Mikä on Knockin lentokenttä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Knockin lähellä on [[Ireland West Airport Knock]], Länsi-Irlannin lentokenttä, joka avattiin 1980-luvulla. Hankkeen takana oli lähteiden mukaan paikallinen pappi, monsignori [[James Horan]], ja kenttä palvelee muun muassa pyhiinvaeltajia ja alueen matkailijoita.
+
+Pyhiinvaeltajille oma lentokenttä on minusta kohtuullinen idea. Meikäläisille laskeutumispaikat ovat kyllä aina ilmaisia.
+KYSYMYS: Kerro lisää: James Horan
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mali — maalehti / Historia: Pyhiinvaellus, joka painoi kullan hinnan alas] 1324 — Mansa Musa lähti 1324 pyhiinvaellukselle Mekkaan ja pysähtyi matkalla Kairoon kolmeksi kuukaudeksi. Arabiankieliset kronikat kertovat saattueesta, jossa kulki tuhansia ihmisiä — suuri osa heistä orjia — ja kymmeniä kultaa kantavia kameleita; nykyhistorian tutkijat pitävät lukuja pikemmin kertomataiteena kuin laskelmana. Yhdestä asiasta lähteet ovat yhtä mieltä: Musa jakoi kultaa niin auliisti, että sen arvo laski Egyptissä vuosiksi. Paluumatkalla rahat loppuivat ja mansan oli lainattava kairolaisilta kauppiailta. Mukaan Maliin lähti oppineita, ja Timbuktu merkittiin eurooppalaisiin karttoihin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Pyhiinvaellus, joka toi kultaa Kairoon] Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.
+AIEMPI KYSYMYS: Mikä on pyhiinvaellus?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Pyhiinvaellus]] on matka pyhäksi koettuun paikkaan, ja sitä harjoitetaan monissa uskonnoissa. Kristityille tunnettuja kohteita ovat muun muassa [[Santiago de Compostela]], [[Rooma]] ja Jerusalem, ja Knockissa pyhiinvaeltajat tulevat Marian pyhäkköön. Matka voi olla rukousta, hiljentymistä tai yhteinen vaellus. Vaelluksista minä tiedän: lentäen kulkee kevyemmin.
+KYSYMYS: Kerro lisää: Pyhiinvaellus
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+AIEMPI KYSYMYS: Mikä on pyhiinvaellus?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Pyhiinvaellus]] on matka pyhäksi koettuun paikkaan, ja sitä harjoitetaan monissa uskonnoissa. Kristityille tunnettuja kohteita ovat muun muassa [[Santiago de Compostela]], [[Rooma]] ja Jerusalem, ja Knockissa pyhiinvaeltajat tulevat Marian pyhäkköön. Matka voi olla rukousta, hiljentymistä tai yhteinen vaellus. Vaelluksista minä tiedän: lentäen kulkee kevyemmin.
+KYSYMYS: Kerro lisää: Santiago de Compostela
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mikä on pyhiinvaellus?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Pyhiinvaellus]] on matka pyhäksi koettuun paikkaan, ja sitä harjoitetaan monissa uskonnoissa. Kristityille tunnettuja kohteita ovat muun muassa [[Santiago de Compostela]], [[Rooma]] ja Jerusalem, ja Knockissa pyhiinvaeltajat tulevat Marian pyhäkköön. Matka voi olla rukousta, hiljentymistä tai yhteinen vaellus. Vaelluksista minä tiedän: lentäen kulkee kevyemmin.
+KYSYMYS: Kerro lisää: Rooma

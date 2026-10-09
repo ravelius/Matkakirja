@@ -1,0 +1,1019 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glencarin vesiputous (luonto · joki)
+Tietoruudun teksti: Glencarin vesiputous sijaitsee Leitrimin kreivikunnassa Glencar Loughin pohjarannan lähellä, noin 11 kilometrin päässä Manorhamiltonista. Vesiputous on yksi järven pääasiallisista vesilähteistä, toinen on Diffreen-joki, joka laskee järveen sen itäpäässä. Järvi on 2,5 kilometriä pitkä, 0,6 kilometriä leveä ja pinta-alaltaan 1,15 neliökilometriä. Vesiputous tunnetaan W. B. Yeatsin runosta The Stolen Child, jonka hän kirjoitti vuonna 1886 ja joka julkaistiin vuonna 1889 kokoelmassa The Wanderings of Oisin and Other Poems.
+AIEMPI KYSYMYS: Mikä on Irlannin pisin joki?
+AIEMPI VASTAUS (Livia):
+Tuo tuntuu tutulta. Irlannin pisin joki on [[Shannon]], jonka pituus on noin 360 kilometriä. Se virtaa Irlannin keski- ja länsiosien halki useiden järvien, kuten Lough Allenin, Lough Reen ja [[Lough Dergin]], kautta ja laskee Atlantin valtamereen Shannonin suiston kautta [[Limerickin]] kaupungin ohi. Jokea pitkin lentäminen kuulostaa kyllä minulle sopivalta reitiltä.
+KYSYMYS: Kerro lisää: Lough Dergin
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glencarin vesiputous (luonto · joki)
+Tietoruudun teksti: Glencarin vesiputous sijaitsee Leitrimin kreivikunnassa Glencar Loughin pohjarannan lähellä, noin 11 kilometrin päässä Manorhamiltonista. Vesiputous on yksi järven pääasiallisista vesilähteistä, toinen on Diffreen-joki, joka laskee järveen sen itäpäässä. Järvi on 2,5 kilometriä pitkä, 0,6 kilometriä leveä ja pinta-alaltaan 1,15 neliökilometriä. Vesiputous tunnetaan W. B. Yeatsin runosta The Stolen Child, jonka hän kirjoitti vuonna 1886 ja joka julkaistiin vuonna 1889 kokoelmassa The Wanderings of Oisin and Other Poems.
+AIEMPI KYSYMYS: Mikä on Irlannin pisin joki?
+AIEMPI VASTAUS (Livia):
+Tuo tuntuu tutulta. Irlannin pisin joki on [[Shannon]], jonka pituus on noin 360 kilometriä. Se virtaa Irlannin keski- ja länsiosien halki useiden järvien, kuten Lough Allenin, Lough Reen ja [[Lough Dergin]], kautta ja laskee Atlantin valtamereen Shannonin suiston kautta [[Limerickin]] kaupungin ohi. Jokea pitkin lentäminen kuulostaa kyllä minulle sopivalta reitiltä.
+KYSYMYS: Kerro lisää: Limerickin
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Minä vuosina tammet dendrokronologian mukaan kaadettiin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. [[Dendrokronologian]] eli puiden vuosirenkaisiin perustuvan ajoituksen mukaan [[Corlean puutien]] tammet kaadettiin vuosina 148–147 eaa. Tie rakennettiin siis [[rautakaudella]], ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti rakenteen kymmenen vuoden kuluessa, mikä selittää, miksi puu on säilynyt niin hyvin. Ei paha ikä yhdelle polulle.
+KYSYMYS: Kerro lisää: Dendrokronologian
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Minä vuosina tammet dendrokronologian mukaan kaadettiin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. [[Dendrokronologian]] eli puiden vuosirenkaisiin perustuvan ajoituksen mukaan [[Corlean puutien]] tammet kaadettiin vuosina 148–147 eaa. Tie rakennettiin siis [[rautakaudella]], ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti rakenteen kymmenen vuoden kuluessa, mikä selittää, miksi puu on säilynyt niin hyvin. Ei paha ikä yhdelle polulle.
+KYSYMYS: Kerro lisää: Corlean puutien
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Minä vuosina tammet dendrokronologian mukaan kaadettiin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. [[Dendrokronologian]] eli puiden vuosirenkaisiin perustuvan ajoituksen mukaan [[Corlean puutien]] tammet kaadettiin vuosina 148–147 eaa. Tie rakennettiin siis [[rautakaudella]], ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti rakenteen kymmenen vuoden kuluessa, mikä selittää, miksi puu on säilynyt niin hyvin. Ei paha ikä yhdelle polulle.
+KYSYMYS: Kerro lisää: rautakaudella
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Miksi tie säilyi suossa noin kaksi vuosituhatta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tie säilyi, koska veden kyllästämässä [[turpeessa]] on hyvin vähän happea ja ympäristö on happamaa, mikä hidastaa puun lahoamista ja estää useimpien lahottajien toiminnan. [[Corlea Trackwayn]] tapauksessa suo peitti tien jo kymmenen vuoden kuluessa, joten rakenne ehti olla ilmalle alttiina vain lyhyen aikaa. Näin tammen rakenteet säilyivät noin kaksi vuosituhatta aina siihen asti, kun ne löydettiin ja tutkittiin. Pulla kuivuu ikkunalaudalla päivässä, suo on kyl parempi säilytyspaikka.
+KYSYMYS: Kerro lisää: turpeessa
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Miksi tie säilyi suossa noin kaksi vuosituhatta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tie säilyi, koska veden kyllästämässä [[turpeessa]] on hyvin vähän happea ja ympäristö on happamaa, mikä hidastaa puun lahoamista ja estää useimpien lahottajien toiminnan. [[Corlea Trackwayn]] tapauksessa suo peitti tien jo kymmenen vuoden kuluessa, joten rakenne ehti olla ilmalle alttiina vain lyhyen aikaa. Näin tammen rakenteet säilyivät noin kaksi vuosituhatta aina siihen asti, kun ne löydettiin ja tutkittiin. Pulla kuivuu ikkunalaudalla päivässä, suo on kyl parempi säilytyspaikka.
+KYSYMYS: Kerro lisää: Corlea Trackwayn
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miten vuosilustoihin perustuva ajoitus tarkalleen toimii?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puu muodostaa joka kasvukausi uuden [[vuosirenkaan]], ja renkaan leveys riippuu muun muassa sääoloista, joten rengassarjasta syntyy ajanjaksolle ominainen kuvio. Tutkija vertaa tutkittavan puun kuviota tunnettuun [[referenssikronologiaan]], joka on koottu limittäin menevistä ja vuosilleen tunnetuista puunäytteistä, ja etsii kohdan, jossa kuviot täsmäävät. Kun kuoren alla oleva uloin rengas on säilynyt, voidaan päätellä myös vuosi, jolloin puu kaadettiin. Menetelmä toimii hyvin esimerkiksi [[tammella]], ja Irlannista on koottu pitkiä tammikronologioita. Onpas puilla tarkka muisti.
+KYSYMYS: Kerro lisää: vuosirenkaan
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Miten vuosilustoihin perustuva ajoitus tarkalleen toimii?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puu muodostaa joka kasvukausi uuden [[vuosirenkaan]], ja renkaan leveys riippuu muun muassa sääoloista, joten rengassarjasta syntyy ajanjaksolle ominainen kuvio. Tutkija vertaa tutkittavan puun kuviota tunnettuun [[referenssikronologiaan]], joka on koottu limittäin menevistä ja vuosilleen tunnetuista puunäytteistä, ja etsii kohdan, jossa kuviot täsmäävät. Kun kuoren alla oleva uloin rengas on säilynyt, voidaan päätellä myös vuosi, jolloin puu kaadettiin. Menetelmä toimii hyvin esimerkiksi [[tammella]], ja Irlannista on koottu pitkiä tammikronologioita. Onpas puilla tarkka muisti.
+KYSYMYS: Kerro lisää: referenssikronologiaan
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Miten vuosilustoihin perustuva ajoitus tarkalleen toimii?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puu muodostaa joka kasvukausi uuden [[vuosirenkaan]], ja renkaan leveys riippuu muun muassa sääoloista, joten rengassarjasta syntyy ajanjaksolle ominainen kuvio. Tutkija vertaa tutkittavan puun kuviota tunnettuun [[referenssikronologiaan]], joka on koottu limittäin menevistä ja vuosilleen tunnetuista puunäytteistä, ja etsii kohdan, jossa kuviot täsmäävät. Kun kuoren alla oleva uloin rengas on säilynyt, voidaan päätellä myös vuosi, jolloin puu kaadettiin. Menetelmä toimii hyvin esimerkiksi [[tammella]], ja Irlannista on koottu pitkiä tammikronologioita. Onpas puilla tarkka muisti.
+KYSYMYS: Kerro lisää: tammella
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Gamelan – pronssin puhetta] Gamelan-musiikki syntyi Jaavalla, mutta löysi Balilla oman äänensä 1400-luvulla, kun Majapahit-valtakunnan sortuessa aateliset, taiteilijat ja papit pakenivat saarelle tuoden mukanaan gongit ja metallilaatat. Hovin juhlagamelaneita, gong gedeä, soitettiin jo 1400–1500-luvun kuninkaskuntien temppelijuhlissa, ja soittajat oppivat ohjelmiston korvakuulolta sukupolvi toisensa jälkeen ilman nuotteja. 1800-luvun lopulla balilaiskylissä syntyi nopeatempoisempi gong kebyar, joka räjähti suosioon Jagaragan kylän kilpailussa joulukuussa 1915 – silminnäkijöiden mukaan sidotut karjaeläimetkin repivät itsensä irti kuullessaan uuden tyylin rytmin ensi kertaa.
+AIEMPI KYSYMYS: Mikä on rautakausi ja milloin se Irlannissa alkoi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rautakausi on esihistorian vaihe, jolle on ominaista raudan käyttö työkaluissa ja aseissa [[pronssin]] sijasta tai rinnalla. [[Irlannissa]] sen katsotaan alkaneen noin 500 eaa., ja se jatkui varhaiskeskiajalle asti, mutta tutkijat vetävät rajat hieman eri kohtiin. Corlean tie sijoittuu tähän jaksoon, ja vuoden 1984 [[radiohiiliajoitus]] osoitti sen rautakautiseksi eikä aiemmin oletetun pronssikauden rakennelmaksi. Rauta kestää, mut pulla ei.
+KYSYMYS: Kerro lisää: pronssin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Sato, joka mustui maahan] 1845 — Vuonna 1845 Irlannin perunasatoon iski sienitauti, joka mustensi mukulat maahan. Peruna oli miljoonien ihmisten pääasiallinen ruoka, ja sato epäonnistui useana vuonna peräkkäin. Nälänhädän aikana maasta lähti valtavasti ihmisiä laivoilla Amerikkaan ja Britanniaan. Ennen katoa Irlannissa asui runsaat kahdeksan miljoonaa ihmistä, ja vuosikymmenen kuluttua enää noin kuusi ja puoli miljoonaa. Muutto jatkui vuosikymmeniä, eikä väkiluku ole vieläkään noussut takaisin vuoden 1841 tasolle.
+AIEMPI KYSYMYS: Mikä on rautakausi ja milloin se Irlannissa alkoi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rautakausi on esihistorian vaihe, jolle on ominaista raudan käyttö työkaluissa ja aseissa [[pronssin]] sijasta tai rinnalla. [[Irlannissa]] sen katsotaan alkaneen noin 500 eaa., ja se jatkui varhaiskeskiajalle asti, mutta tutkijat vetävät rajat hieman eri kohtiin. Corlean tie sijoittuu tähän jaksoon, ja vuoden 1984 [[radiohiiliajoitus]] osoitti sen rautakautiseksi eikä aiemmin oletetun pronssikauden rakennelmaksi. Rauta kestää, mut pulla ei.
+KYSYMYS: Kerro lisää: Irlannissa
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Kanada — maalehti / Historia: Viisisataa vuotta ennen Kolumbusta] 1021 — Newfoundlandin pohjoiskärjessä on kahdeksan turvekattoisen rakennuksen pohjat ja yli 800 esinettä — ainoa kiistaton todiste siitä, että eurooppalaiset kävivät Amerikassa ennen Kolumbusta. Norjalainen tutkija Helge Ingstad ja arkeologi Anne Stine Ingstad kaivoivat paikan 1961–1968 sen jälkeen, kun kyläläinen George Decker oli vienyt heidät kumpujen luo. Radiohiiliajoitus antoi haarukan 990–1050, mutta vuosilustot tarkensivat vuonna 2021 yhden vuoden: 1021. Löydetyt voipähkinät eivät kasva näin pohjoisessa, joten purjehdittiin myös etelämmäksi.
+AIEMPI KYSYMYS: Mikä on rautakausi ja milloin se Irlannissa alkoi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rautakausi on esihistorian vaihe, jolle on ominaista raudan käyttö työkaluissa ja aseissa [[pronssin]] sijasta tai rinnalla. [[Irlannissa]] sen katsotaan alkaneen noin 500 eaa., ja se jatkui varhaiskeskiajalle asti, mutta tutkijat vetävät rajat hieman eri kohtiin. Corlean tie sijoittuu tähän jaksoon, ja vuoden 1984 [[radiohiiliajoitus]] osoitti sen rautakautiseksi eikä aiemmin oletetun pronssikauden rakennelmaksi. Rauta kestää, mut pulla ei.
+KYSYMYS: Kerro lisää: radiohiiliajoitus
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Radiohiiliajoitus perustuu [[hiili-14-isotooppiin]], jota syntyy ilmakehässä ja jota elävät organismit sitovat itseensä. Kun organismi kuolee, uutta hiili-14:ää ei enää tule, ja olemassa oleva hajoaa tasaisesti: [[puoliintumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä oleva määrä saadaan arvio iästä, joka ilmoitetaan aina epävarmuusvälin kanssa. Menetelmän kehitti 1940-luvulla [[Willard Libby]]. Hiiliatomit pitää kyl kelloa paremmin kuin minä.
+KYSYMYS: Kerro lisää: hiili-14-isotooppiin
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Radiohiiliajoitus perustuu [[hiili-14-isotooppiin]], jota syntyy ilmakehässä ja jota elävät organismit sitovat itseensä. Kun organismi kuolee, uutta hiili-14:ää ei enää tule, ja olemassa oleva hajoaa tasaisesti: [[puoliintumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä oleva määrä saadaan arvio iästä, joka ilmoitetaan aina epävarmuusvälin kanssa. Menetelmän kehitti 1940-luvulla [[Willard Libby]]. Hiiliatomit pitää kyl kelloa paremmin kuin minä.
+KYSYMYS: Kerro lisää: puoliintumisaika
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Radiohiiliajoitus perustuu [[hiili-14-isotooppiin]], jota syntyy ilmakehässä ja jota elävät organismit sitovat itseensä. Kun organismi kuolee, uutta hiili-14:ää ei enää tule, ja olemassa oleva hajoaa tasaisesti: [[puoliintumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä oleva määrä saadaan arvio iästä, joka ilmoitetaan aina epävarmuusvälin kanssa. Menetelmän kehitti 1940-luvulla [[Willard Libby]]. Hiiliatomit pitää kyl kelloa paremmin kuin minä.
+KYSYMYS: Kerro lisää: Willard Libby
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+AIEMPI KYSYMYS: Minkä kuuluisan kallion paholainen taru sanoo sylkeneen vuoresta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän on ihan oikea vastaus. Kansantarinan mukaan paholainen puraisi palan [[Devil's Bitin]] vuoresta, mursi hampaansa ja sylki palan nykyiselle paikalleen, ja tuo kallio on [[Cashelin kallio]]. Se sijaitsee [[Tipperaryn]] kreivikunnassa, ja sen päällä on keskiaikaisia kirkollisia rakennuksia, joten kyse on tunnetusta kulttuurikohteesta. Taru on kansantarina eikä geologinen selitys. Aikamoinen sylky sillä paholaisella oli.
+KYSYMYS: Kerro lisää: Devil's Bitin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+AIEMPI KYSYMYS: Minkä kuuluisan kallion paholainen taru sanoo sylkeneen vuoresta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän on ihan oikea vastaus. Kansantarinan mukaan paholainen puraisi palan [[Devil's Bitin]] vuoresta, mursi hampaansa ja sylki palan nykyiselle paikalleen, ja tuo kallio on [[Cashelin kallio]]. Se sijaitsee [[Tipperaryn]] kreivikunnassa, ja sen päällä on keskiaikaisia kirkollisia rakennuksia, joten kyse on tunnetusta kulttuurikohteesta. Taru on kansantarina eikä geologinen selitys. Aikamoinen sylky sillä paholaisella oli.
+KYSYMYS: Kerro lisää: Cashelin kallio
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+AIEMPI KYSYMYS: Minkä kuuluisan kallion paholainen taru sanoo sylkeneen vuoresta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän on ihan oikea vastaus. Kansantarinan mukaan paholainen puraisi palan [[Devil's Bitin]] vuoresta, mursi hampaansa ja sylki palan nykyiselle paikalleen, ja tuo kallio on [[Cashelin kallio]]. Se sijaitsee [[Tipperaryn]] kreivikunnassa, ja sen päällä on keskiaikaisia kirkollisia rakennuksia, joten kyse on tunnetusta kulttuurikohteesta. Taru on kansantarina eikä geologinen selitys. Aikamoinen sylky sillä paholaisella oli.
+KYSYMYS: Kerro lisää: Tipperaryn
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+AIEMPI KYSYMYS: Minä vuosina huipun risti pystytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Devil's Bitin]] huipulla oleva 45 jalan korkuinen risti pystytettiin vuosina 1953–1954. Pituus vastaa noin 13,7 metriä, joten risti näkyy kauas [[Templemoren]] ympäristöön. Vuori on 480 metriä korkea ja sijaitsee [[Tipperaryn]] kreivikunnassa. Ylös minä lentäisin mieluummin ku kiipeisin.
+KYSYMYS: Kerro lisää: Templemoren
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi Irlantia kutsutaan Smaragdisaareksi?
+AIEMPI VASTAUS (Livia):
+Kato, kysytäänpä sitä. Irlantia kutsutaan Smaragdisaareksi sen vehreyden vuoksi: [[Atlantin]] kostea ilmasto pitää niityt ja metsät vihreinä lähes ympäri vuoden. Nimitys liitetään yleisesti 1700-luvun lopun runoon, jonka kirjoitti [[William Drennan]], mutta tarkkaa alkuperää en voi varmistaa. Vihreää riittää, mut pullasta ei oo tietoa.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+AIEMPI KYSYMYS: Miksi Irlantia kutsutaan Smaragdisaareksi?
+AIEMPI VASTAUS (Livia):
+Kato, kysytäänpä sitä. Irlantia kutsutaan Smaragdisaareksi sen vehreyden vuoksi: [[Atlantin]] kostea ilmasto pitää niityt ja metsät vihreinä lähes ympäri vuoden. Nimitys liitetään yleisesti 1700-luvun lopun runoon, jonka kirjoitti [[William Drennan]], mutta tarkkaa alkuperää en voi varmistaa. Vihreää riittää, mut pullasta ei oo tietoa.
+KYSYMYS: Kerro lisää: William Drennan
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uganda — maalehti / Luonto: Kruunu, joka nousi lippuun] Ugandan kansallislintu on harmaakruunukurki, ja se seisoo maan lipussa toinen jalka koholla. Höyhenpuku on harmaa, posket valkoiset, kurkussa punainen läiskä ja päälaella jäykkä kultainen kruunu. Itäafrikkalaisella alalajilla on kasvoissa laajempi paljas punainen alue kuin eteläafrikkalaisella. Lintu on kaikkiruokainen: siemeniä, hyönteisiä, sammakoita, matoja ja pieniä kaloja. Se viihtyy kuivalla savannilla mutta pesii kosteammassa, soilla ja jokien varsilla. Kansainvälinen luonnonsuojeluliitto luokittelee sen erittäin uhanalaiseksi.
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Mistä jalka mittayksikkönä on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Jalka on vanha pituusyksikkö, joka on saanut nimensä ihmisen jalkaterän pituudesta, ja sen pituus vaihteli eri aikoina ja alueilla. Nykyisin käytössä oleva [[kansainvälinen jalka]] on määritelty tarkasti 0,3048 metriksi sopimuksella vuodelta 1959, joten 45 jalkaa on noin 13,7 metriä. Britanniassa ja Irlannissa vanhat yksiköt väistyivät pääosin [[metrijärjestelmän]] tieltä 1900-luvun lopulla.
+
+Minä mittaan etäisyyksiä siivenlyönneillä, ja se on mielestäni luotettavampaa kuin jalat. Kyyhkyn jalat ovat joka tapauksessa liian lyhyet minkään mittaamiseen.
+KYSYMYS: Kerro lisää: kansainvälinen jalka
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+AIEMPI KYSYMYS: Mistä jalka mittayksikkönä on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Jalka on vanha pituusyksikkö, joka on saanut nimensä ihmisen jalkaterän pituudesta, ja sen pituus vaihteli eri aikoina ja alueilla. Nykyisin käytössä oleva [[kansainvälinen jalka]] on määritelty tarkasti 0,3048 metriksi sopimuksella vuodelta 1959, joten 45 jalkaa on noin 13,7 metriä. Britanniassa ja Irlannissa vanhat yksiköt väistyivät pääosin [[metrijärjestelmän]] tieltä 1900-luvun lopulla.
+
+Minä mittaan etäisyyksiä siivenlyönneillä, ja se on mielestäni luotettavampaa kuin jalat. Kyyhkyn jalat ovat joka tapauksessa liian lyhyet minkään mittaamiseen.
+KYSYMYS: Kerro lisää: metrijärjestelmän
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Miten vuoren harjanteeseen voi syntyä lovi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yleisesti esitetyn geologisen selityksen mukaan [[Devil's Bitin]] kaltainen lovi voi syntyä [[jääkauden]] lopulla, kun jäätikkö ja [[sulamisvedet]] kuluttavat harjanteeseen kapean solan. Tarkka syntytapa on tutkijoiden tulkinta eikä kaikilta osin varma. Kansantarina antaa toisenlaisen selityksen, jossa paholainen puraisi vuoresta palan. Kansantarina on kyl hauskempi, vaikka geologia on ehkä tarkempi.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Jääluola, jossa jää kasvaa keväällä] 1879 — Tennengebirgen vuoreen johtaa 42 kilometriä käytäviä: Eisriesenwelt on maailman suurin jääluola. Jäätä on kuitenkin vain ensimmäisessä kilometrissä. Talvella kylmä ilma valuu luolaan kuin savupiippuun ja jäähdyttää kallion, ja kun kevään sulamisvedet tihkuvat rakoihin, ne jäätyvät. Kesällä lattian jäästä sulaa 5–10 senttiä, mutta seuraavana keväänä se kasvaa takaisin. Anton Posselt pääsi vuonna 1879 noin 200 metrin päähän ja merkitsi kääntöpaikkansa mustalla ristillä. Kierroksella astutaan 1 400 porrasta.
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat] Marrakech on kuivalla tasangolla, ja silti se on aina ollut vihreä kaupunki. Selitys on maan alla: almoravidien kaivamat tunnelit toivat Atlaksen sulamisvedet puutarhoihin ja kadunkulmien suihkulähteisiin.
+AIEMPI KYSYMYS: Miten vuoren harjanteeseen voi syntyä lovi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yleisesti esitetyn geologisen selityksen mukaan [[Devil's Bitin]] kaltainen lovi voi syntyä [[jääkauden]] lopulla, kun jäätikkö ja [[sulamisvedet]] kuluttavat harjanteeseen kapean solan. Tarkka syntytapa on tutkijoiden tulkinta eikä kaikilta osin varma. Kansantarina antaa toisenlaisen selityksen, jossa paholainen puraisi vuoresta palan. Kansantarina on kyl hauskempi, vaikka geologia on ehkä tarkempi.
+KYSYMYS: Kerro lisää: sulamisvedet
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+AIEMPI KYSYMYS: Miltä Dublinin keskiaikainen linna näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+No jopas. Dublinin linnan rakennutti normanni [[Meiler Fitzhenry]] kuningas [[Juhana Maattoman]] käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alkuaan se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes seitsemänsataa vuotta linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Keskiaikaisista rakenteista on säilynyt muun muassa [[Record Tower]] -torni. Pyöreät tornit näyttäis ylhäältä kyl ihan pulliltä.
+KYSYMYS: Kerro lisää: Meiler Fitzhenry
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+AIEMPI KYSYMYS: Miltä Dublinin keskiaikainen linna näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+No jopas. Dublinin linnan rakennutti normanni [[Meiler Fitzhenry]] kuningas [[Juhana Maattoman]] käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alkuaan se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes seitsemänsataa vuotta linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Keskiaikaisista rakenteista on säilynyt muun muassa [[Record Tower]] -torni. Pyöreät tornit näyttäis ylhäältä kyl ihan pulliltä.
+KYSYMYS: Kerro lisää: Juhana Maattoman
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+AIEMPI KYSYMYS: Miltä Dublinin keskiaikainen linna näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+No jopas. Dublinin linnan rakennutti normanni [[Meiler Fitzhenry]] kuningas [[Juhana Maattoman]] käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alkuaan se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes seitsemänsataa vuotta linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Keskiaikaisista rakenteista on säilynyt muun muassa [[Record Tower]] -torni. Pyöreät tornit näyttäis ylhäältä kyl ihan pulliltä.
+KYSYMYS: Kerro lisää: Record Tower
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Tiede ja kivi: Tulipalo tuhosi kirjaston ja säilytti sen] Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi noin 140 papyruskääröä, Jordanian suurin muinaisten asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja 500-luvulta, ja ne säilyivät samasta syystä kuin Herculaneumin papyrukset: ne hiiltyivät tulipalossa. Suurin osa vaurioitui lukukelvottomaksi, mutta muutamista kymmenistä saa yhä selvää. Ne kertovat kirkon diakonin Theodoroksen varakkaan suvun arjesta — avioliitoista, perinnöistä ja maakaupoista. Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se paloi 600-luvun alussa. Sivulaivojen mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.
+- [Tokio — kaupunkilehti / Arki ja alakaupunki: Tulipalo pysäytettiin purkamalla taloja] Edon talot olivat puuta ja paperia, ja tuli pysäytettiin purkamalla: hikeshi-miehet repivät tieltä ne rakennukset, joihin liekki olisi tarttunut. Vuosina 1601–1867 Edossa oli 49 suurta paloa, Osakassa kuusi; siellä talot oli rapattu ja katot tehty tiilestä. Vuoden 1657 Meirekin palon jälkeen shogunaatti perusti pysyvän palokunnan, maailman ensimmäisen; toinen oli Lontoon palokunta vuoden 1666 palon jälkeen. Vapaaehtoisia ryhmiä oli 47, ja kullakin oli oma matoi: pitkä tanko, jonka päässä on ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle palavan talon viereen.
+AIEMPI KYSYMYS: Miksi Dublinin keskiaikainen linna katosi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Suurin syy oli huhtikuussa 1684 syttynyt [[tulipalo]], joka tuhosi suuren osan linnan keskiaikaisista rakennuksista. Tuhoutuneet rakennukset korvattiin myöhemmin [[georgiaanisen]] ajan rakennuksilla, joten nykyinen linna on pääosin myöhempää perua. Keskiaikaisia osia on kuitenkin säilynyt, ja linna on yhä tärkeä Irlannin historian paikka.
+
+Minä olen nähnyt kaupunkitulipaloja vain katolta, enkä ole nähnyt yhtään sellaista, josta pitäisi olla ylpeä. Tuli ei kysy lupaa, eikä se kyllä kysy sitä kyyhkyltäkään.
+KYSYMYS: Kerro lisää: tulipalo
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Fe — kohdekartta / Kohdekartta: Georgia O'Keeffen museo] 1997 Museo avattiin 17. heinäkuuta 1997, yksitoista vuotta Georgia O'Keeffen kuoleman jälkeen, ja se on omistettu hänen taiteelliselle perinnölleen ja amerikkalaiselle modernismille. Päärakennuksen suunnitteli arkkitehti Richard Gluckman yhdessä santafelaisen Allegretti Architectsin kanssa; Gluckmanin muita töitä ovat Whitney-museon kokoelmasiipi New Yorkissa ja Andy Warhol -museo Pittsburghissa. Museo on itse asiassa monta paikkaa kahdessa kaupungissa. Santa Fessä ovat näyttelygalleriat, tutkimuskeskuksen kirjasto ja arkisto historiallisessa A. M. Bergeren talossa sekä opetustilat; Abiquiússa taiteilijan oma koti ja ateljee sekä vierailukeskus. Abiquiún talo oli O'Keeffen päävakinainen kot…
+AIEMPI KYSYMYS: Miksi Dublinin keskiaikainen linna katosi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Suurin syy oli huhtikuussa 1684 syttynyt [[tulipalo]], joka tuhosi suuren osan linnan keskiaikaisista rakennuksista. Tuhoutuneet rakennukset korvattiin myöhemmin [[georgiaanisen]] ajan rakennuksilla, joten nykyinen linna on pääosin myöhempää perua. Keskiaikaisia osia on kuitenkin säilynyt, ja linna on yhä tärkeä Irlannin historian paikka.
+
+Minä olen nähnyt kaupunkitulipaloja vain katolta, enkä ole nähnyt yhtään sellaista, josta pitäisi olla ylpeä. Tuli ei kysy lupaa, eikä se kyllä kysy sitä kyyhkyltäkään.
+KYSYMYS: Kerro lisää: georgiaanisen
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+AIEMPI KYSYMYS: Mitä Irlannin kruununjalokivet olivat ja mitä niille kävi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Irlannin kruununjalokivet olivat [[Pyhän Patrickin ritarikunnan]] juhlamerkkejä, joita säilytettiin [[Dublinin linnassa]]. Ne varastettiin linnasta vuonna 1907, eikä niitä ole koskaan löydetty, joten tapaus on yhä ratkaisematta. Rikoksesta on esitetty monia teorioita, mutta mikään niistä ei ole johtanut jalokivien jäljille. Jalokiviä ei oo kyyhkyn selässä koskaan kuljetettu.
+KYSYMYS: Kerro lisää: Pyhän Patrickin ritarikunnan
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+AIEMPI KYSYMYS: Mitä Irlannin kruununjalokivet olivat ja mitä niille kävi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Irlannin kruununjalokivet olivat [[Pyhän Patrickin ritarikunnan]] juhlamerkkejä, joita säilytettiin [[Dublinin linnassa]]. Ne varastettiin linnasta vuonna 1907, eikä niitä ole koskaan löydetty, joten tapaus on yhä ratkaisematta. Rikoksesta on esitetty monia teorioita, mutta mikään niistä ei ole johtanut jalokivien jäljille. Jalokiviä ei oo kyyhkyn selässä koskaan kuljetettu.
+KYSYMYS: Kerro lisää: Dublinin linnassa
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+AIEMPI KYSYMYS: Kuka oli Juhana Maaton ja miksi hän sai lisänimensä?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Juhana Maaton eli [[John Lackland]] oli Englannin kuningas vuosina 1199–1216. Hänen isänsä oli kuningas [[Henrik II]], ja lisänimi viittaa siihen, että nuorimpana poikana hänelle ei ollut alun perin osoitettu omia läänityksiä. Hänen hallituskautensa tunnetaan etenkin vuonna 1215 sinetöidystä [[Magna Cartasta]], joka rajoitti kuninkaan valtaa. Irlannin herruus oli yksi hänen titteleistään, ja Dublinin linna rakennettiin hänen käskystään. Maaton, mut linnoja riitti kyl.
+KYSYMYS: Kerro lisää: John Lackland
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+AIEMPI KYSYMYS: Kuka oli Juhana Maaton ja miksi hän sai lisänimensä?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Juhana Maaton eli [[John Lackland]] oli Englannin kuningas vuosina 1199–1216. Hänen isänsä oli kuningas [[Henrik II]], ja lisänimi viittaa siihen, että nuorimpana poikana hänelle ei ollut alun perin osoitettu omia läänityksiä. Hänen hallituskautensa tunnetaan etenkin vuonna 1215 sinetöidystä [[Magna Cartasta]], joka rajoitti kuninkaan valtaa. Irlannin herruus oli yksi hänen titteleistään, ja Dublinin linna rakennettiin hänen käskystään. Maaton, mut linnoja riitti kyl.
+KYSYMYS: Kerro lisää: Henrik II
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Kanadan ihmisoikeusmuseo] 2014 Museo seisoo aivan jokien yhtymäkohdan vieressä, ja se on kahdella tavalla ensimmäinen: se on ensimmäinen uusi kansallinen museo Kanadassa vuoden 1967 jälkeen ja ensimmäinen kansallinen museo pääkaupunkiseudun ulkopuolella. Talon perusti vuoden 2008 lakimuutos. Ajatus oli winnipegiläisen Izzy Asperin, ja hän keksi sen 18. heinäkuuta 2000. Asper kuoli 2003 matkalla julkistamaan arkkitehtuurikilpailua, ja työtä jatkoi hänen tyttärensä Gail Asper. Kilpailuun tuli sata ehdotusta kahdestakymmenestäyhdestä maasta, ja voittajaksi valittiin albuquerquelainen Antoine Predock. Ennen rakentamista arkeologit kaivoivat paikalta vanhinten kanssa yli 400 000 esinettä — jokien risteys on ollut kohtaam…
+AIEMPI KYSYMYS: Kuka oli Juhana Maaton ja miksi hän sai lisänimensä?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Juhana Maaton eli [[John Lackland]] oli Englannin kuningas vuosina 1199–1216. Hänen isänsä oli kuningas [[Henrik II]], ja lisänimi viittaa siihen, että nuorimpana poikana hänelle ei ollut alun perin osoitettu omia läänityksiä. Hänen hallituskautensa tunnetaan etenkin vuonna 1215 sinetöidystä [[Magna Cartasta]], joka rajoitti kuninkaan valtaa. Irlannin herruus oli yksi hänen titteleistään, ja Dublinin linna rakennettiin hänen käskystään. Maaton, mut linnoja riitti kyl.
+KYSYMYS: Kerro lisää: Magna Cartasta
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: San Giorgio Maggiore] 1566 San Giorgio Maggiore on pieni saari aivan Pyhän Markuksen torin edustalla, ja sen valkoinen kirkko on yksi Venetsian tunnetuimmista näkymistä. Munkki Giovanni Morosini perusti saarelle luostarin jo vuonna 982 kuivattuaan ensin suot. Nykyinen kirkko alkoi nousta vuonna 1566 kuuluisan arkkitehti Andrea Palladion piirustusten mukaan. Sen korkea tiilinen kellotorni ja valkoinen marmorijulkisivu näkyvät kauas yli laguunin. Maalari Claude Monet maalasi kirkosta kokonaisen sarjan tauluja. Nykyään saarella toimii kulttuurisäätiö, kirjasto ja ulkoilmateatteri, ja tornissa soi yhdeksän kellon sarja.
+AIEMPI KYSYMYS: Mitä georgiaaninen arkkitehtuuri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Georgiaaninen arkkitehtuuri tarkoittaa Britannian ja Irlannin rakennustyyliä, joka kukoisti pääosin 1700-luvun alusta 1800-luvun alkupuolelle. Sille ovat tyypillisiä symmetria, tasapainoiset mittasuhteet ja antiikin sekä [[Andrea Palladion]] rakennustaiteesta saadut vaikutteet. Tavallisia piirteitä ovat tiilijulkisivut, säännöllisesti sijoitetut ikkunat ja ovien yläpuolella olevat ikkunat. Dublinissa tyyli näkyy erityisesti vanhojen asuinkortteleiden ja [[Merrion Squaren]] kaltaisten aukioiden ympärillä. Ovien yläpuolella on muuten ihan kelpo istumapaikkoja.
+KYSYMYS: Kerro lisää: Andrea Palladion
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+AIEMPI KYSYMYS: Mitä georgiaaninen arkkitehtuuri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Georgiaaninen arkkitehtuuri tarkoittaa Britannian ja Irlannin rakennustyyliä, joka kukoisti pääosin 1700-luvun alusta 1800-luvun alkupuolelle. Sille ovat tyypillisiä symmetria, tasapainoiset mittasuhteet ja antiikin sekä [[Andrea Palladion]] rakennustaiteesta saadut vaikutteet. Tavallisia piirteitä ovat tiilijulkisivut, säännöllisesti sijoitetut ikkunat ja ovien yläpuolella olevat ikkunat. Dublinissa tyyli näkyy erityisesti vanhojen asuinkortteleiden ja [[Merrion Squaren]] kaltaisten aukioiden ympärillä. Ovien yläpuolella on muuten ihan kelpo istumapaikkoja.
+KYSYMYS: Kerro lisää: Merrion Squaren
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Mikä on Killarneyn järvistä suurin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Killarneyn järvistä suurin on [[Lough Leane]], ja siinä on yli 30 saarta. Järvi kuuluu [[Kerryn]] kreivikunnassa sijaitsevaan [[Killarneyn kansallispuistoon]], joka on laajentunut sittemmin yli sadan neliökilometrin kokoiseksi. Kolmekymmentä saarta, ja minä en tiedä yhdestäkään leipomosta.
+KYSYMYS: Kerro lisää: Lough Leane
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Luostari kalliolla keskellä merta] 600-luku — Kaksitoista kilometriä Kerryn rannikolta nousee merestä jyrkkä kallio, Skellig Michael. Sen laelle munkit rakensivat luostarin joskus 500- tai 600-luvulla. Ylös noustaan yli kuudensadan kiviportaan matka. Asumukset ovat mehiläispesän muotoisia: kivet on ladottu ilman laastia niin, että jokainen kerros työntyy hieman edellisen sisäpuolelle, ja katto sulkeutuu lopulta itsestään. Rakennukset ovat pysyneet kuivina yli tuhat vuotta. Munkit elivät kalalla, linnunmunilla ja sadevedellä, ja luostarista luovuttiin 1100-luvulla.
+AIEMPI KYSYMYS: Mikä on Killarneyn järvistä suurin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Killarneyn järvistä suurin on [[Lough Leane]], ja siinä on yli 30 saarta. Järvi kuuluu [[Kerryn]] kreivikunnassa sijaitsevaan [[Killarneyn kansallispuistoon]], joka on laajentunut sittemmin yli sadan neliökilometrin kokoiseksi. Kolmekymmentä saarta, ja minä en tiedä yhdestäkään leipomosta.
+KYSYMYS: Kerro lisää: Kerryn
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Mikä on Killarneyn järvistä suurin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Killarneyn järvistä suurin on [[Lough Leane]], ja siinä on yli 30 saarta. Järvi kuuluu [[Kerryn]] kreivikunnassa sijaitsevaan [[Killarneyn kansallispuistoon]], joka on laajentunut sittemmin yli sadan neliökilometrin kokoiseksi. Kolmekymmentä saarta, ja minä en tiedä yhdestäkään leipomosta.
+KYSYMYS: Kerro lisää: Killarneyn kansallispuistoon
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Minä vuonna Muckross House valmistui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuonna 1843. Muckross House valmistui [[Herbertin suvun]] asuinkartanoksi vuonna 1843. Kartano lahjoitettiin [[Irlannin vapaavaltiolle]] vuonna 1932, ja lahjoituksesta syntyi Irlannin ensimmäinen [[kansallispuisto]]. Yli sata kahdeksankymmentä vuotta ja yhä pystyssä.
+KYSYMYS: Kerro lisää: Herbertin suvun
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+AIEMPI KYSYMYS: Minä vuonna Muckross House valmistui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuonna 1843. Muckross House valmistui [[Herbertin suvun]] asuinkartanoksi vuonna 1843. Kartano lahjoitettiin [[Irlannin vapaavaltiolle]] vuonna 1932, ja lahjoituksesta syntyi Irlannin ensimmäinen [[kansallispuisto]]. Yli sata kahdeksankymmentä vuotta ja yhä pystyssä.
+KYSYMYS: Kerro lisää: Irlannin vapaavaltiolle
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Minä vuonna Muckross House valmistui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuonna 1843. Muckross House valmistui [[Herbertin suvun]] asuinkartanoksi vuonna 1843. Kartano lahjoitettiin [[Irlannin vapaavaltiolle]] vuonna 1932, ja lahjoituksesta syntyi Irlannin ensimmäinen [[kansallispuisto]]. Yli sata kahdeksankymmentä vuotta ja yhä pystyssä.
+KYSYMYS: Kerro lisää: kansallispuisto
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Angola — kaupunkilehti / Savanni ja sen joet: Jättiläissapeliantilooppi – kadonneeksi luultu kansallissymboli] Vain Angolassa luonnonvaraisena elävä jättiläissapeliantilooppi kuvattiin tieteelle vasta 1916, kun brittiläisen rautatieinsinöörin Frank Varianin löytämä näyte päätyi Lontooseen tutkittavaksi. Uroksen mustaa turkkia, valkoista poskijuovaa ja pitkiä kaarevia sarvia on kuvattu vuoden 1953 postimerkissä. Vuosikymmenten ajan lajista ei saatu varmoja havaintoja, ja monet pitivät sitä sukupuuttoon kuolleena elinympäristön tuhoutumisen vuoksi, kunnes riistakamerat kuvasivat naaraslauman Cangandalan kansallispuistossa 2004. Vuonna 2009 lantanäytteiden DNA johti sadan kilometrin päässä eläneen uroksen jäljille, ja se lennätettiin helikopterilla naaraiden luo.
+- [Darfur — kaupunkilehti / Neljänkymmenen päivän tie: Kamelikaravaani matkalla] Pohjoiseen suuntautuvissa karavaaneissa kulki kultaa, norsunluuta, sarvikuonon sarvia, strutsinsulkia ja -munia, eebenpuuta, kumiarabikumia sekä orjia – 1700-luvun eurooppalaisten arvioiden mukaan vuosittain jopa 3000–12 000 orjaa kuljetettiin tätä reittiä pitkin. Etelään päin kamelit kantoivat puolestaan kankaita, aseita, mausteita ja viiniä Egyptistä ja Välimeren rannikolta. Darfurin sulttaani sääti kamelinomistajaheimoille, kuten fazaralaisille, vuosittaisen veron osana karavaanikauppaa – kamelit olivat sekä kulkuneuvo että verotettava omaisuus, ilman jota koko kauppajärjestelmä olisi pysähtynyt.
+AIEMPI KYSYMYS: Millainen eläin punahirvi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Punahirvi on suuri hirvieläin, jonka urokset kantavat haarautuvia [[sarvia]] ja pudottavat ne vuosittain myöhään talvella tai keväällä. Syksyllä on [[kiima-aika]], jolloin urokset kilpailevat naaraista ääntelemällä ja mittelemällä voimiaan. [[Killarneyn kansallispuistossa]] elää Irlannin mantereen ainoa punahirvilauma. Syksyllä niiden äänet kuulemma kuuluvat kauas, vaikken itse ole kuullut.
+KYSYMYS: Kerro lisää: sarvia
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kiipeilijä jolle jyrkänne ei ole este] Aavikonlampaat liikkuvat Grand Canyonin pystysuorilla kallioseinämillä yhtä varmasti kuin muut eläimet tasamaalla: niiden sorkkien kumimaiset alustat tarttuvat kapeisiinkin kielekkeisiin, ja ne osaavat hypätä useiden metrien pudotuksia vahingoittumatta. Pässien kierteiset sarvet voivat painaa yli 13 kiloa – enemmän kuin niiden kaikkien muiden luiden yhteispaino – ja niitä käytetään sekä puolustukseen että kilpataisteluissa toisia pässejä vastaan kiima-aikana. Lampaat selviävät myös ilman juomavettä pitkiä aikoja, sillä ne saavat nesteestään kasveista ja voivat juoda kerralla suuria määriä löytäessään lähteen tai sadeveden täyttämän kalliokuopan.
+- [Iso-Britannia — maalehti / Luonto: Kuusisataa hirveä aidan sisällä] 1637 — Richmond Park on Lontoon kuninkaallisista puistoista suurin, ja sen kolmentoista kilometrin tiiliaidan sisällä kulkee vapaana noin 630 saksanhirveä ja kuusipeuraa. Kuningas Kaarle I aitasi alueen hirvenmetsästystä varten vuonna 1637. Syys-lokakuussa urokset karjuvat kiima-aikaan. Marraskuussa ja helmikuussa laumasta kaadetaan noin kaksisataa eläintä, jotta laidun riittää lopuille. Vuosina 1867 ja 1876 puistosta lähetettiin kuusipeuroja laivalla Uuteen-Seelantiin, ja ne olivat maan ensimmäiset kuusipeurat.
+AIEMPI KYSYMYS: Millainen eläin punahirvi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Punahirvi on suuri hirvieläin, jonka urokset kantavat haarautuvia [[sarvia]] ja pudottavat ne vuosittain myöhään talvella tai keväällä. Syksyllä on [[kiima-aika]], jolloin urokset kilpailevat naaraista ääntelemällä ja mittelemällä voimiaan. [[Killarneyn kansallispuistossa]] elää Irlannin mantereen ainoa punahirvilauma. Syksyllä niiden äänet kuulemma kuuluvat kauas, vaikken itse ole kuullut.
+KYSYMYS: Kerro lisää: kiima-aika
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Millainen eläin punahirvi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Punahirvi on suuri hirvieläin, jonka urokset kantavat haarautuvia [[sarvia]] ja pudottavat ne vuosittain myöhään talvella tai keväällä. Syksyllä on [[kiima-aika]], jolloin urokset kilpailevat naaraista ääntelemällä ja mittelemällä voimiaan. [[Killarneyn kansallispuistossa]] elää Irlannin mantereen ainoa punahirvilauma. Syksyllä niiden äänet kuulemma kuuluvat kauas, vaikken itse ole kuullut.
+KYSYMYS: Kerro lisää: Killarneyn kansallispuistossa
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Mitä biosfäärialue tarkoittaa Unescon luokituksessa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Biosfäärialue on [[Unescon]] [[Man and the Biosphere]] -ohjelman nimeämä alue, jossa luonnonsuojelua ja kestävää ihmistoimintaa yritetään sovittaa yhteen. Alueella on tavallisesti tiukimmin suojeltu [[ydinalue]] sekä sitä ympäröiviä vyöhykkeitä, joilla asutus ja elinkeinot ovat sallittuja. Killarneyn kansallispuisto sai nimityksen vuonna 1981. Biosfääri on kyl pitkä sana kyyhkylle.
+KYSYMYS: Kerro lisää: Unescon
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Tromssa: Syntikat soivat kaamoksen läpi] Tromssassa alettiin 1980-luvulla tehdä elektronista musiikkia kellareissa silloin, kun ulkona oli pimeää. Kaupungissa perustettiin Bel Canto vuonna 1985, samasta porukasta tuli Biosphere, ja lapsuudenystävät Svein Berge ja Torbjørn Brundtland perustivat Röyksoppin 1998. Pieni kaupunki kuuluu yhä maailman festivaaleilla.
+AIEMPI KYSYMYS: Mitä biosfäärialue tarkoittaa Unescon luokituksessa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Biosfäärialue on [[Unescon]] [[Man and the Biosphere]] -ohjelman nimeämä alue, jossa luonnonsuojelua ja kestävää ihmistoimintaa yritetään sovittaa yhteen. Alueella on tavallisesti tiukimmin suojeltu [[ydinalue]] sekä sitä ympäröiviä vyöhykkeitä, joilla asutus ja elinkeinot ovat sallittuja. Killarneyn kansallispuisto sai nimityksen vuonna 1981. Biosfääri on kyl pitkä sana kyyhkylle.
+KYSYMYS: Kerro lisää: Man and the Biosphere
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+- [Salta — kaupunkilehti / Peña ja pohjoisen laulu: Kuka soittaa mitäkin] Pohjoisen folkloressa on kaksi tanssia yli muiden. Zamba on hidas ja pariin sidottu; chacarera on nopea ja iloinen, ja sen ydinalue on naapurimaakunta Santiago del Estero, mutta sitä tanssitaan koko pohjoisessa. Molempia soitetaan kitaralla ja bombo legüerolla, chacareraa usein myös viululla. Bombo legüero on koko argentiinalaisen folkloren perussoitin, ja sitä ovat tehneet tunnetuksi muun muassa Los Chalchaleros, Los Fronterizos, Soledad Pastorutti ja Mercedes Sosa. Saltan ulkoilmateatteri on nimetty Eduardo Falún mukaan, ja siellä pohjoisen laulu kuullaan siinä koossa, johon peñan pöydät eivät riitä.
+AIEMPI KYSYMYS: Mitä biosfäärialue tarkoittaa Unescon luokituksessa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Biosfäärialue on [[Unescon]] [[Man and the Biosphere]] -ohjelman nimeämä alue, jossa luonnonsuojelua ja kestävää ihmistoimintaa yritetään sovittaa yhteen. Alueella on tavallisesti tiukimmin suojeltu [[ydinalue]] sekä sitä ympäröiviä vyöhykkeitä, joilla asutus ja elinkeinot ovat sallittuja. Killarneyn kansallispuisto sai nimityksen vuonna 1981. Biosfääri on kyl pitkä sana kyyhkylle.
+KYSYMYS: Kerro lisää: ydinalue
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Mikä puu on marjakuusi ja mihin sitä on käytetty?
+AIEMPI VASTAUS (Livia):
+Ai se. Marjakuusi eli [[Taxus baccata]] on hitaasti kasvava ja pitkäikäinen havupuu, joka tunnetaan siitä, että sen neulaset ja siemenet ovat myrkyllisiä. Puuta on arvostettu sen lujuuden ja joustavuuden vuoksi, ja sitä on käytetty keskiajalla [[pitkäjousien]] valmistukseen. [[Killarneyn kansallispuistossa]] kasvaa marjakuusimetsiä, jotka ovat osa alueen kansainvälisesti merkittävää luontoa. Myrkkypuun juurella minä en kyl lepäilis.
+KYSYMYS: Kerro lisää: Taxus baccata
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+AIEMPI KYSYMYS: Mikä puu on marjakuusi ja mihin sitä on käytetty?
+AIEMPI VASTAUS (Livia):
+Ai se. Marjakuusi eli [[Taxus baccata]] on hitaasti kasvava ja pitkäikäinen havupuu, joka tunnetaan siitä, että sen neulaset ja siemenet ovat myrkyllisiä. Puuta on arvostettu sen lujuuden ja joustavuuden vuoksi, ja sitä on käytetty keskiajalla [[pitkäjousien]] valmistukseen. [[Killarneyn kansallispuistossa]] kasvaa marjakuusimetsiä, jotka ovat osa alueen kansainvälisesti merkittävää luontoa. Myrkkypuun juurella minä en kyl lepäilis.
+KYSYMYS: Kerro lisää: pitkäjousien
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mitkä ovat Connemaran tunnetuimmat vuoret?
+AIEMPI VASTAUS (Livia):
+Katotaas. Connemaran tunnetuimmat vuoret ovat [[Twelve Pins]], joita kutsutaan myös nimellä Twelve Bens. Vuoristo kohoaa [[Galwayn]] kreivikunnan länsiosassa, ja sen korkeimpia huippuja on [[Benbaun]]. Maisemaa täydentävät niemimaat, poukamat, saaret ja pienet järvet. Kaksitoista huippua, ja minä jaksan lentää kaikkien yli.
+KYSYMYS: Kerro lisää: Twelve Pins
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Käsityö: Kolme merkkiä yhdessä sormuksessa] 1700-luku — Claddagh oli kalastajakylä Galwayn kaupungin laidalla, ja siitä on saanut nimensä sormus, jossa on kolme merkkiä: kaksi kättä, sydän ja kruunu. Kädet tarkoittavat ystävyyttä, sydän rakkautta ja kruunu uskollisuutta. Sormusta luetaan myös siitä, miten sitä pidetään. Oikeassa kädessä sydämen kärki ulospäin kertoo, ettei kantaja ole varattu, ja kärki sisäänpäin kertoo päinvastaista. Vasemmassa kädessä kärki sisäänpäin tarkoittaa avioliittoa. Vanhimmat säilyneet sormukset ovat 1700-luvulta.
+AIEMPI KYSYMYS: Mitkä ovat Connemaran tunnetuimmat vuoret?
+AIEMPI VASTAUS (Livia):
+Katotaas. Connemaran tunnetuimmat vuoret ovat [[Twelve Pins]], joita kutsutaan myös nimellä Twelve Bens. Vuoristo kohoaa [[Galwayn]] kreivikunnan länsiosassa, ja sen korkeimpia huippuja on [[Benbaun]]. Maisemaa täydentävät niemimaat, poukamat, saaret ja pienet järvet. Kaksitoista huippua, ja minä jaksan lentää kaikkien yli.
+KYSYMYS: Kerro lisää: Galwayn
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mitkä ovat Connemaran tunnetuimmat vuoret?
+AIEMPI VASTAUS (Livia):
+Katotaas. Connemaran tunnetuimmat vuoret ovat [[Twelve Pins]], joita kutsutaan myös nimellä Twelve Bens. Vuoristo kohoaa [[Galwayn]] kreivikunnan länsiosassa, ja sen korkeimpia huippuja on [[Benbaun]]. Maisemaa täydentävät niemimaat, poukamat, saaret ja pienet järvet. Kaksitoista huippua, ja minä jaksan lentää kaikkien yli.
+KYSYMYS: Kerro lisää: Benbaun
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mikä on Connemaran suurin asutuskeskus?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Connemaran suurin asutuskeskus on [[Clifden]], jota kutsutaan usein alueen pääkaupungiksi. Sen ympäristössä on runsaasti [[megaliittihautoja]], ja [[Connemaran vihreä marmori]] oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Clifden sijaitsee Atlantin rannikolla, ja Daniel O'Connell piti siellä vuonna 1843 puheen kansankokouksessa. Pieni kaupunki, mut ylhäältä sekin näyttää komealta.
+KYSYMYS: Kerro lisää: Clifden
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mikä on Connemaran suurin asutuskeskus?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Connemaran suurin asutuskeskus on [[Clifden]], jota kutsutaan usein alueen pääkaupungiksi. Sen ympäristössä on runsaasti [[megaliittihautoja]], ja [[Connemaran vihreä marmori]] oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Clifden sijaitsee Atlantin rannikolla, ja Daniel O'Connell piti siellä vuonna 1843 puheen kansankokouksessa. Pieni kaupunki, mut ylhäältä sekin näyttää komealta.
+KYSYMYS: Kerro lisää: megaliittihautoja
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+- [Chennai — kaupunkilehti / Chennai: Intian toiseksi vanhin museo] Government Museum perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen, jossa se on yhä. Vanhempi museo Intiassa on vain Kalkutan Intian museo. Kokoelmassa on 1,7 miljoonaa esinettä, ja siihen kuuluu yksi Euroopan ulkopuolen laajimmista roomalaisten rahojen kokoelmista sekä viisisataa pronssiveistosta. Samassa korttelissa ovat Museum Theatre, kansallinen taidegalleria ja Connemaran kirjasto, jonka peruskiven kuvernööri lordi Connemara laski 1890 ja joka avattiin yleisölle 1896.
+AIEMPI KYSYMYS: Mikä on Connemaran suurin asutuskeskus?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Connemaran suurin asutuskeskus on [[Clifden]], jota kutsutaan usein alueen pääkaupungiksi. Sen ympäristössä on runsaasti [[megaliittihautoja]], ja [[Connemaran vihreä marmori]] oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Clifden sijaitsee Atlantin rannikolla, ja Daniel O'Connell piti siellä vuonna 1843 puheen kansankokouksessa. Pieni kaupunki, mut ylhäältä sekin näyttää komealta.
+KYSYMYS: Kerro lisää: Connemaran vihreä marmori
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki] Irlannin valtiontunnus on soitin, ja esikuva seisoo Dublinissa lasikaapissa — mutta se on eri muotoinen kuin kolikoiden harppu.
+AIEMPI KYSYMYS: Mikä on gaeltacht ja missä Irlannissa sitä on?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys. Gaeltacht on [[Irlannin valtion]] määrittelemä alue, jolla [[iiri]] on yhä merkittävä yhteisön kieli. Näitä alueita on pääosin maan länsi- ja lounaisrannikolla, esimerkiksi Donegalin, Galwayn ja Kerryn kreivikunnissa. Connemara kattaa suurimman osan [[Connachtin]] gaeltachtista, joka on Irlannin suurin irlanninkielinen alue. Sanaa kyyhky iiriksi en oo vielä opetellut.
+KYSYMYS: Kerro lisää: Irlannin valtion
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mikä on gaeltacht ja missä Irlannissa sitä on?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys. Gaeltacht on [[Irlannin valtion]] määrittelemä alue, jolla [[iiri]] on yhä merkittävä yhteisön kieli. Näitä alueita on pääosin maan länsi- ja lounaisrannikolla, esimerkiksi Donegalin, Galwayn ja Kerryn kreivikunnissa. Connemara kattaa suurimman osan [[Connachtin]] gaeltachtista, joka on Irlannin suurin irlanninkielinen alue. Sanaa kyyhky iiriksi en oo vielä opetellut.
+KYSYMYS: Kerro lisää: iiri
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mikä on gaeltacht ja missä Irlannissa sitä on?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys. Gaeltacht on [[Irlannin valtion]] määrittelemä alue, jolla [[iiri]] on yhä merkittävä yhteisön kieli. Näitä alueita on pääosin maan länsi- ja lounaisrannikolla, esimerkiksi Donegalin, Galwayn ja Kerryn kreivikunnissa. Connemara kattaa suurimman osan [[Connachtin]] gaeltachtista, joka on Irlannin suurin irlanninkielinen alue. Sanaa kyyhky iiriksi en oo vielä opetellut.
+KYSYMYS: Kerro lisää: Connachtin
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mikä oli Irlannin suuri nälänhätä ja mitä se aiheutti?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on raskas aihe. Nälänhätä alkoi vuonna 1845, kun [[perunarutto]] tuhosi perunasadon maassa, jossa suuri osa väestöstä oli riippuvainen perunasta. Irlanti kuului tuolloin [[Yhdistyneeseen kuningaskuntaan]], ja avun riittämättömyys sekä maanomistusolot pahensivat tilannetta. Arvioiden mukaan noin miljoona ihmistä kuoli ja suunnilleen yhtä moni muutti maasta, ja väkiluku pieneni pitkäksi aikaa. [[Connemara]] autioitui rajusti 1840-luvun lopulla. Siitä on onneksi jo yli sata seitsemänkymmentä vuotta.
+KYSYMYS: Kerro lisää: perunarutto
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mikä oli Irlannin suuri nälänhätä ja mitä se aiheutti?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on raskas aihe. Nälänhätä alkoi vuonna 1845, kun [[perunarutto]] tuhosi perunasadon maassa, jossa suuri osa väestöstä oli riippuvainen perunasta. Irlanti kuului tuolloin [[Yhdistyneeseen kuningaskuntaan]], ja avun riittämättömyys sekä maanomistusolot pahensivat tilannetta. Arvioiden mukaan noin miljoona ihmistä kuoli ja suunnilleen yhtä moni muutti maasta, ja väkiluku pieneni pitkäksi aikaa. [[Connemara]] autioitui rajusti 1840-luvun lopulla. Siitä on onneksi jo yli sata seitsemänkymmentä vuotta.
+KYSYMYS: Kerro lisää: Yhdistyneeseen kuningaskuntaan
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+- [Chennai — kaupunkilehti / Chennai: Intian toiseksi vanhin museo] Government Museum perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen, jossa se on yhä. Vanhempi museo Intiassa on vain Kalkutan Intian museo. Kokoelmassa on 1,7 miljoonaa esinettä, ja siihen kuuluu yksi Euroopan ulkopuolen laajimmista roomalaisten rahojen kokoelmista sekä viisisataa pronssiveistosta. Samassa korttelissa ovat Museum Theatre, kansallinen taidegalleria ja Connemaran kirjasto, jonka peruskiven kuvernööri lordi Connemara laski 1890 ja joka avattiin yleisölle 1896.
+AIEMPI KYSYMYS: Mikä oli Irlannin suuri nälänhätä ja mitä se aiheutti?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on raskas aihe. Nälänhätä alkoi vuonna 1845, kun [[perunarutto]] tuhosi perunasadon maassa, jossa suuri osa väestöstä oli riippuvainen perunasta. Irlanti kuului tuolloin [[Yhdistyneeseen kuningaskuntaan]], ja avun riittämättömyys sekä maanomistusolot pahensivat tilannetta. Arvioiden mukaan noin miljoona ihmistä kuoli ja suunnilleen yhtä moni muutti maasta, ja väkiluku pieneni pitkäksi aikaa. [[Connemara]] autioitui rajusti 1840-luvun lopulla. Siitä on onneksi jo yli sata seitsemänkymmentä vuotta.
+KYSYMYS: Kerro lisää: Connemara
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mitä megaliittihauta on ja kuinka vanha se voi olla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Megaliittihauta on suurista kivistä rakennettu muinainen hautarakennelma, ja Irlannissa niitä on tehty etenkin [[uudella kivikaudella]]. Osa Irlannin haudoista on yli viisituhatta vuotta vanhoja: esimerkiksi [[Newgrangen]] käytävähauta ajoitetaan noin vuoteen 3200 eaa. Tyyppejä on useita, ja yksinkertaisimpia ovat pystykivien varaan nostetut kivilaattahaudat. Viisituhatta vuotta ja yhä pystyssä, ei paha.
+KYSYMYS: Kerro lisää: uudella kivikaudella
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+AIEMPI KYSYMYS: Mitä megaliittihauta on ja kuinka vanha se voi olla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Megaliittihauta on suurista kivistä rakennettu muinainen hautarakennelma, ja Irlannissa niitä on tehty etenkin [[uudella kivikaudella]]. Osa Irlannin haudoista on yli viisituhatta vuotta vanhoja: esimerkiksi [[Newgrangen]] käytävähauta ajoitetaan noin vuoteen 3200 eaa. Tyyppejä on useita, ja yksinkertaisimpia ovat pystykivien varaan nostetut kivilaattahaudat. Viisituhatta vuotta ja yhä pystyssä, ei paha.
+KYSYMYS: Kerro lisää: Newgrangen
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Mitä nimi Burren tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Burren tarkoittaa irlanniksi kivistä aluetta, ja nimi kuvaa maisemaa osuvasti: [[Clarein]] kreivikunnan länsirannikolla levittäytyy noin 530 neliökilometrin laajuinen [[karstimaisema]], jossa paljas kalkkikivi näkyy kaikkialla. Alueeseen kuuluvat muun muassa [[Mullaghmoren]] kukkula ja Ailladien kalliot sekä [[Poulnabronen dolmen]]. Kivinen paikka, mut kyl sielläkin kyyhky laskeutuu.
+KYSYMYS: Kerro lisää: Clarein
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Mitä nimi Burren tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Burren tarkoittaa irlanniksi kivistä aluetta, ja nimi kuvaa maisemaa osuvasti: [[Clarein]] kreivikunnan länsirannikolla levittäytyy noin 530 neliökilometrin laajuinen [[karstimaisema]], jossa paljas kalkkikivi näkyy kaikkialla. Alueeseen kuuluvat muun muassa [[Mullaghmoren]] kukkula ja Ailladien kalliot sekä [[Poulnabronen dolmen]]. Kivinen paikka, mut kyl sielläkin kyyhky laskeutuu.
+KYSYMYS: Kerro lisää: karstimaisema
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Mitä nimi Burren tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Burren tarkoittaa irlanniksi kivistä aluetta, ja nimi kuvaa maisemaa osuvasti: [[Clarein]] kreivikunnan länsirannikolla levittäytyy noin 530 neliökilometrin laajuinen [[karstimaisema]], jossa paljas kalkkikivi näkyy kaikkialla. Alueeseen kuuluvat muun muassa [[Mullaghmoren]] kukkula ja Ailladien kalliot sekä [[Poulnabronen dolmen]]. Kivinen paikka, mut kyl sielläkin kyyhky laskeutuu.
+KYSYMYS: Kerro lisää: Mullaghmoren
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Mitä nimi Burren tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Burren tarkoittaa irlanniksi kivistä aluetta, ja nimi kuvaa maisemaa osuvasti: [[Clarein]] kreivikunnan länsirannikolla levittäytyy noin 530 neliökilometrin laajuinen [[karstimaisema]], jossa paljas kalkkikivi näkyy kaikkialla. Alueeseen kuuluvat muun muassa [[Mullaghmoren]] kukkula ja Ailladien kalliot sekä [[Poulnabronen dolmen]]. Kivinen paikka, mut kyl sielläkin kyyhky laskeutuu.
+KYSYMYS: Kerro lisää: Poulnabronen dolmen
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Millaista kasvillisuutta Burrenissa kasvaa rinnakkain?
+AIEMPI VASTAUS (Livia):
+Kato, kasvit. Burrenissa kasvavat rinnakkain [[arktis-alppiset]] kasvit ja [[Välimeren]] alueen kasvit, mikä on epätavallista, koska ne kuuluvat luonnostaan hyvin erilaisiin ilmastoihin. Yli 70 prosenttia Irlannin kukkalajeista löytyy tältä alueelta, vaikka se on kooltaan pieni. Alueella on myös [[Burrenin kansallispuisto]], joka on Irlannin kahdeksasta kansallispuistosta pienin.
+
+Pohjoisen ja etelän kukat samalla kalliolla, ja silti ne tulevat toimeen keskenään. Siinä on esimerkkiä monelle kyyhkyparvelle.
+KYSYMYS: Kerro lisää: arktis-alppiset
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Millaista kasvillisuutta Burrenissa kasvaa rinnakkain?
+AIEMPI VASTAUS (Livia):
+Kato, kasvit. Burrenissa kasvavat rinnakkain [[arktis-alppiset]] kasvit ja [[Välimeren]] alueen kasvit, mikä on epätavallista, koska ne kuuluvat luonnostaan hyvin erilaisiin ilmastoihin. Yli 70 prosenttia Irlannin kukkalajeista löytyy tältä alueelta, vaikka se on kooltaan pieni. Alueella on myös [[Burrenin kansallispuisto]], joka on Irlannin kahdeksasta kansallispuistosta pienin.
+
+Pohjoisen ja etelän kukat samalla kalliolla, ja silti ne tulevat toimeen keskenään. Siinä on esimerkkiä monelle kyyhkyparvelle.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Millaista kasvillisuutta Burrenissa kasvaa rinnakkain?
+AIEMPI VASTAUS (Livia):
+Kato, kasvit. Burrenissa kasvavat rinnakkain [[arktis-alppiset]] kasvit ja [[Välimeren]] alueen kasvit, mikä on epätavallista, koska ne kuuluvat luonnostaan hyvin erilaisiin ilmastoihin. Yli 70 prosenttia Irlannin kukkalajeista löytyy tältä alueelta, vaikka se on kooltaan pieni. Alueella on myös [[Burrenin kansallispuisto]], joka on Irlannin kahdeksasta kansallispuistosta pienin.
+
+Pohjoisen ja etelän kukat samalla kalliolla, ja silti ne tulevat toimeen keskenään. Siinä on esimerkkiä monelle kyyhkyparvelle.
+KYSYMYS: Kerro lisää: Burrenin kansallispuisto
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus] Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+AIEMPI KYSYMYS: Minkä ikäinen Poulnabronen dolmen on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Poulnabronen dolmen on [[kivikautinen]] hautamuistomerkki, jossa kookas kalkkikivilaatta lepää pystyyn nostettujen kivien varassa, ja sen on arvioitu olevan noin 5000 vuoden ikäinen. Burrenin avoimessa kalkkikivimaisemassa se erottuu kaukaa, ja samalla alueella on myös [[Caherconnellin kivilinnoitus]]. Rakenteen alta on löytynyt useiden ihmisten jäännöksiä, mutta en ole varma tarkasta lukumäärästä. Aika kestävä pöytä, mut ei se minun kokoon sovi.
+KYSYMYS: Kerro lisää: kivikautinen
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Minkä ikäinen Poulnabronen dolmen on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Poulnabronen dolmen on [[kivikautinen]] hautamuistomerkki, jossa kookas kalkkikivilaatta lepää pystyyn nostettujen kivien varassa, ja sen on arvioitu olevan noin 5000 vuoden ikäinen. Burrenin avoimessa kalkkikivimaisemassa se erottuu kaukaa, ja samalla alueella on myös [[Caherconnellin kivilinnoitus]]. Rakenteen alta on löytynyt useiden ihmisten jäännöksiä, mutta en ole varma tarkasta lukumäärästä. Aika kestävä pöytä, mut ei se minun kokoon sovi.
+KYSYMYS: Kerro lisää: Caherconnellin kivilinnoitus
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mitä karsti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Karsti on maisematyyppi, joka syntyy, kun vesi liuottaa vuosituhansien kuluessa vesiliukoista kiveä, tavallisimmin [[kalkkikiveä]]. Pinnalle muodostuu halkeilleita kallioalueita ja kuoppia, ja vesi katoaa maan alle, jossa se kaivertaa [[luolia]] ja maanalaisia puroja. Nimi tulee [[Kras]]-nimisestä alueesta Slovenian ja Italian rajaseudulla. Burrenissa karstiin yhdistyy myös jäätiköiden aikaansaama muokkaus.
+
+Kivi liukenee vuosituhansia, ja minä turhaudun jo, jos tuuli kääntyy kesken lennon. Pulla, jonka murut katoaisivat maan alle, olisi minusta suuri menetys.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Budapest — kohdekartta / Kohdekartta: Gellértinvuori] 1850–1854 Gellértinvuori kohoaa 235 metrin korkeuteen Tonavan yllä, ja sen nimi tulee piispa Gellertistä, joka surmattiin kukkulalla kansannousussa vuonna 1046 — tarinan mukaan hänet suljettiin piikkitynnyriin ja vieritettiin alas rinnettä. Kukkulan sisällä on kuumien lähteiden muovaamia luolia; vuonna 2007 sieltä löytyi kokonainen kristallien peittämä luola, joka on syntynyt jo 300 000–500 000 vuotta sitten. Huipulla seisoo Citadella-linnoitus, jonka Habsburgit rakensivat 1850-luvulla vuoden 1848 kansannousun jälkeen pitääkseen kaupunkia kurissa. Sen vieressä kohoaa iso pronssipatsas, jonka neuvostojoukot pystyttivät toisen maailmansodan jälkeen voiton muistoksi — patsas näkyy lähes joka p…
+AIEMPI KYSYMYS: Mitä karsti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Karsti on maisematyyppi, joka syntyy, kun vesi liuottaa vuosituhansien kuluessa vesiliukoista kiveä, tavallisimmin [[kalkkikiveä]]. Pinnalle muodostuu halkeilleita kallioalueita ja kuoppia, ja vesi katoaa maan alle, jossa se kaivertaa [[luolia]] ja maanalaisia puroja. Nimi tulee [[Kras]]-nimisestä alueesta Slovenian ja Italian rajaseudulla. Burrenissa karstiin yhdistyy myös jäätiköiden aikaansaama muokkaus.
+
+Kivi liukenee vuosituhansia, ja minä turhaudun jo, jos tuuli kääntyy kesken lennon. Pulla, jonka murut katoaisivat maan alle, olisi minusta suuri menetys.
+KYSYMYS: Kerro lisää: luolia
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Mitä karsti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Karsti on maisematyyppi, joka syntyy, kun vesi liuottaa vuosituhansien kuluessa vesiliukoista kiveä, tavallisimmin [[kalkkikiveä]]. Pinnalle muodostuu halkeilleita kallioalueita ja kuoppia, ja vesi katoaa maan alle, jossa se kaivertaa [[luolia]] ja maanalaisia puroja. Nimi tulee [[Kras]]-nimisestä alueesta Slovenian ja Italian rajaseudulla. Burrenissa karstiin yhdistyy myös jäätiköiden aikaansaama muokkaus.
+
+Kivi liukenee vuosituhansia, ja minä turhaudun jo, jos tuuli kääntyy kesken lennon. Pulla, jonka murut katoaisivat maan alle, olisi minusta suuri menetys.
+KYSYMYS: Kerro lisää: Kras
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+AIEMPI KYSYMYS: Miten karja auttaa Burrenin kasveja säilymään?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys tuo. Burrenissa karjaa on perinteisesti pidetty kukkuloilla [[laidunnuksessa]] talvisin, ja laidunnuksen uskotaan estävän pensaita ja heinää valtaamasta alaa harvinaisemmilta kukkivilta kasveilta. Lämpö jää talvella [[kalkkikiven]] pintaan, mikä sopii alueen erikoiselle kasvilajien yhdistelmälle. En ole varma kaikista yksityiskohdista, mutta laidunnus on alueen luonnonhoidossa tunnettu tekijä. Lehmillä ois kyl ruokaa, minulla ei murun murua.
+KYSYMYS: Kerro lisää: laidunnuksessa
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+AIEMPI KYSYMYS: Miten karja auttaa Burrenin kasveja säilymään?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys tuo. Burrenissa karjaa on perinteisesti pidetty kukkuloilla [[laidunnuksessa]] talvisin, ja laidunnuksen uskotaan estävän pensaita ja heinää valtaamasta alaa harvinaisemmilta kukkivilta kasveilta. Lämpö jää talvella [[kalkkikiven]] pintaan, mikä sopii alueen erikoiselle kasvilajien yhdistelmälle. En ole varma kaikista yksityiskohdista, mutta laidunnus on alueen luonnonhoidossa tunnettu tekijä. Lehmillä ois kyl ruokaa, minulla ei murun murua.
+KYSYMYS: Kerro lisää: kalkkikiven

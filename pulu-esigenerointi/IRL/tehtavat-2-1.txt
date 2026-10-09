@@ -1,0 +1,1245 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+AIEMPI KYSYMYS: Mitä nimi Corrán Tuathail tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Corrán Tuathail on vuoren irlanninkielinen nimi, ja se tarkoittaa Tuathalin sirppiä. Vuori tunnetaan englanniksi nimellä Carrauntoohil, ja se on Irlannin korkein, 1 038,6 metriä. Se kohoaa Kerryn kreivikunnassa Iveraghin niemimaalla [[MacGillycuddy's Reeksin]] vuorijonon keskellä. Sirppi-sanan yhteys vuoren muotoon on mahdollinen, sillä jäätiköt ovat veistäneet sen itä- ja koillisseinämiin jyrkkiä rotkoja ja teräviä harjanteita, mutta nimen tarkasta alkuperästä en ole varma. Sirppi on kyl hyvä nimi vuorelle.
+KYSYMYS: Kerro lisää: MacGillycuddy's Reeksin
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+AIEMPI KYSYMYS: Mikä on Devil's Ladder?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään jyrkkään. Devil's Ladder on yksi Carrauntoohilin tunnetuimmista nousureiteistä, jyrkkä ja kivinen rotko, joka kulkee [[Hag's Glenin]] laakson yläpäästä vuoren ja sen naapurihuipun [[Beenkeraghin]] väliseen satulaan. Lähteiden mukaan reitillä on runsaasti irtokiveä, ja suuri kävijämäärä on kuluttanut sitä, mutta en ole varma, missä kunnossa se on nykyisin. Sää voi [[MacGillycuddy's Reeksin]] vuoristossa vaihtua nopeasti ja usva peittää reitin, joten moni valitsee mukaansa oppaan. Minä katson nuo rotkot kyl mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Hag's Glenin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+AIEMPI KYSYMYS: Mikä on Devil's Ladder?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään jyrkkään. Devil's Ladder on yksi Carrauntoohilin tunnetuimmista nousureiteistä, jyrkkä ja kivinen rotko, joka kulkee [[Hag's Glenin]] laakson yläpäästä vuoren ja sen naapurihuipun [[Beenkeraghin]] väliseen satulaan. Lähteiden mukaan reitillä on runsaasti irtokiveä, ja suuri kävijämäärä on kuluttanut sitä, mutta en ole varma, missä kunnossa se on nykyisin. Sää voi [[MacGillycuddy's Reeksin]] vuoristossa vaihtua nopeasti ja usva peittää reitin, joten moni valitsee mukaansa oppaan. Minä katson nuo rotkot kyl mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Beenkeraghin
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Kivikko, jossa kasvit tapaavat] Jääkauden jäljiltä — Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, jotka eivät muualla tapaa toisiaan: arktisia kasveja pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.
+AIEMPI KYSYMYS: Miten jäätiköt muokkasivat Irlannin vuoria?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku mietin. Viimeisimmän [[jääkauden]] aikana Irlannin vuorilla oli jäätiköitä, jotka liikkuessaan kuluttivat ja uursivat kalliota. Carrauntoohilin tapauksessa jäätiköityminen on veistänyt hiekkakivestä jyrkkiä rotkoja ja teräviä harjanteita erityisesti vuoren itä- ja koillisseinämiin. Tyypillisiä jäätikköjen jälkiä ovat kulhomaiset laaksonpäät eli [[karit]] sekä U-muotoiset laaksot. Jäätiköiden vetäytymisestä on kulunut noin kymmenentuhatta vuotta, mutta jäljet näkyvät yhä selvästi. Kyl jää on taitava kuvanveistäjä, vaikka hidas.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Karitsa lasimaalauksessa] Kirkon ikkunoissa toistuu Jumalan Karitsan aihe: valkoinen karitsa seisoo sädekehän edessä ja kantaa sorkallaan lippua, jossa on punainen risti. Kuva-aihe on kristikunnan vanhimpia symboleita – karitsa viittaa uhriin ja lippu ylösnousemuksen voittoon kuolemasta. Toisin kuin talojen asulejot, jotka ovat maalattua keramiikkaa, lasimaalaus rakennetaan värillisistä lasinpaloista lyijylistojen väliin; auringonvalo suodattuu niiden läpi ja maalaa lattialle värikkään kuvion. Ikkunat ovat nuorempia kuin kirkon 1600-luvun perustukset – ne ovat osa niitä lukuisia kunnostuskerroksia, jotka ovat muokanneet rakennusta vuosisatojen kuluessa.
+- [Edinburgh — kaupunkilehti / Tiede: Kolme emää, yksi karitsa] Roslinin tutkimuslaitoksessa Edinburghin eteläpuolella syntyi 5. heinäkuuta 1996 karitsa, jolla ei ollut isää lainkaan. Dolly tehtiin aikuisen lampaan utaresolusta: solun tuma siirrettiin munasoluun, jonka oma tuma oli poistettu. Emiä oli siis kolme — yksi antoi munasolun, toinen perimän ja kolmas kantoi karitsan. Nimi tuli laulaja Dolly Partonilta. Yrityksiä tarvittiin 277, ja niistä yksi ainoa kasvoi aikuiseksi.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miten jäätiköt muokkasivat Irlannin vuoria?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku mietin. Viimeisimmän [[jääkauden]] aikana Irlannin vuorilla oli jäätiköitä, jotka liikkuessaan kuluttivat ja uursivat kalliota. Carrauntoohilin tapauksessa jäätiköityminen on veistänyt hiekkakivestä jyrkkiä rotkoja ja teräviä harjanteita erityisesti vuoren itä- ja koillisseinämiin. Tyypillisiä jäätikköjen jälkiä ovat kulhomaiset laaksonpäät eli [[karit]] sekä U-muotoiset laaksot. Jäätiköiden vetäytymisestä on kulunut noin kymmenentuhatta vuotta, mutta jäljet näkyvät yhä selvästi. Kyl jää on taitava kuvanveistäjä, vaikka hidas.
+KYSYMYS: Kerro lisää: karit
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+AIEMPI KYSYMYS: Mikä on MacGillycuddy's Reeks?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tunnen. MacGillycuddy's Reeks on Irlannin korkein vuorijono, ja se sijaitsee Kerryn kreivikunnassa [[Iveraghin]] niemimaalla. Sen keskustan lähellä kohoaa Carrauntoohil, 1 038,6 metriä, ja lähteiden mukaan vuoristossa on lisäksi muita lähes tai yli tuhannen metrin huippuja, esimerkiksi [[Beenkeragh]] ja [[Caher]]. Vuoristo on pääosin hiekkakiveä, ja jäätiköt ovat muokanneet sen rinteitä jyrkiksi. Nimen taustalla on tietääkseni paikallinen MacGillycuddy-suku, mutta en ole siitä aivan varma.
+
+Nimeä en ole koskaan oppinut lausumaan kunnolla, ja se on kyyhkyn kunnia-asia. Huipun erottaa silti kaukaa, kun lentää tarpeeksi korkealta.
+KYSYMYS: Kerro lisää: Iveraghin
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+AIEMPI KYSYMYS: Mikä on MacGillycuddy's Reeks?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tunnen. MacGillycuddy's Reeks on Irlannin korkein vuorijono, ja se sijaitsee Kerryn kreivikunnassa [[Iveraghin]] niemimaalla. Sen keskustan lähellä kohoaa Carrauntoohil, 1 038,6 metriä, ja lähteiden mukaan vuoristossa on lisäksi muita lähes tai yli tuhannen metrin huippuja, esimerkiksi [[Beenkeragh]] ja [[Caher]]. Vuoristo on pääosin hiekkakiveä, ja jäätiköt ovat muokanneet sen rinteitä jyrkiksi. Nimen taustalla on tietääkseni paikallinen MacGillycuddy-suku, mutta en ole siitä aivan varma.
+
+Nimeä en ole koskaan oppinut lausumaan kunnolla, ja se on kyyhkyn kunnia-asia. Huipun erottaa silti kaukaa, kun lentää tarpeeksi korkealta.
+KYSYMYS: Kerro lisää: Beenkeragh
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+AIEMPI KYSYMYS: Mikä on MacGillycuddy's Reeks?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tunnen. MacGillycuddy's Reeks on Irlannin korkein vuorijono, ja se sijaitsee Kerryn kreivikunnassa [[Iveraghin]] niemimaalla. Sen keskustan lähellä kohoaa Carrauntoohil, 1 038,6 metriä, ja lähteiden mukaan vuoristossa on lisäksi muita lähes tai yli tuhannen metrin huippuja, esimerkiksi [[Beenkeragh]] ja [[Caher]]. Vuoristo on pääosin hiekkakiveä, ja jäätiköt ovat muokanneet sen rinteitä jyrkiksi. Nimen taustalla on tietääkseni paikallinen MacGillycuddy-suku, mutta en ole siitä aivan varma.
+
+Nimeä en ole koskaan oppinut lausumaan kunnolla, ja se on kyyhkyn kunnia-asia. Huipun erottaa silti kaukaa, kun lentää tarpeeksi korkealta.
+KYSYMYS: Kerro lisää: Caher
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Kaksi nimeä samalle joenmutkalle] Kaupungin nimi ei kerro paikasta vaan virkamiehestä: John Oxley nimesi joen 1823 Uuden Etelä-Walesin kuvernöörin Thomas Brisbanen mukaan, ja siirtola peri nimensä joeltaan. Keskustan niemekkeellä on kuitenkin vanhempi nimi. Turrbalin ja yagaran kielissä se on Meanjin tai Magandjin, ja sen merkityksestä keskustellaan yhä: yhden tulkinnan mukaan sana viittaa piikin muotoon, toisen mukaan Gardens Pointissa kasvaneeseen tulppaanipuuhun, jonka nimi on magan. Vanhin Gaja Kerry Charlton pitää juuri puuhun palautuvaa Magandjinia osuvampana, eikä kirjoitusasusta ole perinteisten haltijoiden kesken yksimielisyyttä.
+- [Košice — kohdekartta / Kohdekartta: Hlavná-katu] keskiaika Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. 1700-luvun kartoissa se on Platea principalis. Isoisän aikaan kadun nimi on saksaksi Haupt Gasse ja unkariksi Fő utcza. Slovakiksi käännetty nimi Hlavná ulica otettiin käyttöön vasta, kun kaupunki siirtyi Tšekkoslovakialle. Myöhemmin nimi vaihtui politiikan mukana: 1933 kadusta tuli kenraali Štefánikin katu, ja vuodesta 1949 se oli 41 vuotta Leninin katu. Vanha nimi palautettiin 1. heinäkuuta 1990. Vuonna 1984 Hlavnásta tuli koko Tšekkoslova…
+AIEMPI KYSYMYS: Mikä on Iveraghin niemimaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Iveraghin niemimaa on Irlannin lounaisosassa Kerryn kreivikunnassa sijaitseva laaja niemimaa, jonka keskeltä nousevat MacGillycuddy's Reeksin vuoristo ja Carrauntoohil. Niemimaan ympäri kiertää tunnettu matkailureitti [[Ring of Kerry]]. Rannikon edustalla on muun muassa [[Valentian]] saari sekä Skellig-saaret, joista [[Skellig Michael]] on Unescon maailmanperintökohde. Siel pitäis käydä, kun on hyvä keli.
+KYSYMYS: Kerro lisää: Ring of Kerry
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kaupunkilehti / Viesti valtameren yli: Kaapeli, joka nousi merestä] Ensimmäisen pysyvän valtamerenalaisen lennätinkaapelin läntinen pääte oli Heart’s Content Newfoundlandilla, itäinen Valentian saarella Irlannissa. Kaapeli vedettiin maihin 27. heinäkuuta 1866 useiden epäonnistuneiden yritysten jälkeen, ja sen toi paikalle Great Eastern, aikansa suurin höyrylaiva. Ensimmäiset viestit lähetettiin morsella, ja asemalla työskenteli kolme ihmistä. Isoisän matkavuonna 1873 yhteys oli seitsemän vuotta vanha ja yhä ihme. Parhaimmillaan yli kaksisataa kylän asukasta työskenteli kaapeliyhtiölle; asema suljettiin 1965, kun puhelinkaapelit ja satelliitit tekivät lennättimen tarpeettomaksi.
+AIEMPI KYSYMYS: Mikä on Iveraghin niemimaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Iveraghin niemimaa on Irlannin lounaisosassa Kerryn kreivikunnassa sijaitseva laaja niemimaa, jonka keskeltä nousevat MacGillycuddy's Reeksin vuoristo ja Carrauntoohil. Niemimaan ympäri kiertää tunnettu matkailureitti [[Ring of Kerry]]. Rannikon edustalla on muun muassa [[Valentian]] saari sekä Skellig-saaret, joista [[Skellig Michael]] on Unescon maailmanperintökohde. Siel pitäis käydä, kun on hyvä keli.
+KYSYMYS: Kerro lisää: Valentian
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Luostari kalliolla keskellä merta] 600-luku — Kaksitoista kilometriä Kerryn rannikolta nousee merestä jyrkkä kallio, Skellig Michael. Sen laelle munkit rakensivat luostarin joskus 500- tai 600-luvulla. Ylös noustaan yli kuudensadan kiviportaan matka. Asumukset ovat mehiläispesän muotoisia: kivet on ladottu ilman laastia niin, että jokainen kerros työntyy hieman edellisen sisäpuolelle, ja katto sulkeutuu lopulta itsestään. Rakennukset ovat pysyneet kuivina yli tuhat vuotta. Munkit elivät kalalla, linnunmunilla ja sadevedellä, ja luostarista luovuttiin 1100-luvulla.
+AIEMPI KYSYMYS: Mikä on Iveraghin niemimaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Iveraghin niemimaa on Irlannin lounaisosassa Kerryn kreivikunnassa sijaitseva laaja niemimaa, jonka keskeltä nousevat MacGillycuddy's Reeksin vuoristo ja Carrauntoohil. Niemimaan ympäri kiertää tunnettu matkailureitti [[Ring of Kerry]]. Rannikon edustalla on muun muassa [[Valentian]] saari sekä Skellig-saaret, joista [[Skellig Michael]] on Unescon maailmanperintökohde. Siel pitäis käydä, kun on hyvä keli.
+KYSYMYS: Kerro lisää: Skellig Michael
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mikä Yrjönkanaali on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Yrjönkanaali, englanniksi St George's Channel, on merikaista, joka yhdistää Irlanninmeren etelässä [[Kelttienmereen]] ja sitä kautta Atlantin valtamereen. Se kulkee Irlannin saaren kaakkoisosan ja Walesin lounaisosan välissä. Kaistan yli kulkee lauttaliikennettä, esimerkiksi [[Rosslaren]] satamasta Walesin satamiin. Nimi on kyl aika juhlava vesireitille.
+KYSYMYS: Kerro lisää: Kelttienmereen
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mikä Yrjönkanaali on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Yrjönkanaali, englanniksi St George's Channel, on merikaista, joka yhdistää Irlanninmeren etelässä [[Kelttienmereen]] ja sitä kautta Atlantin valtamereen. Se kulkee Irlannin saaren kaakkoisosan ja Walesin lounaisosan välissä. Kaistan yli kulkee lauttaliikennettä, esimerkiksi [[Rosslaren]] satamasta Walesin satamiin. Nimi on kyl aika juhlava vesireitille.
+KYSYMYS: Kerro lisää: Rosslaren
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Sihteeristö] valmistui 1905 Kuudentoista eekkerin tontilla seisoo punatiilinen ja keltatiilinen viktoriaaninen jättiläinen, joka oli brittiläisen Burman hallinnon päärakennus. Sen suunnitteli Henry Hoyne-Fox, valtion rakennushallinnon toimeenpaneva insinööri, ja pohja on U-kirjaimen muotoinen. Työ alkoi loppuvuodesta 1889, keskusosa valmistui 1902 ja itäinen ja läntinen siipi 1905. Hinnaksi tuli 2,5 miljoonaa rupiaa. Suistomaan pehmeä pohja teki tepposet heti. Pohjoinen siipi painui muutaman metrin maan sisään, ja itä- ja länsisiipi rakennettiin osaksi sitä tukemaan. Rakennusaineet tulivat kaukaa: teräs Glasgow’sta, kattotiilet Ranskasta, tiilet ja tiikki lähempää Aasiasta. Kupoleita oli alun perin kuus…
+AIEMPI KYSYMYS: Miksi Mansaari on oma alueensa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mansaari ei kuulu Yhdistyneeseen kuningaskuntaan eikä Euroopan unioniin, vaan se on [[Brittiläisen kruunun]] alainen itsehallintoalue. Sillä on oma parlamenttinsa Tynwald, omat lakinsa ja oma verotuksensa, ja Yhdistynyt kuningaskunta vastaa pääosin saaren puolustuksesta ja ulkosuhteista. Saari oli aikoinaan [[viikinkien]] hallitsema, ja sillä on oma kielensä, mansinkieli. Tynwaldin kerrotaan olevan yksi vanhimmista yhtäjaksoisesti toimineista parlamenteista, mutta tarkkaa ikää en ole varma. Pieni saari mutta iso itsetunto, sanoisin.
+KYSYMYS: Kerro lisää: Brittiläisen kruunun
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Miksi Mansaari on oma alueensa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mansaari ei kuulu Yhdistyneeseen kuningaskuntaan eikä Euroopan unioniin, vaan se on [[Brittiläisen kruunun]] alainen itsehallintoalue. Sillä on oma parlamenttinsa Tynwald, omat lakinsa ja oma verotuksensa, ja Yhdistynyt kuningaskunta vastaa pääosin saaren puolustuksesta ja ulkosuhteista. Saari oli aikoinaan [[viikinkien]] hallitsema, ja sillä on oma kielensä, mansinkieli. Tynwaldin kerrotaan olevan yksi vanhimmista yhtäjaksoisesti toimineista parlamenteista, mutta tarkkaa ikää en ole varma. Pieni saari mutta iso itsetunto, sanoisin.
+KYSYMYS: Kerro lisää: viikinkien
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Millainen saari Anglesey on?
+AIEMPI VASTAUS (Livia):
+Ai se saari. Anglesey on Irlanninmeren suurin saari, ja se sijaitsee Pohjois-Walesin rannikolla. Walesin kielellä sen nimi on Ynys Môn. Saari on yhdistetty mantereeseen kahdella sillalla, joista toinen on [[Menai-riippusilta]], ja [[Holyheadin]] satamasta lähtee lauttoja Dubliniin. Saari on tunnettu myös erittäin pitkästä kylännimestään, jonka lyhyempi muoto on [[Llanfairpwll]]. Nimen lausumisesta minä en edes yritä puhua.
+KYSYMYS: Kerro lisää: Menai-riippusilta
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Millainen saari Anglesey on?
+AIEMPI VASTAUS (Livia):
+Ai se saari. Anglesey on Irlanninmeren suurin saari, ja se sijaitsee Pohjois-Walesin rannikolla. Walesin kielellä sen nimi on Ynys Môn. Saari on yhdistetty mantereeseen kahdella sillalla, joista toinen on [[Menai-riippusilta]], ja [[Holyheadin]] satamasta lähtee lauttoja Dubliniin. Saari on tunnettu myös erittäin pitkästä kylännimestään, jonka lyhyempi muoto on [[Llanfairpwll]]. Nimen lausumisesta minä en edes yritä puhua.
+KYSYMYS: Kerro lisää: Holyheadin
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Millainen saari Anglesey on?
+AIEMPI VASTAUS (Livia):
+Ai se saari. Anglesey on Irlanninmeren suurin saari, ja se sijaitsee Pohjois-Walesin rannikolla. Walesin kielellä sen nimi on Ynys Môn. Saari on yhdistetty mantereeseen kahdella sillalla, joista toinen on [[Menai-riippusilta]], ja [[Holyheadin]] satamasta lähtee lauttoja Dubliniin. Saari on tunnettu myös erittäin pitkästä kylännimestään, jonka lyhyempi muoto on [[Llanfairpwll]]. Nimen lausumisesta minä en edes yritä puhua.
+KYSYMYS: Kerro lisää: Llanfairpwll
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kaupunkilehti / Dublin] Kaupunki, jossa yhden kesäkuisen päivän tapahtumia juhlitaan joka vuosi uudestaan ja jonka valtiontunnus seisoo lasikaapissa yliopiston kirjastossa.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Irlanninmeren rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on helppo. Irlannin puolella merenrannalla ovat pääkaupunki [[Dublin]] sekä satamakaupungit [[Drogheda]] ja Dundalk. Britannian puolella meren lähellä on [[Liverpool]], jolle meri avautuu Mersey-joen suiston kautta, sekä Walesin pohjoisrannikon satamakaupunki Holyhead. Mansaaren pääkaupunki [[Douglas]] sijaitsee saaren itärannalla. Kyl rantakaupungeissa on aina paras pullantuoksu.
+KYSYMYS: Kerro lisää: Dublin
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Irlanninmeren rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on helppo. Irlannin puolella merenrannalla ovat pääkaupunki [[Dublin]] sekä satamakaupungit [[Drogheda]] ja Dundalk. Britannian puolella meren lähellä on [[Liverpool]], jolle meri avautuu Mersey-joen suiston kautta, sekä Walesin pohjoisrannikon satamakaupunki Holyhead. Mansaaren pääkaupunki [[Douglas]] sijaitsee saaren itärannalla. Kyl rantakaupungeissa on aina paras pullantuoksu.
+KYSYMYS: Kerro lisää: Drogheda
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Irlanninmeren rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on helppo. Irlannin puolella merenrannalla ovat pääkaupunki [[Dublin]] sekä satamakaupungit [[Drogheda]] ja Dundalk. Britannian puolella meren lähellä on [[Liverpool]], jolle meri avautuu Mersey-joen suiston kautta, sekä Walesin pohjoisrannikon satamakaupunki Holyhead. Mansaaren pääkaupunki [[Douglas]] sijaitsee saaren itärannalla. Kyl rantakaupungeissa on aina paras pullantuoksu.
+KYSYMYS: Kerro lisää: Liverpool
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Kansallinen sotamuistomerkki] 1924 Muistomerkki on King’s Beachilla Water Streetin varrella, ja paikka on valittu tarkasti: siitä näkyy koko satama, jonka läpi jokainen Eurooppaan lähtenyt sotilas kulki. Muistomerkki paljastettiin Memorial Daynä 1. heinäkuuta 1924, ja paljastajaksi pyydettiin sotamarsalkka Douglas Haig. Paikalle tuli 20 000 ihmistä — noin kymmenen prosenttia koko saaren väestöstä. Päivämäärä on sama kuin Beaumont-Hamelin päivä. 1. heinäkuuta 1916 Royal Newfoundland Regiment menetti noin puolessa tunnissa 86 prosenttia vahvuudestaan kaatuneina, kadonneina tai haavoittuneina; seuraavana aamuna kahdeksastasadasta miehestä ilmoittautui kuusikymmentäkahdeksan. Sodassa kuoli noin 1 700 newfoundlandilaista, jo…
+- [Montreal — kohdekartta / Kohdekartta: Montrealin taidemuseo] 1860 Montrealin taidemuseo on Kanadan vanhin taidemuseo ja näyttelypinta-alaltaan maan suurin. Se perustettiin huhtikuussa 1860, kun anglikaanipiispa Francis Fulford käynnisti Montrealin taideyhdistyksen "edistämään kaupunkilaisten taiteentuntemusta". Yhdistyksellä ei ollut taloa eikä siis paikkaa säilyttää hankintoja, joten se ei voinut ostaa teoksia eikä ottaa vastaan kokoelmia. Parikymmentä vuotta se piti näyttelynsä milloin missäkin — myös vuonna 1873. Ratkaisu tuli 1877 liikemies Benaiah Gibbiltä. Hän lahjoitti kokoelmansa ytimen, 72 maalausta ja neljä pronssia, sekä tontin Phillips Squaren koillisnurkasta ja 8 000 dollaria sillä ehdolla, että museo rakennetaan kolmessa vuodessa. Kenra…
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Irlanninmeren rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on helppo. Irlannin puolella merenrannalla ovat pääkaupunki [[Dublin]] sekä satamakaupungit [[Drogheda]] ja Dundalk. Britannian puolella meren lähellä on [[Liverpool]], jolle meri avautuu Mersey-joen suiston kautta, sekä Walesin pohjoisrannikon satamakaupunki Holyhead. Mansaaren pääkaupunki [[Douglas]] sijaitsee saaren itärannalla. Kyl rantakaupungeissa on aina paras pullantuoksu.
+KYSYMYS: Kerro lisää: Douglas
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mitä eläimiä Irlanninmerellä elää?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Irlanninmerellä elää monenlaisia merinisäkkäitä ja merilintuja. Merellä tavataan muun muassa [[pyöriäisiä]] ja [[harmaahylkeitä]], ja Mansaaren vesillä on nähty myös [[jättiläishaita]], jotka ovat vaarattomia planktonia syöviä jättiläisiä. Rannikon kallioilla pesii merilintuja, kuten [[suulia]]. Tarkoista lajimääristä en ole varma, mutta alue tunnetaan runsaasta merielämästään.
+
+Ylhäältä katsottuna hylkeet näyttävät kivenmöhkäleiltä, ja siksi olen joskus laskeutunut väärälle kalliolle. Hylje ei ilahtunut.
+KYSYMYS: Kerro lisää: pyöriäisiä
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mitä eläimiä Irlanninmerellä elää?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Irlanninmerellä elää monenlaisia merinisäkkäitä ja merilintuja. Merellä tavataan muun muassa [[pyöriäisiä]] ja [[harmaahylkeitä]], ja Mansaaren vesillä on nähty myös [[jättiläishaita]], jotka ovat vaarattomia planktonia syöviä jättiläisiä. Rannikon kallioilla pesii merilintuja, kuten [[suulia]]. Tarkoista lajimääristä en ole varma, mutta alue tunnetaan runsaasta merielämästään.
+
+Ylhäältä katsottuna hylkeet näyttävät kivenmöhkäleiltä, ja siksi olen joskus laskeutunut väärälle kalliolle. Hylje ei ilahtunut.
+KYSYMYS: Kerro lisää: harmaahylkeitä
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mitä eläimiä Irlanninmerellä elää?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Irlanninmerellä elää monenlaisia merinisäkkäitä ja merilintuja. Merellä tavataan muun muassa [[pyöriäisiä]] ja [[harmaahylkeitä]], ja Mansaaren vesillä on nähty myös [[jättiläishaita]], jotka ovat vaarattomia planktonia syöviä jättiläisiä. Rannikon kallioilla pesii merilintuja, kuten [[suulia]]. Tarkoista lajimääristä en ole varma, mutta alue tunnetaan runsaasta merielämästään.
+
+Ylhäältä katsottuna hylkeet näyttävät kivenmöhkäleiltä, ja siksi olen joskus laskeutunut väärälle kalliolle. Hylje ei ilahtunut.
+KYSYMYS: Kerro lisää: jättiläishaita
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+AIEMPI KYSYMYS: Mitä eläimiä Irlanninmerellä elää?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Irlanninmerellä elää monenlaisia merinisäkkäitä ja merilintuja. Merellä tavataan muun muassa [[pyöriäisiä]] ja [[harmaahylkeitä]], ja Mansaaren vesillä on nähty myös [[jättiläishaita]], jotka ovat vaarattomia planktonia syöviä jättiläisiä. Rannikon kallioilla pesii merilintuja, kuten [[suulia]]. Tarkoista lajimääristä en ole varma, mutta alue tunnetaan runsaasta merielämästään.
+
+Ylhäältä katsottuna hylkeet näyttävät kivenmöhkäleiltä, ja siksi olen joskus laskeutunut väärälle kalliolle. Hylje ei ilahtunut.
+KYSYMYS: Kerro lisää: suulia
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+- [Pakistan — maalehti / Luonto: Miljoona tainta yhdessä päivässä] Induksen suistoon on istutettu mangrovea ennätysvauhtia. Sindhin metsähallinto istutti vuonna 2009 Keti Bandarissa yli 540 000 tainta yhdessä päivässä, ja siitä tuli maailmanennätys. Intia ohitti luvun vuonna 2010, ja Pakistan otti ennätyksen takaisin 22. kesäkuuta 2013, kun Kharo Chanissa istutettiin 847 275 tainta. Ennätys parani vielä 19. huhtikuuta 2018, jolloin Keti Bandarissa saatiin maahan 1 129 294 tainta. Säännöt ovat tiukat: työn tekee kolmesataa vapaaehtoista valoisan aikaan. Taimet painetaan käsin pehmeään mutaan vuoroveden laskettua. Lehdet kelpaavat myös rehuksi, ja kyläläiset keräävät niitä karjalleen.
+AIEMPI KYSYMYS: Miksi Shannonin pituudesta ei päästä yksimielisyyteen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syy on se, että Shannonilla ei ole selvää loppua. Joki laskee leveään [[suistoon]], joka avautuu [[Limerickin]] alapuolella kohti Atlanttia, ja joen ja meren raja on liukuva, joten mittaus voidaan päättää monesta kohdasta. Siksi luvut vaihtelevat: perinteinen lukema on 390 kilometriä, virallinen irlantilainen lähde antaa 360,5, oppaat mainitsevat 344 ja osa tutkijoista päätyy noin 280 kilometriin. Moni ei anna lukua lainkaan. Joen alkupää sen sijaan tunnetaan tarkasti: se on pieni lampi nimeltä [[Shannon Pot]].
+
+Lentäjänä minä sanoisin, että joki päättyy siihen, mihin se näyttää päättyvän ylhäältä katsottuna. Se ei kuitenkaan ratkaise asiaa.
+KYSYMYS: Kerro lisää: suistoon
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Miksi Shannonin pituudesta ei päästä yksimielisyyteen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syy on se, että Shannonilla ei ole selvää loppua. Joki laskee leveään [[suistoon]], joka avautuu [[Limerickin]] alapuolella kohti Atlanttia, ja joen ja meren raja on liukuva, joten mittaus voidaan päättää monesta kohdasta. Siksi luvut vaihtelevat: perinteinen lukema on 390 kilometriä, virallinen irlantilainen lähde antaa 360,5, oppaat mainitsevat 344 ja osa tutkijoista päätyy noin 280 kilometriin. Moni ei anna lukua lainkaan. Joen alkupää sen sijaan tunnetaan tarkasti: se on pieni lampi nimeltä [[Shannon Pot]].
+
+Lentäjänä minä sanoisin, että joki päättyy siihen, mihin se näyttää päättyvän ylhäältä katsottuna. Se ei kuitenkaan ratkaise asiaa.
+KYSYMYS: Kerro lisää: Limerickin
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Miksi Shannonin pituudesta ei päästä yksimielisyyteen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syy on se, että Shannonilla ei ole selvää loppua. Joki laskee leveään [[suistoon]], joka avautuu [[Limerickin]] alapuolella kohti Atlanttia, ja joen ja meren raja on liukuva, joten mittaus voidaan päättää monesta kohdasta. Siksi luvut vaihtelevat: perinteinen lukema on 390 kilometriä, virallinen irlantilainen lähde antaa 360,5, oppaat mainitsevat 344 ja osa tutkijoista päätyy noin 280 kilometriin. Moni ei anna lukua lainkaan. Joen alkupää sen sijaan tunnetaan tarkasti: se on pieni lampi nimeltä [[Shannon Pot]].
+
+Lentäjänä minä sanoisin, että joki päättyy siihen, mihin se näyttää päättyvän ylhäältä katsottuna. Se ei kuitenkaan ratkaise asiaa.
+KYSYMYS: Kerro lisää: Shannon Pot
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+AIEMPI KYSYMYS: Mikä on Shannon Pot?
+AIEMPI VASTAUS (Livia):
+Ai tota. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja sitä pidetään Shannon-joen alkulähteenä. Joki lähtee siitä vielä taimenpuron kokoisena. Mittaukset ovat kuitenkin osoittaneet, että lammen vesi tulee nielukuiluista kilometrien päässä, osittain jopa [[Pohjois-Irlannin]] puolelta. Legendan mukaan joki on nimetty jumalatar Sionnan mukaan, joka hukkui paikkaan etsiessään viisauden lähdettä. Pienestä lammesta isoksi joeksi, kyl se kunnioitusta ansaitsee.
+KYSYMYS: Kerro lisää: Pohjois-Irlannin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Houston — kohdekartta / Kohdekartta: Market Squaren puisto] 1854 Kaupungin alkuperäisessä mittauksessa tämä kortteli sai nimen Congress Square. Se vaihtui Market Squareksi, kun Augustus Allen valitsi 1837 parlamenttitalon paikaksi Main Streetin ja Texas Avenuen luoteiskulman. Kaupungin valtuusto tilasi 1840 aukiolle ensimmäisen kauppahallin ja ensimmäisen kaupungintalon, ja urakoitsija sai molemmat valmiiksi seuraavana vuonna. Allen lahjoitti aukion kaupungille 1854, ja siitä tuli avoin torikauppapaikka. Se oli aivan Allenin maihinnousupaikan eli kaupungin ensimmäisen sataman vieressä, ja liikekeskusta kasvoi torin ympärille. Kaupungintaloja nousi ja paloi tälle samalle korttelille useita peräkkäin. Pormestari Thomas Scanlan kiersi 1871 itärannikkoa…
+AIEMPI KYSYMYS: Mitä järviä Shannon-joen varrella on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Shannon virtaa kolmen suuren järven kautta: ylhäällä on [[Lough Allen]], keskiosassa [[Lough Ree]] ja alempana [[Lough Derg]]. Näistä Lough Derg on eteläisin ja sijaitsee lähellä Limerickiä. Järvet ovat tärkeitä kalastukselle ja veneilylle, ja joki on veneilijöiden suosima reitti. Kyl järvet ovat hyviä maamerkkejä, kun lentää kirjepostia.
+KYSYMYS: Kerro lisää: Lough Allen
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä järviä Shannon-joen varrella on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Shannon virtaa kolmen suuren järven kautta: ylhäällä on [[Lough Allen]], keskiosassa [[Lough Ree]] ja alempana [[Lough Derg]]. Näistä Lough Derg on eteläisin ja sijaitsee lähellä Limerickiä. Järvet ovat tärkeitä kalastukselle ja veneilylle, ja joki on veneilijöiden suosima reitti. Kyl järvet ovat hyviä maamerkkejä, kun lentää kirjepostia.
+KYSYMYS: Kerro lisää: Lough Ree
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Mitä järviä Shannon-joen varrella on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Shannon virtaa kolmen suuren järven kautta: ylhäällä on [[Lough Allen]], keskiosassa [[Lough Ree]] ja alempana [[Lough Derg]]. Näistä Lough Derg on eteläisin ja sijaitsee lähellä Limerickiä. Järvet ovat tärkeitä kalastukselle ja veneilylle, ja joki on veneilijöiden suosima reitti. Kyl järvet ovat hyviä maamerkkejä, kun lentää kirjepostia.
+KYSYMYS: Kerro lisää: Lough Derg
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Mihin Shannon laskee?
+AIEMPI VASTAUS (Livia):
+Joo, just niin. Shannon laskee Atlantin valtamereen Irlannin länsirannikolla. Joki leviää [[Limerickin]] alapuolella leveäksi suistoksi, joka avautuu Atlantille [[Loop Headin]] ja [[Kerry Headin]] välissä. Suistossa elää pullokuonodelfiinejä, ja se on myös tärkeä lintualue. Kyllä minä sen suiston tunnistaisin vaikka silmät ummessa.
+KYSYMYS: Kerro lisää: Loop Headin
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Mihin Shannon laskee?
+AIEMPI VASTAUS (Livia):
+Joo, just niin. Shannon laskee Atlantin valtamereen Irlannin länsirannikolla. Joki leviää [[Limerickin]] alapuolella leveäksi suistoksi, joka avautuu Atlantille [[Loop Headin]] ja [[Kerry Headin]] välissä. Suistossa elää pullokuonodelfiinejä, ja se on myös tärkeä lintualue. Kyllä minä sen suiston tunnistaisin vaikka silmät ummessa.
+KYSYMYS: Kerro lisää: Kerry Headin
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Miksi Shannonin ylittäviä paikkoja on niin vähän?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä pointti. Dowran ja Limerickin välillä joen yli pääsee alle kolmestakymmenestäviidestä kohdasta, vaikka matkaa on pitkä. Joki on leveä ja muuttuu paikoin järviksi, ja sen rannat ovat monin paikoin soisia tulva-alueita, joille siltoja on vaikea rakentaa. Ylityspaikat ovat siksi keskittyneet muutamaan tunnettuun kohtaan, kuten [[Athloneen]], [[Banagheriin]] ja [[Killaloeen]]. Koska joki jakaa saaren idän ja lännen, näistä paikoista on tullut tärkeitä kaupan ja liikenteen solmukohtia. Kyyhkylle jokin joki on kyl helppo ylittää.
+KYSYMYS: Kerro lisää: Athloneen
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Miksi Shannonin ylittäviä paikkoja on niin vähän?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä pointti. Dowran ja Limerickin välillä joen yli pääsee alle kolmestakymmenestäviidestä kohdasta, vaikka matkaa on pitkä. Joki on leveä ja muuttuu paikoin järviksi, ja sen rannat ovat monin paikoin soisia tulva-alueita, joille siltoja on vaikea rakentaa. Ylityspaikat ovat siksi keskittyneet muutamaan tunnettuun kohtaan, kuten [[Athloneen]], [[Banagheriin]] ja [[Killaloeen]]. Koska joki jakaa saaren idän ja lännen, näistä paikoista on tullut tärkeitä kaupan ja liikenteen solmukohtia. Kyyhkylle jokin joki on kyl helppo ylittää.
+KYSYMYS: Kerro lisää: Banagheriin
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+AIEMPI KYSYMYS: Miksi Shannonin ylittäviä paikkoja on niin vähän?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä pointti. Dowran ja Limerickin välillä joen yli pääsee alle kolmestakymmenestäviidestä kohdasta, vaikka matkaa on pitkä. Joki on leveä ja muuttuu paikoin järviksi, ja sen rannat ovat monin paikoin soisia tulva-alueita, joille siltoja on vaikea rakentaa. Ylityspaikat ovat siksi keskittyneet muutamaan tunnettuun kohtaan, kuten [[Athloneen]], [[Banagheriin]] ja [[Killaloeen]]. Koska joki jakaa saaren idän ja lännen, näistä paikoista on tullut tärkeitä kaupan ja liikenteen solmukohtia. Kyyhkylle jokin joki on kyl helppo ylittää.
+KYSYMYS: Kerro lisää: Killaloeen
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Mitä talvipäivänseisauksena tapahtuu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Talvipäivänseisauksena aamuaurinko nousee sellaisessa kulmassa, että sen säde pääsee kulkemaan Newgrangen sisäänkäynnin yläpuolella olevan kapean aukon, jota kutsutaan nimellä [[roof-box]], kautta pitkää kivikäytävää pitkin hautakammioon. Valo valaisee kammion lattiaa lyhyen aikaa, lähteiden mukaan noin seitsemäntoista minuutin ajan. Ilmiö on mahdollinen, koska hauta on rakennettu yli viisituhatta vuotta sitten tarkasti suunnattuna, ja se kuuluu [[Brú na Bóinnen]] maailmanperintökohteeseen. Monumentin tarkoituksesta ei ole yksimielisyyttä. Kyl auringonnousu on ollut aina kyyhkyn lempiaika.
+KYSYMYS: Kerro lisää: roof-box
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Mitä talvipäivänseisauksena tapahtuu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Talvipäivänseisauksena aamuaurinko nousee sellaisessa kulmassa, että sen säde pääsee kulkemaan Newgrangen sisäänkäynnin yläpuolella olevan kapean aukon, jota kutsutaan nimellä [[roof-box]], kautta pitkää kivikäytävää pitkin hautakammioon. Valo valaisee kammion lattiaa lyhyen aikaa, lähteiden mukaan noin seitsemäntoista minuutin ajan. Ilmiö on mahdollinen, koska hauta on rakennettu yli viisituhatta vuotta sitten tarkasti suunnattuna, ja se kuuluu [[Brú na Bóinnen]] maailmanperintökohteeseen. Monumentin tarkoituksesta ei ole yksimielisyyttä. Kyl auringonnousu on ollut aina kyyhkyn lempiaika.
+KYSYMYS: Kerro lisää: Brú na Bóinnen
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Isfahanin basaari] Basaari on käytävä kahden eri-ikäisen kaupungin välillä. Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina 1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia basaareja. Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään 1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain se, että ne ovat yli tuhat vu…
+AIEMPI KYSYMYS: Kumpi on vanhempi, Newgrange vai Stonehenge?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Newgrange on vanhempi. Se rakennettiin noin vuoden 3100 eaa. paikkeilla, kun taas Stonehengen ensimmäinen vaihe, kehämäinen vallihauta, ajoitetaan noin vuoteen 3000 eaa., ja sen tunnetut suuret kivet pystytettiin vasta myöhemmin, arviolta noin vuoden 2500 eaa. tienoilla. Newgrange on vanhempi myös kuin Egyptin Gizan pyramidit, jotka rakennettiin noin vuoden 2600 eaa. aikoihin. Ajoitukset ovat arvioita ja eri lähteet antavat hieman eri lukuja, mutta Newgrangen etumatka on selvä. Newgrange on [[käytävähauta]] Meathin kreivikunnassa Boyne-joen varrella.
+
+Viisituhatta vuotta, ja kumpu seisoo yhä paikallaan. Moni linna ei pärjäisi sille.
+KYSYMYS: Kerro lisää: käytävähauta
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Mistä Newgrangen kvartsikivet on tuotu?
+AIEMPI VASTAUS (Livia):
+Ai se valkoinen julkisivu. Newgrangen julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, joiden on arvioitu tulleen kaukaa, ainakin osittain Wicklowin vuorten suunnalta, ja joiden joukossa on myös tummempia kiviä. Tarkasta alkuperästä en ole aivan varma. Kivien kuljetus on ollut mittava työ, sillä monumentin rakentamiseen tarvittiin myös suuria kivilohkareita, ja monet kivet on peitetty [[megaliittitaiteella]]. Nykyinen julkisivu on rakennettu osin uudelleen 1960- ja 1970-lukujen kaivausten jälkeen, ja sen asu on herättänyt keskustelua. Valkoinen kumpu näkyy ylös asti, se on kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: megaliittitaiteella
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Mitä kuviot Newgrangen kivissä esittävät?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä väitellään. Newgrangen kivissä on kaiverrettuja kuvioita, joita kutsutaan [[megaliittitaiteeksi]]: tyypillisiä ovat spiraalit, rombit, siksak-viivat ja samankeskiset kaaret. Tunnetuimpia on sisäänkäynnin edessä oleva suuri kivi, jonka pintaa koristavat spiraalit. Mitä kuviot tarkoittavat, ei tiedetä: ne voivat olla koristeita, merkkejä tai liittyä rituaaleihin, mutta tutkijat eivät ole yksimielisiä. Runsaasta kivitaiteestaan tunnetaan myös läheinen [[Knowthin]] hautakumpu. Kyl minäkin tykkään arvuutella kuvioita.
+KYSYMYS: Kerro lisää: megaliittitaiteeksi
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Mitä kuviot Newgrangen kivissä esittävät?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä väitellään. Newgrangen kivissä on kaiverrettuja kuvioita, joita kutsutaan [[megaliittitaiteeksi]]: tyypillisiä ovat spiraalit, rombit, siksak-viivat ja samankeskiset kaaret. Tunnetuimpia on sisäänkäynnin edessä oleva suuri kivi, jonka pintaa koristavat spiraalit. Mitä kuviot tarkoittavat, ei tiedetä: ne voivat olla koristeita, merkkejä tai liittyä rituaaleihin, mutta tutkijat eivät ole yksimielisiä. Runsaasta kivitaiteestaan tunnetaan myös läheinen [[Knowthin]] hautakumpu. Kyl minäkin tykkään arvuutella kuvioita.
+KYSYMYS: Kerro lisää: Knowthin
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Kuka Newgrangen rakensi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Newgrangen rakensivat neoliittisen kauden maanviljelijät noin vuonna 3100 eaa., joten tekijöiden nimiä ei tunneta eikä kirjallisia lähteitä ole. Rakentaminen vaati valtavasti työtä, sillä kuljetettavana oli kiviä ja maamassoja, ja arvioiden mukaan se vei vuosikymmeniä. Irlantilaisessa myytissä kumpu liittyy jumaliin: tarinoiden mukaan siellä asuivat [[Dagda]] ja hänen poikansa [[Aengus Óg]]. Nimettömiä rakentajia, mut kyl jälki puhuu.
+KYSYMYS: Kerro lisää: Dagda
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+AIEMPI KYSYMYS: Kuka Newgrangen rakensi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Newgrangen rakensivat neoliittisen kauden maanviljelijät noin vuonna 3100 eaa., joten tekijöiden nimiä ei tunneta eikä kirjallisia lähteitä ole. Rakentaminen vaati valtavasti työtä, sillä kuljetettavana oli kiviä ja maamassoja, ja arvioiden mukaan se vei vuosikymmeniä. Irlantilaisessa myytissä kumpu liittyy jumaliin: tarinoiden mukaan siellä asuivat [[Dagda]] ja hänen poikansa [[Aengus Óg]]. Nimettömiä rakentajia, mut kyl jälki puhuu.
+KYSYMYS: Kerro lisää: Aengus Óg
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä nimi Temair tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Temair on muinaisiirin muoto Tarán nimestä, ja nykyiriksi se on [[Teamhair]]. Nimen uskotaan tulevan [[kantakelttiläisestä]] sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa. Sama juuri esiintyy kreikan sanassa [[temenos]] ja latinan sanassa templum. Toisen tulkinnan mukaan nimi tarkoittaa korkeaa paikkaa, jolta on näköala. Latinan kanssa samaa juurta, kuulostaa kyl roomalaiselta suvulta.
+KYSYMYS: Kerro lisää: Teamhair
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä nimi Temair tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Temair on muinaisiirin muoto Tarán nimestä, ja nykyiriksi se on [[Teamhair]]. Nimen uskotaan tulevan [[kantakelttiläisestä]] sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa. Sama juuri esiintyy kreikan sanassa [[temenos]] ja latinan sanassa templum. Toisen tulkinnan mukaan nimi tarkoittaa korkeaa paikkaa, jolta on näköala. Latinan kanssa samaa juurta, kuulostaa kyl roomalaiselta suvulta.
+KYSYMYS: Kerro lisää: kantakelttiläisestä
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Qasr al-Bint] Qasr al-Bint on Petran temppeli ja samalla poikkeus kaikkeen muuhun: se on rakennettu kivestä pystyyn eikä louhittu kallioon. Rakennus seisoo podiumilla, jonka ydin on kivimursketta ja pinta huoliteltua harkkomuurausta. Ajoituksesta on kiistelty vuosikymmeniä, mutta nykyinen rakennus näyttää nousseen jonkin vanhemman ja huonosti tunnetun rakennuksen päälle. Ajoitusta tukee se, että sen koristeaiheet muistuttavat Aarrekammion vastaavia, ja Aarrekammion ajoitus tunnetaan hyvin. Nimi ei ole antiikista. Kokonaisuudessaan se kuuluu Qasr al-Bint Firʿaun eli faaraon tyttären palatsi, ja se tulee paikallisesta tarinasta: pahan faaraon hyveellinen tytär päätti valita kosijoidensa väliltä sen, joka s…
+AIEMPI KYSYMYS: Mitä nimi Temair tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Temair on muinaisiirin muoto Tarán nimestä, ja nykyiriksi se on [[Teamhair]]. Nimen uskotaan tulevan [[kantakelttiläisestä]] sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa. Sama juuri esiintyy kreikan sanassa [[temenos]] ja latinan sanassa templum. Toisen tulkinnan mukaan nimi tarkoittaa korkeaa paikkaa, jolta on näköala. Latinan kanssa samaa juurta, kuulostaa kyl roomalaiselta suvulta.
+KYSYMYS: Kerro lisää: temenos
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mikä Lia Fáil on?
+AIEMPI VASTAUS (Livia):
+Ai se. Lia Fáil on Tarán kukkulalla oleva pystykivi, jota pidetään kohtalon kivenä. Perimätiedon mukaan se liittyi Irlannin [[ylikuninkaiden]] virkaanastujaisiin, ja tarinan mukaan kivi huusi ääneen, kun oikea kuningas kosketti sitä. Irlantilaisessa mytologiassa kivi on yksi [[Tuatha Dé Danannin]] tuomista aarteista. Missä kivi on seissyt vuosisatojen aikana ja onko nykyinen paikka sama, en ole varma. Huutava kivi, sepä olisi hyvä hälytin.
+KYSYMYS: Kerro lisää: ylikuninkaiden
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mikä Lia Fáil on?
+AIEMPI VASTAUS (Livia):
+Ai se. Lia Fáil on Tarán kukkulalla oleva pystykivi, jota pidetään kohtalon kivenä. Perimätiedon mukaan se liittyi Irlannin [[ylikuninkaiden]] virkaanastujaisiin, ja tarinan mukaan kivi huusi ääneen, kun oikea kuningas kosketti sitä. Irlantilaisessa mytologiassa kivi on yksi [[Tuatha Dé Danannin]] tuomista aarteista. Missä kivi on seissyt vuosisatojen aikana ja onko nykyinen paikka sama, en ole varma. Huutava kivi, sepä olisi hyvä hälytin.
+KYSYMYS: Kerro lisää: Tuatha Dé Danannin
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Keitä Irlannin ylikuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+No niin. Ylikuninkaalla, iiriksi [[ard rí]], tarkoitetaan perimätiedossa hallitsijaa, jonka katsottiin olevan Irlannin muiden pikkukuninkaiden yläpuolella ja jonka istuin oli Tarán kukkulalla. Historioitsijat keskustelevat siitä, kuinka suuri todellinen valta ylikuninkailla oli, sillä asema oli usein enemmän arvonimi kuin yksinvalta. Historiallisista ylikuninkaista yksi tunnetuimpia on [[Brian Boru]], joka nousi ylikuninkaaksi vuonna 1002 ja kuoli [[Clontarfin]] taistelun yhteydessä vuonna 1014. Pitkä aika siitä on.
+KYSYMYS: Kerro lisää: ard rí
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki: Kolikon harppu on väärän muotoinen] 1300-luku — Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva seisoo Trinity Collegen kirjastossa: 1300- tai 1400-luvulla tehty harppu, jonka kaulassa on messinkitapit 29 kielelle. Sitä sanotaan Brian Borun harpuksi, vaikka kuningas Brian kuoli vuonna 1014 — satoja vuosia ennen kuin soitin veistettiin. Kolikoihin painettu harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on paljon leveämpi.
+AIEMPI KYSYMYS: Keitä Irlannin ylikuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+No niin. Ylikuninkaalla, iiriksi [[ard rí]], tarkoitetaan perimätiedossa hallitsijaa, jonka katsottiin olevan Irlannin muiden pikkukuninkaiden yläpuolella ja jonka istuin oli Tarán kukkulalla. Historioitsijat keskustelevat siitä, kuinka suuri todellinen valta ylikuninkailla oli, sillä asema oli usein enemmän arvonimi kuin yksinvalta. Historiallisista ylikuninkaista yksi tunnetuimpia on [[Brian Boru]], joka nousi ylikuninkaaksi vuonna 1002 ja kuoli [[Clontarfin]] taistelun yhteydessä vuonna 1014. Pitkä aika siitä on.
+KYSYMYS: Kerro lisää: Brian Boru
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Keitä Irlannin ylikuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+No niin. Ylikuninkaalla, iiriksi [[ard rí]], tarkoitetaan perimätiedossa hallitsijaa, jonka katsottiin olevan Irlannin muiden pikkukuninkaiden yläpuolella ja jonka istuin oli Tarán kukkulalla. Historioitsijat keskustelevat siitä, kuinka suuri todellinen valta ylikuninkailla oli, sillä asema oli usein enemmän arvonimi kuin yksinvalta. Historiallisista ylikuninkaista yksi tunnetuimpia on [[Brian Boru]], joka nousi ylikuninkaaksi vuonna 1002 ja kuoli [[Clontarfin]] taistelun yhteydessä vuonna 1014. Pitkä aika siitä on.
+KYSYMYS: Kerro lisää: Clontarfin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä Tarán kukkulalla on nähtävää nykyään?
+AIEMPI VASTAUS (Livia):
+Odotas, katotaas. Kukkulalla on näkyvissä noin kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet maan alta vähintään kolme kertaa niin monta. Nähtävää ovat muun muassa käytävähauta, joka tunnetaan nimellä [[Panttivankien kumpu]], hautakumpuja, pyöreitä aitauksia, seremoniatie sekä pystykivi, jota pidetään [[Lia Fáilina]]. Kukkulalla on myös kirkko ja hautausmaa.
+
+Kukkula ei näytä korkealta, mutta näköala on laaja, ja ymmärrän kyllä, miksi kuninkaat pitivät siitä.
+KYSYMYS: Kerro lisää: Panttivankien kumpu
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä Tarán kukkulalla on nähtävää nykyään?
+AIEMPI VASTAUS (Livia):
+Odotas, katotaas. Kukkulalla on näkyvissä noin kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet maan alta vähintään kolme kertaa niin monta. Nähtävää ovat muun muassa käytävähauta, joka tunnetaan nimellä [[Panttivankien kumpu]], hautakumpuja, pyöreitä aitauksia, seremoniatie sekä pystykivi, jota pidetään [[Lia Fáilina]]. Kukkulalla on myös kirkko ja hautausmaa.
+
+Kukkula ei näytä korkealta, mutta näköala on laaja, ja ymmärrän kyllä, miksi kuninkaat pitivät siitä.
+KYSYMYS: Kerro lisää: Lia Fáilina
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä muuta historiaa Meathin kreivikunnassa on?
+AIEMPI VASTAUS (Livia):
+Joo, siellä riittää. Meathin kreivikunnassa on useita Irlannin tärkeitä historiallisia kohteita Tarán kukkulan ja Newgrangen lisäksi. [[Trimin]] linna on keskiaikainen anglo-normannilinna Boyne-joen rannalla, ja [[Slanen]] kukkula liittyy perimätiedon mukaan Pyhään Patrickiin ja kristinuskon alkuihin Irlannissa. Newgrange kuuluu Brú na Bóinnen maailmanperintökohteeseen yhdessä [[Knowthin]] ja Dowthin käytävähautojen kanssa. Alueen nimi Mide viittaa tietääkseni keskustaan, mutta en ole siitä aivan varma. Meath on kyl täynnä kiviä ja tarinoita.
+KYSYMYS: Kerro lisää: Trimin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä muuta historiaa Meathin kreivikunnassa on?
+AIEMPI VASTAUS (Livia):
+Joo, siellä riittää. Meathin kreivikunnassa on useita Irlannin tärkeitä historiallisia kohteita Tarán kukkulan ja Newgrangen lisäksi. [[Trimin]] linna on keskiaikainen anglo-normannilinna Boyne-joen rannalla, ja [[Slanen]] kukkula liittyy perimätiedon mukaan Pyhään Patrickiin ja kristinuskon alkuihin Irlannissa. Newgrange kuuluu Brú na Bóinnen maailmanperintökohteeseen yhdessä [[Knowthin]] ja Dowthin käytävähautojen kanssa. Alueen nimi Mide viittaa tietääkseni keskustaan, mutta en ole siitä aivan varma. Meath on kyl täynnä kiviä ja tarinoita.
+KYSYMYS: Kerro lisää: Slanen
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+AIEMPI KYSYMYS: Mitä muuta historiaa Meathin kreivikunnassa on?
+AIEMPI VASTAUS (Livia):
+Joo, siellä riittää. Meathin kreivikunnassa on useita Irlannin tärkeitä historiallisia kohteita Tarán kukkulan ja Newgrangen lisäksi. [[Trimin]] linna on keskiaikainen anglo-normannilinna Boyne-joen rannalla, ja [[Slanen]] kukkula liittyy perimätiedon mukaan Pyhään Patrickiin ja kristinuskon alkuihin Irlannissa. Newgrange kuuluu Brú na Bóinnen maailmanperintökohteeseen yhdessä [[Knowthin]] ja Dowthin käytävähautojen kanssa. Alueen nimi Mide viittaa tietääkseni keskustaan, mutta en ole siitä aivan varma. Meath on kyl täynnä kiviä ja tarinoita.
+KYSYMYS: Kerro lisää: Knowthin
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä kysymys. Luostarin paikka ei ollut sattumaa, sillä se valittiin risteyksen vuoksi: Irlannin suuri itä–länsisuuntainen maareitti [[Slighe Mhór]] ylitti [[Shannon-joen]] juuri tässä kohdassa. Reitti kulki Keski-Irlannin soiden yli [[Eiscir Riadan]] harjua pitkin, ja harju on jääkauden vetäytyvien jäätiköiden jättämä, joten se oli kuivaa ja kantavaa maata suon keskellä. Kun pyhä [[Ciarán]] perusti luostarin vuonna 544, sijainti tarjosi sekä vesitien että maareitin, ja siksi paikasta kehittyi 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskus.
+
+Ylhäältä katsoen tuollainen harju näkyy aivan selvästi, ja kyyhky lentää mieluummin jokea seuraten kuin soisen maan yli. Ymmärrän munkkeja siis hyvin.
+KYSYMYS: Kerro lisää: Slighe Mhór
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä kysymys. Luostarin paikka ei ollut sattumaa, sillä se valittiin risteyksen vuoksi: Irlannin suuri itä–länsisuuntainen maareitti [[Slighe Mhór]] ylitti [[Shannon-joen]] juuri tässä kohdassa. Reitti kulki Keski-Irlannin soiden yli [[Eiscir Riadan]] harjua pitkin, ja harju on jääkauden vetäytyvien jäätiköiden jättämä, joten se oli kuivaa ja kantavaa maata suon keskellä. Kun pyhä [[Ciarán]] perusti luostarin vuonna 544, sijainti tarjosi sekä vesitien että maareitin, ja siksi paikasta kehittyi 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskus.
+
+Ylhäältä katsoen tuollainen harju näkyy aivan selvästi, ja kyyhky lentää mieluummin jokea seuraten kuin soisen maan yli. Ymmärrän munkkeja siis hyvin.
+KYSYMYS: Kerro lisää: Shannon-joen
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä kysymys. Luostarin paikka ei ollut sattumaa, sillä se valittiin risteyksen vuoksi: Irlannin suuri itä–länsisuuntainen maareitti [[Slighe Mhór]] ylitti [[Shannon-joen]] juuri tässä kohdassa. Reitti kulki Keski-Irlannin soiden yli [[Eiscir Riadan]] harjua pitkin, ja harju on jääkauden vetäytyvien jäätiköiden jättämä, joten se oli kuivaa ja kantavaa maata suon keskellä. Kun pyhä [[Ciarán]] perusti luostarin vuonna 544, sijainti tarjosi sekä vesitien että maareitin, ja siksi paikasta kehittyi 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskus.
+
+Ylhäältä katsoen tuollainen harju näkyy aivan selvästi, ja kyyhky lentää mieluummin jokea seuraten kuin soisen maan yli. Ymmärrän munkkeja siis hyvin.
+KYSYMYS: Kerro lisää: Eiscir Riadan
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä kysymys. Luostarin paikka ei ollut sattumaa, sillä se valittiin risteyksen vuoksi: Irlannin suuri itä–länsisuuntainen maareitti [[Slighe Mhór]] ylitti [[Shannon-joen]] juuri tässä kohdassa. Reitti kulki Keski-Irlannin soiden yli [[Eiscir Riadan]] harjua pitkin, ja harju on jääkauden vetäytyvien jäätiköiden jättämä, joten se oli kuivaa ja kantavaa maata suon keskellä. Kun pyhä [[Ciarán]] perusti luostarin vuonna 544, sijainti tarjosi sekä vesitien että maareitin, ja siksi paikasta kehittyi 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskus.
+
+Ylhäältä katsoen tuollainen harju näkyy aivan selvästi, ja kyyhky lentää mieluummin jokea seuraten kuin soisen maan yli. Ymmärrän munkkeja siis hyvin.
+KYSYMYS: Kerro lisää: Ciarán
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Mikä Eiscir Riada on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Harjuja minä tunnen, kun niitä katsoo ylhäältä. Eiscir Riada on jääkauden jättämä harju, tarkemmin sanottuna jäätikön sulamisvesien kasaama hiekka- ja soraharjanne, joka kulkee Irlannin poikki Keski-Irlannin soiden halki. Kosteassa maastossa se oli luonnollinen kuiva kulkureitti, ja sitä pitkin kulki [[Slighe Mhór]], Irlannin suuri itä–länsisuuntainen maareitti, joka ylitti [[Shannon-joen]] [[Clonmacnoisen]] kohdalla. Harju ulottuu karkeasti Dublinin seudulta Galwayn suuntaan, mutta en ole varma sen tarkasta kulusta. Aika paljon merkitystä yhdelle sorakasalle, kyl.
+KYSYMYS: Kerro lisää: Clonmacnoisen
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Mihin pyöreitä torneja Irlannin luostareissa käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Näitä torneja minä olen katsonut monelta kaiteelta. Pyöreät tornit ovat korkeita, kapeita kivitorneja, joita rakennettiin irlantilaisten luostarien yhteyteen noin 900-luvulta 1100-luvulle. Iiriksi niitä kutsutaan nimellä [[cloigtheach]], kellotalo, ja niiden tärkein tehtävä oli kutsua munkit rukoukseen kellon äänellä. Ovi sijaitsee tornin seinässä usein useita metrejä maan yläpuolella, ja sinne noustiin tikkailla, joten torni soveltui myös turvapaikaksi ja kalleuksien säilytyspaikaksi, kun [[viikinkien]] ja muiden ryöstäjien hyökkäykset uhkasivat. [[Clonmacnoisessa]] tällaisia torneja on kaksi, ja ne ovat osa luostarin säilynyttä rauniokokonaisuutta. Ei paha pesäpaikka kyyhkyllekään, ois vaan ovi vähän alempana.
+KYSYMYS: Kerro lisää: cloigtheach
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Mihin pyöreitä torneja Irlannin luostareissa käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Näitä torneja minä olen katsonut monelta kaiteelta. Pyöreät tornit ovat korkeita, kapeita kivitorneja, joita rakennettiin irlantilaisten luostarien yhteyteen noin 900-luvulta 1100-luvulle. Iiriksi niitä kutsutaan nimellä [[cloigtheach]], kellotalo, ja niiden tärkein tehtävä oli kutsua munkit rukoukseen kellon äänellä. Ovi sijaitsee tornin seinässä usein useita metrejä maan yläpuolella, ja sinne noustiin tikkailla, joten torni soveltui myös turvapaikaksi ja kalleuksien säilytyspaikaksi, kun [[viikinkien]] ja muiden ryöstäjien hyökkäykset uhkasivat. [[Clonmacnoisessa]] tällaisia torneja on kaksi, ja ne ovat osa luostarin säilynyttä rauniokokonaisuutta. Ei paha pesäpaikka kyyhkyllekään, ois vaan ovi vähän alempana.
+KYSYMYS: Kerro lisää: viikinkien
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Mihin pyöreitä torneja Irlannin luostareissa käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Näitä torneja minä olen katsonut monelta kaiteelta. Pyöreät tornit ovat korkeita, kapeita kivitorneja, joita rakennettiin irlantilaisten luostarien yhteyteen noin 900-luvulta 1100-luvulle. Iiriksi niitä kutsutaan nimellä [[cloigtheach]], kellotalo, ja niiden tärkein tehtävä oli kutsua munkit rukoukseen kellon äänellä. Ovi sijaitsee tornin seinässä usein useita metrejä maan yläpuolella, ja sinne noustiin tikkailla, joten torni soveltui myös turvapaikaksi ja kalleuksien säilytyspaikaksi, kun [[viikinkien]] ja muiden ryöstäjien hyökkäykset uhkasivat. [[Clonmacnoisessa]] tällaisia torneja on kaksi, ja ne ovat osa luostarin säilynyttä rauniokokonaisuutta. Ei paha pesäpaikka kyyhkyllekään, ois vaan ovi vähän alempana.
+KYSYMYS: Kerro lisää: Clonmacnoisessa
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+AIEMPI KYSYMYS: Keitä Taran ylikuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kuninkaita on kuulemma ollut enemmän kuin kyyhkyjä Pariisissa. Taran ylikuninkaat olivat Irlannin perinteisiä ylimpiä kuninkaita, joiden istuin sijaitsi [[Taran]] kukkulalla nykyisessä Meathin kreivikunnassa. Titteli oli osin symbolinen ja kiistanalainen, sillä käytännössä Irlantia hallitsi lukuisa joukko alueellisia kuninkaita, ja ylikuninkuudesta kilpailivat eri suvut. Luettelot ylikuninkaista ovat osin legendaa, joten varhaisimpiin nimiin on suhtauduttava varovasti. Tunnetuin ylikuningas on [[Brian Boru]], joka kaatui Clontarfin taistelussa vuonna 1014. Paljon kuninkaita, ja pää on jo sekaisin.
+KYSYMYS: Kerro lisää: Taran
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki: Kolikon harppu on väärän muotoinen] 1300-luku — Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva seisoo Trinity Collegen kirjastossa: 1300- tai 1400-luvulla tehty harppu, jonka kaulassa on messinkitapit 29 kielelle. Sitä sanotaan Brian Borun harpuksi, vaikka kuningas Brian kuoli vuonna 1014 — satoja vuosia ennen kuin soitin veistettiin. Kolikoihin painettu harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on paljon leveämpi.
+AIEMPI KYSYMYS: Keitä Taran ylikuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kuninkaita on kuulemma ollut enemmän kuin kyyhkyjä Pariisissa. Taran ylikuninkaat olivat Irlannin perinteisiä ylimpiä kuninkaita, joiden istuin sijaitsi [[Taran]] kukkulalla nykyisessä Meathin kreivikunnassa. Titteli oli osin symbolinen ja kiistanalainen, sillä käytännössä Irlantia hallitsi lukuisa joukko alueellisia kuninkaita, ja ylikuninkuudesta kilpailivat eri suvut. Luettelot ylikuninkaista ovat osin legendaa, joten varhaisimpiin nimiin on suhtauduttava varovasti. Tunnetuin ylikuningas on [[Brian Boru]], joka kaatui Clontarfin taistelussa vuonna 1014. Paljon kuninkaita, ja pää on jo sekaisin.
+KYSYMYS: Kerro lisää: Brian Boru
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostareista tuli oppineisuuden keskuksia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tässä vaiheessa minä taas toivon, että olisin itse osannut kirjoittaa. Varhaiskeskiajan Irlannissa luostarit olivat kirjallisen sivistyksen keskuksia: munkit kopioivat ja kirjoittivat käsikirjoituksia, opettivat latinaa ja kirkon oppia ja pitivät yllä kirjastoja. Kun luostari sijaitsi vilkkaan reitin varrella, se veti puoleensa oppilaita, ja oppineita saapui [[Clonmacnoiseen]] eri puolilta Eurooppaa. Irlantilaiset munkit myös matkasivat mantereelle, ja esimerkiksi [[Columbanus]] perusti luostareita nykyisen Ranskan ja Italian alueelle. Clonmacnoisesta tunnetaan myös käsikirjoitus [[Lebor na hUidre]], joka on koottu noin vuoden 1100 tienoilla. Itse oon enemmän kirjeiden kantaja kuin kirjoittaja.
+KYSYMYS: Kerro lisää: Clonmacnoiseen
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostareista tuli oppineisuuden keskuksia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tässä vaiheessa minä taas toivon, että olisin itse osannut kirjoittaa. Varhaiskeskiajan Irlannissa luostarit olivat kirjallisen sivistyksen keskuksia: munkit kopioivat ja kirjoittivat käsikirjoituksia, opettivat latinaa ja kirkon oppia ja pitivät yllä kirjastoja. Kun luostari sijaitsi vilkkaan reitin varrella, se veti puoleensa oppilaita, ja oppineita saapui [[Clonmacnoiseen]] eri puolilta Eurooppaa. Irlantilaiset munkit myös matkasivat mantereelle, ja esimerkiksi [[Columbanus]] perusti luostareita nykyisen Ranskan ja Italian alueelle. Clonmacnoisesta tunnetaan myös käsikirjoitus [[Lebor na hUidre]], joka on koottu noin vuoden 1100 tienoilla. Itse oon enemmän kirjeiden kantaja kuin kirjoittaja.
+KYSYMYS: Kerro lisää: Columbanus
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+AIEMPI KYSYMYS: Miksi luostareista tuli oppineisuuden keskuksia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tässä vaiheessa minä taas toivon, että olisin itse osannut kirjoittaa. Varhaiskeskiajan Irlannissa luostarit olivat kirjallisen sivistyksen keskuksia: munkit kopioivat ja kirjoittivat käsikirjoituksia, opettivat latinaa ja kirkon oppia ja pitivät yllä kirjastoja. Kun luostari sijaitsi vilkkaan reitin varrella, se veti puoleensa oppilaita, ja oppineita saapui [[Clonmacnoiseen]] eri puolilta Eurooppaa. Irlantilaiset munkit myös matkasivat mantereelle, ja esimerkiksi [[Columbanus]] perusti luostareita nykyisen Ranskan ja Italian alueelle. Clonmacnoisesta tunnetaan myös käsikirjoitus [[Lebor na hUidre]], joka on koottu noin vuoden 1100 tienoilla. Itse oon enemmän kirjeiden kantaja kuin kirjoittaja.
+KYSYMYS: Kerro lisää: Lebor na hUidre
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki: Kolikon harppu on väärän muotoinen] 1300-luku — Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva seisoo Trinity Collegen kirjastossa: 1300- tai 1400-luvulla tehty harppu, jonka kaulassa on messinkitapit 29 kielelle. Sitä sanotaan Brian Borun harpuksi, vaikka kuningas Brian kuoli vuonna 1014 — satoja vuosia ennen kuin soitin veistettiin. Kolikoihin painettu harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on paljon leveämpi.
+AIEMPI KYSYMYS: Kuka kruunattiin kalliolla vuonna 977?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tuo vuosiluku on mulla päässä ihan kirkkaana. Vuonna 977 kalliolla kruunattiin [[Brian Boru]] Munsterin kuninkaaksi, ja hän teki Cashelista pääkaupunkinsa. Brianista tuli myöhemmin koko Irlannin ylikuningas, ja hän kaatui [[Clontarfin]] taistelussa vuonna 1014. Kallio oli ollut [[Munsterin]] kuninkaiden perinteinen istuin jo 300-luvulta lähtien. Ne kruunajaiset ois kyllä kannattanut nähdä kaiteelta.
+KYSYMYS: Kerro lisää: Brian Boru
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+AIEMPI KYSYMYS: Kuka kruunattiin kalliolla vuonna 977?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tuo vuosiluku on mulla päässä ihan kirkkaana. Vuonna 977 kalliolla kruunattiin [[Brian Boru]] Munsterin kuninkaaksi, ja hän teki Cashelista pääkaupunkinsa. Brianista tuli myöhemmin koko Irlannin ylikuningas, ja hän kaatui [[Clontarfin]] taistelussa vuonna 1014. Kallio oli ollut [[Munsterin]] kuninkaiden perinteinen istuin jo 300-luvulta lähtien. Ne kruunajaiset ois kyllä kannattanut nähdä kaiteelta.
+KYSYMYS: Kerro lisää: Clontarfin
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+AIEMPI KYSYMYS: Kuka kruunattiin kalliolla vuonna 977?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tuo vuosiluku on mulla päässä ihan kirkkaana. Vuonna 977 kalliolla kruunattiin [[Brian Boru]] Munsterin kuninkaaksi, ja hän teki Cashelista pääkaupunkinsa. Brianista tuli myöhemmin koko Irlannin ylikuningas, ja hän kaatui [[Clontarfin]] taistelussa vuonna 1014. Kallio oli ollut [[Munsterin]] kuninkaiden perinteinen istuin jo 300-luvulta lähtien. Ne kruunajaiset ois kyllä kannattanut nähdä kaiteelta.
+KYSYMYS: Kerro lisää: Munsterin
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+AIEMPI KYSYMYS: Mitä tarun mukaan tapahtui Devil’s Bitissä?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on niitä tarinoita, joita kerrotaan mielellään kahdesti. Kansantaru kertoo, että pyhä [[Patrick]] karkotti Saatanan luolasta. Tarun yleisen version mukaan Saatana puraisi vuoresta palan, ja pala lensi noin kolmenkymmenen kilometrin päähän etelään ja jäi [[Tipperaryn]] tasangolle: se on Cashelin kallio. Kyseessä on siis kansantaru eikä geologinen selitys, mutta se on säilynyt hyvin ja kuuluu kallion nimeen, sillä iiriksi kallio on Carraig Phádraig, Patrickin kallio.
+
+Vuoren pureminen kuulostaa ylhäältä katsoen aika epäkäytännölliseltä ruokailulta. Hyvä pulla olisi kyllä ollut paljon parempi valinta.
+KYSYMYS: Kerro lisää: Patrick
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+AIEMPI KYSYMYS: Mitä tarun mukaan tapahtui Devil’s Bitissä?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on niitä tarinoita, joita kerrotaan mielellään kahdesti. Kansantaru kertoo, että pyhä [[Patrick]] karkotti Saatanan luolasta. Tarun yleisen version mukaan Saatana puraisi vuoresta palan, ja pala lensi noin kolmenkymmenen kilometrin päähän etelään ja jäi [[Tipperaryn]] tasangolle: se on Cashelin kallio. Kyseessä on siis kansantaru eikä geologinen selitys, mutta se on säilynyt hyvin ja kuuluu kallion nimeen, sillä iiriksi kallio on Carraig Phádraig, Patrickin kallio.
+
+Vuoren pureminen kuulostaa ylhäältä katsoen aika epäkäytännölliseltä ruokailulta. Hyvä pulla olisi kyllä ollut paljon parempi valinta.
+KYSYMYS: Kerro lisää: Tipperaryn
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+AIEMPI KYSYMYS: Mitä rakennuksia Cashelin kalliolla nykyään on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tässä on kivikasaa kerrakseen. Nykyiset rakennukset ovat valtaosin 1100- ja 1200-luvuilta. Vanhimpia ovat pyöreä torni sekä [[Cormacin kappeli]], jonka kuningas [[Cormac Mac Carthaigh]] rakennutti ja joka vihittiin vuonna 1134; se on tunnettu romaanisesta kuvaleikkauksestaan. Alueella on myös 1200-luvun katedraali sekä 1100-luvulta peräisin oleva [[Patrickin risti]]. Kivikasa, jonka päältä näkee kauas, ja siihen minä olen ihastunut.
+KYSYMYS: Kerro lisää: Cormacin kappeli
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+AIEMPI KYSYMYS: Mitä rakennuksia Cashelin kalliolla nykyään on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tässä on kivikasaa kerrakseen. Nykyiset rakennukset ovat valtaosin 1100- ja 1200-luvuilta. Vanhimpia ovat pyöreä torni sekä [[Cormacin kappeli]], jonka kuningas [[Cormac Mac Carthaigh]] rakennutti ja joka vihittiin vuonna 1134; se on tunnettu romaanisesta kuvaleikkauksestaan. Alueella on myös 1200-luvun katedraali sekä 1100-luvulta peräisin oleva [[Patrickin risti]]. Kivikasa, jonka päältä näkee kauas, ja siihen minä olen ihastunut.
+KYSYMYS: Kerro lisää: Cormac Mac Carthaigh
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+- [Dublin — kohdekartta / Kohdekartta: Patrickin katedraali] 1191–1270 Pyhän Patrickin katedraali on yksi Irlannin vanhimmista ja tärkeimmistä kirkoista. Se sai alkunsa vuonna 1191, kun arkkipiispa John Comyn korotti pienen kirkon katedraaliksi. Nykyinen goottilaistyylinen kivikirkko rakennettiin vaiheittain 1200-luvulla. Katedraali on valtava: sisältä se on lähes 90 metriä pitkä. Yksi sen kuuluisimmista haudatuista on kirjailija Jonathan Swift, joka tunnetaan kirjastaan Gulliverin retket. Swift toimi katedraalin kirkkoherrana vuosina 1713–1745. Kirkossa on myös kummallinen "sovinnon ovi": vuonna 1492 kaksi riitaista aatelissukua teki rauhan leikkaamalla oveen reiän, jotta toinen voisi kätellä pelkäämättä väijytystä. Tästä syntyi englanninkielinen sa…
+AIEMPI KYSYMYS: Mitä rakennuksia Cashelin kalliolla nykyään on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tässä on kivikasaa kerrakseen. Nykyiset rakennukset ovat valtaosin 1100- ja 1200-luvuilta. Vanhimpia ovat pyöreä torni sekä [[Cormacin kappeli]], jonka kuningas [[Cormac Mac Carthaigh]] rakennutti ja joka vihittiin vuonna 1134; se on tunnettu romaanisesta kuvaleikkauksestaan. Alueella on myös 1200-luvun katedraali sekä 1100-luvulta peräisin oleva [[Patrickin risti]]. Kivikasa, jonka päältä näkee kauas, ja siihen minä olen ihastunut.
+KYSYMYS: Kerro lisää: Patrickin risti
