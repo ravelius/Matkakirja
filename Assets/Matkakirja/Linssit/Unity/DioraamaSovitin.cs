@@ -341,6 +341,7 @@ namespace Matkakirja.Natiivi
                              $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
                              $"välimuistista {DioraamaLevyvalimuisti.Osumia - osumiaAlussa}, verkosta {DioraamaLevyvalimuisti.Latauksia - latauksiaAlussa})");
                     DioraamaLevyvalimuisti.SiivoaVanhat(o.Kirjaa); // vanhan pakettiversion sisältö pois vasta, kun uusi on valmis
+                    o.StartCoroutine(Esittely1499Paalle());   // juna 175: vuoden 1499 asu ilman myöhempiä bastioneja
                 }
                 else { nayttamo.Odota(true); t = kuoriOdotusT; }
             }
@@ -540,6 +541,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
+            SeikkailuHistoria.Esittely1499(false);   // juna 175: globaalit (vuosileikkaukset, mustan korvaus) pois ennen purkua
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuSade.Poista(); SeikkailuVarjot.Palauta(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
@@ -1060,7 +1062,7 @@ namespace Matkakirja.Natiivi
             string vaiheJuuri = ki >= 0 && kavelyKehitysJuuri == null ? paketinJuuri + ko.Substring(0, ki) : null;
             SeikkailuHistoria.Hamara = DioraamaTunnelma.Hamara(rakennus);   // mustan korvauksen sävy kuoren hämärä- tai päiväkuvaan
             SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null,
-                () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa, vaiheJuuri, peili);
+                () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); o.StartCoroutine(Esittely1499Paalle()); }, o.Kirjaa, vaiheJuuri, peili);
         }
 
         IEnumerator Botti(int alkuN)
@@ -1142,12 +1144,38 @@ namespace Matkakirja.Natiivi
         const float KavelyLahiMaxM = 2.2f;
         IEnumerator VarmistaKavelyData()
         {
+            // Esittelyn 1499-asu (juna 175) luovuttaa leikkaukset ja osittaisen datan pelille tai historialle.
+            if (SeikkailuHistoria.Esittely1499Paalla) SeikkailuHistoria.Esittely1499(false, o.Kirjaa);
+            while (esittelyLataa) yield return null;
             if (SeikkailuKavely.Ladattu) yield break;
-            string osatUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null;
-            string merkitUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null;
+            var (osatUrl, merkitUrl) = KavelyUrlit();
             if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa, kt => o.StartCoroutine(LataaValoAtlas(kt)));
             SeikkailuKavely.AsetaMarkyys(rakennus3D);
         }
+        (string, string) KavelyUrlit() => (
+            kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null,
+            kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null);
+
+        /// <summary>Esittelyn vuoden 1499 asu (PT 10.10., juna 175): kun ulkokuori.asu = "1499", saapumisen jälkeen kävelydata ja vain historian
+        /// kävelyosat (ranta-1499 täytteeksi, porttikäytävä) ja SeikkailuHistoria.Esittely1499 — bastionit 1602–03 ja Kellobastioni piiloon kuten
+        /// historiassa vuonna 1499. Ei, jos pelattava pala, vene tai historia on alkanut.</summary>
+        IEnumerator Esittely1499Paalle()
+        {
+            if (rakennus?.Ulkokuori?.Asu1499 != true || nayttamo == null || SeikkailuHistoria.Esittely1499Paalla) yield break;
+            if (SeikkailuKavely.Data == null && !esittelyLataa)
+            {
+                esittelyLataa = true;
+                var (osatUrl, merkitUrl) = KavelyUrlit();
+                if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa,
+                    kt => o.StartCoroutine(LataaValoAtlas(kt)), EsittelynKavelyosat);
+                esittelyLataa = false;
+            }
+            if (nayttamo == null || pelattavaPala || PelattavaPalaPyydetty || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null
+                || SeikkailuHistoria.Kaynnissa) yield break;
+            SeikkailuHistoria.Esittely1499(true, o.Kirjaa);
+        }
+        static readonly string[] EsittelynKavelyosat = { "ranta-1499", "porttikaytava-T102" };
+        bool esittelyLataa;
 
         // HISTORIAMOOTTORI V2: venesaapuminen. Reitti merkeistä vene:* (järjestyksessä; vene:laituri kierto_y = keulan suunta), muuten
         // varareitti laiturin tilan kameran suunnasta (vedenpinnassa, 120 / 40 / 8 m → 2 m laiturin kohteesta). Perillä pelaaja nousee

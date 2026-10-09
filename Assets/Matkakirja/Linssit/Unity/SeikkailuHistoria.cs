@@ -217,6 +217,50 @@ namespace Matkakirja.Natiivi
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
 
+        // ESITTELYN VUODEN 1499 ASU (PT 10.10., juna 175; omistajan linja 8.10.: bastionit 1602–03 ja Kellobastioni eivät näy missään
+        // 1499-näkymässä, nykylinna vain K2-dronekuvassa): kun ulkokuori.asu = "1499", esittely näyttää linnan kuten historia vuonna 1499 —
+        // vuosileikkaukset (vain-1499-listat ja vuodelliset), ranta-1499 täytteenä tasaisella kalliosävyllä, muut kävelyosat piilossa,
+        // mustien tekselien korvaus. Pelattava pala ja historia ottavat leikkaukset itselleen (Esittely1499(false) ensin).
+        static readonly HashSet<Renderer> esittelyPiilossa = new HashSet<Renderer>(), esittelyRannat = new HashSet<Renderer>();
+        public static bool Esittely1499Paalla { get; private set; }
+        public static void Esittely1499(bool paalla, Action<string> kirjaa = null)
+        {
+            if (paalla == Esittely1499Paalla && !paalla) return;
+            if (!paalla)
+            {
+                Esittely1499Paalla = false;
+                SeikkailuKavely.VainVuosileikkaukset = false;
+                Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
+                foreach (var r in esittelyPiilossa) if (r != null) r.enabled = true;
+                foreach (var r in esittelyRannat) if (r != null) r.SetPropertyBlock(null);
+                esittelyPiilossa.Clear(); esittelyRannat.Clear();
+                if (SeikkailuPelaaja.Aktiivinen == null && SeikkailuVene.Aktiivinen == null && !Kaynnissa) SeikkailuKavely.Leikkaukset(false);
+                kirjaa?.Invoke("seikkailu: esittely 1499 pois");
+                return;
+            }
+            if (SeikkailuKavely.Data == null) return;
+            Esittely1499Paalla = true;
+            if (!SeikkailuKavely.LeikkauksetPaalla) SeikkailuKavely.Leikkaukset(true);
+            SeikkailuKavely.VainVuosileikkaukset = true;
+            SeikkailuKavely.PaivitaLeikkaukset(null, true);
+            Shader.SetGlobalVector(IdMustaKorvaus, MustaKorvaus);
+            int piilo = 0, ranta = 0;
+            var n = FindAnyObjectByType<DioraamaNayttamo>();
+            if (n != null)
+                foreach (var r in n.GetComponentsInChildren<Renderer>(false))
+                {
+                    if (!r.enabled) continue;
+                    for (var t = r.transform; t != null && t != n.transform; t = t.parent)
+                        if (t.name.StartsWith("Tila:kavely:", StringComparison.Ordinal))
+                        {
+                            if (Array.IndexOf(HistorianKavelyosat, t.name) < 0) { r.enabled = false; esittelyPiilossa.Add(r); piilo++; }
+                            else if (t.name == HistorianKavelyosat[0] && esittelyRannat.Add(r)) { TasainenRanta(r); ranta++; }
+                            break;
+                        }
+                }
+            kirjaa?.Invoke($"seikkailu: esittely 1499 (vuosileikkaukset, ranta-1499 {ranta} osaa, kävelyosia piiloon {piilo})");
+        }
+
         IEnumerator Aja(Transform kamera, Action<string> kirjaa)
         {
             var h = Historiajana.Olavinlinna;
