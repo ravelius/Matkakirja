@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 04.2x (uusin)
+## TILA 9.10. klo 05.2x (uusin)
+- LEIKKAUSKORJAUS 52c736c4d (laivat-170): IlmakehaLaatat leikkaa Cesiumin kaavalla (Alpha = 1 − peitteen R, musta oletus; aiempi
+  alfaehto ei leikannut mitään → Concorden teltat ja Notre-Damen nosturi jäivät). 1102/1102. Lähetetty PT + Natiiviseppä (170/171).
+- LOD0-kuvat lokit/linssiseppa2-170f-*/ (arkki-lod0-ab.png): Riddarholmen + Kuninkaanlinna v1.1 OK; Concorde uusi kuva korjatulla
+  varjostimella seuraavassa simuvuorossa (aja-170f.sh). LR:lle: maapinta ei peitä polygonin NE/SE-kulmia (valkoiset reiät).
+- Vienti v3 (Concorde v2.2, Notre-Dame v2, Kuninkaanlinna) vasta PT:n nähtyä kuvat. Botti huone 8 + äänimuisti junalla 172.
+
+## TILA 9.10. klo 04.2x
 - JUNA 170 KUITATTU (PT 04.1x): laivat-170 a9095d78f + omat-mallit-korkeus b1e23a065 → Natiiviseppä. Jatkoparannus 6ac9faba7
   (aamusumu harsoksi, ilta Valissa 0,75, vesipaloja 4/kehys) odottaa simukuvaa → PT, sitten Natiisepälle (170 tai 171).
 - OMAT MALLIT ÄMPÄRISSÄ (Julkaisija 04.01): kartta/omat-mallit/uusin-2.json → v2/ (Giza N 15,35 + helmat, Riddarholmen v1).
