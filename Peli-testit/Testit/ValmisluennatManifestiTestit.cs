@@ -104,7 +104,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(Lukijaaani.NopeusOletus, Nopeus, "Lukijaaani.NopeusOletus = avainten nopeus");
             // Striimiaani.cs (UnityEngine, ei Peli-testeissä): ElevenAanet[0] on lukijan oletusääni → luetaan lähteestä (ajautumissuoja).
             string s = File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "..", "Assets", "Matkakirja", "UI", "Striimiaani.cs"));
-            var m = Regex.Match(s, @"ElevenAanet\s*=\s*new\[\]\s*\{\s*\(""([^""]+)""", RegexOptions.Singleline);
+            var m = Regex.Match(s, @"ElevenAanet\s*=>?\s*new\[\]\s*\{\s*\(""([^""]+)""", RegexOptions.Singleline);
             Oleta.Tosi(m.Success, "Striimiaani.ElevenAanet löytyy");
             Oleta.Sama(Aani, m.Groups[1].Value, "Striimiaanin oletusääni = manifestin ääni (William)");
         }
