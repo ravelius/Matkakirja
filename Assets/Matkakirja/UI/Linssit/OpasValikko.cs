@@ -2386,7 +2386,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Nykyisen kaupungin yksityiskohtakuvien tekijät (LS1: OpasSovitin.KuvaLahteet, (Kohde, Tekija, Lisenssi, Havainnekuva)
-        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Tekoälyllä tuotettu havainnekuva"; kukin kerran.
+        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Havainnekuva"; kukin kerran.
         /// </summary>
         static List<string> KuvaLahteet()
         {
