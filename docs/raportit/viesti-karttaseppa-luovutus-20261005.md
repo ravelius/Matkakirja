@@ -693,3 +693,9 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 - Paketti `_valmiit/s2-eurooppa-talvi-vienti-20261009` (talvi/v1, 521 Mt) Julkaisijalla; uusin.json ei kesken linna- tai simuajojen.
 - Vesi index-v4 (pariisi3, tukholma3) viety 07.40. Liput LS1:lle (`kaupunki-*/liput-*.json`). Geotorget-vaiheet PT:llä (omistaja luo tunnuksen; LM_GEOTORGET_USER/PASS avaintiedostoon).
 - PR:t #3105 ja #3108 suljettu (vanhentuneet).
+
+## 9.10. 17.xx
+
+- Kaukomaa v1 (PT: pallokierros): T7 iss-kuvauspaikat/kaukomaa/{pariisi,tukholma} (KAUKOMAA=1 kuvauspaikat-v2.mjs → kaukomaa-vesi.py → kaukomaa-paketti.py), paketti `_valmiit/kaukomaa-vienti-20261009` Julkaisijalla; LS2 kytkee aluskerrokseen. Työkalut PR #4256 (tools/kaukomaa).
+- LS1: kirkot, kahvilat, hallit kohteet-<id>.json:iin (pbf-kohteet.mjs, relaatiot mukana), juna 173.
+- Talvi/v1 ämpärissä 13.45, LS2 kytki (juna 173).
