@@ -242,6 +242,17 @@ namespace Matkakirja.Linssit.Testit
                 if (!h.MaaNakyy(t)) Oleta.Tosi(h.RakennusKorkeus(t) >= Historiajana.MaanPinta, $"saari pois vasta kallion noustua ({t:F1} s)");
         }
 
+        /// <summary>Arvio 5: historian vain-1499-leikkaukset vain maan yläpuolelta (onton kuoren juuri ehjä).</summary>
+        [Testi] static void LeikkausMaanYlapuolella()
+        {
+            var (y, p) = Historiajana.MaanYlapuolella(2, 10, -2);   // −8…12 → −2…12
+            Oleta.Sama(5.0, y); Oleta.Sama(7.0, p);
+            (y, p) = Historiajana.MaanYlapuolella(5, 3, -2);        // 2…8 ennallaan
+            Oleta.Sama(5.0, y); Oleta.Sama(3.0, p);
+            (y, p) = Historiajana.MaanYlapuolella(-6, 2, -2);       // −8…−4 kokonaan maan alla
+            Oleta.Sama(0.0, p);
+        }
+
         [Testi] static void Liikesaannot()
         {
             var h = Historiajana.Olavinlinna; var keski = new V3(-20, 15, 0); const double dt = 1 / 30.0;

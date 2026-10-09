@@ -155,7 +155,14 @@ namespace Matkakirja.Natiivi
                         if (ainaL && (kasvu != null ? g >= 0.999 : !Vain1499)) continue;   // drone nykyiseen linnaan: bastionit näkyvät
                         double arvo = ainaL ? -1e6 : o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
                         if (pelaaja is Vector3 q) { double dx = l.X - q.x, dy = l.Y - q.y, dz = l.Z + q.z; arvo += Math.Sqrt(dx * dx + dy * dy + dz * dz); }
-                        kaikki.Add((g > 0 ? Kasvanut(l, g) : l, arvo));
+                        var lk = g > 0 ? Kasvanut(l, g) : l;
+                        if (VainVuosileikkaukset && ainaL)
+                        {
+                            var (my, mp) = Matkakirja.Linssit.Dioraama.Historiajana.MaanYlapuolella(lk.Y, lk.KokoY / 2, Matkakirja.Linssit.Dioraama.Historiajana.LeikkausMaa);
+                            if (mp <= 0) continue;
+                            lk = new KavelyLeikkaus(lk.Nimi, lk.X, my, lk.Z, lk.KokoX, mp * 2, lk.KokoZ, lk.KiertoY);
+                        }
+                        kaikki.Add((lk, arvo));
                     }
                 kaikki.Sort((a, b) => a.Arvo.CompareTo(b.Arvo));
                 foreach (var (l, _) in kaikki)

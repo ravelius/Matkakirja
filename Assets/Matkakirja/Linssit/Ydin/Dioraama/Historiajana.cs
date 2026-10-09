@@ -171,6 +171,18 @@ namespace Matkakirja.Linssit.Dioraama
         /// päällekkäisiä pintoja), vaikka sen vuoteen olisi aiemmin (puuvarustus seisoi vedessä vuonna 1476).</summary>
         public bool MaaNakyy(double t) => !LinnaNakyyT(t) || RakennusKorkeus(t) < MaanPinta;
 
+        /// <summary>Historian myöhempien rakenteiden (vain-1499-listat) leikkaus vain maan yläpuolelta (arvio 5): leikkauslaatikon alareuna
+        /// nostetaan tasolle <paramref name="maa"/>, jolloin onton fotogrammetriakuoren juuri jää ehjäksi ja LR:n ranta-1499-täyttö (v46g:
+        /// rakennusten juurella −2,0) jatkuu siitä; laatikko kokonaan maan alla = ei leikkausta (puoli 0).</summary>
+        public const double LeikkausMaa = -2.0;
+        public static (double Y, double Puoli) MaanYlapuolella(double y, double puoli, double maa)
+        {
+            double ala = y - puoli, yla = y + puoli;
+            if (ala >= maa) return (y, puoli);
+            if (yla <= maa) return (maa, 0);
+            return ((maa + yla) / 2, (yla - maa) / 2);
+        }
+
         /// <summary>Vuosi hetkellä t: vaiheen vuodesta seuraavan vaiheen vuoteen (viimeinen: LoppuVuosi) lineaarisesti ankkureiden kautta.</summary>
         public double Vuosi(double t)
         {
