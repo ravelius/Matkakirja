@@ -15,3 +15,24 @@
 - Mittaan nyt kevyen omien mallien latauksen pienellä muistilla (vain näkyvä LOD, välimuisti 64 Mt, 2 latausta; 48e1d53e7).
   Arvio: −0,36 Gt GPU. Tulos tähän ~01.00. Jos ei riitä, vaihtoehdot: kerroin 4,25 pysyy (R2: +0,36 Gt marginaalia 2,72:een
   nähden; kaupunki näkyy nykykärjellä 4,25:llä) tai KTX2-data (LS2 v6hk2) jo 173:een.
+
+## 01.1x → PT: b + c eivät yksin riitä puhtaaseen kierrokseen (muistihätä jäädyttää kaupungin)
+Kuittaan: portti ajetaan v6h3:lla, kun Julkaisija on vienyt sen (01.09 vielä 404). Mittaukset R5–R9 (B-polku, iPad, v6h2/KTX2,
+osoitin ohitettu vain diagnostiikkakäännöksessä):
+
+| ajo | kerroin | omat mallit | vapaa min | muistihätä (< 1,0 Gt → lataus seis) |
+|---|---|---|---|---|
+| R5 | 2,72 | v6h2, täysi lataus | 0,14 Gt | 140 s → Google jää 64 %:iin |
+| R6 | 2,72 | v6h2 + b (kevyt) | 0,64 Gt | 138 s → 61 % |
+| R7 | 4,25 | v6h2 + b | 0,58 Gt | 146 s → 64 % |
+| R8 | 2,72 | KTX2 v6hk2 + b | 0,48 Gt | 144 s → 77 % |
+| R9 | 4,25 | KTX2 v6hk2 + b | 0,49 Gt | 148 s → 83 % |
+| R2 | 4,25 | ei omia | 1,18 Gt | ei hätää, 100 % |
+| R3b | 2,72 | ei omia | 0,82 Gt | 170 s → 82 % |
+
+- Jetsameja ei enää tule, mutta hätä 1 pienellä muistilla = laattojen lataus seis loppukierroksen ajaksi. Kierroksella Louvre ja
+  Orsay jäävät vedeksi ja karkeiksi laatoiksi (R6:n ruudut). Tämä on sama "Googlen laattoja ei näy" -ilmiö kuin 2313-ajossa.
+- Omien mallien kohdalla on lisäkulu tekstuurien lisäksi: Googlen leikkausmaski (CesiumPolygonRasterOverlay, SSE 0,5,
+  maxTextureSize 4096; myös 172:ssa). Kierroksen alussa tulee +300 Mt tekstuureja, joita Google- ja omat laatat eivät selitä.
+  Mittaan seuraavaksi diagnostiikka-asetuksella "leikkaus 0" (2775102b6). Muut isot erät: latauskuvan kerrokset ja napakalotit
+  pysyvät kaupungissa muistissa (~0,2 Gt), cesium-native pitää puretut kuvat CPU:lla (malloc 1,6–2,0 Gt) ja GC-keko on ~0,45 Gt.
