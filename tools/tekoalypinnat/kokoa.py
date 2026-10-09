@@ -10,7 +10,8 @@ from PIL import Image, ImageFilter
 
 def vari(k):
     k = k.strip()
-    return tuple(int(k[i:i + 2], 16) for i in (1, 3, 5)) if k.startswith('#') else tuple(int(v) for v in k.split(','))
+    if ',' in k: return tuple(int(v) for v in k.split(','))
+    k = k.lstrip('#'); return tuple(int(k[i:i + 2], 16) for i in (0, 2, 4))
 
 def maski(mat, varit):
     px = mat.load(); W, H = mat.size; m = Image.new('L', (W, H)); mp = m.load()
@@ -23,7 +24,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--f', required=True); p.add_argument('--l', required=True); p.add_argument('--materiaali', required=True); p.add_argument('--kartta', required=True)
     p.add_argument('--ulos', required=True); p.add_argument('--lukitse', default='kuparikatto,aurinkopaneeli'); p.add_argument('--savy', action='append', default=[])
-    p.add_argument('--koko', default='1600,900')
+    p.add_argument('--koko', default='1600,900'); p.add_argument('--siivous', type=int, default=5, help='lukitusmaskin sulkeminen (px, pariton; 1 = pois)')
     a = p.parse_args(); W, H = (int(v) for v in a.koko.split(','))
     mat = Image.open(a.materiaali).convert('RGB').resize((W, H), Image.NEAREST)
     kartta = {vari(k): v for k, v in json.load(open(a.kartta)).items()}
@@ -34,7 +35,8 @@ def main():
     for n in luk:
         if n in nimet: lm = Image.composite(Image.new('L', (W, H), 255), lm, maski(mat, nimet[n]))
         else: print('ei materiaalia kartassa:', n, file=sys.stderr)
-    out = Image.composite(L, F, lm.filter(ImageFilter.GaussianBlur(2)))
+    if a.siivous > 1: lm = lm.filter(ImageFilter.MaxFilter(a.siivous)).filter(ImageFilter.MinFilter(a.siivous))   # sulkeminen: z-taistelun pilkut pois
+    out = Image.composite(L, F, lm.filter(ImageFilter.GaussianBlur(1.2)))
     tmp = a.ulos + '.tmp.png'; out.save(tmp)
     savy = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'savy.py')
     for s in a.savy:
