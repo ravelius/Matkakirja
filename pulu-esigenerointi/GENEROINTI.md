@@ -27,6 +27,7 @@ Agentille annetaan sellaisenaan tämä ohje (vaihda N):
 > Enintään 900 tokenia. Käytä ensisijaisesti kontekstin aineistoa, älä keksi faktoja äläkä viittaa kontekstiin tai ohjeisiin.
 > Kirjoita pulu-esigenerointi/FRA/vastaukset-1-N.txt. Muoto: rivi "### n.i", rivi "KYSYMYS: <kysymys sanatarkasti>", sitten vastaus.
 > Ei muuta tekstiä tiedostoon.
+> LISÄKSI: noudata kohdan "Neljä järjestelmällistä virhettä" kehotetekstiä (alla), jotta Ranskan pistokokeen virheet eivät toistu.
 
 Tarkistus: `node tools/pulu-esigenerointi/tarkista-era.mjs vaihe1 pulu-esigenerointi/FRA` → `FRA/vaihe1.json`.
 Virheelliset vastaukset kirjoitetaan uudelleen samaan tiedostoon, ja tarkistus ajetaan uudelleen. Yksittäinen käsitemäärävirhe saa jäädä (omistaja).
@@ -60,3 +61,19 @@ Viesti Päätoimittajalle sisältää: vastausten määrä (vaihe 1 + vaihe 2), 
 - Jatkokysymyksiä on täsmälleen 2, ja kukin päättyy kysymysmerkkiin ja on enintään 70 merkkiä.
 - Ei jäänteitä (JATKOT-, KYSYMYS- tai äänitagirivejä) eikä viittauksia ohjeisiin tai kontekstiin.
 - Vaiheessa 1 jokaisella kohdalla on 5 eri kysymystä. Uudet kysymykset ovat enintään 70 merkkiä ja päättyvät kysymysmerkkiin.
+
+## Neljä järjestelmällistä virhettä (Ranskan pistokoe 9.10.2026: docs/raportit/pulu-fra-pistokoe-20261009.md)
+
+Ranskan paketista löytyi pistokokeessa neljä toistuvaa virhettä. **Liitä seuraava teksti jokaisen agentin kehotteeseen (vaihe 1 ja 2) ja aja `tarkista-valmis.mjs` ennen `koosta.mjs`:ää.**
+
+> ÄLÄ TEE NÄITÄ NELJÄÄ VIRHETTÄ:
+> 1. **METALAUSEET.** Älä koskaan kirjoita "Pelin aineisto ei kerro…", "Pelin aineiston mukaan…", "Aineistossani sanotaan…", "tekstin loppu on katkennut", "tietoruudun mukaan", "kontekstissa" tai muuta, mikä paljastaa saamasi aineiston tai ohjeen. Jos aineisto on katkennut tai puutteellinen, kirjoita vastaus yleistiedolla ja sano epävarmuus omalla äänelläsi ("en ole varma tästä"). Jos kyse on huijauksesta, väärennöksestä tai muusta, jonka tiedät, kerro se.
+> 2. **ULKOMAISET SIVUPOLUT.** "Pelin tarkistettua aineistoa" sisältää katkelmia muiden maiden jutuista (esim. Odessa, Afganistan, Iran, Australia, Egypti). Älä käytä niitä, ellei kysymys koske juuri sitä maata. Vastauksessa pysytään kysytyn kohteen maassa ja Euroopassa. **Älä merkitse [[linkkiä]] Euroopan ulkopuoliseen paikkaan tai henkilöön** (tavallinen teksti kelpaa; Odessa ja muu Eurooppa saavat olla). Poikkeus: kohteen oma historia (Uusi-Kaledonia kommunardien karkotuspaikkana, Saint Lawrence -joki Cartierin yhteydessä) kirjoitetaan tavallisena tekstinä.
+> 3. **RIVINVAIHDOT.** Vastaus on yksi juokseva kappale. Älä erota alustusta, ydinvastausta tai loppukommenttia rivinvaihdolla. Ainoa sallittu rivinvaihto on yksi tyhjä rivi (\n\n) ennen Livian lisäystä (yksi kappale, 1–3 virkettä). Natiivi näyttää kentän sellaisenaan: \n on rivinvaihto ja \n\n kappaleväli.
+> 4. **MUISTINVARAISET FAKTAT.** Vuosiluvut, korkeudet, suurimmat/ensimmäiset/vanhimmat, rajat ja koordinaatit ovat asioita, joissa arvaus on väärä vastaus. Jos et ole varma, sano se vastauksessa ("noin", "lähteiden mukaan", "en ole varma") tai jätä luku pois; älä kirjoita "suurin" tai "ensimmäinen", ellet ole varma (esim. Douaumont ei ole Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa: Notre-Dame-de-Lorette on suurempi). Lähteet ristiriidassa (esim. Vignemalen päähuipun raja): kerro molemmat. PAIKKA-rivi vain, jos koordinaatit tiedetään.
+
+Tarkistus ennen koostamista (ajetaan `vaihe1.json`:lle ja `vaihe2.json`:lle, ei vastaukset-*.txt:lle):
+`node tools/pulu-esigenerointi/tarkista-valmis.mjs pulu-esigenerointi/<ISO3>`: virheet = metalauseet, Euroopan ulkopuoliset linkit, rivinvaihdot, linkki ilman lisaa-avainta, V1:n linkkimäärä 2–5, jatkot, lause pienellä kirjaimella (jäännös poistetusta lauseesta). Varoitukset (ulkomainen maininta tekstissä) luetaan silmin. **Faktat tarkistetaan pistokokeella (30 vastausta, muistinvaraiset ensin), ei koneella.**
+
+### Ranska (FRA): korjaukset 9.10.2026
+Ranskan paketti korjattiin pistokokeen jälkeen suoraan `FRA/vaihe1.json`- ja `FRA/vaihe2.json`-tiedostoihin (skripti `korjaa_fra.py` ei ole repossa; muutokset näkyvät diffistä). **`FRA/vastaukset-*.txt` eivät enää vastaa vaihe-JSON:eja: älä aja `tarkista-era.mjs`:ää uudelleen Ranskalle, koska se ylikirjoittaisi korjaukset vanhoilla vastauksilla.** Muille maille ajetaan normaali ketju (tarkista-era → tarkista-valmis → koosta).

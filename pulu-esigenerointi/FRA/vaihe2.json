@@ -3,11 +3,10 @@
   "kohde": "kohde:tuileries",
   "kasite": "kommunardien",
   "kysymys": "Kerro lisää: kommunardien",
-  "vastaus": "Kommunardit olivat [[Pariisin kommuunin]] kannattajia ja puolestataistelijoita. Kommuuni hallitsi Pariisia maaliskuun puolivälistä toukokuun loppuun 1871, kun kaupunkilaiset ja kansalliskaarti eivät hyväksyneet Versailles'ssa istuvan kansalliskokouksen valtaa. Kapina kukistettiin [[verisen viikon]] taisteluissa. Sen jälkeen Ranska tuomitsi tuhansia kommunardeja karkotukseen, esimerkiksi [[Uuteen-Kaledoniaan]], jonne myös opettaja ja anarkisti [[Louise Michel]] nousi vankilaiva Virginien kyytiin elokuussa 1873. Michel armahdettiin ja palasi Ranskaan vuonna 1880.",
+  "vastaus": "Kommunardit olivat [[Pariisin kommuunin]] kannattajia ja puolestataistelijoita. Kommuuni hallitsi Pariisia maaliskuun puolivälistä toukokuun loppuun 1871, kun kaupunkilaiset ja kansalliskaarti eivät hyväksyneet Versailles'ssa istuvan kansalliskokouksen valtaa. Kapina kukistettiin [[verisen viikon]] taisteluissa. Sen jälkeen Ranska tuomitsi tuhansia kommunardeja karkotukseen, esimerkiksi Uuteen-Kaledoniaan, jonne myös opettaja ja anarkisti [[Louise Michel]] nousi vankilaiva Virginien kyytiin elokuussa 1873. Michel armahdettiin ja palasi Ranskaan vuonna 1880.",
   "linkit": [
    "Pariisin kommuunin",
    "verisen viikon",
-   "Uuteen-Kaledoniaan",
    "Louise Michel"
   ],
   "jatkot": [
@@ -195,21 +194,6 @@
   ]
  },
  {
-  "kohde": "kohde:tuileries",
-  "kasite": "Uuteen-Kaledoniaan",
-  "kysymys": "Kerro lisää: Uuteen-Kaledoniaan",
-  "vastaus": "Uusi-Kaledonia on Ranskan hallinnoima saariryhmä Tyynellämerellä, ja sen pääkaupunki on [[Nouméa]]. Nouméa perustettiin rangaistussiirtolana vuonna 1854, ja ensimmäiset raskaisiin töihin tuomitut saapuivat toukokuussa 1864. Lähes 22 000 vankia kuljetettiin saarelle, ja heidän pakkotyönsä muovasi kaupungin katukuvaa. Pariisin kommuunin jälkeen tuomittuja kommunardeja karkotettiin sinne, muun muassa [[Louise Michel]], joka opetti paikallisia [[kanakilapsia]] lukemaan. Saarten alkuperäisväestöstä käytetään nimitystä kanakit.",
-  "linkit": [
-   "Nouméa",
-   "Louise Michel",
-   "kanakilapsia"
-  ],
-  "jatkot": [
-   "Miksi Uuden-Kaledonian nikkeli on tärkeää?",
-   "Millainen on Uuden-Kaledonian asema Ranskassa nykyään?"
-  ]
- },
- {
   "kohde": "kohde:bastilji",
   "kasite": "Invalidien sotilaskodin",
   "kysymys": "Kerro lisää: Invalidien sotilaskodin",
@@ -360,42 +344,13 @@
   "kohde": "kohde:bastilji",
   "kasite": "Markiisi de Lafayette",
   "kysymys": "Kerro lisää: Markiisi de Lafayette",
-  "vastaus": "Markiisi de Lafayette (1757–1834) oli ranskalainen aatelinen ja upseeri. Hän lähti nuorena taistelemaan [[Amerikan vapaussotaan]] George Washingtonin alaisuudessa ja palasi Ranskaan kansallissankarina. Vuonna 1789 hänestä tuli Pariisin [[kansalliskaartin]] komentaja, ja hän osallistui ihmisoikeusjulistuksen laatimiseen. Hän lähetti Bastiljin pääportin avaimen Washingtonille, ja se on esillä Washingtonin kotitilalla.",
+  "vastaus": "Markiisi de Lafayette (1757–1834) oli ranskalainen aatelinen ja upseeri. Hän lähti nuorena taistelemaan Amerikan vapaussotaan George Washingtonin alaisuudessa ja palasi Ranskaan kansallissankarina. Vuonna 1789 hänestä tuli Pariisin [[kansalliskaartin]] komentaja, ja hän osallistui ihmisoikeusjulistuksen laatimiseen. Hän lähetti Bastiljin pääportin avaimen Washingtonille, ja se on esillä Washingtonin kotitilalla.",
   "linkit": [
-   "Amerikan vapaussotaan",
    "kansalliskaartin"
   ],
   "jatkot": [
    "Miksi Lafayette lähti taistelemaan Amerikkaan?",
    "Mitä Lafayettelle tapahtui vallankumouksen aikana?"
-  ]
- },
- {
-  "kohde": "kohde:bastilji",
-  "kasite": "George Washingtonille",
-  "kysymys": "Kerro lisää: George Washingtonille",
-  "vastaus": "George Washington (1732–1799) johti Manner-armeijaa Yhdysvaltain itsenäisyyssodassa ja oli maan ensimmäinen presidentti vuosina 1789–1797. Hän vannoi virkavalansa New Yorkissa vuonna 1789, ja sen satavuotisjuhlaa varten pystytettiin vuonna 1889 [[Washington Squaren riemukaari]]. Bastiljin pääportin avain lähetettiin hänelle lahjaksi ranskalaisen Lafayetten toimesta. Washington asui [[Mount Vernonin]] kotitilallaan Virginiassa ja oli ensimmäinen kenraali, joka sai sotilasarvon suoraan tehtäväänsä varten.",
-  "linkit": [
-   "Washington Squaren riemukaari",
-   "Mount Vernonin"
-  ],
-  "jatkot": [
-   "Miksi Washington ei jatkanut kolmannelle presidenttikaudelle?",
-   "Mikä Washingtonin virkaanastujaisten merkitys oli?"
-  ]
- },
- {
-  "kohde": "kohde:bastilji",
-  "kasite": "Mount Vernonissa",
-  "kysymys": "Kerro lisää: Mount Vernonissa",
-  "vastaus": "Mount Vernon on George Washingtonin kotitila Virginiassa [[Potomac-joen]] rannalla, muutaman kymmenen kilometrin päässä Yhdysvaltain pääkaupungista. Washington peri tilan 1700-luvulla ja laajensi sitä vuosien mittaan. Tilan viljelyssä käytettiin [[orjatyövoimaa]], ja Washington määräsi testamentissaan omistamansa orjat vapautettaviksi. Hän on haudattu tilalle, ja Bastiljin pääportin avain on esillä päärakennuksessa. Mount Vernon on nykyään museo, jossa kävijät voivat tutustua taloon ja puutarhoihin.",
-  "linkit": [
-   "Potomac-joen",
-   "orjatyövoimaa"
-  ],
-  "jatkot": [
-   "Millaista elämä Mount Vernonin tilalla oli?",
-   "Miten Washingtonin orjista lopulta kävi?"
   ]
  },
  {
@@ -902,10 +857,9 @@
   "kohde": "kohde:valimeri~2",
   "kasite": "oliivipuita",
   "kysymys": "Kerro lisää: oliivipuita",
-  "vastaus": "Oliivipuu on Välimeren alueen tyyppikasvi, jota on viljelty tuhansia vuosia. Sen hedelmistä puristetaan [[oliiviöljyä]], ja puu voi elää satoja vuosia. Marokossa Ouzoudin vesiputouksen alapuolella rotkossa kasvaa oliivipuita, joita kastellaan El-Abid-joesta. Egyptissä [[Siwan keitaalla]] kasvaa taatelipuiden rinnalla oliivipuita. Putouksen nimi tarkoittaa berberiksi viljan jauhamista, ja yläpuolella on yhä pieniä vesimyllyjä. Kreetalla oliivipuita on enemmän kuin ihmisiä.",
+  "vastaus": "Oliivipuu on Välimeren alueen tyyppikasvi, jota on viljelty tuhansia vuosia. Sen hedelmistä puristetaan [[oliiviöljyä]], ja puu voi elää satoja vuosia. Kreetalla oliivipuita on enemmän kuin ihmisiä.",
   "linkit": [
-   "oliiviöljyä",
-   "Siwan keitaalla"
+   "oliiviöljyä"
   ],
   "jatkot": [
    "Miten oliiviöljy valmistetaan?",
@@ -931,9 +885,8 @@
   "kohde": "kohde:valimeri~2",
   "kasite": "sirocco",
   "kysymys": "Kerro lisää: sirocco",
-  "vastaus": "Sirocco on kuuma, kuiva tai kostea etelä- tai kaakkoistuuli, joka puhaltaa [[Saharan]] suunnalta Välimerelle. Matkalla se kerää mukaansa hiekkaa ja pölyä, ja se voi nostaa lämpötilaa useilla asteilla Etelä-Euroopassa, esimerkiksi [[Sisilian]] ja Maltan alueella. Libyassa vastaavaa tuulta kutsutaan nimellä [[ghibli]]. Pöly laskeutuu joskus sateen mukana ja värjää pinnat punertaviksi.",
+  "vastaus": "Sirocco on kuuma, kuiva tai kostea etelä- tai kaakkoistuuli, joka puhaltaa Saharan suunnalta Välimerelle. Matkalla se kerää mukaansa hiekkaa ja pölyä, ja se voi nostaa lämpötilaa useilla asteilla Etelä-Euroopassa, esimerkiksi [[Sisilian]] ja Maltan alueella. Libyassa vastaavaa tuulta kutsutaan nimellä [[ghibli]]. Pöly laskeutuu joskus sateen mukana ja värjää pinnat punertaviksi.",
   "linkit": [
-   "Saharan",
    "Sisilian",
    "ghibli"
   ],
@@ -1832,9 +1785,8 @@
   "kohde": "kohde:carcassonnen-linnoituskaupunki",
   "kasite": "maailmanperintöluetteloon",
   "kysymys": "Kerro lisää: maailmanperintöluetteloon",
-  "vastaus": "Maailmanperintöluettelo on Unescon ylläpitämä luettelo kohteista, joilla on poikkeuksellinen kulttuurinen tai luonnonarvo. Kohteita on yli tuhat, ja ne jaetaan kulttuuri-, luonto- ja yhdistelmäkohteisiin. Luetteloon kuuluvat esimerkiksi Iranin [[Yazdin vanha kaupunki]], joka lisättiin vuonna 2017, ja Ranskassa [[Vézèren laakson]] esihistorialliset kohteet.",
+  "vastaus": "Maailmanperintöluettelo on Unescon ylläpitämä luettelo kohteista, joilla on poikkeuksellinen kulttuurinen tai luonnonarvo. Kohteita on yli tuhat, ja ne jaetaan kulttuuri-, luonto- ja yhdistelmäkohteisiin. Luetteloon kuuluvat esimerkiksi Carcassonnen linnoituskaupunki, joka lisättiin vuonna 1997, ja Ranskassa [[Vézèren laakson]] esihistorialliset kohteet.",
   "linkit": [
-   "Yazdin vanha kaupunki",
    "Vézèren laakson"
   ],
   "jatkot": [
@@ -2253,11 +2205,10 @@
   "kohde": "kohde:chartresin-katedraali",
   "kasite": "pyhiinvaeltajien",
   "kysymys": "Kerro lisää: pyhiinvaeltajien",
-  "vastaus": "Pyhiinvaellus on matka pyhäksi katsottuun paikkaan, ja sitä harjoitetaan monissa uskonnoissa. Keskiajan Euroopassa suosittu päämäärä oli [[Santiago de Compostela]], jonne johti verkosto pyhiinvaellusreittejä. Chartresin katedraalin lattiassa on noin kolmetoista metriä leveä [[labyrintti]], jota pyhiinvaeltajat kulkivat. Muslimien pyhiinvaellus [[Mekkaan]] on yksi islamin viidestä peruspilarista.",
+  "vastaus": "Pyhiinvaellus on matka pyhäksi katsottuun paikkaan, ja sitä harjoitetaan monissa uskonnoissa. Keskiajan Euroopassa suosittu päämäärä oli [[Santiago de Compostela]], jonne johti verkosto pyhiinvaellusreittejä. Chartresin katedraalin lattiassa on noin kolmetoista metriä leveä [[labyrintti]], jota pyhiinvaeltajat kulkivat. Muslimien pyhiinvaellus Mekkaan on yksi islamin viidestä peruspilarista.",
   "linkit": [
    "Santiago de Compostela",
-   "labyrintti",
-   "Mekkaan"
+   "labyrintti"
   ],
   "jatkot": [
    "Mikä Santiago de Compostelan pyhiinvaellus on?",
@@ -2476,7 +2427,7 @@
   "kohde": "kohde:pont-du-gard",
   "kasite": "simpukkakalkkikivestä",
   "kysymys": "Kerro lisää: simpukkakalkkikivestä",
-  "vastaus": "Simpukkakalkkikivi on kalkkikiveä, jossa on runsaasti simpukankuorten jäänteitä. Pont du Gardin kolme kaarikerrosta on rakennettu tästä kivestä. Sama kivi on rakennusaineena myös Odessassa: kaupungin talot on rakennettu simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta. Louhinnasta jäi arviolta 2 500 kilometriä käytäviä, joten [[Odessan]] alla on enemmän käytäviä kuin minkään muun kaupungin alla. Syvimmillään ne ulottuvat 60 metriä merenpinnan alapuolelle, eikä koko verkostoa ole koskaan kartoitettu. Toisen maailmansodan aikana käytävissä piileskeli [[partisaaneja]]. Odessan kaupunkilehdessä aiheesta on kokonainen juttu.",
+  "vastaus": "Simpukkakalkkikivi on kalkkikiveä, jossa on runsaasti simpukankuorten jäänteitä. Pont du Gardin kolme kaarikerrosta on rakennettu tästä kivestä. Sama kivi on rakennusaineena myös Odessassa: kaupungin talot on rakennettu simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta. Louhinnasta jäi arviolta 2 500 kilometriä käytäviä, joten [[Odessan]] alla on enemmän käytäviä kuin minkään muun kaupungin alla. Syvimmillään ne ulottuvat 60 metriä merenpinnan alapuolelle, eikä koko verkostoa ole koskaan kartoitettu. Toisen maailmansodan aikana käytävissä piileskeli [[partisaaneja]].",
   "linkit": [
    "Odessan",
    "partisaaneja"
@@ -3227,10 +3178,9 @@
   "kohde": "kohde:bayeux-seinavaate",
   "kasite": "villalankaa",
   "kysymys": "Kerro lisää: villalankaa",
-  "vastaus": "Villalanka on lampaan villasta kehrättyä lankaa. Bayeux'n seinävaate on kirjottu villalangalla karkealle [[pellavalle]] neljällä pistolajilla ja kymmenellä luonnonvärillä. Villa on pitkään ollut arvokas vientituote: Falklandinsaarilla villa lajitellaan ja puristetaan paaleiksi tilojen omissa villavajoissa, ja saarilla ei ole omaa villatehdasta. Myös Länsi-Australian [[Geraldtonin]] satamasta lähti lyijyn ja kuparin lisäksi villaa laivoihin. Seinävaate kertoo [[Hastingsin taistelusta]] vuonna 1066.",
+  "vastaus": "Villalanka on lampaan villasta kehrättyä lankaa. Bayeux'n seinävaate on kirjottu villalangalla karkealle [[pellavalle]] neljällä pistolajilla ja kymmenellä luonnonvärillä. Seinävaate kertoo [[Hastingsin taistelusta]] vuonna 1066.",
   "linkit": [
    "pellavalle",
-   "Geraldtonin",
    "Hastingsin taistelusta"
   ],
   "jatkot": [
@@ -3576,14 +3526,13 @@
   "kohde": "kohde:camargue",
   "kasite": "Ramsar-sopimukseen",
   "kysymys": "Kerro lisää: Ramsar-sopimukseen",
-  "vastaus": "Ramsar-sopimus on kansainvälinen sopimus kosteikkojen suojelusta ja kestävästä käytöstä. Sen nimi tulee Iranin Ramsarin kaupungista, jossa sopimus allekirjoitettiin vuonna 1971. Sopimukseen liitetään yksittäisiä [[kosteikkojen]] alueita, kuten Camarguen kosteikot vuonna 1986. Libyassa kaksi kosteikkoa liitettiin sopimukseen huhtikuussa 2000, ja Valko-Venäjällä sopimuksen luetteloon otettiin [[Pripjatin]] kansallispuiston alue 29. maaliskuuta 2013.",
+  "vastaus": "Ramsar-sopimus on kansainvälinen sopimus kosteikkojen suojelusta ja kestävästä käytöstä. Sen nimi tulee Iranin Ramsarin kaupungista, jossa sopimus allekirjoitettiin vuonna 1971. Sopimukseen liitetään yksittäisiä [[kosteikkojen]] alueita, kuten Camarguen kosteikot vuonna 1986.",
   "linkit": [
-   "kosteikkojen",
-   "Pripjatin"
+   "kosteikkojen"
   ],
   "jatkot": [
    "Mitä kosteikot ovat ja miksi niitä suojellaan?",
-   "Millainen on Pripjatin kansallispuisto?"
+   "Millaisia lintuja Camarguessa elää?"
   ]
  },
  {
@@ -3948,13 +3897,12 @@
   "kohde": "kohde:hahmotelma-lourdes",
   "kasite": "pyhiinvaelluskohteista",
   "kysymys": "Kerro lisää: pyhiinvaelluskohteista",
-  "vastaus": "Pyhiinvaelluskohde on paikka, johon uskovat matkustavat hengellisistä syistä. Lourdes on yksi maailman tärkeimmistä, mutta niitä on monissa uskonnoissa. Marseillessa [[Notre-Dame de la Garde]] -basilika kohoaa 149 metrin korkeudessa, ja paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta. Islamin pyhiinvaelluskohde on Mekka: [[Mansa Musa]] teki matkan sinne vuonna 1324 ja pysähtyi Kairoon kolmeksi kuukaudeksi. Hän jakoi kultaa niin auliisti, että sen arvo laski Egyptissä vuosiksi.",
+  "vastaus": "Pyhiinvaelluskohde on paikka, johon uskovat matkustavat hengellisistä syistä. Lourdes on yksi maailman tärkeimmistä, mutta niitä on monissa uskonnoissa. Marseillessa [[Notre-Dame de la Garde]] -basilika kohoaa 149 metrin korkeudessa, ja paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta.",
   "linkit": [
-   "Notre-Dame de la Garde",
-   "Mansa Musa"
+   "Notre-Dame de la Garde"
   ],
   "jatkot": [
-   "Miksi Mansa Musan pyhiinvaellus vaikutti kullan hintaan?",
+   "Mikä tekee Lourdesista pyhiinvaelluskohteen?",
    "Mitä merenkulkijat jättivät Notre-Damen seinille?"
   ]
  },
@@ -3962,13 +3910,12 @@
   "kohde": "kohde:hahmotelma-lourdes",
   "kasite": "pyhäkkö",
   "kysymys": "Kerro lisää: pyhäkkö",
-  "vastaus": "Pyhäkkö on uskonnollisesti pyhäksi koettu paikka tai rakennus, jossa palvonta ja hartaudenharjoitus tapahtuvat. Lourdesin Neitsyt Marian pyhäkkö on yksi tunnetuimpia. Marseillen [[Notre-Dame de la Garde]] -basilikan kultainen Neitsyt Maria -patsas näkyy kauas merelle. Limassa Santa Rosan pyhäkkö liittyy [[Rosa de Limaan]], joka syntyi vuonna 1586 ja jonka paavi Clemens X julisti pyhäksi 12. huhtikuuta 1671. Hän oli ensimmäinen Amerikassa syntynyt pyhimys.",
+  "vastaus": "Pyhäkkö on uskonnollisesti pyhäksi koettu paikka tai rakennus, jossa palvonta ja hartaudenharjoitus tapahtuvat. Lourdesin Neitsyt Marian pyhäkkö on yksi tunnetuimpia. Marseillen [[Notre-Dame de la Garde]] -basilikan kultainen Neitsyt Maria -patsas näkyy kauas merelle.",
   "linkit": [
-   "Notre-Dame de la Garde",
-   "Rosa de Limaan"
+   "Notre-Dame de la Garde"
   ],
   "jatkot": [
-   "Miksi Rosa de Lima on tunnettu?",
+   "Mikä Notre-Dame de la Garde on?",
    "Miksi merenkulkijat lahjoittivat pienoislaivoja basilikalle?"
   ]
  },
@@ -4005,15 +3952,15 @@
   "kohde": "kohde:hahmotelma-lourdes",
   "kasite": "Pyhiinvaellus",
   "kysymys": "Kerro lisää: Pyhiinvaellus",
-  "vastaus": "Pyhiinvaellus on matka pyhäksi koettuun paikkaan, ja sen tarkoitus voi olla rukous, kiitos tai perinteen ylläpito. Länsi-Afrikan historiasta tunnetaan kaksi merkittävää matkaa Mekkaan. Maliin hallinneen [[Mansa Musan]] matka vuonna 1324 pysähtyi Kairoon kolmeksi kuukaudeksi, ja hän jakoi kultaa niin auliisti, että sen arvo laski Egyptissä. Songhain [[Askia Muhammad]] teki matkan vuosina 1497–1498 mukanaan 300 000 kultarahaa, ja Kairon kalifi nimitti hänet Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla hän toi mukanaan oppineita, jotka opettivat [[Timbuktun]] Sankore-moskeijassa.",
+  "vastaus": "Pyhiinvaellus on matka pyhäksi koettuun paikkaan, ja sen tarkoitus voi olla rukous, kiitos tai perinteen ylläpito. Euroopan tunnetuin pyhiinvaellusreitti vie [[Santiago de Compostelaan]], jossa kerrotaan apostoli Jaakobin haudan olevan. [[Lourdesiin]] saapuu vuosittain noin kolme miljoonaa pyhiinvaeltajaa, jotka tulevat [[Bernadette Soubirous]]'n näkyjen paikalle.",
   "linkit": [
-   "Mansa Musan",
-   "Askia Muhammad",
-   "Timbuktun"
+   "Santiago de Compostelaan",
+   "Lourdesiin",
+   "Bernadette Soubirous"
   ],
   "jatkot": [
-   "Miksi Mansa Musa jakoi kultaa Kairossa?",
-   "Mikä Sankore-moskeija on?"
+   "Mikä Camino de Santiago on?",
+   "Miksi pyhiinvaeltajat tulevat Lourdesiin?"
   ]
  },
  {
@@ -4253,20 +4200,6 @@
  },
  {
   "kohde": "kohde:hahmotelma-verdon",
-  "kasite": "Istalifin",
-  "kysymys": "Kerro lisää: Istalifin",
-  "vastaus": "Istalif on kylä Afganistanissa Kabulin pohjoispuolella, joka tunnetaan savenvalajistaan. Alueen keramiikassa on perinteisesti käytetty turkoosia lasitetta, ja se on yksi tunnetuimmista [[Kabulin]] seudun käsityöperinteistä. Lasitteen tarkasta koostumuksesta en ole varma. Maa on Euroopan ulkopuolella, joten asia liittyy vain turkoosin värin yleiseen esimerkkiin. [[Afganistanin]] savenvalajat ovat tunnettuja värikkäistä astioistaan.",
-  "linkit": [
-   "Kabulin",
-   "Afganistanin"
-  ],
-  "jatkot": [
-   "Miten keramiikan lasite valmistetaan?",
-   "Millaista keramiikkaa Afganistanissa valmistetaan?"
-  ]
- },
- {
-  "kohde": "kohde:hahmotelma-verdon",
   "kasite": "kalsiumkarbonaattia",
   "kysymys": "Kerro lisää: kalsiumkarbonaattia",
   "vastaus": "Kalsiumkarbonaatti on kemiallinen yhdiste, joka on [[kalkkikiven]] pääaines. Sitä on myös eliöiden kuorissa ja luurangoissa. Arabian niemimaan [[Rub al-Khalin]] aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, [[kipsiä]], liejusavea ja savea. Ne ovat matalien järvien pohjia, jotka syntyivät kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten. Lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta.",
@@ -4299,15 +4232,13 @@
   "kohde": "kohde:hahmotelma-verdon",
   "kasite": "padon",
   "kysymys": "Kerro lisää: padon",
-  "vastaus": "Pato on rakennelma, joka estää joen virtauksen ja nostaa vedenpintaa. Padon taakse kerääntyvää vettä voidaan käyttää sähköntuotantoon, vesihuoltoon tai tulvien tasaamiseen. Venäjällä [[Jekaterinburg]] syntyi tällaisen ratkaisun ympärille: ensin padottiin [[Iset-joki]], ja vasta sen jälkeen rakennettiin ruukki, joka kävi padon voimalla. Vasarapajaa koeajettiin 18. marraskuuta 1723, ja siitä päivästä lasketaan kaupungin ikä. Hankkeen aloitti vuonna 1721 [[Vasili Tatištšev]].",
+  "vastaus": "Pato on rakennelma, joka estää joen virtauksen ja nostaa vedenpintaa. Padon taakse kerääntyvää vettä voidaan käyttää sähköntuotantoon, vesihuoltoon tai tulvien tasaamiseen. Verdon-joella Sainte-Croixin pato valmistui vuonna 1974, ja sen taakse syntyi [[Sainte-Croix-järvi]].",
   "linkit": [
-   "Jekaterinburg",
-   "Iset-joki",
-   "Vasili Tatištšev"
+   "Sainte-Croix-järvi"
   ],
   "jatkot": [
    "Miten vesivoimalaitos tuottaa sähköä?",
-   "Mikä on ruukki?"
+   "Mikä on Sainte-Croix-järvi?"
   ]
  },
  {
@@ -4328,29 +4259,26 @@
   "kohde": "kohde:hahmotelma-verdon",
   "kasite": "Rooman",
   "kysymys": "Kerro lisää: Rooman",
-  "vastaus": "Provence-nimi juontuu latinan sanasta provincia, ja alue oli yksi [[Rooman]] valtakunnan varhaisista provinsseista Galliassa. Provinssi tarkoitti Rooman hallitsemaa aluetta, jota hallinnoi nimitetty virkamies. Rooman Afrikka-provinssi perustettiin vuonna 146 eaa. kolmannen puunilaissodan jälkeen, ja siitä tuli valtakunnan viljakomero, joka ruokki Rooman väestön kahdeksan kuukautta vuodessa. Sofian alla on roomalainen [[Serdica]], josta keisari [[Konstantinus Suuri]] kerrotaan sanoneen: Serdica on minun Roomani. Provencen provinssin tarkemmista vaiheista en ole varma.",
+  "vastaus": "Provence-nimi juontuu latinan sanasta provincia, ja alue oli yksi [[Rooman]] valtakunnan varhaisista provinsseista Galliassa. Provinssi tarkoitti Rooman hallitsemaa aluetta, jota hallinnoi nimitetty virkamies. Provencen provinssin tarkemmista vaiheista en ole varma.",
   "linkit": [
-   "Rooman",
-   "Serdica",
-   "Konstantinus Suuri"
+   "Rooman"
   ],
   "jatkot": [
-   "Miksi Afrikan provinssia sanottiin viljakomeroksi?",
-   "Mitä Sofian metrotyömaalta löytyi?"
+   "Miksi Provence sai nimensä?",
+   "Mitä roomalaisia rakennuksia Provencessa on?"
   ]
  },
  {
   "kohde": "kohde:hahmotelma-verdon",
   "kasite": "provinssin",
   "kysymys": "Kerro lisää: provinssin",
-  "vastaus": "Provinssi on valtion hallinnollinen alue. Rooman Afrikka-provinssi perustettiin 146 eaa. kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan rannikon. Hallintopääkaupungiksi tuli [[Utica]], joka oli sodassa asettunut Rooman puolelle. Uudessa-Seelannissa [[Canterburyn]] provinssineuvosto hallitsi maakuntaa vuosina 1853–1876. Sen rakennus Christchurchissa on ainoa säilynyt uusiseelantilainen rakennus, joka rakennettiin varta vasten provinssihallinnolle.",
+  "vastaus": "Provinssi on valtion hallinnollinen alue. Provence-nimi juontuu latinan sanasta provincia, sillä alue oli Rooman ensimmäisiä provinsseja Galliassa. Roomalaiset hallitsivat aluetta nimitettyjen virkamiesten kautta, ja Rooman vaikutus näkyy Provencessa yhä esimerkiksi [[amfiteattereissa]] ja akvedukteissa.",
   "linkit": [
-   "Utica",
-   "Canterburyn"
+   "amfiteattereissa"
   ],
   "jatkot": [
-   "Miksi Utica asettui Rooman puolelle?",
-   "Millainen Canterburyn provinssineuvoston talo on?"
+   "Mikä oli Rooman provinssi?",
+   "Mitä roomalaisia rakennuksia Provencessa on?"
   ]
  },
  {
@@ -4563,14 +4491,14 @@
   "kohde": "kohde:hahmotelma-saint-malo",
   "kasite": "merirosvoista",
   "kysymys": "Kerro lisää: merirosvoista",
-  "vastaus": "Merirosvo on henkilö, joka ryöstää aluksia merellä ilman minkään valtion lupaa. Englantilainen merirosvo ja tutkimusmatkailija [[William Dampier]] purjehti Broomen edustan ohi kahdesti, vuonna 1688 laivalla Cygnet ja vuonna 1699 laivalla [[HMS Roebuck]]. Roebuck Bay on nimetty jälkimmäisen aluksen mukaan. Dampier kartoitti rannikkoa Shark Baystä La Grange Bayhin asti ja kirjasi muistiin kasveja, eläimiä ja tuulia, mutta ei noussut maihin juuri tällä kohdalla.",
+  "vastaus": "Merirosvo on henkilö, joka ryöstää aluksia merellä ilman minkään valtion lupaa. Korsaari eli kaappari toimi sen sijaan valtion antaman kaappauskirjeen turvin. Saint-Malo oli 1600- ja 1700-luvuilla kuuluisa korsaareistaan, joita olivat esimerkiksi [[René Duguay-Trouin]] ja [[Robert Surcouf]].",
   "linkit": [
-   "William Dampier",
-   "HMS Roebuck"
+   "René Duguay-Trouin",
+   "Robert Surcouf"
   ],
   "jatkot": [
-   "Mitä Dampier havaitsi Australian rannikolla?",
-   "Millainen on Roebuck Bay?"
+   "Kuka oli René Duguay-Trouin?",
+   "Mikä on kaappauskirje?"
   ]
  },
  {
@@ -4650,14 +4578,13 @@
   "kohde": "kohde:hahmotelma-saint-malo",
   "kasite": "vuorovesivaihteluita",
   "kysymys": "Kerro lisää: vuorovesivaihteluita",
-  "vastaus": "Vuorovesi johtuu pääasiassa [[Kuun]] ja Auringon vetovoimasta, ja sen vaihtelun suuruus riippuu merialueen muodosta. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta Gabèsin lahden pohjukassa Tunisiassa se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Broomen rannikolla Australiassa [[Roebuck Bayn]] vuorovesi synnyttää joka kuukausi ilmiön, jota ei nähdä missään muualla maailmassa. Saint-Malon seudulla vuorovesi on Euroopan suurimpia, ja korkeusero voi olla yli kymmenen metriä.",
+  "vastaus": "Vuorovesi johtuu pääasiassa [[Kuun]] ja Auringon vetovoimasta, ja sen vaihtelun suuruus riippuu merialueen muodosta. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta Gabèsin lahden pohjukassa Tunisiassa se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Saint-Malon seudulla vuorovesi on Euroopan suurimpia, ja korkeusero voi olla yli kymmenen metriä.",
   "linkit": [
-   "Kuun",
-   "Roebuck Bayn"
+   "Kuun"
   ],
   "jatkot": [
    "Miksi Gabèsin lahdella vuorovesi on Välimeren suurin?",
-   "Mitä ilmiötä Roebuck Bayssa nähdään?"
+   "Miksi Saint-Malon vuorovesi on niin suuri?"
   ]
  },
  {
@@ -4674,52 +4601,6 @@
   "jatkot": [
    "Miksi Kuun vaiheet vaihtelevat?",
    "Miksi Urin ziggurat on säilynyt?"
-  ]
- },
- {
-  "kohde": "kohde:hahmotelma-saint-malo",
-  "kasite": "Saint Lawrence -joen",
-  "kysymys": "Kerro lisää: Saint Lawrence -joen",
-  "vastaus": "Saint Lawrence -joki on Pohjois-Amerikan itäosan suuri vesiväylä, joka laskee Atlantin valtamereen. [[Montreal]] kasvoi turkiskaupan varaan joen mutkassa olevalle saarelle, ja 1860-luvulla se oli Brittiläisen Pohjois-Amerikan suurin kaupunki. Joen yli rakennettiin vuosina 1854–1859 [[Victoria-silta]], joka oli valmistuessaan maailman pisin silta ja ensimmäinen, joka ylitti koko joen. Sen suunnitteli insinööri [[Robert Stephenson]] yhdessä Alexander McKenzie Rossin kanssa.",
-  "linkit": [
-   "Montreal",
-   "Victoria-silta",
-   "Robert Stephenson"
-  ],
-  "jatkot": [
-   "Miten Victoria-silta rakennettiin?",
-   "Miksi turkiskauppa kasvatti Montrealin suureksi?"
-  ]
- },
- {
-  "kohde": "kohde:hahmotelma-saint-malo",
-  "kasite": "Uuden Ranskan",
-  "kysymys": "Kerro lisää: Uuden Ranskan",
-  "vastaus": "Uusi Ranska oli Ranskan siirtomaa-alue Pohjois-Amerikassa, jonka ydin oli Saint Lawrence -joen laakso. Siirtokunnan talous nojasi pitkälti [[turkiskauppaan]]. Kaupunki [[Québec]] perustettiin vuonna 1608, ja sen perustajana pidetään tutkimusmatkailija [[Samuel de Champlainia]]. Ranska menetti suurimman osan alueesta Britannialle vuonna 1763 [[Pariisin rauhassa]], joka päätti seitsenvuotisen sodan.",
-  "linkit": [
-   "turkiskauppaan",
-   "Québec",
-   "Samuel de Champlainia",
-   "Pariisin rauhassa"
-  ],
-  "jatkot": [
-   "Miksi Ranska menetti Uuden Ranskan Britannialle?",
-   "Millainen mies Samuel de Champlain oli?"
-  ]
- },
- {
-  "kohde": "kohde:hahmotelma-saint-malo",
-  "kasite": "Kanadan",
-  "kysymys": "Kerro lisää: Kanadan",
-  "vastaus": "Kanada on pinta-alaltaan maailman toiseksi suurin valtio, ja sen pääkaupunki on [[Ottawa]]. Nimen uskotaan periytyvän irokeesien kielen sanasta, joka tarkoittaa kylää tai asutusta; Jacques Cartier kirjasi sen muistiin 1500-luvulla. Maan ilmasto vaihtelee suuresti. Kanadan kuivin kaupunki on Yukonin [[Whitehorse]], jossa sataa vettä noin 161 milliä vuodessa, koska kaupunki sijaitsee Rannikkovuorten sadevarjossa. Kanadan aurinkoisin kesä puolestaan on [[Yellowknifessä]], jossa kesäkuukausina paistetta kertyy keskimäärin 1 034 tuntia.",
-  "linkit": [
-   "Ottawa",
-   "Whitehorse",
-   "Yellowknifessä"
-  ],
-  "jatkot": [
-   "Miksi Whitehorse on Kanadan kuivin kaupunki?",
-   "Miten Yellowknifen kesä ja talvi eroavat toisistaan?"
   ]
  },
  {
@@ -4756,15 +4637,13 @@
   "kohde": "kohde:hahmotelma-pointe-du-raz",
   "kasite": "Atlantin",
   "kysymys": "Kerro lisää: Atlantin",
-  "vastaus": "Atlantin valtameri on maailman toiseksi suurin valtameri, ja se erottaa Euroopan ja [[Afrikan]] Amerikan mantereista. Sen rannat ovat hyvin erilaisia. Länsi-Afrikan [[Orjarannikolla]] ranta on leveä ja lähes puuton hiekkaharju, ja avomereltä kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. [[Ouidahin]] seudulla rannalla on nykyisin hiljaista: siellä on muutama kalastajakylä, palmuja ja pieniä valkoisiksi rapattuja majoja.",
+  "vastaus": "Atlantin valtameri on maailman toiseksi suurin valtameri, ja se erottaa Euroopan ja Afrikan Amerikan mantereista. Sen rannat ovat hyvin erilaisia. Bretagnessa Atlantti näkyy kallioisena ja myrskyisenä: [[Pointe du Raz]] on yksi Ranskan läntisimmistä kärjistä.",
   "linkit": [
-   "Afrikan",
-   "Orjarannikolla",
-   "Ouidahin"
+   "Pointe du Raz"
   ],
   "jatkot": [
-   "Miksi Länsi-Afrikan rannikolla ei ole luonnollisia satamia?",
-   "Kuinka syvä Atlantti on syvimmillään?"
+   "Kuinka syvä Atlantti on syvimmillään?",
+   "Miksi Pointe du Razin vedet ovat vaarallisia?"
   ]
  },
  {
@@ -4874,15 +4753,13 @@
   "kohde": "kohde:hahmotelma-pointe-du-raz",
   "kasite": "riutoista",
   "kysymys": "Kerro lisää: riutoista",
-  "vastaus": "Riutat ovat sekä vaaroja merenkululle että tärkeitä elinympäristöjä. Punaisellamerellä [[Sanganeb]] on erillinen korallirakennelma keskellä merta, kaukana rannikon riutoista. Port Sudanista noin 130 kilometriä pohjoiseen aukeaa [[Dungonabin lahti]], jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehä. Alue merkittiin [[Ramsar-kosteikoksi]] vuonna 2009 ja hyväksyttiin maailmanperintöluetteloon vuonna 2016. Lahden mangrovet ja pikkusaaret ovat merkittävä lintualue, jossa elävät muun muassa valkosilmälokki ja nokihaukka.",
+  "vastaus": "Riutat ovat sekä vaaroja merenkululle että tärkeitä elinympäristöjä. Pointe du Razin edustalla Raz de Sein -salmessa vedenalaiset kalliot ja voimakkaat virtaukset ovat tehneet purjehduksesta vaarallista, minkä vuoksi alueelle on rakennettu [[La Vieillen]] ja muita majakoita.",
   "linkit": [
-   "Sanganeb",
-   "Dungonabin lahti",
-   "Ramsar-kosteikoksi"
+   "La Vieillen"
   ],
   "jatkot": [
-   "Mikä Ramsar-sopimus on?",
-   "Miksi mangrovemetsät ovat tärkeitä?"
+   "Miten majakat ohjaavat laivoja?",
+   "Mikä on Raz de Sein?"
   ]
  },
  {
@@ -5066,15 +4943,13 @@
   "kohde": "kohde:hahmotelma-etretat",
   "kasite": "liitukaudella",
   "kysymys": "Kerro lisää: liitukaudella",
-  "vastaus": "Liitukausi on maapallon geologinen kausi, joka kesti noin 145–66 miljoonaa vuotta sitten ja päättyi [[massasukupuuttoon]], jossa suurin osa dinosauruksista hävisi. Kauden aikana matalat meret peittivät laajoja alueita, ja merenpohjaan kertyi pikkuruisten merieliöiden kuoria, joista liitu syntyi. Noin sata miljoonaa vuotta sitten suuri osa Keski-Australiaa oli matalan [[Eromanga-sisämeren]] peitossa. Kun meri vetäytyi, jäljelle jääneet hiekka- ja savikerrokset rapautuivat eri tahtiin, ja siksi [[Coober Pedyn]] seutu on värikäs. Samasta kerrostumasta on peräisin myös alueen opaali.",
+  "vastaus": "Liitukausi on maapallon geologinen kausi, joka kesti noin 145–66 miljoonaa vuotta sitten ja päättyi [[massasukupuuttoon]], jossa suurin osa dinosauruksista hävisi. Kauden aikana matalat meret peittivät laajoja alueita, ja merenpohjaan kertyi pikkuruisten merieliöiden kuoria, joista liitu syntyi. Étretatin liitukalliot ovat tämän ajan merenpohjaa, joka on kohonnut ja rapautunut jyrkiksi rantakallioiksi.",
   "linkit": [
-   "massasukupuuttoon",
-   "Eromanga-sisämeren",
-   "Coober Pedyn"
+   "massasukupuuttoon"
   ],
   "jatkot": [
    "Mitä liitukauden lopussa tapahtui?",
-   "Miten opaali syntyy?"
+   "Miten Étretatin kalliot ovat muodostuneet?"
   ]
  },
  {
@@ -5763,9 +5638,8 @@
   "kohde": "kohde:hahmotelma-ajaccio",
   "kasite": "Korsikan",
   "kysymys": "Kerro lisää: Korsikan",
-  "vastaus": "Korsika on Välimeren neljänneksi suurin saari ja Ranskan alue, jonka pääkaupunki on Ajaccio. Saaren eläimistössä on mielenkiintoinen yhteys Afrikkaan: Pohjois-Afrikan [[berberihirvestä]] tehdyn perimätutkimuksen mukaan Korsikan ja [[Sardinian]] hirvet ovat lähes erottamattomia Pohjois-Afrikan hirvistä. Tästä päätellään, että ihmiset ovat aikoinaan vieneet hirviä Afrikasta saarille. [[Välimeren]] saaret ovat kautta historian olleet kauppareittien ja siirtolaisuuden välietappeja.",
+  "vastaus": "Korsika on Välimeren neljänneksi suurin saari ja Ranskan alue, jonka pääkaupunki on Ajaccio. Saaren eläimistössä on mielenkiintoinen yhteys Afrikkaan: Pohjois-Afrikan berberihirvestä tehdyn perimätutkimuksen mukaan Korsikan ja [[Sardinian]] hirvet ovat lähes erottamattomia Pohjois-Afrikan hirvistä. Tästä päätellään, että ihmiset ovat aikoinaan vieneet hirviä Afrikasta saarille. [[Välimeren]] saaret ovat kautta historian olleet kauppareittien ja siirtolaisuuden välietappeja.",
   "linkit": [
-   "berberihirvestä",
    "Sardinian",
    "Välimeren"
   ],
@@ -5792,11 +5666,10 @@
   "kohde": "kohde:hahmotelma-ajaccio",
   "kasite": "Välimeri",
   "kysymys": "Kerro lisää: Välimeri",
-  "vastaus": "Välimeri on Euroopan, Afrikan ja Aasian välinen sisämeri. Sen yhteys Atlantin valtamereen kulkee [[Gibraltarin salmen]] kautta, ja [[Suezin kanavan]] kautta se on yhteydessä Punaiseenmereen. Meren ympärillä kohtasivat vuosisatojen ajan useat kulttuurit ja kauppareitit. Perintö näkyy esimerkiksi [[Libyan]] keittiössä, jossa vaikuttavat berberi-, arabi- ja ottomaaniperintö sekä Välimeri.",
+  "vastaus": "Välimeri on Euroopan, Afrikan ja Aasian välinen sisämeri. Sen yhteys Atlantin valtamereen kulkee [[Gibraltarin salmen]] kautta, ja [[Suezin kanavan]] kautta se on yhteydessä Punaiseenmereen. Meren ympärillä kohtasivat vuosisatojen ajan useat kulttuurit ja kauppareitit.",
   "linkit": [
    "Gibraltarin salmen",
-   "Suezin kanavan",
-   "Libyan"
+   "Suezin kanavan"
   ],
   "jatkot": [
    "Miksi Gibraltarin salmi on niin strategisesti tärkeä?",
@@ -6071,15 +5944,11 @@
   "kohde": "kohde:hahmotelma-bonifacio",
   "kasite": "Napoleon",
   "kysymys": "Kerro lisää: Napoleon",
-  "vastaus": "Napoleon vietti elämänsä viimeiset vuodet maanpaossa Pyhän Helenan saarella, jossa hän kuoli vuonna 1821. Saaren pääkaupungissa [[Jamestownissa]] pääkadun nimi on osuvasti Napoleon Street. Kadun varrella on [[Konsulaatti]]-niminen hotelli, 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Rakennus edustaa Itä-Intian kauppakomppanian ajan [[georgiaanista]] rakennustyyliä, joka antaa koko kaupungille sen tunnusomaisen ilmeen. Hotellin sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen patsas, joka esittää Napoleonia univormussaan.",
-  "linkit": [
-   "Jamestownissa",
-   "Konsulaatti",
-   "georgiaanista"
-  ],
+  "vastaus": "Napoleon vietti elämänsä viimeiset vuodet maanpaossa Pyhän Helenan saarella, jossa hän kuoli vuonna 1821.",
+  "linkit": [],
   "jatkot": [
-   "Mikä oli Itä-Intian kauppakomppania?",
-   "Millaista georgiaaninen rakennustyyli on?"
+   "Miksi Napoleon joutui Pyhälle Helenalle?",
+   "Missä Napoleon syntyi?"
   ]
  },
  {
@@ -6440,9 +6309,8 @@
   "kohde": "kohde:hahmotelma-puy-de-sancy",
   "kasite": "Kerrostulivuori",
   "kysymys": "Kerro lisää: Kerrostulivuori",
-  "vastaus": "Kerrostulivuori on tulivuoren tyyppi, joka on kasvanut korkeaksi ja kartiomaiseksi, kun purkaukset ovat kerrostaneet laavaa ja tuhkaa päällekkäin. Magma on tällaisissa tulivuorissa usein hyvin sitkeää, minkä vuoksi purkaukset ovat usein räjähdysmäisiä. Tunnettuja esimerkkejä ovat Japanin [[Fuji-vuori]] ja Italian [[Vesuvius]]. Tämän tyyppisiä ovat myös monet muut maailman tunnetuimmista tulivuorista. Puy de Sancy on osa vanhaa kerrostulivuorta, joka ei ole purkautunut yli 220 000 vuoteen.",
+  "vastaus": "Kerrostulivuori on tulivuoren tyyppi, joka on kasvanut korkeaksi ja kartiomaiseksi, kun purkaukset ovat kerrostaneet laavaa ja tuhkaa päällekkäin. Magma on tällaisissa tulivuorissa usein hyvin sitkeää, minkä vuoksi purkaukset ovat usein räjähdysmäisiä. Tunnettuja esimerkkejä ovat Japanin Fuji-vuori ja Italian [[Vesuvius]]. Tämän tyyppisiä ovat myös monet muut maailman tunnetuimmista tulivuorista. Puy de Sancy on osa vanhaa kerrostulivuorta, joka ei ole purkautunut yli 220 000 vuoteen.",
   "linkit": [
-   "Fuji-vuori",
    "Vesuvius"
   ],
   "jatkot": [
@@ -6469,15 +6337,13 @@
   "kohde": "kohde:hahmotelma-puy-de-sancy",
   "kasite": "Uinuva tulivuori",
   "kysymys": "Kerro lisää: Uinuva tulivuori",
-  "vastaus": "Uinuva tulivuori ei ole purkautunut pitkään aikaan, mutta se voi vielä herätä. Esimerkkinä on Kilimanjaron korkein huippu [[Kibo]], joka kohoaa 5895 metriin ja on yhä uinuva, sillä sen kraatterista purkautuu edelleen rikkikaasuja. Kilimanjaro ei ole yksi vuori vaan kolmen tulivuorikartion massiivi: sammunut [[Mawenzi]] on Kibon itäpuolella, ja lännempänä kohoaa matalin ja vanhin Shira. Kaikki kolme syntyivät [[Itä-Afrikan hautavajoaman]] alueella. Kibon viimeisin purkaus ajoittuu noin 150 000–200 000 vuoden taakse.",
+  "vastaus": "Uinuva tulivuori ei ole purkautunut pitkään aikaan, mutta se voi vielä herätä. Sammunut tulivuori sen sijaan ei enää purkaudu. Ranskan Keskiylängöllä on useita vanhoja tulivuoria, ja [[Puy de Sancy]] on osa sammunutta tulivuorikompleksia. Uinuvan tulivuoren tunnistaa siitä, että se voi näyttää rauhalliselta mutta sen alla on yhä magmaa.",
   "linkit": [
-   "Kibo",
-   "Mawenzi",
-   "Itä-Afrikan hautavajoaman"
+   "Puy de Sancy"
   ],
   "jatkot": [
    "Miten tutkijat seuraavat uinuvia tulivuoria?",
-   "Miksi Kilimanjarolla on kolme tulivuorikartiota?"
+   "Milloin Puy de Sancyn tulivuori purkautui viimeksi?"
   ]
  },
  {
@@ -6850,10 +6716,9 @@
   "kohde": "kohde:hahmotelma-rouen",
   "kasite": "Kölnin tuomiokirkolle",
   "kysymys": "Kerro lisää: Kölnin tuomiokirkolle",
-  "vastaus": "Kölnin tuomiokirkon rakentaminen alkoi vuonna 1248 ja valmistui vuonna 1880, joten rakennusaika oli yli kuusisataa vuotta. Siitä tuli tuolloin maailman korkein rakennus, ja se oli sitä muutaman vuoden ajan. Kirkon korkeus on noin 157 metriä, ja se on Unescon maailmanperintökohde. Rakennus toimi mallina myös toisaalla: New Yorkin [[Pyhän Patrickin katedraalin]] suunnittelija James Renwick nuorempi haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Titteli siirtyi sen jälkeen [[Washington-monumentille]].",
+  "vastaus": "Kölnin tuomiokirkon rakentaminen alkoi vuonna 1248 ja valmistui vuonna 1880, joten rakennusaika oli yli kuusisataa vuotta. Siitä tuli tuolloin maailman korkein rakennus, ja se oli sitä muutaman vuoden ajan. Kirkon korkeus on noin 157 metriä, ja se on Unescon maailmanperintökohde. Rakennus toimi mallina myös toisaalla: New Yorkin [[Pyhän Patrickin katedraalin]] suunnittelija James Renwick nuorempi haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Titteli siirtyi sen jälkeen Washington-monumentille.",
   "linkit": [
-   "Pyhän Patrickin katedraalin",
-   "Washington-monumentille"
+   "Pyhän Patrickin katedraalin"
   ],
   "jatkot": [
    "Miksi Kölnin tuomiokirkon rakentaminen kesti niin kauan?",
@@ -6993,15 +6858,13 @@
   "kohde": "kohde:hahmotelma-rocamadour",
   "kasite": "pyhiinvaeltajia",
   "kysymys": "Kerro lisää: pyhiinvaeltajia",
-  "vastaus": "Pyhiinvaellus on uskonnollinen matka pyhälle paikalle, ja sellaisia tehdään monissa uskonnoissa. Rocamadour on yksi kristillisistä pyhiinvaelluskohteista, ja sen yhteys [[Santiago de Compostelan]] reittiin on tunnettu, joskaan tarkkoja yksityiskohtia en esitä. Muslimien pyhiinvaellus suuntautuu [[Mekkaan]]. Pohjois-Afrikasta ja Länsi-Afrikasta matkaajat ylittivät Punaisenmeren laivalla, ja 1400-luvun jälkeen tärkein lähtösatama oli [[Suakin]]. Siellä pyhiinvaeltajat odottivat suotuisia tuulia tai vapaata laivapaikkaa viikkoja tai kuukausia.",
+  "vastaus": "Pyhiinvaellus on uskonnollinen matka pyhälle paikalle, ja sellaisia tehdään monissa uskonnoissa. Rocamadour on yksi kristillisistä pyhiinvaelluskohteista, ja sen yhteys [[Santiago de Compostelan]] reittiin on tunnettu, joskaan tarkkoja yksityiskohtia en esitä. Muslimien pyhiinvaellus suuntautuu Mekkaan.",
   "linkit": [
-   "Santiago de Compostelan",
-   "Mekkaan",
-   "Suakin"
+   "Santiago de Compostelan"
   ],
   "jatkot": [
-   "Miten Suakinin satama toimi pyhiinvaeltajien reittinä?",
-   "Mikä on Santiago de Compostelan reitti?"
+   "Mikä on Santiago de Compostelan reitti?",
+   "Miksi Rocamadour oli tärkeä pyhiinvaelluskohde?"
   ]
  },
  {
@@ -7211,11 +7074,9 @@
   "kohde": "kohde:hahmotelma-saint-emilion",
   "kasite": "Kalkkikivi",
   "kysymys": "Kerro lisää: Kalkkikivi",
-  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Sade liuottaa sitä hitaasti, ja tämä synnyttää maisemaa, jota kutsutaan [[karstiksi]]. Kiinassa Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi, ja jäljelle on jäänyt kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita. Australiassa [[Nullarborin]] kalkkikivitasanko kätkee alleen luolia, pystykuiluja ja käytäviä. Viininviljelyssä kalkkikivi on arvostettu, koska se läpäisee vettä hyvin ja varastoi sitä sopivasti. Saint-Émilionissa kalkkikivi on lisäksi mahdollistanut kallioon louhitut tilat ja [[Li-joen]] kaltaiset maisemat ovat sen tunnetuin esimerkki muualla.",
+  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Sade liuottaa sitä hitaasti, ja tämä synnyttää maisemaa, jota kutsutaan [[karstiksi]]. Viininviljelyssä kalkkikivi on arvostettu, koska se läpäisee vettä hyvin ja varastoi sitä sopivasti. Saint-Émilionissa kalkkikivi on lisäksi mahdollistanut kallioon louhitut tilat: kaupungin yksikivinen kirkko ja kellarit on louhittu suoraan kallioon.",
   "linkit": [
-   "karstiksi",
-   "Nullarborin",
-   "Li-joen"
+   "karstiksi"
   ],
   "jatkot": [
    "Miten karstiluolat syntyvät?",
@@ -7226,10 +7087,10 @@
   "kohde": "kohde:hahmotelma-saint-emilion",
   "kasite": "merlot",
   "kysymys": "Kerro lisää: merlot",
-  "vastaus": "Merlot on yksi maailman levinneimmistä punaviinirypäleistä. Sen tunnetuin kotiseutu on [[Bordeaux'n]] alue, ja Saint-Émilionin ympäristössä se on keskeinen lajike. Rypäle tuottaa pehmeitä ja pyöreitä viinejä, ja se kypsyy yleensä aiemmin kuin monet muut lajikkeet. Erikoinen tarina liittyy [[carménère]]-lajikkeeseen: Chilessä sen sato korjattiin koko 1900-luvun merlot'na, kunnes ranskalainen tutkija tunnisti lajikkeen omakseen vuonna 1994. Carménère on yksi Bordeaux'n kuudesta alkuperäisestä punaviinirypäleestä.",
+  "vastaus": "Merlot on yksi maailman levinneimmistä punaviinirypäleistä. Sen tunnetuin kotiseutu on [[Bordeaux'n]] alue, ja Saint-Émilionin ympäristössä se on keskeinen lajike. Rypäle tuottaa pehmeitä ja pyöreitä viinejä, ja se kypsyy yleensä aiemmin kuin monet muut lajikkeet. Merlot'n rinnalla alueella kasvatetaan usein [[Cabernet Franc]] -rypälettä.",
   "linkit": [
    "Bordeaux'n",
-   "carménère"
+   "Cabernet Franc"
   ],
   "jatkot": [
    "Miten merlot eroaa cabernet sauvignonista?",
@@ -7370,14 +7231,13 @@
   "kohde": "kohde:hahmotelma-cognac",
   "kasite": "pisco",
   "kysymys": "Kerro lisää: pisco",
-  "vastaus": "Pisco on käyneestä rypälemehusta tislattu juoma. Espanjalaiset siirtolaiset kehittivät sen 1500-luvulla korvaamaan Espanjasta tuotua orujoa: rypäleitä kasvoi paikan päällä, ja väkevää juomaa mahtui laivaan vähemmällä tilalla. Vanhin tunnettu maininta sanasta perulaisesta paloviinasta on vuodelta 1764. Nimi tulee [[Piscon]] satamakaupungista, josta juomaa vietiin Eurooppaan. Wieniläinen lehti kertoi vuonna 1835, että Chilessä juotiin paljon perulaista piscoa, kunnes tullit synnyttivät sinne oman version. Nimestä kiistellään yhä. Juoman tausta liittyy [[Perun]] siirtomaa-aikaan ja [[orujoa]] korvaavaan tuotantoon.",
+  "vastaus": "Pisco on käyneestä rypälemehusta tislattu väkevä juoma, jota valmistetaan Etelä-Amerikassa. Konjakin tapaan se on rypäleistä tislattua, mutta konjakki tislataan kahdesti [[charentelaisessa tislauspannussa]] ja kypsytetään tammitynnyreissä, kun taas pisco lepää usein neutraaleissa astioissa. Espanjassa vastaavaa juomaa valmistetaan viininpuristeesta: sitä kutsutaan nimellä [[orujo]].",
   "linkit": [
-   "Piscon",
-   "Perun",
-   "orujoa"
+   "charentelaisessa tislauspannussa",
+   "orujo"
   ],
   "jatkot": [
-   "Miksi Peru ja Chile kiistelevät pisco-nimestä?",
+   "Miten konjakki tislataan?",
    "Mikä on orujo ja miten se eroaa konjakista?"
   ]
  },
@@ -7974,9 +7834,8 @@
   "kohde": "kohde:hahmotelma-canal-du-midi",
   "kasite": "Gibraltarin salmea",
   "kysymys": "Kerro lisää: Gibraltarin salmea",
-  "vastaus": "Gibraltarin salmi yhdistää Atlantin valtameren ja Välimeren. Se on kapeimmillaan noin 14 kilometriä leveä, ja sen vastakkaisilla rannoilla ovat Espanja pohjoisessa ja [[Marokko]] etelässä. Salmen rannoilla antiikin ihmiset tunsivat [[Heraklen patsaat]], kallionkärjet, joita pidettiin tunnetun maailman reunana. Salmen espanjalaisella rannalla sijaitsee [[Tarifan]] kaupunki. Kautta kulkee vilkas laivaliikenne, ja salmessa virtaa vesiä molempiin suuntiin.",
+  "vastaus": "Gibraltarin salmi yhdistää Atlantin valtameren ja Välimeren. Se on kapeimmillaan noin 14 kilometriä leveä, ja sen vastakkaisilla rannoilla ovat Espanja pohjoisessa ja Marokko etelässä. Salmen rannoilla antiikin ihmiset tunsivat [[Heraklen patsaat]], kallionkärjet, joita pidettiin tunnetun maailman reunana. Salmen espanjalaisella rannalla sijaitsee [[Tarifan]] kaupunki. Kautta kulkee vilkas laivaliikenne, ja salmessa virtaa vesiä molempiin suuntiin.",
   "linkit": [
-   "Marokko",
    "Heraklen patsaat",
    "Tarifan"
   ],
@@ -8270,30 +8129,28 @@
   "kohde": "kohde:hahmotelma-cluny",
   "kasite": "holvikaaret",
   "kysymys": "Kerro lisää: holvikaaret",
-  "vastaus": "Holvikaari on kaareva rakenne, joka kantaa painon sivuille seinille ja pilareille. Romaanisessa tyylissä käytettiin pyöreää kaarta, jonka malli tuli roomalaisesta rakennustaiteesta. Koska pyöreä holvi työntää painoaan voimakkaasti sivuille, seinät piti tehdä paksuiksi ja ikkunat pieniksi. Tavallisia holvityyppejä ovat [[tynnyriholvi]] ja [[ristiholvi]]. Holveja on rakennettu muuallakin tavoilla, jotka eivät tarvitse puista tukimuottia. Sudanin nubialaisten kirkkojen savitiilestä muurattu holvi syntyy ladomalla tiilet vinoon riviin päätyseinää vasten, ja jokainen uusi rivi nojaa edelliseen, kunnes katto sulkeutuu. Egyptiläinen arkkitehti [[Hassan Fathy]] löysi tämän tekniikan uudelleen nubialaisesta Abu al-Richen kylästä ja teki siitä 1900-luvulla oman rakennustapansa perustan.",
+  "vastaus": "Holvikaari on kaareva rakenne, joka kantaa painon sivuille seinille ja pilareille. Romaanisessa tyylissä käytettiin pyöreää kaarta, jonka malli tuli roomalaisesta rakennustaiteesta. Koska pyöreä holvi työntää painoaan voimakkaasti sivuille, seinät piti tehdä paksuiksi ja ikkunat pieniksi. Tavallisia holvityyppejä ovat [[tynnyriholvi]] ja [[ristiholvi]]. Clunyn luostarin suuri kirkko oli aikansa suurimpia romaanisia holvikirkkoja.",
   "linkit": [
    "tynnyriholvi",
-   "ristiholvi",
-   "Hassan Fathy"
+   "ristiholvi"
   ],
   "jatkot": [
    "Mikä ero on tynnyriholvilla ja ristiholvilla?",
-   "Miten Hassan Fathy käytti savitiilitekniikkaa rakennuksissaan?"
+   "Mikä Cluny oli keskiajalla?"
   ]
  },
  {
   "kohde": "kohde:hahmotelma-cluny",
   "kasite": "goottilainen tyyli",
   "kysymys": "Kerro lisää: goottilainen tyyli",
-  "vastaus": "Goottilainen tyyli syntyi Pohjois-Ranskassa 1100-luvun puolivälin tienoilla ja levisi sieltä ympäri Eurooppaa. Sen tunnusmerkkejä ovat [[suippokaaret]] ja ulkopuoliset [[tukikaaret]], joiden ansiosta seinät saattoivat olla ohuempia ja ikkunat suuria. Kirkkotilasta tuli korkea ja valoisa. Tyyli ei rajoittunut kirkkoihin: Brysselin Grand-Placen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen [[kaupungintalo]], jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija pommitti kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori.",
+  "vastaus": "Goottilainen tyyli syntyi Pohjois-Ranskassa 1100-luvun puolivälin tienoilla ja levisi sieltä ympäri Eurooppaa. Sen tunnusmerkkejä ovat [[suippokaaret]] ja ulkopuoliset [[tukikaaret]], joiden ansiosta seinät saattoivat olla ohuempia ja ikkunat suuria. Kirkkotilasta tuli korkea ja valoisa.",
   "linkit": [
    "suippokaaret",
-   "tukikaaret",
-   "kaupungintalo"
+   "tukikaaret"
   ],
   "jatkot": [
    "Mitä tukikaaret tekevät goottilaisessa kirkossa?",
-   "Miten Grand-Place rakennettiin uudelleen pommituksen jälkeen?"
+   "Millaisia goottilaisia katedraaleja Ranskassa on?"
   ]
  },
  {
@@ -8473,10 +8330,9 @@
   "kohde": "nosto:kirahvin-kavelymatka",
   "kasite": "Étienne Geoffroy Saint-Hilaire",
   "kysymys": "Kerro lisää: Étienne Geoffroy Saint-Hilaire",
-  "vastaus": "Étienne Geoffroy Saint-Hilaire oli ranskalainen luonnontieteilijä, joka syntyi vuonna 1772. Hän toimi eläintieteen professorina Pariisin luonnonhistoriallisessa museossa ja oli mukana perustamassa Jardin des Plantes'n [[ménagerie]]a. Nuorena hän osallistui [[Napoleonin Egyptin-retkikuntaan]], jossa hän tutki alueen eläimistöä. Hän uskoi, että eri eläinten rakenteet noudattavat yhteistä perusmallia. Siitä hän kiisteli vuonna 1830 [[Georges Cuvier'n]] kanssa. Kirahvin kävelymatkalla hän huolehti eläimestä 55-vuotiaana.",
+  "vastaus": "Étienne Geoffroy Saint-Hilaire oli ranskalainen luonnontieteilijä, joka syntyi vuonna 1772. Hän toimi eläintieteen professorina Pariisin luonnonhistoriallisessa museossa ja oli mukana perustamassa Jardin des Plantes'n [[ménagerie]]a. Nuorena hän osallistui Napoleonin Egyptin-retkikuntaan, jossa hän tutki alueen eläimistöä. Hän uskoi, että eri eläinten rakenteet noudattavat yhteistä perusmallia. Siitä hän kiisteli vuonna 1830 [[Georges Cuvier'n]] kanssa. Kirahvin kävelymatkalla hän huolehti eläimestä 55-vuotiaana.",
   "linkit": [
    "ménagerie",
-   "Napoleonin Egyptin-retkikuntaan",
    "Georges Cuvier'n"
   ],
   "jatkot": [
@@ -9086,7 +8942,7 @@
   "kohde": "nosto:guimardin-metro",
   "kasite": "art nouveau",
   "kysymys": "Kerro lisää: art nouveau",
-  "vastaus": "Art nouveau on taiteen ja rakennustaiteen tyylisuunta, joka vaikutti noin vuosina 1890–1910. Sille ovat tyypillisiä kasvimaiset, kaarevat muodot, rautatyöt ja koristeelliset linjat. Suomessa samaa tyyliä kutsutaan [[jugendiksi]]. Tunnettuja tekijöitä ovat belgialainen [[Victor Horta]], katalaani [[Gaudí]] ja tšekkiläinen [[Alphonse Mucha]]. Tyyli levisi laajalle: Perun Iquitosin Hotel Palace on vuosina 1908–1912 rakennettu art nouveau -talo, jossa on katalonialaisen modernismin ja Gaudín koulukunnan vaikutteita. Sen kaakelit tuotiin Málagasta ja parvekkeiden takorauta on taivutettu kasviaiheiksi.",
+  "vastaus": "Art nouveau on taiteen ja rakennustaiteen tyylisuunta, joka vaikutti noin vuosina 1890–1910. Sille ovat tyypillisiä kasvimaiset, kaarevat muodot, rautatyöt ja koristeelliset linjat. Suomessa samaa tyyliä kutsutaan [[jugendiksi]]. Tunnettuja tekijöitä ovat belgialainen [[Victor Horta]], katalaani [[Gaudí]] ja tšekkiläinen [[Alphonse Mucha]]. Pariisissa tyylin tunnetuin esimerkki on Hector Guimardin suunnittelemat metroasemien sisäänkäynnit.",
   "linkit": [
    "jugendiksi",
    "Victor Horta",
@@ -9292,7 +9148,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kasite": "patonkeja",
   "kysymys": "Kerro lisää: patonkeja",
-  "vastaus": "Patonki on pitkä, ohut vehnäleipä, joka on tullut Ranskan tunnetuimmaksi leiväksi. Sana baguette tarkoittaa sauvaa. Perinteisen patongin ainekset on määritelty laissa: vehnäjauhoa, vettä, suolaa ja [[hiivaa]], eikä taikinaa saa pakastaa. Pariisin kilpailussa leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. [[UNESCO]] otti ranskalaisen patongin leivontaperinteen aineettoman kulttuuriperinnön luetteloonsa vuonna 2022. Pieniä patonkeja eli eish finoa syödään myös Libyan kaupungeissa.",
+  "vastaus": "Patonki on pitkä, ohut vehnäleipä, joka on tullut Ranskan tunnetuimmaksi leiväksi. Sana baguette tarkoittaa sauvaa. Perinteisen patongin ainekset on määritelty laissa: vehnäjauhoa, vettä, suolaa ja [[hiivaa]], eikä taikinaa saa pakastaa. Pariisin kilpailussa leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. [[UNESCO]] otti ranskalaisen patongin leivontaperinteen aineettoman kulttuuriperinnön luetteloonsa vuonna 2022.",
   "linkit": [
    "hiivaa",
    "UNESCO"
@@ -9377,7 +9233,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kasite": "brioche",
   "kysymys": "Kerro lisää: brioche",
-  "vastaus": "Brioche on ranskalainen hiivaleivonnainen, jonka taikinaan kuuluu runsaasti voita ja kananmunia. Se on siis varsin erilainen kuin [[patongin]] taikina, jossa saa olla vain vehnäjauhoa, vettä, suolaa ja hiivaa. Tästä syystä brioche on pehmeää ja rikasta, kun taas patonki on rapeakuorinen ja kevyt. Pelin aineisto ei kerro briochesta sen tarkemmin, joten yksityiskohdat jäävät yleistiedon varaan. Brioche kuuluu ranskalaisten [[voita]] sisältävien leivonnaisten joukkoon.",
+  "vastaus": "Brioche on ranskalainen hiivaleivonnainen, jonka taikinaan kuuluu runsaasti voita ja kananmunia. Se on siis varsin erilainen kuin [[patongin]] taikina, jossa saa olla vain vehnäjauhoa, vettä, suolaa ja hiivaa. Tästä syystä brioche on pehmeää ja rikasta, kun taas patonki on rapeakuorinen ja kevyt. Brioche kuuluu ranskalaisten [[voita]] sisältävien leivonnaisten joukkoon.",
   "linkit": [
    "patongin",
    "voita"
@@ -9391,7 +9247,7 @@
   "kohde": "nosto:pariisi-soi",
   "kasite": "Louis Leplée",
   "kysymys": "Kerro lisää: Louis Leplée",
-  "vastaus": "[[Louis Leplée]] oli yökerhon omistaja, joka kuuli nuoren laulajan kadulla vuonna 1935. Hän antoi laulajalle lempinimen [[la Môme Piaf]]. Sana piaf on pariisilaista puhekieltä ja tarkoittaa [[varpusta]]. Lempinimi sopi hyvin pienikokoiselle laulajalle, joka oli 142 senttiä pitkä. Pelin aineisto ei kerro Leplée'stä tämän enempää.",
+  "vastaus": "[[Louis Leplée]] oli yökerhon omistaja, joka kuuli nuoren laulajan kadulla vuonna 1935. Hän antoi laulajalle lempinimen [[la Môme Piaf]]. Sana piaf on pariisilaista puhekieltä ja tarkoittaa [[varpusta]]. Lempinimi sopi hyvin pienikokoiselle laulajalle, joka oli 142 senttiä pitkä.",
   "linkit": [
    "Louis Leplée",
    "la Môme Piaf",
@@ -9422,7 +9278,7 @@
   "kohde": "nosto:pariisi-soi",
   "kasite": "La Vie en rose",
   "kysymys": "Kerro lisää: La Vie en rose",
-  "vastaus": "[[La Vie en rose]] on [[Édith Piafin]] tunnetuin laulu. Se ilmestyi vuonna 1946, ja sen sanat Piaf kirjoitti itse. Laulu syntyi siis samalta ihmiseltä, joka oli aiemmin laulanut kolikoista Pigallen kaduilla. Pelin aineisto ei kerro laulun säveltäjästä eikä sen syntyvaiheista tarkemmin.",
+  "vastaus": "[[La Vie en rose]] on [[Édith Piafin]] tunnetuin laulu. Se ilmestyi vuonna 1946, ja sen sanat Piaf kirjoitti itse. Laulu syntyi siis samalta ihmiseltä, joka oli aiemmin laulanut kolikoista Pigallen kaduilla.",
   "linkit": [
    "La Vie en rose",
    "Édith Piafin"
@@ -9451,23 +9307,21 @@
   "kohde": "nosto:pariisi-soi",
   "kasite": "kitaran",
   "kysymys": "Kerro lisää: kitaran",
-  "vastaus": "Nykyisen klassisen kitaran muotoili almerialainen puuseppä [[Antonio de Torres]]. Ennen 1850-lukua kitara oli pieni ja hiljainen salonkisoitin. Torres suurensi [[kaikukopan]], ohensi kannen ja kehitti sen alle viuhkamaisen rimatuen, joka jakaa värähtelyn koko kannelle. Ääni voimistui niin, että kitara kelpasi konserttisaliin. Kongolainen [[Franco Luambo Makiadi]] puolestaan opetteli kitaraa salaa levyjen pakkaajana, ja hänen kitaransa oli nimeltään [[Libaku ya nguma]], boakäärmeen pää.",
+  "vastaus": "Nykyisen klassisen kitaran muotoili almerialainen puuseppä [[Antonio de Torres]]. Ennen 1850-lukua kitara oli pieni ja hiljainen salonkisoitin. Torres suurensi [[kaikukopan]], ohensi kannen ja kehitti sen alle viuhkamaisen rimatuen, joka jakaa värähtelyn koko kannelle. Ääni voimistui niin, että kitara kelpasi konserttisaliin.",
   "linkit": [
    "Antonio de Torres",
-   "kaikukopan",
-   "Franco Luambo Makiadi",
-   "Libaku ya nguma"
+   "kaikukopan"
   ],
   "jatkot": [
    "Miten Torres todisti äänen tulevan kannesta?",
-   "Kuka oli Franco Luambo Makiadi?"
+   "Mikä on kitaran kaikukoppa?"
   ]
  },
  {
   "kohde": "nosto:pariisi-soi",
   "kasite": "banjoa",
   "kysymys": "Kerro lisää: banjoa",
-  "vastaus": "Banjo on kielisoitin, jonka runko muistuttaa kalvolla päällystettyä pyöreää kehää. Pelin aineiston mukaan [[Django Reinhardt]] soitti banjoa pihoissa ja tanssipaikoissa jo lapsena, kasvettuaan romaniperheen [[asuntovaunussa]] Pariisin porttien luona. Tulipalon ja käden vamman jälkeen hän siirtyi [[kitaraan]], jonka veli toi sairaalaan. Aineisto ei kerro banjosta muuta.",
+  "vastaus": "Banjo on kielisoitin, jonka runko muistuttaa kalvolla päällystettyä pyöreää kehää. [[Django Reinhardt]] soitti banjoa pihoissa ja tanssipaikoissa jo lapsena, kasvettuaan romaniperheen [[asuntovaunussa]] Pariisin porttien luona. Tulipalon ja käden vamman jälkeen hän siirtyi [[kitaraan]], jonka veli toi sairaalaan.",
   "linkit": [
    "Django Reinhardt",
    "asuntovaunussa",
@@ -9482,7 +9336,7 @@
   "kohde": "nosto:pariisi-soi",
   "kasite": "Bellevillessä",
   "kysymys": "Kerro lisää: Bellevillessä",
-  "vastaus": "Belleville on kaupunginosa Pariisin itäosassa. Pelin aineiston mukaan [[Édith Piaf]] syntyi siellä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka [[syntymätodistuksessa]] lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla sisarpuolensa kanssa. Aineisto ei kerro Bellevillestä muuta.",
+  "vastaus": "Belleville on kaupunginosa Pariisin itäosassa. [[Édith Piaf]] syntyi siellä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka [[syntymätodistuksessa]] lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla sisarpuolensa kanssa.",
   "linkit": [
    "Édith Piaf",
    "syntymätodistuksessa",
@@ -9497,7 +9351,7 @@
   "kohde": "nosto:pariisi-soi",
   "kasite": "Pigallen",
   "kysymys": "Kerro lisää: Pigallen",
-  "vastaus": "Pigalle on Pariisin pohjoisosan kaupunginosa Montmartren tuntumassa. Pelin aineiston mukaan [[Édith Piaf]] lauloi siellä teininä kolikoista kaduilla ja pihoissa [[sisarpuolensa]] kanssa. Vuonna 1935 yökerhon omistaja [[Louis Leplée]] kuuli hänet kadulta ja antoi hänelle lempinimen la Môme Piaf. Aineisto ei kerro Pigallesta tämän enempää.",
+  "vastaus": "Pigalle on Pariisin pohjoisosan kaupunginosa Montmartren tuntumassa. [[Édith Piaf]] lauloi siellä teininä kolikoista kaduilla ja pihoissa [[sisarpuolensa]] kanssa. Vuonna 1935 yökerhon omistaja [[Louis Leplée]] kuuli hänet kadulta ja antoi hänelle lempinimen la Môme Piaf.",
   "linkit": [
    "Édith Piaf",
    "sisarpuolensa",
@@ -9559,7 +9413,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kasite": "Versailles'n",
   "kysymys": "Kerro lisää: Versailles'n",
-  "vastaus": "Versailles on Pariisin länsipuolella sijaitseva kaupunki, joka tunnetaan kuninkaan hovin asuinpaikkana. Pelin aineiston mukaan sen puistossa pidettiin yöllinen tapaaminen, jossa [[palkattu nuori nainen]] esitti kuningatarta kardinaalille. Myöhemmin [[kardinaali de Rohan]] pidätettiin Versailles'ssa, kun kaulanauhan ensimmäinen maksuerä oli erääntynyt. Huijauksen taustalla oli [[Jeanne de la Motte]]. Aineisto ei kerro Versailles'sta muuta.",
+  "vastaus": "Versailles on Pariisin länsipuolella sijaitseva kaupunki, joka tunnetaan kuninkaan hovin asuinpaikkana. Sen puistossa pidettiin yöllinen tapaaminen, jossa [[palkattu nuori nainen]] esitti kuningatarta kardinaalille. Myöhemmin [[kardinaali de Rohan]] pidätettiin Versailles'ssa, kun kaulanauhan ensimmäinen maksuerä oli erääntynyt. Huijauksen taustalla oli [[Jeanne de la Motte]].",
   "linkit": [
    "palkattu nuori nainen",
    "kardinaali de Rohan",
@@ -9574,7 +9428,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kasite": "kuningattaren",
   "kysymys": "Kerro lisää: kuningattaren",
-  "vastaus": "Aineiston mukaan kaulanauhan oli koonnut kaksi hovin jalokivikauppiasta, [[Boehmer ja Bassenge]], kuningas [[Ludvig XV:lle]]. Kuningas kuoli kuitenkin ennen kauppaa, eikä [[Marie Antoinette]] huolinut nauhaa. Siksi nauha jäi kauppiaille, ja huijari Jeanne de la Motte pääsi käyttämään tilannetta hyväkseen. Kun maksuerä erääntyi, kauppiaat kääntyivät kuningattaren puoleen. Hänen maineensa kärsi, vaikka hän ei ollut kauppaan osallinen.",
+  "vastaus": "Kaulanauhan oli koonnut kaksi hovin jalokivikauppiasta, [[Boehmer ja Bassenge]], kuningas [[Ludvig XV:lle]]. Kuningas kuoli kuitenkin ennen kauppaa, eikä [[Marie Antoinette]] huolinut nauhaa. Siksi nauha jäi kauppiaille, ja huijari Jeanne de la Motte pääsi käyttämään tilannetta hyväkseen. Kun maksuerä erääntyi, kauppiaat kääntyivät kuningattaren puoleen. Hänen maineensa kärsi, vaikka hän ei ollut kauppaan osallinen.",
   "linkit": [
    "Boehmer ja Bassenge",
    "Ludvig XV:lle",
@@ -9604,11 +9458,11 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kasite": "Denis Vrain-Lucas",
   "kysymys": "Kerro lisää: Denis Vrain-Lucas",
-  "vastaus": "[[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko [[Michel Chasles'lle]] noin 27 000 käsin kirjoitettua kirjettä. Aineiston mukaan yksi niistä oli kirje, jonka [[Kleopatra]] oli kirjoittanut Julius Caesarille ranskaksi vesileimatulle paperille. Kansallisylpeys sokaisi ostajan, sillä kirjeet väittivät todistavan, että painovoima keksittiin Ranskassa. Tiedeakatemia ei suhtautunut asiaan yhtä ilahtuneesti. Kauppa kesti vuosina 1861–1870.",
+  "vastaus": "[[Denis Vrain-Lucas]] oli ranskalainen väärentäjä, joka myi 1860-luvulla matemaatikko [[Michel Chasles'lle]] noin 27 000 väärennettyä kirjettä. Yksi niistä oli kirje, jonka Kleopatran väitettiin kirjoittaneen Julius Caesarille ranskaksi vesileimatulle paperille. Kirjeet väittivät todistavan, että painovoima keksittiin Ranskassa, ja kansallisylpeys sokaisi ostajan. [[Tiedeakatemia]] ei suhtautunut asiaan yhtä ilahtuneesti. Huijaus paljastui vuonna 1869, ja Vrain-Lucas tuomittiin vuonna 1870.",
   "linkit": [
    "Denis Vrain-Lucas",
    "Michel Chasles'lle",
-   "Kleopatra"
+   "Tiedeakatemia"
   ],
   "jatkot": [
    "Mitä kirjeet väittivät painovoimasta?",
@@ -9619,7 +9473,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kasite": "Michel Chasles'lle",
   "kysymys": "Kerro lisää: Michel Chasles'lle",
-  "vastaus": "[[Michel Chasles]] oli kuuluisa ranskalainen matemaatikko, joka osti [[Denis Vrain-Lucasilta]] kirjeitä 1860-luvulla. Aineiston mukaan hän osti ilomielin ensin Kleopatran kirjeen ja sen perään noin 27 000 muuta. Kansallisylpeys teki ostajasta sokean, sillä kirjeet näyttivät todistavan, että [[painovoima]] keksittiin Ranskassa. Aineisto ei kerro hänen myöhemmistä vaiheistaan.",
+  "vastaus": "[[Michel Chasles]] oli kuuluisa ranskalainen matemaatikko, joka osti [[Denis Vrain-Lucasilta]] kirjeitä 1860-luvulla. Hän osti ilomielin ensin Kleopatran kirjeen ja sen perään noin 27 000 muuta, mutta kaikki olivat väärennöksiä. Kansallisylpeys teki ostajasta sokean, sillä kirjeet näyttivät todistavan, että [[painovoima]] keksittiin Ranskassa.",
   "linkit": [
    "Michel Chasles",
    "Denis Vrain-Lucasilta",
@@ -9649,7 +9503,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kasite": "Chasles",
   "kysymys": "Kerro lisää: Chasles",
-  "vastaus": "Michel Chasles oli ranskalainen matemaatikko, joka tunnettiin [[geometriasta]]. Pelin aineiston mukaan hän osti 1860-luvulla [[Denis Vrain-Lucasilta]] noin 27 000 käsin kirjoitettua kirjettä. Aineiston loppu on katkennut, joten kirjeiden sisällöstä ja kaupan vaiheista ei voi sanoa enempää.",
+  "vastaus": "Michel Chasles oli ranskalainen matemaatikko, joka tunnettiin [[geometriasta]]. Hän osti 1860-luvulla [[Denis Vrain-Lucasilta]] tuhansia kirjeitä, noin 27 000 asiakirjaa, joiden väitettiin olevan muun muassa Pascalin, Galilein ja Newtonin kirjoittamia. Kirjeet olivat Vrain-Lucasin tekemiä väärennöksiä. Huijaus paljastui vuonna 1869, ja Vrain-Lucas tuomittiin vuonna 1870 vankeuteen.",
   "linkit": [
    "geometriasta",
    "Denis Vrain-Lucasilta"
@@ -9657,6 +9511,20 @@
   "jatkot": [
    "Mitä geometria tutkii?",
    "Kuka Denis Vrain-Lucas oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saint-malo",
+  "kasite": "Frans I",
+  "kysymys": "Kerro lisää: Frans I",
+  "vastaus": "Frans I eli François I (1494–1547) oli Ranskan kuningas vuosina 1515–1547. Hän tuki renessanssin taidetta ja kutsui [[Leonardo da Vincin]] Ranskaan, ja [[Chambordin linnan]] rakennus aloitettiin hänen käskystään vuonna 1519. Hän antoi Jacques Cartierille tehtävän tutkia Pohjois-Amerikan rannikkoa 1530-luvulla.",
+  "linkit": [
+   "Leonardo da Vincin",
+   "Chambordin linnan"
+  ],
+  "jatkot": [
+   "Miksi Frans I tuki taiteilijoita?",
+   "Mitä Jacques Cartier tutki Pohjois-Amerikassa?"
   ]
  }
 ]

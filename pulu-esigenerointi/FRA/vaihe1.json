@@ -63,10 +63,10 @@
   "kohde": "kohde:tuileries",
   "kysymys": "Mitä kommunardeille tapahtui kommuunin kukistumisen jälkeen?",
   "uusi": true,
-  "vastaus": "Mmm— tuo on vakava aihe. Pariisin kommuunin kukistuminen toukokuun lopussa 1871 tapahtui viikossa, jota kutsutaan nimellä [[verinen viikko]]. Tuhansia kommunardeja kuoli taisteluissa ja teloituksissa, ja arviot lukumäärästä vaihtelevat. Tuhansia vangittiin, ja osa tuomittiin karkotettaviksi: monet lähetettiin [[Uuteen-Kaledoniaan]] Tyynellemerelle, ja osa pakeni ulkomaille. Kolmas tasavalta armahti maanpakoon lähteneet kommunardit, ja yleinen armahdus annettiin 1880. Siitä on yli sataviisikymmentä vuotta, ja kommuunista keskustellaan Ranskassa yhä. Hyvä, että siitä on jo aikaa.",
+  "vastaus": "Mmm— tuo on vakava aihe. Pariisin kommuunin kukistuminen toukokuun lopussa 1871 tapahtui viikossa, jota kutsutaan nimellä [[verinen viikko]]. Tuhansia kommunardeja kuoli taisteluissa ja teloituksissa, ja arviot lukumäärästä vaihtelevat. Tuhansia vangittiin, ja osa tuomittiin karkotettaviksi: monet lähetettiin Uuteen-Kaledoniaan Tyynellemerelle, ja osa pakeni ulkomaille. [[Kolmas tasavalta]] armahti maanpakoon lähteneet kommunardit, ja yleinen armahdus annettiin 1880. Siitä on yli sataviisikymmentä vuotta, ja kommuunista keskustellaan Ranskassa yhä. Hyvä, että siitä on jo aikaa.",
   "linkit": [
    "verinen viikko",
-   "Uuteen-Kaledoniaan"
+   "Kolmas tasavalta"
   ],
   "jatkot": [
    "Miksi Pariisin kommuuni julistettiin vuonna 1871?",
@@ -135,11 +135,10 @@
   "kohde": "kohde:bastilji",
   "kysymys": "Mihin Bastiljin pääportin avain päätyi?",
   "uusi": true,
-  "vastaus": "Sepä sattui: tämä on hauska yksityiskohta. Bastiljin pääportin avain päätyi Atlantin taakse. [[Markiisi de Lafayette]], vallankumouksen tunnettu hahmo, lähetti sen vuonna 1790 lahjaksi [[George Washingtonille]], ensimmäiselle Yhdysvaltain presidentille. Avain on nykyään esillä Washingtonin kotona [[Mount Vernonissa]] Virginiassa. Bastiljin purkaminen alkoi heti valtauksen jälkeen, ja kiviä sekä esineitä myytiin muistoksi. Avaimeni olisi kyl ollut turha, kyyhky lentää ikkunasta.",
+  "vastaus": "Sepä sattui: tämä on hauska yksityiskohta. Bastilji oli vuosisatoja [[valtionvankila]], ja sen pääportin avain päätyi Atlantin taakse. [[Markiisi de Lafayette]], vallankumouksen tunnettu hahmo, lähetti sen vuonna 1790 lahjaksi George Washingtonille, ensimmäiselle Yhdysvaltain presidentille. Avain on nykyään esillä Washingtonin kotona Mount Vernonissa Virginiassa. Bastiljin purkaminen alkoi heti valtauksen jälkeen, ja kiviä sekä esineitä myytiin muistoksi. Avaimeni olisi kyl ollut turha, kyyhky lentää ikkunasta.",
   "linkit": [
-   "Markiisi de Lafayette",
-   "George Washingtonille",
-   "Mount Vernonissa"
+   "valtionvankila",
+   "Markiisi de Lafayette"
   ],
   "jatkot": [
    "Kuka oli markiisi de Lafayette?",
@@ -223,7 +222,7 @@
   "kohde": "kohde:vignemale",
   "kysymys": "Miksi huippu on jaettu kahden maan kesken?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Syynä on rajan kulku: Ranskan ja Espanjan raja seuraa Pyreneillä pääosin vuoriston pääharjannetta ja vedenjakajaa, ja Vignemale sijaitsee juuri tällä linjalla. Rajan lopullinen kulku sovittiin 1800-luvun puolivälin [[Bayonnen sopimuksissa]], jotka ratkaisivat sen koko vuoriston matkalta. Ranskan puolella vuori kuuluu [[Hautes-Pyrénées'n departementtiin]] ja Espanjan puolella Huescan maakuntaan [[Aragoniassa]]. Huipun tarkasta rajakohdasta en ole varma enempää. Rajat on ihmisten, harjanteet vuorten.",
+  "vastaus": "Joo, tän minä tiedän. Vignemale kuuluu vuoristoon, jonka halki Ranskan ja Espanjan raja kulkee. Raja seuraa Pyreneillä pääosin pääharjannetta ja vedenjakajaa, ja sen lopullinen kulku sovittiin 1800-luvun puolivälin [[Bayonnen sopimuksissa]]. Lähteet kuvaavat korkeimman huipun, Pique Longuen (3 298 m), asemaa eri tavoin: joidenkin mukaan se on rajalla, toisten mukaan Ranskan puolella. Varmaa on, että massiivin pohjoispuoli kuuluu Ranskassa [[Hautes-Pyrénées'n departementtiin]] ja eteläpuoli Espanjassa Huescan maakuntaan [[Aragoniassa]]. Rajat on ihmisten, harjanteet vuorten.",
   "linkit": [
    "Bayonnen sopimuksissa",
    "Hautes-Pyrénées'n departementtiin",
@@ -379,7 +378,7 @@
   "kohde": "kohde:biskajanlahti",
   "kysymys": "Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?",
   "uusi": false,
-  "vastaus": "Kato, tän minä tiedän ylhäältä päin. Lahti näyttää pahalta jo katsomalla.\nMaine perustuu lahden asemaan: se aukeaa suoraan avoimen [[Atlantin]] myrskyille, ja vallitsevat länsituulet ajavat aallokon lahden perukoille. Kun purjelaiva joutui myrskyssä lahden sisään, sen oli usein vaikea purjehtia tuulta vastaan takaisin ulapalle, ja tuuli painoi sen kohti rantaa. Avomereltä tuleva [[aallokko]] kasvaa suureksi, ja Espanjan pohjoisrannikko ja Ranskan länsirannikko ovat monin paikoin kallioisia. Siksi [[purjelaivojen]] aikaan lahti oli yksi Euroopan pelätyimmistä merialueista.\nOnneksi kyyhky pysyy mieluummin kuivalla maalla.",
+  "vastaus": "Kato, tän minä tiedän ylhäältä päin. Lahti näyttää pahalta jo katsomalla. Maine perustuu lahden asemaan: se aukeaa suoraan avoimen [[Atlantin]] myrskyille, ja vallitsevat länsituulet ajavat aallokon lahden perukoille. Kun purjelaiva joutui myrskyssä lahden sisään, sen oli usein vaikea purjehtia tuulta vastaan takaisin ulapalle, ja tuuli painoi sen kohti rantaa. Avomereltä tuleva [[aallokko]] kasvaa suureksi, ja Espanjan pohjoisrannikko ja Ranskan länsirannikko ovat monin paikoin kallioisia. Siksi [[purjelaivojen]] aikaan lahti oli yksi Euroopan pelätyimmistä merialueista. Onneksi kyyhky pysyy mieluummin kuivalla maalla.",
   "linkit": [
    "Atlantin",
    "aallokko",
@@ -394,7 +393,7 @@
   "kohde": "kohde:biskajanlahti",
   "kysymys": "Mitä eläimiä lahdella tapaa?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Siivin nähtynä lahden pinta on yllättävän vilkas.\nBiskajanlahdella tavataan monenlaisia merinisäkkäitä, erityisesti [[delfiinejä]] ja useita [[valaslajeja]], ja lahti tunnetaan hyvänä paikkana valaiden katseluun. Merilintuja on runsaasti, ja alueen kalastus perustuu muun muassa [[anjovikseen]] ja sardiiniin. Tarkkoja lajimääriä en ole varma antamaan, mutta avoin syvä vesi ja rikas ravinto tekevät lahdesta merkittävän elinympäristön.\nJa kaiken tämän minä näen vain ylhäältä.",
+  "vastaus": "Annas ku mietin. Siivin nähtynä lahden pinta on yllättävän vilkas. Biskajanlahdella tavataan monenlaisia merinisäkkäitä, erityisesti [[delfiinejä]] ja useita [[valaslajeja]], ja lahti tunnetaan hyvänä paikkana valaiden katseluun. Merilintuja on runsaasti, ja alueen kalastus perustuu muun muassa [[anjovikseen]] ja sardiiniin. Tarkkoja lajimääriä en ole varma antamaan, mutta avoin syvä vesi ja rikas ravinto tekevät lahdesta merkittävän elinympäristön. Ja kaiken tämän minä näen vain ylhäältä.",
   "linkit": [
    "delfiinejä",
    "valaslajeja",
@@ -409,7 +408,7 @@
   "kohde": "kohde:biskajanlahti",
   "kysymys": "Kuinka syvä Biskajanlahti on?",
   "uusi": true,
-  "vastaus": "Mmm— syvyyksiä minä en oikein itse näe.\nBiskajanlahden syvyys vaihtelee voimakkaasti. Ranskan länsirannikon edustalla [[mannerjalusta]] on leveä ja suhteellisen matala, mutta Espanjan pohjoisrannikolla se on kapea ja merenpohja syvenee jyrkästi. Lahden syvimmät osat ovat yli neljän kilometrin syvyydessä, mutta tarkasta luvusta en ole varma. Syvimmillä alueilla pohjaa luonnehtii laaja [[syvänmeren]] tasanko.\nLukuja kyyhky muistaa huonommin kuin reittejä.",
+  "vastaus": "Mmm— syvyyksiä minä en oikein itse näe. Biskajanlahden syvyys vaihtelee voimakkaasti. Ranskan länsirannikon edustalla [[mannerjalusta]] on leveä ja suhteellisen matala, mutta Espanjan pohjoisrannikolla se on kapea ja merenpohja syvenee jyrkästi. Lahden syvimmät osat ovat yli neljän kilometrin syvyydessä, mutta tarkasta luvusta en ole varma. Syvimmillä alueilla pohjaa luonnehtii laaja [[syvänmeren]] tasanko. Lukuja kyyhky muistaa huonommin kuin reittejä.",
   "linkit": [
    "mannerjalusta",
    "syvänmeren"
@@ -423,7 +422,7 @@
   "kohde": "kohde:biskajanlahti",
   "kysymys": "Mitkä kaupungit ovat Biskajanlahden rannalla?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Moni näistä on tullut laskeuduttua katolle.\nEspanjan puolella lahden rannalla ovat esimerkiksi satamakaupunki [[Bilbao]] ja [[Santander]]. Ranskan puolella tunnettuja rantakaupunkeja ovat [[La Rochelle]] ja Espanjan rajan lähellä sijaitseva [[Biarritz]]. Luettelo ei ole tyhjentävä, sillä lahden rannikko on pitkä ja siellä on lukuisia pienempiä satamia ja kalastajakyliä.\nLista venyi, vaikka lupasin pitää sen lyhyenä.",
+  "vastaus": "Joo, tän minä tiedän. Moni näistä on tullut laskeuduttua katolle. Espanjan puolella lahden rannalla ovat esimerkiksi satamakaupunki [[Bilbao]] ja [[Santander]]. Ranskan puolella tunnettuja rantakaupunkeja ovat [[La Rochelle]] ja Espanjan rajan lähellä sijaitseva [[Biarritz]]. Luettelo ei ole tyhjentävä, sillä lahden rannikko on pitkä ja siellä on lukuisia pienempiä satamia ja kalastajakyliä. Lista venyi, vaikka lupasin pitää sen lyhyenä.",
   "linkit": [
    "Bilbao",
    "Santander",
@@ -439,7 +438,7 @@
   "kohde": "kohde:biskajanlahti",
   "kysymys": "Mitä jokia Biskajanlahteen laskee?",
   "uusi": true,
-  "vastaus": "No niin, joet ovat kyyhkyn parhaita suunnistusapuja.\nRanskan puolella lahteen laskevat muun muassa [[Loire]], [[Garonne]], joka päättyy Gironden suistoon, sekä [[Adour]]. Espanjan pohjoisrannikolla joet ovat yleensä lyhyitä ja jyrkkiä, koska vuoristo on lähellä merta. Luettelo ei ole kattava, mutta nämä kuuluvat alueen tärkeimpiin vesistöihin.\nViisas Pöllö on matkoilla tutkimassa jokia, joten hoidan ne minä.",
+  "vastaus": "No niin, joet ovat kyyhkyn parhaita suunnistusapuja. Ranskan puolella lahteen laskevat muun muassa [[Loire]], [[Garonne]], joka päättyy Gironden suistoon, sekä [[Adour]]. Espanjan pohjoisrannikolla joet ovat yleensä lyhyitä ja jyrkkiä, koska vuoristo on lähellä merta. Luettelo ei ole kattava, mutta nämä kuuluvat alueen tärkeimpiin vesistöihin. Viisas Pöllö on matkoilla tutkimassa jokia, joten hoidan ne minä.",
   "linkit": [
    "Loire",
    "Garonne",
@@ -454,7 +453,7 @@
   "kohde": "kohde:loire",
   "kysymys": "Miksi Loiren varrella on niin paljon linnoja?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Linnoja on niin paljon, että katolta ne meinaa mennä sekaisin.\nLoiren laakso oli keskiajan lopulla ja renessanssin aikana Ranskan kuninkaallisen hovin kotiseutua. [[Ranskan kuninkaat]] ja heidän hovinsa oleskelivat alueella, ja aateli rakensi lähistölle omia linnojaan ja palatsejaan. Hedelmällinen maa, kulkuväylänä toiminut joki ja metsästysmaat tekivät seudusta houkuttelevan. Tunnetuimpia linnoja ovat [[Chambord]], [[Amboise]] ja [[Chenonceau]].\nMinä lasken linnat aina väärin, koska ne kaikki näyttävät ylhäältä pelkiltä katoilta.",
+  "vastaus": "Hyvä kysymys tuo. Linnoja on niin paljon, että katolta ne meinaa mennä sekaisin. Loiren laakso oli keskiajan lopulla ja renessanssin aikana Ranskan kuninkaallisen hovin kotiseutua. [[Ranskan kuninkaat]] ja heidän hovinsa oleskelivat alueella, ja aateli rakensi lähistölle omia linnojaan ja palatsejaan. Hedelmällinen maa, kulkuväylänä toiminut joki ja metsästysmaat tekivät seudusta houkuttelevan. Tunnetuimpia linnoja ovat [[Chambord]], [[Amboise]] ja [[Chenonceau]]. Minä lasken linnat aina väärin, koska ne kaikki näyttävät ylhäältä pelkiltä katoilta.",
   "linkit": [
    "Ranskan kuninkaat",
    "Chambord",
@@ -470,7 +469,7 @@
   "kohde": "kohde:loire",
   "kysymys": "Miksi Loire on niin matala kesäisin?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Joen vesi on aina ollut ihan oma lukunsa.\nLoiren virtaama vaihtelee suuresti vuodenaikojen mukaan. Joki saa vetensä pääosin sateesta ja [[Keskiylängön]] lähteistä eikä jäätiköistä, toisin kuin [[Rhône]], joten kuivina kesäkuukausina vesi vähenee ja jokeen nousee [[hiekkasärkkiä]]. Valuma-alue on laaja, mutta virtaama on silti vain puolet Rhônen vastaavasta.\nPöllö parantelee siipeään, joten jokivirrat jäi minulle.",
+  "vastaus": "Odotas vähän. Joen vesi on aina ollut ihan oma lukunsa. Loiren virtaama vaihtelee suuresti vuodenaikojen mukaan. Joki saa vetensä pääosin sateesta ja [[Keskiylängön]] lähteistä eikä jäätiköistä, toisin kuin [[Rhône]], joten kuivina kesäkuukausina vesi vähenee ja jokeen nousee [[hiekkasärkkiä]]. Valuma-alue on laaja, mutta virtaama on silti vain puolet Rhônen vastaavasta. Pöllö parantelee siipeään, joten jokivirrat jäi minulle.",
   "linkit": [
    "Keskiylängön",
    "Rhône",
@@ -485,7 +484,7 @@
   "kohde": "kohde:loire",
   "kysymys": "Mistä Loire saa alkunsa?",
   "uusi": true,
-  "vastaus": "Ai se. Lähde on vähän syrjässä, mutta tiedän sen.\nLoire saa alkunsa [[Gerbier de Jonc]] -vuoren juurelta [[Ardèchen]] departementista, Ranskan [[Keskiylängöllä]], noin 1 400 metrin korkeudessa. Sieltä joki virtaa ensin pohjoiseen kohti Orléansia ja kääntyy sitten länteen Atlantille.\nLyhyt vastaus, mutta pitkä lähde.",
+  "vastaus": "Ai se. Lähde on vähän syrjässä, mutta tiedän sen. Loire saa alkunsa [[Gerbier de Jonc]] -vuoren juurelta [[Ardèchen]] departementista, Ranskan [[Keskiylängöllä]], noin 1 400 metrin korkeudessa. Sieltä joki virtaa ensin pohjoiseen kohti Orléansia ja kääntyy sitten länteen Atlantille. Lyhyt vastaus, mutta pitkä lähde.",
   "linkit": [
    "Gerbier de Jonc",
    "Ardèchen",
@@ -506,7 +505,7 @@
   "kohde": "kohde:loire",
   "kysymys": "Mihin Loire laskee?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Tästä päästään loppuun asti.\nLoire laskee [[Atlantin]] valtamereen Ranskan länsirannikolla. Joki kulkee ensin [[Nantesin]] kaupungin kautta ja päättyy leveään suistoon [[Saint-Nazairen]] kohdalla. Suisto on tärkeä satama- ja teollisuusalue.\nKuvaa vaan ylhäältä, niin joki näyttää isolta sinivihreältä nauhalta.",
+  "vastaus": "Selvä juttu. Tästä päästään loppuun asti. Loire laskee [[Atlantin]] valtamereen Ranskan länsirannikolla. Joki kulkee ensin [[Nantesin]] kaupungin kautta ja päättyy leveään suistoon [[Saint-Nazairen]] kohdalla. Suisto on tärkeä satama- ja teollisuusalue. Kuvaa vaan ylhäältä, niin joki näyttää isolta sinivihreältä nauhalta.",
   "linkit": [
    "Atlantin",
    "Nantesin",
@@ -527,7 +526,7 @@
   "kohde": "kohde:loire",
   "kysymys": "Mikä on Loiren laakson UNESCO-asema?",
   "uusi": true,
-  "vastaus": "Sepä sattui: tämä on tosi hyvä kohta kyyhkyn katsella.\nOsa Loiren laaksosta kuuluu [[UNESCOn]] maailmanperintöluetteloon. Alue on kirjattu kulttuurimaisemaksi, joka ulottuu [[Sully-sur-Loiren]] ja [[Chalonnes-sur-Loiren]] välille, ja se merkittiin luetteloon vuonna 2000. Maisema on arvokas linnojensa, kaupunkiensa ja jokimaisemansa vuoksi.\nLinnojen välissä minä haaveilen aina briochesta.",
+  "vastaus": "Sepä sattui: tämä on tosi hyvä kohta kyyhkyn katsella. Osa Loiren laaksosta kuuluu [[UNESCOn]] maailmanperintöluetteloon. Alue on kirjattu kulttuurimaisemaksi, joka ulottuu [[Sully-sur-Loiren]] ja [[Chalonnes-sur-Loiren]] välille, ja se merkittiin luetteloon vuonna 2000. Maisema on arvokas linnojensa, kaupunkiensa ja jokimaisemansa vuoksi. Linnojen välissä minä haaveilen aina briochesta.",
   "linkit": [
    "UNESCOn",
    "Sully-sur-Loiren",
@@ -542,7 +541,7 @@
   "kohde": "kohde:rhone~2",
   "kysymys": "Mikä Camargue on?",
   "uusi": false,
-  "vastaus": "Kas vaan, tuo on mielenkiintoinen paikka ylhäältä katsottuna.\nCamargue on [[Rhônen]] suistoalue Etelä-Ranskassa, jossa joki jakautuu Arlesin kohdalla Suureksi ja Pieneksi Rhôneksi. Haarojen väliin jäävä suistomaa on laaja kosteikko. Alueella elää oma hevosrotunsa, joka on aikuisena aina valkoinen: varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta. Hevosilla ratsastavat [[gardianit]], paimenet, jotka kokoavat alueen mustia härkiä, ja hevoset elävät laumoina ulkona ympäri vuoden.\nPidän siitä, että joku muukin vaihtaa väriä ikääntyessään.",
+  "vastaus": "Kas vaan, tuo on mielenkiintoinen paikka ylhäältä katsottuna. Camargue on [[Rhônen]] suistoalue Etelä-Ranskassa, jossa joki jakautuu Arlesin kohdalla Suureksi ja Pieneksi Rhôneksi. Haarojen väliin jäävä suistomaa on laaja kosteikko. Alueella elää oma hevosrotunsa, joka on aikuisena aina valkoinen: varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta. Hevosilla ratsastavat [[gardianit]], paimenet, jotka kokoavat alueen mustia härkiä, ja hevoset elävät laumoina ulkona ympäri vuoden. Pidän siitä, että joku muukin vaihtaa väriä ikääntyessään.",
   "linkit": [
    "Rhônen",
    "gardianit"
@@ -556,7 +555,7 @@
   "kohde": "kohde:rhone~2",
   "kysymys": "Miten Rhône muuttuu Genevenjärvessä?",
   "uusi": false,
-  "vastaus": "Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.\nRhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.\nNäin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.",
+  "vastaus": "Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä. Rhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta. Näin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.",
   "linkit": [
    "Alpeilta",
    "jäätiköiden",
@@ -572,7 +571,7 @@
   "kohde": "kohde:rhone~2",
   "kysymys": "Kuinka pitkä Rhône on?",
   "uusi": true,
-  "vastaus": "Katotaas. Pituudet pysyy mielessä paremmin kuin lentoreitit.\nRhône on pituudeltaan noin 810 kilometriä, ja suurempi osa joesta virtaa Ranskan puolella, pienempi [[Sveitsin]] puolella. Se on lyhyempi kuin [[Loire]], Ranskan pisin joki, mutta virtaamaltaan huomattavasti suurempi. Joki päättyy [[Välimeren]] rannalle.\nTarkkaa lukua en ole aivan varma, joten sanon noin.",
+  "vastaus": "Katotaas. Pituudet pysyy mielessä paremmin kuin lentoreitit. Rhône on pituudeltaan noin 810 kilometriä, ja suurempi osa joesta virtaa Ranskan puolella, pienempi [[Sveitsin]] puolella. Se on lyhyempi kuin [[Loire]], Ranskan pisin joki, mutta virtaamaltaan huomattavasti suurempi. Joki päättyy [[Välimeren]] rannalle. Tarkkaa lukua en ole aivan varma, joten sanon noin.",
   "linkit": [
    "Sveitsin",
    "Loire",
@@ -587,7 +586,7 @@
   "kohde": "kohde:rhone~2",
   "kysymys": "Mistä Rhône saa alkunsa Sveitsissä?",
   "uusi": true,
-  "vastaus": "Nyt muistan: se on korkealla, ja ylhäältä sen näkee kyllä.\nRhône saa alkunsa Alpeilta [[Valais]]n kantonista Sveitsistä, [[Furkan]]-solan läheltä, jossa joen lähteenä toimii Rhônen jäätikkö. Jäätikön sulamisvedet muodostavat joen ensimmäisen osan. Jäätikkö on vetäytynyt viime vuosikymmeninä ilmaston lämpenemisen vuoksi.\nPitkä joki saa kyllä alkunsa aika pienestä purosta.",
+  "vastaus": "Nyt muistan: se on korkealla, ja ylhäältä sen näkee kyllä. Rhône saa alkunsa Alpeilta [[Valais]]n kantonista Sveitsistä, [[Furkan]]-solan läheltä, jossa joen lähteenä toimii Rhônen jäätikkö. Jäätikön sulamisvedet muodostavat joen ensimmäisen osan. Jäätikkö on vetäytynyt viime vuosikymmeninä ilmaston lämpenemisen vuoksi. Pitkä joki saa kyllä alkunsa aika pienestä purosta.",
   "linkit": [
    "Valais",
    "Furkan"
@@ -607,7 +606,7 @@
   "kohde": "kohde:rhone~2",
   "kysymys": "Mikä on mistral-tuuli?",
   "uusi": true,
-  "vastaus": "Ai tota. Sen minä olen kyllä itse tuntenut siivissäni.\nMistral on kylmä ja kuiva pohjoistuuli, joka puhaltaa [[Rhônen]] laaksoa pitkin kohti Välimerta. Tuuli kanavoituu laaksoon [[Alppien]] ja [[Keskiylängön]] välissä, ja se voi olla hyvin voimakas, jopa yli sadan kilometrin tuntinopeudella puuskissa. Se kirkastaa ilman ja vaikuttaa muun muassa [[Provencen]] maisemaan ja rakentamistapoihin.\nSilloin ei kyyhky lennä minnekään.",
+  "vastaus": "Ai tota. Sen minä olen kyllä itse tuntenut siivissäni. Mistral on kylmä ja kuiva pohjoistuuli, joka puhaltaa [[Rhônen]] laaksoa pitkin kohti Välimerta. Tuuli kanavoituu laaksoon [[Alppien]] ja [[Keskiylängön]] välissä, ja se voi olla hyvin voimakas, jopa yli sadan kilometrin tuntinopeudella puuskissa. Se kirkastaa ilman ja vaikuttaa muun muassa [[Provencen]] maisemaan ja rakentamistapoihin. Silloin ei kyyhky lennä minnekään.",
   "linkit": [
    "Rhônen",
    "Alppien",
@@ -623,7 +622,7 @@
   "kohde": "kohde:mont-saint-michel",
   "kysymys": "Miksi saarta ei koskaan vallattu?",
   "uusi": false,
-  "vastaus": "Just niin, sehän on kuuluisaa. Tosin täsmennän vielä yhden asian.\nSaari säilyi valtaamattomana koko [[satavuotisen sodan]] ajan, mutta se on rajatumpi väite kuin \"ei koskaan\". Syy oli sijainti: pyhiinvaeltajat pääsivät saarelle laskuveden aikaan, mutta nouseva [[vuorovesi]] jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen vuonna 1433.\nSiivet ovat tällaisessa paikassa aika kätevät.",
+  "vastaus": "Just niin, sehän on kuuluisaa. Tosin täsmennän vielä yhden asian. Saari säilyi valtaamattomana koko [[satavuotisen sodan]] ajan, mutta se on rajatumpi väite kuin \"ei koskaan\". Syy oli sijainti: pyhiinvaeltajat pääsivät saarelle laskuveden aikaan, mutta nouseva [[vuorovesi]] jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen vuonna 1433. Siivet ovat tällaisessa paikassa aika kätevät.",
   "linkit": [
    "satavuotisen sodan",
    "vuorovesi"
@@ -637,7 +636,7 @@
   "kohde": "kohde:mont-saint-michel",
   "kysymys": "Mihin luostaria käytettiin Ancien régimen aikana?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tähän vastaan rauhassa.\nLuostaria käytettiin vankilana säännöllisesti koko [[Ancien régimen]] ajan eli ennen Ranskan vallankumousta vallinneen järjestelmän aikana. Kuningas [[Ludvig XI]] ymmärsi saaren luonnollisen puolustuksen edut ja teki siitä vankilan. Saaren sijainti, jonne ei päässyt vuoroveden aikaan, teki sen vartioinnista helppoa.\nOnneksi siitä on jo pitkä aika.",
+  "vastaus": "Hetkinen ny. Tähän vastaan rauhassa. Luostaria käytettiin vankilana säännöllisesti koko [[Ancien régimen]] ajan eli ennen Ranskan vallankumousta vallinneen järjestelmän aikana. Kuningas [[Ludvig XI]] ymmärsi saaren luonnollisen puolustuksen edut ja teki siitä vankilan. Saaren sijainti, jonne ei päässyt vuoroveden aikaan, teki sen vartioinnista helppoa. Onneksi siitä on jo pitkä aika.",
   "linkit": [
    "Ancien régimen",
    "Ludvig XI"
@@ -651,7 +650,7 @@
   "kohde": "kohde:mont-saint-michel",
   "kysymys": "Kuinka korkea vuorovesi lahdella on?",
   "uusi": true,
-  "vastaus": "No jopas, tämä on se ilmiö jonka takia paikka on tunnettu.\nMont-Saint-Michelin lahden vuorovesi on Euroopan suurimpia, ja vedenkorkeuden vaihtelu voi olla jopa noin neljätoista metriä. Suurimmillaan ero on [[kevätvuorovesien]] aikaan, ja vesi peittää laajan, loivan rantatasangon. [[Normandian]] ja [[Bretagnen]] rannikon muoto vahvistaa ilmiötä.\nKyyhky ei kyllä luottaisi rannan tasaisuuteen.",
+  "vastaus": "No jopas, tämä on se ilmiö jonka takia paikka on tunnettu. Mont-Saint-Michelin lahden vuorovesi on Euroopan suurimpia, ja vedenkorkeuden vaihtelu voi olla jopa noin neljätoista metriä. Suurimmillaan ero on [[kevätvuorovesien]] aikaan, ja vesi peittää laajan, loivan rantatasangon. [[Normandian]] ja [[Bretagnen]] rannikon muoto vahvistaa ilmiötä. Kyyhky ei kyllä luottaisi rannan tasaisuuteen.",
   "linkit": [
    "kevätvuorovesien",
    "Normandian",
@@ -666,7 +665,7 @@
   "kohde": "kohde:mont-saint-michel",
   "kysymys": "Milloin Mont-Saint-Michelin luostari perustettiin?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo, vaikka pitkältähän se kuulostaa.\nPerimätiedon mukaan [[Avranchesin]] piispa Aubert perusti saarelle kirkon vuonna 708 sen jälkeen, kun arkkienkeli Mikael oli ilmestynyt hänelle. Saarelle asettuivat [[benediktiinit]] vuonna 966, ja heidän aikanaan luostari kasvoi. Vuosiluvut kuuluvat osin legendaan, joten tarkkaa alkua ei voi varmasti sanoa.\nViisas Pöllö lupasi palata jo viime viikolla, mutta sama legenda se on tuokin.",
+  "vastaus": "Tost minä osaan kertoo, vaikka pitkältähän se kuulostaa. Perimätiedon mukaan [[Avranchesin]] piispa Aubert perusti saarelle kirkon vuonna 708 sen jälkeen, kun arkkienkeli Mikael oli ilmestynyt hänelle. Saarelle asettuivat [[benediktiinit]] vuonna 966, ja heidän aikanaan luostari kasvoi. Vuosiluvut kuuluvat osin legendaan, joten tarkkaa alkua ei voi varmasti sanoa. Viisas Pöllö lupasi palata jo viime viikolla, mutta sama legenda se on tuokin.",
   "linkit": [
    "Avranchesin",
    "benediktiinit"
@@ -680,7 +679,7 @@
   "kohde": "kohde:mont-saint-michel",
   "kysymys": "Mikä ruoka Mont-Saint-Michelillä on kuuluisa?",
   "uusi": true,
-  "vastaus": "Mmm— tuo kysymys on lempiaiheeni, tosin en saa syödä itse.\nSaaren tunnetuin ruoka on pehmeä, vaahtoinen munakas, jonka ravintola sai maineeseen 1800-luvun lopulla [[Annette Poulard]]. Munakas valmistettiin avotulella kuparipannussa. Alueen toinen erikoisuus on rantaniittyjen lampaanliha eli [[presuolé]]-lammas, joka laiduntaa meren suolaisilla niityillä.\nMunakas ei ole pulla, mutta annan sille anteeksi.",
+  "vastaus": "Mmm— tuo kysymys on lempiaiheeni, tosin en saa syödä itse. Saaren tunnetuin ruoka on pehmeä, vaahtoinen munakas, jonka ravintola sai maineeseen 1800-luvun lopulla [[Annette Poulard]]. Munakas valmistettiin avotulella kuparipannussa. Alueen toinen erikoisuus on rantaniittyjen lampaanliha eli [[presuolé]]-lammas, joka laiduntaa meren suolaisilla niityillä. Munakas ei ole pulla, mutta annan sille anteeksi.",
   "linkit": [
    "Annette Poulard",
    "presuolé"
@@ -694,7 +693,7 @@
   "kohde": "kohde:carcassonnen-linnoituskaupunki",
   "kysymys": "Kuka ennallisti kaupungin 1800-luvulla?",
   "uusi": false,
-  "vastaus": "Kato, tämän nimen kyllä muistan.\nLinnoituksen ennallisti arkkitehti ja teoreetikko [[Eugène Viollet-le-Duc]]. Hän tunnetaan myös [[Notre-Damen]] kirkon Pariisissa ennallistamistöistä. Hänen työnsä jakoi mielipiteitä: osa ihailee sitä, osa kritisoi tapaa, jolla hän täydensi keskiaikaista rakennetta. Linnoitus otettiin [[maailmanperintöluetteloon]] vuonna 1997.\nEipä paha muisti kyyhkyltä.",
+  "vastaus": "Kato, tämän nimen kyllä muistan. Linnoituksen ennallisti arkkitehti ja teoreetikko [[Eugène Viollet-le-Duc]]. Hän tunnetaan myös [[Notre-Damen]] kirkon Pariisissa ennallistamistöistä. Hänen työnsä jakoi mielipiteitä: osa ihailee sitä, osa kritisoi tapaa, jolla hän täydensi keskiaikaista rakennetta. Linnoitus otettiin [[maailmanperintöluetteloon]] vuonna 1997. Eipä paha muisti kyyhkyltä.",
   "linkit": [
    "Eugène Viollet-le-Duc",
    "Notre-Damen",
@@ -709,7 +708,7 @@
   "kohde": "kohde:carcassonnen-linnoituskaupunki",
   "kysymys": "Kuinka pitkä kaksoismuuri on?",
   "uusi": false,
-  "vastaus": "No niin, tähän on helppo vastata.\nKaksoismuuri on noin kolme kilometriä pitkä, ja sitä rytmittää 52 tornia. [[Roomalaiset]] rakensivat alkuperäisen muurin 200-luvulta alkaen, ja sitä tuki noin 34–40 puoliympyrän muotoista tornia. [[Visigootit]] rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.\nJa kaiken tämän laskin ylhäältä käsin.",
+  "vastaus": "No niin, tähän on helppo vastata. Kaksoismuuri on noin kolme kilometriä pitkä, ja sitä rytmittää 52 tornia. [[Roomalaiset]] rakensivat alkuperäisen muurin 200-luvulta alkaen, ja sitä tuki noin 34–40 puoliympyrän muotoista tornia. [[Visigootit]] rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi. Ja kaiken tämän laskin ylhäältä käsin.",
   "linkit": [
    "Roomalaiset",
    "Visigootit"
@@ -723,7 +722,7 @@
   "kohde": "kohde:carcassonnen-linnoituskaupunki",
   "kysymys": "Miksi linnoituksessa on kaksi muuria?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Pariteetti on aina hyvä puolustuksessa.\nKaksinkertainen muurirakenne antoi puolustajille selvän edun: hyökkääjän piti ensin murtautua ulomman muurin läpi ja päätyi sitten sisemmän ja ulomman muurin väliselle kapealle alueelle, jossa puolustajat voivat ampua molemmilta puolilta. Sisempi muuri periytyy [[roomalaisajalta]], ja ulompi lisättiin myöhemmin keskiajalla, todennäköisesti [[Ranskan kruunun]] aikana. Tarkkaa ajoitusta en ole varma antamaan.\nHyvin on suunniteltu, vaikka minä ohitan muurit lentäen.",
+  "vastaus": "Annas ku mietin. Pariteetti on aina hyvä puolustuksessa. Kaksinkertainen muurirakenne antoi puolustajille selvän edun: hyökkääjän piti ensin murtautua ulomman muurin läpi ja päätyi sitten sisemmän ja ulomman muurin väliselle kapealle alueelle, jossa puolustajat voivat ampua molemmilta puolilta. Sisempi muuri periytyy [[roomalaisajalta]], ja ulompi lisättiin myöhemmin keskiajalla, todennäköisesti [[Ranskan kruunun]] aikana. Tarkkaa ajoitusta en ole varma antamaan. Hyvin on suunniteltu, vaikka minä ohitan muurit lentäen.",
   "linkit": [
    "roomalaisajalta",
    "Ranskan kruunun"
@@ -737,7 +736,7 @@
   "kohde": "kohde:carcassonnen-linnoituskaupunki",
   "kysymys": "Missä Carcassonne sijaitsee Ranskassa?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Tämä on helppo paikka löytää katolta.\nCarcassonne sijaitsee Etelä-Ranskassa [[Auden]] departementissa, noin sadan kilometrin päässä [[Toulousesta]] kaakkoon. Kaupungin läpi kulkee [[Canal du Midi]], ja kaupunki sijaitsee [[Pyreneiden]] pohjoispuolella Välimeren ja Atlantin välisellä tiellä. Linnoitus kohoaa kukkulalla Aude-joen oikealla rannalla.\nYlhäältä se näkyy kauas.",
+  "vastaus": "Selvä juttu. Tämä on helppo paikka löytää katolta. Carcassonne sijaitsee Etelä-Ranskassa [[Auden]] departementissa, noin sadan kilometrin päässä [[Toulousesta]] kaakkoon. Kaupungin läpi kulkee [[Canal du Midi]], ja kaupunki sijaitsee [[Pyreneiden]] pohjoispuolella Välimeren ja Atlantin välisellä tiellä. Linnoitus kohoaa kukkulalla Aude-joen oikealla rannalla. Ylhäältä se näkyy kauas.",
   "linkit": [
    "Auden",
    "Toulousesta",
@@ -759,7 +758,7 @@
   "kohde": "kohde:carcassonnen-linnoituskaupunki",
   "kysymys": "Miksi tornien katot ovat teräväkärkisiä?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Moni on ihmetellyt samaa.\nTeräväkärkiset liuskekatot lisättiin tornien päälle 1800-luvun ennallistustöissä. Kriitikot ovat huomauttaneet, että kartiomaiset [[liuskekatot]] muistuttavat [[Pohjois-Ranskan]] rakennustapaa eivätkä sovi hyvin [[Välimeren]] ilmastoon. Alkuperäiset tornien katot eivät välttämättä olleet tällaisia.\nKatoista minulla on aina mielipide, vaikka en saa sanoa sitä.",
+  "vastaus": "Hyvä kysymys tuo. Moni on ihmetellyt samaa. Teräväkärkiset liuskekatot lisättiin tornien päälle 1800-luvun ennallistustöissä. Kriitikot ovat huomauttaneet, että kartiomaiset [[liuskekatot]] muistuttavat [[Pohjois-Ranskan]] rakennustapaa eivätkä sovi hyvin [[Välimeren]] ilmastoon. Alkuperäiset tornien katot eivät välttämättä olleet tällaisia. Katoista minulla on aina mielipide, vaikka en saa sanoa sitä.",
   "linkit": [
    "liuskekatot",
    "Pohjois-Ranskan",
@@ -803,7 +802,7 @@
   "kohde": "kohde:lascaux",
   "kysymys": "Mitä eläimiä luolan seinille on maalattu?",
   "uusi": true,
-  "vastaus": "No niin, nyt tulee eläimiä. Lascaux'n seiniä ja kattoja peittää yli kuusisataa maalausta, ja ne esittävät enimmäkseen suuria eläimiä. Mukana on hevosia, hirviä ja [[alkuhärkiä]], joiden lajit tunnetaan seudun ylemmän [[paleoliittisen]] kauden fossiiliaineistosta. Luolan osille on annettu omia nimiään, esimerkiksi [[Härkien sali]].\n\nMinä olen valoa vaativa lintu, joten pimeään kallioon maalaaminen on mielestäni jo sinänsä taidonnäyte. Katosta olisin ainakin pudonnut.",
+  "vastaus": "No niin, nyt tulee eläimiä. Lascaux'n seiniä ja kattoja peittää yli kuusisataa maalausta, ja ne esittävät enimmäkseen suuria eläimiä. Mukana on hevosia, saksanhirviä ja [[alkuhärkiä]], joiden lajit tunnetaan seudun ylemmän [[paleoliittisen]] kauden fossiiliaineistosta. Luolan osille on annettu omia nimiään, esimerkiksi [[Härkien sali]].\n\nMinä olen valoa vaativa lintu, joten pimeään kallioon maalaaminen on mielestäni jo sinänsä taidonnäyte. Katosta olisin ainakin pudonnut.",
   "linkit": [
    "alkuhärkiä",
    "paleoliittisen",
@@ -1242,10 +1241,11 @@
   "kohde": "kohde:douaumont",
   "kysymys": "Kuka vihki hautausmaan 1923?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Hautausmaan vihki vuonna 1923 [[André Maginot]], joka oli itse Verdunin veteraani. Hautausmaa on Ranskan suurin [[ensimmäisen maailmansodan]] sotilashautausmaa, ja siellä on 16 142 hautaa. Se sijaitsee luukammion edessä rinteessä, ja se vihittiin noin seitsemän vuotta taistelun jälkeen. Hiljainen paikka, sen verran minä tiedän.",
+  "vastaus": "Joo, tän minä tiedän. Hautausmaan vihki vuonna 1923 [[André Maginot]], joka oli itse Verdunin veteraani. Se on Verdunin alueen suurin sotilashautausmaa ja yksi Ranskan suurimmista [[ensimmäisen maailmansodan]] sotilashautausmaista: siellä on 16 142 hautaa. Hautausmaa sijaitsee luukammion edessä rinteessä, ja se vihittiin noin seitsemän vuotta [[Verdunin]] taistelun jälkeen. Hiljainen paikka, sen verran minä tiedän.",
   "linkit": [
    "André Maginot",
-   "ensimmäisen maailmansodan"
+   "ensimmäisen maailmansodan",
+   "Verdunin"
   ],
   "jatkot": [
    "Mikä on Maginot-linja?",
@@ -1586,7 +1586,7 @@
   "kohde": "kohde:dune-du-pilat",
   "kysymys": "Kuinka paljon hiekkaa dyynissä on?",
   "uusi": true,
-  "vastaus": "Ai tota, hyvä lukema. Arvioiden mukaan [[Dune du Pilat]] sisältää noin 60 miljoonaa kuutiometriä hiekkaa. Määrä on valtava, kun ottaa huomioon, että dyyni on vain noin 500 metriä leveä ja 2,7 kilometriä pitkä, mutta korkeutta sillä on yli sata metriä. Luku on arvio, ei tarkka mittaus, sillä hiekka liikkuu ja muoto muuttuu. Dyyni on [[Euroopan korkein hiekkadyyni]], ja sen sisältämä hiekkamäärä selittää, miksi sen siirtyminen tuntuu niin hitaalta mutta voimakkaalta.\nKuusikymmentä miljoonaa kuutiota. Minä jaksan laskea vain murusia, ja ne ovat yleensä briochea.",
+  "vastaus": "Ai tota, hyvä lukema. Arvioiden mukaan [[Dune du Pilat]] sisältää noin 60 miljoonaa kuutiometriä hiekkaa. Määrä on valtava, kun ottaa huomioon, että dyyni on vain noin 500 metriä leveä ja 2,7 kilometriä pitkä, mutta korkeutta sillä on yli sata metriä. Luku on arvio, ei tarkka mittaus, sillä hiekka liikkuu ja muoto muuttuu. Dyyni on [[Euroopan korkein hiekkadyyni]], ja sen sisältämä hiekkamäärä selittää, miksi sen siirtyminen tuntuu niin hitaalta mutta voimakkaalta. Kuusikymmentä miljoonaa kuutiota. Minä jaksan laskea vain murusia, ja ne ovat yleensä briochea.",
   "linkit": [
    "Dune du Pilat",
    "Euroopan korkein hiekkadyyni"
@@ -1848,7 +1848,7 @@
   "kohde": "kohde:hahmotelma-canigou",
   "kysymys": "Kuinka korkea Canigou on?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. [[Canigou]] eli [[Canigó]] on 2 784 metriä korkea vuori Etelä-Ranskan [[Pyreneillä]], alle 50 kilometrin päässä merestä. Lähellä rannikkoa oleva sijainti ja jyrkät rinteet tekevät siitä silmiinpistävän, ja sitä pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena. Todellisuudessa Pyreneillä on korkeampiakin huippuja, mutta Canigou on edelleen merkittävä maamerkki. Luku on korkeus merenpinnasta.\nKaksi tuhatta seitsemänsataa kahdeksankymmentäneljä metriä. Minulle riittää mäntyoksa, mutta vuorelle olisi kyllä mukava kerran laskeutua.",
+  "vastaus": "Joo, tän minä tiedän. [[Canigou]] eli [[Canigó]] on 2 784 metriä korkea vuori Etelä-Ranskan [[Pyreneillä]], alle 50 kilometrin päässä merestä. Lähellä rannikkoa oleva sijainti ja jyrkät rinteet tekevät siitä silmiinpistävän, ja sitä pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena. Todellisuudessa Pyreneillä on korkeampiakin huippuja, mutta Canigou on edelleen merkittävä maamerkki. Luku on korkeus merenpinnasta. Kaksi tuhatta seitsemänsataa kahdeksankymmentäneljä metriä. Minulle riittää mäntyoksa, mutta vuorelle olisi kyllä mukava kerran laskeutua.",
   "linkit": [
    "Canigou",
    "Canigó",
@@ -1906,10 +1906,10 @@
   "kohde": "kohde:hahmotelma-verdon",
   "kysymys": "Mistä veden turkoosi väri tulee?",
   "uusi": false,
-  "vastaus": "Tost minä osaan kertoo. Joen turkoosi väri johtuu pääosin veteen sekoittuneesta hienojakoisesta kiviaineksesta ja liuenneista mineraaleista, jotka aiheuttavat valon [[sironta]]a siten, että vesi näyttää sinivihreältä. Kalkkikiviseudun vesi on usein mineraalipitoista, ja sävy vaihtelee valaistuksen, syvyyden ja vuodenajan mukaan. Turkoosista väristä ja sen syntytavoista kerrotaan myös Afganistanin maalehdessä, jossa käsitellään [[Istalifin]] savenvalajien lasitetta. Tää oli kyl kaunis aihe.",
+  "vastaus": "Tost minä osaan kertoo. Joen turkoosi väri johtuu pääosin veteen sekoittuneesta hienojakoisesta kiviaineksesta ja liuenneista mineraaleista, jotka aiheuttavat valon [[sironta]]a siten, että vesi näyttää sinivihreältä. Joen ympäristössä on paljon [[kalkkikiveä]], joten vesi on usein mineraalipitoista, ja sävy vaihtelee valaistuksen, syvyyden ja vuodenajan mukaan. Tää oli kyl kaunis aihe.",
   "linkit": [
    "sironta",
-   "Istalifin"
+   "kalkkikiveä"
   ],
   "jatkot": [
    "Miten valon sironta toimii?",
@@ -2099,11 +2099,10 @@
   "kohde": "kohde:hahmotelma-saint-malo",
   "kysymys": "Kuka oli saint-malolainen tutkimusmatkailija Jacques Cartier?",
   "uusi": true,
-  "vastaus": "Tuota niin. Jacques Cartier oli saint-malolainen merenkulkija, joka purjehti 1500-luvulla Ranskan kuninkaan toimeksiannosta Pohjois-Amerikan itärannikolle. Hän tutki 1530-luvulla [[Saint Lawrence -joen]] suistoa ja jokea ja kartoitti seutua, josta tuli osa [[Uuden Ranskan]] siirtomaata. Hän kirjasi muistiin myös nimen, josta tuli myöhemmin [[Kanadan]] nimi. Kotikaupungista aika kauas, vähän niin kuin minulla.",
+  "vastaus": "Tuota niin. Jacques Cartier oli saint-malolainen merenkulkija [[Bretagnen]] rannikolta, ja hän purjehti 1500-luvulla kuningas [[Frans I]]:n toimeksiannosta Pohjois-Amerikan itärannikolle. Hän tutki 1530-luvulla Saint Lawrence -jokea ja kartoitti seutua, josta tuli osa Uutta Ranskaa. Hän kirjasi muistiin myös nimen, josta tuli myöhemmin Kanadan nimi. Kotikaupungista aika kauas, vähän niin kuin minulla.",
   "linkit": [
-   "Saint Lawrence -joen",
-   "Uuden Ranskan",
-   "Kanadan"
+   "Bretagnen",
+   "Frans I"
   ],
   "jatkot": [
    "Mikä on Saint Lawrence -joki?",
@@ -2276,7 +2275,7 @@
   "kohde": "kohde:hahmotelma-amiens",
   "kysymys": "Mitä länsijulkisivun kuvanveisto esittää?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tost minä tiedän vähän, mut en kaikkea. Tietoruudun mukaan katedraali tunnetaan erityisesti 1200-luvun alun goottilaisesta [[kuvanveistosta]] länsijulkisivullaan ja eteläisen ristivarren portaalissa. Länsijulkisivun portaaleissa on perinteisesti esitetty Raamatun hahmoja, kuten profeettoja ja apostoleja, sekä pyhimyksiä ja Kristusta, ja keskiaikaiset katedraalit toimivat kivisinä kuvakirjoina, joista lukutaidoton kansakin saattoi lukea Raamatun kertomuksia. En ole kuitenkaan varma, mitkä hahmot kussakin Amiensin portaalissa tarkalleen ovat, joten en yritä luetella niitä yksityiskohtaisesti. Tarkempi kuvaus kannattaa tarkistaa [[Unescon]] tai kirkon omista esittelyistä. Ei tää ollu kyyhkyn vahvinta alaa.",
+  "vastaus": "Hetkinen ny. Tost minä tiedän vähän, mut en kaikkea. Katedraali tunnetaan erityisesti 1200-luvun alun goottilaisesta [[kuvanveistosta]] länsijulkisivullaan ja eteläisen ristivarren portaalissa. Länsijulkisivun portaaleissa on perinteisesti esitetty Raamatun hahmoja, kuten profeettoja ja apostoleja, sekä pyhimyksiä ja Kristusta, ja keskiaikaiset katedraalit toimivat kivisinä kuvakirjoina, joista lukutaidoton kansakin saattoi lukea Raamatun kertomuksia. En ole kuitenkaan varma, mitkä hahmot kussakin Amiensin portaalissa tarkalleen ovat, joten en yritä luetella niitä yksityiskohtaisesti. Tarkempi kuvaus kannattaa tarkistaa [[Unescon]] tai kirkon omista esittelyistä. Ei tää ollu kyyhkyn vahvinta alaa.",
   "linkit": [
    "kuvanveistosta",
    "Unescon"
@@ -2774,7 +2773,7 @@
   "kohde": "kohde:hahmotelma-mont-ventoux",
   "kysymys": "Miksi huippu on puuton ja valkoinen?",
   "uusi": false,
-  "vastaus": "Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on \"[[Kalju vuori]]\", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla [[kasvillisuus]] yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.",
+  "vastaus": "Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on \"[[Kalju vuori]]\", ja nimi kuvaa huippua hyvin, sillä vuoren yläosa on paljas ja vaalea. Huippua peittää kalkkikivirouhe, ja maa on karua ja tuulista, joten [[kasvillisuus]] ei juuri pysy siinä. Lisäksi vuoren metsiä on kautta aikojen hakattu, minkä arvellaan lisänneen paljautta, vaikka tarkkaa osuutta en tiedä varmasti. Vuori kohoaa 1 910 metriin ja on alueensa korkein. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.",
   "linkit": [
    "Mont Ventoux'n",
    "Kalju vuori",
@@ -4077,7 +4076,7 @@
   "kohde": "nosto:notre-damen-kukko",
   "kysymys": "Mitä tornin huipun kukon sisään oli suljettu?",
   "uusi": false,
-  "vastaus": "Kato, tän muistan hyvin. Kukon sisään oli suljettu [[pyhäinjäännöksiä]], ja kuparinen kukko seisoi [[Notre-Damen]] keskitornin huipulla. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi palon jälkeisenä päivänä maasta lommoilla. Samassa palossa tuhoutui yli tuhannesta tammirungosta tehty [[kattotuolisto]].\nOnneksi se löytyi.",
+  "vastaus": "Kato, tän muistan hyvin. Kukon sisään oli suljettu [[pyhäinjäännöksiä]], ja kuparinen kukko seisoi [[Notre-Damen]] keskitornin huipulla. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi palon jälkeisenä päivänä maasta lommoilla. Samassa palossa tuhoutui yli tuhannesta tammirungosta tehty [[kattotuolisto]]. Onneksi se löytyi.",
   "linkit": [
    "pyhäinjäännöksiä",
    "Notre-Damen",
@@ -4092,7 +4091,7 @@
   "kohde": "nosto:notre-damen-kukko",
   "kysymys": "Miksi kuusitoista kuparipatsasta oli poissa katolta palon aikaan?",
   "uusi": false,
-  "vastaus": "No niin, tässä oli vihdoin hiukan onnea. Kuusitoista kuparipatsasta oli nostettu pois katolta korjattavaksi neljä päivää ennen paloa. Niinpä ne eivät olleet tornin ympärillä, kun [[ullakko]] syttyi 15. huhtikuuta 2019 ja keskitorni romahti kello 19.50. Patsaat olivat siis turvassa sillä hetkellä, kun [[Notre-Dame]] oli suurimmassa vaarassa.\nYlhäältä katsottuna se päivä oli hiljainen ja raskas, eikä sille keksi leikkisää sanaa.",
+  "vastaus": "No niin, tässä oli vihdoin hiukan onnea. Kuusitoista kuparipatsasta oli nostettu pois katolta korjattavaksi neljä päivää ennen paloa. Niinpä ne eivät olleet tornin ympärillä, kun [[ullakko]] syttyi 15. huhtikuuta 2019 ja keskitorni romahti kello 19.50. Patsaat olivat siis turvassa sillä hetkellä, kun [[Notre-Dame]] oli suurimmassa vaarassa. Ylhäältä katsottuna se päivä oli hiljainen ja raskas, eikä sille keksi leikkisää sanaa.",
   "linkit": [
    "ullakko",
    "Notre-Dame"
@@ -4106,7 +4105,7 @@
   "kohde": "nosto:notre-damen-kukko",
   "kysymys": "Mitä uuden kukon sisään pantiin?",
   "uusi": false,
-  "vastaus": "Ai se. Uuden kullatun [[kukon]] sisään pantiin samat [[pyhäinjäännökset]], jotka olivat olleet vanhan kukon sisällä. Lisäksi sinne suljettiin 2 000 [[jälleenrakentajien]] nimet. Kukko seisoo [[Notre-Damen]] tornin huipulla, jossa vanha kuparinen kukko seisoi ennen paloa.\nPieni lintu, suuri vastuu.",
+  "vastaus": "Ai se. Uuden kullatun [[kukon]] sisään pantiin samat [[pyhäinjäännökset]], jotka olivat olleet vanhan kukon sisällä. Lisäksi sinne suljettiin 2 000 [[jälleenrakentajien]] nimet. Kukko seisoo [[Notre-Damen]] tornin huipulla, jossa vanha kuparinen kukko seisoi ennen paloa. Pieni lintu, suuri vastuu.",
   "linkit": [
    "kukon",
    "pyhäinjäännökset",
@@ -4122,7 +4121,7 @@
   "kohde": "nosto:notre-damen-kukko",
   "kysymys": "Mistä Notre-Damen vanha kattotuolisto oli tehty?",
   "uusi": true,
-  "vastaus": "Katotaas. Notre-Damen vanha [[kattotuolisto]] oli tehty yli tuhannesta [[tammirungosta]]. Rakenne oli peräisin 1200-luvulta, joten se oli seissyt katon alla useita satoja vuosia. Se paloi ullakon tulipalossa 15. huhtikuuta 2019.\nPuuta riitti, mutta tuli oli nopeampi.",
+  "vastaus": "Katotaas. Notre-Damen vanha [[kattotuolisto]] oli tehty yli tuhannesta [[tammirungosta]]. Rakenne oli peräisin 1200-luvulta, joten se oli seissyt katon alla useita satoja vuosia. Se paloi ullakon tulipalossa 15. huhtikuuta 2019. Puuta riitti, mutta tuli oli nopeampi.",
   "linkit": [
    "kattotuolisto",
    "tammirungosta"
@@ -4136,7 +4135,7 @@
   "kohde": "nosto:notre-damen-kukko",
   "kysymys": "Milloin Notre-Damen palo syttyi?",
   "uusi": true,
-  "vastaus": "Nyt muistan: Notre-Damen [[ullakko]] syttyi 15. huhtikuuta 2019. Palo eteni nopeasti, ja [[keskitorni]] romahti kello 19.50. Tornin huipulla seisonut kuparinen kukko putosi mukana ja löytyi seuraavana päivänä maasta.\nSe päivä muistetaan Pariisissa hiljaisena.",
+  "vastaus": "Nyt muistan: Notre-Damen [[ullakko]] syttyi 15. huhtikuuta 2019. Palo eteni nopeasti, ja [[keskitorni]] romahti kello 19.50. Tornin huipulla seisonut kuparinen kukko putosi mukana ja löytyi seuraavana päivänä maasta. Se päivä muistetaan Pariisissa hiljaisena.",
   "linkit": [
    "ullakko",
    "keskitorni"
@@ -4150,7 +4149,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kysymys": "Miksi leivät numeroidaan ennen maistamista?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Leivät numeroidaan ennen maistamista, jotta raati ei tiedä, kenen leipää se arvostelee. Näin kilpailu pysyy sokkona ja arvostelu perustuu pelkästään leivän makuun ja laatuun. Raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista, ja kaikki arvioivat [[patonkeja]] samoin ehdoin. Kilpailun voittaja saa lisäksi toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan.\nMinä olisin ottanut tehtäväksi maistelun, mutta kukaan ei kysynyt.",
+  "vastaus": "Hetkinen ny. Leivät numeroidaan ennen maistamista, jotta raati ei tiedä, kenen leipää se arvostelee. Näin kilpailu pysyy sokkona ja arvostelu perustuu pelkästään leivän makuun ja laatuun. Raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista, ja kaikki arvioivat [[patonkeja]] samoin ehdoin. Kilpailun voittaja saa lisäksi toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan. Minä olisin ottanut tehtäväksi maistelun, mutta kukaan ei kysynyt.",
   "linkit": [
    "patonkeja",
    "presidentinpalatsin"
@@ -4164,7 +4163,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kysymys": "Mitä patongissa saa lain mukaan olla?",
   "uusi": false,
-  "vastaus": "Joo, tästä minä tiedän. Lain mukaan perinteisessä patongissa saa käytännössä olla vain [[vehnäjauhoa]], vettä, suolaa ja hiivaa. Lisäksi taikinaa ei saa missään vaiheessa pakastaa. Pariisin järjestämässä kilpailussa leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Kilpailu on järjestetty vuodesta 1994, ja sen [[voittaja]] saa rahapalkinnon.\nNo, lyhyt lista, mut kyl siitä leipä syntyy.",
+  "vastaus": "Joo, tästä minä tiedän. Lain mukaan perinteisessä patongissa saa käytännössä olla vain [[vehnäjauhoa]], vettä, suolaa ja hiivaa. Lisäksi taikinaa ei saa missään vaiheessa pakastaa. Pariisin järjestämässä kilpailussa leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Kilpailu on järjestetty vuodesta 1994, ja sen [[voittaja]] saa rahapalkinnon. No, lyhyt lista, mut kyl siitä leipä syntyy.",
   "linkit": [
    "vehnäjauhoa",
    "voittaja"
@@ -4178,7 +4177,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kysymys": "Mikä velvollisuus voittajalle tulee?",
   "uusi": false,
-  "vastaus": "Ai se. Voittajan velvollisuus on toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan. Sen lisäksi hän saa rahapalkinnon. Kilpailu järjestetään Pariisissa, ja siinä palkitaan paras perinteinen [[patonki]]. Leivät arvostellaan sokkona, joten voitto perustuu pelkästään leivän laatuun.\nKunnia on kai suuri, ja leipiä paljon.",
+  "vastaus": "Ai se. Voittajan velvollisuus on toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan. Sen lisäksi hän saa rahapalkinnon. Kilpailu järjestetään Pariisissa, ja siinä palkitaan paras perinteinen [[patonki]]. Leivät arvostellaan sokkona, joten voitto perustuu pelkästään leivän laatuun. Kunnia on kai suuri, ja leipiä paljon.",
   "linkit": [
    "presidentinpalatsin",
    "patonki"
@@ -4192,7 +4191,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kysymys": "Kuinka pitkä ja painava kilpailun patongin pitää olla?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Kilpailun patongin pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Nämä rajat kuuluvat kilpailun tarkkoihin sääntöihin, jotka Pariisin kaupunki on vahvistanut. Lisäksi taikina saa sisältää vain [[vehnäjauhoa]], vettä, suolaa ja hiivaa, eikä sitä saa pakastaa. Leivät numeroidaan ennen maistamista, jotta [[raati]] arvostelee niitä sokkona.\nTarkat mitat, tarkka kyyhky.",
+  "vastaus": "Selvä juttu. Kilpailun patongin pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Nämä rajat kuuluvat kilpailun tarkkoihin sääntöihin, jotka Pariisin kaupunki on vahvistanut. Lisäksi taikina saa sisältää vain [[vehnäjauhoa]], vettä, suolaa ja hiivaa, eikä sitä saa pakastaa. Leivät numeroidaan ennen maistamista, jotta [[raati]] arvostelee niitä sokkona. Tarkat mitat, tarkka kyyhky.",
   "linkit": [
    "vehnäjauhoa",
    "raati"
@@ -4206,7 +4205,7 @@
   "kohde": "nosto:pariisin-patonki",
   "kysymys": "Keitä patonkikilpailun raadissa istuu?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Kaikki arvioivat samat numeroidut leivät tietämättä, kenen ne ovat. Kilpailun järjestää Pariisin kaupunki, ja se on pidetty vuodesta 1994. Voittaja saa rahapalkinnon ja toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan.\nRanskassa on varmasti oma suosikkini, [[brioche]], vaikka se ei patonkikisaan kuulu.",
+  "vastaus": "Odotas vähän. Raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Kaikki arvioivat samat numeroidut leivät tietämättä, kenen ne ovat. Kilpailun järjestää Pariisin kaupunki, ja se on pidetty vuodesta 1994. Voittaja saa rahapalkinnon ja toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan. Ranskassa on varmasti oma suosikkini, [[brioche]], vaikka se ei patonkikisaan kuulu.",
   "linkit": [
    "presidentinpalatsin",
    "brioche"
@@ -4220,7 +4219,7 @@
   "kohde": "nosto:pariisi-soi",
   "kysymys": "Mistä lempinimi la Môme Piaf tuli?",
   "uusi": false,
-  "vastaus": "Kas vaan, tämän minä osaan. Yökerhon omistaja [[Louis Leplée]] kuuli nuoren laulajan kadulla vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli [[Édith Piaf]], joka oli vain 142 senttiä pitkä. Hänen tunnetuin laulunsa [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat hän kirjoitti itse.\nVarpunen, ei kyyhky, mutta kyl se naapuri on.",
+  "vastaus": "Kas vaan, tämän minä osaan. Yökerhon omistaja [[Louis Leplée]] kuuli nuoren laulajan kadulla vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli [[Édith Piaf]], joka oli vain 142 senttiä pitkä. Hänen tunnetuin laulunsa [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat hän kirjoitti itse. Varpunen, ei kyyhky, mutta kyl se naapuri on.",
   "linkit": [
    "Louis Leplée",
    "Édith Piaf",
@@ -4235,7 +4234,7 @@
   "kohde": "nosto:pariisi-soi",
   "kysymys": "Miten Django Reinhardt opetteli soittamaan uudelleen?",
   "uusi": false,
-  "vastaus": "Mmm, tää on koskettava tarina. Lokakuussa 1928 [[Django Reinhardtin]] asuntovaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Hänen vasemman kätensä nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan [[kitaran]], ja Django opetteli soittamaan soolot kahdella sormella. Hän oli kasvanut romaniperheen asuntovaunussa Pariisin porttien luona ja soittanut [[banjoa]] jo lapsena.\nOnpas siit ollut hyvä, että hän ei luovuttanut.",
+  "vastaus": "Mmm, tää on koskettava tarina. Lokakuussa 1928 [[Django Reinhardtin]] asuntovaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Hänen vasemman kätensä nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan [[kitaran]], ja Django opetteli soittamaan soolot kahdella sormella. Hän oli kasvanut romaniperheen asuntovaunussa Pariisin porttien luona ja soittanut [[banjoa]] jo lapsena. Onpas siit ollut hyvä, että hän ei luovuttanut.",
   "linkit": [
    "Django Reinhardtin",
    "kitaran",
@@ -4250,7 +4249,7 @@
   "kohde": "nosto:pariisi-soi",
   "kysymys": "Millaista musiikkia Pariisin kaduilla kuultiin 1930-luvulla?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Aineistoni mukaan [[Édith Piaf]] lauloi kadulla kolikoista, ja yökerhon omistaja [[Louis Leplée]] kuuli hänet siellä vuonna 1935. Django Reinhardt puolestaan oli soittanut jo lapsena [[banjoa]] pihoissa ja tanssipaikoissa. Tarkempaa kuvausta koko kaupungin katumusiikista en ole varma antaa, joten en halua arvata sen sisältöä. Pariisin kaduilla ja pihoilla soitettiin ja laulettiin siis ainakin näiden kahden tapaan.\nTuo oli rehellinen vastaus, vaikka lyhyempi kuin toivoin.",
+  "vastaus": "Annas ku mietin. Aineistoni mukaan [[Édith Piaf]] lauloi kadulla kolikoista, ja yökerhon omistaja [[Louis Leplée]] kuuli hänet siellä vuonna 1935. Django Reinhardt puolestaan oli soittanut jo lapsena [[banjoa]] pihoissa ja tanssipaikoissa. Tarkempaa kuvausta koko kaupungin katumusiikista en ole varma antaa, joten en halua arvata sen sisältöä. Pariisin kaduilla ja pihoilla soitettiin ja laulettiin siis ainakin näiden kahden tapaan. Tuo oli rehellinen vastaus, vaikka lyhyempi kuin toivoin.",
   "linkit": [
    "Édith Piaf",
    "Louis Leplée",
@@ -4265,7 +4264,7 @@
   "kohde": "nosto:pariisi-soi",
   "kysymys": "Kuinka pitkä Édith Piaf oli?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. [[Édith Piaf]] oli 142 senttiä pitkä, ja juuri siksi hänen lempinimensä la Môme Piaf sopi hyvin. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Hän syntyi [[Bellevillessä]] joulukuussa 1915, ja tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla.\nPieni kooltaan, mutta kyl se ääni kuului.",
+  "vastaus": "Hyvä kysymys tuo. [[Édith Piaf]] oli 142 senttiä pitkä, ja juuri siksi hänen lempinimensä la Môme Piaf sopi hyvin. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Hän syntyi [[Bellevillessä]] joulukuussa 1915, ja tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla. Pieni kooltaan, mutta kyl se ääni kuului.",
   "linkit": [
    "Édith Piaf",
    "Bellevillessä",
@@ -4280,7 +4279,7 @@
   "kohde": "nosto:pariisi-soi",
   "kysymys": "Milloin La Vie en rose ilmestyi ja kuka sen sanat kirjoitti?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat kirjoitti [[Édith Piaf]] itse. Se on hänen tunnetuin laulunsa. Piaf oli syntynyt Pariisin Bellevillessä joulukuussa 1915, ja hän oli ollut katulaulaja ennen kuin yökerhon omistaja kuuli hänet vuonna 1935.\nHän on yksi pariisilaisista, jotka ovat laulaneet kaupungin kuuluisaksi.",
+  "vastaus": "Joo, tän minä tiedän. [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat kirjoitti [[Édith Piaf]] itse. Se on hänen tunnetuin laulunsa. Piaf oli syntynyt Pariisin Bellevillessä joulukuussa 1915, ja hän oli ollut katulaulaja ennen kuin yökerhon omistaja kuuli hänet vuonna 1935. Hän on yksi pariisilaisista, jotka ovat laulaneet kaupungin kuuluisaksi.",
   "linkit": [
    "La Vie en rose",
    "Édith Piaf"
@@ -4294,7 +4293,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kysymys": "Miksi kardinaali uskoi väärennetyt kirjeet?",
   "uusi": false,
-  "vastaus": "Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.\nMoni olisi kai uskonut.",
+  "vastaus": "Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta. Moni olisi kai uskonut.",
   "linkit": [
    "Jeanne de la Motte",
    "de Rohanin",
@@ -4310,7 +4309,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kysymys": "Mihin kaulanauhan timantit lopulta päätyivät?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Kaulanauhan kivet pilkottiin ja myytiin Lontoossa ja Pariisissa, joten nauha ei säilynyt kokonaisena. Rohan oli luovuttanut nauhan huijarin lähetille tammikuussa 1785. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät [[kuningattaren]] puoleen ja [[kardinaali]] pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.\nKauniit kivet, ja kaikki hajalleen.",
+  "vastaus": "Selvä juttu. Kaulanauhan kivet pilkottiin ja myytiin Lontoossa ja Pariisissa, joten nauha ei säilynyt kokonaisena. Rohan oli luovuttanut nauhan huijarin lähetille tammikuussa 1785. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät [[kuningattaren]] puoleen ja [[kardinaali]] pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut. Kauniit kivet, ja kaikki hajalleen.",
   "linkit": [
    "kuningattaren",
    "kardinaali"
@@ -4324,10 +4323,10 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kysymys": "Miksi Chasles piti kokoelmastaan kiinni vuosia?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Aineistossani sanotaan, että [[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko [[Michel Chasles'lle]] noin 27 000 käsin kirjoitettua kirjettä. Syytä siihen, miksi Chasles piti kokoelmastaan kiinni vuosia, en ole varma. Tekstin loppu ei kerro sitä, enkä halua arvata sitä. Voin kertoa vain, että kirjeitä oli todella paljon.\nNo, tää jäi ny auki.",
+  "vastaus": "Odotas vähän. [[Chasles]] piti kokoelmastaan kiinni, koska hän uskoi kirjeet aidoiksi: [[Denis Vrain-Lucas]] myi hänelle 1860-luvulla noin 27 000 kirjettä, jotka väitettiin kuuluisten ihmisten kirjoittamiksi. Ne olivat kuitenkin väärennöksiä. Osa kirjeistä näytti todistavan, että painovoima keksittiin Ranskassa, mikä imarteli ranskalaista kansallisylpeyttä ja sokaisi ostajan. Huijaus paljastui vasta vuonna 1869. No, kyllä usko voi sokaista.",
   "linkit": [
-   "Denis Vrain-Lucas",
-   "Michel Chasles'lle"
+   "Chasles",
+   "Denis Vrain-Lucas"
   ],
   "jatkot": [
    "Kuka myi kirjeet matemaatikko Chasles'lle?",
@@ -4338,7 +4337,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kysymys": "Miten kaulanauhan huijaus paljastui?",
   "uusi": true,
-  "vastaus": "Katotaas. Huijaus paljastui, kun ensimmäinen maksuerä erääntyi elokuussa 1785 eikä kardinaali maksanut. Kauppiaat kääntyivät [[kuningattaren]] puoleen, ja tällöin selvisi, ettei hän ollut tilannut tai saanut kaulanauhaa. [[Kardinaali de Rohan]] pidätettiin Versailles'ssa. Oikeus vapautti hänet 1786, mutta kuningattaren maine ei toipunut. Huijauksen taustalla oli [[Jeanne de la Motte]].\nViisas Pöllö olisi osannut tämän paremmin, mutta hän on kuulemma matkoilla.",
+  "vastaus": "Katotaas. Huijaus paljastui, kun ensimmäinen maksuerä erääntyi elokuussa 1785 eikä kardinaali maksanut. Kauppiaat kääntyivät [[kuningattaren]] puoleen, ja tällöin selvisi, ettei hän ollut tilannut tai saanut kaulanauhaa. [[Kardinaali de Rohan]] pidätettiin Versailles'ssa. Oikeus vapautti hänet 1786, mutta kuningattaren maine ei toipunut. Huijauksen taustalla oli [[Jeanne de la Motte]]. Viisas Pöllö olisi osannut tämän paremmin, mutta hän on kuulemma matkoilla.",
   "linkit": [
    "kuningattaren",
    "Kardinaali de Rohan",
@@ -4353,7 +4352,7 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kysymys": "Mitä Vrain-Lucas myi Michel Chasles'lle?",
   "uusi": true,
-  "vastaus": "Ai tota. [[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä. Luku on aineistossani selvä, mutta tekstin loppu on katkennut, joten kirjeiden sisällöstä en voi sanoa enempää. Kaupan tuloksena [[Chasles]] sai erittäin suuren kokoelman.\nPitkä kirjepino, ja sen kantaminen olisi ollut oma urakkansa.",
+  "vastaus": "Ai tota. [[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko Michel Chasles'lle tuhansia käsin kirjoitettuja kirjeitä, noin 27 000 asiakirjaa, joiden väitettiin olevan muun muassa Pascalin, Galilein ja Newtonin kirjoittamia. Kirjeet olivat kuitenkin Vrain-Lucasin itse tekemiä väärennöksiä. [[Chasles]] uskoi ne aidoiksi ja maksoi niistä suuren summan, kunnes huijaus paljastui vuonna 1869, ja Vrain-Lucas tuomittiin vuonna 1870 vankeuteen. Ja kaikki ne kirjeet vielä väärennöksiä.",
   "linkit": [
    "Denis Vrain-Lucas",
    "Chasles"
