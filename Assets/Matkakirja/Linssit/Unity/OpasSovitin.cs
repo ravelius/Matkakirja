@@ -643,14 +643,19 @@ namespace Matkakirja.Natiivi
             get
             {
                 var l = new List<(string, string, string, bool)>();
-                if (yksPolku == null || !yksValimuisti.TryGetValue(yksPolku, out var kuvat) || kuvat == null) return l;
+                var kuvat = yksPolku != null && yksValimuisti.TryGetValue(yksPolku, out var kv) ? kv : null;
                 var t = Viimeisin?.kierrosKohteet ?? Viimeisin?.kohteet;
-                foreach (var k in kuvat)
+                foreach (var k in kuvat ?? new List<OpasYksityiskohdat.Kuva>())
                 {
                     string nimi = string.Equals(k.KohdeId, "avaus", StringComparison.OrdinalIgnoreCase) ? Aloituskaupunki
                         : t?.Find(x => string.Equals(x.Id, k.KohdeId, StringComparison.OrdinalIgnoreCase))?.Nimi;
                     l.Add((string.IsNullOrWhiteSpace(nimi) ? k.KohdeId : nimi, k.Tekija?.Trim() ?? "", k.Lisenssi?.Trim() ?? "", k.Havainnekuva));
                 }
+                // Historiaosioiden kuvat (kohde = osion otsikko).
+                var v = Viimeisin;
+                if (v?.historiaKuvat != null)
+                    foreach (var k in v.historiaKuvat)
+                        l.Add((v.historiaOsiot.Find(x => x.Tunnus == k.KohdeId)?.Otsikko ?? k.KohdeId, k.Tekija?.Trim() ?? "", k.Lisenssi?.Trim() ?? "", k.Havainnekuva));
                 return l;
             }
         }
@@ -948,7 +953,7 @@ namespace Matkakirja.Natiivi
         {
             float raja = Time.unscaledTime + 12f;
             while (yksPolku != null && yksLataukset.Contains(yksPolku) && Time.unscaledTime < raja && kaynnissa()) yield return null;
-            var yksKuvat = yksPolku != null && yksValimuisti.TryGetValue(yksPolku, out var vk) ? vk : null;
+            var yksKuvat = historiaOsiot.Exists(x => x.Tunnus == kohdeId) ? historiaKuvat : yksPolku != null && yksValimuisti.TryGetValue(yksPolku, out var vk) ? vk : null;
             if (yksKuvat == null || yksKuvat.Count == 0) yield break;
             List<(int, double)> ajat = null;
             if (!string.IsNullOrEmpty(ajatUrl))
@@ -2142,55 +2147,84 @@ namespace Matkakirja.Natiivi
         // Kehityskaupungeissa kierroksen lähtöön, jossa ei soi siltalausetta, soi joka HistoriaVali:nteen lentoon (yli HistoriaMinLentoS)
         // seuraava kuulematon osio siltalauseiden kanavalla; seuraavan kohteen kerronta alkaa sen perään (SoitaSillanJalkeen), joten
         // pallo kiertää kohdetta osion loppuun. Osio ei toistu kaupungissa; ääni workerilta /opas/aani/<sha>.mp3, seuraava esiladataan.
-        public const int HistoriaVali = 2;
-        public const float HistoriaMinLentoS = 12f, HistoriaOdotusMaxS = 60f;
-        readonly List<(string tunnus, string teksti, string sha, double kesto)> historiaOsiot = new List<(string, string, string, double)>();
+        public const float HistoriaOdotusMaxS = 60f;
+        List<OpasHistoria.Osio> historiaOsiot = new List<OpasHistoria.Osio>();
+        List<OpasYksityiskohdat.Kuva> historiaKuvat;
+        string historiaSoiTunnus;
+
+        /// <summary>Soivan historiaosion otsikko (Natiivi-UI: esim. "Lutetia" kertojan rivillä); null, kun osio ei soi.</summary>
+        public static string HistoriaOtsikko
+        {
+            get
+            {
+                var v = Viimeisin;
+                if (v == null || v.historiaSoiTunnus == null || v.silta == null || !v.silta.isPlaying) return null;
+                return v.historiaOsiot.Find(x => x.Tunnus == v.historiaSoiTunnus)?.Otsikko;
+            }
+        }
+        /// <summary>Nykyisen kaupungin historiaosioiden lähteet (Natiivi-UI: ☰ Lähteet): otsikko ja lähde-URLit; tyhjä, jos ei ladattu.</summary>
+        public static IReadOnlyList<(string Otsikko, IReadOnlyList<string> Lahteet)> HistoriaLahteet
+        {
+            get
+            {
+                var l = new List<(string, IReadOnlyList<string>)>();
+                var v = Viimeisin;
+                if (v == null) return l;
+                foreach (var o in v.historiaOsiot) l.Add((o.Otsikko, o.Lahteet));
+                return l;
+            }
+        }
         readonly HashSet<string> historiaKuultu = new HashSet<string>();
         string historiaKaupunki; AudioClip historiaKlippi; string historiaKlippiTunnus; int historiaLaskuri; bool historiaSoi, historiaSoiOli;
 
         IEnumerator LataaHistoria(string id)
         {
             if (historiaKaupunki == id && historiaOsiot.Count > 0) yield break;
-            historiaKaupunki = id; historiaOsiot.Clear(); historiaKuultu.Clear(); historiaKlippi = null; historiaKlippiTunnus = null; historiaLaskuri = 0;
+            historiaKaupunki = id; historiaOsiot = new List<OpasHistoria.Osio>(); historiaKuultu.Clear(); historiaKlippi = null; historiaKlippiTunnus = null; historiaLaskuri = 0;
             using (var r = UnityWebRequest.Get("https://media.matkakirja.app/opas/historia-v1/" + UnityWebRequest.EscapeURL(id) + ".json"))
             {
                 r.timeout = 10;
                 yield return r.SendWebRequest();
-                if (r.result != UnityWebRequest.Result.Success || !(MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j)) { o.Kirjaa($"opas: historiaosiot {id} ei latautunut ({r.responseCode})"); yield break; }
-                foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "osiot")))
-                {
-                    var d = MiniJson.ObjektiTaiNull(x);
-                    string sha = MiniJson.Teksti(d, "sha"), tunnus = MiniJson.Teksti(d, "tunnus");
-                    if (!string.IsNullOrEmpty(sha) && !string.IsNullOrEmpty(tunnus)) historiaOsiot.Add((tunnus, MiniJson.Teksti(d, "teksti"), sha, MiniJson.Luku(d, "kesto_s") ?? 30));
-                }
+                if (r.result != UnityWebRequest.Result.Success) { o.Kirjaa($"opas: historiaosiot {id} ei latautunut ({r.responseCode})"); yield break; }
+                historiaOsiot = OpasHistoria.Lue(MiniJson.Jasenna(r.downloadHandler.text));
             }
             o.Kirjaa($"opas: historiaosiot {id}: {historiaOsiot.Count}");
+            // Historiaosioiden yksityiskohtakuvat (Pelikoodari 9.10., Sisältökirjuri: esittely/<id>-historia-v1/<id>-historia-yksityiskohdat.json,
+            // sama muoto kuin kohteilla; kohde_id = osion tunnus) kuvanostoon ankkurisanan kohdalla.
+            using (var r = UnityWebRequest.Get($"https://media.matkakirja.app/esittely/{UnityWebRequest.EscapeURL(id)}-historia-v1/{UnityWebRequest.EscapeURL(id)}-historia-yksityiskohdat.json"))
+            {
+                r.timeout = 10;
+                yield return r.SendWebRequest();
+                historiaKuvat = r.result == UnityWebRequest.Result.Success ? OpasYksityiskohdat.Lue(MiniJson.Jasenna(r.downloadHandler.text)) : null;
+                o.Kirjaa($"opas: historiaosioiden kuvat {id}: {(historiaKuvat != null ? historiaKuvat.Count.ToString() : "ei (" + r.responseCode + ")")}");
+            }
             yield return EsilataaHistoria();
         }
 
         IEnumerator EsilataaHistoria()
         {
-            var seur = historiaOsiot.Find(x => !historiaKuultu.Contains(x.tunnus));
-            if (seur.sha == null || historiaKlippiTunnus == seur.tunnus) yield break;
-            using var p = UnityWebRequestMultimedia.GetAudioClip(PuluChat.Palvelin + "/opas/aani/" + seur.sha + ".mp3", AudioType.MPEG);
+            var seur = OpasHistoria.Seuraava(historiaOsiot, historiaKuultu);
+            if (seur == null || historiaKlippiTunnus == seur.Tunnus) yield break;
+            using var p = UnityWebRequestMultimedia.GetAudioClip(PuluChat.Palvelin + "/opas/aani/" + seur.Sha + ".mp3", AudioType.MPEG);
             p.timeout = 20;
             yield return p.SendWebRequest();
-            if (p.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(p) is AudioClip c) { historiaKlippi = c; historiaKlippiTunnus = seur.tunnus; }
-            else o.Kirjaa($"opas: historiaosio {seur.tunnus} ei latautunut ({p.responseCode})");
+            if (p.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(p) is AudioClip c) { historiaKlippi = c; historiaKlippiTunnus = seur.Tunnus; }
+            else o.Kirjaa($"opas: historiaosio {seur.Tunnus} ei latautunut ({p.responseCode})");
         }
 
         /// <summary>Kierroksen lähtö ilman siltalausetta: historiaosio, jos vuoro ja ääni valmiina.</summary>
         void HistoriaLennolle()
         {
             if (Testi || historiaKlippi == null || historiaKaupunki == null || historiaKaupunki != NykyinenKaupunkiId || silta == null || silta.isPlaying
-                || !Asetukset.Paalla(Kytkin.Kertoja) || silmukka.LentoKestoS < HistoriaMinLentoS) return;
-            if (++historiaLaskuri % HistoriaVali != 0) return;
-            var osio = historiaOsiot.Find(x => x.tunnus == historiaKlippiTunnus);
+                || !Asetukset.Paalla(Kytkin.Kertoja)) return;
+            if (!OpasHistoria.Vuoro(ref historiaLaskuri, silmukka.LentoKestoS)) return;
+            var osio = historiaOsiot.Find(x => x.Tunnus == historiaKlippiTunnus);
+            if (osio == null) return;
             historiaKuultu.Add(historiaKlippiTunnus);
             silta.clip = historiaKlippi; silta.volume = KertojanTaso; silta.Play();
-            historiaSoi = true; historiaSoiOli = true;
-            YksAloita(osio.tunnus, osio.teksti, silta, historiaKlippi, PuluChat.Palvelin + "/opas/aani/" + osio.sha + ".ajat.json", historiaKlippi.length);
-            o.Kirjaa($"opas: historiaosio {osio.tunnus} lennolle ({historiaKlippi.length:F1} s, lento {silmukka.LentoKestoS:F1} s)");
+            historiaSoi = true; historiaSoiOli = true; historiaSoiTunnus = osio.Tunnus;
+            YksAloita(osio.Tunnus, osio.Teksti, silta, historiaKlippi, PuluChat.Palvelin + "/opas/aani/" + osio.Sha + ".ajat.json", historiaKlippi.length);
+            o.Kirjaa($"opas: historiaosio {osio.Tunnus} lennolle ({historiaKlippi.length:F1} s, lento {silmukka.LentoKestoS:F1} s)");
             historiaKlippi = null; historiaKlippiTunnus = null;
             o.StartCoroutine(EsilataaHistoria());
         }

@@ -1,0 +1,94 @@
+{
+ "kaupunki": "pariisi",
+ "versio": 1,
+ "kuvaus": "Kaupungin historia- ja arkiosiot lentojen ajaksi (omistaja 8.–9.10.: vähemmän taukoja ja pelkkiä siirtymiä). Ääni R2 matkakirja-puhe opas/<sha>.mp3|pcm|ajat.json (worker GET /opas/aani/<sha>), William, eleven_v4_turbo.",
+ "osiot": [
+  {
+   "tunnus": "pariisi-historia-lutetia",
+   "otsikko": "Lutetia",
+   "teksti": "Ennen kuin Pariisi oli Pariisi, Seinen rannoilla asui kelttiläinen parisiiheimo. Roomalaiset kukistivat sen vuonna 52 ennen ajanlaskun alkua, ja heidän Lutetia-kaupunkinsa kasvoi pääosin joen vasemmalle rannalle. Ensimmäisen vuosisadan lopulla rakennetun areenan kivipenkit ovat yhä näkyvissä Latinalaiskorttelissa, ja Cluny-museon pihalla seisovat roomalaisten kylpylöiden rauniot. Kaupungin nimi Pariisi juontuu parisiiheimosta.",
+   "sha": "73a394d64cc24b3ab0921a5a498928bf",
+   "kesto_s": 34.1,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lutetia",
+    "https://en.wikipedia.org/wiki/Paris"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-vaakuna",
+   "otsikko": "Laiva vaakunassa",
+   "teksti": "Pariisin vaakunassa purjehtii laiva, ja sen alla lukee latinaksi Fluctuat nec mergitur: aallot heittelevät, mutta se ei uppoa. Laiva on peräisin jokikauppiaiden mahtavalta killalta, joka sai Seinen kaupan oikeudet vuonna 1170. Vaakunana laiva mainitaan ensimmäisen kerran vuonna 1358, ja tunnuslause vahvistettiin virallisesti vuonna 1853. Vaikeina aikoina pariisilaiset ovat kirjoittaneet sen kylteihin ja seiniin.",
+   "sha": "6c595decdf53c929a748007b50db1629",
+   "kesto_s": 37,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Coat_of_arms_of_Paris",
+    "https://en.wikipedia.org/wiki/Fluctuat_nec_mergitur"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-montgolfier",
+   "otsikko": "Ensimmäinen lento",
+   "teksti": "Ihmisen ensimmäinen vapaa lento kuumailmapallolla tehtiin Pariisissa. Marraskuussa 1783 Jean-François Pilâtre de Rozier ja markiisi d'Arlandes nousivat Montgolfierin veljesten pallolla La Muetten linnan puutarhasta Boulognen metsän laidalta. He kohosivat noin yhdeksänsadan metrin korkeuteen, ja tulen kipinät kärvensivät kangasta matkan aikana. Noin kahdenkymmenenviiden minuutin lento päättyi yhdeksän kilometrin päähän Butte-aux-Cailles'n kukkulalle.",
+   "sha": "2f812b62e8553c32a96e402905cfd301",
+   "kesto_s": 35.3,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Montgolfier_brothers"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-piiritys",
+   "otsikko": "Ilmapallot piirityksen yli",
+   "teksti": "Syksyllä 1870 Preussin armeija piiritti Pariisin, eikä kaupungista päässyt ulos maitse. Pariisilaiset ratkaisivat ongelman ilmapalloilla: rautatieasemille perustetuissa työpajoissa ommeltiin kuusikymmentäseitsemän palloa, jotka kuljettivat piiritysrenkaan yli satakuusikymmentäneljä matkustajaa, yli kaksi miljoonaa kirjettä ja kolmesataakahdeksankymmentäyksi kirjekyyhkyä. Yhdellä palloista pakeni ministeri Léon Gambetta järjestämään vastarintaa. Kyyhkyt lensivät takaisin kaupunkiin, ja niiden viestit oli pienennetty mikrofilmille.",
+   "sha": "61af361d59d3d8b325455c009a7f29e4",
+   "kesto_s": 40.9,
+   "lahteet": [
+    "https://fr.wikipedia.org/wiki/Ballon_mont%C3%A9",
+    "https://en.wikipedia.org/wiki/Siege_of_Paris_(1870%E2%80%931871)"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-haussmann",
+   "otsikko": "Haussmannin Pariisi",
+   "teksti": "Nykyisen Pariisin ilme syntyi 1850- ja 1860-luvuilla, kun keisari Napoleon kolmas antoi prefekti Georges-Eugène Haussmannille tehtäväksi uudistaa ahtaan keskiaikaisen kaupungin. Lähes kaksikymmentätuhatta rakennusta purettiin, ja tilalle rakennettiin yli kolmekymmentätuhatta uutta leveiden bulevardien varsille. Vuoden 1859 määräys sitoi talojen enimmäiskorkeuden kadun leveyteen, ja julkisivujen piti olla samaa korkeutta, väriä ja kiveä. Siksi ylhäältä katsoen vaaleat julkisivut ja harmaat mansardikatot muodostavat yhtenäisen meren.",
+   "sha": "99445601f2637826232147e88ac3e497",
+   "kesto_s": 45.6,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris",
+    "https://fr.wikipedia.org/wiki/Transformations_de_Paris_sous_le_Second_Empire"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-metro",
+   "otsikko": "Metro vuodelta 1900",
+   "teksti": "Pariisin metron ensimmäinen linja avattiin heinäkuussa 1900 kesken maailmannäyttelyn Porte Maillot'n ja Porte de Vincennesin välille. Arkkitehti Hector Guimard suunnitteli asemien sisäänkäynnit valuraudasta kuin kasvien varsista, ja niistä kahdeksankymmentäkuusi on yhä paikoillaan. Nykyään asemia on yli kolmesataa, ja kaupungin sisällä lähin asema on melkein mistä tahansa alle puolen kilometrin päässä.",
+   "sha": "d29ffd3cf5edb59190978df2d5e7bc77",
+   "kesto_s": 29.9,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Paris_M%C3%A9tro",
+    "https://fr.wikipedia.org/wiki/Liste_des_stations_du_m%C3%A9tro_de_Paris"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-bouquinistit",
+   "otsikko": "Kirjakaupat joen varrella",
+   "teksti": "Seinen rantamuureilla on lähes tuhat tummanvihreää puulaatikkoa, jotka aukeavat päivisin pieniksi kirjakaupoiksi. Antikvaariset kirjakauppiaat, bouquinistit, ovat myyneet joen varrella vanhoja kirjoja ja julisteita jo 1500-luvulta lähtien, ja nykyään heitä on noin kaksisataakolmekymmentä yli kolmen kilometrin matkalla. Laatikoiden mitat on määrätty tarkasti, kaksi metriä pitkiksi ja kolme neljäsosaa metriä leveiksi, ja niiden väri on nimeltään vaununvihreä.",
+   "sha": "3c36da9f055637840937b4a042a06b73",
+   "kesto_s": 35.9,
+   "lahteet": [
+    "https://fr.wikipedia.org/wiki/Bouquinistes_de_Paris",
+    "https://en.wikipedia.org/wiki/Bouquiniste"
+   ]
+  },
+  {
+   "tunnus": "pariisi-historia-wallace",
+   "otsikko": "Wallacen kaivot",
+   "teksti": "Pariisin kaduilla seisoo noin sata tummanvihreää valurautaista juomavesikaivoa, joiden kupolia kannattelee neljä naishahmoa. Ne kuvaavat ystävällisyyttä, yksinkertaisuutta, hyväntekeväisyyttä ja kohtuullisuutta. Kaivot lahjoitti englantilainen Richard Wallace vuodesta 1872 lähtien, kun piiritys ja Pariisin kommuuni olivat tuhonneet vesijohtoja ja vesi oli kallistunut. Niistä saa yhä ilmaista juomavettä maaliskuun puolivälistä marraskuun puoliväliin.",
+   "sha": "c15470218fae3132c3366ea74745282e",
+   "kesto_s": 36,
+   "lahteet": [
+    "https://fr.wikipedia.org/wiki/Fontaine_Wallace",
+    "https://en.wikipedia.org/wiki/Wallace_fountains"
+   ]
+  }
+ ]
+}
