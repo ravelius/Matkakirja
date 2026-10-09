@@ -57,6 +57,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("Pyramidien 3D-malli: Matkakirja · Concorde: © IGN, © OSM", OmatMallit.Tekijat(p, p.Kohteet));
             Oleta.Sama("Concorde: © IGN, © OSM", OmatMallit.Tekijat(p, new[] { p.Kohteet[1] }));
             Oleta.Sama(null, OmatMallit.Tekijat(p, new OmatMallit.Kohde[0]));
+            var rivit = OmatMallit.Lahderivit(p);
+            Oleta.Sama(2, rivit.Count, "☰ Lähteet: rivi per tekijä"); Oleta.Sama("Concorde: © IGN, © OSM", rivit[1]);
+            Oleta.Sama(0, OmatMallit.Lahderivit(null).Count);
         }
 }
 }
