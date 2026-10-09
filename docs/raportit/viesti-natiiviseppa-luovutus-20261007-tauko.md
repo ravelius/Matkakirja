@@ -3,7 +3,15 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 04.0x (UUSIN)
+## TILA 9.10. 07.4x (UUSIN)
+**JUNA 170 runko b6e2c2dc7** (wt/proto-natiiviseppa-j170): ... + LS1 yövalot 51c1392d0 (LinssiOhjain-konflikti: molempien komennot, vuorokausi kerran) = 93ae0750e
+(käännös 0ae254189, yökuvat lokit/yo170-arkki-{pariisi,tukholma}-0ae25418.png: valot näkyvät, MUTTA taivas musta, vesi kultaraidat, Tukholman sahalaita)
++ LS2 c5d5fe101 = a3e1aa556 (käännös b4022c6f8 07.41) + LS2 caf9a0506 (revert c5d5 + index-v4; PT-kuittaus pyydetty) = b6e2c2dc7; 453/419/1140, unity 0.
+PT 07.4x: EI LUKITUSTA; LS1 (v9 0f96d1830: veden heijastus + kaukohehku) ja LS2 (taivas) korjaavat, TAKARAJA 13.00, muuten yövalot oletuksena pois
+(kytkin) ja 170 lukitaan ilman. Sitten: käännös + yökuvapari (scratchpad yo170-ajo.sh <runko> kaanna|simu) → PT → lukitus + muutosloki PT:ltä → BUILD 170
+masterin 5b91b1a2c päälle → täysi SHA Julkaisijalle; TF omistajan TF 169 -palautteen jälkeen. index-v4 ämpäriin Karttasepältä.
+
+## TILA 9.10. 04.0x
 JUNA 170 runko **018603387** (04.1x: + NUI f9c4aa0cd ⊇ 243a70037 + fcc8d81f7, äänilähteet 73; + LS2 laivat a9095d78f + korkeus b1e23a065; 453/419/1137, unity 0,
 tarkista 0; EI vielä käännetty) ← 90c7bb19a = 9851acae5 + LS1 kierros-170 88ca8e5b5 + 243a70037 (PT kuittasi: elävä taivas, valonheittimet, Eiffelin majakka pois);
 testit 453/419/1137, unity 0, tarkista 0. Käännös 8fae5eb43:sta (ca4221d88, 03.55, 0 varjostinvirhettä; app lokit/natiiviseppa-app-170-8fae5eb43).
