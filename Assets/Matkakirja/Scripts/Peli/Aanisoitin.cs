@@ -641,7 +641,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Intro pyytää kaupunkijakson ajoitusta: nopea katkeaa katkoS:ssä (häivytys haivytysS) ja hidas alkaa hidasS:ssä ilman
-        /// jakson taukoa. Kutsutaan saapumisen yhteydessä (ennen tai jälkeen Paikka-tapahtuman); false = kaupungilla ei jaksoa.
+        /// jakson taukoa. Kutsutaan saapumisen yhteydessä (ennen tai jälkeen Paikka-tapahtuman) tai linssin ollessa auki
+        /// (AaniTila.JaksonIntroAlusta: nopea alkaa heti pidon ohi, hitaan loppu palauttaa pidon); false = kaupungilla ei jaksoa.
         /// </summary>
         public bool KaupunkiIntro(string kaupunki, float katkoS = 31f, float haivytysS = 2f, float hidasS = 32f)
         {
@@ -650,6 +651,7 @@ namespace Matkakirja.Natiivi
             introKaupunki = kaupunki; introUrl = AaniOsoite.Url(polku);
             introKatkoS = katkoS; introHaivytysS = haivytysS; introHidasS = hidasS;
             introT0 = -1f; introKatkottu = introHidasAlkoi = introOhita = false;
+            Tila.JaksonIntroAlusta(kaupunki); // linssi auki (pallon opas): nopea alusta pidon ohi; muuten Paikka käynnistää jakson
             return true;
         }
 
