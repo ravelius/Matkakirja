@@ -380,6 +380,12 @@ namespace Matkakirja.Natiivi
             // Oletus: auringon todellinen korkeus kohteessa; pelaajan valinta tai asetuksen tunti avainkuvista.
             var savy = !KaupunkiKuva.SavyKaytossa ? KaupunkiValo.Paiva
                 : pakko >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
+            // LOPPUILTA YÖN SIJAAN (omistaja 9.10.: "yö voisi olla ennemmin loppu ilta niin että taivaassa näkyisi vielä purppuraa"; PT:
+            // yötila lähes musta): kehityskaupungeissa (ilmakehä päällä) yön sävy on illan ja yön välissä (~−1,1 EV, lämmin taivaanranta);
+            // ilmakehän aurinko −7° (KaupunkiIlmakeha.IltaAurinkoAst), kaupungin valot täysillä kuten yöllä.
+            bool yoNyt = pakko >= 0 ? (tunti >= 21 || tunti < 5) : aurinko <= -8;
+            if (KaupunkiKuva.SavyKaytossa && yoNyt && KaupunkiIlmakeha.IltaYolla && KaupunkiIlmakeha.Paalla)
+                savy = KaupunkiValo.Valissa(KaupunkiValo.Ilta, KaupunkiValo.Yo, 0.55);
             KaupunkiKuva.AsetaNyt(pakko >= 0 ? (tunti >= 21 || tunti < 5 ? "yo" : tunti < 9.5 ? "aamu" : tunti < 16 ? "paiva" : "ilta")
                 : aurinko <= -8 ? "yo" : aurinko < 15 ? (aamupaiva ? "aamu" : "ilta") : "paiva");
             // Yövalot (kuvanlaatujärjestys kohta 2): hämärästä yöhön auringon tai valitun kellonajan mukaan.
