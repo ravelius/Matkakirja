@@ -154,7 +154,7 @@ namespace Matkakirja.Linssit.Dioraama
 
         /// <summary>Kivilinnan rakentuminen (arvio 3 9.10.: linna ilmestyi vuonna 1477 kerralla ja puuvarustus seisoi vedessä vuonna 1476,
         /// kun tyhjä saari oli jo piilossa): kuori nousee vedestä ylös RakennusS sekunnissa ja valmistuu kivilinnan kohtauksen alkuun.</summary>
-        public const double RakennusS = 6;
+        public const double RakennusS = 8;   // arvio 5: 6 s ja raja 60 m näytti nousun vain ~2 s:n hyppynä
         /// <summary>Ensimmäisen kivilinnan kohtauksen (Vuosi ≥ KivilinnaVuosi) alku: rakentuminen valmis.</summary>
         public double RakennusValmisT
         {
@@ -165,7 +165,7 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Linnan kuori näkyvissä (rakentuminen alkanut).</summary>
         public bool LinnaNakyyT(double t) => t >= RakennusValmisT - RakennusS;
         /// <summary>Rakentumisen leikkausraja (glTF y, m): kuori näkyy tämän alapuolella; RakennusAla (veden alla) → RakennusYla (tornien yli).</summary>
-        public const double RakennusAla = -8, RakennusYla = 60, MaanPinta = 2;
+        public const double RakennusAla = -8, RakennusYla = 38, MaanPinta = 2;   // yläraja tornien katoille (ei tyhjää nousua)
         public double RakennusKorkeus(double t) => RakennusAla + Rakennus(t) * (RakennusYla - RakennusAla);
         /// <summary>Maavaihemalli (ei vuodesta-kenttää, tyhjä saari) näkyy, kunnes kuoren kallio on noussut maan pinnan yli (ei
         /// päällekkäisiä pintoja), vaikka sen vuoteen olisi aiemmin (puuvarustus seisoi vedessä vuonna 1476).</summary>

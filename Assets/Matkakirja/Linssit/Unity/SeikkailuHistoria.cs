@@ -183,8 +183,12 @@ namespace Matkakirja.Natiivi
         /// (DioraamaLeivottu) näkyivät rakentumisen aikana ilman kuorta mustina laatikkoina ja tornien sisus hehkui.</summary>
         static bool Leikattava(Renderer r)
         {
-            var m = r.sharedMaterial; var sh = m != null ? m.shader : null;
-            return sh != null && sh.name.EndsWith("DioraamaKuori", StringComparison.Ordinal);
+            var m = r.sharedMaterial; var sh = m != null ? m.shader : null; if (sh == null) return false;
+            if (sh.name.EndsWith("DioraamaKuori", StringComparison.Ordinal)) return true;
+            // Arvio 5: historian kävelyosat (ranta-1499:n täyttö ja vesipohja, porttikaytava-T102) nousevat kuoren mukana, muuten
+            // rakentumisen aikana lounaispuolella näkyi mustia aukkoja.
+            for (var t = r.transform; t != null; t = t.parent) if (Array.IndexOf(HistorianKavelyosat, t.name) >= 0) return true;
+            return false;
         }
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
