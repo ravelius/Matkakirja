@@ -216,12 +216,23 @@ namespace Matkakirja.Peli.Testit
         // JÄLJET 5–6: OSOITTEET
         // =====================================================================
 
+        [Testi] static void LyriaV2Osoitteet()
+        {
+            string J = AaniOsoite.Juuri;
+            Oleta.Sama(J + "audio/musa-pohja-lyria-v2.mp3", AaniOsoite.Url("assets/audio/musa-pohja-lyria.mp3"), "oma polku");
+            Oleta.Sama(J + "aanet/siirtyma-laiva-lyria-v2.mp3", AaniOsoite.Url(J + "aanet/siirtyma-laiva-lyria.mp3"), "ämpärin osoite");
+            Oleta.Sama(J + "aanet/linssi-keksinnot-lyria-v2.mp3?t=1#voima=0.5", AaniOsoite.Musiikkiversio(J + "aanet/linssi-keksinnot-lyria.mp3?t=1#voima=0.5"), "kysely ja fragmentti säilyvät");
+            Oleta.Sama(J + "audio/musa-pohja-lyria-v2.mp3", AaniOsoite.Musiikkiversio(J + "audio/musa-pohja-lyria-v2.mp3"), "ei kahdesti");
+            Oleta.Sama(J + "aanet/lyria-tausta.mp3", AaniOsoite.Url(J + "aanet/lyria-tausta.mp3"), "vain pääte vaihtuu");
+            Oleta.Sama(null, AaniOsoite.Musiikkiversio(null), "null");
+        }
+
         [Testi] static void OsoitteetKutenWeb()
         {
             foreach (var r in L(Jalki["osoitteet"]).Select(O))
             {
                 var s = MiniJson.Teksti(r, "syote");
-                Oleta.Sama(MiniJson.Teksti(r, "url"), AaniOsoite.Url(s), "url " + s);
+                Oleta.Sama(AaniOsoite.Musiikkiversio(MiniJson.Teksti(r, "url")), AaniOsoite.Url(s), "url " + s);
                 Oleta.Sama(MiniJson.Teksti(r, "peili"), AaniOsoite.PeiliPolku(s), "peili " + s);
             }
             foreach (var r in L(Jalki["turvanimet"]).Select(O))
@@ -374,7 +385,7 @@ namespace Matkakirja.Peli.Testit
                     var w = O(kanavat[KanavaNimet[k]]);
                     var c = tila.Toive((Kanava)k);
                     var n = nimi + KanavaNimet[k] + " ";
-                    Oleta.Sama(MiniJson.Teksti(w, "url"), c.Url, n + "url");
+                    Oleta.Sama(AaniOsoite.Musiikkiversio(MiniJson.Teksti(w, "url")), c.Url, n + "url");   // web jäi -lyria.mp3:een (-lyria-v2 9.10.)
                     if (c.Url != null)
                     {
                         Lahella(MiniJson.Luku(w, "taso").Value, c.Tavoite, n + "taso");
@@ -514,22 +525,22 @@ namespace Matkakirja.Peli.Testit
             string Aihe() => tila.Toive(Kanava.Aarre).Url;
 
             tila.UusiKaupunki("lontoo");
-            Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-lansi-eurooppa-lyria.mp3") == true, "vaihe 2: Länsi-Euroopan tunnus");
+            Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-lansi-eurooppa-lyria-v2.mp3") == true, "vaihe 2: Länsi-Euroopan tunnus");
             tila.AarreLoppui();
             tila.UusiKaupunki("ateena");
-            Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-valimeri-lyria.mp3") == true, "Välimeren tunnus");
+            Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-valimeri-lyria-v2.mp3") == true, "Välimeren tunnus");
             Oleta.Tosi(tila.AiheSoi, "aihe soi");
             tila.AarreLoppui();
             Oleta.Tosi(!tila.AiheSoi, "tunnus soi loppuun");
 
             tila.AloituslentoAlkoi();
-            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-marssi-a-lyria.mp3") == true, "aloituslento");
+            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-marssi-a-lyria-v2.mp3") == true, "aloituslento");
             tila.UusiKaupunki("ateena");
-            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-marssi-a-lyria.mp3") == true, "tunnus ei katkaise aloituslentoa");
+            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-marssi-a-lyria-v2.mp3") == true, "tunnus ei katkaise aloituslentoa");
             tila.AarrePaljastui("star");
-            Oleta.Tosi(Aihe()?.Contains("musa-paaaarre-lyria.mp3") == true, "aarre katkaisee");
+            Oleta.Tosi(Aihe()?.Contains("musa-paaaarre-lyria-v2.mp3") == true, "aarre katkaisee");
             tila.MatkaLoppui();
-            Oleta.Tosi(Aihe()?.Contains("musa-loppu-lyria.mp3") == true, "loppu");
+            Oleta.Tosi(Aihe()?.Contains("musa-loppu-lyria-v2.mp3") == true, "loppu");
 
             // Paketin rivi korvaa oletuksen.
             t.LueAanitaulut("{\"nimi\":\"aanitaulut\",\"alkiot\":[{\"id\":\"musiikkiaihe:saapuminen-pohjola\",\"laji\":\"musiikkiaihe\",\"nimi\":\"saapuminen-pohjola\",\"tunnus\":\"musa-saapuminen-pohjola\"}]}");
