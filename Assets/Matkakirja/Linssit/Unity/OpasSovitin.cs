@@ -1077,6 +1077,35 @@ namespace Matkakirja.Natiivi
             return ok;
         }
 
+        // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10., Päätoimittaja juna 170; napit Natiivi-UI heijastuksella,
+        // natiivi-ui/vapaa-lento) ----
+        /// <summary>"Vapaa lento" -nappi: kierros käynnissä, ei siirtoruutua.</summary>
+        public static bool VapaaLentoKaytettavissa => Auki && Viimeisin.silmukka.VapaaLentoKaytettavissa;
+        /// <summary>Kierros keskeytyy (kohde, paikka ja kesken jäänyt kerronta talteen), kertoja vaikenee, käsiohjaus. true = alkoi.</summary>
+        public static bool AloitaVapaaLento()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            bool ok = v.silmukka.AloitaVapaaLento();
+            if (ok) { v.Hiljenna(); if (v.silta != null && v.silta.isPlaying) v.silta.Stop(); }
+            v.o.Kirjaa(ok ? "opas: vapaa lento (kierros keskeytetty, paluukohta talteen)" : "opas: vapaa lento ei käytettävissä");
+            return ok;
+        }
+        /// <summary>"Palaa kierrokselle" -nappi: vapaassa lennossa ja keskeytyskohta tallessa.</summary>
+        public static bool PaluuKierrokselleKaytettavissa => Auki && Viimeisin.silmukka.PaluuKierrokselleKaytettavissa;
+        /// <summary>Pehmeä lento keskeytyskohtaan; perillä kierros jatkuu (kesken jäänyt kohde alusta). true = paluu alkoi.</summary>
+        public static bool PalaaKierrokselle()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            v.puhuttu = null;
+            if (v.silmukka.JatkoKohde is OpasKohde jk) v.Valmistele(jk);   // ääni valmiiksi paluulennon aikana (kuten JATKA)
+            bool ok = v.silmukka.PalaaKierrokselle();
+            v.o.Kirjaa(ok ? "opas: paluu kierrokselle (lento keskeytyskohtaan)" : "opas: paluu ei käytettävissä");
+            return ok;
+        }
+
         /// <summary>■ LOPETA KIERROS (Natiivi-UI, tauon vasemmalla): kierros päättyy, kertoja vaikenee, vapaa tila. true = lopetettiin.</summary>
         public static bool LopetaKierros()
         {
