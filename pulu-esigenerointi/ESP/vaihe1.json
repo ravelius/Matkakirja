@@ -689,9 +689,10 @@
   "kohde": "kohde:cordoban-moskeijakatedraali",
   "kysymys": "Mikä on mihrab?",
   "uusi": true,
-  "vastaus": "Ai tota. Tämän minä olen nähnyt. Mihrab on moskeijan seinässä oleva kolo, joka osoittaa rukouksen suunnan eli kohti Mekkaa. Córdoban suuressa moskeijassa mihrab on koristeellinen, ja sen rakennutti al-Hakam II. Sitä ympäröivä [[maqsura]] eli rukoustilan aidattu osa valmistui vuonna 971. Mihrabin tarkka rakennetapa ja koristelun yksityiskohdat ovat asioita, joista en ole varma. Seinän kolo, jonka kaikki rukoilijat osaavat löytää, on eräänlainen kompassi, ja niin kyyhkynä minä arvostan sitä kovasti.",
+  "vastaus": "Ai tota. Tämän minä olen nähnyt. Mihrab on moskeijan seinässä oleva kolo, joka osoittaa rukouksen suunnan eli kohti Mekkaa. Córdoban suuressa moskeijassa mihrab on koristeellinen, ja sen rakennutti al-Hakam II. Sitä ympäröivä [[maqsura]] eli rukoustilan aidattu osa valmistui vuonna 971. [[Mihrabin]] tarkka rakennetapa ja koristelun yksityiskohdat ovat asioita, joista en ole varma. Seinän kolo, jonka kaikki rukoilijat osaavat löytää, on eräänlainen kompassi, ja niin kyyhkynä minä arvostan sitä kovasti.",
   "linkit": [
-   "maqsura"
+   "maqsura",
+   "Mihrabin"
   ],
   "jatkot": [
    "Mikä on minareetti?",
