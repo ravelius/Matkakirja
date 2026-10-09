@@ -6,10 +6,11 @@ Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpän
 ## TILA 9.10. 09.5x (UUSIN)
 **BUILD 170 = 4a140064ea882557c2189235c9bd9cee571e5023** (proto master; runko d213127c1 = fde044a39 + LS2 811d26cf8; simukäännös b508936fb 0 varjostinvirhettä;
 app lokit/natiiviseppa-app-170-d213127c1; Tukholma yö+päivä lokit/yopaiva170-arkki-tukholma-b508936f.png OK). SHA + muutosloki (scratchpad muutosloki170.txt)
-Julkaisijalla → TF. ODOTTAA: iOS TF -ajon alkuaika → Mac TF -odottaja (`perl … mac-tf-odottaja.sh 4a140064 170 <ISO>`), juna/b13 e9802f2d → d213127c + juna.log.
+Julkaisijalla → iOS TF 37895574369 (06:49Z, muutosloki #4269), Mac TF -odottaja käynnissä 09.52 (loki lokit/natiiviseppa-mac-tf-170.log), juna/b13 → d213127c 09.52.
+Vanhat 170-appit poistettu (PT), jäljellä natiiviseppa-app-170-d213127c1.
 **JUNA 171 runko natiiviseppa/juna-171** (wt/proto-natiiviseppa-j171) add8b853d = BUILD 170 + NUI 7ba57cafe (⊇ 837d8102a ⊇ 9bd44cca6, äänilähteet 75)
-+ Pelikoodari 7ccdcdf16 + LS2 b4a393994 (ympäristövalo); 453/419/1147, unity 0, tarkista 0. PUUTTUU: LS1:n kaupunkimaisema-v2 171-kärki (15fcb7464 on
-jo BUILD 170:n esi-isä ja 51c1392d0 poisti sen → LS1 tekee revertin 4a140064e:n päälle, pyydetty). Osoitin uusin-2.json → v6 Julkaisijalta 171:n mukana.
++ Pelikoodari 7ccdcdf16 + LS2 b4a393994 (ympäristövalo) + LS1 d5fd13b06 (kaupunkimaisema-v2 palautettu) = **f5ac2b0a4**; 453/419/1151, unity 0, tarkista 0.
+LS1:n erä 171 (savu, liput, iltaikkunat, salamat…) tulossa kuvien jälkeen ~10.35. Osoitin uusin-2.json → v6 Julkaisijalta 171:n mukana.
 JUNA 172 / 173 / 174 kärjet: ks. alempana (18227438d + ef56acf4e; NUI 17ee84663 + Siirtoseppä 5d8e362f7; NUI 54182ab06).
 
 ## TILA 9.10. 07.4x
