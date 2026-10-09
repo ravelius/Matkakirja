@@ -328,8 +328,26 @@ namespace Matkakirja.Natiivi
         AudioClip quindar;
         Coroutine puhuu;
 
+        /// <summary>Äänirekisteri (Natiivi-UI:n mikseri, juna 173): avaruuskävelyn tehosteet, hengitys ja Pulun radiorepliikit ISS:ssä.</summary>
+        static bool rekisteroity;
+        static void Rekisteroi()
+        {
+            if (rekisteroity) return; rekisteroity = true;
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            m.Rekisteroi("iss", "tehosteet", "kavely-ilmalukko", "Ilmalukko (paine ja luukku)", "ilmalukko-paine", "ilmalukko-luukku");
+            m.Rekisteroi("iss", "tehosteet", "kavely-karabiini", "Karabiini", "karabiini");
+            m.Rekisteroi("iss", "tehosteet", "kavely-suljin", "Kameran suljin", "suljin");
+            m.Rekisteroi("iss", "maisema", "kavely-hengitys", "Hengitys kypärässä", "hengitys-silmukka");
+            m.Rekisteroi("iss", "pulu", "kavely-pulu", "Pulu kypäräradiossa", "pulu-1", "pulu-2", "pulu-3", "quindar");
+        }
+        /// <summary>Tehosteen taso: webin master × makeup × mikserin kerroin (korvaa Asetukset.Taso(Voima.Tehosteet)).</summary>
+        static float TehosteTaso(string id) => !Asetukset.Paalla(Kytkin.Aanimaisema) ? 0f
+            : Matkakirja.Peli.Tehostetaulu.Master * Matkakirja.Peli.Tehostetaulu.Kompressori.Makeup * Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin(id == "kavely-hengitys" ? "maisema" : "tehosteet", id);
+        static string TehosteId(string nimi) => nimi.StartsWith("ilmalukko") ? "kavely-ilmalukko" : nimi == "karabiini" ? "kavely-karabiini" : "kavely-suljin";
+
         public static KavelyAanet Luo()
         {
+            Rekisteroi();
             var go = new GameObject("KavelyAanet");
             DontDestroyOnLoad(go);
             var a = go.AddComponent<KavelyAanet>();
@@ -363,7 +381,7 @@ namespace Matkakirja.Natiivi
         void Tehoste(string nimi)
         {
             var c = Klippi(nimi);
-            if (c != null) kerta.PlayOneShot(c, Matkakirja.Natiivi.Aanet.Taso(AaniKanava.Tehoste));
+            if (c != null) kerta.PlayOneShot(c, TehosteTaso(TehosteId(nimi)));
         }
 
         /// <summary>Vaiheen tehosteet ja hengitys (ulkona Ulos…Vertailu).</summary>
@@ -377,7 +395,7 @@ namespace Matkakirja.Natiivi
                 case KavelynVaihe.Vertailu: Tehoste("suljin"); break;
             }
             bool ulkona = uusi >= KavelynVaihe.Ulos && uusi <= KavelynVaihe.Vertailu;
-            hengitys.volume = HengitysVoima * Matkakirja.Natiivi.Aanet.Taso(AaniKanava.Tehoste);
+            hengitys.volume = HengitysVoima * TehosteTaso("kavely-hengitys");
             if (ulkona && !hengitys.isPlaying && hengitys.clip != null) { hengitys.time = 0; hengitys.Play(); }
             else if (!ulkona && hengitys.isPlaying) hengitys.Stop();
             if (uusi == KavelynVaihe.Ei || uusi == KavelynVaihe.Takaisin) Hiljaa();
@@ -394,7 +412,8 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Puhu(AudioClip c)
         {
-            float taso = Matkakirja.Natiivi.Aanet.Taso(AaniKanava.Puhe);
+            // Puhe: kertojakytkin ennallaan, taso mikserin pulu-ryhmästä (0,9 kuten Aanet.Taso(Puhe)).
+            float taso = Asetukset.Paalla(Kytkin.Kertoja) ? 0.9f * Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("pulu", "kavely-pulu") : 0f;
             puhe.PlayOneShot(quindar, taso);
             yield return new WaitForSecondsRealtime(QuindarS + 0.1f);
             if (c == null) yield break;
