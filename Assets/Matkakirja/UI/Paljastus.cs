@@ -48,8 +48,8 @@ namespace Matkakirja.Natiivi
         // Web js/aani-ehdokkaat.js HUUDAHDUKSET.star: kolme luettua hihkaisua (huudahdus-star-1…3.mp3).
         const int PaaHihkaisuja = 3;
         // Web AARRE_MUSIIKKI (musaPolku + MUSIIKIN_PAATE "-lyria"), ämpärin audio/-kansio.
-        const string MusiikkiTavallinen = Aanet.Juuri + "audio/musa-aarre-lyria.mp3";
-        const string MusiikkiPaa = Aanet.Juuri + "audio/musa-paaaarre-lyria.mp3";
+        static readonly string MusiikkiTavallinen = AaniOsoite.Musiikkiversio(Aanet.Juuri + "audio/musa-aarre-lyria.mp3");   // -lyria-v2 (PT 9.10.)
+        static readonly string MusiikkiPaa = AaniOsoite.Musiikkiversio(Aanet.Juuri + "audio/musa-paaaarre-lyria.mp3");
         // Web AARRE_MUSIIKIN_VOIMA ≈ 0,13 musiikin oletusliu'ulla; natiivin oletus Voima.Musiikki = 0,35.
         const float MusiikinKerroin = 0.13f / 0.35f;
 
