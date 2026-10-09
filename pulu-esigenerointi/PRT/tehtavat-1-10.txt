@@ -1,0 +1,278 @@
+================ KOHTA 46 (nosto:joanina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirjaston pöydät peitetään joka ilta nahalla — ja aamulla lattialta lakaistaan se, mikä yöllä tapahtui
+Tietoruudun teksti: Coimbran yliopiston barokkikirjasto on rakennettu kirjoja varten niin perusteellisesti, että se toimii kuin holvi. Kuningas João V:n mukaan nimetyn Joanina-kirjaston rakentaminen alkoi 1717 ja valmistui 1728, ja ensimmäiset kirjat kannettiin sisään 1750. Ulkoseinät ovat noin kaksi ja puoli metriä paksut, sisäänkäynnin ovi on tiikkiä, ja niiden ansiosta lämpötila pysyy ympäri vuoden 18 ja 20 asteen välillä ja kosteus noin kuudessakymmenessä prosentissa. Hyllyt on tehty tammesta, koska tammi on tiivistä eikä hyönteinen pääse siihen — ja koska se haisee niistä pahalta.
+
+Mutta paperia syöviä hyönteisiä vastaan ei riitä paksu seinä. Siksi kirjastossa asuu lepakoita. Ne nukkuvat päivät hyllyjen takana ja lähtevät öisin liikkeelle, ja mitä ikinä ilmaan on noussut, se syödään. Järjestelmä maksaa yhden vaivan: joka ilta henkilökunta peittää pöydät nahkasuojuksilla, ja joka aamu lattialta siivota…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Arc de Triomf] 1888 Arc de Triomf ei ole Pariisin kuuluisan Riemukaaren pikkuveli, vaan aivan oma, punaisesta tiilestä muurattu porttinsa Barcelonassa. Arkkitehti Josep Vilaseca suunnitteli sen vuonna 1888 pidetyn maailmannäyttelyn pääsisäänkäynniksi, ja kaari otettiin käyttöön juuri ennen näyttelyn avajaisia. Kaari on lähes 30 metriä korkea ja melkein yhtä leveä, ja se on koristeltu näyttävillä kivireliefeillä. Etusivun veistos esittää Barcelonan toivottamassa maailman kansoja tervetulleiksi, ja kaaren molemmilla pilareilla kohoaa kivestä veistettyjä lepakoita, jotka olivat aikoinaan kuningas Jaume I:n vaakunaeläimiä. Kaaren yläreunaa kiertää laakeriseppele, johon on kaiverrettu peräti 49 silloisen espan…
+- [Kumasi — kohdekartta / Kohdekartta: Kumasin eläintarha] 1951 Eläintarha perustettiin 1951, ja Asantemanin neuvosto avasi sen virallisesti 1957 — samana vuonna, jona Ghana itsenäistyi. Tarkoitus oli suojella luontoa ja näyttää kävijöille maan omia villieläimiä. Puolentoista neliökilometrin alue on aivan keskustassa: se on Kejetian linja-autoaseman, vanhan laukkaradan ja kansallisen kulttuurikeskuksen välissä. Lajeja on noin neljäkymmentä ja yksilöitä yli sataviisikymmentä. Vaikuttavin osa ei ole aidattu lainkaan. Tarhan puissa lepää tuhansia lepakoita, ja ne ovat paikan tunnetuin näky. Rakennusten kunto on toista maata: paikallisten mukaan tarha kaipaa kipeästi korjausta, ja sama koskee useimpia kaupungin puistoja.
+
+### 46.1
+KYSYMYS: Miksi kirjastossa asuu lepakoita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirjaston pöydät peitetään joka ilta nahalla — ja aamulla lattialta lakaistaan se, mikä yöllä tapahtui
+Tietoruudun teksti: Coimbran yliopiston barokkikirjasto on rakennettu kirjoja varten niin perusteellisesti, että se toimii kuin holvi. Kuningas João V:n mukaan nimetyn Joanina-kirjaston rakentaminen alkoi 1717 ja valmistui 1728, ja ensimmäiset kirjat kannettiin sisään 1750. Ulkoseinät ovat noin kaksi ja puoli metriä paksut, sisäänkäynnin ovi on tiikkiä, ja niiden ansiosta lämpötila pysyy ympäri vuoden 18 ja 20 asteen välillä ja kosteus noin kuudessakymmenessä prosentissa. Hyllyt on tehty tammesta, koska tammi on tiivistä eikä hyönteinen pääse siihen — ja koska se haisee niistä pahalta.
+
+Mutta paperia syöviä hyönteisiä vastaan ei riitä paksu seinä. Siksi kirjastossa asuu lepakoita. Ne nukkuvat päivät hyllyjen takana ja lähtevät öisin liikkeelle, ja mitä ikinä ilmaan on noussut, se syödään. Järjestelmä maksaa yhden vaivan: joka ilta henkilökunta peittää pöydät nahkasuojuksilla, ja joka aamu lattialta siivota…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Arc de Triomf] 1888 Arc de Triomf ei ole Pariisin kuuluisan Riemukaaren pikkuveli, vaan aivan oma, punaisesta tiilestä muurattu porttinsa Barcelonassa. Arkkitehti Josep Vilaseca suunnitteli sen vuonna 1888 pidetyn maailmannäyttelyn pääsisäänkäynniksi, ja kaari otettiin käyttöön juuri ennen näyttelyn avajaisia. Kaari on lähes 30 metriä korkea ja melkein yhtä leveä, ja se on koristeltu näyttävillä kivireliefeillä. Etusivun veistos esittää Barcelonan toivottamassa maailman kansoja tervetulleiksi, ja kaaren molemmilla pilareilla kohoaa kivestä veistettyjä lepakoita, jotka olivat aikoinaan kuningas Jaume I:n vaakunaeläimiä. Kaaren yläreunaa kiertää laakeriseppele, johon on kaiverrettu peräti 49 silloisen espan…
+- [Kumasi — kohdekartta / Kohdekartta: Kumasin eläintarha] 1951 Eläintarha perustettiin 1951, ja Asantemanin neuvosto avasi sen virallisesti 1957 — samana vuonna, jona Ghana itsenäistyi. Tarkoitus oli suojella luontoa ja näyttää kävijöille maan omia villieläimiä. Puolentoista neliökilometrin alue on aivan keskustassa: se on Kejetian linja-autoaseman, vanhan laukkaradan ja kansallisen kulttuurikeskuksen välissä. Lajeja on noin neljäkymmentä ja yksilöitä yli sataviisikymmentä. Vaikuttavin osa ei ole aidattu lainkaan. Tarhan puissa lepää tuhansia lepakoita, ja ne ovat paikan tunnetuin näky. Rakennusten kunto on toista maata: paikallisten mukaan tarha kaipaa kipeästi korjausta, ja sama koskee useimpia kaupungin puistoja.
+
+### 46.2
+KYSYMYS: Mitä pöydille tehdään joka ilta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirjaston pöydät peitetään joka ilta nahalla — ja aamulla lattialta lakaistaan se, mikä yöllä tapahtui
+Tietoruudun teksti: Coimbran yliopiston barokkikirjasto on rakennettu kirjoja varten niin perusteellisesti, että se toimii kuin holvi. Kuningas João V:n mukaan nimetyn Joanina-kirjaston rakentaminen alkoi 1717 ja valmistui 1728, ja ensimmäiset kirjat kannettiin sisään 1750. Ulkoseinät ovat noin kaksi ja puoli metriä paksut, sisäänkäynnin ovi on tiikkiä, ja niiden ansiosta lämpötila pysyy ympäri vuoden 18 ja 20 asteen välillä ja kosteus noin kuudessakymmenessä prosentissa. Hyllyt on tehty tammesta, koska tammi on tiivistä eikä hyönteinen pääse siihen — ja koska se haisee niistä pahalta.
+
+Mutta paperia syöviä hyönteisiä vastaan ei riitä paksu seinä. Siksi kirjastossa asuu lepakoita. Ne nukkuvat päivät hyllyjen takana ja lähtevät öisin liikkeelle, ja mitä ikinä ilmaan on noussut, se syödään. Järjestelmä maksaa yhden vaivan: joka ilta henkilökunta peittää pöydät nahkasuojuksilla, ja joka aamu lattialta siivota…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+### 46.3
+KYSYMYS: Missä on maailman toinen lepakkokirjasto?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirjaston pöydät peitetään joka ilta nahalla — ja aamulla lattialta lakaistaan se, mikä yöllä tapahtui
+Tietoruudun teksti: Coimbran yliopiston barokkikirjasto on rakennettu kirjoja varten niin perusteellisesti, että se toimii kuin holvi. Kuningas João V:n mukaan nimetyn Joanina-kirjaston rakentaminen alkoi 1717 ja valmistui 1728, ja ensimmäiset kirjat kannettiin sisään 1750. Ulkoseinät ovat noin kaksi ja puoli metriä paksut, sisäänkäynnin ovi on tiikkiä, ja niiden ansiosta lämpötila pysyy ympäri vuoden 18 ja 20 asteen välillä ja kosteus noin kuudessakymmenessä prosentissa. Hyllyt on tehty tammesta, koska tammi on tiivistä eikä hyönteinen pääse siihen — ja koska se haisee niistä pahalta.
+
+Mutta paperia syöviä hyönteisiä vastaan ei riitä paksu seinä. Siksi kirjastossa asuu lepakoita. Ne nukkuvat päivät hyllyjen takana ja lähtevät öisin liikkeelle, ja mitä ikinä ilmaan on noussut, se syödään. Järjestelmä maksaa yhden vaivan: joka ilta henkilökunta peittää pöydät nahkasuojuksilla, ja joka aamu lattialta siivota…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (nosto:nazare) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhden kylän edustalla aallot ovat kaksi kertaa isompia kuin naapurirannalla — syy on kilometrien syvyydessä
+Tietoruudun teksti: Nazarén kalastajakylän pohjoisen rannan edessä avautuu merenalainen kanjoni, joka on Euroopan suurin: noin 230 kilometriä pitkä ja syvimmillään lähes viisi kilometriä. Se alkaa noin kilometrin päässä rannasta ja päättyy 211 kilometrin päässä Iberian syvänmerentasankoon. Tavallisella rannalla matala pohja jarruttaa maininkia kauan ennen rantaviivaa ja syö siitä energian. Täällä ei jarruta mikään.
+
+Kanjoni toimii kuin suppilo. Syvässä uomassa aalto etenee huomattavasti nopeammin kuin sen vieressä matalikolla, ja kun syvä vesi loppuu äkisti rannan edessä, kaikki se energia on pakko purkaa jonnekin — ylöspäin. Siksi Praia do Nortessa on jatkuvasti selvästi suurempia aaltoja kuin muualla Portugalin rannikolla, ja siksi aallot voivat nousta yli kahdenkymmenen metrin. Marraskuussa 2011 havaijilainen Garrett McNamara surffasi täällä aallon, joka mitattiin aallonpohjasta harjalle 24 metriksi. Aa…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Urheilu: Aalto, jonka pohja on kuilu] 2011 — Nazarén kylän pohjoisella rannalla nousee talvisin maailman suurimpia surffattuja aaltoja. Syy on meren pohjassa: rannan edessä on merenalainen kanjoni, joka on satoja kilometrejä pitkä ja syvimmillään kilometrejä syvä. Kanjoni ohjaa avomeren maininkia kapenevaan uomaan, ja kun syvä vesi loppuu äkisti, aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.
+- [Mosul — kohdekartta / Kohdekartta: Bash Tapian linna] 1100-luku Bash Tapia on rakennettu 1100-luvulla, ja se oli yksi Mosulin kaupunginmuurin seitsemästä linnakkeesta. Se seisoo Tigriin länsirannalla siinä kohdassa, jossa muuri kääntyy joen mukana, eli se puolusti sekä muuria että rantaa. Linnakkeista se on ainoa, josta on jäljellä nähtävää: pyöreä hammastettu torni ja pätkä muuria sen vieressä. Linnan tärkein hetki oli syksyllä 1743. Persian shaahi Nader Shah saapui kaupungin edustalle 14. syyskuuta ja aloitti piirityksen. Mosulin pasha Hajji Hossein al-Jalili puolusti kaupunkia, ja piiritys purettiin saman vuoden 23. lokakuuta — kuusi viikkoa. Bash Tapialla oli puolustuksessa keskeinen osa, ja al-Jalilin suvusta tuli sen jälkeen kaupungin ma…
+
+### 47.1
+KYSYMYS: Miksi juuri tässä kohdassa rannikkoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhden kylän edustalla aallot ovat kaksi kertaa isompia kuin naapurirannalla — syy on kilometrien syvyydessä
+Tietoruudun teksti: Nazarén kalastajakylän pohjoisen rannan edessä avautuu merenalainen kanjoni, joka on Euroopan suurin: noin 230 kilometriä pitkä ja syvimmillään lähes viisi kilometriä. Se alkaa noin kilometrin päässä rannasta ja päättyy 211 kilometrin päässä Iberian syvänmerentasankoon. Tavallisella rannalla matala pohja jarruttaa maininkia kauan ennen rantaviivaa ja syö siitä energian. Täällä ei jarruta mikään.
+
+Kanjoni toimii kuin suppilo. Syvässä uomassa aalto etenee huomattavasti nopeammin kuin sen vieressä matalikolla, ja kun syvä vesi loppuu äkisti rannan edessä, kaikki se energia on pakko purkaa jonnekin — ylöspäin. Siksi Praia do Nortessa on jatkuvasti selvästi suurempia aaltoja kuin muualla Portugalin rannikolla, ja siksi aallot voivat nousta yli kahdenkymmenen metrin. Marraskuussa 2011 havaijilainen Garrett McNamara surffasi täällä aallon, joka mitattiin aallonpohjasta harjalle 24 metriksi. Aa…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Bash Tapian linna] 1100-luku Bash Tapia on rakennettu 1100-luvulla, ja se oli yksi Mosulin kaupunginmuurin seitsemästä linnakkeesta. Se seisoo Tigriin länsirannalla siinä kohdassa, jossa muuri kääntyy joen mukana, eli se puolusti sekä muuria että rantaa. Linnakkeista se on ainoa, josta on jäljellä nähtävää: pyöreä hammastettu torni ja pätkä muuria sen vieressä. Linnan tärkein hetki oli syksyllä 1743. Persian shaahi Nader Shah saapui kaupungin edustalle 14. syyskuuta ja aloitti piirityksen. Mosulin pasha Hajji Hossein al-Jalili puolusti kaupunkia, ja piiritys purettiin saman vuoden 23. lokakuuta — kuusi viikkoa. Bash Tapialla oli puolustuksessa keskeinen osa, ja al-Jalilin suvusta tuli sen jälkeen kaupungin ma…
+- [Irkutsk — kohdekartta / Kohdekartta: Epifanian katedraali] kirkot 1706 ja 1718–1746 Tässä kohdassa kaupunki alkoi. Jakov Pohabov laski 6. heinäkuuta 1661 Angaran rantaan paalulinnoituksen, jossa kerättiin burjaateilta jasak-veroa turkiksina; nykyinen Kirovin aukio on juuri sen paikalla. Linnoituksesta kasvoi 1700-luvun alkuun mennessä puinen kaupunki, ja vuoden 1716 suurpalo tuhosi varustukset lähes kokonaan. Vuodessa ne rakennettiin uudelleen, nyt kivestä. Kaksi kirkkoa on jäljellä. Vapahtajan kirkon kivijalka laskettiin vuonna 1706 linnoituksen luoteisnurkkaan, ja se on ainoa säilynyt rakennus vanhan linnoituksen alueelta. Epifanian katedraali rakennettiin itämuurin taakse vuosina 1718–1746. Molemmat ovat Siperian vanhimpia kivirakennuksia, ja ne…
+
+### 47.2
+KYSYMYS: Kuinka korkealle aalto voi nousta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhden kylän edustalla aallot ovat kaksi kertaa isompia kuin naapurirannalla — syy on kilometrien syvyydessä
+Tietoruudun teksti: Nazarén kalastajakylän pohjoisen rannan edessä avautuu merenalainen kanjoni, joka on Euroopan suurin: noin 230 kilometriä pitkä ja syvimmillään lähes viisi kilometriä. Se alkaa noin kilometrin päässä rannasta ja päättyy 211 kilometrin päässä Iberian syvänmerentasankoon. Tavallisella rannalla matala pohja jarruttaa maininkia kauan ennen rantaviivaa ja syö siitä energian. Täällä ei jarruta mikään.
+
+Kanjoni toimii kuin suppilo. Syvässä uomassa aalto etenee huomattavasti nopeammin kuin sen vieressä matalikolla, ja kun syvä vesi loppuu äkisti rannan edessä, kaikki se energia on pakko purkaa jonnekin — ylöspäin. Siksi Praia do Nortessa on jatkuvasti selvästi suurempia aaltoja kuin muualla Portugalin rannikolla, ja siksi aallot voivat nousta yli kahdenkymmenen metrin. Marraskuussa 2011 havaijilainen Garrett McNamara surffasi täällä aallon, joka mitattiin aallonpohjasta harjalle 24 metriksi. Aa…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Urheilu: Aalto, jonka pohja on kuilu] 2011 — Nazarén kylän pohjoisella rannalla nousee talvisin maailman suurimpia surffattuja aaltoja. Syy on meren pohjassa: rannan edessä on merenalainen kanjoni, joka on satoja kilometrejä pitkä ja syvimmillään kilometrejä syvä. Kanjoni ohjaa avomeren maininkia kapenevaan uomaan, ja kun syvä vesi loppuu äkisti, aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.
+
+### 47.3
+KYSYMYS: Miten surffaaja pääsee liikkeelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhden kylän edustalla aallot ovat kaksi kertaa isompia kuin naapurirannalla — syy on kilometrien syvyydessä
+Tietoruudun teksti: Nazarén kalastajakylän pohjoisen rannan edessä avautuu merenalainen kanjoni, joka on Euroopan suurin: noin 230 kilometriä pitkä ja syvimmillään lähes viisi kilometriä. Se alkaa noin kilometrin päässä rannasta ja päättyy 211 kilometrin päässä Iberian syvänmerentasankoon. Tavallisella rannalla matala pohja jarruttaa maininkia kauan ennen rantaviivaa ja syö siitä energian. Täällä ei jarruta mikään.
+
+Kanjoni toimii kuin suppilo. Syvässä uomassa aalto etenee huomattavasti nopeammin kuin sen vieressä matalikolla, ja kun syvä vesi loppuu äkisti rannan edessä, kaikki se energia on pakko purkaa jonnekin — ylöspäin. Siksi Praia do Nortessa on jatkuvasti selvästi suurempia aaltoja kuin muualla Portugalin rannikolla, ja siksi aallot voivat nousta yli kahdenkymmenen metrin. Marraskuussa 2011 havaijilainen Garrett McNamara surffasi täällä aallon, joka mitattiin aallonpohjasta harjalle 24 metriksi. Aa…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Urheilu: Aalto, jonka pohja on kuilu] 2011 — Nazarén kylän pohjoisella rannalla nousee talvisin maailman suurimpia surffattuja aaltoja. Syy on meren pohjassa: rannan edessä on merenalainen kanjoni, joka on satoja kilometrejä pitkä ja syvimmillään kilometrejä syvä. Kanjoni ohjaa avomeren maininkia kapenevaan uomaan, ja kun syvä vesi loppuu äkisti, aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (nosto:saobento) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Portossa on odotushalli, jonka seinillä on kaksikymmentätuhatta laattaa — ja yksi mies maalasi ne kaikki
+Tietoruudun teksti: Porton päärautatieasema rakennettiin vanhan luostarin paikalle ja sai siltä nimensä. Rakennustyö alkoi vuonna 1904 arkkitehti José Marques da Silvan piirustusten mukaan, ja tavallisesti siihen kohtaan tulisi kertoa aikatauluista ja laiturien määrästä. Tässä asemassa kiinnostavaa on kuitenkin seinä. Odotushallin pinnat on päällystetty noin kahdellakymmenellätuhannella azulejo-laatalla, jotka peittävät 551 neliömetriä, ja ne muodostavat suuria kuvakenttiä: maan historian tapahtumia ja maaseudun töitä, ihmisiä pelloilla ja markkinoilla.
+
+Kuvat maalasi Jorge Colaço, ja hän asetti ensimmäiset laatat paikoilleen 13. elokuuta 1905. Työ kesti yksitoista vuotta, ja halli valmistui 1916. Laatat itse tehtiin Sacavémin tehtaalla, ja niiden sininen tulee kobolttioksidista, joka kestää polton kirkkaana — juuri siksi väri on sama nyt kuin sata vuotta sitten. Asema on yhä käytössä, ja se seisoo Porton …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Kuvataide: Aallon alla kyyhöttää Fuji] Katsushika Hokusai piirsi Suuren aallon vuoden 1831 lopulla. Se on ensimmäinen lehti sarjassa Kolmekymmentäkuusi näkymää Fuji-vuorelle, ja siinä on kolme venettä myrskyävällä merellä. Uutta oli väri: Euroopasta tuotu berliininsininen ei haalistunut kuten kasviväri, ja Hokusai rakensi koko kuvan sen varaan. Aalto ei ole hyökyaalto vaan tuulen nostama merenkäynti, ja vuori jää sen taakse pieneksi kolmioksi. Vedoksia lyötiin puulaatoista niin monta kuin kysyntää riitti; niistä tunnetaan nykyään enää noin sata säilynyttä kappaletta.
+- [Italia — maalehti / Kuvataide: Ehtoollinen, joka haalistuu arvokkaasti] Leonardo da Vinci maalasi Viimeisen ehtoollisen 1490-luvulla milanolaisen luostarin ruokasalin seinään — ja kokeili uutta tekniikkaa, joka alkoi hilseillä jo hänen elinaikanaan. Siksi maalaus on ollut korjattavana melkein koko olemassaolonsa ajan: viimeisin restaurointi kesti 21 vuotta, pidempään kuin maalaaminen. Teos on yhä samassa seinässä, ja sitä katsotaan vartin vuoroissa kuivatussa ilmassa, muutama kymmenen ihmistä kerrallaan. Hauras alkuperäinen voittaa silti kaikki kopiot.
+
+### 48.1
+KYSYMYS: Kuinka kauan laattojen maalaaminen kesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Portossa on odotushalli, jonka seinillä on kaksikymmentätuhatta laattaa — ja yksi mies maalasi ne kaikki
+Tietoruudun teksti: Porton päärautatieasema rakennettiin vanhan luostarin paikalle ja sai siltä nimensä. Rakennustyö alkoi vuonna 1904 arkkitehti José Marques da Silvan piirustusten mukaan, ja tavallisesti siihen kohtaan tulisi kertoa aikatauluista ja laiturien määrästä. Tässä asemassa kiinnostavaa on kuitenkin seinä. Odotushallin pinnat on päällystetty noin kahdellakymmenellätuhannella azulejo-laatalla, jotka peittävät 551 neliömetriä, ja ne muodostavat suuria kuvakenttiä: maan historian tapahtumia ja maaseudun töitä, ihmisiä pelloilla ja markkinoilla.
+
+Kuvat maalasi Jorge Colaço, ja hän asetti ensimmäiset laatat paikoilleen 13. elokuuta 1905. Työ kesti yksitoista vuotta, ja halli valmistui 1916. Laatat itse tehtiin Sacavémin tehtaalla, ja niiden sininen tulee kobolttioksidista, joka kestää polton kirkkaana — juuri siksi väri on sama nyt kuin sata vuotta sitten. Asema on yhä käytössä, ja se seisoo Porton …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: Ehtoollinen, joka haalistuu arvokkaasti] Leonardo da Vinci maalasi Viimeisen ehtoollisen 1490-luvulla milanolaisen luostarin ruokasalin seinään — ja kokeili uutta tekniikkaa, joka alkoi hilseillä jo hänen elinaikanaan. Siksi maalaus on ollut korjattavana melkein koko olemassaolonsa ajan: viimeisin restaurointi kesti 21 vuotta, pidempään kuin maalaaminen. Teos on yhä samassa seinässä, ja sitä katsotaan vartin vuoroissa kuivatussa ilmassa, muutama kymmenen ihmistä kerrallaan. Hauras alkuperäinen voittaa silti kaikki kopiot.
+
+### 48.2
+KYSYMYS: Mitä kuvat esittävät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Portossa on odotushalli, jonka seinillä on kaksikymmentätuhatta laattaa — ja yksi mies maalasi ne kaikki
+Tietoruudun teksti: Porton päärautatieasema rakennettiin vanhan luostarin paikalle ja sai siltä nimensä. Rakennustyö alkoi vuonna 1904 arkkitehti José Marques da Silvan piirustusten mukaan, ja tavallisesti siihen kohtaan tulisi kertoa aikatauluista ja laiturien määrästä. Tässä asemassa kiinnostavaa on kuitenkin seinä. Odotushallin pinnat on päällystetty noin kahdellakymmenellätuhannella azulejo-laatalla, jotka peittävät 551 neliömetriä, ja ne muodostavat suuria kuvakenttiä: maan historian tapahtumia ja maaseudun töitä, ihmisiä pelloilla ja markkinoilla.
+
+Kuvat maalasi Jorge Colaço, ja hän asetti ensimmäiset laatat paikoilleen 13. elokuuta 1905. Työ kesti yksitoista vuotta, ja halli valmistui 1916. Laatat itse tehtiin Sacavémin tehtaalla, ja niiden sininen tulee kobolttioksidista, joka kestää polton kirkkaana — juuri siksi väri on sama nyt kuin sata vuotta sitten. Asema on yhä käytössä, ja se seisoo Porton …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+### 48.3
+KYSYMYS: Miksi sininen väri ei ole haalistunut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Portossa on odotushalli, jonka seinillä on kaksikymmentätuhatta laattaa — ja yksi mies maalasi ne kaikki
+Tietoruudun teksti: Porton päärautatieasema rakennettiin vanhan luostarin paikalle ja sai siltä nimensä. Rakennustyö alkoi vuonna 1904 arkkitehti José Marques da Silvan piirustusten mukaan, ja tavallisesti siihen kohtaan tulisi kertoa aikatauluista ja laiturien määrästä. Tässä asemassa kiinnostavaa on kuitenkin seinä. Odotushallin pinnat on päällystetty noin kahdellakymmenellätuhannella azulejo-laatalla, jotka peittävät 551 neliömetriä, ja ne muodostavat suuria kuvakenttiä: maan historian tapahtumia ja maaseudun töitä, ihmisiä pelloilla ja markkinoilla.
+
+Kuvat maalasi Jorge Colaço, ja hän asetti ensimmäiset laatat paikoilleen 13. elokuuta 1905. Työ kesti yksitoista vuotta, ja halli valmistui 1916. Laatat itse tehtiin Sacavémin tehtaalla, ja niiden sininen tulee kobolttioksidista, joka kestää polton kirkkaana — juuri siksi väri on sama nyt kuin sata vuotta sitten. Asema on yhä käytössä, ja se seisoo Porton …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Kuvataide: Aallon alla kyyhöttää Fuji] Katsushika Hokusai piirsi Suuren aallon vuoden 1831 lopulla. Se on ensimmäinen lehti sarjassa Kolmekymmentäkuusi näkymää Fuji-vuorelle, ja siinä on kolme venettä myrskyävällä merellä. Uutta oli väri: Euroopasta tuotu berliininsininen ei haalistunut kuten kasviväri, ja Hokusai rakensi koko kuvan sen varaan. Aalto ei ole hyökyaalto vaan tuulen nostama merenkäynti, ja vuori jää sen taakse pieneksi kolmioksi. Vedoksia lyötiin puulaatoista niin monta kuin kysyntää riitti; niistä tunnetaan nykyään enää noin sata säilynyttä kappaletta.
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (nosto:korkkitammi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Puulta viedään kuori kirveellä, ja se jää pystyyn — sata vuotta myöhemmin sille tehdään sama uudestaan
+Tietoruudun teksti: Korkkitammen paksu kaarna voidaan irrottaa ilman että puu kuolee, mutta vain jos sen tekee ihminen kirveellä. Konetta ei käytetä, koska kaarnan alla oleva ohut kerros ei saa vaurioitua — siitä kasvaa seuraava kuori. Ensimmäisen kerran puu kuoritaan noin 25-vuotiaana, ja sen jälkeen aina yhdeksän vuoden välein, kun kerros on ehtinyt kolmisen senttiä paksuksi. Runkoon maalataan numero, joka kertoo kuorintavuoden, ja sen näkee kaukaa: metsässä puut kantavat vuosilukuaan kylkeensä maalattuna.
+
+Yksi puu ehditään kuoria elämänsä aikana viidestä seitsemääntoista kertaan, ja se voi elää kaksisataa vuotta. Portugalissa korkkitammimetsiä on 750 000 hehtaaria — maailman suurimmat — ja niistä tulee noin puolet koko maailman korkista. Metsä ei ole vain puita: se on harvaa, valoisaa laidunmetsää, jossa elää suuri joukko lajeja, ja jos korkin kysyntä katoaa, katoaa myös syy pitää metsä pystyssä. Sitä …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Ruoka: Aito kaneli irrotetaan messinkitangolla] Cinnamomum verum eli aito kaneli on kotoisin Sri Lankasta, ja saari tuottaa yhä 80–90 prosenttia maailman aidosta kanelista; kasvin vanha tieteellinen nimi zeylanicum kertoo saman. Puu kasvaisi viisitoistametriseksi, mutta viljelmillä se pidetään kolmen metrin pensaana, josta leikataan ohuita oksia. Ulkokuori poistetaan, ja sisäkuori irrotetaan hankaamalla sitä messinkitangolla ja halkaisemalla veitsellä, jotta se saataisiin irti mahdollisimman ehjänä. Käärö kuivataan ensin varjossa ja sitten pimeässä. Ehjä pitkä käärö on arvokkaampi kuin murut, ja luokat nimetään halkaisijan mukaan: Alba on alle kuusi milliä.
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie: Veturi numero 18 seisoo yhä asemapihalla] Rata liikennöi lopulta vuoteen 1972 asti, jolloin uusi maantie BR-364 teki siitä tarpeettoman ja liikenne lakkautettiin kokonaan. Porto Velhon vanhalle rautatieasemalle jäi kuitenkin useita alkuperäisiä höyryvetureita, jotka on sittemmin kunnostettu museoksi Complexo Madeira-Mamoré -nimisen puiston alueelle. Yksi näkyvimmistä on veturi numero 18, jonka kylkeen on maalattu radan lyhenne E.F.M-M. Museoalueella kiertää nykyään myös matkailijajuna lyhyen pätkän vanhaa rataa pitkin muutaman kerran vuodessa, ja paikalliset pitävät rataa yhtenä kaupungin tärkeimmistä historiallisista muistomerkeistä, vaikka se syntyi niin raskaan hinnan kustannuksella.
+
+### 49.1
+KYSYMYS: Miksi kuori irrotetaan käsin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Puulta viedään kuori kirveellä, ja se jää pystyyn — sata vuotta myöhemmin sille tehdään sama uudestaan
+Tietoruudun teksti: Korkkitammen paksu kaarna voidaan irrottaa ilman että puu kuolee, mutta vain jos sen tekee ihminen kirveellä. Konetta ei käytetä, koska kaarnan alla oleva ohut kerros ei saa vaurioitua — siitä kasvaa seuraava kuori. Ensimmäisen kerran puu kuoritaan noin 25-vuotiaana, ja sen jälkeen aina yhdeksän vuoden välein, kun kerros on ehtinyt kolmisen senttiä paksuksi. Runkoon maalataan numero, joka kertoo kuorintavuoden, ja sen näkee kaukaa: metsässä puut kantavat vuosilukuaan kylkeensä maalattuna.
+
+Yksi puu ehditään kuoria elämänsä aikana viidestä seitsemääntoista kertaan, ja se voi elää kaksisataa vuotta. Portugalissa korkkitammimetsiä on 750 000 hehtaaria — maailman suurimmat — ja niistä tulee noin puolet koko maailman korkista. Metsä ei ole vain puita: se on harvaa, valoisaa laidunmetsää, jossa elää suuri joukko lajeja, ja jos korkin kysyntä katoaa, katoaa myös syy pitää metsä pystyssä. Sitä …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Ruoka: Aito kaneli irrotetaan messinkitangolla] Cinnamomum verum eli aito kaneli on kotoisin Sri Lankasta, ja saari tuottaa yhä 80–90 prosenttia maailman aidosta kanelista; kasvin vanha tieteellinen nimi zeylanicum kertoo saman. Puu kasvaisi viisitoistametriseksi, mutta viljelmillä se pidetään kolmen metrin pensaana, josta leikataan ohuita oksia. Ulkokuori poistetaan, ja sisäkuori irrotetaan hankaamalla sitä messinkitangolla ja halkaisemalla veitsellä, jotta se saataisiin irti mahdollisimman ehjänä. Käärö kuivataan ensin varjossa ja sitten pimeässä. Ehjä pitkä käärö on arvokkaampi kuin murut, ja luokat nimetään halkaisijan mukaan: Alba on alle kuusi milliä.
+
+### 49.2
+KYSYMYS: Mitä runkoon maalattu numero tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Puulta viedään kuori kirveellä, ja se jää pystyyn — sata vuotta myöhemmin sille tehdään sama uudestaan
+Tietoruudun teksti: Korkkitammen paksu kaarna voidaan irrottaa ilman että puu kuolee, mutta vain jos sen tekee ihminen kirveellä. Konetta ei käytetä, koska kaarnan alla oleva ohut kerros ei saa vaurioitua — siitä kasvaa seuraava kuori. Ensimmäisen kerran puu kuoritaan noin 25-vuotiaana, ja sen jälkeen aina yhdeksän vuoden välein, kun kerros on ehtinyt kolmisen senttiä paksuksi. Runkoon maalataan numero, joka kertoo kuorintavuoden, ja sen näkee kaukaa: metsässä puut kantavat vuosilukuaan kylkeensä maalattuna.
+
+Yksi puu ehditään kuoria elämänsä aikana viidestä seitsemääntoista kertaan, ja se voi elää kaksisataa vuotta. Portugalissa korkkitammimetsiä on 750 000 hehtaaria — maailman suurimmat — ja niistä tulee noin puolet koko maailman korkista. Metsä ei ole vain puita: se on harvaa, valoisaa laidunmetsää, jossa elää suuri joukko lajeja, ja jos korkin kysyntä katoaa, katoaa myös syy pitää metsä pystyssä. Sitä …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie: Veturi numero 18 seisoo yhä asemapihalla] Rata liikennöi lopulta vuoteen 1972 asti, jolloin uusi maantie BR-364 teki siitä tarpeettoman ja liikenne lakkautettiin kokonaan. Porto Velhon vanhalle rautatieasemalle jäi kuitenkin useita alkuperäisiä höyryvetureita, jotka on sittemmin kunnostettu museoksi Complexo Madeira-Mamoré -nimisen puiston alueelle. Yksi näkyvimmistä on veturi numero 18, jonka kylkeen on maalattu radan lyhenne E.F.M-M. Museoalueella kiertää nykyään myös matkailijajuna lyhyen pätkän vanhaa rataa pitkin muutaman kerran vuodessa, ja paikalliset pitävät rataa yhtenä kaupungin tärkeimmistä historiallisista muistomerkeistä, vaikka se syntyi niin raskaan hinnan kustannuksella.
+- [Portugali — maalehti / Luonto: Puu, jonka kuori otetaan mutta joka jää pystyyn] Kesäisin — Korkkitammen paksu kuori voidaan irrottaa ilman että puu kuolee. Kuori kuoritaan kirveellä käsin, ei koneella, koska rungon alla oleva kerros ei saa vaurioitua. Ensimmäisen kerran puu kuoritaan noin 25 vuoden ikäisenä, ja sen jälkeen aina yhdeksän vuoden välein. Runkoon maalataan numero, joka kertoo kuorintavuoden. Sama puu voi antaa kuorta parinsadan vuoden ajan. Maassa on maailman suurimmat korkkitammimetsät, ja niistä tulee noin puolet koko maailman korkista.
+
+### 49.3
+KYSYMYS: Mitä metsälle tapahtuu, jos korkkia ei osteta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Puulta viedään kuori kirveellä, ja se jää pystyyn — sata vuotta myöhemmin sille tehdään sama uudestaan
+Tietoruudun teksti: Korkkitammen paksu kaarna voidaan irrottaa ilman että puu kuolee, mutta vain jos sen tekee ihminen kirveellä. Konetta ei käytetä, koska kaarnan alla oleva ohut kerros ei saa vaurioitua — siitä kasvaa seuraava kuori. Ensimmäisen kerran puu kuoritaan noin 25-vuotiaana, ja sen jälkeen aina yhdeksän vuoden välein, kun kerros on ehtinyt kolmisen senttiä paksuksi. Runkoon maalataan numero, joka kertoo kuorintavuoden, ja sen näkee kaukaa: metsässä puut kantavat vuosilukuaan kylkeensä maalattuna.
+
+Yksi puu ehditään kuoria elämänsä aikana viidestä seitsemääntoista kertaan, ja se voi elää kaksisataa vuotta. Portugalissa korkkitammimetsiä on 750 000 hehtaaria — maailman suurimmat — ja niistä tulee noin puolet koko maailman korkista. Metsä ei ole vain puita: se on harvaa, valoisaa laidunmetsää, jossa elää suuri joukko lajeja, ja jos korkin kysyntä katoaa, katoaa myös syy pitää metsä pystyssä. Sitä …
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI

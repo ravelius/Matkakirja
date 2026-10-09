@@ -1,0 +1,206 @@
+================ KOHTA 31 (kohde:hahmotelma-ponte-de-lima) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Suitsutusastia, joka lentää poikki kirkon] 1000-luku — Santiago de Compostelan katedraaliin on kävelty tuhat vuotta: Camino de Santiago on pyhiinvaellustie, jota kulkee yhä satojatuhansia ihmisiä vuodessa. Perillä odottaa botafumeiro, 53-kiloinen hopeoitu suitsutusastia, jota kahdeksan miestä heiluttaa köysillä poikki ristilaivan. Se kiihtyy lähes 70 kilometrin tuntinopeuteen ja nousee 21 metrin korkeuteen. Alkuperäinen syy oli arkinen: pitkän matkan kulkeneet pyhiinvaeltajat haisivat.
+
+### 31.1
+KYSYMYS: Mikä on Vinho Verde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+### 31.2
+KYSYMYS: Mikä Camino de Santiago on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Suitsutusastia, joka lentää poikki kirkon] 1000-luku — Santiago de Compostelan katedraaliin on kävelty tuhat vuotta: Camino de Santiago on pyhiinvaellustie, jota kulkee yhä satojatuhansia ihmisiä vuodessa. Perillä odottaa botafumeiro, 53-kiloinen hopeoitu suitsutusastia, jota kahdeksan miestä heiluttaa köysillä poikki ristilaivan. Se kiihtyy lähes 70 kilometrin tuntinopeuteen ja nousee 21 metrin korkeuteen. Alkuperäinen syy oli arkinen: pitkän matkan kulkeneet pyhiinvaeltajat haisivat.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-vila-vicosa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Myötäjäiset ja kymmenen punnan vuokra] Gujaratin sulttaani Bahadur Shah pelkäsi mogulikeisari Humayunia ja allekirjoitti 23. joulukuuta 1534 Portugalin kanssa Basseinin sopimuksen; seitsemän Bombayn saarta luovutettiin 25. lokakuuta 1535. Portugalilaiset rakensivat saarille kirkkoja ja linnoituksia ja kirjoittivat nimen muotoon Bombaim. Toukokuun 11. päivänä 1661 saarten enemmistö siirtyi Englannin kruunulle osana Catherine of Braganzan myötäjäisiä, kun hän avioitui Kaarle II:n kanssa. Seitsemän vuotta myöhemmin kruunu vuokrasi ne Itä-Intian kauppakomppanialle kymmenen punnan vuosivuokralla, ja väkiluku nousi kymmenestätuhannesta kuuteenkymmeneentuhanteen vuoteen 1675 mennessä.
+
+### 32.1
+KYSYMYS: Keitä Braganzan herttuat olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Myötäjäiset ja kymmenen punnan vuokra] Gujaratin sulttaani Bahadur Shah pelkäsi mogulikeisari Humayunia ja allekirjoitti 23. joulukuuta 1534 Portugalin kanssa Basseinin sopimuksen; seitsemän Bombayn saarta luovutettiin 25. lokakuuta 1535. Portugalilaiset rakensivat saarille kirkkoja ja linnoituksia ja kirjoittivat nimen muotoon Bombaim. Toukokuun 11. päivänä 1661 saarten enemmistö siirtyi Englannin kruunulle osana Catherine of Braganzan myötäjäisiä, kun hän avioitui Kaarle II:n kanssa. Seitsemän vuotta myöhemmin kruunu vuokrasi ne Itä-Intian kauppakomppanialle kymmenen punnan vuosivuokralla, ja väkiluku nousi kymmenestätuhannesta kuuteenkymmeneentuhanteen vuoteen 1675 mennessä.
+
+### 32.2
+KYSYMYS: Mikä Vila Viçosan marmori on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-tavira) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+
+### 33.1
+KYSYMYS: Keitä foinikialaiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+### 33.2
+KYSYMYS: Mikä on Välimeren ruokavalio?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-amarante) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki] Fado syntyi 1800-luvun alussa Lissabonin kujilla, ja Unesco otti sen ihmiskunnan kulttuuriperinnön luetteloon vuonna 2011.
+
+### 34.1
+KYSYMYS: Kuka São Gonçalo oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+### 34.2
+KYSYMYS: Mikä on UNESCOn musiikkikaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki] Fado syntyi 1800-luvun alussa Lissabonin kujilla, ja Unesco otti sen ihmiskunnan kulttuuriperinnön luetteloon vuonna 2011.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-chaves) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Kisanin portti] Portti seisoo vanhankaupungin muurin kaakkoiskulmassa. Muurin kehä on 4,5 kilometriä ja se rajaa 86 hehtaaria. Muurin rakensivat roomalaiset, ja ajjubidit ja mamelukit vahvistivat sitä myöhemmin; vuoden 634 piirityksen kuvauksissa muuri on 11 metriä korkea. Julkisivu on ladottu suurista vaaleista kivilohkareista, ja kahden ulkonevan tornin väliin jäävä keskiosa on koristeltu hakatuin listoin ja pyörein kivimedaljongein. Roomalaiset omistivat kunkin portin yhdelle taivaankappaleelle, ja Kisanin portti sai Saturnuksen. Porttien lukumäärässä on lähteiden välillä hajontaa: vuoden 634 piirityksestä kertovassa luettelossa niitä on kuusi. Nimensä Kisanin portti sai orjasta, joka tuli tunnetuksi ka…
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+
+### 35.1
+KYSYMYS: Mistä Chavesin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+### 35.2
+KYSYMYS: Miksi roomalaiset perustivat sen tähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Kisanin portti] Portti seisoo vanhankaupungin muurin kaakkoiskulmassa. Muurin kehä on 4,5 kilometriä ja se rajaa 86 hehtaaria. Muurin rakensivat roomalaiset, ja ajjubidit ja mamelukit vahvistivat sitä myöhemmin; vuoden 634 piirityksen kuvauksissa muuri on 11 metriä korkea. Julkisivu on ladottu suurista vaaleista kivilohkareista, ja kahden ulkonevan tornin väliin jäävä keskiosa on koristeltu hakatuin listoin ja pyörein kivimedaljongein. Roomalaiset omistivat kunkin portin yhdelle taivaankappaleelle, ja Kisanin portti sai Saturnuksen. Porttien lukumäärässä on lähteiden välillä hajontaa: vuoden 634 piirityksestä kertovassa luettelossa niitä on kuusi. Nimensä Kisanin portti sai orjasta, joka tuli tunnetuksi ka…
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

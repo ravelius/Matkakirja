@@ -1,0 +1,217 @@
+================ KOHTA 41 (kohde:hahmotelma-torres-vedras) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kaupunkilehti / Auckland: Pääkaupunki, jonka Wellington vei] Auckland julistettiin viralliseksi pääkaupungiksi 1841, ja hallinto siirrettiin Russellista Bay of Islandsista kokonaan tänne 1842. Jo 1840 Port Nicholson — nykyinen Wellington — nähtiin kuitenkin parempana hallintopaikkana, koska se on lähempänä Eteläsaarta, ja 1865 pääkaupunki siirtyi sinne. Isoisän saapuessa 1873 menetyksestä oli kulunut kahdeksan vuotta. Kaupunki kasvoi silti satamansa varassa, ja Auckland pysyi Aucklandin provinssin pääkaupunkina, kunnes koko provinssijärjestelmä lakkautettiin 1876 — kolme vuotta isoisän käynnin jälkeen.
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+
+### 41.1
+KYSYMYS: Miksi linjat rakennettiin salassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+- [Grönlanti — maalehti / Kuvataide: Hirviö, jota ei ollut tarkoitus näyttää kenellekään] Inuiittien uskomuksessa tupilak oli kostohirviö, jonka angakkuq eli shamaani kokosi salassa eläimen osista ja herätti henkiin loitsulaululla, minkä jälkeen se laskettiin mereen etsimään tiettyä vihollista. Työ oli tekijälleen vaarallista: jos kohteella oli vahvempi taika, tupilak kääntyi takaisin, ja ainoa pelastus oli tunnustaa teko julkisesti. Koska tupilakit tehtiin salassa katoavista aineksista, yhtään ei ole säilynyt. Eurooppalaiset vieraat halusivat silti nähdä, miltä sellainen näyttää, ja niin niistä alettiin veistää kuvia kaskelotin hampaisiin.
+
+### 41.2
+KYSYMYS: Kuka Wellington oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kaupunkilehti / Auckland: Pääkaupunki, jonka Wellington vei] Auckland julistettiin viralliseksi pääkaupungiksi 1841, ja hallinto siirrettiin Russellista Bay of Islandsista kokonaan tänne 1842. Jo 1840 Port Nicholson — nykyinen Wellington — nähtiin kuitenkin parempana hallintopaikkana, koska se on lähempänä Eteläsaarta, ja 1865 pääkaupunki siirtyi sinne. Isoisän saapuessa 1873 menetyksestä oli kulunut kahdeksan vuotta. Kaupunki kasvoi silti satamansa varassa, ja Auckland pysyi Aucklandin provinssin pääkaupunkina, kunnes koko provinssijärjestelmä lakkautettiin 1876 — kolme vuotta isoisän käynnin jälkeen.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-vimeiro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+### 42.1
+KYSYMYS: Miksi Vimeiron taistelu oli tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+### 42.2
+KYSYMYS: Kuka Junot oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-almeida) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Moskova — kohdekartta / Kohdekartta: Perlovin teetalo] Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, puuvillaa, posliinia ja teetä. Matka kesti tavallisesti kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun itseensä. Sitä sekoitusta myydään nykyäänkin n…
+
+### 43.1
+KYSYMYS: Mitä Almeidan piirityksessä tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kaupunkilehti / Historia: Kanelisopimus, joka johti valloitukseen] Dom Lourenço de Almeidan johtamat portugalilaiset saapuivat saarelle 1505 ja solmivat sopimuksen Kotten kuninkaan Parakramabahu VIII:n kanssa: he saivat oikeuden käydä kauppaa saaren kanelilla ja täyden vallan rannikolla, ja vastineeksi he lupasivat vartioida rannikkoa hyökkääjiltä. Colomboon perustettiin kauppa-asema, ja 1517 alkoi linnoituksen rakentaminen. Sen jälkeen portugalilaiset laajensivat valtaansa käyttämällä hyväkseen Kotten kuningassuvun riitoja, ja kun kuningaskunta kaatui 1593, Colombosta tuli heidän pääkaupunkinsa saarella.
+
+### 43.2
+KYSYMYS: Miksi linnoitus rakennettiin rajalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Moskova — kohdekartta / Kohdekartta: Perlovin teetalo] Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, puuvillaa, posliinia ja teetä. Matka kesti tavallisesti kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun itseensä. Sitä sekoitusta myydään nykyäänkin n…
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-peniche) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Halifax — kohdekartta / Kohdekartta: Halifaxin linnoitus] 1856 Kukkulalla on ollut neljä linnoitusta siitä asti, kun britit perustivat kaupungin 1749. Kaikkia on kutsuttu nimellä Fort George, mutta virallisesti sen nimen sai vain kolmas, vuosina 1794–1800 rakennettu linnoitus: lokakuun 20. päivänä 1798 annettu päiväkäsky nimesi sen kuningas Yrjö III:n mukaan. Ensimmäinen, toinen ja nykyinen neljäs ovat virallisesti Halifax Citadel. Nykyinen linnoitus on betoninen tähtilinnoitus. Sen rakentaminen ja kukkulan tasoittaminen ovat laskeneet laen kymmenestä kahteentoista metriä alkuperäistä matalammaksi. Linnoitusta vastaan ei koskaan hyökätty, mutta se oli vuosikymmenet sataman ja laivastotelakan puolustuksen kulmakivi. Kukkula on syy siihen, miksi kes…
+
+### 44.1
+KYSYMYS: Miksi Peniche oli ennen saari?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+### 44.2
+KYSYMYS: Mihin linnoitusta käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Halifax — kohdekartta / Kohdekartta: Halifaxin linnoitus] 1856 Kukkulalla on ollut neljä linnoitusta siitä asti, kun britit perustivat kaupungin 1749. Kaikkia on kutsuttu nimellä Fort George, mutta virallisesti sen nimen sai vain kolmas, vuosina 1794–1800 rakennettu linnoitus: lokakuun 20. päivänä 1798 annettu päiväkäsky nimesi sen kuningas Yrjö III:n mukaan. Ensimmäinen, toinen ja nykyinen neljäs ovat virallisesti Halifax Citadel. Nykyinen linnoitus on betoninen tähtilinnoitus. Sen rakentaminen ja kukkulan tasoittaminen ovat laskeneet laen kymmenestä kahteentoista metriä alkuperäistä matalammaksi. Linnoitusta vastaan ei koskaan hyökätty, mutta se oli vuosikymmenet sataman ja laivastotelakan puolustuksen kulmakivi. Kukkula on syy siihen, miksi kes…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-convento-carmo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Convento do Carmo (historia)
+Tietoruudun teksti: Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Torre Taglen palatsi] 1735 Palatsi valmistui 1735 José Bernardo de Tagle Brachon kodiksi. Kuningas Filip V oli antanut hänelle 26. marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 neliömetriä. Julkisivu on andalusialaista barokkia ja tarkoituksella epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista setri- ja mahonkipuusta veistettyä parveketta, ja niiden jaotus on eri: oikeanpuoleisessa on kolme osaa ja vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun vaakuna ja teksti "Tagle se llamó el que la sierpe mató y con la infanta casó" — Tagleksi kutsuttiin sitä, joka tappoi käärmeen ja na…
+- [Havanna — kohdekartta / Kohdekartta: Pyhän Hengen kirkko] 1635 Kirkko rakennettiin 1635 Cuba- ja Acosta-katujen kulmaan, ja se uusittiin ja laajennettiin 1648, jolloin siitä tuli seurakuntakirkko. Sen kiinnostavuus on koruttomuudessa: seinät ovat korallikiveä ja koristelu on niukkaa. Kuubalainen arkkitehti ja historioitsija Joaquín Weiss luki sen 1600-luvun kuubalaiseen yksilaivaiseen tyyliin, jossa kirkossa on vain yksi keskilaiva. Kellotorni rakennettiin 1700-luvun ensi vuosina, kuorin holvi noin 1720 ja sivulaiva — kahdeksan kertaa 29 metriä — vuonna 1760 piispa Pedro Morell de Santa Cruzin käskystä. Kirkolla oli siirtomaa-aikana poikkeuksellinen asema. Paavin bulla 1772 ja Kaarle III:n kuninkaallinen kirje 1773 julistivat sen kaupungin ainoaks…
+
+### 45.1
+KYSYMYS: Miksi kirkolla ei ole kattoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Convento do Carmo (historia)
+Tietoruudun teksti: Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Torre Taglen palatsi] 1735 Palatsi valmistui 1735 José Bernardo de Tagle Brachon kodiksi. Kuningas Filip V oli antanut hänelle 26. marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 neliömetriä. Julkisivu on andalusialaista barokkia ja tarkoituksella epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista setri- ja mahonkipuusta veistettyä parveketta, ja niiden jaotus on eri: oikeanpuoleisessa on kolme osaa ja vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun vaakuna ja teksti "Tagle se llamó el que la sierpe mató y con la infanta casó" — Tagleksi kutsuttiin sitä, joka tappoi käärmeen ja na…
+- [Havanna — kohdekartta / Kohdekartta: Pyhän Hengen kirkko] 1635 Kirkko rakennettiin 1635 Cuba- ja Acosta-katujen kulmaan, ja se uusittiin ja laajennettiin 1648, jolloin siitä tuli seurakuntakirkko. Sen kiinnostavuus on koruttomuudessa: seinät ovat korallikiveä ja koristelu on niukkaa. Kuubalainen arkkitehti ja historioitsija Joaquín Weiss luki sen 1600-luvun kuubalaiseen yksilaivaiseen tyyliin, jossa kirkossa on vain yksi keskilaiva. Kellotorni rakennettiin 1700-luvun ensi vuosina, kuorin holvi noin 1720 ja sivulaiva — kahdeksan kertaa 29 metriä — vuonna 1760 piispa Pedro Morell de Santa Cruzin käskystä. Kirkolla oli siirtomaa-aikana poikkeuksellinen asema. Paavin bulla 1772 ja Kaarle III:n kuninkaallinen kirje 1773 julistivat sen kaupungin ainoaks…
+
+### 45.2
+KYSYMYS: Mitä raunioissa on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Convento do Carmo (historia)
+Tietoruudun teksti: Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Tiwanaku, inkoja vanhempi valtakunta] Aivan järven eteläpuolella kohoaa Tiwanaku, valtakunta joka kukoisti vuosisatoja ennen inkoja. Asutus alkoi kasvaa merkittäväksi noin 300–700-luvuilla jaa. ja oli mahtavimmillaan noin vuonna 800, jolloin kaupungissa asui tutkijoiden arvioiden mukaan 10 000–20 000 ihmistä – yksi Andien suurimmista tuolloin. Kuivuusjaksot heikensivät satoja, ja kulttuuri romahti noin vuoteen 1000 mennessä, kauan ennen kuin inkat nousivat valtaan samalla ylängöllä. Inkojen rakennustapa lainasi silti paljon Tiwanakusta: kaupungin raunioissa seisoo yhä yhdestä kivimöhkäleestä veistetty Auringonportti, jonka pintaan on kaiverrettu jumalhahmoja ja kalenterimerkkejä.
+- [Thaimaa — maalehti / Historia: Pää jäi bodhipuun juurten väliin] 1767 — Ayutthaya perustettiin vuonna 1351, ja siitä kasvoi yksi Aasian vilkkaimmista kauppakaupungeista: kolmen joen saartamalla saarella kävivät kiinalaiset, persialaiset, portugalilaiset ja hollantilaiset kauppiaat. Vuonna 1767 kaupunki hylättiin ja pääkaupunki siirtyi etelään. Wat Mahathatin raunioissa on kivinen buddhanpää, joka on jäänyt bodhipuun juurten väliin: puu kasvoi vuosikymmenten kuluessa maahan pudonneen pään ympärille ja nosti sen takaisin silmien korkeudelle. Kukaan ei asettanut sitä sinne.
+- [Salalah — kaupunkilehti / Salalah] Kaupunki, jossa aurinko paistaa toukokuussa 335 tuntia ja heinäkuussa 44, ja jonka rannan raunioissa kävivät aikanaan sekä Marco Polo että Zheng He.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

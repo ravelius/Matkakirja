@@ -1,0 +1,210 @@
+================ KOHTA 6 (kohde:batalha) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Batalhan luostari (historia)
+Tietoruudun teksti: Batalhan luostari on dominikaaniluostari Keski-Portugalissa, ja sen virallinen nimi on Voiton Pyhän Marian luostari. Kuningas Juhana I rakennutti sen lupauksensa mukaan kiitokseksi Neitsyt Marialle siitä, että portugalilaiset voittivat kastilialaiset Aljubarrotan taistelussa vuonna 1385 ja vuosien 1383–1385 kriisi päättyi. Luostarista tuli 1400-luvun Avisin hallitsijasuvun hautakirkko, ja se on Portugalin parhaita esimerkkejä myöhäisestä liekkigotiikasta manueliinityylin kanssa sekoittuneena. Rakentaminen kesti yli sata vuotta, vuodesta 1386 noin vuoteen 1517, ja se ulottui seitsemän kuninkaan hallituskaudelle ja viidentoista rakennusmestarin käsiin — ensimmäinen heistä, Afonso Domingues, laati pohjapiirroksen, ja hänen jälkeensä Huguet toi maahan liekkigotiikan. Työ pysähtyi, kun Juhana III päätti panna kaiken voimansa Lissabonin Jerónimosin luostariin; maailmanperintökohde Batalha on …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+
+### 6.1
+KYSYMYS: Mikä Aljubarrotan taistelu oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Batalhan luostari (historia)
+Tietoruudun teksti: Batalhan luostari on dominikaaniluostari Keski-Portugalissa, ja sen virallinen nimi on Voiton Pyhän Marian luostari. Kuningas Juhana I rakennutti sen lupauksensa mukaan kiitokseksi Neitsyt Marialle siitä, että portugalilaiset voittivat kastilialaiset Aljubarrotan taistelussa vuonna 1385 ja vuosien 1383–1385 kriisi päättyi. Luostarista tuli 1400-luvun Avisin hallitsijasuvun hautakirkko, ja se on Portugalin parhaita esimerkkejä myöhäisestä liekkigotiikasta manueliinityylin kanssa sekoittuneena. Rakentaminen kesti yli sata vuotta, vuodesta 1386 noin vuoteen 1517, ja se ulottui seitsemän kuninkaan hallituskaudelle ja viidentoista rakennusmestarin käsiin — ensimmäinen heistä, Afonso Domingues, laati pohjapiirroksen, ja hänen jälkeensä Huguet toi maahan liekkigotiikan. Työ pysähtyi, kun Juhana III päätti panna kaiken voimansa Lissabonin Jerónimosin luostariin; maailmanperintökohde Batalha on …
+
+### 6.2
+KYSYMYS: Kuinka kauan luostaria rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Batalhan luostari (historia)
+Tietoruudun teksti: Batalhan luostari on dominikaaniluostari Keski-Portugalissa, ja sen virallinen nimi on Voiton Pyhän Marian luostari. Kuningas Juhana I rakennutti sen lupauksensa mukaan kiitokseksi Neitsyt Marialle siitä, että portugalilaiset voittivat kastilialaiset Aljubarrotan taistelussa vuonna 1385 ja vuosien 1383–1385 kriisi päättyi. Luostarista tuli 1400-luvun Avisin hallitsijasuvun hautakirkko, ja se on Portugalin parhaita esimerkkejä myöhäisestä liekkigotiikasta manueliinityylin kanssa sekoittuneena. Rakentaminen kesti yli sata vuotta, vuodesta 1386 noin vuoteen 1517, ja se ulottui seitsemän kuninkaan hallituskaudelle ja viidentoista rakennusmestarin käsiin — ensimmäinen heistä, Afonso Domingues, laati pohjapiirroksen, ja hänen jälkeensä Huguet toi maahan liekkigotiikan. Työ pysähtyi, kun Juhana III päätti panna kaiken voimansa Lissabonin Jerónimosin luostariin; maailmanperintökohde Batalha on …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:tomar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+
+### 7.1
+KYSYMYS: Mitä temppeliherroille tapahtui Portugalissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+
+### 7.2
+KYSYMYS: Minkä rakennuksen mukaan pyörökirkko tehtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:guimaraes) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+### 8.1
+KYSYMYS: Kuka oli Vímara Peres?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+### 8.2
+KYSYMYS: Mikä São Mameden taistelu oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:almendres) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Historia: Kaupunki syntyy kalliolle] 600-luvun puolivälissä Songtsen Gampo nousi Yarlung Tsangpon laaksossa syntyneen Tiibetin valtakunnan johtoon. Valloitettuaan Zhangzhungin lännessä hän siirsi pääkaupunkinsa Yarlungista Rasaan ja pystytti vuonna 637 ensimmäiset rakennukset Marpo Rin kukkulalle — samalle kalliolle, jolla Potala nyt seisoo. Rasa tarkoitti vuohten paikkaa: niitä kerrotaan käytetyn maansiirtoon temppelin työmaalla. Kuningas nai vuosina 639 ja 641 nepalilaisen prinsessa Bhrikutin ja Tang-hovin prinsessa Wenchengin, ja kummankin myötäjäisinä tuli buddhapatsas: toista varten rakennettiin Jokhang, toista varten Ramoche. Kuninkaan kuoltua kaupunkia alettiin sanoa Lhasaksi.
+- [Mongolia — maalehti / Historia: Kokous Ononin latvoilla] 1206 — Voitettuaan viimeisenkin kilpailijansa Temüjin kutsui vuonna 1206 arojen päämiehet suureen kokoukseen eli kurultaihin Onon-joen latvoille ja otti nimen Tšingis-kaani. Nimen merkityksestä kiistellään yhä: sen on arveltu tarkoittavan lujuutta tai — turkin sanasta tängiz, meri — maailmanmeren hallitsijaa. Samassa kokouksessa hän purki heimojärjestyksen. Jokainen 15–70-vuotias mies kirjattiin tuhannen miehen yksikköön, joka jaettiin sadan ja kymmenen miehen ryhmiin, ja voitettujen heimojen miehet hajautettiin eri yksiköihin. Päälliköiksi nousi kahden sepän pojat, puuseppä ja kolme paimenta: sukuperä ei enää ratkaissut, vaan uskollisuus.
+- [Iso-Britannia — maalehti / Historia] Kivikehä, jonka rakentajat kiskoivat kivet satojen kilometrien päästä, pergamentti joka pani kuninkaankin lain alle, ja veturi joka aloitti rautatieajan.
+
+### 9.1
+KYSYMYS: Kuinka vanha kivikehä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Historia] Kivikehä, jonka rakentajat kiskoivat kivet satojen kilometrien päästä, pergamentti joka pani kuninkaankin lain alle, ja veturi joka aloitti rautatieajan.
+
+### 9.2
+KYSYMYS: Mihin kehää on arveltu käytetyn?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Historia: Kaupunki syntyy kalliolle] 600-luvun puolivälissä Songtsen Gampo nousi Yarlung Tsangpon laaksossa syntyneen Tiibetin valtakunnan johtoon. Valloitettuaan Zhangzhungin lännessä hän siirsi pääkaupunkinsa Yarlungista Rasaan ja pystytti vuonna 637 ensimmäiset rakennukset Marpo Rin kukkulalle — samalle kalliolle, jolla Potala nyt seisoo. Rasa tarkoitti vuohten paikkaa: niitä kerrotaan käytetyn maansiirtoon temppelin työmaalla. Kuningas nai vuosina 639 ja 641 nepalilaisen prinsessa Bhrikutin ja Tang-hovin prinsessa Wenchengin, ja kummankin myötäjäisinä tuli buddhapatsas: toista varten rakennettiin Jokhang, toista varten Ramoche. Kuninkaan kuoltua kaupunkia alettiin sanoa Lhasaksi.
+- [Mongolia — maalehti / Historia: Kokous Ononin latvoilla] 1206 — Voitettuaan viimeisenkin kilpailijansa Temüjin kutsui vuonna 1206 arojen päämiehet suureen kokoukseen eli kurultaihin Onon-joen latvoille ja otti nimen Tšingis-kaani. Nimen merkityksestä kiistellään yhä: sen on arveltu tarkoittavan lujuutta tai — turkin sanasta tängiz, meri — maailmanmeren hallitsijaa. Samassa kokouksessa hän purki heimojärjestyksen. Jokainen 15–70-vuotias mies kirjattiin tuhannen miehen yksikköön, joka jaettiin sadan ja kymmenen miehen ryhmiin, ja voitettujen heimojen miehet hajautettiin eri yksiköihin. Päälliköiksi nousi kahden sepän pojat, puuseppä ja kolme paimenta: sukuperä ei enää ratkaissut, vaan uskollisuus.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:saovicente) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Horn — kaupunkilehti / Kap Hornin kiertäjät: Kolme suurta niemeä, yksi sitkeä laiva] Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä "kolmen niemen mies". Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+
+### 10.1
+KYSYMYS: Miksi antiikin kirjoittajat pitivät niemeä pyhänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Horn — kaupunkilehti / Kap Hornin kiertäjät: Kolme suurta niemeä, yksi sitkeä laiva] Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä "kolmen niemen mies". Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.
+
+### 10.2
+KYSYMYS: Mistä niemi sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

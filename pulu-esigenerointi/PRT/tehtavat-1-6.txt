@@ -1,0 +1,206 @@
+================ KOHTA 26 (kohde:hahmotelma-foz-coa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Côa-laakson kalliopiirrokset (historia)
+Tietoruudun teksti: Côa-laakson esihistoriallinen kalliotaidealue on ulkoilmassa sijaitseva paleoliittinen arkeologinen kohde Koillis-Portugalissa lähellä Espanjan rajaa. 1990-luvun alussa Vila Nova de Foz Côassa löydettiin padon rakennustöiden aikana kalliopiirroksia, joita on tuhansia: hevosia, nautoja ja muita eläimiä sekä ihmis- ja abstrakteja hahmoja, ajoitettuina vuosille 22 000–10 000 eaa. Yleisön tuki kalliopiirrosten suojelulle kasvoi Portugalissa ja kansainvälisesti, ja vuoden 1995 vaalien jälkeen uusi hallitus perui padon rakennushankkeen. Vuodesta 1995 arkeologit ovat tutkineet ja luetteloineet aluetta, ja sen ympärille on perustettu arkeologinen puisto ja Côa-museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 26.1
+KYSYMYS: Miksi padon rakentaminen keskeytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Côa-laakson kalliopiirrokset (historia)
+Tietoruudun teksti: Côa-laakson esihistoriallinen kalliotaidealue on ulkoilmassa sijaitseva paleoliittinen arkeologinen kohde Koillis-Portugalissa lähellä Espanjan rajaa. 1990-luvun alussa Vila Nova de Foz Côassa löydettiin padon rakennustöiden aikana kalliopiirroksia, joita on tuhansia: hevosia, nautoja ja muita eläimiä sekä ihmis- ja abstrakteja hahmoja, ajoitettuina vuosille 22 000–10 000 eaa. Yleisön tuki kalliopiirrosten suojelulle kasvoi Portugalissa ja kansainvälisesti, ja vuoden 1995 vaalien jälkeen uusi hallitus perui padon rakennushankkeen. Vuodesta 1995 arkeologit ovat tutkineet ja luetteloineet aluetta, ja sen ympärille on perustettu arkeologinen puisto ja Côa-museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 26.2
+KYSYMYS: Mitä kalliopiirrokset esittävät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Côa-laakson kalliopiirrokset (historia)
+Tietoruudun teksti: Côa-laakson esihistoriallinen kalliotaidealue on ulkoilmassa sijaitseva paleoliittinen arkeologinen kohde Koillis-Portugalissa lähellä Espanjan rajaa. 1990-luvun alussa Vila Nova de Foz Côassa löydettiin padon rakennustöiden aikana kalliopiirroksia, joita on tuhansia: hevosia, nautoja ja muita eläimiä sekä ihmis- ja abstrakteja hahmoja, ajoitettuina vuosille 22 000–10 000 eaa. Yleisön tuki kalliopiirrosten suojelulle kasvoi Portugalissa ja kansainvälisesti, ja vuoden 1995 vaalien jälkeen uusi hallitus perui padon rakennushankkeen. Vuodesta 1995 arkeologit ovat tutkineet ja luetteloineet aluetta, ja sen ympärille on perustettu arkeologinen puisto ja Côa-museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-castelo-rodrigo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castelo Rodrigo (historia)
+Tietoruudun teksti: Castelo Rodrigon linna on keskiaikainen linna Castelo Rodrigon seurakunnassa Figueira de Castelo Rodrigon kunnassa Guardan piirikunnassa. Legendojen mukaan linna perustettiin 500-luvulla. Kun León kuningas Alfonso IX valloitti kylän 1000–1100-lukujen vaihteessa, hän määräsi rakennettavaksi linnan ja vahvistamaan puolustuslinjaa. Sekä kylä että linna ovat saaneet nimensä kreivi Rodrigo Gonzalez de Girónin mukaan, joka vastasi linnan puolustuksesta. Castelo Rodrigo liitettiin Portugalin kuningaskuntaan 1297 Alcañicesin sopimuksella. Kuningas Dinis rakennutti 1300-luvulla linnan ja muurin uudelleen, ja mukaan tulivat 13 tornia, päätorni, esimuuri ja vallihaudat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kohdekartta / Kohdekartta: San Cristóbalin kirkko] 1669 San Cristóbal on keskustan suurin ja asutuin kaupunginosa. Sinne asettui alun perin se mexica- ja tlaxcalteekkiväestö, joka oli tullut Yucatániin valloituksen mukana; heille kuului osallistumisensa perusteella verovapaus. Kuvernööri Diego Quijada otti oikeuden pois, eivätkä asukkaat saaneet sitä protestoimalla takaisin. Viiden korttelin päähän pääaukiolta, yhden Tʼhón kukkulan päälle, rakennettiin pian valloituksen jälkeen suuri fransiskaaniluostari. Paikan oli valinnut Francisco de Montejo nuorempi linnoitusta varten, ja vuonna 1669 kuvernööri Rodrigo Flores de Aldanan aikana ajatus toteutettiin: San Beniton linnoitus rakennettiin luostarin ympärille. Alussa portteja oli kolme — yksi …
+- [Bogotá — kohdekartta / Kohdekartta: Externadon yliopisto] 1886 Yliopiston perusti 15. helmikuuta 1886 juristi ja kasvattaja Nicolás Pinzón Warlosten vastaukseksi koulutuksen rajoituksiin, joita La Regeneración eli konservatiivien hallintokausi asetti. Pinzón sai avukseen radikaaliliberaalin liikkeen professoreita ja muita aikansa ajattelijoita. Täyden yliopiston aseman laitos sai 1958. Nykyään siellä opiskelee yli 13 000 opiskelijaa, ja opetusaloja ovat muun muassa oikeustiede, taloustiede, journalismi, antropologia, sosiaalityö, filosofia ja historia sekä kulttuuriperinnön ala museologiasta arkeologiaan ja konservointiin. Opetuskieli on pääosin espanja. Unesco perusti yliopistoon 2005 oppituolin, jonka alana ovat ihmisoikeudet, väkivalta, julkine…
+
+### 27.1
+KYSYMYS: Kuka Rodrigo oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castelo Rodrigo (historia)
+Tietoruudun teksti: Castelo Rodrigon linna on keskiaikainen linna Castelo Rodrigon seurakunnassa Figueira de Castelo Rodrigon kunnassa Guardan piirikunnassa. Legendojen mukaan linna perustettiin 500-luvulla. Kun León kuningas Alfonso IX valloitti kylän 1000–1100-lukujen vaihteessa, hän määräsi rakennettavaksi linnan ja vahvistamaan puolustuslinjaa. Sekä kylä että linna ovat saaneet nimensä kreivi Rodrigo Gonzalez de Girónin mukaan, joka vastasi linnan puolustuksesta. Castelo Rodrigo liitettiin Portugalin kuningaskuntaan 1297 Alcañicesin sopimuksella. Kuningas Dinis rakennutti 1300-luvulla linnan ja muurin uudelleen, ja mukaan tulivat 13 tornia, päätorni, esimuuri ja vallihaudat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kohdekartta / Kohdekartta: San Cristóbalin kirkko] 1669 San Cristóbal on keskustan suurin ja asutuin kaupunginosa. Sinne asettui alun perin se mexica- ja tlaxcalteekkiväestö, joka oli tullut Yucatániin valloituksen mukana; heille kuului osallistumisensa perusteella verovapaus. Kuvernööri Diego Quijada otti oikeuden pois, eivätkä asukkaat saaneet sitä protestoimalla takaisin. Viiden korttelin päähän pääaukiolta, yhden Tʼhón kukkulan päälle, rakennettiin pian valloituksen jälkeen suuri fransiskaaniluostari. Paikan oli valinnut Francisco de Montejo nuorempi linnoitusta varten, ja vuonna 1669 kuvernööri Rodrigo Flores de Aldanan aikana ajatus toteutettiin: San Beniton linnoitus rakennettiin luostarin ympärille. Alussa portteja oli kolme — yksi …
+- [Bogotá — kohdekartta / Kohdekartta: Externadon yliopisto] 1886 Yliopiston perusti 15. helmikuuta 1886 juristi ja kasvattaja Nicolás Pinzón Warlosten vastaukseksi koulutuksen rajoituksiin, joita La Regeneración eli konservatiivien hallintokausi asetti. Pinzón sai avukseen radikaaliliberaalin liikkeen professoreita ja muita aikansa ajattelijoita. Täyden yliopiston aseman laitos sai 1958. Nykyään siellä opiskelee yli 13 000 opiskelijaa, ja opetusaloja ovat muun muassa oikeustiede, taloustiede, journalismi, antropologia, sosiaalityö, filosofia ja historia sekä kulttuuriperinnön ala museologiasta arkeologiaan ja konservointiin. Opetuskieli on pääosin espanja. Unesco perusti yliopistoon 2005 oppituolin, jonka alana ovat ihmisoikeudet, väkivalta, julkine…
+
+### 27.2
+KYSYMYS: Mikä Alcañicesin sopimus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castelo Rodrigo (historia)
+Tietoruudun teksti: Castelo Rodrigon linna on keskiaikainen linna Castelo Rodrigon seurakunnassa Figueira de Castelo Rodrigon kunnassa Guardan piirikunnassa. Legendojen mukaan linna perustettiin 500-luvulla. Kun León kuningas Alfonso IX valloitti kylän 1000–1100-lukujen vaihteessa, hän määräsi rakennettavaksi linnan ja vahvistamaan puolustuslinjaa. Sekä kylä että linna ovat saaneet nimensä kreivi Rodrigo Gonzalez de Girónin mukaan, joka vastasi linnan puolustuksesta. Castelo Rodrigo liitettiin Portugalin kuningaskuntaan 1297 Alcañicesin sopimuksella. Kuningas Dinis rakennutti 1300-luvulla linnan ja muurin uudelleen, ja mukaan tulivat 13 tornia, päätorni, esimuuri ja vallihaudat.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-castelo-de-vide) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castelo de Vide (historia)
+Tietoruudun teksti: Castelo de Vide on Portugalin kunta, jossa asui vuonna 2011 3 407 ihmistä. Siitä on merkkejä asutuksesta jo neoliittiselta ajalta, ja seudulla on useita megaliittisia kohteita. Linnoituksen rakentaminen vakiinnutti uuden väestön alueelle ja toimi samalla strategisena rajalinnoituksena. Castelo de Videstä tuli oma kuntansa vuonna 1276, ennen sitä se kuului Marvãolle. Kuningas Dinis ja hänen veljensä jatkoivat linnoituksen muurien rakentamista 1300-luvulla. Asiakirjat todistavat kaupungin juutalaisyhteisön ja -korttelin olemassaolosta 1300- ja 1400-luvuilla, ja 1300-luvun synagoga seisoo yhä. Vaikka juutalaiset karkotettiin Portugalista 1496, marraanit käyttivät sitä pyhäkkönä ja koulunaan 1500-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+
+### 28.1
+KYSYMYS: Mikä on marraani?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castelo de Vide (historia)
+Tietoruudun teksti: Castelo de Vide on Portugalin kunta, jossa asui vuonna 2011 3 407 ihmistä. Siitä on merkkejä asutuksesta jo neoliittiselta ajalta, ja seudulla on useita megaliittisia kohteita. Linnoituksen rakentaminen vakiinnutti uuden väestön alueelle ja toimi samalla strategisena rajalinnoituksena. Castelo de Videstä tuli oma kuntansa vuonna 1276, ennen sitä se kuului Marvãolle. Kuningas Dinis ja hänen veljensä jatkoivat linnoituksen muurien rakentamista 1300-luvulla. Asiakirjat todistavat kaupungin juutalaisyhteisön ja -korttelin olemassaolosta 1300- ja 1400-luvuilla, ja 1300-luvun synagoga seisoo yhä. Vaikka juutalaiset karkotettiin Portugalista 1496, marraanit käyttivät sitä pyhäkkönä ja koulunaan 1500-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+
+### 28.2
+KYSYMYS: Miksi kylä oli tärkeä rajalinnoitus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castelo de Vide (historia)
+Tietoruudun teksti: Castelo de Vide on Portugalin kunta, jossa asui vuonna 2011 3 407 ihmistä. Siitä on merkkejä asutuksesta jo neoliittiselta ajalta, ja seudulla on useita megaliittisia kohteita. Linnoituksen rakentaminen vakiinnutti uuden väestön alueelle ja toimi samalla strategisena rajalinnoituksena. Castelo de Videstä tuli oma kuntansa vuonna 1276, ennen sitä se kuului Marvãolle. Kuningas Dinis ja hänen veljensä jatkoivat linnoituksen muurien rakentamista 1300-luvulla. Asiakirjat todistavat kaupungin juutalaisyhteisön ja -korttelin olemassaolosta 1300- ja 1400-luvuilla, ja 1300-luvun synagoga seisoo yhä. Vaikka juutalaiset karkotettiin Portugalista 1496, marraanit käyttivät sitä pyhäkkönä ja koulunaan 1500-luvulle asti.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-belmonte) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belmonte (historia)
+Tietoruudun teksti: Belmonte on kaupunki ja kunta Castelo Brancon piirikunnassa Portugalissa. Se on tunnettu pysyvästä juutalaisyhteisöstään, joka on olemassa ainakin 1200-luvulta alkaen ja säilytti uskonsa kryptojuutalaisuudessa, salaa ylläpitäen juutalaisia perinteitä inkvisition ja pakkokäännytysten paineen alla. Avoin uskonnonharjoitus palautettiin synagogan perustamisella vuonna 1996. Cabralin suvulla oli keskeinen asema Belmonten historiassa 1200-luvulta alkaen. Vuonna 1466 kuningas Afonso V antoi Fernão Cabralille perinnöllisen alcaide-mor-arvonimen, ja Fernão muutti linnan linnoitetuksi kartanoksi, jossa hänen poikansa Pedro Álvares Cabral vietti varhaisvuotensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Real Gabinete -kirjasto] 1837–1887 Kirjaston perusti 1837 neljäkymmentäkolme portugalilaista siirtolaista, jotka olivat paenneet kotimaansa poliittisia oloja. Tarkoitus oli pitää yllä portugalilaista kulttuuria keisarikunnan pääkaupungissa, ja se oli yhteisön ensimmäinen oma yhdistys kaupungissa. Isoisän matkan aikaan lukukabinetti oli siis toiminut jo 36 vuotta — mutta ei siinä talossa, joka nyt tunnetaan. Nykyinen rakennus tehtiin 1880–1887 portugalilaisen arkkitehdin Rafael da Silva e Castron piirustusten mukaan uusmanueliiniseen tyyliin, joka jäljittelee löytöretkiajan portugalilaista koristetyyliä. Keisari Pedro II laski peruskiven 10. kesäkuuta 1880, ja talon vihkivät 10. syyskuuta 1887 hänen tyttärensä prins…
+
+### 29.1
+KYSYMYS: Kuka Pedro Álvares Cabral oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belmonte (historia)
+Tietoruudun teksti: Belmonte on kaupunki ja kunta Castelo Brancon piirikunnassa Portugalissa. Se on tunnettu pysyvästä juutalaisyhteisöstään, joka on olemassa ainakin 1200-luvulta alkaen ja säilytti uskonsa kryptojuutalaisuudessa, salaa ylläpitäen juutalaisia perinteitä inkvisition ja pakkokäännytysten paineen alla. Avoin uskonnonharjoitus palautettiin synagogan perustamisella vuonna 1996. Cabralin suvulla oli keskeinen asema Belmonten historiassa 1200-luvulta alkaen. Vuonna 1466 kuningas Afonso V antoi Fernão Cabralille perinnöllisen alcaide-mor-arvonimen, ja Fernão muutti linnan linnoitetuksi kartanoksi, jossa hänen poikansa Pedro Álvares Cabral vietti varhaisvuotensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Real Gabinete -kirjasto] 1837–1887 Kirjaston perusti 1837 neljäkymmentäkolme portugalilaista siirtolaista, jotka olivat paenneet kotimaansa poliittisia oloja. Tarkoitus oli pitää yllä portugalilaista kulttuuria keisarikunnan pääkaupungissa, ja se oli yhteisön ensimmäinen oma yhdistys kaupungissa. Isoisän matkan aikaan lukukabinetti oli siis toiminut jo 36 vuotta — mutta ei siinä talossa, joka nyt tunnetaan. Nykyinen rakennus tehtiin 1880–1887 portugalilaisen arkkitehdin Rafael da Silva e Castron piirustusten mukaan uusmanueliiniseen tyyliin, joka jäljittelee löytöretkiajan portugalilaista koristetyyliä. Keisari Pedro II laski peruskiven 10. kesäkuuta 1880, ja talon vihkivät 10. syyskuuta 1887 hänen tyttärensä prins…
+
+### 29.2
+KYSYMYS: Mitä kryptojuutalaisuus tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belmonte (historia)
+Tietoruudun teksti: Belmonte on kaupunki ja kunta Castelo Brancon piirikunnassa Portugalissa. Se on tunnettu pysyvästä juutalaisyhteisöstään, joka on olemassa ainakin 1200-luvulta alkaen ja säilytti uskonsa kryptojuutalaisuudessa, salaa ylläpitäen juutalaisia perinteitä inkvisition ja pakkokäännytysten paineen alla. Avoin uskonnonharjoitus palautettiin synagogan perustamisella vuonna 1996. Cabralin suvulla oli keskeinen asema Belmonten historiassa 1200-luvulta alkaen. Vuonna 1466 kuningas Afonso V antoi Fernão Cabralille perinnöllisen alcaide-mor-arvonimen, ja Fernão muutti linnan linnoitetuksi kartanoksi, jossa hänen poikansa Pedro Álvares Cabral vietti varhaisvuotensa.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-monsaraz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsaraz (kulttuuri)
+Tietoruudun teksti: Monsaraz on Reguengos de Monsarazin kunnan seurakunta Guadiana-joen oikealla rannalla Alentejossa lähellä Espanjan rajaa, ja siellä asui vuonna 2011 782 ihmistä. Se on yksi Etelä-Portugalin vanhimmista asutuksista, ja sen alueella on satoja megaliittisia monumentteja. Kukkulalla, jolla kylä nykyisin on, oli esihistoriallinen linnoitettu asutus. Roomalaisten jälkeen alueen valtasivat visigootit, arabit, mozarabit ja juutalaiset, ja Reconquistan jälkeen kristityt Afonso Henriquesin seuraajat. Vuonna 1167 Geraldo Sem Pavor otti linnan ja kaupungin, mutta muslimit valtasivat sen uudelleen, ja vuonna 1232 kuningas Sancho II otti sen lopullisesti takaisin temppeliritarien tuella.
+
+### 30.1
+KYSYMYS: Keitä temppeliritarit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsaraz (kulttuuri)
+Tietoruudun teksti: Monsaraz on Reguengos de Monsarazin kunnan seurakunta Guadiana-joen oikealla rannalla Alentejossa lähellä Espanjan rajaa, ja siellä asui vuonna 2011 782 ihmistä. Se on yksi Etelä-Portugalin vanhimmista asutuksista, ja sen alueella on satoja megaliittisia monumentteja. Kukkulalla, jolla kylä nykyisin on, oli esihistoriallinen linnoitettu asutus. Roomalaisten jälkeen alueen valtasivat visigootit, arabit, mozarabit ja juutalaiset, ja Reconquistan jälkeen kristityt Afonso Henriquesin seuraajat. Vuonna 1167 Geraldo Sem Pavor otti linnan ja kaupungin, mutta muslimit valtasivat sen uudelleen, ja vuonna 1232 kuningas Sancho II otti sen lopullisesti takaisin temppeliritarien tuella.
+
+### 30.2
+KYSYMYS: Mikä Alqueva on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsaraz (kulttuuri)
+Tietoruudun teksti: Monsaraz on Reguengos de Monsarazin kunnan seurakunta Guadiana-joen oikealla rannalla Alentejossa lähellä Espanjan rajaa, ja siellä asui vuonna 2011 782 ihmistä. Se on yksi Etelä-Portugalin vanhimmista asutuksista, ja sen alueella on satoja megaliittisia monumentteja. Kukkulalla, jolla kylä nykyisin on, oli esihistoriallinen linnoitettu asutus. Roomalaisten jälkeen alueen valtasivat visigootit, arabit, mozarabit ja juutalaiset, ja Reconquistan jälkeen kristityt Afonso Henriquesin seuraajat. Vuonna 1167 Geraldo Sem Pavor otti linnan ja kaupungin, mutta muslimit valtasivat sen uudelleen, ja vuonna 1232 kuningas Sancho II otti sen lopullisesti takaisin temppeliritarien tuella.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

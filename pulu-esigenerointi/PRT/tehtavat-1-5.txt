@@ -1,0 +1,207 @@
+================ KOHTA 21 (kohde:hahmotelma-sabugal) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Ankaran linna] Linnassa on kaksi muurikehää. Ulomman kehän tornit ovat noin 40 metrin välein. Sisempi kehä on paljon tiheämpi: siinä tornit seuraavat toisiaan lyhyin välein, ja muurin sisään jää alue, joka on noin 350 metriä pitkä ja 150 metriä leveä. Pohjana on laavakieleke, joka kohoaa selvästi vanhan kaupungin yläpuolelle. Tarkkoja rakennusvuosia ei tiedetä. Molemmat kehät ovat kuitenkin vuotta 622 nuorempia: silloin persialaiset valtasivat ja hävittivät kaupungin, ja muurit nousivat vasta sen jälkeen. Tutkija Clive Foss on arvioinut sisemmän kehän keisari Konstans II:n ajalta — hän hallitsi Bysantissa vuosina 641–668 — ja ulompaa kehää pidetään hieman nuorempana. Kukkula oli linnoitettu jo kauan ennen…
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+
+### 21.1
+KYSYMYS: Mitä Sabugalin taistelussa tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+### 21.2
+KYSYMYS: Miksi linnassa on viisikulmainen muuri?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Ankaran linna] Linnassa on kaksi muurikehää. Ulomman kehän tornit ovat noin 40 metrin välein. Sisempi kehä on paljon tiheämpi: siinä tornit seuraavat toisiaan lyhyin välein, ja muurin sisään jää alue, joka on noin 350 metriä pitkä ja 150 metriä leveä. Pohjana on laavakieleke, joka kohoaa selvästi vanhan kaupungin yläpuolelle. Tarkkoja rakennusvuosia ei tiedetä. Molemmat kehät ovat kuitenkin vuotta 622 nuorempia: silloin persialaiset valtasivat ja hävittivät kaupungin, ja muurit nousivat vasta sen jälkeen. Tutkija Clive Foss on arvioinut sisemmän kehän keisari Konstans II:n ajalta — hän hallitsi Bysantissa vuosina 641–668 — ja ulompaa kehää pidetään hieman nuorempana. Kukkula oli linnoitettu jo kauan ennen…
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-vila-nova-de-cerveira) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kohdekartta / Kohdekartta: Nykytaiteen museo] 1983 Panaman nykytaiteen museo eli MAC on maan ainoa nykytaiteen museo. Sen juuret ovat vuonna 1962 perustetussa Panaman taideinstituutissa, joka toimi vuokratiloissa ja järjesti näyttelyjen lisäksi näytelmiä, konsertteja ja elokuvaesityksiä. Kokoelma syntyi tavalla, joka on samalla nokkela ja köyhä: jokaiselta näyttelyn pitäneeltä taiteilijalta pyydettiin lahjaksi yksi teos. Kaksikymmentä vuotta myöhemmin kokoelma oli arvokas mutta koditon. Vuonna 1983 johtokunta päätti hankkia sille seinät, ja laajan keräyksen sekä pankkilainan turvin ostettiin ja kunnostettiin entisen kanava-alueen vapaamuurarien temppeli Ancónista. Muutostyön tekivät Coqui Calderón ja Graciela de Eleta, jotka saivat sii…
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+
+### 22.1
+KYSYMYS: Mistä kaupungin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 22.2
+KYSYMYS: Mikä nykytaiteen biennaali on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kohdekartta / Kohdekartta: Nykytaiteen museo] 1983 Panaman nykytaiteen museo eli MAC on maan ainoa nykytaiteen museo. Sen juuret ovat vuonna 1962 perustetussa Panaman taideinstituutissa, joka toimi vuokratiloissa ja järjesti näyttelyjen lisäksi näytelmiä, konsertteja ja elokuvaesityksiä. Kokoelma syntyi tavalla, joka on samalla nokkela ja köyhä: jokaiselta näyttelyn pitäneeltä taiteilijalta pyydettiin lahjaksi yksi teos. Kaksikymmentä vuotta myöhemmin kokoelma oli arvokas mutta koditon. Vuonna 1983 johtokunta päätti hankkia sille seinät, ja laajan keräyksen sekä pankkilainan turvin ostettiin ja kunnostettiin entisen kanava-alueen vapaamuurarien temppeli Ancónista. Muutostyön tekivät Coqui Calderón ja Graciela de Eleta, jotka saivat sii…
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-monsanto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+### 23.1
+KYSYMYS: Miksi Monsantoa kutsutaan portugalilaisimmaksi kyläksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+### 23.2
+KYSYMYS: Mitä linnalle tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-marvao) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kohdekartta / Kohdekartta: Suuri moskeija] 638 alkaen Moskeija ei ole rakennettu Kaaban ympärille kerralla vaan kerroksittain. Aluksi Kaaba seisoi avoimella aukiolla. Kalifi Umar laajensi paikkaa vuonna 637 puolellatoista tuhannella neliömetrillä, jolloin ala nousi kolmeen ja puoleen tuhanteen; Uthmanin aikana tehtiin ensimmäiset katetut pylväskäytävät. Abd Allah ibn al-Zubayr venytti alan vuonna 682 lähes seitsemään ja puoleen tuhanteen neliömetriin, ja kalifi al-Mahdin vuonna 779 aloittama työ nosti sen kahteenkymmeneenkahdeksaantuhanteen — suurempaa laajennusta ei tehty ennen Saudi-Arabian aikaa. Se moskeija, jonka 1800-luvun matkalainen näki, oli osmanien työtä. Vuonna 1570 sulttaani Selim II tilasi korjauksen pääarkkitehti Mima…
+
+### 24.1
+KYSYMYS: Kuka Ibn Marwan oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kohdekartta / Kohdekartta: Suuri moskeija] 638 alkaen Moskeija ei ole rakennettu Kaaban ympärille kerralla vaan kerroksittain. Aluksi Kaaba seisoi avoimella aukiolla. Kalifi Umar laajensi paikkaa vuonna 637 puolellatoista tuhannella neliömetrillä, jolloin ala nousi kolmeen ja puoleen tuhanteen; Uthmanin aikana tehtiin ensimmäiset katetut pylväskäytävät. Abd Allah ibn al-Zubayr venytti alan vuonna 682 lähes seitsemään ja puoleen tuhanteen neliömetriin, ja kalifi al-Mahdin vuonna 779 aloittama työ nosti sen kahteenkymmeneenkahdeksaantuhanteen — suurempaa laajennusta ei tehty ennen Saudi-Arabian aikaa. Se moskeija, jonka 1800-luvun matkalainen näki, oli osmanien työtä. Vuonna 1570 sulttaani Selim II tilasi korjauksen pääarkkitehti Mima…
+
+### 24.2
+KYSYMYS: Miksi Marvãosta näkee niin kauas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-mertola) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mértola (historia)
+Tietoruudun teksti: Mértola on kaupunki ja kunta Kaakkois-Alentejossa lähellä Espanjan rajaa, noin 2 500 asukkaan kaupunki kukkulalla Guadiana-joen yllä. Sen strateginen sijainti teki siitä tärkeän jokisataman antiikissa ja Umayyad-valloituksen aikoihin, ja kaupungin pääkirkko, Nossa Senhora da Anunciação, on ainoa keskiaikainen moskeija, joka on säilynyt Portugalissa. Rautakaudelta lähtien paikalla oli asutusta, ja roomalaiset nimesivät sen Myrtilis Iuliaksi. Joen pohjoisin purjehduskelpoinen kohta antoi paikalle kauppa-aseman: läheisiltä mailta saadut hopea, kulta ja tina kulkivat Guadianaa pitkin sen satamasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Suuri moskeija] 742, nykyinen muoto 1392 Tang-keisari Xuanzong määräsi noin vuonna 742 rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja käsityöläisille. Song-kaudelta on säilynyt keisarillinen kilpi, joka todistaa paikan olleen silloin käytössä. Moskeija on rakennettu uudelleen ainakin neljä kertaa; 1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella lisättiin etuportti, kunniaportti ja vesipiste. Alaa kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli kaksikymmentä. Pohjakaava on kiinalainen: neljä muurein erotettua pihaa peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi jälkimmäistä rakennusten aluetta. Jokaisen p…
+- [Bagdad — kohdekartta / Kohdekartta: al-Wazirin moskeija] 1599 Moskeijan rakennutti vuonna 1599 Hasan Pasha, Bagdadin ottomaanikäskynhaltija eli vezir — siitä nimi, käskynhaltijan moskeija. Paikalla oli aiemmin ollut abbasidikautinen Dhu al-Manaran moskeija, ja irakilaisen historioitsijan Imad Abd al-Salam Raufin mukaan tässä seisoi myös vuonna 1106 perustettu koulu. Hasan Pasha uudisti rakennuksen ja perusti sen yhteyteen korkeakoulun, jossa opetettiin sekä järkitieteitä että uskonnollisia aineita. Moskeija on Souk al-Sarain kupeessa, ja sen puutarha ulottuu Tigrisin rantaan. Vuonna 1604 viereen rakennettiin joelle antava Hasan Pashan kahvila. Vuonna 1686 upseeri Ahmed Agha rakensi länsisiiven uudelleen ja lisäsi korkean kupolin. Rakennusta on uu…
+
+### 25.1
+KYSYMYS: Miksi Mértola oli tärkeä satama?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mértola (historia)
+Tietoruudun teksti: Mértola on kaupunki ja kunta Kaakkois-Alentejossa lähellä Espanjan rajaa, noin 2 500 asukkaan kaupunki kukkulalla Guadiana-joen yllä. Sen strateginen sijainti teki siitä tärkeän jokisataman antiikissa ja Umayyad-valloituksen aikoihin, ja kaupungin pääkirkko, Nossa Senhora da Anunciação, on ainoa keskiaikainen moskeija, joka on säilynyt Portugalissa. Rautakaudelta lähtien paikalla oli asutusta, ja roomalaiset nimesivät sen Myrtilis Iuliaksi. Joen pohjoisin purjehduskelpoinen kohta antoi paikalle kauppa-aseman: läheisiltä mailta saadut hopea, kulta ja tina kulkivat Guadianaa pitkin sen satamasta.
+
+### 25.2
+KYSYMYS: Miksi moskeija on säilynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mértola (historia)
+Tietoruudun teksti: Mértola on kaupunki ja kunta Kaakkois-Alentejossa lähellä Espanjan rajaa, noin 2 500 asukkaan kaupunki kukkulalla Guadiana-joen yllä. Sen strateginen sijainti teki siitä tärkeän jokisataman antiikissa ja Umayyad-valloituksen aikoihin, ja kaupungin pääkirkko, Nossa Senhora da Anunciação, on ainoa keskiaikainen moskeija, joka on säilynyt Portugalissa. Rautakaudelta lähtien paikalla oli asutusta, ja roomalaiset nimesivät sen Myrtilis Iuliaksi. Joen pohjoisin purjehduskelpoinen kohta antoi paikalle kauppa-aseman: läheisiltä mailta saadut hopea, kulta ja tina kulkivat Guadianaa pitkin sen satamasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Suuri moskeija] 742, nykyinen muoto 1392 Tang-keisari Xuanzong määräsi noin vuonna 742 rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja käsityöläisille. Song-kaudelta on säilynyt keisarillinen kilpi, joka todistaa paikan olleen silloin käytössä. Moskeija on rakennettu uudelleen ainakin neljä kertaa; 1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella lisättiin etuportti, kunniaportti ja vesipiste. Alaa kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli kaksikymmentä. Pohjakaava on kiinalainen: neljä muurein erotettua pihaa peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi jälkimmäistä rakennusten aluetta. Jokaisen p…
+- [Bagdad — kohdekartta / Kohdekartta: al-Wazirin moskeija] 1599 Moskeijan rakennutti vuonna 1599 Hasan Pasha, Bagdadin ottomaanikäskynhaltija eli vezir — siitä nimi, käskynhaltijan moskeija. Paikalla oli aiemmin ollut abbasidikautinen Dhu al-Manaran moskeija, ja irakilaisen historioitsijan Imad Abd al-Salam Raufin mukaan tässä seisoi myös vuonna 1106 perustettu koulu. Hasan Pasha uudisti rakennuksen ja perusti sen yhteyteen korkeakoulun, jossa opetettiin sekä järkitieteitä että uskonnollisia aineita. Moskeija on Souk al-Sarain kupeessa, ja sen puutarha ulottuu Tigrisin rantaan. Vuonna 1604 viereen rakennettiin joelle antava Hasan Pashan kahvila. Vuonna 1686 upseeri Ahmed Agha rakensi länsisiiven uudelleen ja lisäsi korkean kupolin. Rakennusta on uu…
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

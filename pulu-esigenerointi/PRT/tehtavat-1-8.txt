@@ -1,0 +1,210 @@
+================ KOHTA 36 (kohde:hahmotelma-sao-domingos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nome — kaupunkilehti / Kultaryntäys: Wyatt Earp "louhi kaivosmiehiä"] Syyskuussa 1899 lännen legenda Wyatt Earp rakensi kumppaninsa Charles Hoxien kanssa Dexter-saluunan, kaupungin ensimmäisen kaksikerroksisen puurakennuksen. Earp ei etsinyt kultaa purosta vaan kaivosmiesten taskuista: hän myönsi suoraan tulleensa louhimaan kaivosmiehiä, ja Dexteristä tuli kaupungin ylellisin saluuna, jonka ovista kulki niin kirjailija Rex Beach kuin nuori kaivosinsinööri Herbert Hoover, myöhempi presidentti. Earp ja hänen vaimonsa Josephine viettivät Nomessa vain kesät ja myivät osuutensa Hoxielle muutaman vuoden jälkeen, ennen joulukuuta 1901.
+
+### 36.1
+KYSYMYS: Miksi britit tulivat Portugaliin louhimaan kuparia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nome — kaupunkilehti / Kultaryntäys: Wyatt Earp "louhi kaivosmiehiä"] Syyskuussa 1899 lännen legenda Wyatt Earp rakensi kumppaninsa Charles Hoxien kanssa Dexter-saluunan, kaupungin ensimmäisen kaksikerroksisen puurakennuksen. Earp ei etsinyt kultaa purosta vaan kaivosmiesten taskuista: hän myönsi suoraan tulleensa louhimaan kaivosmiehiä, ja Dexteristä tuli kaupungin ylellisin saluuna, jonka ovista kulki niin kirjailija Rex Beach kuin nuori kaivosinsinööri Herbert Hoover, myöhempi presidentti. Earp ja hänen vaimonsa Josephine viettivät Nomessa vain kesät ja myivät osuutensa Hoxielle muutaman vuoden jälkeen, ennen joulukuuta 1901.
+
+### 36.2
+KYSYMYS: Mikä Iberian pyriittivyöhyke on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-castro-marim) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+- [Uluru — kaupunkilehti / Uluru: Kalliota suurempi kuin näkee] Se, minkä matkailija näkee maan pinnalla, on vain osa Ulurusta. Kallio kohoaa 348 metriä ympäröivää tasankoa korkeammalle, ja sen kehä on peräti 9,4 kilometriä — mutta geologien mittausten mukaan suuri osa kivimassasta jatkuu syvälle maan alle näkymättömissä. Ilmasta kuvattuna kallio erottuu yksinäisenä, terävärajaisena punaisena saarekkeena keskellä äärettömän tasaista pensasaavikkoa. Mittasuhteet tekivät siitä heti mieleenpainuvan uutisaiheen 1870-luvun Etelä-Australiassa: mikään muu yksittäinen kallio mantereella ei noussut näin jyrkästi tasangosta.
+
+### 37.1
+KYSYMYS: Mikä Ramsar-alue on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+
+### 37.2
+KYSYMYS: Mitä lintuja alueella näkee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+- [Uluru — kaupunkilehti / Uluru: Kalliota suurempi kuin näkee] Se, minkä matkailija näkee maan pinnalla, on vain osa Ulurusta. Kallio kohoaa 348 metriä ympäröivää tasankoa korkeammalle, ja sen kehä on peräti 9,4 kilometriä — mutta geologien mittausten mukaan suuri osa kivimassasta jatkuu syvälle maan alle näkymättömissä. Ilmasta kuvattuna kallio erottuu yksinäisenä, terävärajaisena punaisena saarekkeena keskellä äärettömän tasaista pensasaavikkoa. Mittasuhteet tekivät siitä heti mieleenpainuvan uutisaiheen 1870-luvun Etelä-Australiassa: mikään muu yksittäinen kallio mantereella ei noussut näin jyrkästi tasangosta.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-trancoso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+
+### 38.1
+KYSYMYS: Kuka Bandarra oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+### 38.2
+KYSYMYS: Keitä marraanit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-panasqueira) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+
+### 39.1
+KYSYMYS: Mitä wolframi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+### 39.2
+KYSYMYS: Miten kaivos löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-estremoz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Santa Maria Novella] 1279–1470 Dominikaanimunkit saivat vuonna 1221 haltuunsa pienen kirkon kaupungin laidalla peltojen keskellä. Se kävi nopeasti ahtaaksi, ja uuden kirkon rakentaminen alkoi 1279. Paavi Eugenius IV vihki sen 1420. Nimi Novella eli "uusi" jäi kirkkoon kiinni, ja se on kantanut sitä nyt seitsemänsataa vuotta. Julkisivu tehtiin kahdessa erässä sadan vuoden välein. Alaosa on 1300-luvulta: valkoista marmoria ja Praton vihreää serpentiinikiveä. Yläosan suunnitteli Leon Battista Alberti, ja sen maksoi villakauppias Giovanni Rucellai, jonka nimi on latinaksi keskellä seinää yhdessä vuosiluvun 1470 kanssa. Albertin ratkaisu leveän alaosan ja kapean yläosan yhdistämiseen olivat kaksi suurta S-kiehkuraa …
+
+### 40.1
+KYSYMYS: Mitä värejä Estremozin marmorissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+### 40.2
+KYSYMYS: Missä marmoria on käytetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Santa Maria Novella] 1279–1470 Dominikaanimunkit saivat vuonna 1221 haltuunsa pienen kirkon kaupungin laidalla peltojen keskellä. Se kävi nopeasti ahtaaksi, ja uuden kirkon rakentaminen alkoi 1279. Paavi Eugenius IV vihki sen 1420. Nimi Novella eli "uusi" jäi kirkkoon kiinni, ja se on kantanut sitä nyt seitsemänsataa vuotta. Julkisivu tehtiin kahdessa erässä sadan vuoden välein. Alaosa on 1300-luvulta: valkoista marmoria ja Praton vihreää serpentiinikiveä. Yläosan suunnitteli Leon Battista Alberti, ja sen maksoi villakauppias Giovanni Rucellai, jonka nimi on latinaksi keskellä seinää yhdessä vuosiluvun 1470 kanssa. Albertin ratkaisu leveän alaosan ja kapean yläosan yhdistämiseen olivat kaksi suurta S-kiehkuraa …
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

@@ -1,0 +1,216 @@
+================ KOHTA 11 (kohde:elvas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+### 11.1
+KYSYMYS: Mikä trace italienne on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+### 11.2
+KYSYMYS: Mikä Amoreiran akvedukti on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:obidos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kohdekartta / Kohdekartta: Sanam Luang] 1782 alkaen Suurpalatsin ja Wat Phra Kaew'n edessä aukeaa suuri nurmikenttä, jota tamarindirivit ympäröivät. Se on ollut kuninkaallisten seremonioiden näyttämö Rama I:n ajoista asti, ja sen vanha virallinen nimi oli Thung Phra Men, kuninkaallinen polttohautauskenttä: kuninkaiden ja kuningattarien roviot on pystytetty tänne kaupungin perustamisesta lähtien. Rama IV vaihtoi nimen vuonna 1855 nykyiseen, joka tarkoittaa kuninkaallista kenttää. Kenttä on ollut muutakin kuin juhlallinen. Rama II lennätti täällä leijoja — kuninkaalla oli tähden muotoinen chula ja varakuninkaalla yksinkertainen pakpao — ja Rama III:n aikana kentällä viljeltiin riisiä, jotta muut valtiot näkisivät maan olevan niin v…
+
+### 12.1
+KYSYMYS: Miksi Óbidosia sanotaan kuningattarien kaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kohdekartta / Kohdekartta: Sanam Luang] 1782 alkaen Suurpalatsin ja Wat Phra Kaew'n edessä aukeaa suuri nurmikenttä, jota tamarindirivit ympäröivät. Se on ollut kuninkaallisten seremonioiden näyttämö Rama I:n ajoista asti, ja sen vanha virallinen nimi oli Thung Phra Men, kuninkaallinen polttohautauskenttä: kuninkaiden ja kuningattarien roviot on pystytetty tänne kaupungin perustamisesta lähtien. Rama IV vaihtoi nimen vuonna 1855 nykyiseen, joka tarkoittaa kuninkaallista kenttää. Kenttä on ollut muutakin kuin juhlallinen. Rama II lennätti täällä leijoja — kuninkaalla oli tähden muotoinen chula ja varakuninkaalla yksinkertainen pakpao — ja Rama III:n aikana kentällä viljeltiin riisiä, jotta muut valtiot näkisivät maan olevan niin v…
+
+### 12.2
+KYSYMYS: Mistä nimi Óbidos tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:aveiro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aveiro (kulttuuri)
+Tietoruudun teksti: Aveiro on kaupunki ja kunta Portugalin keskiosassa, Atlantin rannalla Ria de Aveiron laguunin äärellä. Sitä kutsutaan Portugalin Venetsiaksi, koska kaupungin halki kulkee kanavaverkosto ja kanavilla liikkuu veneitä. Vuonna 2021 asukkaita oli 80 880.
+
+Kaupunki eli pitkään suolasta ja merenkulusta. Roomalaiset ottivat täältä suolaa, ja keskiajalla paikka oli kauppakeskus: se on mainittu asiakirjassa 26. tammikuuta 959, kreivitär Mumadona Diasin testamentissa, jossa seudun vanha nimi Alauario et Salinas tarkoittaa suunnilleen lintujen kokoontumispaikkaa ja suuria suoloja. Kaupungin nimi juontuu latinan muodosta Averius ja sitä kautta kelttiläisestä sanasta aber, joensuu.
+
+Talvella 1575 ankara myrsky sulki sataman suun ja kasvatti Atlantin puolelle riuttamaisen hiekkasärkän. Kauppa metalleilla ja kaakeleilla loppui, laguunin vedet seisahtuivat, ja seurasi talouskriisi, väen väheneminen ja s…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Kuvataide: Maalari, joka meni tupakkatehtaaseen 13-vuotiaana] 1857–1890 — Cristóbal Rojas syntyi Cúan pikkukaupungissa. Isä kuoli, kun poika oli kolmentoista, ja hän meni töihin tupakkatehtaaseen elättääkseen perheen. Vuoden 1878 maanjäristys tuhosi kotiseudun, ja Rojas muutti Caracasiin; ensimmäiset huomatut työt olivat maalauksia raunioista. Hän sai 1883 hopeamitalin samassa näyttelyssä kuin Michelena ja apurahan viisikymmentä pesoa kuukaudessa Pariisiin. Louvren toistuvat käynnit veivät tyylin jälkiromantiikasta impressionismiin. Rojas kuoli 32-vuotiaana.
+
+### 13.1
+KYSYMYS: Mihin moliceiro-veneitä alun perin käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aveiro (kulttuuri)
+Tietoruudun teksti: Aveiro on kaupunki ja kunta Portugalin keskiosassa, Atlantin rannalla Ria de Aveiron laguunin äärellä. Sitä kutsutaan Portugalin Venetsiaksi, koska kaupungin halki kulkee kanavaverkosto ja kanavilla liikkuu veneitä. Vuonna 2021 asukkaita oli 80 880.
+
+Kaupunki eli pitkään suolasta ja merenkulusta. Roomalaiset ottivat täältä suolaa, ja keskiajalla paikka oli kauppakeskus: se on mainittu asiakirjassa 26. tammikuuta 959, kreivitär Mumadona Diasin testamentissa, jossa seudun vanha nimi Alauario et Salinas tarkoittaa suunnilleen lintujen kokoontumispaikkaa ja suuria suoloja. Kaupungin nimi juontuu latinan muodosta Averius ja sitä kautta kelttiläisestä sanasta aber, joensuu.
+
+Talvella 1575 ankara myrsky sulki sataman suun ja kasvatti Atlantin puolelle riuttamaisen hiekkasärkän. Kauppa metalleilla ja kaakeleilla loppui, laguunin vedet seisahtuivat, ja seurasi talouskriisi, väen väheneminen ja s…
+
+### 13.2
+KYSYMYS: Miksi kaupungin satama meni kerran kiinni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aveiro (kulttuuri)
+Tietoruudun teksti: Aveiro on kaupunki ja kunta Portugalin keskiosassa, Atlantin rannalla Ria de Aveiron laguunin äärellä. Sitä kutsutaan Portugalin Venetsiaksi, koska kaupungin halki kulkee kanavaverkosto ja kanavilla liikkuu veneitä. Vuonna 2021 asukkaita oli 80 880.
+
+Kaupunki eli pitkään suolasta ja merenkulusta. Roomalaiset ottivat täältä suolaa, ja keskiajalla paikka oli kauppakeskus: se on mainittu asiakirjassa 26. tammikuuta 959, kreivitär Mumadona Diasin testamentissa, jossa seudun vanha nimi Alauario et Salinas tarkoittaa suunnilleen lintujen kokoontumispaikkaa ja suuria suoloja. Kaupungin nimi juontuu latinan muodosta Averius ja sitä kautta kelttiläisestä sanasta aber, joensuu.
+
+Talvella 1575 ankara myrsky sulki sataman suun ja kasvatti Atlantin puolelle riuttamaisen hiekkasärkän. Kauppa metalleilla ja kaakeleilla loppui, laguunin vedet seisahtuivat, ja seurasi talouskriisi, väen väheneminen ja s…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Kuvataide: Maalari, joka meni tupakkatehtaaseen 13-vuotiaana] 1857–1890 — Cristóbal Rojas syntyi Cúan pikkukaupungissa. Isä kuoli, kun poika oli kolmentoista, ja hän meni töihin tupakkatehtaaseen elättääkseen perheen. Vuoden 1878 maanjäristys tuhosi kotiseudun, ja Rojas muutti Caracasiin; ensimmäiset huomatut työt olivat maalauksia raunioista. Hän sai 1883 hopeamitalin samassa näyttelyssä kuin Michelena ja apurahan viisikymmentä pesoa kuukaudessa Pariisiin. Louvren toistuvat käynnit veivät tyylin jälkiromantiikasta impressionismiin. Rojas kuoli 32-vuotiaana.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-paco-da-ribeira) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paço da Ribeira (historia)
+Tietoruudun teksti: Manuel I:n vuonna 1502 valmistunut Paço da Ribeira oli Portugalin kuninkaiden päähallintokeskus. Lissabonin maanjäristys, hyökyaalto ja tulipalo tuhosivat palatsin 1. marraskuuta 1755. Paikalla on nykyinen Praça do Comércio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kohdekartta / Kohdekartta: Kauppatori] 1755–1775 Kauppatori eli Praça do Comércio on yksi Euroopan suurimmista aukioista - se on lähes neliön muotoinen ja mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä myös nimellä Terreiro do Paço, "palatsin piha", sillä täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, jonka kirjastossa oli yli 200 000 kirjaa. Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto tuhosivat palatsin täysin. Tilalle rakennettiin avara, jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle pystytettiin komea ratsastajapatsas kuningas Joosef I:stä. Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 valmistuneen suuren riemukaaren ali. Aukiolla on nähty myös synkkiä hetkiä: vuonna 1908 kuningas…
+
+### 14.1
+KYSYMYS: Miltä Paço da Ribeira näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paço da Ribeira (historia)
+Tietoruudun teksti: Manuel I:n vuonna 1502 valmistunut Paço da Ribeira oli Portugalin kuninkaiden päähallintokeskus. Lissabonin maanjäristys, hyökyaalto ja tulipalo tuhosivat palatsin 1. marraskuuta 1755. Paikalla on nykyinen Praça do Comércio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kohdekartta / Kohdekartta: Kauppatori] 1755–1775 Kauppatori eli Praça do Comércio on yksi Euroopan suurimmista aukioista - se on lähes neliön muotoinen ja mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä myös nimellä Terreiro do Paço, "palatsin piha", sillä täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, jonka kirjastossa oli yli 200 000 kirjaa. Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto tuhosivat palatsin täysin. Tilalle rakennettiin avara, jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle pystytettiin komea ratsastajapatsas kuningas Joosef I:stä. Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 valmistuneen suuren riemukaaren ali. Aukiolla on nähty myös synkkiä hetkiä: vuonna 1908 kuningas…
+
+### 14.2
+KYSYMYS: Miksi Paço da Ribeira katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paço da Ribeira (historia)
+Tietoruudun teksti: Manuel I:n vuonna 1502 valmistunut Paço da Ribeira oli Portugalin kuninkaiden päähallintokeskus. Lissabonin maanjäristys, hyökyaalto ja tulipalo tuhosivat palatsin 1. marraskuuta 1755. Paikalla on nykyinen Praça do Comércio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kohdekartta / Kohdekartta: Kauppatori] 1755–1775 Kauppatori eli Praça do Comércio on yksi Euroopan suurimmista aukioista - se on lähes neliön muotoinen ja mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä myös nimellä Terreiro do Paço, "palatsin piha", sillä täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, jonka kirjastossa oli yli 200 000 kirjaa. Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto tuhosivat palatsin täysin. Tilalle rakennettiin avara, jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle pystytettiin komea ratsastajapatsas kuningas Joosef I:stä. Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 valmistuneen suuren riemukaaren ali. Aukiolla on nähty myös synkkiä hetkiä: vuonna 1908 kuningas…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-hospital-real-todos-os-santos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hospital Real de Todos-os-Santos (historia)
+Tietoruudun teksti: Kaikkien pyhien kuninkaallinen sairaala rakennettiin Lissaboniin vuosina 1492–1504 ja oli aikansa Euroopan suurimpia. Vuoden 1755 maanjäristys ja sitä seurannut tulipalo tuhosivat rakennuksen, jota ei enää rakennettu uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Nimi joka syntyi pyhäinpäivänä] Kaupungin nimi tulee juhlapäivästä. Italialainen purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä 1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat linnoitukselleen nimen São Salvador da Bahia de Todos os Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin hallinto siirrettiin Rio de Janeiroon, josta tuli samalla varakuningaskunnan pääkaupunki.
+
+### 15.1
+KYSYMYS: Miltä Hospital Real de Todos-os-Santos näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hospital Real de Todos-os-Santos (historia)
+Tietoruudun teksti: Kaikkien pyhien kuninkaallinen sairaala rakennettiin Lissaboniin vuosina 1492–1504 ja oli aikansa Euroopan suurimpia. Vuoden 1755 maanjäristys ja sitä seurannut tulipalo tuhosivat rakennuksen, jota ei enää rakennettu uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Nimi joka syntyi pyhäinpäivänä] Kaupungin nimi tulee juhlapäivästä. Italialainen purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä 1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat linnoitukselleen nimen São Salvador da Bahia de Todos os Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin hallinto siirrettiin Rio de Janeiroon, josta tuli samalla varakuningaskunnan pääkaupunki.
+
+### 15.2
+KYSYMYS: Miksi Hospital Real de Todos-os-Santos katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hospital Real de Todos-os-Santos (historia)
+Tietoruudun teksti: Kaikkien pyhien kuninkaallinen sairaala rakennettiin Lissaboniin vuosina 1492–1504 ja oli aikansa Euroopan suurimpia. Vuoden 1755 maanjäristys ja sitä seurannut tulipalo tuhosivat rakennuksen, jota ei enää rakennettu uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Nimi joka syntyi pyhäinpäivänä] Kaupungin nimi tulee juhlapäivästä. Italialainen purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä 1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat linnoitukselleen nimen São Salvador da Bahia de Todos os Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin hallinto siirrettiin Rio de Janeiroon, josta tuli samalla varakuningaskunnan pääkaupunki.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

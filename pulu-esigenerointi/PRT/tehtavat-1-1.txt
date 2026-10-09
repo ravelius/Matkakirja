@@ -1,0 +1,213 @@
+================ KOHTA 1 (kohde:torre) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torre (luonto · vuori)
+Tietoruudun teksti: Serra da Estrela on mannermaisen Portugalin korkein vuoristo ja Sistema Centralin läntisin osa. Sen korkein kohta, 1 993 metriä, ei ole erillinen huippu vaan ylätasangon korkein piste, ja sitä kutsutaan nimellä Torre. Se on epätavallinen huippu siinäkin, että sinne pääsee päällystettyä tietä pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Torre Taglen palatsi] 1735 Palatsi valmistui 1735 José Bernardo de Tagle Brachon kodiksi. Kuningas Filip V oli antanut hänelle 26. marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 neliömetriä. Julkisivu on andalusialaista barokkia ja tarkoituksella epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista setri- ja mahonkipuusta veistettyä parveketta, ja niiden jaotus on eri: oikeanpuoleisessa on kolme osaa ja vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun vaakuna ja teksti "Tagle se llamó el que la sierpe mató y con la infanta casó" — Tagleksi kutsuttiin sitä, joka tappoi käärmeen ja na…
+- [Sevilla — kaupunkilehti / Sevilla: Torni, jonka kulta oli laastia] Kaksitoistasivuinen vartiotorni nousi joen rantaan 1220–1221 Sevillan almohadikuvernöörin Abu l-Ulàn käskystä valvomaan jokea pitkin tulevaa liikennettä. Nimi Torre del Oro eli Kultatorni tulee kultaisesta hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi — kultaa tornissa ei ole koskaan ollut. Tornista lähti joen poikki ketju, jonka toinen ankkuripiste vastarannalla on sittemmin kadonnut; sillä yritettiin sulkea satama kastilialaislaivastolta 1248. Ylin, pyöreä kerros on vasta vuodelta 1760: sen rakensi Lissabonin maanjäristyksen jäljiltä sama sotilasinsinööri Sebastian Van der Borcht, joka suunnitteli tupakkatehtaan.
+
+### 1.1
+KYSYMYS: Miksi Torre ei ole tavallinen huippu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torre (luonto · vuori)
+Tietoruudun teksti: Serra da Estrela on mannermaisen Portugalin korkein vuoristo ja Sistema Centralin läntisin osa. Sen korkein kohta, 1 993 metriä, ei ole erillinen huippu vaan ylätasangon korkein piste, ja sitä kutsutaan nimellä Torre. Se on epätavallinen huippu siinäkin, että sinne pääsee päällystettyä tietä pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Torre Taglen palatsi] 1735 Palatsi valmistui 1735 José Bernardo de Tagle Brachon kodiksi. Kuningas Filip V oli antanut hänelle 26. marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 neliömetriä. Julkisivu on andalusialaista barokkia ja tarkoituksella epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista setri- ja mahonkipuusta veistettyä parveketta, ja niiden jaotus on eri: oikeanpuoleisessa on kolme osaa ja vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun vaakuna ja teksti "Tagle se llamó el que la sierpe mató y con la infanta casó" — Tagleksi kutsuttiin sitä, joka tappoi käärmeen ja na…
+- [Sevilla — kaupunkilehti / Sevilla: Torni, jonka kulta oli laastia] Kaksitoistasivuinen vartiotorni nousi joen rantaan 1220–1221 Sevillan almohadikuvernöörin Abu l-Ulàn käskystä valvomaan jokea pitkin tulevaa liikennettä. Nimi Torre del Oro eli Kultatorni tulee kultaisesta hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi — kultaa tornissa ei ole koskaan ollut. Tornista lähti joen poikki ketju, jonka toinen ankkuripiste vastarannalla on sittemmin kadonnut; sillä yritettiin sulkea satama kastilialaislaivastolta 1248. Ylin, pyöreä kerros on vasta vuodelta 1760: sen rakensi Lissabonin maanjäristyksen jäljiltä sama sotilasinsinööri Sebastian Van der Borcht, joka suunnitteli tupakkatehtaan.
+
+### 1.2
+KYSYMYS: Sataako Serra da Estrelalla lunta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torre (luonto · vuori)
+Tietoruudun teksti: Serra da Estrela on mannermaisen Portugalin korkein vuoristo ja Sistema Centralin läntisin osa. Sen korkein kohta, 1 993 metriä, ei ole erillinen huippu vaan ylätasangon korkein piste, ja sitä kutsutaan nimellä Torre. Se on epätavallinen huippu siinäkin, että sinne pääsee päällystettyä tietä pitkin.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:atlantti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atlantti (meri)
+Tietoruudun teksti: Atlantti on maailman valtamerista toiseksi suurin: pinta-alaa noin 85 133 000 neliökilometriä eli noin 17 prosenttia maapallon pinnasta ja lähes neljännes sen vesialasta. Löytöretkien aikaan se tunnettiin merenä, joka erotti Amerikan uuden maailman Afro-Euraasian vanhasta. Portugalin koko rannikko on tätä merta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Tiede ja keksinnöt: Kaksi koiraa palasi kiertoradalta] 1960 — Belka ja Strelka lähtivät kiertoradalle 19. elokuuta 1960. Kapselissa oli mukana 40 hiirtä, kaksi rottaa, kasveja ja televisiokamera, joka kuvasi koiria lennon ajan. Runsaan vuorokauden kuluttua kapseli laskeutui, ja kaikki eläimet olivat elossa — ensimmäisinä maailmassa. Vuotta myöhemmin Strelka sai pentuja, ja yksi niistä lähetettiin lahjaksi Yhdysvaltain presidentin perheelle. Molemmat koirat ovat yhä esillä täytettyinä Moskovan kosmonautiikan museossa.
+- [Portugali — maalehti / Luonto: Sukeltaja, joka menee kilometrin syvyyteen] Vuodesta 1984 — Azorien saarilla keskellä Atlanttia pyydettiin kaskelotteja avoveneistä vielä 1980-luvulle asti. Pyynti loppui vuonna 1984, ja samat kylät elävät nyt valaiden katselusta. Kaskelotti sukeltaa mustekalan perässä yli kilometrin syvyyteen ja voi olla pinnan alla lähes tunnin. Sen pää on valtava, ja siinä on aivot, jotka painavat enemmän kuin minkään muun eläimen. Saarten ympärillä on syvää vettä aivan rannan tuntumassa, joten valaita voi nähdä lyhyen veneretken päässä.
+
+### 2.1
+KYSYMYS: Miksi juuri portugalilaiset lähtivät Atlantille ensimmäisinä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atlantti (meri)
+Tietoruudun teksti: Atlantti on maailman valtamerista toiseksi suurin: pinta-alaa noin 85 133 000 neliökilometriä eli noin 17 prosenttia maapallon pinnasta ja lähes neljännes sen vesialasta. Löytöretkien aikaan se tunnettiin merenä, joka erotti Amerikan uuden maailman Afro-Euraasian vanhasta. Portugalin koko rannikko on tätä merta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Tiede ja keksinnöt: Kaksi koiraa palasi kiertoradalta] 1960 — Belka ja Strelka lähtivät kiertoradalle 19. elokuuta 1960. Kapselissa oli mukana 40 hiirtä, kaksi rottaa, kasveja ja televisiokamera, joka kuvasi koiria lennon ajan. Runsaan vuorokauden kuluttua kapseli laskeutui, ja kaikki eläimet olivat elossa — ensimmäisinä maailmassa. Vuotta myöhemmin Strelka sai pentuja, ja yksi niistä lähetettiin lahjaksi Yhdysvaltain presidentin perheelle. Molemmat koirat ovat yhä esillä täytettyinä Moskovan kosmonautiikan museossa.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+
+### 2.2
+KYSYMYS: Kuinka syvä Atlantti on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atlantti (meri)
+Tietoruudun teksti: Atlantti on maailman valtamerista toiseksi suurin: pinta-alaa noin 85 133 000 neliökilometriä eli noin 17 prosenttia maapallon pinnasta ja lähes neljännes sen vesialasta. Löytöretkien aikaan se tunnettiin merenä, joka erotti Amerikan uuden maailman Afro-Euraasian vanhasta. Portugalin koko rannikko on tätä merta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Luonto: Sukeltaja, joka menee kilometrin syvyyteen] Vuodesta 1984 — Azorien saarilla keskellä Atlanttia pyydettiin kaskelotteja avoveneistä vielä 1980-luvulle asti. Pyynti loppui vuonna 1984, ja samat kylät elävät nyt valaiden katselusta. Kaskelotti sukeltaa mustekalan perässä yli kilometrin syvyyteen ja voi olla pinnan alla lähes tunnin. Sen pää on valtava, ja siinä on aivot, jotka painavat enemmän kuin minkään muun eläimen. Saarten ympärillä on syvää vettä aivan rannan tuntumassa, joten valaita voi nähdä lyhyen veneretken päässä.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:tejo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tejo (luonto · joki)
+Tietoruudun teksti: Tejolla on maailman harvinaisimpia suistoja: se on nurinpäin. Tavallinen suisto levenee merta kohti, mutta Tejon suisto on leveä sisämaan päästä ja kapenee ulos — laguuni on noin viisitoista kilometriä leveä ja kaksikymmentäviisi pitkä, mutta aukko mereen vain kaksi kilometriä. Vuorovesi paljastaa siitä valtavat matalikot. Lissabonin edusta on myös maanjäristysherkkää seutua, ja alajuoksua ovat ravistelleet muun muassa vuosien 1309, 1531, 1755 ja 1909 järistykset. Keskiajan lopulta alkaen joen suu välitti kauppaa Pohjois-Euroopan ja Välimeren välillä, ja renessanssista lähtien se oli Portugalin siirtomaavallan keskus kolmella mantereella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Isoisän ajan höyrylaiva vuorten yli] Kun isoisä matkusti Etelä-Amerikassa 1873, Titicaca-järvellä purjehti jo höyrylaiva, jonka matka sinne oli yhtä käänteinen kuin merten takaa. Yavari tilattiin Lontoosta 1861 ja rakennettiin Thames Ironworksin telakalla osina, jotka piti pystyä kantamaan muulin selässä Andien yli – kumpikin sisarusalus purettiin yhteensä 2 766 kappaleeksi. Rautatie kuljetti osat rannikolta sisämaahan, mutta loppumatka Punoon kesti muulien selässä vuosia, ja alkuperäinen urakoitsija jätti työn kesken. Kuljetus jatkui 1868, rungon ensimmäiset levyt niitattiin paikalleen 1869, ja Yavari laskettiin vesille vasta 1870 – kolme vuotta ennen isoisän matkaa.
+- [Panama — maalehti / Käsityöt: Pusero, joka tehdään leikkaamalla pois] Mola on gunanaisten puseron kuviopaneeli, ja gunan kielellä sana tarkoittaa paitaa. Kuviot olivat alun perin kehomaalauksia; espanjalaisten tulon jälkeen samat geometriset kuviot siirtyivät kankaalle, ensin maalaamalla ja sitten ompelemalla. Kangas saatiin 1800-luvulla vaihtokauppana laivoilta, jotka tulivat ostamaan kookoksia. Tekotapa on käänteinen applikointi: kahdesta seitsemään erivärista kangaskerrosta ommellaan yhteen, ja kuvio syntyy leikkaamalla kerroksia pois ja kääntämällä reunat alle. Parhaissa pistot ovat lähes näkymättömiä.
+
+### 3.1
+KYSYMYS: Mikä on käänteinen suisto?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tejo (luonto · joki)
+Tietoruudun teksti: Tejolla on maailman harvinaisimpia suistoja: se on nurinpäin. Tavallinen suisto levenee merta kohti, mutta Tejon suisto on leveä sisämaan päästä ja kapenee ulos — laguuni on noin viisitoista kilometriä leveä ja kaksikymmentäviisi pitkä, mutta aukko mereen vain kaksi kilometriä. Vuorovesi paljastaa siitä valtavat matalikot. Lissabonin edusta on myös maanjäristysherkkää seutua, ja alajuoksua ovat ravistelleet muun muassa vuosien 1309, 1531, 1755 ja 1909 järistykset. Keskiajan lopulta alkaen joen suu välitti kauppaa Pohjois-Euroopan ja Välimeren välillä, ja renessanssista lähtien se oli Portugalin siirtomaavallan keskus kolmella mantereella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Isoisän ajan höyrylaiva vuorten yli] Kun isoisä matkusti Etelä-Amerikassa 1873, Titicaca-järvellä purjehti jo höyrylaiva, jonka matka sinne oli yhtä käänteinen kuin merten takaa. Yavari tilattiin Lontoosta 1861 ja rakennettiin Thames Ironworksin telakalla osina, jotka piti pystyä kantamaan muulin selässä Andien yli – kumpikin sisarusalus purettiin yhteensä 2 766 kappaleeksi. Rautatie kuljetti osat rannikolta sisämaahan, mutta loppumatka Punoon kesti muulien selässä vuosia, ja alkuperäinen urakoitsija jätti työn kesken. Kuljetus jatkui 1868, rungon ensimmäiset levyt niitattiin paikalleen 1869, ja Yavari laskettiin vesille vasta 1870 – kolme vuotta ennen isoisän matkaa.
+- [Panama — maalehti / Käsityöt: Pusero, joka tehdään leikkaamalla pois] Mola on gunanaisten puseron kuviopaneeli, ja gunan kielellä sana tarkoittaa paitaa. Kuviot olivat alun perin kehomaalauksia; espanjalaisten tulon jälkeen samat geometriset kuviot siirtyivät kankaalle, ensin maalaamalla ja sitten ompelemalla. Kangas saatiin 1800-luvulla vaihtokauppana laivoilta, jotka tulivat ostamaan kookoksia. Tekotapa on käänteinen applikointi: kahdesta seitsemään erivärista kangaskerrosta ommellaan yhteen, ja kuvio syntyy leikkaamalla kerroksia pois ja kääntämällä reunat alle. Parhaissa pistot ovat lähes näkymättömiä.
+
+### 3.2
+KYSYMYS: Miksi Lissabonin edustalla tapahtuu maanjäristyksiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tejo (luonto · joki)
+Tietoruudun teksti: Tejolla on maailman harvinaisimpia suistoja: se on nurinpäin. Tavallinen suisto levenee merta kohti, mutta Tejon suisto on leveä sisämaan päästä ja kapenee ulos — laguuni on noin viisitoista kilometriä leveä ja kaksikymmentäviisi pitkä, mutta aukko mereen vain kaksi kilometriä. Vuorovesi paljastaa siitä valtavat matalikot. Lissabonin edusta on myös maanjäristysherkkää seutua, ja alajuoksua ovat ravistelleet muun muassa vuosien 1309, 1531, 1755 ja 1909 järistykset. Keskiajan lopulta alkaen joen suu välitti kauppaa Pohjois-Euroopan ja Välimeren välillä, ja renessanssista lähtien se oli Portugalin siirtomaavallan keskus kolmella mantereella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kohdekartta / Kohdekartta: Taidegalleria] 2003 Kaupungin taidemuseo oli vuodesta 1932 Robert McDougall Art Gallery kasvitieteellisen puutarhan laidalla Canterburyn museon takana. Se suljettiin 16. kesäkuuta 2002 — päivälleen seitsemänkymmentä vuotta avajaisistaan — ja vanha talo seisoo yhä tyhjillään. Kaupunki osti uuden tontin 1996 ja järjesti suunnittelukilpailun 1998; Buchan Groupin piirtämä Christchurch Art Gallery Te Puna o Waiwhetū avattiin 10. toukokuuta 2003. Etupihalla on Graham Bennettin ja arkkitehti David Colen yhdessä tekemä veistos Reason for Voyaging. Talo rakennettiin kestämään maanjäristyksiä: perustus on maan pinnalla lepäävä betonilautta, joka jakaa järistyksen voimat tasaisesti koko rakennukselle. Ratkaisu koete…
+- [Wellington — kohdekartta / Kohdekartta: Embassy-teatteri] 1924 Elokuvateatteri avattiin 31. lokakuuta 1924 nimellä De Luxe. Sen suunnitteli Llewelyn Williams, ja katsomoon mahtui 1 749 ihmistä. Nimi vaihtui Embassyksi 1945. 1960-luvun remontit toivat 70 millimetrin valkokankaan ja alaslasketut katot ja pudottivat paikkaluvun 852:een. Talo on Uuden-Seelannin ainoa yhä käytössä oleva 1920-luvulla varta vasten elokuvateatteriksi rakennettu talo. 2000-luvun alussa rakennus remontoitiin perusteellisesti. Kaupunki maksoi työstä 4,5 miljoonaa dollaria sillä ehdolla, että talo siirtyy kaupungin omistukseen. Samalla se vahvistettiin maanjäristyksiä vastaan ja sisustus palautettiin lähemmäs alkuperäistä. Sisällä on marmoriportaikko messinkihelluineen sekä l…
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:douro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douro (luonto · joki)
+Tietoruudun teksti: Douro on virtaamaltaan Iberian niemimaan suurin joki. Se nousee Pico de Urbiónilta Espanjan Sorian maakunnassa, virtaa länteen Kastilia ja Leónin pohjoisosan halki ja jatkaa Pohjois-Portugaliin, missä se laskee Atlanttiin Portossa, maan toiseksi suurimmassa kaupungissa. Sen suurin sivujoki on oikealta tuleva Esla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Joki joka ruokkii järveä] Tšad-järveen ei laske vain yksi joki vaan kokonainen jokijärjestelmä: Chari-joki ja sen suurin sivujoki Logone tuovat yhdessä noin 95 prosenttia kaikesta järveen virtaavasta vedestä. Joet saavat alkunsa satojen kilometrien päässä eteläisemmän Afrikan sademetsistä ja savanneilta ja yhtyvät nykyisen N’Djamenan kohdalla ennen laskuaan järveen. Tšad-järvellä itsellään ei ole lainkaan pysyvää laskujokea, joten suurin osa siihen virtaavasta vedestä joko haihtuu polttavassa kuumuudessa tai imeytyy hiekkaan – ainoa poikkeus on ajoittainen Bahr-el-Ghazalin uoma, joka voi sateisimpina vuosina kuljettaa vettä koilliseen.
+- [Angola — kaupunkilehti / Savanni ja sen joet: Kuanza – maan pisin joki] Kuanza-joki saa alkunsa Bié-ylängöltä lähellä Chitemboa ja virtaa lähes tuhat kilometriä luoteeseen ennen laskuaan Atlantille aivan Luandan eteläpuolella. Se on Angolan pisin joki ja oli 1800-luvulla tärkeä kulkuväylä sisämaahan: kanootit ja myöhemmin höyrylaivat kuljettivat sitä pitkin niin ihmisiä kuin kauppatavaraakin. Joen suulla sijaitsevat vanhat linnoituskaupungit Massangano ja Cambambe olivat jo 1600-luvulla portugalilaisten etappeja matkalla kohti ylängön viljelysalueita.
+
+### 4.1
+KYSYMYS: Miksi Douron laakso on kuuluisa viinistään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douro (luonto · joki)
+Tietoruudun teksti: Douro on virtaamaltaan Iberian niemimaan suurin joki. Se nousee Pico de Urbiónilta Espanjan Sorian maakunnassa, virtaa länteen Kastilia ja Leónin pohjoisosan halki ja jatkaa Pohjois-Portugaliin, missä se laskee Atlanttiin Portossa, maan toiseksi suurimmassa kaupungissa. Sen suurin sivujoki on oikealta tuleva Esla.
+
+### 4.2
+KYSYMYS: Mistä joki saa alkunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douro (luonto · joki)
+Tietoruudun teksti: Douro on virtaamaltaan Iberian niemimaan suurin joki. Se nousee Pico de Urbiónilta Espanjan Sorian maakunnassa, virtaa länteen Kastilia ja Leónin pohjoisosan halki ja jatkaa Pohjois-Portugaliin, missä se laskee Atlanttiin Portossa, maan toiseksi suurimmassa kaupungissa. Sen suurin sivujoki on oikealta tuleva Esla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Joki joka ruokkii järveä] Tšad-järveen ei laske vain yksi joki vaan kokonainen jokijärjestelmä: Chari-joki ja sen suurin sivujoki Logone tuovat yhdessä noin 95 prosenttia kaikesta järveen virtaavasta vedestä. Joet saavat alkunsa satojen kilometrien päässä eteläisemmän Afrikan sademetsistä ja savanneilta ja yhtyvät nykyisen N’Djamenan kohdalla ennen laskuaan järveen. Tšad-järvellä itsellään ei ole lainkaan pysyvää laskujokea, joten suurin osa siihen virtaavasta vedestä joko haihtuu polttavassa kuumuudessa tai imeytyy hiekkaan – ainoa poikkeus on ajoittainen Bahr-el-Ghazalin uoma, joka voi sateisimpina vuosina kuljettaa vettä koilliseen.
+- [Angola — kaupunkilehti / Savanni ja sen joet: Kuanza – maan pisin joki] Kuanza-joki saa alkunsa Bié-ylängöltä lähellä Chitemboa ja virtaa lähes tuhat kilometriä luoteeseen ennen laskuaan Atlantille aivan Luandan eteläpuolella. Se on Angolan pisin joki ja oli 1800-luvulla tärkeä kulkuväylä sisämaahan: kanootit ja myöhemmin höyrylaivat kuljettivat sitä pitkin niin ihmisiä kuin kauppatavaraakin. Joen suulla sijaitsevat vanhat linnoituskaupungit Massangano ja Cambambe olivat jo 1600-luvulla portugalilaisten etappeja matkalla kohti ylängön viljelysalueita.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:sintra) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sintra (kulttuuri)
+Tietoruudun teksti: Sintra on kaupunki ja kunta Lissabonin seudulla Portugalin rivieralla, ja se on yksi maan tärkeimmistä matkakohteista. Kunnan halki kulkee Sintran vuoristo, ja historiallinen keskusta tunnetaan 1800-luvun romanttisesta arkkitehtuurista, kartanoista, huviloista, puutarhoista sekä kuninkaallisista palatseista ja linnoista — juuri niiden takia kaupunki on maailmanperintökohde. Tunnetuimmat ovat keskiaikainen maurien linna, romantiikan ajan Penan kansallispalatsi ja portugalilaisen renessanssin Sintran kansallispalatsi. Ihmisiä on asunut alueella varhaisesta paleoliittisesta kaudesta lähtien: Penha Verdestä on löydetty vanhimmat jäljet, ja maurien linnan kupeesta São Pedro de Canaferrimista neoliittista koristeltua keramiikkaa ja piikivikaluja viidenneltä vuosituhannelta eaa. Seudun kuuluisin muinaislöytö on Sintran kaulus, keskipronssikautinen kultainen kaularengas, joka löytyi kaupungin l…
+
+### 5.1
+KYSYMYS: Mikä Penan kansallispalatsi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sintra (kulttuuri)
+Tietoruudun teksti: Sintra on kaupunki ja kunta Lissabonin seudulla Portugalin rivieralla, ja se on yksi maan tärkeimmistä matkakohteista. Kunnan halki kulkee Sintran vuoristo, ja historiallinen keskusta tunnetaan 1800-luvun romanttisesta arkkitehtuurista, kartanoista, huviloista, puutarhoista sekä kuninkaallisista palatseista ja linnoista — juuri niiden takia kaupunki on maailmanperintökohde. Tunnetuimmat ovat keskiaikainen maurien linna, romantiikan ajan Penan kansallispalatsi ja portugalilaisen renessanssin Sintran kansallispalatsi. Ihmisiä on asunut alueella varhaisesta paleoliittisesta kaudesta lähtien: Penha Verdestä on löydetty vanhimmat jäljet, ja maurien linnan kupeesta São Pedro de Canaferrimista neoliittista koristeltua keramiikkaa ja piikivikaluja viidenneltä vuosituhannelta eaa. Seudun kuuluisin muinaislöytö on Sintran kaulus, keskipronssikautinen kultainen kaularengas, joka löytyi kaupungin l…
+
+### 5.2
+KYSYMYS: Mikä Sintran kaulus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sintra (kulttuuri)
+Tietoruudun teksti: Sintra on kaupunki ja kunta Lissabonin seudulla Portugalin rivieralla, ja se on yksi maan tärkeimmistä matkakohteista. Kunnan halki kulkee Sintran vuoristo, ja historiallinen keskusta tunnetaan 1800-luvun romanttisesta arkkitehtuurista, kartanoista, huviloista, puutarhoista sekä kuninkaallisista palatseista ja linnoista — juuri niiden takia kaupunki on maailmanperintökohde. Tunnetuimmat ovat keskiaikainen maurien linna, romantiikan ajan Penan kansallispalatsi ja portugalilaisen renessanssin Sintran kansallispalatsi. Ihmisiä on asunut alueella varhaisesta paleoliittisesta kaudesta lähtien: Penha Verdestä on löydetty vanhimmat jäljet, ja maurien linnan kupeesta São Pedro de Canaferrimista neoliittista koristeltua keramiikkaa ja piikivikaluja viidenneltä vuosituhannelta eaa. Seudun kuuluisin muinaislöytö on Sintran kaulus, keskipronssikautinen kultainen kaularengas, joka löytyi kaupungin l…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

@@ -1,0 +1,207 @@
+================ KOHTA 16 (kohde:hahmotelma-peneda-geres) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peneda-Gerês (luonto · vuori)
+Tietoruudun teksti: Peneda-Gerês eli lyhyesti Gerês on kansallispuisto Portugalin Norte-alueella. Se perustettiin toukokuussa 1971, ja se on Portugalin vanhin suojelualue ja ainoa kansallispuisto. Puisto kattaa 695,9 neliökilometriä Viana do Castelon, Bragan ja Vila Realin piirikunnissa ja rajoittuu pohjoisessa espanjalaiseen Baixa Limia – Serra do Xurés -luonnonpuistoon; yhdessä ne muodostavat Gerês-Xurésin biosfäärialueen. Nimi tulee kahdesta pääasiallisesta graniittimassiivista, Serra da Penedasta ja Serra do Gerêsistä. Jyrkkiä laaksoja peittävät tammi- ja mäntymetsät ovat yksi Portugalin viimeisistä atlanttisen Euroopan kasvillisuuden tukikohdista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kaupunkilehti / Rio de Janeiro: Ainoa Euroopan pääkaupunki Euroopan ulkopuolella] Vuonna 1808 Portugalin kuninkaallinen hovi pakeni Napoleonin joukkoja ja siirtyi kokonaisuudessaan Rio de Janeiroon — ainoa kerta uuden ajan historiassa, kun siirtomaita hallinneen maan pääkaupunki muutti omaan siirtomaahansa. Rio oli hetken koko Portugalin valtakunnan pääkaupunki, sitten 1822 itsenäisen Brasilian keisarikunnan. Hovin mukana tulleille aatelisille tehtiin tilaa häätämällä tavallisia asukkaita kodeistaan. Kaupunkiin syntyi samalla vuosikymmenellä kansalliskirjasto ja kasvitieteellinen puutarha, molemmat yhä toiminnassa.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 16.1
+KYSYMYS: Miksi puisto on Portugalin ainoa kansallispuisto?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peneda-Gerês (luonto · vuori)
+Tietoruudun teksti: Peneda-Gerês eli lyhyesti Gerês on kansallispuisto Portugalin Norte-alueella. Se perustettiin toukokuussa 1971, ja se on Portugalin vanhin suojelualue ja ainoa kansallispuisto. Puisto kattaa 695,9 neliökilometriä Viana do Castelon, Bragan ja Vila Realin piirikunnissa ja rajoittuu pohjoisessa espanjalaiseen Baixa Limia – Serra do Xurés -luonnonpuistoon; yhdessä ne muodostavat Gerês-Xurésin biosfäärialueen. Nimi tulee kahdesta pääasiallisesta graniittimassiivista, Serra da Penedasta ja Serra do Gerêsistä. Jyrkkiä laaksoja peittävät tammi- ja mäntymetsät ovat yksi Portugalin viimeisistä atlanttisen Euroopan kasvillisuuden tukikohdista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kaupunkilehti / Rio de Janeiro: Ainoa Euroopan pääkaupunki Euroopan ulkopuolella] Vuonna 1808 Portugalin kuninkaallinen hovi pakeni Napoleonin joukkoja ja siirtyi kokonaisuudessaan Rio de Janeiroon — ainoa kerta uuden ajan historiassa, kun siirtomaita hallinneen maan pääkaupunki muutti omaan siirtomaahansa. Rio oli hetken koko Portugalin valtakunnan pääkaupunki, sitten 1822 itsenäisen Brasilian keisarikunnan. Hovin mukana tulleille aatelisille tehtiin tilaa häätämällä tavallisia asukkaita kodeistaan. Kaupunkiin syntyi samalla vuosikymmenellä kansalliskirjasto ja kasvitieteellinen puutarha, molemmat yhä toiminnassa.
+
+### 16.2
+KYSYMYS: Mitä eläimiä puistossa elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peneda-Gerês (luonto · vuori)
+Tietoruudun teksti: Peneda-Gerês eli lyhyesti Gerês on kansallispuisto Portugalin Norte-alueella. Se perustettiin toukokuussa 1971, ja se on Portugalin vanhin suojelualue ja ainoa kansallispuisto. Puisto kattaa 695,9 neliökilometriä Viana do Castelon, Bragan ja Vila Realin piirikunnissa ja rajoittuu pohjoisessa espanjalaiseen Baixa Limia – Serra do Xurés -luonnonpuistoon; yhdessä ne muodostavat Gerês-Xurésin biosfäärialueen. Nimi tulee kahdesta pääasiallisesta graniittimassiivista, Serra da Penedasta ja Serra do Gerêsistä. Jyrkkiä laaksoja peittävät tammi- ja mäntymetsät ovat yksi Portugalin viimeisistä atlanttisen Euroopan kasvillisuuden tukikohdista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+- [Nepal — maalehti / Luonto: Yhdeksänkymmentäviisi jäljellä] 1950–2015 — Vuonna 1950 Chitwanin metsissä ja ruohostoissa eli noin 800 panssarisarvikuonoa. Sitten malaria hävitettiin, ylängön viljelijät muuttivat laaksoon, seitsemänkymmentä prosenttia viidakosta raivattiin ja salametsästys riistäytyi: 1960-luvun lopulla eläimiä oli 95. Hallitus kokosi Gaida Gasti -partion, 130 aseistettua miestä ja vartioasemien verkon, ja alue julistettiin 1973 Nepalin ensimmäiseksi kansallispuistoksi — rajojen sisään jääneet tharu-kylät purettiin ja asukkaat siirrettiin pois. Vuonna 2015 puistossa laskettiin 605 sarvikuonoa.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-ria-formosa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ria Formosa (meri)
+Tietoruudun teksti: Ria Formosa on Algarven alueella Etelä-Portugalissa sijaitseva laguuni, jota rajaa hiekkasaarten järjestelmä ja joka yhdistyy mereen kuuden salmen kautta. Viisi salmista on luonnollisia ja liikkuvia, ja kuudes on tekoväylä, joka avattiin helpottamaan pääsyä Faron satamaan. Nykyisin pääsalmi on Faro–Olhão-salmi, jonka rakentaminen alkoi vuonna 1927 ja valmistui 1952. Osa järjestelmästä on 170 neliökilometrin suojelualuetta, ja alue tukee myös merenelävien kasvatusta ja Faron satamaa. Ria Formosa on Ramsar-alue, ja se toimii keväisin ja syksyisin muuttolintujen pysähdyspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Laguuni, joka on nimensä toisinto] Lagosin laguuni on yli viisikymmentä kilometriä pitkä ja kolmesta kolmeentoista kilometriä leveä, ja sen erottaa Atlantista pitkä hiekkasärkkä. Se on Guineanlahden suurin laguuni ja pinta-alaltaan noin 6 355 neliökilometriä, mutta niin matala, ettei valtamerialus pääse sinne — vain proomut ja veneet. Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu mereen Lagosin sataman kautta, joka on puolesta kilometristä kilometriin leveä ja kymmenen kilometriä pitkä väylä keskellä kaupunkia. Nimi on huvittava toisinto itsestään: Lagos tarkoittaa portugaliksi järviä, joten Lagosin laguuni on kaksi kertaa sama sana.
+
+### 17.1
+KYSYMYS: Mikä on laguuni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ria Formosa (meri)
+Tietoruudun teksti: Ria Formosa on Algarven alueella Etelä-Portugalissa sijaitseva laguuni, jota rajaa hiekkasaarten järjestelmä ja joka yhdistyy mereen kuuden salmen kautta. Viisi salmista on luonnollisia ja liikkuvia, ja kuudes on tekoväylä, joka avattiin helpottamaan pääsyä Faron satamaan. Nykyisin pääsalmi on Faro–Olhão-salmi, jonka rakentaminen alkoi vuonna 1927 ja valmistui 1952. Osa järjestelmästä on 170 neliökilometrin suojelualuetta, ja alue tukee myös merenelävien kasvatusta ja Faron satamaa. Ria Formosa on Ramsar-alue, ja se toimii keväisin ja syksyisin muuttolintujen pysähdyspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Laguuni, joka on nimensä toisinto] Lagosin laguuni on yli viisikymmentä kilometriä pitkä ja kolmesta kolmeentoista kilometriä leveä, ja sen erottaa Atlantista pitkä hiekkasärkkä. Se on Guineanlahden suurin laguuni ja pinta-alaltaan noin 6 355 neliökilometriä, mutta niin matala, ettei valtamerialus pääse sinne — vain proomut ja veneet. Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu mereen Lagosin sataman kautta, joka on puolesta kilometristä kilometriin leveä ja kymmenen kilometriä pitkä väylä keskellä kaupunkia. Nimi on huvittava toisinto itsestään: Lagos tarkoittaa portugaliksi järviä, joten Lagosin laguuni on kaksi kertaa sama sana.
+
+### 17.2
+KYSYMYS: Miksi linnut pysähtyvät täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ria Formosa (meri)
+Tietoruudun teksti: Ria Formosa on Algarven alueella Etelä-Portugalissa sijaitseva laguuni, jota rajaa hiekkasaarten järjestelmä ja joka yhdistyy mereen kuuden salmen kautta. Viisi salmista on luonnollisia ja liikkuvia, ja kuudes on tekoväylä, joka avattiin helpottamaan pääsyä Faron satamaan. Nykyisin pääsalmi on Faro–Olhão-salmi, jonka rakentaminen alkoi vuonna 1927 ja valmistui 1952. Osa järjestelmästä on 170 neliökilometrin suojelualuetta, ja alue tukee myös merenelävien kasvatusta ja Faron satamaa. Ria Formosa on Ramsar-alue, ja se toimii keväisin ja syksyisin muuttolintujen pysähdyspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: Gallier Hall] 1845–1853 Kaupungintaloksi rakennettu Gallier Hall on ennen sisällissotaa valmistuneista rakennuksista kaupungin merkittävimpiä. Sen suunnitteli James Gallier Sr., saman suvun arkkitehti, jonka poika rakensi itselleen Gallier Housen Ranskan Kortteliin. Työ alkoi 1845, ja talo vihittiin 10. toukokuuta 1853. Kolme kerrosta korkea marmorirakennus on puhdasta kreikkalaista uusklassismia: julkisivun edessä on kaksi riviä uurrettuja joonialaisia pylväitä. Talo toimi kaupungintalona runsaat sata vuotta, ja sen saleissa käytiin läpi sisällissodan, jälleenrakennuskauden ja kuvernööri Huey Longin ajan käänteet. Kaupungin hallinto muutti 1950-luvulla uuteen keskukseen Duncan Plazalle, mutta vanha talo…
+- [Kano — kaupunkilehti / Kano: Neljä päivää hevosen selässä] Kano on perinteisesti ratsastusyhteiskunta, ja se näkyy durbarissa. Juhla alkaa rukouksilla aamunkoitteessa, ja sitä seuraa emiirin sekä hänen ratsastajiensa, muusikkojensa ja tykkimiestensä kulkue; ylimykset saapuvat vahvistamaan uskollisuutensa. Kanon durbar kestää neljä päivää, ja perinne on yli kaksisataa vuotta vanha — se juontuu ajasta, jolloin hevosia alettiin käyttää sodankäynnissä. Vaikuttavin osa on Hawan Daushe, jonka lopussa on jahi: ratsastajat kiitävät täyttä laukkaa kohti emiiriä, pysähtyvät jyrkästi hänen eteensä, heiluttavat miekkaa tai lippua ja poistuvat. Unesco otti juhlan aineettoman kulttuuriperinnön luetteloon joulukuussa 2024.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-arrabida) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Arrábidan vuoret (luonto · vuori)
+Tietoruudun teksti: Arrábidan luonnonpuisto on Portugalissa Setúbalin niemimaan eteläisimmällä reunalla, ja se perustettiin vuonna 1976. Puisto kattaa 176 neliökilometriä, joista 123 on maata ja 53 merta. Sen erikoisuus on karbonaattikivestä koostuva Serra da Arrábida (501 metriä), joka kohtaa meren samaan tapaan kuin eräissä Välimeren paikoissa ja eroaa Portugalin tavallisesta rannikosta, jossa on pitkiä hiekkarantoja ja kallioita. Kolme puiston rantaa, Galapinhos, Portinho da Arrábida ja Figueirinha, ovat lissabonilaisten ja setúbalilaisten suosiossa. Rantojen yllä kohoaa 1500-luvulla perustettu entinen luostari, Convent of Our Lady of Arrábida.
+
+### 18.1
+KYSYMYS: Miksi Arrábida on erilainen kuin muu Portugalin rannikko?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Arrábidan vuoret (luonto · vuori)
+Tietoruudun teksti: Arrábidan luonnonpuisto on Portugalissa Setúbalin niemimaan eteläisimmällä reunalla, ja se perustettiin vuonna 1976. Puisto kattaa 176 neliökilometriä, joista 123 on maata ja 53 merta. Sen erikoisuus on karbonaattikivestä koostuva Serra da Arrábida (501 metriä), joka kohtaa meren samaan tapaan kuin eräissä Välimeren paikoissa ja eroaa Portugalin tavallisesta rannikosta, jossa on pitkiä hiekkarantoja ja kallioita. Kolme puiston rantaa, Galapinhos, Portinho da Arrábida ja Figueirinha, ovat lissabonilaisten ja setúbalilaisten suosiossa. Rantojen yllä kohoaa 1500-luvulla perustettu entinen luostari, Convent of Our Lady of Arrábida.
+
+### 18.2
+KYSYMYS: Mikä Arrábidan luostari on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Arrábidan vuoret (luonto · vuori)
+Tietoruudun teksti: Arrábidan luonnonpuisto on Portugalissa Setúbalin niemimaan eteläisimmällä reunalla, ja se perustettiin vuonna 1976. Puisto kattaa 176 neliökilometriä, joista 123 on maata ja 53 merta. Sen erikoisuus on karbonaattikivestä koostuva Serra da Arrábida (501 metriä), joka kohtaa meren samaan tapaan kuin eräissä Välimeren paikoissa ja eroaa Portugalin tavallisesta rannikosta, jossa on pitkiä hiekkarantoja ja kallioita. Kolme puiston rantaa, Galapinhos, Portinho da Arrábida ja Figueirinha, ovat lissabonilaisten ja setúbalilaisten suosiossa. Rantojen yllä kohoaa 1500-luvulla perustettu entinen luostari, Convent of Our Lady of Arrábida.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-ponta-da-piedade) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+
+### 19.1
+KYSYMYS: Mitä Ponta da Piedade tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+### 19.2
+KYSYMYS: Miten luolissa vieraillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-berlengas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+### 20.1
+KYSYMYS: Ketkä munkit asuivat Berlengalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+### 20.2
+KYSYMYS: Miksi saaria kutsuttiin Burlingeiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
