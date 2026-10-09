@@ -48,6 +48,10 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Vuosi välillä [vuodesta, vuoteen); null = avoin pää (myös glb-solmujen extras, LR:n restaurointitelineet).</summary>
         public static bool Valilla(double vuosi, double? vuodesta, double? vuoteen) => (vuodesta == null || vuosi >= vuodesta) && (vuoteen == null || vuosi < vuoteen);
 
+        /// <summary>Glb-solmuryhmän vuodet ovat kalenterivuosia päät mukaan lukien (LR v45z: teline-kurtiini-1963 = 1963–1963,
+        /// teline-eerikintorni-1962 = 1962–1963): näkyy välillä [vuodesta, vuoteen + 1).</summary>
+        public static bool RyhmaVuonna(double vuosi, double? vuodesta, double? vuoteen) => Valilla(vuosi, vuodesta, vuoteen + 1);
+
         /// <summary>Solmujen perityt vuodet: oma extras "vuodesta"/"vuoteen" tai lähimmän esivanhemman (LR: teline-kellotorni 1961–1964
         /// lapsineen). vanhempi[i] = −1 juurelle; puuttuva = (null, null).</summary>
         public static (double? Vuodesta, double? Vuoteen)[] SolmujenVuodet(IReadOnlyList<int> vanhempi, IReadOnlyList<(double? Vuodesta, double? Vuoteen)> omat)
@@ -239,7 +243,8 @@ namespace Matkakirja.Linssit.Dioraama
             new HistoriaVaihe(1847, 15, 26, 2.0, "1847"),
             new HistoriaVaihe(1872, 10, 22, 1.9, "1872"),
             // Suuri restaurointi omaksi jaksokseen (LR:n restaurointivaihe 1961–1975, juna 173): telineet näkyvät noin 7 s.
-            new HistoriaVaihe(1961, 12, 18, 1.6, "1961"),
+            new HistoriaVaihe(1961, 12, 18, 1.6, "1961"),   // 1961–1976: 0,8 s/vuosi, yhden vuoden teline näkyy ~0,8 s
+            new HistoriaVaihe(1976, 5, 26, 2.0),            // nykylinna (ponttonisilta kasvaa), ei avainsanaa
         }, 1985);
 
         /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>

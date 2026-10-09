@@ -21,11 +21,18 @@ namespace Matkakirja.Natiivi
             /// <summary>Solmuryhmät omilla vuosillaan (glb-solmujen extras vuodesta/vuoteen; LR:n restaurointitelineet, juna 173).</summary>
             public readonly List<(GameObject Go, double? Vuodesta, double? Vuoteen)> Ryhmat = new List<(GameObject, double?, double?)>();
             /// <summary>Näkyvyys vuonna: vaihe ja sen ryhmät.</summary>
+            /// <summary>Vaihe näkyy omina vuosinaan tai kun jokin sen ryhmistä näkyy (ryhmien vuodet kalenterivuosina, RyhmaVuonna).</summary>
+            public bool Nakyy(double vuosi)
+            {
+                if (Malli.Nakyy(vuosi)) return true;
+                foreach (var (_, a, b) in Ryhmat) if (HistoriaVaihemalli.RyhmaVuonna(vuosi, a, b)) return true;
+                return false;
+            }
             public void Nayta(double vuosi)
             {
-                bool nakyy = Malli.Nakyy(vuosi);
+                bool nakyy = Nakyy(vuosi);
                 if (Go != null && Go.activeSelf != nakyy) Go.SetActive(nakyy);
-                if (nakyy) foreach (var (g, a, b) in Ryhmat) { bool n = HistoriaVaihemalli.Valilla(vuosi, a, b); if (g != null && g.activeSelf != n) g.SetActive(n); }
+                if (nakyy) foreach (var (g, a, b) in Ryhmat) { bool n = HistoriaVaihemalli.RyhmaVuonna(vuosi, a, b); if (g != null && g.activeSelf != n) g.SetActive(n); }
             }
         }
 

@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "731d4ca7142127b8";
-        public const string Versio = "v45y";   // v45x + #4 (sokkelit, kynnykset, Linnantuvan konsolit; kolme salia 8k), Kellotornin lepo-ote 12 ja kapeat otteet, lakaisu:apulainen-tupa, vuodet 12 leikkaukseen, vaihemallit (LR 9.10.)
+        public const string Hash = "a41ac10c88688301";
+        public const string Versio = "v45z";   // v45y + historian restaurointivaihe 1961–1975 (9 telineryhmää, Museoviraston kuvat CC BY 4.0; LR 9.10.)
     }
 }

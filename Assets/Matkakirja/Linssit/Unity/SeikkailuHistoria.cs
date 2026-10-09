@@ -95,7 +95,7 @@ namespace Matkakirja.Natiivi
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
                     {
-                        bool nakyy = vm.Malli.Nakyy(vuosi);
+                        bool nakyy = vm.Nakyy(vuosi);
                         if (vm.Go != null && vm.Go.activeSelf != nakyy) kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})");
                         vm.Nayta(vuosi);
                         if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;

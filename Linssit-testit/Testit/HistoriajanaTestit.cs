@@ -19,7 +19,7 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void KestotSuunnitelmanMukaan()
         {
             var h = Historiajana.Olavinlinna;
-            Oleta.Sama(10, h.Vaiheet.Count);
+            Oleta.Sama(11, h.Vaiheet.Count);
             Oleta.Tosi(h.Kesto >= 150 && h.Kesto <= 200, $"historia noin 3 min ({h.Kesto} s)");
             Oleta.Sama(8.0, Historiajana.K2Lyhyt.Kesto);
             for (int i = 1; i < h.Vaiheet.Count; i++) Oleta.Tosi(h.Vaiheet[i].Vuosi > h.Vaiheet[i - 1].Vuosi, $"vuodet kasvavat ({i})");
@@ -46,6 +46,7 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < h.Vaiheet.Count; i++)
             {
                 double a = h.VaiheenAlku(i);
+                if (h.Vaiheet[i].Avain == null) { Oleta.Tosi(h.Avainsana(a + 2) == null, $"vaihe {i}: ei avainsanaa"); continue; }
                 Oleta.Tosi(h.Avainsana(a + 0.2) == null, $"vaihe {i}: ei heti vaihdossa");
                 Oleta.Tosi(h.Avainsana(a + 2) == h.Vaiheet[i], $"vaihe {i}: avainsana alussa");
                 Oleta.Tosi(h.Vaiheet[i].KestoS >= Historiajana.AvainsanaAlkuS + Historiajana.AvainsanaS + 1, $"vaihe {i}: avainsana ehtii häipyä ennen seuraavaa");
@@ -162,6 +163,13 @@ namespace Matkakirja.Linssit.Testit
             var v = HistoriaVaihemalli.SolmujenVuodet(new[] { -1, 0, 1, 0 }, new (double?, double?)[] { (null, null), (1961, 1964), (null, null), (null, null) });
             Oleta.Tosi(v[1] == (1961, 1964) && v[2] == (1961, 1964) && v[3] == (null, null) && v[0] == (null, null), "lapsi perii, muu avoin");
             Oleta.Tosi(HistoriaVaihemalli.Valilla(1962, 1961, 1964) && !HistoriaVaihemalli.Valilla(1964, 1961, 1964) && HistoriaVaihemalli.Valilla(1970, null, null), "väli [a, b)");
+            // LR v45z: ryhmän vuodet kalenterivuosina (1963–1963 näkyy vuoden 1963 ajan), ja jokainen v45z-ryhmä näkyy historiassa ≥ 0,7 s.
+            Oleta.Tosi(HistoriaVaihemalli.RyhmaVuonna(1963.5, 1963, 1963) && !HistoriaVaihemalli.RyhmaVuonna(1964, 1963, 1963), "kalenterivuosi");
+            foreach (var (a, b) in new (double, double)[] { (1962, 1963), (1963, 1963), (1966, 1966), (1968, 1968), (1970, 1972), (1971, 1971), (1973, 1974), (1975, 1975) })
+            {
+                double nr = 0; for (double tt = 0; tt < Historiajana.Olavinlinna.Kesto; tt += 0.02) if (HistoriaVaihemalli.RyhmaVuonna(Historiajana.Olavinlinna.Vuosi(tt), a, b)) nr += 0.02;
+                Oleta.Tosi(nr >= 0.7, $"ryhmä {a}–{b} näkyy {nr:F2} s");
+            }
             // Restauroinnin jakso: 1961–1975 näkyy vähintään 6 s (telineet).
             var h = Historiajana.Olavinlinna; double n = 0;
             for (double t = 0; t < h.Kesto; t += 0.05) if (HistoriaVaihemalli.Valilla(h.Vuosi(t), 1961, 1975)) n += 0.05;
