@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Lennon, siirron tai avauksen alussa: laatat karkealla kameralla (saapuminen yhtä nopea kuin 1,71:llä).</summary>
         public void Karkeaksi()
         {
-            if (!auki || hallinta == null || kamera == null || KarkeaSkaala >= 0.999f || karkeaKaytossa) return;
+            if (!auki || hallinta == null || kamera == null || KarkeaNyt >= 0.999f || karkeaKaytossa) return;
             if (karkea == null)
             {
                 karkea = new GameObject("Kaupunki karkea valinta").AddComponent<Camera>();
@@ -97,7 +97,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Laatat ≥ 99 % ja kamera paikallaan: valinta pääkameraan (tarkentuu tavoitekertoimeen).</summary>
         public void Tarkenna()
         {
-            if (!karkeaKaytossa || hallinta == null) return;
+            if (!karkeaKaytossa || hallinta == null || muistiPysaytys) return;   // muistihädässä valinta jää karkealle
             if (MacKuorma > KuormaRaja) kuormaValinta = true;   // Mac kuormassa: valinta jää karkealle (1/Kuorma)
             else
             {
@@ -157,7 +157,7 @@ namespace Matkakirja.Natiivi
             if (!(karkeaKaytossa || kuormaValinta) || karkea == null || kamera == null) return;
             karkea.fieldOfView = kamera.fieldOfView;
             karkea.nearClipPlane = kamera.nearClipPlane; karkea.farClipPlane = kamera.farClipPlane;
-            var r0 = kamera.pixelRect; float sk = KarkeaSkaala;
+            var r0 = kamera.pixelRect; float sk = KarkeaNyt;
             karkea.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
             karkea.aspect = kamera.aspect;
         }
@@ -265,10 +265,21 @@ namespace Matkakirja.Natiivi
         }
 
         float muistiTarkistettu, muistiKirjattu;
-        bool hataKaytetty;
+        bool hataKaytetty, muistiPysaytys, pysaytettyTassa;
         long minVapaa = long.MaxValue;
+        /// <summary>Oppaan tauko (OpasSovitin.Tauko): laatat valmiina → lataus seis tauon ajaksi (muisti ei kasva).</summary>
+        public bool Tauko;
+        /// <summary>Muistihädän vapautusraja: lataus jatkuu, kun vapaata on taas HataGt + tämä (Gt).</summary>
+        public const double HataPalautusGt = 0.3;
+        /// <summary>Karkean valinnan pikselikerroin muistihädässä (myös iPadilla, jossa KarkeaSkaala voi olla 1).</summary>
+        public const float HataSkaala = 0.6f;
+        float KarkeaNyt => muistiPysaytys ? Mathf.Min(KarkeaSkaala, HataSkaala) : KarkeaSkaala;
 
-        /// <summary>Kerran 2 s:ssa näkymän aikana: vapaa muisti alle HataGt → kerroin ×1,3 kerran (Cesium lataa laatat uudelleen).</summary>
+        /// <summary>Kerran 2 s:ssa näkymän aikana. MUISTIHÄTÄ (omistaja TF 169 10.0x: tauolla Kuninkaanlinnan kohdalla koko näkymä katosi,
+        /// rakentui hitaasti ja peli kaatui; LS2 + PT 9.10.): EI SSE:n eikä välimuistin vaihtoa — Cesium3DTileset-asettimet kutsuvat
+        /// RecreateTileset():iä (koko tileset ladataan alusta, muistipiikki). Sen sijaan vapaa muisti alle HataGt → laattavalinta karkealle
+        /// kameralle (pikselit × HataSkaala, Natiiviseppä: hienot laatat vapautuvat välimuistin rajoissa, ei recreatea) ja lähikamera pois;
+        /// yli HataGt + HataPalautusGt → tarkentuu normaalisti. Testi: Documents/kaupunki-vapaa-muisti.txt "0.5".</summary>
         void Muistivahti()
         {
             if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
@@ -278,11 +289,28 @@ namespace Matkakirja.Natiivi
             // Laitemittaus (Päätoimittaja: huippu ja vapaa muisti ennen/jälkeen): vapaa nyt ja pienin 15 s välein.
             if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
             { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
-            if (hataKaytetty || v <= 0 || v / 1e9 >= HataGt) return;
-            hataKaytetty = true;
-            kerroin = SseKerroin * 1.3f;
-            maasto.maximumScreenSpaceError = (Kaytossa == Lahde.Google ? GoogleSse : MaastoSse) * kerroin;
-            kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → kerroin {kerroin:F2}, SSE {maasto.maximumScreenSpaceError:F1}");
+            if (v <= 0) return;
+            if (!muistiPysaytys && v / 1e9 < HataGt)
+            {
+                muistiPysaytys = hataKaytetty = true;
+                karkeaKaytossa = false; Karkeaksi();   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
+                kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
+            }
+            else if (muistiPysaytys && v / 1e9 > HataGt + HataPalautusGt)
+            { muistiPysaytys = false; kirjaa($"kaupunki: muisti vapaa {v / 1e9:F2} Gt → hätä ohi, tarkentuu normaalisti"); }
+        }
+
+        /// <summary>Joka kehys: laattojen päivitys seis tauolla, kun laatat ovat valmiit ja kamera paikallaan (tauko pysäyttää lennon ja kierron),
+        /// ei muistihädässä (karkea valinta tarvitsee päivityksen vapauttaakseen hienot laatat).</summary>
+        void PaivitaPysaytys()
+        {
+            if (!auki || maasto == null) return;
+            bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;
+            if (halu == pysaytettyTassa) return;
+            pysaytettyTassa = halu;
+            maasto.suspendUpdate = halu;
+            if (rakennukset != null) rakennukset.suspendUpdate = halu;
+            kirjaa($"kaupunki: laattojen päivitys {(halu ? "seis" : "jatkuu")} ({(muistiPysaytys ? "muistihätä" : Tauko ? "tauko" : "normaali")})");
         }
         public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
@@ -384,6 +412,7 @@ namespace Matkakirja.Natiivi
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
             if (auki && kamera != null) omat.Kamera(kamera.transform.position);
             Muistivahti();
+            PaivitaPysaytys();
             PaivitaKarkea();
             SeuraaTarkentumista();
         }
@@ -469,7 +498,7 @@ namespace Matkakirja.Natiivi
             if (Mac && pakotettu <= 0 && Matkakirja.MacLaatu.GoogleSse > 0) kerroin = Matkakirja.MacLaatu.GoogleSse / GoogleSse;
 #endif
             karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
-            hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
+            hataKaytetty = muistiPysaytys = pysaytettyTassa = Tauko = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
             kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}, välimuisti {GoogleValimuistiNyt >> 20} Mt{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
