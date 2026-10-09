@@ -7,12 +7,12 @@
     "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
   },
   "sourceReadInFull": true,
-  "generationCalls": 4,
+  "generationCalls": 10,
   "generationLimit": 10,
-  "imageCount": 4,
+  "imageCount": 10,
   "requestedImages": 10,
-  "partialDelivery": true,
-  "productionComplete": false,
+  "partialDelivery": false,
+  "productionComplete": true,
   "sampleDeliveryMandatory": true,
   "allContentConstraintsPassed": false,
   "assets": [
@@ -143,6 +143,130 @@
       "byteExactReadback": true
     },
     {
+      "id": "isoisa-1873",
+      "subject": "isoisa-1873",
+      "taskNumber": 49,
+      "style": "F",
+      "form": "mini",
+      "file": "varuste-isoisa-1873-foto.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/isoisa-1873/varuste-isoisa-1873-foto.jpg",
+      "sha256": "62605026780860b4df73c104152444b852306976cbc2f70a8a84813e48dc0132",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fab-81f6-79b3-a46c-fca130d748b0/exec-7ab7525e-1da6-44bf-a83c-62bfd30bb796.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/isoisa-1873/original-generation.png",
+      "originalSHA256": "9bce9f49dbed4644d7620c9963813e72a11193e53de8992bc47673761ec568f1",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup\nAsset type: square game equipment image, photograph-like, intended for a centered circular crop.\nPrimary request: Create a completely new photorealistic camera image of a worn brass pocket watch with its brass chain lying in front of an open brown leather travel diary from the nineteenth century. Recreate this described arrangement from scratch, no input image pixels.\nComposition: elevated three-quarter view down onto a pale warm neutral tabletop. The open diary lies diagonally across the center, top edge tilting down to the right; two cream paper pages visible, thick brown leather cover and a small brass-fastened leather closure at the right. The watch is in the lower-left foreground, partly overlapping the open diary; its chain curls in a loose small loop below the watch and book. A small leaf sprig, a seashell and two small pebbles at the left edge of the group, and a faint unlabelled map sheet under the diary. All these objects form one compact centered arrangement, photographed like a real small still life. Generous plain background margins, at least 18 percent on each side; keep EVERY object completely inside the central circle, including chain, book corners and sprig.\nWatch: ivory face, two ordinary clock hands, a ring of ONLY plain short tick marks. NO dial numbers, no Roman numerals, no year anywhere, no engraved letters.\nPaper: only irregular disconnected non-letter ink strokes suggesting indistinct handwriting, plus one small monochrome steamship sketch on the left page. No actual letters, words, digits, dates, names or cartographic labels on any surface.\nStyle/medium: convincing real camera photograph with natural brass patina, leather grain and softly aged paper, real soft window daylight, muted warm brown and cream, modest shadows and depth of field, no HDR, no illustration, no watercolor, no polished CGI.\nConstraints: no people, faces, text, numerals, logos, watermark or graphic frame. Output one opaque square image. The historical date is context only and must not appear in the image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-vertailu-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": {
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/isoisa-1873/varuste-isoisa-1873.jpg",
+        "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-isoisa-1873.jpg",
+        "sha256": "fd513a7ad5de433c5d96411afca33979f30f9d1ac1e73e5cbda7176c0b4636c7",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "kuvateksti": "Messinkinen taskukello ketjuineen ja avoin nahkakantinen matkapäiväkirja. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "fullConstraintPass": false,
+        "circleSafe": false,
+        "observedPasses": [
+          "Messinkinen taskukello, ketju ja avoin nahkakantinen päiväkirja samassa perussommittelussa kuin Amini",
+          "Kellossa vain tikit ja kaksi viisaria; ei kellotaulunumeroita eikä vuosilukua",
+          "Pieni höyrylaivapiirros vasemmalla sivulla",
+          "Valokuvamaiset messingin, nahan ja paperin materiaalit, vaimeat värit ja pehmeä luonnonvalo",
+          "Ei ihmisiä, kasvoja, logoja, vesileimaa tai kehystä"
+        ],
+        "observedDefects": [
+          "Sommittelu on akvarellia suurempi: keskitetty ympyrä leikkaa kirjankannen oikeaa reunaa, lehvästön ja simpukan uloimpia reunoja sekä karttapaperia.",
+          "Sivujen viivat ovat osin kursiivisten kirjainten kaltaisia, ja karttapaperissa on pieniä tekstinomaisia merkintöjä. Tiukka vaatimus pelkistä ei-kirjainviivoista ja täysin tekstittömistä pinnoista ei toteudu varmasti."
+        ],
+        "contentNotes": "Kello on numeroton ja vuosiluvuton. Näyte toimituskelpoinen vertailuun näistä puutteista huolimatta; ei lisägenerointia.",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "circleCropViewed": true,
+        "reviewedAt": "2026-10-09T08:08:48.307693+00:00",
+        "technicalChecks": {
+          "dimensions512": true,
+          "JPEG": true,
+          "opaqueRGB": true,
+          "sRGBProfilePresent": true,
+          "XMPUnicodeDescriptionAndSource": true,
+          "EXIFUnicodeUserComment": true,
+          "shaMatchesRecord": true,
+          "nativeByteExact": true
+        },
+        "noAdditionalGeneration": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/isoisa-1873/varuste-isoisa-1873-foto.jpg",
+      "sampleDeliveryEligible": true,
+      "fullConstraintPass": false,
+      "generationTool": "builtin image_gen",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/isoisa-1873/output-hint.txt",
+      "r2Key": "julisteet/varustekuvat-foto/20261009/varuste-isoisa-1873-foto.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "62605026780860b4df73c104152444b852306976cbc2f70a8a84813e48dc0132",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Taskukello ja päiväkirja valokuvamaisina; sivuissa/kartassa kirjainmaisia merkintöjä, ympyrä rajaa kirjaa ja reunarekvisiittaa."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/qa/root-last6.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-isoisa-1873-foto.jpg",
+      "bytes": 93210,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
       "id": "tahdet",
       "subject": "tahdet",
       "taskNumber": 49,
@@ -261,6 +385,376 @@
       "published": false,
       "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-tahdet-foto.jpg",
       "bytes": 57616,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "yokartta",
+      "subject": "yokartta",
+      "taskNumber": 49,
+      "style": "F",
+      "form": "mini",
+      "file": "varuste-yokartta-foto.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/yokartta/varuste-yokartta-foto.jpg",
+      "sha256": "ee55e9c6aca823d80cca8a0da85f6dd142b80e0a6676d0b61a6e337648165d66",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fab-81f6-79b3-a46c-fca130d748b0/exec-7aa6abe1-36a3-4568-8599-4300235c28b3.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/yokartta/original-generation.png",
+      "originalSHA256": "8351a01cff427db69ccbeff1d414e46b297932122a09d7345854a0dcc76930c6",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: square game equipment image, photograph-like, intended for a centered circular crop.\nPrimary request: Create a completely new photorealistic image of Earth at night, with Europe and Africa facing the camera, Europe in the upper center, Africa in the lower center, the Middle East at upper right. The full spherical Earth is centered, occupying about 74 percent of the frame diameter, surrounded by generous simple quiet pale warm-neutral background. Keep the entire sphere and its faint atmospheric edge well inside a centered circular crop. No base or stand.\nStyle/medium: a believable photographic night-Earth globe, detailed dark navy oceans, subdued gray-brown continents, thin natural blue atmosphere and sparse realistic cloud wisps. Photographic texture and restrained exposure, soft natural illumination from upper left, no HDR, no fantasy glow or stylized rendering, no watercolor.\nCity lights: individual small warm white/amber point lights in distinct compact city clusters across Europe and a few separate African cities. Each urban cluster is separated from the next by visible dark gaps. Cities can occur inland. Dark seas. NO continuous luminous coastal chains, no luminous coastline tracing, no luminous continent outlines, no connected glowing routes or roads, no lines joining cities. The Mediterranean and African coastlines stay dark except for a few isolated compact urban clusters. Keep Africa mostly dark, with scattered separate compact groups.\nConstraints: one globe only; geographically recognizable Europe, Africa and Mediterranean. No people, faces, text, numbers, country labels, grid lines, logos, watermarks or graphic border. Completely new image from text, no copied source pixels. Output one opaque square image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-vertailu-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": {
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/yokartta/varuste-yokartta.jpg",
+        "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-yokartta.jpg",
+        "sha256": "df2c9ccdacebeefedef468ec6e6d390f7e66f5523ee0b042deaa32e6d015ddc0",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "kuvateksti": "Maa yöllä, Eurooppa ja Afrikka kaupunkien valoineen. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "fullConstraintPass": false,
+        "circleSafe": true,
+        "observedPasses": [
+          "Keskitetty kokonainen yömaapallo, Eurooppa ja Afrikka näkyvät kuten Amini",
+          "Koko pallo ja ilmakehäreuna säilyvät ympyrärajauksessa",
+          "Yömaapallon valokuvamainen pintatekstuuri ja hillityt värit",
+          "Afrikassa useita erillisiä pieniä valorykelmiä ja laajoja pimeitä alueita",
+          "Ei tekstiä, numeroita, ihmisiä, kasvoja, tunnuksia, vesileimaa tai kehystä"
+        ],
+        "observedDefects": [
+          "Euroopassa valot muodostavat paikoin rannikkoja myötäileviä ketjuja ja tiheän verkon, etenkin Italian ympärillä. Egyptin ja Punaisenmeren suunnalla näkyy myös pitkä yhtenäinen valojuova. Vaatimus vain erillisistä kaupunkiryhmistä ei toteudu kokonaan.",
+          "Pallo on Aminiä suurempi, vaikka pyöreä rajaus toimii."
+        ],
+        "contentNotes": "Näyte toimitetaan valorykelmien erillisyyden puutteella; ei lisägenerointia.",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "circleCropViewed": true,
+        "reviewedAt": "2026-10-09T08:08:48.307693+00:00",
+        "technicalChecks": {
+          "dimensions512": true,
+          "JPEG": true,
+          "opaqueRGB": true,
+          "sRGBProfilePresent": true,
+          "XMPUnicodeDescriptionAndSource": true,
+          "EXIFUnicodeUserComment": true,
+          "shaMatchesRecord": true,
+          "nativeByteExact": true
+        },
+        "noAdditionalGeneration": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/yokartta/varuste-yokartta-foto.jpg",
+      "sampleDeliveryEligible": true,
+      "fullConstraintPass": false,
+      "generationTool": "builtin image_gen",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/yokartta/output-hint.txt",
+      "r2Key": "julisteet/varustekuvat-foto/20261009/varuste-yokartta-foto.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "ee55e9c6aca823d80cca8a0da85f6dd142b80e0a6676d0b61a6e337648165d66",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Maapallo ja kaupunkivalot mahtuvat ympyrään; rannikko-/Niilivalojuovia jäi."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/qa/root-last6.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-yokartta-foto.jpg",
+      "bytes": 73790,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "maapallon-vuosi",
+      "subject": "maapallon-vuosi",
+      "taskNumber": 49,
+      "style": "F",
+      "form": "mini",
+      "file": "varuste-maapallon-vuosi-foto.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/varuste-maapallon-vuosi-foto.jpg",
+      "sha256": "1ff6e0f431728fdc5ae7728d0fbb9897b4c47f7be3cfbda28940e7d67dcf7997",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fab-81f6-79b3-a46c-fca130d748b0/exec-54fc67f1-b2f7-4fcc-ac34-935223643c50.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/original-generation.png",
+      "originalSHA256": "e5f1e3703c38aeef399ad02e484e18d2c7d22d4a0280b973f14b2d44a5f7b3f4",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup\nAsset type: square game equipment image, photograph-like, intended for a centered circular crop.\nPrimary request: Create a completely new real-camera-looking photograph of a handmade physical miniature explaining the Earth's year: one small globe in the center, a clearly tilted slender plain brass axle through its poles, and exactly FOUR small floating landscape islands around it. No labels.\nComposition: high three-quarter view, warm pale neutral tabletop/backdrop, compact centered group with abundant clear background margins; every island, branch, globe, axle end and thin oval wire fits entirely within the centered circular crop. The globe is about a third of the frame height, showing the Americas and blue water. Its axle slants from lower-left to upper-right, visibly tilted about 23 degrees from vertical. A single thin oval brass wire encircles the globe, passing behind the islands, photographed as a real miniature wire, no diagram arrows.\nFour miniature islands at the four diagonal corners around the globe, all smaller than the globe: UPPER LEFT spring with a small pale pink flowering tree, bright young green plants and a tiny waterfall; UPPER RIGHT summer with a leafy green tree, a few small yellow flowers and lush grass; LOWER RIGHT autumn with an orange-russet deciduous tree and scattered fallen leaves; LOWER LEFT winter with a bare deciduous tree, one small evergreen, snow and a short icy blue stream. Each island is an irregular rocky soil chunk; each is separate with clear background gaps. Exactly four, not a continuous landscape and not extra globes.\nStyle/medium: real physical diorama photographed in soft window daylight, convincing tiny leaves, bark, stone, soil, snow, painted globe and metal axle, naturally muted colors, fine material texture, realistic contactless miniature shadows and mild depth of field. No HDR, no watercolor, no digital illustration, no smooth shiny CGI look.\nConstraints: no people, faces, text, numbers, season names, globe labels, logos, watermark or graphic frame. Completely new text-based generation, no copied source pixels. Output one opaque square image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-vertailu-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": {
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/maapallon-vuosi/varuste-maapallon-vuosi.jpg",
+        "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-maapallon-vuosi.jpg",
+        "sha256": "bca42a6ed20533c363c3b850c6974d250bf3a17573c7276f21c5b86abbf5de5d",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "kuvateksti": "Maapallo ja kallistettu akseli sekä neljä pientä vuodenaikasaarta. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "fullConstraintPass": false,
+        "circleSafe": false,
+        "observedPasses": [
+          "Täsmälleen neljä erillistä vuodenaikasaarta: kevät ylävasemmalla, kesä yläoikealla, syksy alaoikealla ja talvi alavasemmalla",
+          "Maapallo keskellä, Amerikat näkyvät ja akseli on selvästi kallistettu",
+          "Fyysisen pienoismallin valokuvamainen materiaalituntu ja pehmeä valo",
+          "Ei vuodenaikojen nimiä, globen tekstimerkintöjä, numeroita, ihmisiä, kasvoja tai tunnuksia"
+        ],
+        "observedDefects": [
+          "Saaret ja puut ovat Aminiä suurempia ja taustamarginaalit liian pienet: keskitetty ympyrä leikkaa kevät- ja kesäpuiden uloimpia oksia."
+        ],
+        "contentNotes": "Neljä vuodenajan aihetta säilyvät tunnistettavina, mutta koko sommittelu ei mahdu ympyrään. Näyte toimitetaan; ei uusintaa.",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "circleCropViewed": true,
+        "reviewedAt": "2026-10-09T08:08:48.307693+00:00",
+        "technicalChecks": {
+          "dimensions512": true,
+          "JPEG": true,
+          "opaqueRGB": true,
+          "sRGBProfilePresent": true,
+          "XMPUnicodeDescriptionAndSource": true,
+          "EXIFUnicodeUserComment": true,
+          "shaMatchesRecord": true,
+          "nativeByteExact": true
+        },
+        "noAdditionalGeneration": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/varuste-maapallon-vuosi-foto.jpg",
+      "sampleDeliveryEligible": true,
+      "fullConstraintPass": false,
+      "generationTool": "builtin image_gen",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/output-hint.txt",
+      "r2Key": "julisteet/varustekuvat-foto/20261009/varuste-maapallon-vuosi-foto.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "1ff6e0f431728fdc5ae7728d0fbb9897b4c47f7be3cfbda28940e7d67dcf7997",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Neljä vuodenaikasaarta ja fyysinen kalteva akseli näkyvät; ympyrärajaus leikkaa uloimpia oksia."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/qa/root-last6.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-maapallon-vuosi-foto.jpg",
+      "bytes": 96812,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lontoo",
+      "subject": "lontoo",
+      "taskNumber": 49,
+      "style": "F",
+      "form": "mini",
+      "file": "varuste-lontoo-foto.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lontoo/varuste-lontoo-foto.jpg",
+      "sha256": "0d8ad4b9df4a51036024e1ed111de8f4a2f6277b5eb56261a911965add06b0d7",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fab-81f6-79b3-a46c-fca130d748b0/exec-3fea0eaf-2d08-48b2-bb21-6c246e4af7b3.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lontoo/original-generation.png",
+      "originalSHA256": "0f9a944519b1324524291b29dc45c8aabf19dad37c0c5e07a175dcc8e00ced5e",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square game equipment image, photograph-like, intended for a centered circular crop.\nPrimary request: Create a completely new photographic image of Tower Bridge over the Thames with its TWO bascule roadway leaves raised and one small nineteenth-century steamship passing through. Match the described centered elevated/isometric arrangement, like a real architectural miniature photographed in natural light.\nComposition: high three-quarter camera, looking diagonally down the river. Two recognizable stone Gothic bridge towers sit left-back and right-front, their upper horizontal walkways linked over the river. Pale blue suspension structures extend outward to small old brick riverside buildings and trees on both banks. The two road bascules between the towers are visibly raised toward each other; a dark small steamship with a slim chimney in the lower-left foreground heads under the central open passage, trailing a subtle white steam plume. River runs diagonally from lower-left toward upper-right with modest realistic ripples. Keep the whole bridge, banks and boat in a compact centered cluster surrounded by generous pale warm-neutral empty margins; all towers, bridge endpoints, buildings and steam plume stay within the central circular crop. Do not change to a ground-level street view.\nStyle/medium: believable real camera photograph of a meticulously made physical scale miniature; natural stone, brick, blue-painted iron, dark wooden steamship and real-looking subdued river water. Soft daylight, muted natural colors, gentle shadows, no HDR, no watercolor or painting, no shiny CGI. Small riverside buildings retain a late-nineteenth-century appearance, no modern skyline.\nConstraints: no people, faces, readable text, clock numerals, numbers, ship lettering, national marks, logos, watermark or graphic border. Completely new generation from text, no copied reference pixels. Output one opaque square image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-vertailu-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": {
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lontoo/varuste-lontoo.jpg",
+        "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-lontoo.jpg",
+        "sha256": "55539a80e849113369fa7d21b899ac06d152873cce75049f702f93561754f0f8",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "kuvateksti": "Tower Bridge avattuna Thamesin yllä ja pieni höyrylaiva korkeasta kuvakulmasta. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "fullConstraintPass": false,
+        "circleSafe": false,
+        "observedPasses": [
+          "Kohotettu kolmen neljäsosan/isometrinen kuvakulma ja sama sillan pääsuunta kuin Amini",
+          "Tower Bridgen kaksi tornia, nostetut keskiosan läpät ja yläkäytävät näkyvät",
+          "Thames ja pieni höyrylaiva alavasemmalla etualalla",
+          "Valokuvamaiset kivi-, rauta- ja vesimateriaalit, vaimeat värit ja luonnonvalo",
+          "Ei ilmeisiä ihmisiä, kasvoja, tekstiä, numeroita, logoja, vesileimaa tai kehystä"
+        ],
+        "observedDefects": [
+          "Kuva täyttää koko ruudun jokimaisemalla, joten pyydetty pehmeä yksinkertainen neutraali tausta ja runsaat ulkomarginaalit puuttuvat.",
+          "Sillan ulommat päät ja osa rantataloista rajautuvat jo neliössä ja leikkautuvat lisää ympyrässä. Sommittelu on akvarellia lähempää kuvattu."
+        ],
+        "contentNotes": "Pääaiheiden sijainti ja korkea kamera toteutuvat, mutta koko sillan ympyräsuoja ei toteudu. Näyte toimitetaan; ei uusintaa.",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "circleCropViewed": true,
+        "reviewedAt": "2026-10-09T08:08:48.307693+00:00",
+        "technicalChecks": {
+          "dimensions512": true,
+          "JPEG": true,
+          "opaqueRGB": true,
+          "sRGBProfilePresent": true,
+          "XMPUnicodeDescriptionAndSource": true,
+          "EXIFUnicodeUserComment": true,
+          "shaMatchesRecord": true,
+          "nativeByteExact": true
+        },
+        "noAdditionalGeneration": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lontoo/varuste-lontoo-foto.jpg",
+      "sampleDeliveryEligible": true,
+      "fullConstraintPass": false,
+      "generationTool": "builtin image_gen",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lontoo/output-hint.txt",
+      "r2Key": "julisteet/varustekuvat-foto/20261009/varuste-lontoo-foto.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "0d8ad4b9df4a51036024e1ed111de8f4a2f6277b5eb56261a911965add06b0d7",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Korkea kamera, nostettu Tower Bridge ja höyrylaiva näkyvät; sillan ulkopäät jo neliön rajalla ja tausta on täysi maisema."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/qa/root-last6.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-lontoo-foto.jpg",
+      "bytes": 105908,
       "http": 200,
       "mime": "image/jpeg",
       "cors": "https://matkakirja.app",
@@ -519,14 +1013,261 @@
       "mime": "image/jpeg",
       "cors": "https://matkakirja.app",
       "byteExactReadback": true
+    },
+    {
+      "id": "tavli",
+      "subject": "tavli",
+      "taskNumber": 49,
+      "style": "F",
+      "form": "mini",
+      "file": "varuste-tavli-foto.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/tavli/varuste-tavli-foto.jpg",
+      "sha256": "5e66874bc2b666a9d01dcff690ae8a35c43618b9fc947d9ef359e9283b8817b7",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fab-81f6-79b3-a46c-fca130d748b0/exec-584ff435-fb99-4bab-8e81-a950cb1a9843.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/tavli/original-generation.png",
+      "originalSHA256": "63dc8c91b60e1e7d7206a9bcfc12b78550328ccfda9fd04d5a5d0dfeefb7848a",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup\nAsset type: square game equipment image, photograph-like, intended for a centered circular crop.\nPrimary request: Create a completely new photorealistic photograph of an open wooden tavli/backgammon board, a small loose group of pale wooden disk counters beside its left edge and dark wooden disk counters beside its right edge, and exactly TWO ivory dice with ordinary dot pips, one die on each leaf of the open board.\nComposition: elevated near-overhead three-quarter angle, slightly diagonal tabletop arrangement; board top edge slopes gently down to the right. Brown wooden hinged rectangular case, opened flat with center brass hinges visible. Like a real still-life object viewed from above. Two equal rectangular playing leaves left and right. Keep counters off the board, grouped beside its outer edges with a few small stacks and separated singles. Center the complete arrangement and scale it compactly; abundant plain neutral parchment-colored tabletop margin, at least 18 percent outside the objects. The full board corners and EVERY outside counter must fit safely within the centered circular crop.\nExact playable board geometry: TWENTY-FOUR long slender triangle points in total. Each leaf has exactly TWELVE triangles: SIX from its far/top edge pointing inward and SIX from its near/bottom edge pointing inward. Four clearly separate rows of SIX triangles; each row alternates exactly three dark brown triangles and three pale honey triangles. The two opposed rows of each leaf are separated by a wide plain wooden middle zone for the die. No extra triangles, no checkerboard, no bonus points. All triangles remain visible and unobscured. Exactly two separate dice, both unmarked except standard circular dot pips, never printed numbers.\nStyle/medium: convincing real camera photograph, tactile worn wood grain and inlaid triangle surfaces, rounded wood counters with physical thickness, subtle brass hinge patina, natural ivory dice, soft window daylight and mild shadows, muted natural brown palette, no HDR, no watercolor, no illustration or smooth CGI.\nConstraints: no people, faces, letters, numerals, text, logos, watermark or graphic border. Completely new text-based generation, no copied source pixels. Output one opaque square image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-vertailu-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": {
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tavli/varuste-tavli.jpg",
+        "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-tavli.jpg",
+        "sha256": "5e2c68ffbeb2b8a6f5a89c1d1ba71e6536f3d859ae8548d81c6279657a09644d",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "kuvateksti": "Avattu puinen tavlalauta, kaksikymmentäneljä kolmiota, nappulat ja kaksi pistenoppaa. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": true,
+        "fullConstraintPass": true,
+        "circleSafe": true,
+        "observedPasses": [
+          "Täsmälleen 24 kolmiota: 12 kummallakin lehdellä, neljä kuuden kolmion ryhmää",
+          "Kaksi pistenoppaa, yksi kummallakin lehdellä",
+          "Vaaleat irtonappulat vasemmalla ja tummat oikealla, laudan ulkopuolella",
+          "Aminiä vastaava kohotettu yläkulmanäkymä ja keskitetty lauta",
+          "Koko lauta, kulmat ja kaikki irtonappulat säilyvät ympyrärajauksessa",
+          "Valokuvamainen puu ja pehmeä luonnonvalo; hillityt värit",
+          "Ei tekstiä, numeroita, ihmisiä, kasvoja, logoja, vesileimaa tai kehystä"
+        ],
+        "observedDefects": [],
+        "contentNotes": "Laskettu jokaisesta neljästä kolmiorivistä kuusi pistettä; yhteensä 24. Kaksi erillistä pistenoppaa. Näyte täyttää työntekijän näkyvät vaatimukset; pääagentin riippumaton tarkastus odottaa.",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "circleCropViewed": true,
+        "reviewedAt": "2026-10-09T08:08:48.307693+00:00",
+        "technicalChecks": {
+          "dimensions512": true,
+          "JPEG": true,
+          "opaqueRGB": true,
+          "sRGBProfilePresent": true,
+          "XMPUnicodeDescriptionAndSource": true,
+          "EXIFUnicodeUserComment": true,
+          "shaMatchesRecord": true,
+          "nativeByteExact": true
+        },
+        "noAdditionalGeneration": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/tavli/varuste-tavli-foto.jpg",
+      "sampleDeliveryEligible": true,
+      "fullConstraintPass": true,
+      "generationTool": "builtin image_gen",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/tavli/output-hint.txt",
+      "r2Key": "julisteet/varustekuvat-foto/20261009/varuste-tavli-foto.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "5e66874bc2b666a9d01dcff690ae8a35c43618b9fc947d9ef359e9283b8817b7",
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "24 kolmiota neljässä kuuden ryhmässä, kaksi pistenoppaa ja kaksiväriset nappulat; ympyrärajaus toimii."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/qa/root-last6.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-tavli-foto.jpg",
+      "bytes": 86363,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lentopeli",
+      "subject": "lentopeli",
+      "taskNumber": 49,
+      "style": "F",
+      "form": "mini",
+      "file": "varuste-lentopeli-foto.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lentopeli/varuste-lentopeli-foto.jpg",
+      "sha256": "d16e239dd7e57838b309172b92d0051a039e14944d26231f7a19f5c3601e8726",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fab-81f6-79b3-a46c-fca130d748b0/exec-e1daac3a-e11b-429b-ab22-ce424aee4b59.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lentopeli/original-generation.png",
+      "originalSHA256": "7d040bfa9536de25f928186ee04d66973a05ba394746de59852a9a1727b326f6",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square game equipment image, photograph-like, intended for a centered circular crop.\nPrimary request: Create a completely new photorealistic image of one generic unmarked civilian biplane from the 1910s to early 1920s flying above a small gap in soft clouds, through which a tiny green island and water can be seen far below.\nComposition: elevated front three-quarter view looking slightly down at the aircraft; nose and wooden propeller at the lower-right, tail toward the upper-left. Two cream fabric wings stacked above and below the fuselage, naturally angled across the frame from lower-left toward upper-right; slender wing struts and support wires; honey-brown wood-and-fabric fuselage, one dark EMPTY open cockpit, two small wheels beneath. Entire aircraft centered, compact and completely inside the central circular crop, generous pale neutral cloud/background margins all around the wingtips, tail, propeller and wheels. Soft cloud gaps, subdued distant island at bottom center. Aircraft is the clear main subject.\nStyle/medium: a believable natural-daylight aviation photograph, real slightly translucent woven cream wing fabric, visible restrained rib structure, wooden propeller, aged metal engine cowling, natural wood surfaces, soft weather light, muted cream/tan/blue-gray/green, subtle texture, no HDR, no illustration, no watercolor, no polished CGI.\nConstraints: absolutely NO pilot, no people, faces, national roundels, flags, military marks, serials, registration codes, logos, text, numbers or other insignia anywhere on the plane. No motion effect that hides essential structure. Completely new text-based generation, no copied reference pixels. Output one opaque square image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-vertailu-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "8aed07ad0be28ee71ea72bd885e572fde27df1e6"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": {
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lentopeli/varuste-lentopeli.jpg",
+        "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-lentopeli.jpg",
+        "sha256": "a52b74f1dd5efa54a5295d4dc1e6e8d57f8bdd8732dc16d480a4b96fdd14afbd",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "kuvateksti": "Vanha tunnukseton kaksitaso pilvien ja pienen saaren yllä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "fullConstraintPass": false,
+        "circleSafe": false,
+        "observedPasses": [
+          "1910–1920-luvun kaltainen kaksitaso, kaksi päällekkäistä siipeä, puupotkuri, kangassiivet ja kaksi pyörää",
+          "Aminiä vastaava korkea kolmen neljäsosan kamera, nokka alaoikealla ja pyrstö ylävasemmalla",
+          "Pieni saari ja vettä pilvien välissä koneen alapuolella",
+          "Ohjaamot tyhjät; ei pilottia, ihmisiä, kasvoja, kansallistunnuksia, rekisterimerkintöjä tai logoja",
+          "Valokuvamaiset kangas-, puu- ja metallipinnat, luonnollinen pilvivalo ja vaimeat värit"
+        ],
+        "observedDefects": [
+          "Kone on Aminiä suurempi: keskitetty ympyrä leikkaa yläsiiven oikean kärjen.",
+          "Kuvassa on kaksi avointa ohjaamoaukkoa yhden pyydetyn aukon sijasta. Pilvisaari on Aminiä suurempi ja selvempi."
+        ],
+        "contentNotes": "Koneen aikakausivaikutelma, tunnuksettomuus ja tyhjät ohjaamot toteutuvat. Näyte toimitetaan sommittelu- ja rajauspuutteista huolimatta; ei uusintaa.",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "circleCropViewed": true,
+        "reviewedAt": "2026-10-09T08:08:48.307693+00:00",
+        "technicalChecks": {
+          "dimensions512": true,
+          "JPEG": true,
+          "opaqueRGB": true,
+          "sRGBProfilePresent": true,
+          "XMPUnicodeDescriptionAndSource": true,
+          "EXIFUnicodeUserComment": true,
+          "shaMatchesRecord": true,
+          "nativeByteExact": true
+        },
+        "noAdditionalGeneration": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lentopeli/varuste-lentopeli-foto.jpg",
+      "sampleDeliveryEligible": true,
+      "fullConstraintPass": false,
+      "generationTool": "builtin image_gen",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/lentopeli/output-hint.txt",
+      "r2Key": "julisteet/varustekuvat-foto/20261009/varuste-lentopeli-foto.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "d16e239dd7e57838b309172b92d0051a039e14944d26231f7a19f5c3601e8726",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Tunnukseton kaksitaso, tyhjät ohjaamot; kaksi ohjaamoaukkoa ja yläsiiven oikea kärki leikkautuu ympyrässä."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/qa/root-last6.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-lentopeli-foto.jpg",
+      "bytes": 66206,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
     }
   ],
   "comparison": {
-    "file": "toimitetut-osa-4-foto.jpg",
-    "r2Key": "julisteet/varustekuvat-foto/20261009/toimitetut-osa-4-foto.jpg",
-    "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/toimitetut-osa-4-foto.jpg",
-    "sha256": "2e677e795d540b50a95527e96aff00017642b8488c0672481d827cf9d9d0888c",
-    "bytes": 98634,
+    "file": "toimitetut-10-foto.jpg",
+    "r2Key": "julisteet/varustekuvat-foto/20261009/toimitetut-10-foto.jpg",
+    "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/toimitetut-10-foto.jpg",
+    "sha256": "50adfd0b3c02da9c443ee487c3c32292c83e184f35cbea2b1e4c40d0c3baa9d7",
+    "bytes": 255178,
     "http": 200,
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",
@@ -543,5 +1284,5 @@
   "editorAcceptance": false,
   "gameIntegrated": false,
   "published": false,
-  "updatedAt": "2026-10-09T07:46:36.482422+00:00"
+  "updatedAt": "2026-10-09T08:14:11.051926+00:00"
 }
