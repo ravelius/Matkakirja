@@ -80,6 +80,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;"), "karkea valinta hädässä, suspendUpdate tauolla");
         }
 
+        [Testi] static void SadepilvetJaSalama()
+        {
+            // PT junaan 171: sade = tummat matalat pilvet (kuuron tummuus laskee pohjan ja paksuntaa) + LS1:n salaman välähdys pilviin.
+            string U(string n) => System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", n));
+            string c = U("Unity/KaupunkiIlmakeha.cs"), h = U("Resources/Varjostimet/Ilmakeha.hlsl"), k = U("Unity/KaupunkiKuva.cs");
+            Oleta.Tosi(c.Contains("Mathf.Lerp(PilviKorkeusM, SadePohjaM, tumma)") && c.Contains("korkeusM + 150f"), "pohja laskee, pysyy kameran yllä");
+            Oleta.Tosi(c.Contains("public static void Salama(Vector3 suunta, float voima)") && h.Contains("_IlmSalama.w"), "salama-API ja varjostin");
+            Oleta.Tosi(k.Contains("KaupunkiKuva.Saa.Sade)"), "sään sade kuuroon");
+        }
+
         [Testi] static void LaattojenLeikkausKutenCesium()
         {
             // CesiumUnlitTilesetShader: Alpha = 1 − peitteen R (Lerp mustasta alfalla), raja 0,5, oletuskuva musta (A/B 9.10. 05.0x).

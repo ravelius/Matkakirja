@@ -53,6 +53,21 @@ namespace Matkakirja.Linssit.Kierros
             return 0;
         }
 
+        // ILTAIKKUNAT (Päätoimittaja 9.10., junan 171 erä: "ikkunavalot illalla yövalojen jatkeena"): ikkunat syttyvät jo
+        // illan hämärtyessä, ennen katuvaloja ja valosaastetta; aamulla sammuvat viimeisinä.
+        /// <summary>Ikkunavalojen osuus auringosta: alkaa +8°:ssa, täysi −3°:ssa (katuvalot vasta −2…−8°).</summary>
+        public static double IkkunatAuringosta(double korkeus) => Math.Max(0, Math.Min(1, (8 - korkeus) / 11));
+
+        /// <summary>Ikkunavalojen osuus kellosta: ilta 17–19.5 syttyy (illan valinta 18.5 → 0,6), aamu 5–7.5 sammuu.</summary>
+        public static double IkkunatTunnista(double tunti)
+        {
+            tunti %= 24; if (tunti < 0) tunti += 24;
+            if (tunti >= 19.5 || tunti <= 5) return 1;
+            if (tunti > 17) return (tunti - 17) / 2.5;
+            if (tunti < 7.5) return (7.5 - tunti) / 2.5;
+            return 0;
+        }
+
         /// <summary>Pitääkö ruudukko ladata uudelleen: kamera on siirtynyt toisen keskilaatan alueelle.</summary>
         public static bool Vaihtuu((int lat, int lon)? nyt, double lat, double lon) => nyt == null || nyt.Value != Kulma(lat, lon);
     }
