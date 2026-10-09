@@ -3,7 +3,15 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 03.2x (UUSIN)
+## TILA 9.10. 04.0x (UUSIN)
+JUNA 170 runko **90c7bb19a** = 9851acae5 + LS1 kierros-170 88ca8e5b5 + 243a70037 (PT kuittasi: elävä taivas, valonheittimet, Eiffelin majakka pois);
+testit 453/419/1137, unity 0, tarkista 0. Käännös 8fae5eb43:sta (ca4221d88, 03.55, 0 varjostinvirhettä; app lokit/natiiviseppa-app-170-8fae5eb43).
+YÖKUVAPARI (lokit/yo170-arkki-{pariisi,tukholma}-ca4221d8.png): yövalot EIVÄT näy, vaikka loki sanoo "9/9 laattaa"; taivas ja vedet mustat → PT, LS1, LS2.
+Ehto LS1:lle (varjostimet + yökuvapari) ei täyty → odota LS1:n korjausta. Ajo: scratchpad yo170-ajo.sh <runko> kaanna|simu (vaatii NYT:t).
+LS2: korkeus b1e23a065 (uusin-2.json) ja laivat 9e0610925 välivaihe → ota PT:n kuittauksen jälkeen. NUI yhdistää omansa (edcd51cf1) LS1:n päälle.
+Filmi rungossa (rae 0,32). PT: 170 TF vasta omistajan TF 169 -palautteen jälkeen (iltapäivä). TF 169 ajo 37864329025, Mac-odottaja käynnissä.
+
+## TILA 9.10. 03.2x
 **BUILD 169 = 5b91b1a2c** (proto master; runko e9802f2d1 = d9c848fa0 + LS1 b92647d44 kohdekaari/kierto; simukäännös 2ee9aea8e 0 shader erroria;
 app lokit/natiiviseppa-app-169-e9802f2d1). iOS TF 169 ajo 37864329025 (Julkaisija 03.21), muutosloki #4253. Mac TF -odottaja käynnissä (alaraja
 00:21Z, loki lokit/natiiviseppa-mac-tf-169.log). juna/b13 → e9802f2d 03.21 (juna.log).
