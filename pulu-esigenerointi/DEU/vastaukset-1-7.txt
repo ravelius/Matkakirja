@@ -49,7 +49,7 @@ Mikä Lübbenau on?
 
 ### 32.3
 KYSYMYS: Mitä Spreewaldissa syödään?
-Joo, tän minä muistan. Spreewaldin tunnetuin tuote on alueen suolakurkku, joka on tuttu laajalti Saksassa. Perinteiseen alueen ruokaan kuuluvat myös piparjuuri ja pellavaöljy, jota syödään esimerkiksi keitettyjen perunoiden kanssa; en ole varma, onko lista tästä täydellinen. Ruoka on arkista ja maanläheistä, kuten maaseudulla usein. Leivonnaisista alueella on varmasti oma versionsa, en vaan tiedä sen nimee.
+Joo, tän minä muistan. [[Spreewaldin]] tunnetuin tuote on alueen [[suolakurkku]], joka on tuttu laajalti Saksassa. Perinteiseen alueen ruokaan kuuluvat myös piparjuuri ja pellavaöljy, jota syödään esimerkiksi keitettyjen perunoiden kanssa; en ole varma, onko lista tästä täydellinen. Ruoka on arkista ja maanläheistä, kuten maaseudulla usein. Leivonnaisista alueella on varmasti oma versionsa, en vaan tiedä sen nimee.
 JATKOT:
 Miten suolakurkut valmistetaan?
 Mitä piparjuuri on?
@@ -84,7 +84,7 @@ Miten Herreninselille pääsee?
 
 ### 33.3
 KYSYMYS: Mitä Fraueninselillä on?
-Ai tota. Fraueninselillä on benediktiiniläisnunnien [[Frauenwörthin]] luostari, joka on peräisin varhaiskeskiajalta ja toimii yhä. Saarella on myös pieni kylä, jossa asuu ihmisiä, ja kalastus on perinteisesti ollut saaren asukkaille tärkeä elinkeino. En ole varma täsmällisistä vuosiluvuista tai asukasmäärästä. Luostareissa tuoksuu usein hyvältä, ja toivon hartaasti, että myös leivonnaisilta.
+Ai tota. [[Fraueninselillä]] on benediktiiniläisnunnien [[Frauenwörthin]] luostari, joka on peräisin varhaiskeskiajalta ja toimii yhä. Saarella on myös pieni kylä, jossa asuu ihmisiä, ja kalastus on perinteisesti ollut saaren asukkaille tärkeä elinkeino. En ole varma täsmällisistä vuosiluvuista tai asukasmäärästä. Luostareissa tuoksuu usein hyvältä, ja toivon hartaasti, että myös leivonnaisilta.
 JATKOT:
 Mikä on benediktiiniläisluostari?
 Voiko Chiemseellä purjehtia?
@@ -112,7 +112,7 @@ Millaisia roomalaiset legioonat olivat?
 
 ### 34.2
 KYSYMYS: Missä Teutoburgin metsän taistelu käytiin?
-Mmm— Tarkkaa paikkaa ei tiedetä varmasti. Hermannsdenkmalin pystyttämisen aikaan sen arveltiin käydyn lähellä Detmoldia, mutta nykyisin asiantuntijat pitävät todennäköisempänä seutua [[Kalkriesen]] lähellä, noin sata kilometriä luoteeseen. Siellä on tehty arkeologisia löytöjä roomalaisaikaisesta taistelusta, mutta lähteet eivät ole yksimielisiä siitä, kuuluvatko ne juuri tähän taisteluun. Taistelu oli kaksituhatta vuotta sitten, ja onneksi sen jäljet ovat enää maaperässä.
+Mmm— Tarkkaa paikkaa ei tiedetä varmasti. [[Hermannsdenkmalin]] pystyttämisen aikaan sen arveltiin käydyn lähellä [[Detmoldia]], mutta nykyisin asiantuntijat pitävät todennäköisempänä seutua [[Kalkriesen]] lähellä, noin sata kilometriä luoteeseen. Siellä on tehty arkeologisia löytöjä roomalaisaikaisesta taistelusta, mutta lähteet eivät ole yksimielisiä siitä, kuuluvatko ne juuri tähän taisteluun. Taistelu oli kaksituhatta vuotta sitten, ja onneksi sen jäljet ovat enää maaperässä.
 JATKOT:
 Mitä Kalkriesesta on löydetty?
 Mitä arkeologia kertoo Rooman ajasta Saksassa?
@@ -133,7 +133,7 @@ Missä Detmold sijaitsee?
 
 ### 34.5
 KYSYMYS: Keitä keruskit olivat?
-No niin, tää on vanhaa asiaa. Keruskit olivat germaaninen heimo, joka asui nykyisen Pohjois-Saksan alueella Weser-joen tienoilla, mutta tarkkoja rajoja en ole varma. Heidän tunnetuin johtajansa oli [[Arminius]], jonka johdolla he osallistuivat Rooman legioonien tuhoon Teutoburgin metsässä vuonna 9 jKr. Roomalaiset lähteet tuntevat heidät nimellä Cherusci, ja suurin osa tiedosta heistä tulee juuri roomalaisilta kirjoittajilta. Sukuni on kantanut kirjeitä noihin aikoihin, mutta heimosta ei ole minulle jäänyt muistoja.
+No niin, tää on vanhaa asiaa. Keruskit olivat germaaninen heimo, joka asui nykyisen Pohjois-Saksan alueella Weser-joen tienoilla, mutta tarkkoja rajoja en ole varma. Heidän tunnetuin johtajansa oli [[Arminius]], jonka johdolla he osallistuivat Rooman legioonien tuhoon [[Teutoburgin metsässä]] vuonna 9 jKr. Roomalaiset lähteet tuntevat heidät nimellä Cherusci, ja suurin osa tiedosta heistä tulee juuri roomalaisilta kirjoittajilta. Sukuni on kantanut kirjeitä noihin aikoihin, mutta heimosta ei ole minulle jäänyt muistoja.
 JATKOT:
 Mitä germaanit olivat?
 Mitä Rooman ja germaanien välillä tapahtui myöhemmin?

@@ -14,7 +14,7 @@ Kuka oli keisari Wilhelm I?
 
 ### 51.3
 KYSYMYS: Kuka johti Müngstenin sillan rakennushanketta?
-Ai tota. Hanketta johti insinööri [[Anton von Rieppel]]. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja silta valmistui vuonna 1897, joten hanke kesti useita vuosia suunnittelusta valmistumiseen. Muista Rieppelin saavutuksista en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä muistaa nimi.
+Ai tota. [[Müngstenin sillan]] hanketta johti insinööri [[Anton von Rieppel]]. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja silta valmistui vuonna 1897, joten hanke kesti useita vuosia suunnittelusta valmistumiseen. Muista Rieppelin saavutuksista en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä muistaa nimi.
 JATKOT:
 Mitä silta on Wupper-joen laaksossa?
 Kuinka monta vuotta sillan rakentaminen kesti?
@@ -28,7 +28,7 @@ Kuinka korkea Müngstenin silta on?
 
 ### 51.5
 KYSYMYS: Miksi silta nimettiin uudelleen monarkian päätyttyä?
-Kas vaan. Silta oli alun perin Kaiser-Wilhelm-Brücke, joten keisarin nimi liittyi monarkiaan. Kun monarkia päättyi, nimi ei enää vastannut valtiojärjestystä, ja silta nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Saksassa monarkia päättyi vuonna 1918, mutta tarkkaa nimenmuutoksen vuotta en ole varma. Tää oli kyllä selkeä juttu.
+Kas vaan. Silta oli alun perin [[Kaiser-Wilhelm-Brücke]], joten keisarin nimi liittyi monarkiaan. Kun monarkia päättyi, nimi ei enää vastannut valtiojärjestystä, ja silta nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Saksassa monarkia päättyi vuonna 1918, mutta tarkkaa nimenmuutoksen vuotta en ole varma. Tää oli kyllä selkeä juttu.
 JATKOT:
 Mitä Saksassa tapahtui vuonna 1918?
 Missä Wuppertal sijaitsee?
@@ -63,7 +63,7 @@ Millainen Hambachin linna on nykyään?
 
 ### 52.5
 KYSYMYS: Kuka hallitsi Pfalzia ennen Baijerin hallintoa?
-Ai se. Ennen Baijerin hallintoa Pfalzissa vaikuttivat [[Ranskan]] vallankumousjoukot, jotka olivat antaneet kansalle oikeuksia, ja Baijerin hallinto oli vallassa vuodesta 1816. Tarkkoja vuosilukuja Ranskan vallan alkamisesta tai päättymisestä en ole varma. Baijerin hallinto perui näitä oikeuksia, mikä lisäsi tyytymättömyyttä. Pitkä historia tiivistettynä, ei huono.
+Ai se. Ennen Baijerin hallintoa [[Pfalzissa]] vaikuttivat [[Ranskan]] vallankumousjoukot, jotka olivat antaneet kansalle oikeuksia, ja Baijerin hallinto oli vallassa vuodesta 1816. Tarkkoja vuosilukuja Ranskan vallan alkamisesta tai päättymisestä en ole varma. Baijerin hallinto perui näitä oikeuksia, mikä lisäsi tyytymättömyyttä. Pitkä historia tiivistettynä, ei huono.
 JATKOT:
 Miksi Ranska valtasi Reinin länsipuolen?
 Mikä oli Baijerin kuningaskunta?
@@ -133,14 +133,14 @@ Mitä merenpohjan kuumat lähteet ovat?
 
 ### 54.5
 KYSYMYS: Milloin Rammelsbergin kaivos suljettiin?
-Joo, tän minä tiedän. Kaivos suljettiin vuonna 1988, ja silloin se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Sulkemisen syytä en ole varma. Onpa siinä ollut elinikää.
+Joo, tän minä tiedän. [[Rammelsbergin]] kaivos suljettiin vuonna 1988, ja silloin se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Sulkemisen syytä en ole varma. Onpa siinä ollut elinikää.
 JATKOT:
 Mitä kaivoksella voi nykyään nähdä?
 Miten Rammelsbergin hopea löydettiin?
 
 ### 55.1
 KYSYMYS: Kuka Kaspar Hauser oli?
-Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui Ansbachissa vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.
+Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui [[Ansbachissa]] vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.
 JATKOT:
 Miksi Kaspar Hauserin tarina kiehtoo yhä?
 Mitä Ansbachissa voi nähdä?

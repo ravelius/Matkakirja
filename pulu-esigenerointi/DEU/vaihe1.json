@@ -19,8 +19,9 @@
   "kohde": "kohde:zugspitze",
   "kysymys": "Mitä Saksan jäätiköille on tapahtumassa?",
   "uusi": false,
-  "vastaus": "Joo, tän minä oon nähnyt ylhäältä. Saksan jäätiköt, kuten Pohjoinen Schneeferner ja Höllentalferner, ovat vetäytyneet ja ohentuneet voimakkaasti viime vuosikymmeninä ilmaston lämpenemisen vuoksi. Ne ovat pieniä verrattuna [[Alppien]] suuriin jäätiköihin, ja tutkijat pitävät mahdollisena, että ne sulavat kokonaan lähivuosikymmeninä; tarkkaa vuotta en voi sanoa varmasti. Toivotaan nyt, että ne pysyy tovin vielä.",
+  "vastaus": "Joo, tän minä oon nähnyt ylhäältä. Saksan jäätiköt, kuten Pohjoinen Schneeferner ja [[Höllentalferner]], ovat vetäytyneet ja ohentuneet voimakkaasti viime vuosikymmeninä ilmaston lämpenemisen vuoksi. Ne ovat pieniä verrattuna [[Alppien]] suuriin jäätiköihin, ja tutkijat pitävät mahdollisena, että ne sulavat kokonaan lähivuosikymmeninä; tarkkaa vuotta en voi sanoa varmasti. Toivotaan nyt, että ne pysyy tovin vielä.",
   "linkit": [
+   "Höllentalferner",
    "Alppien"
   ],
   "jatkot": [
@@ -1396,8 +1397,10 @@
   "kohde": "kohde:wartburg",
   "kysymys": "Kuka oli pyhä Elisabet Unkarilainen?",
   "uusi": true,
-  "vastaus": "Just niin, hänestä riittää juttua. Elisabet oli unkarilainen kuninkaantytär, syntynyt 1207, joka meni naimisiin Thüringenin maakreivin kanssa ja asui Wartburgissa. Hän tunnetaan köyhien ja sairaiden auttamisesta, ja hän kuoli nuorena 1231 [[Marburgissa]]. Paavi julisti hänet pyhäksi 1235. Leipää köyhille jakava pyhimys on kyyhkyn lempiihmisiä.",
+  "vastaus": "Just niin, hänestä riittää juttua. Elisabet oli unkarilainen kuninkaantytär, syntynyt 1207, joka meni naimisiin [[Thüringenin]] maakreivin kanssa ja asui [[Wartburgissa]]. Hän tunnetaan köyhien ja sairaiden auttamisesta, ja hän kuoli nuorena 1231 [[Marburgissa]]. Paavi julisti hänet pyhäksi 1235. Leipää köyhille jakava pyhimys on kyyhkyn lempiihmisiä.",
   "linkit": [
+   "Thüringenin",
+   "Wartburgissa",
    "Marburgissa"
   ],
   "jatkot": [
@@ -2343,8 +2346,11 @@
   "kohde": "kohde:hahmotelma-spreewald",
   "kysymys": "Mitä Spreewaldissa syödään?",
   "uusi": true,
-  "vastaus": "Joo, tän minä muistan. Spreewaldin tunnetuin tuote on alueen suolakurkku, joka on tuttu laajalti Saksassa. Perinteiseen alueen ruokaan kuuluvat myös piparjuuri ja pellavaöljy, jota syödään esimerkiksi keitettyjen perunoiden kanssa; en ole varma, onko lista tästä täydellinen. Ruoka on arkista ja maanläheistä, kuten maaseudulla usein. Leivonnaisista alueella on varmasti oma versionsa, en vaan tiedä sen nimee.",
-  "linkit": [],
+  "vastaus": "Joo, tän minä muistan. [[Spreewaldin]] tunnetuin tuote on alueen [[suolakurkku]], joka on tuttu laajalti Saksassa. Perinteiseen alueen ruokaan kuuluvat myös piparjuuri ja pellavaöljy, jota syödään esimerkiksi keitettyjen perunoiden kanssa; en ole varma, onko lista tästä täydellinen. Ruoka on arkista ja maanläheistä, kuten maaseudulla usein. Leivonnaisista alueella on varmasti oma versionsa, en vaan tiedä sen nimee.",
+  "linkit": [
+   "Spreewaldin",
+   "suolakurkku"
+  ],
   "jatkot": [
    "Miten suolakurkut valmistetaan?",
    "Mitä piparjuuri on?"
@@ -2414,8 +2420,9 @@
   "kohde": "kohde:hahmotelma-chiemsee",
   "kysymys": "Mitä Fraueninselillä on?",
   "uusi": true,
-  "vastaus": "Ai tota. Fraueninselillä on benediktiiniläisnunnien [[Frauenwörthin]] luostari, joka on peräisin varhaiskeskiajalta ja toimii yhä. Saarella on myös pieni kylä, jossa asuu ihmisiä, ja kalastus on perinteisesti ollut saaren asukkaille tärkeä elinkeino. En ole varma täsmällisistä vuosiluvuista tai asukasmäärästä. Luostareissa tuoksuu usein hyvältä, ja toivon hartaasti, että myös leivonnaisilta.",
+  "vastaus": "Ai tota. [[Fraueninselillä]] on benediktiiniläisnunnien [[Frauenwörthin]] luostari, joka on peräisin varhaiskeskiajalta ja toimii yhä. Saarella on myös pieni kylä, jossa asuu ihmisiä, ja kalastus on perinteisesti ollut saaren asukkaille tärkeä elinkeino. En ole varma täsmällisistä vuosiluvuista tai asukasmäärästä. Luostareissa tuoksuu usein hyvältä, ja toivon hartaasti, että myös leivonnaisilta.",
   "linkit": [
+   "Fraueninselillä",
    "Frauenwörthin"
   ],
   "jatkot": [
@@ -2469,8 +2476,10 @@
   "kohde": "kohde:hahmotelma-hermannsdenkmal",
   "kysymys": "Missä Teutoburgin metsän taistelu käytiin?",
   "uusi": false,
-  "vastaus": "Mmm— Tarkkaa paikkaa ei tiedetä varmasti. Hermannsdenkmalin pystyttämisen aikaan sen arveltiin käydyn lähellä Detmoldia, mutta nykyisin asiantuntijat pitävät todennäköisempänä seutua [[Kalkriesen]] lähellä, noin sata kilometriä luoteeseen. Siellä on tehty arkeologisia löytöjä roomalaisaikaisesta taistelusta, mutta lähteet eivät ole yksimielisiä siitä, kuuluvatko ne juuri tähän taisteluun. Taistelu oli kaksituhatta vuotta sitten, ja onneksi sen jäljet ovat enää maaperässä.",
+  "vastaus": "Mmm— Tarkkaa paikkaa ei tiedetä varmasti. [[Hermannsdenkmalin]] pystyttämisen aikaan sen arveltiin käydyn lähellä [[Detmoldia]], mutta nykyisin asiantuntijat pitävät todennäköisempänä seutua [[Kalkriesen]] lähellä, noin sata kilometriä luoteeseen. Siellä on tehty arkeologisia löytöjä roomalaisaikaisesta taistelusta, mutta lähteet eivät ole yksimielisiä siitä, kuuluvatko ne juuri tähän taisteluun. Taistelu oli kaksituhatta vuotta sitten, ja onneksi sen jäljet ovat enää maaperässä.",
   "linkit": [
+   "Hermannsdenkmalin",
+   "Detmoldia",
    "Kalkriesen"
   ],
   "jatkot": [
@@ -2511,9 +2520,10 @@
   "kohde": "kohde:hahmotelma-hermannsdenkmal",
   "kysymys": "Keitä keruskit olivat?",
   "uusi": true,
-  "vastaus": "No niin, tää on vanhaa asiaa. Keruskit olivat germaaninen heimo, joka asui nykyisen Pohjois-Saksan alueella Weser-joen tienoilla, mutta tarkkoja rajoja en ole varma. Heidän tunnetuin johtajansa oli [[Arminius]], jonka johdolla he osallistuivat Rooman legioonien tuhoon Teutoburgin metsässä vuonna 9 jKr. Roomalaiset lähteet tuntevat heidät nimellä Cherusci, ja suurin osa tiedosta heistä tulee juuri roomalaisilta kirjoittajilta. Sukuni on kantanut kirjeitä noihin aikoihin, mutta heimosta ei ole minulle jäänyt muistoja.",
+  "vastaus": "No niin, tää on vanhaa asiaa. Keruskit olivat germaaninen heimo, joka asui nykyisen Pohjois-Saksan alueella Weser-joen tienoilla, mutta tarkkoja rajoja en ole varma. Heidän tunnetuin johtajansa oli [[Arminius]], jonka johdolla he osallistuivat Rooman legioonien tuhoon [[Teutoburgin metsässä]] vuonna 9 jKr. Roomalaiset lähteet tuntevat heidät nimellä Cherusci, ja suurin osa tiedosta heistä tulee juuri roomalaisilta kirjoittajilta. Sukuni on kantanut kirjeitä noihin aikoihin, mutta heimosta ei ole minulle jäänyt muistoja.",
   "linkit": [
-   "Arminius"
+   "Arminius",
+   "Teutoburgin metsässä"
   ],
   "jatkot": [
    "Mitä germaanit olivat?",
@@ -3011,9 +3021,11 @@
   "kohde": "kohde:hahmotelma-bayreuth",
   "kysymys": "Kuka oli Baijerin kuningas Ludwig II?",
   "uusi": true,
-  "vastaus": "Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan Richard Wagnerin ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. Bayreuthin Festspielhausin pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.",
+  "vastaus": "Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan [[Richard Wagnerin]] ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. [[Bayreuthin Festspielhausin]] pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.",
   "linkit": [
-   "Neuschwanstein"
+   "Richard Wagnerin",
+   "Neuschwanstein",
+   "Bayreuthin Festspielhausin"
   ],
   "jatkot": [
    "Millainen linna Neuschwanstein on?",
@@ -3024,8 +3036,11 @@
   "kohde": "kohde:hahmotelma-bayreuth",
   "kysymys": "Järjestetäänkö talossa yhä Wagner-festivaaleja?",
   "uusi": true,
-  "vastaus": "Selvä juttu, tän tiedän. Kyllä, Bayreuthin festivaali järjestetään yhä vuosittain kesäisin Festspielhausissa, ja ohjelmistossa ovat Wagnerin teokset. Talo on rakennettu juuri tätä varten, ja sen käyttö on pysynyt samana siitä asti, kun se avattiin vuonna 1876. Tarkkoja päiviä ja ohjelmistoa en ole varma, joten ne kannattaa tarkistaa festivaalin omilta sivuilta. Lippujen saamisesta kuulemma kilpaillaan, ja minä lentäisin ikkunalle.",
-  "linkit": [],
+  "vastaus": "Selvä juttu, tän tiedän. Kyllä, [[Bayreuthin festivaali]] järjestetään yhä vuosittain kesäisin [[Festspielhausissa]], ja ohjelmistossa ovat Wagnerin teokset. Talo on rakennettu juuri tätä varten, ja sen käyttö on pysynyt samana siitä asti, kun se avattiin vuonna 1876. Tarkkoja päiviä ja ohjelmistoa en ole varma, joten ne kannattaa tarkistaa festivaalin omilta sivuilta. Lippujen saamisesta kuulemma kilpaillaan, ja minä lentäisin ikkunalle.",
+  "linkit": [
+   "Bayreuthin festivaali",
+   "Festspielhausissa"
+  ],
   "jatkot": [
    "Miksi talon julkisivu on koristelematonta tiiltä?",
    "Mitä Bayreuthin festivaali tarkoittaa?"
@@ -3063,9 +3078,11 @@
   "kohde": "kohde:hahmotelma-ruedesheim",
   "kysymys": "Mitä Niederwalddenkmal esittää?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki Rüdesheimin viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy Saksan keisarikunnan perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.",
+  "vastaus": "Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki [[Rüdesheimin]] viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy [[Saksan keisarikunnan]] perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.",
   "linkit": [
-   "Germania"
+   "Rüdesheimin",
+   "Germania",
+   "Saksan keisarikunnan"
   ],
   "jatkot": [
    "Miten Niederwalddenkmalille pääsee?",
@@ -3076,8 +3093,9 @@
   "kohde": "kohde:hahmotelma-ruedesheim",
   "kysymys": "Mikä on Drosselgasse?",
   "uusi": true,
-  "vastaus": "Mmm, tuo on kuuluisa. Drosselgasse on Rüdesheimin vanhankaupungin sydämessä oleva kapea kivetty jalankulkukatu, jonka pituus on 144 metriä. Sen varrella on viinitavernoja, ja se kuuluu kaupungin tunnetuimpiin nähtävyyksiin. Kaupungin viinitarhojen läpi kulkee myös [[Riesling-reitti]], joka on toinen tapa tutustua alueeseen. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.",
+  "vastaus": "Mmm, tuo on kuuluisa. Drosselgasse on [[Rüdesheimin]] vanhankaupungin sydämessä oleva kapea kivetty jalankulkukatu, jonka pituus on 144 metriä. Sen varrella on viinitavernoja, ja se kuuluu kaupungin tunnetuimpiin nähtävyyksiin. Kaupungin viinitarhojen läpi kulkee myös [[Riesling-reitti]], joka on toinen tapa tutustua alueeseen. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.",
   "linkit": [
+   "Rüdesheimin",
    "Riesling-reitti"
   ],
   "jatkot": [
@@ -3132,8 +3150,9 @@
   "kohde": "kohde:hahmotelma-bernkastel",
   "kysymys": "Mikä Spitzhäuschen on?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tuo pieni on söpö. Spitzhäuschen on Bernkastelin keskiaikaisella torilla oleva kapea ristikkotalo, joka on vuodelta 1416. Nimi viittaa talon suippoon muotoon. Se kuuluu torin ympärillä olevaan ristikkotaloihin, joita on pääosin 1600-luvulta, ja torin [[Pyhän Mikaelin kaivon]] ympärillä on rivi hyvin säilyneitä rakennuksia. Pienin talo, isoin huomio, ja kyyhky istuu kuulemma mielellään sen harjalla.",
+  "vastaus": "Hetkinen ny. Tuo pieni on söpö. Spitzhäuschen on [[Bernkastelin]] keskiaikaisella torilla oleva kapea ristikkotalo, joka on vuodelta 1416. Nimi viittaa talon suippoon muotoon. Se kuuluu torin ympärillä olevaan ristikkotaloihin, joita on pääosin 1600-luvulta, ja torin [[Pyhän Mikaelin kaivon]] ympärillä on rivi hyvin säilyneitä rakennuksia. Pienin talo, isoin huomio, ja kyyhky istuu kuulemma mielellään sen harjalla.",
   "linkit": [
+   "Bernkastelin",
    "Pyhän Mikaelin kaivon"
   ],
   "jatkot": [
@@ -3216,8 +3235,10 @@
   "kohde": "kohde:hahmotelma-triberg",
   "kysymys": "Miksi Musta metsä tunnetaan käkikelloista?",
   "uusi": true,
-  "vastaus": "Ai tota, kellot. Niitä minä kuuntelen mielelläni. Käkikello on yksi Mustan metsän tunnetuimpia tuotteita, ja alueella tehtiin kelloja jo 1700-luvun paikkeilla. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino myös Tribergissä, vaikka se ei enää ole keskeinen. Aiheeseen voi tutustua [[Schwarzwaldmuseumissa]], joka sijaitsee kaupungissa. Tarkkaa vuosilukua kellon keksimiselle en ole varma. Kellot ovat kyl aika äänekkäitä naapureita.",
+  "vastaus": "Ai tota, kellot. Niitä minä kuuntelen mielelläni. Käkikello on yksi [[Mustan metsän]] tunnetuimpia tuotteita, ja alueella tehtiin kelloja jo 1700-luvun paikkeilla. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino myös [[Tribergissä]], vaikka se ei enää ole keskeinen. Aiheeseen voi tutustua [[Schwarzwaldmuseumissa]], joka sijaitsee kaupungissa. Tarkkaa vuosilukua kellon keksimiselle en ole varma. Kellot ovat kyl aika äänekkäitä naapureita.",
   "linkit": [
+   "Mustan metsän",
+   "Tribergissä",
    "Schwarzwaldmuseumissa"
   ],
   "jatkot": [
@@ -3229,8 +3250,9 @@
   "kohde": "kohde:hahmotelma-triberg",
   "kysymys": "Mikä on Tribergin pyhiinvaelluskirkko?",
   "uusi": true,
-  "vastaus": "Kas vaan, kirkko. Tribergin pyhiinvaelluskirkko on nimeltään [[Maria in der Tanne]]. Se on barokkinen pyhiinvaelluskirkko, ja nimi tarkoittaa suomeksi Mariaa kuusessa. Kirkko kuuluu Tribergin tunnetuimpiin nähtävyyksiin vesiputousten ja museon rinnalla. Rakennusvuosia en ole aivan varma. Hyvä paikka kyyhkylle laskeutua, vaikka kuulemma eivät päästä sisään.",
+  "vastaus": "Kas vaan, kirkko. [[Tribergin]] pyhiinvaelluskirkko on nimeltään [[Maria in der Tanne]]. Se on barokkinen pyhiinvaelluskirkko, ja nimi tarkoittaa suomeksi Mariaa kuusessa. Kirkko kuuluu Tribergin tunnetuimpiin nähtävyyksiin vesiputousten ja museon rinnalla. Rakennusvuosia en ole aivan varma. Hyvä paikka kyyhkylle laskeutua, vaikka kuulemma eivät päästä sisään.",
   "linkit": [
+   "Tribergin",
    "Maria in der Tanne"
   ],
   "jatkot": [
@@ -3727,8 +3749,9 @@
   "kohde": "kohde:hahmotelma-muengsten",
   "kysymys": "Kuka johti Müngstenin sillan rakennushanketta?",
   "uusi": true,
-  "vastaus": "Ai tota. Hanketta johti insinööri [[Anton von Rieppel]]. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja silta valmistui vuonna 1897, joten hanke kesti useita vuosia suunnittelusta valmistumiseen. Muista Rieppelin saavutuksista en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä muistaa nimi.",
+  "vastaus": "Ai tota. [[Müngstenin sillan]] hanketta johti insinööri [[Anton von Rieppel]]. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja silta valmistui vuonna 1897, joten hanke kesti useita vuosia suunnittelusta valmistumiseen. Muista Rieppelin saavutuksista en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä muistaa nimi.",
   "linkit": [
+   "Müngstenin sillan",
    "Anton von Rieppel"
   ],
   "jatkot": [
@@ -3754,8 +3777,9 @@
   "kohde": "kohde:hahmotelma-muengsten",
   "kysymys": "Miksi silta nimettiin uudelleen monarkian päätyttyä?",
   "uusi": true,
-  "vastaus": "Kas vaan. Silta oli alun perin Kaiser-Wilhelm-Brücke, joten keisarin nimi liittyi monarkiaan. Kun monarkia päättyi, nimi ei enää vastannut valtiojärjestystä, ja silta nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Saksassa monarkia päättyi vuonna 1918, mutta tarkkaa nimenmuutoksen vuotta en ole varma. Tää oli kyllä selkeä juttu.",
+  "vastaus": "Kas vaan. Silta oli alun perin [[Kaiser-Wilhelm-Brücke]], joten keisarin nimi liittyi monarkiaan. Kun monarkia päättyi, nimi ei enää vastannut valtiojärjestystä, ja silta nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Saksassa monarkia päättyi vuonna 1918, mutta tarkkaa nimenmuutoksen vuotta en ole varma. Tää oli kyllä selkeä juttu.",
   "linkit": [
+   "Kaiser-Wilhelm-Brücke",
    "Müngstenin"
   ],
   "jatkot": [
@@ -3824,8 +3848,9 @@
   "kohde": "kohde:hahmotelma-hambach",
   "kysymys": "Kuka hallitsi Pfalzia ennen Baijerin hallintoa?",
   "uusi": true,
-  "vastaus": "Ai se. Ennen Baijerin hallintoa Pfalzissa vaikuttivat [[Ranskan]] vallankumousjoukot, jotka olivat antaneet kansalle oikeuksia, ja Baijerin hallinto oli vallassa vuodesta 1816. Tarkkoja vuosilukuja Ranskan vallan alkamisesta tai päättymisestä en ole varma. Baijerin hallinto perui näitä oikeuksia, mikä lisäsi tyytymättömyyttä. Pitkä historia tiivistettynä, ei huono.",
+  "vastaus": "Ai se. Ennen Baijerin hallintoa [[Pfalzissa]] vaikuttivat [[Ranskan]] vallankumousjoukot, jotka olivat antaneet kansalle oikeuksia, ja Baijerin hallinto oli vallassa vuodesta 1816. Tarkkoja vuosilukuja Ranskan vallan alkamisesta tai päättymisestä en ole varma. Baijerin hallinto perui näitä oikeuksia, mikä lisäsi tyytymättömyyttä. Pitkä historia tiivistettynä, ei huono.",
   "linkit": [
+   "Pfalzissa",
    "Ranskan"
   ],
   "jatkot": [
@@ -3963,8 +3988,9 @@
   "kohde": "kohde:hahmotelma-rammelsberg",
   "kysymys": "Milloin Rammelsbergin kaivos suljettiin?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Kaivos suljettiin vuonna 1988, ja silloin se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Sulkemisen syytä en ole varma. Onpa siinä ollut elinikää.",
+  "vastaus": "Joo, tän minä tiedän. [[Rammelsbergin]] kaivos suljettiin vuonna 1988, ja silloin se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Sulkemisen syytä en ole varma. Onpa siinä ollut elinikää.",
   "linkit": [
+   "Rammelsbergin",
    "UNESCOn"
   ],
   "jatkot": [
@@ -3976,8 +4002,9 @@
   "kohde": "kohde:hahmotelma-ansbach",
   "kysymys": "Kuka Kaspar Hauser oli?",
   "uusi": false,
-  "vastaus": "Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui Ansbachissa vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.",
+  "vastaus": "Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui [[Ansbachissa]] vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.",
   "linkit": [
+   "Ansbachissa",
    "Nürnbergin"
   ],
   "jatkot": [
@@ -4110,8 +4137,9 @@
   "kohde": "kohde:hahmotelma-krautturm",
   "kysymys": "Mikä on Heidelbergin linnan suuri viinitynnyri?",
   "uusi": true,
-  "vastaus": "Kas vaan, tynnyri. Heidelbergin linnan kellarissa on jättimäinen viinitynnyri, jota kutsutaan Suureksi tynnyriksi. Se on rakennettu 1700-luvulla [[Pfalzin vaaliruhtinaiden]] aikana, ja siihen mahtuu yli 200 000 litraa viiniä. Tynnyri on yksi linnan suosituimmista nähtävyyksistä. Pullataikinaa siihen mahtuisi hurja määrä.",
+  "vastaus": "Kas vaan, tynnyri. [[Heidelbergin linnan]] kellarissa on jättimäinen viinitynnyri, jota kutsutaan Suureksi tynnyriksi. Se on rakennettu 1700-luvulla [[Pfalzin vaaliruhtinaiden]] aikana, ja siihen mahtuu yli 200 000 litraa viiniä. Tynnyri on yksi linnan suosituimmista nähtävyyksistä. Pullataikinaa siihen mahtuisi hurja määrä.",
   "linkit": [
+   "Heidelbergin linnan",
    "Pfalzin vaaliruhtinaiden"
   ],
   "jatkot": [
@@ -4123,8 +4151,9 @@
   "kohde": "nosto:kopenickin-kapteeni",
   "kysymys": "Miksi sotilaat tottelivat vierasta miestä univormussa?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Preussin armeijassa totteleminen oli kuriin kasvatettu tapa, ja kaartin kapteenin univormu merkitsi arvoa, jonka käskyjä ei ollut tapana kyseenalaistaa. [[Wilhelm Voigt]] oli lisäksi koekäyttänyt univormun vaikutusta sotilaisiin jo ennen tekoaan, ja hän esiintyi käskevästi. Sotilaat noudattivat käskyä, koska he uskoivat sen tulevan oikealta esimieheltä. Ei hassumpi suutarilta.",
+  "vastaus": "Hyvä kysymys tuo. [[Preussin]] armeijassa totteleminen oli kuriin kasvatettu tapa, ja kaartin kapteenin univormu merkitsi arvoa, jonka käskyjä ei ollut tapana kyseenalaistaa. [[Wilhelm Voigt]] oli lisäksi koekäyttänyt univormun vaikutusta sotilaisiin jo ennen tekoaan, ja hän esiintyi käskevästi. Sotilaat noudattivat käskyä, koska he uskoivat sen tulevan oikealta esimieheltä. Ei hassumpi suutarilta.",
   "linkit": [
+   "Preussin",
    "Wilhelm Voigt"
   ],
   "jatkot": [
@@ -4136,9 +4165,10 @@
   "kohde": "nosto:kopenickin-kapteeni",
   "kysymys": "Miksi keisari armahti Köpenickin kapteenin?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Keisari [[Wilhelm II]] armahti Voigtin vuonna 1908, mutta syystä minulla ei ole varmaa tietoa. Yleisesti kerrotaan, että tapaus huvitti suurta yleisöä ja herätti myötätuntoa, sillä Voigt oli karkotettu Berliinistä pelkästään entisen vankeutensa vuoksi, ja keisarin sanotaan itsekin pitäneen asiaa hupaisana. En ole tästä varma. Hyvä, että joku sentään nauroi.",
+  "vastaus": "Odotas vähän. Keisari [[Wilhelm II]] armahti Voigtin vuonna 1908, mutta syystä minulla ei ole varmaa tietoa. Yleisesti kerrotaan, että tapaus huvitti suurta yleisöä ja herätti myötätuntoa, sillä Voigt oli karkotettu [[Berliinistä]] pelkästään entisen vankeutensa vuoksi, ja keisarin sanotaan itsekin pitäneen asiaa hupaisana. En ole tästä varma. Hyvä, että joku sentään nauroi.",
   "linkit": [
-   "Wilhelm II"
+   "Wilhelm II",
+   "Berliinistä"
   ],
   "jatkot": [
    "Millaista Voigtin elämä oli vapautumisen jälkeen?",
@@ -4163,8 +4193,9 @@
   "kohde": "nosto:kopenickin-kapteeni",
   "kysymys": "Miten Berliinin putkipostijärjestelmä toimi?",
   "uusi": true,
-  "vastaus": "Ai se. Viisas Pöllö on matkoilla, mutta tän minä tiedän. Berliinin putkipostissa viestit suljettiin kapseleihin, jotka kulkivat katujen alla olevissa putkissa paineilman ja alipaineen avulla. Järjestelmä yhdisti muun muassa lennätintoimistoja ja pörssin, ja viestit liikkuivat huomattavasti ihmiskuriiria nopeammin. Järjestelmän rakentamiseen osallistui [[Siemens]]. Verkko kehittyi 1860-luvulta alkaen. Setäni kyllä sanoisi, että lennätin vei hänen työnsä.",
+  "vastaus": "Ai se. Viisas Pöllö on matkoilla, mutta tän minä tiedän. [[Berliinin]] putkipostissa viestit suljettiin kapseleihin, jotka kulkivat katujen alla olevissa putkissa paineilman ja alipaineen avulla. Järjestelmä yhdisti muun muassa lennätintoimistoja ja pörssin, ja viestit liikkuivat huomattavasti ihmiskuriiria nopeammin. Järjestelmän rakentamiseen osallistui [[Siemens]]. Verkko kehittyi 1860-luvulta alkaen. Setäni kyllä sanoisi, että lennätin vei hänen työnsä.",
   "linkit": [
+   "Berliinin",
    "Siemens"
   ],
   "jatkot": [
@@ -4176,9 +4207,10 @@
   "kohde": "nosto:kopenickin-kapteeni",
   "kysymys": "Millainen paikka Köpenick on nykyään?",
   "uusi": true,
-  "vastaus": "Katotaas. Köpenick on Berliinin kaakkoisosan kaupunginosa, joka liitettiin osaksi Berliiniä vuonna 1920. Alue sijaitsee [[Spree]]-joen ja Dahme-joen tuntumassa, ja siellä on vanha kaupunginosa sekä kaupungintalo, joka on yhä käytössä. Lähistöllä on myös Müggelsee-järvi, joka on suosittu virkistysalue. Kyllä sinne mieluummin menisi pullalle kuin univormuun.",
+  "vastaus": "Katotaas. Köpenick on Berliinin kaakkoisosan kaupunginosa, joka liitettiin osaksi Berliiniä vuonna 1920. Alue sijaitsee [[Spree]]-joen ja Dahme-joen tuntumassa, ja siellä on vanha kaupunginosa sekä kaupungintalo, joka on yhä käytössä. Lähistöllä on myös [[Müggelsee]]-järvi, joka on suosittu virkistysalue. Kyllä sinne mieluummin menisi pullalle kuin univormuun.",
   "linkit": [
-   "Spree"
+   "Spree",
+   "Müggelsee"
   ],
   "jatkot": [
    "Mikä Müggelsee on?",
@@ -4204,8 +4236,9 @@
   "kohde": "nosto:neuschwanstein",
   "kysymys": "Mistä Ludwig II sai rahat rakennustöihin?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Ludwig II maksoi rakennustyöt omista varoistaan ja laajalla lainanotolla, ei [[Baijerin]] julkisista varoista. Velkaa kertyi paljon, ja vuonna 1886 hänet julistettiin kykenemättömäksi hallitsemaan; samana vuonna hän kuoli. Linna oli tarkoitettu hänen yksityiseksi asunnokseen, mutta se avattiin yleisölle pian hänen kuolemansa jälkeen. Velka on velkaa, vaikka se olisi linnan muotoinen.",
+  "vastaus": "Joo, tän minä tiedän. [[Ludwig II]] maksoi rakennustyöt omista varoistaan ja laajalla lainanotolla, ei [[Baijerin]] julkisista varoista. Velkaa kertyi paljon, ja vuonna 1886 hänet julistettiin kykenemättömäksi hallitsemaan; samana vuonna hän kuoli. Linna oli tarkoitettu hänen yksityiseksi asunnokseen, mutta se avattiin yleisölle pian hänen kuolemansa jälkeen. Velka on velkaa, vaikka se olisi linnan muotoinen.",
   "linkit": [
+   "Ludwig II",
    "Baijerin"
   ],
   "jatkot": [
@@ -4217,8 +4250,9 @@
   "kohde": "nosto:neuschwanstein",
   "kysymys": "Mitä Neuschwansteinista oli valmiina 1870-luvulla?",
   "uusi": false,
-  "vastaus": "Sepä sattui: tästä on selvät vuosiluvut. Peruskivi laskettiin 5. syyskuuta 1869, ja vuonna 1872 oli valmiina kellari. Vuoteen 1876 mennessä rakennus oli noussut ensimmäiseen kerrokseen asti, joten 1870-luvulla linna oli vielä pääosin työmaa. [[Harjannostajaisia]] vietettiin vasta 1880, ja kuningas muutti sisään 1884.\n\nPerustukset ovat linnan tylsin vaihe, mutta ilman niitä ei ole tornejakaan. Ylhäältä katsoen työmaa näyttäisi varmasti pelkältä kuopalta.",
+  "vastaus": "Sepä sattui: tästä on selvät vuosiluvut. Peruskivi laskettiin 5. syyskuuta 1869, ja vuonna 1872 oli valmiina kellari. Vuoteen 1876 mennessä rakennus oli noussut ensimmäiseen kerrokseen asti, joten 1870-luvulla [[Neuschwansteinin]] linna oli vielä pääosin työmaa. [[Harjannostajaisia]] vietettiin vasta 1880, ja kuningas muutti sisään 1884.\n\nPerustukset ovat linnan tylsin vaihe, mutta ilman niitä ei ole tornejakaan. Ylhäältä katsoen työmaa näyttäisi varmasti pelkältä kuopalta.",
   "linkit": [
+   "Neuschwansteinin",
    "Harjannostajaisia"
   ],
   "jatkot": [
@@ -4247,9 +4281,11 @@
   "kohde": "nosto:neuschwanstein",
   "kysymys": "Missä Neuschwanstein sijaitsee?",
   "uusi": true,
-  "vastaus": "Tuota niin. Neuschwanstein sijaitsee Baijerin lounaisosassa Alppien reunalla [[Füssenin]] kaupungin lähellä, aika lähellä Itävallan rajaa. Berliinistä sinne on pitkä matka etelään. Berliinistä sinne on kyyhkyllekin pitkä lento.",
+  "vastaus": "Tuota niin. Neuschwanstein sijaitsee Baijerin lounaisosassa [[Alppien]] reunalla [[Füssenin]] kaupungin lähellä, aika lähellä [[Itävallan]] rajaa. Berliinistä sinne on pitkä matka etelään. Berliinistä sinne on kyyhkyllekin pitkä lento.",
   "linkit": [
-   "Füssenin"
+   "Alppien",
+   "Füssenin",
+   "Itävallan"
   ],
   "jatkot": [
    "Mitä Füssenin seudulla on nähtävää?",
@@ -4295,8 +4331,11 @@
   "kohde": "kohde:brandenburgin-portti",
   "kysymys": "Mikä Unter den Linden on?",
   "uusi": true,
-  "vastaus": "Tuota niin. Unter den Linden on Berliinin tunnettu bulevardi, joka alkaa Brandenburgin portilta ja vie vanhalle kaupunginlinnalle. Nimi tarkoittaa suomeksi lehmusten alla. Sen varrella on muun muassa Humboldtin yliopisto ja valtionooppera. Lehmuksen alla on hyvä istua, minä ainakin istuisin.",
-  "linkit": [],
+  "vastaus": "Tuota niin. Unter den Linden on [[Berliinin]] tunnettu bulevardi, joka alkaa [[Brandenburgin portilta]] ja vie vanhalle kaupunginlinnalle. Nimi tarkoittaa suomeksi lehmusten alla. Sen varrella on muun muassa Humboldtin yliopisto ja valtionooppera. Lehmuksen alla on hyvä istua, minä ainakin istuisin.",
+  "linkit": [
+   "Berliinin",
+   "Brandenburgin portilta"
+  ],
   "jatkot": [
    "Miksi Berliinin kaupunginlinna purettiin?",
    "Mitä Berliinin Museumsinsel on?"
@@ -4349,8 +4388,9 @@
   "kohde": "nosto:archaeopteryx",
   "kysymys": "Miten höyhenet voivat säilyä kivessä?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Höyhenet voivat säilyä painaumina, kun eläin joutuu nopeasti rauhalliseen ja hapettomaan ympäristöön, jossa mikään ei hajota tai repi sitä. Solnhofenin alueen hienojakoinen [[kalkkikivi]] syntyi lagunien pohjalle laskeutuneesta hienosta kalkkisaviliasta, joka peitti pienenkin yksityiskohdan. Kiveen jää tällöin muoto, ei alkuperäinen höyhen sellaisenaan. En ole varma kaikista kemiallisista yksityiskohdista. Kivi muistaa paremmin kuin kyyhky.",
+  "vastaus": "Odotas vähän. Höyhenet voivat säilyä painaumina, kun eläin joutuu nopeasti rauhalliseen ja hapettomaan ympäristöön, jossa mikään ei hajota tai repi sitä. [[Solnhofenin]] alueen hienojakoinen [[kalkkikivi]] syntyi lagunien pohjalle laskeutuneesta hienosta kalkkisaviliasta, joka peitti pienenkin yksityiskohdan. Kiveen jää tällöin muoto, ei alkuperäinen höyhen sellaisenaan. En ole varma kaikista kemiallisista yksityiskohdista. Kivi muistaa paremmin kuin kyyhky.",
   "linkit": [
+   "Solnhofenin",
    "kalkkikivi"
   ],
   "jatkot": [
@@ -4390,8 +4430,9 @@
   "kohde": "nosto:archaeopteryx",
   "kysymys": "Montako Archaeopteryx-yksilöä on löydetty?",
   "uusi": true,
-  "vastaus": "Mmm— hyvä kysymys. Tunnettuja yksilöitä on yli kymmenen, eikä tarkkaa lukua kannata vannoa, koska uusia on tunnistettu vielä uudelleen luokiteltaessa. Lähes kaikki on löydetty Baijerin kalkkikivilouhoksista, ja ensimmäinen luuranko löytyi vuonna 1861. Se on nykyään [[Lontoon]] luonnonhistoriallisessa museossa. Berliinin yksilö tuli myöhemmin, ja sen kuuluisuus perustuu täydellisyyteen. Ei paha saldo yhdelle pienelle lentäjälle.",
+  "vastaus": "Mmm— hyvä kysymys. Tunnettuja yksilöitä on yli kymmenen, eikä tarkkaa lukua kannata vannoa, koska uusia on tunnistettu vielä uudelleen luokiteltaessa. Lähes kaikki on löydetty [[Baijerin]] kalkkikivilouhoksista, ja ensimmäinen luuranko löytyi vuonna 1861. Se on nykyään [[Lontoon]] luonnonhistoriallisessa museossa. Berliinin yksilö tuli myöhemmin, ja sen kuuluisuus perustuu täydellisyyteen. Ei paha saldo yhdelle pienelle lentäjälle.",
   "linkit": [
+   "Baijerin",
    "Lontoon"
   ],
   "jatkot": [
@@ -4724,8 +4765,9 @@
   "kohde": "nosto:maailmankello",
   "kysymys": "Mitä 146 paikannimen valinta kertoo Itä-Saksasta?",
   "uusi": false,
-  "vastaus": "Tuota niin. Valinnan perusteita en tunne, joten en uskalla tulkita liikaa. Se, että luettelo ulottuu Reykjavíkista Kinshasaan, kertoo kuitenkin pyrkimyksestä näyttää koko maailma eikä vain lähialuetta. Ironiana mainitaan usein, että monelle [[Itä-Saksan]] asukkaalle matkustaminen luettelon paikkoihin oli rajoitettua. Kellon ajatus oli siis tuoda maailma kaupungin keskelle silloin, kun siihen pääsi harva.\n\nKyyhky ei tarvitse viisumia eikä lupaa, joten minulle kaikki sata neljäkymmentäkuusi paikkaa ovat auki. Lupa-asiat silti ymmärrän: sukuni on tottunut lentämään rajojen yli, ei niiden läpi.",
+  "vastaus": "Tuota niin. Valinnan perusteita en tunne, joten en uskalla tulkita liikaa. Se, että luettelo ulottuu [[Reykjavíkista]] Kinshasaan, kertoo kuitenkin pyrkimyksestä näyttää koko maailma eikä vain lähialuetta. Ironiana mainitaan usein, että monelle [[Itä-Saksan]] asukkaalle matkustaminen luettelon paikkoihin oli rajoitettua. Kellon ajatus oli siis tuoda maailma kaupungin keskelle silloin, kun siihen pääsi harva.\n\nKyyhky ei tarvitse viisumia eikä lupaa, joten minulle kaikki sata neljäkymmentäkuusi paikkaa ovat auki. Lupa-asiat silti ymmärrän: sukuni on tottunut lentämään rajojen yli, ei niiden läpi.",
   "linkit": [
+   "Reykjavíkista",
    "Itä-Saksan"
   ],
   "jatkot": [

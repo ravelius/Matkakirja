@@ -14,14 +14,14 @@ Mitä muita oopperoita Wagner sävelsi?
 
 ### 41.3
 KYSYMYS: Kuka oli Baijerin kuningas Ludwig II?
-Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan Richard Wagnerin ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. Bayreuthin Festspielhausin pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.
+Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan [[Richard Wagnerin]] ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. [[Bayreuthin Festspielhausin]] pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.
 JATKOT:
 Millainen linna Neuschwanstein on?
 Miten Ludwig II ja Wagner tutustuivat?
 
 ### 41.4
 KYSYMYS: Järjestetäänkö talossa yhä Wagner-festivaaleja?
-Selvä juttu, tän tiedän. Kyllä, Bayreuthin festivaali järjestetään yhä vuosittain kesäisin Festspielhausissa, ja ohjelmistossa ovat Wagnerin teokset. Talo on rakennettu juuri tätä varten, ja sen käyttö on pysynyt samana siitä asti, kun se avattiin vuonna 1876. Tarkkoja päiviä ja ohjelmistoa en ole varma, joten ne kannattaa tarkistaa festivaalin omilta sivuilta. Lippujen saamisesta kuulemma kilpaillaan, ja minä lentäisin ikkunalle.
+Selvä juttu, tän tiedän. Kyllä, [[Bayreuthin festivaali]] järjestetään yhä vuosittain kesäisin [[Festspielhausissa]], ja ohjelmistossa ovat Wagnerin teokset. Talo on rakennettu juuri tätä varten, ja sen käyttö on pysynyt samana siitä asti, kun se avattiin vuonna 1876. Tarkkoja päiviä ja ohjelmistoa en ole varma, joten ne kannattaa tarkistaa festivaalin omilta sivuilta. Lippujen saamisesta kuulemma kilpaillaan, ja minä lentäisin ikkunalle.
 JATKOT:
 Miksi talon julkisivu on koristelematonta tiiltä?
 Mitä Bayreuthin festivaali tarkoittaa?
@@ -42,14 +42,14 @@ Mikä Reinin rotko on?
 
 ### 42.2
 KYSYMYS: Mitä Niederwalddenkmal esittää?
-Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki Rüdesheimin viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy Saksan keisarikunnan perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.
+Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki [[Rüdesheimin]] viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy [[Saksan keisarikunnan]] perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.
 JATKOT:
 Miten Niederwalddenkmalille pääsee?
 Mikä oli Saksan keisarikunta?
 
 ### 42.3
 KYSYMYS: Mikä on Drosselgasse?
-Mmm, tuo on kuuluisa. Drosselgasse on Rüdesheimin vanhankaupungin sydämessä oleva kapea kivetty jalankulkukatu, jonka pituus on 144 metriä. Sen varrella on viinitavernoja, ja se kuuluu kaupungin tunnetuimpiin nähtävyyksiin. Kaupungin viinitarhojen läpi kulkee myös [[Riesling-reitti]], joka on toinen tapa tutustua alueeseen. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+Mmm, tuo on kuuluisa. Drosselgasse on [[Rüdesheimin]] vanhankaupungin sydämessä oleva kapea kivetty jalankulkukatu, jonka pituus on 144 metriä. Sen varrella on viinitavernoja, ja se kuuluu kaupungin tunnetuimpiin nähtävyyksiin. Kaupungin viinitarhojen läpi kulkee myös [[Riesling-reitti]], joka on toinen tapa tutustua alueeseen. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
 JATKOT:
 Mitä Rüdesheimissa kannattaa syödä?
 Millaisia viinitavernat ovat?
@@ -77,7 +77,7 @@ Mikä on Cusanuksen hospitaali Kuesissa?
 
 ### 43.2
 KYSYMYS: Mikä Spitzhäuschen on?
-Hetkinen ny. Tuo pieni on söpö. Spitzhäuschen on Bernkastelin keskiaikaisella torilla oleva kapea ristikkotalo, joka on vuodelta 1416. Nimi viittaa talon suippoon muotoon. Se kuuluu torin ympärillä olevaan ristikkotaloihin, joita on pääosin 1600-luvulta, ja torin [[Pyhän Mikaelin kaivon]] ympärillä on rivi hyvin säilyneitä rakennuksia. Pienin talo, isoin huomio, ja kyyhky istuu kuulemma mielellään sen harjalla.
+Hetkinen ny. Tuo pieni on söpö. Spitzhäuschen on [[Bernkastelin]] keskiaikaisella torilla oleva kapea ristikkotalo, joka on vuodelta 1416. Nimi viittaa talon suippoon muotoon. Se kuuluu torin ympärillä olevaan ristikkotaloihin, joita on pääosin 1600-luvulta, ja torin [[Pyhän Mikaelin kaivon]] ympärillä on rivi hyvin säilyneitä rakennuksia. Pienin talo, isoin huomio, ja kyyhky istuu kuulemma mielellään sen harjalla.
 JATKOT:
 Mikä on ristikkotalo?
 Mikä Bernkastelin tori on?
@@ -121,14 +121,14 @@ Mitä muita korkeita putouksia Euroopassa on?
 
 ### 44.3
 KYSYMYS: Miksi Musta metsä tunnetaan käkikelloista?
-Ai tota, kellot. Niitä minä kuuntelen mielelläni. Käkikello on yksi Mustan metsän tunnetuimpia tuotteita, ja alueella tehtiin kelloja jo 1700-luvun paikkeilla. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino myös Tribergissä, vaikka se ei enää ole keskeinen. Aiheeseen voi tutustua [[Schwarzwaldmuseumissa]], joka sijaitsee kaupungissa. Tarkkaa vuosilukua kellon keksimiselle en ole varma. Kellot ovat kyl aika äänekkäitä naapureita.
+Ai tota, kellot. Niitä minä kuuntelen mielelläni. Käkikello on yksi [[Mustan metsän]] tunnetuimpia tuotteita, ja alueella tehtiin kelloja jo 1700-luvun paikkeilla. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino myös [[Tribergissä]], vaikka se ei enää ole keskeinen. Aiheeseen voi tutustua [[Schwarzwaldmuseumissa]], joka sijaitsee kaupungissa. Tarkkaa vuosilukua kellon keksimiselle en ole varma. Kellot ovat kyl aika äänekkäitä naapureita.
 JATKOT:
 Miten käkikello toimii?
 Mitä Schwarzwaldmuseumissa on esillä?
 
 ### 44.4
 KYSYMYS: Mikä on Tribergin pyhiinvaelluskirkko?
-Kas vaan, kirkko. Tribergin pyhiinvaelluskirkko on nimeltään [[Maria in der Tanne]]. Se on barokkinen pyhiinvaelluskirkko, ja nimi tarkoittaa suomeksi Mariaa kuusessa. Kirkko kuuluu Tribergin tunnetuimpiin nähtävyyksiin vesiputousten ja museon rinnalla. Rakennusvuosia en ole aivan varma. Hyvä paikka kyyhkylle laskeutua, vaikka kuulemma eivät päästä sisään.
+Kas vaan, kirkko. [[Tribergin]] pyhiinvaelluskirkko on nimeltään [[Maria in der Tanne]]. Se on barokkinen pyhiinvaelluskirkko, ja nimi tarkoittaa suomeksi Mariaa kuusessa. Kirkko kuuluu Tribergin tunnetuimpiin nähtävyyksiin vesiputousten ja museon rinnalla. Rakennusvuosia en ole aivan varma. Hyvä paikka kyyhkylle laskeutua, vaikka kuulemma eivät päästä sisään.
 JATKOT:
 Mikä on barokki rakennustyylinä?
 Mitä pyhiinvaellus tarkoittaa?
