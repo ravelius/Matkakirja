@@ -699,3 +699,9 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 - Kaukomaa v1 (PT: pallokierros): T7 iss-kuvauspaikat/kaukomaa/{pariisi,tukholma} (KAUKOMAA=1 kuvauspaikat-v2.mjs → kaukomaa-vesi.py → kaukomaa-paketti.py), paketti `_valmiit/kaukomaa-vienti-20261009` Julkaisijalla; LS2 kytkee aluskerrokseen. Työkalut PR #4256 (tools/kaukomaa).
 - LS1: kirkot, kahvilat, hallit kohteet-<id>.json:iin (pbf-kohteet.mjs, relaatiot mukana), juna 173.
 - Talvi/v1 ämpärissä 13.45, LS2 kytki (juna 173).
+
+## 9.10. 18.xx
+
+- Ilmakehä: kaupunki- ja kausikohtaiset taulukot (AERONET, `_tyo/karttaseppa/ilmakeha-aerosoli-20261009/`) LS2:n A/B-jonossa (varjokoe → KL:n AO → utu-A/B). Vienti vasta LS2:n hyväksynnän jälkeen. Työkalu PR #4256 (tools/ilmakeha).
+- Vesi 40 km (PT kuittaa suosituksen): koeverkot `_tyo/karttaseppa/vesi-40km-koe/`, ajot T7 vesimaski/aja-vesi-v5.sh (tukholma-v5, pariisi-v4). Odottaa LS2:n LOD-valintaa (kauko2 48 m vai 16 m) → index-v5 (6 m kopioidaan uudella nimellä, koska tiedosto-kenttä on yhteinen).
+- Kaukomaa v1 vienti käynnissä (Julkaisija), ja LS2 sai kytkentätiedot.
