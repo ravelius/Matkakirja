@@ -170,11 +170,23 @@ namespace Matkakirja.Natiivi
                     if (t.name.StartsWith("Tila:kavely:", StringComparison.Ordinal))
                     {
                         if (Array.IndexOf(HistorianKavelyosat, t.name) < 0) { r.enabled = false; kavelyPiilossa.Add(r); }
+                        else if (t.name == HistorianKavelyosat[0] && tasaisetRannat.Add(r)) TasainenRanta(r);
                         break;
                     }
             }
         }
         readonly HashSet<Renderer> kavelyPiilossa = new HashSet<Renderer>();
+
+        // Arvio 6: ranta-1499:n leivotussa valoatlaksessa (albedo × valo) on mustia alueita ja mustaa reunatäyttöä pienten UV-saarten välissä;
+        // kaukaa (mipit) täyttö näkyi lounaispuolella mustina aukkoina. Historian ajaksi tasainen kalliosävy (atlaksen keskiarvo), palautus lopussa.
+        readonly HashSet<Renderer> tasaisetRannat = new HashSet<Renderer>();
+        static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
+        static void TasainenRanta(Renderer r)
+        {
+            if (rantaSavy == null) { rantaSavy = new Texture2D(1, 1, TextureFormat.RGBA32, false) { name = "Historia:rantasävy" }; rantaSavy.SetPixel(0, 0, new Color(0.42f, 0.43f, 0.45f)); rantaSavy.Apply(false, true); }
+            rantaLohko ??= new MaterialPropertyBlock();
+            r.GetPropertyBlock(rantaLohko); rantaLohko.SetTexture("_ValoAtlas", rantaSavy); r.SetPropertyBlock(rantaLohko);
+        }
         /// <summary>Historiassa näkyvät kävelyosat (LR 9.10.): ranta-1499 (kalliotäyttö ja vesipohjat leikkausten alla) ja porttikaytava-T102
         /// ilman sisätilaleikkaustaan (sen seinät täyttävät onton fotogrammetriakuoren porttikäytävän tornin juurella, arvio 4 t = 40–70).</summary>
         static readonly string[] HistorianKavelyosat = { "Tila:kavely:ranta-1499", "Tila:kavely:porttikaytava-T102" };   // kieli: ei (tekninen)
@@ -267,6 +279,8 @@ namespace Matkakirja.Natiivi
             SeikkailuKavely.VainVuosileikkaukset = false;
             foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
             kavelyPiilossa.Clear();
+            foreach (var r in tasaisetRannat) if (r != null) r.SetPropertyBlock(null);
+            tasaisetRannat.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;
             DioraamaSovitin.KameraVapaa = kameraVapaa;
