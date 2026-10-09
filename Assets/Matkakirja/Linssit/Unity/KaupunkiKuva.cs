@@ -393,7 +393,7 @@ namespace Matkakirja.Natiivi
             // ilmakehän aurinko −7° (KaupunkiIlmakeha.IltaAurinkoAst), kaupungin valot täysillä kuten yöllä.
             bool yoNyt = pakko >= 0 ? (tunti >= 21 || tunti < 5) : aurinko <= -8;
             if (KaupunkiKuva.SavyKaytossa && yoNyt && KaupunkiIlmakeha.IltaYolla && KaupunkiIlmakeha.Paalla)
-                savy = Matkakirja.Linssit.Kierros.Savy.Valissa(KaupunkiValo.Ilta, KaupunkiValo.Yo, 0.55);
+                savy = Matkakirja.Linssit.Kierros.Savy.Valissa(KaupunkiValo.Ilta, KaupunkiValo.Yo, 0.75);   // PT 9.10.: sinertävämpi hämärä, valot erottuvat
             KaupunkiKuva.AsetaNyt(pakko >= 0 ? (tunti >= 21 || tunti < 5 ? "yo" : tunti < 9.5 ? "aamu" : tunti < 16 ? "paiva" : "ilta")
                 : aurinko <= -8 ? "yo" : aurinko < 15 ? (aamupaiva ? "aamu" : "ilta") : "paiva");
             // Yövalot (kuvanlaatujärjestys kohta 2): hämärästä yöhön auringon tai valitun kellonajan mukaan.
