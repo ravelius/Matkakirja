@@ -16,6 +16,7 @@ Työkalut: gltf-transform (npm @gltf-transform/cli 4.5) ja toktx (KTX-Software 4
 (oletus T7:n linssiseppa2-tyokalut). Muut tiedostot (tileset.json, mallit.json, helma.glb jos ei tekstuureja) kopioidaan sellaisinaan.
 Lopuksi taulukko: tiedostokoko ja GPU-arvio (tekstuurit, mipit mukana) ennen/jälkeen kohteittain, ja automaattinen tarkistus.
 Pelkkä tarkistus: omat_mallit_ktx2.py --tarkista <lähde> <ulos> (paluuarvo 1, jos virheitä).
+Vain puusolmut yhdeksi (JPEG-paketit, vanhat apit): omat_mallit_ktx2.py --instanssit <lähde> <ulos>; KTX2-muunnos tekee sen aina ensin.
 """
 import argparse, io, json, os, shutil, struct, subprocess, sys, tempfile
 
@@ -83,6 +84,24 @@ def aja(args):
     if r.returncode: raise SystemExit(f'gltf-transform {args[0]} epäonnistui:\n{r.stdout[-2000:]}\n{r.stderr[-2000:]}')
 
 
+INSTANSSIT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'omat_mallit_instanssit.mjs')
+
+
+def instanssit(sisaan, ulos):
+    """Jaetut teksturoidut meshit yhdeksi (omat_mallit_instanssit.mjs); ei jaettuja → kopio. Palauttaa tulosterivin."""
+    j, _ = lue_glb(sisaan); k = {}
+    for x in j.get('nodes', []):
+        if 'mesh' in x: k[x['mesh']] = k.get(x['mesh'], 0) + 1
+    tekst = lambda mi: mi is not None and (any(t in j['materials'][mi].get('pbrMetallicRoughness', {}) for t in ('baseColorTexture', 'metallicRoughnessTexture'))
+                                           or any(t in j['materials'][mi] for t in ('normalTexture', 'occlusionTexture', 'emissiveTexture')))
+    if not any(v > 1 and any(tekst(p_.get('material')) for p_ in j['meshes'][m]['primitives']) for m, v in k.items()):
+        shutil.copyfile(sisaan, ulos); return None   # ei jaettuja teksturoituja meshejä (Concorden valaisimet ilman tekstuuria) → tavu tavulta
+    nm = os.path.join(os.path.dirname(os.path.dirname(GT)))
+    r = subprocess.run(['node', INSTANSSIT, sisaan, ulos], env=dict(os.environ, GLTF_TRANSFORM_NM=nm), capture_output=True, text=True)
+    if r.returncode: raise SystemExit(f'instanssit epäonnistui {sisaan}:\n{r.stdout}\n{r.stderr[-2000:]}')
+    return r.stdout.strip()
+
+
 def glob(nimet):
     """gltf-transformin --pattern on glob (micromatch): {a,b,c}; yksi nimi ilman aaltosulkeita."""
     return nimet[0] if len(nimet) == 1 else '{' + ','.join(nimet) + '}'
@@ -90,11 +109,11 @@ def glob(nimet):
 
 def muunna(sisaan, ulos, a):
     tx = tekstuurit(sisaan)
-    if not tx: shutil.copyfile(sisaan, ulos); return
+    if not tx: instanssit(sisaan, ulos); return
     atlas = lambda n, sivu: a.atlakset == 'uastc' and (any(k in n.lower() for k in ATLAS_NIMET) or sivu >= ISO_SIVU)
     uastc = [n for n, s, sivu in tx if 'normalTexture' in s or atlas(n, sivu)]
     with tempfile.TemporaryDirectory() as td:
-        nyt = sisaan
+        nyt = os.path.join(td, 'i.glb'); instanssit(sisaan, nyt)   # puusolmut yhdeksi ennen tekstuureja
         nor = [n for n, s, sivu in tx if 'normalTexture' in s and a.normaali_max and sivu > a.normaali_max]
         if nor:
             seur = os.path.join(td, 'n.glb')
@@ -116,7 +135,7 @@ def muunna(sisaan, ulos, a):
         shutil.copyfile(nyt, ulos)
 
 
-def tarkista(lahde, ulos):
+def tarkista(lahde, ulos, ktx2=True):
     """Automaattinen todennus (ei simua): jokainen kuva KTX2 + KHR_texture_basisu pakollisena, täysi mip-ketju, sivut 4:llä jaollisia,
     geometria sama kuin lähteessä (kolmiot ja POSITION-rajat), glTF-validaattori 0 virhettä. Palauttaa virherivit."""
     virheet = []; tiedoksi = []; n_glb = n_kuva = 0
@@ -125,22 +144,36 @@ def tarkista(lahde, ulos):
             if not n.endswith('.glb'): continue
             u = os.path.join(juuri, n); s = os.path.join(lahde, os.path.relpath(u, ulos)); nimi = os.path.relpath(u, ulos); n_glb += 1
             j, B = lue_glb(u); js, _ = lue_glb(s)
-            if j.get('images') and 'KHR_texture_basisu' not in (j.get('extensionsRequired') or []): virheet.append(f'{nimi}: KHR_texture_basisu ei pakollinen')
-            for t in j.get('textures', []):
+            # INSTANSSIANSA (Natiiviseppä 10.10.: ND 4 puumeshiä × 23 solmua → Cesium 103 tekstuuria 12 kuvasta, 557 Mt): teksturoitu mesh
+            # vain yhdessä solmussa, ja Cesiumin tekstuuriarvio (solmu × primitiivi × tekstuuripaikat) enintään 2 × kuvat + 8
+            kaytto = {}
+            for x in j.get('nodes', []):
+                if 'mesh' in x: kaytto[x['mesh']] = kaytto.get(x['mesh'], 0) + 1
+            paikat = lambda mi: 0 if mi is None else sum(1 for k in ('baseColorTexture', 'metallicRoughnessTexture') if k in j['materials'][mi].get('pbrMetallicRoughness', {})) + sum(1 for k in ('normalTexture', 'occlusionTexture', 'emissiveTexture') if k in j['materials'][mi])
+            for mi_, k_ in kaytto.items():
+                if k_ > 1 and any(paikat(p_.get('material')) for p_ in j['meshes'][mi_]['primitives']): virheet.append(f'{nimi}: teksturoitu mesh {j["meshes"][mi_].get("name")} {k_} solmussa (omat_mallit_ktx2.py --instanssit)')
+            arvio = sum(paikat(p_.get('material')) for x in j.get('nodes', []) if 'mesh' in x for p_ in j['meshes'][x['mesh']]['primitives'])
+            if arvio > 2 * len(j.get('images', [])) + 8: virheet.append(f'{nimi}: Cesiumin tekstuuriarvio {arvio} > 2 × {len(j.get("images", []))} kuvaa + 8')
+            if not ktx2: pass
+            elif j.get('images') and 'KHR_texture_basisu' not in (j.get('extensionsRequired') or []): virheet.append(f'{nimi}: KHR_texture_basisu ei pakollinen')
+            for t in (j.get('textures', []) if ktx2 else []):
                 if 'source' in t or 'KHR_texture_basisu' not in t.get('extensions', {}): virheet.append(f'{nimi}: tekstuuri ilman basisu-lähdettä')
-            for im in j.get('images', []):
+            for im in (j.get('images', []) if ktx2 else []):
                 n_kuva += 1; v = j['bufferViews'][im['bufferView']]; d = B[v.get('byteOffset', 0):v.get('byteOffset', 0) + v['byteLength']]
                 if im.get('mimeType') != 'image/ktx2' or d[:12] != b'\xabKTX 20\xbb\r\n\x1a\n': virheet.append(f'{nimi}/{im.get("name")}: ei KTX2'); continue
                 w, h = struct.unpack_from('<II', d, 20); tasot = struct.unpack_from('<I', d, 40)[0]
                 if w % 4 or h % 4: virheet.append(f'{nimi}/{im.get("name")}: {w}x{h} ei 4:llä jaollinen')
                 if tasot != max(w, h).bit_length(): virheet.append(f'{nimi}/{im.get("name")}: mip-tasoja {tasot}, pitäisi {max(w, h).bit_length()}')
-            kolmiot = lambda g: sum(g['accessors'][p_['indices']]['count'] // 3 for m in g['meshes'] for p_ in m['primitives'] if 'indices' in p_)
+            kolmiot = lambda g: sum(g['accessors'][p_['indices']]['count'] // 3 for x in g.get('nodes', []) if 'mesh' in x for p_ in g['meshes'][x['mesh']]['primitives'] if 'indices' in p_)   # piirrettävät (solmuittain)
+            jaettu_lahde = len([x for x in js.get('nodes', []) if 'mesh' in x]) != len({x['mesh'] for x in js.get('nodes', []) if 'mesh' in x})
             rajat = lambda g: [[round(f(x[k][i] for x in g['accessors'] if x.get('type') == 'VEC3' and 'min' in x and k == ('min' if f is min else 'max')), 2) for i in range(3)] for f, k in ((min, 'min'), (max, 'max'))]
             draco = 'KHR_draco_mesh_compression' in (js.get('extensionsUsed') or [])
             if kolmiot(j) > kolmiot(js) or (kolmiot(j) < kolmiot(js) and not draco): virheet.append(f'{nimi}: kolmiot {kolmiot(js)} → {kolmiot(j)}')
             elif kolmiot(j) < kolmiot(js): tiedoksi.append(f'{nimi}: Draco poisti {kolmiot(js) - kolmiot(j)} surkastunutta kolmiota')   # Sfinksi 9.10.: 6204 nollapinta-alaista (Blender)
-            if any(abs(a_ - b_) > 0.05 for ra, rb in zip(rajat(j), rajat(js)) for a_, b_ in zip(ra, rb)): virheet.append(f'{nimi}: rajat {rajat(js)} → {rajat(j)}')
+            # jaetut lähteet: maailmarajat tarkistaa omat_mallit_instanssit.mjs (accessorien rajat muuttuvat leivonnassa)
+            if not jaettu_lahde and any(abs(a_ - b_) > 0.05 for ra, rb in zip(rajat(j), rajat(js)) for a_, b_ in zip(ra, rb)): virheet.append(f'{nimi}: rajat {rajat(js)} → {rajat(j)}')
             env = dict(os.environ, PATH=KTX_BIN + os.pathsep + os.environ.get('PATH', ''))
+            n_kuva += 0 if ktx2 else len(j.get('images', []))
             r = subprocess.run([GT, 'validate', u, '--format', 'csv'], env=env, capture_output=True, text=True)
             import csv   # vakavuus 0 = virhe (1 varoitus: validaattori ei tunne KHR_texture_basisua → image/ktx2 varoituksena)
             err = [r_['code'] + ' ' + r_['pointer'] for r_ in csv.DictReader(io.StringIO(r.stdout)) if r_.get('severity') == '0']
@@ -151,6 +184,18 @@ def tarkista(lahde, ulos):
 
 def main():
     if len(sys.argv) == 4 and sys.argv[1] == '--tarkista': sys.exit(1 if tarkista(sys.argv[2], sys.argv[3]) else 0)
+    if len(sys.argv) == 4 and sys.argv[1] == '--instanssit':   # vain puusolmujen yhdistys (formaatti ennallaan, käy vanhoille apeille)
+        lahde, ulos = sys.argv[2], sys.argv[3]
+        if os.path.exists(ulos): raise SystemExit('ulos-kansio on uusi kansio')
+        shutil.copytree(lahde, ulos)
+        for juuri, _, tiedostot in sorted(os.walk(ulos)):
+            for n in sorted(tiedostot):
+                if n.endswith('.glb'):
+                    u = os.path.join(juuri, n); rivi = instanssit(os.path.join(lahde, os.path.relpath(u, ulos)), u)
+                    if rivi: print(rivi, flush=True)
+        ktx = any(lue_glb(os.path.join(r_, f))[0].get('extensionsUsed') and 'KHR_texture_basisu' in lue_glb(os.path.join(r_, f))[0]['extensionsUsed']
+                  for r_, _, fs in os.walk(ulos) for f in fs if f.endswith('.glb'))
+        sys.exit(1 if tarkista(lahde, ulos, ktx2=ktx) else 0)
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('lahde'); p.add_argument('ulos'); p.add_argument('--vain', default='')
     p.add_argument('--uastc-taso', type=int, default=2); p.add_argument('--etc1s-laatu', type=int, default=192)
