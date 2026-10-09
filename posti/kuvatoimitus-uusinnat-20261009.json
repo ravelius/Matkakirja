@@ -1,0 +1,1901 @@
+{
+  "task": "hyvaksytyt-uusinnat-20261009",
+  "parentTaskNumbers": [
+    44,
+    46,
+    47
+  ],
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+      "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+      "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+      "readInFull": true
+    },
+    {
+      "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+      "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+      "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+      "readInFull": true
+    }
+  ],
+  "sourceReadInFull": true,
+  "sourceImagePixelsUsed": false,
+  "generationCalls": 6,
+  "generationLimit": 6,
+  "generationCallsByParentTask": {
+    "44": 2,
+    "46": 3,
+    "47": 1
+  },
+  "generationLimitsByParentTask": {
+    "44": 2,
+    "46": 3,
+    "47": 1
+  },
+  "imageCount": 4,
+  "requestedGenerationSubjects": 6,
+  "requestedFinalFiles": 7,
+  "assets": [
+    {
+      "id": "holvi-lehvasto",
+      "parentTaskNumber": 44,
+      "file": "holvi-lehvasto.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/holvi-lehvasto.png",
+      "sha256": "5d8fdf577c07eb61961f0c87a7351b7567e0d776fa1109d40bdc7c1de5cc5c36",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/original-generation.png",
+      "originalSha256": "6f6bb9c963c930c7abbe36ddd4bdb0dce8d0f3d7e565a6f185b3bee1b1d93046",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptId": "holvi-lehvasto-one-call-20261009",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: photorealistic medieval base-color material texture pair for a 1499 chapel vault. Create completely new content from this text only.\nPrimary request: ONE opaque RGB image with an exact 2:1 horizontal aspect ratio, ideally 4096 x 2048 pixels. The image is TWO full square material components placed directly side by side, each occupying exactly half the width and the full height. The left square is painted pale lime plaster. The right square is the matching unpainted pale lime plaster. There is no gap, gutter, frame, separator, border, label, or text. This is a technical texture master, not a scene and not a designed presentation board.\nLeft square: a flat close-up of authentic late-1400s lime plaster bearing a naturally repeating pattern of small thin leafy floral vignettes: fine reddish-brown and muted ochre stems, quiet muted green leaves, small faded flowers. The pigment is worn, gently flaking and translucent in tiny spots where the plaster is visible. Each vignette is isolated, delicate and complete, spaced in a regular loose repeating arrangement so the square can repeat horizontally and vertically. No long connected vines or broad central composition. The pattern repeats naturally with consistent spacing across the virtual tile boundary; leave the same ordinary plaster intervals between motifs at the edges as between motifs inside, no special edge band. Plaster tone and texture must stay uniform at the outer edges. The painting is opaque over the plaster; absolutely no alpha, cutout, or transparent background.\nRight square: only bare unpainted plaster, precisely matching the left square's underlying warm pale ivory-gray lime plaster hue, grain, fine pitting, scale, and illumination. No trace of flowers, leaves, stems, ghosts, pigment or darker edge zones. Fine and evenly distributed microtexture, slight authentic age, no conspicuous stain or feature. Both halves must have the same plaster base, not two different materials or tones.\nComposition/framing: orthographic, perpendicular camera facing the surface; both square components fill their entire allotted area, with no perspective or lens distortion. No vault architecture or curvature.\nLighting: absolutely even neutral diffuse light over every pixel, identical exposure and white balance in both halves. No shadow, center spotlight, gradient, vignette, darkening at edges, highlights, HDR, or theatrical lighting.\nStyle/medium: a realistic photograph of physical, gently worn matte plaster and faded medieval pigment; quiet restrained colors, not flat vector graphics, not crisp modern wallpaper. The two squares are seamless material tiles by natural pattern design, not by faded or blurry edge strips.\nAvoid: people, faces, animals, objects, architecture, text, letters, numbers, logos, watermark, borders, panel lines, perspective, modern materials, saturated color, canvas weave, glossy paint, radial aging patches, any transparency. Output only the single 2:1 RGB texture master.",
+      "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/prompt.txt",
+      "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+          "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+          "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+          "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+          "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+          "readInFull": true
+        },
+        {
+          "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "readInFull": true,
+          "blobVerifiedFromLocalSource": true,
+          "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+        }
+      ],
+      "sourceReadInFull": true,
+      "supplementarySourcesReadInFull": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+        "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+      ],
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+          "usedAs": "entire source read, text-only renewal constraints",
+          "sourceImagePixelsUsed": false
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "usedAs": "entire original source read, text-only material and technical specification",
+          "sourceImagePixelsUsed": false
+        }
+      ],
+      "kuvateksti": "Kappelin holvin haalistunut lehvä- ja kukkamaalaus vaalealla rappauksella vuoden 1499 asun tulkintana. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": [
+        {
+          "method": "exact-half-master-component-crop",
+          "masterSize": [
+            1774,
+            887
+          ],
+          "crop": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "componentNativeSize": [
+            887,
+            887
+          ],
+          "oneGenerationTwoComponents": true
+        },
+        {
+          "method": "full-component-Lanczos-resize",
+          "from": [
+            887,
+            887
+          ],
+          "to": [
+            2048,
+            2048
+          ],
+          "scaleFactor": 2.3089064261555805,
+          "note": "technical enlargement; detail remains derived from native887-square component",
+          "cropAfterComponentSplit": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+          "mode": "RGB",
+          "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        },
+        {
+          "method": "none-seam-processing",
+          "seamBlendBandsApplied": false,
+          "alphaApplied": false
+        },
+        {
+          "rootPeriodicCellMethod": {
+            "cropBoxInNativeComponent": [
+              75,
+              105,
+              255,
+              285
+            ],
+            "cellSize": [
+              180,
+              180
+            ],
+            "periods": [
+              4,
+              4
+            ],
+            "effectiveNativeGridSize": [
+              720,
+              720
+            ],
+            "resizeTo": [
+              2048,
+              2048
+            ],
+            "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+          }
+        }
+      ],
+      "outputProduced": true,
+      "productionComplete": true,
+      "QA": {
+        "nativeOriginalViewed": true,
+        "nativeComponentViewed": true,
+        "finalNativeViewed": true,
+        "finalNativeDisplayNote": "2048-square viewer displayed at1600; native887-square components also inspected",
+        "preview480Viewed": true,
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-preview-480-holvi-lehvasto.png",
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/tiilaus-holvi-lehvasto.jpg",
+        "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-tile-1024-holvi-lehvasto.jpg",
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileEmbedded": true,
+        "profileName": "sRGB built-in",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "opposingEdgeRMS": {
+          "x": 24.680804076118548,
+          "y": 22.847358498622622
+        },
+        "originalByteExactVerified": true,
+        "metadataVerified": true,
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "worker-complete-root-review-needed",
+        "noPeopleTextFacesLogoWatermark": true,
+        "periodMaterialVisualCheck": true,
+        "seamGeometryAccepted": false,
+        "seamlessTileVerified": false,
+        "deliveryEligibleWithoutRootReview": false,
+        "matchingPlasterToneAndTextureVisualCheck": true,
+        "matchingPlasterNote": "The two generated halves have visually matching color and fine physical texture, not pixel-identical underlying plaster fields.",
+        "findings": [
+          "Photorealistic muted reddish-brown/ochre/green leafy flowers over pale worn lime plaster; no alpha or halo.",
+          "2x2 repeat has visible clipped leaf/stem mismatches at vertical and horizontal wrap; exact motif continuity was not achieved.",
+          "Fine plaster boundary is visible in repeat; no forbidden seam-blend strips applied.",
+          "Native887² component enlarged to2048²; not a native2K generation."
+        ],
+        "rootReviewNote": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical."
+      },
+      "createdAt": "2026-10-09T06:46:18.738661+00:00",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto.png",
+      "sharedGenerationMaster": true,
+      "nativeComponentSize": [
+        887,
+        887
+      ],
+      "nativeComponentPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/native-component-holvi-lehvasto.png",
+      "outputAssets": [
+        {
+          "id": "holvi-lehvasto",
+          "parentTaskNumber": 44,
+          "file": "holvi-lehvasto.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/holvi-lehvasto.png",
+          "sha256": "5d8fdf577c07eb61961f0c87a7351b7567e0d776fa1109d40bdc7c1de5cc5c36",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/original-generation.png",
+          "originalSha256": "6f6bb9c963c930c7abbe36ddd4bdb0dce8d0f3d7e565a6f185b3bee1b1d93046",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "nativeGeneratedMode": "RGB",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "alpha": false,
+          "seamAxes": [
+            "x",
+            "y"
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationAttemptId": "holvi-lehvasto-one-call-20261009",
+          "generationPrompt": "Use case: historical-scene.\nAsset type: photorealistic medieval base-color material texture pair for a 1499 chapel vault. Create completely new content from this text only.\nPrimary request: ONE opaque RGB image with an exact 2:1 horizontal aspect ratio, ideally 4096 x 2048 pixels. The image is TWO full square material components placed directly side by side, each occupying exactly half the width and the full height. The left square is painted pale lime plaster. The right square is the matching unpainted pale lime plaster. There is no gap, gutter, frame, separator, border, label, or text. This is a technical texture master, not a scene and not a designed presentation board.\nLeft square: a flat close-up of authentic late-1400s lime plaster bearing a naturally repeating pattern of small thin leafy floral vignettes: fine reddish-brown and muted ochre stems, quiet muted green leaves, small faded flowers. The pigment is worn, gently flaking and translucent in tiny spots where the plaster is visible. Each vignette is isolated, delicate and complete, spaced in a regular loose repeating arrangement so the square can repeat horizontally and vertically. No long connected vines or broad central composition. The pattern repeats naturally with consistent spacing across the virtual tile boundary; leave the same ordinary plaster intervals between motifs at the edges as between motifs inside, no special edge band. Plaster tone and texture must stay uniform at the outer edges. The painting is opaque over the plaster; absolutely no alpha, cutout, or transparent background.\nRight square: only bare unpainted plaster, precisely matching the left square's underlying warm pale ivory-gray lime plaster hue, grain, fine pitting, scale, and illumination. No trace of flowers, leaves, stems, ghosts, pigment or darker edge zones. Fine and evenly distributed microtexture, slight authentic age, no conspicuous stain or feature. Both halves must have the same plaster base, not two different materials or tones.\nComposition/framing: orthographic, perpendicular camera facing the surface; both square components fill their entire allotted area, with no perspective or lens distortion. No vault architecture or curvature.\nLighting: absolutely even neutral diffuse light over every pixel, identical exposure and white balance in both halves. No shadow, center spotlight, gradient, vignette, darkening at edges, highlights, HDR, or theatrical lighting.\nStyle/medium: a realistic photograph of physical, gently worn matte plaster and faded medieval pigment; quiet restrained colors, not flat vector graphics, not crisp modern wallpaper. The two squares are seamless material tiles by natural pattern design, not by faded or blurry edge strips.\nAvoid: people, faces, animals, objects, architecture, text, letters, numbers, logos, watermark, borders, panel lines, perspective, modern materials, saturated color, canvas weave, glossy paint, radial aging patches, any transparency. Output only the single 2:1 RGB texture master.",
+          "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/prompt.txt",
+          "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "sourceVersions": [
+            {
+              "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+              "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+              "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+              "readInFull": true
+            },
+            {
+              "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+              "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+              "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+              "readInFull": true
+            },
+            {
+              "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+              "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+              "readInFull": true,
+              "blobVerifiedFromLocalSource": true,
+              "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+            }
+          ],
+          "sourceReadInFull": true,
+          "supplementarySourcesReadInFull": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+            "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+          ],
+          "sourceImagePixelsUsed": false,
+          "viitteet": [
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+              "usedAs": "entire source read, text-only renewal constraints",
+              "sourceImagePixelsUsed": false
+            },
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "usedAs": "entire original source read, text-only material and technical specification",
+              "sourceImagePixelsUsed": false
+            }
+          ],
+          "kuvateksti": "Kappelin holvin haalistunut lehvä- ja kukkamaalaus vaalealla rappauksella vuoden 1499 asun tulkintana. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "technicalProcessing": [
+            {
+              "method": "exact-half-master-component-crop",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "crop": [
+                0,
+                0,
+                887,
+                887
+              ],
+              "componentNativeSize": [
+                887,
+                887
+              ],
+              "oneGenerationTwoComponents": true
+            },
+            {
+              "method": "full-component-Lanczos-resize",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                2048,
+                2048
+              ],
+              "scaleFactor": 2.3089064261555805,
+              "note": "technical enlargement; detail remains derived from native887-square component",
+              "cropAfterComponentSplit": null
+            },
+            {
+              "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+              "mode": "RGB",
+              "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            },
+            {
+              "method": "none-seam-processing",
+              "seamBlendBandsApplied": false,
+              "alphaApplied": false
+            },
+            {
+              "rootPeriodicCellMethod": {
+                "cropBoxInNativeComponent": [
+                  75,
+                  105,
+                  255,
+                  285
+                ],
+                "cellSize": [
+                  180,
+                  180
+                ],
+                "periods": [
+                  4,
+                  4
+                ],
+                "effectiveNativeGridSize": [
+                  720,
+                  720
+                ],
+                "resizeTo": [
+                  2048,
+                  2048
+                ],
+                "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+              }
+            }
+          ],
+          "outputProduced": true,
+          "productionComplete": true,
+          "QA": {
+            "nativeOriginalViewed": true,
+            "nativeComponentViewed": true,
+            "finalNativeViewed": true,
+            "finalNativeDisplayNote": "2048-square viewer displayed at1600; native887-square components also inspected",
+            "preview480Viewed": true,
+            "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-preview-480-holvi-lehvasto.png",
+            "tile2x2Viewed": true,
+            "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/tiilaus-holvi-lehvasto.jpg",
+            "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-tile-1024-holvi-lehvasto.jpg",
+            "dimensionsVerified": true,
+            "modeVerified": true,
+            "sRGBProfileEmbedded": true,
+            "profileName": "sRGB built-in",
+            "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "opposingEdgeRMS": {
+              "x": 24.680804076118548,
+              "y": 22.847358498622622
+            },
+            "originalByteExactVerified": true,
+            "metadataVerified": true,
+            "independentRootQA": false,
+            "editorialAcceptance": false,
+            "gameIntegrated": false,
+            "published": false,
+            "status": "worker-complete-root-review-needed",
+            "noPeopleTextFacesLogoWatermark": true,
+            "periodMaterialVisualCheck": true,
+            "seamGeometryAccepted": false,
+            "seamlessTileVerified": false,
+            "deliveryEligibleWithoutRootReview": false,
+            "matchingPlasterToneAndTextureVisualCheck": true,
+            "matchingPlasterNote": "The two generated halves have visually matching color and fine physical texture, not pixel-identical underlying plaster fields.",
+            "findings": [
+              "Photorealistic muted reddish-brown/ochre/green leafy flowers over pale worn lime plaster; no alpha or halo.",
+              "2x2 repeat has visible clipped leaf/stem mismatches at vertical and horizontal wrap; exact motif continuity was not achieved.",
+              "Fine plaster boundary is visible in repeat; no forbidden seam-blend strips applied.",
+              "Native887² component enlarged to2048²; not a native2K generation."
+            ],
+            "rootReviewNote": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical."
+          },
+          "createdAt": "2026-10-09T06:46:18.738661+00:00",
+          "r2Key": "julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto.png",
+          "sharedGenerationMaster": true,
+          "nativeComponentSize": [
+            887,
+            887
+          ],
+          "nativeComponentPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/native-component-holvi-lehvasto.png"
+        },
+        {
+          "id": "holvi-lehvasto-rappaus",
+          "parentTaskNumber": 44,
+          "file": "holvi-lehvasto-rappaus.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/holvi-lehvasto-rappaus.png",
+          "sha256": "668d5cc02ae978766d3f9c10fe4d9e6f4048f2c5f1297eba32fec40d8a1839c3",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/original-generation.png",
+          "originalSha256": "6f6bb9c963c930c7abbe36ddd4bdb0dce8d0f3d7e565a6f185b3bee1b1d93046",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "nativeGeneratedMode": "RGB",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "alpha": false,
+          "seamAxes": [
+            "x",
+            "y"
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationAttemptId": "holvi-lehvasto-one-call-20261009",
+          "generationPrompt": "Use case: historical-scene.\nAsset type: photorealistic medieval base-color material texture pair for a 1499 chapel vault. Create completely new content from this text only.\nPrimary request: ONE opaque RGB image with an exact 2:1 horizontal aspect ratio, ideally 4096 x 2048 pixels. The image is TWO full square material components placed directly side by side, each occupying exactly half the width and the full height. The left square is painted pale lime plaster. The right square is the matching unpainted pale lime plaster. There is no gap, gutter, frame, separator, border, label, or text. This is a technical texture master, not a scene and not a designed presentation board.\nLeft square: a flat close-up of authentic late-1400s lime plaster bearing a naturally repeating pattern of small thin leafy floral vignettes: fine reddish-brown and muted ochre stems, quiet muted green leaves, small faded flowers. The pigment is worn, gently flaking and translucent in tiny spots where the plaster is visible. Each vignette is isolated, delicate and complete, spaced in a regular loose repeating arrangement so the square can repeat horizontally and vertically. No long connected vines or broad central composition. The pattern repeats naturally with consistent spacing across the virtual tile boundary; leave the same ordinary plaster intervals between motifs at the edges as between motifs inside, no special edge band. Plaster tone and texture must stay uniform at the outer edges. The painting is opaque over the plaster; absolutely no alpha, cutout, or transparent background.\nRight square: only bare unpainted plaster, precisely matching the left square's underlying warm pale ivory-gray lime plaster hue, grain, fine pitting, scale, and illumination. No trace of flowers, leaves, stems, ghosts, pigment or darker edge zones. Fine and evenly distributed microtexture, slight authentic age, no conspicuous stain or feature. Both halves must have the same plaster base, not two different materials or tones.\nComposition/framing: orthographic, perpendicular camera facing the surface; both square components fill their entire allotted area, with no perspective or lens distortion. No vault architecture or curvature.\nLighting: absolutely even neutral diffuse light over every pixel, identical exposure and white balance in both halves. No shadow, center spotlight, gradient, vignette, darkening at edges, highlights, HDR, or theatrical lighting.\nStyle/medium: a realistic photograph of physical, gently worn matte plaster and faded medieval pigment; quiet restrained colors, not flat vector graphics, not crisp modern wallpaper. The two squares are seamless material tiles by natural pattern design, not by faded or blurry edge strips.\nAvoid: people, faces, animals, objects, architecture, text, letters, numbers, logos, watermark, borders, panel lines, perspective, modern materials, saturated color, canvas weave, glossy paint, radial aging patches, any transparency. Output only the single 2:1 RGB texture master.",
+          "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/prompt.txt",
+          "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "sourceVersions": [
+            {
+              "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+              "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+              "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+              "readInFull": true
+            },
+            {
+              "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+              "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+              "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+              "readInFull": true
+            },
+            {
+              "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+              "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+              "readInFull": true,
+              "blobVerifiedFromLocalSource": true,
+              "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+            }
+          ],
+          "sourceReadInFull": true,
+          "supplementarySourcesReadInFull": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+            "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+          ],
+          "sourceImagePixelsUsed": false,
+          "viitteet": [
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+              "usedAs": "entire source read, text-only renewal constraints",
+              "sourceImagePixelsUsed": false
+            },
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "usedAs": "entire original source read, text-only material and technical specification",
+              "sourceImagePixelsUsed": false
+            }
+          ],
+          "kuvateksti": "Maalatun holvipinnan samansävyinen ja -rakenteinen puhdas vaalea kalkkirappaus vertailupintana. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "technicalProcessing": [
+            {
+              "method": "exact-half-master-component-crop",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "crop": [
+                887,
+                0,
+                1774,
+                887
+              ],
+              "componentNativeSize": [
+                887,
+                887
+              ],
+              "oneGenerationTwoComponents": true
+            },
+            {
+              "method": "full-component-Lanczos-resize",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                2048,
+                2048
+              ],
+              "scaleFactor": 2.3089064261555805,
+              "note": "technical enlargement; detail remains derived from native887-square component",
+              "cropAfterComponentSplit": null
+            },
+            {
+              "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+              "mode": "RGB",
+              "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            },
+            {
+              "method": "none-seam-processing",
+              "seamBlendBandsApplied": false,
+              "alphaApplied": false
+            },
+            {
+              "rootPeriodicCellMethod": {
+                "cropBoxInNativeComponent": [
+                  75,
+                  105,
+                  255,
+                  285
+                ],
+                "cellSize": [
+                  180,
+                  180
+                ],
+                "periods": [
+                  4,
+                  4
+                ],
+                "effectiveNativeGridSize": [
+                  720,
+                  720
+                ],
+                "resizeTo": [
+                  2048,
+                  2048
+                ],
+                "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+              }
+            }
+          ],
+          "outputProduced": true,
+          "productionComplete": true,
+          "QA": {
+            "nativeOriginalViewed": true,
+            "nativeComponentViewed": true,
+            "finalNativeViewed": true,
+            "finalNativeDisplayNote": "2048-square viewer displayed at1600; native887-square components also inspected",
+            "preview480Viewed": true,
+            "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-preview-480-holvi-lehvasto-rappaus.png",
+            "tile2x2Viewed": true,
+            "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/tiilaus-holvi-lehvasto-rappaus.jpg",
+            "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-tile-1024-holvi-lehvasto-rappaus.jpg",
+            "dimensionsVerified": true,
+            "modeVerified": true,
+            "sRGBProfileEmbedded": true,
+            "profileName": "sRGB built-in",
+            "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "opposingEdgeRMS": {
+              "x": 19.718114424516695,
+              "y": 18.012275183653692
+            },
+            "originalByteExactVerified": true,
+            "metadataVerified": true,
+            "independentRootQA": false,
+            "editorialAcceptance": false,
+            "gameIntegrated": false,
+            "published": false,
+            "status": "worker-complete-root-review-needed",
+            "noPeopleTextFacesLogoWatermark": true,
+            "periodMaterialVisualCheck": true,
+            "seamGeometryAccepted": false,
+            "seamlessTileVerified": false,
+            "deliveryEligibleWithoutRootReview": false,
+            "matchingPlasterToneAndTextureVisualCheck": true,
+            "matchingPlasterNote": "The two generated halves have visually matching color and fine physical texture, not pixel-identical underlying plaster fields.",
+            "findings": [
+              "Clean pale unpainted plaster, visually matching hue/grain/scale of the painted component, without pigment ghosts.",
+              "2x2 repeat has a fine visible vertical plaster boundary and some horizontal microtexture change; exact continuity was not achieved.",
+              "No seam-blend strips applied. Native887² component enlarged to2048²."
+            ],
+            "rootReviewNote": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical."
+          },
+          "createdAt": "2026-10-09T06:46:18.807611+00:00",
+          "r2Key": "julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto-rappaus.png",
+          "sharedGenerationMaster": true,
+          "nativeComponentSize": [
+            887,
+            887
+          ],
+          "nativeComponentPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/native-component-holvi-lehvasto-rappaus.png"
+        }
+      ],
+      "requestedOutputFiles": 2,
+      "singleGenerationProducesTwoOutputs": true,
+      "rootTechnicalCellTiling": {
+        "cropBoxInNativeComponent": [
+          75,
+          105,
+          255,
+          285
+        ],
+        "cellSize": [
+          180,
+          180
+        ],
+        "periods": [
+          4,
+          4
+        ],
+        "effectiveNativeGridSize": [
+          720,
+          720
+        ],
+        "resizeTo": [
+          2048,
+          2048
+        ],
+        "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+      },
+      "rootVisualReview": {
+        "approvedForDelivery": true,
+        "sha256": "5d8fdf577c07eb61961f0c87a7351b7567e0d776fa1109d40bdc7c1de5cc5c36",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/root-cell-proof-holvi-lehvasto.jpg",
+        "visualNotes": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical.",
+        "technicalCellTilingInterpretation": "Source permits technicalcrop/resize andforbids seamblend forholvi. Periodic wholemotif crop is technicalrepeat construction,no painting. Editorialreviewpending."
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto.png",
+      "bytes": 1567086,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "holvi-lehvasto-rappaus",
+      "parentTaskNumber": 44,
+      "file": "holvi-lehvasto-rappaus.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/holvi-lehvasto-rappaus.png",
+      "sha256": "668d5cc02ae978766d3f9c10fe4d9e6f4048f2c5f1297eba32fec40d8a1839c3",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/original-generation.png",
+      "originalSha256": "6f6bb9c963c930c7abbe36ddd4bdb0dce8d0f3d7e565a6f185b3bee1b1d93046",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptId": "holvi-lehvasto-one-call-20261009",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: photorealistic medieval base-color material texture pair for a 1499 chapel vault. Create completely new content from this text only.\nPrimary request: ONE opaque RGB image with an exact 2:1 horizontal aspect ratio, ideally 4096 x 2048 pixels. The image is TWO full square material components placed directly side by side, each occupying exactly half the width and the full height. The left square is painted pale lime plaster. The right square is the matching unpainted pale lime plaster. There is no gap, gutter, frame, separator, border, label, or text. This is a technical texture master, not a scene and not a designed presentation board.\nLeft square: a flat close-up of authentic late-1400s lime plaster bearing a naturally repeating pattern of small thin leafy floral vignettes: fine reddish-brown and muted ochre stems, quiet muted green leaves, small faded flowers. The pigment is worn, gently flaking and translucent in tiny spots where the plaster is visible. Each vignette is isolated, delicate and complete, spaced in a regular loose repeating arrangement so the square can repeat horizontally and vertically. No long connected vines or broad central composition. The pattern repeats naturally with consistent spacing across the virtual tile boundary; leave the same ordinary plaster intervals between motifs at the edges as between motifs inside, no special edge band. Plaster tone and texture must stay uniform at the outer edges. The painting is opaque over the plaster; absolutely no alpha, cutout, or transparent background.\nRight square: only bare unpainted plaster, precisely matching the left square's underlying warm pale ivory-gray lime plaster hue, grain, fine pitting, scale, and illumination. No trace of flowers, leaves, stems, ghosts, pigment or darker edge zones. Fine and evenly distributed microtexture, slight authentic age, no conspicuous stain or feature. Both halves must have the same plaster base, not two different materials or tones.\nComposition/framing: orthographic, perpendicular camera facing the surface; both square components fill their entire allotted area, with no perspective or lens distortion. No vault architecture or curvature.\nLighting: absolutely even neutral diffuse light over every pixel, identical exposure and white balance in both halves. No shadow, center spotlight, gradient, vignette, darkening at edges, highlights, HDR, or theatrical lighting.\nStyle/medium: a realistic photograph of physical, gently worn matte plaster and faded medieval pigment; quiet restrained colors, not flat vector graphics, not crisp modern wallpaper. The two squares are seamless material tiles by natural pattern design, not by faded or blurry edge strips.\nAvoid: people, faces, animals, objects, architecture, text, letters, numbers, logos, watermark, borders, panel lines, perspective, modern materials, saturated color, canvas weave, glossy paint, radial aging patches, any transparency. Output only the single 2:1 RGB texture master.",
+      "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/prompt.txt",
+      "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+          "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+          "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+          "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+          "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+          "readInFull": true
+        },
+        {
+          "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "readInFull": true,
+          "blobVerifiedFromLocalSource": true,
+          "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+        }
+      ],
+      "sourceReadInFull": true,
+      "supplementarySourcesReadInFull": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+        "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+      ],
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+          "usedAs": "entire source read, text-only renewal constraints",
+          "sourceImagePixelsUsed": false
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "usedAs": "entire original source read, text-only material and technical specification",
+          "sourceImagePixelsUsed": false
+        }
+      ],
+      "kuvateksti": "Maalatun holvipinnan samansävyinen ja -rakenteinen puhdas vaalea kalkkirappaus vertailupintana. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": [
+        {
+          "method": "exact-half-master-component-crop",
+          "masterSize": [
+            1774,
+            887
+          ],
+          "crop": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "componentNativeSize": [
+            887,
+            887
+          ],
+          "oneGenerationTwoComponents": true
+        },
+        {
+          "method": "full-component-Lanczos-resize",
+          "from": [
+            887,
+            887
+          ],
+          "to": [
+            2048,
+            2048
+          ],
+          "scaleFactor": 2.3089064261555805,
+          "note": "technical enlargement; detail remains derived from native887-square component",
+          "cropAfterComponentSplit": null
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+          "mode": "RGB",
+          "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        },
+        {
+          "method": "none-seam-processing",
+          "seamBlendBandsApplied": false,
+          "alphaApplied": false
+        },
+        {
+          "rootPeriodicCellMethod": {
+            "cropBoxInNativeComponent": [
+              75,
+              105,
+              255,
+              285
+            ],
+            "cellSize": [
+              180,
+              180
+            ],
+            "periods": [
+              4,
+              4
+            ],
+            "effectiveNativeGridSize": [
+              720,
+              720
+            ],
+            "resizeTo": [
+              2048,
+              2048
+            ],
+            "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+          }
+        }
+      ],
+      "outputProduced": true,
+      "productionComplete": true,
+      "QA": {
+        "nativeOriginalViewed": true,
+        "nativeComponentViewed": true,
+        "finalNativeViewed": true,
+        "finalNativeDisplayNote": "2048-square viewer displayed at1600; native887-square components also inspected",
+        "preview480Viewed": true,
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-preview-480-holvi-lehvasto-rappaus.png",
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/tiilaus-holvi-lehvasto-rappaus.jpg",
+        "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-tile-1024-holvi-lehvasto-rappaus.jpg",
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileEmbedded": true,
+        "profileName": "sRGB built-in",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "opposingEdgeRMS": {
+          "x": 19.718114424516695,
+          "y": 18.012275183653692
+        },
+        "originalByteExactVerified": true,
+        "metadataVerified": true,
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "worker-complete-root-review-needed",
+        "noPeopleTextFacesLogoWatermark": true,
+        "periodMaterialVisualCheck": true,
+        "seamGeometryAccepted": false,
+        "seamlessTileVerified": false,
+        "deliveryEligibleWithoutRootReview": false,
+        "matchingPlasterToneAndTextureVisualCheck": true,
+        "matchingPlasterNote": "The two generated halves have visually matching color and fine physical texture, not pixel-identical underlying plaster fields.",
+        "findings": [
+          "Clean pale unpainted plaster, visually matching hue/grain/scale of the painted component, without pigment ghosts.",
+          "2x2 repeat has a fine visible vertical plaster boundary and some horizontal microtexture change; exact continuity was not achieved.",
+          "No seam-blend strips applied. Native887² component enlarged to2048²."
+        ],
+        "rootReviewNote": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical."
+      },
+      "createdAt": "2026-10-09T06:46:18.807611+00:00",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto-rappaus.png",
+      "sharedGenerationMaster": true,
+      "nativeComponentSize": [
+        887,
+        887
+      ],
+      "nativeComponentPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/native-component-holvi-lehvasto-rappaus.png",
+      "outputAssets": [
+        {
+          "id": "holvi-lehvasto",
+          "parentTaskNumber": 44,
+          "file": "holvi-lehvasto.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/holvi-lehvasto.png",
+          "sha256": "5d8fdf577c07eb61961f0c87a7351b7567e0d776fa1109d40bdc7c1de5cc5c36",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/original-generation.png",
+          "originalSha256": "6f6bb9c963c930c7abbe36ddd4bdb0dce8d0f3d7e565a6f185b3bee1b1d93046",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "nativeGeneratedMode": "RGB",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "alpha": false,
+          "seamAxes": [
+            "x",
+            "y"
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationAttemptId": "holvi-lehvasto-one-call-20261009",
+          "generationPrompt": "Use case: historical-scene.\nAsset type: photorealistic medieval base-color material texture pair for a 1499 chapel vault. Create completely new content from this text only.\nPrimary request: ONE opaque RGB image with an exact 2:1 horizontal aspect ratio, ideally 4096 x 2048 pixels. The image is TWO full square material components placed directly side by side, each occupying exactly half the width and the full height. The left square is painted pale lime plaster. The right square is the matching unpainted pale lime plaster. There is no gap, gutter, frame, separator, border, label, or text. This is a technical texture master, not a scene and not a designed presentation board.\nLeft square: a flat close-up of authentic late-1400s lime plaster bearing a naturally repeating pattern of small thin leafy floral vignettes: fine reddish-brown and muted ochre stems, quiet muted green leaves, small faded flowers. The pigment is worn, gently flaking and translucent in tiny spots where the plaster is visible. Each vignette is isolated, delicate and complete, spaced in a regular loose repeating arrangement so the square can repeat horizontally and vertically. No long connected vines or broad central composition. The pattern repeats naturally with consistent spacing across the virtual tile boundary; leave the same ordinary plaster intervals between motifs at the edges as between motifs inside, no special edge band. Plaster tone and texture must stay uniform at the outer edges. The painting is opaque over the plaster; absolutely no alpha, cutout, or transparent background.\nRight square: only bare unpainted plaster, precisely matching the left square's underlying warm pale ivory-gray lime plaster hue, grain, fine pitting, scale, and illumination. No trace of flowers, leaves, stems, ghosts, pigment or darker edge zones. Fine and evenly distributed microtexture, slight authentic age, no conspicuous stain or feature. Both halves must have the same plaster base, not two different materials or tones.\nComposition/framing: orthographic, perpendicular camera facing the surface; both square components fill their entire allotted area, with no perspective or lens distortion. No vault architecture or curvature.\nLighting: absolutely even neutral diffuse light over every pixel, identical exposure and white balance in both halves. No shadow, center spotlight, gradient, vignette, darkening at edges, highlights, HDR, or theatrical lighting.\nStyle/medium: a realistic photograph of physical, gently worn matte plaster and faded medieval pigment; quiet restrained colors, not flat vector graphics, not crisp modern wallpaper. The two squares are seamless material tiles by natural pattern design, not by faded or blurry edge strips.\nAvoid: people, faces, animals, objects, architecture, text, letters, numbers, logos, watermark, borders, panel lines, perspective, modern materials, saturated color, canvas weave, glossy paint, radial aging patches, any transparency. Output only the single 2:1 RGB texture master.",
+          "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/prompt.txt",
+          "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "sourceVersions": [
+            {
+              "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+              "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+              "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+              "readInFull": true
+            },
+            {
+              "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+              "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+              "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+              "readInFull": true
+            },
+            {
+              "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+              "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+              "readInFull": true,
+              "blobVerifiedFromLocalSource": true,
+              "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+            }
+          ],
+          "sourceReadInFull": true,
+          "supplementarySourcesReadInFull": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+            "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+          ],
+          "sourceImagePixelsUsed": false,
+          "viitteet": [
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+              "usedAs": "entire source read, text-only renewal constraints",
+              "sourceImagePixelsUsed": false
+            },
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "usedAs": "entire original source read, text-only material and technical specification",
+              "sourceImagePixelsUsed": false
+            }
+          ],
+          "kuvateksti": "Kappelin holvin haalistunut lehvä- ja kukkamaalaus vaalealla rappauksella vuoden 1499 asun tulkintana. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "technicalProcessing": [
+            {
+              "method": "exact-half-master-component-crop",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "crop": [
+                0,
+                0,
+                887,
+                887
+              ],
+              "componentNativeSize": [
+                887,
+                887
+              ],
+              "oneGenerationTwoComponents": true
+            },
+            {
+              "method": "full-component-Lanczos-resize",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                2048,
+                2048
+              ],
+              "scaleFactor": 2.3089064261555805,
+              "note": "technical enlargement; detail remains derived from native887-square component",
+              "cropAfterComponentSplit": null
+            },
+            {
+              "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+              "mode": "RGB",
+              "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            },
+            {
+              "method": "none-seam-processing",
+              "seamBlendBandsApplied": false,
+              "alphaApplied": false
+            },
+            {
+              "rootPeriodicCellMethod": {
+                "cropBoxInNativeComponent": [
+                  75,
+                  105,
+                  255,
+                  285
+                ],
+                "cellSize": [
+                  180,
+                  180
+                ],
+                "periods": [
+                  4,
+                  4
+                ],
+                "effectiveNativeGridSize": [
+                  720,
+                  720
+                ],
+                "resizeTo": [
+                  2048,
+                  2048
+                ],
+                "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+              }
+            }
+          ],
+          "outputProduced": true,
+          "productionComplete": true,
+          "QA": {
+            "nativeOriginalViewed": true,
+            "nativeComponentViewed": true,
+            "finalNativeViewed": true,
+            "finalNativeDisplayNote": "2048-square viewer displayed at1600; native887-square components also inspected",
+            "preview480Viewed": true,
+            "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-preview-480-holvi-lehvasto.png",
+            "tile2x2Viewed": true,
+            "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/tiilaus-holvi-lehvasto.jpg",
+            "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-tile-1024-holvi-lehvasto.jpg",
+            "dimensionsVerified": true,
+            "modeVerified": true,
+            "sRGBProfileEmbedded": true,
+            "profileName": "sRGB built-in",
+            "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "opposingEdgeRMS": {
+              "x": 24.680804076118548,
+              "y": 22.847358498622622
+            },
+            "originalByteExactVerified": true,
+            "metadataVerified": true,
+            "independentRootQA": false,
+            "editorialAcceptance": false,
+            "gameIntegrated": false,
+            "published": false,
+            "status": "worker-complete-root-review-needed",
+            "noPeopleTextFacesLogoWatermark": true,
+            "periodMaterialVisualCheck": true,
+            "seamGeometryAccepted": false,
+            "seamlessTileVerified": false,
+            "deliveryEligibleWithoutRootReview": false,
+            "matchingPlasterToneAndTextureVisualCheck": true,
+            "matchingPlasterNote": "The two generated halves have visually matching color and fine physical texture, not pixel-identical underlying plaster fields.",
+            "findings": [
+              "Photorealistic muted reddish-brown/ochre/green leafy flowers over pale worn lime plaster; no alpha or halo.",
+              "2x2 repeat has visible clipped leaf/stem mismatches at vertical and horizontal wrap; exact motif continuity was not achieved.",
+              "Fine plaster boundary is visible in repeat; no forbidden seam-blend strips applied.",
+              "Native887² component enlarged to2048²; not a native2K generation."
+            ],
+            "rootReviewNote": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical."
+          },
+          "createdAt": "2026-10-09T06:46:18.738661+00:00",
+          "r2Key": "julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto.png",
+          "sharedGenerationMaster": true,
+          "nativeComponentSize": [
+            887,
+            887
+          ],
+          "nativeComponentPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/native-component-holvi-lehvasto.png"
+        },
+        {
+          "id": "holvi-lehvasto-rappaus",
+          "parentTaskNumber": 44,
+          "file": "holvi-lehvasto-rappaus.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/holvi-lehvasto-rappaus.png",
+          "sha256": "668d5cc02ae978766d3f9c10fe4d9e6f4048f2c5f1297eba32fec40d8a1839c3",
+          "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png",
+          "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/original-generation.png",
+          "originalSha256": "6f6bb9c963c930c7abbe36ddd4bdb0dce8d0f3d7e565a6f185b3bee1b1d93046",
+          "nativeGeneratedSize": [
+            1774,
+            887
+          ],
+          "nativeGeneratedMode": "RGB",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "alpha": false,
+          "seamAxes": [
+            "x",
+            "y"
+          ],
+          "generationCalls": 1,
+          "generationLimit": 1,
+          "generationAttemptId": "holvi-lehvasto-one-call-20261009",
+          "generationPrompt": "Use case: historical-scene.\nAsset type: photorealistic medieval base-color material texture pair for a 1499 chapel vault. Create completely new content from this text only.\nPrimary request: ONE opaque RGB image with an exact 2:1 horizontal aspect ratio, ideally 4096 x 2048 pixels. The image is TWO full square material components placed directly side by side, each occupying exactly half the width and the full height. The left square is painted pale lime plaster. The right square is the matching unpainted pale lime plaster. There is no gap, gutter, frame, separator, border, label, or text. This is a technical texture master, not a scene and not a designed presentation board.\nLeft square: a flat close-up of authentic late-1400s lime plaster bearing a naturally repeating pattern of small thin leafy floral vignettes: fine reddish-brown and muted ochre stems, quiet muted green leaves, small faded flowers. The pigment is worn, gently flaking and translucent in tiny spots where the plaster is visible. Each vignette is isolated, delicate and complete, spaced in a regular loose repeating arrangement so the square can repeat horizontally and vertically. No long connected vines or broad central composition. The pattern repeats naturally with consistent spacing across the virtual tile boundary; leave the same ordinary plaster intervals between motifs at the edges as between motifs inside, no special edge band. Plaster tone and texture must stay uniform at the outer edges. The painting is opaque over the plaster; absolutely no alpha, cutout, or transparent background.\nRight square: only bare unpainted plaster, precisely matching the left square's underlying warm pale ivory-gray lime plaster hue, grain, fine pitting, scale, and illumination. No trace of flowers, leaves, stems, ghosts, pigment or darker edge zones. Fine and evenly distributed microtexture, slight authentic age, no conspicuous stain or feature. Both halves must have the same plaster base, not two different materials or tones.\nComposition/framing: orthographic, perpendicular camera facing the surface; both square components fill their entire allotted area, with no perspective or lens distortion. No vault architecture or curvature.\nLighting: absolutely even neutral diffuse light over every pixel, identical exposure and white balance in both halves. No shadow, center spotlight, gradient, vignette, darkening at edges, highlights, HDR, or theatrical lighting.\nStyle/medium: a realistic photograph of physical, gently worn matte plaster and faded medieval pigment; quiet restrained colors, not flat vector graphics, not crisp modern wallpaper. The two squares are seamless material tiles by natural pattern design, not by faded or blurry edge strips.\nAvoid: people, faces, animals, objects, architecture, text, letters, numbers, logos, watermark, borders, panel lines, perspective, modern materials, saturated color, canvas weave, glossy paint, radial aging patches, any transparency. Output only the single 2:1 RGB texture master.",
+          "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/prompt.txt",
+          "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-24cfea49-4fd4-4277-bff9-1723a40a6520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "sourceVersions": [
+            {
+              "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+              "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+              "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+              "readInFull": true
+            },
+            {
+              "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+              "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+              "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+              "readInFull": true
+            },
+            {
+              "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+              "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+              "readInFull": true,
+              "blobVerifiedFromLocalSource": true,
+              "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+            }
+          ],
+          "sourceReadInFull": true,
+          "supplementarySourcesReadInFull": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+            "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+          ],
+          "sourceImagePixelsUsed": false,
+          "viitteet": [
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+              "usedAs": "entire source read, text-only renewal constraints",
+              "sourceImagePixelsUsed": false
+            },
+            {
+              "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+              "usedAs": "entire original source read, text-only material and technical specification",
+              "sourceImagePixelsUsed": false
+            }
+          ],
+          "kuvateksti": "Maalatun holvipinnan samansävyinen ja -rakenteinen puhdas vaalea kalkkirappaus vertailupintana. Havainnekuva.",
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "technicalProcessing": [
+            {
+              "method": "exact-half-master-component-crop",
+              "masterSize": [
+                1774,
+                887
+              ],
+              "crop": [
+                887,
+                0,
+                1774,
+                887
+              ],
+              "componentNativeSize": [
+                887,
+                887
+              ],
+              "oneGenerationTwoComponents": true
+            },
+            {
+              "method": "full-component-Lanczos-resize",
+              "from": [
+                887,
+                887
+              ],
+              "to": [
+                2048,
+                2048
+              ],
+              "scaleFactor": 2.3089064261555805,
+              "note": "technical enlargement; detail remains derived from native887-square component",
+              "cropAfterComponentSplit": null
+            },
+            {
+              "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+              "mode": "RGB",
+              "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+            },
+            {
+              "method": "none-seam-processing",
+              "seamBlendBandsApplied": false,
+              "alphaApplied": false
+            },
+            {
+              "rootPeriodicCellMethod": {
+                "cropBoxInNativeComponent": [
+                  75,
+                  105,
+                  255,
+                  285
+                ],
+                "cellSize": [
+                  180,
+                  180
+                ],
+                "periods": [
+                  4,
+                  4
+                ],
+                "effectiveNativeGridSize": [
+                  720,
+                  720
+                ],
+                "resizeTo": [
+                  2048,
+                  2048
+                ],
+                "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+              }
+            }
+          ],
+          "outputProduced": true,
+          "productionComplete": true,
+          "QA": {
+            "nativeOriginalViewed": true,
+            "nativeComponentViewed": true,
+            "finalNativeViewed": true,
+            "finalNativeDisplayNote": "2048-square viewer displayed at1600; native887-square components also inspected",
+            "preview480Viewed": true,
+            "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-preview-480-holvi-lehvasto-rappaus.png",
+            "tile2x2Viewed": true,
+            "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/tiilaus-holvi-lehvasto-rappaus.jpg",
+            "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/qa-tile-1024-holvi-lehvasto-rappaus.jpg",
+            "dimensionsVerified": true,
+            "modeVerified": true,
+            "sRGBProfileEmbedded": true,
+            "profileName": "sRGB built-in",
+            "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "opposingEdgeRMS": {
+              "x": 19.718114424516695,
+              "y": 18.012275183653692
+            },
+            "originalByteExactVerified": true,
+            "metadataVerified": true,
+            "independentRootQA": false,
+            "editorialAcceptance": false,
+            "gameIntegrated": false,
+            "published": false,
+            "status": "worker-complete-root-review-needed",
+            "noPeopleTextFacesLogoWatermark": true,
+            "periodMaterialVisualCheck": true,
+            "seamGeometryAccepted": false,
+            "seamlessTileVerified": false,
+            "deliveryEligibleWithoutRootReview": false,
+            "matchingPlasterToneAndTextureVisualCheck": true,
+            "matchingPlasterNote": "The two generated halves have visually matching color and fine physical texture, not pixel-identical underlying plaster fields.",
+            "findings": [
+              "Clean pale unpainted plaster, visually matching hue/grain/scale of the painted component, without pigment ghosts.",
+              "2x2 repeat has a fine visible vertical plaster boundary and some horizontal microtexture change; exact continuity was not achieved.",
+              "No seam-blend strips applied. Native887² component enlarged to2048²."
+            ],
+            "rootReviewNote": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical."
+          },
+          "createdAt": "2026-10-09T06:46:18.807611+00:00",
+          "r2Key": "julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto-rappaus.png",
+          "sharedGenerationMaster": true,
+          "nativeComponentSize": [
+            887,
+            887
+          ],
+          "nativeComponentPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/native-component-holvi-lehvasto-rappaus.png"
+        }
+      ],
+      "requestedOutputFiles": 2,
+      "singleGenerationProducesTwoOutputs": true,
+      "rootTechnicalCellTiling": {
+        "cropBoxInNativeComponent": [
+          75,
+          105,
+          255,
+          285
+        ],
+        "cellSize": [
+          180,
+          180
+        ],
+        "periods": [
+          4,
+          4
+        ],
+        "effectiveNativeGridSize": [
+          720,
+          720
+        ],
+        "resizeTo": [
+          2048,
+          2048
+        ],
+        "method": "Crop one complete existing generated vignette on plaster, periodically tile unchanged cell4x4, Lanczos finalsize. Plain reference samecrop/periods from generatedright plaster. No addedpaintedpixels,alpha or seamblend. Originalfullframe preserved."
+      },
+      "rootVisualReview": {
+        "approvedForDelivery": true,
+        "sha256": "668d5cc02ae978766d3f9c10fe4d9e6f4048f2c5f1297eba32fec40d8a1839c3",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/holvi-lehvasto/root-cell-proof-holvi-lehvasto-rappaus.jpg",
+        "visualNotes": "Closed motif remains complete at every repeat; plaster-grain edge variation comparable to adjacent noise. Native180²cell repeated4x4 thenupscaled to2048²; detail/wear repetition disclosed. Painted/plain fields matching color/texture, not pixelidentical.",
+        "technicalCellTilingInterpretation": "Source permits technicalcrop/resize andforbids seamblend forholvi. Periodic wholemotif crop is technicalrepeat construction,no painting. Editorialreviewpending."
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/holvi-lehvasto-rappaus.png",
+      "bytes": 1557680,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "takka-noki",
+      "parentTaskNumber": 44,
+      "file": "takka-noki.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/takka-noki.png",
+      "sha256": "68ebf0dd2bb5fbb650da4ce398ed9e8e7057b81e96b88c952ebe6ecc1d2fd972",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-2511cac4-ff12-499c-9470-e4b127278ac6.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/original-generation.png",
+      "originalSha256": "5208880ad0063e0098412c600dc485587186d7e262486fa6199b3410ba75ece1",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptId": "takka-noki-one-call-20261009",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: new opaque RGB square seamless XY medieval fireplace interior natural stone wall base-color surface texture, 1024 x 1024 pixels.\nPrimary request: Create a completely new original photorealistic perpendicular photograph of an irregular rubble masonry surface, a real 1499 fireplace inner wall covered in strong soot and heat-induced cracks. Stones are irregular natural rocks with many different sizes, proportions, and orientations, interlocked in a varied organic mosaic. Some angular, some more rounded, tilted freely rather than stacked as rectangular blocks. Rough charcoal gray, black and dark brown soot coats the stones and recessed lime mortar, with patches of gray stone visible. Fine and medium heat fractures run irregularly through stone surfaces; strong authentic soot and heat weathering, no glowing hot areas.\nComposition/framing: only the flat material surface filling the entire square, orthographic perpendicular camera, no perspective. Naturally repeating square texture with precisely continuous left/right and top/bottom edges; stones and organic cracks continue across the imaginary tile boundary. Dense irregularity hides repetition.\nCRITICAL masonry geometry: absolutely no horizontal stone courses, rows, or straight lines of mortar. No single straight seam or layer traverses the image from edge to edge in any direction. No rectangular brickwork. Every joint changes angle and terminates against different stones; the whole surface is irregular natural rubble rather than ordered blocks. Do not organize it into tiers or a checkerboard.\nLighting: perfectly even neutral diffuse illumination and exposure over the entire surface. Dark material because it is sooty, not because of directional shadows. No central dark patch, no vignette or gradient, no specular highlights, no cast shadows, no HDR or dramatic light. Strong material texture remains visible within the subdued black/gray/brown palette.\nStyle/medium: realistic physical stone, irregular ancient lime mortar, soot and heat fracture close-up. Natural worn medieval material, not an illustration. Opaque RGB, no alpha.\nAvoid: fireplace scene, fire, flames, embers, hearth opening, mantel, room, chimney opening, logs, grate, tools, objects, people, faces, readable text, writing, letters, numbers, logo, watermark, image borders, modern materials, tiled grid, horizontal stone layers, any straight edge-to-edge joint. Output only the square seamless surface photograph.",
+      "generationPromptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/prompt.txt",
+      "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054 as /Users/samireivinen/.codex/generated_images/01a11f62-74e3-72f0-98e2-9ad434b03054/exec-2511cac4-ff12-499c-9470-e4b127278ac6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+          "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+          "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+          "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+          "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+          "readInFull": true
+        },
+        {
+          "path": "output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "readInFull": true,
+          "blobVerifiedFromLocalSource": true,
+          "commitBasis": "provided in preserved original production record; original path unavailable in this checkout commit tree"
+        }
+      ],
+      "sourceReadInFull": true,
+      "supplementarySourcesReadInFull": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/worker-contract.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/scope.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+        "/Users/samireivinen/.codex/skills/.system/imagegen/SKILL.md"
+      ],
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+          "usedAs": "entire source read, text-only renewal constraints",
+          "sourceImagePixelsUsed": false
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "usedAs": "entire original source read, text-only material and technical specification",
+          "sourceImagePixelsUsed": false
+        }
+      ],
+      "kuvateksti": "Takan sisäseinän epäsäännöllinen luonnonkivimuuri, vahva nokikerros ja kuumuuden halkeamat vuoden 1499 asun tulkintana. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "scaleFactor": 0.8165869218500797,
+          "crop": null
+        },
+        {
+          "method": "half-frame-cyclic-offset-paired-seam-cosine-blend-restored-offset",
+          "offset": [
+            512,
+            512
+          ],
+          "axes": [
+            "x",
+            "y"
+          ],
+          "edgeBandPixelsEachSide": 24,
+          "totalCenterBlendBandPixels": 48,
+          "donor": "paired samples exclusively from this one new generated texture",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 23.58272369279752,
+            "y": 30.10267801971003
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "geometricContinuityRequiresVisualQA": true
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-iTXt-metadata",
+          "mode": "RGB",
+          "label": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      ],
+      "outputProduced": true,
+      "productionComplete": true,
+      "QA": {
+        "nativeOriginalViewed": true,
+        "nativeComponentViewed": false,
+        "finalNativeViewed": true,
+        "finalNativeDisplayNote": "1024-square final inspected at original size",
+        "preview480Viewed": true,
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/qa-preview-480-takka-noki.png",
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/tiilaus-takka-noki.jpg",
+        "tile2x2ReviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/qa-tile-1024-takka-noki.jpg",
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileEmbedded": true,
+        "profileName": "sRGB built-in",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "opposingEdgeRMS": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "originalByteExactVerified": true,
+        "metadataVerified": true,
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "worker-complete-noki-seam-naturalness-root-review-needed",
+        "noPeopleTextFacesLogoWatermark": true,
+        "periodMaterialVisualCheck": true,
+        "seamGeometryAccepted": null,
+        "seamlessTileVerified": false,
+        "deliveryEligibleWithoutRootReview": false,
+        "opposingEdgePixelsExactMatch": true,
+        "noStraightEdgeToEdgeMasonryCourse": true,
+        "sootAndHeatCrackVisualCheck": true,
+        "findings": [
+          "Irregular natural rubble stones with varied sizes and directions; no straight edge-to-edge course or joint observed.",
+          "Strong charcoal/black/brown soot and heat cracks; evenly exposed material, no objects or forbidden text.",
+          "Allowed24px per-side paired cosine seam blend gives exact opposing edge pixels in both axes.",
+          "2x2 keeps irregular masonry; some locally softened and changed stone contours occur at wraps. Pixel equality alone does not verify natural stone-joint geometry; root visual review remains required."
+        ]
+      },
+      "createdAt": "2026-10-09T06:46:18.842807+00:00",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/takka-noki.png",
+      "rootVisualReview": {
+        "approvedForDelivery": true,
+        "sha256": "68ebf0dd2bb5fbb650da4ce398ed9e8e7057b81e96b88c952ebe6ecc1d2fd972",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/takka-noki/tiilaus-takka-noki.jpg",
+        "visualNotes": "Irregularrubble/soot, no straightmasonrycourses.2x2 no coherentcoursebreak orhardcolorgrid. Local contour/softening atpermitted24px seamblend disclosed; editorialsamplepending."
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/takka-noki.png",
+      "bytes": 2368626,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lippu-sture",
+      "parentTaskNumber": 47,
+      "file": "lippu-sture.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/lippu-sture/lippu-sture.png",
+      "sha256": "ad9131a72a7884a1e78996a1c03a204f6d840dd5633073d7063bcc5142e23ade",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/lippu-sture/original-generation.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f62-1c78-7472-80a3-182e34e5c95a/exec-71523a65-6682-4b11-88e6-34c65a56bae8.png",
+      "originalSha256": "72d50ee66bba471f21e3fa4ca94dde99d2be2978b0f431daee8c17d2028bfec2",
+      "originalPreservedByteExact": true,
+      "sourceOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f62-1c78-7472-80a3-182e34e5c95a as /Users/samireivinen/.codex/generated_images/01a11f62-1c78-7472-80a3-182e34e5c95a/exec-71523a65-6682-4b11-88e6-34c65a56bae8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "format": "PNG",
+      "quality": null,
+      "colorSpace": "sRGB",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: opaque RGB photorealistic cloth surface texture, landscape 2:1, intended exact final 1024 x 512 PNG.\nPrimary request: A frontal photograph of aged golden-yellow wool/linen banner cloth bearing exactly THREE BLACK heart-shaped water-lily leaves (heraldic sjoeblad). This is an interpretive visual based on the coat-of-arms colors, not a claim to reproduce a documented medieval flag.\nSubject and exact geometry: The golden-yellow cloth fills the entire rectangular image edge to edge. Exactly three distinct, solid BLACK heart-like water-lily leaf emblems: TWO at the upper part, symmetrically left and right, and ONE centered below them. A clear 2 + 1 arrangement. Each leaf has two rounded upper lobes with a small notch at the top center and one pointed tip directed STRAIGHT DOWN. No stems, veins, outlines, circles, crowns, shield or additional symbol. All three emblems are fully visible, each similar in size, with generous separation. Their black textile/pigment is slightly worn but still unmistakably black, not silver or blue. The background is recognizably gold/yellow, naturally faded, not blue, white, brown or grey.\nMaterials/textures: Authentic late-15th-century looking coarse woven wool/linen, visible fibers and irregular weave, gentle wear and subdued age variation. Only slight broad ripples, shallow creases, enough flatness to use as an evenly lit texture. Emblems look painted or sewn into the real textile surface, taking its fiber texture.\nComposition/framing and lighting: Camera straight on perpendicular to cloth, no perspective, no lens distortion. Even soft diffuse light, no harsh directional shadows, no dramatic glow, no surrounding room, poles or mounting equipment. Texture fills all pixels with no border.\nText-only historical basis: The supplied source cites Adelsvapen/Elgenstierna for gold field and black water-lily leaves, and Janne Raneke, Svenska medeltidsvapen, via the Commons file page, for probable black on yellow. These are conceptual written references only; do not copy any reference image pixels. The medieval flag color itself is not confirmed. Use the requested exact 2 + 1 arrangement and downward leaf tips.\nConstraints: Entirely new image from words. EXACTLY THREE BLACK emblems, TWO ABOVE and ONE BELOW, on GOLDEN YELLOW cloth. No modern Finnish or Swedish cross flag, no cross of any kind, no flagpole, rope, people, faces, letters, text, numbers, heraldic additions, logo, watermark, frame, or transparent background. Photorealistic cloth, no illustration, no 3D render, no HDR, natural muted historical materials.",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-uusinnat-20261009.md",
+          "commit": "b3f1b37fd0c4aab7ba54e5b5fd48ee30e4496699",
+          "blob": "5a0fa25636880c152b0e0f5031370438ba90505a",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md",
+          "commit": "2934957d3de699b04ad3319f8ab206ba8aaabaf8",
+          "blob": "530fc7220fea0bf46e0b88f8fd493ef47e941083",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "commit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+          "blob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+          "readInFull": true,
+          "colorInstructionSupersededBy": "posti/sisaltokirjuri-codex-lippu-sture-uusinta-20261009.md"
+        }
+      ],
+      "sourceReadInFull": true,
+      "originalOrdersReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/01-uusintalupa.md",
+          "usedAs": "entire text-only renewal specification",
+          "imagePixelsUsed": false
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/sources/02-lipun-uusintalupa.md",
+          "usedAs": "entire text-only later flag authorization",
+          "imagePixelsUsed": false
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "usedAs": "entire text-only surface constraints; old blue/silver colors superseded",
+          "imagePixelsUsed": false
+        },
+        {
+          "source": "Adelsvapen / Elgenstierna",
+          "usedAs": "textual coat-of-arms color attribution supplied by renewal source; no page pixels loaded",
+          "imagePixelsUsed": false
+        },
+        {
+          "source": "Janne Raneke, Svenska medeltidsvapen, via Commons file page; sv.wikipedia",
+          "usedAs": "textual qualified black-on-yellow attribution supplied by renewal source; no page pixels loaded",
+          "imagePixelsUsed": false
+        }
+      ],
+      "kuvateksti": "Sturen vaakunan värien tulkinta: keltainen kangas ja kolme mustaa lumpeenlehteä 2 + 1 -asetelmassa. Keskiaikaisen lipun väriä ei ole varmistettu. Havainnekuva.",
+      "technicalProcessing": [
+        {
+          "method": "full-frame Lanczos resize only",
+          "from": [
+            1774,
+            887
+          ],
+          "to": [
+            1024,
+            512
+          ],
+          "crop": null,
+          "creativeRetouching": false
+        },
+        {
+          "method": "RGB sRGB metadata and output encoding",
+          "colorHandling": "Native output has no ICC; RGB pixel values interpreted as sRGB and a standard sRGB ICC profile attached without tone/color changes.",
+          "quality": null,
+          "metadataEncoding": "Exact Unicode Description/Source in PNG UTF-8 iTXt chunks."
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileEmbedded": true,
+        "iccDescription": "sRGB built-in",
+        "DescriptionExact": true,
+        "SourceExact": true,
+        "status": "worker-pass-awaiting-independent-root-review",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/lippu-sture/qa-native.png",
+        "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/lippu-sture/qa-480.jpg",
+        "checkedAtUTC": "2026-10-09T06:44:46.652360+00:00",
+        "noTextLettersLogosWatermarkBorder": true,
+        "noPeopleHandsFaces": true,
+        "photorealisticMaterialAppearance": true,
+        "leafCount": 3,
+        "leafArrangement": "2 upper + 1 centered lower",
+        "leafTips": "all downward",
+        "leafColor": "black",
+        "fieldColor": "golden yellow",
+        "oldWoolLinenAppearance": true,
+        "evenFrontalTexture": true,
+        "noModernFinnishOrSwedishCross": true,
+        "noFlagpoleRopeOrMount": true,
+        "historicalPaletteLabel": "vaakunan värien tulkinta",
+        "medievalFlagColorVerified": false,
+        "limitations": [
+          "The coat-of-arms palette is an interpretation from the written supplied sources; a medieval banner color or Sten Sture personal flag color is not established."
+        ]
+      },
+      "historicalInterpretation": "vaakunan värien tulkinta",
+      "historicalCertainty": "moderate coat-of-arms palette inference from supplied sources; medieval flag color and Sten Sture personal flag not confirmed",
+      "state": "worker-QA-complete-awaiting-root-review",
+      "readyForDelivery": true,
+      "contentApprovedByWorker": true,
+      "productionComplete": true,
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/lippu-sture.png",
+      "rootVisualReview": {
+        "approvedForDelivery": true,
+        "sha256": "ad9131a72a7884a1e78996a1c03a204f6d840dd5633073d7063bcc5142e23ade",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/qa/root-six.jpg",
+        "visualNotes": "Goldcloth,3blackdownwardheartleaves2+1,coat-of-arms paletteinterpretation; medievalbannerunverified."
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/lippu-sture.png",
+      "bytes": 1047016,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "tileProofs": [
+    {
+      "id": "holvi-lehvasto",
+      "file": "tiilaus-holvi-lehvasto.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/tiilaus-holvi-lehvasto.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/tiilaus-holvi-lehvasto.jpg",
+      "sha256": "4d068155a08e8d2e4cb9eb6ed37c906416a684d775d8b0ab6611b81e8bb27c28",
+      "bytes": 1065140,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "holvi-lehvasto-rappaus",
+      "file": "tiilaus-holvi-lehvasto-rappaus.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/tiilaus-holvi-lehvasto-rappaus.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/tiilaus-holvi-lehvasto-rappaus.jpg",
+      "sha256": "0b191b1c363db128893120c0503043db7096b6d010549c90264b7cfb73ecda06",
+      "bytes": 1037620,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "takka-noki",
+      "file": "tiilaus-takka-noki.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261009/tiilaus-takka-noki.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/tiilaus-takka-noki.jpg",
+      "sha256": "e330b7dcafd3aaaa588d7fcd7ee6d27c9645bd00e4eba37f14f3e3069824fae6",
+      "bytes": 2564998,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-uusinnat-4.jpg",
+    "r2Key": "julisteet/olavinlinna-pinnat/20261009/toimitetut-uusinnat-4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261009/toimitetut-uusinnat-4.jpg",
+    "sha256": "ebc1c2cb12f3d115c958bf1e8ba9486c67cfc067e09218fbefa7d005f63969f0",
+    "bytes": 457553,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "omittedItems": [
+    {
+      "id": "yokartta",
+      "parentTaskNumber": 46,
+      "reason": "Rannikoita seuraavat edelleen yhtenäiset kirkkaat valoketjut; luonnollinen yökuva ei toteudu.",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Original photographic-looking illustration for a game lens catalogue. A single wide horizontal 16:9 image.\nPrimary request: A plausible spacecraft camera photograph of Earth at night, from an elevated oblique orbital viewpoint high enough that ALL of Europe from Iberia and Britain to Scandinavia and Istanbul, plus the Mediterranean and North Africa, fit together clearly inside the frame. Thin blue-green atmospheric glow at the curved far horizon; black space above. Geography, coastlines and relative settlement positions must be physically plausible.\nCity lights: Lights are individual tiny warm pale-yellow points grouped into separate irregular urban islands, with broad dark gaps between cities. London and Paris are distinct concentrated large city clusters. The Ruhr is a larger diffuse inland cluster. The Po Valley is a broken inland patchwork of settlements rather than a solid stripe; Rome and Istanbul are separate compact clusters. Urban density and cluster size vary with actual city size. Dim sparse local lights between the urban islands only. Rural land stays genuinely dark. The Atlantic, Mediterranean, North Sea and other sea water are genuinely black and unlit. Coastal countryside is dark; lights occur only at actual discrete coastal towns with dark gaps. No luminous contour following the coastline, no continuous Mediterranean coastal chain, no bright connected road lines. North Africa is mostly dark with a few isolated settlement clusters.\nCamera appearance: Natural low-light orbital camera exposure, subtle sensor grain, softly uneven tiny city points, muted navy-black land, restrained warm lights. Few scattered soft cloud patches. Real photographic contrast, no HDR, no glossy globe render, no oversaturation. Thin atmospheric rim is subdued.\nComposition/framing: Earth fills most of the lower frame, curved distant horizon across the upper portion; all Europe and North Africa centered safely inside the 16:9 crop, Mediterranean centered. Only Earth and black space, with no spacecraft/window frame.\nConstraints: Brand-new text-only generation. No reference-image pixels. No labels, text, letters, numbers, drawn borders, routes or cartographic lines; no axis lines, no logos, no watermark, no image border, no people or faces. No sunrise flare. Most critically, DO NOT make coastlines into continuous chains of light: keep seas and rural coastlines dark with genuinely separate city clusters.\n",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/yokartta/original-generation.png",
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/yokartta/qa-native.png",
+        "finalPreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/yokartta/qa-final-1600.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/yokartta/qa-preview-480.png",
+        "technical": {
+          "jpeg": true,
+          "dimensionsExact": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "iccDescription": "sRGB built-in",
+          "DescriptionExact": true,
+          "SourceExact": true,
+          "XMPDescriptionExact": true,
+          "XMPSourceExact": true,
+          "EXIFUserCommentExact": true,
+          "EXIFImageDescriptionASCIIExact": true,
+          "EXIFImageDescriptionEncodingNote": "Supplementary EXIF ImageDescription uses ASCII transliteration; exact Finnish label is preserved in UTF-8 XMP Description/Source and Unicode EXIF UserComment.",
+          "originalByteExact": true,
+          "captionEndsHavainnekuva": true
+        },
+        "technicalChecksPass": true,
+        "reviewedAt": "2026-10-09T06:43:44.713101+00:00",
+        "visualNativeReviewed": true,
+        "visualPreview480Reviewed": true,
+        "visual": {
+          "subject": "Eurooppa, Välimeri ja Pohjois-Afrikka ovat tunnistettavat; meri ja Pohjois-Afrikan sisämaa ovat tummat, horisontissa ohut sininen ilmakehäkaari ja harvoja pilviä.",
+          "cityClusters": "Lontoon, Pariisin, Ruhrin, Po-laakson, Rooman ja Istanbulin suunnilla on erikokoisia kirkkaita klustereita. Silti rannikkoja ja tieverkkoja pitkin kulkee lähes yhtenäisiä hyvin kirkkaita valoketjuja.",
+          "requiredNightLightsPass": false,
+          "seasDark": true,
+          "countrysideDark": "Osittain: Pohjois-Afrikan sisämaa ja osa Euroopan maaseutua tummaa, mutta Keski-Euroopassa tiheä valoverkosto.",
+          "continuousCoastlineLightChainsAbsent": false,
+          "style": "Valokuvan kaltainen maapinta ja pilvet; monet kaupunkien kirkkaimmat valot ovat tähdenmuotoisia, ja rannikoiden valot näyttävät karttaääriviivoilta myös 480 pikselin koossa.",
+          "concerns": [
+            "Iberian rannikon, Etelä-Ranskan/Italian ja Pohjois-Afrikan rannikon kirkkaat valoketjut rikkovat uusinnan olennaisen vaatimuksen.",
+            "Kaupunkivalojen voimakkaat tähtimäiset hohdekärjet heikentävät luonnollista kamerailmettä."
+          ],
+          "omissionReason": "Kaupungeissa on erillisiä klustereita, mutta rannikkoja seuraavat edelleen lähes yhtenäiset kirkkaat valoketjut. Yömaata ei voi toimittaa vaadittuna uusintana."
+        },
+        "deliveryRecommendation": "omit",
+        "workerDeliveryApproved": false,
+        "commonConstraints": {
+          "noTextLettersNumbers": true,
+          "noLogosWatermarksBorders": true,
+          "noIdentifiablePeopleFaces": true,
+          "noSourceImagePixels": true,
+          "noViolence": true
+        }
+      }
+    },
+    {
+      "id": "maapallon-vuosi",
+      "parentTaskNumber": 46,
+      "reason": "Napa-akselin kallistus ja napojen täydet valaistusrajat eivät ole kuvasta yksiselitteisesti todettavissa.",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: scientific-educational\nAsset type: A single photorealistic original photographic-looking educational illustration for a game lens catalogue, wide 16:9, with absolutely no diagram overlays.\nScene: One complete spherical Earth floating against black space. The whole globe is centered with generous black margin, globe diameter about 78 percent of frame height, so both poles are safely within the frame. Europe, the Mediterranean and North Africa are visible on the front hemisphere. Physically plausible continents, blue oceans, realistic sparse cloud systems, thin subdued blue atmosphere, modest natural saturation and real camera texture.\nScientific geometry, essential: Northern summer solstice. Sunlight arrives from the RIGHT, slightly above horizontal, with the sun outside the frame. Orient Earth's real geographic polar axis so the north geographic pole is at the UPPER RIGHT edge of the sphere, about 23.4 degrees clockwise from the top of the sphere: roughly at the 1 o'clock direction. The south geographic pole is diametrically opposite near the LOWER LEFT edge, roughly the 7 o'clock direction. Make the polar orientation unmistakably readable from the LAND AND ICE geography, without drawing an axis. The broad white Arctic Ocean ice cap is centered around that tilted upper-right north pole and the entire northern polar cap is in continuous sunlight, with every part of the Arctic ice clearly bright, the midnight sun. Antarctica and the entire south-polar region at the lower-left are wholly on the night side, in deep darkness. The north hemisphere is green and mostly sunlit; the south is mostly dark.\nLighting geometry: The natural softly curved day/night terminator is clearly oblique, slanting down from upper-left toward lower-right over the globe, passing to the dark side of the Arctic cap and to the sunward side of the Antarctic region, never cutting through the fully sunlit Arctic cap. On the upper part of Earth the sunlight extends well leftward around the whole north polar cap; at the bottom it retreats rightward, leaving the whole south polar cap in shadow. This lighting pattern must visually demonstrate the north pole tilted toward the right-hand sun. Gentle reflected dark-side detail only, no lit white Antarctic cap. The northern polar ice cap must NOT be centered vertically at twelve o'clock, and Earth's north/south geographic orientation must NOT look upright.\nStyle: Photorealistic camera view from space, subdued thin atmosphere, realistic surface textures, moderate contrast, no HDR, no exaggerated lens flare, no glossy decorative CGI styling.\nConstraints: Entirely new text-only generation, no input or reference-image pixels. Only Earth and space. No printed text, labels, letters, numerals, arrows, lines, drawn axis, orbit rings, diagrams, compass marks, borders, logos, watermark, people, faces or spacecraft. Do not show the sun itself. No four-season montage. Depict only the northern summer solstice, with north-polar ice entirely lit and south pole entirely shadowed.\n",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/maapallon-vuosi/original-generation.png",
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/maapallon-vuosi/qa-native.png",
+        "finalPreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/maapallon-vuosi/qa-final-1600.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/maapallon-vuosi/qa-preview-480.png",
+        "technical": {
+          "jpeg": true,
+          "dimensionsExact": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "iccDescription": "sRGB built-in",
+          "DescriptionExact": true,
+          "SourceExact": true,
+          "XMPDescriptionExact": true,
+          "XMPSourceExact": true,
+          "EXIFUserCommentExact": true,
+          "EXIFImageDescriptionASCIIExact": true,
+          "EXIFImageDescriptionEncodingNote": "Supplementary EXIF ImageDescription uses ASCII transliteration; exact Finnish label is preserved in UTF-8 XMP Description/Source and Unicode EXIF UserComment.",
+          "originalByteExact": true,
+          "captionEndsHavainnekuva": true
+        },
+        "technicalChecksPass": true,
+        "reviewedAt": "2026-10-09T06:43:44.714038+00:00",
+        "visualNativeReviewed": true,
+        "visualPreview480Reviewed": true,
+        "visual": {
+          "subject": "Koko maapallo, Eurooppa ja Afrikka näkyvät; pohjoisen jääalue on kirkas, valo tulee oikealta ja etelä on suurelta osin tumma. Ohut sininen ilmakehä ja avaruustausta.",
+          "polarTilt": "Maantieteellinen asento näyttää lähes pystysuuntaiselta: Britannia, Skandinavia ja Afrikka asettuvat pääosin tavalliseen pohjoinen-ylös-asentoon. Jääalue painottuu yläoikealle, mutta itse pohjoisnavan sijainti ja noin 23,4 asteen kallistus aurinkoa kohti eivät ole yksiselitteisesti luettavissa.",
+          "northAxisApprox23_4TowardSunUnambiguous": false,
+          "northernIceBright": true,
+          "entireArcticCapSunlitUnambiguous": false,
+          "southernHemisphereMostlyDark": true,
+          "entireSouthPolarRegionShadowedUnambiguous": false,
+          "terminatorOblique": true,
+          "terminatorProvesAxialTiltUnambiguous": false,
+          "style": "Fotorealistinen avaruuskuvan ilme, mutta pohjoisen laaja valkoinen massa ei yksin todista pohjoisnavan geometriaa. Etelänapa/Etelämanner ei ole kuvassa tunnistettava.",
+          "concerns": [
+            "Pyydetty noin 23,4 asteen maantieteellisen napa-akselin kallistus ei ilmene yksiselitteisesti native- tai 480-esikatselussa.",
+            "Valaistu pohjoinen jääalue ja tumma etelä ovat nähtävissä, mutta kokonaan valaistun pohjoisen napajään ja kokonaan varjossa olevan etelänavan ehtoja ei voi varmistaa tunnistettavista napojen sijainneista."
+          ],
+          "omissionReason": "Pohjoinen jääalue on valoisa ja etelä tumma, mutta pyydetty pohjoisnavan noin 23,4 asteen kallistus oikealla olevaan aurinkoon päin ei ole yksiselitteisesti näkyvä. Napojen täydellisiä valaistusrajoja ei voi varmistaa. Ei toimituskelpoinen vuodenaikamaan uusinta."
+        },
+        "deliveryRecommendation": "omit",
+        "workerDeliveryApproved": false,
+        "commonConstraints": {
+          "noTextLettersNumbers": true,
+          "noLogosWatermarksBorders": true,
+          "noIdentifiablePeopleFaces": true,
+          "noSourceImagePixels": true,
+          "noViolence": true
+        }
+      }
+    },
+    {
+      "id": "tavli",
+      "parentTaskNumber": 46,
+      "reason": "Näkyvien neljännesten kolmiomäärä ja nappulasijoittelu eivät muodosta todettua laillista24pisteen/15+15nappulan lautaa; sallittu rajaus ei korjaa tätä.",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: landscape 16:9 game catalogue photograph, 1600 x 900 intended final.\nPrimary request: A real-camera close photograph of an open, old wooden tavli/backgammon board with tasteful wooden marquetry on a warm Mediterranean cafe table. A small plain glass cup of tea sits unobtrusively beside the board. Warm low evening window light, subdued browns and cream, natural wood grain and everyday slight wear. No people or hands.\nComposition/framing: Deliberately crop to the RIGHT-HAND HALF of the open board. Its right-hand rectangular playing leaf is fully visible and centered. The central dividing bar runs along the LEFT edge of this visible leaf; almost the entire other left playing leaf is OUTSIDE the image frame. A gently elevated, nearly top-down camera angle keeps the full width of the visible right leaf readable and all point bases unobscured. No folded lid; this is a correctly open two-leaf tavli board with the other half continuing beyond the crop. Leave the cup in the surrounding table space.\nExact geometry: The entire physical board has 24 long triangular points in four quadrants of SIX each. Only the right-hand two quadrants are shown here: on the far/top edge exactly SIX long narrow triangles point downward; on the near/bottom edge exactly SIX triangles point upward. Each row is 6 evenly spaced point bases, alternating dark walnut and cream wood. Exactly 12 visible triangle points altogether, six above and six below. A clear empty playing area separates the two rows. NO seventh triangle, decorative extra triangles, fragmented triangles or extra points.\nExact game arrangement: A legal standard initial backgammon setup, 15 dark brown round checkers and 15 ivory round checkers on the complete board. On this VISIBLE right leaf, there are exactly FOUR straight tidy single-file piles: FIVE dark round checkers on the far-left point, TWO dark round checkers on the far-right point; FIVE ivory round checkers on the near-left point, TWO ivory round checkers on the near-right point. Their individual circular discs and separating edges are visible and countable. All other visible points are empty. The remaining eight dark and eight ivory checkers are on the unseen left leaf in the normal initial arrangement. No extra loose checkers on the table or bar. Exactly TWO small ivory cube dice rest in the empty center of the shown playing area, with black dot pips, physically correct dots, no written numerals.\nStyle/medium: Photorealistic real camera capture, normal 50mm lens appearance, credible perspective and scale, enough focus to count the triangles and checkers. Warm natural light, soft shadows, slight camera grain, no illustration, no CGI shine, no HDR.\nConstraints: New original text-only image. Board half is the central main subject and the deliberate crop must retain both complete visible six-point quadrants. No text, letters, written numbers, logos, watermark, image border, national symbols, people, hands, faces. Dice dots are the only numeric representation.",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/tavli/original-generation.png",
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "dimensionsVerified": true,
+        "modeVerified": true,
+        "sRGBProfileEmbedded": true,
+        "iccDescription": "sRGB built-in",
+        "DescriptionExact": true,
+        "SourceExact": true,
+        "status": "rejected-content-geometry",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/tavli/qa-native.png",
+        "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-uusinnat-20261009/production/tavli/qa-480.jpg",
+        "checkedAtUTC": "2026-10-09T06:44:46.650394+00:00",
+        "noTextLettersLogosWatermarkBorder": true,
+        "noPeopleHandsFaces": true,
+        "photorealisticMaterialAppearance": true,
+        "visibleDarkCheckers": 7,
+        "visibleIvoryCheckers": 7,
+        "visibleDice": 2,
+        "checkerRows": [
+          5,
+          2,
+          5,
+          2
+        ],
+        "rightLeafEmptyPointsBetweenCheckerRows": [
+          5,
+          5
+        ],
+        "rightLeafImpliedPointPositionsPerQuadrant": [
+          7,
+          7
+        ],
+        "visibleCompleteCorrectQuadrants": 0,
+        "leftLeaf": "incomplete cropped strip; no whole quadrant count can be certified",
+        "boardGeometryVerified": false,
+        "legalCheckerArrangementVerified": false,
+        "total15Plus15CannotBeVerifiedFromCrop": true,
+        "teaCupVisible": true,
+        "marquetryBoardAndWarmCafeVisible": true,
+        "limitations": [
+          "Right leaf has five empty alternating triangular points between each pair of edge checker rows. With both checker rows located on legal point positions this implies seven positions per quadrant rather than six; the five-checker left edge piles obscure their point markings, so the alternative reading leaves those checkers off the marked points. Left leaf is only an incomplete cropped strip, with no complete quadrant available for verification. No permitted crop preserving a demonstrably correct complete quadrant plus dice and cafe setting was established. Exact 24 points and legal 15+15 arrangement cannot be certified. One generation only; candidate retained as QA evidence and omitted from delivery."
+        ]
+      }
+    }
+  ],
+  "productionPhaseComplete": true,
+  "allRequestedImagesDelivered": false,
+  "allR2ReadbacksByteExact": true,
+  "deliveryStatus": "R2verified-prepared-for-normal-mailbox-push",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T06:59:56.071849+00:00"
+}
