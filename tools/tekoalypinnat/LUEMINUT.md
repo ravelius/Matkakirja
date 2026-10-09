@@ -16,3 +16,19 @@ Komento (mikä tahansa python3; ComfyUI käynnistyy tarvittaessa taustalle 127.0
 Koetulokset 9.10. (_tyo/karttaseppa/tekoalypinnat-koe/vertailu-*.jpg; ylhäällä renderi ja syvyys, alhaalla tulos ja tulos + renderin reunat punaisella):
 - Massat, katot ja pylväiköt osuvat. Rakennusalueella 64–82 % tuloksen reunoista on ±3 px:n päässä renderin reunasta, ja renderin reunoista 68–80 % toistuu.
 - Ikkunat siirtyvät osin mallin omaan ruudukkoon. Voimakkaampi reunaohjaus (0,8) auttaa. Taivas ja tausta (syvyys 0) keksitään, joten ne rajataan maskilla.
+
+## Hiottu työnkulku (9.10. ilta, PT: ikkunat ±3 px, pilvinen valo) — SUOSITUS F
+
+    python3 viivat.py <kansio> <nimi>          # → <nimi>_viivat.png (syvyysreunat + ikkunoiden ääriviivat)
+    python3 pinta.py --syvyys <nimi>_syvyys16.png --reunat <nimi>_viivat.png --tile <nimi>_renderi.png --tile-voima 0.3 \
+      --syvyys-voima 0.8 --reunat-voima 1.0 --reunat-loppu 1.0 --kehote "…, tall glass windows with white frames, photorealistic" \
+      --ulos tulos.png --leveys 1360 --korkeus 768        # --valaistus pilvinen on oletus
+
+| versio | ikkunat ±3 px (lähi / risaliitti) | reunatarkkuus | tummat % |
+|---|---|---|---|
+| v1 | 77 / 65 | 71 / 64 | 4,05 / 1,64 |
+| D tile 0,6 | 90 / 74 | 96 / 94 | 0,37 / 0,14 (kopioi renderin pinnat) |
+| E viivat | 98 / 99 | 82 / 79 | 1,19 / 0,41 |
+| F viivat + tile 0,3 | 99 / 99 | 89 / 86 | 0,12 / 0,09 |
+
+Muut valinnat: --pohja <renderi> --denoise 0.6 (img2img), --tile/--tile-voima, --reunat-loppu, --valaistus ei.

@@ -59,8 +59,20 @@ def tyonkulku(a, syv, reu, reu_kuvasta, viite):
         kuva = ['9', 0]
         if reu_kuvasta: g['9b'] = {'class_type': 'Canny', 'inputs': {'image': ['9', 0], 'low_threshold': 0.3, 'high_threshold': 0.7}}; kuva = ['9b', 0]
         g['11'] = {'class_type': 'ControlNetApplyAdvanced', 'inputs': {'positive': ['10', 0], 'negative': ['10', 1], 'control_net': ['7', 0], 'image': kuva,
-                   'strength': a.reunat_voima, 'start_percent': 0.0, 'end_percent': 0.75, 'vae': ['2', 0]}}
+                   'strength': a.reunat_voima, 'start_percent': 0.0, 'end_percent': a.reunat_loppu, 'vae': ['2', 0]}}
         pos, neg = ['11', 0], ['11', 1]
+    if getattr(a, 'tile_n', None):
+        g['21'] = {'class_type': 'SetUnionControlNetType', 'inputs': {'control_net': ['5', 0], 'type': 'tile'}}
+        g['22'] = {'class_type': 'LoadImage', 'inputs': {'image': a.tile_n}}
+        g['23'] = {'class_type': 'ControlNetApplyAdvanced', 'inputs': {'positive': pos, 'negative': neg, 'control_net': ['21', 0], 'image': ['22', 0],
+                   'strength': a.tile_voima, 'start_percent': 0.0, 'end_percent': 0.8, 'vae': ['2', 0]}}
+        pos, neg = ['23', 0], ['23', 1]
+    latentti = ['13', 0]
+    if getattr(a, 'pohja_n', None):
+        g['24'] = {'class_type': 'LoadImage', 'inputs': {'image': a.pohja_n}}
+        g['25'] = {'class_type': 'ImageScale', 'inputs': {'image': ['24', 0], 'upscale_method': 'lanczos', 'width': a.leveys, 'height': a.korkeus, 'crop': 'center'}}
+        g['26'] = {'class_type': 'VAEEncode', 'inputs': {'pixels': ['25', 0], 'vae': ['2', 0]}}
+        latentti = ['26', 0]
     if viite:
         g['17'] = {'class_type': 'IPAdapterModelLoader', 'inputs': {'ipadapter_file': 'ip-adapter-plus_sdxl_vit-h.safetensors'}}
         g['18'] = {'class_type': 'CLIPVisionLoader', 'inputs': {'clip_name': 'CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors'}}
@@ -68,8 +80,8 @@ def tyonkulku(a, syv, reu, reu_kuvasta, viite):
         g['20'] = {'class_type': 'IPAdapterAdvanced', 'inputs': {'model': ['1', 0], 'ipadapter': ['17', 0], 'image': ['19', 0], 'weight': a.viite_voima,
                    'weight_type': a.viite_tapa, 'combine_embeds': 'concat', 'start_at': 0.0, 'end_at': 1.0, 'embeds_scaling': 'V only', 'clip_vision': ['18', 0]}}
         malli = ['20', 0]
-    g['14'] = {'class_type': 'KSampler', 'inputs': {'model': malli, 'positive': pos, 'negative': neg, 'latent_image': ['13', 0], 'seed': a.siemen,
-               'steps': a.askeleet, 'cfg': a.cfg, 'sampler_name': 'dpmpp_2m', 'scheduler': 'karras', 'denoise': 1.0}}
+    g['14'] = {'class_type': 'KSampler', 'inputs': {'model': malli, 'positive': pos, 'negative': neg, 'latent_image': latentti, 'seed': a.siemen,
+               'steps': a.askeleet, 'cfg': a.cfg, 'sampler_name': 'dpmpp_2m', 'scheduler': 'karras', 'denoise': a.denoise}}
     return g
 
 def main():
@@ -80,10 +92,20 @@ def main():
     p.add_argument('--askeleet', type=int, default=28); p.add_argument('--cfg', type=float, default=6.0); p.add_argument('--siemen', type=int, default=1)
     p.add_argument('--syvyys-voima', type=float, default=0.7); p.add_argument('--reunat-voima', type=float, default=0.5)
     p.add_argument('--viite-voima', type=float, default=0.6); p.add_argument('--viite-tapa', default='style transfer')
+    p.add_argument('--reunat-loppu', type=float, default=0.75, help='reunaohjauksen loppu (0–1); 1.0 = koko generointi')
+    p.add_argument('--pohja', help='img2img: renderi pohjakuvaksi (rakenne lukkoon), käytä --denoise 0.55–0.7')
+    p.add_argument('--denoise', type=float, default=1.0)
+    p.add_argument('--tile', help='union tile -ohjaus kuvasta (yleensä renderi): ikkunaruudukko ja mittasuhteet')
+    p.add_argument('--tile-voima', type=float, default=0.5)
+    p.add_argument('--valaistus', choices=['pilvinen', 'ei'], default='pilvinen', help='pilvinen: tasainen valo, ei leivottuja varjoja eikä kiiltoja (peli valaisee itse)')
     a = p.parse_args()
+    if a.valaistus == 'pilvinen':
+        a.kehote += ', overcast sky, soft diffuse even lighting, no cast shadows, matte surfaces'
+        a.kielto += ', harsh shadows, direct sunlight, cast shadows, specular highlights, glare, reflections, lens flare, night'
     kaynnista(); t0 = time.time()
     syv = laheta(a.syvyys); reu = laheta(a.reunat) if a.reunat else None; reuk = laheta(a.reunat_kuvasta) if a.reunat_kuvasta else None
     vii = laheta(a.viite) if a.viite else None
+    a.pohja_n = laheta(a.pohja) if a.pohja else None; a.tile_n = laheta(a.tile) if a.tile else None
     pid = json.loads(pyynto('/prompt', json.dumps({'prompt': tyonkulku(a, syv, reu, reuk, vii), 'client_id': 'pinta'}).encode()))['prompt_id']
     while True:
         h = json.loads(pyynto(f'/history/{pid}'))
