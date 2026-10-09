@@ -626,6 +626,9 @@ namespace Matkakirja.Natiivi
             l.AlkuNayte = a.timeSamples;
         }
 
+        int jaksoTaukoNahty;
+        float jaksoTaukoLoppuu;
+
         void Update()
         {
             if (jaassa || Tila == null) return;
@@ -634,6 +637,9 @@ namespace Matkakirja.Natiivi
             List<Action> teot = null;
             void Tee(Action a) => (teot ??= new List<Action>()).Add(a);
             PaivitaPooli(dt);
+            // Kaupunkijakson tauko (AaniTila.JaksonTaukoNro/Ms): ajastus täällä, siirtymä hitaaseen kappaleeseen koneessa.
+            if (Tila.JaksonTaukoNro != jaksoTaukoNahty) { jaksoTaukoNahty = Tila.JaksonTaukoNro; jaksoTaukoLoppuu = nyt + Tila.JaksonTaukoMs / 1000f; }
+            if (jaksoTaukoLoppuu > 0 && nyt >= jaksoTaukoLoppuu) { jaksoTaukoLoppuu = 0; int nro = jaksoTaukoNahty; Tee(() => Tila.JaksonTaukoOhi(nro)); }
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
             for (int i = elavat.Count - 1; i >= 0; i--)
