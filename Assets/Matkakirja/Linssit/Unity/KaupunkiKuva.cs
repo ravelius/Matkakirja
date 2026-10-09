@@ -43,6 +43,9 @@ namespace Matkakirja.Natiivi
         // VuorokausiPaalla oletuksena (Päätoimittaja 6.10. 21.0x kuittasi sävykolmikon 20.53: aamu kullanlämmin, päivä neutraali, ilta
         // hillitty; juna 154): automaattinen vuorokausi = kohteen paikallisen ajan sävy, ilman pelaajan valintaa.
         public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = true, Kupoli = false;
+        /// <summary>Kaupungin ympäristövalo (LS2 9.10., PT junaan 171): kartan tasainen ambientti jaetaan taivaaseen, horisonttiin ja
+        /// maahan omille malleille ja veneille (YmparistoValo). Asetus "ymparistovalo 0|1" kuvapareille.</summary>
+        public static bool Ymparistovalo = true;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
         /// <summary>Terävöitys 0–1 (KaupunkiTerava, kuvanlaatulista kohta 1; oletus pois kuvapariin ja iPad-mittaukseen asti).</summary>
         public static float Terava = 0f;
@@ -247,6 +250,7 @@ namespace Matkakirja.Natiivi
                         case "vuorokausi": VuorokausiPaalla = v != 0; break;
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
+                        case "ymparistovalo": Ymparistovalo = v != 0; break;
                         case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                         case "yovalot": KaupunkiYovalot.Kaytossa = v != 0; break;
                         case "yohehku": KaupunkiYovalot.Hehku = v; break;
@@ -304,6 +308,7 @@ namespace Matkakirja.Natiivi
     {
         CesiumKaupunki kaupunki;
         bool vanhaSumu; FogMode vanhaMoodi; Color vanhaVari, vanhaTausta; float vanhaAlku, vanhaLoppu;
+        AmbientMode vanhaAmbMoodi; Color vanhaAmbTaivas, vanhaAmbEkv, vanhaAmbMaa, ambPohja, ambViime; bool ambKirjoitettu;
         GameObject kupoli; Material kupoliMat; Mesh kupoliMesh; bool kupoliIlmakeha;
         float edellinenLoki = -999f, luettu;
         static readonly int IdHorisontti = Shader.PropertyToID("_TaivasHorisontti"), IdLaki = Shader.PropertyToID("_TaivasLaki"),
@@ -315,6 +320,8 @@ namespace Matkakirja.Natiivi
             vanhaSumu = RenderSettings.fog; vanhaMoodi = RenderSettings.fogMode; vanhaVari = RenderSettings.fogColor;
             vanhaAlku = RenderSettings.fogStartDistance; vanhaLoppu = RenderSettings.fogEndDistance;
             vanhaTausta = k.Kamera != null ? k.Kamera.backgroundColor : Color.black;
+            vanhaAmbMoodi = RenderSettings.ambientMode; vanhaAmbTaivas = RenderSettings.ambientSkyColor;
+            vanhaAmbEkv = RenderSettings.ambientEquatorColor; vanhaAmbMaa = RenderSettings.ambientGroundColor; ambKirjoitettu = false;
         }
 
         public void Lopeta()
@@ -322,9 +329,35 @@ namespace Matkakirja.Natiivi
             RenderSettings.fog = vanhaSumu; RenderSettings.fogMode = vanhaMoodi; RenderSettings.fogColor = vanhaVari;
             RenderSettings.fogStartDistance = vanhaAlku; RenderSettings.fogEndDistance = vanhaLoppu;
             if (kaupunki?.Kamera != null) kaupunki.Kamera.backgroundColor = vanhaTausta;
+            if (ambKirjoitettu) PalautaYmparisto(true);
             if (kupoli != null) Destroy(kupoli);
             if (kupoliMat != null) Destroy(kupoliMat);
             if (kupoliMesh != null) Destroy(kupoliMesh);
+        }
+
+        /// <summary>Kaupungin ympäristövalo (LS2 9.10., PT junaan 171; Googlen laatat unlit, eivät muutu): Aurinko.Kompensoi kirjoittaa
+        /// kartan tasaisen ambientin ruudun alussa (ambientLight = ambientSkyColor); tämä ajetaan sen jälkeen (DefaultExecutionOrder 5000)
+        /// ja jakaa sen Trilightiksi. Pohja luetaan uudelleen vain, kun Aurinko on kirjoittanut uuden arvon (muuten oma arvo kertautuisi).</summary>
+        void PaivitaYmparisto(float aurinkoAst, float pilvisyys)
+        {
+            var nyt = RenderSettings.ambientSkyColor;
+            if (!ambKirjoitettu || Mathf.Abs(nyt.r - ambViime.r) + Mathf.Abs(nyt.g - ambViime.g) + Mathf.Abs(nyt.b - ambViime.b) > 1e-4f) ambPohja = nyt;
+            if (!KaupunkiKuva.Ymparistovalo) { if (ambKirjoitettu) PalautaYmparisto(false); return; }
+            var l = ambPohja.linear;
+            var (t, h, m) = Matkakirja.Linssit.Ilmakeha.YmparistoValo.Laske(l.r, l.g, l.b, aurinkoAst, pilvisyys);
+            Color C(double[] c) => new Color((float)c[0], (float)c[1], (float)c[2], ambPohja.a).gamma;
+            RenderSettings.ambientMode = AmbientMode.Trilight;
+            RenderSettings.ambientSkyColor = C(t); RenderSettings.ambientEquatorColor = C(h); RenderSettings.ambientGroundColor = C(m);
+            ambViime = RenderSettings.ambientSkyColor; ambKirjoitettu = true;
+        }
+
+        /// <summary>Kartan tila takaisin: tasainen pohja (asetus pois) tai kaupungin avausta edeltävä tila (Lopeta).</summary>
+        void PalautaYmparisto(bool alkuun)
+        {
+            RenderSettings.ambientMode = vanhaAmbMoodi;
+            RenderSettings.ambientSkyColor = alkuun ? vanhaAmbTaivas : ambPohja;
+            if (alkuun) { RenderSettings.ambientEquatorColor = vanhaAmbEkv; RenderSettings.ambientGroundColor = vanhaAmbMaa; }
+            ambKirjoitettu = false;
         }
 
         /// <summary>Taivaskupoli (DioraamaTaivas-varjostin, Background-jono ilman syvyyskirjoitusta): piirtyy ensin, laatat sen päälle.
@@ -440,6 +473,7 @@ namespace Matkakirja.Natiivi
                 KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.45f, 0.95f, harmaus),
                     KaupunkiIlmakeha.TuuliMs * Time.time, mt);
                 kaupunki.Vesi?.Paivita(kamera);
+                PaivitaYmparisto(KaupunkiKuva.KoriAurinkoKorkeus, Mathf.Lerp(0.45f, 0.95f, harmaus));
             }
             if (KaupunkiKuva.jako != null)
             {
