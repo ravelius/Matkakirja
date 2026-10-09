@@ -558,7 +558,32 @@ namespace Matkakirja.Editori
                 }, () => { UiNakymat.Hae().Linssit.TestiKarttalinssi(null); SuljeKaikki(); }, 1.0),
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
                 () => { var o = OpasValikko.Hae(); o.Komento("mika pois"); o.Komento("vapaalento pois"); o.Komento("sulje"); }, 0.6),
+            // Pulu (Natiivi-UI 10.10.2026): kuplapino suoraan PuluKuplat.Lisaa:lla (Sano piilottaa tekstit oletuksena), lyhyt ja
+            // pitkä kupla pinoon ilman ääntä; matkakirjan merkintä kuten `ui matkakirja tanger` + `auki`; Pulun chat linssissä
+            // (Minipulun kortti) kuten `ui chat teema lasi`.
+            ("Pulun kuplat", () =>
+                {
+                    var p = UiNakymat.Hae().Pulu;
+                    p.Nayta(true);
+                    p.Kuplat.Lisaa(PuluLyhyt, 20000f, aani: false);
+                    p.Kuplat.Lisaa(PuluPitka, 20000f, aani: false);
+                }, () => UiNakymat.Hae().Pulu.Kuplat.TyhjennaKaikki(), 0.8),
+            ("matkakirja", () =>
+                {
+                    var u = UiNakymat.Hae();
+                    u.Saapuminen.Testi("tanger", "", t => { Kirjaa("-- matkakirja: " + t); u.Matkakirja.Avaa(); });
+                }, () => { UiNakymat.Hae().Matkakirja.Piilota(); SuljeKaikki(); }, 3.0),
+            ("Pulun chat linssissä", () =>
+                {
+                    var juuri = UiKerros.Hae().Juuri(UiKerros.Valikot);
+                    UiNakymat.Hae().Chat.AvaaLinssissa(() => juuri == null ? default : new Rect(juuri.layout.width - 80, juuri.layout.height - 120, 60, 60),
+                        "testi", new List<string> { "Mitä tässä näkyy?", "Kuka rakensi tämän?" }, "lasi");
+                }, () => { UiNakymat.Hae().Chat.Sulje(); SuljeKaikki(); }, 1.0),
         };
+
+        const string PuluLyhyt = "Minä olen Livia. Kirjekyyhky, en mikään pulu.";
+        const string PuluPitka = "Tangerin satamassa kauppiaat huusivat hintojaan kolmella kielellä, ja isoisäsi kirjoitti muistiin jokaisen, "
+            + "jonka ymmärsi.\n\nKatso, mitä hän piirsi sivun reunaan: kasbahin portin, jonka kaaren alla seisoi vesikauppias kuparimaljoineen.";
 
         static void SuljeKaikki() => UiNakymat.Hae().SuljeKaikki();
 
