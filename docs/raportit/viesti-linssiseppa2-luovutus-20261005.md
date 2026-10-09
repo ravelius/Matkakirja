@@ -35,7 +35,15 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 09.0x (uusin)
+## TILA 9.10. klo 09.5x (uusin)
+- JUNA 170 kuitattu: ea60457f9 + 811d26cf8 (Tukholman yö: vesi kaukana nosto + syvä sävy, loppuillan maa yhtenäiseksi). index-v4 200.
+- JUNA 171 (proto-haarat): ymparistovalo-171 b4a393994 (KUITATTU, Natiisepällä); sade-171 ad5b874b3 (sadepilvet, Salama-API, yöpilvet
+  näyttöarvona; LS1 yhdisti kierros-170:een 3fdf75648); laivat-171 b8da55364 (Pariisin jokilaiva + kiertoajelu tarkkoina; PT: simukuvan
+  jälkeen); kaukomaa-171 eb8b30b14 (aluskerros > 1200 m + testiasetukset). Yhdistetty kuvavuoro jonossa ~10.15:
+  kaanna-ja-kuvaa-kaukomaa.sh (kaukomaa 12 km, KL v1.6, ND v4 + länsi, Seinen läikkä vesi 0/1, Pariisin laivat), vienti20.
+- Ämpäri: omat mallit v6 (ND v3) viety 09.11, uusin-2 → v6 vasta TF 171:n kanssa (Julkaisijan pidossa.txt).
+
+## TILA 9.10. klo 09.0x
 - JUNA 170: ea60457f9 KUITATTU (PT). Natiiviseppä tekee lopullisen.
 - 171 haarat (proto): ymparistovalo-171 b4a393994 (Trilight, v2 vahvempi; kuvat lokit/linssiseppa2-171z-*: ND +12–20 RGB, Kuninkaanlinnan
   pohjoissivun ruskeus materiaalissa → LR) odottaa PT:n kuittausta; sade-171 145cc24c8 (sadepilvet, Sade kuuroon, Salama-API; LS1 yhdisti
