@@ -2198,5 +2198,362 @@
    "Mitä kolmikymmenvuotisessa sodassa tapahtui?",
    "Mikä oli Ruotsin suurvaltakausi?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuhmo",
+  "kysymys": "Miksi Elias Lönnrot kulki Kuhmon kautta Karjalaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Lönnrot kulki Kuhmon kautta, koska hän matkusti keräämään kansanrunoja Karjalaan, ja Kuhmo sijaitsi sillä reitillä. [[Elias Lönnrot]] keräsi vanhoja runoja 1830-luvulta alkaen ja kokosi niistä [[Kalevalan]]. Osan Kalevalasta hän muokkasi juuri Kuhmossa, ja hänen majapaikkansa jäljennös on nykyisin [[Kalevalakylässä]]. Runoja ei tuohon aikaan pääasiassa luettu vaan laulettiin, usein kahden laulajan vuorolauluna. Pitkä matka ilman siipiä.",
+  "linkit": [
+   "Elias Lönnrot",
+   "Kalevalan",
+   "Kalevalakylässä"
+  ],
+  "jatkot": [
+   "Miten kalevalamittaa laulettiin?",
+   "Mitä Gallen-Kallela teki Kuhmossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuhmo",
+  "kysymys": "Mikä on karelianismi, ja miten Kuhmo liittyy siihen?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Karelianismi on 1800-luvun lopun kansallisromanttinen taiteen ja kulttuurin suuntaus, joka haki aiheitaan Karjalasta ja Kalevalan maailmasta. Kalevalan ilmestyminen vuonna 1835 vauhditti sen syntyä. Kuhmo liittyy siihen monella tavalla: [[Akseli Gallen-Kallela]], yksi suuntauksen tunnetuimmista edustajista, vietti häämatkansa Kuhmossa ja maalasi töitään Lentua-järven Lapinsalmella. Lentuan maisema on [[Aino-triptyykin]] keskimmäisen taulun taustana. Taiteilijoilla oli kyl hyvä maku häämatkakohteissa.",
+  "linkit": [
+   "Akseli Gallen-Kallela",
+   "Aino-triptyykin"
+  ],
+  "jatkot": [
+   "Mikä on Aino-triptyykki ja mitä se esittää?",
+   "Miksi Kalevala oli niin tärkeä suomalaisille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuhmo",
+  "kysymys": "Mikä on kalevalamitta, ja miten runoja laulettiin?",
+  "uusi": true,
+  "vastaus": "Ai se. Kalevalamitta on vanhojen suomalaisten runojen säemitta, jossa säkeessä on kahdeksan tavua. Runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Valokuvaaja [[I. K. Inha]] kuvasi laulajaveljekset [[Vienan Uhtualla]] vuonna 1894.\n\nKaksi laulajaa ja yksi käsipari kuulostaa minusta kovasti postinkuljetukselta: toinen kantaa säkeen perille ja toinen ottaa sen vastaan. Sukuni olisi ymmärtänyt tuon ilman selityksiä.",
+  "linkit": [
+   "I. K. Inha",
+   "Vienan Uhtualla"
+  ],
+  "jatkot": [
+   "Miten Lönnrot kokosi Kalevalan runoista?",
+   "Kuka I. K. Inha oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuhmo",
+  "kysymys": "Mitä terva on, ja miksi sitä tuotettiin Kuhmossa?",
+  "uusi": true,
+  "vastaus": "Kato, tost minä osaan kertoo. Terva on puusta, etenkin männystä, poltettu tumma ja tahmea aine, jota käytettiin muun muassa puuveneiden ja köysien suojaamiseen. Sitä valmistettiin [[tervahaudassa]], jossa puuta poltettiin hapettomissa oloissa. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin, ja laajoilla metsillä oli luultavasti tärkeä osa asiassa. Terva oli tuohon aikaan arvokas [[vientitavara]], mutta tarkemmista määristä en ole varma. Hajusta minä en pidä.",
+  "linkit": [
+   "tervahaudassa",
+   "vientitavara"
+  ],
+  "jatkot": [
+   "Mihin terva on muuten käytetty?",
+   "Miten tervahauta toimi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuhmo",
+  "kysymys": "Mikä on Aino-triptyykki ja mikä sen yhteys Kuhmoon?",
+  "uusi": true,
+  "vastaus": "No niin. Aino-triptyykki on [[Akseli Gallen-Kallelan]] kolmiosainen maalaus, joka kuvaa Kalevalan Ainon tarinaa: Aino ei halunnut vanhaa [[Väinämöistä]] puolisokseen. Teos syntyi 1890-luvun alussa, mutta tarkasta vuodesta en ole varma. Yhteys Kuhmoon on, että taiteilija vietti siellä häämatkansa ja maalasi töitään Lentua-järven Lapinsalmella, ja [[Lentuan]] maisema näkyy triptyykin keskimmäisen taulun taustalla. Kyl se on kaunis yhteys.",
+  "linkit": [
+   "Akseli Gallen-Kallelan",
+   "Väinämöistä",
+   "Lentuan"
+  ],
+  "jatkot": [
+   "Kuka oli Akseli Gallen-Kallela?",
+   "Mikä on Ainon tarina Kalevalassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaustinen",
+  "kysymys": "Miksi kaustislaiset matkustivat Tukholmaan kuningas Kustaa III:n puheille?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Kaustislaiset lähettivät valtuuskunnan [[Tukholmaan]], koska he halusivat oman kirkon ja pitkät kirkkomatkat pois. Kuningas [[Kustaa III]] antoi kesäkuussa 1776 luvan kirkon rakentamiseen, ja kirkko valmistui syksyllä 1777. Matka oli siis kannattava: luvalla [[Kaustisen]] asukkaat saivat jumalanpalveluksen lähemmäs kotia. Siinä oli kyl pitkä reissu hakea yksi lupa.",
+  "linkit": [
+   "Tukholmaan",
+   "Kustaa III",
+   "Kaustisen"
+  ],
+  "jatkot": [
+   "Miksi kirkkomatkat olivat aikoinaan niin pitkiä?",
+   "Mikä Kaustisessa on tunnettua?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaustinen",
+  "kysymys": "Mitä yhteistä Kaustisella ja Peanuts-sarjan Woodstock-linnulla on?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. En ole varma, että niillä on mitään yhteistä, enkä halua keksiä sellaista. Woodstock on Peanuts-sarjan pieni keltainen lintuhahmo, kun taas Kaustinen on keskipohjalainen kunta, joka tunnetaan pelimanniperinteestään ja jonka vaakunassa on viulu. Joka heinäkuu siellä järjestetään [[Kaustisen kansanmusiikkijuhlat]], ja vuonna 2021 [[kaustislainen viulunsoitto]] hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon. Lintu on lintu, mut sukulaisuutta en ala väittää.",
+  "linkit": [
+   "Kaustisen kansanmusiikkijuhlat",
+   "kaustislainen viulunsoitto"
+  ],
+  "jatkot": [
+   "Millaista Kaustisen pelimannimusiikki on?",
+   "Mitä viulu vaakunassa kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaustinen",
+  "kysymys": "Mitä Kaustisen kansanmusiikkijuhlilla tapahtuu?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kaustisen kansanmusiikkijuhlat järjestetään joka heinäkuu, ja ne ylläpitävät paikkakunnan elävää kansanmusiikkiperinnettä. Kunnan vaakunassa on viulu, ja [[pelimanniperinne]] on Kaustisella vanha ja yhä elävä. Ohjelman yksityiskohdista en ole täysin varma, mutta musiikki on juhlien ydin. Vuonna 2021 [[kaustislainen viulunsoitto]] hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon, mikä kertoo perinteen arvostuksesta. Kuuntelisin mielelläni, kunhan joku jättäisi pullan ikkunalaudalle.",
+  "linkit": [
+   "pelimanniperinne",
+   "kaustislainen viulunsoitto"
+  ],
+  "jatkot": [
+   "Mitä Unescon aineeton kulttuuriperintö tarkoittaa?",
+   "Millaisia soittimia pelimannit soittavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaustinen",
+  "kysymys": "Miksi terva oli talonpojalle niin tärkeä tulonlähde?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Terva]] oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde Kaustisella. Sitä tarvittiin puualusten ja köysien suojaamiseen, joten kysyntää riitti, ja tervaa vietiin myös ulkomaille. Talonpoika sai metsästään ja työstään rahaa, jota maatalous ei tuolloin yksin tuottanut. Yksityiskohtaisista hinnoista en ole varma. Terva on [[Pohjanmaan]] historiassa iso asia, ja se kuuluu jokaisen lintusilmäisen havaintoihin.",
+  "linkit": [
+   "Terva",
+   "Pohjanmaan"
+  ],
+  "jatkot": [
+   "Mistä terva valmistetaan?",
+   "Miten tervaa kuljetettiin rannikolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaustinen",
+  "kysymys": "Mitä Unescon aineeton kulttuuriperintö tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Unescon luettelo kokoaa elävää perinnettä: tapoja, musiikkia, käsityötaitoja ja kertomuksia, jotka siirtyvät sukupolvelta toiselle. Kyse ei siis ole rakennuksista tai alueista vaan tekemisestä ja osaamisesta. Kaustisen tapauksessa luetteloon hyväksyttiin vuonna 2021 [[kaustislainen viulunsoitto]], joka on osa paikallista [[pelimanniperinnettä]]. Se kertoo, että perinne on yhä elävä. Ja kyyhkyjenkin taito pitäisi kirjata sinne.",
+  "linkit": [
+   "kaustislainen viulunsoitto",
+   "pelimanniperinnettä"
+  ],
+  "jatkot": [
+   "Mitä muuta Suomesta on Unescon luettelossa?",
+   "Miten kansanmusiikkia on siirretty eteenpäin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-inari",
+  "kysymys": "Miksi Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Inarin kylässä sijaitsevat [[Siida]], jossa toimivat Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus [[Sajos]]. Näiden vuoksi Inari on saamelaiskulttuurin keskeinen paikka Suomessa. Lisäksi kunnalla on neljä virallista kieltä: suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Pääkaupunki kuulostaa isolta, mut kylä on pieni.",
+  "linkit": [
+   "Siida",
+   "Sajos"
+  ],
+  "jatkot": [
+   "Mitä Siidassa voi nähdä?",
+   "Kuinka paljon saamelaisia Suomessa asuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-inari",
+  "kysymys": "Mitä kieliä Inarissa puhutaan, ja mitä ne kertovat alueen asukkaista?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Inarissa on neljä virallista kieltä: suomi sekä [[inarinsaame]], [[koltansaame]] ja [[pohjoissaame]]. Kielet kertovat, että alueella elää useampi saamelaisryhmä, joilla jokaisella on oma kielensä ja kulttuurinsa. Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä, ja 1990-luvun puolivälissä sitä puhui lapsilleen enää kaksi perhettä. Vuonna 1997 aloitettiin [[kielipesä]], ja nykyisin puhujia on muutama sata. Kieli siis elää, vaikka vähän.",
+  "linkit": [
+   "inarinsaame",
+   "koltansaame",
+   "pohjoissaame",
+   "kielipesä"
+  ],
+  "jatkot": [
+   "Miten kielipesä toimii?",
+   "Missä koltansaamea puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-inari",
+  "kysymys": "Mitä Siidassa ja Sajoksessa voi nähdä ja kokea?",
+  "uusi": true,
+  "vastaus": "Hmm, annas ku muistan. Inarin kylässä sijaitsee [[Siida]], jossa toimivat Saamelaismuseo ja Pohjois-Lapin luontokeskus. Siellä tutustutaan saamelaiskulttuuriin ja Pohjois-Lapin luontoon. [[Sajos]] on saamelaiskulttuurikeskus, ja sen tarkasta ohjelmasta en ole varma. Yhdessä nämä paikat tekevät kylästä saamelaiskulttuurin keskuksen. Matkaajalle riittää siis tekemistä, vaikkei kylä iso olekaan.",
+  "linkit": [
+   "Siida",
+   "Sajos"
+  ],
+  "jatkot": [
+   "Mikä on Pohjois-Lapin luontokeskus?",
+   "Miten saamelaiskulttuuri näkyy arjessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-inari",
+  "kysymys": "Mitä kylmänkestotestaus on, ja miksi sitä tehdään Inarissa?",
+  "uusi": true,
+  "vastaus": "No jopas. Kylmänkestotestauksessa ajoneuvoja, laitteita ja materiaaleja kokeillaan oikeassa pakkasessa, jotta nähdään, toimivatko ne. Se on yksi Inarin tärkeistä elinkeinoista matkailun ja palvelujen ohella. Syynä on luultavasti [[Lapin]] luotettava talvi ja runsas tila, mutta tarkoista perusteista en ole varma. Inari on pinta-alaltaan Suomen suurin kunta ja samalla yksi harvimmin asutuista, mikä sopii [[kylmänkestotestaukselle]]. Minä testaan pakkasta vain ikkunalaudalla.",
+  "linkit": [
+   "Lapin",
+   "kylmänkestotestaukselle"
+  ],
+  "jatkot": [
+   "Kuinka kylmää Inarissa talvella voi olla?",
+   "Mitkä kansallispuistot ovat Inarin alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-inari",
+  "kysymys": "Mikä on kielipesä ja miten se auttaa kieltä säilymään?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kielipesä on toimintatapa, jossa aikuiset puhuvat lapsille vain uhanalaista kieltä, jotta lapset oppivat sen luonnollisesti. Inarissa aloitettiin vuonna 1997 [[kielipesä]], jossa aikuiset puhuvat lapsille vain [[inarinsaamea]]. Tulos on ollut hyvä: puhujia on nykyisin muutama sata, ja osa kielipesän lapsista opettaa kieltä itse. Näin kieli siirtyy uudelle sukupolvelle. Sellaista pesää minäkin kunnioitan.",
+  "linkit": [
+   "kielipesä",
+   "inarinsaamea"
+  ],
+  "jatkot": [
+   "Miksi inarinsaame oli joutunut uhanalaiseksi?",
+   "Onko kielipesiä muissakin maissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuopio",
+  "kysymys": "Miksi Kuopion katuverkossa on joka toinen katu varattu jalankulkijoille ja pyöräilijöille?",
+  "uusi": false,
+  "vastaus": "Katotaas. Kyse on [[rännikadusta]], jonka Kuopion ensimmäinen asemakaava vuodelta 1776 jätti perinnöksi. Rännikatu tehtiin alun perin palokatkoksi, koska kaupunki oli pääosin puinen ja tuli levisi helposti talosta toiseen. Joka toinen katu varattiin siksi väljäksi vyöhykkeeksi, joka nykyisin palvelee jalankulkijoita ja pyöräilijöitä. Vanha varotoimi on siis muuttunut arjen hyödyksi. Hyvä [[asemakaava]] kestää, mikä ei kyyhkyn pesästä ihan aina pidä paikkaansa.",
+  "linkit": [
+   "rännikadusta",
+   "asemakaava"
+  ],
+  "jatkot": [
+   "Miten kaupungit suojautuivat tulipaloilta ennen?",
+   "Mitä muuta Kuopion historiasta tiedetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuopio",
+  "kysymys": "Mitä kalakukko on, ja miksi Kuopiota sanotaan sen luvatuksi maaksi?",
+  "uusi": false,
+  "vastaus": "Mmm— kalakukko, kyl minä tän tiedän. Kalakukko on savolainen ruoka, jossa kala on leivottu leivän sisään; täytteestä ja tarkasta valmistuksesta en kuitenkaan ole täysin varma. [[Kalakukko]] on Kuopion tunnetuimpia ruokia, minkä vuoksi kaupunkia kutsutaan kalakukon luvatuksi maaksi. Kuopio on myös Pohjois-Savon maakuntakeskus, jota ympäröi [[Kallavesi]], joten kalaa on lähellä. Se sopii hyvin tälle paikkakunnalle.\n\nKalakukko ei ole pulla, mutta minä kunnioitan kaikkea, mikä on leivottu. Pitäisi kai joskus maistaa, ennen kuin arvostelen.",
+  "linkit": [
+   "Kalakukko",
+   "Kallavesi"
+  ],
+  "jatkot": [
+   "Mistä kalakukon täyte tehdään?",
+   "Mitä muita savolaisia ruokia on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuopio",
+  "kysymys": "Mikä Puijon torni on, ja mitä sieltä näkee?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Puijo]] on Kuopion tunnettu mäki, ja sen päällä on [[Puijon torni]], jonka Kuopio tuntee omana maamerkkinään. Tornista aukeaa näkymä kaupungin ja sitä ympäröivän järviluonnon ylle. Kuopion osat sijaitsevat saarilla, ja [[Kallavesi]] ympäröi kaupunkia, joten vesi hallitsee maisemaa. Tornin tarkasta korkeudesta en ole varma. Ylhäältä katsoen näkee sen, minkä me kyyhkyt näemme joka päivä.",
+  "linkit": [
+   "Puijo",
+   "Puijon torni",
+   "Kallavesi"
+  ],
+  "jatkot": [
+   "Miksi Puijo on kuopiolaisille tärkeä?",
+   "Mitä Kallavesi on järvenä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuopio",
+  "kysymys": "Miksi Kuopion perustamisvuodeksi sanotaan 1775 eikä 1653?",
+  "uusi": true,
+  "vastaus": "No niin. Kuopion virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas [[Kustaa III]] määräsi sen Savo-Karjalan läänin hallintokaupungiksi. Asutus oli kuitenkin perustettu jo vuonna 1653, joten kaupungin juuret ovat vanhemmat kuin virallinen päivä. Kuopion ensimmäinen [[asemakaava]] on vuodelta 1776. Kaksi päivämäärää kertoo siis eri asioista: asutuksen alusta ja kaupungin hallinnollisesta asemasta. Virallisuus tuntuu kyl aina vähän kankealta.",
+  "linkit": [
+   "Kustaa III",
+   "asemakaava"
+  ],
+  "jatkot": [
+   "Mitä asemakaava tarkoittaa?",
+   "Mikä oli Savo-Karjalan lääni?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuopio",
+  "kysymys": "Miten Kallavesi on muovannut Kuopion kaupunkia?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kuopio on [[Pohjois-Savon]] maakuntakeskus, jota ympäröi [[Kallavesi]] ja jonka osat sijaitsevat saarilla. Vesi on siis ollut kaupungin muodon ja sijainnin keskeinen tekijä, ja alue on jakautunut vesistön muotoja seuraavasti. Tarkemmista yksityiskohdista, kuten järven koosta, en ole varma. Kallavesi kuuluu kaupungin kuvaan yhtä lailla kuin Puijon mäki ja sen torni. Ylhäältä se näyttää hienolta.",
+  "linkit": [
+   "Pohjois-Savon",
+   "Kallavesi"
+  ],
+  "jatkot": [
+   "Mitä Puijolta näkee?",
+   "Miten järvet vaikuttavat suomalaisten asumiseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kristinestad",
+  "kysymys": "Miksi kaupunki on nimetty Ruotsin kuningattaren mukaan?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä muistan. Kristiinankaupunki sai kaupunkioikeudet vuonna 1649 [[Per Brahe nuoremman]] toimesta [[Koppön]] saarella, ja kaupunki nimettiin Ruotsin [[kuningatar Kristiinan]] mukaan. Nimi kunnioitti siis hallitsijaa, jonka valtakuntaan Suomi tuolloin kuului. Tarkemmista nimeämisen perusteista en ole varma. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Lyhyt nimi sopii kyl pitkään kaupunkiin.",
+  "linkit": [
+   "Per Brahe nuoremman",
+   "Koppön",
+   "kuningatar Kristiinan"
+  ],
+  "jatkot": [
+   "Kuka oli kuningatar Kristiina?",
+   "Mikä on kaupungin ruotsinkielinen nimi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kristinestad",
+  "kysymys": "Mitä Cittaslow tarkoittaa, ja miksi Kristiinankaupungista tuli Suomen ensimmäinen Cittaslow-kaupunki?",
+  "uusi": false,
+  "vastaus": "Kas vaan. [[Cittaslow-liike]] on Italiasta lähtenyt kaupunkien verkosto, jonka jäsenet pyrkivät rauhallisempaan elämänrytmiin, paikalliseen kulttuuriin ja viihtyisään arkeen. Kristiinankaupungista tuli vuonna 2011 Suomen ensimmäinen tällainen kaupunki. Tarkoista kriteereistä en ole varma, mutta kaupungin [[vanha kaupunginosa]] matalien puutalojensa ja kapeiden kujiensa kanssa sopii ajatukseen hyvin. Hidas kaupunki sopii kyyhkylle, joka ei kiirehdi.",
+  "linkit": [
+   "Cittaslow-liike",
+   "vanha kaupunginosa"
+  ],
+  "jatkot": [
+   "Mitä muita Cittaslow-kaupunkeja Suomessa on?",
+   "Miten hidas kaupunki eroaa tavallisesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kristinestad",
+  "kysymys": "Kuka oli Per Brahe nuorempi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. Per Brahe nuorempi oli ruotsalainen valtionmies ja 1600-luvulla Suomen [[kenraalikuvernööri]], eli maan ylin hallintovirkamies. Hänen toimestaan Kristiinankaupunki sai vuonna 1649 kaupunkioikeudet [[Koppön]] saarella. Hänen aikanaan perustettiin useita kaupunkeja, mutta tarkasta luvusta ja virkakausista en ole varma. Nimi kuulostaa suvun muistiinpanoissa tärkeältä. Hyvä, että joku muistaa kaupunkien perustajat.",
+  "linkit": [
+   "kenraalikuvernööri",
+   "Koppön"
+  ],
+  "jatkot": [
+   "Mitä kenraalikuvernööri teki?",
+   "Miten kaupunkioikeudet saatiin 1600-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kristinestad",
+  "kysymys": "Mitä kaksikielisyys tarkoittaa Kristiinankaupungissa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Kristiinankaupunki on [[kaksikielinen]]: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Kaupungissa käytetään siis kahta kieltä arjessa, ja ruotsi on enemmistökieli. Ruotsinkielinen nimi on [[Kristinestad]], ja suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Kaksi kieltä, yksi kaupunki ja yksi kyyhky.",
+  "linkit": [
+   "kaksikielinen",
+   "Kristinestad"
+  ],
+  "jatkot": [
+   "Miksi Suomessa puhutaan ruotsia?",
+   "Missä muualla Suomessa on ruotsinkielisiä alueita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kristinestad",
+  "kysymys": "Millainen on Kristiinankaupungin vanha kaupunginosa?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia [[puutaloja]] ja kapeita kujia. Kaupunki sijaitsee Pohjanmaalla Selkämeren rannalla, ja sen [[Cittaslow]]-asema vuodelta 2011 sopii tähän rauhalliseen kaupunkikuvaan. Tarkemmista rakennuksista en ole varma. Vanha kaupunginosa on säilyttänyt luonteensa. Kapeat kujat ovat kyyhkyn mielestä mukavia: niissä on varjoa.",
+  "linkit": [
+   "puutaloja",
+   "Cittaslow"
+  ],
+  "jatkot": [
+   "Miksi vanhat puukaupungit ovat harvinaisia?",
+   "Mitä Selkämerestä tiedetään?"
+  ]
  }
 ]
