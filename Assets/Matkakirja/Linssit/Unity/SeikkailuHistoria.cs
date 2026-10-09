@@ -180,6 +180,11 @@ namespace Matkakirja.Natiivi
         // Arvio 6: ranta-1499:n leivotussa valoatlaksessa (albedo × valo) on mustia alueita ja mustaa reunatäyttöä pienten UV-saarten välissä;
         // kaukaa (mipit) täyttö näkyi lounaispuolella mustina aukkoina. Historian ajaksi tasainen kalliosävy (atlaksen keskiarvo), palautus lopussa.
         readonly HashSet<Renderer> tasaisetRannat = new HashSet<Renderer>();
+        // Arvio 7: lounaispuolen musta ei ollut tyhjää (järvitaso on kuoren alla) vaan kuvaamattomia mustia tekselejä kuoressa ja
+        // porttikäytävän pimeässä valoatlaksessa, jotka myöhempien rakenteiden leikkaus paljastaa. Historian ajan maan tasolla (y < 4 m)
+        // lähes mustat tekselit kalliosävyllä (DioraamaKuori ja DioraamaLeivottu, globaali; oletus 0 = pois).
+        static readonly int IdMustaKorvaus = Shader.PropertyToID("_DioraamaMustaKorvaus");
+        static readonly Vector4 MustaKorvaus = new Vector4(0.30f, 0.31f, 0.32f, 4f);
         static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
         static void TasainenRanta(Renderer r)
         {
@@ -249,6 +254,7 @@ namespace Matkakirja.Natiivi
                         if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;
                     }
                 SeikkailuKavely.VainVuosileikkaukset = true;
+                Shader.SetGlobalVector(IdMustaKorvaus, MustaKorvaus);
                 PiilotaKavelyosat();
                 if (rakentuu)
                 {
@@ -277,6 +283,7 @@ namespace Matkakirja.Natiivi
             ValotLoppuun();   // historia päättyy: ei jätetä valoja himmeiksi (objekti tuhotaan)
             vaiheet?.Tuhoa(); vaiheet = null;
             SeikkailuKavely.VainVuosileikkaukset = false;
+            Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
             foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
             kavelyPiilossa.Clear();
             foreach (var r in tasaisetRannat) if (r != null) r.SetPropertyBlock(null);

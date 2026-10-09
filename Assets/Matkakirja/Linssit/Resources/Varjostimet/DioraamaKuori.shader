@@ -53,6 +53,7 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             float4 _KuoriLahi;   // x = 1 / toistoväli m, y = voima, z = päällä
 
             half4 _DioraamaSumuVari;
+            half4 _DioraamaMustaKorvaus;   // historia (SeikkailuHistoria): rgb = kalliosävy, a = y-raja (0 = pois); kuvaamattomat mustat tekselit maan tasolla
             float4 _DioraamaSumu;
             float4 _DioraamaValo;
             float4 _DetaljiToisto, _DetaljiKeski, _DetaljiParam; // toisto m (R,G,B,A), keskikirkkaus, (voimakkuus, normaali, päällä)
@@ -200,6 +201,7 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
                     // viivana); leikattu kivi erottuu, mutta seuraa päivän/hämärän kirkkautta.
                     if (Leikkauksessa(i.paikkaW, 0.12)) vari = vari * 1.45h + half3(0.02h, 0.018h, 0.015h);
                 }
+                if (_DioraamaMustaKorvaus.a > 0.5 && i.paikkaW.y < _DioraamaMustaKorvaus.a && max(vari.r, max(vari.g, vari.b)) < 0.012h) vari = _DioraamaMustaKorvaus.rgb;
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 return half4(lerp(vari, _DioraamaSumuVari.rgb, sumu), 1);

@@ -57,6 +57,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
+            half4 _DioraamaMustaKorvaus;   // historia (SeikkailuHistoria): rgb = kalliosävy, a = y-raja (0 = pois); kuvaamattomat mustat tekselit maan tasolla
             float4 _DioraamaSumu; // x = alku (m), y = loppu (m)
             float4 _DioraamaLiekkiPisteet[8];
             float _DioraamaLiekkiMaara;
@@ -177,6 +178,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 #endif
                 vari += DioraamaMarkaHeijastus(dt.normaali, i.paikkaW, mm, dt.karheus, inputData);   // liekit ja kuu märällä kivellä
 
+                if (_DioraamaMustaKorvaus.a > 0.5 && i.paikkaW.y < _DioraamaMustaKorvaus.a && max(vari.r, max(vari.g, vari.b)) < 0.012h) vari = _DioraamaMustaKorvaus.rgb;
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 vari = lerp(vari, _DioraamaSumuVari.rgb, sumu);
