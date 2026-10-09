@@ -35,6 +35,35 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void SaksanKorostukset() => Maa("DEU", 61, 10);
         [Testi] static void ItalianKorostukset() => Maa("ITA", 66, 17);
 
+        // Jatkokysymysten [[ ]] puretaan lukuvaiheessa (PuluValmiit.PuraLinkit): siru ja liveen lähtevä kysymys ovat puhtaita.
+        [Testi] static void JatkojenLinkitPuretaan()
+        {
+            Oleta.Sama("Mitä kultakotka syö?", PuluValmiit.PuraLinkit("Mitä [[kultakotka]] syö?"));
+            Oleta.Sama("Millaisia Ranskan puutarhoja?", PuluValmiit.PuraLinkit("Millaisia [[Ranska|Ranskan]] puutarhoja?"));
+            var tunnetut = new[]
+            {
+                ("FRA", "kohde:hahmotelma-saint-cloud", "Millaisia Ranskan puutarhoja 1600-luvulla suunniteltiin?"),
+                ("ROU", "kohde:hahmotelma-retezat", "Mitä kultakotka syö Retezatissa?"),
+                ("ROU", "kohde:hahmotelma-ceahlau", "Mitä uhanalaiset lajit tarkoittavat?"),
+            };
+            foreach (var (maa, kohta, puhdas) in tunnetut)
+            {
+                var p = PuluValmiit.Lue(Lue("pulu-" + maa.ToLowerInvariant() + ".json"));
+                Oleta.Tosi(p != null && p.Kohdat.ContainsKey(kohta), maa + " " + kohta);
+                var jatkot = p.Kohdat[kohta].Kysymykset.Concat(p.Kohdat[kohta].Lisaa.Values).SelectMany(v => v.Jatkot).ToList();
+                Oleta.Tosi(jatkot.Contains(puhdas), kohta + ": puhdas jatko puuttuu: " + puhdas);
+            }
+            // Kaikissa paketeissa: yksikään jatko ei sisällä merkintöjä.
+            foreach (string maa in new[] { "FRA", "GRC", "DEU", "ITA", "ROU" })
+            {
+                var p = PuluValmiit.Lue(Lue("pulu-" + maa.ToLowerInvariant() + ".json"));
+                foreach (var k in p.Kohdat)
+                    foreach (var v in k.Value.Kysymykset.Concat(k.Value.Lisaa.Values))
+                        foreach (string j in v.Jatkot)
+                            Oleta.Tosi(!j.Contains("[[") && !j.Contains("]]") && !j.Contains("|"), maa + " " + k.Key + ": jatkossa merkintä: " + j);
+            }
+        }
+
         [Testi] static void KysymysPurkautuuKasitteeksi()
         {
             Oleta.Sama("Bysantti", PuluValmiit.KerroLisaa(PuluValmiit.KerroLisaaKysymys(" Bysantti ")));
