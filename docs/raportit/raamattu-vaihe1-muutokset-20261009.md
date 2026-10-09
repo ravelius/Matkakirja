@@ -6,7 +6,7 @@ Pohja: docs/raportit/raamattu-lapikaynti-20261009.md (279 löydöstä). Tämä v
 
 - **94 muutosta** (rivialueita) 80 ehdokkaan pohjalta: päivitä 35, poista-päällekkäinen 33, poista 19, tilamerkintä 7. Tiedosto 4016 → 3789 riviä (+118/−345). Osio "Tuotantotalous (kehitystyo)" poistui kokonaan (28 → 27 osiota).
 - Testit: `node --check` OK; `raamattu-loki`, `raamattu-muokkaus`, `dokumentit`, `havainnekuva-sanasto`, `tyopolut`, `savukesarjat`, `tyohuone-valikko`, `sisaltopaketti` kaikki läpi.
-- **Kysymyksiksi / jäi tekemättä: 51 merkintää** (§4). Lisäksi koko raportin 57 RISTIRIITAA ja keski/matalan varmuuden kohdat (≈ 188) ovat vaiheessa 2 (kysymykset omistajalle, raportin §1.4).
+- **Kysymyksiksi / jäi tekemättä: 51 merkintää** (§4). Lisäksi koko raportin 57 RISTIRIITAA ja keski/matalan varmuuden kohdat (177 kpl) ovat vaiheessa 2 (kysymykset omistajalle, raportin §1.4).
 
 ## 2. Muutokset (rivialueen mukaisessa järjestyksessä, rivinumerot vanhassa tiedostossa)
 
