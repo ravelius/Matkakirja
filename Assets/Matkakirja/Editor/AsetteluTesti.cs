@@ -517,6 +517,9 @@ namespace Matkakirja.Editori
             ("asetukset", () => UiNakymat.Hae().Aanentasot.Avaa(), () => UiNakymat.Hae().Aanentasot.Sulje(), 1.0),
         };
 
+        /// <summary>Näkymän paneeli, jonka sisällä kaikkien sen nappien pitää olla (myös ruudun ulkopuolelle valuneiden).</summary>
+        static VisualElement NakymanPaneeli(string nimi) => nimi == "asetukset" ? UiNakymat.Hae().Aanentasot.TestiPaneeli : null;
+
         /// <summary>Kaikkien kerrosten näkyvät napit ja tekstit (ketju display ≠ None, visibility, peitto > 0,01, mitoittunut).</summary>
         static HashSet<VisualElement> NakyvatOhjaimet()
         {
@@ -570,6 +573,19 @@ namespace Matkakirja.Editori
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
             if (viat > 6) Kirjaa($"-- {nimi}: {viat - 6} muuta vikaa");
+            // Paneelin napit paneelin sisällä (9.10.2026 ajo #12: Äänentasojen väkänen valui paneelin ja ruudun ulkopuolelle).
+            var paneeli = NakymanPaneeli(nimi);
+            if (paneeli?.panel != null && Nakyvissa(paneeli))
+            {
+                var pb = paneeli.worldBound;
+                paneeli.Query<Button>().ForEach(nb =>
+                {
+                    if (!Nakyvissa(nb) || nb.resolvedStyle.visibility == Visibility.Hidden || !(nb.worldBound.width >= 1f)) return;
+                    var bb = nb.worldBound;
+                    if (bb.xMin < pb.xMin - 0.5f || bb.xMax > pb.xMax + 0.5f)
+                        Virhe($"{nimi}: nappi \"{Lyhyt(nb)}\" {Laatikko(bb)} on paneelin {Laatikko(pb)} ulkopuolella");
+                });
+            }
             Kirjaa($"{(viat == 0 ? "OK" : "--")} {nimi}: {ok} elementtiä turva-alueella, {uudet.Count} uutta");
         }
 
