@@ -77,7 +77,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(i > 0 && j > i, "Muistivahti ja PaivitaPysaytys");
             string vahti = c.Substring(i, j - i);
             Oleta.Tosi(!vahti.Contains("maximumScreenSpaceError") && !vahti.Contains("maximumCachedBytes"), "hädässä ei SSE- eikä välimuistivaihtoa");
-            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;"), "karkea valinta hädässä, suspendUpdate tauolla");
+            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = (Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti) || hataSeis;"), "karkea valinta hädässä, suspendUpdate tauolla ja hädän toisessa portaassa");
+            Oleta.Tosi(vahti.Contains("hataSeis = true") && c.Contains("HataSeisGt = 0.6"), "hätä 2: lataus seis alle 0,6 Gt (juna 173)");
         }
 
         [Testi] static void AluskerrosKorkealla()
