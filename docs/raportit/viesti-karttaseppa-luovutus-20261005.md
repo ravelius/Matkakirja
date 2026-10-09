@@ -1,3 +1,14 @@
+# TILANNE 9.10. klo 04.2x
+
+- **Kuninkaanlinna (LR, PT:n erä):** _tyo/karttaseppa/kuninkaanlinna/ (LUEMINUT.md).
+  - OSM 300 m: 135 building:part-osaa korkeuksineen.
+  - Jalanjälki relation/34394.
+  - GLO-rengas sivuittain ja 2 m:n korkeusruutu: `vesimaski/kohde-korkeus.mjs <jalanjalki.geojson> <etuliite> <sivu> <nimi>` (yleistetty riddarholmen-korkeus.mjs:stä).
+  - Ortokuvaa ei ole (Lantmäteriet vaatii Geotorget-tunnuksen).
+- Talvi3-loput käynnissä.
+
+---
+
 # TILANNE 9.10. klo 04.0x
 
 - **LS1:n lisäpyyntö (juna 171):** Tukholman 8 esittely-v3-kohdetta → jalanjaljet-20261009/jalanjaljet-tukholma-lisa.json (kaikki Wikidatalla). Lähde-json scratchpadissa, koordinaatit 3:lle Wikidatasta. LS1 paketoi nyt vain Tukholman ja Pariisin (muut odottavat omistajaa).
