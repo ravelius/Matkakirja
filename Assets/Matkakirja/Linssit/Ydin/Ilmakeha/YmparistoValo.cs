@@ -1,7 +1,7 @@
 // KAUPUNGIN YMPÄRISTÖVALO OMILLE MALLEILLE JA VENEILLE (Linssiseppä 2, 9.10.2026; PT: junaan 171, "ruskeat ja pahvimaiset
 // varjosivut"). Googlen laatoissa valo on leivottu (unlit), mutta omat mallit (CesiumDefaultTilesetShader) ja veneet valaistaan
 // auringolla + ympäristövalolla, joka oli kartan tasainen lämmin ambientti (Aurinko.Kompensoi). Kaupunkinäkymässä se jaetaan
-// kolmeen (Unityn Trilight): taivas (viileä, kirkas), horisontti (perussävy, hieman kirkkaampi) ja maa (lämmin heijastus, tumma).
+// kolmeen (Unityn Trilight): taivas (viileä, kirkas), horisontti (neutraali, kirkkaampi) ja maa (lämmin heijastus, tumma).
 // Pohja on kartan ambientti samassa ruudussa (yö/päivä ja kompensointi säilyvät); tämä vain jakaa sen suunnittain.
 using System;
 
@@ -10,7 +10,7 @@ namespace Matkakirja.Linssit.Ilmakeha
     public static class YmparistoValo
     {
         /// <summary>Kertoimet pohjan luminanssiin: päivällä (aurinko ≥ 10°) ja yöllä (≤ −6°), välillä liukuen.</summary>
-        public const double TaivasPaiva = 1.7, TaivasYo = 1.15, HorisonttiPaiva = 1.25, HorisonttiYo = 1.0, MaaPaiva = 0.6, MaaYo = 0.45;
+        public const double TaivasPaiva = 2.0, TaivasYo = 1.15, HorisonttiPaiva = 1.6, HorisonttiYo = 1.0, MaaPaiva = 0.6, MaaYo = 0.45;
         static readonly double[] SiniPaiva = { 0.80, 0.92, 1.18 }, SiniYo = { 0.70, 0.85, 1.30 }, Harmaa = { 0.97, 0.99, 1.04 },
             Lammin = { 1.08, 0.98, 0.85 };
 
@@ -27,7 +27,8 @@ namespace Matkakirja.Linssit.Ilmakeha
             {
                 double sini = Lerp(SiniYo[i], SiniPaiva[i], p);
                 taivas[i] = L * kt * Lerp(sini, Harmaa[i], pil * 0.7);
-                horisontti[i] = (i == 0 ? r : i == 1 ? g : b) * kh;
+                // Horisontti (pystyseinät) neutraalin viileänä, ei kartan lämmintä sävyä (kuvapari 9.10. 08.3x: julkisivu +4–7 RGB, yhä ruskea).
+                horisontti[i] = L * kh * Harmaa[i];
                 maa[i] = L * km * Lammin[i];
             }
             return (taivas, horisontti, maa);
