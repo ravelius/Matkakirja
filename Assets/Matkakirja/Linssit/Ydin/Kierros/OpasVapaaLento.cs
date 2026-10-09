@@ -18,6 +18,9 @@ namespace Matkakirja.Linssit.Kierros
     {
         // Omistaja TF 167 (9.10. 00.0x): "Pallo saisi liikkua yli puolet hitaammin manuaali ohjauksella": vauhti ja nousu 0,42 ×,
         // kääntö 0,65 ×, pehmeämpi kiihdytys (ennen 0,6 / 0,5 / 55 °/s / 15 m/s / 0,2 s).
+        /// <summary>Nopeusvipu (1 = oletus) ja sen rajat; lasku naapuruston näytteiden ollessa kesken (osuus).</summary>
+        public double Vipu = 1;
+        public const double VipuMin = 0.25, VipuMax = 3, LaskuKeskenOsuus = 0.5;
         public const double NopeusKerroin = 0.25, NousuKerroin = 0.21, KaantoAstS = 36, SyoteAikaS = 0.35, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
         public const double MinKorkeusM = 40, MaxKorkeusM = 12000, MinNopeusMS = 6.5, EnnakkoS = 0.6, NostoAikaS = 0.25;
         /// <summary>
@@ -101,10 +104,12 @@ namespace Matkakirja.Linssit.Kierros
             double eteen = K(vasenY), sivu = K(vasenX), kaanto = K(oikeaX), nousu = K(oikeaY);
             bool syote = eteen != 0 || sivu != 0 || kaanto != 0 || nousu != 0;
             double a = 1 - Math.Exp(-dt / (syote ? SyoteAikaS : HiipumaAikaS));
-            double v = Math.Max(MinNopeusMS, NopeusKerroin * KorkeusM);
+            // Nopeusvipu (Päätoimittaja 9.10., Natiivi-UI:n vipu → OpasSovitin.VapaaNopeus): kerroin VipuMin…VipuMax vaaka- ja pystynopeuteen.
+            double vipu = Math.Max(VipuMin, Math.Min(VipuMax, Vipu));
+            double v = Math.Max(MinNopeusMS, NopeusKerroin * KorkeusM) * vipu;
             vEteen += (eteen * v - vEteen) * a;
             vSivu += (sivu * v - vSivu) * a;
-            vNousu += (nousu * Math.Max(MinNopeusMS, NousuKerroin * KorkeusM) - vNousu) * a;
+            vNousu += (nousu * Math.Max(MinNopeusMS, NousuKerroin * KorkeusM) * vipu - vNousu) * a;
             vKaanto += (kaanto * KaantoAstS - vKaanto) * a;
             if (eteen != 0 || sivu != 0) ToiveSuuntaEro = Math.Atan2(sivu, eteen) * 180 / Math.PI;
             else if (Math.Abs(vEteen) + Math.Abs(vSivu) > 1) ToiveSuuntaEro = Math.Atan2(vSivu, vEteen) * 180 / Math.PI;
@@ -128,9 +133,11 @@ namespace Matkakirja.Linssit.Kierros
             var (el, eo) = Ennakko;
             double suurin = double.NaN; int tunnetut = 0;
             void Ota(double h) { if (!double.IsNaN(h)) { tunnetut++; suurin = double.IsNaN(suurin) ? h : Math.Max(suurin, h); } }
+            bool ydinTunnettu = false;
             if (pinta != null)
             {
                 Ota(pinta(Lat, Lon)); Ota(pinta(el, eo));
+                ydinTunnettu = tunnetut >= 2;
                 for (int i = 0; i < KehaPisteita; i++) { var (kl, ko) = KehaPiste(i); Ota(pinta(kl, ko)); }
             }
             // Naapurusto tuntematon (näytteet kesken: SampleHeightMostDetailed voi kestää sekunteja; koe-152 Eiffel: kamera laskeutui
@@ -140,10 +147,14 @@ namespace Matkakirja.Linssit.Kierros
             if (!double.IsNaN(suurin)) PintaM = taysi ? suurin : Math.Max(PintaM, suurin);
             if (!taysi)
             {
-                if (vNousu < 0) vNousu = 0;
+                // ALAS JA ETEEN YHTÄ AIKAA (Päätoimittaja 9.10.: lasku esti kokonaan liikkeessä, koska kehän näytteet ovat liikkuessa
+                // aina kesken): lasku sallitaan puolella nopeudella, kun kameran ja ennakon näytteet ovat tiedossa — PintaM ei laske
+                // naapuruston ollessa kesken (vain kasvaa), joten alaraja PintaM + MinKorkeusM pysyy turvallisena. Ilman niitä ei laskua.
+                if (vNousu < 0 && !ydinTunnettu) vNousu = 0;
                 if (KorkeusM < 150) { vEteen *= 0.3; vSivu *= 0.3; }
             }
-            KorkeusAbsM += vNousu * dt;
+            // Puolitus vain integroinnissa (tilaan kertominen joka ruutu vei laskun ~3 m/s:iin).
+            KorkeusAbsM += (vNousu < 0 && !taysi ? vNousu * LaskuKeskenOsuus : vNousu) * dt;
             double ala = PintaM + MinKorkeusM, yla = PintaM + MaxKorkeusM;
             // Pinnan nousu nostaa kameraa pehmeästi (NostoAikaS), muttei koskaan alle rajan.
             if (KorkeusAbsM < ala) KorkeusAbsM += (ala - KorkeusAbsM) * Math.Min(1, dt / NostoAikaS);

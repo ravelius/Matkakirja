@@ -116,6 +116,12 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 tasainen = lerp(tasainen, 1.0, saturate((jalanjalki - 2.0) / 4.0));   // kaukana (pikseli > 2–6 m) mattoa ei karsita
 
                 float3 lisa = _ValoVari.rgb * bm * bm * _ValoParam.y;  // valosaaste
+                // KAUKAISET VALOT (v7, Päätoimittaja 9.10.: filmikuvissa horisonttiin katsottaessa kaupunki oli musta, B163:n alaspäin
+                // katsovassa kuvassa valot näkyivät): kun pikseli on pinnalla yli ~2–10 m, katulamput (nakyvyys), ikkunat (terava) ja
+                // katunauhan normaalit (vaaka, kohinainen syvyys) häviävät, ja jäljelle jäi vain himmeä valosaaste. Kaukana Black Marblen
+                // säteily piirretään valopisteiden keskiarvona (lamput + ikkunat yhteensä), joten kaupunki hehkuu horisonttiin asti.
+                float kauko = saturate((jalanjalki - 2.0) / 8.0);
+                lisa += _ValoVari.rgb * bm * kauko * _ValoParam.z * 0.35;
 
                 // Katuvalot OSM-katujen mukaan (v4): maski kaduista; vaakapinnoilla valonauha (katu valaistu) ja lamput nauhan keskellä.
                 float vaaka = saturate((n.y - 0.82) / 0.1) * tasainen;

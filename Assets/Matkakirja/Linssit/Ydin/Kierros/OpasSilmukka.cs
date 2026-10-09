@@ -831,6 +831,51 @@ namespace Matkakirja.Linssit.Kierros
             return true;
         }
 
+        // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10.: "saisi olla se vapaa lento nappi ja sitten kun se on kytketty päälle
+        // olisi palaa kierrokselle tms nappi, joka palauttaisi pelaajan takaisin siihen missä hän keskeytti opaskierroksen ja kierros
+        // jatkuisi siitä eteenpäin"; Päätoimittaja juna 170, napit Natiivi-UI) ----
+        /// <summary>Vapaa lento voidaan aloittaa: kierros käynnissä, ei siirtoruutua eikä kaukosiirtoa.</summary>
+        public bool VapaaLentoKaytettavissa => Vaihe != OpasVaihe.Valmis && KierrosKaynnissa && !Siirtymassa && !siirto && !VapaaTila && avausViive <= 0;
+        /// <summary>Paluu kierrokselle voidaan aloittaa: vapaassa lennossa ja keskeytyskohta tallessa.</summary>
+        public bool PaluuKierrokselleKaytettavissa => VapaaTila && KierrosKeskeytetty && paluuKehys != null && Vaihe != OpasVaihe.Valmis && !paluuLento;
+        /// <summary>Paluulento keskeytyskohtaan käynnissä.</summary>
+        public bool PaluuLennossa => paluuLento;
+        Pysahdys paluuKehys; bool paluuLento;
+
+        /// <summary>Kierros keskeytyy (kohde, vaihe ja kesken jäänyt kerronta talteen kuten kysymyksessä), kamera jää paikalleen, ja
+        /// pelaaja ohjaa vapaasti (OpasVapaaLento). true = aloitettiin.</summary>
+        public bool AloitaVapaaLento()
+        {
+            if (!VapaaLentoKaytettavissa || !KeskeytaKierros()) return false;
+            var k = NykyinenKehys ?? new Pysahdys { Lat = Asento.Lat, Lon = Asento.Lon, MaaM = Asento.KatseKorkeusM, Suuntima = Asento.Suuntima, Kallistus = Asento.Kallistus, EtaisyysM = Asento.EtaisyysM };
+            // Paluupaikka on keskeytyshetken asento (lipuminen ja kaari mukana), ei kehyksen alkua.
+            paluuKehys = new Pysahdys { Id = k.Id, Nimi = k.Nimi, Lat = Asento.Lat, Lon = Asento.Lon, MaaM = Asento.KatseKorkeusM, NostoM = 0,
+                Suuntima = Asento.Suuntima, Kallistus = Asento.Kallistus, EtaisyysM = Asento.EtaisyysM, MinEtM = k.MinEtM };
+            VapaaTila = true; vapaaKaynnissa = false; vapaaKehyksessa = false;
+            return true;
+        }
+
+        /// <summary>Pehmeä lento keskeytyskohtaan (pallon S-käyrät, ei kerrontaa); perillä kierros jatkuu kuten JATKA KIERROSTA
+        /// (kesken jäänyt kohde alusta, muuten seuraava). true = paluu alkoi.</summary>
+        public bool PalaaKierrokselle()
+        {
+            if (!PaluuKierrokselleKaytettavissa) return false;
+            VapaaTila = false; vapaaKaynnissa = false; vapaaKehyksessa = false;
+            var p = paluuKehys;
+            AsetaKohdeKehys(p, false, null, p.Suuntima);
+            Ohjaus.Nollaa();
+            lahto = Asento;
+            double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, p.Lat, p.Lon);
+            LentoKestoS = Math.Max(PaluuMinS, LennonKesto(matka));
+            suoraLasku = false; panLento = false; lentoKaari = 0;
+            AloitaSiirtoJosKaukana(matka, p.Lat, p.Lon, p.Nimi);
+            Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
+            puheAloitettu = true; siirtyma = true; paluuLento = true;
+            return true;
+        }
+        /// <summary>Paluulennon vähimmäiskesto (s): lyhytkin paluu on pehmeä.</summary>
+        public const double PaluuMinS = 6;
+
         /// <summary>LOPETA KIERROS (■): kierros päättyy, kertoja vaikenee, kamera jää paikalleen vapaaseen tilaan.</summary>
         public void LopetaKierros()
         {
@@ -879,7 +924,7 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Pelaajan oma suunta (toive, Liiku, paikan vaihto, uusi kierros): vanha kierros ja vapaa tila päättyvät.</summary>
-        void PelaajaValitsi() { KierrosKeskeytetty = false; jatkoKohde = null; VapaaTila = false; lykattyKysymys = null; esihakuPuheenJalkeen = false; }
+        void PelaajaValitsi() { KierrosKeskeytetty = false; jatkoKohde = null; VapaaTila = false; lykattyKysymys = null; esihakuPuheenJalkeen = false; paluuKehys = null; paluuLento = false; }
 
         /// <summary>Kaupunkikierros: kohteet järjestyksessä; ensimmäiseen heti, seuraava esihaetaan kerronnan aikana.</summary>
         public const int PalloNopeitaLentoja = 2;
@@ -1199,6 +1244,15 @@ namespace Matkakirja.Linssit.Kierros
                     {
                         // Siirtymälento perillä: kaupungin yleiskuva kiertää; ei saapumista, puhetta eikä esihakua.
                         siirtyma = false;
+                        if (paluuLento)
+                        {
+                            // Paluu kierrokselle perillä: kehys keskeytyskohdassa, kierros jatkuu.
+                            paluuLento = false; paluuKehys = null;
+                            NykyinenKehys = kohdeKehys; kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0; kaariKulma = 0; kaariSuunta = 0; kaariRaja = double.MaxValue;
+                            Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
+                            JatkaKierrosta();
+                            break;
+                        }
                         NykyinenKehys = kohdeKehys; kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0; kaariKulma = 0; kaariSuunta = 0; kaariRaja = double.MaxValue;
                         Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
                         break;
