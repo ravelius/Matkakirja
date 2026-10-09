@@ -1,0 +1,1118 @@
+{
+  "taskNumbers": [
+    53,
+    54
+  ],
+  "taskNumber": 53,
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+      "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+      "blob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+    },
+    {
+      "path": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+      "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+      "blob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+    }
+  ],
+  "sourceReadInFull": true,
+  "generationCalls": 4,
+  "generationLimit": 4,
+  "taskCounts": {
+    "53": {
+      "imageCount": 2,
+      "generationCalls": 2,
+      "generationLimit": 2
+    },
+    "54": {
+      "imageCount": 2,
+      "generationCalls": 2,
+      "generationLimit": 2
+    }
+  },
+  "imageCount": 4,
+  "productionComplete": true,
+  "partialDelivery": false,
+  "allR2ReadbacksByteExact": true,
+  "assets": [
+    {
+      "id": "tahdet-mini",
+      "subject": "Otava ja Pohjantähti",
+      "taskNumber": 53,
+      "style": "photorealistic-natural",
+      "form": "mini",
+      "file": "tahdet-foto-mini-v3.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-mini/tahdet-foto-mini-v3.jpg",
+      "sha256": "0657bfe32f72bc42f6a1209df5146d0d525e1b1ba77b54bc9e832ef36286a33f",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-12094fc1-5864-4283-bfed-901131556b1b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-mini/original-generation.png",
+      "originalSHA256": "f2284dde4c973fe0f2b6d74ec932d3d2906778577536bc0799b12f1f6bda0c30",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Produce one complete new camera-like photographic illustration for a game, not a small edit, not a collage. Realistic materials, natural exposure, muted color, no HDR, no painterly/CGI surface. NO text, names, digits, letters, labels, logos, watermarks, border or people/faces. The metadata notice must not be visible in the image. All content must be newly generated; input images are only specified geometry/composition references.\nScene: dark clear early-autumn night at a quiet lake, still dark water, low distant tree line and a grassy foreground knoll. One small unbranded BRASS telescope on a plain tripod in the lower central part, no human. Dark navy camera-photographed starry sky, natural subtle stars, no glow lines. Input 1 is the mandatory accurate clean star-coordinate reference, not a style to imitate as a flat diagram. Preserve the exact eight-star point geometry by ONE uniform scale and translation, never mirror or stretch or rearrange. Reference 1600-square point centers: Polaris(809,399), Dubhe(992,983), Merak(1035,1094), Phecda(889,1186), Megrez(818,1115), Alioth(702,1133), Mizar(607,1140), Alkaid(488,1245). EXACTLY seven Big-Dipper stars plus Polaris above: Megrez much dimmer than the other six Dipper stars, Polaris also bright. No eighth bright star in or immediately next to Dipper. Other background stars much dimmer. Zero connecting lines, dotted lines, arrows, handwriting or names. Do not turn the required orientation into a familiar horizontal cartoon dipper: this given dipper's bowl is at lower right and handle runs toward lower left. Polaris lies far above Dubhe, on extension of Merak through Dubhe, about 5.3 times their spacing. Orientation should match input with ideally zero rotation, at most 10 degrees. Stars are tiny realistic round camera points, no cross/starburst icons.\nSquare1:1 intended512x512, safe central circular icon. Input2 (when supplied) is our new matching landscape photograph, used only for exact telescope/lake/lighting identity. Make a complete NEW square scene, not a crop of the wide photo. Keep the reference geometry input1 authoritative. All eight point stars entirely within the centered circle; overall star height about51 percent, at most60 percent. Target coordinates in512canvas under ONE uniform transform: Polaris(266,88), Dubhe(322.7,269), Merak(336.1,303.5), Phecda(290.8,332), Megrez(268.8,310), Alioth(232.8,315.5), Mizar(203.4,317.7), Alkaid(166.5,350.3). Telescope small near(256,423), horizon in lowest quarter abouty390. Preserve every star-relative angle/spacing; do not let lake/sky layout shift or distort star geometry. No extra bright stars, no lines. Main telescope/constellation remains inside circle.\n\nReference priority: input1 is the ONLY authoritative star geometry. Input2 has an inaccurate sky and faint unwanted guide traces; DO NOT copy its stars or lines. Input2 is used ONLY for the lake, brass telescope and natural photographic materials/light. Completely regenerate the square sky from the exact eight positions of input1 under the stated uniform transform. No constellation lines even faintly, no implied dot-to-dot traces. Megrez, the upper-left bowl corner just beside the handle, is dimmest; Phecda bottom-left bowl corner remains bright.",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+        "sourceCommit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+        "sourceBlob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md"
+      ],
+      "kuvateksti": "Otava ja Pohjantähti järven yllä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": false
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "0657bfe32f72bc42f6a1209df5146d0d525e1b1ba77b54bc9e832ef36286a33f",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Seitsemän Otavan tähteä ja Pohjantähti; Megrez himmein, yhdysjälkiä ei havaittu. Kaikki päätähdet ja kaukoputki mahtuvat ympyrään.",
+          "Paras tasaisen skaalauksen sovituskierto +6,76°, paikkajäännöksen RMS 1,02 % kuvan leveydestä, suurin 1,44 %. Reunavektorien suurin suuntapoikkeama 14,59°: tarkka geometria ei toteudu."
+        ],
+        "measurement": {
+          "method": "Manually matched8 stars; brightness-weighted centroid in9x9 final JPEG patches; least-squares no-mirror similarity fit. Uncertainty about1pixel.",
+          "starOrder": [
+            "Polaris",
+            "Dubhe",
+            "Merak",
+            "Phecda",
+            "Megrez",
+            "Alioth",
+            "Mizar",
+            "Alkaid"
+          ],
+          "measuredFinalPixels": [
+            [
+              259.29912875121005,
+              51.343175217812195
+            ],
+            [
+              277.0,
+              201.54545454545453
+            ],
+            [
+              285.44941348973606,
+              225.0
+            ],
+            [
+              254.0,
+              237.47477064220183
+            ],
+            [
+              241.0,
+              216.52380952380952
+            ],
+            [
+              210.5052535404294,
+              221.51210598446778
+            ],
+            [
+              186.48127659574467,
+              227.50127659574468
+            ],
+            [
+              161.51829498302527,
+              247.49000377216146
+            ]
+          ],
+          "referencePixels": [
+            [
+              809.0,
+              399.0
+            ],
+            [
+              992.0,
+              983.0
+            ],
+            [
+              1035.0,
+              1094.0
+            ],
+            [
+              889.0,
+              1186.0
+            ],
+            [
+              818.0,
+              1115.0
+            ],
+            [
+              702.0,
+              1133.0
+            ],
+            [
+              607.0,
+              1140.0
+            ],
+            [
+              488.0,
+              1245.0
+            ]
+          ],
+          "uniformFitRotationDegrees": 6.760208685380238,
+          "absoluteRotationWithin10Degrees": true,
+          "residualRMSPercentImageWidth": 1.020390430623598,
+          "residualMaxPercentImageWidth": 1.4382302854515663,
+          "edgeDirectionDifferencesDegrees": [
+            1.3643705821444883,
+            10.580225803342216,
+            13.18053937759538,
+            14.594200867658941,
+            -0.46972131950769835,
+            -9.784295563882921,
+            2.738196543153663,
+            10.677574422463096
+          ],
+          "maxEdgeDirectionDifferenceDegrees": 14.594200867658941,
+          "starCoordinateFidelityPass": false,
+          "connectingTracesObserved": false,
+          "dipperStarsObserved": 7,
+          "polarisObserved": 1,
+          "MegrezDimmestObserved": true,
+          "mainStarsWithinCenteredCircle": true,
+          "starHeightPercentImage": 38.30992745202134
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-mini/original-generation.png"
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/otava-referenssi-20261009.png",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "c0424feac2611142369b421330933de7f0920f2a",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-20261009.png",
+          "sha256": "9c7f41ca6b9c81ec59c6afbc03b5c6e3fcdef60a31039648dda9a5232a16e0f8",
+          "dimensions": [
+            1600,
+            1600
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/otava-referenssi-merkitty-20261009.png",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "aab0d16895ad01a0db87d3e176dc7010fbac8f17",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-merkitty-20261009.png",
+          "sha256": "8494fab264faea056904bf4850af630002f74f682e393e53a1292069b0e35b40",
+          "dimensions": [
+            1600,
+            1600
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-20261009.png",
+        "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0fddca1e-084f-4bf7-b2fe-34bcc1a749af.png"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-20261009.png",
+        "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0fddca1e-084f-4bf7-b2fe-34bcc1a749af.png"
+      ],
+      "completeNewGeneration": true,
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "r2Key": "linssikatalogi/tahdet-foto-mini-v3.jpg",
+      "rootVisualReview": {
+        "sha256": "0657bfe32f72bc42f6a1209df5146d0d525e1b1ba77b54bc9e832ef36286a33f",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Seitsemän Otavan tähteä ja Pohjantähti; Megrez himmein, yhdysjälkiä ei havaittu. Kaikki päätähdet ja kaukoputki mahtuvat ympyrään.",
+          "Paras tasaisen skaalauksen sovituskierto +6,76°, paikkajäännöksen RMS 1,02 % kuvan leveydestä, suurin 1,44 %. Reunavektorien suurin suuntapoikkeama 14,59°: tarkka geometria ei toteudu."
+        ],
+        "measurement": {
+          "method": "Manually matched8 stars; brightness-weighted centroid in9x9 final JPEG patches; least-squares no-mirror similarity fit. Uncertainty about1pixel.",
+          "starOrder": [
+            "Polaris",
+            "Dubhe",
+            "Merak",
+            "Phecda",
+            "Megrez",
+            "Alioth",
+            "Mizar",
+            "Alkaid"
+          ],
+          "measuredFinalPixels": [
+            [
+              259.29912875121005,
+              51.343175217812195
+            ],
+            [
+              277.0,
+              201.54545454545453
+            ],
+            [
+              285.44941348973606,
+              225.0
+            ],
+            [
+              254.0,
+              237.47477064220183
+            ],
+            [
+              241.0,
+              216.52380952380952
+            ],
+            [
+              210.5052535404294,
+              221.51210598446778
+            ],
+            [
+              186.48127659574467,
+              227.50127659574468
+            ],
+            [
+              161.51829498302527,
+              247.49000377216146
+            ]
+          ],
+          "referencePixels": [
+            [
+              809.0,
+              399.0
+            ],
+            [
+              992.0,
+              983.0
+            ],
+            [
+              1035.0,
+              1094.0
+            ],
+            [
+              889.0,
+              1186.0
+            ],
+            [
+              818.0,
+              1115.0
+            ],
+            [
+              702.0,
+              1133.0
+            ],
+            [
+              607.0,
+              1140.0
+            ],
+            [
+              488.0,
+              1245.0
+            ]
+          ],
+          "uniformFitRotationDegrees": 6.760208685380238,
+          "absoluteRotationWithin10Degrees": true,
+          "residualRMSPercentImageWidth": 1.020390430623598,
+          "residualMaxPercentImageWidth": 1.4382302854515663,
+          "edgeDirectionDifferencesDegrees": [
+            1.3643705821444883,
+            10.580225803342216,
+            13.18053937759538,
+            14.594200867658941,
+            -0.46972131950769835,
+            -9.784295563882921,
+            2.738196543153663,
+            10.677574422463096
+          ],
+          "maxEdgeDirectionDifferenceDegrees": 14.594200867658941,
+          "starCoordinateFidelityPass": false,
+          "connectingTracesObserved": false,
+          "dipperStarsObserved": 7,
+          "polarisObserved": 1,
+          "MegrezDimmestObserved": true,
+          "mainStarsWithinCenteredCircle": true,
+          "starHeightPercentImage": 38.30992745202134
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-mini/original-generation.png"
+      },
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-mini-v3.jpg?t=0657bfe32f72bc42",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-mini-v3.jpg",
+      "bytes": 38325,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    },
+    {
+      "id": "tahdet-iso",
+      "subject": "Otava ja Pohjantähti",
+      "taskNumber": 53,
+      "style": "photorealistic-natural",
+      "form": "iso",
+      "file": "tahdet-foto-iso-v3.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-iso/tahdet-foto-iso-v3.jpg",
+      "sha256": "24c859c8bf44775a7f64a77f5ac25ab537554180f8fe39cbcd56ca714bcc7113",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0fddca1e-084f-4bf7-b2fe-34bcc1a749af.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-iso/original-generation.png",
+      "originalSHA256": "e9b2b6460723d3ce17e941323f3e379f77b78dc84628dc83b3fcba041f0f6ca5",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Produce one complete new camera-like photographic illustration for a game, not a small edit, not a collage. Realistic materials, natural exposure, muted color, no HDR, no painterly/CGI surface. NO text, names, digits, letters, labels, logos, watermarks, border or people/faces. The metadata notice must not be visible in the image. All content must be newly generated; input images are only specified geometry/composition references.\nScene: dark clear early-autumn night at a quiet lake, still dark water, low distant tree line and a grassy foreground knoll. One small unbranded BRASS telescope on a plain tripod in the lower central part, no human. Dark navy camera-photographed starry sky, natural subtle stars, no glow lines. Input 1 is the mandatory accurate clean star-coordinate reference, not a style to imitate as a flat diagram. Preserve the exact eight-star point geometry by ONE uniform scale and translation, never mirror or stretch or rearrange. Reference 1600-square point centers: Polaris(809,399), Dubhe(992,983), Merak(1035,1094), Phecda(889,1186), Megrez(818,1115), Alioth(702,1133), Mizar(607,1140), Alkaid(488,1245). EXACTLY seven Big-Dipper stars plus Polaris above: Megrez much dimmer than the other six Dipper stars, Polaris also bright. No eighth bright star in or immediately next to Dipper. Other background stars much dimmer. Zero connecting lines, dotted lines, arrows, handwriting or names. Do not turn the required orientation into a familiar horizontal cartoon dipper: this given dipper's bowl is at lower right and handle runs toward lower left. Polaris lies far above Dubhe, on extension of Merak through Dubhe, about 5.3 times their spacing. Orientation should match input with ideally zero rotation, at most 10 degrees. Stars are tiny realistic round camera points, no cross/starburst icons.\nLandscape16:9, intended1600x900. Same lake/telescope composition family as corresponding square mini. Horizon only in lowest quarter (abouty720), telescope/knoll lower center, all eight stars centered with dark empty breathing room. Geometric target coordinates in the final1600x900 canvas are ONE exact uniform transform of reference: Polaris(820,130), Dubhe(927.1,471.6), Merak(952.2,536.6), Phecda(866.8,590.4), Megrez(825.3,548.9), Alioth(757.4,559.4), Mizar(701.8,563.5), Alkaid(632.2,624.9). Treat these only as placement, never render coordinate text. Preserve all internal angular/length ratios. Wide sky expands naturally sideways. Telescope fits below the star cluster. No connecting traces anywhere.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+        "sourceCommit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+        "sourceBlob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md"
+      ],
+      "kuvateksti": "Otava ja Pohjantähti järven yllä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": false
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "24c859c8bf44775a7f64a77f5ac25ab537554180f8fe39cbcd56ca714bcc7113",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Seitsemän Otavan tähteä ja Pohjantähti, mutta hentoja yhdysjälkiä on näkyvissä ja Phecda näyttää Megreziä himmeämmältä.",
+          "Sovituskierto +13,66° ylittää ±10° ehdon; paikkajäännöksen RMS 1,17 %, suurin 2,00 % kuvan leveydestä. Reunavektorien suurin suuntapoikkeama 22,58°. Ei opetuskäyttöön hyväksyttynä."
+        ],
+        "measurement": {
+          "method": "Manually matched eight stars; brightness-weighted centroid in15x15 final JPEG patches; least-squares no-mirror uniform-scale similarity fit. Uncertainty about1-2pixels.",
+          "starOrder": [
+            "Polaris",
+            "Dubhe",
+            "Merak",
+            "Phecda",
+            "Megrez",
+            "Alioth",
+            "Mizar",
+            "Alkaid"
+          ],
+          "measuredFinalPixels": [
+            [
+              806.0536352800954,
+              83.60828367103694
+            ],
+            [
+              784.2990945380196,
+              323.5122188686593
+            ],
+            [
+              801.2858891013384,
+              376.87709369024856
+            ],
+            [
+              737.4854797979798,
+              400.52146464646466
+            ],
+            [
+              716.8722902921772,
+              357.6732642161483
+            ],
+            [
+              662.6261424383514,
+              362.260648387653
+            ],
+            [
+              613.489355381721,
+              375.26814536092684
+            ],
+            [
+              554.2851252528396,
+              424.86696748093976
+            ]
+          ],
+          "referencePixels": [
+            [
+              809.0,
+              399.0
+            ],
+            [
+              992.0,
+              983.0
+            ],
+            [
+              1035.0,
+              1094.0
+            ],
+            [
+              889.0,
+              1186.0
+            ],
+            [
+              818.0,
+              1115.0
+            ],
+            [
+              702.0,
+              1133.0
+            ],
+            [
+              607.0,
+              1140.0
+            ],
+            [
+              488.0,
+              1245.0
+            ]
+          ],
+          "uniformFitRotationDegrees": 13.656590364912136,
+          "absoluteRotationWithin10Degrees": false,
+          "residualRMSPercentImageWidth": 1.173148355817527,
+          "residualMaxPercentImageWidth": 1.995729332150682,
+          "edgeDirectionDifferencesDegrees": [
+            3.5187306429019145,
+            11.88188830916124,
+            19.308965120595786,
+            10.316157005103321,
+            3.9866008852021366,
+            -10.613064665055902,
+            1.468801818015919,
+            22.5801266338855
+          ],
+          "maxEdgeDirectionDifferenceDegrees": 22.5801266338855,
+          "starCoordinateFidelityPass": false,
+          "connectingTracesObserved": true,
+          "dipperStarsObserved": 7,
+          "polarisObserved": 1,
+          "brightnessOrderingIssue": "Phecda appears dimmer than Megrez, contrary to reference."
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-iso/original-generation.png"
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/otava-referenssi-20261009.png",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "c0424feac2611142369b421330933de7f0920f2a",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-20261009.png",
+          "sha256": "9c7f41ca6b9c81ec59c6afbc03b5c6e3fcdef60a31039648dda9a5232a16e0f8",
+          "dimensions": [
+            1600,
+            1600
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/otava-referenssi-merkitty-20261009.png",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "aab0d16895ad01a0db87d3e176dc7010fbac8f17",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-merkitty-20261009.png",
+          "sha256": "8494fab264faea056904bf4850af630002f74f682e393e53a1292069b0e35b40",
+          "dimensions": [
+            1600,
+            1600
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-20261009.png"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/otava-referenssi-20261009.png"
+      ],
+      "completeNewGeneration": true,
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "r2Key": "linssikatalogi/tahdet-foto-iso-v3.jpg",
+      "rootVisualReview": {
+        "sha256": "24c859c8bf44775a7f64a77f5ac25ab537554180f8fe39cbcd56ca714bcc7113",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Seitsemän Otavan tähteä ja Pohjantähti, mutta hentoja yhdysjälkiä on näkyvissä ja Phecda näyttää Megreziä himmeämmältä.",
+          "Sovituskierto +13,66° ylittää ±10° ehdon; paikkajäännöksen RMS 1,17 %, suurin 2,00 % kuvan leveydestä. Reunavektorien suurin suuntapoikkeama 22,58°. Ei opetuskäyttöön hyväksyttynä."
+        ],
+        "measurement": {
+          "method": "Manually matched eight stars; brightness-weighted centroid in15x15 final JPEG patches; least-squares no-mirror uniform-scale similarity fit. Uncertainty about1-2pixels.",
+          "starOrder": [
+            "Polaris",
+            "Dubhe",
+            "Merak",
+            "Phecda",
+            "Megrez",
+            "Alioth",
+            "Mizar",
+            "Alkaid"
+          ],
+          "measuredFinalPixels": [
+            [
+              806.0536352800954,
+              83.60828367103694
+            ],
+            [
+              784.2990945380196,
+              323.5122188686593
+            ],
+            [
+              801.2858891013384,
+              376.87709369024856
+            ],
+            [
+              737.4854797979798,
+              400.52146464646466
+            ],
+            [
+              716.8722902921772,
+              357.6732642161483
+            ],
+            [
+              662.6261424383514,
+              362.260648387653
+            ],
+            [
+              613.489355381721,
+              375.26814536092684
+            ],
+            [
+              554.2851252528396,
+              424.86696748093976
+            ]
+          ],
+          "referencePixels": [
+            [
+              809.0,
+              399.0
+            ],
+            [
+              992.0,
+              983.0
+            ],
+            [
+              1035.0,
+              1094.0
+            ],
+            [
+              889.0,
+              1186.0
+            ],
+            [
+              818.0,
+              1115.0
+            ],
+            [
+              702.0,
+              1133.0
+            ],
+            [
+              607.0,
+              1140.0
+            ],
+            [
+              488.0,
+              1245.0
+            ]
+          ],
+          "uniformFitRotationDegrees": 13.656590364912136,
+          "absoluteRotationWithin10Degrees": false,
+          "residualRMSPercentImageWidth": 1.173148355817527,
+          "residualMaxPercentImageWidth": 1.995729332150682,
+          "edgeDirectionDifferencesDegrees": [
+            3.5187306429019145,
+            11.88188830916124,
+            19.308965120595786,
+            10.316157005103321,
+            3.9866008852021366,
+            -10.613064665055902,
+            1.468801818015919,
+            22.5801266338855
+          ],
+          "maxEdgeDirectionDifferenceDegrees": 22.5801266338855,
+          "starCoordinateFidelityPass": false,
+          "connectingTracesObserved": true,
+          "dipperStarsObserved": 7,
+          "polarisObserved": 1,
+          "brightnessOrderingIssue": "Phecda appears dimmer than Megrez, contrary to reference."
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/53/production/tahdet-iso/original-generation.png"
+      },
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-iso-v3.jpg?t=24c859c8bf44775a",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-iso-v3.jpg",
+      "bytes": 176919,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    },
+    {
+      "id": "ihmisen-matka-2-mini",
+      "subject": "Ihmisen matkan reitit",
+      "taskNumber": 54,
+      "style": "photorealistic-natural",
+      "form": "mini",
+      "file": "ihmisen-matka-2-foto-mini-v3.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-mini/ihmisen-matka-2-foto-mini-v3.jpg",
+      "sha256": "60723f712414747951ff078db72cf9b1ce510866fbec84af7739b7457f893cab",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b397aca3-98aa-48e6-8596-01b558dd0657.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-mini/original-generation.png",
+      "originalSHA256": "cb606cabd97d9f889ac4217afd338b5ed325e6c388fa641fd73d473312ac6bda",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Produce one complete new camera-like photographic illustration for a game, not a small edit, not a collage. Realistic materials, natural exposure, muted color, no HDR, no painterly/CGI surface. NO text, names, digits, letters, labels, logos, watermarks, border or people/faces. The metadata notice must not be visible in the image. All content must be newly generated; input images are only specified geometry/composition references.\nInput reference is a route DIAGRAM ONLY: use its topology and time-color progression, never copy its grid, words, years, names or flat graphic style. Underlying Earth must look like a daylight satellite photograph, real terrain, recognizable correct coasts and landmasses, blue ocean, no night hemisphere or city lights. Main subject is FOUR plainly visible continuous luminous migration routes with small bright node points, not a spotlight on Earth. Use deep gold at oldest East-Africa origin, warm orange/gold toward Arabia and southern Asia, pale yellow for later Eurasian segments, white for Beringia/North-America, cool pale blue for southern South-America. Routes: (1) EastAfrica OmoKibish4.8N36E -> Arabia AlWusta28.3N41E -> Sumatra LidaAjer0N101E -> northernAustralia Madjedbebe12.5S133E -> southeastAustralia LakeMungo33.8S143E. (2) Branch from Arabia -> Altai/Denisova51N85E -> eastChinaTianyuan40N116E. (3) Branch from Arabia -> Balkans BachoKiro43N25E -> southernFrance Chauvet44N4E. (4) Branch from Altai -> northernSiberia Yana71N135E -> Beringia66N169W -> southwestNorthAmerica WhiteSands33N106W -> southernChile MonteVerde42S73W. All arcs lie directly above their correct places on Earth and follow geographic paths, not shortcut straight from Africa to America. No arbitrary extra route branches. No words, coordinate labels, year numbers, arrows, compass, map border, latitude/longitude lines or legend.\nSQUARE1:1 intended512x512: ROUND daylight Earth seen from space, centered viewing point about40N105E. Europe left, Asia center, Australia bottom, Africa lower left, Beringia upper right edge. Full main globe and all visible routes safely inside central circle. Routes1,2,3 COMPLETE on visible hemisphere. Route4 from Altai through Siberia reaches BERINGIA then the arc continues over the curved globe horizon; the Americas are behind the horizon and must NOT be moved into the visible front hemisphere. All routes thick enough to remain unambiguous in a96px icon, at least about1 percent image width in final mini. Bright physical-looking light paths and tiny nodes on realistic daylight terrain, no spotlight instead of routes. Same deep-gold->orange->pale-yellow->white color code as matching wide map. No other objects, frames or text.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+        "sourceCommit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+        "sourceBlob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md"
+      ],
+      "kuvateksti": "Nykyihmisen leviäminen Afrikasta Aasiaan ja Australiaan. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": false
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "60723f712414747951ff078db72cf9b1ce510866fbec84af7739b7457f893cab",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Reitit 1–3 näkyvät ja pohjoinen reitti 4 jatkuu pallon horisontin yli. Reitit erottuvat 96 px:n kuvakkeessa; koko maapallo mahtuu ympyrään.",
+          "Solmujen maantieteellisissä paikoissa on epätarkkuutta, näkymä painottuu briefiä enemmän Afrikkaan ja eteläiseen pallonpuoliskoon. Kaarten kirkas ydin noin 1,5–3 px, hohtokehä noin 5–8 px; vähintään 5 px:n ydin ei toteudu. Aikavärityksen vaaleneminen Australiaan jää heikoksi."
+        ],
+        "measurement": {
+          "route1": "Visible Africa-Arabia-SouthAsia-Australia connection; individual site locations deviate and northern-Australian node appears too far south/west.",
+          "route2": "Visible Arabia-Altai-EastAsia branch; exact Altai/Tianyuan coordinates not verified.",
+          "route3": "Visible Arabia-Balkans-southernFrance branch; extra easternMediterranean node occurs.",
+          "route4": "Visible northern arc from Altai/Siberia to bright northeastern limb and beyond; exact Yana/Beringia locations ambiguous. Americas stay outside front view.",
+          "routes1to3CompleteTopicVisible": true,
+          "route4ToHorizonVisible": true,
+          "correctSpecifiedViewingCenter40N105ECertified": false,
+          "viewingCenterIssue": "Whole Africa and south-polar region much more visible than the specified Asian/Northern center implies.",
+          "routeStrokeCorePixelsEstimate": [
+            1.5,
+            3
+          ],
+          "routeGlowHaloPixelsEstimate": [
+            5,
+            8
+          ],
+          "minimumWidth5PixelsCorePass": false,
+          "routesReadable96Pixels": true,
+          "fullEarthAndMainArcsInCircle": true,
+          "actualSiteCoordinatesCertified": false,
+          "timeColorIssue": "Gold remains dominant through Australia; required later pale-yellow progression weak."
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-mini/original-generation.png"
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/ihmisen-matka-reitit-referenssi-20261009.png",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "0c993ee44c18611ae06b174d0732f77411a22d45",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/ihmisen-matka-reitit-referenssi-20261009.png",
+          "sha256": "daae525535160915d09249fd7ab4c395252e910c79c96b1c5273fb61af3cbb6e",
+          "dimensions": [
+            1800,
+            900
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/ihmisen-matka-reitit-referenssi-20261009.png"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/ihmisen-matka-reitit-referenssi-20261009.png"
+      ],
+      "completeNewGeneration": true,
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "r2Key": "linssikatalogi/ihmisen-matka-2-foto-mini-v3.jpg",
+      "rootVisualReview": {
+        "sha256": "60723f712414747951ff078db72cf9b1ce510866fbec84af7739b7457f893cab",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Reitit 1–3 näkyvät ja pohjoinen reitti 4 jatkuu pallon horisontin yli. Reitit erottuvat 96 px:n kuvakkeessa; koko maapallo mahtuu ympyrään.",
+          "Solmujen maantieteellisissä paikoissa on epätarkkuutta, näkymä painottuu briefiä enemmän Afrikkaan ja eteläiseen pallonpuoliskoon. Kaarten kirkas ydin noin 1,5–3 px, hohtokehä noin 5–8 px; vähintään 5 px:n ydin ei toteudu. Aikavärityksen vaaleneminen Australiaan jää heikoksi."
+        ],
+        "measurement": {
+          "route1": "Visible Africa-Arabia-SouthAsia-Australia connection; individual site locations deviate and northern-Australian node appears too far south/west.",
+          "route2": "Visible Arabia-Altai-EastAsia branch; exact Altai/Tianyuan coordinates not verified.",
+          "route3": "Visible Arabia-Balkans-southernFrance branch; extra easternMediterranean node occurs.",
+          "route4": "Visible northern arc from Altai/Siberia to bright northeastern limb and beyond; exact Yana/Beringia locations ambiguous. Americas stay outside front view.",
+          "routes1to3CompleteTopicVisible": true,
+          "route4ToHorizonVisible": true,
+          "correctSpecifiedViewingCenter40N105ECertified": false,
+          "viewingCenterIssue": "Whole Africa and south-polar region much more visible than the specified Asian/Northern center implies.",
+          "routeStrokeCorePixelsEstimate": [
+            1.5,
+            3
+          ],
+          "routeGlowHaloPixelsEstimate": [
+            5,
+            8
+          ],
+          "minimumWidth5PixelsCorePass": false,
+          "routesReadable96Pixels": true,
+          "fullEarthAndMainArcsInCircle": true,
+          "actualSiteCoordinatesCertified": false,
+          "timeColorIssue": "Gold remains dominant through Australia; required later pale-yellow progression weak."
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-mini/original-generation.png"
+      },
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-foto-mini-v3.jpg?t=60723f7124147479",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-foto-mini-v3.jpg",
+      "bytes": 121624,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    },
+    {
+      "id": "ihmisen-matka-2-iso",
+      "subject": "Ihmisen matkan reitit",
+      "taskNumber": 54,
+      "style": "photorealistic-natural",
+      "form": "iso",
+      "file": "ihmisen-matka-2-foto-iso-v3.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-iso/ihmisen-matka-2-foto-iso-v3.jpg",
+      "sha256": "93a904627a9449a7c9cfd14332c9fc69c1631508df9578a8d548d821de0edff8",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-755edcf9-26a4-4178-8346-3221f2c5dd42.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-iso/original-generation.png",
+      "originalSHA256": "bace3a49f042b1dbad40fa0150a562767555463b4de244fa6088c5958fa7e605",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Produce one complete new camera-like photographic illustration for a game, not a small edit, not a collage. Realistic materials, natural exposure, muted color, no HDR, no painterly/CGI surface. NO text, names, digits, letters, labels, logos, watermarks, border or people/faces. The metadata notice must not be visible in the image. All content must be newly generated; input images are only specified geometry/composition references.\nInput reference is a route DIAGRAM ONLY: use its topology and time-color progression, never copy its grid, words, years, names or flat graphic style. Underlying Earth must look like a daylight satellite photograph, real terrain, recognizable correct coasts and landmasses, blue ocean, no night hemisphere or city lights. Main subject is FOUR plainly visible continuous luminous migration routes with small bright node points, not a spotlight on Earth. Use deep gold at oldest East-Africa origin, warm orange/gold toward Arabia and southern Asia, pale yellow for later Eurasian segments, white for Beringia/North-America, cool pale blue for southern South-America. Routes: (1) EastAfrica OmoKibish4.8N36E -> Arabia AlWusta28.3N41E -> Sumatra LidaAjer0N101E -> northernAustralia Madjedbebe12.5S133E -> southeastAustralia LakeMungo33.8S143E. (2) Branch from Arabia -> Altai/Denisova51N85E -> eastChinaTianyuan40N116E. (3) Branch from Arabia -> Balkans BachoKiro43N25E -> southernFrance Chauvet44N4E. (4) Branch from Altai -> northernSiberia Yana71N135E -> Beringia66N169W -> southwestNorthAmerica WhiteSands33N106W -> southernChile MonteVerde42S73W. All arcs lie directly above their correct places on Earth and follow geographic paths, not shortcut straight from Africa to America. No arbitrary extra route branches. No words, coordinate labels, year numbers, arrows, compass, map border, latitude/longitude lines or legend.\nWIDE16:9 intended1600x900: a FLAT daylight satellite mosaic WORLD MAP, BlueMarble-like photographic land/sea texture, not a globe. Pacific-centered presentation, longitude range0E at left to290E(70W) at right, latitudes about80N to80S. Africa on LEFT, Asia and Australia middle, Americas RIGHT. All FOUR routes must be COMPLETE and easily distinguishable, including Siberia->Beringia->NorthAmerica->SouthAmerica. Southern Chile endpoint still fully in frame at right edge with small margin. No ships or people. Land masses remain correctly located; no duplicating continents to force routes. Route color/body style exactly the same as the matching mini globe.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+        "sourceCommit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+        "sourceBlob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md"
+      ],
+      "kuvateksti": "Nykyihmisen leviäminen maailman eri osiin. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": false
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "93a904627a9449a7c9cfd14332c9fc69c1631508df9578a8d548d821de0edff8",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Kaikki neljä reittiketjua ovat kokonaisina näkyvissä litteällä päivämaailmankartalla, myös Beringia–Pohjois-Amerikka–Etelä-Amerikka.",
+          "Lida Ajerin ja Madjedbeben solmuissa sekä muissa löytöpaikoissa sijaintiepätarkkuutta. Kartta näyttää pyydettyä 0–290°E/±80° aluetta laajemman maantieteen. Aikavärityksen vaaleneminen Australiaan jää heikoksi."
+        ],
+        "measurement": {
+          "route1": "Visible continuous Africa-Arabia-SouthAsia-Australia chain; LidaAjer/Madjedbebe node locations are approximate/off their requested sites.",
+          "route2": "Visible north/eastAsia branch; individual coordinates approximate.",
+          "route3": "Visible Europe branch; Balkan/France nodes readable as general regions.",
+          "route4": "Visible Siberia-Beringia-NorthAmerica-SouthAmerica chain with white/cool-blue glow. SouthAmerica node visible near Chile.",
+          "allFourRouteChainsVisible": true,
+          "flatDaylightSatelliteMosaic": true,
+          "pacificCenteredGeneralLayout": true,
+          "longitudeBounds0Eto290EMatched": false,
+          "projectionIssue": "Generated map includes broader Americas/Greenland/Atlantic and Antarctica than requested0E-290E,±80degrees.",
+          "actualSiteCoordinatesCertified": false,
+          "timeColorIssue": "Main southern route remains largely golden instead of later pale-yellow at all specified destinations."
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-iso/original-generation.png"
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-tahdet-ihmisen-matka-uusinnat-20261009.md",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "662beb6ebf0e08bbcd8fd5f53b1b5cae5ab5303c"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/ihmisen-matka-reitit-referenssi-20261009.png",
+          "commit": "50049e3b4b6e9ee87125ae165686556a0ffa3532",
+          "blob": "0c993ee44c18611ae06b174d0732f77411a22d45",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/ihmisen-matka-reitit-referenssi-20261009.png",
+          "sha256": "daae525535160915d09249fd7ab4c395252e910c79c96b1c5273fb61af3cbb6e",
+          "dimensions": [
+            1800,
+            900
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/ihmisen-matka-reitit-referenssi-20261009.png"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/ihmisen-matka-reitit-referenssi-20261009.png"
+      ],
+      "completeNewGeneration": true,
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "r2Key": "linssikatalogi/ihmisen-matka-2-foto-iso-v3.jpg",
+      "rootVisualReview": {
+        "sha256": "93a904627a9449a7c9cfd14332c9fc69c1631508df9578a8d548d821de0edff8",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Kaikki neljä reittiketjua ovat kokonaisina näkyvissä litteällä päivämaailmankartalla, myös Beringia–Pohjois-Amerikka–Etelä-Amerikka.",
+          "Lida Ajerin ja Madjedbeben solmuissa sekä muissa löytöpaikoissa sijaintiepätarkkuutta. Kartta näyttää pyydettyä 0–290°E/±80° aluetta laajemman maantieteen. Aikavärityksen vaaleneminen Australiaan jää heikoksi."
+        ],
+        "measurement": {
+          "route1": "Visible continuous Africa-Arabia-SouthAsia-Australia chain; LidaAjer/Madjedbebe node locations are approximate/off their requested sites.",
+          "route2": "Visible north/eastAsia branch; individual coordinates approximate.",
+          "route3": "Visible Europe branch; Balkan/France nodes readable as general regions.",
+          "route4": "Visible Siberia-Beringia-NorthAmerica-SouthAmerica chain with white/cool-blue glow. SouthAmerica node visible near Chile.",
+          "allFourRouteChainsVisible": true,
+          "flatDaylightSatelliteMosaic": true,
+          "pacificCenteredGeneralLayout": true,
+          "longitudeBounds0Eto290EMatched": false,
+          "projectionIssue": "Generated map includes broader Americas/Greenland/Atlantic and Antarctica than requested0E-290E,±80degrees.",
+          "actualSiteCoordinatesCertified": false,
+          "timeColorIssue": "Main southern route remains largely golden instead of later pale-yellow at all specified destinations."
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/54/production/ihmisen-matka-2-iso/original-generation.png"
+      },
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-foto-iso-v3.jpg?t=93a904627a9449a7",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-foto-iso-v3.jpg",
+      "bytes": 527021,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "r2Key": "linssikatalogi/20261009-uusinnat-tahdet-ihmisen-matka-kooste.jpg",
+    "url": "https://media.matkakirja.app/linssikatalogi/20261009-uusinnat-tahdet-ihmisen-matka-kooste.jpg?t=561b399fa9eefbbf",
+    "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/20261009-uusinnat-tahdet-ihmisen-matka-kooste.jpg",
+    "sha256": "561b399fa9eefbbf7ebe88c7dee47d0fc8d9aaa6ec9fb2b4eff2176c4b245da7",
+    "bytes": 307695,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "cacheBustedPreflightHttp": 404,
+    "cacheBustedReadback": true,
+    "byteExactReadback": true
+  },
+  "allContentConstraintsPassed": false,
+  "existingAssetsRemainInUse": true,
+  "fableReceipt": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T11:55:13.047301+00:00"
+}

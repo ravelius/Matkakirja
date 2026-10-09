@@ -1,0 +1,295 @@
+{
+  "taskNumbers": [
+    55
+  ],
+  "taskNumber": 55,
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-20261009.md",
+      "commit": "99e53264825a7a81d760f6996fc9a4777d51927d",
+      "blob": "489074bf65a567d8b46fa68483e8526ac9d6bce7"
+    }
+  ],
+  "sourceReadInFull": true,
+  "generationCalls": 1,
+  "generationLimit": 1,
+  "taskCounts": {
+    "55": {
+      "imageCount": 1,
+      "generationCalls": 1,
+      "generationLimit": 1
+    }
+  },
+  "imageCount": 1,
+  "productionComplete": true,
+  "partialDelivery": false,
+  "allR2ReadbacksByteExact": true,
+  "assets": [
+    {
+      "id": "pariisi-c5",
+      "subject": "Pariisi 1870-luvulla",
+      "taskNumber": 55,
+      "style": "historical-scene-photographic",
+      "form": "intro-4:3",
+      "file": "pariisi-nykyintro-c5.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/55/production/pariisi-c5/pariisi-nykyintro-c5.jpg",
+      "sha256": "1f3de7ff97de93c53a540072350d3d6b67bb07087211ad295e9a07f0090229b6",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5fb891d9-8982-42d6-b07f-3eb0da2121de.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/55/production/pariisi-c5/original-generation.png",
+      "originalSHA256": "8c19b3dfae114b1ed465e344adaa498abccc4f004e22aa4239cc0c7bd4f1a12a",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene. One entirely NEW photorealistic reconstruction of a1870s Paris aerial albumen photograph, LANDSCAPE4:3 intended2048x1536. Mandatory input is a drawn cartographic composition reference only, NOT a photograph/Google3D/screenshot. Use ONLY its exact water-land boundaries and camera composition, not its flat colors, data labels or red marker. Lock the river's two branching channels, leaf-shaped Cite-island shoreline, broad main Seine branch at lower right, and all shore contours to the reference without mirroring, rotation, simplification, reprojection or inventing islands. Build historical buildings on land only and rivers on water only. Same high oblique view: about1100m camera distance,50degrees from vertical, bearing-131degrees; the attachment is the authoritative pixel perspective. NotreDame footprint centered at EXACTLYx50percent,y64percent of finalcanvas, where the small red reference dot is. REMOVE that dot/any ring from final image; its site becomes the accurately scaled cathedral on the island, not an oversized floating icon. The scene must fill the whole frame in the same composition as input, no horizon invented and no conventional aerial postcard view replacing the input. Cathedral has its two west towers, long nave, and Viollet-le-Duc's slender1859 crossing spire. Include OLD Hotel-Dieu hospital, as before its1878 demolition, among island buildings beside NotreDame near the south bank/parvis, period stone bridges, narrow streets, packed traditional slate/stone roofs, light coal/chimney smoke, a few tiny period steam vessels/barges and moored boats. Genuine old-camera optical softness, subtle fine grain, monochromatic warm sepia albumen tone with slightly yellow paper tint and very faint vignette, natural daylight. Full photographic texture, not engraving/painting/model/CGI/map rendering. No cars, modern buildings, EiffelTower, completed SacreCoeur, neon, modern concrete bridges, recognizable faces, readable text, captions, digits, labels, logos or watermark. No paper border or frame. No Google3D data used or imitated. Preserve mapped shore geometry and cathedral anchor exactly, with natural historical photographic texture.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-20261009.md",
+        "sourceCommit": "99e53264825a7a81d760f6996fc9a4777d51927d",
+        "sourceBlob": "489074bf65a567d8b46fa68483e8526ac9d6bce7"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-20261009.md"
+      ],
+      "kuvateksti": "Pariisin Cité-saari ja Seine 1870-luvun valokuvan tyyliin. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1448,
+          1086
+        ],
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "1f3de7ff97de93c53a540072350d3d6b67bb07087211ad295e9a07f0090229b6",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Seepiasävyinen vanhan valokuvan vaikutelma, Notre-Dame kattoratsastajalla, kivisiltoja, piippusavua ja pieniä höyrylaivoja/proomuja. Autoja, Eiffeliä, valmistunutta Sacré-Cœuria, luettavaa tekstiä tai tunnistettavia kasvoja ei havaittu.",
+          "Sommittelu ei vastaa pakollista referenssiä: Notre-Damen katon/maapohjan arvioitu keskipiste poikkeaa noin 8–10 % kuvan leveydestä (mittausepävarmuus noin 2 %); testattujen rantapisteiden poikkeama noin 5–13 %. Ei sellaisenaan ristihäivytykseen. Vanhan Hôtel-Dieun tarkkaa rakennusidentiteettiä ei varmennettu.",
+          "Työkalun 1448 × 1086 -alkuperäinen suurennettu teknisesti 2048 × 1536 -toimituskokoon. #52:n hyväksyntää ei muutettu."
+        ],
+        "measurement": {
+          "method": "Manual normalized-coordinate comparison on reference/photograph grid; cathedral roof/footprint center is approximate. Positional uncertainty about1.5-2percent of image width.",
+          "expectedNotreDameAnchor": [
+            0.5,
+            0.64
+          ],
+          "estimatedGeneratedNotreDameRoofCenter": [
+            0.55,
+            0.53
+          ],
+          "estimatedGeneratedNotreDameFootprintCenter": [
+            0.57,
+            0.58
+          ],
+          "cathedralDisplacementPercentWidthRoof": 9.64689069078737,
+          "cathedralDisplacementPercentWidthFootprint": 8.32165848854662,
+          "riverSamples": [
+            {
+              "xFraction": 0.5,
+              "referenceNorthChannelBankY": [
+                0.5489341085,
+                0.5717054264
+              ],
+              "estimatedGeneratedBankY": [
+                0.38,
+                0.5
+              ],
+              "bankOffsetPercentWidth": [
+                12.670058137500002,
+                5.37790698
+              ]
+            },
+            {
+              "xFraction": 0.7,
+              "referenceMainChannelBankY": [
+                0.793120155,
+                0.904069767
+              ],
+              "estimatedGeneratedBankY": [
+                0.663,
+                0.805
+              ],
+              "bankOffsetPercentWidth": [
+                9.759011624999998,
+                7.430232524999994
+              ]
+            }
+          ],
+          "shoreGeometryFidelityPass": false,
+          "crossfadeAlignmentPass": false,
+          "anachronismsObserved": false,
+          "historicArchitectureCertified": false,
+          "noReadableTextOrIdentifiableFacesObserved": true,
+          "oldHotelDieuBuildingIdentityVerified": false,
+          "referenceUsedOnlyForWaterLandAndComposition": true,
+          "Google3DInputUsed": false
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/55/production/pariisi-c5/original-generation.png"
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-20261009.md",
+          "commit": "99e53264825a7a81d760f6996fc9a4777d51927d",
+          "blob": "489074bf65a567d8b46fa68483e8526ac9d6bce7"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/pariisi-c5-sommittelu-osm-20261009.png",
+          "commit": "99e53264825a7a81d760f6996fc9a4777d51927d",
+          "blob": "9cc2ec51a3f782197a1adc48778df14f6b43a9c5",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/pariisi-c5-sommittelu-osm-20261009.png",
+          "sha256": "1ae68ab313da32de9c38eb9a64e68a6a44deff7dc42480ff93216619c8a2242a",
+          "dimensions": [
+            2752,
+            2064
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/pariisi-c5-sommittelu-osm-20261009.png"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/references/pariisi-c5-sommittelu-osm-20261009.png"
+      ],
+      "completeNewGeneration": true,
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "datasetAttribution": "© OpenStreetMap contributors, ODbL; ESA WorldCover 2021, CC BY 4.0",
+      "sourceReferencePixelCopy": "No direct compositing; geometry-guided complete builtin generation",
+      "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5.jpg",
+      "rootVisualReview": {
+        "sha256": "1f3de7ff97de93c53a540072350d3d6b67bb07087211ad295e9a07f0090229b6",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "accuracyGatePass": false,
+        "educationalOrCrossfadeUseApproved": false,
+        "findings": [
+          "Seepiasävyinen vanhan valokuvan vaikutelma, Notre-Dame kattoratsastajalla, kivisiltoja, piippusavua ja pieniä höyrylaivoja/proomuja. Autoja, Eiffeliä, valmistunutta Sacré-Cœuria, luettavaa tekstiä tai tunnistettavia kasvoja ei havaittu.",
+          "Sommittelu ei vastaa pakollista referenssiä: Notre-Damen katon/maapohjan arvioitu keskipiste poikkeaa noin 8–10 % kuvan leveydestä (mittausepävarmuus noin 2 %); testattujen rantapisteiden poikkeama noin 5–13 %. Ei sellaisenaan ristihäivytykseen. Vanhan Hôtel-Dieun tarkkaa rakennusidentiteettiä ei varmennettu.",
+          "Työkalun 1448 × 1086 -alkuperäinen suurennettu teknisesti 2048 × 1536 -toimituskokoon. #52:n hyväksyntää ei muutettu."
+        ],
+        "measurement": {
+          "method": "Manual normalized-coordinate comparison on reference/photograph grid; cathedral roof/footprint center is approximate. Positional uncertainty about1.5-2percent of image width.",
+          "expectedNotreDameAnchor": [
+            0.5,
+            0.64
+          ],
+          "estimatedGeneratedNotreDameRoofCenter": [
+            0.55,
+            0.53
+          ],
+          "estimatedGeneratedNotreDameFootprintCenter": [
+            0.57,
+            0.58
+          ],
+          "cathedralDisplacementPercentWidthRoof": 9.64689069078737,
+          "cathedralDisplacementPercentWidthFootprint": 8.32165848854662,
+          "riverSamples": [
+            {
+              "xFraction": 0.5,
+              "referenceNorthChannelBankY": [
+                0.5489341085,
+                0.5717054264
+              ],
+              "estimatedGeneratedBankY": [
+                0.38,
+                0.5
+              ],
+              "bankOffsetPercentWidth": [
+                12.670058137500002,
+                5.37790698
+              ]
+            },
+            {
+              "xFraction": 0.7,
+              "referenceMainChannelBankY": [
+                0.793120155,
+                0.904069767
+              ],
+              "estimatedGeneratedBankY": [
+                0.663,
+                0.805
+              ],
+              "bankOffsetPercentWidth": [
+                9.759011624999998,
+                7.430232524999994
+              ]
+            }
+          ],
+          "shoreGeometryFidelityPass": false,
+          "crossfadeAlignmentPass": false,
+          "anachronismsObserved": false,
+          "historicArchitectureCertified": false,
+          "noReadableTextOrIdentifiableFacesObserved": true,
+          "oldHotelDieuBuildingIdentityVerified": false,
+          "referenceUsedOnlyForWaterLandAndComposition": true,
+          "Google3DInputUsed": false
+        },
+        "rootReviewedAt": "2026-10-09T11:53:30.149549+00:00",
+        "editorAcceptance": false,
+        "reviewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien53-55-20261009/55/production/pariisi-c5/original-generation.png"
+      },
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5.jpg?t=1f3de7ff97de93c5",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5.jpg",
+      "bytes": 899312,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": null,
+  "allContentConstraintsPassed": false,
+  "existingAssetsRemainInUse": true,
+  "fableReceipt": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T11:53:35.390314+00:00",
+  "sourcePriorC1C4AcceptanceClaimUnverified": true,
+  "priorTask52AcceptanceChanged": false
+}
