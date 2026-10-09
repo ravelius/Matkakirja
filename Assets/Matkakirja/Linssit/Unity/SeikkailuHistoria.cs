@@ -37,12 +37,14 @@ namespace Matkakirja.Natiivi
             ajossa = go.AddComponent<SeikkailuHistoria>();
             ajossa.valmis = valmis;
             var nayttamo = FindAnyObjectByType<DioraamaNayttamo>();
-            if (vaiheJuuri != null && nayttamo != null)
-                ajossa.StartCoroutine(SeikkailuVaiheet.Lataa(vaiheJuuri, url ?? (s => s), nayttamo.transform, kirjaa, v => { if (ajossa != null && !ajossa.lopeta) ajossa.vaiheet = v; else v.Tuhoa(); }));
+            ajossa.vaiheetKesken = vaiheJuuri != null && nayttamo != null;
+            if (ajossa.vaiheetKesken)
+                ajossa.StartCoroutine(SeikkailuVaiheet.Lataa(vaiheJuuri, url ?? (s => s), nayttamo.transform, kirjaa, v => { if (ajossa != null && !ajossa.lopeta) { ajossa.vaiheet = v; ajossa.vaiheetKesken = false; } else v.Tuhoa(); }));
             ajossa.StartCoroutine(ajossa.Aja(kamera, kirjaa));
         }
 
         SeikkailuVaiheet vaiheet;
+        bool vaiheetKesken;
 
         // KERTOJA (PT 9.10.: 9 riviä Pelikoodarin aja-generointi.sh:lla omistajan luvalla): ääni workerin kautta {Palvelin}/opas/aani/<sha>.mp3,
         // sha taulusta olavinlinna.historia.<avain>.kertoja.aani (tyokalut/historia_kertoja_sha.mjs, sama kuin generoinnissa). Jakso
@@ -110,8 +112,10 @@ namespace Matkakirja.Natiivi
             var keski = new Matkakirja.Linssit.Dioraama.V3(SeikkailuNousu.LinnaKeskiUnity.x, SeikkailuNousu.LinnaKeskiUnity.y, -SeikkailuNousu.LinnaKeskiUnity.z);
             kirjaa?.Invoke($"seikkailu: historia alkaa ({h.Kesto:F0} s, {h.Vaiheet.Count} vaihetta, kasvu {(kasvu ? "leikkauksin" : "ei kävelydataa")}{(Historiajana.Lukittu ? "" : ", vuodet alustavia")})");
             yield return HaeKertoja(0, h.Vaiheet[0]);   // ensimmäinen rivi ennen alkua (puuttuva → heti eteenpäin)
+            // Vaihemallit valmiiksi ennen alkua (tyhjä saari näkyy heti, linna ei katoa tyhjään veteen); enintään 10 s.
+            for (float odotus = 0; vaiheetKesken && odotus < 10f && !lopeta; odotus += Time.unscaledDeltaTime) yield return null;
             float alku = Time.unscaledTime;
-            int vaihe = -1;
+            int vaihe = -1; double seurLoki = 0;
             HistoriaVaihe nakyva = null;
             while (!lopeta)
             {
@@ -124,6 +128,7 @@ namespace Matkakirja.Natiivi
                 if (suunta.sqrMagnitude > 1e-6f) kamera.rotation = Quaternion.LookRotation(suunta, Vector3.up);
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
+                if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
                 LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
                 List<KavelyLeikkaus> vl = null;
                 if (vaiheet != null)
