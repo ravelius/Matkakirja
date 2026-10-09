@@ -270,6 +270,52 @@ namespace Matkakirja.Linssit.Testit
                 }
         }
 
+        // Vasa-arkki 9.10. 17.54: kierroksella kääntöraja piti saapumisen lentosuunnassa (99° → 88°) ja kaaret kiersivät seuraavaa
+        // kohdetta (Skansen) kohti → oman katse_suunnan kohteella lennon kaari pois ja pysähdyksen kaari päättyy katsesuuntaan.
+        public static (double saapui, double loppu) KierrosSaapumisSuuntima(bool katse)
+        {
+            bool p0 = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
+            try
+            {
+                var jono = new List<(string, double, double)> { ("Gamla stan", 59.3250, 18.0708), ("Vasa-museo", 59.3281, 18.0914), ("Ulkoilmamuseo Skansen", 59.3245, 18.1010) };
+                var s = new OpasSilmukka(new Kuvakulma(59.3250, 18.0708, 420, 58, 70, 30));
+                var pyynnot = new List<(int n, string t)>();
+                s.Pyyda += (n, t) => pyynnot.Add((n, t));
+                double puheAlkoi = -1, t = 0; s.AlkaaPuhua += k => puheAlkoi = t;
+                s.Aloita("Tukholma");
+                s.AloitaKierros(jono);
+                const double dt = 1 / 30.0; int vastattu = 0; double saapui = double.NaN, loppu = double.NaN;
+                for (; t < 400; t += dt)
+                {
+                    while (vastattu < pyynnot.Count)
+                    {
+                        var (n, nimi) = pyynnot[vastattu++];
+                        var e = jono.Find(x => x.Item1 == nimi);
+                        if (e.Item1 == null) continue;
+                        var k = new OpasKohde { Id = e.Item1, Nimi = e.Item1, Lat = e.Item2, Lon = e.Item3, KokoM = 120, KorkeusM = 39, KestoS = 5, Kierros = true };
+                        if (katse && e.Item1 == "Vasa-museo") k.KatseSuunta = 40;
+                        s.Vastaus(n, k);
+                    }
+                    s.Paivita(dt, _ => 29);
+                    if (s.Nykyinen?.Id == "Vasa-museo" && (s.Vaihe == OpasVaihe.Puhuu || s.Vaihe == OpasVaihe.Odottaa))
+                    { if (double.IsNaN(saapui)) saapui = s.Asento.Suuntima; loppu = s.Asento.Suuntima; }
+                    else if (!double.IsNaN(saapui)) break;
+                    double kesto = s.Nykyinen?.Id == "Vasa-museo" ? 40 : 5;
+                    if (s.Vaihe == OpasVaihe.Puhuu && puheAlkoi >= 0 && t - puheAlkoi > kesto) { s.AaniLoppui(); puheAlkoi = -1; }
+                }
+                return (saapui, loppu);
+            }
+            finally { OpasSilmukka.PalloLento = p0; }
+        }
+
+        [Testi] static void KierroksellaPysahdysKiertaaKatseSuuntaan()
+        {
+            var ilman = KierrosSaapumisSuuntima(false); var kanssa = KierrosSaapumisSuuntima(true);
+            string m = $"Vasa kierroksella: ilman kenttää {ilman.saapui:F0}° → {ilman.loppu:F0}°, katse 40°: {kanssa.saapui:F0}° → {kanssa.loppu:F0}°";
+            Oleta.Tosi(!double.IsNaN(ilman.loppu) && !double.IsNaN(kanssa.loppu), "Vasaan perille: " + m);
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(kanssa.loppu - 40)) < 5, "pysähdyksen kaari päättyy katsesuuntaan: " + m);
+        }
+
         // Video8 8.10.: siirron maanäyte pyydettiin ennen kuin kaupunki oli auki (hylättiin hiljaa) → siirto aina aikarajaan.
         [Testi] static void SiirtoPyytaaMaanNaytteenUudelleen()
         {
