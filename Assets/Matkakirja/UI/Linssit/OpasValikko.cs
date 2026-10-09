@@ -1766,6 +1766,10 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Omat 3D-mallit (Päätoimittaja 9.10.2026: Concorde, Riddarholmen, Notre-Dame, Giza): mallit.json:n kohdekohtaiset
+                    // tekijärivit (LS2 0bf2ed7b2: CesiumOmatMallit.Lahderivit; tyhjä, kunnes json on saapunut).
+                    foreach (var m in Matkakirja.Linssit.CesiumOmatMallit.Lahderivit)
+                        if (!string.IsNullOrWhiteSpace(m)) Kirjasimet.Aseta(Rakenne.Teksti(m.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
