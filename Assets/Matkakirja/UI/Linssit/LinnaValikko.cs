@@ -280,7 +280,12 @@ namespace Matkakirja.Natiivi
             if (r.Taulu != null) foreach (var k in r.Taulu.Kohdat) Lisaa(k.Lahde);
             // Linnan historian restaurointivaihe (Päätoimittaja 9.10.2026, juna 173): Museoviraston valokuvat 1959–1975, CC BY 4.0
             // (Sisältökirjurin olavinlinna-restaurointi-1961-75/MANIFEST.json: kuvaajat Per-Olof Welin ja Teuvo Kanerva, osa nimeämättä).
-            if (DioraamaSovitin.RakennusId == DioraamaSovitin.Oletusrakennus) Lisaa(Kieli.T("ui.linna.lahde.restaurointi"));
+            // Olavinlinnan maasto (Siirtosepän v45z, Päätoimittaja 9.10.: rakennus.json:n lähteissä ei ole MML:ää).
+            if (DioraamaSovitin.RakennusId == DioraamaSovitin.Oletusrakennus)
+            {
+                Lisaa(Kieli.T("ui.linna.lahde.restaurointi"));
+                Lisaa(Kieli.T("ui.linna.lahde.korkeusmalli"));
+            }
             return tulos;
         }
 
