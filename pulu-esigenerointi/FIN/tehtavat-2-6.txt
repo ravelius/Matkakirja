@@ -1,0 +1,1030 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miksi veneillä oli yhä vaikeampi päästä saarelle rakennetulle Raaseporin linnalle?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on hyvä pähkinä. Syynä oli [[maankohoaminen]]: maa nousi merestä, vesi madaltui ja merenlahti alkoi vetäytyä linnan edustalta. Linna oli rakennettu pienelle saarelle merenlahden pohjukkaan, joten kulkuyhteys meren puolelta vaikeutui vähitellen. Ilmiö on edelleen todellinen Suomen rannikolla, sillä maa kohoaa [[jääkauden]] jälkeen, koska mannerjään paino on poistunut. Maa nousee yhä, mut kyyhky lentää kuivin siivin.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Miksi Helsingin perustaminen vaikutti Raaseporin linnan kohtaloon?
+AIEMPI VASTAUS (Livia):
+Hmm, kaksi kaupunkia ja yksi linna. Helsinki perustettiin vuonna 1550, ja sen perusti kuningas [[Kustaa Vaasa]] muun muassa kilpailemaan [[Tallinnan]] kaupan kanssa. Kun uusi kaupunki nousi alueen keskukseksi, Raasepori menetti asemansa, ja linna hylättiin vuonna 1553. Sen lisäksi [[maankohoaminen]] oli jo tehnyt linnalle lähestymisestä meren puolelta vaikeaa. Kyllä ne kaupungit vanhoja linnoja vähän syrjäyttävät.
+KYSYMYS: Kerro lisää: Kustaa Vaasa
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Paksu Margareeta] 1511–1530 Paksu Margareeta on tanakka, pyöreä torni Tallinnan vanhan kaupungin laidalla, aivan sataman kupeessa Pika kadun päässä. Se rakennettiin vuosien 1511 ja 1530 välillä osaksi kaupungin meren puoleista puolustusta, Suuren Rantaportin kylkeen. Torni on niin järeä, että sen läpimitta on 25 metriä ja seinät jopa 5 metriä paksut - se on koko kaupunginmuurin tukevin yksittäinen rakennelma. Sillä oli kaksi tehtävää: torjua hyökkääjät ja tehdä samalla vaikutuksen merta pitkin saapuviin vieraisiin. Vuosisatojen varrella torni sai monta erilaista käyttötarkoitusta. Ensin siellä säilytettiin ruutia ja aseita, myöhemmin siitä tehtiin vankila. Vuoden 1917 vallankumouksen aikaan tornissa tapahtui…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Miksi Helsingin perustaminen vaikutti Raaseporin linnan kohtaloon?
+AIEMPI VASTAUS (Livia):
+Hmm, kaksi kaupunkia ja yksi linna. Helsinki perustettiin vuonna 1550, ja sen perusti kuningas [[Kustaa Vaasa]] muun muassa kilpailemaan [[Tallinnan]] kaupan kanssa. Kun uusi kaupunki nousi alueen keskukseksi, Raasepori menetti asemansa, ja linna hylättiin vuonna 1553. Sen lisäksi [[maankohoaminen]] oli jo tehnyt linnalle lähestymisestä meren puolelta vaikeaa. Kyllä ne kaupungit vanhoja linnoja vähän syrjäyttävät.
+KYSYMYS: Kerro lisää: Tallinnan
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Mikä hansa oli ja miksi Tallinna oli siinä tärkeä kaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Hansa oli pohjoiseurooppalaisten kauppakaupunkien liitto, joka hallitsi pitkään Pohjanmeren ja Itämeren kauppaa keskiajalla. Sen keskeisiä kaupunkeja olivat esimerkiksi [[Lyypekki]] ja [[Tallinna]], joka sijaitsi Suomenlahden eteläpuolella tärkeällä kauppareitillä. Raaseporin linna rakennettiin turvaamaan Ruotsin etuja Etelä-Suomessa tätä kauppaverkostoa vastaan.
+
+Kauppakaupunkien verkosto, jossa tieto kulkee kaupungista toiseen, kuulostaa kyyhkyn korvaan melkein kodilta. Suvussa olisi kyllä riittänyt töitä.
+KYSYMYS: Kerro lisää: Lyypekki
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kaupunkilehti / Tallinna] Kaupunki, jonka apteekissa myytiin poltettuja siilejä ja jonka tornin huipulla sama sotilas on kääntynyt tuulen mukana vuodesta 1530.
+AIEMPI KYSYMYS: Mikä hansa oli ja miksi Tallinna oli siinä tärkeä kaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Hansa oli pohjoiseurooppalaisten kauppakaupunkien liitto, joka hallitsi pitkään Pohjanmeren ja Itämeren kauppaa keskiajalla. Sen keskeisiä kaupunkeja olivat esimerkiksi [[Lyypekki]] ja [[Tallinna]], joka sijaitsi Suomenlahden eteläpuolella tärkeällä kauppareitillä. Raaseporin linna rakennettiin turvaamaan Ruotsin etuja Etelä-Suomessa tätä kauppaverkostoa vastaan.
+
+Kauppakaupunkien verkosto, jossa tieto kulkee kaupungista toiseen, kuulostaa kyyhkyn korvaan melkein kodilta. Suvussa olisi kyllä riittänyt töitä.
+KYSYMYS: Kerro lisää: Tallinna
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kaupunkilehti / Yellowknife: Vuosi 1873: rauniot lahden suulla] Isoisän matkavuonna lahden rannalla ei ollut kauppa-asemaa — se oli ollut suljettuna viisikymmentä vuotta. Old Fort Providence perustettiin 1789, kun Alexander Mackenzie aloitti kaupan Yellowknivesin ja tłı̨chǫn kanssa ja määräsi apulaisensa Laurent Leroux'n pystyttämään aseman. Paikka ei ollut suuri turkiskeskus vaan huoltopiste: sieltä muonitettiin muita asemia ja retkikuntia, muun muassa John Franklinin Coppermine-retkeä 1820. Asema oli kalaisalla paikalla, jota denet olivat käyttäneet sukupolvien ajan. Hudson's Bay Company otti sen 1821 ja sulki 1823; rauniot kaivettiin esiin vasta 1969—1971.
+AIEMPI KYSYMYS: Voiko Raaseporin linnaan tutustua nykyään ja milloin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys. Raaseporin [[rauniot]] ovat nykyisin kesäisin avoinna yleisölle, joten vierailu on mahdollinen kesäkauden aikana. Niiden vieressä esitetään ruotsinkielistä [[kesäteatteria]]. Tarkat aukioloajat ja esitysten ohjelman kannattaa tarkistaa ajantasaisesta lähteestä, koska en ole niistä varma. Väliajalla pitäis saada pullaa, ainakin minä sitä toivoisin.
+KYSYMYS: Kerro lisää: rauniot
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+AIEMPI KYSYMYS: Voiko Raaseporin linnaan tutustua nykyään ja milloin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys. Raaseporin [[rauniot]] ovat nykyisin kesäisin avoinna yleisölle, joten vierailu on mahdollinen kesäkauden aikana. Niiden vieressä esitetään ruotsinkielistä [[kesäteatteria]]. Tarkat aukioloajat ja esitysten ohjelman kannattaa tarkistaa ajantasaisesta lähteestä, koska en ole niistä varma. Väliajalla pitäis saada pullaa, ainakin minä sitä toivoisin.
+KYSYMYS: Kerro lisää: kesäteatteria
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+AIEMPI KYSYMYS: Miten maankohoaminen on muuttanut Suomen rannikkoa?
+AIEMPI VASTAUS (Livia):
+Annas ku katon. Jääkauden jälkeen mannerjään paino poistui, ja maankuori on kohonnut siitä asti. Kohoaminen on nopeinta [[Pohjanlahden]] pohjoisosissa ja hitaampaa etelärannikolla. Rannikolla tämä näkyy siinä, että vesi madaltuu, uusia saaria ja luotoja syntyy ja vanhat väylät ja satamat jäävät liian matalaksi, kuten [[Raaseporin]] linnan edustalla kävi. Ilmiö on edelleen käynnissä.
+
+Ylhäältä katsottuna ranta tuntuu liikkuvan, vaikka se tapahtuu hitaammin kuin yksikään kyyhky ehtisi huomata.
+KYSYMYS: Kerro lisää: Pohjanlahden
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+AIEMPI KYSYMYS: Miten maankohoaminen on muuttanut Suomen rannikkoa?
+AIEMPI VASTAUS (Livia):
+Annas ku katon. Jääkauden jälkeen mannerjään paino poistui, ja maankuori on kohonnut siitä asti. Kohoaminen on nopeinta [[Pohjanlahden]] pohjoisosissa ja hitaampaa etelärannikolla. Rannikolla tämä näkyy siinä, että vesi madaltuu, uusia saaria ja luotoja syntyy ja vanhat väylät ja satamat jäävät liian matalaksi, kuten [[Raaseporin]] linnan edustalla kävi. Ilmiö on edelleen käynnissä.
+
+Ylhäältä katsottuna ranta tuntuu liikkuvan, vaikka se tapahtuu hitaammin kuin yksikään kyyhky ehtisi huomata.
+KYSYMYS: Kerro lisää: Raaseporin
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+AIEMPI KYSYMYS: Miksi Elias Lönnrot kulki Kuhmon kautta Karjalaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lönnrot kulki Kuhmon kautta, koska hän matkusti keräämään kansanrunoja Karjalaan, ja Kuhmo sijaitsi sillä reitillä. [[Elias Lönnrot]] keräsi vanhoja runoja 1830-luvulta alkaen ja kokosi niistä [[Kalevalan]]. Osan Kalevalasta hän muokkasi juuri Kuhmossa, ja hänen majapaikkansa jäljennös on nykyisin [[Kalevalakylässä]]. Runoja ei tuohon aikaan pääasiassa luettu vaan laulettiin, usein kahden laulajan vuorolauluna. Pitkä matka ilman siipiä.
+KYSYMYS: Kerro lisää: Elias Lönnrot
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Soitin, joka syntyi kalasta] Kalevalassa — Kantele on Suomen vanhin oma soitin: puinen kaikukoppa, jonka yli on pingotettu kieliä, ja jota soitetaan sormin näppäillen. Kalevalan mukaan Väinämöinen teki ensimmäisen kanteleen hauen leukaluusta ja kielet hevosen jouhista. Vanhimmissa kanteleissa oli viisi kieltä ja ne veistettiin yhdestä puukappaleesta. Nykyisessä konserttikanteleessa on 39 kieltä ja vipuja, joilla sävelkorkeutta muutetaan kesken soiton. Pienintä viisikielistä opetellaan kouluissa.
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+AIEMPI KYSYMYS: Miksi Elias Lönnrot kulki Kuhmon kautta Karjalaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lönnrot kulki Kuhmon kautta, koska hän matkusti keräämään kansanrunoja Karjalaan, ja Kuhmo sijaitsi sillä reitillä. [[Elias Lönnrot]] keräsi vanhoja runoja 1830-luvulta alkaen ja kokosi niistä [[Kalevalan]]. Osan Kalevalasta hän muokkasi juuri Kuhmossa, ja hänen majapaikkansa jäljennös on nykyisin [[Kalevalakylässä]]. Runoja ei tuohon aikaan pääasiassa luettu vaan laulettiin, usein kahden laulajan vuorolauluna. Pitkä matka ilman siipiä.
+KYSYMYS: Kerro lisää: Kalevalan
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Miksi Elias Lönnrot kulki Kuhmon kautta Karjalaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lönnrot kulki Kuhmon kautta, koska hän matkusti keräämään kansanrunoja Karjalaan, ja Kuhmo sijaitsi sillä reitillä. [[Elias Lönnrot]] keräsi vanhoja runoja 1830-luvulta alkaen ja kokosi niistä [[Kalevalan]]. Osan Kalevalasta hän muokkasi juuri Kuhmossa, ja hänen majapaikkansa jäljennös on nykyisin [[Kalevalakylässä]]. Runoja ei tuohon aikaan pääasiassa luettu vaan laulettiin, usein kahden laulajan vuorolauluna. Pitkä matka ilman siipiä.
+KYSYMYS: Kerro lisää: Kalevalakylässä
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Mikä on karelianismi, ja miten Kuhmo liittyy siihen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Karelianismi on 1800-luvun lopun kansallisromanttinen taiteen ja kulttuurin suuntaus, joka haki aiheitaan Karjalasta ja Kalevalan maailmasta. Kalevalan ilmestyminen vuonna 1835 vauhditti sen syntyä. Kuhmo liittyy siihen monella tavalla: [[Akseli Gallen-Kallela]], yksi suuntauksen tunnetuimmista edustajista, vietti häämatkansa Kuhmossa ja maalasi töitään Lentua-järven Lapinsalmella. Lentuan maisema on [[Aino-triptyykin]] keskimmäisen taulun taustana. Taiteilijoilla oli kyl hyvä maku häämatkakohteissa.
+KYSYMYS: Kerro lisää: Akseli Gallen-Kallela
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Mikä on karelianismi, ja miten Kuhmo liittyy siihen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Karelianismi on 1800-luvun lopun kansallisromanttinen taiteen ja kulttuurin suuntaus, joka haki aiheitaan Karjalasta ja Kalevalan maailmasta. Kalevalan ilmestyminen vuonna 1835 vauhditti sen syntyä. Kuhmo liittyy siihen monella tavalla: [[Akseli Gallen-Kallela]], yksi suuntauksen tunnetuimmista edustajista, vietti häämatkansa Kuhmossa ja maalasi töitään Lentua-järven Lapinsalmella. Lentuan maisema on [[Aino-triptyykin]] keskimmäisen taulun taustana. Taiteilijoilla oli kyl hyvä maku häämatkakohteissa.
+KYSYMYS: Kerro lisää: Aino-triptyykin
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+AIEMPI KYSYMYS: Mikä on kalevalamitta, ja miten runoja laulettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalevalamitta on vanhojen suomalaisten runojen säemitta, jossa säkeessä on kahdeksan tavua. Runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Valokuvaaja [[I. K. Inha]] kuvasi laulajaveljekset [[Vienan Uhtualla]] vuonna 1894.
+
+Kaksi laulajaa ja yksi käsipari kuulostaa minusta kovasti postinkuljetukselta: toinen kantaa säkeen perille ja toinen ottaa sen vastaan. Sukuni olisi ymmärtänyt tuon ilman selityksiä.
+KYSYMYS: Kerro lisää: I. K. Inha
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+AIEMPI KYSYMYS: Mikä on kalevalamitta, ja miten runoja laulettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalevalamitta on vanhojen suomalaisten runojen säemitta, jossa säkeessä on kahdeksan tavua. Runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Valokuvaaja [[I. K. Inha]] kuvasi laulajaveljekset [[Vienan Uhtualla]] vuonna 1894.
+
+Kaksi laulajaa ja yksi käsipari kuulostaa minusta kovasti postinkuljetukselta: toinen kantaa säkeen perille ja toinen ottaa sen vastaan. Sukuni olisi ymmärtänyt tuon ilman selityksiä.
+KYSYMYS: Kerro lisää: Vienan Uhtualla
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Mitä terva on, ja miksi sitä tuotettiin Kuhmossa?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Terva on puusta, etenkin männystä, poltettu tumma ja tahmea aine, jota käytettiin muun muassa puuveneiden ja köysien suojaamiseen. Sitä valmistettiin [[tervahaudassa]], jossa puuta poltettiin hapettomissa oloissa. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin, ja laajoilla metsillä oli luultavasti tärkeä osa asiassa. Terva oli tuohon aikaan arvokas [[vientitavara]], mutta tarkemmista määristä en ole varma. Hajusta minä en pidä.
+KYSYMYS: Kerro lisää: tervahaudassa
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Oponen kuuluisin vientitavara] Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.
+AIEMPI KYSYMYS: Mitä terva on, ja miksi sitä tuotettiin Kuhmossa?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Terva on puusta, etenkin männystä, poltettu tumma ja tahmea aine, jota käytettiin muun muassa puuveneiden ja köysien suojaamiseen. Sitä valmistettiin [[tervahaudassa]], jossa puuta poltettiin hapettomissa oloissa. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin, ja laajoilla metsillä oli luultavasti tärkeä osa asiassa. Terva oli tuohon aikaan arvokas [[vientitavara]], mutta tarkemmista määristä en ole varma. Hajusta minä en pidä.
+KYSYMYS: Kerro lisää: vientitavara
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Mikä on Aino-triptyykki ja mikä sen yhteys Kuhmoon?
+AIEMPI VASTAUS (Livia):
+No niin. Aino-triptyykki on [[Akseli Gallen-Kallelan]] kolmiosainen maalaus, joka kuvaa Kalevalan Ainon tarinaa: Aino ei halunnut vanhaa [[Väinämöistä]] puolisokseen. Teos syntyi 1890-luvun alussa, mutta tarkasta vuodesta en ole varma. Yhteys Kuhmoon on, että taiteilija vietti siellä häämatkansa ja maalasi töitään Lentua-järven Lapinsalmella, ja [[Lentuan]] maisema näkyy triptyykin keskimmäisen taulun taustalla. Kyl se on kaunis yhteys.
+KYSYMYS: Kerro lisää: Akseli Gallen-Kallelan
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Mikä on Aino-triptyykki ja mikä sen yhteys Kuhmoon?
+AIEMPI VASTAUS (Livia):
+No niin. Aino-triptyykki on [[Akseli Gallen-Kallelan]] kolmiosainen maalaus, joka kuvaa Kalevalan Ainon tarinaa: Aino ei halunnut vanhaa [[Väinämöistä]] puolisokseen. Teos syntyi 1890-luvun alussa, mutta tarkasta vuodesta en ole varma. Yhteys Kuhmoon on, että taiteilija vietti siellä häämatkansa ja maalasi töitään Lentua-järven Lapinsalmella, ja [[Lentuan]] maisema näkyy triptyykin keskimmäisen taulun taustalla. Kyl se on kaunis yhteys.
+KYSYMYS: Kerro lisää: Väinämöistä
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+AIEMPI KYSYMYS: Mikä on Aino-triptyykki ja mikä sen yhteys Kuhmoon?
+AIEMPI VASTAUS (Livia):
+No niin. Aino-triptyykki on [[Akseli Gallen-Kallelan]] kolmiosainen maalaus, joka kuvaa Kalevalan Ainon tarinaa: Aino ei halunnut vanhaa [[Väinämöistä]] puolisokseen. Teos syntyi 1890-luvun alussa, mutta tarkasta vuodesta en ole varma. Yhteys Kuhmoon on, että taiteilija vietti siellä häämatkansa ja maalasi töitään Lentua-järven Lapinsalmella, ja [[Lentuan]] maisema näkyy triptyykin keskimmäisen taulun taustalla. Kyl se on kaunis yhteys.
+KYSYMYS: Kerro lisää: Lentuan
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Matkustajasatama] 900-luku Tallinnan Vanasatama eli matkustajasatama on yksi maailman vilkkaimmista matkustajasatamista. Tallinnan loistava sijainti meren äärellä on ollut tunnettu jo 900-luvulta lähtien, jolloin alueella kulki vilkasta kauppaa. Nykyisin satamassa on kaksi suurta matkustajaterminaalia, A- ja D-terminaalit, ja laitureita on yhteensä 4,2 kilometriä. Parhaimmillaan, ennen koronapandemiaa, satamassa kävi vuosittain jopa 10,6 miljoonaa matkustajaa - vuonna 2023 luku oli 7,75 miljoonaa. Satamasta pääsee laivalla muun muassa Helsinkiin ja Tukholmaan, ja kesäisin rantaan kiinnittyy myös valtavia risteilyaluksia ympäri Eurooppaa. Satama on ollut myös tekniikan edelläkävijä: syyskuussa 2017, EU:n digi…
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+AIEMPI KYSYMYS: Miksi kaustislaiset matkustivat Tukholmaan kuningas Kustaa III:n puheille?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kaustislaiset lähettivät valtuuskunnan [[Tukholmaan]], koska he halusivat oman kirkon ja pitkät kirkkomatkat pois. Kuningas [[Kustaa III]] antoi kesäkuussa 1776 luvan kirkon rakentamiseen, ja kirkko valmistui syksyllä 1777. Matka oli siis kannattava: luvalla [[Kaustisen]] asukkaat saivat jumalanpalveluksen lähemmäs kotia. Siinä oli kyl pitkä reissu hakea yksi lupa.
+KYSYMYS: Kerro lisää: Tukholmaan
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Naamiaislaukaus] 1792 Naamiaiset ovat salamurhaajan kannalta käytännölliset: kaikilla on naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai perustuslakikriisin.
+AIEMPI KYSYMYS: Miksi kaustislaiset matkustivat Tukholmaan kuningas Kustaa III:n puheille?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kaustislaiset lähettivät valtuuskunnan [[Tukholmaan]], koska he halusivat oman kirkon ja pitkät kirkkomatkat pois. Kuningas [[Kustaa III]] antoi kesäkuussa 1776 luvan kirkon rakentamiseen, ja kirkko valmistui syksyllä 1777. Matka oli siis kannattava: luvalla [[Kaustisen]] asukkaat saivat jumalanpalveluksen lähemmäs kotia. Siinä oli kyl pitkä reissu hakea yksi lupa.
+KYSYMYS: Kerro lisää: Kustaa III
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Miksi kaustislaiset matkustivat Tukholmaan kuningas Kustaa III:n puheille?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kaustislaiset lähettivät valtuuskunnan [[Tukholmaan]], koska he halusivat oman kirkon ja pitkät kirkkomatkat pois. Kuningas [[Kustaa III]] antoi kesäkuussa 1776 luvan kirkon rakentamiseen, ja kirkko valmistui syksyllä 1777. Matka oli siis kannattava: luvalla [[Kaustisen]] asukkaat saivat jumalanpalveluksen lähemmäs kotia. Siinä oli kyl pitkä reissu hakea yksi lupa.
+KYSYMYS: Kerro lisää: Kaustisen
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mitä yhteistä Kaustisella ja Peanuts-sarjan Woodstock-linnulla on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. En ole varma, että niillä on mitään yhteistä, enkä halua keksiä sellaista. Woodstock on Peanuts-sarjan pieni keltainen lintuhahmo, kun taas Kaustinen on keskipohjalainen kunta, joka tunnetaan pelimanniperinteestään ja jonka vaakunassa on viulu. Joka heinäkuu siellä järjestetään [[Kaustisen kansanmusiikkijuhlat]], ja vuonna 2021 [[kaustislainen viulunsoitto]] hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon. Lintu on lintu, mut sukulaisuutta en ala väittää.
+KYSYMYS: Kerro lisää: Kaustisen kansanmusiikkijuhlat
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mitä yhteistä Kaustisella ja Peanuts-sarjan Woodstock-linnulla on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. En ole varma, että niillä on mitään yhteistä, enkä halua keksiä sellaista. Woodstock on Peanuts-sarjan pieni keltainen lintuhahmo, kun taas Kaustinen on keskipohjalainen kunta, joka tunnetaan pelimanniperinteestään ja jonka vaakunassa on viulu. Joka heinäkuu siellä järjestetään [[Kaustisen kansanmusiikkijuhlat]], ja vuonna 2021 [[kaustislainen viulunsoitto]] hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon. Lintu on lintu, mut sukulaisuutta en ala väittää.
+KYSYMYS: Kerro lisää: kaustislainen viulunsoitto
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mitä Kaustisen kansanmusiikkijuhlilla tapahtuu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaustisen kansanmusiikkijuhlat järjestetään joka heinäkuu, ja ne ylläpitävät paikkakunnan elävää kansanmusiikkiperinnettä. Kunnan vaakunassa on viulu, ja [[pelimanniperinne]] on Kaustisella vanha ja yhä elävä. Ohjelman yksityiskohdista en ole täysin varma, mutta musiikki on juhlien ydin. Vuonna 2021 [[kaustislainen viulunsoitto]] hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon, mikä kertoo perinteen arvostuksesta. Kuuntelisin mielelläni, kunhan joku jättäisi pullan ikkunalaudalle.
+KYSYMYS: Kerro lisää: pelimanniperinne
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Miksi terva oli talonpojalle niin tärkeä tulonlähde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Terva]] oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde Kaustisella. Sitä tarvittiin puualusten ja köysien suojaamiseen, joten kysyntää riitti, ja tervaa vietiin myös ulkomaille. Talonpoika sai metsästään ja työstään rahaa, jota maatalous ei tuolloin yksin tuottanut. Yksityiskohtaisista hinnoista en ole varma. Terva on [[Pohjanmaan]] historiassa iso asia, ja se kuuluu jokaisen lintusilmäisen havaintoihin.
+KYSYMYS: Kerro lisää: Terva
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Miksi terva oli talonpojalle niin tärkeä tulonlähde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Terva]] oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde Kaustisella. Sitä tarvittiin puualusten ja köysien suojaamiseen, joten kysyntää riitti, ja tervaa vietiin myös ulkomaille. Talonpoika sai metsästään ja työstään rahaa, jota maatalous ei tuolloin yksin tuottanut. Yksityiskohtaisista hinnoista en ole varma. Terva on [[Pohjanmaan]] historiassa iso asia, ja se kuuluu jokaisen lintusilmäisen havaintoihin.
+KYSYMYS: Kerro lisää: Pohjanmaan
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mitä Unescon aineeton kulttuuriperintö tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Unescon luettelo kokoaa elävää perinnettä: tapoja, musiikkia, käsityötaitoja ja kertomuksia, jotka siirtyvät sukupolvelta toiselle. Kyse ei siis ole rakennuksista tai alueista vaan tekemisestä ja osaamisesta. Kaustisen tapauksessa luetteloon hyväksyttiin vuonna 2021 [[kaustislainen viulunsoitto]], joka on osa paikallista [[pelimanniperinnettä]]. Se kertoo, että perinne on yhä elävä. Ja kyyhkyjenkin taito pitäisi kirjata sinne.
+KYSYMYS: Kerro lisää: pelimanniperinnettä
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+AIEMPI KYSYMYS: Miksi Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Inarin kylässä sijaitsevat [[Siida]], jossa toimivat Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus [[Sajos]]. Näiden vuoksi Inari on saamelaiskulttuurin keskeinen paikka Suomessa. Lisäksi kunnalla on neljä virallista kieltä: suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Pääkaupunki kuulostaa isolta, mut kylä on pieni.
+KYSYMYS: Kerro lisää: Siida
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Parlamentti, joka sai oman talon vasta 2012] Suomen saamelaiskäräjät perustettiin 1996 hoitamaan saamelaisten kielen ja kulttuurin itsehallintoa, mutta sillä ei pitkään ollut omaa rakennusta — istunnot pidettiin vuokratiloissa Inarissa. Oma talo, Sajos, valmistui vasta 2012, ja sen puurakenteinen sali on suunniteltu perinteisen saamelaiskodan, kotan, muotoa mukaillen. Saamelaiskäräjät päättää muun muassa saamen kielten opetuksesta ja kulttuurimäärärahoista, mutta sillä ei ole Suomen eduskunnan kaltaista lainsäädäntövaltaa — se on neuvotteleva ja lausuntoja antava itsehallintoelin.
+AIEMPI KYSYMYS: Miksi Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Inarin kylässä sijaitsevat [[Siida]], jossa toimivat Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus [[Sajos]]. Näiden vuoksi Inari on saamelaiskulttuurin keskeinen paikka Suomessa. Lisäksi kunnalla on neljä virallista kieltä: suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Pääkaupunki kuulostaa isolta, mut kylä on pieni.
+KYSYMYS: Kerro lisää: Sajos
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kohdekartta / Kohdekartta: Fushimi Inari-taisha] perustettu 711 Pyhäkön perusti vuonna 711 Hata-suku, Korean niemimaalta muuttanut mahtisuku, joka toi mukanaan kastelun, silkinviljelyn ja sakenpanon taidot. Se on omistettu Inarille, riisin ja maanviljelyn kamille — ja kun riisi oli myös maksuväline, kauppiaat alkoivat palvoa Inaria liike-elämän suojelijana. Inari-pyhäköitä on jaettu ympäri Japania niin ahkerasti, että sivupyhäköitä lasketaan olevan noin 32 000. Ensimmäiset rakennukset nousivat Inari-vuorelle 711, ja pyhäkkö siirrettiin vuonna 816 munkki Kūkain pyynnöstä nykyiselle paikalleen vuoren juurelle. Päärakennus on vuodelta 1499. Vuosina 1871–1946 Fushimi Inari oli valtion tukemien pyhäköiden ylimmässä luokassa. Kuuluisimpia ovat …
+AIEMPI KYSYMYS: Mitä kieliä Inarissa puhutaan, ja mitä ne kertovat alueen asukkaista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Inarissa on neljä virallista kieltä: suomi sekä [[inarinsaame]], [[koltansaame]] ja [[pohjoissaame]]. Kielet kertovat, että alueella elää useampi saamelaisryhmä, joilla jokaisella on oma kielensä ja kulttuurinsa. Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä, ja 1990-luvun puolivälissä sitä puhui lapsilleen enää kaksi perhettä. Vuonna 1997 aloitettiin [[kielipesä]], ja nykyisin puhujia on muutama sata. Kieli siis elää, vaikka vähän.
+KYSYMYS: Kerro lisää: inarinsaame
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+AIEMPI KYSYMYS: Mitä kieliä Inarissa puhutaan, ja mitä ne kertovat alueen asukkaista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Inarissa on neljä virallista kieltä: suomi sekä [[inarinsaame]], [[koltansaame]] ja [[pohjoissaame]]. Kielet kertovat, että alueella elää useampi saamelaisryhmä, joilla jokaisella on oma kielensä ja kulttuurinsa. Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä, ja 1990-luvun puolivälissä sitä puhui lapsilleen enää kaksi perhettä. Vuonna 1997 aloitettiin [[kielipesä]], ja nykyisin puhujia on muutama sata. Kieli siis elää, vaikka vähän.
+KYSYMYS: Kerro lisää: koltansaame
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Mitä kieliä Inarissa puhutaan, ja mitä ne kertovat alueen asukkaista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Inarissa on neljä virallista kieltä: suomi sekä [[inarinsaame]], [[koltansaame]] ja [[pohjoissaame]]. Kielet kertovat, että alueella elää useampi saamelaisryhmä, joilla jokaisella on oma kielensä ja kulttuurinsa. Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä, ja 1990-luvun puolivälissä sitä puhui lapsilleen enää kaksi perhettä. Vuonna 1997 aloitettiin [[kielipesä]], ja nykyisin puhujia on muutama sata. Kieli siis elää, vaikka vähän.
+KYSYMYS: Kerro lisää: pohjoissaame
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+- [Kapkaupunki — kaupunkilehti / Kapkaupunki: Bo-Kaap ja kieli, joka kirjoitettiin oikealta] Jan de Waal alkoi 1763 rakentaa Signal Hillin juurelle pieniä vuokrataloja, huurhuisjeja. Alueelle muutti kaakkoisaasialaisia muslimikäsityöläisiä, ja ensimmäinen moskeija avattiin 1794. Vuoden 1834 vapautumisen jälkeen taloja rakennettiin lisää. Korttelissa on Etelä-Afrikan suurin ennen vuotta 1850 rakennetun arkkitehtuurin keskittymä. Talojen kirkkaita värejä selitetään vapauden merkiksi, koska vuokralla ollessa ne oli maalattava valkoisiksi — mutta tapa maalata värikkäästi näyttää yleistyneen vasta 1900-luvun lopulla. Korttelin madrasoissa syntyi 1830-luvulla arabialainen afrikaans.
+AIEMPI KYSYMYS: Mitä kieliä Inarissa puhutaan, ja mitä ne kertovat alueen asukkaista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Inarissa on neljä virallista kieltä: suomi sekä [[inarinsaame]], [[koltansaame]] ja [[pohjoissaame]]. Kielet kertovat, että alueella elää useampi saamelaisryhmä, joilla jokaisella on oma kielensä ja kulttuurinsa. Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä, ja 1990-luvun puolivälissä sitä puhui lapsilleen enää kaksi perhettä. Vuonna 1997 aloitettiin [[kielipesä]], ja nykyisin puhujia on muutama sata. Kieli siis elää, vaikka vähän.
+KYSYMYS: Kerro lisää: kielipesä
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+AIEMPI KYSYMYS: Mitä kylmänkestotestaus on, ja miksi sitä tehdään Inarissa?
+AIEMPI VASTAUS (Livia):
+No jopas. Kylmänkestotestauksessa ajoneuvoja, laitteita ja materiaaleja kokeillaan oikeassa pakkasessa, jotta nähdään, toimivatko ne. Se on yksi Inarin tärkeistä elinkeinoista matkailun ja palvelujen ohella. Syynä on luultavasti [[Lapin]] luotettava talvi ja runsas tila, mutta tarkoista perusteista en ole varma. Inari on pinta-alaltaan Suomen suurin kunta ja samalla yksi harvimmin asutuista, mikä sopii [[kylmänkestotestaukselle]]. Minä testaan pakkasta vain ikkunalaudalla.
+KYSYMYS: Kerro lisää: Lapin
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Peru — maalehti / Luonto: Kylmä meri keskellä tropiikkia] Perun rannikkoa pitkin virtaa pohjoiseen kylmä ja vähäsuolainen Humboldtin merivirta, joka ulottuu tuhannen kilometrin päähän merelle. Pintavesi jäähtyy Perun edustalla kuuteentoista asteeseen, kun trooppisilla merillä ollaan yleensä yli kahdessakymmenessäviidessä. Kumpuaminen nostaa ravinteet pintaan, ja virrasta saadaan 18–20 prosenttia koko maailman merikalansaaliista. Kalan päällä elää valtava merilintu- ja hyljekanta. Virran nimesi Alexander von Humboldt, vaikka José de Acosta kuvasi sen 250 vuotta aiemmin.
+AIEMPI KYSYMYS: Mitä kylmänkestotestaus on, ja miksi sitä tehdään Inarissa?
+AIEMPI VASTAUS (Livia):
+No jopas. Kylmänkestotestauksessa ajoneuvoja, laitteita ja materiaaleja kokeillaan oikeassa pakkasessa, jotta nähdään, toimivatko ne. Se on yksi Inarin tärkeistä elinkeinoista matkailun ja palvelujen ohella. Syynä on luultavasti [[Lapin]] luotettava talvi ja runsas tila, mutta tarkoista perusteista en ole varma. Inari on pinta-alaltaan Suomen suurin kunta ja samalla yksi harvimmin asutuista, mikä sopii [[kylmänkestotestaukselle]]. Minä testaan pakkasta vain ikkunalaudalla.
+KYSYMYS: Kerro lisää: kylmänkestotestaukselle
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kohdekartta / Kohdekartta: Fushimi Inari-taisha] perustettu 711 Pyhäkön perusti vuonna 711 Hata-suku, Korean niemimaalta muuttanut mahtisuku, joka toi mukanaan kastelun, silkinviljelyn ja sakenpanon taidot. Se on omistettu Inarille, riisin ja maanviljelyn kamille — ja kun riisi oli myös maksuväline, kauppiaat alkoivat palvoa Inaria liike-elämän suojelijana. Inari-pyhäköitä on jaettu ympäri Japania niin ahkerasti, että sivupyhäköitä lasketaan olevan noin 32 000. Ensimmäiset rakennukset nousivat Inari-vuorelle 711, ja pyhäkkö siirrettiin vuonna 816 munkki Kūkain pyynnöstä nykyiselle paikalleen vuoren juurelle. Päärakennus on vuodelta 1499. Vuosina 1871–1946 Fushimi Inari oli valtion tukemien pyhäköiden ylimmässä luokassa. Kuuluisimpia ovat …
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+AIEMPI KYSYMYS: Mikä on kielipesä ja miten se auttaa kieltä säilymään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kielipesä on toimintatapa, jossa aikuiset puhuvat lapsille vain uhanalaista kieltä, jotta lapset oppivat sen luonnollisesti. Inarissa aloitettiin vuonna 1997 [[kielipesä]], jossa aikuiset puhuvat lapsille vain [[inarinsaamea]]. Tulos on ollut hyvä: puhujia on nykyisin muutama sata, ja osa kielipesän lapsista opettaa kieltä itse. Näin kieli siirtyy uudelle sukupolvelle. Sellaista pesää minäkin kunnioitan.
+KYSYMYS: Kerro lisää: inarinsaamea
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+AIEMPI KYSYMYS: Miksi Kuopion katuverkossa on joka toinen katu varattu jalankulkijoille ja pyöräilijöille?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyse on [[rännikadusta]], jonka Kuopion ensimmäinen asemakaava vuodelta 1776 jätti perinnöksi. Rännikatu tehtiin alun perin palokatkoksi, koska kaupunki oli pääosin puinen ja tuli levisi helposti talosta toiseen. Joka toinen katu varattiin siksi väljäksi vyöhykkeeksi, joka nykyisin palvelee jalankulkijoita ja pyöräilijöitä. Vanha varotoimi on siis muuttunut arjen hyödyksi. Hyvä [[asemakaava]] kestää, mikä ei kyyhkyn pesästä ihan aina pidä paikkaansa.
+KYSYMYS: Kerro lisää: rännikadusta
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+AIEMPI KYSYMYS: Miksi Kuopion katuverkossa on joka toinen katu varattu jalankulkijoille ja pyöräilijöille?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyse on [[rännikadusta]], jonka Kuopion ensimmäinen asemakaava vuodelta 1776 jätti perinnöksi. Rännikatu tehtiin alun perin palokatkoksi, koska kaupunki oli pääosin puinen ja tuli levisi helposti talosta toiseen. Joka toinen katu varattiin siksi väljäksi vyöhykkeeksi, joka nykyisin palvelee jalankulkijoita ja pyöräilijöitä. Vanha varotoimi on siis muuttunut arjen hyödyksi. Hyvä [[asemakaava]] kestää, mikä ei kyyhkyn pesästä ihan aina pidä paikkaansa.
+KYSYMYS: Kerro lisää: asemakaava
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+AIEMPI KYSYMYS: Mitä kalakukko on, ja miksi Kuopiota sanotaan sen luvatuksi maaksi?
+AIEMPI VASTAUS (Livia):
+Mmm— kalakukko, kyl minä tän tiedän. Kalakukko on savolainen ruoka, jossa kala on leivottu leivän sisään; täytteestä ja tarkasta valmistuksesta en kuitenkaan ole täysin varma. [[Kalakukko]] on Kuopion tunnetuimpia ruokia, minkä vuoksi kaupunkia kutsutaan kalakukon luvatuksi maaksi. Kuopio on myös Pohjois-Savon maakuntakeskus, jota ympäröi [[Kallavesi]], joten kalaa on lähellä. Se sopii hyvin tälle paikkakunnalle.
+
+Kalakukko ei ole pulla, mutta minä kunnioitan kaikkea, mikä on leivottu. Pitäisi kai joskus maistaa, ennen kuin arvostelen.
+KYSYMYS: Kerro lisää: Kalakukko
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+AIEMPI KYSYMYS: Mitä kalakukko on, ja miksi Kuopiota sanotaan sen luvatuksi maaksi?
+AIEMPI VASTAUS (Livia):
+Mmm— kalakukko, kyl minä tän tiedän. Kalakukko on savolainen ruoka, jossa kala on leivottu leivän sisään; täytteestä ja tarkasta valmistuksesta en kuitenkaan ole täysin varma. [[Kalakukko]] on Kuopion tunnetuimpia ruokia, minkä vuoksi kaupunkia kutsutaan kalakukon luvatuksi maaksi. Kuopio on myös Pohjois-Savon maakuntakeskus, jota ympäröi [[Kallavesi]], joten kalaa on lähellä. Se sopii hyvin tälle paikkakunnalle.
+
+Kalakukko ei ole pulla, mutta minä kunnioitan kaikkea, mikä on leivottu. Pitäisi kai joskus maistaa, ennen kuin arvostelen.
+KYSYMYS: Kerro lisää: Kallavesi
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+AIEMPI KYSYMYS: Mikä Puijon torni on, ja mitä sieltä näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Puijo]] on Kuopion tunnettu mäki, ja sen päällä on [[Puijon torni]], jonka Kuopio tuntee omana maamerkkinään. Tornista aukeaa näkymä kaupungin ja sitä ympäröivän järviluonnon ylle. Kuopion osat sijaitsevat saarilla, ja [[Kallavesi]] ympäröi kaupunkia, joten vesi hallitsee maisemaa. Tornin tarkasta korkeudesta en ole varma. Ylhäältä katsoen näkee sen, minkä me kyyhkyt näemme joka päivä.
+KYSYMYS: Kerro lisää: Puijo
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+AIEMPI KYSYMYS: Mikä Puijon torni on, ja mitä sieltä näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Puijo]] on Kuopion tunnettu mäki, ja sen päällä on [[Puijon torni]], jonka Kuopio tuntee omana maamerkkinään. Tornista aukeaa näkymä kaupungin ja sitä ympäröivän järviluonnon ylle. Kuopion osat sijaitsevat saarilla, ja [[Kallavesi]] ympäröi kaupunkia, joten vesi hallitsee maisemaa. Tornin tarkasta korkeudesta en ole varma. Ylhäältä katsoen näkee sen, minkä me kyyhkyt näemme joka päivä.
+KYSYMYS: Kerro lisää: Puijon torni
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Naamiaislaukaus] 1792 Naamiaiset ovat salamurhaajan kannalta käytännölliset: kaikilla on naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai perustuslakikriisin.
+AIEMPI KYSYMYS: Miksi Kuopion perustamisvuodeksi sanotaan 1775 eikä 1653?
+AIEMPI VASTAUS (Livia):
+No niin. Kuopion virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas [[Kustaa III]] määräsi sen Savo-Karjalan läänin hallintokaupungiksi. Asutus oli kuitenkin perustettu jo vuonna 1653, joten kaupungin juuret ovat vanhemmat kuin virallinen päivä. Kuopion ensimmäinen [[asemakaava]] on vuodelta 1776. Kaksi päivämäärää kertoo siis eri asioista: asutuksen alusta ja kaupungin hallinnollisesta asemasta. Virallisuus tuntuu kyl aina vähän kankealta.
+KYSYMYS: Kerro lisää: Kustaa III
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salomonsaaret — maalehti / Luonto: Lintu, joka jättää munat maan huomaan] Melanesianisojalkakana ei haudo muniaan ruumiinlämmöllä vaan jättää ne ympäristön lämmön varaan. Naaras kaivaa kuopan hiekkarannalle, geotermiseen maahan tai lahoavaan kasvimassaan, ja munat makaavat 30–90 sentin syvyydessä 36–37 asteessa, vaikka ilman lämpötila olisi 31. Munat ovat suuria ja niissä on poikkeuksellisen paljon keltuaista. Poikasella ei ole munahammasta: se rikkoo kuoren jaloillaan ja kaivautuu pintaan, ja siitä hetkestä alkaen se juoksee, etsii ruokansa ja lentää lyhyitä matkoja ilman että tapaa vanhempiaan koskaan. Savon saarella laji munii ympäri vuoden.
+AIEMPI KYSYMYS: Miten Kallavesi on muovannut Kuopion kaupunkia?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kuopio on [[Pohjois-Savon]] maakuntakeskus, jota ympäröi [[Kallavesi]] ja jonka osat sijaitsevat saarilla. Vesi on siis ollut kaupungin muodon ja sijainnin keskeinen tekijä, ja alue on jakautunut vesistön muotoja seuraavasti. Tarkemmista yksityiskohdista, kuten järven koosta, en ole varma. Kallavesi kuuluu kaupungin kuvaan yhtä lailla kuin Puijon mäki ja sen torni. Ylhäältä se näyttää hienolta.
+KYSYMYS: Kerro lisää: Pohjois-Savon
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Tycho Brahe] Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. Viimeisenä vuotenaan hän sai apula…
+AIEMPI KYSYMYS: Miksi kaupunki on nimetty Ruotsin kuningattaren mukaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Kristiinankaupunki sai kaupunkioikeudet vuonna 1649 [[Per Brahe nuoremman]] toimesta [[Koppön]] saarella, ja kaupunki nimettiin Ruotsin [[kuningatar Kristiinan]] mukaan. Nimi kunnioitti siis hallitsijaa, jonka valtakuntaan Suomi tuolloin kuului. Tarkemmista nimeämisen perusteista en ole varma. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Lyhyt nimi sopii kyl pitkään kaupunkiin.
+KYSYMYS: Kerro lisää: Per Brahe nuoremman
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+AIEMPI KYSYMYS: Miksi kaupunki on nimetty Ruotsin kuningattaren mukaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Kristiinankaupunki sai kaupunkioikeudet vuonna 1649 [[Per Brahe nuoremman]] toimesta [[Koppön]] saarella, ja kaupunki nimettiin Ruotsin [[kuningatar Kristiinan]] mukaan. Nimi kunnioitti siis hallitsijaa, jonka valtakuntaan Suomi tuolloin kuului. Tarkemmista nimeämisen perusteista en ole varma. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Lyhyt nimi sopii kyl pitkään kaupunkiin.
+KYSYMYS: Kerro lisää: Koppön
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Polhem sai sulkutyön 83-vuotiaana] Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, työ annettiin 1744 Christopher Polhemille, joka oli silloin 83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai sulun valmiiksi 1755.
+AIEMPI KYSYMYS: Miksi kaupunki on nimetty Ruotsin kuningattaren mukaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Kristiinankaupunki sai kaupunkioikeudet vuonna 1649 [[Per Brahe nuoremman]] toimesta [[Koppön]] saarella, ja kaupunki nimettiin Ruotsin [[kuningatar Kristiinan]] mukaan. Nimi kunnioitti siis hallitsijaa, jonka valtakuntaan Suomi tuolloin kuului. Tarkemmista nimeämisen perusteista en ole varma. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Lyhyt nimi sopii kyl pitkään kaupunkiin.
+KYSYMYS: Kerro lisää: kuningatar Kristiinan
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+AIEMPI KYSYMYS: Mitä Cittaslow tarkoittaa, ja miksi Kristiinankaupungista tuli Suomen ensimmäinen Cittaslow-kaupunki?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Cittaslow-liike]] on Italiasta lähtenyt kaupunkien verkosto, jonka jäsenet pyrkivät rauhallisempaan elämänrytmiin, paikalliseen kulttuuriin ja viihtyisään arkeen. Kristiinankaupungista tuli vuonna 2011 Suomen ensimmäinen tällainen kaupunki. Tarkoista kriteereistä en ole varma, mutta kaupungin [[vanha kaupunginosa]] matalien puutalojensa ja kapeiden kujiensa kanssa sopii ajatukseen hyvin. Hidas kaupunki sopii kyyhkylle, joka ei kiirehdi.
+KYSYMYS: Kerro lisää: Cittaslow-liike
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Mitä Cittaslow tarkoittaa, ja miksi Kristiinankaupungista tuli Suomen ensimmäinen Cittaslow-kaupunki?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Cittaslow-liike]] on Italiasta lähtenyt kaupunkien verkosto, jonka jäsenet pyrkivät rauhallisempaan elämänrytmiin, paikalliseen kulttuuriin ja viihtyisään arkeen. Kristiinankaupungista tuli vuonna 2011 Suomen ensimmäinen tällainen kaupunki. Tarkoista kriteereistä en ole varma, mutta kaupungin [[vanha kaupunginosa]] matalien puutalojensa ja kapeiden kujiensa kanssa sopii ajatukseen hyvin. Hidas kaupunki sopii kyyhkylle, joka ei kiirehdi.
+KYSYMYS: Kerro lisää: vanha kaupunginosa
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+AIEMPI KYSYMYS: Kuka oli Per Brahe nuorempi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Per Brahe nuorempi oli ruotsalainen valtionmies ja 1600-luvulla Suomen [[kenraalikuvernööri]], eli maan ylin hallintovirkamies. Hänen toimestaan Kristiinankaupunki sai vuonna 1649 kaupunkioikeudet [[Koppön]] saarella. Hänen aikanaan perustettiin useita kaupunkeja, mutta tarkasta luvusta ja virkakausista en ole varma. Nimi kuulostaa suvun muistiinpanoissa tärkeältä. Hyvä, että joku muistaa kaupunkien perustajat.
+KYSYMYS: Kerro lisää: kenraalikuvernööri
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zimbabwe — maalehti / Ruoka: Sama jauho, kaksi ateriaa] Maissijauhosta keitetään sadza, ndebeleksi isitshwala: jauho ja vesi sekoitetaan, ja kun seos on kiehunut muutaman minuutin, sekaan lisätään lisää jauhoa, kunnes taikina on paksua. Se syödään lounaaksi ja päivälliseksi kastikkeen, papujen, lehtivihannesten tai lihan kanssa, usein myös hapanmaidon eli lacton kera. Samasta jauhosta keitetään aamiaiseksi ohuempi bota, joka maustetaan maapähkinävoilla, maidolla, voilla tai hillolla. Siirtomaa-ajalta on jäänyt teetauko kello kymmenen ja toinen kello neljä.
+AIEMPI KYSYMYS: Mitä kaksikielisyys tarkoittaa Kristiinankaupungissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kristiinankaupunki on [[kaksikielinen]]: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Kaupungissa käytetään siis kahta kieltä arjessa, ja ruotsi on enemmistökieli. Ruotsinkielinen nimi on [[Kristinestad]], ja suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Kaksi kieltä, yksi kaupunki ja yksi kyyhky.
+KYSYMYS: Kerro lisää: kaksikielinen
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+AIEMPI KYSYMYS: Mitä kaksikielisyys tarkoittaa Kristiinankaupungissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kristiinankaupunki on [[kaksikielinen]]: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Kaupungissa käytetään siis kahta kieltä arjessa, ja ruotsi on enemmistökieli. Ruotsinkielinen nimi on [[Kristinestad]], ja suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi. Paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Kaksi kieltä, yksi kaupunki ja yksi kyyhky.
+KYSYMYS: Kerro lisää: Kristinestad
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Millainen on Kristiinankaupungin vanha kaupunginosa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia [[puutaloja]] ja kapeita kujia. Kaupunki sijaitsee Pohjanmaalla Selkämeren rannalla, ja sen [[Cittaslow]]-asema vuodelta 2011 sopii tähän rauhalliseen kaupunkikuvaan. Tarkemmista rakennuksista en ole varma. Vanha kaupunginosa on säilyttänyt luonteensa. Kapeat kujat ovat kyyhkyn mielestä mukavia: niissä on varjoa.
+KYSYMYS: Kerro lisää: puutaloja
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+AIEMPI KYSYMYS: Millainen on Kristiinankaupungin vanha kaupunginosa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia [[puutaloja]] ja kapeita kujia. Kaupunki sijaitsee Pohjanmaalla Selkämeren rannalla, ja sen [[Cittaslow]]-asema vuodelta 2011 sopii tähän rauhalliseen kaupunkikuvaan. Tarkemmista rakennuksista en ole varma. Vanha kaupunginosa on säilyttänyt luonteensa. Kapeat kujat ovat kyyhkyn mielestä mukavia: niissä on varjoa.
+KYSYMYS: Kerro lisää: Cittaslow
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+AIEMPI KYSYMYS: Miksi Maarianhamina on nimetty Venäjän keisarinnan mukaan?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Maarianhamina perustettiin 21. helmikuuta 1861 [[Övernäsin]] kylän maille, ja se nimettiin Venäjän keisarinnan [[Maria Aleksandrovnan]] mukaan. Nimeäminen liittyy aikaan, jolloin Suomi kuului suuriruhtinaskuntana Venäjän keisarikuntaan ja Maria Aleksandrovna oli keisari Aleksanteri II:n puoliso. Kaupunki rakennettiin suunnitellun asemakaavan pohjalta, ja nykyisen [[Ahvenanmaan]] pääkaupungin nimi on pysynyt samana siitä asti. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Övernäsin
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Mariinski-teatteri] 1860 Mariinski-teatteri avasi ovensa vuonna 1860 ja sai nimensä keisarinna Maria Aleksandrovnan mukaan. Sen lavalla on nähty ensi-iltoja, joita esitetään yhä ympäri maailmaa: Tšaikovskin baletti Prinsessa Ruusunen kantaesitettiin täällä vuonna 1890 ja Pähkinänsärkijä vuonna 1892. Teatterin balettikoulusta ovat ponnistaneet monet historian kuuluisimmista tanssijoista, kuten Anna Pavlova, Vaslav Nijinski ja Mihail Baryšnikov. Päänäyttämölle mahtuu 1625 katsojaa, ja vuonna 2013 teatterin viereen valmistui kokonaan uusi toinen näyttämö, jossa on 1830 istumapaikkaa.
+AIEMPI KYSYMYS: Miksi Maarianhamina on nimetty Venäjän keisarinnan mukaan?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Maarianhamina perustettiin 21. helmikuuta 1861 [[Övernäsin]] kylän maille, ja se nimettiin Venäjän keisarinnan [[Maria Aleksandrovnan]] mukaan. Nimeäminen liittyy aikaan, jolloin Suomi kuului suuriruhtinaskuntana Venäjän keisarikuntaan ja Maria Aleksandrovna oli keisari Aleksanteri II:n puoliso. Kaupunki rakennettiin suunnitellun asemakaavan pohjalta, ja nykyisen [[Ahvenanmaan]] pääkaupungin nimi on pysynyt samana siitä asti. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Maria Aleksandrovnan
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Miksi Maarianhamina on nimetty Venäjän keisarinnan mukaan?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Maarianhamina perustettiin 21. helmikuuta 1861 [[Övernäsin]] kylän maille, ja se nimettiin Venäjän keisarinnan [[Maria Aleksandrovnan]] mukaan. Nimeäminen liittyy aikaan, jolloin Suomi kuului suuriruhtinaskuntana Venäjän keisarikuntaan ja Maria Aleksandrovna oli keisari Aleksanteri II:n puoliso. Kaupunki rakennettiin suunnitellun asemakaavan pohjalta, ja nykyisen [[Ahvenanmaan]] pääkaupungin nimi on pysynyt samana siitä asti. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Ahvenanmaan
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+AIEMPI KYSYMYS: Mitä nelimastoparkki Pommern kertoo Maarianhaminan merenkulusta?
+AIEMPI VASTAUS (Livia):
+No niin, tost laivasta riittää juttua. Parkki on suuri purjelaiva, ja Maarianhaminassa se kertoo purjelaivojen aikakaudesta, jolloin merenkulusta tuli kaupungin elinkeinoelämän keskus 1800-luvun lopulla. Laivanvarustajat ja [[telakat]] asettuivat kaupunkiin, ja laiva on kiinnitettynä [[Länsisatamassa]] osana [[Ahvenanmaan merenkulkumuseota]]. Näin vierailija voi nähdä kaupungin merenkulkuperinteen konkreettisesti eikä pelkästään kuvauksina. Kyyhky ei kyllä itse tohtisi laskeutua kolmannelle mastolle.
+KYSYMYS: Kerro lisää: telakat
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mitä nelimastoparkki Pommern kertoo Maarianhaminan merenkulusta?
+AIEMPI VASTAUS (Livia):
+No niin, tost laivasta riittää juttua. Parkki on suuri purjelaiva, ja Maarianhaminassa se kertoo purjelaivojen aikakaudesta, jolloin merenkulusta tuli kaupungin elinkeinoelämän keskus 1800-luvun lopulla. Laivanvarustajat ja [[telakat]] asettuivat kaupunkiin, ja laiva on kiinnitettynä [[Länsisatamassa]] osana [[Ahvenanmaan merenkulkumuseota]]. Näin vierailija voi nähdä kaupungin merenkulkuperinteen konkreettisesti eikä pelkästään kuvauksina. Kyyhky ei kyllä itse tohtisi laskeutua kolmannelle mastolle.
+KYSYMYS: Kerro lisää: Länsisatamassa
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Mitä nelimastoparkki Pommern kertoo Maarianhaminan merenkulusta?
+AIEMPI VASTAUS (Livia):
+No niin, tost laivasta riittää juttua. Parkki on suuri purjelaiva, ja Maarianhaminassa se kertoo purjelaivojen aikakaudesta, jolloin merenkulusta tuli kaupungin elinkeinoelämän keskus 1800-luvun lopulla. Laivanvarustajat ja [[telakat]] asettuivat kaupunkiin, ja laiva on kiinnitettynä [[Länsisatamassa]] osana [[Ahvenanmaan merenkulkumuseota]]. Näin vierailija voi nähdä kaupungin merenkulkuperinteen konkreettisesti eikä pelkästään kuvauksina. Kyyhky ei kyllä itse tohtisi laskeutua kolmannelle mastolle.
+KYSYMYS: Kerro lisää: Ahvenanmaan merenkulkumuseota
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+AIEMPI KYSYMYS: Mikä on asemakaava ja miksi sellainen tehtiin Maarianhaminalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Asemakaava on suunnitelma siitä, miten kaupungin kadut, korttelit ja tontit sijoitetaan. Maarianhamina perustettiin vuonna 1861 uudelle paikalle [[Övernäsin]] kylän maille, joten kaupunki saattoi kasvaa suunnitellun asemakaavan pohjalta eikä vanhan, itsestään syntyneen rakenteen varassa. Kaava on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla [[Södragatanilla]] on yhä 1800-luvun puutaloja. Siivin katsottuna ruudukko näyttää kyllä tosi siistiltä.
+KYSYMYS: Kerro lisää: Södragatanilla
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Historia: Parlamentti, joka valmistui isoisän ympärillä] Uuden siirtokunnan parlamentti kokoontui ensimmäisen kerran 22. toukokuuta 1860 entisessä vankibarakissa, ja kunnollisen talon suunnittelukilpailu meni kahdesti uusiksi ennen kuin siirtokunnan arkkitehdin Charles Tiffinin ehdotus valittiin. Peruskiven laski kuvernööri George Bowen 14. heinäkuuta 1865, ja George Streetin julkisivu avattiin elokuussa 1868 ranskalaisen renessanssin tyyliin. Isoisän matkan aikaan rakennus oli siis käytössä mutta yhä kesken: kaarikäytävät ja pylväiköt valmistuivat vasta 1878 ja Alice Streetin siipi 1889. Rakentaja Joshua Jeays louhi hiekkakiven omista louhoksistaan.
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, "lakikalliolla", josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että Ahvenanmaa on autonominen maakunta?
+AIEMPI VASTAUS (Livia):
+Ai se. Autonomia tarkoittaa laajaa itsehallintoa: Ahvenanmaa kuuluu Suomeen, mutta sillä on oma [[parlamentti]] ja oma hallitus, jotka sijaitsevat Maarianhaminassa. Maakunnan virallinen kieli on ruotsi, ja alue on lisäksi [[demilitarisoitu]]. [[Ahvenanmaan]] itsehallinnon perusta luotiin 1900-luvun alkupuolella, mutta tarkan vuoden jätän tässä mainitsematta, koska en ole siitä varma. Tämän verran kyyhky muistaa, loppu on lakimiesten alaa.
+KYSYMYS: Kerro lisää: parlamentti
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että Ahvenanmaa on autonominen maakunta?
+AIEMPI VASTAUS (Livia):
+Ai se. Autonomia tarkoittaa laajaa itsehallintoa: Ahvenanmaa kuuluu Suomeen, mutta sillä on oma [[parlamentti]] ja oma hallitus, jotka sijaitsevat Maarianhaminassa. Maakunnan virallinen kieli on ruotsi, ja alue on lisäksi [[demilitarisoitu]]. [[Ahvenanmaan]] itsehallinnon perusta luotiin 1900-luvun alkupuolella, mutta tarkan vuoden jätän tässä mainitsematta, koska en ole siitä varma. Tämän verran kyyhky muistaa, loppu on lakimiesten alaa.
+KYSYMYS: Kerro lisää: demilitarisoitu
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miksi merenkulusta tuli Maarianhaminalle tärkeä elinkeino?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maarianhamina sijaitsee saaristomaakunnassa, jossa meri on luonteva kulkureitti, ja 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus. Kaupunkiin asettuivat silloin [[laivanvarustajat]] sekä [[telakat]], ja nykyään tästä perinteestä muistuttaa muun muassa [[Ahvenanmaan merenkulkumuseo]]. Tarkempia lukuja laivojen määristä en ole varma, joten jätän ne pois. Kyl tää kaupunki tuoksuu merelle vielä nykyäänkin.
+KYSYMYS: Kerro lisää: laivanvarustajat
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Miksi merenkulusta tuli Maarianhaminalle tärkeä elinkeino?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maarianhamina sijaitsee saaristomaakunnassa, jossa meri on luonteva kulkureitti, ja 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus. Kaupunkiin asettuivat silloin [[laivanvarustajat]] sekä [[telakat]], ja nykyään tästä perinteestä muistuttaa muun muassa [[Ahvenanmaan merenkulkumuseo]]. Tarkempia lukuja laivojen määristä en ole varma, joten jätän ne pois. Kyl tää kaupunki tuoksuu merelle vielä nykyäänkin.
+KYSYMYS: Kerro lisää: Ahvenanmaan merenkulkumuseo
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Karjapaimentolaisten maailma: Karja morsiamen hintana] Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.
+AIEMPI KYSYMYS: Miksi Ilomantsissa on niin paljon ortodokseja muuhun Suomeen verrattuna?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kyse on idän ja lännen rajasta. Ilomantsi sijaitsee Karjalassa Suomen itärajan tuntumassa, ja ortodoksisuus levisi [[Karjalan]] alueelle idästä, lähteiden mukaan [[Novgorodin]] vaikutuspiiristä. Paikallinen ortodoksiyhteisö on yli 500 vuotta vanha, ja Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista. Alueella on Profeetta Elialle omistettu puukirkko sekä viisi [[tsasounaa]]. Tarkempaa kehityskulkua vuosisadoilta en ole varma. Pitkä historia, lyhyt kyyhky.
+KYSYMYS: Kerro lisää: Karjalan
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Miksi Ilomantsissa on niin paljon ortodokseja muuhun Suomeen verrattuna?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kyse on idän ja lännen rajasta. Ilomantsi sijaitsee Karjalassa Suomen itärajan tuntumassa, ja ortodoksisuus levisi [[Karjalan]] alueelle idästä, lähteiden mukaan [[Novgorodin]] vaikutuspiiristä. Paikallinen ortodoksiyhteisö on yli 500 vuotta vanha, ja Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista. Alueella on Profeetta Elialle omistettu puukirkko sekä viisi [[tsasounaa]]. Tarkempaa kehityskulkua vuosisadoilta en ole varma. Pitkä historia, lyhyt kyyhky.
+KYSYMYS: Kerro lisää: Novgorodin
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+AIEMPI KYSYMYS: Miksi Ilomantsissa on niin paljon ortodokseja muuhun Suomeen verrattuna?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kyse on idän ja lännen rajasta. Ilomantsi sijaitsee Karjalassa Suomen itärajan tuntumassa, ja ortodoksisuus levisi [[Karjalan]] alueelle idästä, lähteiden mukaan [[Novgorodin]] vaikutuspiiristä. Paikallinen ortodoksiyhteisö on yli 500 vuotta vanha, ja Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista. Alueella on Profeetta Elialle omistettu puukirkko sekä viisi [[tsasounaa]]. Tarkempaa kehityskulkua vuosisadoilta en ole varma. Pitkä historia, lyhyt kyyhky.
+KYSYMYS: Kerro lisää: tsasounaa
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+AIEMPI KYSYMYS: Mikä tekee Parppeinvaaran runokylästä erityisen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tost minä osaan kertoo vähän. Parppeinvaaran runokylä on Ilomantsin nähtävyys, ja sen nimi viittaa karjalaiseen [[runolauluperinteeseen]], jota yhdistetään [[Kalevalan]] kaltaisiin runoihin. Tarkkoja yksityiskohtia kylän tapahtumista ja historiasta en ole varma, joten niiden kohdalla kannattaa tarkistaa ajantasainen tieto paikallisilta. Runolaulu on kuitenkin yksi Karjalan tunnetuimmista kulttuuriperinteistä, ja Ilomantsi liittyy siihen vahvasti. Runosta riittäisi kyllä pullaakin pidempi tarina.
+KYSYMYS: Kerro lisää: runolauluperinteeseen
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Soitin, joka syntyi kalasta] Kalevalassa — Kantele on Suomen vanhin oma soitin: puinen kaikukoppa, jonka yli on pingotettu kieliä, ja jota soitetaan sormin näppäillen. Kalevalan mukaan Väinämöinen teki ensimmäisen kanteleen hauen leukaluusta ja kielet hevosen jouhista. Vanhimmissa kanteleissa oli viisi kieltä ja ne veistettiin yhdestä puukappaleesta. Nykyisessä konserttikanteleessa on 39 kieltä ja vipuja, joilla sävelkorkeutta muutetaan kesken soiton. Pienintä viisikielistä opetellaan kouluissa.
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+AIEMPI KYSYMYS: Mikä tekee Parppeinvaaran runokylästä erityisen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tost minä osaan kertoo vähän. Parppeinvaaran runokylä on Ilomantsin nähtävyys, ja sen nimi viittaa karjalaiseen [[runolauluperinteeseen]], jota yhdistetään [[Kalevalan]] kaltaisiin runoihin. Tarkkoja yksityiskohtia kylän tapahtumista ja historiasta en ole varma, joten niiden kohdalla kannattaa tarkistaa ajantasainen tieto paikallisilta. Runolaulu on kuitenkin yksi Karjalan tunnetuimmista kulttuuriperinteistä, ja Ilomantsi liittyy siihen vahvasti. Runosta riittäisi kyllä pullaakin pidempi tarina.
+KYSYMYS: Kerro lisää: Kalevalan
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kohdekartta / Kohdekartta: Menilin kokoelma] 1987 Menilin kokoelma on John ja Dominique de Menilin keräämä taidekokoelma ja sitä varten rakennettu museo. Sitä on verrattu Yhdysvaltain suuriin yksityismuseoihin: New Yorkin Frickiin, Bostonin Gardneriin ja Washingtonin Phillipsiin. Museon perustana on Menil Foundation, joka perustettiin 1954 edistämään ymmärrystä ja kulttuuria ennen kaikkea taiteen kautta. Renzo Pianon suunnittelema rakennus avattiin yleisölle kesäkuussa 1987. Kokoelmassa on museon oman ilmoituksen mukaan yli 25 000 esinettä, mutta esillä on kerrallaan vain noin viisi prosenttia. Se oli Dominique de Menilin tietoinen valinta: hän halusi teosten vaihtuvan jatkuvasti, jotta kävijän kokemus olisi aina uusi. Kokoelma ulottu…
+AIEMPI KYSYMYS: Mitä tsasouna on ja miten se eroaa tavallisesta kirkosta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tsasouna on pieni ortodoksinen rukoushuone, joka on tavallisesti kirkkoa vaatimattomampi eikä välttämättä ole jatkuvassa jumalanpalveluskäytössä. Sinne tullaan rukoilemaan, sytyttämään kynttilä ja katsomaan [[ikoneja]], ja jumalanpalvelus pidetään siellä yleensä vain erityisinä päivinä. Ilomantsissa on viisi tsasounaa, ja ne kuuluvat alueen vanhaan [[ortodoksiseen]] kulttuuriin. Näin kyyhkyn ymmärrys asiasta, pienet rakennukset ovat minun kokoani.
+KYSYMYS: Kerro lisää: ikoneja
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kolminaisuuden katedraali] 1818–1852 Kirkon takana on vanhauskoisten historia. Hanketta ajoivat 1800-luvun alussa juuri he, ja se teki rakentamisesta hankalaa: vanhauskoisia pidettiin valtakirkon ulkopuolisina, ja lupa-asiat takkusivat. Työt alkoivat vuonna 1824, ja piirustukset teki arkkitehti Mihail Malahov klassistiseen tyyliin — sama mies, joka muotoili Kharitonovin kartanon pihapiirin. Rakennuttajien joukossa oli Rjazanovien kauppias- ja kaivossuku, ja heistä keskeisin oli Jakim Rjazanov. Hän oli itse vanhauskoinen, mutta päätti vuonna 1838 vaihtaa kirkon tunnustuksen valtakirkon puolelle — ja vasta sen jälkeen työ eteni. Ensimmäinen osa valmistui ja vihittiin vuonna 1839, ja koko rakennus oli valmis 1852. Talon…
+AIEMPI KYSYMYS: Mitä tsasouna on ja miten se eroaa tavallisesta kirkosta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tsasouna on pieni ortodoksinen rukoushuone, joka on tavallisesti kirkkoa vaatimattomampi eikä välttämättä ole jatkuvassa jumalanpalveluskäytössä. Sinne tullaan rukoilemaan, sytyttämään kynttilä ja katsomaan [[ikoneja]], ja jumalanpalvelus pidetään siellä yleensä vain erityisinä päivinä. Ilomantsissa on viisi tsasounaa, ja ne kuuluvat alueen vanhaan [[ortodoksiseen]] kulttuuriin. Näin kyyhkyn ymmärrys asiasta, pienet rakennukset ovat minun kokoani.
+KYSYMYS: Kerro lisää: ortodoksiseen
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+- [Irak — maalehti / Suot] Tigris ja Eufrat päättyvät samaan paikkaan: laajaan kosteikkoon Basran pohjoispuolella. Siellä ruoko on rakennusaine, vesipuhveli kotieläin ja vene ainoa tie naapuriin.
+AIEMPI KYSYMYS: Millaisia ovat Petkeljärven ja Patvinsuon kansallispuistot?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kunnan maisemaa hallitsevat metsät ja [[suot]], ja nämä kaksi kansallispuistoa edustavat sitä luontoa hyvin. [[Patvinsuo]] on nimensä mukaisesti suoluonnon aluetta, kun taas [[Petkeljärvi]] tunnetaan lähteiden mukaan harjumaisemista ja järvistä. Tarkkoja pinta-aloja ja reittien pituuksia en ole varma, joten jätän ne mainitsematta. Kansallispuistot ovat yleisesti ottaen luonnonsuojelualueita, joilla kulkeminen on mahdollista merkityillä poluilla. Paljon lintuja siellä varmaan on, minä en ole käynyt.
+KYSYMYS: Kerro lisää: suot
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+AIEMPI KYSYMYS: Millaisia ovat Petkeljärven ja Patvinsuon kansallispuistot?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kunnan maisemaa hallitsevat metsät ja [[suot]], ja nämä kaksi kansallispuistoa edustavat sitä luontoa hyvin. [[Patvinsuo]] on nimensä mukaisesti suoluonnon aluetta, kun taas [[Petkeljärvi]] tunnetaan lähteiden mukaan harjumaisemista ja järvistä. Tarkkoja pinta-aloja ja reittien pituuksia en ole varma, joten jätän ne mainitsematta. Kansallispuistot ovat yleisesti ottaen luonnonsuojelualueita, joilla kulkeminen on mahdollista merkityillä poluilla. Paljon lintuja siellä varmaan on, minä en ole käynyt.
+KYSYMYS: Kerro lisää: Patvinsuo
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+AIEMPI KYSYMYS: Millaisia ovat Petkeljärven ja Patvinsuon kansallispuistot?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kunnan maisemaa hallitsevat metsät ja [[suot]], ja nämä kaksi kansallispuistoa edustavat sitä luontoa hyvin. [[Patvinsuo]] on nimensä mukaisesti suoluonnon aluetta, kun taas [[Petkeljärvi]] tunnetaan lähteiden mukaan harjumaisemista ja järvistä. Tarkkoja pinta-aloja ja reittien pituuksia en ole varma, joten jätän ne mainitsematta. Kansallispuistot ovat yleisesti ottaen luonnonsuojelualueita, joilla kulkeminen on mahdollista merkityillä poluilla. Paljon lintuja siellä varmaan on, minä en ole käynyt.
+KYSYMYS: Kerro lisää: Petkeljärvi
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+AIEMPI KYSYMYS: Kuka oli Mateli Kuivalatar ja miksi hänet muistetaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Mateli Kuivalatar]] oli ilomantsilainen kansanlaulaja, joka eli vuosina 1771–1846. Hänet lasketaan [[Ilomantsin]] tunnetuimpiin henkilöihin, mikä kertoo siitä, että laulu- ja runoperinne on ollut Ilomantsissa tärkeä osa kulttuuria. Tarkempia elämäkerrallisia yksityiskohtia en ole varma, joten en lähde niitä arvailemaan. [[Kansanlaulajat]] välittivät perinnettä suullisesti sukupolvelta toiselle, koska kaikkea ei ollut kirjattu muistiin. Suullinen perinne kuulostaa kyllä kyyhkyn kaltaiselta viestinviejältä.
+KYSYMYS: Kerro lisää: Mateli Kuivalatar
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+AIEMPI KYSYMYS: Kuka oli Mateli Kuivalatar ja miksi hänet muistetaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Mateli Kuivalatar]] oli ilomantsilainen kansanlaulaja, joka eli vuosina 1771–1846. Hänet lasketaan [[Ilomantsin]] tunnetuimpiin henkilöihin, mikä kertoo siitä, että laulu- ja runoperinne on ollut Ilomantsissa tärkeä osa kulttuuria. Tarkempia elämäkerrallisia yksityiskohtia en ole varma, joten en lähde niitä arvailemaan. [[Kansanlaulajat]] välittivät perinnettä suullisesti sukupolvelta toiselle, koska kaikkea ei ollut kirjattu muistiin. Suullinen perinne kuulostaa kyllä kyyhkyn kaltaiselta viestinviejältä.
+KYSYMYS: Kerro lisää: Ilomantsin

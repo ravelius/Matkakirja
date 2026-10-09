@@ -1,0 +1,1048 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+AIEMPI KYSYMYS: Miksi Porvoon vanha kaupunki on säilynyt niin hyvin, vaikka sen purkamista suunniteltiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on oikeasti hieno tarina. Porvoon vanha kaupunki on säilynyt, koska kaupunki rakennettiin tulipalon jälkeen uudelleen vanhoille perustuksille ja entistä katuverkkoa muuttamatta. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot nousivat vanhojen tilalle, ja keskiaikainen katuverkko säilyi. Kaupungin purkamista on tosiaan suunniteltu, mutta tietoni siitä, milloin ja miksi, ovat epävarmat, joten en lähde arvailemaan. Tällä hetkellä vanha kaupunki tunnetaan tiiviistä, pääosin puisista 1600- ja 1700-luvun taloistaan ja 1400-luvulla rakennetusta [[tuomiokirkosta]]. Kaupunki on [[Suomen kuuden keskiaikaisen kaupungin]] joukossa.
+KYSYMYS: Kerro lisää: tuomiokirkosta
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Vaara jolle uhrattiin ja jolla laidunnetaan yhä] 1991 — Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet metsittyisivät muutamassa vuosikymmenessä.
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+AIEMPI KYSYMYS: Miksi Porvoon vanha kaupunki on säilynyt niin hyvin, vaikka sen purkamista suunniteltiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on oikeasti hieno tarina. Porvoon vanha kaupunki on säilynyt, koska kaupunki rakennettiin tulipalon jälkeen uudelleen vanhoille perustuksille ja entistä katuverkkoa muuttamatta. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot nousivat vanhojen tilalle, ja keskiaikainen katuverkko säilyi. Kaupungin purkamista on tosiaan suunniteltu, mutta tietoni siitä, milloin ja miksi, ovat epävarmat, joten en lähde arvailemaan. Tällä hetkellä vanha kaupunki tunnetaan tiiviistä, pääosin puisista 1600- ja 1700-luvun taloistaan ja 1400-luvulla rakennetusta [[tuomiokirkosta]]. Kaupunki on [[Suomen kuuden keskiaikaisen kaupungin]] joukossa.
+KYSYMYS: Kerro lisää: Suomen kuuden keskiaikaisen kaupungin
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Mitä Porvoossa tapahtui vuonna 1809, ja miksi se muutti Suomen aseman?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on tärkeä käännekohta. Vuonna 1809 Porvoossa kokoontuivat valtiopäivät, joilla tsaari Aleksanteri I teki Suomesta autonomisen [[suuriruhtinaskunnan]]. Suomi oli ollut vuosisatoja osa Ruotsia, mutta Suomen sodan jälkeen se liitettiin Venäjän keisarikuntaan. Tsaari lupasi valtiopäivillä säilyttää maan perustuslait ja uskonnon, ja Suomi sai oman hallintonsa ja lakinsa. Muutos oli suuri, koska Suomesta tuli ensimmäistä kertaa oma valtiollinen kokonaisuus, vaikka se kuului edelleen keisarikunnan yhteyteen. Tämä loi pohjan myöhemmälle [[itsenäistymiselle]]. Aika pitkä sepustus tuli taas.
+KYSYMYS: Kerro lisää: suuriruhtinaskunnan
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+AIEMPI KYSYMYS: Mitä Porvoossa tapahtui vuonna 1809, ja miksi se muutti Suomen aseman?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on tärkeä käännekohta. Vuonna 1809 Porvoossa kokoontuivat valtiopäivät, joilla tsaari Aleksanteri I teki Suomesta autonomisen [[suuriruhtinaskunnan]]. Suomi oli ollut vuosisatoja osa Ruotsia, mutta Suomen sodan jälkeen se liitettiin Venäjän keisarikuntaan. Tsaari lupasi valtiopäivillä säilyttää maan perustuslait ja uskonnon, ja Suomi sai oman hallintonsa ja lakinsa. Muutos oli suuri, koska Suomesta tuli ensimmäistä kertaa oma valtiollinen kokonaisuus, vaikka se kuului edelleen keisarikunnan yhteyteen. Tämä loi pohjan myöhemmälle [[itsenäistymiselle]]. Aika pitkä sepustus tuli taas.
+KYSYMYS: Kerro lisää: itsenäistymiselle
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+AIEMPI KYSYMYS: Mikä on Porvoon tuomiokirkko ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä näin ylhäältä monesti. Porvoon tuomiokirkko on vanhan kaupungin keskipisteenä oleva [[Porvoon]] 1400-luvulla rakennettu kivikirkko. Se on suomalaisen historian kannalta tärkeä, koska siellä pidettiin vuoden 1809 valtiopäivien avajaisjumalanpalvelus, jossa tsaari Aleksanteri I oli läsnä. Kirkko on kärsinyt tulipaloista ja kunnostuksista vuosisatojen aikana, mutta se on yhä tärkeä [[luterilainen]] kirkko ja Porvoon hiippakunnan keskus. Kirkon yksityiskohtaisista rakennusvaiheista en ole varma, mutta rakennus on ollut keskeinen osa kaupungin historiaa. Sen maine on vain kasvanut, ja minäkin tykkään.
+KYSYMYS: Kerro lisää: Porvoon
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mikä on Porvoon tuomiokirkko ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä näin ylhäältä monesti. Porvoon tuomiokirkko on vanhan kaupungin keskipisteenä oleva [[Porvoon]] 1400-luvulla rakennettu kivikirkko. Se on suomalaisen historian kannalta tärkeä, koska siellä pidettiin vuoden 1809 valtiopäivien avajaisjumalanpalvelus, jossa tsaari Aleksanteri I oli läsnä. Kirkko on kärsinyt tulipaloista ja kunnostuksista vuosisatojen aikana, mutta se on yhä tärkeä [[luterilainen]] kirkko ja Porvoon hiippakunnan keskus. Kirkon yksityiskohtaisista rakennusvaiheista en ole varma, mutta rakennus on ollut keskeinen osa kaupungin historiaa. Sen maine on vain kasvanut, ja minäkin tykkään.
+KYSYMYS: Kerro lisää: luterilainen
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+AIEMPI KYSYMYS: Miksi Porvoonjoen rannan punaiset aitat ovat niin tunnettuja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, kaikki ottavat niistä kuvan. Porvoonjoen rannalla seisovat punamullalla maalatut puiset [[aitat]] ovat yksi Porvoon tunnetuimmista maisemista. Aitat olivat alun perin varastoja, joissa säilytettiin kaupan tavaroita, ja ne rakennettiin joen varrelle, koska tavarat kulkivat jokea pitkin laivoilla. Punamulta oli perinteinen ja edullinen maali, ja sitä käytettiin Suomessa laajasti puutalojen suojaamiseen. Nykyään aitat kuuluvat vanhan kaupungin romanttiseen kuvaan ja ovat suosittu matkailukohde. Joen ja [[Porvoon vanhan kaupungin]] yhdistelmä on kuvauksellinen. Ruokapaikoista en sentään muista mitään.
+KYSYMYS: Kerro lisää: aitat
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+AIEMPI KYSYMYS: Miksi Porvoonjoen rannan punaiset aitat ovat niin tunnettuja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, kaikki ottavat niistä kuvan. Porvoonjoen rannalla seisovat punamullalla maalatut puiset [[aitat]] ovat yksi Porvoon tunnetuimmista maisemista. Aitat olivat alun perin varastoja, joissa säilytettiin kaupan tavaroita, ja ne rakennettiin joen varrelle, koska tavarat kulkivat jokea pitkin laivoilla. Punamulta oli perinteinen ja edullinen maali, ja sitä käytettiin Suomessa laajasti puutalojen suojaamiseen. Nykyään aitat kuuluvat vanhan kaupungin romanttiseen kuvaan ja ovat suosittu matkailukohde. Joen ja [[Porvoon vanhan kaupungin]] yhdistelmä on kuvauksellinen. Ruokapaikoista en sentään muista mitään.
+KYSYMYS: Kerro lisää: Porvoon vanhan kaupungin
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Mitä kieltä Porvoossa puhutaan?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kiva kysymys. Porvoossa puhutaan suomea ja ruotsia, ja kaupunki on virallisesti kaksikielinen. Suurin osa asukkaista puhuu äidinkielenään suomea, mutta kaupungissa on myös merkittävä [[ruotsinkielinen]] vähemmistö, ja ruotsi kuuluu vahvasti kaupungin historiaan ja arkeen. Kyltit ja palvelut ovat usein molemmilla kielillä. Koko [[Uudenmaan]] rannikkoalueella on perinteisesti ollut ruotsinkielistä väestöä, ja Porvoo on yksi alueen vanhimmista kaupungeista. Tarkkoja asukasmääriä en muista, joten jätän ne sanomatta. Ja pullatkin ovat varmasti kaksikielisiä.
+KYSYMYS: Kerro lisää: ruotsinkielinen
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+AIEMPI KYSYMYS: Mitä kieltä Porvoossa puhutaan?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kiva kysymys. Porvoossa puhutaan suomea ja ruotsia, ja kaupunki on virallisesti kaksikielinen. Suurin osa asukkaista puhuu äidinkielenään suomea, mutta kaupungissa on myös merkittävä [[ruotsinkielinen]] vähemmistö, ja ruotsi kuuluu vahvasti kaupungin historiaan ja arkeen. Kyltit ja palvelut ovat usein molemmilla kielillä. Koko [[Uudenmaan]] rannikkoalueella on perinteisesti ollut ruotsinkielistä väestöä, ja Porvoo on yksi alueen vanhimmista kaupungeista. Tarkkoja asukasmääriä en muista, joten jätän ne sanomatta. Ja pullatkin ovat varmasti kaksikielisiä.
+KYSYMYS: Kerro lisää: Uudenmaan
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Miksi Haminan linnoitus ja kaupunki on rakennettu tähden ja ympyrän muotoon?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on ihan oikeasti siisti juttu. Haminan tähtimäinen linnoitus ja ympyränmuotoinen katuverkko liittyvät siihen, että kaupunki rakennettiin uudelleen vuosina 1722–1724 sen jälkeen, kun Viipuri oli joutunut Venäjälle vuonna 1721. Haminasta tehtiin Viipurin korvaaja, ja se sai laajat ulkomaankaupan oikeudet. Kaupungin suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten [[renessanssin]] mallien mukaan. Tähtimuotoinen linnoitus oli aikansa sotatekniikan mukainen ratkaisu, koska sen kulmikkaat muurit mahdollistivat tehokkaan puolustuksen. Ympyränmuotoinen katuverkko puolestaan oli ihanteellisen kaupungin ajatusta noudattava suunnitelma. Tällaiset kaupungit ovat harvinaisia, ja Hamina on [[Axel Löwenin]] työn tulos. Ylhäältä se kyllä näyttää hienolta.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+AIEMPI KYSYMYS: Miksi Haminan linnoitus ja kaupunki on rakennettu tähden ja ympyrän muotoon?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on ihan oikeasti siisti juttu. Haminan tähtimäinen linnoitus ja ympyränmuotoinen katuverkko liittyvät siihen, että kaupunki rakennettiin uudelleen vuosina 1722–1724 sen jälkeen, kun Viipuri oli joutunut Venäjälle vuonna 1721. Haminasta tehtiin Viipurin korvaaja, ja se sai laajat ulkomaankaupan oikeudet. Kaupungin suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten [[renessanssin]] mallien mukaan. Tähtimuotoinen linnoitus oli aikansa sotatekniikan mukainen ratkaisu, koska sen kulmikkaat muurit mahdollistivat tehokkaan puolustuksen. Ympyränmuotoinen katuverkko puolestaan oli ihanteellisen kaupungin ajatusta noudattava suunnitelma. Tällaiset kaupungit ovat harvinaisia, ja Hamina on [[Axel Löwenin]] työn tulos. Ylhäältä se kyllä näyttää hienolta.
+KYSYMYS: Kerro lisää: Axel Löwenin
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Mitä vuonna 1809 Haminassa sovittiin, ja miksi se oli Suomelle niin tärkeää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on tärkeä. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle. Sopimus päätti Suomen sodan, ja sen seurauksena Suomi erosi Ruotsista, johon se oli kuulunut vuosisatojen ajan. Suomesta tuli Venäjän keisarikunnan sisällä autonominen [[suuriruhtinaskunta]], jolla oli oma hallintonsa ja lakinsa. Tämä oli Suomen kehityksen kannalta käänteentekevä vaihe, koska se loi pohjaa omalle valtiolliselle identiteetille ja myöhemmälle [[itsenäisyydelle]]. Sopimus tunnetaan [[Haminan rauhana]]. Vuosiluvun muistin hyvin, mutta pidempi aikajana jäi vähemmälle.
+KYSYMYS: Kerro lisää: suuriruhtinaskunta
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+AIEMPI KYSYMYS: Mitä vuonna 1809 Haminassa sovittiin, ja miksi se oli Suomelle niin tärkeää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on tärkeä. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle. Sopimus päätti Suomen sodan, ja sen seurauksena Suomi erosi Ruotsista, johon se oli kuulunut vuosisatojen ajan. Suomesta tuli Venäjän keisarikunnan sisällä autonominen [[suuriruhtinaskunta]], jolla oli oma hallintonsa ja lakinsa. Tämä oli Suomen kehityksen kannalta käänteentekevä vaihe, koska se loi pohjaa omalle valtiolliselle identiteetille ja myöhemmälle [[itsenäisyydelle]]. Sopimus tunnetaan [[Haminan rauhana]]. Vuosiluvun muistin hyvin, mutta pidempi aikajana jäi vähemmälle.
+KYSYMYS: Kerro lisää: itsenäisyydelle
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+AIEMPI KYSYMYS: Mitä vuonna 1809 Haminassa sovittiin, ja miksi se oli Suomelle niin tärkeää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on tärkeä. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle. Sopimus päätti Suomen sodan, ja sen seurauksena Suomi erosi Ruotsista, johon se oli kuulunut vuosisatojen ajan. Suomesta tuli Venäjän keisarikunnan sisällä autonominen [[suuriruhtinaskunta]], jolla oli oma hallintonsa ja lakinsa. Tämä oli Suomen kehityksen kannalta käänteentekevä vaihe, koska se loi pohjaa omalle valtiolliselle identiteetille ja myöhemmälle [[itsenäisyydelle]]. Sopimus tunnetaan [[Haminan rauhana]]. Vuosiluvun muistin hyvin, mutta pidempi aikajana jäi vähemmälle.
+KYSYMYS: Kerro lisää: Haminan rauhana
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Raatihuone] 1872–1883 Wienin komea raatihuone rakennettiin vuosina 1872–1883 arkkitehti Friedrich von Schmidtin suunnitelmien mukaan. Rakennuksesta tuli niin kallis — peräti 14 miljoonaa guldenia — että sekä kaupunki että keisarikunta maksoivat siitä yhdessä. Talo on valtava: siellä on 1575 huonetta ja 2035 ikkunaa. Torni kohoaa 98 metrin korkeuteen, ja sen huipulla seisoo rautainen ritarihahmo nimeltä Rathausmann, joka nostaa kokonaiskorkeuden yli sataan metriin. Rakennuksen juhlasali on Itävallan suurin historiallinen sali. Toisen maailmansodan pommitukset vaurioittivat raatihuonetta pahoin, mutta se korjattiin. Nykyään se on Wienin pormestarin työpaikka ja koko kaupungin sydän, jonka edustalla Ratha…
+- [Viro — maalehti / Historia: Raatihuone, joka on Pohjois-Euroopan vanhin] 1404 — Tallinnan raatihuone sai nykyisen muotonsa vuosina 1401–1404, mutta rakennuksesta on mainintoja jo 1300-luvulta. Se on Pohjois-Euroopan ainoa säilynyt goottilaistyylinen raatihuone ja seisoo yhä keskiajan Raatihuoneentorin laidalla. Torninhuippua koristaa Vanha Toomas, vartijaa esittävä tuuliviiri, josta on tullut koko kaupungin tunnus. Toisessa maailmansodassa pommitus tuhosi tornin maaliskuussa 1944, ja se rakennettiin uudelleen vasta 1952. Raatihuoneen kellarissa toimi keskiajalla viinikellari, ja rakennus oli vuosisatoja kaupunginhallinnon keskus.
+AIEMPI KYSYMYS: Mikä on Haminan ympyräkaupungin keskipiste?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, mutta annas ku mietin. Haminan ympyränmuotoisen kaupunkisuunnitelman keskipisteenä on tori, jonka laidalla on [[raatihuone]]. Katuverkko on suunniteltu niin, että kadut lähtevät keskustorilta säteittäin kohti ympyrän reunaa, ja niitä yhdistävät kaarevat kadut. Tämä suunnitelma tekee kaupungista omaleimaisen, ja se on harvinainen ratkaisu Suomessa ja koko [[Pohjois-Euroopassa]]. Suunnitelman ovat laatineet Axel Löwen ja hänen työtoverinsa, ja tarkkoja yksityiskohtia, kuten torin mittoja, en muista, joten jätän ne sanomatta. Hyvä on, kyllä tästä pääsee kävelemään.
+KYSYMYS: Kerro lisää: raatihuone
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa] Kolumbia on yksi maailman seitsemästätoista megadiversistä maasta, ja sillä on maailman suurin lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. Noin kymmenen prosenttia maapallon lajeista elää siellä. Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman lintulajeista. Maa on ensimmäinen myös orkidealajien ja kotoperäisten perhosten määrässä, ja siellä on 32 maabiomia ja 314 ekosysteemityyppiä.
+AIEMPI KYSYMYS: Mikä on Haminan ympyräkaupungin keskipiste?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, mutta annas ku mietin. Haminan ympyränmuotoisen kaupunkisuunnitelman keskipisteenä on tori, jonka laidalla on [[raatihuone]]. Katuverkko on suunniteltu niin, että kadut lähtevät keskustorilta säteittäin kohti ympyrän reunaa, ja niitä yhdistävät kaarevat kadut. Tämä suunnitelma tekee kaupungista omaleimaisen, ja se on harvinainen ratkaisu Suomessa ja koko [[Pohjois-Euroopassa]]. Suunnitelman ovat laatineet Axel Löwen ja hänen työtoverinsa, ja tarkkoja yksityiskohtia, kuten torin mittoja, en muista, joten jätän ne sanomatta. Hyvä on, kyllä tästä pääsee kävelemään.
+KYSYMYS: Kerro lisää: Pohjois-Euroopassa
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+AIEMPI KYSYMYS: Mikä on Haminan reserviupseerikoulu ja mitä siellä opetetaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on mielenkiintoinen. Haminassa toimii Reserviupseerikoulu, joka koulutti ensimmäiset oppilaansa vuonna 1920 samoissa tiloissa, joissa aiemmin toimi vuonna 1819 perustettu kadettikoulu. Koulussa koulutetaan [[reserviupseereita]] Suomen puolustusvoimille, eli varusmiehiä, jotka suorittavat johtajakoulutuksen ja saavat reservin upseerin tai aliupseerin pätevyyden. Koulutukseen kuuluu sotilaallisen osaamisen lisäksi johtamista ja vastuunkantoa. Tarkemmasta koulutusohjelmasta, kuten kurssien pituudesta, en ole varma, joten ne kannattaa tarkistaa puolustusvoimilta. Haminan [[kadettikoulu]] on osa kaupungin pitkää sotilashistoriaa. Ja minä lensin paikan ylitse ilman ylennystä.
+KYSYMYS: Kerro lisää: reserviupseereita
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Hotel Tequendama] 1953 Hotelli rakennettiin 1950–51 osaksi kymmenennen valtakadun levennystä, ja se vihittiin 17. toukokuuta 1953 juhlaillallisella, jolla oli läsnä tasavallan presidentti Roberto Urdaneta Arbeláez. Suunnittelijoina olivat yhdysvaltalaiset Holabird & Root ja John Burgee sekä kolumbialainen Cuéllar Serrano Gómez. Talo oli 1950-luvulla kaupungin korkein uudisrakennus ja Centro Internacional Tequendaman ensimmäinen rakennus — se aloitti kokonaisen kaupunginosan. Tontilla on ollut ennen hotellia neljä muuta laitosta: San Diegon luostari, sotakorkeakoulu, kadettikoulu ja puolustusministeriö. Vuosina 1967–1970 hotelliin rakennettiin samassa tyylissä laajennus, joka kaksinkertaisti sen koon, siirsi …
+AIEMPI KYSYMYS: Mikä on Haminan reserviupseerikoulu ja mitä siellä opetetaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on mielenkiintoinen. Haminassa toimii Reserviupseerikoulu, joka koulutti ensimmäiset oppilaansa vuonna 1920 samoissa tiloissa, joissa aiemmin toimi vuonna 1819 perustettu kadettikoulu. Koulussa koulutetaan [[reserviupseereita]] Suomen puolustusvoimille, eli varusmiehiä, jotka suorittavat johtajakoulutuksen ja saavat reservin upseerin tai aliupseerin pätevyyden. Koulutukseen kuuluu sotilaallisen osaamisen lisäksi johtamista ja vastuunkantoa. Tarkemmasta koulutusohjelmasta, kuten kurssien pituudesta, en ole varma, joten ne kannattaa tarkistaa puolustusvoimilta. Haminan [[kadettikoulu]] on osa kaupungin pitkää sotilashistoriaa. Ja minä lensin paikan ylitse ilman ylennystä.
+KYSYMYS: Kerro lisää: kadettikoulu
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Soittajat: Tattoo tarkoitti: sulkekaa hanat] 1600-luku — Joka elokuu linnan edustalle rakennetaan katsomot, ja niiden keskellä marssivat sotilassoittokunnat. Nimi tulee 1600-luvun hollannista: rumpalit soittivat iltaisin majatalojen edessä merkin doe den tap toe eli sulkekaa hanat, jolloin sotilaiden oli aika lopettaa ja palata nukkumaan. Ensimmäinen Edinburghin tattoo pidettiin vuonna 1950. Siinä oli kahdeksan ohjelmanumeroa ja noin 6 000 katsojaa rakennustelineillä; nykyään katsomoon mahtuu 8 800 ihmistä joka ilta.
+AIEMPI KYSYMYS: Mikä on Haminan Tattoo -tapahtuma?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä muistan, siinä on rumpuja. Haminan Tattoo on kansainvälinen sotilasmusiikkitapahtuma, joka järjestetään Haminassa joka toinen vuosi. Tapahtumaan osallistuu sotilassoittokuntia ja -esityksiä eri puolilta maailmaa, ja esitykset pidetään linnoituksen alueella. Sana tattoo viittaa sotilasmusiikin perinteeseen, jossa soitettiin iltasignaali tai iltarummutus. Haminan [[Tattoo]] on tunnettu suuresta yleisöstä ja näyttävistä esityksistä. Tapahtuma on näyttävä [[sotilasmusiikin]] kokonaisuus, mutta tarkkoja kävijämääriä en muista. Soitto kuuluu varmasti taivaalle asti.
+KYSYMYS: Kerro lisää: Tattoo
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+AIEMPI KYSYMYS: Mikä on Haminan Tattoo -tapahtuma?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä muistan, siinä on rumpuja. Haminan Tattoo on kansainvälinen sotilasmusiikkitapahtuma, joka järjestetään Haminassa joka toinen vuosi. Tapahtumaan osallistuu sotilassoittokuntia ja -esityksiä eri puolilta maailmaa, ja esitykset pidetään linnoituksen alueella. Sana tattoo viittaa sotilasmusiikin perinteeseen, jossa soitettiin iltasignaali tai iltarummutus. Haminan [[Tattoo]] on tunnettu suuresta yleisöstä ja näyttävistä esityksistä. Tapahtuma on näyttävä [[sotilasmusiikin]] kokonaisuus, mutta tarkkoja kävijämääriä en muista. Soitto kuuluu varmasti taivaalle asti.
+KYSYMYS: Kerro lisää: sotilasmusiikin
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kaupunkilehti / Historia: Presidentti joka avasi tähtitieteen ikkunan] Presidentti Gabriel García Moreno avasi Quiton observatorion 1873 La Alameda -puistoon, aivan vanhankaupungin laidalle: yksi Etelä-Amerikan vanhimmista tähtitieteellisistä laitoksista syntyi saksalaisen Bonnin observatorion mallin mukaan. Ensimmäiseksi johtajaksi tuli Juan Bautista Menten, ja rakennus valmistui kokonaan 1878. Kaksi vuotta avajaisten jälkeen, elokuussa 1875, García Moreno murhattiin Quitossa – mutta observatorio jäi paikalleen ja jatkoi samaa työtä, meteorologiaa ja tähtitiedettä.
+AIEMPI KYSYMYS: Mitä ranskalaiset tutkijat mittasivat Tornionlaaksossa 1730-luvulla, ja mitä he halusivat sillä todistaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on hieno tiedejuttu. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Tarkoituksena oli selvittää maapallon muoto: mittaus kertoi, kuinka pitkä yhden asteen pituinen kaari on napaseudulla, ja tulosta verrattiin eteläisemmällä retkikunnalla saatuun tulokseen. Mittaustulos tuki Isaac Newtonin teoriaa, jonka mukaan maapallo on navoilta litistynyt. Retkikunta oli tärkeä tapahtuma [[tähtitieteen]] ja [[geodesian]] historiassa. Tarkoista vuosiluvuista ja tuloksista en ole varma, joten jätän ne sanomatta. Kyyhkynkin täytyy tunnustaa, että tää oli hieno saavutus.
+KYSYMYS: Kerro lisää: tähtitieteen
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+AIEMPI KYSYMYS: Mitä ranskalaiset tutkijat mittasivat Tornionlaaksossa 1730-luvulla, ja mitä he halusivat sillä todistaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on hieno tiedejuttu. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Tarkoituksena oli selvittää maapallon muoto: mittaus kertoi, kuinka pitkä yhden asteen pituinen kaari on napaseudulla, ja tulosta verrattiin eteläisemmällä retkikunnalla saatuun tulokseen. Mittaustulos tuki Isaac Newtonin teoriaa, jonka mukaan maapallo on navoilta litistynyt. Retkikunta oli tärkeä tapahtuma [[tähtitieteen]] ja [[geodesian]] historiassa. Tarkoista vuosiluvuista ja tuloksista en ole varma, joten jätän ne sanomatta. Kyyhkynkin täytyy tunnustaa, että tää oli hieno saavutus.
+KYSYMYS: Kerro lisää: geodesian
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+AIEMPI KYSYMYS: Miksi Tornion satamaa piti siirtää joen varrella alavirtaan kahdesti?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vähän hankala, enkä ole ihan varma. Satamaa on Tornionjoen suulla siirretty ajan mittaan, ja syynä on yleensä ollut se, että veden syvyys ja laivojen koko eivät enää sopineet yhteen. Pohjanlahden rannikolla [[maankohoaminen]] madaltaa merenlahtia ja jokisuita vuosi vuodelta, ja se on pakottanut monet Perämeren sataman siirtymään lähemmäs avomerta. Tornion nykyinen [[Röyttän satama]] on merenrannalla kaukana vanhasta kaupunkikeskustasta, mikä sopii tähän. Siitä, montako kertaa ja milloin satamaa siirrettiin, en ole varma, joten en vahvista väitettä kahdesta siirrosta. Onneksi kyyhkyn ei tarvitse etsiä satamaa, vaan vain laituri.
+KYSYMYS: Kerro lisää: maankohoaminen
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+AIEMPI KYSYMYS: Miksi Tornion satamaa piti siirtää joen varrella alavirtaan kahdesti?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vähän hankala, enkä ole ihan varma. Satamaa on Tornionjoen suulla siirretty ajan mittaan, ja syynä on yleensä ollut se, että veden syvyys ja laivojen koko eivät enää sopineet yhteen. Pohjanlahden rannikolla [[maankohoaminen]] madaltaa merenlahtia ja jokisuita vuosi vuodelta, ja se on pakottanut monet Perämeren sataman siirtymään lähemmäs avomerta. Tornion nykyinen [[Röyttän satama]] on merenrannalla kaukana vanhasta kaupunkikeskustasta, mikä sopii tähän. Siitä, montako kertaa ja milloin satamaa siirrettiin, en ole varma, joten en vahvista väitettä kahdesta siirrosta. Onneksi kyyhkyn ei tarvitse etsiä satamaa, vaan vain laituri.
+KYSYMYS: Kerro lisää: Röyttän satama
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+AIEMPI KYSYMYS: Miten raja kulkee Tornion ja Haaparannan välillä arjessa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on minun lempijuttuni. Tornio ja Haaparanta muodostavat rajat ylittävän kaksoiskaupungin, ja raja kulkee Tornionjoessa kaupunkien välissä. Ihmiset liikkuvat kaupunkien välillä päivittäin, koska matka on lyhyt, ja palvelut sekä työpaikat jakautuvat molemmille puolille. Rajaa ylittäessä kellot ovat eri ajassa, sillä Suomessa kello on tunnin edellä Ruotsia, ja maissa on eri valuutat: Suomessa käytetään euroa ja Ruotsissa kruunua. Tämä [[Tornion–Haaparannan]] yhteistyö on esimerkki siitä, miten [[Pohjoismaiden]] rajat voivat olla arjessa hyvin avoimia. Tarkemmasta kaupunkien yhteistyömuodoista en ole varma. Aika luontevaa lentää tuosta ylitse.
+KYSYMYS: Kerro lisää: Tornion–Haaparannan
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Miten raja kulkee Tornion ja Haaparannan välillä arjessa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on minun lempijuttuni. Tornio ja Haaparanta muodostavat rajat ylittävän kaksoiskaupungin, ja raja kulkee Tornionjoessa kaupunkien välissä. Ihmiset liikkuvat kaupunkien välillä päivittäin, koska matka on lyhyt, ja palvelut sekä työpaikat jakautuvat molemmille puolille. Rajaa ylittäessä kellot ovat eri ajassa, sillä Suomessa kello on tunnin edellä Ruotsia, ja maissa on eri valuutat: Suomessa käytetään euroa ja Ruotsissa kruunua. Tämä [[Tornion–Haaparannan]] yhteistyö on esimerkki siitä, miten [[Pohjoismaiden]] rajat voivat olla arjessa hyvin avoimia. Tarkemmasta kaupunkien yhteistyömuodoista en ole varma. Aika luontevaa lentää tuosta ylitse.
+KYSYMYS: Kerro lisää: Pohjoismaiden
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Lohi nousee eduskuntatalon vierestä] Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti.
+- [Ruotsi — maalehti / Eläimet kaupungissa: Lohi ui eduskuntatalon ohi] 2000 — Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä. Siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes 22 kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Kalat palasivat 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen.
+AIEMPI KYSYMYS: Millainen joki Tornionjoki on, ja mitä siitä pyydetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ainakin lohesta puhutaan. Tornionjoki on Suomen ja Ruotsin välisen rajan muodostava joki, joka laskee Perämereen. Se on Euroopan harvoja suuria jokia, joita ei ole padottu, ja siksi sen vesistö on säilynyt luonnonmukaisena. Joessa nousee merestä [[lohi]], ja Tornionjoki tunnetaan lohijokena, jossa kalastetaan perinteisesti myös muita kaloja. Jokea käytetään kalastukseen ja virkistykseen, ja sen rannoilla on vanhoja kalastusperinteitä. Tarkkoja lohimääriä ja joen pituutta en muista, joten jätän ne sanomatta. [[Tornionlaakson]] elämä on kiinteästi sidoksissa jokeen. Itse söisin mieluummin pullaa.
+KYSYMYS: Kerro lisää: lohi
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Millainen joki Tornionjoki on, ja mitä siitä pyydetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ainakin lohesta puhutaan. Tornionjoki on Suomen ja Ruotsin välisen rajan muodostava joki, joka laskee Perämereen. Se on Euroopan harvoja suuria jokia, joita ei ole padottu, ja siksi sen vesistö on säilynyt luonnonmukaisena. Joessa nousee merestä [[lohi]], ja Tornionjoki tunnetaan lohijokena, jossa kalastetaan perinteisesti myös muita kaloja. Jokea käytetään kalastukseen ja virkistykseen, ja sen rannoilla on vanhoja kalastusperinteitä. Tarkkoja lohimääriä ja joen pituutta en muista, joten jätän ne sanomatta. [[Tornionlaakson]] elämä on kiinteästi sidoksissa jokeen. Itse söisin mieluummin pullaa.
+KYSYMYS: Kerro lisää: Tornionlaakson
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+AIEMPI KYSYMYS: Kuka oli Kustaa II Aadolf?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän, kaikki Pohjolan kuninkaat tulevat tutuiksi. Kustaa II Aadolf oli Ruotsin kuningas 1600-luvun alkupuoliskolla, ja hän hallitsi aikana, jolloin Ruotsista kehittyi merkittävä suurvalta. Hän johti maansa mukaan [[kolmikymmenvuotiseen sotaan]], jossa hän kaatui Lützenin taistelussa vuonna 1632. Hän tunnetaan sotataidon uudistajana ja hallinnon kehittäjänä, ja hänen aikanaan perustettiin useita kaupunkeja, myös Tornio vuonna 1621. Hänen kuolemansa oli suuri isku [[Ruotsille]], ja siitä on kulunut jo yli neljäsataa vuotta. Lyhyt vastaus olisi riittänyt, mutta ei se kyyhkyltä onnistu.
+KYSYMYS: Kerro lisää: kolmikymmenvuotiseen sotaan
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+AIEMPI KYSYMYS: Kuka oli Kustaa II Aadolf?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän, kaikki Pohjolan kuninkaat tulevat tutuiksi. Kustaa II Aadolf oli Ruotsin kuningas 1600-luvun alkupuoliskolla, ja hän hallitsi aikana, jolloin Ruotsista kehittyi merkittävä suurvalta. Hän johti maansa mukaan [[kolmikymmenvuotiseen sotaan]], jossa hän kaatui Lützenin taistelussa vuonna 1632. Hän tunnetaan sotataidon uudistajana ja hallinnon kehittäjänä, ja hänen aikanaan perustettiin useita kaupunkeja, myös Tornio vuonna 1621. Hänen kuolemansa oli suuri isku [[Ruotsille]], ja siitä on kulunut jo yli neljäsataa vuotta. Lyhyt vastaus olisi riittänyt, mutta ei se kyyhkyltä onnistu.
+KYSYMYS: Kerro lisää: Ruotsille
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Mitä Uudenkaupungin rauhalla vuonna 1721 lopetettiin, ja keiden kesken?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Uudenkaupungin rauha päätti vuonna 1721 [[Suuren Pohjan sodan]], jota oli käyty Ruotsin ja Venäjän välillä. Rauha solmittiin Uudessakaupungissa. Siinä Ruotsi luovutti Venäjälle muun muassa [[Viron]] ja [[Liivinmaan]] sekä osan [[Karjalaa]], ja Venäjän valtaama Suomi palautettiin pääosin Ruotsille.
+
+Pieni rantakaupunki ja aivan valtava sopimus, siinä on kyyhkyn mielestä jotain lohdullista. Suuret asiat ratkeavat usein yllättävän pienissä paikoissa.
+KYSYMYS: Kerro lisää: Suuren Pohjan sodan
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [Tallinna — kohdekartta / Kohdekartta: Paksu Margareeta] 1511–1530 Paksu Margareeta on tanakka, pyöreä torni Tallinnan vanhan kaupungin laidalla, aivan sataman kupeessa Pika kadun päässä. Se rakennettiin vuosien 1511 ja 1530 välillä osaksi kaupungin meren puoleista puolustusta, Suuren Rantaportin kylkeen. Torni on niin järeä, että sen läpimitta on 25 metriä ja seinät jopa 5 metriä paksut - se on koko kaupunginmuurin tukevin yksittäinen rakennelma. Sillä oli kaksi tehtävää: torjua hyökkääjät ja tehdä samalla vaikutuksen merta pitkin saapuviin vieraisiin. Vuosisatojen varrella torni sai monta erilaista käyttötarkoitusta. Ensin siellä säilytettiin ruutia ja aseita, myöhemmin siitä tehtiin vankila. Vuoden 1917 vallankumouksen aikaan tornissa tapahtui…
+AIEMPI KYSYMYS: Mitä Uudenkaupungin rauhalla vuonna 1721 lopetettiin, ja keiden kesken?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Uudenkaupungin rauha päätti vuonna 1721 [[Suuren Pohjan sodan]], jota oli käyty Ruotsin ja Venäjän välillä. Rauha solmittiin Uudessakaupungissa. Siinä Ruotsi luovutti Venäjälle muun muassa [[Viron]] ja [[Liivinmaan]] sekä osan [[Karjalaa]], ja Venäjän valtaama Suomi palautettiin pääosin Ruotsille.
+
+Pieni rantakaupunki ja aivan valtava sopimus, siinä on kyyhkyn mielestä jotain lohdullista. Suuret asiat ratkeavat usein yllättävän pienissä paikoissa.
+KYSYMYS: Kerro lisää: Viron
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mitä Uudenkaupungin rauhalla vuonna 1721 lopetettiin, ja keiden kesken?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Uudenkaupungin rauha päätti vuonna 1721 [[Suuren Pohjan sodan]], jota oli käyty Ruotsin ja Venäjän välillä. Rauha solmittiin Uudessakaupungissa. Siinä Ruotsi luovutti Venäjälle muun muassa [[Viron]] ja [[Liivinmaan]] sekä osan [[Karjalaa]], ja Venäjän valtaama Suomi palautettiin pääosin Ruotsille.
+
+Pieni rantakaupunki ja aivan valtava sopimus, siinä on kyyhkyn mielestä jotain lohdullista. Suuret asiat ratkeavat usein yllättävän pienissä paikoissa.
+KYSYMYS: Kerro lisää: Liivinmaan
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Karjapaimentolaisten maailma: Karja morsiamen hintana] Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.
+AIEMPI KYSYMYS: Mitä Uudenkaupungin rauhalla vuonna 1721 lopetettiin, ja keiden kesken?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Uudenkaupungin rauha päätti vuonna 1721 [[Suuren Pohjan sodan]], jota oli käyty Ruotsin ja Venäjän välillä. Rauha solmittiin Uudessakaupungissa. Siinä Ruotsi luovutti Venäjälle muun muassa [[Viron]] ja [[Liivinmaan]] sekä osan [[Karjalaa]], ja Venäjän valtaama Suomi palautettiin pääosin Ruotsille.
+
+Pieni rantakaupunki ja aivan valtava sopimus, siinä on kyyhkyn mielestä jotain lohdullista. Suuret asiat ratkeavat usein yllättävän pienissä paikoissa.
+KYSYMYS: Kerro lisää: Karjalaa
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Miksi kaupunki perustettiin, vaikka alueella käytiin jo kauppaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, ei se ihan itsestään selvää oo. Kaupunki perustettiin laillistamaan kauppa, jota alueella oli käyty puuesineillä ja suolalla jo varhaiskeskiajalla. Kun kauppapaikka sai [[kaupunkioikeuksien]] muodossa virallisen aseman, aiemmin vakiintunut kanssakäyminen tuli kuninkaan hyväksymäksi. Kuningas [[Kustaa II Aadolf]] antoi kaupungille kaupunkioikeudet vuonna 1617. Viisas Pöllö selittäisi tämän paremmin, mut hänet kutsuttiin jonnekin puhumaan.
+KYSYMYS: Kerro lisää: kaupunkioikeuksien
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Miksi kaupunki perustettiin, vaikka alueella käytiin jo kauppaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, ei se ihan itsestään selvää oo. Kaupunki perustettiin laillistamaan kauppa, jota alueella oli käyty puuesineillä ja suolalla jo varhaiskeskiajalla. Kun kauppapaikka sai [[kaupunkioikeuksien]] muodossa virallisen aseman, aiemmin vakiintunut kanssakäyminen tuli kuninkaan hyväksymäksi. Kuningas [[Kustaa II Aadolf]] antoi kaupungille kaupunkioikeudet vuonna 1617. Viisas Pöllö selittäisi tämän paremmin, mut hänet kutsuttiin jonnekin puhumaan.
+KYSYMYS: Kerro lisää: Kustaa II Aadolf
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kaupunkilehti / Yangon: Ruutukaava suistomaalle] Toisen Englanti–Burma-sodan jälkeen vuonna 1852 britit ottivat haltuunsa Yangonin ja koko Ala-Burman ja tekivät kaupungista alueensa kaupallisen ja hallinnollisen keskuksen — pääkaupunki siirrettiin sinne Moulmeinista, nykyisestä Mawlamyinesta. Armeijan insinööri, luutnantti Alexander Fraser, mittasi suistomaalle uuden kaupungin ruutukaavaan: rajoina olivat idässä Pazundaung-puro ja etelässä ja lännessä Yangon-joki. Kolmannen sodan jälkeen 1885 Rangoonista tuli koko brittihallitun Burman pääkaupunki, ja 1890-luvulla kasvava kauppa synnytti vauraita esikaupunkeja Kandawgyi- ja Inya-järvien pohjoispuolelle.
+AIEMPI KYSYMYS: Millainen on Uudenkaupungin empiretyylinen puutalokortteli?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan ylhäältä. Uudenkaupungin keskusta on rakennettu [[ruutukaavaan]], eli katuverkko muodostuu suorista, toisiaan leikkaavista kaduista. Siellä on yksi Suomen parhaiten säilyneistä [[empiretyylisistä]] puutalokortteleista. Empire on 1800-luvun alun suuntaus, jonka tunnusmerkkejä ovat tasapainoiset julkisivut ja selkeät linjat. Tuollaisen korttelin ikkunalaudalla pulla jäähtyisi kyl ihan sopivasti.
+KYSYMYS: Kerro lisää: ruutukaavaan
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Empire State Building] 1930–1931 Tontilla seisoi Waldorf–Astoria. Astorin suku oli omistanut paikan 1820-luvulta, ja William Waldorf Astor avasi siihen 1893 Waldorf-hotellin; neljä vuotta myöhemmin serkku John Jacob Astor IV rakensi viereen 16-kerroksisen Astorian. Yhdessä niissä oli 1 300 vuodetta, mikä teki talosta aikansa maailman suurimman hotellin. Kun seurapiirielämä siirtyi pohjoisemmas, suku myi tontin 1928 ja hotelli suljettiin 3. toukokuuta 1929. Uuden omistajayhtiön Empire State Inc:n takana olivat muun muassa John J. Raskob ja du Pontin suku, ja johtoon tuli entinen New Yorkin kuvernööri Alfred E. Smith. Tavoite oli maailman korkein rakennus, ja koska Chrysler Building nousi samaan aikaan, piirustukse…
+AIEMPI KYSYMYS: Millainen on Uudenkaupungin empiretyylinen puutalokortteli?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan ylhäältä. Uudenkaupungin keskusta on rakennettu [[ruutukaavaan]], eli katuverkko muodostuu suorista, toisiaan leikkaavista kaduista. Siellä on yksi Suomen parhaiten säilyneistä [[empiretyylisistä]] puutalokortteleista. Empire on 1800-luvun alun suuntaus, jonka tunnusmerkkejä ovat tasapainoiset julkisivut ja selkeät linjat. Tuollaisen korttelin ikkunalaudalla pulla jäähtyisi kyl ihan sopivasti.
+KYSYMYS: Kerro lisää: empiretyylisistä
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Nairn Streetin mökki] 1858 Wellingtonin vanhin alkuperäinen mökki rakennettiin 1858 Mount Cookin rinteeseen. Rakentaja oli kirvesmies William Wallis, joka oli tullut Uuteen-Seelantiin syyskuussa 1857 vaimonsa Catherinen kanssa seitsemäntoista viikon merimatkan jälkeen. Wallis oli oppipoikana ollut mukana rakentamassa Lontoon Kristallipalatsia ja tehnyt sairaaloita Krimin sodassa; taidot ja säästöt riittivät muuttoon. Toisin kuin useimmat tulijat, Wallis osti tonttinsa vasta nähtyään sen. Hän valitsi paikan, jonka alalaidassa virtasi puro: vuoden 1855 maanjäristys oli synnyttänyt hyökyaallon, joka pilasi kaupungin vesihuollon, ja lavantauti oli tappanut ihmisiä. Mökki tehtiin käsin ja lähes kokonaan kotimaisesta …
+- [Bukarest — kohdekartta / Kohdekartta: Szathmárin studio] Se valokuva, jonka juuri näit isoisäsi merkinnän vieressä, on erään bukarestilaisen ottama. Carol Popp de Szathmari muutti kaupunkiin 18-vuotiaana ja avasi tänne kaupallisen valokuvausstudion vuonna 1850. Häntä pidetään romanialaisen valokuvauksen perustajana — ja maailman ensimmäisenä sotavalokuvaajana. Vuodesta 1853 hän kuvasi Tonavan rannoilla sekä turkkilaisia että venäläisiä joukkoja, komentajia ja linnoituksia sodassa, joka tunnetaan Krimin sotana; märkälevyjen kehittämistä varten hän oli rakentanut vaunuun pimiön. Studion asiakkaina Bukarestissa oli molempien armeijoiden upseereita, ja juuri se avasi hänelle pääsyn leireihin. Vuonna 1855 hän vei albuminsa Pariisin maailmannäyttelyyn,…
+AIEMPI KYSYMYS: Mikä Ahvenanmaan sota oli ja miksi se ulottui Uuteenkaupunkiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, kerron sen rauhassa. Ahvenanmaan sota oli osa [[Krimin sotaa]], jonka Itämeren rintamalla Britannian ja Ranskan laivastot toimivat Venäjää vastaan. Suomi kuului tuolloin [[Venäjän keisarikuntaan]], joten Suomen rannikko oli osa sotatannerta. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät Uuteenkaupunkiin. Sota päättyi Krimin sodan yleiseen rauhaan, joka tehtiin Pariisissa vuonna 1856. Tapahtumista on kulunut yli 170 vuotta, ja rannikko on sen jälkeen elänyt rauhallista elämää. Onpas siit onneks jo pitkä aika.
+KYSYMYS: Kerro lisää: Krimin sotaa
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mikä Ahvenanmaan sota oli ja miksi se ulottui Uuteenkaupunkiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, kerron sen rauhassa. Ahvenanmaan sota oli osa [[Krimin sotaa]], jonka Itämeren rintamalla Britannian ja Ranskan laivastot toimivat Venäjää vastaan. Suomi kuului tuolloin [[Venäjän keisarikuntaan]], joten Suomen rannikko oli osa sotatannerta. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät Uuteenkaupunkiin. Sota päättyi Krimin sodan yleiseen rauhaan, joka tehtiin Pariisissa vuonna 1856. Tapahtumista on kulunut yli 170 vuotta, ja rannikko on sen jälkeen elänyt rauhallista elämää. Onpas siit onneks jo pitkä aika.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Vaara jolle uhrattiin ja jolla laidunnetaan yhä] 1991 — Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet metsittyisivät muutamassa vuosikymmenessä.
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+AIEMPI KYSYMYS: Missä päin Suomea Uusikaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, helppo juttu. Uusikaupunki sijaitsee Suomen lounaisrannikolla [[Varsinais-Suomen]] maakunnassa [[Pohjanlahden]] rannalla. Se on [[Turusta]] katsottuna luoteessa, ja pohjoisessa lähin suurempi kaupunki on [[Rauma]]. Suunnistus on kyl suvun vahvinta aluetta.
+KYSYMYS: Kerro lisää: Varsinais-Suomen
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+AIEMPI KYSYMYS: Missä päin Suomea Uusikaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, helppo juttu. Uusikaupunki sijaitsee Suomen lounaisrannikolla [[Varsinais-Suomen]] maakunnassa [[Pohjanlahden]] rannalla. Se on [[Turusta]] katsottuna luoteessa, ja pohjoisessa lähin suurempi kaupunki on [[Rauma]]. Suunnistus on kyl suvun vahvinta aluetta.
+KYSYMYS: Kerro lisää: Pohjanlahden
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+AIEMPI KYSYMYS: Missä päin Suomea Uusikaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, helppo juttu. Uusikaupunki sijaitsee Suomen lounaisrannikolla [[Varsinais-Suomen]] maakunnassa [[Pohjanlahden]] rannalla. Se on [[Turusta]] katsottuna luoteessa, ja pohjoisessa lähin suurempi kaupunki on [[Rauma]]. Suunnistus on kyl suvun vahvinta aluetta.
+KYSYMYS: Kerro lisää: Turusta
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+AIEMPI KYSYMYS: Missä päin Suomea Uusikaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, helppo juttu. Uusikaupunki sijaitsee Suomen lounaisrannikolla [[Varsinais-Suomen]] maakunnassa [[Pohjanlahden]] rannalla. Se on [[Turusta]] katsottuna luoteessa, ja pohjoisessa lähin suurempi kaupunki on [[Rauma]]. Suunnistus on kyl suvun vahvinta aluetta.
+KYSYMYS: Kerro lisää: Rauma
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Miksi kaupungin nimi vaihtui Degerbystä Loviisaksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupunki perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, koska [[Turun rauhan]] jälkeen Itä-Suomen ainoa kauppakaupunki [[Hamina]] oli jäänyt rajan taakse. Vuonna 1752 kuningas [[Aadolf Fredrik]] antoi kaupungille uuden nimen kuningattarensa [[Lovisa Ulrikan]] mukaan. Nimenvaihdos oli siis kunnianosoitus kuningattarelle. Minusta Degerby kuulostaa kyl ihan hyvältä.
+KYSYMYS: Kerro lisää: Turun rauhan
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+AIEMPI KYSYMYS: Miksi kaupungin nimi vaihtui Degerbystä Loviisaksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupunki perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, koska [[Turun rauhan]] jälkeen Itä-Suomen ainoa kauppakaupunki [[Hamina]] oli jäänyt rajan taakse. Vuonna 1752 kuningas [[Aadolf Fredrik]] antoi kaupungille uuden nimen kuningattarensa [[Lovisa Ulrikan]] mukaan. Nimenvaihdos oli siis kunnianosoitus kuningattarelle. Minusta Degerby kuulostaa kyl ihan hyvältä.
+KYSYMYS: Kerro lisää: Hamina
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Miksi kaupungin nimi vaihtui Degerbystä Loviisaksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupunki perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, koska [[Turun rauhan]] jälkeen Itä-Suomen ainoa kauppakaupunki [[Hamina]] oli jäänyt rajan taakse. Vuonna 1752 kuningas [[Aadolf Fredrik]] antoi kaupungille uuden nimen kuningattarensa [[Lovisa Ulrikan]] mukaan. Nimenvaihdos oli siis kunnianosoitus kuningattarelle. Minusta Degerby kuulostaa kyl ihan hyvältä.
+KYSYMYS: Kerro lisää: Aadolf Fredrik
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+AIEMPI KYSYMYS: Miksi kaupungin nimi vaihtui Degerbystä Loviisaksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupunki perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, koska [[Turun rauhan]] jälkeen Itä-Suomen ainoa kauppakaupunki [[Hamina]] oli jäänyt rajan taakse. Vuonna 1752 kuningas [[Aadolf Fredrik]] antoi kaupungille uuden nimen kuningattarensa [[Lovisa Ulrikan]] mukaan. Nimenvaihdos oli siis kunnianosoitus kuningattarelle. Minusta Degerby kuulostaa kyl ihan hyvältä.
+KYSYMYS: Kerro lisää: Lovisa Ulrikan
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Suomenlinna] 1748 Merilinnoitus Suomenlinna alkoi nousta kahdeksalle saarelle Helsingin edustalla vuonna 1748, kun Ruotsin kruunu halusi vahvan tukikohdan Venäjää vastaan. Työmaalla riitti väkeä: parhaimmillaan vuonna 1755 linnoitusta rakensi yhtä aikaa noin 7000 työntekijää. Alun perin linnoitus tunnettiin nimellä Sveaborg. Maineestaan huolimatta — sitä kutsuttiin "Pohjolan Gibraltariksi" — linnoitus antautui venäläisille jo vuonna 1808, vain parin kuukauden piirityksen jälkeen. Vuonna 1855 Krimin sodan aikana Englannin ja Ranskan laivastot pommittivat saaria voimakkaasti. Linnoitus sai suomenkielisen nimensä Suomenlinna vasta vuonna 1918, ja vuonna 1991 siitä tuli Unescon maailmanperintökohde. Nykyään…
+- [Turkki — maalehti / Historia: Valtio ilmoitti maksavansa vain puolet] 1875 — Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin velanhoito söi valtaosan valtion tuloista. Lokakuun 6. päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat viisi vuotta velasta maksettaisiin vain puolet käteisenä ja loput uusina viiden prosentin obligaatioina. Seuraavana vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 muharrem-asetuksella, joka perusti eurooppalaisten velkojien johtaman velkahallinnon; se keräsi suoraan itselleen muun muassa suola-, tupakka-, leimavero- ja alkoholitulot. Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa toimii nykyään Istanbul Erkek Lisesi -lukio.
+AIEMPI KYSYMYS: Mitä Loviisassa tapahtui Krimin sodan aikana kesällä 1855?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on vähän raskaampi aihe. Heinäkuussa 1855, yli 170 vuotta sitten, englantilaiset laivat ampuivat [[Krimin sodan]] aikana [[Svartholman]] merilinnoitusta, ja linnoitus räjähti raunioiksi. Samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi. Senaatti päätti rakentaa kaupungin uudelleen entiselle paikalleen, ja 1860-luvun alussa Loviisa alkoi kehittyä [[kylpyläkaupungiksi]]. Onneks se nousi uudestaan.
+KYSYMYS: Kerro lisää: Krimin sodan
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+AIEMPI KYSYMYS: Mitä Loviisassa tapahtui Krimin sodan aikana kesällä 1855?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on vähän raskaampi aihe. Heinäkuussa 1855, yli 170 vuotta sitten, englantilaiset laivat ampuivat [[Krimin sodan]] aikana [[Svartholman]] merilinnoitusta, ja linnoitus räjähti raunioiksi. Samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi. Senaatti päätti rakentaa kaupungin uudelleen entiselle paikalleen, ja 1860-luvun alussa Loviisa alkoi kehittyä [[kylpyläkaupungiksi]]. Onneks se nousi uudestaan.
+KYSYMYS: Kerro lisää: Svartholman
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Mitä Loviisassa tapahtui Krimin sodan aikana kesällä 1855?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on vähän raskaampi aihe. Heinäkuussa 1855, yli 170 vuotta sitten, englantilaiset laivat ampuivat [[Krimin sodan]] aikana [[Svartholman]] merilinnoitusta, ja linnoitus räjähti raunioiksi. Samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi. Senaatti päätti rakentaa kaupungin uudelleen entiselle paikalleen, ja 1860-luvun alussa Loviisa alkoi kehittyä [[kylpyläkaupungiksi]]. Onneks se nousi uudestaan.
+KYSYMYS: Kerro lisää: kylpyläkaupungiksi
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Suomenlinna] 1748 Merilinnoitus Suomenlinna alkoi nousta kahdeksalle saarelle Helsingin edustalla vuonna 1748, kun Ruotsin kruunu halusi vahvan tukikohdan Venäjää vastaan. Työmaalla riitti väkeä: parhaimmillaan vuonna 1755 linnoitusta rakensi yhtä aikaa noin 7000 työntekijää. Alun perin linnoitus tunnettiin nimellä Sveaborg. Maineestaan huolimatta — sitä kutsuttiin "Pohjolan Gibraltariksi" — linnoitus antautui venäläisille jo vuonna 1808, vain parin kuukauden piirityksen jälkeen. Vuonna 1855 Krimin sodan aikana Englannin ja Ranskan laivastot pommittivat saaria voimakkaasti. Linnoitus sai suomenkielisen nimensä Suomenlinna vasta vuonna 1918, ja vuonna 1991 siitä tuli Unescon maailmanperintökohde. Nykyään…
+- [Suomi — maalehti / Luonto: Vaara jolle uhrattiin ja jolla laidunnetaan yhä] 1991 — Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet metsittyisivät muutamassa vuosikymmenessä.
+AIEMPI KYSYMYS: Mitä Svartholman merilinnoitukselle tapahtui vuonna 1808?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Svartholman merilinnoitus antautui venäläisille vuonna 1808 lähes taistelematta. Tapahtuma sijoittuu [[Suomen sodan]] aikaan, jonka päätteeksi Suomi siirtyi Ruotsilta Venäjälle autonomiseksi [[suuriruhtinaskunnaksi]] vuonna 1809. Linnoitus oli rakennettu Loviisan eteläpuolelle, ja sen kohtalo tuli vielä uudelleen esiin [[Krimin sodassa]] vuonna 1855. Rauhallisempia aikoja on onneks tullu.
+KYSYMYS: Kerro lisää: Suomen sodan
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Mitä Svartholman merilinnoitukselle tapahtui vuonna 1808?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Svartholman merilinnoitus antautui venäläisille vuonna 1808 lähes taistelematta. Tapahtuma sijoittuu [[Suomen sodan]] aikaan, jonka päätteeksi Suomi siirtyi Ruotsilta Venäjälle autonomiseksi [[suuriruhtinaskunnaksi]] vuonna 1809. Linnoitus oli rakennettu Loviisan eteläpuolelle, ja sen kohtalo tuli vielä uudelleen esiin [[Krimin sodassa]] vuonna 1855. Rauhallisempia aikoja on onneks tullu.
+KYSYMYS: Kerro lisää: suuriruhtinaskunnaksi
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Nairn Streetin mökki] 1858 Wellingtonin vanhin alkuperäinen mökki rakennettiin 1858 Mount Cookin rinteeseen. Rakentaja oli kirvesmies William Wallis, joka oli tullut Uuteen-Seelantiin syyskuussa 1857 vaimonsa Catherinen kanssa seitsemäntoista viikon merimatkan jälkeen. Wallis oli oppipoikana ollut mukana rakentamassa Lontoon Kristallipalatsia ja tehnyt sairaaloita Krimin sodassa; taidot ja säästöt riittivät muuttoon. Toisin kuin useimmat tulijat, Wallis osti tonttinsa vasta nähtyään sen. Hän valitsi paikan, jonka alalaidassa virtasi puro: vuoden 1855 maanjäristys oli synnyttänyt hyökyaallon, joka pilasi kaupungin vesihuollon, ja lavantauti oli tappanut ihmisiä. Mökki tehtiin käsin ja lähes kokonaan kotimaisesta …
+- [Bukarest — kohdekartta / Kohdekartta: Szathmárin studio] Se valokuva, jonka juuri näit isoisäsi merkinnän vieressä, on erään bukarestilaisen ottama. Carol Popp de Szathmari muutti kaupunkiin 18-vuotiaana ja avasi tänne kaupallisen valokuvausstudion vuonna 1850. Häntä pidetään romanialaisen valokuvauksen perustajana — ja maailman ensimmäisenä sotavalokuvaajana. Vuodesta 1853 hän kuvasi Tonavan rannoilla sekä turkkilaisia että venäläisiä joukkoja, komentajia ja linnoituksia sodassa, joka tunnetaan Krimin sotana; märkälevyjen kehittämistä varten hän oli rakentanut vaunuun pimiön. Studion asiakkaina Bukarestissa oli molempien armeijoiden upseereita, ja juuri se avasi hänelle pääsyn leireihin. Vuonna 1855 hän vei albuminsa Pariisin maailmannäyttelyyn,…
+AIEMPI KYSYMYS: Mitä Svartholman merilinnoitukselle tapahtui vuonna 1808?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Svartholman merilinnoitus antautui venäläisille vuonna 1808 lähes taistelematta. Tapahtuma sijoittuu [[Suomen sodan]] aikaan, jonka päätteeksi Suomi siirtyi Ruotsilta Venäjälle autonomiseksi [[suuriruhtinaskunnaksi]] vuonna 1809. Linnoitus oli rakennettu Loviisan eteläpuolelle, ja sen kohtalo tuli vielä uudelleen esiin [[Krimin sodassa]] vuonna 1855. Rauhallisempia aikoja on onneks tullu.
+KYSYMYS: Kerro lisää: Krimin sodassa
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Panamá: Hattu, joka ei ole koskaan käynyt Panamassa valmistumassa] Panama-hattu punotaan Ecuadorissa toquilla-oljesta, ja se on saanut nimensä myyntipaikastaan eikä valmistusmaastaan. Termi esiintyy painetussa tekstissä jo 1828. Kun Kalifornian kultaryntäys alkoi 1848, kannaksen ylittäjät tarvitsivat suojaa aurinkoa vastaan, ja vienti Ecuadorista ja Panamasta Yhdysvaltoihin kasvoi vuoteen 1850 mennessä 220 000 hattuun vuodessa. Suosio sai lisäpotkun 1906, kun presidentti Theodore Roosevelt kuvattiin Panama-hattu päässään kanavan työmaalla — nimen sekaannus oli siitä lähtien lopullinen.
+AIEMPI KYSYMYS: Mikä oli Turun rauha 1743 ja miten se vaikutti rajaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, nyt muistan. Turun rauha solmittiin vuonna 1743 Ruotsin ja Venäjän välillä, ja se päätti niin sanotun [[hattujen sodan]]. Rauhassa raja siirtyi länteen [[Kymijoelle]], ja Itä-Suomen ainoa kauppakaupunki [[Hamina]] jäi rajan taakse Venäjän puolelle. Siksi Ruotsi perusti uuden raja- ja linnoituskaupungin, josta tuli Loviisa. Rajat kyllä siirtyy, mut kyyhky lentää ne aina yli.
+KYSYMYS: Kerro lisää: hattujen sodan
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+AIEMPI KYSYMYS: Mikä oli Turun rauha 1743 ja miten se vaikutti rajaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, nyt muistan. Turun rauha solmittiin vuonna 1743 Ruotsin ja Venäjän välillä, ja se päätti niin sanotun [[hattujen sodan]]. Rauhassa raja siirtyi länteen [[Kymijoelle]], ja Itä-Suomen ainoa kauppakaupunki [[Hamina]] jäi rajan taakse Venäjän puolelle. Siksi Ruotsi perusti uuden raja- ja linnoituskaupungin, josta tuli Loviisa. Rajat kyllä siirtyy, mut kyyhky lentää ne aina yli.
+KYSYMYS: Kerro lisää: Kymijoelle
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Kuka oli kuningatar Lovisa Ulrika, jonka mukaan kaupunki nimettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä sattui hyvin. Lovisa Ulrika oli kuningas Aadolf Fredrikin puoliso ja Ruotsin kuningatar. Hän oli syntyjään [[Preussin]] prinsessa ja [[Fredrik Suuren]] sisar, ja hänen poikansa oli myöhemmin kuningas [[Kustaa III]]. Kuningas antoi vuonna 1752 Degerbylle kuningattaren nimen, ja niin kaupungista tuli Loviisa.
+
+Veli sai historiankirjoihin sotansa, sisar sai kokonaisen kaupungin nimeensä. Kyyhkyn silmin se ei ole yhtään huono vaihtokauppa.
+KYSYMYS: Kerro lisää: Preussin
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Kuka oli kuningatar Lovisa Ulrika, jonka mukaan kaupunki nimettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä sattui hyvin. Lovisa Ulrika oli kuningas Aadolf Fredrikin puoliso ja Ruotsin kuningatar. Hän oli syntyjään [[Preussin]] prinsessa ja [[Fredrik Suuren]] sisar, ja hänen poikansa oli myöhemmin kuningas [[Kustaa III]]. Kuningas antoi vuonna 1752 Degerbylle kuningattaren nimen, ja niin kaupungista tuli Loviisa.
+
+Veli sai historiankirjoihin sotansa, sisar sai kokonaisen kaupungin nimeensä. Kyyhkyn silmin se ei ole yhtään huono vaihtokauppa.
+KYSYMYS: Kerro lisää: Fredrik Suuren
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Naamiaislaukaus] 1792 Naamiaiset ovat salamurhaajan kannalta käytännölliset: kaikilla on naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai perustuslakikriisin.
+AIEMPI KYSYMYS: Kuka oli kuningatar Lovisa Ulrika, jonka mukaan kaupunki nimettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä sattui hyvin. Lovisa Ulrika oli kuningas Aadolf Fredrikin puoliso ja Ruotsin kuningatar. Hän oli syntyjään [[Preussin]] prinsessa ja [[Fredrik Suuren]] sisar, ja hänen poikansa oli myöhemmin kuningas [[Kustaa III]]. Kuningas antoi vuonna 1752 Degerbylle kuningattaren nimen, ja niin kaupungista tuli Loviisa.
+
+Veli sai historiankirjoihin sotansa, sisar sai kokonaisen kaupungin nimeensä. Kyyhkyn silmin se ei ole yhtään huono vaihtokauppa.
+KYSYMYS: Kerro lisää: Kustaa III
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+AIEMPI KYSYMYS: Miksi Vaasa rakennettiin palon jälkeen aivan uuteen paikkaan?
+AIEMPI VASTAUS (Livia):
+Mmm— se oli kyl rankka vuosi. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle. Syyksi mainitaan yleensä, että [[maankohoaminen]] oli madaltanut vanhan sataman ja että uudella asemakaavalla haluttiin tehdä kaupungista turvallisempi; en ole varma, miten painotukset jakautuivat. Uuden kaavan laati [[Carl Axel Setterberg]]. Tuhosta on yli 170 vuotta, ja kaupunki on ehtinyt kasvaa uudestaan.
+KYSYMYS: Kerro lisää: maankohoaminen
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+AIEMPI KYSYMYS: Miksi Vaasa rakennettiin palon jälkeen aivan uuteen paikkaan?
+AIEMPI VASTAUS (Livia):
+Mmm— se oli kyl rankka vuosi. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle. Syyksi mainitaan yleensä, että [[maankohoaminen]] oli madaltanut vanhan sataman ja että uudella asemakaavalla haluttiin tehdä kaupungista turvallisempi; en ole varma, miten painotukset jakautuivat. Uuden kaavan laati [[Carl Axel Setterberg]]. Tuhosta on yli 170 vuotta, ja kaupunki on ehtinyt kasvaa uudestaan.
+KYSYMYS: Kerro lisää: Carl Axel Setterberg
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Afrasiyabin rauniokumpu] n. 500 eaa. – 1220 Afrasiyab on vanha Samarkand. Kumpua asutettiin noin vuodesta 500 eaa. mongolivalloitukseen 1220 asti, ja vanhimmat kerrokset ovat ensimmäisen vuosituhannen puolivälistä ennen ajanlaskun alkua. Aluetta on 220 hehtaaria ja arkeologisten kerrostumien paksuus on 8–12 metriä. Kaupunki oli tasakylkisen kolmion muotoinen, leveimmillään puolitoista kilometriä, ja sitä ympäröivät korkeat savimuurit torneineen. Vesi tuotiin kanavia, saviputkia ja kaivoja pitkin, ja eteläisen muurin lähellä oli allas, johon mahtui miljoona gallonaa eli noin neljätuhatta kuutiometriä vettä. Nimi ei ole alun perin sadun kuningas Afrasiabin. Tutkijoiden mukaan se on väännös persian sanasta Parsiab, so…
+- [Ulan Bator — kohdekartta / Kohdekartta: Bogd Khanin talvipalatsi] 1893–1903 Talvipalatsi oli osa laajempaa Vihreän palatsin kokonaisuutta, joka oli kahdeksannen Jebtsundamba Khutuktun eli Bogd Khanin asuinpaikka. Hallitsijalla oli neljä pääasuntoa, ja kaikki olivat Keski- ja Tuul-joen välisellä alueella: kesäpalatsi, Valkoinen palatsi, Pandelinin palatsi ja tämä. Osaa niistä käytettiin myös uskonnollisiin menoihin. Kolme muuta on kadonnut, ja talvipalatsi on ainoa jäljellä oleva. Alueella on kaikkiaan parikymmentä rakennusta. Portin nimi on Rauhan ja onnen portti, ja pihalla on jäähdytyspaviljonki sekä kuusi temppeliä, joissa on buddhalaista taidetta, kirjoituksia ja thangka-maalauksia; kahden temppelin nimet ovat Naidan ja Makhranz. Itse talvipalatsi on …
+AIEMPI KYSYMYS: Miksi kaupunkia kutsuttiin Nikolainkaupungiksi, vaikka asukkaat käyttivät vanhaa nimeä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vuonna 1855 kaupungin nimeksi muutettiin Nikolainkaupunki tsaari [[Nikolai I:n]] muistoksi. Suomi kuului tuolloin [[Venäjän keisarikuntaan]], joten nimi kunnioitti maan hallitsijaa, joka oli kuollut samana vuonna. Asukkaat käyttivät kuitenkin edelleen vanhaa nimeä Vaasa, ja se palautettiin virallisesti vasta vuonna 1917. Asukkaat näköjään pitivät kiinni omasta nimestään, ja sen minä kyl ymmärrän.
+KYSYMYS: Kerro lisää: Nikolai I:n
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miksi kaupunkia kutsuttiin Nikolainkaupungiksi, vaikka asukkaat käyttivät vanhaa nimeä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vuonna 1855 kaupungin nimeksi muutettiin Nikolainkaupunki tsaari [[Nikolai I:n]] muistoksi. Suomi kuului tuolloin [[Venäjän keisarikuntaan]], joten nimi kunnioitti maan hallitsijaa, joka oli kuollut samana vuonna. Asukkaat käyttivät kuitenkin edelleen vanhaa nimeä Vaasa, ja se palautettiin virallisesti vasta vuonna 1917. Asukkaat näköjään pitivät kiinni omasta nimestään, ja sen minä kyl ymmärrän.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+AIEMPI KYSYMYS: Miksi tervakauppa toi Vaasalle vaurautta 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+No jopas, tervasta puhutaan. Terva oli tärkeä vientituote, koska sillä käsiteltiin puulaivoja ja köysiä vedenpitäviksi ja lahoamattomiksi. [[Pohjanmaalla]] sitä poltettiin metsien männystä, ja se kuljetettiin rannikon kaupunkeihin laivattavaksi. Vaasa sijaitsi meren rannalla, joten sen kautta terva pääsi Eurooppaan. Tervakaupan lisäksi vaurautta toivat meriyhteydet ja [[laivanrakennus]].
+
+Terva on sitä tavaraa, jota kyyhky ei haluaisi siipiinsä. Silti ilman sitä ei olisi ollut laivoja eikä kauppaa, joten arvostan sitä.
+KYSYMYS: Kerro lisää: Pohjanmaalla
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miksi tervakauppa toi Vaasalle vaurautta 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+No jopas, tervasta puhutaan. Terva oli tärkeä vientituote, koska sillä käsiteltiin puulaivoja ja köysiä vedenpitäviksi ja lahoamattomiksi. [[Pohjanmaalla]] sitä poltettiin metsien männystä, ja se kuljetettiin rannikon kaupunkeihin laivattavaksi. Vaasa sijaitsi meren rannalla, joten sen kautta terva pääsi Eurooppaan. Tervakaupan lisäksi vaurautta toivat meriyhteydet ja [[laivanrakennus]].
+
+Terva on sitä tavaraa, jota kyyhky ei haluaisi siipiinsä. Silti ilman sitä ei olisi ollut laivoja eikä kauppaa, joten arvostan sitä.
+KYSYMYS: Kerro lisää: laivanrakennus
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Empire State Building] 1930–1931 Tontilla seisoi Waldorf–Astoria. Astorin suku oli omistanut paikan 1820-luvulta, ja William Waldorf Astor avasi siihen 1893 Waldorf-hotellin; neljä vuotta myöhemmin serkku John Jacob Astor IV rakensi viereen 16-kerroksisen Astorian. Yhdessä niissä oli 1 300 vuodetta, mikä teki talosta aikansa maailman suurimman hotellin. Kun seurapiirielämä siirtyi pohjoisemmas, suku myi tontin 1928 ja hotelli suljettiin 3. toukokuuta 1929. Uuden omistajayhtiön Empire State Inc:n takana olivat muun muassa John J. Raskob ja du Pontin suku, ja johtoon tuli entinen New Yorkin kuvernööri Alfred E. Smith. Tavoite oli maailman korkein rakennus, ja koska Chrysler Building nousi samaan aikaan, piirustukse…
+AIEMPI KYSYMYS: Miksi Vaasan uuden asemakaavan kadut tehtiin leveiksi?
+AIEMPI VASTAUS (Livia):
+Katotaas, tää on ihan loogista. Uuden kaupungin asemakaavan laati [[Carl Axel Setterberg]] [[empiretyyliin]], ja siinä viisi leveää katua jakoi korttelit osiin. Leveiden katujen tavallinen syy oli aikanaan palon leviämisen estäminen, ja vuoden 1852 palo oli juuri tuhonnut tiheästi rakennetun vanhan kaupungin. Siksi tämä on todennäköinen syy, mutta en ole varma, mitkä tekijät olivat ratkaisevia juuri Vaasassa. Hyvin suunniteltu kaupunki kyl kestää aikaa.
+KYSYMYS: Kerro lisää: empiretyyliin
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+AIEMPI KYSYMYS: Missä Vaasa sijaitsee Suomessa?
+AIEMPI VASTAUS (Livia):
+Selvä, katsotaan ylhäältä. Vaasa sijaitsee Suomen länsirannikolla [[Pohjanmaalla]] Pohjanlahden rannalla [[Merenkurkun]] tuntumassa. Merenkurkun toisella puolella on Ruotsin [[Uumaja]]. Nykyinen kaupunki on rakennettu noin seitsemän kilometriä luoteeseen vanhasta paikasta. Viisas Pöllö parantelee vielä siipeään, mut karttaa minä osaan lukea.
+KYSYMYS: Kerro lisää: Merenkurkun
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+AIEMPI KYSYMYS: Missä Vaasa sijaitsee Suomessa?
+AIEMPI VASTAUS (Livia):
+Selvä, katsotaan ylhäältä. Vaasa sijaitsee Suomen länsirannikolla [[Pohjanmaalla]] Pohjanlahden rannalla [[Merenkurkun]] tuntumassa. Merenkurkun toisella puolella on Ruotsin [[Uumaja]]. Nykyinen kaupunki on rakennettu noin seitsemän kilometriä luoteeseen vanhasta paikasta. Viisas Pöllö parantelee vielä siipeään, mut karttaa minä osaan lukea.
+KYSYMYS: Kerro lisää: Uumaja
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi Kajaanin linna rakennettiin kaukaiseen Kainuuseen?
+AIEMPI VASTAUS (Livia):
+Ai se linna, joo. Kuningas [[Kaarle IX]] aloitti linnan rakentamisen vuonna 1604 suojaamaan [[Kainuuta]], joka oli siirtynyt Ruotsille [[Teusinan rauhassa]] vuonna 1595. Linnalla haluttiin siis vahvistaa uuden rajamaan puolustusta. Kajaanin linna oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Pitkä matka sinne olisi, mut kyyhky löytäis perille.
+KYSYMYS: Kerro lisää: Kaarle IX
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Miksi Kajaanin linna rakennettiin kaukaiseen Kainuuseen?
+AIEMPI VASTAUS (Livia):
+Ai se linna, joo. Kuningas [[Kaarle IX]] aloitti linnan rakentamisen vuonna 1604 suojaamaan [[Kainuuta]], joka oli siirtynyt Ruotsille [[Teusinan rauhassa]] vuonna 1595. Linnalla haluttiin siis vahvistaa uuden rajamaan puolustusta. Kajaanin linna oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Pitkä matka sinne olisi, mut kyyhky löytäis perille.
+KYSYMYS: Kerro lisää: Kainuuta
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Miksi Kajaanin linna rakennettiin kaukaiseen Kainuuseen?
+AIEMPI VASTAUS (Livia):
+Ai se linna, joo. Kuningas [[Kaarle IX]] aloitti linnan rakentamisen vuonna 1604 suojaamaan [[Kainuuta]], joka oli siirtynyt Ruotsille [[Teusinan rauhassa]] vuonna 1595. Linnalla haluttiin siis vahvistaa uuden rajamaan puolustusta. Kajaanin linna oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Pitkä matka sinne olisi, mut kyyhky löytäis perille.
+KYSYMYS: Kerro lisää: Teusinan rauhassa
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Miksi vankeja lähetettiin juuri Kajaanin linnaan?
+AIEMPI VASTAUS (Livia):
+Odotas, tää vaatii vähän rehellisyyttä. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija [[Johannes Messenius]]. Linna sijaitsi kaukana valtakunnan keskuksista, mikä voi selittää valinnan, mutta en ole varma, mikä oli ratkaiseva syy juuri Kajaaniin. Linna rakennettiin alun perin suojaamaan [[Kainuuta]], ja vankilakäyttö oli aluksi tilapäistä. Tarkempaa syytä en uskalla arvata.
+KYSYMYS: Kerro lisää: Johannes Messenius
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Miksi venäläiset joukot räjäyttivät Kajaanin linnan vuonna 1716?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Suuren Pohjan sodan]] aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot. Syytä ei voi sanoa varmasti, mutta sotilaallinen tapa oli tuhota valtaamansa linnoitus, ettei vastustaja voisi käyttää sitä uudelleen; en ole varma, päteekö se juuri tässä tapauksessa. Rauniot sijaitsevat [[Kajaaninjoen]] saarella. Rauniot on kyl pysyneet, vaikka katto ei.
+KYSYMYS: Kerro lisää: Suuren Pohjan sodan
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Miksi venäläiset joukot räjäyttivät Kajaanin linnan vuonna 1716?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Suuren Pohjan sodan]] aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot. Syytä ei voi sanoa varmasti, mutta sotilaallinen tapa oli tuhota valtaamansa linnoitus, ettei vastustaja voisi käyttää sitä uudelleen; en ole varma, päteekö se juuri tässä tapauksessa. Rauniot sijaitsevat [[Kajaaninjoen]] saarella. Rauniot on kyl pysyneet, vaikka katto ei.
+KYSYMYS: Kerro lisää: Kajaaninjoen
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Kuka oli Johannes Messenius ja mitä hän kirjoitti vankeutensa aikana?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kyl tarinaa. Johannes Messenius oli historioitsija, ja hän oli Kajaanin linnan tunnetuin vanki. Vankeutensa aikana hän kirjoitti [[Skandinavian]] historiaa käsittelevän teoksen [[Scondia illustrata]]. Linna oli tuolloin vielä keskeneräinen ja toimi aluksi vankilana.
+
+Kirjan kirjoittaminen linnan vankeudessa vaatii sitkeyttä, jota kyyhky osaa arvostaa. Sukuni on kantanut viestejä huonompiinkin paikkoihin.
+KYSYMYS: Kerro lisää: Skandinavian
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Kuka oli Johannes Messenius ja mitä hän kirjoitti vankeutensa aikana?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kyl tarinaa. Johannes Messenius oli historioitsija, ja hän oli Kajaanin linnan tunnetuin vanki. Vankeutensa aikana hän kirjoitti [[Skandinavian]] historiaa käsittelevän teoksen [[Scondia illustrata]]. Linna oli tuolloin vielä keskeneräinen ja toimi aluksi vankilana.
+
+Kirjan kirjoittaminen linnan vankeudessa vaatii sitkeyttä, jota kyyhky osaa arvostaa. Sukuni on kantanut viestejä huonompiinkin paikkoihin.
+KYSYMYS: Kerro lisää: Scondia illustrata
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Missä Kajaanin linnan rauniot sijaitsevat nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä, katotaan ylhäältä. Kajaanin linnan rauniot ovat Kajaanin kaupungissa [[Kainuun]] maakunnassa [[Kajaaninjoen]] saarella Ämmäkosken ja Koivukosken välissä. Kajaani sijaitsee Oulujärven itäpuolella, ja Kajaaninjoki laskee [[Oulujärveen]]. Kaupunki perustettiin linnan viereen vuonna 1651. Joki ja kaksi koskea, siit on kyyhkyn helppo suunnistaa.
+KYSYMYS: Kerro lisää: Kainuun
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+AIEMPI KYSYMYS: Missä Kajaanin linnan rauniot sijaitsevat nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä, katotaan ylhäältä. Kajaanin linnan rauniot ovat Kajaanin kaupungissa [[Kainuun]] maakunnassa [[Kajaaninjoen]] saarella Ämmäkosken ja Koivukosken välissä. Kajaani sijaitsee Oulujärven itäpuolella, ja Kajaaninjoki laskee [[Oulujärveen]]. Kaupunki perustettiin linnan viereen vuonna 1651. Joki ja kaksi koskea, siit on kyyhkyn helppo suunnistaa.
+KYSYMYS: Kerro lisää: Oulujärveen
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+AIEMPI KYSYMYS: Miksi veneillä oli yhä vaikeampi päästä saarelle rakennetulle Raaseporin linnalle?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on hyvä pähkinä. Syynä oli [[maankohoaminen]]: maa nousi merestä, vesi madaltui ja merenlahti alkoi vetäytyä linnan edustalta. Linna oli rakennettu pienelle saarelle merenlahden pohjukkaan, joten kulkuyhteys meren puolelta vaikeutui vähitellen. Ilmiö on edelleen todellinen Suomen rannikolla, sillä maa kohoaa [[jääkauden]] jälkeen, koska mannerjään paino on poistunut. Maa nousee yhä, mut kyyhky lentää kuivin siivin.
+KYSYMYS: Kerro lisää: maankohoaminen

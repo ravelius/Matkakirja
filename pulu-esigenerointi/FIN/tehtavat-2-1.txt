@@ -1,0 +1,1011 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+AIEMPI KYSYMYS: Miksi Suomen korkein kohta ei ole huippu?
+AIEMPI VASTAUS (Livia):
+Kato, tässä on ny pieni karttavitsi. Suomen korkein kohta on [[Hálditšohkka]], 1 324 metrin korkeudessa [[Haltin]] rinteellä, eikä se ole huippu siksi, että tunturin varsinainen huippu [[Ráisduottarháldi]] sijaitsee Norjan puolella, noin kilometrin päässä rajasta. Raja kulkee niin, että se jättää huipun Norjalle mutta antaa Suomelle rinteen korkeimman kohdan. Tunturi on siis yhteinen, mutta sen kruunu on naapurin. Ylhäältä raja ei näy, mut kartalla kyl.
+KYSYMYS: Kerro lisää: Hálditšohkka
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kohdekartta / Kohdekartta: Fortin rautatieasema] nykyinen rakennus 1917 Rautatieliikenne alkoi Ceylonilla 1864, ja junat päättyivät silloin Colombo Terminus -asemalle Maradanan lähelle. Ensimmäinen Fort-niminen asema oli pieni ja rakennettiin 1877, kun rannikkorata avattiin; se sijaitsi nykyisen Secretariat Haltin kohdalla vähän nykyisestä asemasta länteen. Vuonna 1906 alkoi hanke, jossa Colombon rautatiet järjestettiin uudelleen: vanha pääteasema suljettiin ja sen korvasi uusi Maradanan asema. Nykyinen Fortin asema avattiin 1917 kaupungin keskusasemaksi. Se rakennettiin Beira-järvestä kuivatulle maalle, ja esikuvana oli Manchesterin Victoria-asema. Asemalla on yksitoista raidetta, ja useimmat maan kaukojunat päättyvät siihen. Idästä tule…
+AIEMPI KYSYMYS: Miksi Suomen korkein kohta ei ole huippu?
+AIEMPI VASTAUS (Livia):
+Kato, tässä on ny pieni karttavitsi. Suomen korkein kohta on [[Hálditšohkka]], 1 324 metrin korkeudessa [[Haltin]] rinteellä, eikä se ole huippu siksi, että tunturin varsinainen huippu [[Ráisduottarháldi]] sijaitsee Norjan puolella, noin kilometrin päässä rajasta. Raja kulkee niin, että se jättää huipun Norjalle mutta antaa Suomelle rinteen korkeimman kohdan. Tunturi on siis yhteinen, mutta sen kruunu on naapurin. Ylhäältä raja ei näy, mut kartalla kyl.
+KYSYMYS: Kerro lisää: Haltin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+AIEMPI KYSYMYS: Miksi Suomen korkein kohta ei ole huippu?
+AIEMPI VASTAUS (Livia):
+Kato, tässä on ny pieni karttavitsi. Suomen korkein kohta on [[Hálditšohkka]], 1 324 metrin korkeudessa [[Haltin]] rinteellä, eikä se ole huippu siksi, että tunturin varsinainen huippu [[Ráisduottarháldi]] sijaitsee Norjan puolella, noin kilometrin päässä rajasta. Raja kulkee niin, että se jättää huipun Norjalle mutta antaa Suomelle rinteen korkeimman kohdan. Tunturi on siis yhteinen, mutta sen kruunu on naapurin. Ylhäältä raja ei näy, mut kartalla kyl.
+KYSYMYS: Kerro lisää: Ráisduottarháldi
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+AIEMPI KYSYMYS: Mikä on korkein kokonaan Suomessa oleva tunturi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lähteiden mukaan korkein kokonaan Suomen puolella oleva tunturi on [[Ridnitšohkka]] [[Enontekiön]] Käsivarressa, noin 1 316 metriä, mutta en ole luvusta aivan varma. Halti ei kelpaa tähän, koska sen huippu on Norjan puolella ja Suomen osuus on vain rinnettä. Käsivarren alueella on useita lähes yhtä korkeita tuntureita, joten järjestys riippuu tarkasta mittauksesta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Ridnitšohkka
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+AIEMPI KYSYMYS: Mikä on korkein kokonaan Suomessa oleva tunturi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lähteiden mukaan korkein kokonaan Suomen puolella oleva tunturi on [[Ridnitšohkka]] [[Enontekiön]] Käsivarressa, noin 1 316 metriä, mutta en ole luvusta aivan varma. Halti ei kelpaa tähän, koska sen huippu on Norjan puolella ja Suomen osuus on vain rinnettä. Käsivarren alueella on useita lähes yhtä korkeita tuntureita, joten järjestys riippuu tarkasta mittauksesta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Enontekiön
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+AIEMPI KYSYMYS: Miksi Suomen pohjoisosaa kutsutaan Käsivarreksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimi tulee Suomen kartan muodosta: Enontekiön kapea alue työntyy Norjan ja Ruotsin väliin kuin käsi, ja kun maata ajatellaan naisen hahmoksi, [[Suomi-neidoksi]], se muodostaa neidon ojennetun käsivarren. Alue kuuluu [[Enontekiön]] kuntaan, ja sen länsiosassa sijaitsee Halti. Käsivarressa on Suomen korkeimpia tuntureita. Tämä kaikki lentäen ja ilman karttaa.
+KYSYMYS: Kerro lisää: Suomi-neidoksi
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+AIEMPI KYSYMYS: Mikä ero tunturilla ja vaaralla on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Tunturi]] on puuton tai lähes puuton, paljakkaan nouseva korkea mäki- tai vuorimuodostuma, joka kohoaa metsänrajan yläpuolelle, ja Halti on tästä kunnon esimerkki. [[Vaara]] taas on metsän peittämä, pyöreähkö ja yleensä matalampi kumpu, jollaisia on paljon Itä- ja Pohjois-Suomessa. Raja ei ole tarkka, koska metsänraja nousee ja laskee leveysasteen mukaan, ja joskus nimi on vain vakiintunut paikallisessa käytössä. Selvä, kyyhky selvisi.
+KYSYMYS: Kerro lisää: Tunturi
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Vaara jolle uhrattiin ja jolla laidunnetaan yhä] 1991 — Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet metsittyisivät muutamassa vuosikymmenessä.
+AIEMPI KYSYMYS: Mikä ero tunturilla ja vaaralla on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Tunturi]] on puuton tai lähes puuton, paljakkaan nouseva korkea mäki- tai vuorimuodostuma, joka kohoaa metsänrajan yläpuolelle, ja Halti on tästä kunnon esimerkki. [[Vaara]] taas on metsän peittämä, pyöreähkö ja yleensä matalampi kumpu, jollaisia on paljon Itä- ja Pohjois-Suomessa. Raja ei ole tarkka, koska metsänraja nousee ja laskee leveysasteen mukaan, ja joskus nimi on vain vakiintunut paikallisessa käytössä. Selvä, kyyhky selvisi.
+KYSYMYS: Kerro lisää: Vaara
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkes…
+- [Mosambik — maalehti / Historia: Tila, joka periytyi tyttäreltä tyttärelle] 1677–1900-luku — Prazo da coroa oli suuri maatila, jonka Portugalin kruunu vuokrasi kiinteää vuosimaksua vastaan, ja niitä oli tiheimmin Sambesin laaksossa. Haltijan piti asua tilallaan eikä myydä tai vuokrata sitä eteenpäin — sääntöä rikottiin jatkuvasti. Vuonna 1677 asutusta yritettiin houkutella omalla säännöllä: vapautunut prazo annettiin "ansioituneille orpotytöille tai kruunun virkamiesten tyttärille", ja se siirtyi vanhimmalle tyttärelle kolmen sukupolven ajan sillä ehdolla, että tämä nai portugalilaisen. Haltija sai käydä kauppaa kaikella, pitää järjestystä ja koota oman armeijan. Teten maakunnassa 1800-luvulla 32 tilanherraa hallitsi 57:ää prazoa.
+AIEMPI KYSYMYS: Mistä nimi Halti tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimen uskotaan juontuvan saamen sanasta háldi, joka tarkoittaa luonnonhaltijaa tai tietyn paikan henkeä; en kuitenkaan ole nimen alkuperästä aivan varma, joten pidä tätä lähteiden mukaan -tietona. Saamelaisessa perinteessä [[haltija]] oli paikkaan sidottu henki, joka vartioi aluetta, ja tunturinimissä näkyy tämä vanha maisemakäsitys. Pohjoisen paikannimistö on muutenkin pitkälti [[saamen]]kielistä.
+
+Minä en ole hengistä kovin varma, mutta tunturin päällä kyl tuntee itsensä vähän vieraaksi.
+KYSYMYS: Kerro lisää: haltija
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Parlamentti, joka sai oman talon vasta 2012] Suomen saamelaiskäräjät perustettiin 1996 hoitamaan saamelaisten kielen ja kulttuurin itsehallintoa, mutta sillä ei pitkään ollut omaa rakennusta — istunnot pidettiin vuokratiloissa Inarissa. Oma talo, Sajos, valmistui vasta 2012, ja sen puurakenteinen sali on suunniteltu perinteisen saamelaiskodan, kotan, muotoa mukaillen. Saamelaiskäräjät päättää muun muassa saamen kielten opetuksesta ja kulttuurimäärärahoista, mutta sillä ei ole Suomen eduskunnan kaltaista lainsäädäntövaltaa — se on neuvotteleva ja lausuntoja antava itsehallintoelin.
+- [Tromssa — kaupunkilehti / Valo: Pohjoisin yliopisto maailmassa] Tromssan yliopisto perustettiin 1968 ja aloitti opetuksen 1972. Se on maailman pohjoisin yliopisto, ja sen erikoisalat seuraavat sijaintia: revontulet, merentutkimus, arktinen lääketiede ja saamen kieli. Revontuliobservatorio perustettiin kaupunkiin jo 1928, ja sen mittaussarja on maailman pisimpiä. Kaupunki on pieni mutta täynnä tutkijoita, ja opiskelijoita tulee kymmenistä maista — moni jää talveksi juuri nähdäkseen pimeän ajan.
+AIEMPI KYSYMYS: Mistä nimi Halti tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimen uskotaan juontuvan saamen sanasta háldi, joka tarkoittaa luonnonhaltijaa tai tietyn paikan henkeä; en kuitenkaan ole nimen alkuperästä aivan varma, joten pidä tätä lähteiden mukaan -tietona. Saamelaisessa perinteessä [[haltija]] oli paikkaan sidottu henki, joka vartioi aluetta, ja tunturinimissä näkyy tämä vanha maisemakäsitys. Pohjoisen paikannimistö on muutenkin pitkälti [[saamen]]kielistä.
+
+Minä en ole hengistä kovin varma, mutta tunturin päällä kyl tuntee itsensä vähän vieraaksi.
+KYSYMYS: Kerro lisää: saamen
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Merenkurkku]] on Pohjanlahden kapein kohta, jossa lahti kapenee [[Perämeren]] ja [[Selkämeren]] välillä, ja siellä Suomen ja Ruotsin rannikot ovat lähimpänä toisiaan. Alue on matala, täynnä saaria ja kareja, ja maankohoaminen on siellä nopeinta: lähes sentin vuodessa. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde. Onpas kapea kurkku, siivin menee sekunnissa.
+KYSYMYS: Kerro lisää: Merenkurkku
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Merenkurkku]] on Pohjanlahden kapein kohta, jossa lahti kapenee [[Perämeren]] ja [[Selkämeren]] välillä, ja siellä Suomen ja Ruotsin rannikot ovat lähimpänä toisiaan. Alue on matala, täynnä saaria ja kareja, ja maankohoaminen on siellä nopeinta: lähes sentin vuodessa. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde. Onpas kapea kurkku, siivin menee sekunnissa.
+KYSYMYS: Kerro lisää: Perämeren
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Reloncavín selkä] Puerto Montt sijaitsee juuri siinä kohdassa, jossa Reloncavín selkä avautuu pohjoiseen - paikassa jota pidetään Chilen keskilaakson ja Tyynenmeren fjordivyöhykkeen rajana. Etelään avautuu Calbucon saaristo Tenglon, Maillénin ja Huarin saarineen, ja Carretera Austral, Patagonian pääväylä, kulkee selän itärantaa pitkin ennen kuin katkeaa lautalle. Vuonon vesi vaihtelee makean jokiveden ja suolaisen merenveden välillä, mikä tekee siitä ainutlaatuisen elinympäristön monille kaloille ja äyriäisille. Sään mukana selän pinta vaihtaa nopeasti väriään tyynen sinisestä myrskyn harmaaseen.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Merenkurkku]] on Pohjanlahden kapein kohta, jossa lahti kapenee [[Perämeren]] ja [[Selkämeren]] välillä, ja siellä Suomen ja Ruotsin rannikot ovat lähimpänä toisiaan. Alue on matala, täynnä saaria ja kareja, ja maankohoaminen on siellä nopeinta: lähes sentin vuodessa. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde. Onpas kapea kurkku, siivin menee sekunnissa.
+KYSYMYS: Kerro lisää: Selkämeren
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [NFK — maalehti / Tiede: Saari joka nousi merestä] n. 3,1–2,3 milj. vuotta sitten — Norfolkinsaari ja pieni Phillipinsaari syntyivät, kun merenalainen kilpitulivuori purkautui toistuvasti noin 3,1–2,3 miljoonan vuoden ajan basalttilaavaa. Suurin osa alkuperäisestä tulivuoresta on sittemmin kulunut mereen, ja jäljellä on saaren korkein kohta, 319 metriä merenpinnan yläpuolelle kohoava Mount Bates, sekä rannikon jyrkät basalttikalliot ja irralliset kalliosaarekkeet. Saari on osa Norfolkinharjannetta, tuhat kilometriä pitkää enimmäkseen vedenalaista vuoristoa, joka ulottuu Uuden-Seelannin ja Uuden-Kaledonian väliin – Norfolkinsaari ja Phillipinsaari ovat harvoja kohtia, joissa harjanne kohoaa meren pinnan yläpuolelle.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Merenkurkku]] on Pohjanlahden kapein kohta, jossa lahti kapenee [[Perämeren]] ja [[Selkämeren]] välillä, ja siellä Suomen ja Ruotsin rannikot ovat lähimpänä toisiaan. Alue on matala, täynnä saaria ja kareja, ja maankohoaminen on siellä nopeinta: lähes sentin vuodessa. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde. Onpas kapea kurkku, siivin menee sekunnissa.
+KYSYMYS: Kerro lisää: Merenkurkun saaristo
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat yhä?
+AIEMPI VASTAUS (Livia):
+Mmm— Hyvä kysymys tuo. Rannat nousevat, koska viime [[jääkauden]] mannerjää painoi maankuoren lähes kilometrin verran alaspäin, ja kun jää suli, kuori alkoi palautua entiselleen. Palautuminen on hidasta, sillä sen alla oleva kallioperä ja vaippa joustavat vain verkkaisesti; nousu on noin 80 senttiä vuosisadassa ja [[Merenkurkussa]] lähes sentin vuodessa. Ilmiötä kutsutaan nimellä [[maankohoaminen]]. Hidas juttu, ja silti minä huomaan sen rannoilla.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat yhä?
+AIEMPI VASTAUS (Livia):
+Mmm— Hyvä kysymys tuo. Rannat nousevat, koska viime [[jääkauden]] mannerjää painoi maankuoren lähes kilometrin verran alaspäin, ja kun jää suli, kuori alkoi palautua entiselleen. Palautuminen on hidasta, sillä sen alla oleva kallioperä ja vaippa joustavat vain verkkaisesti; nousu on noin 80 senttiä vuosisadassa ja [[Merenkurkussa]] lähes sentin vuodessa. Ilmiötä kutsutaan nimellä [[maankohoaminen]]. Hidas juttu, ja silti minä huomaan sen rannoilla.
+KYSYMYS: Kerro lisää: Merenkurkussa
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat yhä?
+AIEMPI VASTAUS (Livia):
+Mmm— Hyvä kysymys tuo. Rannat nousevat, koska viime [[jääkauden]] mannerjää painoi maankuoren lähes kilometrin verran alaspäin, ja kun jää suli, kuori alkoi palautua entiselleen. Palautuminen on hidasta, sillä sen alla oleva kallioperä ja vaippa joustavat vain verkkaisesti; nousu on noin 80 senttiä vuosisadassa ja [[Merenkurkussa]] lähes sentin vuodessa. Ilmiötä kutsutaan nimellä [[maankohoaminen]]. Hidas juttu, ja silti minä huomaan sen rannoilla.
+KYSYMYS: Kerro lisää: maankohoaminen
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Millainen on Ahvenanmaan erityisasema?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Ahvenanmaa]] on Suomen autonominen maakunta [[Ahvenanmeren]] ja [[Saaristomeren]] välissä, ja sen asukkaat puhuvat pääosin ruotsia. Maakunnalla on oma lainsäädäntövalta tietyissä asioissa, oma lippu ja oma maakuntapäivien eli lagtingin valitsema hallinto. Alue on demilitarisoitu ja neutralisoitu kansainvälisten sopimusten nojalla, ja sen asema ratkaistiin [[Kansainliitossa]] vuonna 1921. Tarkat yksityiskohdat vaihtelevat, joten tarkista ne vielä virallisesta lähteestä. Mut sanotaan, että tää on hyvin järjestetty.
+KYSYMYS: Kerro lisää: Ahvenanmaa
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Millainen on Ahvenanmaan erityisasema?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Ahvenanmaa]] on Suomen autonominen maakunta [[Ahvenanmeren]] ja [[Saaristomeren]] välissä, ja sen asukkaat puhuvat pääosin ruotsia. Maakunnalla on oma lainsäädäntövalta tietyissä asioissa, oma lippu ja oma maakuntapäivien eli lagtingin valitsema hallinto. Alue on demilitarisoitu ja neutralisoitu kansainvälisten sopimusten nojalla, ja sen asema ratkaistiin [[Kansainliitossa]] vuonna 1921. Tarkat yksityiskohdat vaihtelevat, joten tarkista ne vielä virallisesta lähteestä. Mut sanotaan, että tää on hyvin järjestetty.
+KYSYMYS: Kerro lisää: Ahvenanmeren
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Millainen on Ahvenanmaan erityisasema?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Ahvenanmaa]] on Suomen autonominen maakunta [[Ahvenanmeren]] ja [[Saaristomeren]] välissä, ja sen asukkaat puhuvat pääosin ruotsia. Maakunnalla on oma lainsäädäntövalta tietyissä asioissa, oma lippu ja oma maakuntapäivien eli lagtingin valitsema hallinto. Alue on demilitarisoitu ja neutralisoitu kansainvälisten sopimusten nojalla, ja sen asema ratkaistiin [[Kansainliitossa]] vuonna 1921. Tarkat yksityiskohdat vaihtelevat, joten tarkista ne vielä virallisesta lähteestä. Mut sanotaan, että tää on hyvin järjestetty.
+KYSYMYS: Kerro lisää: Saaristomeren
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Millainen on Ahvenanmaan erityisasema?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Ahvenanmaa]] on Suomen autonominen maakunta [[Ahvenanmeren]] ja [[Saaristomeren]] välissä, ja sen asukkaat puhuvat pääosin ruotsia. Maakunnalla on oma lainsäädäntövalta tietyissä asioissa, oma lippu ja oma maakuntapäivien eli lagtingin valitsema hallinto. Alue on demilitarisoitu ja neutralisoitu kansainvälisten sopimusten nojalla, ja sen asema ratkaistiin [[Kansainliitossa]] vuonna 1921. Tarkat yksityiskohdat vaihtelevat, joten tarkista ne vielä virallisesta lähteestä. Mut sanotaan, että tää on hyvin järjestetty.
+KYSYMYS: Kerro lisää: Kansainliitossa
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Miksi Perämeri jäätyy lähes joka talvi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perämeri on Pohjanlahden pohjoisin ja matalin osa, ja sen vesi on vähäsuolaista, koska siihen laskee paljon jokivesiä. Makea vesi jäätyy helpommin kuin suolainen, ja matala vesi jäähtyy nopeasti, joten talvella lähes koko [[Perämeri]] peittyy jäällä. Jää pysyy tavallisesti kevääseen asti, ja alueella kulkee jäänmurtajia, jotka pitävät [[Tornion]] ja [[Kemin]] satamat auki. Jääpeite vaihtelee talvittain, eikä jokaisen talven jään laajuutta voi ennustaa. Onpas ollu kylmä vastaus.
+KYSYMYS: Kerro lisää: Perämeri
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Miksi Perämeri jäätyy lähes joka talvi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perämeri on Pohjanlahden pohjoisin ja matalin osa, ja sen vesi on vähäsuolaista, koska siihen laskee paljon jokivesiä. Makea vesi jäätyy helpommin kuin suolainen, ja matala vesi jäähtyy nopeasti, joten talvella lähes koko [[Perämeri]] peittyy jäällä. Jää pysyy tavallisesti kevääseen asti, ja alueella kulkee jäänmurtajia, jotka pitävät [[Tornion]] ja [[Kemin]] satamat auki. Jääpeite vaihtelee talvittain, eikä jokaisen talven jään laajuutta voi ennustaa. Onpas ollu kylmä vastaus.
+KYSYMYS: Kerro lisää: Tornion
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Miksi Perämeri jäätyy lähes joka talvi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perämeri on Pohjanlahden pohjoisin ja matalin osa, ja sen vesi on vähäsuolaista, koska siihen laskee paljon jokivesiä. Makea vesi jäätyy helpommin kuin suolainen, ja matala vesi jäähtyy nopeasti, joten talvella lähes koko [[Perämeri]] peittyy jäällä. Jää pysyy tavallisesti kevääseen asti, ja alueella kulkee jäänmurtajia, jotka pitävät [[Tornion]] ja [[Kemin]] satamat auki. Jääpeite vaihtelee talvittain, eikä jokaisen talven jään laajuutta voi ennustaa. Onpas ollu kylmä vastaus.
+KYSYMYS: Kerro lisää: Kemin
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Mikä Vanha Rauma on?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Vanha Rauma]] on Rauman historiallinen puukaupunginosa, jossa on matalia, väriltään vaihtelevia puutaloja kapeilla kujilla, ja se on yksi Pohjoismaiden laajimmista yhtenäisistä puukaupunkialueista. Alue kuuluu [[Unescon]] maailmanperintöluetteloon, ja sen asukkaat puhuvat perinteisesti [[rauman kieltä]], omaa murrettaan, joka eroaa selvästi ympäröivistä murteista. [[Rauma]] on myös tunnettu pitsistään, ja siellä järjestetään vuosittain pitsiviikko. Tää oli lyhyt, minä olin yllättyny.
+KYSYMYS: Kerro lisää: Vanha Rauma
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Mikä Vanha Rauma on?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Vanha Rauma]] on Rauman historiallinen puukaupunginosa, jossa on matalia, väriltään vaihtelevia puutaloja kapeilla kujilla, ja se on yksi Pohjoismaiden laajimmista yhtenäisistä puukaupunkialueista. Alue kuuluu [[Unescon]] maailmanperintöluetteloon, ja sen asukkaat puhuvat perinteisesti [[rauman kieltä]], omaa murrettaan, joka eroaa selvästi ympäröivistä murteista. [[Rauma]] on myös tunnettu pitsistään, ja siellä järjestetään vuosittain pitsiviikko. Tää oli lyhyt, minä olin yllättyny.
+KYSYMYS: Kerro lisää: Unescon
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Mikä Vanha Rauma on?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Vanha Rauma]] on Rauman historiallinen puukaupunginosa, jossa on matalia, väriltään vaihtelevia puutaloja kapeilla kujilla, ja se on yksi Pohjoismaiden laajimmista yhtenäisistä puukaupunkialueista. Alue kuuluu [[Unescon]] maailmanperintöluetteloon, ja sen asukkaat puhuvat perinteisesti [[rauman kieltä]], omaa murrettaan, joka eroaa selvästi ympäröivistä murteista. [[Rauma]] on myös tunnettu pitsistään, ja siellä järjestetään vuosittain pitsiviikko. Tää oli lyhyt, minä olin yllättyny.
+KYSYMYS: Kerro lisää: rauman kieltä
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+AIEMPI KYSYMYS: Mikä Vanha Rauma on?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Vanha Rauma]] on Rauman historiallinen puukaupunginosa, jossa on matalia, väriltään vaihtelevia puutaloja kapeilla kujilla, ja se on yksi Pohjoismaiden laajimmista yhtenäisistä puukaupunkialueista. Alue kuuluu [[Unescon]] maailmanperintöluetteloon, ja sen asukkaat puhuvat perinteisesti [[rauman kieltä]], omaa murrettaan, joka eroaa selvästi ympäröivistä murteista. [[Rauma]] on myös tunnettu pitsistään, ja siellä järjestetään vuosittain pitsiviikko. Tää oli lyhyt, minä olin yllättyny.
+KYSYMYS: Kerro lisää: Rauma
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Mikä joki laskee Suomenlahden pohjukkaan?
+AIEMPI VASTAUS (Livia):
+Joo, tähän minä osaan vastata. Suomenlahden itäpäähän, Pietarin kohdalle, laskee [[Neva]]-joki, joka tuo vetensä [[Laatokasta]]. Joki on lyhyt mutta vesirikas, ja sen suistoon rakennettiin [[Pietari]]. Neva on yksi Euroopan runsasvetisimmistä joista, ja sen virtaus vaikuttaa koko lahden itäosan veden laatuun ja suolaisuuteen. Aika hyvä muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Neva
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Mikä joki laskee Suomenlahden pohjukkaan?
+AIEMPI VASTAUS (Livia):
+Joo, tähän minä osaan vastata. Suomenlahden itäpäähän, Pietarin kohdalle, laskee [[Neva]]-joki, joka tuo vetensä [[Laatokasta]]. Joki on lyhyt mutta vesirikas, ja sen suistoon rakennettiin [[Pietari]]. Neva on yksi Euroopan runsasvetisimmistä joista, ja sen virtaus vaikuttaa koko lahden itäosan veden laatuun ja suolaisuuteen. Aika hyvä muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Laatokasta
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Mikä joki laskee Suomenlahden pohjukkaan?
+AIEMPI VASTAUS (Livia):
+Joo, tähän minä osaan vastata. Suomenlahden itäpäähän, Pietarin kohdalle, laskee [[Neva]]-joki, joka tuo vetensä [[Laatokasta]]. Joki on lyhyt mutta vesirikas, ja sen suistoon rakennettiin [[Pietari]]. Neva on yksi Euroopan runsasvetisimmistä joista, ja sen virtaus vaikuttaa koko lahden itäosan veden laatuun ja suolaisuuteen. Aika hyvä muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Pietari
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Suomenlahti]] on matala ja pitkä, joten veden vaihtuminen [[Itämeren]] päävesimassan kanssa on hidasta ja lahden vesi lämpenee ja sakkautuu helposti. Lahteen tulee ravinteita ympäröivien suurten kaupunkien, jokien ja maatalouden mukana, ja ravinteet lisäävät levien kasvua. Kun levä hajoaa, se kuluttaa pohjan happea, ja syvänteet voivat jäädä ilman happea. Siksi ongelmat näkyvät täällä selvemmin kuin avoimemmilla vesialueilla. Ei se oo kyyhkyn vika, vaikka kaikkea näkee ylhäältä.
+KYSYMYS: Kerro lisää: Suomenlahti
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Suomenlahti]] on matala ja pitkä, joten veden vaihtuminen [[Itämeren]] päävesimassan kanssa on hidasta ja lahden vesi lämpenee ja sakkautuu helposti. Lahteen tulee ravinteita ympäröivien suurten kaupunkien, jokien ja maatalouden mukana, ja ravinteet lisäävät levien kasvua. Kun levä hajoaa, se kuluttaa pohjan happea, ja syvänteet voivat jäädä ilman happea. Siksi ongelmat näkyvät täällä selvemmin kuin avoimemmilla vesialueilla. Ei se oo kyyhkyn vika, vaikka kaikkea näkee ylhäältä.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Tiede: Puhelu joka aloitti matkapuhelinajan] 1991 — 1. heinäkuuta 1991 pääministeri Harri Holkeri soitti Tampereen apulaispormestari Kaarina Suoniolle Nokian ja Siemensin rakentamalla, Radiolinjan operoimalla verkolla — puhelua on vuosikymmenet pidetty maailman ensimmäisenä GSM-puheluna. Vuonna 2021 entinen Nokia-insinööri Pekka Lonka paljasti Helsingin Sanomille soittaneensa testipuhelun pari tuntia aiemmin samana päivänä Saloon: Maailman ensimmäisen GSM-puhelun soitin minä. GSM kehitettiin yhteiseurooppalaisena hankkeena, ja Suomi oli sen ensimmäisten kaupallisten verkkojen joukossa. Siitä kasvoi maailman käytetyin matkapuhelinteknologia, josta 3G, 4G ja 5G ovat myöhempiä kehitysaskeleita.
+- [Suomi — maalehti / Tiede: Käyttöjärjestelmä joka syntyi opiskelijan huoneessa] 1991 — Linus Torvalds oli Helsingin yliopiston tietojenkäsittelytieteen opiskelija, kun hän julkaisi 17. syyskuuta 1991 postituslistalla harrastusprojektinsa lähdekoodin ja kirjoitti vaatimattomasti, ettei se tule olemaan mitään ammattimaista GNU:n kaltaista. Projekti sai nimen Linux, ja siitä kasvoi ilmainen, avoimen lähdekoodin käyttöjärjestelmän ydin, jota kuka tahansa sai muokata ja jakaa edelleen. Nykyään Linux-ydin pyörittää suurinta osaa maailman verkkopalvelimista ja supertietokoneista, ja se on myös miljardien Android-puhelinten sydämessä. Torvalds asuu nykyään Yhdysvalloissa mutta on säilyttänyt Suomen kansalaisuutensa.
+AIEMPI KYSYMYS: Kuinka kaukana Helsinki on Tallinnasta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Helsingin]] ja [[Tallinnan]] välinen matka Suomenlahden yli on noin 80 kilometriä, ja se kulkee yleensä lautalla tai laivalla noin kahdessa tunnissa, nopeimmillaan vähän lyhyemmässä ajassa. Kaupungit ovat toistensa lähimmät pääkaupunkimaiden suuret satamat, ja liikenne on vilkasta ympäri vuoden. Talvella jääolosuhteet voivat vaikuttaa aikatauluihin. Lintuna minä lentäisin sen tunnissa, mut kyllä lautta on mukavampi.
+KYSYMYS: Kerro lisää: Helsingin
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Paksu Margareeta] 1511–1530 Paksu Margareeta on tanakka, pyöreä torni Tallinnan vanhan kaupungin laidalla, aivan sataman kupeessa Pika kadun päässä. Se rakennettiin vuosien 1511 ja 1530 välillä osaksi kaupungin meren puoleista puolustusta, Suuren Rantaportin kylkeen. Torni on niin järeä, että sen läpimitta on 25 metriä ja seinät jopa 5 metriä paksut - se on koko kaupunginmuurin tukevin yksittäinen rakennelma. Sillä oli kaksi tehtävää: torjua hyökkääjät ja tehdä samalla vaikutuksen merta pitkin saapuviin vieraisiin. Vuosisatojen varrella torni sai monta erilaista käyttötarkoitusta. Ensin siellä säilytettiin ruutia ja aseita, myöhemmin siitä tehtiin vankila. Vuoden 1917 vallankumouksen aikaan tornissa tapahtui…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Kuinka kaukana Helsinki on Tallinnasta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Helsingin]] ja [[Tallinnan]] välinen matka Suomenlahden yli on noin 80 kilometriä, ja se kulkee yleensä lautalla tai laivalla noin kahdessa tunnissa, nopeimmillaan vähän lyhyemmässä ajassa. Kaupungit ovat toistensa lähimmät pääkaupunkimaiden suuret satamat, ja liikenne on vilkasta ympäri vuoden. Talvella jääolosuhteet voivat vaikuttaa aikatauluihin. Lintuna minä lentäisin sen tunnissa, mut kyllä lautta on mukavampi.
+KYSYMYS: Kerro lisää: Tallinnan
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Suomenlinna] 1748 Merilinnoitus Suomenlinna alkoi nousta kahdeksalle saarelle Helsingin edustalla vuonna 1748, kun Ruotsin kruunu halusi vahvan tukikohdan Venäjää vastaan. Työmaalla riitti väkeä: parhaimmillaan vuonna 1755 linnoitusta rakensi yhtä aikaa noin 7000 työntekijää. Alun perin linnoitus tunnettiin nimellä Sveaborg. Maineestaan huolimatta — sitä kutsuttiin "Pohjolan Gibraltariksi" — linnoitus antautui venäläisille jo vuonna 1808, vain parin kuukauden piirityksen jälkeen. Vuonna 1855 Krimin sodan aikana Englannin ja Ranskan laivastot pommittivat saaria voimakkaasti. Linnoitus sai suomenkielisen nimensä Suomenlinna vasta vuonna 1918, ja vuonna 1991 siitä tuli Unescon maailmanperintökohde. Nykyään…
+- [Helsinki — kaupunkilehti / Historia: Linnoituksen majakka vilkuttaa H-kirjainta] Ruotsi alkoi vuonna 1748 rakentaa Helsingin edustan saarille merilinnoitusta Augustin Ehrensvärdin johdolla. Se levittäytyi kuudelle saarelle ja tunnettiin vuoteen 1918 asti nimellä Viapori. Nykyään Suomenlinna on Unescon maailmanperintökohde vuodesta 1991 ja samalla tavallinen kaupunginosa: lautta Kauppatorilta kuuluu joukkoliikenteeseen ja kulkee ympäri vuoden. Kirkontornin majakka välähtää neljä lyhyttä kertaa — se on morseaakkosten H niin kuin Helsinki.
+AIEMPI KYSYMYS: Mikä Suomenlinna on?
+AIEMPI VASTAUS (Livia):
+Hmm, tän minä muistan hyvin. [[Suomenlinna]] on Helsingin edustalla sijaitseva merilinnoitus, jonka rakentaminen aloitettiin [[Ruotsin]] vallan aikana 1700-luvun puolivälissä nimellä Sveaborg. Linnoitus levittäytyy usealle saarelle, ja se siirtyi Venäjän hallintaan vuoden 1808 sodan jälkeen. Nykyisin se on asuttu kaupunginosa, museoalue ja [[Unescon]] maailmanperintökohde, jonne kulkee lautta Kauppatorilta. Siellä asuu edelleen ihmisiä, ja minä näin sen ylhäältä viimeksi viime kesänä.
+KYSYMYS: Kerro lisää: Suomenlinna
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Mikä Suomenlinna on?
+AIEMPI VASTAUS (Livia):
+Hmm, tän minä muistan hyvin. [[Suomenlinna]] on Helsingin edustalla sijaitseva merilinnoitus, jonka rakentaminen aloitettiin [[Ruotsin]] vallan aikana 1700-luvun puolivälissä nimellä Sveaborg. Linnoitus levittäytyy usealle saarelle, ja se siirtyi Venäjän hallintaan vuoden 1808 sodan jälkeen. Nykyisin se on asuttu kaupunginosa, museoalue ja [[Unescon]] maailmanperintökohde, jonne kulkee lautta Kauppatorilta. Siellä asuu edelleen ihmisiä, ja minä näin sen ylhäältä viimeksi viime kesänä.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Mikä Suomenlinna on?
+AIEMPI VASTAUS (Livia):
+Hmm, tän minä muistan hyvin. [[Suomenlinna]] on Helsingin edustalla sijaitseva merilinnoitus, jonka rakentaminen aloitettiin [[Ruotsin]] vallan aikana 1700-luvun puolivälissä nimellä Sveaborg. Linnoitus levittäytyy usealle saarelle, ja se siirtyi Venäjän hallintaan vuoden 1808 sodan jälkeen. Nykyisin se on asuttu kaupunginosa, museoalue ja [[Unescon]] maailmanperintökohde, jonne kulkee lautta Kauppatorilta. Siellä asuu edelleen ihmisiä, ja minä näin sen ylhäältä viimeksi viime kesänä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Jäätyykö Suomenlahti talvisin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suomenlahti jäätyy ainakin osittain lähes joka talvi, ja itäinen osa jäätyy ensin, koska se on matalampi ja sen vesi on vähemmän suolaista kuin länsiosan. Kovina talvina jääpeite voi ulottua pitkälle merelle, ja laivaliikenne turvautuu [[jäänmurtajiin]]. Peite vaihtelee suuresti vuodesta toiseen, eikä tarkkaa vuosittaista laajuutta voi ennustaa. [[Pietarin]] ja [[Helsingin]] satamat pysyvät kuitenkin käytössä talven yli. Vilu tulee jo muistellessa.
+KYSYMYS: Kerro lisää: jäänmurtajiin
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Pyhän Pietarin kirkko] 1209–1746 Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja se on yksi kaupungin vanhimmista rakennuksista. Sen torni on ollut vuosisatojen ajan Riian korkein rakennelma – mutta myös yksi onnettomimmista: torni on romahtanut ja palanut useita kertoja historian aikana. Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja se oli 148 metriä korkea – tuolloin koko Euroopan korkein puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja seuraava, matalampi torni valmistui vasta 1746. Toisessa maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja nykyinen torni valmistui jälleenrakennettuna vasta 1970-luvulla.…
+AIEMPI KYSYMYS: Jäätyykö Suomenlahti talvisin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suomenlahti jäätyy ainakin osittain lähes joka talvi, ja itäinen osa jäätyy ensin, koska se on matalampi ja sen vesi on vähemmän suolaista kuin länsiosan. Kovina talvina jääpeite voi ulottua pitkälle merelle, ja laivaliikenne turvautuu [[jäänmurtajiin]]. Peite vaihtelee suuresti vuodesta toiseen, eikä tarkkaa vuosittaista laajuutta voi ennustaa. [[Pietarin]] ja [[Helsingin]] satamat pysyvät kuitenkin käytössä talven yli. Vilu tulee jo muistellessa.
+KYSYMYS: Kerro lisää: Pietarin
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Miksi Ounasjoki rauhoitettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Ounasjoki]] rauhoitettiin lailla vuonna 1983, ja laki esti vesivoimalaitosten rakentamisen siihen. Sitä ennen [[Kemijoen]] vesistöön oli jo rakennettu runsaasti voimalaitoksia, ja haluttiin säilyttää yksi suuri sivujoki koskemattomana. Tarkkoja perusteluja en ole varma kaikilta osin, mutta yleensä mainitaan luonnon, kalastuksen ja vapaana virtaavan joen arvo. Joki yhtyy Kemijokeen [[Rovaniemellä]]. Hyvä, että yksi jäi vapaaksi.
+KYSYMYS: Kerro lisää: Ounasjoki
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Miksi Ounasjoki rauhoitettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Ounasjoki]] rauhoitettiin lailla vuonna 1983, ja laki esti vesivoimalaitosten rakentamisen siihen. Sitä ennen [[Kemijoen]] vesistöön oli jo rakennettu runsaasti voimalaitoksia, ja haluttiin säilyttää yksi suuri sivujoki koskemattomana. Tarkkoja perusteluja en ole varma kaikilta osin, mutta yleensä mainitaan luonnon, kalastuksen ja vapaana virtaavan joen arvo. Joki yhtyy Kemijokeen [[Rovaniemellä]]. Hyvä, että yksi jäi vapaaksi.
+KYSYMYS: Kerro lisää: Kemijoen
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Miksi Ounasjoki rauhoitettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Ounasjoki]] rauhoitettiin lailla vuonna 1983, ja laki esti vesivoimalaitosten rakentamisen siihen. Sitä ennen [[Kemijoen]] vesistöön oli jo rakennettu runsaasti voimalaitoksia, ja haluttiin säilyttää yksi suuri sivujoki koskemattomana. Tarkkoja perusteluja en ole varma kaikilta osin, mutta yleensä mainitaan luonnon, kalastuksen ja vapaana virtaavan joen arvo. Joki yhtyy Kemijokeen [[Rovaniemellä]]. Hyvä, että yksi jäi vapaaksi.
+KYSYMYS: Kerro lisää: Rovaniemellä
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Milloin Kemijoen uitto loppui?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kemijoen]] uitto päättyi kesällä 1991, kun viimeiset tukit uitettiin joessa. Uitto oli alkanut 1860-luvulla, joten se kesti noin sata kolmekymmentä vuotta, kunnes kuljetus siirtyi maanteille ja rautateille. [[Tukinuitto]] oli pitkään tärkeä tapa kuljettaa puuta metsistä sahoille ja tehtaille, ja jokien varrella eli koko uittokulttuuri. Sata kolmekymmentä vuotta, ja minä muistan vain lopun.
+KYSYMYS: Kerro lisää: Tukinuitto
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Mihin Kemijoki laskee?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä minä pidän. [[Kemijoki]] laskee [[Pohjanlahteen]] Kemin kohdalla, tarkemmin sanoen sen pohjoisosaan eli [[Perämereen]]. Joki on 550 kilometrin pituisena Suomen pisin, ja sen valuma-alue kattaa suuren osan Lappia. Suisto on laaja ja kaupunki on rakennettu sen ympärille. Pitkä joki, lyhyt lento.
+KYSYMYS: Kerro lisää: Kemijoki
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Mihin Kemijoki laskee?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä minä pidän. [[Kemijoki]] laskee [[Pohjanlahteen]] Kemin kohdalla, tarkemmin sanoen sen pohjoisosaan eli [[Perämereen]]. Joki on 550 kilometrin pituisena Suomen pisin, ja sen valuma-alue kattaa suuren osan Lappia. Suisto on laaja ja kaupunki on rakennettu sen ympärille. Pitkä joki, lyhyt lento.
+KYSYMYS: Kerro lisää: Pohjanlahteen
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Mihin Kemijoki laskee?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä minä pidän. [[Kemijoki]] laskee [[Pohjanlahteen]] Kemin kohdalla, tarkemmin sanoen sen pohjoisosaan eli [[Perämereen]]. Joki on 550 kilometrin pituisena Suomen pisin, ja sen valuma-alue kattaa suuren osan Lappia. Suisto on laaja ja kaupunki on rakennettu sen ympärille. Pitkä joki, lyhyt lento.
+KYSYMYS: Kerro lisää: Perämereen
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Miten vesivoimalaitos tuottaa sähköä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Vesivoimalaitoksessa padottu vesi johdetaan putkea pitkin turbiiniin, joka alkaa pyöriä veden virtauksen voimasta. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi, ja sähkö siirretään voimajohtoja pitkin kuluttajille. Laitoksen teho riippuu veden määrästä ja putouskorkeudesta eli siitä, kuinka korkealta vesi tulee. [[Vesivoima]] on uusiutuvaa energiaa, mutta pato muuttaa joen luontoa. Selvisin tästä ilman jäänteitä.
+KYSYMYS: Kerro lisää: generaattoriin
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+AIEMPI KYSYMYS: Miten vesivoimalaitos tuottaa sähköä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Vesivoimalaitoksessa padottu vesi johdetaan putkea pitkin turbiiniin, joka alkaa pyöriä veden virtauksen voimasta. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi, ja sähkö siirretään voimajohtoja pitkin kuluttajille. Laitoksen teho riippuu veden määrästä ja putouskorkeudesta eli siitä, kuinka korkealta vesi tulee. [[Vesivoima]] on uusiutuvaa energiaa, mutta pato muuttaa joen luontoa. Selvisin tästä ilman jäänteitä.
+KYSYMYS: Kerro lisää: Vesivoima
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Historian hetki: Rovaniemi 1909 — ensimmäinen juna] 1909 — Poika seisoo isänsä käden varassa laiturilla ja tuntee maan tärisevän jalkojensa alla ennen kuin näkee mitään — sitten savupilvi ilmestyy metsän takaa ja ääni kasvaa jyskeeksi, jota kukaan paikalla ei ole ennen kuullut näin läheltä. Rovaniemi on ollut vuosisatoja markkinapaikka joen varrella, tavoitettavissa veneellä, reellä ja jo vuonna 1839 valmistunutta maantietä pitkin, mutta rautatie Kemistä pohjoiseen valmistuu 1909 ja tuo veturin puuvarikon läpi ensimmäistä kertaa. Koko kylä on kokoontunut laiturille katsomaan, ja moni koskettaa vaunun kylmää metalliseinää kuin varmistaakseen, että se on totta. Yhtäkkiä Lappi ei ole enää matkan päässä muusta Suomesta — se on rautatien päässä. …
+AIEMPI KYSYMYS: Missä Rovaniemi sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän. [[Rovaniemi]] sijaitsee Lapissa, napapiirin tuntumassa, Kemijoen ja Ounasjoen yhtymäkohdassa. Kaupunki on Lapin maakunnan keskus ja yksi Suomen pinta-alaltaan suurimmista kunnista; en ole varma tarkasta järjestyksestä, joten jätän sen tähän. Napapiiri kulkee kaupungin pohjoispuolella, ja turistit tuntevat sen [[Joulupukin]] kotina. Kauempaa katsottuna sinne kyl löytää, kun seuraa jokea.
+KYSYMYS: Kerro lisää: Rovaniemi
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Missä Rovaniemi sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän. [[Rovaniemi]] sijaitsee Lapissa, napapiirin tuntumassa, Kemijoen ja Ounasjoen yhtymäkohdassa. Kaupunki on Lapin maakunnan keskus ja yksi Suomen pinta-alaltaan suurimmista kunnista; en ole varma tarkasta järjestyksestä, joten jätän sen tähän. Napapiiri kulkee kaupungin pohjoispuolella, ja turistit tuntevat sen [[Joulupukin]] kotina. Kauempaa katsottuna sinne kyl löytää, kun seuraa jokea.
+KYSYMYS: Kerro lisää: Joulupukin
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Mikä Pähkinäsaaren rauha oli?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Pähkinäsaaren rauha]] oli vuonna 1323 tehty sopimus Ruotsin ja [[Novgorodin]] tasavallan välillä, ja sitä pidetään ensimmäisenä Ruotsin ja Novgorodin välisenä rajasopimuksena. Raja kulki Suomenlahden pohjukasta Pohjanlahdelle asti, ja sen tarkka kulku Pohjois-Suomessa on ollut historiantutkijoiden kiistakysymys. Sopimus nimettiin Pähkinäsaaren eli Nevan lähteen linnoituksen mukaan. Minä muistan tämän suvun kertomana, ja sukuni oli silloin jo vanha.
+KYSYMYS: Kerro lisää: Pähkinäsaaren rauha
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Mikä Pähkinäsaaren rauha oli?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Pähkinäsaaren rauha]] oli vuonna 1323 tehty sopimus Ruotsin ja [[Novgorodin]] tasavallan välillä, ja sitä pidetään ensimmäisenä Ruotsin ja Novgorodin välisenä rajasopimuksena. Raja kulki Suomenlahden pohjukasta Pohjanlahdelle asti, ja sen tarkka kulku Pohjois-Suomessa on ollut historiantutkijoiden kiistakysymys. Sopimus nimettiin Pähkinäsaaren eli Nevan lähteen linnoituksen mukaan. Minä muistan tämän suvun kertomana, ja sukuni oli silloin jo vanha.
+KYSYMYS: Kerro lisää: Novgorodin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Miksi linna rakennettiin keskelle salmea?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Olavinlinna]] rakennettiin Kyrönsalmen saarelle, koska paikka oli sekä rajan lähellä että järvien verkon solmukohta. Vesistö hidasti hyökkääjää ja kapea salmi teki linnasta helposti vartioitavan, joten kulku [[Haukiveden]] ja [[Pihlajaveden]] välillä kulki linnan ohi. Tott perusti linnan vuonna 1475 vahvistamaan Ruotsin asemaa idässä, ja paikka vei rajaa Savosta itään. Linnaa ei koskaan vallattu väkisin. Hyvä paikka linnalle, mut huono paikka pulla-ostoksille.
+KYSYMYS: Kerro lisää: Olavinlinna
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Miksi linna rakennettiin keskelle salmea?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Olavinlinna]] rakennettiin Kyrönsalmen saarelle, koska paikka oli sekä rajan lähellä että järvien verkon solmukohta. Vesistö hidasti hyökkääjää ja kapea salmi teki linnasta helposti vartioitavan, joten kulku [[Haukiveden]] ja [[Pihlajaveden]] välillä kulki linnan ohi. Tott perusti linnan vuonna 1475 vahvistamaan Ruotsin asemaa idässä, ja paikka vei rajaa Savosta itään. Linnaa ei koskaan vallattu väkisin. Hyvä paikka linnalle, mut huono paikka pulla-ostoksille.
+KYSYMYS: Kerro lisää: Haukiveden
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Miksi linna rakennettiin keskelle salmea?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Olavinlinna]] rakennettiin Kyrönsalmen saarelle, koska paikka oli sekä rajan lähellä että järvien verkon solmukohta. Vesistö hidasti hyökkääjää ja kapea salmi teki linnasta helposti vartioitavan, joten kulku [[Haukiveden]] ja [[Pihlajaveden]] välillä kulki linnan ohi. Tott perusti linnan vuonna 1475 vahvistamaan Ruotsin asemaa idässä, ja paikka vei rajaa Savosta itään. Linnaa ei koskaan vallattu väkisin. Hyvä paikka linnalle, mut huono paikka pulla-ostoksille.
+KYSYMYS: Kerro lisää: Pihlajaveden
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Millainen on Savonlinnan oopperajuhlat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Savonlinnan oopperajuhlat]] ovat vuosittain heinäkuussa järjestettävä oopperafestivaali, jonka päänäyttämönä toimii Olavinlinnan sisäpiha. Juhlat perusti laulajatar [[Aino Ackté]] vuonna 1912, ja ne ovat sittemmin kasvaneet kansainvälisesti tunnetuksi tapahtumaksi. Esityksiä on kymmeniä, ja ohjelmistossa on sekä klassikoita että uutta oopperaa. Linnan akustiikka ja miljöö tekevät kokemuksesta erityisen, mutta sää voi vaikuttaa esityksiin. Hienoa musiikkia, ja minä istuin ylimpänä.
+KYSYMYS: Kerro lisää: Savonlinnan oopperajuhlat
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Millainen on Savonlinnan oopperajuhlat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Savonlinnan oopperajuhlat]] ovat vuosittain heinäkuussa järjestettävä oopperafestivaali, jonka päänäyttämönä toimii Olavinlinnan sisäpiha. Juhlat perusti laulajatar [[Aino Ackté]] vuonna 1912, ja ne ovat sittemmin kasvaneet kansainvälisesti tunnetuksi tapahtumaksi. Esityksiä on kymmeniä, ja ohjelmistossa on sekä klassikoita että uutta oopperaa. Linnan akustiikka ja miljöö tekevät kokemuksesta erityisen, mutta sää voi vaikuttaa esityksiin. Hienoa musiikkia, ja minä istuin ylimpänä.
+KYSYMYS: Kerro lisää: Aino Ackté
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+AIEMPI KYSYMYS: Miksi keskiaikaisten linnojen tornit tehtiin pyöreiksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pyöreä torni kestää tykinkuulia paremmin kuin kulmikas, koska kuula osuu kaarevaan pintaan viistosti ja kimpoaa helpommin pois. Lisäksi kulmat ovat rakenteen heikkoja kohtia, jotka murtuvat helposti, ja pyöreässä tornissa puolustajalla on parempi näkyvyys joka suuntaan. Siksi [[Olavinlinnan]] paksut pyöreät tornit suunniteltiin kestämään [[tykkitulta]]. Aiemmin linnat oli rakennettu nuolia ja heittokoneita ajatellen. No olipas teknistä.
+KYSYMYS: Kerro lisää: Olavinlinnan
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+AIEMPI KYSYMYS: Miksi keskiaikaisten linnojen tornit tehtiin pyöreiksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pyöreä torni kestää tykinkuulia paremmin kuin kulmikas, koska kuula osuu kaarevaan pintaan viistosti ja kimpoaa helpommin pois. Lisäksi kulmat ovat rakenteen heikkoja kohtia, jotka murtuvat helposti, ja pyöreässä tornissa puolustajalla on parempi näkyvyys joka suuntaan. Siksi [[Olavinlinnan]] paksut pyöreät tornit suunniteltiin kestämään [[tykkitulta]]. Aiemmin linnat oli rakennettu nuolia ja heittokoneita ajatellen. No olipas teknistä.
+KYSYMYS: Kerro lisää: tykkitulta
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Kuka oli Iivana III?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Iivana III]] eli Iivana Suuri oli Moskovan suuriruhtinas, joka laajensi Moskovan valtaa yhdistämällä ympäröiviä ruhtinaskuntia, ja hän valloitti [[Novgorodin]] tasavallan 1400-luvun lopulla. Hänen aikanaan Moskova vapautui [[Kultaisen ordan]] ylivallasta, ja venäläinen valtio vahvistui. Novgorodin kaatuminen vaikutti myös Suomen rajaseutuun, koska se muutti alueen vallansuhteita. Tarkat vuosiluvut vaihtelevat lähteittäin, joten en niitä tähän ota. Tää oli lyhyt, mut painava.
+KYSYMYS: Kerro lisää: Iivana III
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Kaksi armeijaa tuijotti toisiaan yli joen] 1480 — Moskovan suuriruhtinas Iivana III lakkasi 1470-luvulla maksamasta veroa Kultaisen ordan perijälle, Suurelle ordalle, ja lokakuussa 1480 sen kaani Ahmat marssi joukkoineen Ugra-joen toiselle rannalle Moskovan armeijaa vastapäätä. Kuukauden ajan armeijat vain tuijottivat toisiaan joen yli: yksi kaanin ylityskokeilu torjuttiin venäläisten tuliaseilla, mutta suurempaa taistelua ei koskaan syttynyt. Ahmat odotti turhaan liettualaista apujoukkoa, ja kun pakkanen ja muonapula painoivat päälle, hän perääntyi 8. marraskuuta. Venäläinen historiankirjoitus on sen jälkeen pitänyt Ugran seisontaa kahden ja puolen vuosisadan mongolivallan päätepisteenä: enää yksikään ruhtinas ei tarvinnut kaanin l…
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+AIEMPI KYSYMYS: Kuka oli Iivana III?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Iivana III]] eli Iivana Suuri oli Moskovan suuriruhtinas, joka laajensi Moskovan valtaa yhdistämällä ympäröiviä ruhtinaskuntia, ja hän valloitti [[Novgorodin]] tasavallan 1400-luvun lopulla. Hänen aikanaan Moskova vapautui [[Kultaisen ordan]] ylivallasta, ja venäläinen valtio vahvistui. Novgorodin kaatuminen vaikutti myös Suomen rajaseutuun, koska se muutti alueen vallansuhteita. Tarkat vuosiluvut vaihtelevat lähteittäin, joten en niitä tähän ota. Tää oli lyhyt, mut painava.
+KYSYMYS: Kerro lisää: Kultaisen ordan
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+AIEMPI KYSYMYS: Mikä Österland oli?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Österland oli Ruotsin valtakunnan itäinen osa, se alue, jota nykyään kutsutaan Suomeksi, ja nimi tarkoittaa suunnilleen itämaata. Alue kuului [[Ruotsiin]] keskiajalta vuoteen 1809, ja [[Turun linna]] oli sen puolustusrakennus ja hallintokeskus. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Ruotsiin
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Mikä Österland oli?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Österland oli Ruotsin valtakunnan itäinen osa, se alue, jota nykyään kutsutaan Suomeksi, ja nimi tarkoittaa suunnilleen itämaata. Alue kuului [[Ruotsiin]] keskiajalta vuoteen 1809, ja [[Turun linna]] oli sen puolustusrakennus ja hallintokeskus. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Turun linna
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Kuka oli Juhana-herttua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Juhana oli [[Kustaa Vaasan]] poika ja 1500-luvun puolivälissä Suomen herttua, joka asui Turun linnassa. Hän oli naimisissa puolalaisen prinsessan, [[Katarina Jagellonican]], kanssa, ja heidän aikanaan päälinnaa laajennettiin tuntuvasti. Myöhemmin Juhanasta tuli Ruotsin kuningas [[Juhana III]].
+
+Minusta on kiva, että linnan huippuvuodet liittyvät pariskuntaan, joka halusi kodistaan ison. Sellaista kelpaa kyyhkynkin ylhäältä ihailla.
+KYSYMYS: Kerro lisää: Kustaa Vaasan
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+AIEMPI KYSYMYS: Kuka oli Juhana-herttua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Juhana oli [[Kustaa Vaasan]] poika ja 1500-luvun puolivälissä Suomen herttua, joka asui Turun linnassa. Hän oli naimisissa puolalaisen prinsessan, [[Katarina Jagellonican]], kanssa, ja heidän aikanaan päälinnaa laajennettiin tuntuvasti. Myöhemmin Juhanasta tuli Ruotsin kuningas [[Juhana III]].
+
+Minusta on kiva, että linnan huippuvuodet liittyvät pariskuntaan, joka halusi kodistaan ison. Sellaista kelpaa kyyhkynkin ylhäältä ihailla.
+KYSYMYS: Kerro lisää: Katarina Jagellonican
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: San Thomen basilika] 1523, nykyinen rakennus 1896 Portugalilaiset lähettivät 1521 lähetyssaarnaajia etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana III:n tuella sinne rakennettiin kirkko, joka vihittiin käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 ja asui noin vuoden sen pappilassa. Paavi Paavali V teki kirkosta katedraalin 1606. Nykyinen rakennus on vuodelta 1896, jolloin britit rakensivat kirkon uudelleen uusgoottilaiseen tyyliin kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja ikkunoita on kuusitoista ja v…
+AIEMPI KYSYMYS: Kuka oli Juhana-herttua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Juhana oli [[Kustaa Vaasan]] poika ja 1500-luvun puolivälissä Suomen herttua, joka asui Turun linnassa. Hän oli naimisissa puolalaisen prinsessan, [[Katarina Jagellonican]], kanssa, ja heidän aikanaan päälinnaa laajennettiin tuntuvasti. Myöhemmin Juhanasta tuli Ruotsin kuningas [[Juhana III]].
+
+Minusta on kiva, että linnan huippuvuodet liittyvät pariskuntaan, joka halusi kodistaan ison. Sellaista kelpaa kyyhkynkin ylhäältä ihailla.
+KYSYMYS: Kerro lisää: Juhana III
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mikä Kalmarin unioni oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kalmarin unioni oli pohjoismainen valtioliitto, joka syntyi 1300-luvun lopulla ja hajosi 1520-luvulla. [[Tanskan]], [[Norjan]] ja Ruotsin yhdistänyt liitto kesti pitkään, ja Ruotsissa unionin kannattajat ja vastustajat kävivät toistuvasti valtataisteluja, ja Turun linna joutui mukaan niihin. Liitto päättyi lopulta siihen, että [[Kustaa Vaasa]] nousi Ruotsin kuninkaaksi vuonna 1523. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mikä Kalmarin unioni oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kalmarin unioni oli pohjoismainen valtioliitto, joka syntyi 1300-luvun lopulla ja hajosi 1520-luvulla. [[Tanskan]], [[Norjan]] ja Ruotsin yhdistänyt liitto kesti pitkään, ja Ruotsissa unionin kannattajat ja vastustajat kävivät toistuvasti valtataisteluja, ja Turun linna joutui mukaan niihin. Liitto päättyi lopulta siihen, että [[Kustaa Vaasa]] nousi Ruotsin kuninkaaksi vuonna 1523. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Norjan
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Mikä Kalmarin unioni oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kalmarin unioni oli pohjoismainen valtioliitto, joka syntyi 1300-luvun lopulla ja hajosi 1520-luvulla. [[Tanskan]], [[Norjan]] ja Ruotsin yhdistänyt liitto kesti pitkään, ja Ruotsissa unionin kannattajat ja vastustajat kävivät toistuvasti valtataisteluja, ja Turun linna joutui mukaan niihin. Liitto päättyi lopulta siihen, että [[Kustaa Vaasa]] nousi Ruotsin kuninkaaksi vuonna 1523. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Kustaa Vaasa
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Kuka oli Pietari Brahe?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Pietari Brahe, ruotsiksi Per Brahe nuorempi, oli ruotsalainen kreivi ja Suomen kenraalikuvernööri 1600-luvulla. Hänen aloitteestaan perustettiin vuonna 1640 [[Turun akatemia]], joka on [[Helsingin yliopiston]] edeltäjä. Hänen kenraalikuvernöörikautensa jälkeen Turun linna menetti hallintokeskuksen aseman. Kyl se nimi jäi mieleen.
+KYSYMYS: Kerro lisää: Turun akatemia
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Tiede: Käyttöjärjestelmä joka syntyi opiskelijan huoneessa] 1991 — Linus Torvalds oli Helsingin yliopiston tietojenkäsittelytieteen opiskelija, kun hän julkaisi 17. syyskuuta 1991 postituslistalla harrastusprojektinsa lähdekoodin ja kirjoitti vaatimattomasti, ettei se tule olemaan mitään ammattimaista GNU:n kaltaista. Projekti sai nimen Linux, ja siitä kasvoi ilmainen, avoimen lähdekoodin käyttöjärjestelmän ydin, jota kuka tahansa sai muokata ja jakaa edelleen. Nykyään Linux-ydin pyörittää suurinta osaa maailman verkkopalvelimista ja supertietokoneista, ja se on myös miljardien Android-puhelinten sydämessä. Torvalds asuu nykyään Yhdysvalloissa mutta on säilyttänyt Suomen kansalaisuutensa.
+AIEMPI KYSYMYS: Kuka oli Pietari Brahe?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Pietari Brahe, ruotsiksi Per Brahe nuorempi, oli ruotsalainen kreivi ja Suomen kenraalikuvernööri 1600-luvulla. Hänen aloitteestaan perustettiin vuonna 1640 [[Turun akatemia]], joka on [[Helsingin yliopiston]] edeltäjä. Hänen kenraalikuvernöörikautensa jälkeen Turun linna menetti hallintokeskuksen aseman. Kyl se nimi jäi mieleen.
+KYSYMYS: Kerro lisää: Helsingin yliopiston
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+AIEMPI KYSYMYS: Miksi linna rakennettiin joen suulle?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Keskiajalla joet ja meri olivat tärkeimpiä kulkuväyliä, ja Turun linna sijaitsee [[Aurajoen]] rannalla lähellä sitä, mistä pääsee [[Saaristomerelle]]. Sijainti antoi linnalle otteen sekä vesiliikenteeseen että alueen hallintoon. Linna toimi ruotsalaisten sotilaslinnoituksena ja etuvartiona alueella, joka tunnettiin Österlandina. No olipa vähän lyhyempi vastaus.
+KYSYMYS: Kerro lisää: Aurajoen
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Miksi linna rakennettiin joen suulle?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Keskiajalla joet ja meri olivat tärkeimpiä kulkuväyliä, ja Turun linna sijaitsee [[Aurajoen]] rannalla lähellä sitä, mistä pääsee [[Saaristomerelle]]. Sijainti antoi linnalle otteen sekä vesiliikenteeseen että alueen hallintoon. Linna toimi ruotsalaisten sotilaslinnoituksena ja etuvartiona alueella, joka tunnettiin Österlandina. No olipa vähän lyhyempi vastaus.
+KYSYMYS: Kerro lisää: Saaristomerelle
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+AIEMPI KYSYMYS: Miksi vanhimmat talot ovat vasta 1700-luvulta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Syynä ovat kaupungin tulipalot vuosina 1640 ja 1682, jotka tuhosivat suuren osan puukaupungista. Palojen jälkeen rakennettiin uudelleen, ja vanhimmat nykyiset talot ovat peräisin 1700-luvulta. Katuverkko ja tonttijako ovat silti suurelta osin keskiaikaisia, minkä vuoksi [[Rauman]] vanhakaupunki on päässyt [[maailmanperintöluetteloon]] vuonna 1991. Ihan vähän tuli ikävä pullaa tän palon jälkeen.
+KYSYMYS: Kerro lisää: Rauman
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi vanhimmat talot ovat vasta 1700-luvulta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Syynä ovat kaupungin tulipalot vuosina 1640 ja 1682, jotka tuhosivat suuren osan puukaupungista. Palojen jälkeen rakennettiin uudelleen, ja vanhimmat nykyiset talot ovat peräisin 1700-luvulta. Katuverkko ja tonttijako ovat silti suurelta osin keskiaikaisia, minkä vuoksi [[Rauman]] vanhakaupunki on päässyt [[maailmanperintöluetteloon]] vuonna 1991. Ihan vähän tuli ikävä pullaa tän palon jälkeen.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+AIEMPI KYSYMYS: Mikä Pyhän Ristin kirkko on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pyhän Ristin kirkko on [[Vanhassa Raumassa]] sijaitseva keskiaikainen kirkko, joka oli alun perin [[fransiskaanien]] luostarikirkko. Se vihittiin vuonna 1512, ja sen seinillä on keskiaikaisia maalauksia. Se on keskiajalta säilynyt harvinainen rakennus kaupungissa, jonka vanhimmat talot ovat 1700-luvulta. Mukava, että jotain vanhaa jäi.
+KYSYMYS: Kerro lisää: Vanhassa Raumassa
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+AIEMPI KYSYMYS: Mikä Pyhän Ristin kirkko on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pyhän Ristin kirkko on [[Vanhassa Raumassa]] sijaitseva keskiaikainen kirkko, joka oli alun perin [[fransiskaanien]] luostarikirkko. Se vihittiin vuonna 1512, ja sen seinillä on keskiaikaisia maalauksia. Se on keskiajalta säilynyt harvinainen rakennus kaupungissa, jonka vanhimmat talot ovat 1700-luvulta. Mukava, että jotain vanhaa jäi.
+KYSYMYS: Kerro lisää: fransiskaanien
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kohdekartta / Kohdekartta: Queens Gardens] 1904 Queens Gardens on karkeasti kolmion muotoinen puu- ja nurmialue aivan Warehouse Precinctin pohjoispäässä, noin kaksisataa metriä itään Exchangesta, joka oli kaupungin vanha kauppakeskus Princes Streetillä. Puisto seisoo täyttömaalla hyvin lähellä sitä paikkaa, johon maorien waka-kanootit aikanaan rantautuivat; lahden osa täytettiin 1800-luvun viimeisinä vuosina. Aluetta kutsuttiin aluksi nimellä The Triangle, se nimettiin virallisesti Victoria Gardensiksi 1904 ja siitä tuli puhekielessä Queenʼs Gardens. Puistoa hallitsee kaupungin päämuistomerkki, 28 metriä korkea kahdeksankulmainen kenotafi, joka rakennettiin 1924–1927. Sen vieressä on pienempi muistomerkki, johon on kirjattu Uuden-Se…
+AIEMPI KYSYMYS: Mitä tarkoittaa keskiaikainen kaavarunko?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaavarunko tarkoittaa kaupungin perusrakennetta eli [[katuverkkoa]] ja tonttijakoa. Vanhassa Raumassa tämä rakenne on säilynyt suurelta osin keskiaikaisena, vaikka rakennukset ovat uudempia, sillä tulipalojen jälkeen kaupunki rakennettiin entisille paikoilleen. Asuintalot ovat pääkatujen varrella ja aitat ja vajat kapeilla kujilla. Siinä se, [[Vanhan Rauman]] ydin.
+KYSYMYS: Kerro lisää: katuverkkoa
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+AIEMPI KYSYMYS: Mitä tarkoittaa keskiaikainen kaavarunko?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaavarunko tarkoittaa kaupungin perusrakennetta eli [[katuverkkoa]] ja tonttijakoa. Vanhassa Raumassa tämä rakenne on säilynyt suurelta osin keskiaikaisena, vaikka rakennukset ovat uudempia, sillä tulipalojen jälkeen kaupunki rakennettiin entisille paikoilleen. Asuintalot ovat pääkatujen varrella ja aitat ja vajat kapeilla kujilla. Siinä se, [[Vanhan Rauman]] ydin.
+KYSYMYS: Kerro lisää: Vanhan Rauman
