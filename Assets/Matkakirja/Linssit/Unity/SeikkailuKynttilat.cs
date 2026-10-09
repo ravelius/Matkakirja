@@ -210,13 +210,13 @@ namespace Matkakirja.Natiivi
         {
             if (p == null) return null;
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (LuukullaOn(c)) return LuukkuAuki ? "Sulje" : "Avaa";
-            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return "Sytytä";
-            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return "Ota";
-            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return "Aseta";
+            if (LuukullaOn(c)) return LuukkuAuki ? Kieli.T("olavinlinna.verbi.sulje") : Kieli.T("olavinlinna.verbi.avaa");
+            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return Kieli.T("olavinlinna.verbi.sytyta");
+            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return Kieli.T("olavinlinna.verbi.ota");
+            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return Kieli.T("olavinlinna.verbi.aseta");
             var t = ydin.Valitse(c.x, c.y, c.z).Toiminto;
             if (t == KynttilaToiminto.Ei || !(Lahella(c) || ydin.OmaPalaa)) return null;
-            return t == KynttilaToiminto.SammutaOma ? "Puhalla" : t == KynttilaToiminto.SammutaTilan ? "Sammuta" : "Sytytä";
+            return t == KynttilaToiminto.SammutaOma ? Kieli.T("olavinlinna.verbi.puhalla") : t == KynttilaToiminto.SammutaTilan ? Kieli.T("olavinlinna.verbi.sammuta") : Kieli.T("olavinlinna.verbi.sytyta");
         }
 
         void Update()

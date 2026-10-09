@@ -156,7 +156,10 @@ namespace Matkakirja.Natiivi
             if (tunnus != null && Matkakirja.Natiivi.CupolaAani.KorvaaLinssinTaustan(tunnus)) tunnus = null;
             if (tunnus == null) { s.Tila.LinssiTausta(null, 0, 0); return; }
             if (!LinssiTaustat.TryGetValue(tunnus, out var t)) { Debug.Log("MATKAKIRJA aani: tuntematon linssin taustaääni " + tunnus); return; }
-            s.Tila.LinssiTausta(t.Url, t.Voima, t.NousuMs);
+            // Mikseri (PT 9.10.: ISS-äänet rekisteriin): linssin taustaääni omalla tunnuksellaan maisema-ryhmässä (astro-humina iss).
+            var mik = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            if (!mik.Rekisteroity(tunnus)) mik.Rekisteroi(tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina ? "iss" : "linssit", "maisema", tunnus, tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina ? "Astronautin humina" : tunnus, tunnus);
+            s.Tila.LinssiTausta(t.Url, t.Voima * mik.Kerroin("maisema", tunnus), t.NousuMs);
         }
 
         /// <summary>Linssin raidan himmennys (kellon pysäytys 0,5; jatko 1).</summary>
@@ -227,6 +230,8 @@ namespace Matkakirja.Natiivi
             public bool SilmukkaPyydetty, LoppuIlmoitettu, OdottaaVerkkoa;
             public float KaynnistysAika, Uusinta;
             public int AlkuNayte, Vuoro;
+            /// <summary>Äänimikserin tunnus (maisema/&lt;tiedosto&gt;), rekisteröity ensimmäisellä tasolla; null = ei vielä.</summary>
+            public string MikseriId;
         }
 
         sealed class Latausvirhe { public long Http; public bool Verkko, Aika, Purku; }
@@ -467,6 +472,18 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        static double MaisemaKerroin(Lahde l)
+        {
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            if (l.MikseriId == null)
+            {
+                string tiedosto = Path.GetFileNameWithoutExtension(Aanilataus.LevyNimi(l.Url) ?? "maisema");
+                l.MikseriId = Matkakirja.Natiivi.Aanet.MikseriId("maisema/", tiedosto);
+                m.Rekisteroi(m.Nyt, "maisema", l.MikseriId, "Äänimaisema: " + tiedosto, l.A.clip != null ? l.A.clip.name : l.MikseriId);
+            }
+            return m.AaniKerroin(m.Nyt, l.MikseriId);
+        }
+
         /// <summary>
         /// Lähteen taso: maisemalla kompressorin jälkeen suodattimessa (volume 1, ei leikkausta, web-gain),
         /// muilla AudioSource.volume = min(1, taso).
@@ -474,6 +491,9 @@ namespace Matkakirja.Natiivi
         static void AsetaTaso(Lahde l, double taso)
         {
             if (l.A == null) return;
+            // Äänimikseri (Natiivi-UI:n rekisteri, juna 172): kartan äänimaisemakorin äänite omalla tunnuksellaan ryhmään maisema
+            // soittohetken kontekstissa; taso × äänen kerroin (ryhmätaso tulee jo Tausta-voimasta AaniTilan kautta).
+            if (l.Kanava == Kanava.Maisema && taso > 0 && !string.IsNullOrEmpty(l.Url)) taso *= MaisemaKerroin(l);
             if (l.Komp != null) { l.A.volume = 1f; l.Komp.Taso = (float)taso; }
             else l.A.volume = (float)Math.Min(1.0, taso);
         }

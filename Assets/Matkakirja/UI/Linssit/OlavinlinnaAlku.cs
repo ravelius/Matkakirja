@@ -71,8 +71,8 @@ namespace Matkakirja.Natiivi
             rivi.style.alignItems = Align.Center;
             rivi.style.justifyContent = Justify.Center;
             rivi.style.width = Length.Percent(100);
-            pelaaKortti = KorttiValinta("OLAVINLINNA", "Pelaa: kesäyö 1499", "Pelaa", "mk-nappi--kulta", () => Valitse(true));
-            historiaKortti = KorttiValinta("OLAVINLINNA", "Linnan historia (noin 3 min)", "Historia", "mk-nappi--toiminto", () => Valitse(false));
+            pelaaKortti = KorttiValinta(Kieli.T("ui.alku.olavinlinna"), Kieli.T("ui.alku.pelaa-kesayo-1499"), Kieli.T("ui.alku.pelaa"), "mk-nappi--kulta", () => Valitse(true));
+            historiaKortti = KorttiValinta(Kieli.T("ui.alku.olavinlinna"), Kieli.T("ui.alku.linnan-historia-noin-3-min"), Kieli.T("ui.alku.historia"), "mk-nappi--toiminto", () => Valitse(false));
             himmennys.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
         }
 

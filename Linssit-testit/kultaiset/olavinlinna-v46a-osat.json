@@ -98,7 +98,9 @@
       21.5,
       45.5
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-vesiportin-bastioni-e",
@@ -112,7 +114,9 @@
       21.5,
       29.6
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-vesiportin-bastioni-fw",
@@ -126,7 +130,9 @@
       21.5,
       20.7
      ],
-     "kierto_y": -0.6055
+     "kierto_y": -0.6055,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-porttikurtiini-s101",
@@ -140,7 +146,9 @@
       21.5,
       8.5
      ],
-     "kierto_y": -0.7314
+     "kierto_y": -0.7314,
+     "vuodesta": 1749,
+     "huom": "kurtiinien työt 1749–55 (#4249)"
     },
     {
      "nimi": "b1499-s201-rakennus",
@@ -154,7 +162,10 @@
       21.5,
       8.0
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "S 201: rakennusvuosi ei tiedossa (Venäjän ajan rakenteet), TULKINTA"
     },
     {
      "nimi": "b1499-kellobastioni",
@@ -168,7 +179,10 @@
       21.5,
       10.1
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     },
     {
      "nimi": "b1499-vesiportin-bastioni-itakylki",
@@ -182,7 +196,9 @@
       21.5,
       21.0
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-ponttonisilta",
@@ -196,7 +212,10 @@
       21.5,
       9.0
      ],
-     "kierto_y": -0.585
+     "kierto_y": -0.585,
+     "vuodesta": null,
+     "historia_vuosi": 1975,
+     "huom": "nykyinen ponttonisilta; vuosi ei tiedossa, TULKINTA: yleisölle avaaminen 1975 (#4249)"
     },
     {
      "nimi": "b1499-kellobastioni-lounas",
@@ -210,7 +229,10 @@
       21.5,
       7.0
      ],
-     "kierto_y": -0.3883
+     "kierto_y": -0.3883,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     }
    ],
    "varmuus": "V kerrokset, A porras",
@@ -1211,7 +1233,10 @@
       8.0,
       5.5
      ],
-     "kierto_y": -4.7997
+     "kierto_y": -4.7997,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     },
     {
      "nimi": "pako-kellobastioni-2",
@@ -1225,7 +1250,10 @@
       8.0,
       6.0
      ],
-     "kierto_y": -4.7997
+     "kierto_y": -4.7997,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     },
     {
      "nimi": "pako-kellobastioni-3",
@@ -1239,7 +1267,10 @@
       8.0,
       10.5
      ],
-     "kierto_y": -4.7997
+     "kierto_y": -4.7997,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     }
    ],
    "varmuus": "V kerrokset, A porras",

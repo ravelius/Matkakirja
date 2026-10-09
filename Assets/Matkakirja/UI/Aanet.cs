@@ -112,6 +112,7 @@ namespace Matkakirja.Natiivi
         public static void Alusta()
         {
             Kytke();
+            RekisteroiMikseriin();
             EsilataaTehosteet();
         }
 
@@ -132,12 +133,59 @@ namespace Matkakirja.Natiivi
                 if (puhe != null) puhe.volume = Taso(AaniKanava.Puhe);
                 if (kertoja != null) kertoja.volume = Taso(AaniKanava.Kertoja);
                 // Tehosteliuku ja mykistys kuuluvat soiviin siivuihin heti (webin paivitaTehosteVoima).
-                float vayla = Taso(AaniKanava.Tehoste);
-                foreach (var s in soivat) if (!s.Lento && s.Lahde != null) s.Lahde.volume = s.Gain * vayla;
+                PaivitaSoivat();
                 // Webin setEnabled(true): äänet takaisin → napsahdus.
                 if (nimi == nameof(Kytkin.Aanimaisema) && !Mykistetty) Tehoste("click");
             };
+            Mikseri.Muuttui += () =>
+            {
+                if (puhe != null && puhe.isPlaying) puhe.volume = Taso(AaniKanava.Puhe) * Mikseri.AaniKerroin(Mikseri.Nyt, PulunPuheId);
+                PaivitaSoivat();
+            };
         }
+
+        // --- äänimikseri (Natiivi-UI:n rekisteri, omistaja 9.10.2026 klo 09.5x; Pelikoodari juna 172) -----------------------
+        // Tehosteet ryhmään "tehosteet" (tunnus tehoste/<nimi>), Pulun tehosteet ja puhe ryhmään "pulu" (pulu/<avain>, pulu/puhe).
+        // Rekisteröinti kerran Alusta-kutsussa kontekstiin "kartta" (taulun ja Pulun tehosteet) ja lisäksi soittohetken kontekstiin
+        // (Mikseri.Nyt), jotta mikseri näyttää äänen siellä, missä se oikeasti soi (esim. linssi, linna, lautapelit). Taso = siivun gain × ryhmän väylä (Asetukset-taso = Mikseri.Kerroin(ryhmä)) × äänen kerroin.
+        static Matkakirja.Linssit.Aanet.Aanimikseri Mikseri => Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+        public const string PulunPuheId = "pulu/puhe";
+
+        /// <summary>Mikserin tunnus: pienet kirjaimet, sallitut merkit [a-z0-9._:/-], muu → '-'.</summary>
+        public static string MikseriId(string etuliite, string nimi)
+        {
+            var sb = new System.Text.StringBuilder(etuliite);
+            foreach (var c in (nimi ?? "").ToLowerInvariant())
+                sb.Append((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.' || c == '_' || c == ':' || c == '/' || c == '-' ? c : '-');
+            return sb.ToString();
+        }
+
+        static void Rekisteroi(string ryhma, string id, string nimi, params string[] klipit) =>
+            Mikseri.Rekisteroi(Mikseri.Nyt, ryhma, id, nimi, klipit);
+
+        /// <summary>Ryhmän väylä: tehosteet ja Pulun tehosteet webin masterilla × makeup × mikserin ryhmätaso (mykistys 0).</summary>
+        static float Vayla(string ryhma) => Mykistetty ? 0f
+            : Tehostetaulu.Master * Tehostetaulu.Kompressori.Makeup * (ryhma == "tehosteet" ? Asetukset.Taso(Voima.Tehosteet) : Mikseri.Kerroin(ryhma));
+
+        static float SiivunTaso(Soiva s) => s.Gain * Vayla(s.Ryhma) * (s.Id != null ? Mikseri.AaniKerroin(Mikseri.Nyt, s.Id) : 1f);
+
+        static void PaivitaSoivat()
+        {
+            foreach (var s in soivat) if (!s.Lento && s.Lahde != null) s.Lahde.volume = SiivunTaso(s);
+        }
+
+        /// <summary>Taulun ja Pulun tehosteet mikseriin (kartta), kerran käynnistyksessä.</summary>
+        static void RekisteroiMikseriin()
+        {
+            foreach (var n in Tehostetaulu.Kaikki.Keys) Mikseri.Rekisteroi("kartta", "tehosteet", MikseriId("tehoste/", n), n);
+            foreach (var kv in pulunTehosteet) Mikseri.Rekisteroi("kartta", "pulu", MikseriId("pulu/", kv.Key.Replace("pulu.", "")), "Pulu: " + kv.Key.Replace("pulu.", ""));
+            Mikseri.Rekisteroi("kartta", "pulu", PulunPuheId, "Pulun puhe");
+            Mikseri.Rekisteroi("kartta", "tehosteet", LentoId, "Lentomoottori", LentoId);
+        }
+
+        public const string LentoId = "tehoste/lento";
+        /// <summary>Lentomoottorin väylä: tehosteväylä × äänen kerroin (tehoste/lento).</summary>
+        static float LentoTaso() => Taso(AaniKanava.Tehoste) * Mikseri.AaniKerroin(Mikseri.Nyt, LentoId);
 
         /// <summary>Hakee äänitteen (https-osoite tai ämpärin avain). valmis(null) = ei saatu.</summary>
         public static void Hae(string urlTaiAvain, Action<AudioClip> valmis)
@@ -290,7 +338,9 @@ namespace Matkakirja.Natiivi
                 if (k == AaniKanava.Tehoste)
                 {
                     if (Mykistetty) { alkoi?.Invoke(null); return; }
-                    SoitaSiivu(klippi, Osoite(urlTaiAvain), "alusta", klippi.length, vaimennus, null, true, 0f);
+                    string tid = MikseriId("tehoste/", System.IO.Path.GetFileNameWithoutExtension(Osoite(urlTaiAvain).Split('?', '#')[0]));
+                    Rekisteroi("tehosteet", tid, tid.Substring(8), klippi.name);
+                    SoitaSiivu(klippi, Osoite(urlTaiAvain), "alusta", klippi.length, vaimennus, null, true, 0f, id: tid);
                     alkoi?.Invoke(klippi);
                     return;
                 }
@@ -299,6 +349,11 @@ namespace Matkakirja.Natiivi
                 s.Stop();
                 s.clip = klippi;
                 s.volume = Taso(k) * vaimennus;
+                if (k == AaniKanava.Puhe)
+                {
+                    Rekisteroi("pulu", PulunPuheId, "Pulun puhe", klippi.name);
+                    s.volume *= Mikseri.AaniKerroin(Mikseri.Nyt, PulunPuheId);
+                }
                 s.Play();
                 alkoi?.Invoke(klippi);
             });
@@ -363,6 +418,7 @@ namespace Matkakirja.Natiivi
             public AudioClip Lahdeklippi;  // välimuistin klippi, josta siivu on
             public float Gain;
             public bool Lento, Laskee;
+            public string Ryhma = "tehosteet", Id;   // äänimikseri (Natiivi-UI 9.10.): ryhmän väylä × äänen kerroin
         }
 
         static readonly List<Soiva> soivat = new List<Soiva>();
@@ -410,12 +466,16 @@ namespace Matkakirja.Natiivi
             {
                 if (Mykistetty || sanelussa) return true;
                 var klippi = oma.Klipit[UnityEngine.Random.Range(0, oma.Klipit.Length)];
-                SoitaSiivu(klippi, "oma:" + nimi, "alusta", klippi.length, oma.Gain * voima, null, oma.Tasavire, viive, oma.OmaIsku);
+                string oid = MikseriId("tehoste/", nimi);
+                Rekisteroi("tehosteet", oid, nimi, oid);
+                SoitaSiivu(klippi, "oma:" + nimi, "alusta", klippi.length, oma.Gain * voima, null, oma.Tasavire, viive, oma.OmaIsku, id: oid);
                 return true;
             }
             TehosteRivi t = Tehostetaulu.Hae(nimi);
             if (t == null || Mykistetty) return false;
-            SoitaSiivu(t.Url, t.Aloitus, t.Kesto, t.Gain * voima, t.Vire, t.Tasavire, viive);
+            string id = MikseriId("tehoste/", nimi);
+            Rekisteroi("tehosteet", id, nimi, id);
+            SoitaSiivu(t.Url, t.Aloitus, t.Kesto, t.Gain * voima, t.Vire, t.Tasavire, viive, id: id);
             return true;
         }
 
@@ -445,7 +505,8 @@ namespace Matkakirja.Natiivi
             sanelunTauolla.Clear();
         }
 
-        static void SoitaSiivu(string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive)
+        static void SoitaSiivu(string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive,
+            string ryhma = "tehosteet", string id = null)
         {
             // Webin play(): mykistettynä tehosteita ei synny lainkaan; sanelun ajan konteksti on pysäytetty.
             if (Mykistetty || sanelussa) return;
@@ -453,11 +514,12 @@ namespace Matkakirja.Natiivi
             Hae(osoite, klippi =>
             {
                 if (klippi == null || Mykistetty) return;
-                SoitaSiivu(klippi, osoite, aloitus, kesto, gain, vire, tasavire, viive);
+                SoitaSiivu(klippi, osoite, aloitus, kesto, gain, vire, tasavire, viive, ryhma: ryhma, id: id);
             });
         }
 
-        static void SoitaSiivu(AudioClip klippi, string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive, bool omaIsku = false)
+        static void SoitaSiivu(AudioClip klippi, string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive, bool omaIsku = false,
+            string ryhma = "tehosteet", string id = null)
         {
             // Vireheitto elävöittää kolahduksia; nimetty vire soittaa matalampana/korkeampana.
             float nopeus = vire.HasValue ? Heitto(vire.Value, Tehostetaulu.NimettyVireHeitto) : tasavire ? 1f : Heitto(1f, Tehostetaulu.VireHeitto);
@@ -484,11 +546,12 @@ namespace Matkakirja.Natiivi
             s.loop = false;
             s.pitch = nopeus;
             s.clip = siivu != null ? siivu : klippi;
-            s.volume = gain * Taso(AaniKanava.Tehoste);
+            if (siivu != null && id != null) siivu.name = id;   // äänivahti: siivun nimi = mikserin tunnus
+            var soiva = new Soiva { Lahde = s, Siivu = siivu, Lahdeklippi = klippi, Gain = gain, Ryhma = ryhma, Id = id };
+            s.volume = SiivunTaso(soiva);
             // Varareitti (klippiä ei voi lukea): soitetaan lähdeklippiä kohdasta alku ilman käyrää.
             if (siivu == null) s.time = Mathf.Clamp(alku, 0f, Mathf.Max(0f, pituus - 0.01f));
             if (viive > 0f) s.PlayDelayed(viive); else s.Play();
-            var soiva = new Soiva { Lahde = s, Siivu = siivu, Lahdeklippi = klippi, Gain = gain };
             soivat.Add(soiva);
             float soi = (siivu != null ? siivu.length : Mathf.Min(luku, pituus - alku)) / Mathf.Max(0.01f, nopeus);
             UiKerros.Hae().StartCoroutine(Lopuksi(soiva, viive + soi + 0.05f));
@@ -714,7 +777,9 @@ namespace Matkakirja.Natiivi
                 s.clip = silmukka != null ? silmukka : klippi;
                 s.loop = true;
                 s.pitch = 1f;
-                s.volume = Hiljaisuus * Taso(AaniKanava.Tehoste);
+                if (silmukka != null) silmukka.name = LentoId;   // äänivahti
+                Rekisteroi("tehosteet", LentoId, "Lentomoottori", LentoId, klippi.name);
+                s.volume = Hiljaisuus * LentoTaso();
                 // Varareitti: ilman leikkausta silmukka palaa äänitteen alkuun.
                 if (silmukka == null && alku > 0f) s.time = alku;
                 s.Play();
@@ -733,7 +798,7 @@ namespace Matkakirja.Natiivi
                 if (s.Lahde == null || !soivat.Contains(s)) yield break;
                 float t = Time.unscaledTime - alku;
                 taso = t < a ? Hiljaisuus : t >= b ? huippu : Hiljaisuus * Mathf.Pow(huippu / Hiljaisuus, (t - a) / (b - a));
-                s.Lahde.volume = taso * Taso(AaniKanava.Tehoste);
+                s.Lahde.volume = taso * LentoTaso();
                 yield return null;
             }
             // Moottori hiipuu rauhassa nykyisestä tasosta 0,0001:een.
@@ -742,7 +807,7 @@ namespace Matkakirja.Natiivi
             {
                 if (s.Lahde == null || !soivat.Contains(s)) yield break;
                 float u = (Time.unscaledTime - laskuAlku) / kesto;
-                s.Lahde.volume = v0 * Mathf.Pow(Hiljaisuus / v0, u) * Taso(AaniKanava.Tehoste);
+                s.Lahde.volume = v0 * Mathf.Pow(Hiljaisuus / v0, u) * LentoTaso();
                 yield return null;
             }
             Vapauta(s);
@@ -799,7 +864,10 @@ namespace Matkakirja.Natiivi
         public static void PulunTehoste(string avain, float voima = 1f, float viive = 0f)
         {
             if (!pulunTehosteet.TryGetValue(avain, out var t)) { Tehoste(avain, voima, viive); return; }
-            SoitaSiivu(PulunTehosteJuuri + t.Tiedosto + ".mp3", "alusta", t.Kesto, PulunPerusvoima * PulunTaso * t.Voima * voima, null, false, viive);
+            string id = MikseriId("pulu/", avain.Replace("pulu.", ""));
+            Rekisteroi("pulu", id, "Pulu: " + avain.Replace("pulu.", ""), id);
+            SoitaSiivu(PulunTehosteJuuri + t.Tiedosto + ".mp3", "alusta", t.Kesto, PulunPerusvoima * PulunTaso * t.Voima * voima, null, false, viive,
+                ryhma: "pulu", id: id);
         }
 
         /// <summary>Tehosteohjelma: "saapuu", "sekoilee", "lahtee".</summary>

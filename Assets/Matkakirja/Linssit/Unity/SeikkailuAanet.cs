@@ -54,7 +54,10 @@ namespace Matkakirja.Natiivi
                 var o = MiniJson.ObjektiTaiNull(x); string t = MiniJson.Teksti(o, "tunnus");
                 string polku = MiniJson.Teksti(o, "aani");
                 if (!string.IsNullOrEmpty(t) && !aanet.ContainsKey(t) && !string.IsNullOrEmpty(polku) && (vain == null || vain.Contains(t)))
+                {
                     aanet[t] = new Aani { Tunnus = t, Polku = pohja + polku, Silmukka = MiniJson.Kentta(o, "silmukka") is bool b && b };
+                    Rekisteroi(Ryhma(t), t, "Tehoste:" + t);
+                }
             }
             Valmis = true;
             kirjaa?.Invoke($"seikkailu: tehosteet {aanet.Count} ({Lyhyt(url)})");
@@ -72,6 +75,19 @@ namespace Matkakirja.Natiivi
             if (p.result == UnityWebRequest.Result.Success) { a.Klippi = DownloadHandlerAudioClip.GetContent(p); a.Klippi.name = "Tehoste:" + a.Tunnus; }
         }
 
+        /// <summary>Satunnainen ladattu muunnelma (sonniss-aanet-v3: lukko-ulko-1-a/b …), muuten vara.</summary>
+        public static void SoitaJokin(string[] tunnukset, string vara, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
+        {
+            int n = 0; foreach (var t in tunnukset) if (Klippi(t) != null) n++;
+            if (n == 0) { if (vara != null) Soita(vara, paikka, voimakkuus, savel); return; }
+            int valinta = UnityEngine.Random.Range(0, n);
+            foreach (var t in tunnukset) if (Klippi(t) != null && valinta-- == 0) { Soita(t, paikka, voimakkuus); return; }
+        }
+        public static readonly string[] LukkoAuki = { "lukko-ulko-1-a", "lukko-ulko-1-b", "lukko-ulko-2-a", "lukko-ulko-2-b" },
+            LukkoRavistus = { "lukko-ravistus-a", "lukko-ravistus-b" }, LukkoRaapaisu = { "lukko-raapaisu-a", "lukko-raapaisu-b" },
+            OviNarina = { "puuovi-narina-1-a", "puuovi-narina-1-b" }, PaksuOviNarina = { "puuovi-narina-2-a", "puuovi-narina-2-b" },
+            RaskasOviAvain = { "raskas-ovi-avain-a", "raskas-ovi-avain-b" }, Kolikot = { "kolikot-1", "kolikot-2" };
+
         /// <summary>M-osa (aanet-fp-v2): uusi tunnus, jos ladattu, muuten vara (olemassa oleva ääni).</summary>
         public static void SoitaTaiVara(string tunnus, string vara, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
         {
@@ -88,8 +104,23 @@ namespace Matkakirja.Natiivi
             Destroy(l.gameObject, a.Klippi.length / Mathf.Max(0.1f, savel) + 0.2f);
         }
 
-        /// <summary>☰-mikseri (PT 8.10.): sääääni (tuuli, sade …) Sää-säätimellä, muut tehosteet Tehosteet-säätimellä.</summary>
-        public static float MikserinTaso(string tunnus) => Asetukset.Taso(Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(tunnus) ? Voima.Saa : Voima.Tehosteet);
+        // ÄÄNIREKISTERI (omistaja 9.10.2026 klo 09.5x, Natiivi-UI:n konteksti-mikseri): jokainen linnan ääni rekisteröidään kontekstiin
+        // "linna" (ryhmä, tunnus, näkyvä nimi, klippien nimet äänivahdille) ja soi tasolla perus × Kerroin(ryhmä, tunnus).
+        public const string Konteksti = "linna";
+        static Matkakirja.Linssit.Aanet.Aanimikseri M => Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+        /// <summary>Mikserin taso ryhmälle ja äänelle (ryhmän perustaso × ryhmän kerroin × äänen kerroin, enintään 1).</summary>
+        public static float Taso(string ryhma, string id) => M.Kerroin(ryhma, id);
+        /// <summary>Pelkkä äänen oma kerroin (silmukat, joiden ryhmätason Aanisoittimen pooli jo kertoo).</summary>
+        public static float AanenKerroin(string id) => M.AaniKerroin(M.Nyt, id);
+        public static void Rekisteroi(string ryhma, string id, params string[] klipit) => M.Rekisteroi(Konteksti, ryhma, id, Nimi(id), klipit);
+        /// <summary>Näkyvä nimi tunnuksesta: "lukko-ulko-1-a" → "Lukko ulko 1 a".</summary>
+        public static string Nimi(string id) => string.IsNullOrEmpty(id) ? id : char.ToUpperInvariant(id[0]) + id.Substring(1).Replace('-', ' ');
+        /// <summary>Tehosteen ryhmä: sää (tuuli, sade …), maisema (SeikkailuSaden taustat: yölinnut, satama …), muuten tehosteet.</summary>
+        public static string Ryhma(string tunnus) => Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(tunnus) ? "saa"
+            : Array.IndexOf(SeikkailuSade.Tunnukset, tunnus) >= 0 ? "maisema" : "tehosteet";
+
+        /// <summary>☰-mikseri: tehosteen taso rekisterin kautta (ryhmä tunnuksesta).</summary>
+        public static float MikserinTaso(string tunnus) => Taso(Ryhma(tunnus), tunnus);
 
         /// <summary>Ladattu klippi tunnuksella tai null (pelaajan askeleet valitsevat pinnan äänitteen).</summary>
         public static AudioClip Klippi(string tunnus) => tunnus != null && Aktiivinen != null && Aktiivinen.aanet.TryGetValue(tunnus, out var a) ? a.Klippi : null;

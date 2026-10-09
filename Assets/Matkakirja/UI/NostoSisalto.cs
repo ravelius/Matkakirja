@@ -547,6 +547,17 @@ namespace Matkakirja.Natiivi
         /// Karttavalot kerran muistiin. tulos saa ladatun taulun suoraan: löydös 170:n <see cref="Hylkaa"/> voi nollata
         /// staattisen taulun kesken korutiinin (sisältö vaihtui), joten kutsuja ei lue sitä uudelleen yield-rivin jälkeen.
         /// </summary>
+        /// <summary>Karttavalojen (id, maa ISO3) parit annetuista maista, id:n mukaan järjestettynä (luentavienti, Natiivi-UI 9.10.2026).</summary>
+        public static IEnumerator ValoIdt(Func<string, bool> maa, Action<List<(string Id, string Maa)>> tulos)
+        {
+            Dictionary<string, Valo> vt = null;
+            yield return ValojenMaat(tulos: x => vt = x);
+            var l = new List<(string, string)>();
+            if (vt != null) foreach (var kv in vt) if (kv.Value.Maa != null && maa(kv.Value.Maa)) l.Add((kv.Key, kv.Value.Maa));
+            l.Sort((a, b) => string.CompareOrdinal(a.Item1, b.Item1));
+            tulos?.Invoke(l);
+        }
+
         static IEnumerator ValojenMaat(Taso taso = Taso.Nakyva, Action<Dictionary<string, Valo>> tulos = null)
         {
             if (valot != null) { tulos?.Invoke(valot); yield break; }

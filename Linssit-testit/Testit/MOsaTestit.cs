@@ -136,5 +136,37 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 610; i++) v.Paivita(0.1, new VartijanSyote { PelaajaZ = 30, Valoisuus = 0 });
             Oleta.Tosi(v.Valppaus == 0, $"valppaus 60 s:ssa nollaan ({v.Valppaus:F1})");
         }
+
+        [Testi] static void VoimaKapeaJaLepo()
+        {
+            // Voima loppuu roikkuessa VoimaS:ssa → ote pettää (himmennys, alkuun, voima täyteen).
+            var k = new Kiipeily(5);
+            for (double t = 0; t < Kiipeily.VoimaS + 0.2 && !k.Putosi; t += 0.05) k.Paivita(0.05, 0);
+            Oleta.Tosi(k.Putosi && k.Himmenee, "voima loppui → putoaa");
+            for (int i = 0; i < 20; i++) k.Paivita(0.05, 0);
+            Oleta.Tosi(k.Ote == 0 && k.Voima > 0.95, "alkuun, voima täynnä");
+            // Lepo-otteella voima palautuu; puuska ei lipsauta.
+            var l = new Kiipeily(4, new[] { 1 }, levot: new[] { 1 });
+            for (int i = 0; i < 12; i++) l.Paivita(0.05, 1);   // otteelle 1 (0,6 s) ja puuskan varoitus alkaa
+            Oleta.Sama(1, l.Ote);
+            double ennen = l.Voima;
+            bool puuska = false;
+            for (int i = 0; i < 40; i++) { l.Paivita(0.05, 0); puuska |= l.PuuskaVaroittaa || l.Puuska; }
+            Oleta.Tosi(l.Voima > ennen, "lepo palauttaa voimaa");
+            Oleta.Tosi(!puuska, "lepo-ote on suojassa puuskalta");
+            for (int i = 0; i < 10; i++) l.Paivita(0.05, 1);
+            Oleta.Tosi(!l.Putosi && l.Lipsahdukset == 0 && l.Ote >= 1, "lepolta jatko ilman lipsahdusta");
+            // Kapea: siirtymä KapeaOteS, ja jatko heti ilman pysähdystä lipsauttaa (ote pitää).
+            var c = new Kiipeily(4, kapeat: new[] { 1 });
+            c.Paivita(0.05, 1); for (double t = 0.05; t < Kiipeily.OteS + 0.05; t += 0.05) c.Paivita(0.05, 1);
+            Oleta.Sama(0, c.Ote);   // 0,6 s ei vielä riitä kapealle
+            for (double t = 0; t < 0.5; t += 0.05) c.Paivita(0.05, 1);
+            Oleta.Tosi(c.Ote == 1 && c.KapeaOdottaa, "kapealla, tarkka ote odottaa");
+            c.Paivita(0.05, 1);
+            Oleta.Tosi(c.Lipsahti && c.Ote == 1 && !c.Putosi, "kiire kapealla → lipsahdus, ote pitää");
+            c.Lipsahti = false;
+            for (int i = 0; i < 20; i++) c.Paivita(0.05, 0);   // toipuminen + pysähdys
+            Oleta.Tosi(!c.KapeaOdottaa, "pysähdyksen jälkeen jatko sallittu");
+        }
     }
 }

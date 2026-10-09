@@ -16,5 +16,24 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(File.Exists(Path.Combine(k, $"olavinlinna-{PelattavaPala.Versio}-{osa}.json")),
                     $"kultaiset olavinlinna-{PelattavaPala.Versio}-{osa}.json puuttuu: simulaatio ei todenna appiin kiinnitettyä pakettia");
         }
+
+        /// <summary>LR v46a: lukittujen tammiovien lehdet (glb) ja Codex-seinäesineet (seina: true, ei törmäystä) kävelydatassa.</summary>
+        [Testi] static void OvilehdetJaSeinaesineet()
+        {
+            string Lue(string n) => File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", n));
+            var d = KavelyData.Lue(Lue($"olavinlinna-{PelattavaPala.Versio}-osat.json"), Lue($"olavinlinna-{PelattavaPala.Versio}-merkit.json"));
+            int lehtia = 0;
+            foreach (var m in d.Lajia("ovi"))
+                if (!string.IsNullOrEmpty(m.Glb))
+                {
+                    lehtia++;
+                    Oleta.Tosi(m.Lukko, $"ovilehti vain lukitussa ovessa ({m.Tunnus})");
+                    Oleta.Tosi(m.Glb.StartsWith("ovi-tammi-", StringComparison.Ordinal) && m.Leveys > 0, $"ovi {m.Tunnus}: glb {m.Glb}, leveys {m.Leveys}");
+                }
+            Oleta.Tosi(lehtia >= 4, $"tammiovien lehtiä {lehtia} (pääovi, muurikäytävä, Kellotorni, tyrmä)");
+            int seinia = 0;
+            foreach (var m in d.Lajia("rekvisiitta")) if (m.Seina) seinia++;
+            Oleta.Tosi(seinia >= 4, $"seinäesineitä {seinia} (kuvakudos, lippu, vaakuna, raapustukset)");
+        }
     }
 }

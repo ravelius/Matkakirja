@@ -74,9 +74,23 @@ namespace Matkakirja.Natiivi
         public static bool KorvaaLinssinTaustan(string tunnus) =>
             instanssi != null && instanssi.paalla && tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina;
 
+        /// <summary>Äänirekisteri (Natiivi-UI:n mikseri, juna 173): humina ja radio ISS:n maisemaksi; humina myös linssien maisemaksi
+        /// (soi koko linssin ajan). Natiivi Silmukka ei näy äänivahdissa, joten rekisteröinti tässä.</summary>
+        static readonly bool rekisteroity = Rekisteroi();
+        static bool Rekisteroi()
+        {
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            m.Rekisteroi("iss", "maisema", "cupola-humina", "Cupolan humina", "cupola-humina-gen-90s");
+            // Radiosilmukkaa ei rekisteröidä: omistaja poisti sen 3.10. (rätinä), RadioKaytossa = false (PT 9.10.: ei kytketä).
+            m.Rekisteroi("linssit", "maisema", "cupola-humina", "Linssin humina (Cupola)", "cupola-humina-gen-90s");
+            // Astronautin humina (linssin taustaääni; Cupolan humina korvaa sen ISS:ssä, mutta taso säädettävissä): Aanisoitin.LinssiTausta.
+            m.Rekisteroi("iss", "maisema", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina, "Astronautin humina", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
+            return true;
+        }
+
         static CupolaAani Varmista()
         {
-            if (instanssi == null)
+            if (instanssi == null && rekisteroity)
             {
                 var go = new GameObject("CupolaAani");
                 DontDestroyOnLoad(go);
@@ -195,11 +209,13 @@ namespace Matkakirja.Natiivi
             // Äänikaappauksen ajan humina soi testimykistyksestä huolimatta (natiivikaappaus nollaa kaiuttimet itse).
             bool mykka = TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa;
             bool kuuluu = paalla && !mykka && (tila?.Aanimaisema ?? true);
-            float tausta = (float)(tila?.TaustanKerroin ?? 1);
+            // Taso mikserin rekisteristä (korvaa kehittäjän 'tausta'-kertoimen): ryhmä × ääni nykyisessä kontekstissa.
+            var mik = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            float tausta = mik.Kerroin("maisema", "cupola-humina"), tausta2 = tausta;   // radio pois käytöstä (RadioKaytossa)
             bool puhe = tila != null && tila.Voimassa < 0.999;
             bool kuuluisi = paalla && (tila?.Aanimaisema ?? true);
             tavoite[Humina] = kuuluisi ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
-            tavoite[Radio] = kuuluisi && cupolassa && RadioKaytossa ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;   // radio vain Cupolassa
+            tavoite[Radio] = kuuluisi && cupolassa && RadioKaytossa ? RadioVoima * tausta2 * (puhe ? RadioVaisto : 1f) : 0f;   // radio vain Cupolassa
             puheNyt = puhe;
             float h = kuuluu ? tavoite[Humina] : 0f;
             float r = kuuluu ? tavoite[Radio] : 0f;

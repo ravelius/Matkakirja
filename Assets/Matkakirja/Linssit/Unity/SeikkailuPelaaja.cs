@@ -90,7 +90,7 @@ namespace Matkakirja.Natiivi
         public const float TakaM = 2.5f, TakaYlos = 0.4f, TakaSiirtymaS = 0.6f, OteRiippuu = 1.55f, OteIrti = 0.35f;
         public Transform TakakuvaHahmo { get; private set; }
         Kiipeily oteKiipeily; List<(Vector3 P, Vector3 Ulos)> otteet; Action<bool> oteValmis;
-        string oteLeike; float lipsahdusAsti; bool puuskaKuului;
+        string oteLeike; float lipsahdusAsti; bool puuskaKuului, levossa;
         static void KiipeilyAanetPois(Vector3 p) { SeikkailuAanet.Silmukka("koysi-lasku", false, p); SeikkailuAanet.Silmukka("tuuli-muuri", false, p); }
         float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi, lyhtyKayty;
         public Kiipeily OteKiipeily => oteKiipeily;
@@ -99,10 +99,11 @@ namespace Matkakirja.Natiivi
         public static event Action OteHavaittu;
 
         /// <summary>Aloita ote-kiipeily (otteet Unityssa, ulospäin = seinän ulkonormaali); valmis(true) perillä komeron kynnyksellä.</summary>
-        public void AloitaOteKiipeily(List<(Vector3 P, Vector3 Ulos)> o, IEnumerable<int> puuskat, Action<bool> valmis, string leikeNimi = null)
+        public void AloitaOteKiipeily(List<(Vector3 P, Vector3 Ulos)> o, IEnumerable<int> puuskat, Action<bool> valmis, string leikeNimi = null,
+            IEnumerable<int> kapeat = null, IEnumerable<int> levot = null)
         {
             if (o == null || o.Count == 0) return;
-            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat); oteValmis = valmis; lyhtyKayty = false; oteLeike = leikeNimi;
+            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat, kapeat, levot); oteValmis = valmis; lyhtyKayty = false; oteLeike = leikeNimi;
             cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear();
             takaPaikka = olka.position; takaKierto = olka.rotation;
             NaytaTakakuvaHahmo(true);
@@ -156,20 +157,25 @@ namespace Matkakirja.Natiivi
             if (k.PuuskaVaroittaa && !puuskaKuului) SeikkailuAanet.Soita("tuuli-puuska", transform.position + Vector3.up * 1.5f, 0.9f);
             puuskaKuului = k.PuuskaVaroittaa;
             if (k.Lipsahti) { k.Lipsahti = false; lipsahdusAsti = Time.time + (float)Kiipeily.ToipuminenS; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
-            if (k.Putosi) { k.Putosi = false; Debug.Log("MATKAKIRJA seikkailu: ote petti, kiipeilyn alkuun"); }
+            if (k.Putosi) { k.Putosi = false; Debug.Log($"MATKAKIRJA seikkailu: ote petti{(k.VoimaLoppui ? " (voimat loppuivat)" : "")}, kiipeilyn alkuun"); k.VoimaLoppui = false; }
+            // Voima (LR v45y, PT 9.10.): lepo-otteella hengähdys (loki kerran), heikkenevä ote tärisee alle 35 %:n.
+            bool lepaa = k.Siirtyy == 0 && k.Lepo(k.Ote);
+            if (lepaa && !levossa) Debug.Log($"MATKAKIRJA seikkailu: lepo-ote ({k.Ote + 1}), voima {k.Voima:P0}");
+            levossa = lepaa;
             if (k.Himmenee != himmensi) { himmensi = k.Himmenee; SeikkailuNakyvyys.Himmennys = himmensi ? 1f : 0f; }
             if (k.Havaittu) { k.Havaittu = false; Debug.Log("MATKAKIRJA seikkailu: lyhdyn valossa liikkui"); OteHavaittu?.Invoke(); }
             int i = Mathf.Clamp(k.Ote, 0, otteet.Count - 1), j = Mathf.Clamp(k.Ote + k.Siirtyy, 0, otteet.Count - 1);
             float u = (float)k.Osuus;
             var ote = Vector3.Lerp(otteet[i].P, otteet[j].P, u);
             var ulos = Vector3.Slerp(otteet[i].Ulos, otteet[j].Ulos, u); ulos.y = 0; ulos = ulos.sqrMagnitude > 1e-4f ? ulos.normalized : -hahmo.forward;
-            transform.position = ote + ulos * OteIrti - Vector3.up * OteRiippuu;
+            float tarina = k.Voima < 0.35 ? (float)((0.35 - k.Voima) / 0.35) * 0.015f : 0f;
+            transform.position = ote + ulos * OteIrti - Vector3.up * OteRiippuu + (tarina > 0 ? Vector3.up * tarina * Mathf.Sin(Time.time * 37f) : Vector3.zero);
             kavely.HahmoYaw = Mathf.Atan2(-ulos.x, -ulos.z) * Mathf.Rad2Deg;   // kasvot seinään
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
             // Takakuvan hahmon leike (LR pyydetty 8.10.: ote_idle, ote_siirto 0,6 s; puuttuessa Hahmot3D:n varaketju idleen).
             string ol = oteLeike ?? (Time.time < lipsahdusAsti ? "ote_lipsahdus" : k.Siirtyy != 0 ? "ote_siirto" : "ote_idle");   // LR v44u
             if (ol != leike) { leike = ol; leikeAika = 0; }
-            leikeAika += dt;
+            leikeAika += dt * (k.Siirtyy != 0 && k.Kapea(k.Ote + k.Siirtyy) ? (float)(Kiipeily.OteS / Kiipeily.KapeaOteS) : 1f);   // kapea: hitaampi siirto
             takaPaino = Mathf.MoveTowards(takaPaino, 1f, dt / TakaSiirtymaS);
             var taka = transform.position + ulos * TakaM + Vector3.up * (Korkeus + TakaYlos);
             takaPaikka = taka; takaKierto = Quaternion.LookRotation(transform.position + Vector3.up * 1.2f - taka);
@@ -243,7 +249,7 @@ namespace Matkakirja.Natiivi
             var polku = new NavMeshPath();
             bool ok = NavMesh.SamplePosition(kohde, out var k, 1.0f, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, k.position, NavMesh.AllAreas, polku)
                 && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1;
-            BottiReitti = ok ? polku.status.ToString() : "ei reittiä";
+            BottiReitti = ok ? polku.status.ToString() : "ei reittiä";   // kieli: ei (tekninen)
             if (ok) for (int i = 1; i < polku.corners.Length; i++) napautusReitti.Add(polku.corners[i]); else napautusReitti.Add(kohde);
             jumiAika = 0; jumiPaikka = transform.position;
             return ok;
@@ -316,7 +322,7 @@ namespace Matkakirja.Natiivi
                 if (kahva != null)
                 {
                     Kasi.SetParent(kahva, false); Kasi.localPosition = Vector3.zero; Kasi.localRotation = Quaternion.identity;
-                    var kv = KadetSolmu("Kontaktivarjo"); if (kv != null) kv.gameObject.SetActive(false);
+                    var kv = KadetSolmu("Kontaktivarjo"); if (kv != null) kv.gameObject.SetActive(false);   // kieli: ei (tekninen)
                     foreach (var smr in olka.GetComponentsInChildren<SkinnedMeshRenderer>(true))   // kädet ovat silmien lapsina (Hahmot3D: Juuri → Isa)
                         smr.localBounds = new Bounds(Vector3.zero, new Vector3(3f, 3f, 3f));
                     Debug.Log("MATKAKIRJA seikkailu: kädet kiinni (kahva_oikea)");
@@ -351,7 +357,7 @@ namespace Matkakirja.Natiivi
         public static SeikkailuPelaaja Luo(Transform isa, Vector3 paikka, float yaw, int kerros)
         {
             Poista();
-            var go = new GameObject("Seikkailu pelaaja") { layer = kerros, tag = "Player" };
+            var go = new GameObject("Seikkailu pelaaja") { layer = kerros, tag = "Player" };   // kieli: ei (tekninen)
             go.transform.SetParent(isa, false);
             go.transform.position = paikka;
             var p = go.AddComponent<SeikkailuPelaaja>();
@@ -364,11 +370,11 @@ namespace Matkakirja.Natiivi
             // Hahmo (väliaikainen kapseli; Fogg-glb myöhemmin).
             // Hahmosolmu (kääntö, skaalaamaton: Fogg, kynttilä ja esineet sen lapsina) ja kapseli sen lapsena (7.10.: Fogg peri kapselin
             // skaalan 0,6 / 0,875 / 0,6 ja oli kapea ja 1,58 m).
-            var hs = new GameObject("hahmo") { layer = kerros, tag = "Player" };
+            var hs = new GameObject("hahmo") { layer = kerros, tag = "Player" };   // kieli: ei (tekninen)
             hs.transform.SetParent(go.transform, false);
             var h = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             Destroy(h.GetComponent<Collider>());
-            h.name = "kapseli"; h.layer = kerros; h.tag = "Player";
+            h.name = "kapseli"; h.layer = kerros; h.tag = "Player";   // kieli: ei (tekninen)
             h.transform.SetParent(hs.transform, false);
             h.transform.localPosition = new Vector3(0, Korkeus / 2, 0); h.transform.localScale = new Vector3(Sade * 2, Korkeus / 2, Sade * 2);
             var sh = Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
@@ -383,7 +389,7 @@ namespace Matkakirja.Natiivi
             if (Ensimmainen)
             {
                 // Takakuvan hahmo (pelattavuusmalli 7): Fogg asu v2 näkyy vain takakuvassa ja kaukokuvissa.
-                p.TakakuvaHahmo = new GameObject("takakuvan hahmo") { layer = kerros, tag = "Player" }.transform;
+                p.TakakuvaHahmo = new GameObject("takakuvan hahmo") { layer = kerros, tag = "Player" }.transform;   // kieli: ei (tekninen)
                 p.TakakuvaHahmo.SetParent(hs.transform, false); p.TakakuvaHahmo.gameObject.SetActive(false);
             }
             else { p.Kasi.SetParent(hs.transform, false); p.Kasi.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
@@ -414,7 +420,7 @@ namespace Matkakirja.Natiivi
             tpf.ShoulderOffset = new Vector3(OlkaX, 0.35f, 0f); tpf.VerticalArmLength = 0.4f; tpf.CameraSide = 1f; tpf.CameraDistance = KameraEtaisyys;
             tpf.Damping = new Vector3(0.1f, 0.25f, 0.3f);
             var es = tpf.AvoidObstacles;   // oletukset komponentista (Default on internal)
-            es.Enabled = true; es.CollisionFilter = 1 << kerros; es.IgnoreTag = "Player"; es.CameraRadius = 0.3f;   // pallopyyhkäisy varressa
+            es.Enabled = true; es.CollisionFilter = 1 << kerros; es.IgnoreTag = "Player"; es.CameraRadius = 0.3f;   // pallopyyhkäisy varressa   // kieli: ei (tekninen)
             tpf.AvoidObstacles = es;
             // Täytevalo (Päätoimittaja: keittiön lattia ja esineet erottuvat): lämmin pehmeä pistevalo pään yläpuolella hieman takana,
             // ei varjoja (URP:n lisävalo, DioraamaValaistu lukee sen kuten tilojen pistevalot).

@@ -40,6 +40,8 @@ namespace Matkakirja.Natiivi
         public const int IrrotusNapautukset = 3;
         /// <summary>Koputuksen ääni (ontto kohta); Sovitin asettaa.</summary>
         public static AudioClip OnttoKlippi;
+        /// <summary>Varaklippien mikseritunnukset (DioraamaSovitin rekisteröi ladatessaan: pikari-1, ovi-puu).</summary>
+        public const string Kolahdus = "kolahdus", Koputus = "koputus";
         readonly List<Esine> esineet = new List<Esine>();
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
         Esine kadessa;
@@ -57,9 +59,12 @@ namespace Matkakirja.Natiivi
         public bool Naamio => puetut.Contains("esiliina") && puetut.Contains("myssy");
         /// <summary>Avaimet laukussa (avainrengas voudin pöydältä): lukitut ovet merkin avain-kentän mukaan.</summary>
         public readonly HashSet<string> Avaimet = new HashSet<string>(StringComparer.Ordinal);
-        sealed class Ovi { public KavelyMerkki M; public GameObject Go; public bool Auki; public Vector3 Paikka; }
+        sealed class Ovi { public KavelyMerkki M; public GameObject Go; public bool Auki; public Vector3 Paikka; public Transform Sarana; public Quaternion Kiinni; public float Kulma; public Coroutine Kaanto; }
+        /// <summary>Ovilehden avauskulma ja kesto (LR v46a ovi-tammi-*.glb: origo saranalla, +X leveys, +Y ylös, +Z ulos; PT: 90° 1,5 s:ssa).</summary>
+        public const float OviAukiAste = 90f, OviHidasS = 1.5f, OviNopeaS = 0.8f, OviRaollaanAste = 18f;
         // Huone 8: köysi sakaraan (koysi:sakara, köysikieppi kädessä) → ote-kiipeily ote:kellotorni-1…N takakuvassa, puuskat tuuli:puuska-N.
         Vector3? sakara; readonly List<(Vector3 P, Vector3 Ulos)> otteet = new List<(Vector3, Vector3)>(); readonly List<int> puuskat = new List<int>();
+        readonly List<int> kapeatOtteet = new List<int>(), lepoOtteet = new List<int>();
         public const string Koysikieppi = "koysikieppi";
 
         void LuoKiipeily(KavelyData d)
@@ -70,6 +75,8 @@ namespace Matkakirja.Natiivi
             ot.Sort((a, b) => Numero(a.Tunnus).CompareTo(Numero(b.Tunnus)));
             foreach (var m in ot)
             {
+                if (m.Kapea) kapeatOtteet.Add(otteet.Count);
+                if (m.Tyyppi == "lepo") lepoOtteet.Add(otteet.Count);
                 var n = m.Ulkonormaali ?? new[] { 0.0, 0.0, 1.0 };
                 otteet.Add((new Vector3((float)m.X, (float)m.Y, (float)-m.Z), new Vector3((float)n[0], 0f, (float)-n[2])));
             }
@@ -93,7 +100,7 @@ namespace Matkakirja.Natiivi
             koysiKiinni = true;
             p.KasiEle("poiminta");
             SeikkailuAanet.SoitaTaiVara("koysi-kiinnitys", "lyhty-narina", sakara.Value, 0.6f, 0.8f);
-            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: köysi sakarassa");
+            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: köysi sakarassa");   // kieli: ei (tekninen)
             AloitaSeinakiipeily(p);
         }
 
@@ -102,7 +109,7 @@ namespace Matkakirja.Natiivi
         void AloitaSeinakiipeily(SeikkailuPelaaja p)
         {
             kirjaa?.Invoke($"seikkailu: ote-kiipeily ({otteet.Count} otetta, puuskat {string.Join(",", puuskat)})");
-            p.AloitaOteKiipeily(otteet, puuskat, ok => kirjaa?.Invoke("seikkailu: komeron kynnyksellä (huone 9)"));
+            p.AloitaOteKiipeily(otteet, puuskat, ok => kirjaa?.Invoke("seikkailu: komeron kynnyksellä (huone 9)"), null, kapeatOtteet, lepoOtteet);
         }
         bool koysiKiinni;
         readonly Dictionary<string, Transform> solmut = new Dictionary<string, Transform>(StringComparer.Ordinal);
@@ -145,7 +152,7 @@ namespace Matkakirja.Natiivi
         {
             foreach (var x in m.Puettu) { puetut.Add(x); var e = esineet.Find(y => y.Id == x); if (e?.Go != null) e.Go.SetActive(false); }
             if (m.Avainrengas) { Avaimet.Add("avainrengas"); var e = esineet.Find(y => y.Id == "avainrengas"); if (e?.Go != null) e.Go.SetActive(false); }
-            foreach (var o in ovet) if (m.AvatutOvet.Contains(o.M.Tunnus)) { o.Auki = true; if (o.Go != null) o.Go.SetActive(false); }
+            foreach (var o in ovet) if (m.AvatutOvet.Contains(o.M.Tunnus)) { o.Auki = true; if (o.Go != null) o.Go.SetActive(false); AsetaLehti(o, OviAukiAste); }
             if (m.Koysi && sakara is Vector3) { koysiKiinni = true; var e = esineet.Find(y => y.Id == Koysikieppi); if (e?.Go != null) KieppiSakaraan(e); }
             kirjaa?.Invoke($"seikkailu: M-tila palautettu (puettu {m.Puettu.Count}, avainrengas {m.Avainrengas}, ovia {m.AvatutOvet.Count}, köysi {m.Koysi})");
         }
@@ -184,6 +191,59 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Ovilehdet (LR v46a): merkin glb (ovi-tammi-100x190/200.glb) saranaan, joka on aukon reunassa (merkki = aukon keskikohta
+        /// lattiatasossa, kierto_y aukon suunta). Avaus kääntää saranaa 90° pehmeästi (AvaaOvi); tallennuksesta palautettu ovi on heti auki.</summary>
+        IEnumerator LuoOvilehdet(Transform isa, Action<string> kirjaa)
+        {
+            int n = 0;
+            foreach (var o in ovet)
+            {
+                if (string.IsNullOrEmpty(o.M.Glb)) continue;
+                GameObject lehti = null;
+                yield return LataaMalli(o.M, isa, luodut, g => lehti = g, kirjaa);
+                if (lehti == null) continue;
+                float w = o.M.Leveys > 0 ? (float)o.M.Leveys : 1f;
+                var s = new GameObject("Ovisarana:" + o.M.Tunnus) { layer = DioraamaNayttamo.Kerros }.transform;
+                s.SetParent(isa, false);
+                s.SetPositionAndRotation(lehti.transform.position + lehti.transform.rotation * new Vector3(-w / 2f, 0f, 0f), lehti.transform.rotation);
+                lehti.transform.SetParent(s, true);
+                lehti.transform.localPosition = Vector3.zero; lehti.transform.localRotation = Quaternion.identity;
+                lehti.name = "Ovilehti:" + o.M.Tunnus;
+                o.Sarana = s; o.Kiinni = s.localRotation; n++;
+                if (o.Auki) AsetaLehti(o, OviAukiAste);
+            }
+            if (n > 0) kirjaa?.Invoke($"seikkailu: ovilehtiä {n}");
+        }
+
+        /// <summary>Kääntää ovilehteä saranasta kulmaan (0 = kiinni) pehmeästi (smootherstep); ei muuta törmäystä eikä lukkoa.</summary>
+        void KaannaLehti(Ovi o, float aste, float s)
+        {
+            if (o?.Sarana == null) return;
+            if (o.Kaanto != null) StopCoroutine(o.Kaanto);
+            o.Kaanto = StartCoroutine(Kaanna(o, aste, s));
+        }
+
+        IEnumerator Kaanna(Ovi o, float aste, float kesto)
+        {
+            float alku = o.Kulma;
+            for (float t = 0f; t < kesto && o.Sarana != null; t += Time.deltaTime)
+            {
+                float u = t / kesto; u = u * u * u * (u * (u * 6f - 15f) + 10f);
+                AsetaLehti(o, Mathf.Lerp(alku, aste, u));
+                yield return null;
+            }
+            AsetaLehti(o, aste);
+            o.Kaanto = null;
+        }
+
+        static void AsetaLehti(Ovi o, float aste) { if (o.Sarana == null) return; o.Kulma = aste; o.Sarana.localRotation = o.Kiinni * Quaternion.Euler(0f, aste, 0f); }
+
+        /// <summary>Ovilehti auki tai raolleen koodista (tyrmä: avaimella auki, vesipoika jättää raolleen); vain näkymä.</summary>
+        public void OviLehti(string tunnus, bool raollaan)
+        {
+            foreach (var o in ovet) if (o.M.Tunnus == tunnus) KaannaLehti(o, raollaan ? OviRaollaanAste : OviAukiAste, OviHidasS);
+        }
+
         /// <summary>Onko lukittu ovi (ovi:&lt;tunnus&gt;) auki (LS2:n vihjeportaat).</summary>
         public bool OviAuki(string tunnus) { foreach (var o in ovet) if (o.M.Tunnus == tunnus) return o.Auki; return false; }
 
@@ -203,14 +263,18 @@ namespace Matkakirja.Natiivi
             if (tulos == OviTulos.Lukossa)
             {
                 // Kahva kolahtaa (6 m); Kellotornin ovi ei aukea huoneessa 7 (takaa vaimea Fatabuuri-kohtaus).
-                SeikkailuAanet.Soita("kivi-kolahdus", c, 0.6f, 1.3f); SeikkailuVartijat.Aani(c, LukittuOvi.KahvaM);
+                SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoRavistus, "kivi-kolahdus", c, 0.7f, 1.3f); SeikkailuVartijat.Aani(c, LukittuOvi.KahvaM);   // lukittu ovi ravisee (sonniss-aanet-v3)
                 p.KasiEle("raapaisu");
                 kirjaa?.Invoke($"seikkailu: ovi {o.M.Tunnus} lukossa");
                 return;
             }
             o.Auki = true; if (o.Go != null) o.Go.SetActive(false);
-            SeikkailuAanet.Soita("avain-lukko", c, 0.8f);
-            if (tulos == OviTulos.AukiNarahtaa) { SeikkailuAanet.SoitaTaiVara("ovi-narahdus", "luukku-narahdus", c, 0.9f); SeikkailuVartijat.Aani(c, o.M.AaniNopeaM > 0 ? o.M.AaniNopeaM : 4); }
+            KaannaLehti(o, OviAukiAste, tulos == OviTulos.AukiNarahtaa ? OviNopeaS : OviHidasS);
+            // Lukko vain lukitussa ovessa (hidas avaus: avain raapii, sitten lukko aukeaa); portti narahtaa omalla äänellään (sonniss-aanet-v3).
+            bool portti = o.M.Tunnus.StartsWith("vesiportti", StringComparison.Ordinal);
+            if (o.M.Lukko) { if (tulos == OviTulos.AukiHiljaa) SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoRaapaisu, null, c, 0.5f); SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", c, 0.8f); }
+            else if (portti && tulos == OviTulos.AukiHiljaa) SeikkailuAanet.SoitaTaiVara("portin-salpa", null, c, 0.6f);
+            if (tulos == OviTulos.AukiNarahtaa) { if (portti) SeikkailuAanet.SoitaTaiVara("portti-narahdus", "luukku-narahdus", c, 0.9f); else SeikkailuAanet.SoitaJokin(SeikkailuAanet.OviNarina, "luukku-narahdus", c, 0.9f); SeikkailuVartijat.Aani(c, o.M.AaniNopeaM > 0 ? o.M.AaniNopeaM : 4); }
             p.KasiEle("poiminta");
             kirjaa?.Invoke($"seikkailu: ovi {o.M.Tunnus} auki ({(tulos == OviTulos.AukiNarahtaa ? "nopeasti, narahti" : "hitaasti, hiljaa")})");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: ovi " + o.M.Tunnus);
@@ -289,7 +353,7 @@ namespace Matkakirja.Natiivi
                 if (rg == null) continue;
                 rg.name = "Rekvisiitta:" + m.Tunnus; rekvisiittaa++;
                 // Törmäys vain isoille (≥ 0,35 m korkea): pöytätavarat (kulhot, omenat) eivät estä esineiden napautusta eivätkä kulkua.
-                if (varasto.TryGetValue(m.Glb, out var rv) && rv.Malli != null && RekvisiitanLaatikko(rv.Malli) is Vector3 koko && koko.y >= 0.35f)
+                if (!m.Seina && varasto.TryGetValue(m.Glb, out var rv) && rv.Malli != null && RekvisiitanLaatikko(rv.Malli) is Vector3 koko && koko.y >= 0.35f)
                 {
                     var bc = rg.AddComponent<BoxCollider>(); bc.size = koko; bc.center = new Vector3(0f, koko.y * 0.5f, 0f);
                     var ob = rg.AddComponent<UnityEngine.AI.NavMeshObstacle>(); ob.shape = UnityEngine.AI.NavMeshObstacleShape.Box;
@@ -298,6 +362,7 @@ namespace Matkakirja.Natiivi
             }
             if (rekvisiittaa > 0) kirjaa?.Invoke($"seikkailu: rekvisiitta {rekvisiittaa} mallia");
             se.LuoOvet(d); se.LuoKiipeily(d);
+            yield return se.LuoOvilehdet(go.transform, kirjaa);
             SeikkailuKomero.Luo(d, go.transform, kirjaa);   // huone 9: tiilet ja arkun kilpilukko
             SeikkailuPako.Luo(d, go.transform, kirjaa);     // huone 10: kello, köysilasku, sukellus, uinti, vene
             SeikkailuSali.Luo(d, go.transform, kirjaa);     // huone 6: kulho voudin pöytään, kiista, avaimet
@@ -473,7 +538,7 @@ namespace Matkakirja.Natiivi
             else
             {
                 SeikkailuAanet.Soita("kivi-kolahdus", e.Go.transform.position, 1f, 0.8f);
-                if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f);
+                if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f * SeikkailuAanet.Taso("tehosteet", Kolahdus));
             }
             Kolahti?.Invoke(e.Go.transform.position);
             kirjaa?.Invoke($"seikkailu: kaadettu {e.Id} (kuuluu {e.AaniM:F0} m)");
@@ -737,7 +802,7 @@ namespace Matkakirja.Natiivi
                     }
                     foreach (int ix in o.Kolmiot ?? Array.Empty<int>()) kol.Add(ix + a);
                 }
-            var m = new Mesh { name = "Esine" };
+            var m = new Mesh { name = "Esine" };   // kieli: ei (tekninen)
             m.SetVertices(p); m.SetNormals(nr); m.SetUVs(0, uv); m.SetTriangles(kol, 0); m.RecalculateBounds();
             if (uv.Count == p.Count && p.Count > 0) m.RecalculateTangents();   // normaalikartta (LR v45o)
             return m;
@@ -790,13 +855,13 @@ namespace Matkakirja.Natiivi
                 ?? (kadessa == null && SeikkailuKomero.Aktiivinen?.Verbi(p) != null ? "komero" : null)
                 ?? (kadessa == null && SeikkailuPako.Aktiivinen?.Verbi(p) != null ? "pako" : null);
             Toiminto = kadessa != null
-                ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? "Avaa"
-                    : kadessa.Id == Koysikieppi && SakaraLahella(p) ? "Kiinnitä"
-                    : kadessa.Id == Tarjotin && SeikkailuVartijat.TarjotinVastaanottaja(p.transform.position) ? "Anna"
-                    : kadessa.Laji == Laji.Heitettava ? "Heitä" : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? "Aseta" : "Laske")
-                : lahin != null ? (lahin.Laji == Laji.Irrotettava ? "Irrota" : lahin.Laji == Laji.Kaadettava ? "Kaada" : lahin.Laji == Laji.Puettava ? "Pue" : lahin.Id == Nyytti ? "Avaa" : "Poimi")
+                ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? Kieli.T("olavinlinna.verbi.avaa")
+                    : kadessa.Id == Koysikieppi && SakaraLahella(p) ? Kieli.T("olavinlinna.verbi.kiinnita")
+                    : kadessa.Id == Tarjotin && SeikkailuVartijat.TarjotinVastaanottaja(p.transform.position) ? Kieli.T("olavinlinna.verbi.anna")
+                    : kadessa.Laji == Laji.Heitettava ? Kieli.T("olavinlinna.verbi.heita") : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? Kieli.T("olavinlinna.verbi.aseta") : Kieli.T("olavinlinna.verbi.laske"))
+                : lahin != null ? (lahin.Laji == Laji.Irrotettava ? Kieli.T("olavinlinna.verbi.irrota") : lahin.Laji == Laji.Kaadettava ? Kieli.T("olavinlinna.verbi.kaada") : lahin.Laji == Laji.Puettava ? Kieli.T("olavinlinna.verbi.pue") : lahin.Id == Nyytti ? Kieli.T("olavinlinna.verbi.avaa") : Kieli.T("olavinlinna.verbi.poimi"))
                 : Lahin == "kynttila" ? kynttilat.ToimintoVerbi(p)
-                : Lahin == "koputa" ? "Koputa" : Lahin == "tikkaat" ? "Kiipeä" : Lahin == "ovi" ? "Avaa" : Lahin == "sakara" ? "Kiipeä" : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : Lahin == "pako" ? SeikkailuPako.Aktiivinen.Verbi(p) : null;
+                : Lahin == "koputa" ? Kieli.T("olavinlinna.verbi.koputa") : Lahin == "tikkaat" ? Kieli.T("olavinlinna.verbi.kiipea") : Lahin == "ovi" ? Kieli.T("olavinlinna.verbi.avaa") : Lahin == "sakara" ? Kieli.T("olavinlinna.verbi.kiipea") : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : Lahin == "pako" ? SeikkailuPako.Aktiivinen.Verbi(p) : null;
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
@@ -809,6 +874,7 @@ namespace Matkakirja.Natiivi
             {
                 // Torkkuva vartija herää eväisiin (pelattavuusmalli 8.1 huone 4): tarjotin hänelle, käteen jää kynttilä.
                 var t = kadessa; kadessa = null; t.Go.SetActive(false); p.KasiEle("laske");
+                SeikkailuAanet.SoitaTaiVara("tarjotin", null, p.transform.position + p.Hahmo.forward * 0.6f + Vector3.up, 0.8f);   // aanet-lapi-v2
                 kirjaa?.Invoke("seikkailu: tarjotin annettu vartijalle");
             }
             else if (kadessa != null) { if (kadessa.Laji == Laji.Heitettava) Heita(p); else Laske(p); }
@@ -840,6 +906,7 @@ namespace Matkakirja.Natiivi
 
         void Poimi(SeikkailuPelaaja p, Esine e)
         {
+            if (e.Go != null) SeikkailuAanet.SoitaTaiVara("hanska", null, e.Go.transform.position, 0.6f);   // hanska tarttuu (aanet-lapi-v2)
             if (e.Id == Nyytti)
             {
                 // Fogg avaa nyytin: liina pois, kalkki, pateeni ja liuskekivi esiin syvennyksen pohjalle.
@@ -999,7 +1066,7 @@ namespace Matkakirja.Natiivi
             else if (OnttoKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Koputus", 1.5f, 15f); SeikkailuKuulija.Aseta(a, c);
-                a.clip = OnttoKlippi; a.pitch = 0.75f; a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
+                a.clip = OnttoKlippi; a.pitch = 0.75f; a.volume = SeikkailuAanet.Taso("tehosteet", Koputus); a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
             }
             Aanteli?.Invoke(c);
             kirjaa?.Invoke("seikkailu: koputus kuulostaa ontolta");
@@ -1013,11 +1080,13 @@ namespace Matkakirja.Natiivi
             Kolahti?.Invoke(kohta);
             if (e.Laji == Laji.Irrotettava || e.Id.StartsWith("kivi", StringComparison.Ordinal)) SeikkailuAanet.Soita("kivi-kolahdus", kohta);
             else if (e.Id.StartsWith("savipurkki", StringComparison.Ordinal) && SeikkailuAanet.Klippi("savipurkki") != null) SeikkailuAanet.Soita("savipurkki", kohta);   // rikkoutuu (aanet-lapi-v1)
+            else if ((e.Id.StartsWith("nauris", StringComparison.Ordinal) || e.Id == Tarjotin) && SeikkailuAanet.Klippi(e.Id == Tarjotin ? "tarjotin" : "nauris") != null)
+                SeikkailuAanet.Soita(e.Id == Tarjotin ? "tarjotin" : "nauris", kohta);   // aanet-lapi-v2
             else if (KolahdusKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);
                 SeikkailuKuulija.Aseta(a, kohta);
-                a.clip = KolahdusKlippi; a.pitch = UnityEngine.Random.Range(0.9f, 1.1f); a.Play();
+                a.clip = KolahdusKlippi; a.pitch = UnityEngine.Random.Range(0.9f, 1.1f); a.volume = SeikkailuAanet.Taso("tehosteet", Kolahdus); a.Play();
                 Destroy(a.gameObject, KolahdusKlippi.length + 0.2f);
             }
             kirjaa?.Invoke($"seikkailu: kolahdus {e.Id} ({nopeus:F1} m/s) @ {kohta} → vartijoille {KuuluuM} m");

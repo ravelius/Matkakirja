@@ -853,7 +853,7 @@ namespace Matkakirja.Peli
             if (siirtyma != null && siirtymaLaji == laji) return;
             if (siirtyma != null) LopetaSiirtyma();
             ajonHimmennys = 1;
-            var s = Uusi(Kanava.Siirtyma, raita.Ampari, true);
+            var s = Uusi(Kanava.Siirtyma, AaniOsoite.Musiikkiversio(raita.Ampari), true);
             s.Polku = laji;
             siirtyma = s;
             siirtymaLaji = laji;

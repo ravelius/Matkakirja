@@ -926,6 +926,19 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "nostoluennat":
+                    // "ui nostoluennat [europe|ISO3,ISO3…] | tila": nostojen luettavat palat esigenerointiin (Pelikoodari 9.10.2026).
+                    return "=" + (loput.Trim() == "tila" ? "nostoluennat: " + NostoluentaVienti.Tila : NostoluentaVienti.Aloita(loput));
+                case "aanet":
+                {
+                    // "ui aanet vahti | tila | konteksti <nimi>": äänirekisteri ja konteksti-mikseri (omistaja 9.10.2026 klo 09.5x).
+                    var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+                    var o = loput.Trim().Split(' ');
+                    if (o[0] == "vahti") return "=" + MikseriPalvelin.Vahti();
+                    if (o[0] == "konteksti" && o.Length > 1) m.AsetaNyt(o[1]);
+                    return "=" + $"mikseri: konteksti {m.Nyt}, {MikseriPalvelin.Tila}, rekisteröityjä {m.RekisteroityjaAania}, omia {m.OmiaMuutoksia(m.Nyt)}; "
+                        + string.Join(", ", Matkakirja.Linssit.Aanet.Aanimikseri.Ryhmat.Select(r => $"{r} {m.Ryhma(m.Nyt, r):0.00}"));
+                }
                 case "aanimikseri":
                     // Kehittäjän äänimikserin äänipuoli (AaniMikseri.cs): tila | cupola | linna | aseta <id> <arvo> | b 0|1 | tallenna.
                     return AaniMikseri.Komento(loput);

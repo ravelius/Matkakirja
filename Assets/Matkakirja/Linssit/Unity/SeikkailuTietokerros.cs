@@ -86,10 +86,14 @@ namespace Matkakirja.Natiivi
             Kutsu("TietokorttiAvautui", k.Lyhyt ?? "");   // null yksinään params-taulukkona = null-taulukko
         }
 
+        /// <summary>Lopputekstit (loppukortit) näytetty; pysyy, kunnes tietokerros poistuu linnan mukana (loppumusiikin silmukka).</summary>
+        public bool LoppuAuki { get; private set; }
+
         /// <summary>Pystyleikkeen loppu: loppukortit auki ja kortisto Natiivi-UI:lle.</summary>
         public void Loppu()
         {
             if (ydin == null) return;
+            LoppuAuki = true;
             foreach (var k in ydin.Loppu()) kirjaa?.Invoke($"seikkailu: tietokortti avautui {k.Numero} {k.Lyhyt} (loppu)");
             Talleta();
             var o = new List<string>(); var t = new List<string>(); var l = new List<string>();

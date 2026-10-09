@@ -80,7 +80,7 @@ namespace Matkakirja.Natiivi
             kuljettu = Rakenne.El("mk-metrolinja__kuljettu", juuri, PickingMode.Ignore);
             // KYLTTI (omistaja 9.10.2026: "metrokartan voisi myös nimetä "kaupunki kierros" kyltillä sen yläpuolelle"): linjan
             // yläpuolelle asemanimien tyylillä (sama valkoinen, varjo ja ääriviiva), lihavana; linja siirtyy kyltin verran alas.
-            kyltti = Rakenne.Teksti("Kaupunkikierros", "mk-metrolinja__nimi", juuri);
+            kyltti = Rakenne.Teksti(Kieli.T("ui.opas.metro.kaupunkikierros"), "mk-metrolinja__nimi", juuri);
             kyltti.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(kyltti, Kirjasin.ModerniLihava);
             kyltti.style.position = Position.Absolute;

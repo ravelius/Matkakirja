@@ -57,11 +57,16 @@ namespace Matkakirja.Natiivi
         public Aanentasot(UiKerros kerros, Func<float> alareuna) : base(kerros, alareuna, "mk-aanentasot")
         {
             AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
-            Otsikko("Äänentasot").AddToClassList("mk-aanentasot__otsikko");
+            // MIKSERI (omistaja 9.10.2026 klo 09.5x): vain kehittäjäkoodilla; tasot nykyisen kontekstin (pallo, linna, ISS …) mukaan,
+            // ryhmän rivillä väkänen avaa ryhmän rekisteröidyt äänet omin säätimin; "Tallenna kaikille" vie kontekstin tasot workeriin.
+            otsikko = Otsikko("Äänentasot");
+            otsikko.AddToClassList("mk-aanentasot__otsikko");
             foreach (var v in Asetukset.VoimaJarjestys) Saadinrivi(v);
-            // KEHITTÄJÄ (omistaja 8.10. 17.5x): "Tallenna oletuksiksi" kirjoittaa tasot asetukset.json-palana (aanet.mikseri) laitteelle
-            // Documents/mikseri-oletukset.json, leikepöydälle ja lokiin; vienti kokoelmat/asetukset.jsoniin → kaikkien oletus.
-            oletuksiksi = Rakenne.Nappi("Tallenna oletuksiksi", "mk-pikkunappi", TallennaOletuksiksi, Sisalto);
+            var napit = Rakenne.El("mk-saadinrivi", Sisalto, PickingMode.Ignore);
+            oletuksiksi = Rakenne.Nappi(Kieli.T("ui.mikseri.tallenna-kaikille"), "mk-pikkunappi", TallennaKaikille, napit);
+            palauta = Rakenne.Nappi(Kieli.T("ui.mikseri.palauta"), "mk-pikkunappi", () => { Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.PalautaYhteiset(Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Nyt); Asetukset.Tallenna(); Paivita(); }, napit);
+            mikseriTila = Rakenne.Teksti("", "mk-offline__selite", Sisalto);
+            Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Muuttui += () => { if (Auki && kontekstiNaytetty != Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Nyt) Paivita(); };
 
             offlineOsio = Rakenne.El("mk-offline", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("LATAA OFFLINE-KÄYTTÖÖN", "mk-pudotus__otsikko", offlineOsio);
@@ -75,19 +80,68 @@ namespace Matkakirja.Natiivi
             Asetukset.Muuttui += nimi => { if (Auki && !Asetukset.OnTaso(nimi)) Paivita(); };
         }
 
-        void Saadinrivi(Voima v) => saatimet[v] = LuoSaadinrivi(Sisalto, v);
+        void Saadinrivi(Voima v)
+        {
+            saatimet[v] = LuoSaadinrivi(Sisalto, v);
+            // Väkänen ryhmän riville ja ryhmän äänet sen alle (rakennetaan avattaessa nykyisen kontekstin rekisteristä).
+            var rivi = saatimet[v].Saadin.parent;
+            var lista = Rakenne.El(null, Sisalto, PickingMode.Ignore);
+            lista.style.display = DisplayStyle.None;
+            lista.style.marginLeft = Tyylikirja.Vali.L;
+            Button vakanen = null;
+            vakanen = Rakenne.Nappi(null, "mk-pikkunappi", () =>
+            {
+                bool auki = lista.style.display == DisplayStyle.None;
+                if (auki) RakennaAanet(v, lista);
+                lista.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+                vakanen.style.rotate = new Rotate(auki ? 90f : 0f);
+                vakanen.tooltip = Kieli.T(auki ? "ui.mikseri.piilota-aanet" : "ui.mikseri.nayta-aanet", Asetukset.Nimi(v));
+            }, rivi, Ikonit.NuoliOikea);
+            vakanen.tooltip = Kieli.T("ui.mikseri.nayta-aanet", Asetukset.Nimi(v));
+            vakaset[v] = (vakanen, lista);
+        }
 
-        readonly Button oletuksiksi;
+        /// <summary>Ryhmän rekisteröidyt äänet nykyisessä kontekstissa: säädin 0–200 % (kerroin, 100 % = ennallaan).</summary>
+        static void RakennaAanet(Voima v, VisualElement lista)
+        {
+            lista.Clear();
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            foreach (var (id, nimi) in m.AanetRyhmassa(m.Nyt, Asetukset.Ryhma(v)))
+            {
+                string avain = Matkakirja.Linssit.Aanet.Aanimikseri.AaniAvain(m.Nyt, id);
+                var rivi = Rakenne.El("mk-saadinrivi", lista);
+                Rakenne.Teksti(nimi, "mk-saadinrivi__nimi", rivi);
+                var sl = new Slider(0, 200) { pageSize = 0, fill = true };
+                sl.AddToClassList("mk-saadin");
+                rivi.Add(sl);
+                var arvo = Rakenne.Teksti("", "mk-saadinrivi__arvo", rivi);
+                int p0 = Mathf.RoundToInt(m.AaniKerroin(m.Nyt, id) * 100f);
+                sl.SetValueWithoutNotify(p0); arvo.text = p0 + " %";
+                sl.RegisterValueChangedCallback(e =>
+                {
+                    int p = Mathf.RoundToInt(e.newValue);
+                    arvo.text = p + " %";
+                    m.Aseta(avain, p / 100f);
+                });
+                sl.RegisterCallback<PointerCaptureOutEvent>(_ => Asetukset.Tallenna());
+            }
+        }
 
-        static void TallennaOletuksiksi()
+        readonly Dictionary<Voima, (Button Vakanen, VisualElement Lista)> vakaset = new Dictionary<Voima, (Button, VisualElement)>();
+        readonly Button oletuksiksi, palauta;
+        readonly Label otsikko, mikseriTila;
+        string kontekstiNaytetty;
+
+        void TallennaKaikille()
         {
             Asetukset.Tallenna();
-            string json = Asetukset.MikseriJson();
-            string polku = System.IO.Path.Combine(Application.persistentDataPath, "mikseri-oletukset.json");
-            try { System.IO.File.WriteAllText(polku, json); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA mikseri: " + e.Message); }
-            GUIUtility.systemCopyBuffer = json;
-            Debug.Log("MATKAKIRJA mikseri oletuksiksi: " + json);
-            if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti("Mikserin tasot tallennettu oletuksiksi vientiä varten (leikepöydällä)");
+            mikseriTila.text = "…";
+            MikseriPalvelin.TallennaKaikille(viesti =>
+            {
+                mikseriTila.text = viesti;
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(viesti);
+                Paivita();
+            });
         }
 
         /// <summary>Äänentason liukusäädinrivi (myös iPhonen Asetukset-osion yläosa, Paavalikko).</summary>
@@ -122,9 +176,25 @@ namespace Matkakirja.Natiivi
 
         protected override void Paivita()
         {
+            // Mikseri vain kehittäjäkoodilla (omistaja 9.10. 09.5x: "Muille … näitä miksereitä ei näy"); muille vain offline-osio.
+            bool mikseri = osa != Osa.Offline && Asetukset.Kehittaja;
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
             foreach (var e in Sisalto.Children())
-                if (e != offlineOsio) e.style.display = osa == Osa.Offline ? DisplayStyle.None : DisplayStyle.Flex;
-            if (oletuksiksi != null) oletuksiksi.style.display = osa != Osa.Offline && Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+                if (e != offlineOsio) e.style.display = mikseri ? DisplayStyle.Flex : DisplayStyle.None;
+            foreach (var (vakanen, lista) in vakaset.Values)
+            {
+                if (kontekstiNaytetty != m.Nyt) { lista.style.display = DisplayStyle.None; vakanen.style.rotate = new Rotate(0f); }
+            }
+            foreach (var pari in vakaset)
+            {
+                bool aania = m.AanetRyhmassa(m.Nyt, Asetukset.Ryhma(pari.Key)).Count > 0;
+                pari.Value.Vakanen.style.visibility = aania ? Visibility.Visible : Visibility.Hidden;
+                if (!mikseri) pari.Value.Lista.style.display = DisplayStyle.None;
+            }
+            kontekstiNaytetty = m.Nyt;
+            otsikko.text = Kieli.T("ui.mikseri.otsikko", MikseriPalvelin.KontekstinNimi(m.Nyt)).ToUpperInvariant();
+            int omia = m.OmiaMuutoksia(m.Nyt);
+            mikseriTila.text = omia > 0 ? Kieli.T("ui.mikseri.tila-omia", MikseriPalvelin.Tila, omia) : MikseriPalvelin.Tila;
             PaivitaSaatimet(saatimet);
             PaivitaOffline();
         }

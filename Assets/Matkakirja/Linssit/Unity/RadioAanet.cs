@@ -209,22 +209,30 @@ namespace Matkakirja.Natiivi
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
             ((DownloadHandlerAudioClip)p.downloadHandler).compressed = true; // ei mp3:n purkua pääsäikeessä (EsityksenAani)
             yield return p.SendWebRequest();
-            if (p.result == UnityWebRequest.Result.Success) ladatut[url] = DownloadHandlerAudioClip.GetContent(p);
+            if (p.result == UnityWebRequest.Result.Success)
+            {
+                var c = DownloadHandlerAudioClip.GetContent(p);
+                string id = Tunnus(url); c.name = id; ladatut[url] = c;
+                Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Rekisteroi("linssit", "tehosteet", id, "Maailmanradio: viritys " + id.Substring(id.IndexOf('-') + 1), id);
+            }
             else Debug.LogWarning($"MATKAKIRJA radio: viritysääni {url} ei latautunut: {p.error}");
         }
 
-        public float Voimakkuus { set { aani = Mathf.Clamp01(value); if (soi && haiveKesto <= 0) lahde.volume = aani; } }
+        /// <summary>Mikseritunnus osoitteesta: radio.viritys-&lt;nimi&gt; (esim. …/viritys-taajuustungos.mp3).</summary>
+        static string Tunnus(string url) => "radio." + System.IO.Path.GetFileNameWithoutExtension(url);
+        float Kerroin => lahde.clip != null ? Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("tehosteet", lahde.clip.name) : 1f;
+        public float Voimakkuus { set { aani = Mathf.Clamp01(value); if (soi && haiveKesto <= 0) lahde.volume = aani * Kerroin; } }
 
         public void Aloita()
         {
             using var _ = LinssiOhjain.Merkki("radio", "Viritin.Aloita").Auto();
             haiveKesto = 0;
-            if (soi && lahde.isPlaying) { lahde.volume = aani; return; }
+            if (soi && lahde.isPlaying) { lahde.volume = aani * Kerroin; return; }
             var valmiit = new List<AudioClip>(ladatut.Values);
             if (valmiit.Count == 0) { soi = false; return; }
             lahde.clip = valmiit[Random.Range(0, valmiit.Count)];
             lahde.time = Random.Range(0f, Mathf.Max(0, lahde.clip.length - 1f));
-            lahde.volume = aani;
+            lahde.volume = aani * Kerroin;
             lahde.Play();
             soi = true;
         }
@@ -284,6 +292,16 @@ namespace Matkakirja.Natiivi
             L(RadioEfekti.KytkinPois, "kytkin-pois");
             L(RadioEfekti.Lampeneminen, "lampeneminen");
             L(RadioEfekti.Lukittuminen, "lukittuminen");
+            // Mikserirekisteri (PT 9.10., Pelikoodarin aanikooste/linssit): maailmanradion tehosteet omilla tunnuksillaan.
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            if (e.silmukka.clip != null) e.silmukka.clip.name = "radio.kohina";
+            m.Rekisteroi("linssit", "tehosteet", "radio.kohina", "Maailmanradio: kohina", "radio.kohina");
+            foreach (var (k, id, nimi) in new[] { (RadioEfekti.KytkinPaalle, "radio.kytkin-paalle", "Maailmanradio: kytkin päälle"), (RadioEfekti.KytkinPois, "radio.kytkin-pois", "Maailmanradio: kytkin pois"),
+                (RadioEfekti.Lampeneminen, "radio.lampeneminen", "Maailmanradio: putkien lämpeneminen"), (RadioEfekti.Lukittuminen, "radio.lukittuminen", "Maailmanradio: asema lukittuu") })
+            {
+                if (e.leikkeet.TryGetValue(k, out var lc)) lc.name = id;
+                m.Rekisteroi("linssit", "tehosteet", id, nimi, id);
+            }
             if (e.silmukka.clip == null || e.leikkeet.Count < 4)
                 Debug.LogWarning($"MATKAKIRJA radio: tehosteita {e.leikkeet.Count}/4, silmukka {(e.silmukka.clip != null ? "ok" : "puuttuu")}");
             return e;
@@ -291,7 +309,7 @@ namespace Matkakirja.Natiivi
 
         public void Soita(RadioEfekti efekti, float voimakkuus)
         {
-            if (leikkeet.TryGetValue(efekti, out var c) && voimakkuus > 0) kerta.PlayOneShot(c, Mathf.Clamp01(voimakkuus));
+            if (leikkeet.TryGetValue(efekti, out var c) && voimakkuus > 0) kerta.PlayOneShot(c, Mathf.Clamp01(voimakkuus) * Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("tehosteet", c.name));
         }
 
         public float Kohina { set => kohina = Mathf.Clamp01(value); }
@@ -301,7 +319,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.clip == null) return;
             kohinaNyt += (kohina - kohinaNyt) * (1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
             if (kohina <= 0 && kohinaNyt < 0.002f) kohinaNyt = 0;
-            silmukka.volume = kohinaNyt;
+            silmukka.volume = kohinaNyt * Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("tehosteet", "radio.kohina");
             if (kohinaNyt > 0 && !silmukka.isPlaying) { silmukka.time = Random.Range(0f, silmukka.clip.length); silmukka.Play(); }
             else if (kohinaNyt <= 0 && silmukka.isPlaying) silmukka.Stop();
         }

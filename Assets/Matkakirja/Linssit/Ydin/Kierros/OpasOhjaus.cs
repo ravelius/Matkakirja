@@ -17,7 +17,10 @@ namespace Matkakirja.Linssit.Kierros
         // Omistaja TF 167 (9.10.): manuaaliohjaus alle puoleen (ennen 50 / 28 / 0,9) ja pehmeämpi tapin vaste (ennen 0,18 s).
         public const double KiertoMaxAstS = 22, KallistusMaxAstS = 12, EtaisyysMaxS = 0.4;   // täysi tappi (etäisyys log-asteikolla /s)
         public const double SyoteAikaS = 0.3, HiipumaAikaS = 0.45, PaluuS = 1.5, KuollutAlue = 0.12;
-        public const double KallistusMin = 25, KallistusMax = 78, EtMinM = 110, EtMaxM = 2200, KattoYlaM = 55, YlaKerroin = 1.5;
+        public const double KallistusMin = 25, EtMinM = 110, EtMaxM = 2200, KattoYlaM = 55, YlaKerroin = 1.5;
+        /// <summary>Jyrkkyyden yläraja: pallossa 84° (ESITTELYKORKEUS, omistaja TF 169: rakennuksen puolivälin korkeudelta, katse lähes
+        /// vaakaan), muualla 78°.</summary>
+        public static double KallistusMax => OpasSilmukka.PalloLento ? 84 : 78;
 
         /// <summary>Pelaajan siirtymät automaattiseen kehykseen: kierto (°), jyrkkyys (°, + = vaakaan) ja etäisyyskerroin (log).</summary>
         public double Kierto { get; private set; }
@@ -47,17 +50,18 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Siirtymät automaattiseen asentoon rajoineen. maaM = maan korkeus ellipsoidista kohteessa (kattoraja).</summary>
-        public Kuvakulma Sovella(Kuvakulma perus, double maaM)
+        public Kuvakulma Sovella(Kuvakulma perus, double maaM, double kattoYla = double.NaN)
         {
+            double katto = double.IsNaN(kattoYla) ? KattoYlaM : kattoYla;   // kohteen oma kattoraja (Pysahdys.KattoYlaM)
             double kall = Rajaa(perus.Kallistus + Kallistus, KallistusMin, KallistusMax);
             // Rajat perussuhteisia (Linssiseppä 6.10.: kaupungin vaihdon 5 km:n yläkuva hyppäsi 2 200 m:iin): enintään
             // max(EtMaxM, 1,5 × perus), vähintään min(EtMinM, perus) — perusasento itse on aina sallittu.
             double et = Rajaa(perus.EtaisyysM * Math.Exp(EtaisyysLog), Math.Min(EtMinM, perus.EtaisyysM), Math.Max(EtMaxM, perus.EtaisyysM * YlaKerroin));
             // Korkeusraja: kameran korkeus = katse + et·cos(kall) ≥ maa + KattoYlaM → cos(kall) ≥ (maa + KattoYlaM − katse) / et.
-            double tarve = (maaM + KattoYlaM - perus.KatseKorkeusM) / et;
+            double tarve = (maaM + katto - perus.KatseKorkeusM) / et;
             if (tarve > 0)
             {
-                if (tarve >= 1) et = Math.Max(et, maaM + KattoYlaM - perus.KatseKorkeusM);   // suoraan ylhäältä ja kauemmas
+                if (tarve >= 1) et = Math.Max(et, maaM + katto - perus.KatseKorkeusM);   // suoraan ylhäältä ja kauemmas
                 double maxKall = Math.Acos(Math.Min(1, tarve)) * 180 / Math.PI;
                 kall = Math.Min(kall, maxKall);
             }
@@ -72,13 +76,14 @@ namespace Matkakirja.Linssit.Kierros
         /// kohdekehys on sama kuin pysähdyksen Sovella-asento levossa (Linssiseppä 8.10., PalloKaupungitTestit: matalilla kehyksillä
         /// kamera hyppäsi saapuessa 1,5–14,5 m, kun raja tuli voimaan vasta pysähdyksellä).
         /// </summary>
-        public static Kuvakulma Rajoita(Kuvakulma perus, double maaM)
+        public static Kuvakulma Rajoita(Kuvakulma perus, double maaM, double kattoYla = double.NaN)
         {
+            double katto = double.IsNaN(kattoYla) ? KattoYlaM : kattoYla;
             double kall = Rajaa(perus.Kallistus, KallistusMin, KallistusMax), et = perus.EtaisyysM;
-            double tarve = (maaM + KattoYlaM - perus.KatseKorkeusM) / Math.Max(1e-6, et);
+            double tarve = (maaM + katto - perus.KatseKorkeusM) / Math.Max(1e-6, et);
             if (tarve > 0)
             {
-                if (tarve >= 1) et = Math.Max(et, maaM + KattoYlaM - perus.KatseKorkeusM);
+                if (tarve >= 1) et = Math.Max(et, maaM + katto - perus.KatseKorkeusM);
                 kall = Math.Min(kall, Math.Acos(Math.Min(1, tarve)) * 180 / Math.PI);
             }
             return new Kuvakulma(perus.Lat, perus.Lon, et, kall, perus.Suuntima, perus.KatseKorkeusM);

@@ -82,6 +82,10 @@ namespace Matkakirja.Natiivi
             esiIkoni.AddToClassList("mk-linssivalitsin__esiikoni");
             esiIkoni.pickingMode = PickingMode.Ignore;
             esiKuva.Add(esiIkoni);
+            // Havainnekuvan merkintä kuvan alle (Raamattu KUVAT; linssikatalogin Codex-kuvat), lähderivin pohjalla.
+            esiMerkki = Rakenne.Teksti(Kieli.T("ui.opas.lahde.havainnekuva"), "mk-linssivalikko__lahde", esiSisus);
+            Kirjasimet.Aseta(esiMerkki, Kirjasin.Moderni);
+            esiMerkki.style.display = DisplayStyle.None;
             esiOtsikko = Rakenne.Teksti("", "mk-linssivalitsin__esiotsikko", esiSisus);
             Kirjasimet.Aseta(esiOtsikko, Kirjasin.LukuLihava);
             esiTeksti = Rakenne.Teksti("", "mk-linssivalitsin__esiteksti", esiSisus);
@@ -119,9 +123,11 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti(teksti.ToUpperInvariant(), "mk-linssivalitsin__valiotsikko", isa ?? lisaosa);
 
         /// <summary>Äänentasojen liukusäätimet (Asetukset-näkymä; entinen Äänentasot-paneeli).</summary>
-        public void LisaSaatimet(VisualElement isa = null)
+        public void LisaSaatimet(VisualElement isa = null, VisualElement otsikko = null)
         {
             var kuori = Rakenne.El("mk-linssivalitsin__saatimet", isa ?? lisaosa, PickingMode.Ignore);
+            saadinOsat.Add(kuori);
+            if (otsikko != null) saadinOsat.Add(otsikko);
             foreach (var v in Asetukset.VoimaJarjestys)
             {
                 var (s, a) = Aanentasot.LuoSaadinrivi(kuori, v);
@@ -129,8 +135,13 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Äänentasojen osat (otsikko ja säätimet): näkyvät vain kehittäjäkoodilla (omistaja 9.10. 09.5x).</summary>
+        readonly System.Collections.Generic.List<VisualElement> saadinOsat = new System.Collections.Generic.List<VisualElement>();
+
         void PaivitaSaatimet()
         {
+            var nd = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            foreach (var e in saadinOsat) if (e.style.display != nd) e.style.display = nd;
             foreach (var (s, a, v) in saatimet)
             {
                 int p = Mathf.RoundToInt(Asetukset.Taso(v) * 100f);
@@ -237,6 +248,7 @@ namespace Matkakirja.Natiivi
                 Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; VaraaEsikatselu(); });
         }
 
+        Label esiMerkki;
         string taytetty;
 
         /// <summary>
@@ -251,6 +263,7 @@ namespace Matkakirja.Natiivi
             esiTeksti.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
             esikatselu.style.visibility = StyleKeyword.Null;
             esiKuva.style.backgroundImage = StyleKeyword.Null;
+            esiMerkki.style.display = DisplayStyle.None;
             void Kuvake(bool nakyy)
             {
                 bool on = nakyy && !string.IsNullOrEmpty(ikoni);
@@ -264,7 +277,11 @@ namespace Matkakirja.Natiivi
             Kuvat.Hae(kuvaUrl, tex =>
             {
                 if (taytetty != id) return;
-                if (tex != null) esiKuva.style.backgroundImage = new StyleBackground(tex);
+                if (tex != null)
+                {
+                    esiKuva.style.backgroundImage = new StyleBackground(tex);
+                    if (OnKatalogiKuva(kuvaUrl)) esiMerkki.style.display = DisplayStyle.Flex;
+                }
                 else Kuvake(true);
             });
         }

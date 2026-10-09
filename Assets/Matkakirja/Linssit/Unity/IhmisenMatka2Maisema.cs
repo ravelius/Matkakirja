@@ -13,6 +13,8 @@
 //   uusi kierros toisella lähteellä ja vanha häivytetään sen alta (web sama koneisto).
 //   TASO: Voima (web MAISEMAN_VOIMA 0,10) × pelaajan taustataso; kertojan puheen alla väistö (web lisaaVaistaja).
 //   Asetus "Äänimaisema" pois tai sovellus mykistetty → hiljaa. Puuttuva manifesti tai tiedosto on hiljaisuus, ei virhe.
+//   MIKSERI (Natiivi-UI 9.10., Ydin Aanimikseri): jokainen manifestin maisema omana äänenään konteksti linssit, ryhmä maisema,
+//   tunnus ihmisen-matka.<tunnus>, klipin nimi maisema-<tunnus>; taso Kerroin("maisema", tunnus) korvaa Asetukset.Taso(Voima.Tausta).
 //   TAUKO (löydös 148): esityksen tauolla maisema hiljenee TaukoTasolle kuten linssin raita (Pysakkiajo.TaukoHimmennys)
 //   TaukoS:ssä ja palaa jatkossa; paikka ei vaikene kokonaan, mutta kertomus odottaa.
 using System.Collections;
@@ -50,7 +52,7 @@ namespace Matkakirja.Natiivi
         AudioSource a, b;          // vuorotellen: kärki (nouseva) ja hiipuva
         AudioSource karki, hiipuva;
         float karjenKerroin, hiipuvanKerroin;
-        string tyyppi, haluttu;
+        string tyyppi, haluttu, hiipuvaTyyppi;
         bool lopetus;
 
         public static IhmisenMatka2Maisema Luo(Transform isanta)
@@ -87,8 +89,19 @@ namespace Matkakirja.Natiivi
                     if (o is Dictionary<string, object> r && r.TryGetValue("tunnus", out var tu) && tu is string tunnus
                         && r.TryGetValue("tiedosto", out var ti) && ti is string tiedosto)
                         t[tunnus] = tiedosto;
+            foreach (var tunnus in t.Keys)
+                Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Rekisteroi("linssit", "maisema", AaniId(tunnus),
+                    "Ihmisen matka II: " + tunnus.Replace('-', ' ').Replace('_', ' '), "maisema-" + tunnus);
             tiedostot = t;
             LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: äänimaisemia {t.Count}");
+        }
+
+        /// <summary>Mikserin tunnus manifestin tunnuksesta (pienet kirjaimet, numerot, ._:/-).</summary>
+        public static string AaniId(string tunnus)
+        {
+            var sb = new System.Text.StringBuilder("ihmisen-matka.");
+            foreach (char c in tunnus.ToLowerInvariant()) sb.Append((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.' || c == '-' ? c : '-');
+            return sb.ToString();
         }
 
         /// <summary>Jakson maisema (tunnus tai null = hiljaisuus). Sama tyyppi jatkuu katkeamatta.</summary>
@@ -133,9 +146,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Ristihäivytys uuteen klippiin (null = häivytys hiljaisuuteen). Kesken oleva hiipuva katkaistaan.</summary>
         void Vaihda(string tunnus, AudioClip klippi)
         {
+            string tyyppiEnnen = tyyppi;
             tyyppi = tunnus;
             if (hiipuva != null) { hiipuva.Stop(); hiipuva.volume = 0; }
             hiipuva = karki != null && karki.isPlaying ? karki : null;
+            hiipuvaTyyppi = hiipuva != null ? tyyppiEnnen : null;
             hiipuvanKerroin = karjenKerroin;
             karki = null;
             karjenKerroin = 0;
@@ -155,12 +170,13 @@ namespace Matkakirja.Natiivi
             Vaihda(null, null);
         }
 
-        float Taso()
+        float Taso(string tunnus)
         {
             // Vain Äänimaisema-kytkin (koko pelin mykistys, web sfx.enabled). EI EsityksenAani.Mykistetty: se on tosi myös,
             // kun pelaaja on ottanut pelkän kertojan pois, eikä kertojan poisto saa vaientaa paikkojen ääniä.
             if (!Asetukset.Paalla(Kytkin.Aanimaisema)) return 0f;
-            float t = MaisemanVoima * Asetukset.Taso(Voima.Tausta) * taukoKerroin;
+            if (tunnus == null) return 0f;
+            float t = MaisemanVoima * Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("maisema", AaniId(tunnus)) * taukoKerroin;
             return KertojaSoi != null && KertojaSoi() ? t * Vaisto : t;
         }
 
@@ -170,11 +186,11 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             taukoKerroin = Mathf.MoveTowards(taukoKerroin, Tauolla ? TaukoTaso : 1f, Time.unscaledDeltaTime * (1f - TaukoTaso) / TaukoS);
-            float dt = Time.unscaledDeltaTime, taso = Taso();
+            float dt = Time.unscaledDeltaTime;
             if (karki != null)
             {
                 karjenKerroin = Mathf.MoveTowards(karjenKerroin, 1f, dt / RistiS);
-                karki.volume = taso * Teho(karjenKerroin);
+                karki.volume = Taso(tyyppi) * Teho(karjenKerroin);
                 // Silmukan sauma: uusi kierros toisella lähteellä ristihäivytyksen verran ennen loppua.
                 if (karki.clip != null && karki.clip.length > RistiS * 2 && karki.time >= karki.clip.length - RistiS)
                 {
@@ -185,7 +201,7 @@ namespace Matkakirja.Natiivi
             if (hiipuva != null)
             {
                 hiipuvanKerroin = Mathf.MoveTowards(hiipuvanKerroin, 0f, dt / (lopetus ? LoppuS : RistiS));
-                hiipuva.volume = taso * Teho(hiipuvanKerroin);
+                hiipuva.volume = Taso(hiipuvaTyyppi) * Teho(hiipuvanKerroin);
                 if (hiipuvanKerroin <= 0f) { hiipuva.Stop(); hiipuva = null; }
             }
         }
