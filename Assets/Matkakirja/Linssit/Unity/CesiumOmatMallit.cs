@@ -186,6 +186,14 @@ namespace Matkakirja.Linssit
                 t.showCreditsOnScreen = false;   // oma tekijärivi Tekijat-kentästä
                 t.createPhysicsMeshes = false;
                 t.forbidHoles = true;
+                // PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus): mallin kaikki LOD-tasot (lod2 + lod1 + lod0) olivat muistissa
+                // yhtä aikaa (preloadAncestors, forbidHoles, välimuisti 512 Mt) = korjatullakin datalla 575 Mt GPU:ta. Kevyt lataus: vain
+                // näkyvä taso + välimuisti 64 Mt (käyttämätön taso vapautuu), 2 latausta kerrallaan (kuvien purku ei kasaannu).
+                if (Matkakirja.Natiivi.KaupunkiKuva.PieniMuisti && Matkakirja.Natiivi.KaupunkiKuva.PieniLataus)
+                {
+                    t.preloadAncestors = false; t.forbidHoles = false;
+                    t.maximumCachedBytes = 64L << 20; t.maximumSimultaneousTileLoads = 2;
+                }
                 // Omat mallit tarkemmin kuin Googlen laatat (simu 9.10. 04.5x: Googlen SSE 16 piti 420 m:stä Notre-Damen karkeimmalla LOD2:lla,
                 // virhe 1,7 m → SSE ~15). Mallit ovat pieniä (LOD0 30–120 k), joten LOD0 jo noin 1 km:stä.
                 t.maximumScreenSpaceError = Mathf.Min(OmaSse, googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f);
