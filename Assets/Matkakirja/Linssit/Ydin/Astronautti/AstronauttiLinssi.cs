@@ -775,13 +775,14 @@ namespace Matkakirja.Linssit.Astronautti
         /// <summary>Mikserin tunnus (PT 9.10.: ISS-äänet rekisteriin; Natiivi-UI:n Aanimikseri).</summary>
         public const string SuhinaTunnus = "iss-kaasu-suhina";
         static readonly bool suhinaRekisteroity = RekisteroiSuhina();
-        static bool RekisteroiSuhina() { Aanet.Aanimikseri.Yhteinen.Rekisteroi("iss", "tehosteet", SuhinaTunnus, "Kaasusuhina (ohjaus)", "iss-kaasu-suhina-loop"); return true; }
+        // Maisemaryhmässä: Aanisoittimen silmukkapooli kertoo kaikki silmukat jo maisemaryhmällä (TaustanKerroin; Natiivi-UI), joten tässä vain äänen kerroin.
+        static bool RekisteroiSuhina() { Aanet.Aanimikseri.Yhteinen.Rekisteroi("iss", "maisema", SuhinaTunnus, "Kaasusuhina (ohjaus)", "iss-kaasu-suhina-loop"); return true; }
 
         void PaivitaSuhina()
         {
             bool cupola = kyyti.Tila == Iss.KyydinTila.Ikkuna;
             if (suhina == null && cupola && !string.IsNullOrEmpty(SuhinaUrl) && y != null) suhina = y.Silmukka(SuhinaUrl);
-            suhina?.Voimakkuus(cupola && JoystickLiikkuu && suhinaRekisteroity ? Aanet.Aanimikseri.Yhteinen.Kerroin("tehosteet", SuhinaTunnus) : 0f, SuhinaLiukuS);
+            suhina?.Voimakkuus(cupola && JoystickLiikkuu && suhinaRekisteroity ? Aanet.Aanimikseri.Yhteinen.AaniKerroin("iss", SuhinaTunnus) : 0f, SuhinaLiukuS);
         }
 
         /// <summary>Nopeutus (web asetaNopeus): 1 = Palaa LIVE (pehmeä kelaus todelliseen hetkeen), 10, 100 tai 1000. Ylilento unohtuu.</summary>
