@@ -189,6 +189,15 @@ namespace Matkakirja.Natiivi
         IVisualElementScheduledItem heilunta, syke;
 
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
+#if UNITY_EDITOR
+        /// <summary>Asettelutesti (vain editori): ohjaamo näkyviin kyydin tilassa ilman linssiä ja kyytiaikaa.</summary>
+        public void TestiNayta(KyydinTila t)
+        {
+            Tila = t;
+            juuri.style.display = t == KyydinTila.Kauko ? DisplayStyle.None : DisplayStyle.Flex;
+            PaivitaPoydat(t);
+        }
+#endif
         /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
         public static bool IlmanKehysta;
         /// <summary>

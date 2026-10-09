@@ -279,8 +279,8 @@ namespace Matkakirja.Editori
                     if (nakymaNro >= Nakymat.Length) { Siirry(Vaihe.Linna); break; }
                     if (kehyksia < 10) return;
                     ennen = NakyvatOhjaimet();
-                    Nakymat[nakymaNro].Avaa();
-                    Siirry(Vaihe.OdotaNakyma);
+                    try { Nakymat[nakymaNro].Avaa(); Siirry(Vaihe.OdotaNakyma); }
+                    catch (Exception e) { Virhe($"{Nakymat[nakymaNro].Nimi}: avaus kaatui {e.GetType().Name}: {e.Message}"); nakymaNro++; Siirry(Vaihe.Nakyma); }
                     break;
                 case Vaihe.OdotaNakyma:
                 {
@@ -547,6 +547,15 @@ namespace Matkakirja.Editori
             ("radio", () => Linssi("radio"), SuljeLinssi, 0.6),
             ("maan kyltti", () => Linssi("maa ITA"), SuljeLinssi, 0.6),
             ("linssin selite", () => Linssi("selite"), () => { Linssi("selite pois"); SuljeLinssi(); }, 0.6),
+            // Linssin sovitinta vaativat näkymät editorin testikytkimillä (#if UNITY_EDITOR, PT 10.10.2026).
+            ("ajattelijat", () => AjattelijatSovitin.TestiValinta(true), () => { AjattelijatSovitin.TestiValinta(false); SuljeKaikki(); }, 1.0),
+            ("ISS-ohjaamo", () => UiNakymat.Hae().Linssit.Astronautti.Kyyti.TestiNayta(Matkakirja.Linssit.Iss.KyydinTila.Ikkuna),
+                () => UiNakymat.Hae().Linssit.Astronautti.Kyyti.TestiNayta(Matkakirja.Linssit.Iss.KyydinTila.Kauko), 1.0),
+            ("karttavalikko", () =>
+                {
+                    UiNakymat.Hae().Linssit.TestiKarttalinssi("topografia");
+                    UiKerros.Hae().Juuri(LinssiUi.RadioKerros).schedule.Execute(() => Linssi("karttavalikko auki")).StartingIn(200);
+                }, () => { UiNakymat.Hae().Linssit.TestiKarttalinssi(null); SuljeKaikki(); }, 1.0),
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
                 () => { var o = OpasValikko.Hae(); o.Komento("mika pois"); o.Komento("vapaalento pois"); o.Komento("sulje"); }, 0.6),
         };

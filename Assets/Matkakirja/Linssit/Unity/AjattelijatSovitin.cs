@@ -87,6 +87,10 @@ namespace Matkakirja.Natiivi
         public static AjattelijaTekstit Tekstit { get; private set; }
         /// <summary>Avaus, sulku, valinta, lataus valmis tai lopetus.</summary>
         public static event Action Muuttui;
+#if UNITY_EDITOR
+        /// <summary>Asettelutesti (vain editori): valintanäkymä ilman linssin ohjainta (aineisto Resources/Ajattelijat).</summary>
+        public static void TestiValinta(bool auki) { AukiNyt = auki; Valittu = null; Lopussa = false; LueAjattelijat(); Muuttui?.Invoke(); }
+#endif
 
         public static void Valitse(string tunnus) => Instanssi?.AloitaKohtaus(tunnus);
         /// <summary>
