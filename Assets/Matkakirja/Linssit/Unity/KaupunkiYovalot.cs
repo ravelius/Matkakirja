@@ -27,6 +27,8 @@ namespace Matkakirja.Natiivi
         // v4 (Päätoimittaja 22.3x): valosaaste kevyeksi, katuvalot OSM-katujen mukaan (ei satunnaisia pisteitä), ikkunat harvoiksi.
         /// <summary>Diagnoosi (komento opas yovalot N): 0 normaali, 1 passi violettina, 2 maailmanpaikka, 3 Black Marble, 4 lisävalo × 5.</summary>
         public static float Diagnoosi;
+        /// <summary>Koe: true = kaupunkikameran MSAA pois yöllä, false = päällä, null = ei kosketa.</summary>
+        public static bool? MsaaPois;
         static readonly int IdDebug = Shader.PropertyToID("_ValoDebug");
         public static float Hehku = 0.04f, Pisteet = 1.4f, SoluM = 18f, Ikkunat = 0.8f, IkkunaOsuus = 0.25f;
         /// <summary>Kohteen valaistus (v4): oppaan nykyinen kohde (lat, lon, maan korkeus ellipsoidista m, säde m) saa yöllä lämpimän
@@ -83,6 +85,8 @@ namespace Matkakirja.Natiivi
         {
             Osuus = Kaytossa && georef != null ? (float)System.Math.Max(0, System.Math.Min(1, osuus)) : 0f;
             viimeKamera = kamera;
+            // Koe (diagnoosi): MSAA pois yöllä, jos syvyys jää tyhjäksi esivaiheessa (opas yovalotmsaa 0).
+            if (MsaaPois != null && kamera != null) { bool sallittu = !(MsaaPois.Value && Kaytossa && osuus > 0.001); if (kamera.allowMSAA != sallittu) kamera.allowMSAA = sallittu; }
             if (!Kaytossa || osuus <= 0.001 || georef == null || kamera == null) { Pois(); return; }
             var ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed(new double3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z));
             var llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
