@@ -475,6 +475,17 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        static HashSet<string> linssiTaustaUrlit;
+        static bool OnLinssiTausta(string url)
+        {
+            if (linssiTaustaUrlit == null)
+            {
+                linssiTaustaUrlit = new HashSet<string>(StringComparer.Ordinal);
+                foreach (var t in LinssiTaustat.Values) { linssiTaustaUrlit.Add(t.Url); linssiTaustaUrlit.Add(AaniOsoite.Url(t.Url)); }
+            }
+            return linssiTaustaUrlit.Contains(url) || linssiTaustaUrlit.Contains(AaniOsoite.Url(url));
+        }
+
         static double MaisemaKerroin(Lahde l)
         {
             var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
@@ -496,7 +507,8 @@ namespace Matkakirja.Natiivi
             if (l.A == null) return;
             // Äänimikseri (Natiivi-UI:n rekisteri, juna 172): kartan äänimaisemakorin äänite omalla tunnuksellaan ryhmään maisema
             // soittohetken kontekstissa; taso × äänen kerroin (ryhmätaso tulee jo Tausta-voimasta AaniTilan kautta).
-            if (l.Kanava == Kanava.Maisema && taso > 0 && !string.IsNullOrEmpty(l.Url)) taso *= MaisemaKerroin(l);
+            // Linssin taustaääni (LinssiTaustat) on myös Maisema-kanavalla, mutta sillä on linssin oma tunnus ja kerroin (LS2) → ohi.
+            if (l.Kanava == Kanava.Maisema && taso > 0 && !string.IsNullOrEmpty(l.Url) && !OnLinssiTausta(l.Url)) taso *= MaisemaKerroin(l);
             if (l.Komp != null) { l.A.volume = 1f; l.Komp.Taso = (float)taso; }
             else l.A.volume = (float)Math.Min(1.0, taso);
         }
