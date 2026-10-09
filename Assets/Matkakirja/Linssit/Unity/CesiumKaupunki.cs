@@ -413,6 +413,7 @@ namespace Matkakirja.Natiivi
             if (auki && kamera != null) omat.Kamera(kamera.transform.position);
             Muistivahti();
             PaivitaPysaytys();
+            if (KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM) TarkistaReiat();   // kaukomaa myös kiinteällä kameralla (simu 9.10. 10.4x: ei laukeamista)
             PaivitaKarkea();
             SeuraaTarkentumista();
         }
