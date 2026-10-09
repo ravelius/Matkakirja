@@ -17,9 +17,12 @@ namespace Matkakirja.Linssit.Elava
     {
         static readonly byte[] Valkoinen = { 238, 238, 232, 255 }, Kerma = { 226, 220, 200, 255 }, Musta = { 28, 28, 30, 255 },
             Pohja = { 128, 38, 34, 255 }, Ikkuna = { 34, 46, 58, 255 }, Lankku = { 156, 128, 96, 255 }, Kelta = { 216, 172, 60, 255 },
-            Sininen = { 32, 66, 120, 255 }, Harmaa = { 112, 116, 120, 255 }, Puu = { 120, 84, 52, 255 }, Oranssi = { 210, 96, 36, 255 };
+            Sininen = { 32, 66, 120, 255 }, Harmaa = { 112, 116, 120, 255 }, Puu = { 120, 84, 52, 255 }, Oranssi = { 210, 96, 36, 255 },
+            Lasi = { 120, 150, 168, 255 }, Tummansininen = { 24, 40, 72, 255 }, Penkki = { 70, 78, 88, 255 }, Punainen = { 168, 40, 36, 255 };
 
-        public static readonly string[] Tyypit = { "saaristolaiva", "hoyrylaiva", "lautta", "pendelbat" };
+        // Pariisi (PT 9.10., omistajan TF 169: Seinen laivat punavalkoraitaisina laatikkoina): jokilaiva (bateau-mouche) ja
+        // kiertoajelu (vedette / Batobus) tarkempina; muut VeneMalleista.
+        public static readonly string[] Tyypit = { "saaristolaiva", "hoyrylaiva", "lautta", "pendelbat", "jokilaiva", "kiertoajelu" };
         public static bool Tukee(string tyyppi) => Array.IndexOf(Tyypit, tyyppi) >= 0;
 
         sealed class R
@@ -133,6 +136,25 @@ namespace Matkakirja.Linssit.Elava
             }
         }
 
+        /// <summary>Suorakulmainen laatikko (penkit, kaiteet, ohjaamon katto): keskipiste (x, y + sy/2, z), mitat sx × sy × sz.</summary>
+        static void Laatikko(R r, float x, float y, float z, float sx, float sy, float sz, byte[] v)
+        {
+            float a = x - sx / 2, b = x + sx / 2, c = y, d = y + sy, e = z - sz / 2, f = z + sz / 2; var k = P(x, y + sy / 2, z);
+            r.Q(P(a, c, e), P(b, c, e), P(b, d, e), P(a, d, e), v, k); r.Q(P(a, c, f), P(b, c, f), P(b, d, f), P(a, d, f), v, k);
+            r.Q(P(a, c, e), P(a, c, f), P(a, d, f), P(a, d, e), v, k); r.Q(P(b, c, e), P(b, c, f), P(b, d, f), P(b, d, e), v, k);
+            r.Q(P(a, d, e), P(b, d, e), P(b, d, f), P(a, d, f), v, k);
+        }
+
+        /// <summary>Lasikattoinen salonki (jokilaivat): matala seinä, isot ikkunat ja loiva lasikatto harjalla.</summary>
+        static void LasiSalonki(R r, float y, float z, float sx, float sy, float sz, byte[] seina)
+        {
+            Rakennus(r, y, z, sx, sy, sz, seina, Lasi, true);
+            float hx = sx / 2 * 0.96f, hz = sz / 2 * 0.98f, harja = y + sy + sx * 0.12f; var k = P(0, y + sy * 0.5f, z);
+            r.Q(P(-hx, y + sy, z - hz), P(-hx, y + sy, z + hz), P(0, harja, z + hz), P(0, harja, z - hz), Lasi, k);
+            r.Q(P(hx, y + sy, z - hz), P(hx, y + sy, z + hz), P(0, harja, z + hz), P(0, harja, z - hz), Lasi, k);
+            for (int i = -3; i <= 3; i++) Laatikko(r, 0, y + sy, z + i * sz / 7f, sx * 0.98f, 0.08f, 0.12f, seina);   // kattokaaret
+        }
+
         /// <summary>Pyöreä savupiippu: 12 sivua, kallistus taaksepäin, raita ja musta yläpää.</summary>
         static void Piippu(R r, float y, float z, float halk, float korkeus, byte[] runko, byte[] raita)
         {
@@ -230,6 +252,26 @@ namespace Matkakirja.Linssit.Elava
                     Piippu(r, h + 2.4f, -4f, 0.6f, 1.8f, Valkoinen, Sininen);
                     foreach (int s in new[] { 1, -1 }) Pelastusvene(r, s * b * 0.35f, h + 2.4f, -6f, 1.8f, Oranssi);
                     return r.Valmis(l, b, h + 6f);
+                }
+                case "jokilaiva":   // bateau-mouche (~50 m): valkoinen matala runko, tummansininen raita, pitkä lasikattoinen salonki,
+                {                   // perässä avoin kansi penkkiriveineen, ohjaamo keulassa, lippu perässä
+                    float l = 50, b = 9.0f, h = 1.3f;
+                    Runko(r, l, b, h, Valkoinen, Tummansininen, 0.3f);
+                    LasiSalonki(r, h, -3f, b * 0.86f, 2.1f, l * 0.58f, Valkoinen);
+                    Rakennus(r, h, 15.5f, b * 0.42f, 2.4f, 3.6f, Valkoinen, Valkoinen, true);   // ohjaamo
+                    for (int i = 0; i < 4; i++) Laatikko(r, 0, h, -19.5f + i * 1.3f, b * 0.7f, 0.45f, 0.5f, Penkki);   // avoin peräkansi
+                    foreach (int s2 in new[] { 1, -1 }) Laatikko(r, s2 * b * 0.43f, h, -19f, 0.06f, 0.9f, 6f, Valkoinen);   // kaide
+                    Masto(r, h, -23f, 3.2f, Valkoinen);
+                    return r.Valmis(l, b, h + 4f);
+                }
+                case "kiertoajelu":   // vedette / Batobus (~24 m): matala, tummansininen, lähes koko pituudelta lasikattoinen salonki
+                {
+                    float l = 24, b = 5.6f, h = 1.3f;
+                    Runko(r, l, b, h, Tummansininen, Valkoinen, 0.25f);
+                    LasiSalonki(r, h, -0.5f, b * 0.84f, 1.7f, l * 0.66f, Tummansininen);
+                    Laatikko(r, 0, h, -10.5f, b * 0.6f, 0.4f, 1.2f, Penkki);
+                    Masto(r, h, -9.5f, 2.4f, Valkoinen);
+                    return r.Valmis(l, b, h + 3.2f);
                 }
                 default: return null;
             }
