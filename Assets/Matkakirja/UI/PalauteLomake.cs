@@ -37,7 +37,7 @@ namespace Matkakirja.Natiivi
             var o = PeliOhjain.Instanssi;
             if (o?.Matka != null)
             {
-                osat.Add("Maailman aarrekartta");
+                osat.Add("Maailman aarrekartta");   // kieli: ei (tilanne lähtee palvelimelle (sivu-kenttä) ja palautuu näkyviin; lähetettävä data jää suomeksi)
                 var s = o.Matka.Tila.Pelaaja.Sijainti;
                 if (s.Kaupungissa && UiSisalto.Kaupunki(s.Kaupunki)?.Nimi is string nimi) osat.Add(nimi);
             }
@@ -81,13 +81,9 @@ namespace Matkakirja.Natiivi
         public static VisualElement PeriaateLohko(VisualElement isa, int kerros)
         {
             var lohko = Rakenne.El("mk-palaute", isa, PickingMode.Ignore);
-            Lomake.Valiotsikko(lohko, "Palaute ja mukaan").AddToClassList("mk-palaute__valiotsikko--alku");
-            Lomake.Teksti(lohko, "Jos tämä peli kiinnostaa, lähetä palautetta. "
-                + "Voit myös osallistua pelin kehittämiseen — sisältöä, kuvia, "
-                + "kysymyksiä tai koodia.");
-            Lomake.Teksti(lohko, "Valikossa on nappi \"ehdota sisältöä\". Sitä "
-                + "napauttamalla voit lähettää palautetta juuri siitä kohdasta, "
-                + "jossa olet — kätevää etenkin, jos jokin näyttää menneen vikaan.");
+            Lomake.Valiotsikko(lohko, Kieli.T("ui.palaute.palaute-ja-mukaan")).AddToClassList("mk-palaute__valiotsikko--alku");
+            Lomake.Teksti(lohko, Kieli.T("ui.palaute.periaate-1"));
+            Lomake.Teksti(lohko, Kieli.T("ui.palaute.periaate-2"));
             Kentat(lohko, "", kerros);
             return lohko;
         }
@@ -96,52 +92,47 @@ namespace Matkakirja.Natiivi
         static VisualElement EhdotusOsio(VisualElement isa, string sivu, int kerros)
         {
             var lohko = Rakenne.El("mk-palaute__osio", isa, PickingMode.Ignore);
-            Lomake.Teksti(lohko, "Näitkö matkallasi kuvan tai aiheen, joka kuuluisi "
-                + "johonkin pelin lehteen? Lähetä se tästä. Tiimi käy ehdotuksesi läpi "
-                + "ja kaikki hyvät ja sopivat muutokset lisätään peliin. Mikäli haluat "
-                + "lisätä peliin enemmän sisältöä, voit hakea pro-sisällöntuottaja "
-                + "statusta.");
-            var kuvat = new Kuvavalinta(lohko, $"Kuvat (enintään {Palautekanava.Kuvia})", Palautekanava.Kuvia, Palautekanava.EhdotuksenSivu);
-            var teksti = Lomake.Kentta(lohko, "Juttuidea tai kuvateksti — mistä kuva on ja miksi se sopisi lehteen?", Kenttalaji.Monirivi);
+            Lomake.Teksti(lohko, Kieli.T("ui.palaute.ehdotus-johdanto"));
+            var kuvat = new Kuvavalinta(lohko, Kieli.T("ui.palaute.kuvat-enintaan", Palautekanava.Kuvia), Palautekanava.Kuvia, Palautekanava.EhdotuksenSivu);
+            var teksti = Lomake.Kentta(lohko, Kieli.T("ui.palaute.juttuidea"), Kenttalaji.Monirivi);
             Lomake.Huomio(lohko, !string.IsNullOrEmpty(sivu)
-                ? "Ehdotus kohdistuu sivulle: " + sivu
-                : "Ehdotus kohdistuu koko peliin (et ole juuri nyt lehdessä).");
-            var tarkenne = Lomake.Kentta(lohko, "Tarkennus: mille sivulle tai osastolle? (vapaaehtoinen)");
-            var nimimerkki = Lomake.Kentta(lohko, "Nimi tai nimimerkki (vapaaehtoinen)");
-            var krediitti = new Rasti(lohko, "Nimeni saa näkyä pelin krediiteissä");
-            var posti = Lomake.Kentta(lohko, "Sähköposti (vapaaehtoinen)", Kenttalaji.Sahkoposti);
-            Lomake.Huomio(lohko, "Sähköposti on vain ilmoitusta varten — sitä ei julkaista eikä käytetä mihinkään muuhun.");
-            var lisenssi = new Rasti(lohko, "Kuva on ottamani tai minulla on oikeus antaa se peliin, ja se saa julkaista "
-                + "pelissä tekijän nimellä (CC BY -henkisesti).");
+                ? Kieli.T("ui.palaute.kohdistuu-sivulle", sivu)
+                : Kieli.T("ui.palaute.kohdistuu-peliin"));
+            var tarkenne = Lomake.Kentta(lohko, Kieli.T("ui.palaute.tarkennus"));
+            var nimimerkki = Lomake.Kentta(lohko, Kieli.T("ui.palaute.nimimerkki"));
+            var krediitti = new Rasti(lohko, Kieli.T("ui.palaute.krediitti"));
+            var posti = Lomake.Kentta(lohko, Kieli.T("ui.palaute.sahkoposti"), Kenttalaji.Sahkoposti);
+            Lomake.Huomio(lohko, Kieli.T("ui.palaute.sahkoposti-seloste"));
+            var lisenssi = new Rasti(lohko, Kieli.T("ui.palaute.lisenssi"));
             lisenssi.Nayta(false);
             var proHaku = ProOsio.HakuRasti(lohko, kerros);
             Button nappi = null;
             Label huomio = null;
             kuvat.Muuttui += () => lisenssi.Nayta(kuvat.Valitut.Count > 0);
 
-            nappi = Lomake.Laheta(lohko, "Lähetä ehdotus", () =>
+            nappi = Lomake.Laheta(lohko, Kieli.T("ui.palaute.laheta-ehdotus"), () =>
             {
                 string idea = teksti.value.Trim();
                 if (kuvat.Valitut.Count == 0 && idea.Length == 0)
                 {
-                    huomio.text = "Kirjoita juttuidea tai valitse kuva.";
+                    huomio.text = Kieli.T("ui.palaute.kirjoita-idea");
                     teksti.Focus();
                     return;
                 }
                 // Hakemus kulkee ehdotuksen tekstin etuliitteenä ja vaatii sähköpostin.
                 if (proHaku.Arvo && posti.value.Trim().Length == 0)
                 {
-                    huomio.text = "Jätä sähköpostisi, jotta pro-hakemukseesi voi vastata.";
+                    huomio.text = Kieli.T("ui.palaute.jata-sahkoposti");
                     posti.Focus();
                     return;
                 }
                 if (kuvat.Valitut.Count > 0 && !lisenssi.Arvo)
                 {
-                    huomio.text = "Vahvista vielä, että kuvan saa julkaista.";
+                    huomio.text = Kieli.T("ui.palaute.vahvista-julkaisu");
                     return;
                 }
                 nappi.SetEnabled(false);
-                huomio.text = "Lähetetään…";
+                huomio.text = Kieli.T("ui.pulu.lahetetaan");
                 var kentat = new List<(string, string)>
                 {
                     ("laji", ""),
@@ -165,10 +156,9 @@ namespace Matkakirja.Natiivi
                     tarkenne.value = "";
                     kuvat.Tyhjenna();
                     lisenssi.Nayta(false);
-                    Lomake.Nimi(nappi, "Lähetetty");
+                    Lomake.Nimi(nappi, Kieli.T("ui.palaute.lahetetty"));
                     // Palkkiosta kerrotaan vasta onnistumisen jälkeen (päätoimittaja 18.8.2026).
-                    huomio.text = "Kiitos! Ehdotus on perillä. Jos ehdotuksesi päätyy "
-                        + "lehteen, saat palkkioksi pelirahaa — jätä sähköpostisi niin kuulet siitä.";
+                    huomio.text = Kieli.T("ui.palaute.kiitos-ehdotus");
                 });
             });
             huomio = Lomake.Huomio(lohko, "");
@@ -197,7 +187,7 @@ namespace Matkakirja.Natiivi
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
             var kortti = new Kortti("mk-tietoja mk-palaute-ikkuna", pohja: true); // KORTTI-pohja (web #3796): vain kuori; kentät ennallaan
             himmennys.Add(kortti);
-            var otsikko = Rakenne.Teksti("Kerro mitä huomasit", "mk-kortti__otsikko", kortti.Sisus);
+            var otsikko = Rakenne.Teksti(Kieli.T("ui.palaute.kerro-mita-huomasit"), "mk-kortti__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
@@ -205,7 +195,7 @@ namespace Matkakirja.Natiivi
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var takaisin = Rakenne.Nappi("Takaisin peliin", "mk-nappi--toiminto", Sulje, napit);
+            var takaisin = Rakenne.Nappi(Kieli.T("ui.palaute.takaisin-peliin"), "mk-nappi--toiminto", Sulje, napit);
             Kirjasimet.Aseta(takaisin, Kirjasin.KoneLihava);
         }
 
@@ -459,7 +449,7 @@ namespace Matkakirja.Natiivi
             this.sivu = sivu;
             yksi = enintaan == 1;
             Lomake.Nimio(isa, nimio);
-            var nappi = Rakenne.Nappi(yksi ? "Valitse kuva" : "Valitse kuvat", "mk-palaute__kuvanappi", Valitse, isa);
+            var nappi = Rakenne.Nappi(Kieli.T(yksi ? "ui.palaute.valitse-kuva" : "ui.palaute.valitse-kuvat"), "mk-palaute__kuvanappi", Valitse, isa);
             Kirjasimet.Aseta(nappi, Kirjasin.Kone);
             Tieto = Lomake.Huomio(isa, "");
         }
@@ -470,7 +460,7 @@ namespace Matkakirja.Natiivi
             // editorissa ja ilman liitännäistä kuvia ei voi valita.
             if (Palautekanava.Kuvanvalitsin == null)
             {
-                Tieto.text = "Kuvan valinta ei vielä toimi tässä sovelluksessa.";
+                Tieto.text = Kieli.T("ui.palaute.kuvanvalinta-ei-toimi");
                 return;
             }
             Palautekanava.Kuvanvalitsin(enintaan, sivu, kuvat => UiKerros.PaaSaikeessa(() => Aseta(kuvat)));
@@ -483,13 +473,13 @@ namespace Matkakirja.Natiivi
             if (kuvat == null || kuvat.Count == 0) return;
             Valitut.Clear();
             if (kuvat.Count > enintaan)
-                Tieto.text = $"Valitse enintään {enintaan} kuvaa.";
+                Tieto.text = Kieli.T("ui.palaute.valitse-enintaan", enintaan);
             else
             {
                 long tavut = 0;
                 foreach (var k in kuvat) { if (k?.Tavut == null) continue; Valitut.Add(k); tavut += k.Tavut.Length; }
                 string megat = (tavut / (1024.0 * 1024.0)).ToString("0.0", CultureInfo.InvariantCulture);
-                Tieto.text = yksi ? $"Kuva valmiina ({megat} Mt)." : $"{Valitut.Count} kuvaa valmiina ({megat} Mt).";
+                Tieto.text = yksi ? Kieli.T("ui.palaute.kuva-valmiina", megat) : Kieli.T("ui.palaute.kuvia-valmiina", Valitut.Count, megat);
             }
             Muuttui?.Invoke();
         }
