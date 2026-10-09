@@ -189,8 +189,9 @@ namespace Matkakirja.Natiivi
         static Vector4 MustaKorvaus => Hamara ? new Vector4(0.045f, 0.047f, 0.05f, 4f) : new Vector4(0.27f, 0.28f, 0.29f, 4f);
         /// <summary>Kuori hämäräkuvalla (DioraamaTunnelma.Hamara; DioraamaSovitin asettaa ennen Aloita-kutsua).</summary>
         public static bool Hamara;
-        /// <summary>Koe (arvio 10 virhe 1, "poikki historia saari 1"): tyhjän saaren maa linnan alla koko historian ajan (lounaispuolen aukot).</summary>
-        public static bool SaariAlla;
+        /// <summary>Tyhjän saaren maa linnan alla koko historian ajan (arvio 10 virhe 1, PT 9.10.: lounaispuolen vedenväriset aukot
+        /// täyttyvät maalla); "poikki historia saari 0" palauttaa vanhan (saari vain ennen kuoren nousua).</summary>
+        public static bool SaariAlla = true;
         static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
         static void TasainenRanta(Renderer r)
         {
