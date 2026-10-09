@@ -755,6 +755,44 @@ namespace Matkakirja.Natiivi
             if (puhe != null) puhe.volume = KertojanTaso;
             if (silta != null) silta.volume = KertojanTaso;
             if (ukkosLahde != null) ukkosLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(ukkosLahde.volume, UkkosenTavoite(), Time.unscaledDeltaTime);
+            if (kelloLahde != null && kelloLahde.isPlaying) kelloLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(kelloLahde.volume, KellojenTavoite(), Time.unscaledDeltaTime);
+        }
+
+        // ---- KIRKONKELLOT (Päätoimittaja 9.10., juna 170; Pelikoodari aanet/sonniss-aanet-v2/kirkonkellot-kyla.mp3, Sonniss, 30 s
+        // silmukka, −23 LUFS): kun pallo pysähtyy kehityskaupungin kirkkokohteeseen, kellot soivat kerran kierroksella kaupunkia kohti
+        // KelloS sekuntia pehmeästi häivyttäen, etäisyyden mukaan hiljaa ja kertojan alla väistäen (OpasAanitasot.Maisema). ----
+        public const string KelloOsoite = "https://media.matkakirja.app/aanet/sonniss-aanet-v2/kirkonkellot-kyla.mp3";
+        public const float KelloS = 24f, KelloHaivytysS = 3f, KelloPerus = 0.55f, KelloVertailuM = 300f;
+        AudioSource kelloLahde; AudioClip kelloKlippi; readonly HashSet<string> kellotSoineet = new HashSet<string>(); float kelloAlku, kelloEtaisyys = 300f;
+
+        static bool OnKirkko(OpasKohde k) => k != null && (string.Equals(k.Luokka, "kirkko", StringComparison.OrdinalIgnoreCase)
+            || (k.Nimi ?? "").IndexOf("kirkko", StringComparison.OrdinalIgnoreCase) >= 0 || (k.Nimi ?? "").IndexOf("katedraali", StringComparison.OrdinalIgnoreCase) >= 0);
+
+        float KellojenTavoite()
+        {
+            float t = Time.unscaledTime - kelloAlku;
+            float haivytys = Mathf.Clamp01(t / KelloHaivytysS) * Mathf.Clamp01((KelloS - t) / KelloHaivytysS);
+            float etaisyys = Mathf.Clamp(KelloVertailuM / Mathf.Max(1f, kelloEtaisyys), 0.25f, 1f);
+            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? 1f : 0f);
+        }
+
+        IEnumerator SoitaKellot(OpasKohde k)
+        {
+            if (kelloKlippi == null)
+            {
+                using var p = UnityWebRequestMultimedia.GetAudioClip(KelloOsoite, AudioType.MPEG);
+                p.timeout = 20;
+                yield return p.SendWebRequest();
+                if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"opas: kirkonkellot ei latautunut ({p.responseCode})"); yield break; }
+                kelloKlippi = DownloadHandlerAudioClip.GetContent(p);
+            }
+            if (silmukka == null || silmukka.Nykyinen != k) yield break;
+            if (kelloLahde == null) { kelloLahde = o.gameObject.AddComponent<AudioSource>(); kelloLahde.playOnAwake = false; kelloLahde.spatialBlend = 0; kelloLahde.loop = true; }
+            kelloEtaisyys = (float)silmukka.Asento.EtaisyysM;
+            kelloLahde.clip = kelloKlippi; kelloLahde.volume = 0; kelloAlku = Time.unscaledTime; kelloLahde.Play();
+            o.Kirjaa($"opas: kirkonkellot {k.Nimi} ({kelloEtaisyys:F0} m)");
+            while (kelloLahde != null && Time.unscaledTime - kelloAlku < KelloS) yield return null;
+            if (kelloLahde != null) kelloLahde.Stop();
         }
 
         void SoitaUkkonen()
@@ -1231,6 +1269,7 @@ namespace Matkakirja.Natiivi
             var jono = new List<(string, double, double)>();
             foreach (var t in v.kierrosKohteet ?? v.kohteet) jono.Add((t.Nimi, t.Lat, t.Lon));
             v.o.Kirjaa($"opas: kaupunkikierros {jono.Count} kohdetta");
+            v.kellotSoineet.Clear();   // kirkonkellot kerran kierroksella
             v.silmukka.AloitaKierros(jono);
             v.Silta(OpasSiltalauseet.Aloitus, true);
             return true;
@@ -2675,6 +2714,8 @@ namespace Matkakirja.Natiivi
             // päivittää kaikkien ~850 laatan sijainnit samassa ruudussa); kaupungin sisällä float-tarkkuus riittää SaapumisOrigoRajaM:iin.
             kaupunki.SiirraOrigoTarvittaessa(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45, SaapumisOrigoRajaM);
             if (puhuttu != k) AlkaaPuhua(k);   // ei aloitettu lennon lopussa (esim. sama paikka): nyt
+            if (!Testi && OpasSilmukka.PalloLento && silmukka.KierrosKaynnissa && OnKirkko(k) && NykyinenKaupunkiId is string kid && Kehityskaupungit.On(kid) && kellotSoineet.Add(kid))
+                o.StartCoroutine(SoitaKellot(k));
             if (!k.Id?.StartsWith("kysy-") ?? true) PaivitaKysymykset(k);
             saapumisia++;
             o.StartCoroutine(Siivoa());
@@ -2894,7 +2935,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
-            YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false; Nosto?.Piilota();
+            YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false; Nosto?.Piilota(); if (kelloLahde != null) kelloLahde.Stop(); kellotSoineet.Clear();
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true); KohdeKorostus.Piilota(true);
             KaupunkiYovalot.Kohde = null;
