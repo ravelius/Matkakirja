@@ -11937,3 +11937,43 @@ Omistaja 9.10.2026 klo 12.0x (chat) sanatarkasti: "Ei kannata pyytää Lyriasta 
 ## VARUSTEKUVAT FOTOREALISTISINA (MINI JA ISO) (9.10.2026 klo 12.06)
 
 Omistaja 9.10.2026 klo 12.0x (chat) sanatarkasti: "tee mini ja iso kumpikin fotona" — vastaus kolmen tyylin vertailuun (A akvarelli, F foto, K käsinpiirretty rajattu paletti; 4 kohdetta mini + iso, sekä 10 varustekuvaa akvarelli vs. foto; PT suositteli mini A + iso F). Linja: matkalaukun varustekuvat eli linssien ja pelien minikuva listassa ja iso kuva ennen aktivointia tehdään fotorealistisina Codexilla (merkintä havainnekuva kuten muissakin Codexin kuvissa); korvaa saman päivän klo 08.4x linjan "varustekuvat akvarellina". Kartan nähtävyysminiatyyrit pysyvät akvarelleina. Heikot fotot uusitaan Codexilla: yökartta (Afrikka lähes pimeä), tähdet (ei tunnistettavaa tähtikuviota), linnan poikkileikkaus (leikkaus vain osin näkyvissä).
+
+## LUENNAT KAIKKI KERRALLA, PULU 5 KYSYMYSTÄ + 1 LINKKITASO (OMISTAJA 9.10.2026 KLO 12.2x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 12.2x (kortti): luennat "Kaikki kerralla (Suositus)" — nostot 1 788 korttia 1 370 954 mrk (+31 % arviosta) + kuusi lajia 684 914 mrk + lehtikorjaus ~300 000 mrk ≈ 2,36 milj. mrk ≈ 156 000 krediittiä (William, eleven_v4_turbo, yksi otto); raja +15 % (~2,7 milj. mrk), sen ylittyessä kysytään ensin. Pulu "5 kysymystä + 1 linkkitaso (Suositus)" ~31 800 vastausta ~207 $; pilotti Ranska + Sisältökirjurin pistokoe 30 vastausta → sitten koko Eurooppa; Pulun luentaääniä ei vielä. Toteutus: Pelikoodari (luennat, valmis ~15.30, PCM-masterit T7:llä) ja Natiivi-UI (Pulu).
+
+## NOTRE-DAME JA KUNINKAANLINNA ENSIN, SITTEN TARVEARVIO (OMISTAJA 9.10.2026 KLO 12.3x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 12.3x (chat) sanatarkasti: "Anna havainnekuva, kun Notre-Damen 3D valmistuu, samoin Tukholman kohde. Ja sitten kun ne saadaan valmiiksi ja kun olen ne hyväksynyt, niin jatketaan kaupunkien muihin kohteisiin. Tosin kannattaa tehdä seuraavaksi tarvearvio, että ei tehdä turhaa työtä, eli korjataan vain ilmeisimmät virheet sekä tärkeimmät kohteet, mahdollisimman hienoksi, jos ne eivät jo sellaisia ole." → Raamattu OMAT 3D-MALLIT, JÄRJESTYS. LR: ND v6 + KL v2 pelin kuvina PT:n tarkistuksen kautta; LS2: tarvearvio docs/raportit/tarvearvio-pariisi-tukholma-20261009.md (Pariisi: Palais Bourbon ja ministeriöalue, Banque de France, Orsayn kehys, Quai Branly; Tukholma: Vasa ja Riddarholmen OmaMalli-apilla uudelleen).
+
+## PALLON LENTO SAA OLLA NOPEA, KIIHDYTYS JA JARRUTUS PEHMEÄT (OMISTAJA 9.10.2026 KLO 13.1x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 13.1x (chat) sanatarkasti: "Kyllä lento voi olla nopea. Tärkeintä on vain se, että kiihdytys on pehmeää, samoin jarrutus, jolloin voidaan säästää aikaa." → LS1: ei 1 rad/s -kulmanopeusrajaa (PT:n aiempi hyväksyntä kumottu), lentoajat ennallaan, pehmeä S-käyrä kiihdytykseen ja jarrutukseen; Raamattu PALLON LIIKE (kamera-ajot) tarkennettu.
+
+## UNITY 6.7 LTS JUNAN 172 JÄLKEEN (OMISTAJA 9.10.2026 KLO 13.3x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 13.0x kysyi Unity 6.6/6.7/7:stä ja NanoGeosta → PT: nyt 6.3 LTS (6000.3.24f1); suositus 6.7 LTS junan 172 jälkeen selvityksen kautta, Unity 7 vakiintumisen jälkeen; NanoGeoa seurataan. Omistaja 13.3x: "Lisäksi ehdotuksesi siitä, että otetaan Unitin 6.7 LTS. Seuraavan junan jälkeen käyttöön kuulostaa hyvältä idealta ja myös muut ehdotuksesi olivat hyviä." + 13.4x: "niin päästään kehittämään heti sen jälkeen uudella versiolla Unitya." → Natiiviseppä: selvitys erillisessä haarassa (Cesium, Steam Audio, OmaMalli/DioraamaValaistu-varjostimet, iOS/Mac-käännös), vaihto vasta 6.7:n LTS-julkaisun jälkeen ja omistajan luvalla. Raamattu NATIIVI PELI ETUSIJALLE.
+
+## PULU LOW, RANSKA ENSIN PILVIKREDIITEILLÄ (OMISTAJA 9.10.2026 KLO 13.3x–13.4x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 13.3x (chat) sanatarkasti: "Tuo low-tasohan näyttää paremmalta kuin ilman asetusta. Se on nopein ja vie vähiten kredittejä, ja yksi muotovirhe ei haittaa mitään, joten ajetaan sillä ensimmäinen erä ja käytetään vain viikkokiintiötä tai sitten, jos on niitä, clauden ilmaisia Pilvikredittejä, niin käytetään niitä ensin pois näihin. Se aina riippuu vähän tilistä, onko niitä jäljellä vai ei. Mutta tehdään nyt vaikka Ranskan kaikki pulun jutut ensimmäisessä erässä ja katsotaan kuinka paljon se vie aikaa ja viikkokulutusta ja mietitään sen jälkeen asiaa uudestaan." + 13.4x: "Pilvikredittejä on 250 dollaria jäljellä, niin käytä ennemmin niitä ensin." → Ranska pilvisessiossa session_011hQ7s3WYK4Kao3UcQ79nE6, haara pulu-ranska-pilvi (vaihe 1: 295 vastausta, 0 virhettä). PT:n high/low-arvio 13.41 (keskustelu Paatoimittaja-2026-10-09-klo-0046-1341.md): tyyliero pieni, high vähän enemmän persoonaa, low useammin konkreettisia lisätietoja, high ~20 % kalliimpi ja ~60 % hitaampi → low. NUI 13.5x: natiivi-ui/pulu-valmiit 80625b5c2 junaan 173; "live vain kehittäjälle" pois, kunnes koko Euroopan paketit valmiit (PT). Raamattu PULU ESIGENEROITUNA.
+
+## ITALIAN GALLERIA PIILOTETAAN ITALIAN APP STORESSA (OMISTAJA 9.10.2026 KLO 13.4x) (9.10.2026 klo 13.56)
+
+Italian lakiselvitys valmis 13.3x (docs/raportit/italia-kulttuuriperintolaki-20261009.md): Codice art. 107–108 lupa + maksu italialaisten julkisten haltijoiden teosten kaupalliseen jäljentämiseen (myös PD ja ministeriön ohjeen mukaan Commons-kuvat); tuomiot David/GQ 2023, Bologna 2024, Venetsia/Ravensburger 2022 vs. Stuttgart 2024/2025. Omistaja 13.4x (chat) sanatarkasti: "Ja kierretään sitä lupaa niin, että mikäli peli julkaistaan Italiassa, niin poistetaan silloin siitä Italian gallerian kuvat, jos mikään muu ei auta." → Raamattu TAIDEMUSEO-LINSSI (MAITTAIN, ALANKOMAAT ENSIN; ITALIA). Lisäselvitykset (DM 108/2024, museohinnastot, muut Euroopan maat) ajetaan uudelleen Sonnet-agenteilla PT:n nollauksen jälkeen.
+
+## JUNA 172 PÄÄTOIMITTAJAN HARKINNALLA: LUKITTU JA TESTFLIGHT (OMISTAJA 9.10.2026 KLO 13.4x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 13.4x (chat) sanatarkasti: "Voit julkaista junan 172 heti, kun sinusta tuntuu, että se on hyvä, niin päästään kehittämään heti sen jälkeen uudella versiolla Unitya." → Natiiviseppä lukitsi BUILD 172:n 13.45 (proto 1c2ecbe32, runko 936c84e66, käännös 105df6483, näyttönimi "Matkakirja"; Steam Audio pois junaan 173 simulaattorilinkityksen takia); Julkaisija käynnisti TF 172:n 13.48 (iOS 37919863047, muutosloki #4287) sisäisille, osoitin v6b testaajilla-vaiheessa.
+
+## KESKUSTELU TALLENNETAAN ENNEN OMAA NOLLAUSTA (OMISTAJA 9.10.2026 KLO 13.4x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 13.4x (chat) sanatarkasti: "ja mitä vastasit siihen pulun high/low tyyli arvioon? se katosi kun teit tyhjennyksen. sinun pitäisi tallentaa aina keskustelu, kuten teit aiemmin. puutuukohan tämä tieto raamatusta? keskustelut pitäisi tulla näkyviin tänne talon tilaan (ruutukaappaus)" → syy: tallennus (7.10.) oli vain Clauden muistissa, ei Raamatussa, ja 9.10. 13.4x oma nollaus jäi tallentamatta. Korjaus: keskustelu tallennettu jälkikäteen (/Users/Shared/Claude/keskustelut/Paatoimittaja-2026-10-09-klo-0046-1341.md), työkalu scratchpadista repoon tools/tallenna-keskustelu.py (oletuksena uusin istunto, aikavyöhyke Europe/Helsinki), Raamattu FABLEN OMA NOLLAUS: tallennus ennen clear_sessionia ja polku luovutukseen.
+
+## PARIISIN NYKYINTRO: PÄÄTOIMITTAJAN PÄÄTÖKSET (9.10.2026 KLO 13.5x) (9.10.2026 klo 13.56)
+
+LS1:n kuvakäsikirjoitus #4286 (docs/kohtaukset/pallokierros/pariisi-nykyintro.md, main 576475ac4; omistajan toive 11.5x "nopea intro nykyajan tunnelmista pariisissa ja sitten laskeuduttaisiin isoisän maailmaan"). PT päätti hyväksytyn suunnan (30–40 s) sisällä: 1) pituus 31 s (8 hiljaista + 8 groovetahtia, mitattu), 2) Codex-havainnekuvat C1–C5 (Sisältökirjuri tilaa; C5 1870-luvun versio pelin avausnäkymästä LS1:n referenssikuvalla), 3) otsikkorivi "PARIISI · nyt · kello · sää" nousun kohdalla olemassa olevalla nimikylttipohjalla (3–4 s, peitto < 5 %, Moderni), 4) ensimmäisen kyydin opastus Notre-Damen pysähdyksen jälkeen. Toteutus junaan 173 tai myöhemmin kuvien tultua; Pelikoodari muuttaa kaupunkijakson (nopea katkeaa 31 s, hidas heti).
+
+## UNREAL VAIN TYÖN AJAN (9.10.2026 KLO 13.5x) (9.10.2026 klo 13.56)
+
+Omistaja 9.10.2026 klo 13.4x–13.5x: "unreal käynnistyi uudestaan. pidetäänkö se päällä?" + "Unrealiin oli tullut joitain juttuja, niin se halusi uudelleenkäynnistyksen, niin minä tein sen, mutta mietin, että tarvitseeko sen enää olla päällä." → PT: ei tarvita (LR:n MetaHuman-voudin ARKit-vienti valmistui 10.41); linja: Unreal-editori avataan vain työn ajaksi ja suljetaan heti sen jälkeen, koska se kuormittaa näytönohjainta saman Macin käännösten aikana (LR kuittasi). Raamattu MetaHuman-kohta.
