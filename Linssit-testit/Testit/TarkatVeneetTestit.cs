@@ -38,6 +38,7 @@ namespace Matkakirja.Linssit.Testit
                 }
                 Oleta.Sama(0, vaarin, $"{tyyppi}: kiertojärjestys normaalia vastaan");
                 var pp = TarkatVeneet.Piippu(tyyppi);
+                if (tyyppi == "jokilaiva" || tyyppi == "kiertoajelu") { Oleta.Tosi(pp == null, $"{tyyppi}: Seinen dieselveneissä ei piippua (ei savua)"); continue; }
                 Oleta.Tosi(pp != null && pp[1] > 4 && pp[1] <= v.Korkeus && pp[2] > minZ && pp[2] < maxZ, $"{tyyppi}: piippu");
             }
             Oleta.Tosi(TarkatVeneet.Luo("vene") == null && !TarkatVeneet.Tukee("vene") && TarkatVeneet.Tukee("hoyrylaiva"), "muut LS1:n malleista");
