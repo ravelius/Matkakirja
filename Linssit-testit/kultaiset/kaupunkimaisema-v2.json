@@ -1,0 +1,130 @@
+{
+ "versio": 1,
+ "kuvaus": "Kaupunkikohtainen sorina (PT 9.10.: ei vieraskielistä puhetta): Tukholma ruotsiksi, Pariisi ranskaksi. Yleiset kerrokset aanet/kaupunkimaisema-v1.",
+ "kaupungit": {
+  "tukholma": [
+   {
+    "tunnus": "tori",
+    "aani": "tukholma/tori.mp3",
+    "silmukka": true,
+    "kesto_s": 45.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.3,
+    "kaytto": "Östermalmstorgin tori, ruotsinkielinen sorina",
+    "alku_s": 45,
+    "lahde": "Freesound",
+    "nimi": "170719_Stockholm_OestermalmstorgMarket_R.wav",
+    "tekija": "blaukreuz",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/398854/"
+   },
+   {
+    "tunnus": "kahvila",
+    "aani": "tukholma/kahvila.mp3",
+    "silmukka": true,
+    "kesto_s": 45.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.4,
+    "kaytto": "Nytorgetin aukio ja kahvilat, ruotsinkielinen sorina",
+    "alku_s": 45,
+    "lahde": "Freesound",
+    "nimi": "170717_Stockholm_Nytorget_R.wav",
+    "tekija": "blaukreuz",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/398828/"
+   },
+   {
+    "tunnus": "lapset",
+    "aani": "tukholma/lapset.mp3",
+    "silmukka": true,
+    "kesto_s": 45.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -6.3,
+    "kaytto": "Aspuddsparken, puisto ja leikki",
+    "alku_s": 100,
+    "lahde": "Freesound",
+    "nimi": "170717_Stockholm_Aspuddsparken_R.wav",
+    "tekija": "blaukreuz",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/397898/"
+   }
+  ],
+  "pariisi": [
+   {
+    "tunnus": "tori",
+    "aani": "pariisi/tori.mp3",
+    "silmukka": true,
+    "kesto_s": 40.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.5,
+    "kaytto": "Bastillen tori, ranskankielinen sorina",
+    "alku_s": 2,
+    "lahde": "Freesound",
+    "nimi": "Ambience_Paris_street market at the Bastille_November 2021.wav",
+    "tekija": "Rmlbrg",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/617062/"
+   },
+   {
+    "tunnus": "kahvila",
+    "aani": "pariisi/kahvila.mp3",
+    "silmukka": true,
+    "kesto_s": 30.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.5,
+    "kaytto": "Montmartren kahvilat ja katu",
+    "alku_s": 30,
+    "lahde": "Freesound",
+    "nimi": "Paris Mont Marte",
+    "tekija": "Toybox",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/707975/"
+   },
+   {
+    "tunnus": "lapset",
+    "aani": "pariisi/lapset.mp3",
+    "silmukka": true,
+    "kesto_s": 45.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.3,
+    "kaytto": "Jardin des Plantes: lapset, ohikulkijat ja linnut",
+    "alku_s": 70,
+    "lahde": "Freesound",
+    "nimi": "Jardin des plantes - oiseaux - enfants - passants - voitures fond.mp3",
+    "tekija": "mosfran",
+    "lisenssi": "CC BY 4.0",
+    "url": "https://freesound.org/s/42970/"
+   },
+   {
+    "tunnus": "metro",
+    "aani": "pariisi/metro.mp3",
+    "silmukka": true,
+    "kesto_s": 45.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.5,
+    "kaytto": "Châtelet–Les Halles, ranskankieliset kuulutukset",
+    "alku_s": 45,
+    "lahde": "Freesound",
+    "nimi": "Metro Paris Chatelet Les Halles",
+    "tekija": "paolacruz84",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/635311/"
+   },
+   {
+    "tunnus": "raitiovaunu",
+    "aani": "pariisi/raitiovaunu.mp3",
+    "silmukka": false,
+    "kesto_s": 36.32,
+    "LUFS": -23.0,
+    "huippu_dBFS": -3.9,
+    "kaytto": "raitiovaunu ohittaa (kerta)",
+    "alku_s": 0,
+    "lahde": "Freesound",
+    "nimi": "250617_172732_FR_Tram_passing_by",
+    "tekija": "kevp888",
+    "lisenssi": "CC BY 4.0",
+    "url": "https://freesound.org/s/812537/"
+   }
+  ]
+ }
+}

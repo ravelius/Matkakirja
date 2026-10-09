@@ -1,6 +1,6 @@
 {
- "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi).",
- "paivitetty": "2026-10-08",
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). 9.10.: + kaupunkimaisema-v2 (Pariisi: lapset ja raitiovaunu, CC BY 4.0).",
+ "paivitetty": "2026-10-09",
  "nimeamiset": [
   {
    "lahde": "Freesound",
@@ -323,6 +323,20 @@
    "tekija": "klankbeeld",
    "lisenssi": "CC BY 4.0",
    "url": "https://freesound.org/s/269417/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Jardin des plantes - oiseaux - enfants - passants - voitures fond.mp3",
+   "tekija": "mosfran",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/42970/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "250617_172732_FR_Tram_passing_by",
+   "tekija": "kevp888",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/812537/"
   }
  ]
 }
