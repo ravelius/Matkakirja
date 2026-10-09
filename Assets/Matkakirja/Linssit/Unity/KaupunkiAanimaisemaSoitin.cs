@@ -174,7 +174,7 @@ namespace Matkakirja.Natiivi
             yield return r2.SendWebRequest();
             if (r1.result != UnityWebRequest.Result.Success || r2.result != UnityWebRequest.Result.Success)
             { Debug.Log($"MATKAKIRJA äänimaisema: kaupunkimaisema ei latautunut ({r1.responseCode}/{r2.responseCode})"); yield break; }
-            try { maisema = KaupunkiMaisema.Lue(r1.downloadHandler.text, MaisemaV1, r2.downloadHandler.text, MaisemaV2); Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema v1+v2 ladattu"); }
+            try { maisema = KaupunkiMaisema.Lue(r1.downloadHandler.text, MaisemaV1, r2.downloadHandler.text, MaisemaV2, Juuri); Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema v1+v2 ladattu"); }
             catch (Exception e) { Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema virheellinen: " + e.Message); }
         }
 
