@@ -101,6 +101,14 @@ namespace Matkakirja.Natiivi
                 piilotetut.Clear(); sammutetut.Clear();
                 return;
             }
+            PiilotaLinna();
+        }
+
+        /// <summary>Linnan renderöijät ja valot piiloon (ympäristö, vaihemallit ja vesi jäävät). Ajetaan myös 0,5 s välein linnan ollessa
+        /// piilossa: myöhemmin latautuvat kävelyosat, esineet ja liekit (lykätyt osat) jäivät näkyviin valopisteinä tyhjän saaren
+        /// ylle (arvio 2 9.10., t = 0–37).</summary>
+        void PiilotaLinna()
+        {
             var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
             bool Jaa(Transform t) { for (; t != null && t != n.transform; t = t.parent) if (t.name.StartsWith("Ymparisto", StringComparison.Ordinal) || t.name.StartsWith("Vaihe:", StringComparison.Ordinal) || t.name == "Ulkokuori:vesi") return true; return false; }   // kieli: ei (tekninen)
             foreach (var r in n.GetComponentsInChildren<Renderer>(false)) if (r.enabled && !Jaa(r.transform)) { r.enabled = false; piilotetut.Add(r); }
@@ -123,7 +131,7 @@ namespace Matkakirja.Natiivi
             // Vaihemallit valmiiksi ennen alkua (tyhjä saari näkyy heti, linna ei katoa tyhjään veteen); enintään 10 s.
             for (float odotus = 0; vaiheetKesken && odotus < 10f && !lopeta; odotus += Time.unscaledDeltaTime) yield return null;
             float alku = Time.unscaledTime;
-            int vaihe = -1; double seurLoki = 0;
+            int vaihe = -1; double seurLoki = 0; double seurPiilotus = 0;
             HistoriaVaihe nakyva = null;
             while (!lopeta)
             {
@@ -138,6 +146,7 @@ namespace Matkakirja.Natiivi
                 double vuosi = h.Vuosi(t);
                 if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
                 LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
+                if (linnaPiilossa && t >= seurPiilotus) { seurPiilotus = t + 0.5; PiilotaLinna(); }   // myöhään latautuneet osat ja liekit
                 List<KavelyLeikkaus> vl = null;
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
