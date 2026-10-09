@@ -99,6 +99,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(c.Contains("t.opaqueMaterial = om"), "materiaali tilesetille");
         }
 
+        [Testi] static void OmienMallienPbrKartat()
+        {
+            // Omistaja 9.10. (PT junaan 173): ND:n ja KL:n oikeat pinnat → OmaMalli lukee glTF:n normaali-, metalli/karheus- ja peittokartat
+            // Cesiumin ominaisuusnimillä; tangentit derivaatoista, koska malleissa ei ole TANGENT-attribuuttia.
+            string v = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "OmaMalli.shader"));
+            foreach (var o in new[] { "_normalMapTexture", "_normalMapScale", "_normalMapTextureCoordinateIndex", "_metallicRoughnessTexture",
+                                      "_metallicRoughnessFactor", "_metallicRoughnessTextureCoordinateIndex", "_occlusionTexture", "_occlusionStrength", "_occlusionTextureCoordinateIndex" })
+                Oleta.Tosi(v.Contains(o + " ("), "Cesiumin ominaisuus " + o);
+            Oleta.Tosi(v.Contains("_metallicRoughnessFactor.x * mr.b") && v.Contains("_metallicRoughnessFactor.y * mr.g"), "metalli B, karheus G (glTF)");
+            Oleta.Tosi(v.Contains("Kartoitettu(n0, v.w, v.uvNM.xy") && v.Contains("ddx(w)"), "kotangenttikehys derivaatoista");
+            Oleta.Tosi(v.Contains("\"white\" {}") && v.Contains("_metallicRoughnessFactor (\"Metalli, karheus\", Vector) = (0, 1, 0, 0)"), "oletus: ei metallia, karhea (vanhat mallit ennallaan)");
+        }
+
         [Testi] static void SadepilvetJaSalama()
         {
             // PT junaan 171: sade = tummat matalat pilvet (kuuron tummuus laskee pohjan ja paksuntaa) + LS1:n salaman välähdys pilviin.
