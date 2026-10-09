@@ -13,7 +13,7 @@ Worktreet 9.10. 13.0x: vain wt/proto-natiiviseppa-j172 jäljellä (13 mergettyä
 UNITY 6.7 (omistaja 13.3x): JUNAN 172 JÄLKEEN erillinen haara (Cesium, Steam Audio, OmaMalli/DioraamaValaistu, URP, iOS+Mac, testit) →
 raportti PT:lle (rikkoutuvat, korjaukset; URP reaaliaikainen GI, SSR, Fast Build Profile) → päähaaraan vasta LTS:n jälkeen. EI kesken 172:n.
 **JUNA 172 = YKSI ISO JUNA (omistaja 10.3x: 172–175 yhdessä, ei välijunia/TF:iä ennen PT:n ilmoitusta)** — runko natiiviseppa/juna-172
-(wt/proto-natiiviseppa-j172) **f6b1f88f3** BUILD 171:n päällä; 453/426/1208, unity 0, tarkista 0. TARKISTUSLISTA:
+(wt/proto-natiiviseppa-j172) **18a78427a** BUILD 171:n päällä; 453/426/1208, unity 0, tarkista 0. TARKISTUSLISTA:
   [x] 172 NUI cd4553c8d (⊇ Siirtoseppä 18227438d + pysty + krediitit + ef56acf4e)
   [x] 173 Siirtoseppä f5346bac4 (⊇ 5d8e362f7 ⊇ bed0c2d97, v45z, äänet; ⊇ 174:n Siirtoseppä-osa)
   [x] 173–175 NUI 1fce56a22 (⊇ 2bb472819 ⊇ 500126589 mikseri ⊇ c00f125a9 ⊇ 9ca6e2795 ⊇ 54182ab06 ⊇ 17ee84663 ⊇ becff9f1b); konfliktit
@@ -30,14 +30,14 @@ raportti PT:lle (rikkoutuvat, korjaukset; URP reaaliaikainen GI, SSR, Fast Build
   [x] LS1 viisto-172 65323621a (viisto katse lennolla)
   [x] LS1 alue-esittely-172 0d4ad0316 (⊇ viisto; alueiden esittelykorkeus 75°, nopea lento kaaressa)
   [ ] LS1: Orsay, Kuninkaanlinnan kaari, Tukholman avaus (tulossa)
-  [x] NUI 16f5c9f14 (luentavienti kaikkiin lehtiin, ui puluvienti, PuluChat.Konteksti jaettu; PT: ehto testit läpi → OK) ⊇ 0f2a2cec1 (⊇ fe8d84616 katalogikuvat havainne-v2 + 7 foto-minikuvaa varusteille; loput NUI:lta Codexin erän mukana)
+  [x] NUI e7c7474d2 (kuvasuurennos 2048 px, varapolku kuvat/) ⊇ 16f5c9f14 (luentavienti kaikkiin lehtiin, ui puluvienti, PuluChat.Konteksti jaettu; PT: ehto testit läpi → OK) ⊇ 0f2a2cec1 (⊇ fe8d84616 katalogikuvat havainne-v2 + 7 foto-minikuvaa varusteille; loput NUI:lta Codexin erän mukana)
   [x] LS1 Steam Audio -koe 4869a5dc9 + a13a6bac8 (SteamAudioPoisTestit: spatialize pois kaikista lähteistä kytkin pois; kytkin oletuksena pois; AudioManager spatializer = Steam Audio) + OMA a1b13e5ee ENABLE_BITCODE NO;
       libz.tbd Steam Audion BuildProcessor; Mac: proto3d-mac-testflight allekirjoittaa .bundlet jo (PT: ei Mac-poikkeusta)
   [x] LS2 omavalo-172 51799391e (omien mallien varjostin + kaukomaa) + laivat-171 657676845 (Pariisin jokilaivat + vana); malli v7 ämpärissä,
       OSOITIN uusin-2 → v7 vasta junan 172 mukana (Julkaisija); Seinen läikkä mahdollisesti erikseen
   [-] Siirtosepän lähteettömät äänet: EI tarvita (PT: ElevenLabs SFX, oma tuotanto, c911053ee)
-  [ ] Siirtoseppä: lounaispuolen aukkojen korjaus (tulossa)
-  [ ] LR:n prefektuuri (LS2:n vienti) + Codex-fotot (NUI)
+  [x] Siirtoseppä 553edcdc4 (⊇ 2ad8e8f6a; lounaispuolen aukot vuosileikkauksin) — lukitusehto 2 TÄYTETTY; saari v2c (v46e) vain jos ehtii
+  [-] ND/KL v9, Codexin loput fotot, Pulu: EI lukitusehtoja (PT 13.4x) → 173; osoittimet EIVÄT vaihdu junan mukana
   [x] Pelikoodari kaupunkijakso cf0a1547d (Pariisin saapumismusiikki; nopea kappale ämpärissä 12.58)
   LUKITUSEHDOT 172: (a) omistajan lupa (PT välittää) (b) Siirtosepän arvio 3 -laitekäännös ilman varjostinvirheitä (DioraamaValaistu
       alfaleikkaus) (c) LR:n prefektuuri, jos ehtii (d) Codex-fotot NUI:lta (loput minikuvat) (e) yksi simukäännös 0 varjostinvirhettä (Steam Audio,
@@ -45,7 +45,7 @@ raportti PT:lle (rikkoutuvat, korjaukset; URP reaaliaikainen GI, SSR, Fast Build
       (PostProcessBuild 190) + Mac (MacNayttonimi plutil Rakennus.MacOS:ssa) — tarkista simu-appin Info.plist käännöksen jälkeen.
   MUUTOSLOKI 172 (PT:n versio + saapumismusiikki, 268 mrk / 274 t): "Olavinlinna: historia elokuvana, uusia esineitä, aukeavat ovet ja äänet. Pallo: sadekuurot, märät kadut, salamat, iltaikkunat, Pariisin jokilaivat ja saapumismusiikki, tarkemmat Notre-Dame ja Kuninkaanlinna. Uudet varustekuvat, iPhone pystyssä. Nimi on nyt Matkakirja."
   [x] OMA STP (#4220 kohta 7) natiiviseppa/stp-172 9781342ed — PT kuittasi; ajallinen oletuksena pois, käyttöönotto pallokierroksen kuva-arkista.
-  [ ] simukäännös + PT:n muutosloki + lukitus — OMISTAJA 12.0x: VASTA OMISTAJAN LUVALLA (PT välittää); ei käännöstä ennen sitä
+  [ ] simukäännös + lukitus + muutosloki → Julkaisija TF 172 — OMISTAJAN LUPA TULI 13.4x; lukitusehto 1 = LS1 Orsay, Kuninkaanlinnan kaari, Tukholman avaus
 
 ## TILA 9.10. 09.5x
 **BUILD 170 = 4a140064ea882557c2189235c9bd9cee571e5023** (proto master; runko d213127c1 = fde044a39 + LS2 811d26cf8; simukäännös b508936fb 0 varjostinvirhettä;
