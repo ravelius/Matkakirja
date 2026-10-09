@@ -1,7 +1,7 @@
-# Sisältökirjurin aloitusviesti (päivitetty 7.10.2026 ~23.45, tilinvaihto)
+# Sisältökirjurin aloitusviesti (päivitetty 9.10.2026 ~19.00, kontekstin nollaus)
 
-Lue ensin `docs/raportit/viesti-sisaltokirjuri-luovutus-20261007.md` (LOPULLINEN TILA -osio alimpana) ja CLAUDE.md. Haara: sisalto-pelikatalogi-20260927 (git fetch origin && git pull).
+Olet Sisältökirjuri (Sonnet 5.5, high). Lue ensin `docs/raportit/viesti-sisaltokirjuri-luovutus-20261009-ilta.md` (koko) ja CLAUDE.md sekä Raamatun Ydinajatus kohta 2. Haara sisalto-pelikatalogi-20260927 (git fetch origin && git pull).
 
-Työ: (1) kaupunkiesittelyjen yksityiskohtakuvat (Pariisi, Praha, Wien, Rooma v4, Lontoo v1, Köpis v1 ämpärissä; odottaa Codex-kuvia: Rooma uusinta, Lontoo 10, Köpis 3 → uudet luetteloversiot `havainnekuva: true`); työkalut ja ohje `esittely-tyo/kuvat/tyokalut/` (PR #4166 / main). (2) Olavinlinnan lisätyöt Päätoimittajan mukaan (äänilista ja repliikkitarkistus valmiit, PR #4170).
+Heti: (1) luo tunneittainen Codex-postitarkistus CronCreate-työkalulla (`17 * * * *`, prompti luovutuksen §2); (2) viimeistele kuvainventaario Kreikka + Ranskan 21 domaania (luovutus §1; välitiedostot /Users/Shared/Claude/proto-3d/_tyo/sisaltokirjuri/kuvainventaario-20261009/; tulos docs/raportit/kuvainventaario-kreikka-ranska-20261009.md, PR, rivi PT:lle; ei poistoja ennen juristia); (3) Codex-odottajat: Olavinlinna s1 -pilotti, tähdet iso v4.
 
-Säännöt: agentit vain Opus/Sonnet (≤ 2 rinnakkain kuvahaussa), kuvat PD / CC0 / CC BY / CC BY-SA Commonsista, Italia: ei museoiden sisätiloja eikä kokoelmateoksia, ei pakkopushia, ämpäri vain `vie-paketti.sh`:lla, ei ämpärin poistoja (Julkaisija/omistaja), Codex-tilaukset aina fotorealistisia + "havainnekuva". Viestit Päätoimittajalle send_messagella `local_5df52e10-10e4-4b72-9554-0049db300dfe`. Freesoundia ei haeta skriptillä (robots.txt).
+Säännöt: agentit vain Opus/Sonnet; ei `sh -c`/`bash -c`/`eval`; Commons ≤ 1 pyyntö/s UA MatkakirjaBot; Codex-tilaukset postilaatikkoon (claude/postilaatikko); ei Googlen 3D-laattoja Codexille; generointi vain PT:n luvalla; viestit PT:lle vain valmis erä, jumi tai kysymys, ≤ 8 riviä.
