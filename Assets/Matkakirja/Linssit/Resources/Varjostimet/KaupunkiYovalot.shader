@@ -78,6 +78,14 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 return l;
             }
 
+            // Pehmeä arvokohina (v11: soluittainen hash näkyi Tukholman vedellä matalasta kulmasta ruudukkona, LS2:n kuva 9.10.).
+            float Kohina(float2 q)
+            {
+                float2 i = floor(q), f = frac(q); f = f * f * (3.0 - 2.0 * f);
+                float a = Hash32(i).x, b = Hash32(i + float2(1, 0)).x, c = Hash32(i + float2(0, 1)).x, d = Hash32(i + float2(1, 1)).x;
+                return lerp(lerp(a, b, f.x), lerp(c, d, f.x), f.y);
+            }
+
             static const float MAA_R = 6371000.0, ASTE = 57.2957795;
 
             float2 Asteet(float3 paikka)
@@ -254,11 +262,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float3 kohti = p - _KameraP.xyz; float et = length(kohti);
                     float2 v = normalize(kohti.xz + 1e-4), poikki = float2(-v.y, v.x);
                     float cosv = saturate(-kohti.y / max(et, 1.0));
-                    float fresnel = 0.12 + 0.88 * pow(1.0 - cosv, 3.0);
+                    float fresnel = 0.12 + 0.38 * pow(1.0 - cosv, 3.0);   // v11: enintään 0,5 (LS2:n vesi heijastaa jo taivaan; matalalla lahti tasaisen kultainen)
                     // Aaltojen välke: kohina venytettynä katsesuuntaan (juovat kohti kameraa), liikkuu ajassa.
                     float2 q = float2(dot(p.xz, poikki) / 2.5, dot(p.xz, v) / 14.0 + _Time.y * 0.9);
-                    float3 hv = Hash32(floor(q));
-                    float valke = saturate(hv.x * 1.6 - 0.35) * (0.6 + 0.4 * sin(_Time.y * 2.3 + hv.y * 6.28));
+                    float kn = Kohina(q);
+                    float valke = saturate(kn * 1.8 - 0.5) * (0.7 + 0.3 * sin(_Time.y * 2.3 + kn * 6.28));
                     float ranta = 0.0;
                     [unroll] for (int k = 0; k < 4; k++)
                     {
@@ -266,7 +274,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         float3 q3 = p + float3(v.x * s, 0.0, v.y * s);
                         ranta = max(ranta, BlackMarble(q3) * (1.0 - Vesi(q3)) / (1.0 + s / 250.0));
                     }
-                    float3 heij = _ValoVari.rgb * ranta * 0.45;   // v9: puolet (junan 170 kuvat: vesi tasaisen kullanruskea)
+                    float3 heij = _ValoVari.rgb * ranta * 0.2;    // v9: puolet (junan 170 kuvat: vesi tasaisen kullanruskea)
                     float3 kulta = float3(1.0, 0.74, 0.36);
                     int nm = (int)_MaamerkkiParam.x;
                     for (int m = 0; m < 8; m++)
