@@ -30,5 +30,28 @@ Shader "Matkakirja/Linssit/ReikaTayte"
             half4 frag(V v) : SV_Target { return half4(MixFog(_Vari.rgb, v.sumu), 1); }
             ENDHLSL
         }
+        Pass
+        {
+            Name "DepthNormals"
+            Tags { "LightMode" = "DepthNormals" }
+            Cull Back
+            ZWrite On
+            // URP:n DepthNormals-esipassi (Ultra-renderöijän SSAO, lähde DepthNormals) tuottaa kameran syvyystekstuurin: ilman tätä passia
+            // kohde puuttuu _CameraDepthTexturesta (9.10. simu: yövalot ja muotokorostus näkivät tyhjän syvyyden).
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            struct A { float4 p : POSITION; };
+            struct V { float4 p : SV_POSITION; float3 pw : TEXCOORD0; };
+            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.pw = TransformObjectToWorld(a.p.xyz); return v; }
+            half4 frag(V v) : SV_Target
+            {
+                float3 n = normalize(cross(ddy(v.pw), ddx(v.pw)));
+                if (dot(n, GetCameraPositionWS() - v.pw) < 0.0) n = -n;
+                return half4(n, 0.0);
+            }
+            ENDHLSL
+        }
     }
 }
