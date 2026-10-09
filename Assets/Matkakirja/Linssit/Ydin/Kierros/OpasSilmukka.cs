@@ -43,6 +43,10 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
         public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
         public double Lat, Lon, KokoM = 60, KorkeusM, KestoS;
+        /// <summary>Kohteen oma katsesuunta (Linssiseppä 9.10., PT junaan 174: Vasa-museo veden puolelta mastoineen; worker
+        /// "katse_suunta", astetta pohjoisesta, suunta johon kamera katsoo): korvaa lentosuunnan pysähdyksen kehyksessä (pallon
+        /// kääntöraja pätee yhä). NaN = lentosuunnan mukaan kuten ennen.</summary>
+        public double KatseSuunta = double.NaN;
         /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
         public bool Kysymys;
         public string[] Vaihtoehdot;
@@ -68,6 +72,7 @@ namespace Matkakirja.Linssit.Kierros
                 Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
                 AaniAjat = S("aani_ajat"), AaniTaajuus = (int)D("aani_taajuus", 24000),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
+                KatseSuunta = D("katse_suunta", double.NaN),
             };
             if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
             {
@@ -518,6 +523,11 @@ namespace Matkakirja.Linssit.Kierros
         /// Pallolennon saapumissuunta: kohteen kehys katsoo enintään niin paljon nykyisestä suunnasta poispäin, että suunta kääntyy
         /// koko lennon ajan etenemisen mukana (huippu enintään 2 × keskiarvo) enintään PalloKaantoAstS asteen sekuntinopeudella.
         /// </summary>
+        /// <summary>Kehyksen tulosuunta: kohteen oma katsesuunta (OpasKohde.KatseSuunta − SivuKulma, jolloin kehyksen suuntima on
+        /// juuri katsesuunta), muuten lentosuunta.</summary>
+        public static double KohteenTulo(OpasKohde k, double lentoTulo) =>
+            k != null && !double.IsNaN(k.KatseSuunta) ? KierrosLento.Kiedo(k.KatseSuunta - OpasKuvaus.SivuKulma) : lentoTulo;
+
         public static double PalloTulosuunta(double nykyinen, double lentosuunta, double kestoS)
         {
             // Kääntö vaakaliikkeen mukana: huippu ≈ 2 × keskiarvo (S-käyrä) × korkeussuhde (vaakanopeus ∝ korkeus, pitkillä lennoilla ≤ 1,6) → 3,2;
@@ -1296,6 +1306,7 @@ namespace Matkakirja.Linssit.Kierros
             if (arvio) maa = MaaArvioM;
             tulo = PalloLento ? LennonSuunta(k.Lat, k.Lon) : Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             double matkaM = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
+            if (matkaM >= 150) tulo = KohteenTulo(k, tulo);   // kohteen oma katsesuunta (Vasa), kääntöraja alla pätee
             if (matkaM < 150) tulo = Asento.Suuntima;
             // Raja koskee lopullista kehyssuuntimaa (tulo + SivuKulma; video6 Louvre: kääntö 13,6 °/s, kun sivukulma jäi rajan ulkopuolelle).
             else if (PalloLento) tulo = PalloTulosuunta(Asento.Suuntima - OpasKuvaus.SivuKulma, tulo, LennonKesto(matkaM));

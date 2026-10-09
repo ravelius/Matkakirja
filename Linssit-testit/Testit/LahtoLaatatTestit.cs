@@ -227,6 +227,49 @@ namespace Matkakirja.Linssit.Testit
             finally { OpasSilmukka.PalloLento = false; }
         }
 
+        // Tukholman kuva-arkki 9.10. (PT junaan 174): Vasa-museo nähtiin lentosuunnasta tumman takaseinän puolelta → worker
+        // "katse_suunta" kääntää pysähdyksen kehyksen veden puolelle (kamera lounaassa, katse koilliseen), kääntöraja pätee yhä.
+        [Testi] static void KohteenKatseSuuntaKorvaaLentosuunnan()
+        {
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"nimi\":\"Vasa-museo\",\"lat\":59.3281,\"lon\":18.0914,\"katse_suunta\":40}");
+            Oleta.Tosi(Math.Abs(OpasKohde.Lue(j).KatseSuunta - 40) < 1e-9, "katse_suunta luetaan");
+            Oleta.Tosi(double.IsNaN(OpasKohde.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"nimi\":\"x\",\"lat\":1,\"lon\":2}")).KatseSuunta), "puuttuva = NaN");
+            foreach (bool pallo in new[] { false, true })
+                foreach (double? katse in new double?[] { null, 40 })
+                {
+                    OpasSilmukka.PalloLento = pallo;
+                    try
+                    {
+                        var s = new OpasSilmukka(new Kuvakulma(59.3250, 18.0708, 420, 58, 70, 30));
+                        var p = new List<(int n, string t)>();
+                        s.Pyyda += (n, t) => p.Add((n, t));
+                        s.Aloita("Tukholma");
+                        s.Vastaus(p[^1].n, K("Gamla stan", 59.3250, 18.0708));
+                        for (int i = 0; i < 600 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.05, _ => 25);
+                        var vasa = new OpasKohde { Id = "Q901371", Nimi = "Vasa-museo", Lat = 59.3281, Lon = 18.0914, KokoM = 120, KorkeusM = 39, KestoS = 5 };
+                        if (katse.HasValue) vasa.KatseSuunta = katse.Value;
+                        s.Vastaus(p[^1].n, vasa);
+                        s.AaniLoppui();
+                        for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.05, _ => 25);
+                        double maks = 0, ed = s.Asento.Suuntima; const double dt = 1 / 60.0;
+                        for (int i = 0; i < 4000 && s.Vaihe != OpasVaihe.Puhuu; i++)
+                        {
+                            s.Paivita(dt, _ => 25);
+                            if (s.Vaihe == OpasVaihe.Lentaa) maks = Math.Max(maks, Math.Abs(KierrosLento.Kiedo(s.Asento.Suuntima - ed)) / dt);
+                            ed = s.Asento.Suuntima;
+                        }
+                        Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Q901371", $"perillä Vasassa ({s.Vaihe})");
+                        double su = s.Asento.Suuntima, lento = OpasSilmukka.Suunta(59.3250, 18.0708, 59.3281, 18.0914);
+                        string m = $"pallo {pallo}, katse {(katse?.ToString() ?? "-")}: suuntima {su:F0}°, lentosuunta {lento:F0}°, kääntö {maks:F1} °/s";
+                        if (katse.HasValue && !pallo) Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(su - 40)) < 6, m);
+                        if (katse.HasValue && pallo) Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(su - 40)) < Math.Abs(KierrosLento.Kiedo(lento + OpasKuvaus.SivuKulma - 40)), "pallo kääntyy kohti katsesuuntaa: " + m);
+                        if (!katse.HasValue) Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(su - 40)) > 20, "ilman kenttää lentosuunnan mukaan: " + m);
+                        if (pallo) Oleta.Tosi(maks <= OpasSilmukka.PalloKaantoAstS + 0.3, "kääntöraja: " + m);
+                    }
+                    finally { OpasSilmukka.PalloLento = false; }
+                }
+        }
+
         // Video8 8.10.: siirron maanäyte pyydettiin ennen kuin kaupunki oli auki (hylättiin hiljaa) → siirto aina aikarajaan.
         [Testi] static void SiirtoPyytaaMaanNaytteenUudelleen()
         {
