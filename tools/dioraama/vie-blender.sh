@@ -100,6 +100,9 @@ for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; don
 for f in "$LAHDE"/hahmot/*.astcm(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
 # Toistuvat detaljimateriaalit (8.10.2026, Thief-vertailun #1): materiaalit/detaljit.json + <pinta>-{albedo,normaali,karheus}{.jpg,-6x6.astcm}.
 for f in "$LAHDE"/materiaalit/*.(json|jpg|astcm)(N); do lisaa "materiaalit/${f:t}" "materiaalit/${f:t}"; done
+# Historia-animaation vaihemallit (9.10.2026, Siirtosepän kuittaama muoto): vaiheet/<id>.glb + vaiheet/vaiheet.json
+# ([{id, glb, vuodesta, vuoteen}]); lista kopioidaan myös blender.json:n kenttään "vaiheet".
+for f in "$LAHDE"/vaiheet/*.(glb|json)(N); do lisaa "vaiheet/${f:t}" "vaiheet/${f:t}"; done
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do
@@ -121,10 +124,11 @@ sort -o "$TMP/rivit" "$TMP/rivit"
 HASH=$(cut -d' ' -f1,2 "$TMP/rivit" | shasum -a 256 | cut -c1-16)
 N=$(wc -l < "$TMP/rivit" | tr -d ' ')
 node -e '
-const fs = require("fs"); const [, rivit, rakennus, hash, ulos] = process.argv.slice(1);
+const fs = require("fs"); const [, rivit, rakennus, hash, ulos, vaiheet] = process.argv.slice(1);
 const tiedostot = fs.readFileSync(rivit, "utf8").trim().split("\n").map((l) => { const [polku, sha256, t] = l.split(" "); return { polku, sha256, tavuja: Number(t) }; });
-fs.writeFileSync(ulos, JSON.stringify({ rakennus, hash, kansio: `dioraama/${rakennus}/blender/${hash}/`, tiedostot }, null, 2) + "\n");
-' _ "$TMP/rivit" "$RAKENNUS" "$HASH" "$ULOS_JSON"
+const lisa = fs.existsSync(vaiheet) ? { vaiheet: JSON.parse(fs.readFileSync(vaiheet, "utf8")) } : {};
+fs.writeFileSync(ulos, JSON.stringify({ rakennus, hash, kansio: `dioraama/${rakennus}/blender/${hash}/`, tiedostot, ...lisa }, null, 2) + "\n");
+' _ "$TMP/rivit" "$RAKENNUS" "$HASH" "$ULOS_JSON" "$LAHDE/vaiheet/vaiheet.json"
 cp "$ULOS_JSON" "$TMP/blender.json"
 KOHDE="dioraama/$RAKENNUS/blender/$HASH"
 echo "== Blender-vienti: $RAKENNUS → $KOHDE/"
