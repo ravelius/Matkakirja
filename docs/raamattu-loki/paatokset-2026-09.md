@@ -11993,3 +11993,31 @@ Omistaja 15.0x sanatarkasti ND v8 / KL v2b -kuvista: "Tuo Notre Dame ei näytä 
 ## PULU RANSKA VALMIS, PISTOKOE JA ÄMPÄRI (9.10.2026 KLO 14.2x–14.3x) (9.10.2026 klo 15.19)
 
 Pilvisessio session_011hQ7s3WYK4Kao3UcQ79nE6 (pulu-ranska-pilvi): 955 vastausta (295 + 660), 40 min, 3,1 M tokenia, 0 muotovirhettä. Sisältökirjurin pistokoe #4291: ~40 vastausta korjattavaksi (Douaumont, Lascaux saksanhirvet, Chasles/Vrain-Lucas, metalauseet, Euroopan ulkopuoliset sivupolut, rivinvaihdot) → korjattu caea0c2cd, uusi 14 vastauksen pistokoe 0 virhettä, GENEROINTI.md:hen 4 järjestelmävirhettä, tarkista-valmis.mjs. Julkaisija 14.34: pulu/vastaukset/v1/FRA.json + maat.json ämpärissä; NUI 38ec50e9f + f6af5f0a8 junaan 173. Omistaja 14.5x: krediittejä ei näy kuluneen → ajo oli pilvessä (commitit pilviympäristöstä, sama tili sami@valokuvaamoklik.fi); syy (viive vai tilauksen käyttö) selvitettävä illalla; muut maat omistajan päätöksellä.
+
+## LEVYSIIRROT: YKSI SIIRTÄJÄ PER KANSIO (PÄÄTOIMITTAJA 9.10.2026 KLO 15.2x) (9.10.2026 klo 18.13)
+
+PT:n siirrot.py valmis (NAS 10,9 Gi, T7 14,8 Gi, 0 vajaata; scratchpad/soundly-gui/siirrot-tulos-20261009.txt), vapaa 125 Gi. Julkaisija siirsi samaan aikaan _valmiit/*-vienti-* T7:lle (Matkakirja-julkaisija/vienti-arkisto) → 70 tarkistussummaltaan vajaata kaksoiskappaletta Julkaisijan arkistossa; PT:n kopiot ehjät (koodaus/proto-3d/_valmiit + 137 symlinkkiä). Julkaisija omistaa täsmäytyksen ja vienti-arkiston (NAS:lle). Linja: kansion siirtää vain sen omistava rooli, ja PT ilmoittaa omistavalle roolille ennen omaa siirtoajoaan. Raamattu KÄYNNISTYSLEVY EI TÄYTY, kohta 8.
+
+## LUENNAT VALMIIT (PELIKOODARI 9.10.2026 KLO 15.2x) (9.10.2026 klo 18.13)
+
+6 903 / 6 903 luentaa, 0 virhettä, 59,6 h, 2 461 225 merkkiä ≈ 162 400 krediittiä; vienti Julkaisijalla (_valmiit/luennat-v1-vienti-20261009, 4,8 Gt → NAS viennin jälkeen). Kultainen toistotesti 970355d5d junaan 173. Omistajalle kerrottu.
+
+## PARIISIN NYKYINTRON MUSIIKKI PALLOSSA (PÄÄTOIMITTAJA 9.10.2026 KLO 15.3x, LS1:N SUOSITUS) (9.10.2026 klo 18.13)
+
+Intro vapauttaa linssipidon; nopea musiikki alkaa alusta, hidas soi loppuun, ja sitten pohja palaa pitoon (pallon oma äänimaisema); kierroksen alla ei soi musiikkia. Kun musiikki tai äänet ovat pois, intro näytetään silti hiljaisella kellolla (KaupunkiIntroAlkoi(k, 0) heti). Pelikoodari 35393b309 + 2ae1b0e1a, juna 173. LS1 kirjasi docs/kohtaukset/pallokierros/pariisi-nykyintro.md:hen (#4300).
+
+## PILVIKREDIITTI KULUU VASTA RAJALLA (OMISTAJA 9.10.2026 KLO 15.3x) (9.10.2026 klo 18.13)
+
+Omistaja Usage-ponnahduksen kuvasta: "pilvikreditit eivät vieläkään ole kuluneet" (250/250 $). PT: ajo klo 13.27 oli pilvessä tällä tilillä (sami@valokuvaamoklik.fi), mutta se kirjattiin tilauksen käyttöön; krediitti kuluu vasta, kun tilin 5 h- tai viikkoraja on täynnä (7.10. toisen tilin viikko oli 96 %). Linja: työt pilveen vasta, kun 5 h- tai viikkoraja on vähintään 95 % (PT:n jonokierroksen vaihe 0), siihen asti paikallisesti. Raamattu PILVIAJOT JA PILVIKREDIITTI: KREDIITTI VASTA RAJALLA.
+
+## JUNA 173 KERÄÄ, KUNNES OMISTAJA SANOO NYT (OMISTAJA 9.10.2026 KLO 17.2x) (9.10.2026 klo 18.13)
+
+Omistaja sanatarkasti: "kyllä voidaan myös tänään julkaista mutta kerätään niin paljon kokoon kunnes sanon että nyt on hyvä hetki". Juna 173 pysyy auki ja kerää kaikki kuitatut (myös 174:ään kuitatut NUI f0f2e436f ja Pelikoodari 970355d5d). Julkaisu vasta omistajan "nyt"-sanasta; silloin PT kuittaa lopullisen BUILD-SHA:n, Natiiviseppä kirjoittaa muutoslokin uudelleen ja PT tarkistaa, ja Julkaisija vie TF 173:n.
+
+## TEKOÄLYPINNAT KOKEILUUN, NOTRE-DAMEN MALLIT (OMISTAJA 9.10.2026 KLO 17.3x) (9.10.2026 klo 18.13)
+
+Omistaja: "Luulisin, että joku on tehnyt tällaista samaa juttua aiemminkin, niin mietin, että löytyykö tähän apuja netistä, että miten tekoälyllä luotuja grafiikoita saa siirrettyä parhaiten 3D-mallien päälle." PT:n selvitys: geometriaohjattu generointi (syvyys-, reuna- ja normaaliohjaus samasta kamerasta, projisointi malliin ja saumojen paikkaus; StableGen, Hunyuan3D-Paint 2.1, Eurographics 2026 -katsaus). Kortti "Kyllä, kokeillaan (suositus)": ComfyUI + SDXL + ControlNet union + IP-Adapter T7:lle (/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat/, 14 Gt, LAHTEET.md), vain kaupallisen käytön sallivat mallit (ei FLUX.1-deviä eikä Hunyuania). KL-koe: valokuvamainen, massat ja katot osuvat, ikkunat osin väärin (64–82 % reunoista ±3 px); Karttaseppä hioo (ikkunat ≥ 90 %, pilvinen valo). LR (pinta.py): Olavinlinnan pilottiseinä + ND:n eteläjulkisivu → vertailu (nykyinen / Codex / uusi) PT:lle ja sitten omistajalle. Codexin ND-pilotti #57 (tornien pyramidikatot, etelän ruusuikkuna puuttuu, IoU 0,92) ja C5 v2 #58 (P1 7 %) hylätty; C5 v1 pysyy. Fotogrammetria (scratchpad/fotogrammetria-nd-kl-20261009.md): restauroinnin jälkeistä koko ulkopuolen mallia ei ole; francois.bouillen CC BY -malli on sisätilaskannaus; Diolez Fab -länsijulkisivu 45–134 € ainoa ulkoskannaus; Googlen ND on restauroinnin aikainen (docs/raportit/google-nd-20261009.md). Raamattu OMAT 3D-MALLIT: TEKOÄLYPINNAT KOKEILUUN.
+
+## GOOGLEN SUMENNUKSET JA OMAT MALLIT (PÄÄTOIMITTAJA 9.10.2026 KLO 18.1x) (9.10.2026 klo 18.13)
+
+Ristiriita korjattu: Raamatussa luki 8.–9.10. "Googlen omia sumennuksia ei silti peitetä" ja "poliisiprefektuuri … ohitetaan korkeammalta lentämällä eikä niitä peitetä", mutta PT päätti 9.10. ennen klo 13, että LR mallintaa prefektuurin korttelin (Pariisin avausnäkymän sumennusläiskä, LS1:n nykyintroarvio #4300 virhe 3), ja v6c–v6e (uusin-3 → v6e 16.25) sisältävät sen. PT tarkisti Map Tiles -ehdot (developers.google.com/maps/documentation/tile/policies, 9.10.2026): omat 3D-objektit laattojen päällä ovat sallittuja, kun niitä ei ole jäljitetty tai johdettu laatoista ja käyttöliittymä kertoo Googlen osuuden; sumennuksista ei ole kieltoa. Linja: oman mallin saa tehdä myös sumennetun kohteen kohdalle vain julkisista vapaista lähteistä (OSM, Commons); erillistä peittokerrosta tai laikkua sumennuksen päälle ei tehdä, ja muut sumennukset (Élysée) ohitetaan korkeammalta lentämällä.
