@@ -81,7 +81,7 @@ namespace Matkakirja.Natiivi
         {
             var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
             m.Rekisteroi("iss", "maisema", "cupola-humina", "Cupolan humina", "cupola-humina-gen-90s");
-            m.Rekisteroi("iss", "maisema", "cupola-radio", "Cupolan radio (EVA 38)", "cupola-radio-eva38-23min");
+            // Radiosilmukkaa ei rekisteröidä: omistaja poisti sen 3.10. (rätinä), RadioKaytossa = false (PT 9.10.: ei kytketä).
             m.Rekisteroi("linssit", "maisema", "cupola-humina", "Linssin humina (Cupola)", "cupola-humina-gen-90s");
             return true;
         }
@@ -209,7 +209,7 @@ namespace Matkakirja.Natiivi
             bool kuuluu = paalla && !mykka && (tila?.Aanimaisema ?? true);
             // Taso mikserin rekisteristä (korvaa kehittäjän 'tausta'-kertoimen): ryhmä × ääni nykyisessä kontekstissa.
             var mik = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
-            float tausta = mik.Kerroin("maisema", "cupola-humina"), tausta2 = mik.Kerroin("maisema", "cupola-radio");
+            float tausta = mik.Kerroin("maisema", "cupola-humina"), tausta2 = tausta;   // radio pois käytöstä (RadioKaytossa)
             bool puhe = tila != null && tila.Voimassa < 0.999;
             bool kuuluisi = paalla && (tila?.Aanimaisema ?? true);
             tavoite[Humina] = kuuluisi ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
