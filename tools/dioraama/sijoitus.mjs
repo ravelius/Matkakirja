@@ -81,9 +81,9 @@ export function sijoitaTila(tila) {
     if (typeof h.suunta === 'number') h.suunta = suuntaan(h.suunta);
     if (Array.isArray(h.reitti?.pisteet)) h.reitti.pisteet = h.reitti.pisteet.map((p) => (onPiste(p) ? m.piste(p) : p));
     // Final IK (9.10., juna 174, kädet kirjalle): "tartu"-kohteen paikka ja kämmenen kierto samaan sijoitukseen kuin hahmo.
-    // "kanna" (siirto ja kierto käden paikallisessa) ei muutu.
+    // "kanna" (siirto ja kierto käden/kämmenen kehyksessä) ja tartu esineeseen (`esine`: paikka ja kierto esineen kehyksessä) eivät muutu.
     for (const k of h.kadet ?? []) {
-      if ((k.tyyppi ?? 'tartu') === 'kanna') continue;
+      if ((k.tyyppi ?? 'tartu') === 'kanna' || k.esine) continue;
       pisteeksi(k, 'paikka');
       if (Array.isArray(k.kierto) && k.kierto.length === 4) k.kierto = m.kierra(k.kierto);
     }

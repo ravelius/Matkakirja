@@ -199,6 +199,7 @@ test('hahmon kädet (kadet[]): tartu-paikka ja kämmenen kierto sijoittuvat kute
     { tyyppi: 'tartu', kasi: 'r', paikka: [1, 1, 0], kierto: q0, milloin: 'tyo' },
     { kasi: 'l', paikka: [0, 1, 1] },
     { tyyppi: 'kanna', kasi: 'r', esine: 'kirja', siirto: [0.1, 0, 0], kierto: [0, 0, 0, 1] },
+    { tyyppi: 'tartu', kasi: 'l', esine: 'kirja', paikka: [0, 0.035, 0.03], kierto: [0, 1, 0, 0] },
   ];
   const sij = { ankkuri: [0, 0, 0], paikka: [10, 0.2, -5], suunta: 90 };
   const t = sijoitaTila({ ...t0, sijoitus: sij });
@@ -206,6 +207,7 @@ test('hahmon kädet (kadet[]): tartu-paikka ja kämmenen kierto sijoittuvat kute
   lahella(r.paikka, [10, 1.2, -4], 'tartu r: +x → +z');
   lahella(l.paikka, [9, 1.2, -5], 'tartu l (oletustyyppi): +z → −x');
   assert.deepEqual(kanna, t0.hahmot[0].kadet[2], 'kanna ennallaan');
+  assert.deepEqual(t.hahmot[0].kadet[3], t0.hahmot[0].kadet[3], 'tartu esineeseen (esineen kehys) ennallaan');
   for (const v of [[0, 0, 1], [0, -1, 0], [1, 0, 0]]) {   // sormet, kämmen ja sivu kiertyvät kuten pisteet (ilman siirtoa)
     const a = kierra(q0, v); const odotus = [-a[2], a[1], a[0]];   // suunta 90: (x, z) → (−z, x)
     lahella(kierra(r.kierto, v), odotus, `kierto ${v}`);
