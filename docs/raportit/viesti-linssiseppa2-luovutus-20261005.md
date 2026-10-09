@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 05.2x (uusin)
+## TILA 9.10. klo 05.4x (uusin)
+- ÄMPÄRI: omat mallit v3 (Giza + Riddarholmen + Kuninkaanlinna v1.1) ja uusin-2.json → v3 (Julkaisija 05.23). Vain juna 170+ lukee uusin-2.
+- GIZA PUUTTUI 168/169:STÄ: uusin.json ja giza-v1 olivat 404 (ei varapolkua StreamingAssetsissa). Paketti _valmiit/omat-mallit-vienti-20261009c
+  (uusin.json → v2/mallit-giza.json, vain 4 Giza-kohdetta) Julkaisijalla. Ei kaupunkeja uusin.json:iin (169 leikkaa käänteisesti TKL/PAR).
+- LR korjasi takaperin olleet maakolmiot (valkoiset reiät) + ND/kuninkaanlinnan sävyt → concorde-putki/vienti10 (aja-170f.sh käyttää sitä).
+  Seuraava simuvuoro: Concorde + Notre-Dame (+ kuninkaanlinna) korjatulla varjostimella → PT → v4.
+
+## TILA 9.10. klo 05.2x
 - LEIKKAUSKORJAUS 52c736c4d (laivat-170): IlmakehaLaatat leikkaa Cesiumin kaavalla (Alpha = 1 − peitteen R, musta oletus; aiempi
   alfaehto ei leikannut mitään → Concorden teltat ja Notre-Damen nosturi jäivät). 1102/1102. Lähetetty PT + Natiiviseppä (170/171).
 - LOD0-kuvat lokit/linssiseppa2-170f-*/ (arkki-lod0-ab.png): Riddarholmen + Kuninkaanlinna v1.1 OK; Concorde uusi kuva korjatulla
