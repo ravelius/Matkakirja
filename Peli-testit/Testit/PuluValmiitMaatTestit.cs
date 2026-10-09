@@ -3,7 +3,7 @@
 // Linkit tarkistetaan kuten PuluChat näyttää ne (Kasitelinkit: KasiteKuvio, aihe ennen |-merkkiä, enintään 12 per vastaus,
 // napautus kysyy "Kerro lisää: <aihe>" samassa kohdassa). Kohteet: Kultaiset/pulu-kohdat-v633.tsv = sisältöpaketin v633
 // karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maineen, koska nostokortti hakee paketin nosto.Iso-maan mukaan.
-// ./kaanna.sh PuluValmiitMaat
+// Uusi maa: python3 -I pulu-kultaiset.py (raportti) ja --kirjoita (kultaiset), sitten testirivi ja HakemistoKaikkiMaat. ./kaanna.sh PuluValmiitMaat
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

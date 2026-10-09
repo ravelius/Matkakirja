@@ -1,4 +1,4 @@
-# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v633 (FRA, GRC, DEU, ITA, ROU, ESP, NLD), Pulun valmiiden vastausten testiin
+# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v633 (DEU, ESP, FRA, GRC, ITA, NLD, ROU), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
 elaintaky:DEU	DEU
 elaintaky:ESP	ESP
 elaintaky:FRA	FRA
