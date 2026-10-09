@@ -41,7 +41,10 @@ namespace Matkakirja.Linssit
         /// (omistaja 7.10. 08.4x), kun ennen/jälkeen-kuva on todennettu. Testi pois: Documents/omat-mallit/leikkaus-pois.</summary>
         static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
 
-        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin.json";
+        /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
+        /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä
+        /// kehityskaupungin koko Googlen kaupunki katoaisi leikkauksen kohdalla.</summary>
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-2.json";
         static string verkkoJson, verkkoJuuri;
         static bool verkkoHaettu, verkkoHaussa;
         /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
