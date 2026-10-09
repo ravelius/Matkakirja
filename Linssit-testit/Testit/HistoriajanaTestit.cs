@@ -121,6 +121,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.0, Historiajana.Kasvu(1749 + Historiajana.DatanRakennusVuotta, Historiajana.Osa("b1499-vesiportin-bastioni-l", h)));
         }
 
+        [Testi] static void PaketinLeikkauksillaOnVuodet()
+        {
+            // LR v45y: 12 leikkausobjektia vuodella (vuodesta tai historia_vuosi); jokainen vain-1499-leikkaus saa vuoden datasta.
+            var d = Data();
+            var l = new List<(string, double?, double?)>();
+            foreach (var o in d.Osat.Values) foreach (var k in o.Leikkaukset) l.Add((k.Nimi, k.HistoriaVuodesta, k.HistoriaVuoteen));
+            var h = Historiajana.OsatDatasta(l);
+            Oleta.Tosi(h.Count >= 12, $"vuosia {h.Count}");
+            foreach (var m in d.Lajia("leikkaus"))
+                if (m.Tunnus.StartsWith("vain-1499", StringComparison.Ordinal) && m.Leikkaukset != null)
+                    foreach (var n in m.Leikkaukset) { var o = Historiajana.Osa(n, h); Oleta.Tosi(o != null && o.Vuodesta > 1499, $"{n}: vuosi datasta"); }
+        }
+
         [Testi] static void K2KasvattaaKaikkiOsat()
         {
             var k2 = Historiajana.K2Lyhyt;
