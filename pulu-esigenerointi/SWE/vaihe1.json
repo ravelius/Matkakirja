@@ -1879,9 +1879,11 @@
   "kohde": "kohde:hahmotelma-oland",
   "kysymys": "Mitä Eketorpin linnoituksen kaivauksissa on löytynyt?",
   "uusi": false,
-  "vastaus": "No niin, tästä on kyl paljon kerrottavaa. [[Eketorp]] on Ölannin rautakautisista linnavarustuksista se, joka on kaivettu kokonaan, ja kaivauksista on kertynyt yli 24 000 esinettä. Löydöt valaisevat sitä, miten linnoituksessa asuneet ihmiset elivät arkeaan. Tarkemmasta esineluettelosta en ole varma, joten jätän yksittäiset löydöt mainitsematta. Kokonaan kaivettu linnoitus on arkeologille harvinainen onni. Pitkä numero, mut luvut ovat lukuja.",
+  "vastaus": "No niin, tästä on kyl paljon kerrottavaa. Eketorp on [[Ölannin]] [[rautakautisista]] [[linnavarustuksista]] se, joka on kaivettu kokonaan, ja kaivauksista on kertynyt yli 24 000 esinettä. Löydöt valaisevat sitä, miten linnoituksessa asuneet ihmiset elivät arkeaan. Tarkemmasta esineluettelosta en ole varma, joten jätän yksittäiset löydöt mainitsematta. Kokonaan kaivettu linnoitus on arkeologille harvinainen onni. Pitkä numero, mut luvut ovat lukuja.",
   "linkit": [
-   "Eketorp"
+   "Ölannin",
+   "rautakautisista",
+   "linnavarustuksista"
   ],
   "jatkot": [
    "Mitä rautakaudella tarkoitetaan Ruotsin historiassa?",
@@ -1892,9 +1894,10 @@
   "kohde": "kohde:hahmotelma-oland",
   "kysymys": "Miten Öland yhdistettiin mantereeseen?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Öland yhdistettiin mantereeseen vuonna 1972 valmistuneella, noin kuuden kilometrin pituisella [[sillalla]]. Sitä ennen saarelle kuljettiin vesitse, joten silta muutti sekä saaren arjen että matkailun. Silta ylittää Kalmarsundin, saaren ja manner-Ruotsin välisen salmen. Se on kuulemma pitkä, mutta kyyhky ei ole koskaan tarvinnut siltaa.",
+  "vastaus": "Hetkinen ny. Öland yhdistettiin mantereeseen vuonna 1972 valmistuneella, noin kuuden kilometrin pituisella [[sillalla]]. Sitä ennen saarelle kuljettiin vesitse, joten silta muutti sekä saaren arjen että matkailun. Silta ylittää [[Kalmarsundin]], saaren ja manner-Ruotsin välisen salmen. Se on kuulemma pitkä, mutta kyyhky ei ole koskaan tarvinnut siltaa.",
   "linkit": [
-   "sillalla"
+   "sillalla",
+   "Kalmarsundin"
   ],
   "jatkot": [
    "Miten Ölannin silta on vaikuttanut saaren asukkaiden elämään?",
@@ -1947,8 +1950,12 @@
   "kohde": "kohde:hahmotelma-faro",
   "kysymys": "Mitä Fårön nimi todennäköisesti tarkoittaa, vaikka sitä voi luulla lampaisiin liittyväksi?",
   "uusi": false,
-  "vastaus": "Kas vaan, sepä on hyvä sanaleikki. Fårön nimen arvellaan tarkoittavan matkustajan saarta, vaikka manner-Ruotsissa sen voi luulla tulevan sanasta får eli lammas. Lammasselitys on siis helppo mutta todennäköisesti väärä. Nimien alkuperä on aina jossain määrin arvailua, joten varmuutta ei kannata luvata. Ainakin lampaita saarella saattaa silti olla.",
-  "linkit": [],
+  "vastaus": "Kas vaan, sepä on hyvä sanaleikki. Fårön nimen arvellaan tarkoittavan matkustajan saarta, vaikka [[Ruotsin]] mantereella sen voi luulla tulevan sanasta får eli lammas. Lammasselitys on siis helppo mutta todennäköisesti väärä. [[Nimistöntutkimus]] on aina jossain määrin arvailua, ja [[Gotlannin]] pohjoispuolella olevan saaren nimestäkin kannattaa puhua varoen, joten varmuutta ei kannata luvata. Ainakin lampaita saarella saattaa silti olla.",
+  "linkit": [
+   "Ruotsin",
+   "Nimistöntutkimus",
+   "Gotlannin"
+  ],
   "jatkot": [
    "Miten saarten ja paikkojen nimet yleensä syntyvät?",
    "Millainen murre fårömål on?"
@@ -1987,8 +1994,10 @@
   "kohde": "kohde:hahmotelma-faro",
   "kysymys": "Miten Fårölle pääsee Gotlannin puolelta?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Fårön ja Gotlannin erottaa kapea salmi, jonka yli kulkee kaksi autolauttaa, joten saarelle pääsee lautalla Gotlannin pohjoisosasta. Lauttamatka on lyhyt. Aikatauluista en ole varma, joten ne kannattaa tarkistaa ennen lähtöä. Saari on noin 111 neliökilometrin kokoinen ja siellä on [[majakka]]. Minä kulkisin ilman lauttaa, mut kaikilla ei ole siipiä.",
+  "vastaus": "Selvä juttu. Fårön ja Gotlannin erottaa kapea salmi, jonka yli kulkee kaksi [[autolauttaa]], joten saarelle pääsee lautalla Gotlannin pohjoisosasta. Lauttamatka on lyhyt. Aikatauluista en ole varma, joten ne kannattaa tarkistaa ennen lähtöä. Saari on noin 111 neliökilometrin kokoinen, se sijaitsee [[Itämerellä]] ja siellä on [[majakka]]. Minä kulkisin ilman lauttaa, mut kaikilla ei ole siipiä.",
   "linkit": [
+   "autolauttaa",
+   "Itämerellä",
    "majakka"
   ],
   "jatkot": [
@@ -2014,8 +2023,12 @@
   "kohde": "kohde:hahmotelma-hoga-kusten",
   "kysymys": "Mistä rannikon poikkeuksellisen korkeat kalliot ovat peräisin?",
   "uusi": false,
-  "vastaus": "Tuota niin, tässä on pitkä tarina. Korkeat kalliot ovat seurausta maankohoamisesta: kun jään painama maa on nostanut entisiä rannikoita ja merenpohjia ylemmäs, rantaviivat ja kalliot ovat päätyneet merenpinnan yläpuolelle. Entisten rantaviivojen jäänteet näkyvät rannikolla edelleen. Kalliot eivät ole siis syntyneet kerralla vaan vähitellen tuhansien vuosien aikana. Tarkemmasta kallioperän koostumuksesta en ole varma. Kalliot katsoo mieluiten ylhäältä.",
-  "linkit": [],
+  "vastaus": "Tuota niin, tässä on pitkä tarina. [[Höga kustenin]] korkeat kalliot ovat seurausta [[maankohoamisesta]]: kun jään painama maa on nostanut entisiä rannikoita ja merenpohjia ylemmäs, [[rantaviivat]] ja kalliot ovat päätyneet merenpinnan yläpuolelle. Entisten rantaviivojen jäänteet näkyvät rannikolla edelleen. Kalliot eivät ole siis syntyneet kerralla vaan vähitellen tuhansien vuosien aikana. Tarkemmasta kallioperän koostumuksesta en ole varma. Kalliot katsoo mieluiten ylhäältä.",
+  "linkit": [
+   "Höga kustenin",
+   "maankohoamisesta",
+   "rantaviivat"
+  ],
   "jatkot": [
    "Miten entiset rantaviivat näkyvät maastossa?",
    "Millainen kallioperä Ruotsin rannikolla on?"
@@ -2039,9 +2052,11 @@
   "kohde": "kohde:hahmotelma-hoga-kusten",
   "kysymys": "Milloin viimeisin jääkausi päättyi ja mitä mannerjää on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. [[Mannerjää]] on laaja, usean kilometrin paksuinen jäämassa, joka peittää kokonaisia alueita ja virtaa hitaasti oman painonsa vaikutuksesta. Viimeisin jääkausi päättyi noin 11 700 vuotta sitten, jolloin nykyinen lämpimämpi kausi alkoi. Pohjoismaissa jää suli eri aikoina eri alueilta, ja Höga kustenilta se suli noin 9 600 vuotta sitten. Tarkat vuosiluvut vaihtelevat lähteittäin. Pitkä aika, mut kyyhkysuku muistaa.",
+  "vastaus": "Annas ku mietin. [[Mannerjää]] on laaja, usean kilometrin paksuinen jäämassa, joka peittää kokonaisia alueita ja virtaa hitaasti oman painonsa vaikutuksesta. Viimeisin jääkausi päättyi noin 11 700 vuotta sitten, jolloin nykyinen lämpimämpi kausi eli [[holoseeni]] alkoi. Pohjoismaissa jää suli eri aikoina eri alueilta, ja [[Höga kustenilta]] se suli noin 9 600 vuotta sitten. Tarkat vuosiluvut vaihtelevat lähteittäin. Pitkä aika, mut kyyhkysuku muistaa.",
   "linkit": [
-   "Mannerjää"
+   "Mannerjää",
+   "holoseeni",
+   "Höga kustenilta"
   ],
   "jatkot": [
    "Miten jäätikkö muokkaa maisemaa?",
@@ -2052,8 +2067,11 @@
   "kohde": "kohde:hahmotelma-hoga-kusten",
   "kysymys": "Miten maankohoamista mitataan?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Maankohoamista mitataan nykyään tarkasti satelliittipaikannuksella, jossa vastaanottimet seuraavat maanpinnan korkeuden muutoksia vuosien kuluessa. Lisäksi apuna käytetään vedenkorkeusasemia, jotka kertovat meren pinnan suhteen maan liikkeestä. Vanhemmat havainnot perustuvat rannan merkkeihin ja rantaviivojen tutkimukseen. Yhdistämällä menetelmiä saadaan hyvä kuva siitä, kuinka paljon maa nousee vuodessa. Mittaus on hidasta puuhaa, mut minä en ole kärsimätön.",
-  "linkit": [],
+  "vastaus": "Hetkinen ny. Maankohoamista mitataan nykyään tarkasti satelliittipaikannuksella, jossa vastaanottimet seuraavat maanpinnan korkeuden muutoksia vuosien kuluessa. Lisäksi apuna käytetään [[vedenkorkeusasemia]], jotka kertovat meren pinnan suhteen maan liikkeestä. Vanhemmat havainnot perustuvat rannan merkkeihin ja [[rantaviivojen]] tutkimukseen. Yhdistämällä menetelmiä saadaan hyvä kuva siitä, kuinka paljon maa nousee vuodessa. Mittaus on hidasta puuhaa, mut minä en ole kärsimätön.",
+  "linkit": [
+   "vedenkorkeusasemia",
+   "rantaviivojen"
+  ],
   "jatkot": [
    "Miten satelliittipaikannus toimii?",
    "Mitä vedenkorkeusasema mittaa?"
@@ -2077,9 +2095,11 @@
   "kohde": "kohde:hahmotelma-kosterhavet",
   "kysymys": "Mitä eroa on merellisellä kansallispuistolla ja tavallisella maakansallispuistolla?",
   "uusi": false,
-  "vastaus": "Katotaas. Merellinen [[kansallispuisto]] suojelee pääosin vesialuetta, merenpohjaa ja rantoja maa-alueen sijaan. Kosterhavetin puisto kattaa Kosterinsaarten ympärillä olevan meren ja rannat, mutta ei itse saaria. Maakansallispuistossa suojelun kohteena ovat metsät, suot ja muut maaekosysteemit, ja merellisessä puistossa taas vedenalaiset elinympäristöt ja merieliöt. Tarkat säännöt riippuvat puistosta, eikä niitä kannata arvailla. Kyyhky vaihtaa kyl maan mielellään taivaaseen.",
+  "vastaus": "Katotaas. Merellinen [[kansallispuisto]] suojelee pääosin vesialuetta, merenpohjaa ja rantoja maa-alueen sijaan. Kosterhavetin puisto kattaa [[Kosterinsaarten]] ympärillä olevan meren ja rannat, mutta ei itse saaria. Maakansallispuistossa suojelun kohteena ovat metsät, suot ja muut [[maaekosysteemit]], ja merellisessä puistossa taas vedenalaiset elinympäristöt ja merieliöt. Tarkat säännöt riippuvat puistosta, eikä niitä kannata arvailla. Kyyhky vaihtaa kyl maan mielellään taivaaseen.",
   "linkit": [
-   "kansallispuisto"
+   "kansallispuisto",
+   "Kosterinsaarten",
+   "maaekosysteemit"
   ],
   "jatkot": [
    "Millaisia suojeltuja merialueita Euroopassa on?",
@@ -2090,9 +2110,11 @@
   "kohde": "kohde:hahmotelma-kosterhavet",
   "kysymys": "Millainen maakunta Bohuslän on?",
   "uusi": true,
-  "vastaus": "Kas vaan. [[Bohuslän]] on Ruotsin länsirannikon maakunta, joka tunnetaan kallioisesta saaristosta ja kalastuksesta. Maisemaa hallitsevat karut kalliot ja meren muovaamat rannat. Kosterhavetin kansallispuisto sijaitsee Bohuslänissä Skagerrakin rannalla. Tarkempia väestö- tai pinta-alalukuja en ole varma. Rannikko on kyyhkysen mielestä kaunis, mut kovin tuulinen.",
+  "vastaus": "Kas vaan. Bohuslän on Ruotsin länsirannikon maakunta, joka tunnetaan kallioisesta [[saaristosta]] ja kalastuksesta. Maisemaa hallitsevat karut kalliot ja meren muovaamat rannat. [[Kosterhavetin]] kansallispuisto sijaitsee Bohuslänissä [[Skagerrakin]] rannalla. Tarkempia väestö- tai pinta-alalukuja en ole varma. Rannikko on kyyhkysen mielestä kaunis, mut kovin tuulinen.",
   "linkit": [
-   "Bohuslän"
+   "saaristosta",
+   "Kosterhavetin",
+   "Skagerrakin"
   ],
   "jatkot": [
    "Miten kalastus on muokannut Länsi-Ruotsin rannikkokyliä?",
@@ -2103,9 +2125,11 @@
   "kohde": "kohde:hahmotelma-kosterhavet",
   "kysymys": "Mitä ovat kylmän veden korallit ja missä ne kasvavat?",
   "uusi": true,
-  "vastaus": "Nyt muistan: ne eivät ole trooppisia. [[Kylmän veden korallit]] ovat meren pohjalla eläviä eliöitä, jotka toisin kuin trooppiset lajit eivät tarvitse auringonvaloa vaan ottavat ravintonsa vedestä. Ne kasvavat hitaasti viileissä ja syvissä vesissä, ja niitä tavataan myös Pohjois-Atlantilla ja Skandinavian vesillä. Kosterhavetin kaltaisilla alueilla ne muodostavat elinympäristön muille pienille meren eliöille. Tarkoista lajeista ja esiintymispaikoista en ole varma. Hidas kasvu ja hidas kyyhky, mut sopii.",
+  "vastaus": "Nyt muistan: ne eivät ole trooppisia. Kylmän veden korallit ovat meren pohjalla eläviä eliöitä, jotka toisin kuin trooppiset lajit eivät tarvitse auringonvaloa vaan ottavat ravintonsa vedestä. Ne kasvavat hitaasti viileissä ja syvissä vesissä, ja niitä tavataan myös [[Pohjois-Atlantilla]] ja [[Skandinavian]] vesillä. [[Kosterhavetin]] kaltaisilla alueilla ne muodostavat elinympäristön muille pienille meren eliöille. Tarkoista lajeista ja esiintymispaikoista en ole varma. Hidas kasvu ja hidas kyyhky, mut sopii.",
   "linkit": [
-   "Kylmän veden korallit"
+   "Pohjois-Atlantilla",
+   "Skandinavian",
+   "Kosterhavetin"
   ],
   "jatkot": [
    "Miten kylmän veden korallit saavat ravintonsa?",
@@ -2144,8 +2168,12 @@
   "kohde": "kohde:hahmotelma-kullaberg",
   "kysymys": "Mitä kivikehät ja hautakummut kertovat siitä, keitä Kullabergissa on asunut?",
   "uusi": false,
-  "vastaus": "Hmm, tuo on arkeologian puolta. Kullabergissa on asuttu jo kivikaudella, ja kivikehät, hautakumpuja ja muinaisten kylien jäänteet kertovat, että alueella on elänyt ihmisiä pitkän aikaa. Hautakummut ja kivikehät viittaavat vakiintuneeseen asutukseen ja yhteisön rituaaleihin sekä muistoon vainajista. Tarkempaa ajoitusta tai asukkaiden elinkeinoja en ole varma, joten ne kannattaa tarkistaa arkeologien tutkimuksista. Muinaiset asukkaat näkivät samat kalliot, joita minä katson ylhäältä.",
-  "linkit": [],
+  "vastaus": "Hmm, tuo on arkeologian puolta. Kullabergissa on asuttu jo [[kivikaudella]], ja kivikehät, hautakumpuja ja muinaisten kylien jäänteet kertovat, että alueella on elänyt ihmisiä pitkän aikaa. Hautakummut ja kivikehät viittaavat vakiintuneeseen asutukseen ja yhteisön [[rituaaleihin]] sekä muistoon vainajista. Tarkempaa ajoitusta tai asukkaiden elinkeinoja en ole varma, joten ne kannattaa tarkistaa [[arkeologien]] tutkimuksista. Muinaiset asukkaat näkivät samat kalliot, joita minä katson ylhäältä.",
+  "linkit": [
+   "kivikaudella",
+   "rituaaleihin",
+   "arkeologien"
+  ],
   "jatkot": [
    "Miten arkeologit ajoittavat muinaisia hautakumpuja?",
    "Mitä kivikausi tarkoittaa Pohjoismaissa?"
@@ -2169,9 +2197,11 @@
   "kohde": "kohde:hahmotelma-kullaberg",
   "kysymys": "Mikä on mikroilmasto?",
   "uusi": true,
-  "vastaus": "Odotas vähän. [[Mikroilmasto]] tarkoittaa pienen alueen ilmastoa, joka poikkeaa ympäröivästä seudusta. Siihen vaikuttavat esimerkiksi maaston muodot, auringon suunta, tuuli ja kosteus. Kallion aurinkoinen etelärinne on lämpimämpi kuin varjoisa pohjoisrinne, vaikka ne ovat vain muutaman metrin päässä toisistaan. Siksi pienelläkin alueella voi kasvaa hyvin erilaisia kasveja. Kullabergin kallioilla se näkyy selvästi kasvillisuuden monipuolisuutena. Pienet erot ovat tärkeitä, ja minä tiedän sen, kun etsin hyvää tuulensuojaa.",
+  "vastaus": "Odotas vähän. Mikroilmasto tarkoittaa pienen alueen ilmastoa, joka poikkeaa ympäröivästä seudusta. Siihen vaikuttavat esimerkiksi maaston muodot, auringon suunta, tuuli ja kosteus. Kallion aurinkoinen [[etelärinne]] on lämpimämpi kuin varjoisa pohjoisrinne, vaikka ne ovat vain muutaman metrin päässä toisistaan. Siksi pienelläkin alueella voi kasvaa hyvin erilaisia kasveja. [[Kullabergin]] kallioilla se näkyy selvästi [[kasvillisuuden]] monipuolisuutena. Pienet erot ovat tärkeitä, ja minä tiedän sen, kun etsin hyvää tuulensuojaa.",
   "linkit": [
-   "Mikroilmasto"
+   "etelärinne",
+   "Kullabergin",
+   "kasvillisuuden"
   ],
   "jatkot": [
    "Miten tuuli vaikuttaa kasvillisuuteen kalliorannikolla?",
@@ -2182,9 +2212,12 @@
   "kohde": "kohde:hahmotelma-kullaberg",
   "kysymys": "Mitä Kattegat on ja miten se eroaa Skagerrakista?",
   "uusi": true,
-  "vastaus": "No niin, pitää vähän katsoa kartta mielessä. [[Kattegat]] on merialue Tanskan Jyllannin ja Ruotsin länsirannikon välissä, ja se yhdistää Skagerrakin Itämereen Tanskan salmien kautta. Kattegatin vesi on yleensä vähemmän suolaista kuin Skagerrakin, koska siihen sekoittuu Itämereltä tulevaa murtovettä. Skagerrak taas on avoimempi ja yhteydessä Pohjanmereen. Tarkkoja suolaisuuslukuja en ole varma. Kullaberg työntyy Kattegatiin, ja sieltä saa hyvän näkymän. Kyyhky pitää näkymistä.",
+  "vastaus": "No niin, pitää vähän katsoa kartta mielessä. Kattegat on merialue Tanskan [[Jyllannin]] ja Ruotsin länsirannikon välissä, ja se yhdistää [[Skagerrakin]] [[Itämereen]] [[Tanskan salmien]] kautta. Kattegatin vesi on yleensä vähemmän suolaista kuin Skagerrakin, koska siihen sekoittuu Itämereltä tulevaa murtovettä. Skagerrak taas on avoimempi ja yhteydessä Pohjanmereen. Tarkkoja suolaisuuslukuja en ole varma. Kullaberg työntyy Kattegatiin, ja sieltä saa hyvän näkymän. Kyyhky pitää näkymistä.",
   "linkit": [
-   "Kattegat"
+   "Jyllannin",
+   "Skagerrakin",
+   "Itämereen",
+   "Tanskan salmien"
   ],
   "jatkot": [
    "Miksi Itämeren vesi vaihtuu hitaasti?",
@@ -2367,15 +2400,18 @@
  },
  {
   "kohde": "kohde:hahmotelma-gripsholm",
-  "kysymys": "Mitä Ruotsin kansallinen muotokuvagalleria on, ja mitä siellä on esillä?",
+  "kysymys": "Mikä on Mälaren, jonka rannalla Gripsholm sijaitsee?",
   "uusi": true,
-  "vastaus": "No jopas. Kerron mielelläni. Gripsholmin linnassa toimii vuodesta 1822 Ruotsin kansallinen [[muotokuvagalleria]], joka on yksi maailman vanhimmista muotokuvakokoelmista. Kokoelma esittelee Ruotsin historiaa muotokuvien kautta: siinä on kuninkaita ja kuningattaria sekä muita merkittäviä ruotsalaisia eri aikakausilta. Muotokuvat kertovat paitsi kuvatuista ihmisistä myös siitä, miten heidät haluttiin muistaa ja miten pukeutuminen ja kuvataide muuttuivat. Kokoelman koosta tai yksittäisistä teoksista en ole varma. Pitkä meni, mut kyllä minä silti jaksoin.",
+  "vastaus": "Kas vaan, tuo on kotikulmia. Mälaren on Itä-Ruotsin laaja ja rannoiltaan rikkonainen järvi, joka laskee [[Itämereen]] Tukholman kohdalla, ja [[Tukholma]] on syntynyt juuri järven laskuaukon tuntumaan. Järvi oli aikoinaan osa merenlahtea, mutta [[maankohoaminen]] erotti sen vähitellen merestä. Sen rannoilla ja saarilla on ollut asutusta ja kauppaa jo viikinkiajalta, ja yksi tunnetuimmista kauppapaikoista oli [[Birka]]. Tarkemmista mitoista en ole varma, joten jätän luvut pois. Kyl järvi näyttää ylhäältä kauniimmalta kuin kartalta.",
   "linkit": [
-   "muotokuvagalleria"
+   "Itämereen",
+   "Tukholma",
+   "maankohoaminen",
+   "Birka"
   ],
   "jatkot": [
-   "Miksi muotokuvia kerättiin 1800-luvulla?",
-   "Mitä muut kuninkaalliset linnat Ruotsissa ovat?"
+   "Miten maankohoaminen on muuttanut Itämeren rantoja?",
+   "Mikä Birka oli viikinkiajalla?"
   ]
  },
  {
@@ -2614,9 +2650,11 @@
   "kohde": "kohde:hahmotelma-marstrand",
   "kysymys": "Mitä kaupunkioikeudet tarkoittivat keskiajalla?",
   "uusi": true,
-  "vastaus": "Ai se. Kaupunkioikeudet tarkoittivat sitä, että paikka sai hallitsijalta oikeuden harjoittaa kauppaa ja käsityötä sekä pitää markkinoita. Usein [[kaupunkioikeudet]] toivat mukanaan myös oman hallinnon, oman oikeuden ja alueen, jolla vain kaupungin porvarit saivat käydä kauppaa. Ruotsissa kauppaa pyrittiin pitkään keskittämään kaupunkeihin, joten oikeus oli taloudellisesti arvokas. Marstrandin kaupunkioikeudet ovat lähteiden mukaan peräisin noin vuodelta 1200, vaikka paikka on nykyään pieni kylä. Pieni kylä, mutta kaupunki se on silti.",
+  "vastaus": "Ai se. Kaupunkioikeudet tarkoittivat sitä, että paikka sai hallitsijalta oikeuden harjoittaa kauppaa ja käsityötä sekä pitää [[markkinoita]]. Usein kaupunkioikeudet toivat mukanaan myös oman hallinnon, oman oikeuden ja alueen, jolla vain kaupungin [[porvarit]] saivat käydä kauppaa. Ruotsissa kauppaa pyrittiin pitkään keskittämään kaupunkeihin, joten oikeus oli taloudellisesti arvokas. [[Marstrandin]] kaupunkioikeudet ovat lähteiden mukaan peräisin noin vuodelta 1200, vaikka paikka on nykyään pieni kylä. Pieni kylä, mutta kaupunki se on silti.",
   "linkit": [
-   "kaupunkioikeudet"
+   "markkinoita",
+   "porvarit",
+   "Marstrandin"
   ],
   "jatkot": [
    "Mikä erotti kaupungin maaseudusta keskiajalla?",
@@ -2785,9 +2823,11 @@
   "kohde": "kohde:hahmotelma-rattvik",
   "kysymys": "Miksi Dalhalla-ooppera pidetään entisessä kalkkikivilouhoksessa eikä tavallisessa oopperatalossa?",
   "uusi": false,
-  "vastaus": "Sepä sattui: kaunis paikka. [[Dalhalla]] on entinen kalkkikivilouhos, jossa kalkkia louhittiin teollisuuden tarpeisiin. Kun louhinta loppui, jäljelle jäi syvä, jyrkkäseinäinen kuoppa, jonka kalliorinteet toimivat luonnostaan akustiikkana. Sanotaan, että ääni kantaa siellä poikkeuksellisen hyvin, ja rinteille on rakennettu istumapaikat. Louhoksen käyttö esityspaikkana alkoi 1990-luvulla, ja siellä esitetään oopperaa, konsertteja ja muuta ohjelmistoa kesäisin. Ympäristö on ainutlaatuinen, koska luonto ja esitys yhdistyvät. Kyl minä tän kuuntelisin, jos pääsisin sisään ilman lippua.",
+  "vastaus": "Sepä sattui: kaunis paikka. Dalhalla on entinen [[kalkkikivilouhos]], jossa kalkkia louhittiin teollisuuden tarpeisiin. Kun louhinta loppui, jäljelle jäi syvä, jyrkkäseinäinen kuoppa, jonka kalliorinteet toimivat luonnostaan [[akustiikkana]]. Sanotaan, että ääni kantaa siellä poikkeuksellisen hyvin, ja rinteille on rakennettu istumapaikat. Louhoksen käyttö esityspaikkana alkoi 1990-luvulla, ja siellä esitetään [[oopperaa]], konsertteja ja muuta ohjelmistoa kesäisin. Ympäristö on ainutlaatuinen, koska luonto ja esitys yhdistyvät. Kyl minä tän kuuntelisin, jos pääsisin sisään ilman lippua.",
   "linkit": [
-   "Dalhalla"
+   "kalkkikivilouhos",
+   "akustiikkana",
+   "oopperaa"
   ],
   "jatkot": [
    "Miksi louhokset sopivat akustiikaltaan konserttipaikoiksi?",
@@ -2938,6 +2978,50 @@
   ]
  },
  {
+  "kohde": "kohde:hahmotelma-vimmerby",
+  "kysymys": "Miksi Astrid Lindgrenin kirjat ovat rakastettuja eri maissa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Lindgrenin kirjoja on käännetty lukuisille kielille, ja niiden suosio perustuu eläviin lapsihahmoihin sekä tarinoiden huumoriin ja lämpöön. Tunnetuimpia hahmoja ovat [[Peppi Pitkätossu]], [[Emil Lönnebergan]] kepposet ja [[Katto-Kassinen]]. Usein sanotaan, että Lindgren kirjoitti lapsen näkökulmasta ottamatta lukijaa ylhäältä alas, ja siksi aikuisetkin lukevat kirjoja mielellään. Tarkkoja käännösmääriä en lähde arvailemaan. Eikä tässä ole vielä mainittu pullaakaan.",
+  "linkit": [
+   "Peppi Pitkätossu",
+   "Emil Lönnebergan",
+   "Katto-Kassinen"
+  ],
+  "jatkot": [
+   "Milloin Peppi Pitkätossu julkaistiin?",
+   "Mitä muita ruotsalaisia lastenkirjailijoita on tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vimmerby",
+  "kysymys": "Miksi ruotsalaiset puutalot maalataan usein punaisiksi?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Perinteinen punainen väri on tehty usein [[punamullasta]], jota saatiin sivutuotteena [[Falunin]] kuparikaivoksen toiminnasta. Maali on edullista ja suojaa puuta säältä, minkä vuoksi se levisi maaseudun taloihin ja mökkeihin eri puolille Ruotsia. Tarkkaa ajankohtaa, jolloin tapa yleistyi, en ole varma. Punainen on kyyhkyn silmään lämmin väri.",
+  "linkit": [
+   "punamullasta",
+   "Falunin"
+  ],
+  "jatkot": [
+   "Mikä Falunin kuparikaivos on?",
+   "Mitä punamulta oikeastaan on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vimmerby",
+  "kysymys": "Missä Kalmarin lääni sijaitsee ja mitä siihen kuuluu?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Kalmarin läänin]] alue sijaitsee Etelä-Ruotsin itärannikolla [[Itämeren]] rannalla, ja siihen kuuluu myös [[Öland]]-saari. Läänin hallintokaupunki on Kalmar, ja Vimmerby sijaitsee läänin sisämaan puolella. Tarkkaa asukasmäärää en ole varma. Rannikolla on kyyhkyn mielestä aina parempi tuuli.",
+  "linkit": [
+   "Kalmarin läänin",
+   "Itämeren",
+   "Öland"
+  ],
+  "jatkot": [
+   "Mikä Öland on?",
+   "Mitä muita lääniä Ruotsissa on?"
+  ]
+ },
+ {
   "kohde": "kohde:hahmotelma-kalix",
   "kysymys": "Miksi Kalixin muikunmäti maistuu erilaiselta kuin muualta saatu?",
   "uusi": false,
@@ -2983,8 +3067,10 @@
   "kohde": "kohde:hahmotelma-kalix",
   "kysymys": "Mitä Kalixin nimi tarkoittaa saamen kielellä?",
   "uusi": true,
-  "vastaus": "Annas ku mietin, tämä on kiva yksityiskohta. Nimen uskotaan tulevan saamen sanasta Gáláseatnu, joka tarkoittaa kylmää jokea, ja se oli Kalixjoen vanha nimi. Paikkakunta on siis saanut nimensä joesta eikä päinvastoin. [[Saamelaiset]] ovat Pohjois-Euroopan alkuperäiskansa, jonka asuinalue ulottuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosiin, ja saamen kielissä on monia pohjoisen luonnon paikannimiä. Nimen alkuperää pidetään todennäköisenä, mutta ei täysin varmana. Kylmältä kuulostaa, mutta onneksi pulla on yhä lämmintä.",
+  "vastaus": "Annas ku mietin, tämä on kiva yksityiskohta. Nimen uskotaan tulevan saamen sanasta [[Gáláseatnu]], joka tarkoittaa kylmää jokea, ja se oli [[Kalixjoen]] vanha nimi. Paikkakunta on siis saanut nimensä joesta eikä päinvastoin. [[Saamelaiset]] ovat Pohjois-Euroopan alkuperäiskansa, jonka asuinalue ulottuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosiin, ja saamen kielissä on monia pohjoisen luonnon paikannimiä. Nimen alkuperää pidetään todennäköisenä, mutta ei täysin varmana. Kylmältä kuulostaa, mutta onneksi pulla on yhä lämmintä.",
   "linkit": [
+   "Gáláseatnu",
+   "Kalixjoen",
    "Saamelaiset"
   ],
   "jatkot": [
@@ -3010,8 +3096,10 @@
   "kohde": "kohde:hahmotelma-leksand",
   "kysymys": "Miksi Siljan-järven avovesi voi aiheuttaa keväällä yllättäviä lumipyryjä?",
   "uusi": false,
-  "vastaus": "Odotas vähän, tämä on ilmiö, jonka minä olen itse nähnyt ylhäältä. Kun järvi on jäätynyt vain osittain, avoin vesi on usein ilmaa lämpimämpää ja haihtuu runsaasti. Kostea ilma nousee ylös, jäähtyy ja muodostaa pilviä, jotka voivat tuottaa runsaita lumisateita. Leksandin seudulla toukokuussa 2008 satoi yllättäen 30 senttiä lunta, vaikka kevät oli jo pitkällä. Täsmällistä sääselitystä tuohon yksittäiseen päivään en osaa antaa. [[Dalarnan]] läänin sää voi siis yllättää vielä keväällä. Lumi kyllä sulaa, mutta kyyhkyn siivet eivät kuivu yhtä nopeasti.",
+  "vastaus": "Odotas vähän, tämä on ilmiö, jonka minä olen itse nähnyt ylhäältä. Kun järvi on jäätynyt vain osittain, avoin vesi on usein ilmaa lämpimämpää ja haihtuu runsaasti. Kostea ilma nousee ylös, jäähtyy ja muodostaa pilviä, jotka voivat tuottaa runsaita [[lumisateita]]. [[Leksandin]] seudulla toukokuussa 2008 satoi yllättäen 30 senttiä lunta, vaikka kevät oli jo pitkällä. Täsmällistä sääselitystä tuohon yksittäiseen päivään en osaa antaa. [[Dalarnan]] läänin sää voi siis yllättää vielä keväällä. Lumi kyllä sulaa, mutta kyyhkyn siivet eivät kuivu yhtä nopeasti.",
   "linkit": [
+   "lumisateita",
+   "Leksandin",
    "Dalarnan"
   ],
   "jatkot": [
@@ -3038,8 +3126,10 @@
   "kohde": "kohde:hahmotelma-leksand",
   "kysymys": "Millainen leipä on näkkileipä ja miten sitä tehdään?",
   "uusi": true,
-  "vastaus": "Sepä sattui: tämä on oikeaa kyyhkyn aluetta. Näkkileipä on ohut, kuiva ja rapea leipä, joka kestää säilytystä pitkään, ja se valmistetaan yleensä ruisjauhoista tai muista viljajauhoista. Taikina kauletaan ohueksi, leivotaan kypsäksi ja kuivataan, jolloin leipä pysyy rapeana. Leksandissa sitä valmistaa [[Leksandsbröd]]-niminen näkkileipäyritys, ja leipälaji on osa pohjoismaista ruokakulttuuria. Yksityiskohtaiset reseptit vaihtelevat valmistajasta toiseen. Mulla on silti yhä haave oikeasta kardemummapullasta.",
+  "vastaus": "Sepä sattui: tämä on oikeaa kyyhkyn aluetta. Näkkileipä on ohut, kuiva ja rapea leipä, joka kestää säilytystä pitkään, ja se valmistetaan yleensä [[ruisjauhoista]] tai muista viljajauhoista. Taikina kauletaan ohueksi, leivotaan kypsäksi ja kuivataan, jolloin leipä pysyy rapeana. [[Leksandissa]] sitä valmistaa [[Leksandsbröd]]-niminen näkkileipäyritys, ja leipälaji on osa pohjoismaista ruokakulttuuria. Yksityiskohtaiset reseptit vaihtelevat valmistajasta toiseen. Minulla on silti yhä haave oikeasta kardemummapullasta.",
   "linkit": [
+   "ruisjauhoista",
+   "Leksandissa",
    "Leksandsbröd"
   ],
   "jatkot": [
@@ -3094,9 +3184,11 @@
   "kohde": "kohde:hahmotelma-granna",
   "kysymys": "Mitä Brahehusin linnalle tapahtui, ja mikä siitä on jäljellä?",
   "uusi": false,
-  "vastaus": "Mmm— tämä on surullisempi tarina. Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta se ei koskaan valmistunut, ja linna paloi vuonna 1708. Sen rakennuttaja oli kreivi [[Per Brahe]], joka perusti myös Grännan vuonna 1652. Palon jälkeen linnaa ei kunnostettu valmiiksi, ja nykyisin sen paikalla on rauniot, jotka ovat vierailtavissa Grännavuoren lähellä. Täsmällistä tilannetta en ole aivan varma, joten kannattaa tarkistaa se ennen matkaa. Onpas siitä jo aikaa.",
+  "vastaus": "Mmm— tämä on surullisempi tarina. [[Brahehusin]] linnan rakentaminen alkoi vuonna 1638, mutta se ei koskaan valmistunut, ja linna paloi vuonna 1708. Sen rakennuttaja oli kreivi [[Per Brahe]], joka perusti myös Grännan vuonna 1652. Palon jälkeen linnaa ei kunnostettu valmiiksi, ja nykyisin sen paikalla on rauniot, jotka ovat vierailtavissa [[Grännavuoren]] lähellä. Täsmällistä tilannetta en ole aivan varma, joten kannattaa tarkistaa se ennen matkaa. Onpas siitä jo aikaa.",
   "linkit": [
-   "Per Brahe"
+   "Brahehusin",
+   "Per Brahe",
+   "Grännavuoren"
   ],
   "jatkot": [
    "Millainen mies kreivi Per Brahe oli?",
@@ -3107,8 +3199,10 @@
   "kohde": "kohde:hahmotelma-granna",
   "kysymys": "Miten polkagris-karkkitanko valmistetaan?",
   "uusi": true,
-  "vastaus": "Selvä juttu, tämä on käsityötä. Polkagris valmistetaan keittämällä sokerimassa, jota vedetään ja kierretään raidalliseksi tangoksi, ja perinteinen maku on piparminttu. Punavalkoinen kuvio syntyy, kun värjätty ja värjäämätön massa yhdistetään. Perinteisessä valmistuksessa massa käsitellään vielä lämpimänä, jotta siihen saadaan haluttu muoto. Amalia Erikssonin ensimmäinen karkki valmistettiin vuonna 1859, ja [[Grännassa]] sitä valmistetaan edelleen. Kyyhky kiittää aina, kun jokin on käsintehtyä ja makeaa.",
+  "vastaus": "Selvä juttu, tämä on käsityötä. Polkagris valmistetaan keittämällä sokerimassa, jota vedetään ja kierretään raidalliseksi tangoksi, ja perinteinen maku on [[piparminttu]]. Punavalkoinen kuvio syntyy, kun värjätty ja värjäämätön massa yhdistetään. Perinteisessä valmistuksessa massa käsitellään vielä lämpimänä, jotta siihen saadaan haluttu muoto. [[Amalia Erikssonin]] ensimmäinen karkki valmistettiin vuonna 1859, ja [[Grännassa]] sitä valmistetaan edelleen. Kyyhky kiittää aina, kun jokin on käsintehtyä ja makeaa.",
   "linkit": [
+   "piparminttu",
+   "Amalia Erikssonin",
    "Grännassa"
   ],
   "jatkot": [
@@ -3162,9 +3256,11 @@
   "kohde": "kohde:hahmotelma-halsingegardar",
   "kysymys": "Mitä Erik-Anders-tilalle tapahtui, kun Erik Anderssonin perheen onni kääntyi?",
   "uusi": false,
-  "vastaus": "No niin, tämä on vähän haikea kohta. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti. Talon nimi tulee talonpoika [[Erik Anderssonista]] (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Rakennuksia on entisöity vuodesta 1993, ja ne kuuluvat nykyisin Hälsingen koristeltujen maatilojen joukkoon, jotka ovat Unescon maailmanperintökohde. Tarkkoja omistajavaiheita en tiedä, joten en lähde niitä arvailemaan. Hyvä, että talo on pidetty kunnossa.",
+  "vastaus": "No niin, tämä on vähän haikea kohta. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti. Talon nimi tulee talonpoika [[Erik Anderssonista]] (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Rakennuksia on entisöity vuodesta 1993, ja ne kuuluvat nykyisin [[Hälsingen]] koristeltujen maatilojen joukkoon, jotka ovat [[Unescon]] maailmanperintökohde. Tarkkoja omistajavaiheita en tiedä, joten en lähde niitä arvailemaan. Hyvä, että talo on pidetty kunnossa.",
   "linkit": [
-   "Erik Anderssonista"
+   "Erik Anderssonista",
+   "Hälsingen",
+   "Unescon"
   ],
   "jatkot": [
    "Miten vanhoja puutaloja entisöidään?",
@@ -3189,9 +3285,11 @@
   "kohde": "kohde:hahmotelma-halsingegardar",
   "kysymys": "Mitä kaavamaalaus on ja miten sitä tehdään?",
   "uusi": true,
-  "vastaus": "Tuota niin, hyvä kysymys. Kaavamaalaus eli [[kaavamaalaus]] on koristemaalauksen tapa, jossa kuvio toistuu samanlaisena, ja siihen käytetään yleensä apuna valmista kaavaa tai sapluunaa. Näin maalari saa toistuvat kuviot samanlaisiksi nopeammin kuin vapaalla kädellä maalaten. Hälsinglandin koristelluissa taloissa seinillä on maalauksia, kaavamaalauksia ja tuontitapettia, joten tekniikka kuuluu alueen perinteeseen. Tarkat työvaiheet vaihtelivat maalarin ja ajan mukaan. Tuollainen toisto on kyyhkylle suorastaan rauhoittavaa.",
+  "vastaus": "Tuota niin, hyvä kysymys. Kaavamaalaus on koristemaalauksen tapa, jossa kuvio toistuu samanlaisena, ja siihen käytetään yleensä apuna valmista kaavaa eli [[sapluunaa]]. Näin maalari saa toistuvat kuviot samanlaisiksi nopeammin kuin vapaalla kädellä maalaten. [[Hälsinglandin]] koristelluissa taloissa seinillä on maalauksia, kaavamaalauksia ja [[tuontitapettia]], joten tekniikka kuuluu alueen perinteeseen. Tarkat työvaiheet vaihtelivat maalarin ja ajan mukaan. Tuollainen toisto on kyyhkylle suorastaan rauhoittavaa.",
   "linkit": [
-   "kaavamaalaus"
+   "sapluunaa",
+   "Hälsinglandin",
+   "tuontitapettia"
   ],
   "jatkot": [
    "Mitä sapluuna tarkoittaa koristemaalauksessa?",
@@ -3202,9 +3300,12 @@
   "kohde": "kohde:hahmotelma-halsingegardar",
   "kysymys": "Miksi Ruotsissa on rakennettu perinteisesti paljon puutaloja?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Ruotsissa on paljon metsää, joten puu on ollut helposti saatavilla oleva ja edullinen rakennusmateriaali. Perinteinen puurakentaminen on kehittynyt vuosisatojen kuluessa, ja puutaloja on tehty sekä maaseudulle että kaupunkeihin. Hälsinglandin koristellut maatilat ovat hyvä esimerkki: niiden suuret päärakennukset tehtiin pelkästä puusta, ja ne edustavat 1800-luvun [[puurakentamisen]] perinnettä. Vimmerbyssä ja Grännassakin on säilynyt vanhoja puutaloja. Tarkkaa syytä jokaiselle alueelle en osaa antaa. Puutalot näyttävät ylhäältä erityisen lämpimiltä.",
+  "vastaus": "Annas ku mietin. Ruotsissa on paljon metsää, joten puu on ollut helposti saatavilla oleva ja edullinen rakennusmateriaali. Perinteinen puurakentaminen on kehittynyt vuosisatojen kuluessa, ja puutaloja on tehty sekä maaseudulle että kaupunkeihin. [[Hälsinglandin]] koristellut maatilat ovat hyvä esimerkki: niiden suuret päärakennukset tehtiin pelkästä puusta, ja ne edustavat 1800-luvun [[puurakentamisen]] perinnettä. [[Vimmerbyssä]] ja [[Grännassa]] on myös säilynyt vanhoja puutaloja. Tarkkaa syytä jokaiselle alueelle en osaa antaa. Puutalot näyttävät ylhäältä erityisen lämpimiltä.",
   "linkit": [
-   "puurakentamisen"
+   "Hälsinglandin",
+   "puurakentamisen",
+   "Vimmerbyssä",
+   "Grännassa"
   ],
   "jatkot": [
    "Miten puutaloja suojellaan tulipaloilta?",
@@ -3305,8 +3406,10 @@
   "kohde": "kohde:hahmotelma-eskilstuna",
   "kysymys": "Miksi Eskilstunaa on verrattu englantilaiseen Sheffieldiin?",
   "uusi": false,
-  "vastaus": "Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja terästeollisuuden keskuksina. Eskilstunassa valmistettiin aterimia, saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.",
+  "vastaus": "Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja [[terästeollisuuden]] keskuksina. Eskilstunassa valmistettiin [[aterimia]], saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.",
   "linkit": [
+   "terästeollisuuden",
+   "aterimia",
    "Stålstaden"
   ],
   "jatkot": [
@@ -3332,8 +3435,10 @@
   "kohde": "kohde:hahmotelma-eskilstuna",
   "kysymys": "Mitä vapaakaupunki tarkoitti Eskilstunan käsityöläisille?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.",
+  "vastaus": "Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa [[käsityöläiset]] ja valmistajat saivat perustaa [[verovapaita pajoja]] ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.",
   "linkit": [
+   "käsityöläiset",
+   "verovapaita pajoja",
    "teollisen vallankumouksen"
   ],
   "jatkot": [
@@ -3388,9 +3493,11 @@
   "kohde": "kohde:hahmotelma-norrkoping",
   "kysymys": "Kuka oli Louis De Geer ja miten hän tuki Norrköpingiä?",
   "uusi": true,
-  "vastaus": "No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 asetehdas, ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.",
+  "vastaus": "No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 [[asetehdas]], ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 [[Norrköpingissä]] oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.",
   "linkit": [
-   "tekstiilituotanto"
+   "asetehdas",
+   "tekstiilituotanto",
+   "Norrköpingissä"
   ],
   "jatkot": [
    "Mitä tekstiilituotanto tarkoittaa?",
@@ -3401,9 +3508,11 @@
   "kohde": "kohde:hahmotelma-norrkoping",
   "kysymys": "Miksi puutalot kiellettiin Norrköpingissä tulipalojen jälkeen?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Keskiaikainen kaupunki oli tuhoutunut tulipaloissa ja vuonna 1719 venäläisten polttamana, ja palojen jälkeen [[puutalot]] kiellettiin. Kiellon tarkoitus oli vähentää uusien tulipalojen vaaraa, sillä puurakennukset syttyvät ja palavat helposti. Kaupunki rakennettiin uudelleen, ja 1800-luvulla teollisuus kasvoi Motala ströminin varrella. Puu on kyyhkyn ystävä, mutta ei tulen.",
+  "vastaus": "Joo, tän minä tiedän. Keskiaikainen kaupunki oli tuhoutunut [[tulipaloissa]] ja vuonna 1719 venäläisten polttamana, ja palojen jälkeen [[puutalot]] kiellettiin. Kiellon tarkoitus oli vähentää uusien tulipalojen vaaraa, sillä puurakennukset syttyvät ja palavat helposti. Kaupunki rakennettiin uudelleen, ja 1800-luvulla teollisuus kasvoi [[Motala ströminin]] varrella. Puu on kyyhkyn ystävä, mutta ei tulen.",
   "linkit": [
-   "puutalot"
+   "tulipaloissa",
+   "puutalot",
+   "Motala ströminin"
   ],
   "jatkot": [
    "Mistä materiaaleista kaupunkeja rakennettiin palojen jälkeen?",
@@ -3443,8 +3552,10 @@
   "kohde": "kohde:hahmotelma-gammelstad",
   "kysymys": "Miksi kirkkokylän talot olivat käytössä vain sunnuntaisin ja juhlapäivinä?",
   "uusi": false,
-  "vastaus": "Kas vaan. Kirkkomajat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.",
+  "vastaus": "Kas vaan. [[Kirkkomajat]] olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet [[kirkkovieraat]] eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.",
   "linkit": [
+   "Kirkkomajat",
+   "kirkkovieraat",
    "Nederluleån kivikirkon"
   ],
   "jatkot": [
@@ -3484,9 +3595,12 @@
   "kohde": "kohde:hahmotelma-gammelstad",
   "kysymys": "Kuinka monta kirkkomajaa Gammelstadissa on?",
   "uusi": true,
-  "vastaus": "Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun kivikirkkoa. Kylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.",
+  "vastaus": "Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun [[kivikirkkoa]]. Kylä sijaitsee noin kymmenen kilometriä [[Luleån]] pohjoispuolella [[Pohjanlahden]] pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.",
   "linkit": [
-   "kirkkomajaa"
+   "kirkkomajaa",
+   "kivikirkkoa",
+   "Luleån",
+   "Pohjanlahden"
   ],
   "jatkot": [
    "Mistä kirkkomajat on rakennettu?",
@@ -3512,9 +3626,11 @@
   "kohde": "kohde:hahmotelma-almhult",
   "kysymys": "Millainen paikka Råshult on, ja kuka siellä syntyi?",
   "uusi": false,
-  "vastaus": "Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila Älmhultin seudulla, ja nykyään se on museo. Linné oli kasvitieteilijä, joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.",
+  "vastaus": "Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila [[Älmhultin]] seudulla, ja nykyään se on museo. Linné oli [[kasvitieteilijä]], joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.",
   "linkit": [
-   "Carl von Linnén"
+   "Carl von Linnén",
+   "Älmhultin",
+   "kasvitieteilijä"
   ],
   "jatkot": [
    "Mistä Carl von Linné tunnetaan?",
@@ -3525,9 +3641,11 @@
   "kohde": "kohde:hahmotelma-almhult",
   "kysymys": "Mitä Älmhultin IKEA-museossa esitellään?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Älmhultin [[IKEA-museo]] esittelee IKEAn historiaa, ja museo avattiin kaupunkiin vuonna 2016. Se sopii paikkaan hyvin, sillä ensimmäinen IKEA-myymälä rakennettiin Älmhultiin ja yhtiöllä on yhä suuri toiminta paikkakunnalla. Hyllyistä ja ruuveista tulee yllättävän pitkä tarina.",
+  "vastaus": "Hyvä kysymys tuo. Älmhultin [[IKEA-museo]] esittelee [[IKEAn]] historiaa, ja museo avattiin kaupunkiin vuonna 2016. Se sopii paikkaan hyvin, sillä ensimmäinen [[IKEA-myymälä]] rakennettiin Älmhultiin ja yhtiöllä on yhä suuri toiminta paikkakunnalla. Hyllyistä ja ruuveista tulee yllättävän pitkä tarina.",
   "linkit": [
-   "IKEA-museo"
+   "IKEA-museo",
+   "IKEAn",
+   "IKEA-myymälä"
   ],
   "jatkot": [
    "Miten IKEA kasvoi pienestä yrityksestä maailmanlaajuiseksi?",
