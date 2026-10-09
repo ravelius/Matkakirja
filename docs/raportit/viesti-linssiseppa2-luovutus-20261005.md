@@ -35,7 +35,18 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 09.5x (uusin)
+## TILA 9.10. klo 11.1x (uusin)
+- OMISTAJA: kaikki suunniteltu → yksi iso JUNA 172. Minulta: Pariisin laivat (laivat-171 b8da55364), kaukomaa (kaukomaa-171b:
+  aluskerros > 1200 m + PidaMaski-tarkistus de07812c1, yön kaukoutu korkeuden mukaan c783cc796), Seinen läikkä (EI omasta vedestä,
+  testi ilmakeha 0 kesken), mikseri (mikseri-173 ddbee4e70, Natiivi-UI:lle), omien mallien valo (omavalo-172 d817e1291: OmaMalli-
+  varjostin, illan julkisivuvalo, lasien hehku). Lopuksi rivi PT:lle "valmis 172:een".
+- TF 171 julki (Natiiviseppä): muistihätä ilman RecreateTilesetiä + vana (muistihata-171 7f1a0c6f2).
+- Ämpäri: omat mallit v7 (KL v1.6 + ND v4) viety 11.02, uusin-2 → v7 junan 172 mukana (nyt v6).
+- Seuraava simuvuoro ~11.50: kaanna-ja-kuvaa-172b.sh (juna-171 + omavalo-172 + laivat-171; ND/KL valo päivä/ilta, kaukomaa yö,
+  Seine ilmakeha 0/1, laivat).
+- LR:n jatkolista (PT): ND puut, jokimuurin kiila, KL julkisivun lämmin rosa; emissive vain lasille (OmaMalli).
+
+## TILA 9.10. klo 09.5x
 - JUNA 170 kuitattu: ea60457f9 + 811d26cf8 (Tukholman yö: vesi kaukana nosto + syvä sävy, loppuillan maa yhtenäiseksi). index-v4 200.
 - JUNA 171 (proto-haarat): ymparistovalo-171 b4a393994 (KUITATTU, Natiisepällä); sade-171 ad5b874b3 (sadepilvet, Salama-API, yöpilvet
   näyttöarvona; LS1 yhdisti kierros-170:een 3fdf75648); laivat-171 b8da55364 (Pariisin jokilaiva + kiertoajelu tarkkoina; PT: simukuvan
