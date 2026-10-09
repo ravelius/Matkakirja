@@ -110,8 +110,13 @@ Shader "Matkakirja/Linssit/OmaMalli"
                 float4 mr = SAMPLE_TEXTURE2D(_metallicRoughnessTexture, sampler_metallicRoughnessTexture, v.uvNM.zw);
                 float metalli = saturate(_metallicRoughnessFactor.x * mr.b), karheus = clamp(_metallicRoughnessFactor.y * mr.g, 0.045, 1.0);
                 float peitto = lerp(1.0, SAMPLE_TEXTURE2D(_occlusionTexture, sampler_occlusionTexture, v.uvO).r, saturate(_occlusionStrength));
-                // Aurinko: päävalo (URP), pehmeä kääre (Googlen leivottu valo on pehmeä), varjot jos käytössä, pilvien varjot kuten laatoissa.
+                // Aurinko: KAUPUNGIN aurinko (_IlmAurinko, x itä, y ylös, z pohjoinen; PT 9.10.: ND kauempaa harmaa) eikä URP:n
+                // päävalo, joka on kartan aurinko ja seuraa kameraa (Kartta/Aurinko.cs, ei varjoja): muuten etelän seinät jäivät valotta
+                // ja valo vaihtoi puolta kameran mukana. Päävalosta vain väri. Pehmeä kääre (Googlen leivottu valo on pehmeä), pilvien varjot.
                 Light valo = GetMainLight(TransformWorldToShadowCoord(v.w));
+                bool kaupunki = dot(_IlmAurinko.xyz, _IlmAurinko.xyz) > 0.5;
+                valo.direction = kaupunki ? normalize(_IlmAurinko.xyz) : valo.direction;
+                valo.color *= kaupunki ? saturate(_IlmAurinko.y * 6.0 + 0.1) : 1.0;   // aurinko horisontin alla → ei suoraa valoa
                 float nl = saturate((dot(n, valo.direction) + 0.25) / 1.25);
                 float pilvi = IlmPilvi(v.w * m) * _IlmPilviParam.y * saturate(_IlmAurinko.y * 4.0);
                 float3 suora = valo.color * nl * valo.shadowAttenuation * (1.0 - pilvi);
