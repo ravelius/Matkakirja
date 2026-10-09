@@ -652,7 +652,7 @@ namespace Matkakirja.Natiivi
         /// <summary>LAATUKORVAAJAT (Pelikoodari 9.10., aanet/laatu-korvaajat-v1, PT:n laatutarkistus): rakennus.json:n äänitiedosto →
         /// korjattu ääni median juuresta (keittiön ambienssissa oli englanninkielistä puhetta; uusi: tulisijan rätinä ja sanaton sorina).</summary>
         static string LaatuKorvaaja(string polku) =>
-            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/silmukat-korjaukset-v1/keittio-ambienssi-03.mp3" : polku;   // -03: alle 600 kt → PCM-sauma
+            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/silmukat-korjaukset-v2/keittio-ambienssi-03.mp3" : polku;   // -03: alle 600 kt → PCM-sauma
 
         string AaniUrlSuora(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null
@@ -1312,7 +1312,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v2/manifest.json");   // generoidut (PT 9.10.): sytytys, hanska, kauha, nauris, tarjotin; puuttuva = hiljaa
                 // Soundly-pankki (Pelikoodari 9.10., erä 1b, 205 ääntä vuodelle 1499): pakattuna muistiin; korvaa varmat vastineet
                 // (SeikkailuAanet.Korvaavat) ja pelaajan askeleet kertaääninä (SeikkailuAanet.Askel); puuttuva = vanhat äänet.
-                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/olavinlinna-soundly-v1/manifest.json");
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/olavinlinna-soundly-v2/manifest.json");   // v2 (Pelikoodari 10.10.): 25 alle 0,4 s:n kertaääntä normalisoitu (v1: +18…+24 dB perhettään kovempia)
                 SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/laatu-korvaajat-v1/manifest.json", "sydan-silmukka-02", "sydan-nopea-01", "hiipiminen-10");   // Pelikoodari 9.10.
                 SeikkailuSade.Luo(nayttamo.transform);
             }
