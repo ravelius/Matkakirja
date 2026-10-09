@@ -35,12 +35,15 @@ namespace Matkakirja.Natiivi
         Nakyma nakyma;
         public bool Auki { get; private set; }
 
-        readonly Button taukoNappi;
+        readonly Button taukoNappi, ohitaNappi;
         bool taukoTauolla;
 
         /// <summary>Esittelyn II/▶ (DioraamaTaulu joka ruutu): näkyy kertojan kierroksen tai tauon ajan.</summary>
         public void NaytaTauko(bool nakyy)
         {
+            // Linnan historian ohitus (Päätoimittaja 9.10.2026, juna 171): ⏭ historian ajan (myös pelin aikana ☰:sta avattuna).
+            var od = SeikkailuHistoria.Kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (ohitaNappi.style.display != od) ohitaNappi.style.display = od;
             bool tauolla = Matkakirja.Natiivi.DioraamaSovitin.Tauolla;
             nakyy |= tauolla;
             // Seikkailussa ei esittelyn taukoa (LS2:n stillit 9.10.2026, BUILD 169: II näkyi pelin aikana; Thiefin taso).
@@ -69,6 +72,10 @@ namespace Matkakirja.Natiivi
             // ESITTELYN TAUKO (omistaja 6.10.2026): II/▶ ☰:n vieressä kertojan esittelyn ajan (sama kuvake kuin oppaassa).
             taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { Matkakirja.Natiivi.DioraamaSovitin.VaihdaTauko(); NaytaTauko(true); }, ryhma);
             taukoNappi.style.display = DisplayStyle.None;
+            // LINNAN HISTORIAN OHITUS (Päätoimittaja 9.10.2026, juna 171): sama OHJAUSNAPPI ja ⏭-kuvake kuin oppaan tauko/seuraava-
+            // parissa; lopettaa SeikkailuHistorian (Siirtoseppä), jolloin alun valinnassa tulee Pelaa-kortti ja ☰:sta avattuna peli jatkuu.
+            ohitaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Ohita linnan historia", () => { Debug.Log("MATKAKIRJA linnavalikko: historia ohitettu"); SeikkailuHistoria.Lopeta(); }, ryhma);
+            ohitaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
             // Pienoiskartta ‹:n paikalle OHJAUSNAPPI-kehyksessä (.mk-ohjausnappi--iso 56 pt, omistaja 17.4x): oma ryhmä
