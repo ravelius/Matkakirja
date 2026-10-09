@@ -1,5 +1,5 @@
 {
- "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1).",
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1). 9.10.: + pallon elävät äänet v2 (aanet/pallo-elava-v2: ihmiset, poltin, katusoittaja, laivan torvi).",
  "paivitetty": "2026-10-09",
  "nimeamiset": [
   {
@@ -609,6 +609,62 @@
    "lisenssi": "CC0 1.0",
    "url": "https://opengameart.org/content/medieval-the-bards-tale",
    "ryhma": "Olavinlinna"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Balloon burner bursts.wav",
+   "tekija": "ExploreTayo",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/ExploreTayo/sounds/652482/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "people_laughing_outdoors_001.wav",
+   "tekija": "Martina_Leitschuh",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/Martina_Leitschuh/sounds/582751/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "people_laughing_outdoors_003.wav",
+   "tekija": "Martina_Leitschuh",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/Martina_Leitschuh/sounds/582757/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "big crowd a little laughter 3.wav",
+   "tekija": "Kyster",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/Kyster/sounds/124025/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Girl laughing.wav",
+   "tekija": "Hawkeye_Sprout",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/Hawkeye_Sprout/sounds/469065/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "120114_street_musicians.wav",
+   "tekija": "reinsamba",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/reinsamba/sounds/141669/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Maritime Horn Signal Blast - Maquoit 2 (Casco Bay)",
+   "tekija": "ericnorcross81",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/people/ericnorcross81/sounds/738249/",
+   "ryhma": "Kuumailmapallo ja kaupungit"
   }
  ]
 }
