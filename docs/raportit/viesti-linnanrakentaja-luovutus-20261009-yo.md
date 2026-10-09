@@ -207,3 +207,7 @@ Seuraavaksi:
   kohinaa ja kallion pinta.
   - **Siirtoseppä 46ee501f9:** kun 1499-kuori (v25) viedään, rakennus.jsonin ulkokuoreen tulee kenttä `"asu": "1499"`. Silloin historia
     ei piilota rantaa. Ilman kenttää kuori on nykyasu (v24) ja ranta piilotetaan bastionien ajaksi.
+- **Rukouskirjan peili** (21.4x): dioraama/olavinlinna/83b6185bc898d1e7, haara `linnanrakentaja-linna-v45d` (fbffee576 = v45c + kadet).
+  - Sijoitus: tartu-rivi jää muuntamatta vain, kun sen esine on saman hahmon kanna-rivin esine. Hoitajan pulpettirivit muunnetaan kuten ennen.
+  - Main-pohjainen `linnanrakentaja-kadet-sijoitus` on vanhentunut, ja sen worktree on poistettu (haara jää originiin).
+  - Poista v45c- ja v45d-worktreet, kun Siirtoseppä on kytkenyt.
