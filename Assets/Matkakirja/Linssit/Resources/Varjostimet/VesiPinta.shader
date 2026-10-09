@@ -36,7 +36,12 @@ Shader "Matkakirja/Linssit/VesiPinta"
             struct V { float4 p : SV_POSITION; float3 w : TEXCOORD0; float ranta : TEXCOORD1; float sumu : TEXCOORD2; };
             V vert(A a)
             {
-                V v; v.w = TransformObjectToWorld(a.p.xyz); v.p = TransformWorldToHClip(v.w);
+                V v; v.w = TransformObjectToWorld(a.p.xyz);
+                // KAUKANA NOSTO (Natiiviseppä 9.10., juna 170 Tukholma korkealta: vedessä teräväkulmaisia laikkuja): Googlen vesipinta ja
+                // oma vesi taistelivat syvyydestä kaukana; nosto kasvaa etäisyyden mukana (0 alle 330 m, 3 km:ssä ~3 m; veneet näkyvät yhä).
+                float etM = length(v.w - _WorldSpaceCameraPos) * _IlmMaailma.x;
+                v.w.y += max(0.0, etM * 0.0012 - 0.4) / max(1e-6, _IlmMaailma.x);
+                v.p = TransformWorldToHClip(v.w);
                 v.ranta = a.uv.x; v.sumu = ComputeFogFactor(v.p.z); return v;
             }
             // Gradienttikohinan derivaatta (arvokohina, sileä) normaalikenttään.
@@ -93,7 +98,9 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 // PT 9.10. 07.0x (kuva kl 06.48: aurinkoa kohti isoja valkoisia läiskiä): heijastus puolitettu (_Kimallus 30 → 15,
                 // välke 1,5 → 0,75) ja pehmeä katto: kirkkaus lähestyy 1,2:ta, ei leikkaudu valkoiseksi, läiskän reuna liukuu.
                 aurinko = 1.2 * aurinko / (1.0 + aurinko);
-                float3 c = lerp(_Syva.rgb * saturate(_IlmAurinko.y * 3.0 + 0.15), taivas, fresnel) + aurinko * IlmLapaisy(_IlmParam.x, _IlmAurinko.y);
+                // Loppuillan syvä vesi sinisen hetken sävyyn (ylhäältä katsottuna Fresnel ~0,02, muuten ruskeanmusta Googlen violetin veden vieressä).
+                float3 syva = _Syva.rgb * saturate(_IlmAurinko.y * 3.0 + 0.15) + IlmSininenHetki(normalize(float3(d.x, 0.25, d.z))) * 0.45;
+                float3 c = lerp(syva, taivas, fresnel) + aurinko * IlmLapaisy(_IlmParam.x, _IlmAurinko.y);
                 // Vaahto: valkoinen auringon ja taivaan valossa (näyttöavaruudessa kuten _Syva), vain lähellä (ei välkettä kaukana).
                 float vaahtoV = saturate(vaahto) * 0.75 * (1.0 - saturate(et * m / 2500.0));
                 // KAUPUNGIN VALOJEN HEIJASTUS (yöllä, _IlmMaailma.z): lämpimät pitkät välkkeet katsojaa kohti venyneinä (valojen juovat),
