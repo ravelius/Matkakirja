@@ -68,6 +68,9 @@ namespace Matkakirja.Linssit.Kierros
             return l.Count == 0 ? null : string.Join(" · ", l);
         }
 
+        /// <summary>☰ › Lähteet (Natiivi-UI 9.10.): kaikkien paketin kohteiden erilliset krediittirivit (kohteen oma, varalla paketin).</summary>
+        public static List<string> Lahderivit(Paketti p) => p == null ? new List<string>() : (Tekijat(p, p.Kohteet) is string t ? new List<string>(t.Split(" · ")) : new List<string>());
+
         /// <summary>Kohteet enintään rM:n päässä pisteestä.</summary>
         public static List<Kohde> Lahella(Paketti p, double lat, double lon, double rM = LahellaM)
         {

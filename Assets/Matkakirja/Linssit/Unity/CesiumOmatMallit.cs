@@ -25,6 +25,19 @@ namespace Matkakirja.Linssit
     {
         /// <summary>Näkyvien omien mallien tekijärivi (null = ei omia malleja ruudulla). Googlen rivien erillään (Map Tiles -ohjeet).</summary>
         public static string Tekijat { get; private set; }
+        /// <summary>☰ › Lähteet (Natiivi-UI 9.10.): kaikkien mallit.json-kohteiden krediittirivit (myös ei näkyvien); tyhjä, kunnes json on
+        /// saatavilla (Documents, StreamingAssets tai R2-osoitin).</summary>
+        public static IReadOnlyList<string> Lahderivit
+        {
+            get
+            {
+                var (json, _, _) = Lue();
+                if (json == null) return System.Array.Empty<string>();
+                if (!ReferenceEquals(json, lahdeJson)) { lahdeJson = json; lahdeRivit = OmatMallit.Lahderivit(OmatMallit.Lue(json)); }
+                return lahdeRivit;
+            }
+        }
+        static string lahdeJson; static List<string> lahdeRivit = new List<string>();
         /// <summary>Tyhjä näyte (Googlen laatat eivät vielä ladattu): uusi yritys näin monta kertaa 3 s välein.</summary>
         public const int NayteYrityksia = 5;
 
