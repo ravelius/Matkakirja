@@ -21,7 +21,7 @@ Mistä pronssikausi sai nimensä?
 
 ### 36.4
 KYSYMYS: Miten avolouhos eroaa tunnelikaivoksesta?
-Tuota niin. Avolouhoksessa malmia louhitaan suoraan maan pinnalta kaivamalla suuri, porrasmainen kuoppa, kun taas maanalaisessa kaivoksessa malmin luo kaivetaan tunneleita ja kuiluja. Avolouhos sopii esiintymille, jotka ovat lähellä pintaa ja joissa malmia on paljon, mutta se vaatii valtavien maamassojen siirtämistä ja jättää maisemaan suuren kuopan. Maanalainen kaivos sopii syvemmälle esiintymille, ja siinä pintaa häiriintyy vähemmän, mutta työ on kalliimpaa ja vaikeampaa. Monet [[avolouhokset]] täyttyvät kaivostoiminnan loputtua vedellä, kun pumppaus lakkaa. Kuka tahansa kyyhky valitsisi kyllä katon alta lentämisen.
+Tuota niin. Avolouhoksessa malmia louhitaan suoraan maan pinnalta kaivamalla suuri, porrasmainen kuoppa, kun taas maanalaisessa kaivoksessa malmin luo kaivetaan [[tunneleita]] ja [[kuiluja]]. Avolouhos sopii esiintymille, jotka ovat lähellä pintaa ja joissa malmia on paljon, mutta se vaatii valtavien maamassojen siirtämistä ja jättää maisemaan suuren kuopan. Maanalainen kaivos sopii syvemmälle esiintymille, ja siinä pintaa häiriintyy vähemmän, mutta työ on kalliimpaa ja vaikeampaa. Monet [[avolouhokset]] täyttyvät kaivostoiminnan loputtua vedellä, kun pumppaus lakkaa. Kuka tahansa kyyhky valitsisi kyllä katon alta lentämisen.
 JATKOT:
 Miksi hylätyt avolouhokset täyttyvät vedellä?
 Miten kaivosten ympäristövaikutuksia rajoitetaan nykyään?
@@ -52,7 +52,7 @@ Miksi monet linnut muuttavat talveksi etelään?
 
 ### 37.3
 KYSYMYS: Miksi flamingot ovat vaaleanpunaisia?
-Ai se. Flamingojen värin aiheuttavat ravinnon mukana saadut [[karotenoidit]], joita on esimerkiksi levissä ja pienissä äyriäisissä. Linnut syövät niitä suodattamalla ravintoa vedestä nokallaan, ja elimistö muuttaa väriaineet höyhenten ja ihon väriksi. Mitä enemmän karotenoideja linnun ravinto sisältää, sitä värikkäämmäksi se tulee, ja ilman sopivaa ravintoa väri himmenee. Nuoret linnut ovat aluksi harmaita ja saavat värinsä vasta kasvaessaan. Tämä oli kyllä väriopin tunti kyyhkylle.
+Ai se. Flamingojen värin aiheuttavat ravinnon mukana saadut [[karotenoidit]], joita on esimerkiksi [[levissä]] ja pienissä [[äyriäisissä]]. Linnut syövät niitä suodattamalla ravintoa vedestä nokallaan, ja elimistö muuttaa väriaineet höyhenten ja ihon väriksi. Mitä enemmän karotenoideja linnun ravinto sisältää, sitä värikkäämmäksi se tulee, ja ilman sopivaa ravintoa väri himmenee. Nuoret linnut ovat aluksi harmaita ja saavat värinsä vasta kasvaessaan. Tämä oli kyllä väriopin tunti kyyhkylle.
 JATKOT:
 Miten flamingot syövät nokallaan vedestä?
 Mitä muita eläimiä väriaineet värjäävät ravinnosta?
@@ -66,7 +66,7 @@ Miten kosteikkoja voidaan ennallistaa?
 
 ### 37.5
 KYSYMYS: Miksi monet linnut muuttavat talveksi etelään?
-Joo, tän minä tiedän. Linnut muuttavat pääosin siksi, että pohjoisessa talvella ravintoa on vähän ja päivät ovat lyhyitä, kun taas lämpimämmillä alueilla ruokaa on saatavilla ympäri vuoden. Lisääntymiseen pohjoinen kesä on kuitenkin edullinen, koska päivä on pitkä ja hyönteisiä on runsaasti, joten monet lajit palaavat sinne keväällä. Reitin suuntaamiseen linnut käyttävät muun muassa auringon asemaa, tähtiä ja maapallon magneettikenttää. Iberian [[kosteikot]] ovat usein tärkeitä levähdys- tai talvehtimispaikkoja Euroopan pohjoisemmille linnuille. Minä pysyn kyllä mieluummin paikallani.
+Joo, tän minä tiedän. Linnut muuttavat pääosin siksi, että pohjoisessa talvella ravintoa on vähän ja päivät ovat lyhyitä, kun taas lämpimämmillä alueilla ruokaa on saatavilla ympäri vuoden. Lisääntymiseen pohjoinen kesä on kuitenkin edullinen, koska päivä on pitkä ja hyönteisiä on runsaasti, joten monet lajit palaavat sinne keväällä. Reitin suuntaamiseen linnut käyttävät muun muassa auringon asemaa, tähtiä ja maapallon [[magneettikenttää]]. Iberian [[kosteikot]] ovat usein tärkeitä levähdys- tai talvehtimispaikkoja Euroopan pohjoisemmille linnuille. Minä pysyn kyllä mieluummin paikallani.
 JATKOT:
 Miten linnut löytävät perille pitkillä muuttomatkoilla?
 Mitkä linnut jäävät Suomeen talveksi?
@@ -94,14 +94,14 @@ Miksi rajaseudulle rakennettiin paljon linnoja?
 
 ### 38.4
 KYSYMYS: Mitä sefardit ovat?
-Katotaas. Sefardit ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla Espanjassa ja Portugalissa. Espanjasta juutalaiset karkotettiin vuonna 1492, ja Portugalissa heidät pakotettiin kääntymään kristinuskoon 1490-luvun lopulla. Monet lähtivät pakoon muun muassa Pohjois-Afrikkaan, Alankomaihin ja Osmanien valtakuntaan, ja he veivät mukanaan [[ladino]]-kielen ja omat perinteensä. Osa jäi maahan ja eli salaa juutalaisina marraaneina. Sefardien perintö elää yhä musiikissa, ruoassa ja kielessä. Hiljaista ja pitkää historiaa tämä on.
+Katotaas. Sefardit ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla Espanjassa ja Portugalissa. [[Espanjasta]] juutalaiset karkotettiin vuonna 1492, ja Portugalissa heidät pakotettiin kääntymään kristinuskoon 1490-luvun lopulla. Monet lähtivät pakoon muun muassa Pohjois-Afrikkaan, Alankomaihin ja Osmanien valtakuntaan, ja he veivät mukanaan [[ladino]]-kielen ja omat perinteensä. Osa jäi maahan ja eli salaa juutalaisina [[marraaneina]]. Sefardien perintö elää yhä musiikissa, ruoassa ja kielessä. Hiljaista ja pitkää historiaa tämä on.
 JATKOT:
 Mikä ladino on?
 Miten sefardien perinteet ovat säilyneet?
 
 ### 38.5
 KYSYMYS: Mikä on piirikunta Portugalissa?
-Tuota niin. Piirikunta eli distrikti on Portugalin hallinnollinen aluejako. Mantereella on 18 piirikuntaa, ja ne jakautuvat edelleen kuntiin eli municipioihin. Piirikunnat nimetään yleensä pääkaupunkinsa mukaan, ja esimerkiksi [[Guardan]] piirikunnan keskus on Guardan kaupunki. Nykyisin piirikuntien merkitys hallinnossa on vähäinen verrattuna kuntiin ja suurempiin tilastoalueisiin. Tämä olikin helppo, vaikka rajat ovat kyyhkylle vaikeita.
+Tuota niin. Piirikunta eli distrikti on Portugalin hallinnollinen aluejako. Mantereella on 18 piirikuntaa, ja ne jakautuvat edelleen [[kuntiin]] eli [[municipioihin]]. Piirikunnat nimetään yleensä pääkaupunkinsa mukaan, ja esimerkiksi [[Guardan]] piirikunnan keskus on Guardan kaupunki. Nykyisin piirikuntien merkitys hallinnossa on vähäinen verrattuna kuntiin ja suurempiin tilastoalueisiin. Tämä olikin helppo, vaikka rajat ovat kyyhkylle vaikeita.
 JATKOT:
 Mikä kunta Portugalissa on?
 Mitä Portugalin autonomiset alueet ovat?
@@ -131,14 +131,14 @@ Mitä juottaminen tarkoittaa?
 
 ### 39.4
 KYSYMYS: Mikä on Cova da Beira?
-Nyt muistan: Cova da Beira on Portugalin keskiosassa sijaitseva alue Beira Interiorissa, [[Serra da Estrelan]] ja muiden vuoristojen välissä. Aluetta luonnehtii laaja laakso, joka on ympäristöään viljavampi, ja sen kaupunkeja ovat muun muassa Covilhã ja Fundão. En ole varma alueen tarkoista rajoista, koska ne määritellään eri tavoin eri yhteyksissä. Panasqueiran kaivoksella on ollut vahva vaikutus sekä Beira Interiorin että Cova da Beiran identiteettiin. Tässä oli kyllä pieni karttakurssi kyyhkylle.
+Nyt muistan: Cova da Beira on Portugalin keskiosassa sijaitseva alue Beira Interiorissa, [[Serra da Estrelan]] ja muiden vuoristojen välissä. Aluetta luonnehtii laaja laakso, joka on ympäristöään viljavampi, ja sen kaupunkeja ovat muun muassa [[Covilhã]] ja [[Fundão]]. En ole varma alueen tarkoista rajoista, koska ne määritellään eri tavoin eri yhteyksissä. [[Panasqueiran]] kaivoksella on ollut vahva vaikutus sekä Beira Interiorin että Cova da Beiran identiteettiin. Tässä oli kyllä pieni karttakurssi kyyhkylle.
 JATKOT:
 Mikä Covilhã on?
 Mikä Serra da Estrela on?
 
 ### 39.5
 KYSYMYS: Miksi hiiltä aikoinaan poltettiin?
-No jopas. Hiiltä poltettiin, koska puuhiili palaa kuumemmin ja savuttomammin kuin raaka puu, ja sitä tarvittiin erityisesti metallien sulatukseen ja takomiseen. Hiilenpoltossa puuta kuumennetaan hapettomissa oloissa, esimerkiksi peitetyssä miilussa, jolloin siitä poistuu kosteutta ja haihtuvia aineita ja jäljelle jää lähes pelkkää hiiltä. Hiilenpoltto oli ennen teollisuuden nykyaikaistumista tärkeä ammatti metsäseuduilla. Nykyään [[puuhiiltä]] käytetään enää esimerkiksi grillaamiseen ja joihinkin erikoistarkoituksiin, ja ammatti on harvinaistunut. Vaikka kyyhky haaveilee mieluummin pullan tuoksusta kuin hiilestä.
+No jopas. Hiiltä poltettiin, koska puuhiili palaa kuumemmin ja savuttomammin kuin raaka puu, ja sitä tarvittiin erityisesti metallien [[sulatukseen]] ja [[takomiseen]]. Hiilenpoltossa puuta kuumennetaan hapettomissa oloissa, esimerkiksi peitetyssä [[miilussa]], jolloin siitä poistuu kosteutta ja haihtuvia aineita ja jäljelle jää lähes pelkkää hiiltä. Hiilenpoltto oli ennen teollisuuden nykyaikaistumista tärkeä ammatti metsäseuduilla. Nykyään [[puuhiiltä]] käytetään enää esimerkiksi grillaamiseen ja joihinkin erikoistarkoituksiin, ja ammatti on harvinaistunut. Vaikka kyyhky haaveilee mieluummin pullan tuoksusta kuin hiilestä.
 JATKOT:
 Miten miilu rakennettiin?
 Mitä muuta puuhiilellä on tehty?
@@ -166,7 +166,7 @@ Miten marmori eroaa graniitista?
 
 ### 40.4
 KYSYMYS: Miten marmori louhitaan ja työstetään?
-Hetkinen ny. Marmori louhitaan nykyään yleensä irrottamalla kalliosta suuria lohkoja esimerkiksi [[timanttilankasahoilla]], jotka sahaavat kiven läpi vähitellen vettä apuna käyttäen. Lohkot nostetaan nosturein ylös ja kuljetetaan työstettäväksi. Tehtaassa ne sahataan levyiksi, ja pinta hiotaan ja kiillotetaan, jotta kuvio ja väri tulevat esiin. Lisäksi marmoria voidaan veistää käsin tai koneella veistoksiksi ja koristeiksi. Nykyaikaiset menetelmät ovat nopeampia kuin vanhat, mutta työ vaatii silti paljon tarkkuutta. Kyllä tää oli kerrottavaa varmaan kolmen torin verran.
+Hetkinen ny. Marmori louhitaan nykyään yleensä irrottamalla kalliosta suuria lohkoja esimerkiksi [[timanttilankasahoilla]], jotka sahaavat kiven läpi vähitellen vettä apuna käyttäen. Lohkot nostetaan [[nosturein]] ylös ja kuljetetaan työstettäväksi. Tehtaassa ne sahataan levyiksi, ja pinta hiotaan ja kiillotetaan, jotta kuvio ja väri tulevat esiin. Lisäksi marmoria voidaan veistää käsin tai koneella veistoksiksi ja koristeiksi. Nykyaikaiset menetelmät ovat nopeampia kuin vanhat, mutta työ vaatii silti paljon tarkkuutta. Kyllä tää oli kerrottavaa varmaan kolmen torin verran.
 JATKOT:
 Miten vanhoina aikoina marmoria louhittiin?
 Miten kiviveistos tehdään?
