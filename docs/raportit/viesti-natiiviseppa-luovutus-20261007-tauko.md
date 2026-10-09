@@ -9,7 +9,7 @@ tarkista 0; EI vielä käännetty) ← 90c7bb19a = 9851acae5 + LS1 kierros-170 8
 testit 453/419/1137, unity 0, tarkista 0. Käännös 8fae5eb43:sta (ca4221d88, 03.55, 0 varjostinvirhettä; app lokit/natiiviseppa-app-170-8fae5eb43).
 YÖKUVAPARI (lokit/yo170-arkki-{pariisi,tukholma}-ca4221d8.png): yövalot EIVÄT näy, vaikka loki sanoo "9/9 laattaa"; taivas ja vedet mustat → PT, LS1, LS2.
 Ehto LS1:lle (varjostimet + yökuvapari) ei täyty → odota LS1:n korjausta. Ajo: scratchpad yo170-ajo.sh <runko> kaanna|simu (vaatii NYT:t).
-+ LS2 0bf2ed7b2 (Lahderivit; korvaa b1e23a065). + NUI a36c3a85f (mallilähteet, korvaa f9c4aa0cd) → runko **3a6f0c67c** (453/419/1137, unity 0, tarkista 0). Puuttuu: LS1:n yövalojen näkyvyyskorjaus (PT), LS1 9b83405fc/9ea01b5a0 EI kuitattu. Sen jälkeen käännös + yökuvapari uudelleen.
++ LS2 0bf2ed7b2 (Lahderivit; korvaa b1e23a065). + NUI a36c3a85f (mallilähteet, korvaa f9c4aa0cd) → 3a6f0c67c → + LS2 laivat 6ac9faba7 + korkeus 7ca419f92 (ruutuvirheraja 4) → runko **240e46dcb** (Linssit 1137, unity 0, tarkista 0). Puuttuu: LS1:n yövalojen näkyvyyskorjaus (PT), LS1 9b83405fc/9ea01b5a0 EI kuitattu. Sen jälkeen käännös + yökuvapari uudelleen.
 Filmi rungossa (rae 0,32). PT: 170 TF vasta omistajan TF 169 -palautteen jälkeen (iltapäivä). TF 169 ajo 37864329025, Mac-odottaja käynnissä.
 
 ## TILA 9.10. 03.2x
