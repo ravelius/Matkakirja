@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using RootMotion;
 using RootMotion.FinalIK;
+using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -31,6 +32,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Animaation ja sijainnin jälkeen: kohdistetun huoneen hahmoille FBBIK + Grounder.</summary>
         void Ik(Esiintyma e)
         {
+            // Kannettu esine seuraa kättä vain IK:n jälkeen: muualla piiloon, ettei se jää leijumaan (huone ei kohdistettuna, IK pois).
+            if (e.TilaId == null || e.TilaId != PuhujanTila || !IkPaalla) { if (e.Kannettava != null && e.Kannettava.activeSelf) e.Kannettava.SetActive(false); e.KannettavaValmis = false; }
             if (e.TilaId == null || e.TilaId != PuhujanTila) return;
             if (!IkPaalla) { MittaaJalat(e); return; }
             if (e.Ik == null)
@@ -53,6 +56,7 @@ namespace Matkakirja.Natiivi
             }
             Kadet(e);
             e.Ik.solver.Update();
+            Kannettava(e);
             MittaaJalat(e);
         }
 
@@ -110,12 +114,20 @@ namespace Matkakirja.Natiivi
             bool kiertoR = false, kiertoL = false;
             foreach (var k in kadet)
             {
-                if (k.Tyyppi != "tartu") continue;
-                bool voimassa = k.Milloin == "aina" || k.Milloin == e.Silmukka || (k.Milloin == "puhe" && e.EleNimi != null);
-                if (!voimassa) continue;
+                if (k.Tyyppi != "tartu" || !Voimassa(e, k)) continue;
                 var eff = k.Kasi == "l" ? e.Ik.solver.leftHandEffector : e.Ik.solver.rightHandEffector;
-                eff.position = DioraamaNayttamo.UnityPiste(k.Paikka);
-                bool kierto = KadetKierto && k.Kierto != null && KammenKierto(e, k.Kasi, k.Kierto) is Quaternion q && SetRot(eff, q);
+                Vector3 paikkaC; Quaternion? kammenC = k.Kierto != null ? Kanoninen(k.Kierto) : (Quaternion?)null;
+                if (!string.IsNullOrEmpty(k.Esine))
+                {
+                    // Tartu kannettuun esineeseen (rukouskirja): paikka ja kierto esineen kehyksessä, esineen asento edellisestä ruudusta.
+                    if (!e.KannettavaValmis) continue;
+                    paikkaC = e.KannettavaPaikkaC + e.KannettavaKiertoC * new Vector3((float)k.Paikka.X, (float)k.Paikka.Y, (float)k.Paikka.Z);
+                    if (kammenC is Quaternion kq) kammenC = e.KannettavaKiertoC * kq;
+                }
+                else paikkaC = new Vector3((float)k.Paikka.X, (float)k.Paikka.Y, (float)k.Paikka.Z);
+                eff.position = Peili(paikkaC);
+                bool kierto = KadetKierto && kammenC is Quaternion kc && KammenKehys(e, k.Kasi) is (Transform luu, Quaternion nyt)
+                    && SetRot(eff, KammenTavoite(kc) * Quaternion.Inverse(nyt) * luu.rotation);
                 if (k.Kasi == "l") { tavoiteL = (float)k.Paino; kiertoL = kierto; } else { tavoiteR = (float)k.Paino; kiertoR = kierto; }
             }
             float askel = Time.unscaledDeltaTime / 0.3f;
@@ -127,18 +139,25 @@ namespace Matkakirja.Natiivi
             e.Ik.solver.leftHandEffector.rotationWeight = kiertoL ? e.KasiPainoL : 0f;
         }
         static bool SetRot(IKEffector eff, Quaternion q) { eff.rotation = q; return true; }
+        static bool Voimassa(Esiintyma e, KasiKohde k) => k.Milloin == "aina" || k.Milloin == e.Silmukka || (k.Milloin == "puhe" && e.EleNimi != null);
 
         /// <summary>Kämmenen kierto datasta ("poikki kadet kierto 0|1"; PT 9.10., juna 174: kädet kirjalle ja pulpetille).</summary>
         public static bool KadetKierto = true;
 
+        // Kanoninen (glTF, oikeakätinen, sijoitettu) ↔ Unity: z-peilaus (DioraamaNayttamo.UnityPiste). Kierron peilaus S·R·S = (−x, −y, z, w).
+        static Vector3 Peili(Vector3 v) => new Vector3(v.x, v.y, -v.z);
+        static Quaternion Peili(Quaternion q) => new Quaternion(-q.x, -q.y, q.z, q.w);
+        static Quaternion Kanoninen(double[] q) => new Quaternion((float)q[0], (float)q[1], (float)q[2], (float)q[3]);
+        /// <summary>Datan kämmenkehys (kanoninen) → Unityn LookRotation-kehys (sormet eteen, kämmenselkä ylös).</summary>
+        static Quaternion KammenTavoite(Quaternion kammenC) => Quaternion.LookRotation(Peili(kammenC * Vector3.forward), Peili(kammenC * Vector3.up));
+
         /// <summary>
-        /// KÄMMENEN KIERTO (`kadet[].kierto`, kämmenen kehys: kämmen −Y, sormet +Z, sijoitettuna kuten paikka): käden luun tavoitekierto
-        /// = (datan kehys) · (luista laskettu nykyinen kehys)⁻¹ · luun nykyinen kierto, joten erillistä kalibrointia ei tarvita.
-        /// Luista: sormet = middle_01 − hand, peukalon puoli = index_01 − pinky_01, kämmenen normaali = sormet × peukalon puoli
-        /// (oikea) tai peukalon puoli × sormet (vasen) Unityn vasenkätisessä tilassa. Data peilataan z:ssä kuten UnityPiste.
-        /// null = luita ei löydy (nivelhahmo tai eri luusto).
+        /// KÄMMENEN KEHYS luista (`kadet[].kierto`: kämmen −Y, sormet +Z): käden luun tavoitekierto = (datan kehys) · (tämä kehys)⁻¹ ·
+        /// luun kierto, joten erillistä kalibrointia ei tarvita. Sormet = middle_01 − hand, peukalon puoli = index_01 − pinky_01,
+        /// kämmenen normaali = sormet × peukalon puoli (oikea) tai peukalon puoli × sormet (vasen) Unityn tilassa; palauttaa
+        /// käden luun ja LookRotation(sormet, kämmenselkä). null = luita ei löydy (nivelhahmo tai eri luusto).
         /// </summary>
-        static Quaternion? KammenKierto(Esiintyma e, string kasi, double[] kierto)
+        static (Transform, Quaternion)? KammenKehys(Esiintyma e, string kasi)
         {
             string p = kasi == "l" ? "_l" : "_r";
             Transform kasiLuu = null, keski = null, etu = null, pikku = null;
@@ -152,11 +171,48 @@ namespace Matkakirja.Natiivi
             Vector3 sormet = keski.position - kasiLuu.position, peukalo = etu.position - pikku.position;
             Vector3 normaali = kasi == "l" ? Vector3.Cross(peukalo, sormet) : Vector3.Cross(sormet, peukalo);
             if (sormet.sqrMagnitude < 1e-8f || normaali.sqrMagnitude < 1e-8f) return null;
-            var nyt = Quaternion.LookRotation(sormet, -normaali);
-            var r = new Quaternion((float)kierto[0], (float)kierto[1], (float)kierto[2], (float)kierto[3]);
-            Vector3 Peili(Vector3 v) => new Vector3(v.x, v.y, -v.z);   // kanoninen → Unity (DioraamaNayttamo.UnityPiste)
-            var tavoite = Quaternion.LookRotation(Peili(r * Vector3.forward), Peili(r * Vector3.up));   // kämmen −Y → kämmenselkä +Y
-            return tavoite * Quaternion.Inverse(nyt) * kasiLuu.rotation;
+            return (kasiLuu, Quaternion.LookRotation(sormet, -normaali));
+        }
+
+        /// <summary>
+        /// KANNETTAVA ESINE (kadet[] "kanna", kehys "kammen"; LR 9.10. kappalaisen rukouskirja): IK:n jälkeen esine käden kämmenkehykseen
+        /// (Siirto ja Kierto kanonisessa kämmenkehyksessä). Kanoninen kämmenkehys = Unityn kehys peilattuna; esineen Unity-asento =
+        /// kanoninen peilattuna (glb:n verteksit ovat jo peilattuja). Esine näkyy vain, kun rivi on voimassa (milloin).
+        /// </summary>
+        void Kannettava(Esiintyma e)
+        {
+            var kadet = e.Hahmo.Kadet;
+            if (kadet == null || e.Juuri == null) return;
+            KasiKohde rivi = null;
+            foreach (var k in kadet) if (k.Tyyppi == "kanna" && !string.IsNullOrEmpty(k.Glb) && k.Kierto != null) { rivi = k; break; }
+            if (rivi == null) return;
+            if (e.Kannettava == null)
+            {
+                if (!malliCache.TryGetValue(rivi.Glb, out var hm) || hm.Solmut == null) return;
+                e.Kannettava = new GameObject("Kannettava:" + (rivi.Esine ?? rivi.Glb)) { layer = DioraamaNayttamo.Kerros };
+                e.Kannettava.transform.SetParent(e.Juuri.transform, false);
+                for (int i = 0; i < hm.Solmut.Length; i++)
+                {
+                    var sm = hm.Solmut[i]; if (sm == null) continue;
+                    var gs = hm.Glb.Solmut[i];
+                    var go = new GameObject("osa" + i) { layer = DioraamaNayttamo.Kerros };
+                    go.transform.SetParent(e.Kannettava.transform, false);
+                    // Solmun TRS (DioraamaGlb.Lue(unityyn: true): jo peilattu); kirjassa yksi solmu origossa, vanhemmat ohitetaan.
+                    go.transform.localPosition = new Vector3(gs.Translation[0], gs.Translation[1], gs.Translation[2]);
+                    go.transform.localRotation = new Quaternion(gs.Rotation[0], gs.Rotation[1], gs.Rotation[2], gs.Rotation[3]);
+                    go.transform.localScale = new Vector3(gs.Scale[0], gs.Scale[1], gs.Scale[2]);
+                    go.AddComponent<MeshFilter>().sharedMesh = sm.Mesh;
+                    go.AddComponent<MeshRenderer>().sharedMaterials = sm.Materiaalit;
+                }
+            }
+            bool nakyy = Voimassa(e, rivi);
+            if (e.Kannettava.activeSelf != nakyy) e.Kannettava.SetActive(nakyy);
+            if (!nakyy || KammenKehys(e, rivi.Kasi) is not (Transform luu, Quaternion nyt)) { e.KannettavaValmis = false; return; }
+            var kammenC = Peili(nyt);   // Unityn kämmenkehys → kanoninen
+            var paikkaC = Peili(luu.position) + kammenC * new Vector3((float)rivi.Siirto.X, (float)rivi.Siirto.Y, (float)rivi.Siirto.Z);
+            var kiertoC = kammenC * Kanoninen(rivi.Kierto);
+            e.Kannettava.transform.SetPositionAndRotation(Peili(paikkaC), Peili(kiertoC));
+            e.KannettavaPaikkaC = paikkaC; e.KannettavaKiertoC = kiertoC; e.KannettavaValmis = true;
         }
 
         /// <summary>A/B-mittari: 2 s välein kummankin nilkan korkeus lattiasta (säde IkKerrokseen) lokiin, IK päällä tai pois.

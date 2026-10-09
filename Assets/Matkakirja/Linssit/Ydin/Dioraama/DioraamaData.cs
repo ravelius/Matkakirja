@@ -343,6 +343,9 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class KasiKohde
     {
         public string Tyyppi = "tartu", Esine, Kasi = "r", Milloin = "aina";
+        /// <summary>Kannettavan esineen glb (`glb`, LR 9.10. rukouskirja) ja kehys (`kehys`): "kammen" = Siirto/Kierto kämmenen
+        /// kehyksessä (kämmen −Y, sormet +Z, origo käden luussa); tartu-rivi, jolla on Esine, on esineen omassa kehyksessä.</summary>
+        public string Glb, Kehys;
         public V3 Paikka, Siirto;
         public double[] Kierto;
         public double Paino = 1;
@@ -1574,6 +1577,8 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     Tyyppi = MiniJson.Teksti(k, "tyyppi") ?? "tartu",
                     Esine = MiniJson.Teksti(k, "esine"),
+                    Glb = MiniJson.Teksti(k, "glb"),
+                    Kehys = MiniJson.Teksti(k, "kehys"),
                     Kasi = MiniJson.Teksti(k, "kasi") == "l" ? "l" : "r",
                     Milloin = MiniJson.Teksti(k, "milloin") ?? "aina",
                     Paino = Math.Clamp(MiniJson.Luku(k, "paino") ?? 1, 0, 1),

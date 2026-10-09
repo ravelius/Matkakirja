@@ -96,6 +96,9 @@ namespace Matkakirja.Natiivi
             public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
             public bool IkYritetty; public float JalkaMittausT;
             public string Silmukka; public float KasiPainoR, KasiPainoL; // kädet esineisiin (kadet[].milloin)
+            /// <summary>Kannettu esine (kadet[] "kanna", esim. kappalaisen rukouskirja) ja sen kanonien asento edellisestä ruudusta
+            /// (toinen käsi tarttuu siihen).</summary>
+            public GameObject Kannettava; public Vector3 KannettavaPaikkaC; public Quaternion KannettavaKiertoC; public bool KannettavaValmis;
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
             // Eleet puheen tahdissa (7.10.): ajoitettu kertaele, kuulijan nyökkäys, puhujan katseen kohde, vakaa siemen.
             public string AjoitettuEle; public double AjoitettuAlku = double.NegativeInfinity; public int EleLaskuri;
@@ -395,8 +398,11 @@ namespace Matkakirja.Natiivi
             {
                 if (rakennus.Henkilot == null || !rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) continue;
                 string glb = henkilo.Malli3d?.NatiiviGlb;
-                if (string.IsNullOrEmpty(glb) || malliCache.ContainsKey(glb) || ulos.Contains(glb)) continue;
-                ulos.Add(glb);
+                if (!string.IsNullOrEmpty(glb) && !malliCache.ContainsKey(glb) && !ulos.Contains(glb)) ulos.Add(glb);
+                // Kannettavat esineet (kadet[] "kanna" + glb) ladataan samalla polulla kuin hahmot.
+                if (hahmo.Kadet != null)
+                    foreach (var k in hahmo.Kadet)
+                        if (k.Tyyppi == "kanna" && !string.IsNullOrEmpty(k.Glb) && !malliCache.ContainsKey(k.Glb) && !ulos.Contains(k.Glb)) ulos.Add(k.Glb);
             }
         }
 
