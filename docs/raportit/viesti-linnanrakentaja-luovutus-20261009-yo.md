@@ -205,3 +205,5 @@ Seuraavaksi:
   ajan. v25:n (1499-kuori) mukana ranta-1499 tehdään kallion näköiseksi, muoto ja pinta, ei litteää laattaa. Työ on
   `olavinlinna-kavely-v1/lahde/ranta1499.py`:ssä: etuvarustuksen ympäryksen ankkuri −5,8 tuottaa terassin, joten tilalle kalliorinne,
   kohinaa ja kallion pinta.
+  - **Siirtoseppä 46ee501f9:** kun 1499-kuori (v25) viedään, rakennus.jsonin ulkokuoreen tulee kenttä `"asu": "1499"`. Silloin historia
+    ei piilota rantaa. Ilman kenttää kuori on nykyasu (v24) ja ranta piilotetaan bastionien ajaksi.
