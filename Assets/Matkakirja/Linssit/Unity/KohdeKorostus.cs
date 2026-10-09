@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
         public const float AariviivaVoima = 1f, OletusKorkeusM = 25f;
 
         static readonly Dictionary<string, Dictionary<string, object>> muodot = new Dictionary<string, Dictionary<string, object>>();
-        static FullScreenPassRendererFeature feature; static Material materiaali; static ScriptableRendererData data;
+        static bool luotu; static Material materiaali;
         static Texture2D maski; static KohdeMuoto muoto;
         static double lat, lon, maaM; static float korkeus, alku, poisAlku = -1f; static bool haivytetty;
         static readonly int IdMaski = Shader.PropertyToID("_Maski"), IdMatriisi = Shader.PropertyToID("_MaailmaKohde"),
@@ -82,7 +82,7 @@ namespace Matkakirja.Natiivi
             float hehku = Mathf.Lerp(1f, OpasKorostusKuva.HeikkoOsuus, Mathf.SmoothStep(0f, 1f, (t - alku - OpasKorostusKuva.HehkuS) / OpasKorostusKuva.HehkuLaskuS));
             float voima = sisaan * pois * hehku * Mathf.SmoothStep(0f, 1f, OpasKorostusKuva.Osuus);
             if (poisAlku >= 0 && pois <= 0) { Piilota(true); return; }
-            if (feature == null && !Luo()) return;
+            if (!luotu && !Luo()) return;
             var u = g.TransformEarthCenteredEarthFixedPositionToUnity(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, maaM)));
             var pk = g.transform.worldToLocalMatrix.MultiplyPoint3x4(new Vector3((float)u.x, (float)u.y, (float)u.z));
             materiaali.SetMatrix(IdMatriisi, Matrix4x4.Translate(-pk) * g.transform.worldToLocalMatrix);
@@ -92,42 +92,23 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdParam, new Vector4(OpasSovitin.OnEiffel(lat, lon) ? voima * (1f - 0.7f * KaupunkiYovalot.Osuus) : voima, OpasSovitin.OnEiffel(lat, lon) ? 0f : KaupunkiYovalot.Osuus, korkeus, AariviivaVoima));
         }
 
-        static void VainPeruskamera(ScriptableRenderContext _, Camera k)
-        {
-            if (feature == null) { RenderPipelineManager.beginCameraRendering -= VainPeruskamera; return; }
-            var d = k != null ? k.GetComponent<UniversalAdditionalCameraData>() : null;
-            bool peruskamera = d != null && d.renderType == CameraRenderType.Base && k.targetTexture == null && k.cameraType == CameraType.Game;
-            if (feature.isActive != peruskamera) feature.SetActive(peruskamera);
-        }
 
         static bool Luo()
         {
             var v = Shader.Find("Matkakirja/Linssit/KohdeKorostus");
-            if (v == null || !(GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) || urp.rendererDataList.Length == 0) { Paalla = false; return false; }
-            data = urp.rendererDataList[0];
-            if (data == null) return false;
+            if (v == null) { Paalla = false; return false; }
             materiaali = new Material(v) { name = "KohdeKorostus" };
-            feature = ScriptableObject.CreateInstance<FullScreenPassRendererFeature>();
-            feature.name = "Matkakirja kohteen muotokorostus";
-            // JUURISYY 9.10. (oma simudiagnoosi 3910d569: passi violettina koko ruudulla, maailmanpaikka tyhjä): AfterRenderingPostProcessing
-            // ajetaan kamerapinossa vain viimeiselle kameralle (korin ja kuvun päällyskamerat), jonka syvyys on tyhjä → kaupungin pikselit
-            // ohitettiin taivaana. Peruskameran vaiheessa ennen jälkikäsittelyä syvyys on kaupungin (valotus kompensoidaan varjostimessa).
-            feature.injectionPoint = FullScreenPassRendererFeature.InjectionPoint.BeforeRenderingPostProcessing;
-            feature.fetchColorBuffer = true; feature.requirements = ScriptableRenderPassInput.Depth;
-            feature.passMaterial = materiaali;
-            // Vain kaupungin peruskameralle (ei korin, kuvun eikä koosteen päällyskameroille, joiden syvyys on tyhjä): aktiivisuus
-            // vaihdetaan kameran alussa (9.10. simudiagnoosi: päällyskameran passi korvasi peruskameran tuloksen).
-            RenderPipelineManager.beginCameraRendering -= VainPeruskamera; RenderPipelineManager.beginCameraRendering += VainPeruskamera; feature.passIndex = 0;
-            data.rendererFeatures.Add(feature); data.SetDirty();
+            luotu = true;
+            KaupunkiPassi.Aseta("korostus", materiaali);   // oma passi vain kaupungin peruskameralle (9.10.)
             return true;
         }
 
         static void Pois()
         {
-            if (feature == null) return;
-            if (data != null) { data.rendererFeatures.Remove(feature); data.SetDirty(); }
-            Object.Destroy(feature); if (materiaali != null) Object.Destroy(materiaali);
-            feature = null; materiaali = null; data = null;
+            if (!luotu) return;
+            KaupunkiPassi.Aseta("korostus", null);
+            if (materiaali != null) Object.Destroy(materiaali);
+            luotu = false; materiaali = null;
         }
     }
 }
