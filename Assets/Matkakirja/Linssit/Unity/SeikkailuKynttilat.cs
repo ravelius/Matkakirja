@@ -180,7 +180,7 @@ namespace Matkakirja.Natiivi
             if (LuukullaOn(c)) { VaihdaLuukku(); p.KasiEle("luukku"); return true; }
             if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f)
             {
-                ydin.AsetaOma(true); SeikkailuAanet.Soita("sytytys", IkuinenValo, 0.7f);
+                ydin.AsetaOma(true); SeikkailuAanet.SoitaTaiVara("sytytys", "raapaisu", IkuinenValo, 0.7f);   // "sytytys" puuttuu manifesteista (läpipeluu 9.10.) → raapaisu
                 kirjaa?.Invoke("seikkailu: kynttilä sytytetty ikuisesta valosta");
                 return true;
             }

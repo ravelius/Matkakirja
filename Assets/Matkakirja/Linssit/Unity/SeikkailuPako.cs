@@ -176,7 +176,7 @@ namespace Matkakirja.Natiivi
             ydin.Katkaistu = false;
             AsetaKoysi(false);
             SeikkailuAanet.SoitaTaiVara("koysi-katkeaa", "raapaisu", koysi, 0.9f, 0.8f);
-            SeikkailuAanet.Soita("vesisanko", koysi, 0.7f, 0.9f);   // vartija istahtaa matalaan veteen vahingoittumatta (omistajan päätös 1)
+            SeikkailuAanet.SoitaTaiVara("vesisanko", "molskahdus", koysi, 0.7f, 0.9f);   // vesisanko vain linnan pankissa → molskahdus   // vartija istahtaa matalaan veteen vahingoittumatta (omistajan päätös 1)
             if (koysiVene != null) StartCoroutine(KoysiVajoaa(koysiVene));
             kirjaa?.Invoke("seikkailu: köysi katkaistu → K5");
             SeikkailuRepliikit.SoitaTaiVara("ranta-vartija-1", null, koysi + Vector3.up * 1.2f);   // istahtaa matalaan veteen

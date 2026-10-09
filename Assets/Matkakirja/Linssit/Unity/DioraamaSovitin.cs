@@ -951,7 +951,18 @@ namespace Matkakirja.Natiivi
                 float t0 = Time.unscaledTime;
                 while (p != null && p.Napautuskavely && Time.unscaledTime - t0 < 40f) { yield return null; p = SeikkailuPelaaja.Aktiivinen; }
                 float etaisyys = p != null ? Vector3.Distance(p.transform.position, kohde) : -1;
-                o.Kirjaa($"botti: pelaaja-{kv.Key} {(etaisyys >= 0 && etaisyys < 1.0f ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}");
+                bool okP = etaisyys >= 0 && etaisyys < 1.0f;
+                o.Kirjaa($"botti: pelaaja-{kv.Key} {(okP ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}");
+                // LS2 BUILD 169: yksi jumi (pelaaja-8, osittainen reitti) pysäytti loput 86 pistettä 0,0 s:n virheiksi. Nyt virheestä
+                // sijainti, osa ja reitin tila lokiin, ja pelaaja siirretään kohteeseen, jotta loput huoneet saavat aikansa.
+                if (!okP && p != null)
+                {
+                    var pp = p.transform.position;
+                    string osa = Matkakirja.Linssit.Seikkailu.Askelaani.Osa(d, pp.x, pp.y, -pp.z) ?? "-";
+                    o.Kirjaa($"botti: pelaaja-{kv.Key} jumi ({pp.x:F2}, {pp.y:F2}, {pp.z:F2}) osa {osa}, reitti {p.BottiReitti}, kohde osa {kv.Value.Osa ?? "-"}; siirretään kohteeseen");
+                    p.Siirra(kohde + Vector3.up * 0.1f);
+                    yield return null;
+                }
             }
             SeikkailuVartijat.Kiinnijaatiin -= Laske;
             var tv = typeof(DioraamaSovitin).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit")?.GetMethod("Tekstivahti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
@@ -1790,6 +1801,14 @@ namespace Matkakirja.Natiivi
             }
             // "poikki kavely 1 [tila] | 0 | tapit lx ly kx ky s": historiamoottori V1 — pelaaja vapaaseen kävelyyn tilan kohteeseen (tai nykyiseen),
             // törmäykset tilojen mesheistä (väliaikaiset), kamera olan yli; tapit = testisyöte s sekuntia (simulaattori ilman kosketusta).
+            if (mita == "kavelyosat")
+            {
+                // "poikki kavelyosat 0|1": kävelyosien näkyvät meshit (tilat "kavely:<osa>") pois tai päälle — vianselvitys (LS2 9.10.).
+                bool nayta = arvo != "0"; int n = 0;
+                if (rakennus3D != null) foreach (var kv in rakennus3D.Tilat) if (kv.Key.StartsWith("kavely:", StringComparison.Ordinal) && kv.Value != null) { kv.Value.SetActive(nayta); n++; }
+                o.Kirjaa($"poikki: kävelyosat {(nayta ? "näkyviin" : "piiloon")} ({n})");
+                return;
+            }
             if (mita == "kavely")
             {
                 if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuVartijat.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }
