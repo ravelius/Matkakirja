@@ -23,6 +23,15 @@ jobs:
           "poltin|hot air balloon burner|1|60|by"
           "poltin|propane burner|1|60|by"
           "raitiovaunu|tram pass by|3|60|by"
+          "pyoran-kello|bicycle bell|0.3|4|by"
+          "laivan-torvi|ship horn|1|20|by"
+          "laivan-torvi|ferry horn|1|20|by"
+          "nauru|laughter outdoor|1|10|by"
+          "lapsi|child laughing|0.5|6|by"
+          "sorina|crowd walla passing|3|40|by"
+          "katusoittaja|street musician accordion|15|180|by"
+          "katusoittaja|busker guitar|15|180|by"
+          "katusoittaja|busker violin|15|180|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
