@@ -65,7 +65,7 @@ Millainen mies Otto von Bismarck oli?
 Miksi keisari julistettiin Versaillesissa?
 
 ### 652
-Müngsten on pieni asutus Wupper-joen laaksossa sillan tuntumassa Solingenin ja Remscheidin kaupunkien välillä. Siltaa ei alun perin nimetty sen mukaan, vaan se sai nimen vasta monarkian päätyttyä. Sillan juurella on nykyisin matkailijoille tarkoitettu siltapuisto, mutta en ole varma sen tarkemmista vaiheista. Laakson rinteet ovat metsäisiä, ja [[Wupper-joen]] ylle kohoava teräsrakenne hallitsee maisemaa.
+Müngsten on pieni asutus Wupper-joen laaksossa sillan tuntumassa Solingenin ja [[Remscheidin]] kaupunkien välillä. Siltaa ei alun perin nimetty sen mukaan, vaan se sai nimen vasta monarkian päätyttyä. Sillan juurella on nykyisin matkailijoille tarkoitettu siltapuisto, mutta en ole varma sen tarkemmista vaiheista. Laakson rinteet ovat metsäisiä, ja [[Wupper-joen]] ylle kohoava teräsrakenne hallitsee maisemaa.
 JATKOT:
 Miten Müngstenin sillalle pääsee?
 Mikä Wupper on?
@@ -77,7 +77,7 @@ Miten kaarisilta kantaa painoaan?
 Millä menetelmällä silta rakennettiin ilman telineitä?
 
 ### 654
-Anton von Rieppel oli saksalainen insinööri, joka tunnetaan Müngstenin sillan rakennushankkeen johtajana. Lähteiden mukaan hän työskenteli Nürnbergin konepajayhtiössä [[MAN]], joka toteutti sillan teräsrakenteet, mutta en ole varma hänen urastaan tarkemmin. Silta valmistui vuonna 1897, ja se on yksi hänen tunnetuimmista töistään. Nimi on jäänyt historiaan juuri tämän siltahankkeen yhteydessä.
+Anton von Rieppel oli saksalainen insinööri, joka tunnetaan [[Müngstenin sillan]] rakennushankkeen johtajana. Lähteiden mukaan hän työskenteli Nürnbergin konepajayhtiössä [[MAN]], joka toteutti sillan teräsrakenteet, mutta en ole varma hänen urastaan tarkemmin. Silta valmistui vuonna 1897, ja se on yksi hänen tunnetuimmista töistään. Nimi on jäänyt historiaan juuri tämän siltahankkeen yhteydessä.
 JATKOT:
 Mikä on MAN?
 Mitä muuta MAN on valmistanut?
@@ -135,4 +135,346 @@ Pfalz on Rheinland-Pfalzin eteläinen osa, jonka nimi tulee latinan sanasta pala
 JATKOT:
 Miksi Speyerin tuomiokirkko on tärkeä?
 Mikä on BASF?
+
+### 664
+Wilhelm I (1797–1888) oli Preussin kuningas vuodesta 1861 ja Saksan keisari vuodesta 1871. Heinäkuussa 1870 hän oleskeli Bad Emsin kylpylässä, kun Ranskan lähettiläs Benedetti pyysi häntä lupaamaan, ettei [[Hohenzollern-suvun]] jäsen asettuisi uudelleen ehdokkaaksi Espanjan valtaistuimelle. Kuningas torjui vaatimuksen kohteliaasti, ja kokouksesta lähetettiin raportti [[Bismarckille]]. Sodan jälkeen hänet julistettiin vastaperustetun [[Saksan keisarikunnan]] keisariksi.
+JATKOT:
+Miksi Espanjan valtaistuin aiheutti kiistan?
+Milloin Ranskan ja Preussin sota päättyi?
+
+### 665
+Otto von Bismarck (1815–1898) oli Preussin pääministeri vuodesta 1862 ja Saksan keisarikunnan ensimmäinen liittokansleri vuodesta 1871 vuoteen 1890. Hän ohjasi Preussin johdolla tapahtunutta Saksan yhdistymistä muun muassa [[Ranskan ja Preussin sodan]] kautta. Hänen aikanaan Saksassa otettiin käyttöön yksi Euroopan varhaisimmista [[sosiaalivakuutusjärjestelmistä]] 1880-luvulla. Vuonna 1890 keisari [[Wilhelm II]] erotti hänet tehtävästään.
+JATKOT:
+Millainen sosiaalivakuutus Saksassa otettiin käyttöön?
+Miksi Wilhelm II erotti Bismarckin?
+
+### 666
+Lahn on Reinin oikeanpuoleinen sivujoki, jonka pituus on noin 245 kilometriä. Se saa alkunsa Rothaar-vuoristosta ja virtaa muun muassa [[Marburgin]] ja [[Limburgin]] kautta Bad Emsiin. Joki laskee Reiniin Lahnsteinin kohdalla, lähellä Koblenzia. Sen laakso on jyrkkärinteinen ja metsäinen, ja sen varrella on linnoja ja kylpyläkaupunkeja.
+JATKOT:
+Millainen kaupunki Marburg on?
+Missä Rein saa alkunsa?
+
+### 667
+Rheinland-Pfalz on Saksan liittotasavallan osavaltio maan lounaisosassa, ja sen pääkaupunki on [[Mainz]]. Osavaltio perustettiin vuonna 1946 Ranskan miehitysvyöhykkeen alueille. Se rajoittuu Ranskaan, Luxemburgiin ja Belgiaan, ja sen halki virtaavat [[Rein]] ja [[Mosel]], joiden laaksot ovat tunnettuja viininviljelystään. Mainzissa vaikutti kirjapainotaidon kehittäjä [[Johannes Gutenberg]].
+JATKOT:
+Mitä Gutenberg keksi?
+Miksi Moselin laakso on viinialue?
+
+### 668
+Taunus on keskivuoristoalue Hessenin ja Rheinland-Pfalzin osavaltioissa Reinin ja Mainin pohjoispuolella. Sen korkein huippu on [[Großer Feldberg]], jonka korkeus on noin 880 metriä. Alueen halki kulki aikoinaan Rooman valtakunnan raja, [[Limes]], ja sen varrella sijaitsee rekonstruoitu roomalaislinnoitus [[Saalburg]]. Taunuksen reuna-alueilla on monia kylpyläkaupunkeja, ja Bad Ems on yksi niistä.
+JATKOT:
+Mikä oli Limes?
+Mitä Saalburgissa voi nähdä?
+
+### 669
+Westerwald on matala vuoristoalue, joka ulottuu Rheinland-Pfalzin, Hessenin ja Nordrhein-Westfalenin alueille Reinin itäpuolella. Sen korkein kohta on [[Fuchskaute]], jonka korkeus on noin 657 metriä. Alue on sateista ja viileää, ja sen savikerrostumien ansiosta siellä on pitkät keramiikan perinteet, joiden vuoksi seutua kutsutaan nimellä [[Kannenbäckerland]]. Alueen halki virtaa muun muassa [[Sieg]]-joki.
+JATKOT:
+Miksi Westerwaldissa valmistetaan keramiikkaa?
+Mikä Sieg on?
+
+### 670
+Otto I eli Otto Suuri (912–973) oli Itä-Frankin kuningas vuodesta 936 ja keisari vuodesta 962, jolloin paavi kruunasi hänet Roomassa. Hänen katsotaan usein luoneen perustan [[Pyhälle saksalais-roomalaiselle keisarikunnalle]]. Vuonna 955 hän voitti unkarilaiset [[Lechfeldin taistelussa]], mikä turvasi hänen valtakuntansa itärajan. Otto on haudattu [[Magdeburgin]] tuomiokirkkoon.
+JATKOT:
+Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+Mitä Lechfeldin taistelussa tapahtui?
+
+### 671
+Goslar on historiallinen kaupunki Ala-Saksissa Harzin vuoriston pohjoisreunalla Rammelsbergin vuoren juurella. Kaupunki vaurastui vuosisatojen ajan vuoren kaivoksen ansiosta, ja siitä tuli keskiajalla tärkeä keisarillinen kaupunki. Kaupungin tunnetuin rakennus on keskiaikainen [[Kaiserpfalz]], keisarillinen palatsi, jonka lähteiden mukaan rakennuttivat Saksan keisarit 1000-luvulla. Goslarin vanhakaupunki ja Rammelsbergin kaivos kuuluvat yhdessä [[Unescon maailmanperintökohteisiin]].
+JATKOT:
+Mikä oli Kaiserpfalz?
+Miksi Goslar oli keskiajalla tärkeä?
+
+### 672
+Unesco eli Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö perustettiin vuonna 1945, ja sen päämaja sijaitsee [[Pariisissa]]. Järjestö ylläpitää [[maailmanperintöluetteloa]], johon valitaan kulttuuri- ja luontokohteita, joilla on poikkeuksellinen yleismaailmallinen arvo. Luettelo perustuu vuonna 1972 hyväksyttyyn maailmanperintösopimukseen, ja kohteita on nykyisin yli tuhat. Valinnan jälkeen kohteen suojelu on kuitenkin pitkälti maan omalla vastuulla.
+JATKOT:
+Miten kohde pääsee maailmanperintöluetteloon?
+Mitä muuta Unesco tekee?
+
+### 673
+Harz on Keski-Saksan pohjoisin vuoristoalue, joka ulottuu Ala-Saksin, Saksi-Anhaltin ja Thüringenin osavaltioiden alueille. Sen korkein huippu on [[Brocken]], jonka korkeus on noin 1 140 metriä. Brockeniin liittyy kansantarina noitien kokoontumisesta [[Walpurgisyönä]], ja se esiintyy myös Goethen näytelmärunoelmassa [[Faust]]. Vuoriston alueella on ollut vuosisatojen ajan laaja kaivostoiminta, ja tämän perinteen keskeinen kohde on Rammelsbergin kaivos.
+JATKOT:
+Mikä on Walpurgisyö?
+Miten Harzin kaivostoiminta aikoinaan toimi?
+
+### 674
+Devonikausi oli geologinen kausi, joka alkoi noin 419 miljoonaa vuotta sitten ja päättyi noin 359 miljoonaa vuotta sitten. Se on [[paleotsooisen]] maailmankauden neljäs kausi, ja sitä seurasi [[karbonikausi]]. Devonikautta kutsutaan kalojen aikakaudeksi, koska meressä eli silloin monia kalaryhmiä. Kauden lopulla ensimmäiset [[nelijalkaiset]] siirtyivät vedestä maalle, ja maalle levisivät myös ensimmäiset metsät.
+JATKOT:
+Miten ensimmäiset nelijalkaiset siirtyivät maalle?
+Mitä karbonikaudella tapahtui?
+
+### 675
+Rammelsberg on 635 metriä korkea vuori Harzin pohjoisreunalla Goslarin eteläpuolella Ala-Saksissa. Sen kaivoksessa louhittiin hopeaa, kuparia ja lyijyä, ja se oli käytössä yhtäjaksoisesti yli tuhat vuotta vuoteen 1988 asti. Legendan mukaan vuori on saanut nimensä ritari Rammilta, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Nykyisin kaivos toimii vierailukohteena, ja se on [[Unescon]] maailmanperintökohde, jonka yhteydessä mainitaan myös [[Goslarin]] vanhakaupunki.
+JATKOT:
+Millainen on Rammelsbergin vierailukaivos?
+Miten vuoren malmiesiintymä syntyi?
+
+### 676
+Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, noin 40 kilometrin päässä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina, ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331. Markkreivien barokkipalatsi [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja kaupunki tunnetaan myös nuoresta [[Kaspar Hauserista]], joka asui siellä 1830–1833. Lähteiden mukaan kaupungissa järjestetään joka toinen vuosi Bach-viikko, [[Bachwoche]], mutta tarkasta ajankohdasta en ole varma.
+JATKOT:
+Mikä Markgrafenschloss on?
+Kuka oli Kaspar Hauser?
+
+### 677
+Nürnberg on Baijerin Frankenin alueen suurin kaupunki ja Münchenin jälkeen Baijerin toiseksi suurin, ja siellä on noin puoli miljoonaa asukasta. Kaupungin siluettia hallitsee keskiaikainen linnoitus [[Kaiserburg]]. Siellä syntyi vuonna 1471 taidemaalari [[Albrecht Dürer]]. Joulukuussa kaupungissa pidetään tunnettu joulumarkkina, [[Christkindlesmarkt]], jonka asiakirjamaininta on vuodelta 1628 ja jossa myydään muun muassa puisia leluja, kynttilöitä ja paahdettuja manteleita.
+JATKOT:
+Mikä Christkindlesmarkt on?
+Mitä Albrecht Dürer maalasi?
+
+### 678
+Hohenzollernit olivat saksalainen ruhtinassuku, jonka nimi tulee Schwabenissa sijaitsevasta [[Hohenzollernin linnasta]]. Suvun jäsenet hallitsivat Brandenburgin vaaliruhtinaskuntaa vuodesta 1415, Preussin kuningaskuntaa vuodesta 1701 ja Saksan keisarikuntaa vuosina 1871–1918. Suvun haara, Brandenburg-Ansbachin markkreivit, hallitsi Ansbachia, jonka rakennuksista näkyy yhä heidän aikansa barokki. Viimeinen Saksan keisari oli [[Wilhelm II]].
+JATKOT:
+Millainen keisari Wilhelm II oli?
+Missä Hohenzollernin linna sijaitsee?
+
+### 679
+Preussi oli Pohjois- ja Itä-Saksan valtio, josta tuli kuningaskunta vuonna 1701 ja joka kasvoi 1700-luvulla Euroopan suurvallaksi. Ansbachin ruhtinaskunta siirtyi lähteiden mukaan Preussille vuonna 1791, mutta en ole varma tarkasta vuodesta. Napoleonin sotien aikaan alue siirtyi lopulta [[Baijerin]] hallintaan, lähteiden mukaan vuonna 1806, mutta tämänkään vuoden suhteen en ole varma. Preussin johdolla perustettiin vuonna 1871 [[Saksan keisarikunta]], ja valtio lakkautettiin vuonna 1947.
+JATKOT:
+Miten Preussista tuli suurvalta?
+Miksi Baijeri sai Ansbachin?
+
+### 680
+Markgrafenschloss on Ansbachin markkreivien palatsi, joka rakennettiin vuosina 1704–1738 ja joka on säilyttänyt alkuperäisen barokkisen ilmeensä. Palatsin yhteydessä on puutarha, [[Hofgarten]], jossa lähteiden mukaan on myös [[Orangerie]], mutta en ole varma sen nykykäytöstä. Puutarhassa puukotettiin vuonna 1833 [[Kaspar Hauser]], joka oli asunut Ansbachissa vuodesta 1830. Palatsi kuvastaa Brandenburg-Ansbachin markkreivien valtaa ja vaurautta.
+JATKOT:
+Mikä on Orangerie?
+Miten barokkipalatsi eroaa renessanssilinnasta?
+
+### 681
+Barokki on taiteen ja arkkitehtuurin tyylisuunta, joka syntyi Italiassa 1600-luvun alussa ja vaikutti Euroopassa noin 1700-luvun puoliväliin asti. Sille ovat tyypillisiä runsas koristelu, kaarevat muodot, voimakkaat valon ja varjon vastakohdat sekä dramaattisuus. Barokkimaalauksen tunnetuimpia nimiä on [[Caravaggio]], ja musiikissa barokkia edustavat esimerkiksi [[Bach]] ja Händel. Saksassa barokkipalatseja rakennettiin ruhtinaiden hoveihin, ja Ranskassa tunnetuin esimerkki on [[Versaillesin]] linna.
+JATKOT:
+Millainen oli Bachin musiikki?
+Mistä sana barokki on peräisin?
+
+### 682
+Nürnberg sijaitsee Frankenin alueella Pegnitz-joen varrella. Kaupunki oli keskiajalla Pyhän saksalais-roomalaisen keisarikunnan tärkeä kauppa- ja hallintokeskus, ja täällä pidettiin keisarikunnan valtiopäiviä. Saksan ensimmäinen höyryveturilla liikennöity rautatie, [[Ludwigsbahn]], avattiin vuonna 1835 Nürnbergin ja Fürthin välille. Toisen maailmansodan jälkeen kaupungissa pidettiin vuosina 1945–1946 kansainvälinen [[sotarikosoikeudenkäynti]]. Etäisyys Ansbachiin on noin 40 kilometriä.
+JATKOT:
+Millainen oli Ludwigsbahn?
+Miksi oikeudenkäynti pidettiin Nürnbergissä?
+
+### 683
+Keski-Franken on yksi Baijerin seitsemästä hallintoalueesta, ja sen pääkaupunki on Ansbach. Alueen suurin kaupunki on Nürnberg. Muita tunnettuja kohteita ovat keskiaikainen [[Rothenburg ob der Tauber]], yliopistokaupunki [[Erlangen]] ja teollisuuskaupunki [[Fürth]]. Alue kuuluu historialliseen Frankenin maahan, joka on kulttuurisesti eri alue kuin muu Baijeri.
+JATKOT:
+Mikä tekee Rothenburgista tunnetun?
+Mitä Franken tarkoittaa?
+
+### 684
+Benediktiiniluostari kuului katoliseen benediktiinien ritarikuntaan, jonka perusti [[Benedictus Nursialainen]] noin 500-luvulla. Hänen laatimansa luostarisääntö tunnetaan toimintaperiaatteesta ora et labora, rukoile ja työskentele. Ensimmäinen suuri benediktiiniluostari oli [[Monte Cassino]] Italiassa. Benediktiiniluostarit olivat keskiajalla opin ja viljelyn keskuksia, ja munkit kopioivat käsikirjoituksia. Ansbachin luostarin perustajana pidetään perimätiedon mukaan [[Gumbertusta]], mutta en ole varma tästä.
+JATKOT:
+Mitä luostarisääntö sisälsi?
+Miksi munkit kopioivat käsikirjoituksia?
+
+### 685
+Krautturm eli räjäytetty torni oli osa Heidelbergin linnan 1500-luvun puolustusvarustusta. Sana Kraut tarkoitti lähteiden mukaan aikoinaan myös [[ruutia]], mutta en ole varma nimen alkuperästä. Ranskan joukot räjäyttivät tornin syyskuussa 1693 tehdäkseen linnasta sotilaallisesti käyttökelvottoman, ja puolet tornista sortui vallihautaan. Jäljelle jäänyt osa seisoo yhä puoliksi auki ja on linnan tunnetuin symboli. Linnassa on myös tunnettu [[Heidelbergin suuri tynnyri]].
+JATKOT:
+Mikä on Heidelbergin suuri tynnyri?
+Miten Heidelbergin linna palautettiin rauniosta?
+
+### 686
+Pfalzin perimyssota käytiin vuosina 1688–1697, ja siitä käytetään myös nimeä yhdeksänvuotinen sota. Ranskan kuningas [[Ludvig XIV]] taisteli sitä vastaan liittoutuneita valtioita, joiden ryhmää kutsutaan nimellä [[Augsburgin liitto]]. Ranskalaiset joukot hävittivät sodan aikana laajoja alueita Pfalzissa poltetun maan taktiikalla, ja [[Heidelbergin linna]] tuhoutui vuosina 1689 ja 1693. Sota päättyi vuonna 1697 [[Rijswijkin rauhaan]].
+JATKOT:
+Miksi Ranska hävitti Pfalzin alueita?
+Mitä Rijswijkin rauhassa sovittiin?
+
+### 687
+Heidelberg on Baden-Württembergin kaupunki Neckar-joen varrella, ja siellä on noin 160 000 asukasta. Kaupungin yliopisto, [[Heidelbergin yliopisto]], perustettiin vuonna 1386, ja se on yksi Saksan vanhimmista. Vanhaa kaupunkia ja Neckarin ylittävää [[Alte Brücke]] -siltaa pidetään kaupungin tunnetuimpina nähtävyyksinä. Joen pohjoispuolella kulkee kävelytie [[Philosophenweg]], josta avautuu näkymä kaupunkiin ja linnaan.
+JATKOT:
+Miksi Philosophenweg on saanut nimensä?
+Millainen on Alte Brücke?
+
+### 688
+Krautturm on Heidelbergin linnan puolustusvarustukseen kuulunut torni, joka rakennettiin 1500-luvulla. Sen toinen nimi on gesprengter Turm eli räjäytetty torni. Ranskan joukot räjäyttivät tornin syyskuussa 1693, ja puolet siitä sortui vallihautaan. Jäljelle jäänyt osa seisoo yhä puoliksi auki, jolloin tornin sisärakenne on näkyvissä, ja siitä on tullut linnan tunnetuin symboli. Linnan muita huomattavia osia ovat renessanssirakennus [[Ottheinrichsbau]] ja puutarha [[Hortus Palatinus]].
+JATKOT:
+Mikä on Ottheinrichsbau?
+Mikä Hortus Palatinus on?
+
+### 689
+Baden-Württemberg on Saksan lounaisosan osavaltio, jonka pääkaupunki on [[Stuttgart]] ja jonka asukasluku on noin 11 miljoonaa. Osavaltio perustettiin vuonna 1952 yhdistämällä kolme aiempaa aluetta: Baden, Württemberg-Baden ja Württemberg-Hohenzollern. Sen maisemiin kuuluvat [[Schwarzwald]] eli Mustametsä sekä [[Bodenjärven]] rannikko. Osavaltio on tunnettu myös autoteollisuudestaan, ja siellä sijaitsevat muun muassa Mercedes-Benzin ja Porschen päämajat.
+JATKOT:
+Millainen alue Schwarzwald on?
+Missä Bodenjärvi sijaitsee?
+
+### 690
+Neckar on Reinin sivujoki, jonka pituus on noin 360 kilometriä. Se saa alkunsa Schwarzwaldin itäpuolelta ja virtaa Baden-Württembergin halki. Sen varrella ovat muun muassa [[Tübingen]], [[Stuttgart]] ja Heidelberg. Joki yhtyy Reiniin Mannheimin kohdalla, ja se on vuosisatojen ajan ollut tärkeä kauppa- ja kuljetusreitti.
+JATKOT:
+Millainen kaupunki Tübingen on?
+Miten Mannheim syntyi Reinin ja Neckarin yhtymäkohtaan?
+
+### 691
+Heidelbergin yliopisto perustettiin vuonna 1386 Pfalzin vaaliruhtinas [[Ruprecht I:n]] aloitteesta, ja se on yksi Saksan vanhimmista yliopistoista. Siellä ovat opettaneet muun muassa kemisti [[Robert Bunsen]], filosofi Georg Wilhelm Friedrich Hegel ja sosiologi [[Max Weber]]. Yliopisto on kasvanut tutkimus- ja opiskelijakaupungin keskukseksi, ja opiskelijat muodostavat suuren osan kaupungin asukkaista.
+JATKOT:
+Mitä Robert Bunsen keksi?
+Mitä Max Weber tutki?
+
+### 692
+Ludvig XIV (1638–1715) oli Ranskan kuningas vuodesta 1643 kuolemaansa saakka, ja hänen hallituskautensa oli poikkeuksellisen pitkä, noin 72 vuotta. Hänestä käytetään lisänimeä [[Aurinkokuningas]]. Hän rakennutti [[Versaillesin]] palatsin ja keskitti vallan itselleen vahvistaen Ranskan asemaa Euroopan johtavana suurvaltana. Hänen sotansa, kuten Pfalzin perimyssota, rasittivat kuitenkin sekä Ranskan taloutta että naapurimaita.
+JATKOT:
+Millainen on Versailles'n palatsi?
+Miksi Ludvig XIV:tä kutsuttiin Aurinkokuninkaaksi?
+
+### 693
+Augsburgin liitto oli vuonna 1686 muodostettu puolustusliitto, jonka tavoitteena oli estää Ranskan kuningas Ludvig XIV:n laajentuminen Reinin alueelle. Siihen kuuluivat lähteiden mukaan muun muassa keisari ja useita Saksan ruhtinaita sekä muita valtioita, mutta en ole varma täydellisestä jäsenluettelosta. Myöhemmin liittoon liittyivät [[Englanti]] ja [[Alankomaat]], jolloin siitä tuli laajempi liittoutuma, jota kutsutaan joskus Suureksi liitoksi. Ranskan ja liittolaisten välinen taistelu jatkui vuoteen 1697.
+JATKOT:
+Miksi Englanti liittyi liittoon?
+Mikä oli Suuri liitto?
+
+### 694
+Rijswijkin rauha solmittiin vuonna 1697 [[Alankomaissa]] sijaitsevassa Rijswijkin kaupungissa, ja se päätti Pfalzin perimyssodan. Ranska palautti rauhassa suurimman osan sodan aikana valtaamistaan alueista, mutta lähteiden mukaan se sai pitää [[Strasbourgin]] ja suurimman osan Elsassista. Tarkat rauhanehdot en ole varma muistavani oikein. Rauha oli Ranskalle ja sen vastustajille vain tauko, sillä uusi sota alkoi muutaman vuoden kuluttua.
+JATKOT:
+Miksi Ranska sai pitää Strasbourgin?
+Mikä sota alkoi rauhan jälkeen?
+
+### 695
+Heidelbergin linna kohoaa kaupungin yläpuolella vuoren rinteellä, ja se toimi Pfalzin vaaliruhtinaiden asuinlinnana. Ranskan joukot tuhosivat sen Pfalzin perimyssodassa vuosina 1689 ja 1693, ja myöhemmin salamanisku aiheutti lisää vahinkoa. Linna jäi raunioksi, ja siitä tuli 1800-luvulla [[romantiikan]] ajan taiteilijoiden ja runoilijoiden rakastama kohde. Sen tunnetuimpia osia ovat renessanssirakennus [[Ottheinrichsbau]] ja kellarin Suuri tynnyri.
+JATKOT:
+Mitä romantiikka tarkoittaa taiteessa?
+Mikä on Suuri tynnyri?
+
+### 696
+Pfalzin vaaliruhtinaat olivat yksi Pyhän saksalais-roomalaisen keisarikunnan seitsemästä ruhtinaasta, joilla oli oikeus valita keisari, ja heidän asemansa vahvistettiin vuoden 1356 [[Kultaisessa bullassa]]. Heidän sukunsa oli [[Wittelsbach]], ja heidän pääkaupunkinsa oli pitkään Heidelberg, kunnes hovi siirtyi 1700-luvun alussa [[Mannheimiin]]. Heidelbergin linna oli heidän asuinlinnansa, ja siellä sijaitsi myös tunnettu Suuri tynnyri. Pfalzin vaaliruhtinaiden valta päättyi keisarikunnan hajotessa 1800-luvun alussa.
+JATKOT:
+Miksi hovi siirtyi Mannheimiin?
+Keitä olivat keisarikunnan muut vaaliruhtinaat?
+
+### 697
+Preussi oli pohjoissaksalainen valtio, jonka pääkaupunki oli Berliini ja josta tuli kuningaskunta vuonna 1701. Sen armeija oli tunnettu kurinalaisuudestaan, ja sotilaallinen perinne vahvistui erityisesti kuningas [[Fredrik Vilhelm I:n]] aikana 1700-luvun alkupuoliskolla. Kuningas [[Fredrik Suuri]] teki valtiosta Euroopan suurvallan, ja vuonna 1871 Preussin johdolla perustettiin Saksan keisarikunta. Sotilasarvon kunnioitus oli Preussissa syvään juurtunutta, mikä selittää, miksi univormu sai monet tottelemaan.
+JATKOT:
+Millainen kuningas Fredrik Vilhelm I oli?
+Miten Preussi liittyi Saksan yhdistymiseen?
+
+### 698
+Wilhelm Voigt (1849–1922) oli saksalainen suutari, joka tunnetaan nimellä Köpenickin kapteeni. Hän oli viettänyt vankilassa yhteensä 25 vuotta ja karkotettiin Berliinistä vapautumisensa jälkeen, minkä jälkeen hän valtasi lokakuussa 1906 [[Köpenickin]] kaupungintalon. Tapauksesta tuli Saksassa tunnettu, ja siitä kirjoitti näytelmän [[Carl Zuckmayer]] vuonna 1931. Voigtin tarina on elänyt yhä elokuvina ja teatterina.
+JATKOT:
+Mistä Zuckmayerin näytelmä kertoo?
+Mikä Köpenick on?
+
+### 699
+Wilhelm II (1859–1941) oli Saksan keisari ja Preussin kuningas vuosina 1888–1918. Hän erotti vuonna 1890 liittokansleri [[Bismarckin]], ja hänen aikanaan Saksa pyrki vahvistamaan asemaansa maailmanpolitiikassa. Hänen hallituskautensa päättyi [[ensimmäisen maailmansodan]] lopussa, kun hän luopui vallasta marraskuussa 1918 ja siirtyi maanpakoon Alankomaihin. Hän asui siellä [[Doornin]] kylässä kuolemaansa saakka.
+JATKOT:
+Miksi Wilhelm II erotti Bismarckin?
+Miten ensimmäinen maailmansota alkoi?
+
+### 700
+Berliini on Saksan pääkaupunki ja väkirikkain kaupunki, ja siellä asuu noin 3,7 miljoonaa ihmistä. Kaupunki sijaitsee Spree-joen varrella. Berliinin sinetissä on ollut karhu jo vuodesta 1280, ja karhu on edelleen kaupungin vaakunaeläin. Spree-joen keskellä sijaitseva [[Museosaari]] sisältää viisi museota, ja se on Unescon maailmanperintökohde vuodesta 1999. Maalari [[Eduard Gaertner]] tallensi 1800-luvun Berliinin tarkoin kuvin.
+JATKOT:
+Mitä Museosaarella on nähtävää?
+Miten Berliinin karhu päätyi vaakunaan?
+
+### 701
+Köpenickin tapaus tapahtui 16. lokakuuta 1906, kun suutari Wilhelm Voigt pukeutui preussilaisen kaartinkapteenin univormuun, otti komentoonsa joukon sotilaita, miehitti Köpenickin kaupungintalon ja takavarikoi kassasta 4 002 markkaa ja 37 penniä. Hänet tuomittiin neljäksi vuodeksi vankeuteen, mutta keisari Wilhelm II armahti hänet 1908. Tapauksesta tuli kuuluisa, ja se on kuvattu muun muassa [[Carl Zuckmayerin]] näytelmässä vuodelta 1931 sekä [[Heinz Rühmannin]] tähdittämässä elokuvassa. Tapausta pidetään yleisesti esimerkkinä siitä, miten pitkälle univormun arvovalta ulottui.
+JATKOT:
+Millainen elokuva Heinz Rühmannin Köpenick on?
+Mitä Voigt teki armahduksensa jälkeen?
+
+### 702
+Berliini oli 1800-luvulla nopeasti kasvava pääkaupunki, ja vuoden 1871 jälkeen se oli Saksan keisarikunnan keskus. Kaupunkiin rakennettiin myös edistyksellisiä viestintäyhteyksiä: [[putkipostin]] ensimmäinen linja avattiin 1860-luvulla, ja verkko laajeni myöhemmin kattamaan suuren osan kaupungista. [[Lennätin]] ja putkipostin yhdistämät toimistot palvelivat pörssiä, sanomalehtiä ja viranomaisia. Putkipostin viimeiset linjat suljettiin vasta 1900-luvun jälkipuoliskolla.
+JATKOT:
+Miten putkiposti oikein toimi?
+Miten lennätin muutti viestintää?
+
+### 703
+Werner von Siemens (1816–1892) oli saksalainen keksijä ja yrittäjä, joka perusti vuonna 1847 Berliiniin lennätinlaitteita valmistavan yrityksen [[Siemens & Halske]]. Hän kehitti 1860-luvulla sähkögeneraattorin periaatetta eli [[dynamoa]], ja vuonna 1879 hän esitteli Berliinin teollisuusnäyttelyssä sähkökäyttöisen rautatien. Yrityksestä kasvoi maailmanlaajuinen sähkötekniikan konserni. Hän rahoitti myös [[Archaeopteryx]]-fossiilin ostoa Berliinin luonnontieteelliselle museolle.
+JATKOT:
+Miten dynamo toimii?
+Mikä Archaeopteryx oli?
+
+### 704
+Spree on noin 400 kilometriä pitkä joki, joka saa alkunsa Saksin itäosan vuoristoalueelta ja virtaa Brandenburgin kautta Berliiniin. Berliinin Spandaussa se yhtyy [[Havel]]-jokeen. Berliinin eteläpuolella joki haarautuu kanavien ja soisten metsien verkostoksi, joka tunnetaan nimellä [[Spreewald]] ja on Unescon biosfäärialue. Berliinin keskustassa joen halkaisema [[Museosaari]] kuuluu kaupungin tunnetuimpiin kulttuurikohteisiin.
+JATKOT:
+Millainen alue Spreewald on?
+Mikä Havel on?
+
+### 705
+Müggelsee on Berliinin kaakkoisosassa Köpenickin kaupunginosassa sijaitseva järvi, joka kuuluu kaupungin suurimpiin ja jonka läpi virtaa Spree-joki. Sen rannoilla on uimarantoja, ja järvi on suosittu purjehdus- ja virkistysalue. Järven pohjoisrannalla sijaitsee [[Friedrichshagen]], jonka metsäinen ympäristö houkuttelee kävelijöitä. Eteläpuolella kohoavat [[Müggelberge]], Berliinin ympäristön metsäisiä kukkuloita.
+JATKOT:
+Millainen kaupunginosa Friedrichshagen on?
+Mitä Müggelbergeillä voi tehdä?
+
+### 706
+Historismi oli 1800-luvun tyylisuunta, jossa rakennuksissa ja taiteessa jäljiteltiin aiempien aikakausien tyylejä, kuten keskiajan goottia, renessanssia ja barokkia. Siitä käytetään tyylin mukaan nimiä uusgotiikka, uusrenessanssi ja uusbarokki. Historismin tunnetuimpia kohteita ovat Wienin [[Ringstrasse]]-kehäkatu ja sen varren monumentaalirakennukset sekä Kölnin tuomiokirkko, joka valmistui keskiaikaisten suunnitelmien mukaan vuonna 1880. Tyylisuunta kuvasti aikansa kiinnostusta kansalliseen menneisyyteen, ja siihen vaikutti vahvasti [[romantiikka]].
+JATKOT:
+Mikä on Wienin Ringstrasse?
+Miksi Kölnin tuomiokirkon rakentaminen kesti niin kauan?
+
+### 707
+Romantiikka oli 1700-luvun lopulla alkanut ja 1800-luvun puolelle jatkunut kulttuurivirtaus, joka korosti tunteita, luontoa, yksilön kokemusta ja menneisyyden, erityisesti keskiajan, ihannointia. Maalaustaiteessa sen tunnetuimpia edustajia oli saksalainen [[Caspar David Friedrich]], jonka maisemat tuovat esiin ihmisen pienuuden luonnon edessä. Kirjallisuudessa kansansatuja keräsivät [[Grimmin veljekset]], ja musiikissa romantiikkaa edustivat muun muassa [[Franz Schubert]] ja Richard Wagner. Linnat ja rauniot nousivat suosittuina kohteina taiteilijoiden ja matkailijoiden mieleen.
+JATKOT:
+Mitä Grimmin veljekset keräsivät?
+Millainen oli Caspar David Friedrichin tyyli?
+
+### 708
+Richard Wagner (1813–1883) syntyi Leipzigissä ja kuoli Venetsiassa. Hän oli säveltäjä ja kirjailija, joka kirjoitti itse oopperoidensa tekstit ja kutsui teoksiaan musiikkidraamoiksi. Hänen musiikissaan toistuu usein niin kutsuttu [[johtoaihe]], tiettyyn henkilöön tai ajatukseen liittyvä tunnistettava sävelkulku. Hänen tunnetuimpia teoksiaan on oopperasarja [[Nibelungin sormus]], ja hänen oma oopperatalonsa [[Bayreuthissa]] avattiin vuonna 1876. Baijerin kuningas Ludwig II oli hänen ihailijansa ja tukijansa.
+JATKOT:
+Mikä on johtoaihe musiikissa?
+Miten Ludwig II tuki Wagneria?
+
+### 709
+Ludwig II (1845–1886) oli Baijerin kuningas vuodesta 1864. Hän tunnettiin kiinnostuksestaan taiteeseen ja satuihin, ja hänen rakennuttamiaan linnoja ovat Neuschwansteinin lisäksi [[Linderhof]] ja [[Herrenchiemsee]]. Hän tuki säveltäjä Richard Wagneria, ja hänen rakennushankkeensa maksettiin omilla varoilla ja lainoilla. Kesäkuussa 1886 hänet julistettiin kykenemättömäksi hallitsemaan, ja hän kuoli samassa kuussa [[Starnberger See]] -järven rannalla. Hänen kuolemansa olosuhteet ovat jääneet osin epäselviksi.
+JATKOT:
+Millainen linna Linderhof on?
+Mikä Herrenchiemsee on?
+
+### 710
+Baijeri on Saksan pinta-alaltaan suurin osavaltio, ja sen pääkaupunki on München. Etelässä sen rajalla kohoavat Alpit, ja Saksan korkein vuori [[Zugspitze]] sijaitsee Baijerin ja Itävallan rajalla. Baijeria hallitsi vuosisatoja [[Wittelsbach]]-suku, ja se oli kuningaskunta vuodesta 1806 vuoteen 1918. Osavaltio tunnetaan perinteistään, ja sen kuuluisin vuosittainen tapahtuma on Münchenissä järjestettävä [[Oktoberfest]].
+JATKOT:
+Kuinka korkea Zugspitze on?
+Mikä on Oktoberfest?
+
+### 711
+Neuschwanstein sijaitsee Baijerin lounaisosassa Alppien reunalla Füssenin lähellä, ja sen peruskivi laskettiin vuonna 1869. Lähistöllä on myös [[Hohenschwangau]]-linna, jossa Ludwig II vietti lapsuutensa. Neuschwansteinin sisätiloissa on muun muassa juhlava [[Sängersaal]], laulajien sali, jonka aiheet liittyvät keskiaikaisiin tarinoihin ja Wagnerin oopperoihin. Linnan viereisen rotkon ylittää [[Marienbrücke]], josta avautuu kuuluisa näkymä linnaan. Linna on yksi Saksan vierailluimmista nähtävyyksistä.
+JATKOT:
+Mitä Wagnerin oopperat kertovat?
+Missä Hohenschwangau sijaitsee?
+
+### 712
+Harjannostajaiset ovat rakennustyömaan juhla, joka vietetään, kun rakennuksen runko tai kattorakenne on saatu valmiiksi. Saksassa juhlaa kutsutaan nimellä [[Richtfest]], ja siihen kuuluu perinteisesti, että harjalle nostetaan koristeltu havupuu tai seppele. Rakennuttaja kestitsee työmiehiä ja mestaria, ja puhe pidetään valmistuneelle rakenteelle. Perinne elää yhä, ja sitä noudatetaan monissa Euroopan maissa, myös Suomessa. [[Neuschwansteinissa]] harjannostajaisia vietettiin vuonna 1880.
+JATKOT:
+Mistä harjannostajaisten perinne on peräisin?
+Miksi harjalle nostetaan havupuu?
+
+### 713
+Lohengrin on Richard Wagnerin romanttinen ooppera, joka sai kantaesityksensä [[Weimarissa]] vuonna 1850, ja kantaesitystä johti säveltäjä [[Franz Liszt]]. Sen päähenkilö on Graalin ritari, joka saapuu joutsenen vetämällä veneellä suojelemaan Elsaa ja asettaa ehdoksi, ettei Elsa koskaan kysy hänen nimeään. Elsa kysyy kuitenkin, ja ritari joutuu lähtemään. Oopperan kolmannen näytöksen alussa kuultava [[häämarssi]] on edelleen yksi tunnetuimmista hääsävelmistä. Ludwig II ihaili joutsenritarin tarinaa.
+JATKOT:
+Mikä on Graalin ritarin legenda?
+Miksi Wagnerin häämarssi soi häissä?
+
+### 714
+Tristan ja Isolde on Richard Wagnerin ooppera, joka sai kantaesityksensä [[Münchenissä]] vuonna 1865. Se perustuu keskiaikaiseen tarinaan, jossa ritari Tristan saattaa Isolden naimisiin kuningas Markeen, mutta kaksi rakastuu juotuaan rakkausjuomaa. Oopperan alussa kuultava niin kutsuttu [[Tristan-sointu]] tunnetaan musiikin harmonian historiassa, koska se venyttää tavanomaisen sointuvärin rajoja. Teoksen huipentuu Isolden laulamaan [[Liebestod]]-kohtaukseen, rakkauskuolemaan.
+JATKOT:
+Mikä on Tristan-sointu?
+Mistä keskiaikainen Tristan-tarina on peräisin?
+
+### 715
+Nibelungin sormus on Richard Wagnerin neljän oopperan sarja: [[Das Rheingold]], Die Walküre, Siegfried ja Götterdämmerung. Koko sarja sai ensiesityksensä Bayreuthin ensimmäisessä festivaalissa vuonna 1876, ja sen esittäminen kestää yhteensä noin viisitoista tuntia. Tarinan aineksina ovat germaanisen ja pohjoismaisen mytologian kertomukset sekä keskiaikainen [[Nibelungenlied]]-eepos. Juoni kiertyy taikasormuksen ympärille, joka antaa omistajalleen vallan mutta tuo mukanaan tuhon.
+JATKOT:
+Mistä Nibelungenlied kertoo?
+Mikä on Bayreuthin festivaali?
+
+### 716
+Bayreuth on Ylä-Frankenin kaupunki Baijerissa, jossa on noin 75 000 asukasta. Kaupunki tunnetaan Richard Wagnerin vuonna 1876 avatusta oopperatalosta [[Festspielhaus]], jossa järjestetään joka kesä Wagner-festivaali. Wagner asui kaupungissa [[Wahnfried]]-huvilassa ja on haudattu sen puutarhaan. Kaupungissa on myös barokkinen [[Markgräfliches Opernhaus]], joka on Unescon maailmanperintökohde.
+JATKOT:
+Miten Bayreuthin festivaali toimii?
+Millainen on Markgräfliches Opernhaus?
+
+### 717
+Alpit ovat Euroopan korkein vuoristo, joka ulottuu noin 1 200 kilometrin pituisena kaarena Ranskasta Sveitsin, Italian, Itävallan ja Saksan kautta Sloveniaan. Alppien alueeseen kuuluvat lisäksi Monaco ja Liechtenstein, eli yhteensä kahdeksan maata. Korkein huippu on [[Mont Blanc]], jonka korkeus on noin 4 800 metriä, ja Saksan korkein huippu on [[Zugspitze]]. Alpeilla on laajoja jäätiköitä, jotka ovat vähentyneet ilmaston lämmetessä. Karthagolainen sotapäällikkö Hannibal ylitti Alpit norsuineen vuonna 218 eaa.
+JATKOT:
+Miksi Alppien jäätiköt sulavat?
+Kuinka korkea Zugspitze on?
+
+### 718
+Füssen on Baijerin lounaisosassa Lech-joen varrella sijaitseva kaupunki, jossa asuu noin 15 000 ihmistä. Kaupunki sijaitsee aivan Itävallan rajan tuntumassa, ja sen kautta tullaan Neuschwansteinin ja Hohenschwangaun linnoille. Kaupungin tunnetuimpia rakennuksia ovat [[Hohes Schloss]] ja benediktiiniluostari [[St. Mang]]. Füssenillä on myös pitkät perinteet luutun ja viulun valmistuksessa.
+JATKOT:
+Millainen on Hohes Schloss?
+Miten Füssenin soitinrakennus syntyi?
+
+### 719
+Itävalta on Keski-Euroopan alppivaltio, jonka pääkaupunki on [[Wien]] ja jossa asuu noin yhdeksän miljoonaa ihmistä. Maa rajoittuu muun muassa Saksaan, Italiaan ja Sveitsiin, ja siitä suuri osa on vuoristoa. Itävalta oli vuosisatoja [[Habsburgien]] hallitsema suurvalta, ja Preussi voitti sen sodassa vuonna 1866. Tunnettuja kaupunkeja ovat Wienin lisäksi [[Salzburg]], Mozartin syntymäkaupunki, ja Innsbruck.
+JATKOT:
+Keitä olivat Habsburgit?
+Millainen kaupunki Salzburg on?
+
+### 720
+Johann Gottfried Schadow (1764–1850) oli berliiniläinen kuvanveistäjä ja yksi saksalaisen klassismin tunnetuimmista taiteilijoista. Hänen tunnetuin työnsä on [[Brandenburgin portin]] kvadriga, joka valmistui 1790-luvulla. Muita merkittäviä töitä ovat prinsessa Luisea ja hänen sisartaan esittävä [[Prinzessinnengruppe]], ja hän työskenteli myöhemmin Berliinin taideakatemian johtajana. Schadow muokkasi Berliinin julkisten patsaiden ilmettä vuosikymmenten ajan.
+JATKOT:
+Millainen on Prinzessinnengruppe?
+Mikä on klassismi taiteessa?
 
