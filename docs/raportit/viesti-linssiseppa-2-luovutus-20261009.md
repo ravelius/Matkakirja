@@ -5,6 +5,14 @@ Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Workt
 Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
 (`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
 
+## TILA 15.0x
+- pbr-173 kärki a72f1ee21 (Natiivisepällä): + osoitin uusin-3.json (173+ lukee; Julkaisija loi → v6b; uusin-2 = v6b vanhoille).
+  v9 vain uusin-3:een ja vasta omistajan hyväksynnän jälkeen. Versiokansiot muuttumattomia.
+- PT:n tarkistukseen: lokit/linssiseppa2-omistaja4-173pbr2/omistajalle/ (ND v8 ja KL v2b, app 93c54e13 = 173pbr2). Omat havainnot
+  PT:lle: etelärannan Googlen kaista, ikkuna-aukot tummat, KL:n paneelit mustat. Odottaa PT:n päätöstä.
+- Vasa/Riddarholmen-arvio: docs/raportit/vasa-riddarholmen-173-20261009.md (Vasa pois, Riddarholmen tasainen; LR-työ vasta omistajan hyväksynnän jälkeen).
+- Putki: uusin vienti29 (ND v8, KL v2b, prefektuuri v1.1, ei Vasaa); vienti28v = arviota varten Vasan kanssa. App-kopiot 172c, 173pbr, 173pbr2.
+
 ## TILA 14.3x
 - Juna 173 kuitattu ja Natiivisepällä: pbr-173 86bd795f1 (korvaa 2f641e53c; OmaMalli PBR + VALO KAUPUNGIN AURINGOSTA _IlmAurinko,
   koska URP:n päävalo = kartan kameraa seuraava aurinko → ND harmaa) ja talvi-173 b64cb3b75. 1209/1209.
