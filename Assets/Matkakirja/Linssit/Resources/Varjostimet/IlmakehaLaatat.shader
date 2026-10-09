@@ -11,7 +11,7 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
         _baseColorTexture ("Perusväri", 2D) = "white" {}
         _baseColorFactor ("Perusvärin kerroin", Color) = (1, 1, 1, 1)
         _baseColorTextureCoordinateIndex ("UV-kanava", Float) = 0
-        _overlayTexture_Clipping ("Leikkaus", 2D) = "black" {}
+        _overlayTexture_Clipping ("Leikkaus", 2D) = "white" {}
         _overlayTextureCoordinateIndex_Clipping ("Leikkauksen UV-kanava", Float) = 0
         _overlayTranslationAndScale_Clipping ("Leikkauksen siirto ja skaala", Vector) = (0, 0, 1, 1)
     }
@@ -26,12 +26,14 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
         CBUFFER_END
         TEXTURE2D(_overlayTexture_Clipping); SAMPLER(sampler_overlayTexture_Clipping);
         float2 Kanava(float2 a, float2 b, float2 c, float2 d, float i) { return i < 0.5 ? a : i < 1.5 ? b : i < 2.5 ? c : d; }
-        /// Cesiumin leikkaus: polygonin sisällä peite (alfa > 0,5) → pikseli pois.
+        /// Cesiumin leikkaus kuten CesiumUnlitTilesetShader (Alpha = peitteen alfa, AlphaClipThreshold 0,5): pikseli säilyy, kun alfa ≥ 0,5;
+        /// polygonin sisällä alfa 0 → pois. Oletuskuva valkoinen: laatat ilman leikkauspeitettä säilyvät kokonaan.
+        /// (9.10. 02.3x: käänteinen ehto ja musta oletus poistivat Concorden testissä koko Googlen kaupungin polygonin ulkopuolelta.)
         void Leikkaa(float2 uv)
         {
             float4 t = _overlayTranslationAndScale_Clipping;
             float2 q = uv * t.zw + t.xy; q.y = 1.0 - q.y;
-            clip(0.5 - SAMPLE_TEXTURE2D(_overlayTexture_Clipping, sampler_overlayTexture_Clipping, q).a);
+            clip(SAMPLE_TEXTURE2D(_overlayTexture_Clipping, sampler_overlayTexture_Clipping, q).a - 0.5);
         }
         ENDHLSL
         Pass
@@ -66,6 +68,19 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 // Pilvien varjot: kenttä auringon suunnassa pisteen yllä, häipyy auringon laskiessa.
                 float varjo = IlmPilvi(v.w * m) * _IlmPilviParam.y * saturate(_IlmAurinko.y * 4.0);
                 c *= 1.0 - varjo;
+                // MÄRÄT KADUT (Ydin KaupunkiKuuro.Markyys; omistaja TF 168): ylöspäin osoittavat pinnat (geometrian normaali derivaatoista,
+                // Googlen laatoissa ei normaaleja) tummuvat ja heijastavat taivasta Fresnelillä; lätäköt kohinasta 3 m:n mittakaavassa.
+                if (_IlmSaa.x > 0.001)
+                {
+                    float3 n = normalize(cross(ddy(v.w), ddx(v.w))); n *= sign(n.y + 1e-4);
+                    float ylos = smoothstep(0.8, 0.95, n.y);
+                    float2 lc = floor(v.w.xz * m / 3.0); float latakko = frac(sin(dot(lc, float2(12.9898, 78.233))) * 43758.5453);
+                    float mark = _IlmSaa.x * ylos * (0.6 + 0.4 * latakko);
+                    float3 dv = kohti / max(1e-4, length(kohti)), r = reflect(dv, float3(0, 1, 0));
+                    float fres = 0.02 + 0.98 * pow(1.0 - saturate(-dv.y), 5.0);
+                    c *= 1.0 - 0.35 * mark;
+                    c = lerp(c, IlmSavytys(IlmTaivas(r) * _IlmParam.y), saturate(fres * mark * 0.8));
+                }
                 // Ilmaperspektiivi: läpäisy kanavittain ja sironta (valotus ja sävytys kuten taivaassa), voimalla A/B.
                 float3 sironta, lapaisy; IlmIlmaperspektiivi(etM, kohti / max(1e-4, length(kohti)), sironta, lapaisy);
                 float3 ap = c * lapaisy + IlmSavytys(sironta * _IlmParam.y);

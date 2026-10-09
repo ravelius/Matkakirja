@@ -26,14 +26,28 @@ namespace Matkakirja.Natiivi
         }
         static bool kaupunkiKirjattu;
         /// <summary>Valotus (radianssi × valotus ennen sävytystä; Karttaseppä: 10–30), ilmaperspektiivin voima, pilvien varjon voima.</summary>
-        public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = 2000f;
+        /// <summary>Kauko-utu (omistaja 9.10. "vähän sumua kauemmas (ehkä)", maltillisesti): ilmaperspektiivin matka × kerroin.
+        /// Aamusumu veden yllä: auringon noustessa (itä, korkeus −2…14°) Aamusumu × häivytys (VesiPinta, toinen kerros).</summary>
+        public static float KaukoUtu = 1.4f, Aamusumu = 1f;
+        /// <summary>Yötila = loppuilta (omistaja 9.10.: "taivaassa näkyisi vielä purppuraa"): yövalinnalla ilmakehän aurinko enintään
+        /// IltaAurinkoAst horisontin alla (sininen hetki, purppura ja iltarusko taivaanrannassa); kaupungin valot LS1:n yötilan mukaan.</summary>
+        public static float IltaAurinkoAst = -7f;
+        public static bool IltaYolla = true;
+        public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PohjaM;
+        /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a; omistaja 9.10. "pilviä voisi vähän lisätä taivaalle"): oletus
+        /// päällä kehityskaupungeissa (kuten ilmakehä), asetus "pilvet 0|1" pakottaa. Pohja = PilviKorkeusM, paksuus PilviPaksuusM.</summary>
+        public static bool? PilvetPakotettu;
+        public static bool Pilvet => PilvetPakotettu ?? kehitys;
+        /// <summary>Tuuli (m/s, x itä, y pohjoinen): pilvikentän ja pilvien varjojen siirtymä sekä laivojen savu (VeneSavu).</summary>
+        public static Vector2 TuuliMs = new Vector2(6f, 2f);
+        public static float PilviPaksuusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PaksuusM;
         static float voima;
         static Texture2D lapaisy, pilvet; static Texture3D taivas, ap, apLapaisy;
         static bool ladattu, puuttuu;
         static readonly int IdLapaisy = Shader.PropertyToID("_IlmLapaisy"), IdTaivas = Shader.PropertyToID("_IlmTaivas"), IdAp = Shader.PropertyToID("_IlmAp"),
             IdApLapaisy = Shader.PropertyToID("_IlmApLapaisy"), IdPilvet = Shader.PropertyToID("_IlmPilvet"), IdAurinko = Shader.PropertyToID("_IlmAurinko"),
             IdParam = Shader.PropertyToID("_IlmParam"), IdPilviParam = Shader.PropertyToID("_IlmPilviParam"), IdTuuli = Shader.PropertyToID("_IlmTuuli"),
-            IdMaailma = Shader.PropertyToID("_IlmMaailma");
+            IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros"), IdSaa = Shader.PropertyToID("_IlmSaa");
 
         static Texture3D Lue3D(string nimi, int w, int h, int d)
         {
@@ -78,6 +92,7 @@ namespace Matkakirja.Natiivi
         public static void Paivita(double lat, double lon, float korkeusM, float aurinkoKorkeusAst, float aurinkoAtsimuuttiAst, float pilvisyys, Vector2 tuuliM, float mitta)
         {
             Kaupunki(lat, lon);
+            if (IltaYolla && KaupunkiKuva.Nyt == "yo") aurinkoKorkeusAst = Mathf.Max(aurinkoKorkeusAst, IltaAurinkoAst);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
             if (voima <= 0f && !Paalla && !KaupunkiVesi.Nakyvissa) return;   // vesi tarvitsee taivaan arvot heijastukseen
             if (!Lataa()) { voima = 0f; return; }
@@ -85,9 +100,16 @@ namespace Matkakirja.Natiivi
             var s = new Vector3(Mathf.Cos(k) * Mathf.Sin(a), Mathf.Sin(k), Mathf.Cos(k) * Mathf.Cos(a));
             Shader.SetGlobalVector(IdAurinko, new Vector4(s.x, s.y, s.z, 90f - aurinkoKorkeusAst));
             Shader.SetGlobalVector(IdParam, new Vector4(Mathf.Max(0f, korkeusM), Valotus, ApVoima * voima, voima));
-            Shader.SetGlobalVector(IdPilviParam, new Vector4(Mathf.Clamp01(pilvisyys), VarjoVoima * voima, PilviJaksoM, PilviKorkeusM));
+            // Kuuro (LS1): peitto lähes täyteen, pilvet tummuvat, varjot vahvistuvat; märkyys laattoihin (Ydin KaupunkiKuuro).
+            pilvisyys = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Peitto(Mathf.Clamp01(pilvisyys));
+            float tumma = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Tummuus;
+            Shader.SetGlobalVector(IdPilviParam, new Vector4(pilvisyys, VarjoVoima * voima * (1f + tumma), PilviJaksoM, PilviKorkeusM));
+            Shader.SetGlobalVector(IdSaa, new Vector4((float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Markyys * voima, tumma,
+                (float)Matkakirja.Linssit.Ilmakeha.AamuSumu.Voima(aurinkoKorkeusAst, aurinkoAtsimuuttiAst) * Aamusumu,
+                (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Sateenkaari(aurinkoKorkeusAst) * voima));
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
-            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), 0f, 0f, 0f));
+            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), 0f, 0f));
+            Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));
         }
 
         /// <summary>Kupolin materiaali (IlmakehaTaivas), null jos pois tai LUTit puuttuvat (silloin vanha DioraamaTaivas).</summary>
@@ -110,6 +132,6 @@ namespace Matkakirja.Natiivi
         }
         static Material laattaMat;
 
-        public static string Kuvaus() => $"ilmakehä {(Paalla ? "päällä" : "pois")} (voima {voima:F2}, valotus {Valotus:F0}, LUTit {(ladattu ? "ladattu" : puuttuu ? "PUUTTUU" : "ei vielä")})";
+        public static string Kuvaus() => $"ilmakehä {(Paalla ? "päällä" : "pois")} (voima {voima:F2}, valotus {Valotus:F0}, pilvikerros {(Pilvet ? "päällä" : "pois")}, LUTit {(ladattu ? "ladattu" : puuttuu ? "PUUTTUU" : "ei vielä")})";
     }
 }

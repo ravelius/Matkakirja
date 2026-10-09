@@ -46,7 +46,7 @@ namespace Matkakirja.Natiivi
         readonly List<Transform> autoT = new List<Transform>(), raitioT = new List<Transform>();
 
         VesiLiikenne liikenne;
-        sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe; }
+        sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe, Pituus; }
         readonly List<VeneOlio> veneet = new List<VeneOlio>();
         sealed class ParviOlio { public Parvi P; public VesiLiikenne.ParviPaikka Paikka; public GameObject Juuri; public Transform[] Lokit, Vasen, Oikea; public double Pinta = double.NaN; public float Haettu = -9f; }
         readonly List<ParviOlio> parvet = new List<ParviOlio>();
@@ -159,13 +159,23 @@ namespace Matkakirja.Natiivi
                 int t = liikenne.Tyyppi(k);
                 if (!veneVerkot.TryGetValue(t, out var m))
                 {
-                    var vv = VeneMallit.Luo(VeneMallit.Tyypit[t]);
+                    // LS2 9.10. (omistaja TF 168, juna 170): tarkemmat mallit Tukholman tyypeille (TarkatVeneet), muut VeneMalleista.
+                    string nimi = VeneMallit.Tyypit[t];
+                    var vv = TarkatVeneet.Tukee(nimi) ? TarkatVeneet.Luo(nimi) : VeneMallit.Luo(nimi);
                     veneVerkot[t] = m = Verkko(vv, "Vene " + VeneMallit.Tyypit[t]);
                     vanaVerkot[t] = Verkko(VeneMallit.Vana(vv.Pituus, vv.Leveys), "Vana " + VeneMallit.Tyypit[t]);
                 }
                 var g = Olio("vene " + VeneMallit.Tyypit[t], transform, m, kohdeMat);
                 if (vanaMat != null) Olio("vana", g.transform, vanaVerkot[t], vanaMat).transform.localPosition = new Vector3(0, 0.12f, 0);
-                veneet.Add(new VeneOlio { T = g.transform, K = k, Vaihe = (i++ * 2.399f) % 6.283f });
+                // LS2: savu piipusta (VeneSavu; lapsi vanan jälkeen, GetChild(0) pysyy vanana).
+                var piippuP = TarkatVeneet.Piippu(VeneMallit.Tyypit[t]);
+                if (piippuP != null)
+                {
+                    var piippu = new GameObject("piippu").transform; piippu.SetParent(g.transform, false);
+                    piippu.localPosition = new Vector3(piippuP[0], piippuP[1], piippuP[2]);
+                    VeneSavu.Liita(piippu, VeneMallit.Tyypit[t]);
+                }
+                veneet.Add(new VeneOlio { T = g.transform, K = k, Vaihe = (i++ * 2.399f) % 6.283f, Pituus = m.bounds.size.z });
             }
             int s = 1;
             foreach (var pp in liikenne.Parvet)
@@ -293,7 +303,10 @@ namespace Matkakirja.Natiivi
                 float nyokkays = 0.6f * Mathf.Sin(t * 0.9f + v.Vaihe) - 0.5f * liikkuu, kallistus = 0.9f * Mathf.Sin(t * 0.7f + v.Vaihe * 1.7f);
                 v.T.localPosition = new Vector3((float)k.X, (float)k.Y + nosto + 0.05f * Mathf.Sin(t * 1.1f + v.Vaihe), (float)k.Z);
                 v.T.localRotation = Quaternion.Euler(nyokkays, (float)k.Suuntima, kallistus);
-                if (v.T.childCount > 0) { var vana = v.T.GetChild(0).gameObject; if (vana.activeSelf != (liikkuu > 0)) vana.SetActive(liikkuu > 0); }
+                // LS2: vana omalla vesipinnalla (KaupunkiVesi.Vana); oma vanaverkko vain, kun omaa vettä ei ole.
+                bool omaVesi = KaupunkiVesi.Nakyvissa;
+                if (v.T.childCount > 0) { var vana = v.T.GetChild(0).gameObject; bool nk = liikkuu > 0 && !omaVesi; if (vana.activeSelf != nk) vana.SetActive(nk); }
+                if (omaVesi && liikkuu > 0) { var f = v.T.forward; KaupunkiVesi.Vana(veneet.IndexOf(v), v.T.position, new Vector2(f.x, f.z).normalized, (float)k.Nopeus, v.Pituus); }
             }
             foreach (var p in parvet)
             {
