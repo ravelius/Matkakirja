@@ -529,6 +529,9 @@ namespace Matkakirja.Natiivi
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
+                case "olavinlinna":
+                    // "ui olavinlinna alku|loppu|nollaa|sulje|tila": Olavinlinnan alun valinta (OlavinlinnaAlku, juna 171).
+                    return "=" + OlavinlinnaAlku.Testi(loput.Trim().Length > 0 ? loput.Trim() : "tila");
                 case "seikkailutapit":
                     // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
                     if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
@@ -547,6 +550,8 @@ namespace Matkakirja.Natiivi
                     else if (loput.Trim() == "pala") { SeikkailuTapit.AvaaPelattavaPala(); return "=seikkailutapit: pala avataan"; }
                     else if (loput.Trim() == "teksti") return "=seikkailutapit: teksti " + SeikkailuTapit.Tekstivahti();
                     else if (loput.Trim() == "tietokortti") { SeikkailuTapit.TietokorttiAvautui("testi"); return "=seikkailutapit: tietokortin merkki"; }
+                    // "ui seikkailutapit kortisto": tietokerroksen kortisto auki suoraan (kuten ☰ › Tietoa; LS2:n stillit 9.10.).
+                    else if (loput.Trim() == "kortisto") { SeikkailuTapit.AvaaTietokerrosValikosta(); return "=seikkailutapit: kortisto " + (SeikkailuTapit.TietokerrosTarjolla ? "auki" : "ei tarjolla (aja ensin tietokerros)"); }
                     else if (loput.Trim() == "loyto") { SeikkailuTapit.NaytaLoyto("Liinanyytti", "Kalkki, pateeni ja liuskekivi kääritty liinaan."); return "=seikkailutapit: löytö näytetty"; }
                     return "=" + SeikkailuTapit.Kuvaus();
                 case "matka": ui.Esimerkkimatka(); return null;

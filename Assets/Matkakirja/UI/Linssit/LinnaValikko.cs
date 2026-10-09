@@ -43,6 +43,8 @@ namespace Matkakirja.Natiivi
         {
             bool tauolla = Matkakirja.Natiivi.DioraamaSovitin.Tauolla;
             nakyy |= tauolla;
+            // Seikkailussa ei esittelyn taukoa (LS2:n stillit 9.10.2026, BUILD 169: II näkyi pelin aikana; Thiefin taso).
+            if (SeikkailuTapit.SeikkailuKaynnissa) nakyy = false;
             var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (taukoNappi.style.display != d) taukoNappi.style.display = d;
             if (tauolla == taukoTauolla) return;

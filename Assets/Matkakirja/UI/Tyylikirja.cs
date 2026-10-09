@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 085961b73cfd. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde eb1498a45a7e. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "085961b73cfd";
+        public const string Lahde = "eb1498a45a7e";
 
         public static class Kehys
         {
@@ -288,6 +288,20 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Ihme1A55 = new Color32(30, 9, 8, 140);
             public static readonly Color32 Ihme2 = new Color32(139, 61, 56, 255);
             public static readonly Color32 Ihme3 = new Color32(184, 134, 43, 255);
+            public static readonly Color32 Isskytkin1 = new Color32(31, 36, 31, 255);
+            public static readonly Color32 Isskytkin2A96 = new Color32(33, 34, 38, 245);
+            public static readonly Color32 Isskytkin3 = new Color32(41, 41, 43, 255);
+            public static readonly Color32 Isskytkin4 = new Color32(51, 48, 43, 255);
+            public static readonly Color32 Isskytkin5 = new Color32(56, 59, 64, 255);
+            public static readonly Color32 Isskytkin6 = new Color32(76, 82, 76, 255);
+            public static readonly Color32 Isskytkin7 = new Color32(92, 94, 102, 255);
+            public static readonly Color32 Isskytkin8A85 = new Color32(184, 41, 31, 217);
+            public static readonly Color32 Isskytkin9 = new Color32(140, 143, 148, 255);
+            public static readonly Color32 Isskytkin10 = new Color32(89, 242, 115, 255);
+            public static readonly Color32 Isskytkin11 = new Color32(255, 184, 82, 255);
+            public static readonly Color32 Isskytkin12 = new Color32(140, 242, 153, 255);
+            public static readonly Color32 Isskytkin13 = new Color32(219, 214, 199, 255);
+            public static readonly Color32 Isskytkin14 = new Color32(217, 219, 224, 255);
             public static readonly Color32 Kartuscha1A85 = new Color32(150, 30, 22, 217);
             public static readonly Color32 Kartuscha2 = new Color32(216, 52, 42, 255);
             public static readonly Color32 Leima1A62 = new Color32(72, 74, 116, 158);
@@ -304,6 +318,28 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Opas3 = new Color32(179, 119, 95, 255);
             public static readonly Color32 Radio1 = new Color32(58, 20, 8, 255);
             public static readonly Color32 Radio2 = new Color32(255, 214, 130, 255);
+            public static readonly Color32 Radiopaletti1 = new Color32(13, 8, 3, 255);
+            public static readonly Color32 Radiopaletti2 = new Color32(22, 11, 3, 255);
+            public static readonly Color32 Radiopaletti3A09 = new Color32(24, 12, 4, 23);
+            public static readonly Color32 Radiopaletti4 = new Color32(26, 16, 6, 255);
+            public static readonly Color32 Radiopaletti5 = new Color32(34, 18, 4, 255);
+            public static readonly Color32 Radiopaletti6 = new Color32(58, 20, 8, 255);
+            public static readonly Color32 Radiopaletti7 = new Color32(74, 46, 18, 255);
+            public static readonly Color32 Radiopaletti8 = new Color32(84, 51, 16, 255);
+            public static readonly Color32 Radiopaletti10 = new Color32(96, 58, 18, 255);
+            public static readonly Color32 Radiopaletti11 = new Color32(107, 68, 35, 255);
+            public static readonly Color32 Radiopaletti12 = new Color32(194, 69, 47, 255);
+            public static readonly Color32 Radiopaletti13 = new Color32(255, 110, 70, 255);
+            public static readonly Color32 Radiopaletti14 = new Color32(242, 192, 94, 255);
+            public static readonly Color32 Radiopaletti15 = new Color32(255, 196, 88, 255);
+            public static readonly Color32 Radiopaletti16 = new Color32(255, 228, 166, 255);
+            public static readonly Color32 Radiopaletti17 = new Color32(255, 239, 192, 255);
+            public static readonly Color32 Radiopaletti18 = new Color32(255, 236, 204, 255);
+            public static readonly Color32 Radiopaletti19 = new Color32(255, 243, 204, 255);
+            public static readonly Color32 Radiopaletti20 = new Color32(255, 238, 208, 255);
+            public static readonly Color32 Radiopaletti21 = new Color32(255, 244, 208, 255);
+            public static readonly Color32 Radiopaletti22 = new Color32(255, 240, 214, 255);
+            public static readonly Color32 Radiopaletti22A04 = new Color32(255, 240, 214, 11);
             public static readonly Color32 Saa1 = new Color32(76, 100, 120, 255);
             public static readonly Color32 Saa2 = new Color32(246, 221, 200, 255);
             public static readonly Color32 Saa3 = new Color32(224, 234, 231, 255);

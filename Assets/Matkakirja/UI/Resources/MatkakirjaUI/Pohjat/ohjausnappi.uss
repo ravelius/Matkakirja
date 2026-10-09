@@ -86,7 +86,7 @@
 .mk-ohjausnappi__live {
     font-size: var(--tk-koko-kapiteeli);
     -unity-font-style: bold;
-    letter-spacing: 6px; /* web 0.06em */
+    letter-spacing: 3px; /* web 0.03em; oli 0.06em, pienennetty 9.10. jotta "LIVE" mahtuu napin sisään (Päätoimittaja) */
     color: var(--tk-korostus);
     -unity-text-outline-width: 0.6px;
     -unity-text-outline-color: var(--tk-himmennys-tumma);
