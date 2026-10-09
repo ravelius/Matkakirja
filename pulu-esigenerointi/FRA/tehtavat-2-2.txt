@@ -1,0 +1,1331 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitä jokia Biskajanlahteen laskee?
+AIEMPI VASTAUS (Livia):
+No niin, joet ovat kyyhkyn parhaita suunnistusapuja.
+Ranskan puolella lahteen laskevat muun muassa [[Loire]], [[Garonne]], joka päättyy Gironden suistoon, sekä [[Adour]]. Espanjan pohjoisrannikolla joet ovat yleensä lyhyitä ja jyrkkiä, koska vuoristo on lähellä merta. Luettelo ei ole kattava, mutta nämä kuuluvat alueen tärkeimpiin vesistöihin.
+Viisas Pöllö on matkoilla tutkimassa jokia, joten hoidan ne minä.
+KYSYMYS: Kerro lisää: Garonne
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitä jokia Biskajanlahteen laskee?
+AIEMPI VASTAUS (Livia):
+No niin, joet ovat kyyhkyn parhaita suunnistusapuja.
+Ranskan puolella lahteen laskevat muun muassa [[Loire]], [[Garonne]], joka päättyy Gironden suistoon, sekä [[Adour]]. Espanjan pohjoisrannikolla joet ovat yleensä lyhyitä ja jyrkkiä, koska vuoristo on lähellä merta. Luettelo ei ole kattava, mutta nämä kuuluvat alueen tärkeimpiin vesistöihin.
+Viisas Pöllö on matkoilla tutkimassa jokia, joten hoidan ne minä.
+KYSYMYS: Kerro lisää: Adour
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kanton — kaupunkilehti / Historia: Panyu ja Nanyuen kuninkaat] Ennen kiinalaisia seudulla asui baiyue-heimoja, ja kaupungin virallinen syntymävuosi on 214 eaa., jolloin Qin-dynastian sotilaat perustivat Helmijoen itärannalle Panyun. Se oli Nanhain komentokunnan hallintopaikka ja tukikohta, josta etelään suuntautuneet retket lähtivät. Qin-valtakunnan hajottua paikallinen käskynhaltija perusti Nanyuen kuningaskunnan, ja Panyusta tuli sen pääkaupunki. Yksi sen hallitsijoista oli Zhao Mo, joka hallitsi vuosina 137–122 eaa. Hänen hautansa löytyi keskustasta vuonna 1983 koskemattomana, ja sen päälle avattiin vuonna 1988 museo. Han-dynastia liitti Nanyuen itseensä vuonna 111 eaa.
+AIEMPI KYSYMYS: Miksi Loiren varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnoja on niin paljon, että katolta ne meinaa mennä sekaisin.
+Loiren laakso oli keskiajan lopulla ja renessanssin aikana Ranskan kuninkaallisen hovin kotiseutua. [[Ranskan kuninkaat]] ja heidän hovinsa oleskelivat alueella, ja aateli rakensi lähistölle omia linnojaan ja palatsejaan. Hedelmällinen maa, kulkuväylänä toiminut joki ja metsästysmaat tekivät seudusta houkuttelevan. Tunnetuimpia linnoja ovat [[Chambord]], [[Amboise]] ja [[Chenonceau]].
+Minä lasken linnat aina väärin, koska ne kaikki näyttävät ylhäältä pelkiltä katoilta.
+KYSYMYS: Kerro lisää: Ranskan kuninkaat
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Miksi Loiren varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnoja on niin paljon, että katolta ne meinaa mennä sekaisin.
+Loiren laakso oli keskiajan lopulla ja renessanssin aikana Ranskan kuninkaallisen hovin kotiseutua. [[Ranskan kuninkaat]] ja heidän hovinsa oleskelivat alueella, ja aateli rakensi lähistölle omia linnojaan ja palatsejaan. Hedelmällinen maa, kulkuväylänä toiminut joki ja metsästysmaat tekivät seudusta houkuttelevan. Tunnetuimpia linnoja ovat [[Chambord]], [[Amboise]] ja [[Chenonceau]].
+Minä lasken linnat aina väärin, koska ne kaikki näyttävät ylhäältä pelkiltä katoilta.
+KYSYMYS: Kerro lisää: Chambord
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Miksi Loiren varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnoja on niin paljon, että katolta ne meinaa mennä sekaisin.
+Loiren laakso oli keskiajan lopulla ja renessanssin aikana Ranskan kuninkaallisen hovin kotiseutua. [[Ranskan kuninkaat]] ja heidän hovinsa oleskelivat alueella, ja aateli rakensi lähistölle omia linnojaan ja palatsejaan. Hedelmällinen maa, kulkuväylänä toiminut joki ja metsästysmaat tekivät seudusta houkuttelevan. Tunnetuimpia linnoja ovat [[Chambord]], [[Amboise]] ja [[Chenonceau]].
+Minä lasken linnat aina väärin, koska ne kaikki näyttävät ylhäältä pelkiltä katoilta.
+KYSYMYS: Kerro lisää: Amboise
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Miksi Loiren varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnoja on niin paljon, että katolta ne meinaa mennä sekaisin.
+Loiren laakso oli keskiajan lopulla ja renessanssin aikana Ranskan kuninkaallisen hovin kotiseutua. [[Ranskan kuninkaat]] ja heidän hovinsa oleskelivat alueella, ja aateli rakensi lähistölle omia linnojaan ja palatsejaan. Hedelmällinen maa, kulkuväylänä toiminut joki ja metsästysmaat tekivät seudusta houkuttelevan. Tunnetuimpia linnoja ovat [[Chambord]], [[Amboise]] ja [[Chenonceau]].
+Minä lasken linnat aina väärin, koska ne kaikki näyttävät ylhäältä pelkiltä katoilta.
+KYSYMYS: Kerro lisää: Chenonceau
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi Loire on niin matala kesäisin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joen vesi on aina ollut ihan oma lukunsa.
+Loiren virtaama vaihtelee suuresti vuodenaikojen mukaan. Joki saa vetensä pääosin sateesta ja [[Keskiylängön]] lähteistä eikä jäätiköistä, toisin kuin [[Rhône]], joten kuivina kesäkuukausina vesi vähenee ja jokeen nousee [[hiekkasärkkiä]]. Valuma-alue on laaja, mutta virtaama on silti vain puolet Rhônen vastaavasta.
+Pöllö parantelee siipeään, joten jokivirrat jäi minulle.
+KYSYMYS: Kerro lisää: Keskiylängön
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Miksi Loire on niin matala kesäisin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joen vesi on aina ollut ihan oma lukunsa.
+Loiren virtaama vaihtelee suuresti vuodenaikojen mukaan. Joki saa vetensä pääosin sateesta ja [[Keskiylängön]] lähteistä eikä jäätiköistä, toisin kuin [[Rhône]], joten kuivina kesäkuukausina vesi vähenee ja jokeen nousee [[hiekkasärkkiä]]. Valuma-alue on laaja, mutta virtaama on silti vain puolet Rhônen vastaavasta.
+Pöllö parantelee siipeään, joten jokivirrat jäi minulle.
+KYSYMYS: Kerro lisää: Rhône
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Hiekka joka on täynnä pieneliöitä] nykyään — Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+AIEMPI KYSYMYS: Miksi Loire on niin matala kesäisin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joen vesi on aina ollut ihan oma lukunsa.
+Loiren virtaama vaihtelee suuresti vuodenaikojen mukaan. Joki saa vetensä pääosin sateesta ja [[Keskiylängön]] lähteistä eikä jäätiköistä, toisin kuin [[Rhône]], joten kuivina kesäkuukausina vesi vähenee ja jokeen nousee [[hiekkasärkkiä]]. Valuma-alue on laaja, mutta virtaama on silti vain puolet Rhônen vastaavasta.
+Pöllö parantelee siipeään, joten jokivirrat jäi minulle.
+KYSYMYS: Kerro lisää: hiekkasärkkiä
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mistä Loire saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Lähde on vähän syrjässä, mutta tiedän sen.
+Loire saa alkunsa [[Gerbier de Jonc]] -vuoren juurelta [[Ardèchen]] departementista, Ranskan [[Keskiylängöllä]], noin 1 400 metrin korkeudessa. Sieltä joki virtaa ensin pohjoiseen kohti Orléansia ja kääntyy sitten länteen Atlantille.
+Lyhyt vastaus, mutta pitkä lähde.
+KYSYMYS: Kerro lisää: Gerbier de Jonc
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mistä Loire saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Lähde on vähän syrjässä, mutta tiedän sen.
+Loire saa alkunsa [[Gerbier de Jonc]] -vuoren juurelta [[Ardèchen]] departementista, Ranskan [[Keskiylängöllä]], noin 1 400 metrin korkeudessa. Sieltä joki virtaa ensin pohjoiseen kohti Orléansia ja kääntyy sitten länteen Atlantille.
+Lyhyt vastaus, mutta pitkä lähde.
+KYSYMYS: Kerro lisää: Ardèchen
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mistä Loire saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Lähde on vähän syrjässä, mutta tiedän sen.
+Loire saa alkunsa [[Gerbier de Jonc]] -vuoren juurelta [[Ardèchen]] departementista, Ranskan [[Keskiylängöllä]], noin 1 400 metrin korkeudessa. Sieltä joki virtaa ensin pohjoiseen kohti Orléansia ja kääntyy sitten länteen Atlantille.
+Lyhyt vastaus, mutta pitkä lähde.
+KYSYMYS: Kerro lisää: Keskiylängöllä
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Mihin Loire laskee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä päästään loppuun asti.
+Loire laskee [[Atlantin]] valtamereen Ranskan länsirannikolla. Joki kulkee ensin [[Nantesin]] kaupungin kautta ja päättyy leveään suistoon [[Saint-Nazairen]] kohdalla. Suisto on tärkeä satama- ja teollisuusalue.
+Kuvaa vaan ylhäältä, niin joki näyttää isolta sinivihreältä nauhalta.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mihin Loire laskee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä päästään loppuun asti.
+Loire laskee [[Atlantin]] valtamereen Ranskan länsirannikolla. Joki kulkee ensin [[Nantesin]] kaupungin kautta ja päättyy leveään suistoon [[Saint-Nazairen]] kohdalla. Suisto on tärkeä satama- ja teollisuusalue.
+Kuvaa vaan ylhäältä, niin joki näyttää isolta sinivihreältä nauhalta.
+KYSYMYS: Kerro lisää: Nantesin
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mihin Loire laskee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä päästään loppuun asti.
+Loire laskee [[Atlantin]] valtamereen Ranskan länsirannikolla. Joki kulkee ensin [[Nantesin]] kaupungin kautta ja päättyy leveään suistoon [[Saint-Nazairen]] kohdalla. Suisto on tärkeä satama- ja teollisuusalue.
+Kuvaa vaan ylhäältä, niin joki näyttää isolta sinivihreältä nauhalta.
+KYSYMYS: Kerro lisää: Saint-Nazairen
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mikä on Loiren laakson UNESCO-asema?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on tosi hyvä kohta kyyhkyn katsella.
+Osa Loiren laaksosta kuuluu [[UNESCOn]] maailmanperintöluetteloon. Alue on kirjattu kulttuurimaisemaksi, joka ulottuu [[Sully-sur-Loiren]] ja [[Chalonnes-sur-Loiren]] välille, ja se merkittiin luetteloon vuonna 2000. Maisema on arvokas linnojensa, kaupunkiensa ja jokimaisemansa vuoksi.
+Linnojen välissä minä haaveilen aina briochesta.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mikä on Loiren laakson UNESCO-asema?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on tosi hyvä kohta kyyhkyn katsella.
+Osa Loiren laaksosta kuuluu [[UNESCOn]] maailmanperintöluetteloon. Alue on kirjattu kulttuurimaisemaksi, joka ulottuu [[Sully-sur-Loiren]] ja [[Chalonnes-sur-Loiren]] välille, ja se merkittiin luetteloon vuonna 2000. Maisema on arvokas linnojensa, kaupunkiensa ja jokimaisemansa vuoksi.
+Linnojen välissä minä haaveilen aina briochesta.
+KYSYMYS: Kerro lisää: Sully-sur-Loiren
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+AIEMPI KYSYMYS: Mikä on Loiren laakson UNESCO-asema?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on tosi hyvä kohta kyyhkyn katsella.
+Osa Loiren laaksosta kuuluu [[UNESCOn]] maailmanperintöluetteloon. Alue on kirjattu kulttuurimaisemaksi, joka ulottuu [[Sully-sur-Loiren]] ja [[Chalonnes-sur-Loiren]] välille, ja se merkittiin luetteloon vuonna 2000. Maisema on arvokas linnojensa, kaupunkiensa ja jokimaisemansa vuoksi.
+Linnojen välissä minä haaveilen aina briochesta.
+KYSYMYS: Kerro lisää: Chalonnes-sur-Loiren
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Mikä Camargue on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on mielenkiintoinen paikka ylhäältä katsottuna.
+Camargue on [[Rhônen]] suistoalue Etelä-Ranskassa, jossa joki jakautuu Arlesin kohdalla Suureksi ja Pieneksi Rhôneksi. Haarojen väliin jäävä suistomaa on laaja kosteikko. Alueella elää oma hevosrotunsa, joka on aikuisena aina valkoinen: varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta. Hevosilla ratsastavat [[gardianit]], paimenet, jotka kokoavat alueen mustia härkiä, ja hevoset elävät laumoina ulkona ympäri vuoden.
+Pidän siitä, että joku muukin vaihtaa väriä ikääntyessään.
+KYSYMYS: Kerro lisää: Rhônen
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Mikä Camargue on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on mielenkiintoinen paikka ylhäältä katsottuna.
+Camargue on [[Rhônen]] suistoalue Etelä-Ranskassa, jossa joki jakautuu Arlesin kohdalla Suureksi ja Pieneksi Rhôneksi. Haarojen väliin jäävä suistomaa on laaja kosteikko. Alueella elää oma hevosrotunsa, joka on aikuisena aina valkoinen: varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta. Hevosilla ratsastavat [[gardianit]], paimenet, jotka kokoavat alueen mustia härkiä, ja hevoset elävät laumoina ulkona ympäri vuoden.
+Pidän siitä, että joku muukin vaihtaa väriä ikääntyessään.
+KYSYMYS: Kerro lisää: gardianit
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+- [Alpit — kaupunkilehti / Luonto: Lintu, joka syö luita] Partakorppikotkan ravinnosta valtaosa on luuta — se on ainoa lintu maailmassa, joka elää lähes pelkillä luilla. Isot luut se kantaa ilmaan ja pudottaa kalliolle, kunnes ne murtuvat, ja nielee palat kokonaisina; vatsahapot ovat niin väkeviä, että luu liukenee. Siipiväli on lähes kolme metriä. Lintu tapettiin Alpeilta sukupuuttoon 1900-luvun alkuun mennessä, koska sen luultiin vievän lampaita ja lapsia. Palautus aloitettiin 1986, ja nyt niitä pesii taas satakunta paria.
+- [Alpit — kaupunkilehti / Alpit: Vuori hehkuu punaisena auringon laskiessa] Matterhorn on lähes symmetrinen pyramidi, jonka neljä jyrkkää seinämää osoittavat ilmansuuntiin, ja huippu kohoaa 4 478 metriin Sveitsin ja Italian rajalla. Auringon laskiessa tai noustessa huippu hehkuu hetken punaisena tai oranssina, kun matala valo heijastuu ilmakehän pisaroista — ilmiötä kutsutaan alppihehkuksi (saksaksi Alpenglühen), ja nimi tulee juuri Alpeilta. Muotonsa ja hehkunsa ansiosta Matterhorn on yksi maailman kuvatuimmista vuorista.
+AIEMPI KYSYMYS: Miten Rhône muuttuu Genevenjärvessä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.
+Rhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.
+Näin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.
+KYSYMYS: Kerro lisää: Alpeilta
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Piispanhiippa vedestä nousee] Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.
+- [Ruotsi — maalehti / Luonto: Erämaa ilman polkuja] Sarek perustettiin kansallispuistoksi 1909, samana vuonna kuin Euroopan ensimmäiset kansallispuistot ylipäätään. Se on lähes tienotonta ja polutonta tunturimaata: parisataa yli 1800-metristä huippua, kymmeniä jäätiköitä eikä juuri lainkaan siltoja. Sisään mennään omin voimin ja ulos samoin. Kuuluisin näkymä on Rapadalen, jossa jäätiköiden liete on kasannut jokeen suistoja kuin punos — vihreä laakso keskellä harmaita vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten kaikki tarvittava kannetaan selässä.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+AIEMPI KYSYMYS: Miten Rhône muuttuu Genevenjärvessä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.
+Rhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.
+Näin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.
+KYSYMYS: Kerro lisää: jäätiköiden
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Miten Rhône muuttuu Genevenjärvessä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.
+Rhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.
+Näin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.
+KYSYMYS: Kerro lisää: suisto
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+AIEMPI KYSYMYS: Miten Rhône muuttuu Genevenjärvessä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.
+Rhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.
+Näin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.
+KYSYMYS: Kerro lisää: Genevessä
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Kuinka pitkä Rhône on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pituudet pysyy mielessä paremmin kuin lentoreitit.
+Rhône on pituudeltaan noin 810 kilometriä, ja suurempi osa joesta virtaa Ranskan puolella, pienempi [[Sveitsin]] puolella. Se on lyhyempi kuin [[Loire]], Ranskan pisin joki, mutta virtaamaltaan huomattavasti suurempi. Joki päättyy [[Välimeren]] rannalle.
+Tarkkaa lukua en ole aivan varma, joten sanon noin.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+AIEMPI KYSYMYS: Kuinka pitkä Rhône on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pituudet pysyy mielessä paremmin kuin lentoreitit.
+Rhône on pituudeltaan noin 810 kilometriä, ja suurempi osa joesta virtaa Ranskan puolella, pienempi [[Sveitsin]] puolella. Se on lyhyempi kuin [[Loire]], Ranskan pisin joki, mutta virtaamaltaan huomattavasti suurempi. Joki päättyy [[Välimeren]] rannalle.
+Tarkkaa lukua en ole aivan varma, joten sanon noin.
+KYSYMYS: Kerro lisää: Loire
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Ranska — maalehti / Urheilu: Tenniskisa on nimetty lentäjän mukaan] 1928 — Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se nimettiin hänen mukaansa, ja samaa nimeä kantaa yhä Ranskan avoin tennisturnaus. Kentän kuuluisa punainen pinta ei ole savea vaan kalkkikiveä, jonka päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan raahaamalla sen yli ketjumattoa.
+AIEMPI KYSYMYS: Kuinka pitkä Rhône on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pituudet pysyy mielessä paremmin kuin lentoreitit.
+Rhône on pituudeltaan noin 810 kilometriä, ja suurempi osa joesta virtaa Ranskan puolella, pienempi [[Sveitsin]] puolella. Se on lyhyempi kuin [[Loire]], Ranskan pisin joki, mutta virtaamaltaan huomattavasti suurempi. Joki päättyy [[Välimeren]] rannalle.
+Tarkkaa lukua en ole aivan varma, joten sanon noin.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+AIEMPI KYSYMYS: Mistä Rhône saa alkunsa Sveitsissä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se on korkealla, ja ylhäältä sen näkee kyllä.
+Rhône saa alkunsa Alpeilta [[Valais]]n kantonista Sveitsistä, [[Furkan]]-solan läheltä, jossa joen lähteenä toimii Rhônen jäätikkö. Jäätikön sulamisvedet muodostavat joen ensimmäisen osan. Jäätikkö on vetäytynyt viime vuosikymmeninä ilmaston lämpenemisen vuoksi.
+Pitkä joki saa kyllä alkunsa aika pienestä purosta.
+KYSYMYS: Kerro lisää: Valais
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+AIEMPI KYSYMYS: Mistä Rhône saa alkunsa Sveitsissä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se on korkealla, ja ylhäältä sen näkee kyllä.
+Rhône saa alkunsa Alpeilta [[Valais]]n kantonista Sveitsistä, [[Furkan]]-solan läheltä, jossa joen lähteenä toimii Rhônen jäätikkö. Jäätikön sulamisvedet muodostavat joen ensimmäisen osan. Jäätikkö on vetäytynyt viime vuosikymmeninä ilmaston lämpenemisen vuoksi.
+Pitkä joki saa kyllä alkunsa aika pienestä purosta.
+KYSYMYS: Kerro lisää: Furkan
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mikä on mistral-tuuli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sen minä olen kyllä itse tuntenut siivissäni.
+Mistral on kylmä ja kuiva pohjoistuuli, joka puhaltaa [[Rhônen]] laaksoa pitkin kohti Välimerta. Tuuli kanavoituu laaksoon [[Alppien]] ja [[Keskiylängön]] välissä, ja se voi olla hyvin voimakas, jopa yli sadan kilometrin tuntinopeudella puuskissa. Se kirkastaa ilman ja vaikuttaa muun muassa [[Provencen]] maisemaan ja rakentamistapoihin.
+Silloin ei kyyhky lennä minnekään.
+KYSYMYS: Kerro lisää: Alppien
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä on mistral-tuuli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sen minä olen kyllä itse tuntenut siivissäni.
+Mistral on kylmä ja kuiva pohjoistuuli, joka puhaltaa [[Rhônen]] laaksoa pitkin kohti Välimerta. Tuuli kanavoituu laaksoon [[Alppien]] ja [[Keskiylängön]] välissä, ja se voi olla hyvin voimakas, jopa yli sadan kilometrin tuntinopeudella puuskissa. Se kirkastaa ilman ja vaikuttaa muun muassa [[Provencen]] maisemaan ja rakentamistapoihin.
+Silloin ei kyyhky lennä minnekään.
+KYSYMYS: Kerro lisää: Keskiylängön
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+AIEMPI KYSYMYS: Mikä on mistral-tuuli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sen minä olen kyllä itse tuntenut siivissäni.
+Mistral on kylmä ja kuiva pohjoistuuli, joka puhaltaa [[Rhônen]] laaksoa pitkin kohti Välimerta. Tuuli kanavoituu laaksoon [[Alppien]] ja [[Keskiylängön]] välissä, ja se voi olla hyvin voimakas, jopa yli sadan kilometrin tuntinopeudella puuskissa. Se kirkastaa ilman ja vaikuttaa muun muassa [[Provencen]] maisemaan ja rakentamistapoihin.
+Silloin ei kyyhky lennä minnekään.
+KYSYMYS: Kerro lisää: Provencen
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji] Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+AIEMPI KYSYMYS: Miksi saarta ei koskaan vallattu?
+AIEMPI VASTAUS (Livia):
+Just niin, sehän on kuuluisaa. Tosin täsmennän vielä yhden asian.
+Saari säilyi valtaamattomana koko [[satavuotisen sodan]] ajan, mutta se on rajatumpi väite kuin "ei koskaan". Syy oli sijainti: pyhiinvaeltajat pääsivät saarelle laskuveden aikaan, mutta nouseva [[vuorovesi]] jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen vuonna 1433.
+Siivet ovat tällaisessa paikassa aika kätevät.
+KYSYMYS: Kerro lisää: satavuotisen sodan
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Miksi saarta ei koskaan vallattu?
+AIEMPI VASTAUS (Livia):
+Just niin, sehän on kuuluisaa. Tosin täsmennän vielä yhden asian.
+Saari säilyi valtaamattomana koko [[satavuotisen sodan]] ajan, mutta se on rajatumpi väite kuin "ei koskaan". Syy oli sijainti: pyhiinvaeltajat pääsivät saarelle laskuveden aikaan, mutta nouseva [[vuorovesi]] jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen vuonna 1433.
+Siivet ovat tällaisessa paikassa aika kätevät.
+KYSYMYS: Kerro lisää: vuorovesi
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Mihin luostaria käytettiin Ancien régimen aikana?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tähän vastaan rauhassa.
+Luostaria käytettiin vankilana säännöllisesti koko [[Ancien régimen]] ajan eli ennen Ranskan vallankumousta vallinneen järjestelmän aikana. Kuningas [[Ludvig XI]] ymmärsi saaren luonnollisen puolustuksen edut ja teki siitä vankilan. Saaren sijainti, jonne ei päässyt vuoroveden aikaan, teki sen vartioinnista helppoa.
+Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ancien régimen
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Mihin luostaria käytettiin Ancien régimen aikana?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tähän vastaan rauhassa.
+Luostaria käytettiin vankilana säännöllisesti koko [[Ancien régimen]] ajan eli ennen Ranskan vallankumousta vallinneen järjestelmän aikana. Kuningas [[Ludvig XI]] ymmärsi saaren luonnollisen puolustuksen edut ja teki siitä vankilan. Saaren sijainti, jonne ei päässyt vuoroveden aikaan, teki sen vartioinnista helppoa.
+Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ludvig XI
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Kuinka korkea vuorovesi lahdella on?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on se ilmiö jonka takia paikka on tunnettu.
+Mont-Saint-Michelin lahden vuorovesi on Euroopan suurimpia, ja vedenkorkeuden vaihtelu voi olla jopa noin neljätoista metriä. Suurimmillaan ero on [[kevätvuorovesien]] aikaan, ja vesi peittää laajan, loivan rantatasangon. [[Normandian]] ja [[Bretagnen]] rannikon muoto vahvistaa ilmiötä.
+Kyyhky ei kyllä luottaisi rannan tasaisuuteen.
+KYSYMYS: Kerro lisää: kevätvuorovesien
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Meri palaa saaren ympärille] 2015 — Normandian rannikolla Mont-Saint-Michelin lahdessa vuoroveden korkeusero on noin neljätoista metriä, yksi Euroopan suurimmista. Kalliosaari oli ennen kiinni mantereessa vain laskuveden aikaan. Vuonna 1879 sinne rakennettiin pengertie, mutta se pysäytti veden virtauksen ja lahti alkoi liettyä umpeen. Penger purettiin, tilalle tuli pilareilla seisova silta, ja Couesnon-jokeen padottiin vettä, joka päästetään huuhtomaan lietettä pois. 21. maaliskuuta 2015 poikkeuksellisen korkea vuoksi peitti uuden sillan kokonaan.
+- [Ranska — maalehti / Historia: Seitsemänkymmentä metriä sarjakuvaa pellavalle] 1070-luku — Bayeux'n seinävaate kertoo, miten Normandian herttua Vilhelm valloitti Englannin vuonna 1066. Se ei ole kudottu vaan kirjottu villalangalla pellavakankaalle, ja sitä on lähes seitsemänkymmentä metriä. Kuvat etenevät kohtaus kohtaukselta kuin sarjakuva, ja niiden yllä kulkee latinankielinen tekstirivi. Yhdessä kohtauksessa ihmiset osoittavat taivaalle: siellä näkyy Halleyn komeetta, joka todella ohitti maan samana vuonna.
+AIEMPI KYSYMYS: Kuinka korkea vuorovesi lahdella on?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on se ilmiö jonka takia paikka on tunnettu.
+Mont-Saint-Michelin lahden vuorovesi on Euroopan suurimpia, ja vedenkorkeuden vaihtelu voi olla jopa noin neljätoista metriä. Suurimmillaan ero on [[kevätvuorovesien]] aikaan, ja vesi peittää laajan, loivan rantatasangon. [[Normandian]] ja [[Bretagnen]] rannikon muoto vahvistaa ilmiötä.
+Kyyhky ei kyllä luottaisi rannan tasaisuuteen.
+KYSYMYS: Kerro lisää: Normandian
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Kuinka korkea vuorovesi lahdella on?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on se ilmiö jonka takia paikka on tunnettu.
+Mont-Saint-Michelin lahden vuorovesi on Euroopan suurimpia, ja vedenkorkeuden vaihtelu voi olla jopa noin neljätoista metriä. Suurimmillaan ero on [[kevätvuorovesien]] aikaan, ja vesi peittää laajan, loivan rantatasangon. [[Normandian]] ja [[Bretagnen]] rannikon muoto vahvistaa ilmiötä.
+Kyyhky ei kyllä luottaisi rannan tasaisuuteen.
+KYSYMYS: Kerro lisää: Bretagnen
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Milloin Mont-Saint-Michelin luostari perustettiin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, vaikka pitkältähän se kuulostaa.
+Perimätiedon mukaan [[Avranchesin]] piispa Aubert perusti saarelle kirkon vuonna 708 sen jälkeen, kun arkkienkeli Mikael oli ilmestynyt hänelle. Saarelle asettuivat [[benediktiinit]] vuonna 966, ja heidän aikanaan luostari kasvoi. Vuosiluvut kuuluvat osin legendaan, joten tarkkaa alkua ei voi varmasti sanoa.
+Viisas Pöllö lupasi palata jo viime viikolla, mutta sama legenda se on tuokin.
+KYSYMYS: Kerro lisää: Avranchesin
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Milloin Mont-Saint-Michelin luostari perustettiin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, vaikka pitkältähän se kuulostaa.
+Perimätiedon mukaan [[Avranchesin]] piispa Aubert perusti saarelle kirkon vuonna 708 sen jälkeen, kun arkkienkeli Mikael oli ilmestynyt hänelle. Saarelle asettuivat [[benediktiinit]] vuonna 966, ja heidän aikanaan luostari kasvoi. Vuosiluvut kuuluvat osin legendaan, joten tarkkaa alkua ei voi varmasti sanoa.
+Viisas Pöllö lupasi palata jo viime viikolla, mutta sama legenda se on tuokin.
+KYSYMYS: Kerro lisää: benediktiinit
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Mikä ruoka Mont-Saint-Michelillä on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo kysymys on lempiaiheeni, tosin en saa syödä itse.
+Saaren tunnetuin ruoka on pehmeä, vaahtoinen munakas, jonka ravintola sai maineeseen 1800-luvun lopulla [[Annette Poulard]]. Munakas valmistettiin avotulella kuparipannussa. Alueen toinen erikoisuus on rantaniittyjen lampaanliha eli [[presuolé]]-lammas, joka laiduntaa meren suolaisilla niityillä.
+Munakas ei ole pulla, mutta annan sille anteeksi.
+KYSYMYS: Kerro lisää: Annette Poulard
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+AIEMPI KYSYMYS: Mikä ruoka Mont-Saint-Michelillä on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo kysymys on lempiaiheeni, tosin en saa syödä itse.
+Saaren tunnetuin ruoka on pehmeä, vaahtoinen munakas, jonka ravintola sai maineeseen 1800-luvun lopulla [[Annette Poulard]]. Munakas valmistettiin avotulella kuparipannussa. Alueen toinen erikoisuus on rantaniittyjen lampaanliha eli [[presuolé]]-lammas, joka laiduntaa meren suolaisilla niityillä.
+Munakas ei ole pulla, mutta annan sille anteeksi.
+KYSYMYS: Kerro lisää: presuolé
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Kuka ennallisti kaupungin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kato, tämän nimen kyllä muistan.
+Linnoituksen ennallisti arkkitehti ja teoreetikko [[Eugène Viollet-le-Duc]]. Hän tunnetaan myös [[Notre-Damen]] kirkon Pariisissa ennallistamistöistä. Hänen työnsä jakoi mielipiteitä: osa ihailee sitä, osa kritisoi tapaa, jolla hän täydensi keskiaikaista rakennetta. Linnoitus otettiin [[maailmanperintöluetteloon]] vuonna 1997.
+Eipä paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Eugène Viollet-le-Duc
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Damen kukko] Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+AIEMPI KYSYMYS: Kuka ennallisti kaupungin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kato, tämän nimen kyllä muistan.
+Linnoituksen ennallisti arkkitehti ja teoreetikko [[Eugène Viollet-le-Duc]]. Hän tunnetaan myös [[Notre-Damen]] kirkon Pariisissa ennallistamistöistä. Hänen työnsä jakoi mielipiteitä: osa ihailee sitä, osa kritisoi tapaa, jolla hän täydensi keskiaikaista rakennetta. Linnoitus otettiin [[maailmanperintöluetteloon]] vuonna 1997.
+Eipä paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Notre-Damen
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Kuka ennallisti kaupungin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kato, tämän nimen kyllä muistan.
+Linnoituksen ennallisti arkkitehti ja teoreetikko [[Eugène Viollet-le-Duc]]. Hän tunnetaan myös [[Notre-Damen]] kirkon Pariisissa ennallistamistöistä. Hänen työnsä jakoi mielipiteitä: osa ihailee sitä, osa kritisoi tapaa, jolla hän täydensi keskiaikaista rakennetta. Linnoitus otettiin [[maailmanperintöluetteloon]] vuonna 1997.
+Eipä paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Kuinka pitkä kaksoismuuri on?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on helppo vastata.
+Kaksoismuuri on noin kolme kilometriä pitkä, ja sitä rytmittää 52 tornia. [[Roomalaiset]] rakensivat alkuperäisen muurin 200-luvulta alkaen, ja sitä tuki noin 34–40 puoliympyrän muotoista tornia. [[Visigootit]] rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+Ja kaiken tämän laskin ylhäältä käsin.
+KYSYMYS: Kerro lisää: Roomalaiset
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Kuinka pitkä kaksoismuuri on?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on helppo vastata.
+Kaksoismuuri on noin kolme kilometriä pitkä, ja sitä rytmittää 52 tornia. [[Roomalaiset]] rakensivat alkuperäisen muurin 200-luvulta alkaen, ja sitä tuki noin 34–40 puoliympyrän muotoista tornia. [[Visigootit]] rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+Ja kaiken tämän laskin ylhäältä käsin.
+KYSYMYS: Kerro lisää: Visigootit
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Urbanin torni] 1500-luku Urbanin torni on tuomiokirkon renessanssiajan kellotorni, joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 suuri Urbanin kello, joka sai nimensä viininviljelijöiden suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja Franciscus Illenfeld. Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin 1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on roomalaisajalta 300-luvulta. Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. Sirpaleista koottu k…
+AIEMPI KYSYMYS: Miksi linnoituksessa on kaksi muuria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pariteetti on aina hyvä puolustuksessa.
+Kaksinkertainen muurirakenne antoi puolustajille selvän edun: hyökkääjän piti ensin murtautua ulomman muurin läpi ja päätyi sitten sisemmän ja ulomman muurin väliselle kapealle alueelle, jossa puolustajat voivat ampua molemmilta puolilta. Sisempi muuri periytyy [[roomalaisajalta]], ja ulompi lisättiin myöhemmin keskiajalla, todennäköisesti [[Ranskan kruunun]] aikana. Tarkkaa ajoitusta en ole varma antamaan.
+Hyvin on suunniteltu, vaikka minä ohitan muurit lentäen.
+KYSYMYS: Kerro lisää: roomalaisajalta
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Miksi linnoituksessa on kaksi muuria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pariteetti on aina hyvä puolustuksessa.
+Kaksinkertainen muurirakenne antoi puolustajille selvän edun: hyökkääjän piti ensin murtautua ulomman muurin läpi ja päätyi sitten sisemmän ja ulomman muurin väliselle kapealle alueelle, jossa puolustajat voivat ampua molemmilta puolilta. Sisempi muuri periytyy [[roomalaisajalta]], ja ulompi lisättiin myöhemmin keskiajalla, todennäköisesti [[Ranskan kruunun]] aikana. Tarkkaa ajoitusta en ole varma antamaan.
+Hyvin on suunniteltu, vaikka minä ohitan muurit lentäen.
+KYSYMYS: Kerro lisää: Ranskan kruunun
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Missä Carcassonne sijaitsee Ranskassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on helppo paikka löytää katolta.
+Carcassonne sijaitsee Etelä-Ranskassa [[Auden]] departementissa, noin sadan kilometrin päässä [[Toulousesta]] kaakkoon. Kaupungin läpi kulkee [[Canal du Midi]], ja kaupunki sijaitsee [[Pyreneiden]] pohjoispuolella Välimeren ja Atlantin välisellä tiellä. Linnoitus kohoaa kukkulalla Aude-joen oikealla rannalla.
+Ylhäältä se näkyy kauas.
+KYSYMYS: Kerro lisää: Auden
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Missä Carcassonne sijaitsee Ranskassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on helppo paikka löytää katolta.
+Carcassonne sijaitsee Etelä-Ranskassa [[Auden]] departementissa, noin sadan kilometrin päässä [[Toulousesta]] kaakkoon. Kaupungin läpi kulkee [[Canal du Midi]], ja kaupunki sijaitsee [[Pyreneiden]] pohjoispuolella Välimeren ja Atlantin välisellä tiellä. Linnoitus kohoaa kukkulalla Aude-joen oikealla rannalla.
+Ylhäältä se näkyy kauas.
+KYSYMYS: Kerro lisää: Toulousesta
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Missä Carcassonne sijaitsee Ranskassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on helppo paikka löytää katolta.
+Carcassonne sijaitsee Etelä-Ranskassa [[Auden]] departementissa, noin sadan kilometrin päässä [[Toulousesta]] kaakkoon. Kaupungin läpi kulkee [[Canal du Midi]], ja kaupunki sijaitsee [[Pyreneiden]] pohjoispuolella Välimeren ja Atlantin välisellä tiellä. Linnoitus kohoaa kukkulalla Aude-joen oikealla rannalla.
+Ylhäältä se näkyy kauas.
+KYSYMYS: Kerro lisää: Canal du Midi
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+AIEMPI KYSYMYS: Missä Carcassonne sijaitsee Ranskassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on helppo paikka löytää katolta.
+Carcassonne sijaitsee Etelä-Ranskassa [[Auden]] departementissa, noin sadan kilometrin päässä [[Toulousesta]] kaakkoon. Kaupungin läpi kulkee [[Canal du Midi]], ja kaupunki sijaitsee [[Pyreneiden]] pohjoispuolella Välimeren ja Atlantin välisellä tiellä. Linnoitus kohoaa kukkulalla Aude-joen oikealla rannalla.
+Ylhäältä se näkyy kauas.
+KYSYMYS: Kerro lisää: Pyreneiden
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+AIEMPI KYSYMYS: Miksi tornien katot ovat teräväkärkisiä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Moni on ihmetellyt samaa.
+Teräväkärkiset liuskekatot lisättiin tornien päälle 1800-luvun ennallistustöissä. Kriitikot ovat huomauttaneet, että kartiomaiset [[liuskekatot]] muistuttavat [[Pohjois-Ranskan]] rakennustapaa eivätkä sovi hyvin [[Välimeren]] ilmastoon. Alkuperäiset tornien katot eivät välttämättä olleet tällaisia.
+Katoista minulla on aina mielipide, vaikka en saa sanoa sitä.
+KYSYMYS: Kerro lisää: liuskekatot
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Miksi tornien katot ovat teräväkärkisiä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Moni on ihmetellyt samaa.
+Teräväkärkiset liuskekatot lisättiin tornien päälle 1800-luvun ennallistustöissä. Kriitikot ovat huomauttaneet, että kartiomaiset [[liuskekatot]] muistuttavat [[Pohjois-Ranskan]] rakennustapaa eivätkä sovi hyvin [[Välimeren]] ilmastoon. Alkuperäiset tornien katot eivät välttämättä olleet tällaisia.
+Katoista minulla on aina mielipide, vaikka en saa sanoa sitä.
+KYSYMYS: Kerro lisää: Pohjois-Ranskan
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Ranska — maalehti / Urheilu: Tenniskisa on nimetty lentäjän mukaan] 1928 — Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se nimettiin hänen mukaansa, ja samaa nimeä kantaa yhä Ranskan avoin tennisturnaus. Kentän kuuluisa punainen pinta ei ole savea vaan kalkkikiveä, jonka päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan raahaamalla sen yli ketjumattoa.
+AIEMPI KYSYMYS: Miksi tornien katot ovat teräväkärkisiä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Moni on ihmetellyt samaa.
+Teräväkärkiset liuskekatot lisättiin tornien päälle 1800-luvun ennallistustöissä. Kriitikot ovat huomauttaneet, että kartiomaiset [[liuskekatot]] muistuttavat [[Pohjois-Ranskan]] rakennustapaa eivätkä sovi hyvin [[Välimeren]] ilmastoon. Alkuperäiset tornien katot eivät välttämättä olleet tällaisia.
+Katoista minulla on aina mielipide, vaikka en saa sanoa sitä.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Kuka löysi luolan ja miten?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Luolan löysi 12. syyskuuta 1940 18-vuotias [[Marcel Ravidat]], jonka koira tutki kaatuneen puun jättämää kuoppaa [[Dordognen]] metsässä. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja pojat laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Alta paljastui [[Lascaux'n]] luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Koira ansaitsi kyl ison pullan palkaksi.
+KYSYMYS: Kerro lisää: Marcel Ravidat
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Neljä poikaa ja koira löysivät luolan] n. 17 000 vuotta sitten — Syyskuussa 1940 neljä teini-ikäistä poikaa etsi koiraansa Dordognen metsässä ja putosi kuoppaan. Alta paljastui luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Maalaukset ovat noin 17 000 vuotta vanhoja. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa käydään yhä.
+AIEMPI KYSYMYS: Kuka löysi luolan ja miten?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Luolan löysi 12. syyskuuta 1940 18-vuotias [[Marcel Ravidat]], jonka koira tutki kaatuneen puun jättämää kuoppaa [[Dordognen]] metsässä. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja pojat laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Alta paljastui [[Lascaux'n]] luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Koira ansaitsi kyl ison pullan palkaksi.
+KYSYMYS: Kerro lisää: Dordognen
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Kuka löysi luolan ja miten?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Luolan löysi 12. syyskuuta 1940 18-vuotias [[Marcel Ravidat]], jonka koira tutki kaatuneen puun jättämää kuoppaa [[Dordognen]] metsässä. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja pojat laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Alta paljastui [[Lascaux'n]] luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Koira ansaitsi kyl ison pullan palkaksi.
+KYSYMYS: Kerro lisää: Lascaux'n
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Miksi luola suljettiin yleisöltä?
+AIEMPI VASTAUS (Livia):
+Ai se. Siit on ihan oikea vastaus. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden määrä alkoi vahingoittaa maalauksia: ihmisten hengitys ja sen mukanaan tuoma [[hiilidioksidi]] sekä kosteus muuttivat luolan ilmaa, ja värit alkoivat tuhoutua. Luola suljettiin vuonna 1963, ja alkuperäiseen luolaan pääsee nykyään vain hyvin harva. Viereen rakennettiin tarkka [[jäljennös]], jossa vierailijat käyvät yhä. Jäljennös on kyl onneksi tosi hieno.
+KYSYMYS: Kerro lisää: hiilidioksidi
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Neljä poikaa ja koira löysivät luolan] n. 17 000 vuotta sitten — Syyskuussa 1940 neljä teini-ikäistä poikaa etsi koiraansa Dordognen metsässä ja putosi kuoppaan. Alta paljastui luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Maalaukset ovat noin 17 000 vuotta vanhoja. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa käydään yhä.
+AIEMPI KYSYMYS: Miksi luola suljettiin yleisöltä?
+AIEMPI VASTAUS (Livia):
+Ai se. Siit on ihan oikea vastaus. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden määrä alkoi vahingoittaa maalauksia: ihmisten hengitys ja sen mukanaan tuoma [[hiilidioksidi]] sekä kosteus muuttivat luolan ilmaa, ja värit alkoivat tuhoutua. Luola suljettiin vuonna 1963, ja alkuperäiseen luolaan pääsee nykyään vain hyvin harva. Viereen rakennettiin tarkka [[jäljennös]], jossa vierailijat käyvät yhä. Jäljennös on kyl onneksi tosi hieno.
+KYSYMYS: Kerro lisää: jäljennös
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Neljä poikaa ja koira löysivät luolan] n. 17 000 vuotta sitten — Syyskuussa 1940 neljä teini-ikäistä poikaa etsi koiraansa Dordognen metsässä ja putosi kuoppaan. Alta paljastui luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Maalaukset ovat noin 17 000 vuotta vanhoja. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa käydään yhä.
+AIEMPI KYSYMYS: Mitä eläimiä luolan seinille on maalattu?
+AIEMPI VASTAUS (Livia):
+No niin, nyt tulee eläimiä. Lascaux'n seiniä ja kattoja peittää yli kuusisataa maalausta, ja ne esittävät enimmäkseen suuria eläimiä. Mukana on hevosia, hirviä ja [[alkuhärkiä]], joiden lajit tunnetaan seudun ylemmän [[paleoliittisen]] kauden fossiiliaineistosta. Luolan osille on annettu omia nimiään, esimerkiksi [[Härkien sali]].
+
+Minä olen valoa vaativa lintu, joten pimeään kallioon maalaaminen on mielestäni jo sinänsä taidonnäyte. Katosta olisin ainakin pudonnut.
+KYSYMYS: Kerro lisää: alkuhärkiä
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Mitä eläimiä luolan seinille on maalattu?
+AIEMPI VASTAUS (Livia):
+No niin, nyt tulee eläimiä. Lascaux'n seiniä ja kattoja peittää yli kuusisataa maalausta, ja ne esittävät enimmäkseen suuria eläimiä. Mukana on hevosia, hirviä ja [[alkuhärkiä]], joiden lajit tunnetaan seudun ylemmän [[paleoliittisen]] kauden fossiiliaineistosta. Luolan osille on annettu omia nimiään, esimerkiksi [[Härkien sali]].
+
+Minä olen valoa vaativa lintu, joten pimeään kallioon maalaaminen on mielestäni jo sinänsä taidonnäyte. Katosta olisin ainakin pudonnut.
+KYSYMYS: Kerro lisää: paleoliittisen
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Gao — kaupunkilehti / Gao: Marokon tykit kaatoivat valtakunnan] Vuonna 1583 kuollut Askia Daoud oli valtakunnan viimeinen vahva hallitsija: hänen jälkeensä seuranneet valtataistelut heikensivät Songhain puolustusta juuri kun Marokon sulttaani Ahmad al-Mansur päätti iskeä. Vuonna 1591 komentaja Judar Pasha johti pienen mutta tuliaseilla varustetun armeijan halki Saharan Gaon pohjoispuolelle Tondibiin. Songhain moninkertaisesti suurempi joukko hyökkäsi tykkien ja arkebuusien tuleen laumoittamiensa härkien turvin, mutta paniikkiin ajautunut karja käännähti omia joukkoja vastaan. Tappio murskasi Songhain sotilaallisen ylivallan lopullisesti, ja Gao menetti asemansa alueen mahtavimpana kaupunkina.
+AIEMPI KYSYMYS: Mitä eläimiä luolan seinille on maalattu?
+AIEMPI VASTAUS (Livia):
+No niin, nyt tulee eläimiä. Lascaux'n seiniä ja kattoja peittää yli kuusisataa maalausta, ja ne esittävät enimmäkseen suuria eläimiä. Mukana on hevosia, hirviä ja [[alkuhärkiä]], joiden lajit tunnetaan seudun ylemmän [[paleoliittisen]] kauden fossiiliaineistosta. Luolan osille on annettu omia nimiään, esimerkiksi [[Härkien sali]].
+
+Minä olen valoa vaativa lintu, joten pimeään kallioon maalaaminen on mielestäni jo sinänsä taidonnäyte. Katosta olisin ainakin pudonnut.
+KYSYMYS: Kerro lisää: Härkien sali
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Kuinka vanhoja maalaukset ovat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maalausten iäksi arvioidaan tavallisesti 17 000–22 000 vuotta, ja ne kuuluvat varhaiseen [[magdalénien-kauteen]]. Kyse ei ole yhden tekijän työstä, sillä maalaukset ovat monen sukupolven yhteinen työ. Ajallisesti ne sijoittuvat ylemmän [[paleoliittisen]] kauden loppupuolelle. Minun sukuni on vanha, mut ei näin vanha.
+KYSYMYS: Kerro lisää: magdalénien-kauteen
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Milloin Lascaux tuli Unescon maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: siihen löytyy selvä vastaus. Lascaux otettiin [[Unescon]] maailmanperintöluetteloon vuonna 1979 osana [[Vézèren laakson]] esihistoriallisia kohteita. Luola sijaitsee lähellä [[Montignacin]] kylää Dordognen departementissa Lounais-Ranskassa. Eikä yhtään liian aikaisin, sanoisin minä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Milloin Lascaux tuli Unescon maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: siihen löytyy selvä vastaus. Lascaux otettiin [[Unescon]] maailmanperintöluetteloon vuonna 1979 osana [[Vézèren laakson]] esihistoriallisia kohteita. Luola sijaitsee lähellä [[Montignacin]] kylää Dordognen departementissa Lounais-Ranskassa. Eikä yhtään liian aikaisin, sanoisin minä.
+KYSYMYS: Kerro lisää: Vézèren laakson
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+AIEMPI KYSYMYS: Milloin Lascaux tuli Unescon maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: siihen löytyy selvä vastaus. Lascaux otettiin [[Unescon]] maailmanperintöluetteloon vuonna 1979 osana [[Vézèren laakson]] esihistoriallisia kohteita. Luola sijaitsee lähellä [[Montignacin]] kylää Dordognen departementissa Lounais-Ranskassa. Eikä yhtään liian aikaisin, sanoisin minä.
+KYSYMYS: Kerro lisää: Montignacin
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Dame] 1163–1345 Notre-Damen katedraalin rakentaminen kesti uskomattomat 182 vuotta — työ alkoi vuonna 1163 ja valmistui vasta 1345. Kirkko oli aikansa insinööritaidon huippu: sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit, jotka keksittiin juuri tällaisia jättimäisiä kirkkoja varten. Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle kiitti Jumalaa Pariisin vapautumisesta samassa kirkossa. Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet onnistuivat kuitenkin pelastamaan tornit, julkisivun ja l…
+AIEMPI KYSYMYS: Miksi katedraalin ikkunat ovat niin suuria?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ikkunat voitiin tehdä suuriksi, koska rakennuksen paino kannetaan eri tavalla kuin vanhemmissa kirkoissa. Ulkoa katedraalia hallitsevat raskaat [[tukikaaret]], jotka siirtävät holvien painon seinien ulkopuolelle. Kun seinien ei tarvinnut kantaa painoa kokonaan, niihin mahtui paljon suurempia aukkoja kuin ennen. Tämä on [[korkeagotiikan]] ydintä, ja suurin osa alkuperäisistä [[lasimaalauksista]] on säilynyt ehjänä.
+
+Ylhäältä katsoen tukikaaret muistuttavat jättiläislinnun kylkiluita. Kyyhkyn silmään ne ovat myös erinomaisia istumapaikkoja.
+KYSYMYS: Kerro lisää: tukikaaret
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+AIEMPI KYSYMYS: Miksi katedraalin ikkunat ovat niin suuria?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ikkunat voitiin tehdä suuriksi, koska rakennuksen paino kannetaan eri tavalla kuin vanhemmissa kirkoissa. Ulkoa katedraalia hallitsevat raskaat [[tukikaaret]], jotka siirtävät holvien painon seinien ulkopuolelle. Kun seinien ei tarvinnut kantaa painoa kokonaan, niihin mahtui paljon suurempia aukkoja kuin ennen. Tämä on [[korkeagotiikan]] ydintä, ja suurin osa alkuperäisistä [[lasimaalauksista]] on säilynyt ehjänä.
+
+Ylhäältä katsoen tukikaaret muistuttavat jättiläislinnun kylkiluita. Kyyhkyn silmään ne ovat myös erinomaisia istumapaikkoja.
+KYSYMYS: Kerro lisää: korkeagotiikan
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Anglikaaninen katedraali] 1847–1905 Anglikaaninen seurakunta perustettiin 1699 vetoomuksella Lontoon piispalle Henry Comptonille. Vetoomuksessa pyydettiin apua myös kirkon jälleenrakentamiseen: ranskalaiset olivat tuhonneet sen ja koko kaupungin 1696. Paikalla tai sen lähellä on ollut ainakin kuusi puukirkkoa, ja jokainen niistä tuhoutui sotatoimissa. Ensimmäinen kivikirkko aloitettiin 1843, mutta se paloi vuoden 1846 suurpalossa ennen kuin siitä ehti tulla muuta kuin peruskivi ja alkua. Nykyisen katedraalin aloitti 1847 piispa Edward Feild, ja piirustukset tilattiin uusgotiikan johtavalta arkkitehdilta George Gilbert Scottilta. Kirkkosali rakennettiin 1847–1850, ja se sai toimia yksinään koko katedraalina 35 vuotta…
+- [Hobart — kohdekartta / Kohdekartta: St Maryn katedraali] 1866 Katolisen arkkihiippakunnan pääkirkon juuret ovat vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen pappi Philip Conolly rakensi nykyisen paikan lähelle väliaikaisen puukappelin. Varsinaisen katedraalin peruskivi laskettiin 1860. Piirustukset teki William Wardell, Augustus Puginin oppilas, ja kirkko vihittiin 1866 uusgoottilaisena. Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja katedraali purettiin lopulta lähes kokonaan. Se rakennettiin uudelleen Wardellin alkuperäisiin suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja työstä vastasi hobartilainen Henry Hunter — sama arkkitehti, joka oli voittanut Tasmanian museon suunnittelukilpailun. Hunter laski uuden peruskive…
+AIEMPI KYSYMYS: Miksi katedraalin ikkunat ovat niin suuria?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ikkunat voitiin tehdä suuriksi, koska rakennuksen paino kannetaan eri tavalla kuin vanhemmissa kirkoissa. Ulkoa katedraalia hallitsevat raskaat [[tukikaaret]], jotka siirtävät holvien painon seinien ulkopuolelle. Kun seinien ei tarvinnut kantaa painoa kokonaan, niihin mahtui paljon suurempia aukkoja kuin ennen. Tämä on [[korkeagotiikan]] ydintä, ja suurin osa alkuperäisistä [[lasimaalauksista]] on säilynyt ehjänä.
+
+Ylhäältä katsoen tukikaaret muistuttavat jättiläislinnun kylkiluita. Kyyhkyn silmään ne ovat myös erinomaisia istumapaikkoja.
+KYSYMYS: Kerro lisää: lasimaalauksista
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+AIEMPI KYSYMYS: Mikä Sancta Camisa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minä muistan pääasian. Sancta Camisa eli Pyhä paita on Chartresin katedraalin tunnetuin [[pyhäinjäännös]]. Perimätiedon mukaan kyse on [[Neitsyt Marian]] vaatteesta, ja siksi Marialle omistettu katedraali on ollut keskiajalta lähtien [[pyhiinvaeltajien]] kohde. En ole varma kaikista yksityiskohdista, esimerkiksi siitä, milloin relikvio tarkalleen saapui Chartresiin. Pitkäikäinen kangas, pulla ei kestäis puoltakaan.
+KYSYMYS: Kerro lisää: pyhäinjäännös
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Mikä Sancta Camisa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minä muistan pääasian. Sancta Camisa eli Pyhä paita on Chartresin katedraalin tunnetuin [[pyhäinjäännös]]. Perimätiedon mukaan kyse on [[Neitsyt Marian]] vaatteesta, ja siksi Marialle omistettu katedraali on ollut keskiajalta lähtien [[pyhiinvaeltajien]] kohde. En ole varma kaikista yksityiskohdista, esimerkiksi siitä, milloin relikvio tarkalleen saapui Chartresiin. Pitkäikäinen kangas, pulla ei kestäis puoltakaan.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kohdekartta / Kohdekartta: Assi Ghat] kaupungin eteläisin ghat Assi on Varanasin eteläisin ja samalla suurimpia ghateja. Se on siinä kohdassa, missä Assi-puro yhtyy Gangesiin, ja juuri tästä alkaa se noin neljän kilometrin rantakaista, joka päättyy pohjoisessa Varunan suulle. Kaupungin nimi tulee näistä kahdesta uomasta, ja väli on pyhiinvaeltajien perinteinen kiertoreitti. Ghatilla on kirjallinen maine. Perinteen mukaan täältä runoilija Tulsidas lähti viimeiselle matkalleen; hän kirjoitti Varanasissa suuren osan Ramcharitmanasistaan, awadhinkielisestä Ramayanasta, jota Ramnagarin Ramlila yhä näyttelee. Kashinath Singhin romaani Kashi Ka Assi kertoo juuri tämän ghatin korttelista. Assi on nykyään opiskelijoiden ja matkailijoide…
+- [Damaskos — kaupunkilehti / Damaskos: Keittiö, majatalo ja moskeija samalla pihalla] Sulttaani Suleiman I:n käskystä joen rannalle rakennettiin vuosina 1554–1559 rakennusryhmä, jonka piirustukset laati hoviarkkitehti Mimar Sinan. Se toi ottomaanien rakennustyylin Damaskokseen: moskeijan päällä on ottomaanikupolit ja sen kulmilla kaksi ohutta minareettia, mutta seinien vaalean ja tumman kiven vuorottelu on paikallista työtä. Pihan lounaislaidalla on moskeija ja vastapäätä keittiörakennus eli imaret, jonka kummallakin sivulla on majoitussiipi. Itäpuolelle nousi vuosina 1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin täällä ennen lähtöä etelään.
+AIEMPI KYSYMYS: Mikä Sancta Camisa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minä muistan pääasian. Sancta Camisa eli Pyhä paita on Chartresin katedraalin tunnetuin [[pyhäinjäännös]]. Perimätiedon mukaan kyse on [[Neitsyt Marian]] vaatteesta, ja siksi Marialle omistettu katedraali on ollut keskiajalta lähtien [[pyhiinvaeltajien]] kohde. En ole varma kaikista yksityiskohdista, esimerkiksi siitä, milloin relikvio tarkalleen saapui Chartresiin. Pitkäikäinen kangas, pulla ei kestäis puoltakaan.
+KYSYMYS: Kerro lisää: pyhiinvaeltajien
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Dublin — kaupunkilehti / Dublin: Romaani, joka kestää yhden päivän] James Joycen romaani Odysseus kertoo yhden ainoan päivän: torstain 16. kesäkuuta 1904 Dublinissa. Joyce valitsi juuri sen päivän, koska silloin hän oli ollut ensi kertaa kävelyllä tulevan vaimonsa Nora Barnaclen kanssa. Nyt joka 16. kesäkuuta dublinilaiset pukeutuvat vuoden 1904 vaatteisiin ja kulkevat kirjan reitit läpi. Ensimmäinen sellainen retki tehtiin 1954 vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 tuntia.
+AIEMPI KYSYMYS: Miksi katedraalin kaksi tornia ovat erilaiset?
+AIEMPI VASTAUS (Livia):
+Katotaas. Länsipäädyn tornit ovat eri ikäisiä. Toinen on noin vuonna 1160 valmistunut, 105-metrinen sileä pyramiditorni, joka edustaa vanhempaa, [[romaanista]] rakennustapaa. Toinen, 113-metrinen torni, rakennettiin tiettävästi uudelleen 1500-luvun alussa tulipalon jälkeen, ja se noudattaa koristeellisempaa [[liekehtivän gotiikan]] tyyliä. Siksi tornit eivät ole toistensa peilikuvia. Pariton pari, mut aika komea.
+KYSYMYS: Kerro lisää: romaanista
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+AIEMPI KYSYMYS: Miksi katedraalin kaksi tornia ovat erilaiset?
+AIEMPI VASTAUS (Livia):
+Katotaas. Länsipäädyn tornit ovat eri ikäisiä. Toinen on noin vuonna 1160 valmistunut, 105-metrinen sileä pyramiditorni, joka edustaa vanhempaa, [[romaanista]] rakennustapaa. Toinen, 113-metrinen torni, rakennettiin tiettävästi uudelleen 1500-luvun alussa tulipalon jälkeen, ja se noudattaa koristeellisempaa [[liekehtivän gotiikan]] tyyliä. Siksi tornit eivät ole toistensa peilikuvia. Pariton pari, mut aika komea.
+KYSYMYS: Kerro lisää: liekehtivän gotiikan
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: St. Augustinen kirkko] 1842 Kirkon perustivat vapaat värilliset. He järjestäytyivät 1830-luvulla ja saivat piispa Antoine Blancilta luvan rakentaa oman kirkon; ursuliinisisaret lahjoittivat tontin ehdolla, että kirkko nimetään heidän suojeluspyhänsä Augustinuksen mukaan. Tontti oli osa Claude Tremén vanhaa plantaasia, ja kirkon piirsi ranskalainen arkkitehti J. N. B. de Pouilly. Kirkko vihittiin 9. lokakuuta 1842, ja sitä pidetään Yhdysvaltain vanhimpana mustana katolisena seurakuntana. Vihkiäisiä edelsi tapaus, jota kutsutaan penkkisodaksi. Penkeistä maksettiin siihen aikaan vuokraa, ja kun vapaat värilliset alkoivat ostaa penkkejä perheilleen, seudun valkoiset ryhtyivät ostamaan niitä enemmän. Vapaat värilliset…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Oliko samalla paikalla aiemmin muita katedraaleja?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: oli. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin [[hiippakunta]] perustettiin 300-luvulla. Nykyinen rakennus valmistui pääosin vuosina 1194–1220, ja sitä pidetään [[korkeagotiikan]] tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä. [[Unesco]] kutsui sitä vuonna 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Viisi katedraalia samalla paikalla tarkoittaa, että joku on aina rakentanut uudestaan saman pesän. Sen minä ymmärrän, sillä kyyhkynen palaa samalle ikkunalaudalle vuosikymmenestä toiseen.
+KYSYMYS: Kerro lisää: hiippakunta
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Oliko samalla paikalla aiemmin muita katedraaleja?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: oli. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin [[hiippakunta]] perustettiin 300-luvulla. Nykyinen rakennus valmistui pääosin vuosina 1194–1220, ja sitä pidetään [[korkeagotiikan]] tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä. [[Unesco]] kutsui sitä vuonna 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Viisi katedraalia samalla paikalla tarkoittaa, että joku on aina rakentanut uudestaan saman pesän. Sen minä ymmärrän, sillä kyyhkynen palaa samalle ikkunalaudalle vuosikymmenestä toiseen.
+KYSYMYS: Kerro lisää: Unesco
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Mitä korkeagotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Korkeagotiikka on [[gotiikan]] kukoistuskautta, joka sijoittuu pääosin 1200-luvun alkupuolelle. Sille ovat ominaisia korkeat holvit ja suuret ikkunat, jotka onnistuvat [[tukikaarien]] ansiosta, kun seinien paino siirtyy ulkopuolelle. Chartresin katedraalia pidetään sen tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja sen arkkitehtuuriin on tehty 1200-luvun alun jälkeen vain vähäisiä muutoksia. Korkealla minä viihdyn, joten tää aihe sopii.
+KYSYMYS: Kerro lisää: gotiikan

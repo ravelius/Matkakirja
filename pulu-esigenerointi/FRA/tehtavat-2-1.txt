@@ -1,0 +1,1163 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Historia: Kapinallinen saapuu laivalla] 1873 — Pariisin kommuunin kukistuttua 1871 Ranska tuomitsi tuhansia kommunardeja karkotukseen. Opettaja ja anarkisti Louise Michel nousi vankilaiva Virginien kyytiin elokuussa 1873, ja alus saapui Uuteen-Kaledoniaan neljän kuukauden purjehduksen jälkeen samana vuonna — samana vuonna, jona Foggin isoisä teki oman matkansa. Michel asettui Ducosin niemelle muiden kommunardien joukkoon, opetti lukemaan kanakilapsia ja opiskeli paikallista kasvistoa ja kieliä. Vuonna 1878 hän asettui julkisesti kanakikapinallisten puolelle heidän noustessaan ranskalaista maanhimoa vastaan. Michel armahdettiin ja palasi Ranskaan vasta 1880.
+- [Nouméa — kaupunkilehti / Nouméa] Nouméa syntyi rangaistussiirtolana Uuden-Kaledonian niemelle 1854, ja isoisän matkan aikaan 1873 kaupunki eli vankityön, kommunardien ja vasta löydetyn nikkelin murroksessa. Sivut kertovat sen ensimmäiset vuosikymmenet.
+AIEMPI KYSYMYS: Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tost minä tiedän jotain. Palatsin kivimuurit seisoivat tulipalon jälkeenkin, joten korjaus olisi ollut mahdollinen: myös [[kommunardien]] polttama Pariisin kaupungintalo rakennettiin uudelleen jo 1870-luvulla. Tuileries'n rauniot jäivät kuitenkin paikalleen yksitoista vuotta, ja vuonna 1882 [[kolmas tasavalta]] päätti purkaa ne. Palatsi oli ollut Ranskan hallitsijoiden koti Henrik neljännestä Napoleon kolmanteen, joten sen on yleisesti katsottu edustaneen tasavallan silmissä monarkiaa ja keisarikuntaa; täsmällisiä syitä en osaa luetella varmasti. Purkua vastustivat muun muassa [[Georges-Eugène Haussmann]] ja joukko historioitsijoita, ja työ tehtiin helmikuusta syyskuun loppuun 1883. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kommunardien
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marm…
+- [Pohjois-Makedonia — maalehti / Historian hetki: Kruševo 1903 — kymmenen päivän tasavalta] 2.8.1903 — Kirkonkellot soivat kaikkialla Kruševossa samaan aikaan, ja hetken ne peittävät alleen jokaisen muun äänen. On Elian päivä, Ilinden, 2. elokuuta 1903, ja makedonialaiset kapinalliset ovat juuri vallanneet pienen vuoristokaupungin ottomaanihallinnolta. Julistus tasavallasta tehdään Tomalevski-suvun talossa; torilla sen uutinen leviää väkijoukkoon — sekakomitea, jossa istuvat sekä slaavilaiset että kutzovlach-aromanialaiset asukkaat, hallitsee kaupunkia yhdessä. Kapinallisten riveissä taistelee puutteen vuoksi myös naisia ja nuoria poikia, joille on jaettu kivääreitä ilman koulutusta. Kellojen soidessa moni asukas ei vielä tiedä, kuinka lyhyeksi juhla jää: kymmenen päivän kuluttua …
+AIEMPI KYSYMYS: Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tost minä tiedän jotain. Palatsin kivimuurit seisoivat tulipalon jälkeenkin, joten korjaus olisi ollut mahdollinen: myös [[kommunardien]] polttama Pariisin kaupungintalo rakennettiin uudelleen jo 1870-luvulla. Tuileries'n rauniot jäivät kuitenkin paikalleen yksitoista vuotta, ja vuonna 1882 [[kolmas tasavalta]] päätti purkaa ne. Palatsi oli ollut Ranskan hallitsijoiden koti Henrik neljännestä Napoleon kolmanteen, joten sen on yleisesti katsottu edustaneen tasavallan silmissä monarkiaa ja keisarikuntaa; täsmällisiä syitä en osaa luetella varmasti. Purkua vastustivat muun muassa [[Georges-Eugène Haussmann]] ja joukko historioitsijoita, ja työ tehtiin helmikuusta syyskuun loppuun 1883. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kolmas tasavalta
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marm…
+AIEMPI KYSYMYS: Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tost minä tiedän jotain. Palatsin kivimuurit seisoivat tulipalon jälkeenkin, joten korjaus olisi ollut mahdollinen: myös [[kommunardien]] polttama Pariisin kaupungintalo rakennettiin uudelleen jo 1870-luvulla. Tuileries'n rauniot jäivät kuitenkin paikalleen yksitoista vuotta, ja vuonna 1882 [[kolmas tasavalta]] päätti purkaa ne. Palatsi oli ollut Ranskan hallitsijoiden koti Henrik neljännestä Napoleon kolmanteen, joten sen on yleisesti katsottu edustaneen tasavallan silmissä monarkiaa ja keisarikuntaa; täsmällisiä syitä en osaa luetella varmasti. Purkua vastustivat muun muassa [[Georges-Eugène Haussmann]] ja joukko historioitsijoita, ja työ tehtiin helmikuusta syyskuun loppuun 1883. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Georges-Eugène Haussmann
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Louvre] 1793 Louvre ei ollut alun perin museo vaan linnoitus: kuningas Filip II rakennutti sen 1100-luvun lopulla puolustamaan Pariisia. Vuosisatojen kuluessa siitä tehtiin kuninkaallinen palatsi, kunnes Ranskan vallankumouksen jälkeen se avattiin kaikille kansalaisille museona elokuussa 1793. Nykyään Louvressa on esillä noin 35 000 taideteosta, ja koko kokoelmassa on peräti 500 000 esinettä. Museo on maailman suurin, ja sen käytävät ovat kilometrien mittaiset. Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: arkkitehti I. M. Pein suunnittelema lasinen pyramidi, josta tuli museon pääsisäänkäynti. Aluksi moni pariisilainen paheksui lasirakennelmaa vanhan palatsin edessä, mutta siitä tuli pia…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marm…
+AIEMPI KYSYMYS: Mitä palatsin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä näin itse katolta. Palatsia ei koskaan rakennettu uudelleen, ja sen paikalle jäi avoin aukio [[Louvren]] pihan ja [[Tuileries'n puutarhan]] väliin. Aukiolla seisoo [[Carrousel'n riemukaari]], joka rakennettiin Napoleon ensimmäisen aikana palatsin juhlalliseksi portiksi ja jäi paikalleen palatsin kadottua. Puutarha jatkuu aukiolta länteen, ja se on nykyään kaikille avoin kävelypuisto Pariisin keskustassa. Ja ny haluaisin kyl briochen.
+KYSYMYS: Kerro lisää: Louvren
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Mitä palatsin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä näin itse katolta. Palatsia ei koskaan rakennettu uudelleen, ja sen paikalle jäi avoin aukio [[Louvren]] pihan ja [[Tuileries'n puutarhan]] väliin. Aukiolla seisoo [[Carrousel'n riemukaari]], joka rakennettiin Napoleon ensimmäisen aikana palatsin juhlalliseksi portiksi ja jäi paikalleen palatsin kadottua. Puutarha jatkuu aukiolta länteen, ja se on nykyään kaikille avoin kävelypuisto Pariisin keskustassa. Ja ny haluaisin kyl briochen.
+KYSYMYS: Kerro lisää: Tuileries'n puutarhan
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Markuksen hevoset] Isoisäsi näki ne siellä, missä ne olivat seisoneet kuusisataa vuotta: basilikan parvekkeella, katunäkymän yläpuolella. Sitä ennen ne olivat seisoneet Konstantinopolin hippodromilla, ja vuonna 1204 ne vietiin sieltä pois. Kuljetusta varten päät katkaistiin irti, ja samana vuonna kaulaan lisättiin pannat peittämään saumat — ne pannat ovat siinä yhä. Venetsiaan hevoset pystytettiin 1254, ja Petrarca kävi ihailemassa niitä. Vuonna 1797 Napoleon vei ne Pariisiin ja ne nostettiin Carrousel-riemukaareen; kahdeksantoista vuotta myöhemmin ne tuotiin takaisin, ja työn teki kapteeni nimeltä Dumaresq, jonka Itävallan keisari palkitsi kultaisella nuuskarasialla, kannessa timanteista tehdyt nimikirjaimet…
+AIEMPI KYSYMYS: Mitä palatsin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä näin itse katolta. Palatsia ei koskaan rakennettu uudelleen, ja sen paikalle jäi avoin aukio [[Louvren]] pihan ja [[Tuileries'n puutarhan]] väliin. Aukiolla seisoo [[Carrousel'n riemukaari]], joka rakennettiin Napoleon ensimmäisen aikana palatsin juhlalliseksi portiksi ja jäi paikalleen palatsin kadottua. Puutarha jatkuu aukiolta länteen, ja se on nykyään kaikille avoin kävelypuisto Pariisin keskustassa. Ja ny haluaisin kyl briochen.
+KYSYMYS: Kerro lisää: Carrousel'n riemukaari
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: Venus nousi merestä Firenzessä] Sandro Botticellin Venus nousee merestä simpukankuoressa, ja tuulet puhaltavat sen rantaan ruusujen sateessa. Maalaus syntyi 1480-luvun Firenzessä Medici-suvun tilauksesta, ja se oli rohkea teko: ensimmäisiä suuria maalauksia vuosisatoihin, joiden aihe ei ollut Raamatusta vaan antiikin tarustosta. Vuosisatoja myöhemmin siitä on tullut yksi maailman tunnistetuimmista kuvista — Venus katsoo ohi, kuin ei huomaisi koko mainetta.
+AIEMPI KYSYMYS: Kuka oli Katariina de Medici?
+AIEMPI VASTAUS (Livia):
+Kas vaan, palatsin tilaaja itse. Katariina de Medici syntyi vuonna 1519 [[Firenzessä]] [[Medici-suvusta]], ja hänet naitettiin 1533 Ranskan tulevalle kuninkaalle Henrik toiselle. Hän oli Ranskan kuningatar vuodesta 1547 miehensä kuolemaan 1559, ja sen jälkeen hän vaikutti vahvasti kolmen poikansa hallintoon sekä toimi nuoren Kaarle yhdeksännen aikana [[valtionhoitajana]]. Tuileries'n palatsin rakennutus alkoi hänen aloitteestaan vuonna 1564, ja nimi viittaa paikalla aiemmin toimineisiin tiilitehtaisiin. Hän kuoli vuonna 1589. Ja kaikki vuosiluvut minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Firenzessä
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Pylväät jotka kertovat suvusta] Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.
+- [Pariisi — kohdekartta / Kohdekartta: Luxembourgin puisto] 1612 Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä viihtynyt Louvressa. Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, joka jäljitteli hänen kotikaupunkinsa Firenzen Palazzo Pittiä. Puistoon istutettiin 2 000 jalavaa, ja firenzeläinen suihkulähdemestari Tommaso Francini muotoili maisemasta sellaisen, jollaisen kuningatar oli lapsena tuntenut. Puisto on kasvanut ja kutistunut vallanpitäjien mukana. Alun kahdeksasta hehtaarista se laajeni kolmeenkymmeneen 1630-luvulla ja vallankumouksen jälkeen neljäänkymmeneen, kun naapuriluostarin maat takavarikoitiin. Napoleon III:n katutyöt veivät 1…
+AIEMPI KYSYMYS: Kuka oli Katariina de Medici?
+AIEMPI VASTAUS (Livia):
+Kas vaan, palatsin tilaaja itse. Katariina de Medici syntyi vuonna 1519 [[Firenzessä]] [[Medici-suvusta]], ja hänet naitettiin 1533 Ranskan tulevalle kuninkaalle Henrik toiselle. Hän oli Ranskan kuningatar vuodesta 1547 miehensä kuolemaan 1559, ja sen jälkeen hän vaikutti vahvasti kolmen poikansa hallintoon sekä toimi nuoren Kaarle yhdeksännen aikana [[valtionhoitajana]]. Tuileries'n palatsin rakennutus alkoi hänen aloitteestaan vuonna 1564, ja nimi viittaa paikalla aiemmin toimineisiin tiilitehtaisiin. Hän kuoli vuonna 1589. Ja kaikki vuosiluvut minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Medici-suvusta
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Kuka oli Katariina de Medici?
+AIEMPI VASTAUS (Livia):
+Kas vaan, palatsin tilaaja itse. Katariina de Medici syntyi vuonna 1519 [[Firenzessä]] [[Medici-suvusta]], ja hänet naitettiin 1533 Ranskan tulevalle kuninkaalle Henrik toiselle. Hän oli Ranskan kuningatar vuodesta 1547 miehensä kuolemaan 1559, ja sen jälkeen hän vaikutti vahvasti kolmen poikansa hallintoon sekä toimi nuoren Kaarle yhdeksännen aikana [[valtionhoitajana]]. Tuileries'n palatsin rakennutus alkoi hänen aloitteestaan vuonna 1564, ja nimi viittaa paikalla aiemmin toimineisiin tiilitehtaisiin. Hän kuoli vuonna 1589. Ja kaikki vuosiluvut minä muistin ulkoa.
+KYSYMYS: Kerro lisää: valtionhoitajana
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Ritarikunnan loppu ja ranskalaisten kaksi vuotta] Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. syyskuuta 1800, kun heidän ruokavaransa…
+AIEMPI KYSYMYS: Kuka oli Napoleon kolmas ja miten hänen valtansa päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tää on se palatsin viimeinen isäntä. Napoleon kolmas oli [[Napoleon Bonaparten]] veljenpoika, joka valittiin Ranskan tasavallan presidentiksi vuonna 1848 ja julistautui keisariksi 1852. Hänen valtansa päättyi [[Ranskan ja Preussin sotaan]]: hänet vangittiin [[Sedanin taistelussa]] syyskuun alussa 1870, ja Pariisissa julistettiin muutaman päivän kuluttua tasavalta. Keisarinna Eugénie, joka oli asunut Tuileries'ssa, pakeni Englantiin. Napoleon kolmas asui sen jälkeen maanpaossa Englannissa ja kuoli siellä tammikuussa 1873. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Napoleon Bonaparten
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Kuka oli Napoleon kolmas ja miten hänen valtansa päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tää on se palatsin viimeinen isäntä. Napoleon kolmas oli [[Napoleon Bonaparten]] veljenpoika, joka valittiin Ranskan tasavallan presidentiksi vuonna 1848 ja julistautui keisariksi 1852. Hänen valtansa päättyi [[Ranskan ja Preussin sotaan]]: hänet vangittiin [[Sedanin taistelussa]] syyskuun alussa 1870, ja Pariisissa julistettiin muutaman päivän kuluttua tasavalta. Keisarinna Eugénie, joka oli asunut Tuileries'ssa, pakeni Englantiin. Napoleon kolmas asui sen jälkeen maanpaossa Englannissa ja kuoli siellä tammikuussa 1873. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Ranskan ja Preussin sotaan
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Kuka oli Napoleon kolmas ja miten hänen valtansa päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tää on se palatsin viimeinen isäntä. Napoleon kolmas oli [[Napoleon Bonaparten]] veljenpoika, joka valittiin Ranskan tasavallan presidentiksi vuonna 1848 ja julistautui keisariksi 1852. Hänen valtansa päättyi [[Ranskan ja Preussin sotaan]]: hänet vangittiin [[Sedanin taistelussa]] syyskuun alussa 1870, ja Pariisissa julistettiin muutaman päivän kuluttua tasavalta. Keisarinna Eugénie, joka oli asunut Tuileries'ssa, pakeni Englantiin. Napoleon kolmas asui sen jälkeen maanpaossa Englannissa ja kuoli siellä tammikuussa 1873. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Sedanin taistelussa
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Houtman Abrolhosin haaksirikko: Kapina ja verinen kesä] Pelsaertin lähdettyä hakemaan apua jäljelle jääneiden noin 250 haaksirikkoutuneen johtoon nousi kauppias Jeronimus Cornelisz, joka pelkäsi oman osuutensa laivan väärinkäytöksestä paljastuvan. Turvatakseen asemansa hän järjesti seuraajineen kuukausien väkivallan kierteen, jonka aikana surmattiin ainakin 110 miestä, naista ja lasta – yksi Australian historian julmimmista tapahtumista. Kun Pelsaert lokakuussa 1629 palasi pelastuslaivalla, kapina oli jo osittain kukistettu, ja Cornelisz sekä pahimmat rikoskumppaninsa tuomittiin ja hirtettiin lähisaarella samana kuukautena – Australian ensimmäiset tunnetut oikeuden määräämät teloitukset.
+AIEMPI KYSYMYS: Mitä kommunardeille tapahtui kommuunin kukistumisen jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on vakava aihe. Pariisin kommuunin kukistuminen toukokuun lopussa 1871 tapahtui viikossa, jota kutsutaan nimellä [[verinen viikko]]. Tuhansia kommunardeja kuoli taisteluissa ja teloituksissa, ja arviot lukumäärästä vaihtelevat. Tuhansia vangittiin, ja osa tuomittiin karkotettaviksi: monet lähetettiin [[Uuteen-Kaledoniaan]] Tyynellemerelle, ja osa pakeni ulkomaille. Kolmas tasavalta armahti maanpakoon lähteneet kommunardit, ja yleinen armahdus annettiin 1880. Siitä on yli sataviisikymmentä vuotta, ja kommuunista keskustellaan Ranskassa yhä. Hyvä, että siitä on jo aikaa.
+KYSYMYS: Kerro lisää: verinen viikko
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Historia: Kapinallinen saapuu laivalla] 1873 — Pariisin kommuunin kukistuttua 1871 Ranska tuomitsi tuhansia kommunardeja karkotukseen. Opettaja ja anarkisti Louise Michel nousi vankilaiva Virginien kyytiin elokuussa 1873, ja alus saapui Uuteen-Kaledoniaan neljän kuukauden purjehduksen jälkeen samana vuonna — samana vuonna, jona Foggin isoisä teki oman matkansa. Michel asettui Ducosin niemelle muiden kommunardien joukkoon, opetti lukemaan kanakilapsia ja opiskeli paikallista kasvistoa ja kieliä. Vuonna 1878 hän asettui julkisesti kanakikapinallisten puolelle heidän noustessaan ranskalaista maanhimoa vastaan. Michel armahdettiin ja palasi Ranskaan vasta 1880.
+- [Nouméa — kaupunkilehti / Nouméa: Vankityö rakensi kaupungin] Toukokuussa 1864 ensimmäiset raskaisiin töihin tuomitut miehet astuivat maihin nelikuisen merimatkan jälkeen. Seuraavien vuosikymmenten aikana Ranska kuljetti Uuteen-Kaledoniaan lähes 22 000 vankia, ja heidän pakkotyönsä muovasi Nouméan katukuvaa: kukkuloita tasoitettiin, teitä louhittiin ja rakennuksia nostettiin palkatta. Vangit majoitettiin erillään kaupungista Île Noun saarelle, mutta heidät soudettiin päivittäin työmaille. Isoisän matkan aikaan 1873 vankisiirtola oli täydessä käynnissä; se lakkautettiin vasta 1900-luvun alkupuolella, ja monet entiset vangit jäivät saarelle vapaina siirtolaisina.
+AIEMPI KYSYMYS: Mitä kommunardeille tapahtui kommuunin kukistumisen jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on vakava aihe. Pariisin kommuunin kukistuminen toukokuun lopussa 1871 tapahtui viikossa, jota kutsutaan nimellä [[verinen viikko]]. Tuhansia kommunardeja kuoli taisteluissa ja teloituksissa, ja arviot lukumäärästä vaihtelevat. Tuhansia vangittiin, ja osa tuomittiin karkotettaviksi: monet lähetettiin [[Uuteen-Kaledoniaan]] Tyynellemerelle, ja osa pakeni ulkomaille. Kolmas tasavalta armahti maanpakoon lähteneet kommunardit, ja yleinen armahdus annettiin 1880. Siitä on yli sataviisikymmentä vuotta, ja kommuunista keskustellaan Ranskassa yhä. Hyvä, että siitä on jo aikaa.
+KYSYMYS: Kerro lisää: Uuteen-Kaledoniaan
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Syitä oli kaksi, käytännöllinen ja symbolinen. Käytännöllinen oli ruuti: 14. heinäkuuta 1789 väkijoukko oli tyhjentänyt [[Invalidien sotilaskodin]] asevaraston ja saanut lähes 30 000 kivääriä mutta ei panoksia, ja 250 tynnyriä ruutia oli siirretty Bastiljiin. Symbolinen syy oli linnoituksen maine: se oli ollut vuodesta 1659 lähinnä [[valtionvankila]], ja kuninkaan määräyksellä sinne oli voitu sulkea ihmisiä ilman oikeudenkäyntiä, joten se edusti kansan silmissä kuninkaan mielivaltaa. Valtauksen aikaan selleissä oli vain seitsemän vankia, mutta tapahtuman merkitys oli suuri, ja 14. heinäkuuta on nykyään [[Ranskan kansallispäivä]]. Pienestä linnasta tuli suuri tarina.
+KYSYMYS: Kerro lisää: Invalidien sotilaskodin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Syitä oli kaksi, käytännöllinen ja symbolinen. Käytännöllinen oli ruuti: 14. heinäkuuta 1789 väkijoukko oli tyhjentänyt [[Invalidien sotilaskodin]] asevaraston ja saanut lähes 30 000 kivääriä mutta ei panoksia, ja 250 tynnyriä ruutia oli siirretty Bastiljiin. Symbolinen syy oli linnoituksen maine: se oli ollut vuodesta 1659 lähinnä [[valtionvankila]], ja kuninkaan määräyksellä sinne oli voitu sulkea ihmisiä ilman oikeudenkäyntiä, joten se edusti kansan silmissä kuninkaan mielivaltaa. Valtauksen aikaan selleissä oli vain seitsemän vankia, mutta tapahtuman merkitys oli suuri, ja 14. heinäkuuta on nykyään [[Ranskan kansallispäivä]]. Pienestä linnasta tuli suuri tarina.
+KYSYMYS: Kerro lisää: valtionvankila
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Linnoituksessa oli vain seitsemän vankia] 1789 — Bastilji oli keskiaikainen linnoitus, jota kuningas käytti vankilana. Kun väkijoukko valtasi sen 14. heinäkuuta 1789, sisällä oli seitsemän vankia — ei yhtään kuuluisaa. Merkitys ei ollutkaan vangeissa vaan siinä, mitä rakennus edusti: kuningas saattoi sulkea kenet tahansa sinne ilman oikeudenkäyntiä. Linnoitus purettiin heti, ja päivästä tuli Ranskan kansallispäivä, jota vietetään yhä joka vuosi.
+AIEMPI KYSYMYS: Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Syitä oli kaksi, käytännöllinen ja symbolinen. Käytännöllinen oli ruuti: 14. heinäkuuta 1789 väkijoukko oli tyhjentänyt [[Invalidien sotilaskodin]] asevaraston ja saanut lähes 30 000 kivääriä mutta ei panoksia, ja 250 tynnyriä ruutia oli siirretty Bastiljiin. Symbolinen syy oli linnoituksen maine: se oli ollut vuodesta 1659 lähinnä [[valtionvankila]], ja kuninkaan määräyksellä sinne oli voitu sulkea ihmisiä ilman oikeudenkäyntiä, joten se edusti kansan silmissä kuninkaan mielivaltaa. Valtauksen aikaan selleissä oli vain seitsemän vankia, mutta tapahtuman merkitys oli suuri, ja 14. heinäkuuta on nykyään [[Ranskan kansallispäivä]]. Pienestä linnasta tuli suuri tarina.
+KYSYMYS: Kerro lisää: Ranskan kansallispäivä
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji] Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+AIEMPI KYSYMYS: Millaista elämä linnoituksen sisällä oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bastilji rakennettiin [[satavuotisen sodan]] aikana suojaamaan Pariisin itäistä sisääntuloa, ja kahdeksan tornin muurien sisällä oli varuskunta. Vuonna 1417 linnoitus julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä sellaisena; vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Vankien olot riippuivat osin heidän asemastaan: ylhäisemmillä vangeilla oli yleisen käsityksen mukaan mahdollisuus omiin huonekaluihin ja kirjoihin, kun taas muilla olot olivat niukemmat. Tunnetuimpiin vankeihin kuuluivat kirjailija [[Voltaire]] ja [[markiisi de Sade]]. Arjen tarkemmista yksityiskohdista en ole varma. Itse en kyl vaihtaisi kaidettani linnan torniin.
+KYSYMYS: Kerro lisää: satavuotisen sodan
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Panthéon] 1758–1790 Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon perustukset laskettiin 1758. Rahapula venytti työtä vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä. Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 kansalliskokous määräsi sen suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun…
+AIEMPI KYSYMYS: Millaista elämä linnoituksen sisällä oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bastilji rakennettiin [[satavuotisen sodan]] aikana suojaamaan Pariisin itäistä sisääntuloa, ja kahdeksan tornin muurien sisällä oli varuskunta. Vuonna 1417 linnoitus julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä sellaisena; vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Vankien olot riippuivat osin heidän asemastaan: ylhäisemmillä vangeilla oli yleisen käsityksen mukaan mahdollisuus omiin huonekaluihin ja kirjoihin, kun taas muilla olot olivat niukemmat. Tunnetuimpiin vankeihin kuuluivat kirjailija [[Voltaire]] ja [[markiisi de Sade]]. Arjen tarkemmista yksityiskohdista en ole varma. Itse en kyl vaihtaisi kaidettani linnan torniin.
+KYSYMYS: Kerro lisää: Voltaire
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: San Franciscon luostarikirkko] 1710–1716 Luostari oli niiden kahdentoista ensimmäisen fransiskaanin päämaja, jotka tulivat Martín de Valencian johdolla Meksikoon ensimmäisellä paavin luvalla tehdä lähetystyötä Uudessa Espanjassa. Se rakennettiin sinne, missä oli ollut Moctezuma II:n eläintarha. Laajimmillaan kirkko ja luostari peittivät korttelit, joita nykyään rajaavat Bolívar, Madero, Eje Central ja Venustiano Carranza — noin 32 000 neliömetriä. Ensimmäisen ristikäytävän pihalla seisoi risti, jonka sanottiin olevan korkeampi kuin kaupungin korkein torni; se oli veistetty Chapultepecin metsän sypressistä. Nykyinen kirkko on paikan kolmas: kaksi ensimmäistä vajosivat pehmeään maahan ja jouduttiin purkamaan. Tämä rakennet…
+- [Havanna — kohdekartta / Kohdekartta: Plaza de Armas] 1520-luku Kun espanjalaiset perustivat kaupungin 1519, tapaan kuului varata heti tilaa julkiselle aukiolle. Plaza de Armas syntyi 1520-luvun alussa vanhankaupungin ensimmäiseksi aukioksi, ja se oli sotilaiden ja hallinnon paikka — nimi tarkoittaa aseiden aukiota. 1580-luvulle tultaessa se oli otettu kokonaan sotilaskäyttöön. Vuonna 1896 aukiota kuvattiin neljäksi ceibapuiden varjostamaksi puistoksi, joiden keskellä seisoi Ferdinand VII:n marmoripatsas. Aukion itälaidalla on kuvernöörien palatsi. Kuvernööri Felipe de Fondesviela, markiisi de la Torre, esitti kaupunginvaltuustolle 28. tammikuuta 1773, että vanha pääkirkko puretaan ja tilalle rakennetaan palatsi. Työ alkoi 1776 kuubalaisen ins…
+AIEMPI KYSYMYS: Millaista elämä linnoituksen sisällä oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bastilji rakennettiin [[satavuotisen sodan]] aikana suojaamaan Pariisin itäistä sisääntuloa, ja kahdeksan tornin muurien sisällä oli varuskunta. Vuonna 1417 linnoitus julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä sellaisena; vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Vankien olot riippuivat osin heidän asemastaan: ylhäisemmillä vangeilla oli yleisen käsityksen mukaan mahdollisuus omiin huonekaluihin ja kirjoihin, kun taas muilla olot olivat niukemmat. Tunnetuimpiin vankeihin kuuluivat kirjailija [[Voltaire]] ja [[markiisi de Sade]]. Arjen tarkemmista yksityiskohdista en ole varma. Itse en kyl vaihtaisi kaidettani linnan torniin.
+KYSYMYS: Kerro lisää: markiisi de Sade
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji] Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+AIEMPI KYSYMYS: Mitä Bastiljin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä tiedän. Paikalla on Place de la Bastille -aukio, jonka keskellä kohoaa [[heinäkuun pylväs]]. Pylväs on pystytetty vuoden 1830 heinäkuun vallankumouksen uhrien muistoksi, ei vuoden 1789 tapahtumien. Aukion laidalla on [[Opéra Bastille]], joka avattiin 1989 vallankumouksen kaksisataavuotisjuhlien aikaan. Linnoituksen paikka on merkitty kiveyksellä, ja osa vanhoista perustuksista on säilynyt Pariisin maan alla. Ylhäältä aukio näyttää pyöreältä kakulta.
+KYSYMYS: Kerro lisää: heinäkuun pylväs
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Palais Garnier] 1875 Uuden oopperatalon suunnittelukilpailu julkistettiin joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. Voittajaksi julistettiin toukokuussa 1861 yksimielisesti nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut asemaansa — viimeinen sana valinnassa oli keisari Napoleon III:lla. Paikka oli hankala: paroni Haussmannin osoittama tontti oli vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita taloja. Garnier ratkaisi asian tekemällä talosta näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat yhtä koreat kuin katsomo. Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra Bastille valmistui; nykyään Palais G…
+AIEMPI KYSYMYS: Mitä Bastiljin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä tiedän. Paikalla on Place de la Bastille -aukio, jonka keskellä kohoaa [[heinäkuun pylväs]]. Pylväs on pystytetty vuoden 1830 heinäkuun vallankumouksen uhrien muistoksi, ei vuoden 1789 tapahtumien. Aukion laidalla on [[Opéra Bastille]], joka avattiin 1989 vallankumouksen kaksisataavuotisjuhlien aikaan. Linnoituksen paikka on merkitty kiveyksellä, ja osa vanhoista perustuksista on säilynyt Pariisin maan alla. Ylhäältä aukio näyttää pyöreältä kakulta.
+KYSYMYS: Kerro lisää: Opéra Bastille
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Keskustori] 1940–1942 Keskustori levittäytyy Vodnikin aukiolle Tromostovjen ja Lohikäärmesillan väliin Ljubljanica-joen oikealle rannalle. Aukio on nimetty Valentin Vodnikin mukaan: hän oli valistusajan lopun pappi, toimittaja ja runoilija. Isoisän aikaan aukiolla ei ole toria eikä Vodnikin patsasta, joka paljastettiin vasta 1889. Paikalla seisoo vanha luostari, jossa toimivat hiippakunnan tyttökoulu ja kirjasto. Vuoden 1895 maanjäristys tuhosi luostarin niin pahoin, että se purettiin kokonaan, ja tyhjälle aukiolle syntyi ulkotori. Torihallin suunnitteli Jože Plečnik 1931–1939, ja se rakennettiin 1940–1942. Kaksikerroksinen halli seuraa joen kaarta: jokipuolella on suuret puolipyöreät ikkunat, katupuol…
+AIEMPI KYSYMYS: Mitä tarkoitti lettre de cachet?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lettre de cachet oli kuninkaan sinetöimä kirje, jolla henkilö voitiin määrätä vangittavaksi tai karkotettavaksi ilman oikeudenkäyntiä. Niitä käytettiin valtiollisiin tarkoituksiin, mutta myös perheiden pyynnöstä esimerkiksi hankalan sukulaisen sulkemiseksi pois. Vankeus saattoi kestää määräämättömän ajan, ja juuri tämä teki käytännöstä vihatun. [[Valistusajan]] ajattelijat arvostelivat sitä ankarasti, ja [[kansalliskokous]] lakkautti sen vallankumouksen alkuvuosina. Ei se kirje ainakaan ollut kyyhkyn kantama, toivon.
+KYSYMYS: Kerro lisää: Valistusajan
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Mitä tarkoitti lettre de cachet?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lettre de cachet oli kuninkaan sinetöimä kirje, jolla henkilö voitiin määrätä vangittavaksi tai karkotettavaksi ilman oikeudenkäyntiä. Niitä käytettiin valtiollisiin tarkoituksiin, mutta myös perheiden pyynnöstä esimerkiksi hankalan sukulaisen sulkemiseksi pois. Vankeus saattoi kestää määräämättömän ajan, ja juuri tämä teki käytännöstä vihatun. [[Valistusajan]] ajattelijat arvostelivat sitä ankarasti, ja [[kansalliskokous]] lakkautti sen vallankumouksen alkuvuosina. Ei se kirje ainakaan ollut kyyhkyn kantama, toivon.
+KYSYMYS: Kerro lisää: kansalliskokous
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Mihin Bastiljin pääportin avain päätyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hauska yksityiskohta. Bastiljin pääportin avain päätyi Atlantin taakse. [[Markiisi de Lafayette]], vallankumouksen tunnettu hahmo, lähetti sen vuonna 1790 lahjaksi [[George Washingtonille]], ensimmäiselle Yhdysvaltain presidentille. Avain on nykyään esillä Washingtonin kotona [[Mount Vernonissa]] Virginiassa. Bastiljin purkaminen alkoi heti valtauksen jälkeen, ja kiviä sekä esineitä myytiin muistoksi. Avaimeni olisi kyl ollut turha, kyyhky lentää ikkunasta.
+KYSYMYS: Kerro lisää: Markiisi de Lafayette
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mihin Bastiljin pääportin avain päätyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hauska yksityiskohta. Bastiljin pääportin avain päätyi Atlantin taakse. [[Markiisi de Lafayette]], vallankumouksen tunnettu hahmo, lähetti sen vuonna 1790 lahjaksi [[George Washingtonille]], ensimmäiselle Yhdysvaltain presidentille. Avain on nykyään esillä Washingtonin kotona [[Mount Vernonissa]] Virginiassa. Bastiljin purkaminen alkoi heti valtauksen jälkeen, ja kiviä sekä esineitä myytiin muistoksi. Avaimeni olisi kyl ollut turha, kyyhky lentää ikkunasta.
+KYSYMYS: Kerro lisää: George Washingtonille
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Mihin Bastiljin pääportin avain päätyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hauska yksityiskohta. Bastiljin pääportin avain päätyi Atlantin taakse. [[Markiisi de Lafayette]], vallankumouksen tunnettu hahmo, lähetti sen vuonna 1790 lahjaksi [[George Washingtonille]], ensimmäiselle Yhdysvaltain presidentille. Avain on nykyään esillä Washingtonin kotona [[Mount Vernonissa]] Virginiassa. Bastiljin purkaminen alkoi heti valtauksen jälkeen, ja kiviä sekä esineitä myytiin muistoksi. Avaimeni olisi kyl ollut turha, kyyhky lentää ikkunasta.
+KYSYMYS: Kerro lisää: Mount Vernonissa
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Kuka nousi Mont Blancille ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvin tunnettu juttu. Mont Blancin huipulle nousivat ensimmäisinä 8. elokuuta 1786 ranskalaiset [[Jacques Balmat]] ja [[Michel-Gabriel Paccard]], jotka lähtivät liikkeelle [[Chamonix'n]] laaksosta. Retkeä oli kannustanut sveitsiläinen luonnontutkija [[Horace-Bénédict de Saussure]], joka oli luvannut palkkion huipulle johtavan reitin löytäjälle ja nousi itse huipulle seuraavana vuonna. Nousu oli alppikiipeilyn varhaisimpia suuria saavutuksia. Ilman siipiä, kyl se on kunnioitettavaa.
+KYSYMYS: Kerro lisää: Jacques Balmat
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Kuka nousi Mont Blancille ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvin tunnettu juttu. Mont Blancin huipulle nousivat ensimmäisinä 8. elokuuta 1786 ranskalaiset [[Jacques Balmat]] ja [[Michel-Gabriel Paccard]], jotka lähtivät liikkeelle [[Chamonix'n]] laaksosta. Retkeä oli kannustanut sveitsiläinen luonnontutkija [[Horace-Bénédict de Saussure]], joka oli luvannut palkkion huipulle johtavan reitin löytäjälle ja nousi itse huipulle seuraavana vuonna. Nousu oli alppikiipeilyn varhaisimpia suuria saavutuksia. Ilman siipiä, kyl se on kunnioitettavaa.
+KYSYMYS: Kerro lisää: Michel-Gabriel Paccard
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Kuka nousi Mont Blancille ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvin tunnettu juttu. Mont Blancin huipulle nousivat ensimmäisinä 8. elokuuta 1786 ranskalaiset [[Jacques Balmat]] ja [[Michel-Gabriel Paccard]], jotka lähtivät liikkeelle [[Chamonix'n]] laaksosta. Retkeä oli kannustanut sveitsiläinen luonnontutkija [[Horace-Bénédict de Saussure]], joka oli luvannut palkkion huipulle johtavan reitin löytäjälle ja nousi itse huipulle seuraavana vuonna. Nousu oli alppikiipeilyn varhaisimpia suuria saavutuksia. Ilman siipiä, kyl se on kunnioitettavaa.
+KYSYMYS: Kerro lisää: Chamonix'n
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Kuka nousi Mont Blancille ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvin tunnettu juttu. Mont Blancin huipulle nousivat ensimmäisinä 8. elokuuta 1786 ranskalaiset [[Jacques Balmat]] ja [[Michel-Gabriel Paccard]], jotka lähtivät liikkeelle [[Chamonix'n]] laaksosta. Retkeä oli kannustanut sveitsiläinen luonnontutkija [[Horace-Bénédict de Saussure]], joka oli luvannut palkkion huipulle johtavan reitin löytäjälle ja nousi itse huipulle seuraavana vuonna. Nousu oli alppikiipeilyn varhaisimpia suuria saavutuksia. Ilman siipiä, kyl se on kunnioitettavaa.
+KYSYMYS: Kerro lisää: Horace-Bénédict de Saussure
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Historia: Neljäsataa univormua ja uudet aakkoset] 1817–1830 — Lokakuussa 1817 kuningas Radama I allekirjoitti Britannian kanssa sopimuksen, joka tunnusti hänet Madagaskarin kuninkaaksi ja lopetti orjaviennin. Korvaus kulki sopimuksessa nimellä The Equivalent: vuosittain tuhat dollaria kultana ja tuhat hopeana, ruutia, piikiviä ja musketteja — sekä neljäsataa Britannian armeijan ylijäämäunivormua. Kolme vuotta myöhemmin Radama tapasi Toamasinassa walesilaiset lähetyssaarnaajat David Jonesin ja David Griffithsin, joilla oli siellä kolmen oppilaan koulu. Vuodessa kouluja oli 23 ja oppilaita 2 300, joista kolmasosa tyttöjä. Kuningas määräsi malagassin kirjoitettavaksi 21 latinalaisella kirjaimella.
+- [Denver — kaupunkilehti / Denver: Maa, joka oli sopimuksella toisten] Seudulla asuivat apassit, utet, tšeijennit, comanchet ja arapahot. Arapahot kutsuvat itseään nimellä Hinono’eino, "meidän ihmisemme", ja tšeijennit nimellä Tsétsėhéstȧhese. Vuoden 1851 Fort Laramien sopimuksessa Yhdysvallat määritteli heidän alueekseen maat North Platte -joelta Arkansas-joelle — juuri sen, missä Denver on. Vuoden 1858 kultaryntäys toi siirtolaistulvan näiden maiden yli, ja Fort Wisen sopimuksessa 1861 luovutettiin yli yhdeksänkymmentä prosenttia niistä. Osa tšeijenneistä kiisti sopimuksen: sen oli allekirjoittanut pieni vähemmistö päälliköistä. Erimielisyys johti vuosien 1864–65 Coloradon sotaan ja Sand Creekin verilöylyyn.
+AIEMPI KYSYMYS: Kummalle maalle huippu oikeastaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on aidosti kiistanalainen kysymys. Huippu sijaitsee Ranskan ja Italian rajalla, ja rajan tarkka kulku huipun kohdalla on tulkinnanvarainen: ranskalaisen näkemyksen mukaan huippu kuuluu Ranskalle, kun taas italialaisen näkemyksen mukaan raja kulkee huipun kautta ja huippu on jaettu maiden kesken. Epäselvyyden juuret on yleisesti yhdistetty [[Torinon sopimuksessa]] vuonna 1860 sovittuihin rajoihin, kun [[Savoijin]] alue siirtyi Ranskalle. En ole varma, onko asia nykyään ratkaistu, joten tietoni voi olla vanhentunutta. Minulle raja on vain viiva kartalla, enkä kysele passia.
+KYSYMYS: Kerro lisää: Torinon sopimuksessa
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Kummalle maalle huippu oikeastaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on aidosti kiistanalainen kysymys. Huippu sijaitsee Ranskan ja Italian rajalla, ja rajan tarkka kulku huipun kohdalla on tulkinnanvarainen: ranskalaisen näkemyksen mukaan huippu kuuluu Ranskalle, kun taas italialaisen näkemyksen mukaan raja kulkee huipun kautta ja huippu on jaettu maiden kesken. Epäselvyyden juuret on yleisesti yhdistetty [[Torinon sopimuksessa]] vuonna 1860 sovittuihin rajoihin, kun [[Savoijin]] alue siirtyi Ranskalle. En ole varma, onko asia nykyään ratkaistu, joten tietoni voi olla vanhentunutta. Minulle raja on vain viiva kartalla, enkä kysele passia.
+KYSYMYS: Kerro lisää: Savoijin
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Mikä on Mont Blancin tunneli ja mihin se johtaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tunneli. Sitä minä en käytä. Mont Blancin tunneli on maantietunneli vuoriston alla, ja se yhdistää ranskalaisen [[Chamonix'n]] laakson italialaiseen [[Courmayeurin]] kaupunkiin. Tunneli on noin 11,6 kilometriä pitkä ja se avattiin liikenteelle vuonna 1965. Vuonna 1999 tunnelissa syttyi vakava tulipalo, jonka vuoksi se oli suljettuna noin kolme vuotta. Minä kyl ylitän vuoren mieluummin päältä.
+KYSYMYS: Kerro lisää: Courmayeurin
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Miksi alppikiipeily syntyi juuri Chamonix'n laaksossa?
+AIEMPI VASTAUS (Livia):
+No jopas. Syitä on useita, ja tärkein on maantiede: Chamonix'n laakso on suoraan Mont Blancin juurella, ja sen jäätiköt vetivät puoleensa 1700-luvulla ensimmäiset matkailijat. Ensinousun jälkeen laaksoon alkoi virrata vieraita, ja vuonna 1821 perustettiin [[Compagnie des guides de Chamonix]] -niminen opasyhdistys, joka ammattimaisti vuoristo-oppaan työn. Laakso on yhä kiipeilyn ja vuoristourheilun keskus: ensimmäiset [[talviolympialaiset]] pidettiin Chamonix'ssa vuonna 1924.
+
+Minulle vuori on vain suuri kivi, jonka yli lennetään sivutuulessa. Mutta että ihmiset kiipeävät sinne huvikseen, sen minä ymmärrän vasta, kun joku kantaa pullan huipulle.
+KYSYMYS: Kerro lisää: Compagnie des guides de Chamonix
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Tropiikki, jossa talvi on sininen] Townsvillen ilmasto on trooppinen savanni, ja sen erikoisuus on talvi. Muualla Queenslandin itärannikon tropiikissa — esimerkiksi Cairnsissa — sataa myös talvella, koska rannikko kulkee pohjois—etelä-suunnassa ja kaakkoispasaati nousee sitä vasten. Townsvillen kohdalla rannikko kääntyy itä—länsisuuntaiseksi, eikä nostetta synny. Siksi talvikuukaudet ovat sinitaivaisia: lämpimät päivät, viileät yöt ja tasainen pasaati. Vuosisade on 1 095 millimetriä 61 sadepäivänä, ja lähes kaikki siitä tulee marras—huhtikuun kuudessa kuukaudessa. Syyskuun keskisade on 9,9 millimetriä.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria] Winnipegissä sää tulee joka suunnasta ja koko voimallaan: talvi on pitkä ja ankara, kesä kuuma ja ukkoinen, ja joka kevät katsotaan, kuinka korkealle Punainen joki nousee.
+- [Sarajevo — kaupunkilehti / Talvikisat: Suomalainen voitti kaikki kolme matkaa] Talviolympialaiset pidettiin Sarajevossa 8.–19. helmikuuta 1984, ja kilpailut käytiin kaupunkia ympäröivillä vuorilla. Suomalainen Marja-Liisa Hämäläinen — nykyään Kirvesniemi — voitti kaikki kolme naisten henkilökohtaista hiihtomatkaa ja hiihti lisäksi viestistä pronssia. Isäntämaa Jugoslavia sai kisoista ensimmäisen talviolympiamitalinsa, kun Jure Franko tuli suurpujottelussa toiseksi.
+AIEMPI KYSYMYS: Miksi alppikiipeily syntyi juuri Chamonix'n laaksossa?
+AIEMPI VASTAUS (Livia):
+No jopas. Syitä on useita, ja tärkein on maantiede: Chamonix'n laakso on suoraan Mont Blancin juurella, ja sen jäätiköt vetivät puoleensa 1700-luvulla ensimmäiset matkailijat. Ensinousun jälkeen laaksoon alkoi virrata vieraita, ja vuonna 1821 perustettiin [[Compagnie des guides de Chamonix]] -niminen opasyhdistys, joka ammattimaisti vuoristo-oppaan työn. Laakso on yhä kiipeilyn ja vuoristourheilun keskus: ensimmäiset [[talviolympialaiset]] pidettiin Chamonix'ssa vuonna 1924.
+
+Minulle vuori on vain suuri kivi, jonka yli lennetään sivutuulessa. Mutta että ihmiset kiipeävät sinne huvikseen, sen minä ymmärrän vasta, kun joku kantaa pullan huipulle.
+KYSYMYS: Kerro lisää: talviolympialaiset
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Mikä on Mer de Glace -jäätikkö Mont Blancin juurella?
+AIEMPI VASTAUS (Livia):
+Just niin, kuuluisa jäätikkö. Mer de Glace on Ranskan suurimpia jäätiköitä, ja se laskeutuu Mont Blancin vuoristosta [[Chamonix'n]] suuntaan. Sen pituus on seitsemän kilometrin luokkaa, mutta jäätikkö on vetäytynyt ja ohentunut viime vuosikymmeninä, ja tietoni lukuarvoista voi olla vanhentunutta. Englantilaiset matkailijat [[William Windham]] ja [[Richard Pococke]] kävivät sitä katsomassa jo vuonna 1741, ja nykyään jäätikölle pääsee hammasratajunalla laakson puolelta. Kyyhky ei kiipeä jäälle, kyyhky katselee.
+KYSYMYS: Kerro lisää: William Windham
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+AIEMPI KYSYMYS: Mikä on Mer de Glace -jäätikkö Mont Blancin juurella?
+AIEMPI VASTAUS (Livia):
+Just niin, kuuluisa jäätikkö. Mer de Glace on Ranskan suurimpia jäätiköitä, ja se laskeutuu Mont Blancin vuoristosta [[Chamonix'n]] suuntaan. Sen pituus on seitsemän kilometrin luokkaa, mutta jäätikkö on vetäytynyt ja ohentunut viime vuosikymmeninä, ja tietoni lukuarvoista voi olla vanhentunutta. Englantilaiset matkailijat [[William Windham]] ja [[Richard Pococke]] kävivät sitä katsomassa jo vuonna 1741, ja nykyään jäätikölle pääsee hammasratajunalla laakson puolelta. Kyyhky ei kiipeä jäälle, kyyhky katselee.
+KYSYMYS: Kerro lisää: Richard Pococke
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Sumatra: Pippurin sulttaanikunta] Saaren pohjoiskärki tunnettiin 1500-luvulta pippurista. Acehista tuli sen kaupan keskus, ja sulttaanikunta avasi omat reittinsä Punaisenmeren kautta Välimerelle kilpailemaan portugalilaisten laivalinjojen kanssa. 1820-luvulla Aceh tuotti yli puolet koko maailman pippurista, ja johtaja Tuanku Ibrahim sai pippuriruhtinaat kuriin pelaamalla heitä toisiaan vastaan. Britannia oli pitkään suojellut sulttaanikunnan itsenäisyyttä, mutta vuosien 1870 ja 1871 sopimuksissa se luovutti Sumatran Alankomaille. Acehin sota alkoi 1873, isoisän omana matkavuonna; sulttaani antautui 1903, ja hajanainen vastarinta jatkui vuoteen 1912.
+AIEMPI KYSYMYS: Miksi huippu on jaettu kahden maan kesken?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Syynä on rajan kulku: Ranskan ja Espanjan raja seuraa Pyreneillä pääosin vuoriston pääharjannetta ja vedenjakajaa, ja Vignemale sijaitsee juuri tällä linjalla. Rajan lopullinen kulku sovittiin 1800-luvun puolivälin [[Bayonnen sopimuksissa]], jotka ratkaisivat sen koko vuoriston matkalta. Ranskan puolella vuori kuuluu [[Hautes-Pyrénées'n departementtiin]] ja Espanjan puolella Huescan maakuntaan [[Aragoniassa]]. Huipun tarkasta rajakohdasta en ole varma enempää. Rajat on ihmisten, harjanteet vuorten.
+KYSYMYS: Kerro lisää: Bayonnen sopimuksissa
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+AIEMPI KYSYMYS: Miksi huippu on jaettu kahden maan kesken?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Syynä on rajan kulku: Ranskan ja Espanjan raja seuraa Pyreneillä pääosin vuoriston pääharjannetta ja vedenjakajaa, ja Vignemale sijaitsee juuri tällä linjalla. Rajan lopullinen kulku sovittiin 1800-luvun puolivälin [[Bayonnen sopimuksissa]], jotka ratkaisivat sen koko vuoriston matkalta. Ranskan puolella vuori kuuluu [[Hautes-Pyrénées'n departementtiin]] ja Espanjan puolella Huescan maakuntaan [[Aragoniassa]]. Huipun tarkasta rajakohdasta en ole varma enempää. Rajat on ihmisten, harjanteet vuorten.
+KYSYMYS: Kerro lisää: Hautes-Pyrénées'n departementtiin
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Miksi huippu on jaettu kahden maan kesken?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Syynä on rajan kulku: Ranskan ja Espanjan raja seuraa Pyreneillä pääosin vuoriston pääharjannetta ja vedenjakajaa, ja Vignemale sijaitsee juuri tällä linjalla. Rajan lopullinen kulku sovittiin 1800-luvun puolivälin [[Bayonnen sopimuksissa]], jotka ratkaisivat sen koko vuoriston matkalta. Ranskan puolella vuori kuuluu [[Hautes-Pyrénées'n departementtiin]] ja Espanjan puolella Huescan maakuntaan [[Aragoniassa]]. Huipun tarkasta rajakohdasta en ole varma enempää. Rajat on ihmisten, harjanteet vuorten.
+KYSYMYS: Kerro lisää: Aragoniassa
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Millaista on Pyreneiden jäätikkö nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyreneiden jäätiköt ovat pieniä ja ne ovat kutistuneet voimakkaasti viimeisen sadan vuoden aikana. Vignemalen rinteillä on [[Ossouen jäätikkö]], joka on Ranskan puolen Pyreneiden suurimpia jäätiköitä, ja Espanjan puolella jäätiköitä on esimerkiksi Maladetan vuoristossa. Syynä on yleisesti [[ilmaston lämpeneminen]], ja ennusteiden mukaan monet Pyreneiden jäätiköt voivat kadota muutaman vuosikymmenen kuluessa. Tilanne muuttuu nopeasti, joten tietoni voi olla jo vanhentunutta. Niitä kannattaa käydä katsomassa, kun vielä voi.
+KYSYMYS: Kerro lisää: Ossouen jäätikkö
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Jääkarhujen pääkaupunki: Uimari joka ei väsy] Jääkarhu on erinomainen uimari: sen eturaajat toimivat lähes airojen tavoin, ja paksu rasvakerros pitää sen kelluvana kylmässä vedessä. Tutkijoiden GPS-pannoilla mittaamana karhu voi uida keskimäärin peräti 3,4 vuorokautta yhtäjaksoisesti ja edetä samalla noin 154 kilometriä ilman lepotaukoa, nopeuden ollessa noin 6 kilometriä tunnissa. Pitkät uinnit ovat karhulle silti raskaita, ja etenkin emojen on täytynyt viime vuosikymmeninä uida yhä pidempiä matkoja jään vetäytyessä yhä kauemmas rannikosta. Osa tutkijoista pitää pitkittyviä uintimatkoja yhtenä merkkinä siitä, miten ilmaston lämpeneminen muuttaa karhujen elinympäristöä.
+AIEMPI KYSYMYS: Millaista on Pyreneiden jäätikkö nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyreneiden jäätiköt ovat pieniä ja ne ovat kutistuneet voimakkaasti viimeisen sadan vuoden aikana. Vignemalen rinteillä on [[Ossouen jäätikkö]], joka on Ranskan puolen Pyreneiden suurimpia jäätiköitä, ja Espanjan puolella jäätiköitä on esimerkiksi Maladetan vuoristossa. Syynä on yleisesti [[ilmaston lämpeneminen]], ja ennusteiden mukaan monet Pyreneiden jäätiköt voivat kadota muutaman vuosikymmenen kuluessa. Tilanne muuttuu nopeasti, joten tietoni voi olla jo vanhentunutta. Niitä kannattaa käydä katsomassa, kun vielä voi.
+KYSYMYS: Kerro lisää: ilmaston lämpeneminen
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Mikä on koko Pyreneiden korkein huippu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pyreneiden korkein huippu on [[Aneto]], jonka korkeus on 3 404 metriä. Se sijaitsee [[Maladetan]] vuoristoryhmässä Espanjan puolella [[Aragoniassa]]. Vignemale on siis Ranskan puolen Pyreneiden korkein huippu, mutta koko vuoriston korkein on Espanjan puolella. Ja luvun muistin ulkoa.
+KYSYMYS: Kerro lisää: Aneto
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Mikä on koko Pyreneiden korkein huippu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pyreneiden korkein huippu on [[Aneto]], jonka korkeus on 3 404 metriä. Se sijaitsee [[Maladetan]] vuoristoryhmässä Espanjan puolella [[Aragoniassa]]. Vignemale on siis Ranskan puolen Pyreneiden korkein huippu, mutta koko vuoriston korkein on Espanjan puolella. Ja luvun muistin ulkoa.
+KYSYMYS: Kerro lisää: Maladetan
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Keitä baskit ovat ja missä he asuvat?
+AIEMPI VASTAUS (Livia):
+Kato, nyt lennetään länteen. Baskit ovat Pyreneiden länsipäässä Biskajanlahden rannikolla asuva kansa, jonka alue ulottuu sekä Espanjan että Ranskan puolelle. Espanjan puolella he asuvat pääosin Baskimaan ja [[Navarran]] alueella. Baskien oma kieli, [[euskara]], ei ole sukua indoeurooppalaisille kielille, ja sen alkuperää pidetään tutkimuksessa yhä avoimena. Kuvaan kansaa kunnioittavasti: alueella on vahva oma kulttuurinsa ja oma identiteettinsä. Pitkä lento länteen, mutta kannatti.
+KYSYMYS: Kerro lisää: Navarran
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Keitä baskit ovat ja missä he asuvat?
+AIEMPI VASTAUS (Livia):
+Kato, nyt lennetään länteen. Baskit ovat Pyreneiden länsipäässä Biskajanlahden rannikolla asuva kansa, jonka alue ulottuu sekä Espanjan että Ranskan puolelle. Espanjan puolella he asuvat pääosin Baskimaan ja [[Navarran]] alueella. Baskien oma kieli, [[euskara]], ei ole sukua indoeurooppalaisille kielille, ja sen alkuperää pidetään tutkimuksessa yhä avoimena. Kuvaan kansaa kunnioittavasti: alueella on vahva oma kulttuurinsa ja oma identiteettinsä. Pitkä lento länteen, mutta kannatti.
+KYSYMYS: Kerro lisää: euskara
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Missä Andorra sijaitsee ja millainen valtio se on?
+AIEMPI VASTAUS (Livia):
+Mmm— pieni mutta tärkeä. Andorra on pieni itsenäinen valtio Pyreneillä Ranskan ja Espanjan välissä. Sen pääkaupunki on [[Andorra la Vella]], virallinen kieli on [[katalaani]] ja pinta-ala vain noin 470 neliökilometriä. Valtiolla on poikkeuksellinen valtiomuoto: sen yhteisinä valtionpäämiehinä toimivat [[Urgellin piispa]] ja Ranskan presidentti. Kyyhkylle tuollainen on yhden lepotauon mittainen valtio.
+KYSYMYS: Kerro lisää: Andorra la Vella
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+AIEMPI KYSYMYS: Missä Andorra sijaitsee ja millainen valtio se on?
+AIEMPI VASTAUS (Livia):
+Mmm— pieni mutta tärkeä. Andorra on pieni itsenäinen valtio Pyreneillä Ranskan ja Espanjan välissä. Sen pääkaupunki on [[Andorra la Vella]], virallinen kieli on [[katalaani]] ja pinta-ala vain noin 470 neliökilometriä. Valtiolla on poikkeuksellinen valtiomuoto: sen yhteisinä valtionpäämiehinä toimivat [[Urgellin piispa]] ja Ranskan presidentti. Kyyhkylle tuollainen on yhden lepotauon mittainen valtio.
+KYSYMYS: Kerro lisää: katalaani
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+AIEMPI KYSYMYS: Missä Andorra sijaitsee ja millainen valtio se on?
+AIEMPI VASTAUS (Livia):
+Mmm— pieni mutta tärkeä. Andorra on pieni itsenäinen valtio Pyreneillä Ranskan ja Espanjan välissä. Sen pääkaupunki on [[Andorra la Vella]], virallinen kieli on [[katalaani]] ja pinta-ala vain noin 470 neliökilometriä. Valtiolla on poikkeuksellinen valtiomuoto: sen yhteisinä valtionpäämiehinä toimivat [[Urgellin piispa]] ja Ranskan presidentti. Kyyhkylle tuollainen on yhden lepotauon mittainen valtio.
+KYSYMYS: Kerro lisää: Urgellin piispa
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pakistan — maalehti / Luonto: Puolet suolasta jätetään pylväiksi] Khewran suolakaivos Punjabin Suolavuoristossa on maailman toiseksi suurin. Tarinan mukaan esiintymä löytyi vuonna 326 eaa., kun Aleksanteri Suuren armeijan hevoset alkoivat nuolla kiviä. Kauppa alkoi mughalien aikana, ja brittien kaivosinsinööri H. Warth avasi pääkäytävän 1872. Louhinta tehdään kammio ja pylväs -menetelmällä: vain puolet suolasta otetaan ja loput jätetään kannattelemaan kattoa. Kerroksia on yhdeksäntoista, joista yksitoista maan alla, käytävää noin 40 kilometriä ja lämpötila pysyy 18–20 asteessa. Suolatiilistä on muurattu kaivokseen moskeija.
+AIEMPI KYSYMYS: Kuinka kapea Gibraltarinsalmi todella on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sehän on aika lyhyt lento. Gibraltarinsalmi on kapeimmillaan noin neljätoista kilometriä leveä, ja se erottaa Iberian niemimaan Marokosta. Muinaisessa tarustossa sen kahta vastakkaista kallioniemeä kutsuttiin [[Herkuleen pylväiksi]], ja toinen niistä on [[Gibraltarin kallio]]. Salmen yli kulkee lauttayhteyksiä esimerkiksi [[Tarifasta]] Marokon puolelle, ja matka kestää noin tunnin. Minulta menee salmen ylitykseen kai vartti.
+KYSYMYS: Kerro lisää: Herkuleen pylväiksi
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kaupunkilehti / Winnipeg: Kaksi yhtiötä ja seitsemän tammea] North West Company rakensi Fort Gibraltarin 1809 ja Hudson's Bay Company Fort Douglasin 1812, ja yhtiöt kilpailivat kiivaasti samasta turkiskaupasta. Lord Selkirk osti maata ja perusti ensimmäisen pysyvän siirtokunnan, Red River Colonyn, ja mittautti jokitontit. Métisit ja Selkirkin uudisasukkaat ottivat yhteen Seitsemän tammen taistelussa 1816. Kilpailu päättyi vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja se rakennettiin uudelleen vasta 1835.
+AIEMPI KYSYMYS: Kuinka kapea Gibraltarinsalmi todella on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sehän on aika lyhyt lento. Gibraltarinsalmi on kapeimmillaan noin neljätoista kilometriä leveä, ja se erottaa Iberian niemimaan Marokosta. Muinaisessa tarustossa sen kahta vastakkaista kallioniemeä kutsuttiin [[Herkuleen pylväiksi]], ja toinen niistä on [[Gibraltarin kallio]]. Salmen yli kulkee lauttayhteyksiä esimerkiksi [[Tarifasta]] Marokon puolelle, ja matka kestää noin tunnin. Minulta menee salmen ylitykseen kai vartti.
+KYSYMYS: Kerro lisää: Gibraltarin kallio
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+AIEMPI KYSYMYS: Kuinka kapea Gibraltarinsalmi todella on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sehän on aika lyhyt lento. Gibraltarinsalmi on kapeimmillaan noin neljätoista kilometriä leveä, ja se erottaa Iberian niemimaan Marokosta. Muinaisessa tarustossa sen kahta vastakkaista kallioniemeä kutsuttiin [[Herkuleen pylväiksi]], ja toinen niistä on [[Gibraltarin kallio]]. Salmen yli kulkee lauttayhteyksiä esimerkiksi [[Tarifasta]] Marokon puolelle, ja matka kestää noin tunnin. Minulta menee salmen ylitykseen kai vartti.
+KYSYMYS: Kerro lisää: Tarifasta
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Eliöstö ja maasto: Suolajärviä hiekkameren keskellä] Libyan Fezzanin alueella, keskellä 58 000 neliökilometrin laajuista Awbarin hiekkamerta, piilee yli kaksikymmentä järveä palmulehtoineen. Vettä ei virtaa niihin mistään joesta, joten haihtuminen on tehnyt osasta järvistä lähes viisi kertaa merivettä suolaisempia; suolaa sietävät levät värjäävät joidenkin pinnan punertavaksi. Noin 200 000 vuotta sitten alue oli osa valtavaa Megafezzan-järveä, joka kutistui vähitellen muutaman tuhannen vuoden kuluessa. Nykyiset järvet ovat siis viimeiset jäänteet ajasta, jolloin Sahara oli vihreä ja vetinen.
+AIEMPI KYSYMYS: Miksi Välimeri on niin suolainen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on oikeasti hauska juttu. Välimeri on suolaisempi kuin valtameret, koska sen alueella [[haihtuminen]] on suurempaa kuin sadanta ja jokien tuoma vesimäärä. Menetettyä vettä korvaa [[Atlantin]] vesi, joka virtaa pintakerroksessa sisään Gibraltarinsalmen kautta, kun taas suolaisempi vesi virtaa syvempänä ulos. Salmi on kapea, joten veden vaihtuminen on hidasta, ja siksi Välimeren [[suolapitoisuus]] on noin 38 promillea, kun valtamerillä se on noin 35. Ei kannata juoda, sanon kokemuksesta.
+KYSYMYS: Kerro lisää: haihtuminen
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi Välimeri on niin suolainen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on oikeasti hauska juttu. Välimeri on suolaisempi kuin valtameret, koska sen alueella [[haihtuminen]] on suurempaa kuin sadanta ja jokien tuoma vesimäärä. Menetettyä vettä korvaa [[Atlantin]] vesi, joka virtaa pintakerroksessa sisään Gibraltarinsalmen kautta, kun taas suolaisempi vesi virtaa syvempänä ulos. Salmi on kapea, joten veden vaihtuminen on hidasta, ja siksi Välimeren [[suolapitoisuus]] on noin 38 promillea, kun valtamerillä se on noin 35. Ei kannata juoda, sanon kokemuksesta.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+AIEMPI KYSYMYS: Miksi Välimeri on niin suolainen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on oikeasti hauska juttu. Välimeri on suolaisempi kuin valtameret, koska sen alueella [[haihtuminen]] on suurempaa kuin sadanta ja jokien tuoma vesimäärä. Menetettyä vettä korvaa [[Atlantin]] vesi, joka virtaa pintakerroksessa sisään Gibraltarinsalmen kautta, kun taas suolaisempi vesi virtaa syvempänä ulos. Salmi on kapea, joten veden vaihtuminen on hidasta, ja siksi Välimeren [[suolapitoisuus]] on noin 38 promillea, kun valtamerillä se on noin 35. Ei kannata juoda, sanon kokemuksesta.
+KYSYMYS: Kerro lisää: suolapitoisuus
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Sisilia] Saari, jossa nukketeatterin ritarit taistelevat narujen varassa, leivos täytetään vasta tilauksesta, ja torilla huudetaan laulaen.
+AIEMPI KYSYMYS: Mitkä ovat Välimeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Välimeren suurimmat saaret ovat suuruusjärjestyksessä [[Sisilia]], [[Sardinia]], [[Kypros]], [[Korsika]] ja [[Kreeta]]. Sisilia ja Sardinia kuuluvat Italiaan, Korsika Ranskaan ja Kreeta Kreikkaan, ja Kypros on itsenäinen valtio, joka sijaitsee itäisessä Välimeressä. Sisilia on koko meren suurin saari, ja pinta-alaltaan se on yli 25 000 neliökilometriä.
+
+Italiassa pulla on maritozzo, ja jos Sisiliassakin tuoksuu samalta, minä muutan sinne asumaan. Mutta tämä on vain toive.
+KYSYMYS: Kerro lisää: Sisilia
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+AIEMPI KYSYMYS: Mitkä ovat Välimeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Välimeren suurimmat saaret ovat suuruusjärjestyksessä [[Sisilia]], [[Sardinia]], [[Kypros]], [[Korsika]] ja [[Kreeta]]. Sisilia ja Sardinia kuuluvat Italiaan, Korsika Ranskaan ja Kreeta Kreikkaan, ja Kypros on itsenäinen valtio, joka sijaitsee itäisessä Välimeressä. Sisilia on koko meren suurin saari, ja pinta-alaltaan se on yli 25 000 neliökilometriä.
+
+Italiassa pulla on maritozzo, ja jos Sisiliassakin tuoksuu samalta, minä muutan sinne asumaan. Mutta tämä on vain toive.
+KYSYMYS: Kerro lisää: Sardinia
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto] Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saarella on myös vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä.
+AIEMPI KYSYMYS: Mitkä ovat Välimeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Välimeren suurimmat saaret ovat suuruusjärjestyksessä [[Sisilia]], [[Sardinia]], [[Kypros]], [[Korsika]] ja [[Kreeta]]. Sisilia ja Sardinia kuuluvat Italiaan, Korsika Ranskaan ja Kreeta Kreikkaan, ja Kypros on itsenäinen valtio, joka sijaitsee itäisessä Välimeressä. Sisilia on koko meren suurin saari, ja pinta-alaltaan se on yli 25 000 neliökilometriä.
+
+Italiassa pulla on maritozzo, ja jos Sisiliassakin tuoksuu samalta, minä muutan sinne asumaan. Mutta tämä on vain toive.
+KYSYMYS: Kerro lisää: Kypros
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+AIEMPI KYSYMYS: Mitkä ovat Välimeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Välimeren suurimmat saaret ovat suuruusjärjestyksessä [[Sisilia]], [[Sardinia]], [[Kypros]], [[Korsika]] ja [[Kreeta]]. Sisilia ja Sardinia kuuluvat Italiaan, Korsika Ranskaan ja Kreeta Kreikkaan, ja Kypros on itsenäinen valtio, joka sijaitsee itäisessä Välimeressä. Sisilia on koko meren suurin saari, ja pinta-alaltaan se on yli 25 000 neliökilometriä.
+
+Italiassa pulla on maritozzo, ja jos Sisiliassakin tuoksuu samalta, minä muutan sinne asumaan. Mutta tämä on vain toive.
+KYSYMYS: Kerro lisää: Korsika
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Kreeta] Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän kuin ihmisiä.
+AIEMPI KYSYMYS: Mitkä ovat Välimeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Välimeren suurimmat saaret ovat suuruusjärjestyksessä [[Sisilia]], [[Sardinia]], [[Kypros]], [[Korsika]] ja [[Kreeta]]. Sisilia ja Sardinia kuuluvat Italiaan, Korsika Ranskaan ja Kreeta Kreikkaan, ja Kypros on itsenäinen valtio, joka sijaitsee itäisessä Välimeressä. Sisilia on koko meren suurin saari, ja pinta-alaltaan se on yli 25 000 neliökilometriä.
+
+Italiassa pulla on maritozzo, ja jos Sisiliassakin tuoksuu samalta, minä muutan sinne asumaan. Mutta tämä on vain toive.
+KYSYMYS: Kerro lisää: Kreeta
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Putous, jonka nimi tarkoittaa jauhamista] Ouzoud on yhteisnimi useille putouksille Azilalin maakunnassa Keski-Atlaksessa. Vesi putoaa kaikkiaan 110 metriä kolmessa portaassa El-Abid-joen rotkoon; joen nimi tarkoittaa orjien jokea. Azilalin kaupunkiin on matkaa 36 kilometriä ja Marrakechiin 150. Nimi ouzoud tarkoittaa berberiksi viljan jauhamista, ja se kertoo, mihin vettä käytettiin ennen kuin sitä tultiin katsomaan: putouksen yläpuolella on yhä pieniä vesimyllyjä, joissa jauhettiin kylän vilja. Alempana rotkossa kasvaa oliivipuita, joita kastellaan samasta joesta.
+- [Egypti — maalehti / Luonto: Keidas keskellä ei-mitään] Siwan keidas on aavikon saari: lähimpään kaupunkiin on satoja kilometrejä hiekkaa, mutta keitaalla pulppuaa satoja lähteitä, joiden varassa kasvaa satojatuhansia taateli- ja oliivipuita. Eristyksissä siwalaiset säilyttivät oman berberikielensä, jota muualla Egyptissä ei puhuta. Kuuluisin vieras saapui vuonna 331 eaa.: Aleksanteri Suuri vaelsi aavikon poikki kysymään neuvoa keitaan oraakkelilta.
+- [Kreeta — kaupunkilehti / Kreeta] Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän kuin ihmisiä.
+AIEMPI KYSYMYS: Millainen Välimeren ilmasto on?
+AIEMPI VASTAUS (Livia):
+Kato, nyt puhutaan lämmöstä. Välimeren ilmastolle ovat tyypillisiä kuumat ja kuivat kesät sekä leudot ja sateiset talvet, ja suurin osa sateesta tulee syksyllä ja talvella. Ilmasto näkyy kasvillisuudessa: rannikoilla viljellään muun muassa [[oliivipuita]] ja viiniköynnöksiä. Alueella on myös paikallisia tuulia: Ranskassa puhaltaa kylmä tuuli nimeltä [[mistral]] ja Saharasta Välimeren yli lämmin [[sirocco]]. Minä viihdyn kyl kaiteella, jossa aurinko paistaa.
+KYSYMYS: Kerro lisää: oliivipuita
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — maalehti / Urheilu: Cheung Chaun tyttö ja neljänkymmenenneljän vuoden odotus] 1996 — Lee Lai Shan syntyi 1970 Cheung Chaun saarella, nousi purjelaudalle kaksitoistavuotiaana, aloitti kilpailut seitsemäntoista ja pääsi maajoukkueeseen yhdeksäntoista vanhana. Maailmanmestariksi hän tuli 1993. Atlantan olympialaisissa 1996 hän voitti naisten mistral-luokan — se oli Hongkongin ensimmäinen olympiamitali, vaikka alue oli osallistunut kisoihin vuodesta 1952. Voiton jälkeen hän sanoi toimittajille lauseen, joka jäi elämään: hongkongilaiset urheilijat eivät ole roskaa. Cheung Chaun rannan lähelle on pystytetty purjelautaa ja mastoa muistuttava muistomerkki.
+AIEMPI KYSYMYS: Millainen Välimeren ilmasto on?
+AIEMPI VASTAUS (Livia):
+Kato, nyt puhutaan lämmöstä. Välimeren ilmastolle ovat tyypillisiä kuumat ja kuivat kesät sekä leudot ja sateiset talvet, ja suurin osa sateesta tulee syksyllä ja talvella. Ilmasto näkyy kasvillisuudessa: rannikoilla viljellään muun muassa [[oliivipuita]] ja viiniköynnöksiä. Alueella on myös paikallisia tuulia: Ranskassa puhaltaa kylmä tuuli nimeltä [[mistral]] ja Saharasta Välimeren yli lämmin [[sirocco]]. Minä viihdyn kyl kaiteella, jossa aurinko paistaa.
+KYSYMYS: Kerro lisää: mistral
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+AIEMPI KYSYMYS: Millainen Välimeren ilmasto on?
+AIEMPI VASTAUS (Livia):
+Kato, nyt puhutaan lämmöstä. Välimeren ilmastolle ovat tyypillisiä kuumat ja kuivat kesät sekä leudot ja sateiset talvet, ja suurin osa sateesta tulee syksyllä ja talvella. Ilmasto näkyy kasvillisuudessa: rannikoilla viljellään muun muassa [[oliivipuita]] ja viiniköynnöksiä. Alueella on myös paikallisia tuulia: Ranskassa puhaltaa kylmä tuuli nimeltä [[mistral]] ja Saharasta Välimeren yli lämmin [[sirocco]]. Minä viihdyn kyl kaiteella, jossa aurinko paistaa.
+KYSYMYS: Kerro lisää: sirocco
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+AIEMPI KYSYMYS: Keitä olivat foinikialaiset ja mitä he jättivät jälkeensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Merenkulkijoita, siis melkein kollegoita. Foinikialaiset olivat itäisen Välimeren rannikolla nykyisen Libanonin seudulla asunut kauppakansa, jonka kaupunkeja olivat muun muassa [[Tyros]] ja Sidon. He purjehtivat ympäri Välimerta ja perustivat kauppa-asemia ja siirtokuntia, joista tunnetuin oli [[Karthago]]. Heidän tärkeä perintönsä on [[aakkostonsa]]: foinikialainen aakkosto oli kreikkalaisten aakkosten esikuva, ja sitä kautta pitkälti nykyisten eurooppalaisten kirjoitusjärjestelmien edeltäjä. Paljon he kantoivat, melkein kuin kyyhky.
+KYSYMYS: Kerro lisää: Tyros
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthago] Isoisän vuonna 1873 Karthago ei ollut avoin muistomerkkipuisto: suurin osa muinaisesta suurkaupungista lepäsi hiekan ja oliivitarhojen alla Tunisinlahden rannalla, odottaen ensimmäisiä järjestelmällisiä kaivauksia.
+AIEMPI KYSYMYS: Keitä olivat foinikialaiset ja mitä he jättivät jälkeensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Merenkulkijoita, siis melkein kollegoita. Foinikialaiset olivat itäisen Välimeren rannikolla nykyisen Libanonin seudulla asunut kauppakansa, jonka kaupunkeja olivat muun muassa [[Tyros]] ja Sidon. He purjehtivat ympäri Välimerta ja perustivat kauppa-asemia ja siirtokuntia, joista tunnetuin oli [[Karthago]]. Heidän tärkeä perintönsä on [[aakkostonsa]]: foinikialainen aakkosto oli kreikkalaisten aakkosten esikuva, ja sitä kautta pitkälti nykyisten eurooppalaisten kirjoitusjärjestelmien edeltäjä. Paljon he kantoivat, melkein kuin kyyhky.
+KYSYMYS: Kerro lisää: Karthago
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+AIEMPI KYSYMYS: Keitä olivat foinikialaiset ja mitä he jättivät jälkeensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Merenkulkijoita, siis melkein kollegoita. Foinikialaiset olivat itäisen Välimeren rannikolla nykyisen Libanonin seudulla asunut kauppakansa, jonka kaupunkeja olivat muun muassa [[Tyros]] ja Sidon. He purjehtivat ympäri Välimerta ja perustivat kauppa-asemia ja siirtokuntia, joista tunnetuin oli [[Karthago]]. Heidän tärkeä perintönsä on [[aakkostonsa]]: foinikialainen aakkosto oli kreikkalaisten aakkosten esikuva, ja sitä kautta pitkälti nykyisten eurooppalaisten kirjoitusjärjestelmien edeltäjä. Paljon he kantoivat, melkein kuin kyyhky.
+KYSYMYS: Kerro lisää: aakkostonsa
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ylhäältä päin. Lahti näyttää pahalta jo katsomalla.
+Maine perustuu lahden asemaan: se aukeaa suoraan avoimen [[Atlantin]] myrskyille, ja vallitsevat länsituulet ajavat aallokon lahden perukoille. Kun purjelaiva joutui myrskyssä lahden sisään, sen oli usein vaikea purjehtia tuulta vastaan takaisin ulapalle, ja tuuli painoi sen kohti rantaa. Avomereltä tuleva [[aallokko]] kasvaa suureksi, ja Espanjan pohjoisrannikko ja Ranskan länsirannikko ovat monin paikoin kallioisia. Siksi [[purjelaivojen]] aikaan lahti oli yksi Euroopan pelätyimmistä merialueista.
+Onneksi kyyhky pysyy mieluummin kuivalla maalla.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Historia: Satama, joka rakennettiin aallokkoon] Madrasilla ei ollut luonnonsatamaa. Laivat ankkuroivat yli kilometrin päähän rannasta, ja lasti tuotiin maihin masula-veneillä ja katamaraaneilla aallokon läpi. Satamaa ehdotti Warren Hastings jo 1770, mutta ensimmäisiin laituritöihin ryhdyttiin vasta 1850-luvulla kauppakamarin aloitteesta, ja vuosien 1868 ja 1872 myrskyt tekivät laitureista käyttökelvottomia. Uuden sataman peruskiven laski 1875 Britannian tuleva kuningas Edward VII, ja aallonmurtajien kivityöt alkoivat 1876. Kun poikittaispadot romahtivat 1877, eteläistä laituria alettiin rakentaa kolmenkymmenenkolmen tonnin betoniharkoista.
+AIEMPI KYSYMYS: Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ylhäältä päin. Lahti näyttää pahalta jo katsomalla.
+Maine perustuu lahden asemaan: se aukeaa suoraan avoimen [[Atlantin]] myrskyille, ja vallitsevat länsituulet ajavat aallokon lahden perukoille. Kun purjelaiva joutui myrskyssä lahden sisään, sen oli usein vaikea purjehtia tuulta vastaan takaisin ulapalle, ja tuuli painoi sen kohti rantaa. Avomereltä tuleva [[aallokko]] kasvaa suureksi, ja Espanjan pohjoisrannikko ja Ranskan länsirannikko ovat monin paikoin kallioisia. Siksi [[purjelaivojen]] aikaan lahti oli yksi Euroopan pelätyimmistä merialueista.
+Onneksi kyyhky pysyy mieluummin kuivalla maalla.
+KYSYMYS: Kerro lisää: aallokko
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Horn — kaupunkilehti / Kap Horn: Purjelaivojen hautausmaa] Kap Hornin ympärillä puhaltavat lähes taukoamatta "pauhaavat neljäkymmentä", "raivoisat viisikymmentä" ja "kiljuvat kuusikymmentä" -nimillä tunnetut länsituulet, joita Andit ja Etelämantereen niemimaa vielä voimistavat suppilomaisesti. Matalikoilla tuuli ja virtaukset nostavat aaltoja, jotka voivat äityä yli 30 metrin korkuisiksi jättiaalloiksi, ja jäävuoret ajautuvat alueelle etenkin talvikuukausina. Charles Darwin kirjoitti rannikosta nähtyään sen: pelkkä näky riittäisi saamaan maakravun näkemään viikon painajaisia haaksirikoista. Satojen vuosien aikana Kap Hornin edustalle onkin uponnut lukemattomia laivoja.
+AIEMPI KYSYMYS: Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ylhäältä päin. Lahti näyttää pahalta jo katsomalla.
+Maine perustuu lahden asemaan: se aukeaa suoraan avoimen [[Atlantin]] myrskyille, ja vallitsevat länsituulet ajavat aallokon lahden perukoille. Kun purjelaiva joutui myrskyssä lahden sisään, sen oli usein vaikea purjehtia tuulta vastaan takaisin ulapalle, ja tuuli painoi sen kohti rantaa. Avomereltä tuleva [[aallokko]] kasvaa suureksi, ja Espanjan pohjoisrannikko ja Ranskan länsirannikko ovat monin paikoin kallioisia. Siksi [[purjelaivojen]] aikaan lahti oli yksi Euroopan pelätyimmistä merialueista.
+Onneksi kyyhky pysyy mieluummin kuivalla maalla.
+KYSYMYS: Kerro lisää: purjelaivojen
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Sademetsä ja joet: Vaaleanpunainen jokidelfiini] Tapajós- ja Amazon-jokien vesissä ui boto, Amazonin jokidelfiini, joka voi kasvaa yli kaksi ja puoli metriä pitkäksi ja painaa yli 150 kiloa. Sen pitkä kapea kuono ja notkea kaula erottavat sen merissä elävistä delfiineistä, ja iän myötä sen iho muuttuu yhä vaaleanpunaisemmaksi. Lähellä Alter do Chãota sijaitseva Ponta do Cururú on tunnettu paikka, jossa botoja ja harmaita tucuxi-delfiinejä kokoontuu iltaisin syömään matalikoille. Paikallisessa Sairé-juhlassa, jonka jesuiitat toivat alueelle jo 1600-luvulla, juhlitaan yhä sekä botoa että tucuxia.
+- [Kap Palmas — kaupunkilehti / Kap Palmas: Lahti, laguuni ja hiekkaranta] Harperin edustalla Atlantin vedet ovat ympäri vuoden lämpimiä, ja niissä riittää kalaa, delfiinejä, satunnaisia valaita ja ostereita täynnä olevia simpukkapenkkejä. Kaupungin takana kapea hiekkaharju erottaa meren matalasta laguunista, jonka rannalla olkikattoiset kylät ovat sijainneet sukupolvien ajan. Kalastajat lähtevät edelleen pitkillä kanooteilla aaltojen läpi avomerelle, samaan tapaan kuin isoisän aikana 1870-luvulla, jolloin rannikon laivaliikenne kulki juuri tätä samaa hiekkarantaa pitkin kohti Harperin satamaa.
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Meriruoho ruokkii dugongit] Dilin ympäristö tuottaa luontaisesti kuivaa lehtimetsää. Rannikon mangrovelajeihin kuuluu silmälläpidettävä Ceriops decandra. Rannan edustan meriruohoniityt elättävät dugongeja ja merikilpikonnia, ja kauempana avovesillä liikkuu delfiinejä ja valaita. Kaupungin oma kasvu näkyy näissä luvuissa: vuosina 1990–2014 Dilin ympärillä olevan tasaisen maan maatalouskäytön arvioidaan vähentyneen noin neljäkymmentä prosenttia, ja kosteikot ovat kaventuneet edelleen, kun niitä on kuivattu ja rakennettu.
+AIEMPI KYSYMYS: Mitä eläimiä lahdella tapaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Siivin nähtynä lahden pinta on yllättävän vilkas.
+Biskajanlahdella tavataan monenlaisia merinisäkkäitä, erityisesti [[delfiinejä]] ja useita [[valaslajeja]], ja lahti tunnetaan hyvänä paikkana valaiden katseluun. Merilintuja on runsaasti, ja alueen kalastus perustuu muun muassa [[anjovikseen]] ja sardiiniin. Tarkkoja lajimääriä en ole varma antamaan, mutta avoin syvä vesi ja rikas ravinto tekevät lahdesta merkittävän elinympäristön.
+Ja kaiken tämän minä näen vain ylhäältä.
+KYSYMYS: Kerro lisää: delfiinejä
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitä eläimiä lahdella tapaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Siivin nähtynä lahden pinta on yllättävän vilkas.
+Biskajanlahdella tavataan monenlaisia merinisäkkäitä, erityisesti [[delfiinejä]] ja useita [[valaslajeja]], ja lahti tunnetaan hyvänä paikkana valaiden katseluun. Merilintuja on runsaasti, ja alueen kalastus perustuu muun muassa [[anjovikseen]] ja sardiiniin. Tarkkoja lajimääriä en ole varma antamaan, mutta avoin syvä vesi ja rikas ravinto tekevät lahdesta merkittävän elinympäristön.
+Ja kaiken tämän minä näen vain ylhäältä.
+KYSYMYS: Kerro lisää: valaslajeja
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitä eläimiä lahdella tapaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Siivin nähtynä lahden pinta on yllättävän vilkas.
+Biskajanlahdella tavataan monenlaisia merinisäkkäitä, erityisesti [[delfiinejä]] ja useita [[valaslajeja]], ja lahti tunnetaan hyvänä paikkana valaiden katseluun. Merilintuja on runsaasti, ja alueen kalastus perustuu muun muassa [[anjovikseen]] ja sardiiniin. Tarkkoja lajimääriä en ole varma antamaan, mutta avoin syvä vesi ja rikas ravinto tekevät lahdesta merkittävän elinympäristön.
+Ja kaiken tämän minä näen vain ylhäältä.
+KYSYMYS: Kerro lisää: anjovikseen
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Kuinka syvä Biskajanlahti on?
+AIEMPI VASTAUS (Livia):
+Mmm— syvyyksiä minä en oikein itse näe.
+Biskajanlahden syvyys vaihtelee voimakkaasti. Ranskan länsirannikon edustalla [[mannerjalusta]] on leveä ja suhteellisen matala, mutta Espanjan pohjoisrannikolla se on kapea ja merenpohja syvenee jyrkästi. Lahden syvimmät osat ovat yli neljän kilometrin syvyydessä, mutta tarkasta luvusta en ole varma. Syvimmillä alueilla pohjaa luonnehtii laaja [[syvänmeren]] tasanko.
+Lukuja kyyhky muistaa huonommin kuin reittejä.
+KYSYMYS: Kerro lisää: mannerjalusta
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Kivi, joka putosi miljoona vuotta sitten] Järvi on törmäyskraatterissa. Kraatteri on halkaisijaltaan 10,5 kilometriä eli hieman järveä suurempi, ja se on 1,07 miljoonaa vuotta vanha. Syvyyttä on noin 380 metriä ja sedimenttien kanssa 750. Todisteet ovat kaukana: Norsunluurannikolta löytyy tektiittejä, joiden uskotaan syntyneen tästä törmäyksestä, ja mikrotektiittejä on syvänmeren sedimenteissä Afrikan länsipuolella. Ennen törmäystä alue oli rehevää sademetsää. Vesi on käynyt matalalla ja korkealla: kukkuloiden huipuilta on löytynyt kalanfossiileja, ja vielä noin kolmesataa vuotta sitten järvi oli kutistunut lammeksi.
+AIEMPI KYSYMYS: Kuinka syvä Biskajanlahti on?
+AIEMPI VASTAUS (Livia):
+Mmm— syvyyksiä minä en oikein itse näe.
+Biskajanlahden syvyys vaihtelee voimakkaasti. Ranskan länsirannikon edustalla [[mannerjalusta]] on leveä ja suhteellisen matala, mutta Espanjan pohjoisrannikolla se on kapea ja merenpohja syvenee jyrkästi. Lahden syvimmät osat ovat yli neljän kilometrin syvyydessä, mutta tarkasta luvusta en ole varma. Syvimmillä alueilla pohjaa luonnehtii laaja [[syvänmeren]] tasanko.
+Lukuja kyyhky muistaa huonommin kuin reittejä.
+KYSYMYS: Kerro lisää: syvänmeren
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Biskajanlahden rannalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Moni näistä on tullut laskeuduttua katolle.
+Espanjan puolella lahden rannalla ovat esimerkiksi satamakaupunki [[Bilbao]] ja [[Santander]]. Ranskan puolella tunnettuja rantakaupunkeja ovat [[La Rochelle]] ja Espanjan rajan lähellä sijaitseva [[Biarritz]]. Luettelo ei ole tyhjentävä, sillä lahden rannikko on pitkä ja siellä on lukuisia pienempiä satamia ja kalastajakyliä.
+Lista venyi, vaikka lupasin pitää sen lyhyenä.
+KYSYMYS: Kerro lisää: Bilbao
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Ensimmäisten kirjainten talo] 1790-luku Talo on kahden vierekkäisen asuintalon, numeroiden 29 ja 31, yhteensulautuma: asukkaiden lapset menivät keskenään naimisiin, ja seinä avattiin. Simón Rodríguez sai opettajanpätevyytensä 1791 ja alkoi pitää talossa koulua. Tilat olivat ahtaat ja varat vähissä — vuonna 1793 Rodríguezin luokassa oli 114 oppilasta, ja poissaolot olivat vaikea ongelma. Yksi noista oppilaista oli Simón Bolívar. Koulu oli ensimmäinen monista, joita Rodríguez yritti pyörittää omien periaatteidensa mukaan: lapsen pitää saada kysellä, koulun pitää opettaa myös työtaitoja, opetuksen pitää olla kaikille yhteistä ja kasvattaa yhteisöllisiä eikä itsekkäitä arvoja. Samaa hän yritti myöhemmin Bogotássa ja Chuquis…
+- [Santa Cruz — kohdekartta / Kohdekartta: Gabriel René Moreno -yliopisto] 1880 Bolivian idän suurin julkinen korkeakoulu perustettiin 11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. Perustamisen taustalla oli valtion asetus 15. joulukuuta 1879, jolla haluttiin vastata kaupungin nuorten tarpeeseen: siihen asti tutkintoa oli pitänyt hakea Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe Leonor Riberalta ja cruceño-piispalta, joka toimi myös ensimmäisenä rehtorina. Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja oikeustiede. Niin pysyi lähes viisikymmentä vuotta. Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen yliopisto 1898 ja nykyisen nimensä 1911 cruceño-kirjailijan ja historioitsijan Gabriel René Morenon mukaan. Keskusrakennus nousi 1940 Ju…
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Biskajanlahden rannalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Moni näistä on tullut laskeuduttua katolle.
+Espanjan puolella lahden rannalla ovat esimerkiksi satamakaupunki [[Bilbao]] ja [[Santander]]. Ranskan puolella tunnettuja rantakaupunkeja ovat [[La Rochelle]] ja Espanjan rajan lähellä sijaitseva [[Biarritz]]. Luettelo ei ole tyhjentävä, sillä lahden rannikko on pitkä ja siellä on lukuisia pienempiä satamia ja kalastajakyliä.
+Lista venyi, vaikka lupasin pitää sen lyhyenä.
+KYSYMYS: Kerro lisää: Santander
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Biskajanlahden rannalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Moni näistä on tullut laskeuduttua katolle.
+Espanjan puolella lahden rannalla ovat esimerkiksi satamakaupunki [[Bilbao]] ja [[Santander]]. Ranskan puolella tunnettuja rantakaupunkeja ovat [[La Rochelle]] ja Espanjan rajan lähellä sijaitseva [[Biarritz]]. Luettelo ei ole tyhjentävä, sillä lahden rannikko on pitkä ja siellä on lukuisia pienempiä satamia ja kalastajakyliä.
+Lista venyi, vaikka lupasin pitää sen lyhyenä.
+KYSYMYS: Kerro lisää: La Rochelle
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Biskajanlahden rannalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Moni näistä on tullut laskeuduttua katolle.
+Espanjan puolella lahden rannalla ovat esimerkiksi satamakaupunki [[Bilbao]] ja [[Santander]]. Ranskan puolella tunnettuja rantakaupunkeja ovat [[La Rochelle]] ja Espanjan rajan lähellä sijaitseva [[Biarritz]]. Luettelo ei ole tyhjentävä, sillä lahden rannikko on pitkä ja siellä on lukuisia pienempiä satamia ja kalastajakyliä.
+Lista venyi, vaikka lupasin pitää sen lyhyenä.
+KYSYMYS: Kerro lisää: Biarritz
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+AIEMPI KYSYMYS: Mitä jokia Biskajanlahteen laskee?
+AIEMPI VASTAUS (Livia):
+No niin, joet ovat kyyhkyn parhaita suunnistusapuja.
+Ranskan puolella lahteen laskevat muun muassa [[Loire]], [[Garonne]], joka päättyy Gironden suistoon, sekä [[Adour]]. Espanjan pohjoisrannikolla joet ovat yleensä lyhyitä ja jyrkkiä, koska vuoristo on lähellä merta. Luettelo ei ole kattava, mutta nämä kuuluvat alueen tärkeimpiin vesistöihin.
+Viisas Pöllö on matkoilla tutkimassa jokia, joten hoidan ne minä.
+KYSYMYS: Kerro lisää: Loire

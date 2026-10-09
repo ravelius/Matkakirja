@@ -1,0 +1,397 @@
+### 641
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Paras patonki valitaan sokkona
+Tietoruudun teksti: Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Pariisi: Paras patonki valitaan sokkona] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+- [Pariisi — kohdekartta / Kohdekartta: Paras patonki] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+AIEMPI KYSYMYS: Kuinka pitkä ja painava kilpailun patongin pitää olla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kilpailun patongin pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Nämä rajat kuuluvat kilpailun tarkkoihin sääntöihin, jotka Pariisin kaupunki on vahvistanut. Lisäksi taikina saa sisältää vain [[vehnäjauhoa]], vettä, suolaa ja hiivaa, eikä sitä saa pakastaa. Leivät numeroidaan ennen maistamista, jotta [[raati]] arvostelee niitä sokkona.
+Tarkat mitat, tarkka kyyhky.
+KYSYMYS: Kerro lisää: raati
+
+### 642
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Paras patonki valitaan sokkona
+Tietoruudun teksti: Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Keitä patonkikilpailun raadissa istuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Kaikki arvioivat samat numeroidut leivät tietämättä, kenen ne ovat. Kilpailun järjestää Pariisin kaupunki, ja se on pidetty vuodesta 1994. Voittaja saa rahapalkinnon ja toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan.
+Ranskassa on varmasti oma suosikkini, [[brioche]], vaikka se ei patonkikisaan kuulu.
+KYSYMYS: Kerro lisää: brioche
+
+### 643
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Mistä lempinimi la Môme Piaf tuli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän minä osaan. Yökerhon omistaja [[Louis Leplée]] kuuli nuoren laulajan kadulla vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli [[Édith Piaf]], joka oli vain 142 senttiä pitkä. Hänen tunnetuin laulunsa [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat hän kirjoitti itse.
+Varpunen, ei kyyhky, mutta kyl se naapuri on.
+KYSYMYS: Kerro lisää: Louis Leplée
+
+### 644
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Mistä lempinimi la Môme Piaf tuli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän minä osaan. Yökerhon omistaja [[Louis Leplée]] kuuli nuoren laulajan kadulla vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli [[Édith Piaf]], joka oli vain 142 senttiä pitkä. Hänen tunnetuin laulunsa [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat hän kirjoitti itse.
+Varpunen, ei kyyhky, mutta kyl se naapuri on.
+KYSYMYS: Kerro lisää: Édith Piaf
+
+### 645
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Mistä lempinimi la Môme Piaf tuli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän minä osaan. Yökerhon omistaja [[Louis Leplée]] kuuli nuoren laulajan kadulla vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli [[Édith Piaf]], joka oli vain 142 senttiä pitkä. Hänen tunnetuin laulunsa [[La Vie en rose]] ilmestyi vuonna 1946, ja sen sanat hän kirjoitti itse.
+Varpunen, ei kyyhky, mutta kyl se naapuri on.
+KYSYMYS: Kerro lisää: La Vie en rose
+
+### 646
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Miten Django Reinhardt opetteli soittamaan uudelleen?
+AIEMPI VASTAUS (Livia):
+Mmm, tää on koskettava tarina. Lokakuussa 1928 [[Django Reinhardtin]] asuntovaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Hänen vasemman kätensä nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan [[kitaran]], ja Django opetteli soittamaan soolot kahdella sormella. Hän oli kasvanut romaniperheen asuntovaunussa Pariisin porttien luona ja soittanut [[banjoa]] jo lapsena.
+Onpas siit ollut hyvä, että hän ei luovuttanut.
+KYSYMYS: Kerro lisää: Django Reinhardtin
+
+### 647
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Musiikki: Levypakkaaja, josta tuli kitaran velho] 1938–1989 — Franco Luambo Makiadi jäi 11-vuotiaana ilman isää, ja koulu loppui siihen. Äiti myi munkkeja Ngiri-Ngirin torilla, ja poika sai paikan levyjen pakkaajana Ngoma-levy-yhtiöllä. Siellä hän opetteli kitaraa salaa aina, kun muusikot olivat lopettaneet äänityksensä. Vuonna 1953 hän soitti koekuuntelun ja sai sopimuksen sekä kitaran, jota kutsuttiin nimellä Libaku ya nguma, boakäärmeen pää — se oli yhtä iso kuin viisitoistavuotias soittaja. OK Jazz perustettiin 1956, ja Franco siirsi sebenen kappaleen loppuun ja soitti sen peukalolla ja etusormella. Rolling Stone sijoitti hänet 2023 kaikkien aikojen kitaristien listalla sijalle 71.
+- [Espanja — maalehti / Musiikki: Puuseppä, joka keksi nykyisen kitaran] Ennen 1850-lukua kitara oli pieni ja hiljainen, kotisoitin salonkiin. Almerialainen puuseppä Antonio de Torres suurensi kaikukopan, ohensi kannen ja kehitti sen alle viuhkamaisen rimatuen, joka jakaa värähtelyn koko kannelle. Ääni kasvoi niin paljon, että kitara kelpasi konserttisaliin. Todistaakseen, että ääni tulee kannesta eikä kalliista kyljistä, Torres rakensi kerran kitaran, jonka kyljet ja pohja olivat pahvia — ja se soi. Kaikki nykyiset klassiset ja flamencokitarat noudattavat hänen mittojaan.
+AIEMPI KYSYMYS: Miten Django Reinhardt opetteli soittamaan uudelleen?
+AIEMPI VASTAUS (Livia):
+Mmm, tää on koskettava tarina. Lokakuussa 1928 [[Django Reinhardtin]] asuntovaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Hänen vasemman kätensä nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan [[kitaran]], ja Django opetteli soittamaan soolot kahdella sormella. Hän oli kasvanut romaniperheen asuntovaunussa Pariisin porttien luona ja soittanut [[banjoa]] jo lapsena.
+Onpas siit ollut hyvä, että hän ei luovuttanut.
+KYSYMYS: Kerro lisää: kitaran
+
+### 648
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Miten Django Reinhardt opetteli soittamaan uudelleen?
+AIEMPI VASTAUS (Livia):
+Mmm, tää on koskettava tarina. Lokakuussa 1928 [[Django Reinhardtin]] asuntovaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Hänen vasemman kätensä nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan [[kitaran]], ja Django opetteli soittamaan soolot kahdella sormella. Hän oli kasvanut romaniperheen asuntovaunussa Pariisin porttien luona ja soittanut [[banjoa]] jo lapsena.
+Onpas siit ollut hyvä, että hän ei luovuttanut.
+KYSYMYS: Kerro lisää: banjoa
+
+### 649
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Kuinka pitkä Édith Piaf oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Édith Piaf]] oli 142 senttiä pitkä, ja juuri siksi hänen lempinimensä la Môme Piaf sopi hyvin. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Hän syntyi [[Bellevillessä]] joulukuussa 1915, ja tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla.
+Pieni kooltaan, mutta kyl se ääni kuului.
+KYSYMYS: Kerro lisää: Bellevillessä
+
+### 650
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+AIEMPI KYSYMYS: Kuinka pitkä Édith Piaf oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Édith Piaf]] oli 142 senttiä pitkä, ja juuri siksi hänen lempinimensä la Môme Piaf sopi hyvin. Sana piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Hän syntyi [[Bellevillessä]] joulukuussa 1915, ja tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla.
+Pieni kooltaan, mutta kyl se ääni kuului.
+KYSYMYS: Kerro lisää: Pigallen
+
+### 651
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Miksi kardinaali uskoi väärennetyt kirjeet?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.
+Moni olisi kai uskonut.
+KYSYMYS: Kerro lisää: Jeanne de la Motte
+
+### 652
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Miksi kardinaali uskoi väärennetyt kirjeet?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.
+Moni olisi kai uskonut.
+KYSYMYS: Kerro lisää: de Rohanin
+
+### 653
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+- [Pariisi — kohdekartta / Kohdekartta: Concorden aukio] 1757–1772 Arkkitehti Ange-Jacques Gabriel suunnitteli Pariisin suurimman aukion 1700-luvulla kuningas Ludvig XV:n kunniaksi. Vallankumouksen aikana aukiolle pystytettiin giljotiini, ja siellä mestattiin muun muassa kuningas Ludvig XVI ja kuningatar Marie Antoinette. Kaikkiaan aukiolla teloitettiin yli tuhat ihmistä reilun vuoden aikana. Aukion keskellä kohoaa 23-metrinen, yli 3 300 vuotta vanha Luxorin obeliski, jonka Egyptin hallitsija lahjoitti Ranskalle marraskuussa 1830. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään aukiolla poreilevat komeat suihkulähteet ja sitä reunustavat kahdeksan naispatsasta, jotka kuva…
+AIEMPI KYSYMYS: Miksi kardinaali uskoi väärennetyt kirjeet?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.
+Moni olisi kai uskonut.
+KYSYMYS: Kerro lisää: Marie Antoinette
+
+### 654
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi kardinaali uskoi väärennetyt kirjeet?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.
+Moni olisi kai uskonut.
+KYSYMYS: Kerro lisää: Versailles'n
+
+### 655
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+- [Pariisi — kohdekartta / Kohdekartta: Place des Vosges] 1612 Place des Vosges on Pariisin vanhin aukio. Se rakennettiin kuningas Henrik IV:n määräyksestä hovielämän julkiseksi keskukseksi, mutta valmistui vasta kuninkaan kuoleman jälkeen — vihkiäisiä vietettiin 1612 Ludvig XIII:n ja Anna Itävaltalaisen häiden yhteydessä, eikä kuningaspari koskaan asunut siellä. Aukiota ympäröi 36 kolmikerroksista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja aumakatto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia. Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin Vosgesin departementin mukaan. Aukion laidalla asui kuusitoista v…
+AIEMPI KYSYMYS: Mihin kaulanauhan timantit lopulta päätyivät?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaulanauhan kivet pilkottiin ja myytiin Lontoossa ja Pariisissa, joten nauha ei säilynyt kokonaisena. Rohan oli luovuttanut nauhan huijarin lähetille tammikuussa 1785. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät [[kuningattaren]] puoleen ja [[kardinaali]] pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+Kauniit kivet, ja kaikki hajalleen.
+KYSYMYS: Kerro lisää: kuningattaren
+
+### 656
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Mihin kaulanauhan timantit lopulta päätyivät?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaulanauhan kivet pilkottiin ja myytiin Lontoossa ja Pariisissa, joten nauha ei säilynyt kokonaisena. Rohan oli luovuttanut nauhan huijarin lähetille tammikuussa 1785. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät [[kuningattaren]] puoleen ja [[kardinaali]] pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+Kauniit kivet, ja kaikki hajalleen.
+KYSYMYS: Kerro lisää: kardinaali
+
+### 657
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Vrain-Lucas] 1861–1870 Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään 27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut.
+AIEMPI KYSYMYS: Miksi Chasles piti kokoelmastaan kiinni vuosia?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Aineistossani sanotaan, että [[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko [[Michel Chasles'lle]] noin 27 000 käsin kirjoitettua kirjettä. Syytä siihen, miksi Chasles piti kokoelmastaan kiinni vuosia, en ole varma. Tekstin loppu ei kerro sitä, enkä halua arvata sitä. Voin kertoa vain, että kirjeitä oli todella paljon.
+No, tää jäi ny auki.
+KYSYMYS: Kerro lisää: Denis Vrain-Lucas
+
+### 658
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Miksi Chasles piti kokoelmastaan kiinni vuosia?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Aineistossani sanotaan, että [[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko [[Michel Chasles'lle]] noin 27 000 käsin kirjoitettua kirjettä. Syytä siihen, miksi Chasles piti kokoelmastaan kiinni vuosia, en ole varma. Tekstin loppu ei kerro sitä, enkä halua arvata sitä. Voin kertoa vain, että kirjeitä oli todella paljon.
+No, tää jäi ny auki.
+KYSYMYS: Kerro lisää: Michel Chasles'lle
+
+### 659
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Miten kaulanauhan huijaus paljastui?
+AIEMPI VASTAUS (Livia):
+Katotaas. Huijaus paljastui, kun ensimmäinen maksuerä erääntyi elokuussa 1785 eikä kardinaali maksanut. Kauppiaat kääntyivät [[kuningattaren]] puoleen, ja tällöin selvisi, ettei hän ollut tilannut tai saanut kaulanauhaa. [[Kardinaali de Rohan]] pidätettiin Versailles'ssa. Oikeus vapautti hänet 1786, mutta kuningattaren maine ei toipunut. Huijauksen taustalla oli [[Jeanne de la Motte]].
+Viisas Pöllö olisi osannut tämän paremmin, mutta hän on kuulemma matkoilla.
+KYSYMYS: Kerro lisää: Kardinaali de Rohan
+
+### 660
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Mitä Vrain-Lucas myi Michel Chasles'lle?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä. Luku on aineistossani selvä, mutta tekstin loppu on katkennut, joten kirjeiden sisällöstä en voi sanoa enempää. Kaupan tuloksena [[Chasles]] sai erittäin suuren kokoelman.
+Pitkä kirjepino, ja sen kantaminen olisi ollut oma urakkansa.
+KYSYMYS: Kerro lisää: Chasles

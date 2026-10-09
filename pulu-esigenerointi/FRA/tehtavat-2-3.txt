@@ -1,0 +1,1318 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+AIEMPI KYSYMYS: Mitä korkeagotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Korkeagotiikka on [[gotiikan]] kukoistuskautta, joka sijoittuu pääosin 1200-luvun alkupuolelle. Sille ovat ominaisia korkeat holvit ja suuret ikkunat, jotka onnistuvat [[tukikaarien]] ansiosta, kun seinien paino siirtyy ulkopuolelle. Chartresin katedraalia pidetään sen tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja sen arkkitehtuuriin on tehty 1200-luvun alun jälkeen vain vähäisiä muutoksia. Korkealla minä viihdyn, joten tää aihe sopii.
+KYSYMYS: Kerro lisää: tukikaarien
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Kuinka loivasti akvedukti laskee?
+AIEMPI VASTAUS (Livia):
+Mmm— tarkkaa työtä. Vesi laskee akveduktissa keskimäärin noin senttimetrin 182,4 metriä kohti, joten kaltevuus on äärimmäisen loiva. Silti vesi virtasi yli viidenkymmenen kilometrin matkan [[Nemausukseen]] eli nykyiseen [[Nîmesiin]] pelkän [[painovoiman]] varassa. Rakennustyön tarkkuus näkyy juuri tässä, sillä virheelle ei jäänyt paljon tilaa. Minä laskeudun kyl paljon jyrkemmin.
+KYSYMYS: Kerro lisää: Nemausukseen
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Kuinka loivasti akvedukti laskee?
+AIEMPI VASTAUS (Livia):
+Mmm— tarkkaa työtä. Vesi laskee akveduktissa keskimäärin noin senttimetrin 182,4 metriä kohti, joten kaltevuus on äärimmäisen loiva. Silti vesi virtasi yli viidenkymmenen kilometrin matkan [[Nemausukseen]] eli nykyiseen [[Nîmesiin]] pelkän [[painovoiman]] varassa. Rakennustyön tarkkuus näkyy juuri tässä, sillä virheelle ei jäänyt paljon tilaa. Minä laskeudun kyl paljon jyrkemmin.
+KYSYMYS: Kerro lisää: Nîmesiin
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Kuinka loivasti akvedukti laskee?
+AIEMPI VASTAUS (Livia):
+Mmm— tarkkaa työtä. Vesi laskee akveduktissa keskimäärin noin senttimetrin 182,4 metriä kohti, joten kaltevuus on äärimmäisen loiva. Silti vesi virtasi yli viidenkymmenen kilometrin matkan [[Nemausukseen]] eli nykyiseen [[Nîmesiin]] pelkän [[painovoiman]] varassa. Rakennustyön tarkkuus näkyy juuri tässä, sillä virheelle ei jäänyt paljon tilaa. Minä laskeudun kyl paljon jyrkemmin.
+KYSYMYS: Kerro lisää: painovoiman
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Miksi silta säilyi Rooman jälkeen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Silta säilyi lähes ehjänä, koska Rooman valtakunnan hajottua sille löytyi uusi tehtävä: siitä tuli [[tullisilta]]. Paikalliset herrat ja [[piispat]] vastasivat kunnossapidosta, joten rakennetta huollettiin, vaikka akvedukti ei enää toiminut. Veronkanto on siis joskus ollut hyödyksikin.
+KYSYMYS: Kerro lisää: tullisilta
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Miksi silta säilyi Rooman jälkeen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Silta säilyi lähes ehjänä, koska Rooman valtakunnan hajottua sille löytyi uusi tehtävä: siitä tuli [[tullisilta]]. Paikalliset herrat ja [[piispat]] vastasivat kunnossapidosta, joten rakennetta huollettiin, vaikka akvedukti ei enää toiminut. Veronkanto on siis joskus ollut hyödyksikin.
+KYSYMYS: Kerro lisää: piispat
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Paljonko vettä akvedukti kuljetti vuorokaudessa?
+AIEMPI VASTAUS (Livia):
+No jopas. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa, mikä vastaa noin 40 miljoonaa litraa. Vesi johdettiin yli viidenkymmenen kilometrin matkan [[Nemausuksen]] eli nykyisen [[Nîmesin]] kaupungille, ja matkalla se ylitti [[Gardon-joen]] kolmikerroksista siltaa pitkin. Siinä olis vettä kaikille kyyhkyille koko kaupungissa.
+KYSYMYS: Kerro lisää: Nemausuksen
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Paljonko vettä akvedukti kuljetti vuorokaudessa?
+AIEMPI VASTAUS (Livia):
+No jopas. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa, mikä vastaa noin 40 miljoonaa litraa. Vesi johdettiin yli viidenkymmenen kilometrin matkan [[Nemausuksen]] eli nykyisen [[Nîmesin]] kaupungille, ja matkalla se ylitti [[Gardon-joen]] kolmikerroksista siltaa pitkin. Siinä olis vettä kaikille kyyhkyille koko kaupungissa.
+KYSYMYS: Kerro lisää: Nîmesin
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Paljonko vettä akvedukti kuljetti vuorokaudessa?
+AIEMPI VASTAUS (Livia):
+No jopas. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa, mikä vastaa noin 40 miljoonaa litraa. Vesi johdettiin yli viidenkymmenen kilometrin matkan [[Nemausuksen]] eli nykyisen [[Nîmesin]] kaupungille, ja matkalla se ylitti [[Gardon-joen]] kolmikerroksista siltaa pitkin. Siinä olis vettä kaikille kyyhkyille koko kaupungissa.
+KYSYMYS: Kerro lisää: Gardon-joen
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa: Kaupunki seisoo oman louhoksensa päällä] Odessan talot on rakennettu simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta. Käytäviä kertyi arviolta 2 500 kilometriä — enemmän kuin minkään muun kaupungin alle maailmassa — ja syvimmillään ne ulottuvat 60 metriä merenpinnan alapuolelle. Louhoksia on käytävistä 95 prosenttia, eikä koko verkostoa ole koskaan kartoitettu. Toisen maailmansodan aikana käytävissä piileskeli partisaaneja, jotka nousivat maan alta ja katosivat takaisin.
+AIEMPI KYSYMYS: Kuinka korkea silta on ja mistä se on rakennettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pont du Gard on 48,8 metriä korkea, ja siinä on kolme päällekkäistä kaarikerrosta. Silta on rakennettu [[simpukkakalkkikivestä]], ja kivet on tiettävästi laskettu paikoilleen ilman laastia. Se ylittää [[Gardon-joen]] Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa, ja [[Unesco]] otti sen luetteloonsa vuonna 1985.
+
+Neljäkymmentäkahdeksan metriä on kyyhkyn mittapuulla mukava lentokorkeus, mutta rakentajat joutuivat nostamaan jokaisen kiven ylös. Sen minä kunnioitan.
+KYSYMYS: Kerro lisää: simpukkakalkkikivestä
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Kuinka korkea silta on ja mistä se on rakennettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pont du Gard on 48,8 metriä korkea, ja siinä on kolme päällekkäistä kaarikerrosta. Silta on rakennettu [[simpukkakalkkikivestä]], ja kivet on tiettävästi laskettu paikoilleen ilman laastia. Se ylittää [[Gardon-joen]] Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa, ja [[Unesco]] otti sen luetteloonsa vuonna 1985.
+
+Neljäkymmentäkahdeksan metriä on kyyhkyn mittapuulla mukava lentokorkeus, mutta rakentajat joutuivat nostamaan jokaisen kiven ylös. Sen minä kunnioitan.
+KYSYMYS: Kerro lisää: Unesco
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+AIEMPI KYSYMYS: Milloin ja miksi akvedukti lakkasi toimimasta?
+AIEMPI VASTAUS (Livia):
+Pöllö parantelee vielä siipeään, joten tän hoidan minä. Akvedukti alkoi tukkeutua, kun huolto loppui 300-luvun jälkeen. [[Kivettymät]] ja roskat täyttivät uoman vähitellen, vaikka vesi saattoi kulkea siinä mahdollisesti vielä 500-luvulla. Silta säilyi, mutta sen alkuperäinen tehtävä, veden kuljettaminen [[Nemausukseen]], oli päättynyt. Huoltoa tarvitsee kaikki, minäkin kyl.
+KYSYMYS: Kerro lisää: Kivettymät
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kohdekartta / Kohdekartta: Sotamuistomerkki] 1925 Tasmanian tärkein sotamuistomerkki seisoo Queens Domainin kumpareella, josta näkyy sekä kaupunki että Derwent. Paikalla oli vuosina 1838–1923 Queens Battery -patteri, ja sijainti valittiin nimenomaan sen näkyvyyden ja oman sotilashistorian takia. Muistomerkki on art déco -tulkinta egyptiläisestä obeliskista: sinikivinen porrastettu jalusta, harmaasta graniitista tehty kapeneva vartalo ja pyramidin muotoinen huippu. Huipun alla on joka sivulla punaisesta läpikuultamattomasta lasista tehty risti, jota valaistaan takaa lakkaamatta. Suunnittelukilpailu pidettiin 1923, ja sen voitti hobartilainen toimisto Hutchinson and Walker. Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta korkeutta nost…
+- [Kanton — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] 1861–1888 Katedraalin paikalla oli Qing-kaudella Liangguangin varakuninkaan virka-asunto, joka tuhoutui 1850-luvun lopulla. Ranskan lähetysseura sai tontin sopimuksella vuonna 1861. Perustuksia alettiin kaivaa saman vuoden kesäkuussa, ja 8. joulukuuta 1863 laskettiin kaksi peruskiveä: itäiseen kaiverrettiin ”Jerusalem 1863” ja läntiseen ”Roma 1863”, ja niiden alle pantiin kilo multaa Roomasta ja kivi Jerusalemista. Työ oli vaikeaa. Rakennus tehtiin kokonaan graniitista, käsivoimin ja ilman koneita, eikä kukaan kiinalaisista työmiehistä ollut nähnyt länsimaista katedraalia. Kielimuuri hidasti alkuvuosia, kunnes työnjohtajaksi palkattiin Jiexin piirikunnasta kotoisin oleva Cai Xiao, joka oli …
+AIEMPI KYSYMYS: Kuinka monta pystykiveä alueella on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alueella on yli kolmetuhatta paikallisesta [[graniitista]] veistettyä pystykiveä. Ne pystytti [[Bretagnen]] esikelttiläinen väestö, ja suurempaa keskittymää ei tunneta maailmasta. Kiviä on kivirivistöinä sekä yksittäisinä [[menhirejä]], ja suurin osa niistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Kolme tuhatta kiveä, minä en jaksais laskea edes sataa.
+KYSYMYS: Kerro lisää: graniitista
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Kuinka monta pystykiveä alueella on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alueella on yli kolmetuhatta paikallisesta [[graniitista]] veistettyä pystykiveä. Ne pystytti [[Bretagnen]] esikelttiläinen väestö, ja suurempaa keskittymää ei tunneta maailmasta. Kiviä on kivirivistöinä sekä yksittäisinä [[menhirejä]], ja suurin osa niistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Kolme tuhatta kiveä, minä en jaksais laskea edes sataa.
+KYSYMYS: Kerro lisää: Bretagnen
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Kuinka monta pystykiveä alueella on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alueella on yli kolmetuhatta paikallisesta [[graniitista]] veistettyä pystykiveä. Ne pystytti [[Bretagnen]] esikelttiläinen väestö, ja suurempaa keskittymää ei tunneta maailmasta. Kiviä on kivirivistöinä sekä yksittäisinä [[menhirejä]], ja suurin osa niistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Kolme tuhatta kiveä, minä en jaksais laskea edes sataa.
+KYSYMYS: Kerro lisää: menhirejä
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Mitä tarut kertovat kivistä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä on monta tarua. Kristillisen legendan mukaan kivet olivat pakanasotilaita, jotka ajoivat takaa paavi [[Corneliusta]], kunnes tämä muutti heidät kiveksi. [[Bretagnessa]] on myös oma versionsa [[Arthur-taruista]], ja paikallinen perimätieto selittää myös kivirivien suoruutta, mutta en ole varma, mitä selitys tarkalleen sanoo. Tehokas keino päästä jahtaajista, myönnetään.
+KYSYMYS: Kerro lisää: Corneliusta
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Ruoka: Helmikuun toisena paistetaan ohukaisia] 1933 — Chandeleur on juhla, jota vietetään 2. helmikuuta, neljäkymmentä päivää joulun jälkeen. Nimi tulee kynttilöistä, mutta ranskalaisille päivä tarkoittaa ennen kaikkea ohukaisia. Niitä paistetaan kotona pinoittain ja syödään sokerin, hillon tai suklaan kanssa. Perinne sanoo, että ohukainen pitää heittää ilmaan yhdellä kädellä samalla kun toisessa kädessä on kolikko, niin vuodesta tulee onnekas. Bretagnessa ohukaisia paistetaan pyöreällä valurautalevyllä, ja taikina levitetään pitkällä puulastalla.
+AIEMPI KYSYMYS: Mitä tarut kertovat kivistä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä on monta tarua. Kristillisen legendan mukaan kivet olivat pakanasotilaita, jotka ajoivat takaa paavi [[Corneliusta]], kunnes tämä muutti heidät kiveksi. [[Bretagnessa]] on myös oma versionsa [[Arthur-taruista]], ja paikallinen perimätieto selittää myös kivirivien suoruutta, mutta en ole varma, mitä selitys tarkalleen sanoo. Tehokas keino päästä jahtaajista, myönnetään.
+KYSYMYS: Kerro lisää: Bretagnessa
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Mitä tarut kertovat kivistä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä on monta tarua. Kristillisen legendan mukaan kivet olivat pakanasotilaita, jotka ajoivat takaa paavi [[Corneliusta]], kunnes tämä muutti heidät kiveksi. [[Bretagnessa]] on myös oma versionsa [[Arthur-taruista]], ja paikallinen perimätieto selittää myös kivirivien suoruutta, mutta en ole varma, mitä selitys tarkalleen sanoo. Tehokas keino päästä jahtaajista, myönnetään.
+KYSYMYS: Kerro lisää: Arthur-taruista
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Milloin kivet pystytettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tää on selvä. Kivet pystytettiin [[neoliittisella kaudella]], todennäköisesti noin 3300 eaa. Jotkin niistä saattavat olla peräisin jo ajalta 4500 eaa. Pystyttäjinä pidetään Bretagnen [[esikelttiläistä]] väestöä, joten rakentajat elivät paljon ennen kelttejä. Ajatella, ennen kelttejä — tää ei ole mikään uusi muoti.
+KYSYMYS: Kerro lisää: neoliittisella kaudella
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Milloin kivet pystytettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tää on selvä. Kivet pystytettiin [[neoliittisella kaudella]], todennäköisesti noin 3300 eaa. Jotkin niistä saattavat olla peräisin jo ajalta 4500 eaa. Pystyttäjinä pidetään Bretagnen [[esikelttiläistä]] väestöä, joten rakentajat elivät paljon ennen kelttejä. Ajatella, ennen kelttejä — tää ei ole mikään uusi muoti.
+KYSYMYS: Kerro lisää: esikelttiläistä
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Mitä muuta alueella on kuin kivirivejä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kokonaisuuteen kuuluu kivirivistöjen lisäksi [[dolmeneja]] eli kivihautoja, [[hautakumpuja]] ja yksittäisiä menhirejä. Alue on poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa, ja kivet jakautuvat Carnacin kunnan ja idempänä sijaitsevan [[La Trinité-sur-Merin]] alueille. Kivipuutarha, jos minulta kysytään.
+KYSYMYS: Kerro lisää: dolmeneja
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Tyhjä hauta Geraniumilaaksossa] Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.
+AIEMPI KYSYMYS: Mitä muuta alueella on kuin kivirivejä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kokonaisuuteen kuuluu kivirivistöjen lisäksi [[dolmeneja]] eli kivihautoja, [[hautakumpuja]] ja yksittäisiä menhirejä. Alue on poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa, ja kivet jakautuvat Carnacin kunnan ja idempänä sijaitsevan [[La Trinité-sur-Merin]] alueille. Kivipuutarha, jos minulta kysytään.
+KYSYMYS: Kerro lisää: hautakumpuja
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Mitä muuta alueella on kuin kivirivejä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kokonaisuuteen kuuluu kivirivistöjen lisäksi [[dolmeneja]] eli kivihautoja, [[hautakumpuja]] ja yksittäisiä menhirejä. Alue on poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa, ja kivet jakautuvat Carnacin kunnan ja idempänä sijaitsevan [[La Trinité-sur-Merin]] alueille. Kivipuutarha, jos minulta kysytään.
+KYSYMYS: Kerro lisää: La Trinité-sur-Merin
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+AIEMPI KYSYMYS: Missä päin Ranskaa Carnacin kivet ovat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Carnacin kivirivit sijaitsevat Luoteis-Ranskassa, [[Bretagnen]] etelärannikon tuntumassa. Carnac kuuluu [[Morbihanin]] departementtiin. Suurin osa kivistä on Carnacin kunnan alueella, ja osa on idempänä La Trinité-sur-Merissä. Meri on ihan vieressä, kyyhkyn silmin katsoen.
+KYSYMYS: Kerro lisää: Morbihanin
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Montako konklaavia palatsissa pidettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä on tarkka luku. Palatsissa pidettiin kuusi konklaavia. Niissä valittiin [[Benedictus XII]] vuonna 1334, [[Klemens VI]] 1342, [[Innocentius VI]] 1352, [[Urbanus V]] 1362, [[Gregorius XI]] 1370 ja Benedictus XIII 1394. Palatsi toimi 1300-luvulla läntisen kristikunnan istuimena. Kuusi nimeä ja vuosilukua päässä, aika hyvin menee.
+KYSYMYS: Kerro lisää: Benedictus XII
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Vizcaínas-koulu] 1734 Koulun perusti baskien veljeskunta Nuestra Señora de Aránzazu, johon kuului Vizcayasta, Álavasta, Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; hanketta johti kolme jäsentä, Francisco de Echeveste, Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin tonttia sieltä, missä nykyään kulkee Avenida Juárez, mutta pyyntö evättiin. Tilalle tarjottiin San Juanin kaupunginosan entistä toripaikkaa, josta oli tullut kaatopaikka ja jota pidettiin hyvin huonona seutuna. Tontti otettiin vastaan, vaikka se piti kuivattaa. Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, baskien…
+AIEMPI KYSYMYS: Montako konklaavia palatsissa pidettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä on tarkka luku. Palatsissa pidettiin kuusi konklaavia. Niissä valittiin [[Benedictus XII]] vuonna 1334, [[Klemens VI]] 1342, [[Innocentius VI]] 1352, [[Urbanus V]] 1362, [[Gregorius XI]] 1370 ja Benedictus XIII 1394. Palatsi toimi 1300-luvulla läntisen kristikunnan istuimena. Kuusi nimeä ja vuosilukua päässä, aika hyvin menee.
+KYSYMYS: Kerro lisää: Klemens VI
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Montako konklaavia palatsissa pidettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä on tarkka luku. Palatsissa pidettiin kuusi konklaavia. Niissä valittiin [[Benedictus XII]] vuonna 1334, [[Klemens VI]] 1342, [[Innocentius VI]] 1352, [[Urbanus V]] 1362, [[Gregorius XI]] 1370 ja Benedictus XIII 1394. Palatsi toimi 1300-luvulla läntisen kristikunnan istuimena. Kuusi nimeä ja vuosilukua päässä, aika hyvin menee.
+KYSYMYS: Kerro lisää: Innocentius VI
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: Saint-Victorin kirkko] 415 Munkki ja teologi Johannes Cassianus perusti luostarin Marseilleen vuonna 415 tultuaan Egyptin erakkoluostareista — se on yksi Ranskan vanhimmista luostareista. Kirkon alla olevissa kryptoissa on jäljellä muinaiskreikkalainen kivilouhos, josta tuli myöhemmin hautapaikka. Saraseenit hyökkäsivät ja hävittivät luostarin kahdesti, vuosina 838 ja 923, mutta munkit palasivat 977. Vuonna 1020 apotti Isarn aloitti ison rakennusurakan, ja kirkosta tehtiin samalla myös linnoitus — siksi siinä on yhä paksut harjakivimuurit. Vuonna 1365 paavi Urbanus V — joka oli aiemmin ollut tämän saman luostarin apotti — palasi Marseilleen ja vihki kirkon alttarin.
+AIEMPI KYSYMYS: Montako konklaavia palatsissa pidettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä on tarkka luku. Palatsissa pidettiin kuusi konklaavia. Niissä valittiin [[Benedictus XII]] vuonna 1334, [[Klemens VI]] 1342, [[Innocentius VI]] 1352, [[Urbanus V]] 1362, [[Gregorius XI]] 1370 ja Benedictus XIII 1394. Palatsi toimi 1300-luvulla läntisen kristikunnan istuimena. Kuusi nimeä ja vuosilukua päässä, aika hyvin menee.
+KYSYMYS: Kerro lisää: Urbanus V
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Manilan katedraali] nykyinen rakennus 1958 Manilan seurakuntakirkko perustettiin 1571 Meksikon arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII perusti Manilan hiippakunnan 6. helmikuuta 1579. Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin pyhäinjäännökset, joita varten pääkirkon viereen rakennettiin oma sivurakennus. Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen pääalttari veistettiin molave-puusta 1662, ja firenzeläinen munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. Viides muistutti Rooman Il Gesùa, ku…
+AIEMPI KYSYMYS: Montako konklaavia palatsissa pidettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä on tarkka luku. Palatsissa pidettiin kuusi konklaavia. Niissä valittiin [[Benedictus XII]] vuonna 1334, [[Klemens VI]] 1342, [[Innocentius VI]] 1352, [[Urbanus V]] 1362, [[Gregorius XI]] 1370 ja Benedictus XIII 1394. Palatsi toimi 1300-luvulla läntisen kristikunnan istuimena. Kuusi nimeä ja vuosilukua päässä, aika hyvin menee.
+KYSYMYS: Kerro lisää: Gregorius XI
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Pyhän Pietarin kirkko] 1209–1746 Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja se on yksi kaupungin vanhimmista rakennuksista. Sen torni on ollut vuosisatojen ajan Riian korkein rakennelma – mutta myös yksi onnettomimmista: torni on romahtanut ja palanut useita kertoja historian aikana. Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja se oli 148 metriä korkea – tuolloin koko Euroopan korkein puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja seuraava, matalampi torni valmistui vasta 1746. Toisessa maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja nykyinen torni valmistui jälleenrakennettuna vasta 1970-luvulla.…
+AIEMPI KYSYMYS: Miksi paavit halusivat takaisin Roomaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on pitkä tarina. Rooma oli paavin oma hiippakunta ja kristikunnan perinteinen keskus, ja siellä sijaitsi [[Pietarin]] hauta. Avignonin kausi kesti suurimman osan 1300-lukua, ja syitä paluuseen oli useita. Gregorius XI palasi Roomaan vuonna 1377, tiettävästi muun muassa [[Katariina Sienalaisen]] kehotuksesta. Pian sen jälkeen alkoi [[läntinen skisma]], jossa kirkolla oli samanaikaisesti useita paaveja. Kaikki tiet vievät Roomaan, ja kyllä ne paavitkin sinne lopulta palasivat.
+KYSYMYS: Kerro lisää: Pietarin
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Miksi paavit halusivat takaisin Roomaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on pitkä tarina. Rooma oli paavin oma hiippakunta ja kristikunnan perinteinen keskus, ja siellä sijaitsi [[Pietarin]] hauta. Avignonin kausi kesti suurimman osan 1300-lukua, ja syitä paluuseen oli useita. Gregorius XI palasi Roomaan vuonna 1377, tiettävästi muun muassa [[Katariina Sienalaisen]] kehotuksesta. Pian sen jälkeen alkoi [[läntinen skisma]], jossa kirkolla oli samanaikaisesti useita paaveja. Kaikki tiet vievät Roomaan, ja kyllä ne paavitkin sinne lopulta palasivat.
+KYSYMYS: Kerro lisää: Katariina Sienalaisen
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Miksi paavit halusivat takaisin Roomaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on pitkä tarina. Rooma oli paavin oma hiippakunta ja kristikunnan perinteinen keskus, ja siellä sijaitsi [[Pietarin]] hauta. Avignonin kausi kesti suurimman osan 1300-lukua, ja syitä paluuseen oli useita. Gregorius XI palasi Roomaan vuonna 1377, tiettävästi muun muassa [[Katariina Sienalaisen]] kehotuksesta. Pian sen jälkeen alkoi [[läntinen skisma]], jossa kirkolla oli samanaikaisesti useita paaveja. Kaikki tiet vievät Roomaan, ja kyllä ne paavitkin sinne lopulta palasivat.
+KYSYMYS: Kerro lisää: läntinen skisma
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Kuka palatsin suunnitteli ja koristeli?
+AIEMPI VASTAUS (Livia):
+Ai nyt kysytään tekijöitä. Palatsin suunnittelusta vastasivat [[Pierre Peysson]] ja [[Jean de Louvres]]. Koristelusta vastasivat sienalaisen koulukunnan taiteilijat [[Simone Martini]] ja [[Matteo Giovanetti]]. Rakennuksia on oikeastaan kaksi, Benedictus XII:n vanha palatsi ja Klemens VI:n uusi palatsi, ja yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen.
+
+Matka Italiasta Avignoniin on kyyhkylle tuttu reitti, mutta taiteilijoille se oli varmasti pitkä. Minä tiedän: kirje ei kulje itsestään.
+KYSYMYS: Kerro lisää: Pierre Peysson
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Louvre] 1793 Louvre ei ollut alun perin museo vaan linnoitus: kuningas Filip II rakennutti sen 1100-luvun lopulla puolustamaan Pariisia. Vuosisatojen kuluessa siitä tehtiin kuninkaallinen palatsi, kunnes Ranskan vallankumouksen jälkeen se avattiin kaikille kansalaisille museona elokuussa 1793. Nykyään Louvressa on esillä noin 35 000 taideteosta, ja koko kokoelmassa on peräti 500 000 esinettä. Museo on maailman suurin, ja sen käytävät ovat kilometrien mittaiset. Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: arkkitehti I. M. Pein suunnittelema lasinen pyramidi, josta tuli museon pääsisäänkäynti. Aluksi moni pariisilainen paheksui lasirakennelmaa vanhan palatsin edessä, mutta siitä tuli pia…
+AIEMPI KYSYMYS: Kuka palatsin suunnitteli ja koristeli?
+AIEMPI VASTAUS (Livia):
+Ai nyt kysytään tekijöitä. Palatsin suunnittelusta vastasivat [[Pierre Peysson]] ja [[Jean de Louvres]]. Koristelusta vastasivat sienalaisen koulukunnan taiteilijat [[Simone Martini]] ja [[Matteo Giovanetti]]. Rakennuksia on oikeastaan kaksi, Benedictus XII:n vanha palatsi ja Klemens VI:n uusi palatsi, ja yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen.
+
+Matka Italiasta Avignoniin on kyyhkylle tuttu reitti, mutta taiteilijoille se oli varmasti pitkä. Minä tiedän: kirje ei kulje itsestään.
+KYSYMYS: Kerro lisää: Jean de Louvres
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Kuka palatsin suunnitteli ja koristeli?
+AIEMPI VASTAUS (Livia):
+Ai nyt kysytään tekijöitä. Palatsin suunnittelusta vastasivat [[Pierre Peysson]] ja [[Jean de Louvres]]. Koristelusta vastasivat sienalaisen koulukunnan taiteilijat [[Simone Martini]] ja [[Matteo Giovanetti]]. Rakennuksia on oikeastaan kaksi, Benedictus XII:n vanha palatsi ja Klemens VI:n uusi palatsi, ja yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen.
+
+Matka Italiasta Avignoniin on kyyhkylle tuttu reitti, mutta taiteilijoille se oli varmasti pitkä. Minä tiedän: kirje ei kulje itsestään.
+KYSYMYS: Kerro lisää: Simone Martini
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Kuka palatsin suunnitteli ja koristeli?
+AIEMPI VASTAUS (Livia):
+Ai nyt kysytään tekijöitä. Palatsin suunnittelusta vastasivat [[Pierre Peysson]] ja [[Jean de Louvres]]. Koristelusta vastasivat sienalaisen koulukunnan taiteilijat [[Simone Martini]] ja [[Matteo Giovanetti]]. Rakennuksia on oikeastaan kaksi, Benedictus XII:n vanha palatsi ja Klemens VI:n uusi palatsi, ja yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen.
+
+Matka Italiasta Avignoniin on kyyhkylle tuttu reitti, mutta taiteilijoille se oli varmasti pitkä. Minä tiedän: kirje ei kulje itsestään.
+KYSYMYS: Kerro lisää: Matteo Giovanetti
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Mistä kahdesta rakennuksesta palatsi koostuu?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on pieni yllätys. Palatsi on oikeastaan kaksi rakennusta yhteen liitettynä: [[Benedictus XII:n]] vanha palatsi Domsin kalliolla ja [[Klemens VI:n]] uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Palatsi oli yhtä aikaa linnoitus ja asuinpalatsi, ja 1300-luvulla se oli läntisen kristikunnan istuin. Isoin ikkunalauta, minkä kyyhky voi toivoa.
+KYSYMYS: Kerro lisää: Benedictus XII:n
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Vizcaínas-koulu] 1734 Koulun perusti baskien veljeskunta Nuestra Señora de Aránzazu, johon kuului Vizcayasta, Álavasta, Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; hanketta johti kolme jäsentä, Francisco de Echeveste, Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin tonttia sieltä, missä nykyään kulkee Avenida Juárez, mutta pyyntö evättiin. Tilalle tarjottiin San Juanin kaupunginosan entistä toripaikkaa, josta oli tullut kaatopaikka ja jota pidettiin hyvin huonona seutuna. Tontti otettiin vastaan, vaikka se piti kuivattaa. Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, baskien…
+AIEMPI KYSYMYS: Mistä kahdesta rakennuksesta palatsi koostuu?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on pieni yllätys. Palatsi on oikeastaan kaksi rakennusta yhteen liitettynä: [[Benedictus XII:n]] vanha palatsi Domsin kalliolla ja [[Klemens VI:n]] uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Palatsi oli yhtä aikaa linnoitus ja asuinpalatsi, ja 1300-luvulla se oli läntisen kristikunnan istuin. Isoin ikkunalauta, minkä kyyhky voi toivoa.
+KYSYMYS: Kerro lisää: Klemens VI:n
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+AIEMPI KYSYMYS: Millainen palatsin kirjasto oli ja keitä se veti puoleensa?
+AIEMPI VASTAUS (Livia):
+Ai kirjasto, tykkään. Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa. Se veti puoleensa oppineita, joiden joukossa oli [[humanismin]] perustajana pidetty [[Petrarca]]. Kirjasto osoittaa, että palatsi oli paitsi linnoitus ja hallintokeskus myös oppineisuuden paikka. Kirjoja kantoi kyl moni muukin, mut kirjeitä vain minun sukuni.
+KYSYMYS: Kerro lisää: humanismin
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Markuksen hevoset] Isoisäsi näki ne siellä, missä ne olivat seisoneet kuusisataa vuotta: basilikan parvekkeella, katunäkymän yläpuolella. Sitä ennen ne olivat seisoneet Konstantinopolin hippodromilla, ja vuonna 1204 ne vietiin sieltä pois. Kuljetusta varten päät katkaistiin irti, ja samana vuonna kaulaan lisättiin pannat peittämään saumat — ne pannat ovat siinä yhä. Venetsiaan hevoset pystytettiin 1254, ja Petrarca kävi ihailemassa niitä. Vuonna 1797 Napoleon vei ne Pariisiin ja ne nostettiin Carrousel-riemukaareen; kahdeksantoista vuotta myöhemmin ne tuotiin takaisin, ja työn teki kapteeni nimeltä Dumaresq, jonka Itävallan keisari palkitsi kultaisella nuuskarasialla, kannessa timanteista tehdyt nimikirjaimet…
+AIEMPI KYSYMYS: Millainen palatsin kirjasto oli ja keitä se veti puoleensa?
+AIEMPI VASTAUS (Livia):
+Ai kirjasto, tykkään. Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa. Se veti puoleensa oppineita, joiden joukossa oli [[humanismin]] perustajana pidetty [[Petrarca]]. Kirjasto osoittaa, että palatsi oli paitsi linnoitus ja hallintokeskus myös oppineisuuden paikka. Kirjoja kantoi kyl moni muukin, mut kirjeitä vain minun sukuni.
+KYSYMYS: Kerro lisää: Petrarca
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+AIEMPI KYSYMYS: Mihin Frans I rakennutti Chambordin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Frans I rakennutti Chambordin [[Loiren]] laaksoon, ja linna oli alun perin tarkoitettu metsästysmajaksi. Kuninkaan varsinaiset asunnot sijaitsivat [[Blois'n]] ja [[Amboisen]] linnoissa, joten Chambord ei ollut hänen pysyvä kotinsa. Rakennustyö kesti vuodesta 1519 vuoteen 1547, ja valmistuttuaan se oli Loiren laakson suurin linna. Metsästysmaja se oli, mut aika iso sellainen.
+KYSYMYS: Kerro lisää: Loiren
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+AIEMPI KYSYMYS: Mihin Frans I rakennutti Chambordin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Frans I rakennutti Chambordin [[Loiren]] laaksoon, ja linna oli alun perin tarkoitettu metsästysmajaksi. Kuninkaan varsinaiset asunnot sijaitsivat [[Blois'n]] ja [[Amboisen]] linnoissa, joten Chambord ei ollut hänen pysyvä kotinsa. Rakennustyö kesti vuodesta 1519 vuoteen 1547, ja valmistuttuaan se oli Loiren laakson suurin linna. Metsästysmaja se oli, mut aika iso sellainen.
+KYSYMYS: Kerro lisää: Blois'n
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+AIEMPI KYSYMYS: Mihin Frans I rakennutti Chambordin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Frans I rakennutti Chambordin [[Loiren]] laaksoon, ja linna oli alun perin tarkoitettu metsästysmajaksi. Kuninkaan varsinaiset asunnot sijaitsivat [[Blois'n]] ja [[Amboisen]] linnoissa, joten Chambord ei ollut hänen pysyvä kotinsa. Rakennustyö kesti vuodesta 1519 vuoteen 1547, ja valmistuttuaan se oli Loiren laakson suurin linna. Metsästysmaja se oli, mut aika iso sellainen.
+KYSYMYS: Kerro lisää: Amboisen
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi linnan muurit ja vallihauta ovat koristeita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Chambordia ei koskaan tarkoitettu puolustukseen, joten sen linnoitusmaiset piirteet ovat koristeita eivätkä todellista suojaa. Keskustorni ja neljä kulmatornia antavat rakennukselle [[keskiaikaisen]] linnan ilmeen, mutta kokonaisuus on [[renessanssin]] ajan metsästysmaja. Frans I esitteli sillä vaurauttaan ja valtaansa, muun muassa keisari [[Kaarle V:lle]]. Muurien ja vallihaudan tarkemmista vaiheista en ole varma. Ylhäältä katsottuna tornit näyttävät kyl vaikuttavilta.
+KYSYMYS: Kerro lisää: keskiaikaisen
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Miksi linnan muurit ja vallihauta ovat koristeita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Chambordia ei koskaan tarkoitettu puolustukseen, joten sen linnoitusmaiset piirteet ovat koristeita eivätkä todellista suojaa. Keskustorni ja neljä kulmatornia antavat rakennukselle [[keskiaikaisen]] linnan ilmeen, mutta kokonaisuus on [[renessanssin]] ajan metsästysmaja. Frans I esitteli sillä vaurauttaan ja valtaansa, muun muassa keisari [[Kaarle V:lle]]. Muurien ja vallihaudan tarkemmista vaiheista en ole varma. Ylhäältä katsottuna tornit näyttävät kyl vaikuttavilta.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi linnan muurit ja vallihauta ovat koristeita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Chambordia ei koskaan tarkoitettu puolustukseen, joten sen linnoitusmaiset piirteet ovat koristeita eivätkä todellista suojaa. Keskustorni ja neljä kulmatornia antavat rakennukselle [[keskiaikaisen]] linnan ilmeen, mutta kokonaisuus on [[renessanssin]] ajan metsästysmaja. Frans I esitteli sillä vaurauttaan ja valtaansa, muun muassa keisari [[Kaarle V:lle]]. Muurien ja vallihaudan tarkemmista vaiheista en ole varma. Ylhäältä katsottuna tornit näyttävät kyl vaikuttavilta.
+KYSYMYS: Kerro lisää: Kaarle V:lle
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Isfahanin basaari] Basaari on käytävä kahden eri-ikäisen kaupungin välillä. Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina 1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia basaareja. Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään 1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain se, että ne ovat yli tuhat vu…
+AIEMPI KYSYMYS: Kuinka monta huonetta ja takkaa Chambordissa on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Chambordissa on 440 huonetta, 282 takkaa ja 84 porrasta. Rakennus koostuu [[keskustornista]] ja neljästä [[kulmatornista]], ja se on Loiren laakson suurin linna. Koska linnaa käytettiin metsästysmajana eikä pysyvänä asuntona, huoneiden ja takkojen määrä kertoo ennen muuta rakennuttajansa haluamasta komeudesta. Kyl se on paljon takkoja yhdelle mökille.
+KYSYMYS: Kerro lisää: keskustornista
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Historia: Tuulinen kulma, jonka kapteeni valitsi] 1840–1885 — Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja pian hänen neuvostonsa hallitsi maan keskiosaa. Noin 1840 hän pysähtyi kuuman lähteen äärelle ja rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. Sotien jälkeen paikka autioitui: 1885 sinne saapunut kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja hoitamattomien hedelmäpuiden seasta.
+- [Wien — kohdekartta / Kohdekartta: Rattaan kulmat] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+AIEMPI KYSYMYS: Kuinka monta huonetta ja takkaa Chambordissa on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Chambordissa on 440 huonetta, 282 takkaa ja 84 porrasta. Rakennus koostuu [[keskustornista]] ja neljästä [[kulmatornista]], ja se on Loiren laakson suurin linna. Koska linnaa käytettiin metsästysmajana eikä pysyvänä asuntona, huoneiden ja takkojen määrä kertoo ennen muuta rakennuttajansa haluamasta komeudesta. Kyl se on paljon takkoja yhdelle mökille.
+KYSYMYS: Kerro lisää: kulmatornista
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+AIEMPI KYSYMYS: Kuka valvoi Chambordin rakennustyötä paikan päällä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Rakennustyötä valvoi paikan päällä [[Pierre Neveu]]. Työ kesti kaikkiaan kahdenkymmenenkahdeksan vuotta, vuodesta 1519 vuoteen 1547, ja suunnitelmaa muutettiin sinä aikana paljon. Alkuperäinen suunnitelma katsotaan toscanalaisen [[Domenico da Cortonan]] työksi, ja myös [[Leonardo da Vinci]] on saattanut vaikuttaa siihen. Työmaanvalvoja ei kuulu historian kuuluisimpiin nimiin, vaikka kyl hänen työnsä näkyy.
+KYSYMYS: Kerro lisää: Pierre Neveu
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+AIEMPI KYSYMYS: Kuka valvoi Chambordin rakennustyötä paikan päällä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Rakennustyötä valvoi paikan päällä [[Pierre Neveu]]. Työ kesti kaikkiaan kahdenkymmenenkahdeksan vuotta, vuodesta 1519 vuoteen 1547, ja suunnitelmaa muutettiin sinä aikana paljon. Alkuperäinen suunnitelma katsotaan toscanalaisen [[Domenico da Cortonan]] työksi, ja myös [[Leonardo da Vinci]] on saattanut vaikuttaa siihen. Työmaanvalvoja ei kuulu historian kuuluisimpiin nimiin, vaikka kyl hänen työnsä näkyy.
+KYSYMYS: Kerro lisää: Domenico da Cortonan
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+- [Firenze — kohdekartta / Kohdekartta: Palazzo Vecchio] 1299–1314 Palazzo Vecchio rakennettiin kaupungin hallituksen taloksi vuosina 1299–1314. Se näyttää linnalta, ja se on linna: paksut kiviseinät, ampuma-aukot ja 94 metriä korkea torni kertovat ajasta, jolloin kaupungin sisäiset riidat ratkottiin aseilla. Talossa istui Signoria, kaupungin yhdeksän valittua hallitusmiestä, jotka asuivat virkakautensa ajan sisällä eivätkä saaneet poistua. Vuonna 1540 Cosimo I de' Medici muutti taloon, ja hän muutti sen palatsiksi. Kun hovi siirtyi 1565 joen toiselle puolelle Pitti-palatsiin, vanha talo sai nimen Palazzo Vecchio, "vanha palatsi". Sisällä on Viidensadan sali, joka rakennettiin 1494 suurta kansanneuvostoa varten ja jonka seiniä Leonardo da Vinci j…
+AIEMPI KYSYMYS: Kuka valvoi Chambordin rakennustyötä paikan päällä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Rakennustyötä valvoi paikan päällä [[Pierre Neveu]]. Työ kesti kaikkiaan kahdenkymmenenkahdeksan vuotta, vuodesta 1519 vuoteen 1547, ja suunnitelmaa muutettiin sinä aikana paljon. Alkuperäinen suunnitelma katsotaan toscanalaisen [[Domenico da Cortonan]] työksi, ja myös [[Leonardo da Vinci]] on saattanut vaikuttaa siihen. Työmaanvalvoja ei kuulu historian kuuluisimpiin nimiin, vaikka kyl hänen työnsä näkyy.
+KYSYMYS: Kerro lisää: Leonardo da Vinci
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+AIEMPI KYSYMYS: Kuka Chambordin alkuperäisen suunnitelman luultavasti laati?
+AIEMPI VASTAUS (Livia):
+Ai tota. Alkuperäisen suunnitelman katsotaan olevan toscanalaisen [[Domenico da Cortonan]] työtä. Myös [[Leonardo da Vinci]] on saattanut vaikuttaa siihen, mutta se on arvelu eikä varma tieto. Suunnitelmaa muutettiin rakennusaikana paljon, joten valmis linna ei välttämättä vastaa alkuperäistä ajatusta. Tilaajana oli kuningas [[Frans I]]. Taitaa olla niin, että yhden linnan takana on aina monta tekijää.
+KYSYMYS: Kerro lisää: Frans I
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Kuinka pienellä alueella Verdunin taistelu käytiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on raskas aihe. Verdunin taistelu käytiin alueella, joka oli alle kaksikymmentä neliökilometriä. Taistelu kesti vuonna 1916 kolmesataa päivää, helmikuun lopulta joulukuuhun, ja sen aikana kuoli noin 300 000 miestä. Se tapahtui [[ensimmäisen maailmansodan]] aikana, yli sata vuotta sitten, ja nykyään paikalla on muistomerkkinä [[Douaumontin luukammio]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ensimmäisen maailmansodan
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Kuinka pienellä alueella Verdunin taistelu käytiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on raskas aihe. Verdunin taistelu käytiin alueella, joka oli alle kaksikymmentä neliökilometriä. Taistelu kesti vuonna 1916 kolmesataa päivää, helmikuun lopulta joulukuuhun, ja sen aikana kuoli noin 300 000 miestä. Se tapahtui [[ensimmäisen maailmansodan]] aikana, yli sata vuotta sitten, ja nykyään paikalla on muistomerkkinä [[Douaumontin luukammio]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Douaumontin luukammio
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Kuka vihki hautausmaan 1923?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hautausmaan vihki vuonna 1923 [[André Maginot]], joka oli itse Verdunin veteraani. Hautausmaa on Ranskan suurin [[ensimmäisen maailmansodan]] sotilashautausmaa, ja siellä on 16 142 hautaa. Se sijaitsee luukammion edessä rinteessä, ja se vihittiin noin seitsemän vuotta taistelun jälkeen. Hiljainen paikka, sen verran minä tiedän.
+KYSYMYS: Kerro lisää: André Maginot
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Kuinka monta miestä Verdunin taistelussa kuoli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Verdunin taistelussa kuoli noin 300 000 miestä. Kun lasketaan mukaan kaatuneet, haavoittuneet ja kadonneet, tappioita oli yhteensä noin 700 000. Taistelu käytiin vuonna 1916 ja kesti kolmesataa päivää, eli se oli yksi [[ensimmäisen maailmansodan]] pisimmistä ja kuolettavimmista taisteluista. Tapahtumasta on kulunut yli sata vuotta, ja [[Douaumontin]] alueelle on rakennettu muistomerkki. Isoja lukuja, ja vaikeita.
+KYSYMYS: Kerro lisää: Douaumontin
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Kuka aloitti luukammion rakentamisen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Luukammio rakennettiin [[Verdunin]] piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden [[ranskalaisten]] nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.
+KYSYMYS: Kerro lisää: Verdunin
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Kuka aloitti luukammion rakentamisen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Luukammio rakennettiin [[Verdunin]] piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden [[ranskalaisten]] nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.
+KYSYMYS: Kerro lisää: Charles Ginistyn
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Ritarikunnan loppu ja ranskalaisten kaksi vuotta] Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. syyskuuta 1800, kun heidän ruokavaransa…
+- [Chennai — kaupunkilehti / Historia: Ranskalaisten kolme vuotta] Vuonna 1746 ranskalaiset valtasivat Madrasin ja Fort St. Georgen kenraali La Bourdonnais’n johdolla; hän oli tuolloin Mauritiuksen kuvernööri. Britit saivat kaupungin takaisin 1749 Aix-la-Chapellen rauhassa, joka päätti Itävallan perimyssodan. Sen jälkeen kuusimetrisiä muureja vahvistettiin yhä uudelleen: ranskalaiset yrittivät piiritystä 1759, ja 1769 Mysoren Hyder Ali uhkasi kaupunkia ensimmäisessä Anglo-Mysore-sodassa, joka päättyi Madrasin sopimukseen. Linnoituksessa on yhä museo, jonka kokoelmissa on komppanian ajan esineistöä.
+AIEMPI KYSYMYS: Kuka aloitti luukammion rakentamisen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Luukammio rakennettiin [[Verdunin]] piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden [[ranskalaisten]] nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.
+KYSYMYS: Kerro lisää: ranskalaisten
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Millä nimillä Verdunin taistelua on kutsuttu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Saksaksi taistelua alettiin kutsua nimellä [[Die Hölle von Verdun]] ja ranskaksi nimellä [[L'Enfer de Verdun]], suomeksi Verdunin helvetti. Nimet kuvaavat sitä, miten raskas ja pitkä taistelu oli: se kesti kolmesataa päivää vuonna 1916 ja vaati noin 300 000 miehen hengen. Kaikki nimet viittaavat samaan taisteluun, joka on jäänyt [[ensimmäisen maailmansodan]] muistiin. Painava nimi, ei siihen paljon lisättävää.
+KYSYMYS: Kerro lisää: Die Hölle von Verdun
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+AIEMPI KYSYMYS: Millä nimillä Verdunin taistelua on kutsuttu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Saksaksi taistelua alettiin kutsua nimellä [[Die Hölle von Verdun]] ja ranskaksi nimellä [[L'Enfer de Verdun]], suomeksi Verdunin helvetti. Nimet kuvaavat sitä, miten raskas ja pitkä taistelu oli: se kesti kolmesataa päivää vuonna 1916 ja vaati noin 300 000 miehen hengen. Kaikki nimet viittaavat samaan taisteluun, joka on jäänyt [[ensimmäisen maailmansodan]] muistiin. Painava nimi, ei siihen paljon lisättävää.
+KYSYMYS: Kerro lisää: L'Enfer de Verdun
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Arki: Villa pakataan paaleiksi] nykyään — Kerintäkauden jälkeen villa lajitellaan ja puristetaan suuriksi paaleiksi tilojen omissa villavajoissa, kuten West Point Islandin kuvassa näkyvässä rakennuksessa. Paalit kuljetetaan pienillä aluksilla tai lentäen Port Stanleyhin ja sieltä laivalla eteenpäin, sillä Falklandeilla ei ole omaa villatehdasta. Monilla syrjäisillä tiloilla koko perhe osallistuu kerintään ja pakkaamiseen muutaman viikon ajan vuodessa, ja työ on säilynyt lähes samanlaisena jo 1800-luvun lopulta asti. Villavaja on usein tilan suurin rakennus asuinrakennuksen jälkeen.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Miksi teos ei ole oikeasti kuvakudos?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Bayeux'n seinävaate on kirjonta eikä kudottu kuvakudos, koska kuvat on ommeltu valmiille kankaalle eikä kudottu kankaan rakenteeseen. Tässä työssä on käytetty [[villalankaa]] karkealle [[pellavalle]], neljää pistolajia ja kymmentä luonnonväriä. Nimitys kuvakudos on silti vakiintunut, vaikka se on teknisesti väärä. Kangas kertoo [[Hastingsin taistelusta]] vuonna 1066. Nimi on vääntynyt, mut kyl sen tuntee.
+KYSYMYS: Kerro lisää: villalankaa
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Seitsemänkymmentä metriä sarjakuvaa pellavalle] 1070-luku — Bayeux'n seinävaate kertoo, miten Normandian herttua Vilhelm valloitti Englannin vuonna 1066. Se ei ole kudottu vaan kirjottu villalangalla pellavakankaalle, ja sitä on lähes seitsemänkymmentä metriä. Kuvat etenevät kohtaus kohtaukselta kuin sarjakuva, ja niiden yllä kulkee latinankielinen tekstirivi. Yhdessä kohtauksessa ihmiset osoittavat taivaalle: siellä näkyy Halleyn komeetta, joka todella ohitti maan samana vuonna.
+AIEMPI KYSYMYS: Miksi teos ei ole oikeasti kuvakudos?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Bayeux'n seinävaate on kirjonta eikä kudottu kuvakudos, koska kuvat on ommeltu valmiille kankaalle eikä kudottu kankaan rakenteeseen. Tässä työssä on käytetty [[villalankaa]] karkealle [[pellavalle]], neljää pistolajia ja kymmentä luonnonväriä. Nimitys kuvakudos on silti vakiintunut, vaikka se on teknisesti väärä. Kangas kertoo [[Hastingsin taistelusta]] vuonna 1066. Nimi on vääntynyt, mut kyl sen tuntee.
+KYSYMYS: Kerro lisää: pellavalle
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Miksi teos ei ole oikeasti kuvakudos?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Bayeux'n seinävaate on kirjonta eikä kudottu kuvakudos, koska kuvat on ommeltu valmiille kankaalle eikä kudottu kankaan rakenteeseen. Tässä työssä on käytetty [[villalankaa]] karkealle [[pellavalle]], neljää pistolajia ja kymmentä luonnonväriä. Nimitys kuvakudos on silti vakiintunut, vaikka se on teknisesti väärä. Kangas kertoo [[Hastingsin taistelusta]] vuonna 1066. Nimi on vääntynyt, mut kyl sen tuntee.
+KYSYMYS: Kerro lisää: Hastingsin taistelusta
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+AIEMPI KYSYMYS: Kuka sen luultavasti tilasi ja miksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa [[Odoa]]. Syystä en ole aivan varma, mutta koska kangas kertoo [[Vilhelmin]] Englannin-valloituksesta ja [[Hastingsin]] taistelusta, tilaus liittyi todennäköisesti tämän voiton muistamiseen. Tilaajasta ei ole täyttä varmuutta, vaan kyse on tutkijoiden yleisimmästä arvelusta. Minä olisin tilannut vähintään pullaa.
+KYSYMYS: Kerro lisää: Odoa
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Ensimmäinen huipulle] Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.
+AIEMPI KYSYMYS: Kuka sen luultavasti tilasi ja miksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa [[Odoa]]. Syystä en ole aivan varma, mutta koska kangas kertoo [[Vilhelmin]] Englannin-valloituksesta ja [[Hastingsin]] taistelusta, tilaus liittyi todennäköisesti tämän voiton muistamiseen. Tilaajasta ei ole täyttä varmuutta, vaan kyse on tutkijoiden yleisimmästä arvelusta. Minä olisin tilannut vähintään pullaa.
+KYSYMYS: Kerro lisää: Vilhelmin
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Kuka sen luultavasti tilasi ja miksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa [[Odoa]]. Syystä en ole aivan varma, mutta koska kangas kertoo [[Vilhelmin]] Englannin-valloituksesta ja [[Hastingsin]] taistelusta, tilaus liittyi todennäköisesti tämän voiton muistamiseen. Tilaajasta ei ole täyttä varmuutta, vaan kyse on tutkijoiden yleisimmästä arvelusta. Minä olisin tilannut vähintään pullaa.
+KYSYMYS: Kerro lisää: Hastingsin
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Seitsemänkymmentä metriä sarjakuvaa pellavalle] 1070-luku — Bayeux'n seinävaate kertoo, miten Normandian herttua Vilhelm valloitti Englannin vuonna 1066. Se ei ole kudottu vaan kirjottu villalangalla pellavakankaalle, ja sitä on lähes seitsemänkymmentä metriä. Kuvat etenevät kohtaus kohtaukselta kuin sarjakuva, ja niiden yllä kulkee latinankielinen tekstirivi. Yhdessä kohtauksessa ihmiset osoittavat taivaalle: siellä näkyy Halleyn komeetta, joka todella ohitti maan samana vuonna.
+AIEMPI KYSYMYS: Kuinka monta kohtausta seinävaatteessa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen [[latinankielinen]] teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy [[Hastingsin taisteluun]]. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: latinankielinen
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Ljubljana — kohdekartta / Kohdekartta: Prešernin aukio] 1600-luku Prešernin aukio on Ljubljanan keskusaukio vanhan kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa 1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja kivettiin. Wolfin ja Čopin kadun välissä seisova Hauptmannin talo rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen jälkeen: Max Fabiani suunnitteli sen nel…
+AIEMPI KYSYMYS: Kuinka monta kohtausta seinävaatteessa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen [[latinankielinen]] teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy [[Hastingsin taisteluun]]. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: Edvard Tunnustajan
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Kuinka monta kohtausta seinävaatteessa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen [[latinankielinen]] teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy [[Hastingsin taisteluun]]. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: Hastingsin taisteluun
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Seitsemänkymmentä metriä sarjakuvaa pellavalle] 1070-luku — Bayeux'n seinävaate kertoo, miten Normandian herttua Vilhelm valloitti Englannin vuonna 1066. Se ei ole kudottu vaan kirjottu villalangalla pellavakankaalle, ja sitä on lähes seitsemänkymmentä metriä. Kuvat etenevät kohtaus kohtaukselta kuin sarjakuva, ja niiden yllä kulkee latinankielinen tekstirivi. Yhdessä kohtauksessa ihmiset osoittavat taivaalle: siellä näkyy Halleyn komeetta, joka todella ohitti maan samana vuonna.
+AIEMPI KYSYMYS: Mihin tapahtumaan seinävaatteen kertomus päättyy?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kertomus päättyy [[Hastingsin taisteluun]], jossa [[Vilhelm]] voitti Harold Godwininpojan ja otti Englannin kruunun. Taistelu käytiin vuonna 1066. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064, ja lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia. Hyvä loppu Vilhelmille, vähän huonompi Haroldille.
+KYSYMYS: Kerro lisää: Vilhelm
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+AIEMPI KYSYMYS: Miksi sillan rakentamiseen ryhdyttiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä oli sellainen asia, jonka ymmärtää vasta ruuhkassa. Millaun seudun tiet tukkeutuivat 1980-luvulla, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki kaupungin kautta. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Silta kuuluu [[A75–A71]]-moottoritieakseliin, joka vie Pariisista Béziers'iin ja [[Montpellier'hen]]. Se avattiin liikenteelle joulukuussa 2004. Ilman siltaa ruuhka jatkuisi kyl yhä.
+KYSYMYS: Kerro lisää: A75–A71
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+AIEMPI KYSYMYS: Miksi sillan rakentamiseen ryhdyttiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä oli sellainen asia, jonka ymmärtää vasta ruuhkassa. Millaun seudun tiet tukkeutuivat 1980-luvulla, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki kaupungin kautta. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Silta kuuluu [[A75–A71]]-moottoritieakseliin, joka vie Pariisista Béziers'iin ja [[Montpellier'hen]]. Se avattiin liikenteelle joulukuussa 2004. Ilman siltaa ruuhka jatkuisi kyl yhä.
+KYSYMYS: Kerro lisää: Montpellier'hen
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Kultaisen sarven silta] avattu 2012 Kultaisen sarven lahti teki Vladivostokista sataman, mutta se myös halkaisi kaupungin: Tšurkinin puolelle pääsi vuosikymmenten ajan vain lautalla tai pitkällä kierrolla lahden pohjukan kautta, pahimmillaan puolentoista–kahden tunnin matkalla. Silta tilattiin 2006, rakennustyöt alkoivat heinäkuussa 2008, ja elokuussa 2012 vuoden 2012 APEC-huippukokouksen alla lahden yli avattiin 1 387 metrin vinoköysisilta. Ylitys kestää nyt viidestä kymmeneen minuuttia. Mitat ovat kaupungin mittakaavassa valtavat: pääjänne on 737 metriä, V-kirjaimen muotoiset pylonit nousevat 222 metriin ja kannen alla on kuusikymmentä metriä vapaata korkeutta laivoille. Samana kesänä valmistui toinenkin jättilä…
+AIEMPI KYSYMYS: Kuinka korkea rakenne on?
+AIEMPI VASTAUS (Livia):
+No jopas, tän minä muistan. Millaun sillan rakenteellinen korkeus on 343 metriä. Yli kahden vuosikymmenen ajan, vuoden 2025 loppuun asti, se oli maailman korkein silta. Silta on monijänteinen [[vinoköysisilta]] [[Tarn]]-joen rotkolaakson yli Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri [[Michel Virlogeux]] ja arkkitehti Norman Foster. Korkealta katsottuna minäkin tunnen oloni kotoisaksi.
+KYSYMYS: Kerro lisää: vinoköysisilta
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+AIEMPI KYSYMYS: Kuinka korkea rakenne on?
+AIEMPI VASTAUS (Livia):
+No jopas, tän minä muistan. Millaun sillan rakenteellinen korkeus on 343 metriä. Yli kahden vuosikymmenen ajan, vuoden 2025 loppuun asti, se oli maailman korkein silta. Silta on monijänteinen [[vinoköysisilta]] [[Tarn]]-joen rotkolaakson yli Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri [[Michel Virlogeux]] ja arkkitehti Norman Foster. Korkealta katsottuna minäkin tunnen oloni kotoisaksi.
+KYSYMYS: Kerro lisää: Tarn
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+AIEMPI KYSYMYS: Kuinka korkea rakenne on?
+AIEMPI VASTAUS (Livia):
+No jopas, tän minä muistan. Millaun sillan rakenteellinen korkeus on 343 metriä. Yli kahden vuosikymmenen ajan, vuoden 2025 loppuun asti, se oli maailman korkein silta. Silta on monijänteinen [[vinoköysisilta]] [[Tarn]]-joen rotkolaakson yli Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri [[Michel Virlogeux]] ja arkkitehti Norman Foster. Korkealta katsottuna minäkin tunnen oloni kotoisaksi.
+KYSYMYS: Kerro lisää: Michel Virlogeux
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Khan Shatyr] 2006–2010 Rakennuksen suunnitteli Foster and Partners ja rakenteet insinööritoimisto Buro Happold; työn teki turkkilainen Sembol, ja hinnaksi kerrotaan 400 miljoonaa dollaria. Työmaa alkoi joulukuussa 2006, keskusmasto pystytettiin joulukuussa 2008 ja talo avattiin 5. heinäkuuta 2010. Pinta-alasta Wikipedia antaa kaksi lukua, infoboksin 100 000 ja leipätekstin 140 000 neliömetriä. Katteena ei ole lasi vaan ETFE-kalvotyynyt, jotka riippuvat keskusmastosta lähtevässä vaijeriverkossa. Kalvo päästää auringonvalon läpi, ja sen ansiosta katon alla kasvaa puita. Sisälämpötila pidetään pääosassa 15 ja 30 asteen välillä ja myymälöissä 19 ja 24 asteen välillä, vaikka ulkoilma vaihtelee vuoden mittaan…
+AIEMPI KYSYMYS: Kuka suunnitteli Millaun sillan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suunnitteluryhmää johtivat insinööri [[Michel Virlogeux]] ja englantilainen arkkitehti [[Norman Foster]]. Silta on monijänteinen [[vinoköysisilta]], joka ylittää [[Tarn]]-joen rotkolaakson Aveyronin departementissa Etelä-Ranskassa. Työ kesti kolme vuotta, ja silta vihittiin 14. joulukuuta 2004. Insinööri ja arkkitehti, hyvä pari, kuten kyyhky ja kirje.
+KYSYMYS: Kerro lisää: Norman Foster
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+AIEMPI KYSYMYS: Paljonko Millaun sillan rakentaminen maksoi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Millaun sillan rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta, ja silta vihittiin 14. joulukuuta 2004. Se kuuluu moottoritieakseliin [[A75–A71]], joka vie Pariisista [[Béziers'iin]] ja Montpellier'hen. Kustannuksiin nähden silta on pystynyt kohentamaan sekä matka-aikoja että Millaun liikennettä. Paljon rahaa, mut korkealle se myös nousee.
+KYSYMYS: Kerro lisää: Béziers'iin
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Camargue (luonto · joki)
+Tietoruudun teksti: Camargue on yli 930 neliökilometrin suistoalue, joka syntyy Rhônen jakautuessa kahdeksi pääuomaksi, Grand Rhôneksi ja Petit Rhôneksi, ennen laskuaan Välimereen Arlesin eteläpuolella — yksi Länsi-Euroopan suurimmista jokisuistoista. Suolaisten laguunien ja ruovikkoisten suomaiden verkosto on koti yli 400 lintulajille, joista tunnetuin on flamingo. Puolivillit valkoiset camarguenhevoset ja camarguenhärät laiduntavat vapaina laumoina, joita gardianit eli alueen paimenet kaitsevat ratsain. Alue rauhoitettiin luonnonpuistoksi vuonna 1970, ja sen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Mistä camarguenhevoset ovat alun perin peräisin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Alkuperästä en ole aivan varma, enkä halua arvata. Varmasti tiedetään, että [[Camarguen]] hevosrotu elää [[Rhônen]] suiston suomailla ja on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, ja niiden leveät, kovat kaviot sopivat [[upottavaan suohon]]. Ne elävät laumoina ulkona ympäri vuoden. Alkuperä jää ny arvoitukseksi, harmi.
+KYSYMYS: Kerro lisää: Camarguen
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Camargue (luonto · joki)
+Tietoruudun teksti: Camargue on yli 930 neliökilometrin suistoalue, joka syntyy Rhônen jakautuessa kahdeksi pääuomaksi, Grand Rhôneksi ja Petit Rhôneksi, ennen laskuaan Välimereen Arlesin eteläpuolella — yksi Länsi-Euroopan suurimmista jokisuistoista. Suolaisten laguunien ja ruovikkoisten suomaiden verkosto on koti yli 400 lintulajille, joista tunnetuin on flamingo. Puolivillit valkoiset camarguenhevoset ja camarguenhärät laiduntavat vapaina laumoina, joita gardianit eli alueen paimenet kaitsevat ratsain. Alue rauhoitettiin luonnonpuistoksi vuonna 1970, ja sen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Mistä camarguenhevoset ovat alun perin peräisin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Alkuperästä en ole aivan varma, enkä halua arvata. Varmasti tiedetään, että [[Camarguen]] hevosrotu elää [[Rhônen]] suiston suomailla ja on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, ja niiden leveät, kovat kaviot sopivat [[upottavaan suohon]]. Ne elävät laumoina ulkona ympäri vuoden. Alkuperä jää ny arvoitukseksi, harmi.
+KYSYMYS: Kerro lisää: Rhônen

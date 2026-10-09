@@ -1,0 +1,994 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Kuka kiipesi näitä portaita polvillaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tästä saa kertoa lämmöllä. [[Rocamadourin]] pyhäkössä on käynyt vuosisatojen ajan sekä tavallisia [[pyhiinvaeltajia]] että kuninkaita, piispoja ja aatelisia, ja kävijöitä on ollut 1100-luvun taitteesta alkaen. Monumentaalista portaikkoa pyhäköille noustiin polvillaan, mikä oli hartauden ja katumuksen ilmaus. Kävijät tulivat [[Neitsyt Marian]] pyhäkön vuoksi, ja kylä on rakennettu kallioseinämään 150 metriä [[Alzoun]] laakson yläpuolelle. Minun polveni eivät edes taivu sillä tavalla.
+KYSYMYS: Kerro lisää: Alzoun
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Mistä pieni vuohenjuusto sai nimensä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: juuston nimi on helppo selittää. [[Rocamadour]] on pieni vuohenmaitojuusto, joka on nimetty kylän mukaan, ja se sai [[AOC-suojauksen]] vuonna 1996. Suojauksen tarkoitus on sitoa tuote tiettyyn alueeseen ja sen valmistustapaan, joten nimeä saa käyttää vain alueen juustosta. Kylä sijaitsee Lotin departementissa, entisessä [[Quercyn]] maakunnassa, ja juusto tulee samalta seudulta. Sitä, miten itse kylän nimi on syntynyt, en ole varma, enkä halua arvata. Pullaa tuolla ei kyllä ole, mut juustokin kelpaa.
+KYSYMYS: Kerro lisää: Rocamadour
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Mistä pieni vuohenjuusto sai nimensä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: juuston nimi on helppo selittää. [[Rocamadour]] on pieni vuohenmaitojuusto, joka on nimetty kylän mukaan, ja se sai [[AOC-suojauksen]] vuonna 1996. Suojauksen tarkoitus on sitoa tuote tiettyyn alueeseen ja sen valmistustapaan, joten nimeä saa käyttää vain alueen juustosta. Kylä sijaitsee Lotin departementissa, entisessä [[Quercyn]] maakunnassa, ja juusto tulee samalta seudulta. Sitä, miten itse kylän nimi on syntynyt, en ole varma, enkä halua arvata. Pullaa tuolla ei kyllä ole, mut juustokin kelpaa.
+KYSYMYS: Kerro lisää: AOC-suojauksen
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Mistä pieni vuohenjuusto sai nimensä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: juuston nimi on helppo selittää. [[Rocamadour]] on pieni vuohenmaitojuusto, joka on nimetty kylän mukaan, ja se sai [[AOC-suojauksen]] vuonna 1996. Suojauksen tarkoitus on sitoa tuote tiettyyn alueeseen ja sen valmistustapaan, joten nimeä saa käyttää vain alueen juustosta. Kylä sijaitsee Lotin departementissa, entisessä [[Quercyn]] maakunnassa, ja juusto tulee samalta seudulta. Sitä, miten itse kylän nimi on syntynyt, en ole varma, enkä halua arvata. Pullaa tuolla ei kyllä ole, mut juustokin kelpaa.
+KYSYMYS: Kerro lisää: Quercyn
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Mitä AOC-suojaus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä kuuluu asioihin, jotka kannattaa osata oikein. Lyhenne AOC tulee ranskan sanoista appellation d'origine contrôlée, eli valvottu alkuperänimitys. [[AOC-suojaus]] tarkoittaa, että tuotteen nimeä saa käyttää vain, jos tuote on valmistettu tietyllä alueella ja tietyn säännöstön mukaan. Sääntöjen alle kuuluvat esimerkiksi raaka-aineet ja valmistustapa. Suojaus on tavallista [[viineille]] ja [[juustoille]], ja EU:n alueella sitä vastaa nimike AOP. [[Rocamadourin]] juusto sai suojauksen vuonna 1996. Tarkat säännöt kannattaa tarkistaa virallisesta lähteestä, sillä minun muistini on lintumuisti.
+KYSYMYS: Kerro lisää: AOC-suojaus
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Mitä AOC-suojaus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä kuuluu asioihin, jotka kannattaa osata oikein. Lyhenne AOC tulee ranskan sanoista appellation d'origine contrôlée, eli valvottu alkuperänimitys. [[AOC-suojaus]] tarkoittaa, että tuotteen nimeä saa käyttää vain, jos tuote on valmistettu tietyllä alueella ja tietyn säännöstön mukaan. Sääntöjen alle kuuluvat esimerkiksi raaka-aineet ja valmistustapa. Suojaus on tavallista [[viineille]] ja [[juustoille]], ja EU:n alueella sitä vastaa nimike AOP. [[Rocamadourin]] juusto sai suojauksen vuonna 1996. Tarkat säännöt kannattaa tarkistaa virallisesta lähteestä, sillä minun muistini on lintumuisti.
+KYSYMYS: Kerro lisää: viineille
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Ruoka: Juusto kypsyy vuoren sisällä] 1411 — Roquefortiksi saa kutsua vain juustoa, joka on kypsytetty Roquefort-sur-Soulzonin kylässä Combalou-vuoren luonnonluolissa. Vuori on aikoinaan sortunut, ja lohkareiden väliin jäi halkeamia, joita kutsutaan fleurineiksi. Ne puhaltavat luoliin kosteaa ilmaa ja pitävät lämpötilan tasaisena ympäri vuoden. Juusto tehdään lampaan maidosta, ja yhteen kiloon menee noin neljä ja puoli litraa maitoa. Kuningas Kaarle VI antoi kyläläisille yksinoikeuden kypsytykseen jo vuonna 1411, ja 1925 roquefort sai ensimmäisenä ranskalaisena juustona virallisen alkuperäsuojan.
+AIEMPI KYSYMYS: Mitä AOC-suojaus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä kuuluu asioihin, jotka kannattaa osata oikein. Lyhenne AOC tulee ranskan sanoista appellation d'origine contrôlée, eli valvottu alkuperänimitys. [[AOC-suojaus]] tarkoittaa, että tuotteen nimeä saa käyttää vain, jos tuote on valmistettu tietyllä alueella ja tietyn säännöstön mukaan. Sääntöjen alle kuuluvat esimerkiksi raaka-aineet ja valmistustapa. Suojaus on tavallista [[viineille]] ja [[juustoille]], ja EU:n alueella sitä vastaa nimike AOP. [[Rocamadourin]] juusto sai suojauksen vuonna 1996. Tarkat säännöt kannattaa tarkistaa virallisesta lähteestä, sillä minun muistini on lintumuisti.
+KYSYMYS: Kerro lisää: juustoille
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Miten kylä mahtuu jyrkkään kallioseinämään?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä katsoa tätä ylhäältä. [[Rocamadour]] on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle, ja rakennukset nousevat seinämällä kerroksittain. Tavallisesti kylästä erotetaan alaosa, pyhäkköalue keskellä ja ylhäällä kallion päällä sijaitseva linnoitus, vaikka tarkat rajat voivat vaihdella kertojasta toiseen. Pyhäkköihin noustiin [[monumentaalista portaikkoa]] polvillaan. [[Alzou]] on Dordognen sivujoki, ja kylä katsoo sen kapeaa laaksoa alas jyrkänteeltä. Siinä on vähän tilaa, joten rakennukset on tungettu lähelle toisiaan niin kuin parvi ikkunalaudalle.
+KYSYMYS: Kerro lisää: monumentaalista portaikkoa
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Miten kylä mahtuu jyrkkään kallioseinämään?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä katsoa tätä ylhäältä. [[Rocamadour]] on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle, ja rakennukset nousevat seinämällä kerroksittain. Tavallisesti kylästä erotetaan alaosa, pyhäkköalue keskellä ja ylhäällä kallion päällä sijaitseva linnoitus, vaikka tarkat rajat voivat vaihdella kertojasta toiseen. Pyhäkköihin noustiin [[monumentaalista portaikkoa]] polvillaan. [[Alzou]] on Dordognen sivujoki, ja kylä katsoo sen kapeaa laaksoa alas jyrkänteeltä. Siinä on vähän tilaa, joten rakennukset on tungettu lähelle toisiaan niin kuin parvi ikkunalaudalle.
+KYSYMYS: Kerro lisää: Alzou
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Suitsutusastia, joka lentää poikki kirkon] 1000-luku — Santiago de Compostelan katedraaliin on kävelty tuhat vuotta: Camino de Santiago on pyhiinvaellustie, jota kulkee yhä satojatuhansia ihmisiä vuodessa. Perillä odottaa botafumeiro, 53-kiloinen hopeoitu suitsutusastia, jota kahdeksan miestä heiluttaa köysillä poikki ristilaivan. Se kiihtyy lähes 70 kilometrin tuntinopeuteen ja nousee 21 metrin korkeuteen. Alkuperäinen syy oli arkinen: pitkän matkan kulkeneet pyhiinvaeltajat haisivat.
+AIEMPI KYSYMYS: Miksi pyhiinvaeltajat tulivat juuri tänne?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on selvä pääsyy. [[Neitsyt Marian]] pyhäkkö veti pyhiinvaeltajia puoleensa 1100-luvun taitteesta alkaen, ja kävijöiden joukossa oli kuninkaita, piispoja ja aatelisia. Pyhäpaikan maine kasvoi, kun kerrottiin kävijöiden kokemista armon ja avun hetkistä, ja kylä sijaitsi reiteillä, joita pitkin matkattiin Ranskan halki. Muun muassa [[Santiago de Compostelan]] suuntaan kulkeneet pysähtyivät tällä seudulla, mutta tästä en ole aivan varma. Kallio, kaunis laakso ja pyhäkkö yhdessä tekevät paikasta sellaisen, että sinne halusi tulla. Matkani sinne on ollut pitkä, vaikka olen lentänyt vain mielessäni.
+KYSYMYS: Kerro lisää: Santiago de Compostelan
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Miten kokonainen kirkko louhitaan kallion sisään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kalkkikivi on pehmeää ja hyvin työstettävää, joten se soveltuu siihen, että tila kaivetaan sen sisään. [[Saint-Émilionin]] kirkko on yksikivinen, eli se on louhittu kokonaan yhdestä kalliosta eikä rakennettu erillisistä kivilohkoista. Työ tehtiin käsityökaluilla: kalliosta poistettiin kiveä, kunnes jäljelle jäi sali, jossa on pilarit ja holvit jätettyinä paikoilleen. Kivi, jota kaivettiin pois, voitiin käyttää rakennusaineena kaupungin muihin rakennuksiin. Kaupunki on [[kalkkikivikummulla]], ja siellä kallioon louhittu kirkko on osa [[Unescon]] maailmanperintökohdetta. Hienosti tehty, vaikka kyyhky ei kaivaisi edes kuoppaa.
+KYSYMYS: Kerro lisää: Saint-Émilionin
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Miten kokonainen kirkko louhitaan kallion sisään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kalkkikivi on pehmeää ja hyvin työstettävää, joten se soveltuu siihen, että tila kaivetaan sen sisään. [[Saint-Émilionin]] kirkko on yksikivinen, eli se on louhittu kokonaan yhdestä kalliosta eikä rakennettu erillisistä kivilohkoista. Työ tehtiin käsityökaluilla: kalliosta poistettiin kiveä, kunnes jäljelle jäi sali, jossa on pilarit ja holvit jätettyinä paikoilleen. Kivi, jota kaivettiin pois, voitiin käyttää rakennusaineena kaupungin muihin rakennuksiin. Kaupunki on [[kalkkikivikummulla]], ja siellä kallioon louhittu kirkko on osa [[Unescon]] maailmanperintökohdetta. Hienosti tehty, vaikka kyyhky ei kaivaisi edes kuoppaa.
+KYSYMYS: Kerro lisää: kalkkikivikummulla
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Miten kokonainen kirkko louhitaan kallion sisään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kalkkikivi on pehmeää ja hyvin työstettävää, joten se soveltuu siihen, että tila kaivetaan sen sisään. [[Saint-Émilionin]] kirkko on yksikivinen, eli se on louhittu kokonaan yhdestä kalliosta eikä rakennettu erillisistä kivilohkoista. Työ tehtiin käsityökaluilla: kalliosta poistettiin kiveä, kunnes jäljelle jäi sali, jossa on pilarit ja holvit jätettyinä paikoilleen. Kivi, jota kaivettiin pois, voitiin käyttää rakennusaineena kaupungin muihin rakennuksiin. Kaupunki on [[kalkkikivikummulla]], ja siellä kallioon louhittu kirkko on osa [[Unescon]] maailmanperintökohdetta. Hienosti tehty, vaikka kyyhky ei kaivaisi edes kuoppaa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Keitto, jonka värin tekee kalkkikivi] Achu on tikarien ja ngembojen perusruoka Kamerunin luoteis- ja länsiosissa: kokojamssi ja raa'at banaanit keitetään, kuoritaan ja survotaan huhmaressa sileäksi taikinaksi, joka muotoillaan lautaselle oman kuoppansa kanssa. Kuoppaan kaadetaan keltainen keitto, joka valmistetaan erikseen palmuöljystä, mausteista ja lihaliemestä — ja kanwa- eli niki-vedestä, jossa on liuotettua kalkkikiveä. Juuri se kääntää punaisen palmuöljyn keltaiseksi ja antaa ruoalle sen toisen nimen, keltainen keitto. Seurana on naudanlihaa, sisäelimiä tai naudannahkaa. Luoteessa ruoka on achu, lännessä taro.
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla] Nullarborin tasainen pinta kätkee alleen toisen maailman: kauan sitten merenpohjasta noussut kalkkikivi on täynnä luolia, pystykuiluja ja käytäviä, joissa muinaiset ihmiset ja aavikon eläimet ovat molemmat oppineet elämään.
+AIEMPI KYSYMYS: Mikä tekee näistä kukkuloista niin hyviä viinille?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Kalkkikivi]] on seudun perusta: se vie vettä hyvin läpi ja varastoi sitä sopivasti, joten viiniköynnös saa kosteutta mutta ei seiso märässä. Rinteet ja kummut ottavat vastaan aurinkoa ja ohjaavat vettä pois juurilta. Seudulla viljellään pääasiassa [[merlot]]-rypälettä ja [[cabernet franc]] -rypälettä, mutta tarkka lajikejako vaihtelee tiloittain. Saint-Émilion kaupunkina ja ympäröivät viinitarhat otettiin Unescon maailmanperintöluetteloon vuonna 1999, koska viininviljely on seudulla pitkää ja yhä elävää. Aika paljon tietoa viinistä kyyhkyltä, joka ei juo muuta kuin vettä.
+KYSYMYS: Kerro lisää: Kalkkikivi
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Ruoka: Rypäle, jota luultiin sukupuuttoon kuolleeksi] 1867–1998 — Carménère on yksi Bordeaux’n kuudesta alkuperäisestä punaviinirypäleestä, ja nimi tulee sanasta carmin, karmiini: lehdet punertuvat syksyllä. Vuoden 1867 viinikirvatuho hävitti sen Euroopasta lähes kokonaan, ja lajia pidettiin kadonneena. Pistokkaat oli kuitenkin tuotu 1850-luvulla Santiagon ympäristön laaksoihin, joihin kirva ei koskaan levinnyt. Koko 1900-luvun sato korjattiin merlot’na. Ranskalainen ampelografi Jean Boursiquot tunnisti lajikkeen omakseen 1994, ja se sai virallisen aseman 1998.
+AIEMPI KYSYMYS: Mikä tekee näistä kukkuloista niin hyviä viinille?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Kalkkikivi]] on seudun perusta: se vie vettä hyvin läpi ja varastoi sitä sopivasti, joten viiniköynnös saa kosteutta mutta ei seiso märässä. Rinteet ja kummut ottavat vastaan aurinkoa ja ohjaavat vettä pois juurilta. Seudulla viljellään pääasiassa [[merlot]]-rypälettä ja [[cabernet franc]] -rypälettä, mutta tarkka lajikejako vaihtelee tiloittain. Saint-Émilion kaupunkina ja ympäröivät viinitarhat otettiin Unescon maailmanperintöluetteloon vuonna 1999, koska viininviljely on seudulla pitkää ja yhä elävää. Aika paljon tietoa viinistä kyyhkyltä, joka ei juo muuta kuin vettä.
+KYSYMYS: Kerro lisää: merlot
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Purcarin tila ja Negru de Purcari] vuodesta 1827 — Purcarin kylä on Ștefan Vodăn piirikunnassa Moldovan kaakkoisosassa. Vuonna 1827 Venäjän keisari Nikolai I antoi asetuksen, jolla Purcarin tila sai Bessarabian ensimmäisen erikoistuneen viinitilan aseman. Tila sai tunnustusta Pariisin maailmannäyttelyssä 1878. Sen tunnetuin viini on Negru de Purcari, jossa on 70 prosenttia cabernet sauvignonia, 25 prosenttia saperavia ja 5 prosenttia rară neagrăa. Tuotanto seisoi Neuvostoliiton hajoamisen jälkeen kymmenen vuotta ja käynnistyi uudelleen 2003; nyt tilalla on yli 260 hehtaaria viinitarhoja.
+AIEMPI KYSYMYS: Mikä tekee näistä kukkuloista niin hyviä viinille?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Kalkkikivi]] on seudun perusta: se vie vettä hyvin läpi ja varastoi sitä sopivasti, joten viiniköynnös saa kosteutta mutta ei seiso märässä. Rinteet ja kummut ottavat vastaan aurinkoa ja ohjaavat vettä pois juurilta. Seudulla viljellään pääasiassa [[merlot]]-rypälettä ja [[cabernet franc]] -rypälettä, mutta tarkka lajikejako vaihtelee tiloittain. Saint-Émilion kaupunkina ja ympäröivät viinitarhat otettiin Unescon maailmanperintöluetteloon vuonna 1999, koska viininviljely on seudulla pitkää ja yhä elävää. Aika paljon tietoa viinistä kyyhkyltä, joka ei juo muuta kuin vettä.
+KYSYMYS: Kerro lisää: cabernet franc
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Mitä Saint-Émilionin viiniluokitus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on oikeasti kiinnostava. Saint-Émilionin viineillä on oma [[viiniluokitus]], joka on tehty vuonna 1955, ja sitä tarkistetaan noin kymmenen vuoden välein. Luokituksessa viinitilat arvioidaan, ja ylimpään luokkaan kuuluvat [[Premier Grand Cru Classé]] -tilat. Siksi luokitus ei ole kertaluonteinen arvosana vaan muuttuu: tila voi nousta, laskea tai pudota luokituksesta kokonaan. Tarkat nykyiset luokat ja tilat kannattaa tarkistaa ajantasaisesta lähteestä, sillä en ole varma kaikista yksityiskohdista.
+
+Pullassa ei ole luokitusta, mutta jos olisi, minä olisin ensimmäinen tuomari.
+KYSYMYS: Kerro lisää: viiniluokitus
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Mitä Saint-Émilionin viiniluokitus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on oikeasti kiinnostava. Saint-Émilionin viineillä on oma [[viiniluokitus]], joka on tehty vuonna 1955, ja sitä tarkistetaan noin kymmenen vuoden välein. Luokituksessa viinitilat arvioidaan, ja ylimpään luokkaan kuuluvat [[Premier Grand Cru Classé]] -tilat. Siksi luokitus ei ole kertaluonteinen arvosana vaan muuttuu: tila voi nousta, laskea tai pudota luokituksesta kokonaan. Tarkat nykyiset luokat ja tilat kannattaa tarkistaa ajantasaisesta lähteestä, sillä en ole varma kaikista yksityiskohdista.
+
+Pullassa ei ole luokitusta, mutta jos olisi, minä olisin ensimmäinen tuomari.
+KYSYMYS: Kerro lisää: Premier Grand Cru Classé
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Kuka oli Émilion, jonka mukaan kaupunki on nimetty?
+AIEMPI VASTAUS (Livia):
+Kato, nimien takana on usein ihminen. [[Émilion]] oli munkki, joka tunnetaan kaupungin nimen antajana, ja hänen sanotaan elänneen erakkona luolassa kallion sisällä kahdeksannella vuosisadalla. Hänen ympärilleen kasvoi uskonnollinen yhteisö, ja asutus kehittyi sen ympärille. Kallioon louhittu [[yksikivinen kirkko]] kuuluu kaupungin tunnetuimpiin kohteisiin. Tarkat vuosiluvut ja yksityiskohdat kannattaa tarkistaa lähteistä, koska ne vaihtelevat kertomuksesta toiseen. Munkit ovat tunnetusti hyviä leipomaan, mikä on minulle tärkein oppi koko tarinassa.
+KYSYMYS: Kerro lisää: Émilion
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Kuka oli Émilion, jonka mukaan kaupunki on nimetty?
+AIEMPI VASTAUS (Livia):
+Kato, nimien takana on usein ihminen. [[Émilion]] oli munkki, joka tunnetaan kaupungin nimen antajana, ja hänen sanotaan elänneen erakkona luolassa kallion sisällä kahdeksannella vuosisadalla. Hänen ympärilleen kasvoi uskonnollinen yhteisö, ja asutus kehittyi sen ympärille. Kallioon louhittu [[yksikivinen kirkko]] kuuluu kaupungin tunnetuimpiin kohteisiin. Tarkat vuosiluvut ja yksityiskohdat kannattaa tarkistaa lähteistä, koska ne vaihtelevat kertomuksesta toiseen. Munkit ovat tunnetusti hyviä leipomaan, mikä on minulle tärkein oppi koko tarinassa.
+KYSYMYS: Kerro lisää: yksikivinen kirkko
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Millainen leivonnainen on Saint-Émilionin macaron?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt puhutaan asiaa. [[Saint-Émilionin macaron]] on seudun tunnettu pieni leivonnainen, joka valmistetaan manteleista, sokerista ja munanvalkuaisesta. Se on eri asia kuin Pariisin värikäs, täytteellä varustettu macaron: Saint-Émilionin versio on yksinkertaisempi ja paistettu pehmeäksi. Leivonnaisen sanotaan periytyvän luostareiden perinteestä, ja sitä pidetään seudun perinteisenä makeisena. Tarkkaa reseptiä ei tarvitse tuntea, mutta tiedän, että kyseessä on [[mantelimassa]]-pohjainen kakku. Kaupungissa on varmasti sen verran macaroneja, että minä voisin elää niillä kuukauden.
+KYSYMYS: Kerro lisää: Saint-Émilionin macaron
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+AIEMPI KYSYMYS: Millainen leivonnainen on Saint-Émilionin macaron?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt puhutaan asiaa. [[Saint-Émilionin macaron]] on seudun tunnettu pieni leivonnainen, joka valmistetaan manteleista, sokerista ja munanvalkuaisesta. Se on eri asia kuin Pariisin värikäs, täytteellä varustettu macaron: Saint-Émilionin versio on yksinkertaisempi ja paistettu pehmeäksi. Leivonnaisen sanotaan periytyvän luostareiden perinteestä, ja sitä pidetään seudun perinteisenä makeisena. Tarkkaa reseptiä ei tarvitse tuntea, mutta tiedän, että kyseessä on [[mantelimassa]]-pohjainen kakku. Kaupungissa on varmasti sen verran macaroneja, että minä voisin elää niillä kuukauden.
+KYSYMYS: Kerro lisää: mantelimassa
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Miksi juoma sai nimensä juuri tästä kaupungista?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaupungin nimi on aika vanha juttu. [[Konjakki]] valmistetaan Cognacin ympäristössä Charenten departementissa, ja juoman nimi viittaa sen alkuperään: se on nimetty kaupungin mukaan, jonka seudulla sitä tislataan. [[Nimisuojaus]] tarkoittaa, että vain tietyltä alueelta tulevaa ja tietyin säännöin valmistettua juomaa saa kutsua konjakiksi. Samanlainen ilmiö on tuttu muualtakin: [[pisco]] on nimetty Piscon satamakaupungin mukaan, josta juomaa vietiin Eurooppaan. Cognacin tapauksessa nimi liittyy siis kaupunkiin ja sen ympäristöön, vaikka juoman historian yksityiskohdat ovat laajempi aihe. Nimi on lyhyt, mutta se kuljettaa pitkän maineen.
+KYSYMYS: Kerro lisää: Konjakki
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Miksi juoma sai nimensä juuri tästä kaupungista?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaupungin nimi on aika vanha juttu. [[Konjakki]] valmistetaan Cognacin ympäristössä Charenten departementissa, ja juoman nimi viittaa sen alkuperään: se on nimetty kaupungin mukaan, jonka seudulla sitä tislataan. [[Nimisuojaus]] tarkoittaa, että vain tietyltä alueelta tulevaa ja tietyin säännöin valmistettua juomaa saa kutsua konjakiksi. Samanlainen ilmiö on tuttu muualtakin: [[pisco]] on nimetty Piscon satamakaupungin mukaan, josta juomaa vietiin Eurooppaan. Cognacin tapauksessa nimi liittyy siis kaupunkiin ja sen ympäristöön, vaikka juoman historian yksityiskohdat ovat laajempi aihe. Nimi on lyhyt, mutta se kuljettaa pitkän maineen.
+KYSYMYS: Kerro lisää: Nimisuojaus
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Ruoka: Juoma, joka sai nimensä satamasta] 1764 — Pisco tislataan käyneestä rypälemehusta. Espanjalaiset siirtolaiset kehittivät sen 1500-luvulla korvaamaan Espanjasta tuotua orujoa: rypäleitä kasvoi paikan päällä, ja väkevää juomaa mahtui laivaan vähemmällä tilalla. Vanhin tunnettu maininta sanasta perulaisesta paloviinasta on vuodelta 1764, ja nimi tulee Piscon satamakaupungista, josta juomaa vietiin Eurooppaan. Wieniläinen lehti kertoi 1835, että Chilessä juotiin paljon perulaista piscoa, kunnes tullit synnyttivät sinne oman version. Nimestä kiistellään yhä.
+AIEMPI KYSYMYS: Miksi juoma sai nimensä juuri tästä kaupungista?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaupungin nimi on aika vanha juttu. [[Konjakki]] valmistetaan Cognacin ympäristössä Charenten departementissa, ja juoman nimi viittaa sen alkuperään: se on nimetty kaupungin mukaan, jonka seudulla sitä tislataan. [[Nimisuojaus]] tarkoittaa, että vain tietyltä alueelta tulevaa ja tietyin säännöin valmistettua juomaa saa kutsua konjakiksi. Samanlainen ilmiö on tuttu muualtakin: [[pisco]] on nimetty Piscon satamakaupungin mukaan, josta juomaa vietiin Eurooppaan. Cognacin tapauksessa nimi liittyy siis kaupunkiin ja sen ympäristöön, vaikka juoman historian yksityiskohdat ovat laajempi aihe. Nimi on lyhyt, mutta se kuljettaa pitkän maineen.
+KYSYMYS: Kerro lisää: pisco
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Ruoka: Viina, joka tislataan kaktuksen hedelmästä] Tungi on saarelaisten nimi viikunakaktukselle, jonka norsunluukauppiaat toivat Itä-Afrikasta 1850-luvulla. Kasvi villiintyi kuiville rannikkorinteille ja on sittemmin päätynyt osaksi saaren omaa ruokapöytää. Lajikkeita on kolme: keltainen "English", iso punainen "Madeira" ja pieni kova "spiny red". Vain kaksi ensimmäistä kelpaavat tislaukseen, sillä pienen hedelmän mehupitoisuus on liian matala, vaikka sen satokausi kestää lähes kahdeksan kuukautta. Tungi-viina tislataan Alarm Forestissa tislaamossa, jota kutsutaan maailman syrjäisimmäksi; samasta tislaamosta tulee myös kahvilikööriä, giniä ja rommia.
+AIEMPI KYSYMYS: Mihin kuparipannua tarvitaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on tislauksen sydän. Kuparipannua käytetään [[tislaukseen]]: viini kuumennetaan pannussa, jolloin alkoholi höyrystyy, ja höyry jäähdytetään nesteeksi. Kupari johtaa lämpöä hyvin ja sitoo itseensä joitakin ei-toivottuja yhdisteitä, joten sitä on perinteisesti pidetty parhaana materiaalina. Konjakin valmistuksessa käytetään yleensä [[charentelaista tislauspannua]], ja tislaus tehdään kaksi kertaa. Näin saatu kirkas tislaus kypsytetään sen jälkeen tammitynnyreissä. Tarkat säännöt ovat tiukat, joten ne kannattaa tarkistaa viralliselta taholta. Itse en pannua tarvitse, minä keitän vain ajatuksia.
+KYSYMYS: Kerro lisää: tislaukseen
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Mihin kuparipannua tarvitaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on tislauksen sydän. Kuparipannua käytetään [[tislaukseen]]: viini kuumennetaan pannussa, jolloin alkoholi höyrystyy, ja höyry jäähdytetään nesteeksi. Kupari johtaa lämpöä hyvin ja sitoo itseensä joitakin ei-toivottuja yhdisteitä, joten sitä on perinteisesti pidetty parhaana materiaalina. Konjakin valmistuksessa käytetään yleensä [[charentelaista tislauspannua]], ja tislaus tehdään kaksi kertaa. Näin saatu kirkas tislaus kypsytetään sen jälkeen tammitynnyreissä. Tarkat säännöt ovat tiukat, joten ne kannattaa tarkistaa viralliselta taholta. Itse en pannua tarvitse, minä keitän vain ajatuksia.
+KYSYMYS: Kerro lisää: charentelaista tislauspannua
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Kuinka kauan konjakkia kypsytetään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Aika on tässä juoman laadun mitta. Konjakki kypsytetään [[tammitynnyreissä]], ja kypsytyksen pituus määrää luokan: VS-luokassa kypsytys on vähintään kaksi vuotta, VSOP:ssä vähintään neljä ja XO:ssa vähintään kymmenen vuotta. Joissain konjakeissa kypsytys on paljon pidempi. Tynnyreistä haihtuu vuosittain pieni osa nestettä, jota kutsutaan [[enkelten osuudeksi]]. Luokkien tarkat vaatimukset ovat säädeltyjä, joten niitä kannattaa tarkistaa viralliselta taholta. Minä en ole koskaan odottanut mitään kymmentä vuotta, paitsi ehkä pullaa.
+KYSYMYS: Kerro lisää: tammitynnyreissä
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Kuinka kauan konjakkia kypsytetään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Aika on tässä juoman laadun mitta. Konjakki kypsytetään [[tammitynnyreissä]], ja kypsytyksen pituus määrää luokan: VS-luokassa kypsytys on vähintään kaksi vuotta, VSOP:ssä vähintään neljä ja XO:ssa vähintään kymmenen vuotta. Joissain konjakeissa kypsytys on paljon pidempi. Tynnyreistä haihtuu vuosittain pieni osa nestettä, jota kutsutaan [[enkelten osuudeksi]]. Luokkien tarkat vaatimukset ovat säädeltyjä, joten niitä kannattaa tarkistaa viralliselta taholta. Minä en ole koskaan odottanut mitään kymmentä vuotta, paitsi ehkä pullaa.
+KYSYMYS: Kerro lisää: enkelten osuudeksi
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Mistä rypäleistä konjakki tislataan?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on yksi pääasiallinen vastaus. Konjakki tislataan valkoviinistä, ja yleisin rypälelajike on [[ugni blanc]]. Rypäleistä valmistettu viini on happamaista ja alkoholipitoisuudeltaan melko matalaa, mikä sopii tislattavaksi. Sallittuja lajikkeita on muitakin, mutta ugni blanc on selvästi tavallisin. Viini tislataan [[Charenten]] seudulla, jonka mukaan alueen viininviljely ja tislaus on nimetty. Tarkat osuudet ja sallitut lajikkeet kannattaa varmistaa lähteestä. Hapan viini ei kuulosta minusta houkuttelevalta, mutta tislaaja tietää paremmin.
+KYSYMYS: Kerro lisää: ugni blanc
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Mistä rypäleistä konjakki tislataan?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on yksi pääasiallinen vastaus. Konjakki tislataan valkoviinistä, ja yleisin rypälelajike on [[ugni blanc]]. Rypäleistä valmistettu viini on happamaista ja alkoholipitoisuudeltaan melko matalaa, mikä sopii tislattavaksi. Sallittuja lajikkeita on muitakin, mutta ugni blanc on selvästi tavallisin. Viini tislataan [[Charenten]] seudulla, jonka mukaan alueen viininviljely ja tislaus on nimetty. Tarkat osuudet ja sallitut lajikkeet kannattaa varmistaa lähteestä. Hapan viini ei kuulosta minusta houkuttelevalta, mutta tislaaja tietää paremmin.
+KYSYMYS: Kerro lisää: Charenten
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Mitä Ville d'art et d'histoire -nimitys tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimitys on virallinen, joten se kannattaa selittää tarkasti. Ville d'art et d'histoire on ranskalainen nimitys, jonka kulttuuriministeriö myöntää kaupungeille ja alueille, jotka pitävät huolta kulttuuriperinnöstään ja kertovat siitä asukkaille ja vierailijoille. Cognac on kantanut nimitystä vuodesta 2012. [[Ville d'art et d'histoire]] -nimitykseen liittyy yleensä sitoumus esitellä historiaa ja arkkitehtuuria, esimerkiksi opastuksin ja näyttelyin, mutta tarkat ehdot kannattaa tarkistaa ministeriön lähteistä. Nimitys ei ole sama kuin [[Unescon]] maailmanperintö. Sana kaupungista, jolla on taidetta ja historiaa, kuulostaa kyyhkyn korvaan oikein sopivalta.
+KYSYMYS: Kerro lisää: Ville d'art et d'histoire
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+AIEMPI KYSYMYS: Mitä Ville d'art et d'histoire -nimitys tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimitys on virallinen, joten se kannattaa selittää tarkasti. Ville d'art et d'histoire on ranskalainen nimitys, jonka kulttuuriministeriö myöntää kaupungeille ja alueille, jotka pitävät huolta kulttuuriperinnöstään ja kertovat siitä asukkaille ja vierailijoille. Cognac on kantanut nimitystä vuodesta 2012. [[Ville d'art et d'histoire]] -nimitykseen liittyy yleensä sitoumus esitellä historiaa ja arkkitehtuuria, esimerkiksi opastuksin ja näyttelyin, mutta tarkat ehdot kannattaa tarkistaa ministeriön lähteistä. Nimitys ei ole sama kuin [[Unescon]] maailmanperintö. Sana kaupungista, jolla on taidetta ja historiaa, kuulostaa kyyhkyn korvaan oikein sopivalta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Mitä kylpylävieraat oikein tekivät täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo, vaikken itse kylpemään uskalla. Vichyn [[kivennäislähteet]] tunnettiin jo antiikin aikana, ja 1800-luvulla kaupunki kasvoi voimakkaasti kylpyläkaupunkina. Vieraat tulivat hoitamaan terveyttään: heidän päivänsä koostuivat pääasiassa lähdeveden juomisesta, kylvyistä ja rauhallisista kävelyistä. Samalta ajalta on peräisin myös [[Vichyn pastilli]], joka luotiin vuonna 1825. Kylpyläperinne on edelleen niin arvostettu, että Vichy on kuulunut Unescon [[maailmanperintökohteisiin]] vuodesta 2021 yhdessä kymmenen muun eurooppalaisen kylpyläkaupungin kanssa. Minä valitsisin kyl pullan lähdeveden sijaan.
+KYSYMYS: Kerro lisää: kivennäislähteet
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Mitä kylpylävieraat oikein tekivät täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo, vaikken itse kylpemään uskalla. Vichyn [[kivennäislähteet]] tunnettiin jo antiikin aikana, ja 1800-luvulla kaupunki kasvoi voimakkaasti kylpyläkaupunkina. Vieraat tulivat hoitamaan terveyttään: heidän päivänsä koostuivat pääasiassa lähdeveden juomisesta, kylvyistä ja rauhallisista kävelyistä. Samalta ajalta on peräisin myös [[Vichyn pastilli]], joka luotiin vuonna 1825. Kylpyläperinne on edelleen niin arvostettu, että Vichy on kuulunut Unescon [[maailmanperintökohteisiin]] vuodesta 2021 yhdessä kymmenen muun eurooppalaisen kylpyläkaupungin kanssa. Minä valitsisin kyl pullan lähdeveden sijaan.
+KYSYMYS: Kerro lisää: Vichyn pastilli
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä kylpylävieraat oikein tekivät täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo, vaikken itse kylpemään uskalla. Vichyn [[kivennäislähteet]] tunnettiin jo antiikin aikana, ja 1800-luvulla kaupunki kasvoi voimakkaasti kylpyläkaupunkina. Vieraat tulivat hoitamaan terveyttään: heidän päivänsä koostuivat pääasiassa lähdeveden juomisesta, kylvyistä ja rauhallisista kävelyistä. Samalta ajalta on peräisin myös [[Vichyn pastilli]], joka luotiin vuonna 1825. Kylpyläperinne on edelleen niin arvostettu, että Vichy on kuulunut Unescon [[maailmanperintökohteisiin]] vuodesta 2021 yhdessä kymmenen muun eurooppalaisen kylpyläkaupungin kanssa. Minä valitsisin kyl pullan lähdeveden sijaan.
+KYSYMYS: Kerro lisää: maailmanperintökohteisiin
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Miksi juuri tämä kaupunki jäi historiaan sodan takia?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vakava juttu, joten kerron sen suoraan. Vichy tuli tunnetuksi, koska se oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kesällä 1940 Ranska oli kärsinyt sodassa tappion Saksalle, ja marsalkka [[Philippe Pétainin]] johtama hallinto asettui toimimaan pieneen kylpyläkaupunkiin, kun suuri osa maasta Pariisi mukaan lukien oli saksalaisten miehittämää. Hallinto tunnetaan nimellä [[Vichyn hallinto]], ja se teki yhteistyötä Saksan kanssa, minkä vuoksi kaupungin nimi on Ranskassa edelleen arkaluonteinen. Hallinto päättyi vuonna 1944, kun Ranska vapautettiin. Tapahtumista on yli kahdeksankymmentä vuotta, ja kaupunki on sittemmin palannut kylpyläkaupungiksi. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Philippe Pétainin
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Miksi juuri tämä kaupunki jäi historiaan sodan takia?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vakava juttu, joten kerron sen suoraan. Vichy tuli tunnetuksi, koska se oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kesällä 1940 Ranska oli kärsinyt sodassa tappion Saksalle, ja marsalkka [[Philippe Pétainin]] johtama hallinto asettui toimimaan pieneen kylpyläkaupunkiin, kun suuri osa maasta Pariisi mukaan lukien oli saksalaisten miehittämää. Hallinto tunnetaan nimellä [[Vichyn hallinto]], ja se teki yhteistyötä Saksan kanssa, minkä vuoksi kaupungin nimi on Ranskassa edelleen arkaluonteinen. Hallinto päättyi vuonna 1944, kun Ranska vapautettiin. Tapahtumista on yli kahdeksankymmentä vuotta, ja kaupunki on sittemmin palannut kylpyläkaupungiksi. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Vichyn hallinto
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Millainen makeinen Vichyn pastilli on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, makeisia. Niistä minä tiedän enemmän kuin pitäisi. Vichyn pastilli on pieni, perinteisesti mintunmakuinen makeinen, joka luotiin vuonna 1825 kylpyläkaupungin kukoistuskaudella. Sen valmistuksessa on perinteisesti käytetty Vichyn [[kivennäislähteiden]] [[mineraalisuoloja]], ja se on säilynyt kaupungin tunnettuna tuliaisena näihin päiviin asti. Pullaa se ei korvaa, mut kyl minä yhden maistaisin.
+KYSYMYS: Kerro lisää: kivennäislähteiden
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Millainen makeinen Vichyn pastilli on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, makeisia. Niistä minä tiedän enemmän kuin pitäisi. Vichyn pastilli on pieni, perinteisesti mintunmakuinen makeinen, joka luotiin vuonna 1825 kylpyläkaupungin kukoistuskaudella. Sen valmistuksessa on perinteisesti käytetty Vichyn [[kivennäislähteiden]] [[mineraalisuoloja]], ja se on säilynyt kaupungin tunnettuna tuliaisena näihin päiviin asti. Pullaa se ei korvaa, mut kyl minä yhden maistaisin.
+KYSYMYS: Kerro lisää: mineraalisuoloja
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kohdekartta / Kohdekartta: Dar Batha] 1800-luvun loppu Ennen Moulay Hassan I:n hallituskautta tällä paikalla oli vain pieniä yksittäisiä rakennuksia Fes el-Balin ja Fes Jdidin välissä. Kun sulttaani päätti yhdistää kaksi kaupunkia muurikäytävällä, väliin jäänyt tila täyttyi kuninkaallisilla puutarhoilla ja palatseilla. Dar Bathan tontti ostettiin Fèsin varakkaalta Ben Jelloun -suvulta. Palatsi rakennettiin kesäpalatsiksi ja arvovieraiden asunnoksi. Hassan I aloitti sen 1800-luvun lopulla ja hänen seuraajansa Abdelaziz viimeisteli sen; erään lähteen mukaan rakentaminen tapahtui vuosina 1886–1907. Viereisen Dar el-Beidan valmisti sulttaani Abdelhafid, Marokon viimeinen itsenäinen sulttaani. Vuonna 1912 molemmat palatsit otettiin …
+AIEMPI KYSYMYS: Mitkä muut kaupungit ovat samalla Unesco-listalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vichy kuuluu Unescon maailmanperintökohteeseen nimeltä Euroopan suuret kylpyläkaupungit, joka hyväksyttiin listalle 24.7.2021. Kohteessa on yhteensä yksitoista kaupunkia seitsemässä maassa. Vichyn lisäksi mukana ovat muun muassa [[Bath]] Britanniassa, [[Baden-Baden]] Saksassa ja [[Karlovy Vary]] Tšekissä. Yhteistä kaikille on se, että ne kehittyivät kivennäis- ja lämpölähteiden ympärille ja kukoistivat kylpyläkaupunkeina erityisesti 1700- ja 1800-luvuilla.
+
+Ylhäältä katsottuna kaikki höyryävä vesi näyttää samalta, mutta kai ne kaupungit osaavat erottaa toisensa.
+KYSYMYS: Kerro lisää: Bath
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Mitkä muut kaupungit ovat samalla Unesco-listalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vichy kuuluu Unescon maailmanperintökohteeseen nimeltä Euroopan suuret kylpyläkaupungit, joka hyväksyttiin listalle 24.7.2021. Kohteessa on yhteensä yksitoista kaupunkia seitsemässä maassa. Vichyn lisäksi mukana ovat muun muassa [[Bath]] Britanniassa, [[Baden-Baden]] Saksassa ja [[Karlovy Vary]] Tšekissä. Yhteistä kaikille on se, että ne kehittyivät kivennäis- ja lämpölähteiden ympärille ja kukoistivat kylpyläkaupunkeina erityisesti 1700- ja 1800-luvuilla.
+
+Ylhäältä katsottuna kaikki höyryävä vesi näyttää samalta, mutta kai ne kaupungit osaavat erottaa toisensa.
+KYSYMYS: Kerro lisää: Baden-Baden
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Ruoka: Riisi ei ole ruokalaji vaan ateria] Ateria on vary ja sen seuralainen laoka. Riisiä on monta tapaa: vary maina keitetään kuivaksi, vary sosoa vetiseksi puuroksi aamiaiseksi tai sairaalle, ja sen kanssa syödään kitozaa, savustettuja sebun lihasuikaleita. Vary amin'anana on puuroa lihan ja silputun lehtivihanneksen kanssa; famadihanassa eli luiden kääntämisen juhlassa tarjotaan vary be menaka, "riisi, jossa on paljon rasvaa". Paahdettuna ja jauhettuna riisi on lango, joka kestää matkan. Yleisin juoma syntyy kattilan pohjasta: ranon'ampango on kuumaa vettä paahtuneen riisikuoren päällä. Kuivassa etelässä riisin korvaa maniokki, maissi tai hapatettu sebunmaito.
+AIEMPI KYSYMYS: Mitkä muut kaupungit ovat samalla Unesco-listalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vichy kuuluu Unescon maailmanperintökohteeseen nimeltä Euroopan suuret kylpyläkaupungit, joka hyväksyttiin listalle 24.7.2021. Kohteessa on yhteensä yksitoista kaupunkia seitsemässä maassa. Vichyn lisäksi mukana ovat muun muassa [[Bath]] Britanniassa, [[Baden-Baden]] Saksassa ja [[Karlovy Vary]] Tšekissä. Yhteistä kaikille on se, että ne kehittyivät kivennäis- ja lämpölähteiden ympärille ja kukoistivat kylpyläkaupunkeina erityisesti 1700- ja 1800-luvuilla.
+
+Ylhäältä katsottuna kaikki höyryävä vesi näyttää samalta, mutta kai ne kaupungit osaavat erottaa toisensa.
+KYSYMYS: Kerro lisää: Karlovy Vary
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+AIEMPI KYSYMYS: Kuinka vanha Vichyn kylpyläperinne on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku lasken. Vichyn kivennäislähteet tunnettiin jo antiikin aikana, joten niiden hyödyntäminen ulottuu kauas ennen nykyaikaa. Kaupunki on [[Allier-joen]] rannalla Keski-Ranskassa, ja varsinaiseksi kylpyläkaupungiksi se kasvoi voimakkaasti vasta 1800-luvulla. Samalta ajalta on peräisin myös vuonna 1825 luotu pastilli. Tänä päivänä kaupunki on noin 25 000 asukkaan [[kylpyläkaupunki]], jonka perinne on tunnustettu Unescon maailmanperintönä. Ei paha kyyhkyltä, kun ei edes kylpenyt.
+KYSYMYS: Kerro lisää: Allier-joen
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Kuinka vanha Vichyn kylpyläperinne on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku lasken. Vichyn kivennäislähteet tunnettiin jo antiikin aikana, joten niiden hyödyntäminen ulottuu kauas ennen nykyaikaa. Kaupunki on [[Allier-joen]] rannalla Keski-Ranskassa, ja varsinaiseksi kylpyläkaupungiksi se kasvoi voimakkaasti vasta 1800-luvulla. Samalta ajalta on peräisin myös vuonna 1825 luotu pastilli. Tänä päivänä kaupunki on noin 25 000 asukkaan [[kylpyläkaupunki]], jonka perinne on tunnustettu Unescon maailmanperintönä. Ei paha kyyhkyltä, kun ei edes kylpenyt.
+KYSYMYS: Kerro lisää: kylpyläkaupunki
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+- [Persepolis — kohdekartta / Kohdekartta: Artakserkses III:n hauta] n. 358–338 eKr. Terassin takana vuoren kyljessä on kolme kallioon louhittua hautaa. Kaksi on valmiita ja kolmas jäi kesken kilometrin päähän. Kenen haudat ovat, ei lue missään, vaan nimet päätellään: Ktesias kertoo, että kuningas valmistutti hautansa eläessään, ja Naqsh-e Rustamin neljä hautaa on tavallisesti luettu Dareios I:lle, Xerxes I:lle, Artakserkses I:lle ja Dareios II:lle. Jäljelle jäävät Artakserkses II ja Artakserkses III, ja heille nämä kaksi valmista hautaa annetaan. Artakserkses III rakensi Persepolikseen myöhään: hän pystytti oman palatsinsa, louhi hautansa isänsä haudan viereen ja aloitti pitkiä hankkeita, jotka jäivät kesken — keskeneräisen portin ja kolmenkymmenenkahden py…
+AIEMPI KYSYMYS: Miten kalastajakylästä tuli muotikylpylä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Näin se meni, ainakin meikäläisten muistiinpanojen mukaan. Biarritz oli alun perin pieni kalastajakylä Atlantin rannalla. Sen maine alkoi nousta 1800-luvun puolivälissä, kun keisari [[Napoleon III:n]] puoliso, keisarinna [[Eugénie]], alkoi viettää aikaa alueella ja rakennutti sinne huvilan. Huvila on nykyään [[Hôtel du Palais]] -hotelli. Hallitsijoiden ja ylhäisön perässä saapuivat muutkin vieraat, ja kaupunki kehittyi ylelliseksi merenrantakohteeksi, joka tunnetaan nykyään myös kasinoistaan ja surffauskulttuuristaan. Ylhäältä se näyttää edelleen enemmän hotellilta kuin kylältä.
+KYSYMYS: Kerro lisää: Napoleon III:n
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+- [Istanbul — kaupunkilehti / Historia: Läimäys Dolmabahçen palatsissa] Vuonna 1868 sulttaani Abdülaziz vei vieraansa, Ranskan keisarinna Eugénien, tapaamaan äitiään Dolmabahçen palatsiin. Pertevniyal Sultan piti vieraan naisen läsnäoloa omissa yksityisissä huoneissaan loukkauksena, ja hänen kerrotaan läimäisseen keisarinnaa kasvoihin — tilanne oli lähellä kansainvälistä selkkausta. Toisen kertomuksen mukaan hän suuttui siitä, että Eugénie tarttui hänen poikaansa käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, mihin sulttaanin äiti löi.
+AIEMPI KYSYMYS: Miten kalastajakylästä tuli muotikylpylä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Näin se meni, ainakin meikäläisten muistiinpanojen mukaan. Biarritz oli alun perin pieni kalastajakylä Atlantin rannalla. Sen maine alkoi nousta 1800-luvun puolivälissä, kun keisari [[Napoleon III:n]] puoliso, keisarinna [[Eugénie]], alkoi viettää aikaa alueella ja rakennutti sinne huvilan. Huvila on nykyään [[Hôtel du Palais]] -hotelli. Hallitsijoiden ja ylhäisön perässä saapuivat muutkin vieraat, ja kaupunki kehittyi ylelliseksi merenrantakohteeksi, joka tunnetaan nykyään myös kasinoistaan ja surffauskulttuuristaan. Ylhäältä se näyttää edelleen enemmän hotellilta kuin kylältä.
+KYSYMYS: Kerro lisää: Eugénie
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Palais Garnier] 1875 Uuden oopperatalon suunnittelukilpailu julkistettiin joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. Voittajaksi julistettiin toukokuussa 1861 yksimielisesti nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut asemaansa — viimeinen sana valinnassa oli keisari Napoleon III:lla. Paikka oli hankala: paroni Haussmannin osoittama tontti oli vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita taloja. Garnier ratkaisi asian tekemällä talosta näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat yhtä koreat kuin katsomo. Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra Bastille valmistui; nykyään Palais G…
+AIEMPI KYSYMYS: Miten kalastajakylästä tuli muotikylpylä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Näin se meni, ainakin meikäläisten muistiinpanojen mukaan. Biarritz oli alun perin pieni kalastajakylä Atlantin rannalla. Sen maine alkoi nousta 1800-luvun puolivälissä, kun keisari [[Napoleon III:n]] puoliso, keisarinna [[Eugénie]], alkoi viettää aikaa alueella ja rakennutti sinne huvilan. Huvila on nykyään [[Hôtel du Palais]] -hotelli. Hallitsijoiden ja ylhäisön perässä saapuivat muutkin vieraat, ja kaupunki kehittyi ylelliseksi merenrantakohteeksi, joka tunnetaan nykyään myös kasinoistaan ja surffauskulttuuristaan. Ylhäältä se näyttää edelleen enemmän hotellilta kuin kylältä.
+KYSYMYS: Kerro lisää: Hôtel du Palais
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+AIEMPI KYSYMYS: Kuinka lähellä Espanjan raja oikeastaan on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Se on lähempänä kuin luulisi. Biarritzista Espanjan rajalle on noin 35 kilometriä, joten raja on lyhyen automatkan päässä. Kaupunki kuuluu [[Pyrénées-Atlantiques'n]] departementtiin Ranskan [[Baskimaassa]], joka jatkuu rajan toisella puolella Espanjassa. Ranskan ja Espanjan välinen raja kulkee [[Pyreneiden]] vuoristossa ja päättyy lännessä Atlantin rannalle. Lyhyt vastaus, ei tarvinnut edes lentää.
+KYSYMYS: Kerro lisää: Pyrénées-Atlantiques'n
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+AIEMPI KYSYMYS: Kuinka lähellä Espanjan raja oikeastaan on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Se on lähempänä kuin luulisi. Biarritzista Espanjan rajalle on noin 35 kilometriä, joten raja on lyhyen automatkan päässä. Kaupunki kuuluu [[Pyrénées-Atlantiques'n]] departementtiin Ranskan [[Baskimaassa]], joka jatkuu rajan toisella puolella Espanjassa. Ranskan ja Espanjan välinen raja kulkee [[Pyreneiden]] vuoristossa ja päättyy lännessä Atlantin rannalle. Lyhyt vastaus, ei tarvinnut edes lentää.
+KYSYMYS: Kerro lisää: Baskimaassa
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+AIEMPI KYSYMYS: Kuinka lähellä Espanjan raja oikeastaan on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Se on lähempänä kuin luulisi. Biarritzista Espanjan rajalle on noin 35 kilometriä, joten raja on lyhyen automatkan päässä. Kaupunki kuuluu [[Pyrénées-Atlantiques'n]] departementtiin Ranskan [[Baskimaassa]], joka jatkuu rajan toisella puolella Espanjassa. Ranskan ja Espanjan välinen raja kulkee [[Pyreneiden]] vuoristossa ja päättyy lännessä Atlantin rannalle. Lyhyt vastaus, ei tarvinnut edes lentää.
+KYSYMYS: Kerro lisää: Pyreneiden
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+AIEMPI KYSYMYS: Mitä kieltä Baskimaassa puhutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hauska kysymys. Baskimaassa puhutaan ranskaa ja espanjaa sen mukaan, kummalla puolella rajaa ollaan, mutta alueella on myös oma perinteinen kielensä, [[euskara]] eli baskin kieli. Baskin kieli ei ole sukua ranskalle eikä espanjalle, eikä sen tiedetä kuuluvan mihinkään muuhun tunnettuun kieliperheeseen, joten sitä sanotaan erilliskieleksi. Ranskan puolella sitä puhuu vain osa asukkaista, ja se on tärkeä osa alueen [[Baskimaan]] omaa identiteettiä. Viisas Pöllö olisi kertonut pidemmin, mutta hän on sattumoisin matkoilla.
+KYSYMYS: Kerro lisää: euskara
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+AIEMPI KYSYMYS: Mitä kieltä Baskimaassa puhutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hauska kysymys. Baskimaassa puhutaan ranskaa ja espanjaa sen mukaan, kummalla puolella rajaa ollaan, mutta alueella on myös oma perinteinen kielensä, [[euskara]] eli baskin kieli. Baskin kieli ei ole sukua ranskalle eikä espanjalle, eikä sen tiedetä kuuluvan mihinkään muuhun tunnettuun kieliperheeseen, joten sitä sanotaan erilliskieleksi. Ranskan puolella sitä puhuu vain osa asukkaista, ja se on tärkeä osa alueen [[Baskimaan]] omaa identiteettiä. Viisas Pöllö olisi kertonut pidemmin, mutta hän on sattumoisin matkoilla.
+KYSYMYS: Kerro lisää: Baskimaan
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+AIEMPI KYSYMYS: Miten surffaus tuli Biarritziin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Biarritzin surffauskulttuuri sai alkunsa vuonna 1956, kun yhdysvaltalainen käsikirjoittaja [[Peter Viertel]] toi surffilaudan mukanaan elokuvan kuvauksiin ja kokeili lajia kaupungin rannoilla. Laji levisi nopeasti, sillä [[Biskajanlahden]] pohjukkaan saapuvat Atlantin aallot sopivat surffaukseen hyvin. Nykyään Biarritz on yksi Euroopan tunnetuimmista surffauspaikoista. Itse pysyn mieluummin kuivalla.
+KYSYMYS: Kerro lisää: Peter Viertel
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Neula, joka ei ole Kleopatran] Victoria Embankmentin rantakadulla seisoo obeliski, jonka faarao Thutmosis III pystytti Egyptiin noin vuonna 1450 eaa. eli lähes 1 400 vuotta ennen Kleopatran syntymää, vaikka kivi on nimetty tämän mukaan. Se lähti Aleksandriasta syyskuussa 1877 maaten 28 metriä pitkän rautasylinterin sisällä, ja Biskajanlahden myrskyssä hukkui kuusi pelastusveneeseen lähtenyttä miestä, joiden nimet on kaiverrettu jalustan pronssilaattaan. Kivi pystytettiin paikalleen vasta syyskuussa 1878, ja kun viereen putosi pommi vuonna 1917, sirpaleiden jäljet jätettiin tahallaan korjaamatta.
+AIEMPI KYSYMYS: Miten surffaus tuli Biarritziin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Biarritzin surffauskulttuuri sai alkunsa vuonna 1956, kun yhdysvaltalainen käsikirjoittaja [[Peter Viertel]] toi surffilaudan mukanaan elokuvan kuvauksiin ja kokeili lajia kaupungin rannoilla. Laji levisi nopeasti, sillä [[Biskajanlahden]] pohjukkaan saapuvat Atlantin aallot sopivat surffaukseen hyvin. Nykyään Biarritz on yksi Euroopan tunnetuimmista surffauspaikoista. Itse pysyn mieluummin kuivalla.
+KYSYMYS: Kerro lisää: Biskajanlahden
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Mikä Biskajanlahti on ja mitä maita se rajaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Karttaa katsoen tää on selvä. Biskajanlahti on [[Atlantin valtameren]] laaja lahti, joka sijaitsee Ranskan länsirannikon ja Espanjan pohjoisrannikon välissä. Sitä rajaavat siis Ranska ja Espanja. Biarritz sijaitsee lahden pohjukassa, lähellä rajaa. Lahti tunnetaan avomereltä saapuvasta voimakkaasta aallokosta. Tämä sopii hyvin ainakin [[Biarritzin]] surffareille. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Atlantin valtameren
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+AIEMPI KYSYMYS: Mikä Biskajanlahti on ja mitä maita se rajaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Karttaa katsoen tää on selvä. Biskajanlahti on [[Atlantin valtameren]] laaja lahti, joka sijaitsee Ranskan länsirannikon ja Espanjan pohjoisrannikon välissä. Sitä rajaavat siis Ranska ja Espanja. Biarritz sijaitsee lahden pohjukassa, lähellä rajaa. Lahti tunnetaan avomereltä saapuvasta voimakkaasta aallokosta. Tämä sopii hyvin ainakin [[Biarritzin]] surffareille. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Biarritzin
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mistä kanavan huipulle saadaan vettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kanavan korkein kohta on Seuil de Naurouze, ja vaikein tehtävä oli johtaa sinne vettä [[Montagne Noiren]] vuorilta. Vesi tuotiin vuorilta keinotekoisia syöttöuomia pitkin, ja sitä varastoitiin padottuun [[Saint-Ferréolin]] tekoaltaaseen. Ratkaisun takana oli kanavan rakentaja [[Pierre-Paul Riquet]], joka johti työtä Ludvig XIV:n hallituskaudella. Kanavan huippukohdasta vesi virtaa kumpaankin suuntaan, Garonnelle ja Välimerelle.
+
+Minä lennän ylämäet ilman vettä, joten arvostan insinöörejä.
+KYSYMYS: Kerro lisää: Montagne Noiren
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mistä kanavan huipulle saadaan vettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kanavan korkein kohta on Seuil de Naurouze, ja vaikein tehtävä oli johtaa sinne vettä [[Montagne Noiren]] vuorilta. Vesi tuotiin vuorilta keinotekoisia syöttöuomia pitkin, ja sitä varastoitiin padottuun [[Saint-Ferréolin]] tekoaltaaseen. Ratkaisun takana oli kanavan rakentaja [[Pierre-Paul Riquet]], joka johti työtä Ludvig XIV:n hallituskaudella. Kanavan huippukohdasta vesi virtaa kumpaankin suuntaan, Garonnelle ja Välimerelle.
+
+Minä lennän ylämäet ilman vettä, joten arvostan insinöörejä.
+KYSYMYS: Kerro lisää: Saint-Ferréolin
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mistä kanavan huipulle saadaan vettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kanavan korkein kohta on Seuil de Naurouze, ja vaikein tehtävä oli johtaa sinne vettä [[Montagne Noiren]] vuorilta. Vesi tuotiin vuorilta keinotekoisia syöttöuomia pitkin, ja sitä varastoitiin padottuun [[Saint-Ferréolin]] tekoaltaaseen. Ratkaisun takana oli kanavan rakentaja [[Pierre-Paul Riquet]], joka johti työtä Ludvig XIV:n hallituskaudella. Kanavan huippukohdasta vesi virtaa kumpaankin suuntaan, Garonnelle ja Välimerelle.
+
+Minä lennän ylämäet ilman vettä, joten arvostan insinöörejä.
+KYSYMYS: Kerro lisää: Pierre-Paul Riquet
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Kuinka kauan kaivamiseen meni?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Työt aloitettiin [[Jean-Baptiste Colbertin]] kuninkaallisella määräyksellä lokakuussa 1666, ja kanava valmistui vuonna 1681, joten rakentaminen kesti noin viisitoista vuotta. Työtä johti [[Pierre-Paul Riquet]], joka kuoli vuonna 1680 eli vähän ennen kanavan valmistumista. Kanava valmistui [[Ludvig XIV:n]] hallituskaudella. Viisitoista vuotta, ja minä valitan kolmen tunnin lennosta.
+KYSYMYS: Kerro lisää: Jean-Baptiste Colbertin
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+AIEMPI KYSYMYS: Kuinka kauan kaivamiseen meni?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Työt aloitettiin [[Jean-Baptiste Colbertin]] kuninkaallisella määräyksellä lokakuussa 1666, ja kanava valmistui vuonna 1681, joten rakentaminen kesti noin viisitoista vuotta. Työtä johti [[Pierre-Paul Riquet]], joka kuoli vuonna 1680 eli vähän ennen kanavan valmistumista. Kanava valmistui [[Ludvig XIV:n]] hallituskaudella. Viisitoista vuotta, ja minä valitan kolmen tunnin lennosta.
+KYSYMYS: Kerro lisää: Ludvig XIV:n
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mikä Thaun laguuni on?
+AIEMPI VASTAUS (Livia):
+Ai se. Thaun laguuni on Välimeren rannalla oleva laaja murtovesilaguuni, johon Canal du Midi päättyy. Se on erotettu merestä kapealla rantasärkällä. Laguunin rannalla on [[Sèten]] kaupunki, ja laguunissa harjoitetaan [[osterinviljelyä]] sekä simpukoiden viljelyä. Se on siis kanavan eteläinen päätepiste, josta matka jatkuu Välimerelle. Suolaista vettä ja suolaisia murusia, ei kovin pullamaista.
+KYSYMYS: Kerro lisää: Sèten
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mikä Thaun laguuni on?
+AIEMPI VASTAUS (Livia):
+Ai se. Thaun laguuni on Välimeren rannalla oleva laaja murtovesilaguuni, johon Canal du Midi päättyy. Se on erotettu merestä kapealla rantasärkällä. Laguunin rannalla on [[Sèten]] kaupunki, ja laguunissa harjoitetaan [[osterinviljelyä]] sekä simpukoiden viljelyä. Se on siis kanavan eteläinen päätepiste, josta matka jatkuu Välimerelle. Suolaista vettä ja suolaisia murusia, ei kovin pullamaista.
+KYSYMYS: Kerro lisää: osterinviljelyä
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Kirjoitettu Tanger: Hajjille lähtenyt poika] Ibn Battuta syntyi Tangerissa 24. helmikuuta 1304 ja lähti kotoa kaksikymmenvuotiaana pyhiinvaellukselle. Kolmenkymmenen vuoden aikana 1325–1354 hän kiersi suuren osan Afrikkaa, Aasiaa ja Iberian niemimaata ja kulki arvioiden mukaan noin 117 000 kilometriä — enemmän kuin yksikään esimoderni matkaaja. Zheng He teki noin 50 000 ja Marco Polo noin 24 000 kilometriä. Elämänsä lopulla Ibn Battuta saneli matkoistaan kirjan, joka tunnetaan nimellä Rihla; kirjoittajaksi ryhtyi Ibn Juzayy, oppinut, jonka hän oli tavannut Granadassa.
+AIEMPI KYSYMYS: Miksi kanava rakennettiin alun perin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän liittyy iso ajatus. Kanavan tarkoitus oli yhdistää Atlantti ja Välimeri Ranskan halki, jolloin laivojen ei tarvinnut kiertää [[Iberian niemimaata]] ja [[Gibraltarin salmea]]. Hankkeen takana olivat ministeri Colbert ja kuningas Ludvig XIV, ja yhdessä Garonnen sivukanavan kanssa Canal du Midi muodostaa [[Canal des Deux Mers'n]] eli väylän Atlantilta Välimerelle.
+
+Tavara kulki kanavalla päiviä, mutta kirje lensi nopeammin, ja setäni kantoi aikanaan kursseja Reuterille Aachenin ja Brysselin väliä, kunnes lennätin vei työn. Hänelle tämäkin kanava olisi ollut vain hidas vesiputki, ja suvun puolustuksessa voisin jatkaa tästä vaikka iltaan asti. Kanava. Se yhdisti kaksi merta, ja hyvä niin.
+KYSYMYS: Kerro lisää: Iberian niemimaata
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Sitka: Tulivuori joka vartioi salmea] Sitka on Yhdysvaltain pinta-alaltaan suurin kaupunki, sillä se ulottuu peräti noin 4 815 neliömailin alueelle Baranofin ja Tšitšagofin saarille Alexanterin saaristossa. Kaupungin salmea vartioi Mount Edgecumbe, sammunut tulivuori, jonka lumihuippuinen, punertava tuhkakartio kohoaa merestä naapurisaaren keskellä. Ilmasto on lauhkea mutta hyvin sateinen: vuotuinen sademäärä on peräti noin 335 senttimetriä. Kalastus ja kalanjalostus ovat kaupungin tärkeimpiä elinkeinoja tänäkin päivänä, ja satamassa risteilevät kalastusveneet ovat yhtä pysyvä näky kuin sata vuotta sitten.
+AIEMPI KYSYMYS: Miksi kanava rakennettiin alun perin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän liittyy iso ajatus. Kanavan tarkoitus oli yhdistää Atlantti ja Välimeri Ranskan halki, jolloin laivojen ei tarvinnut kiertää [[Iberian niemimaata]] ja [[Gibraltarin salmea]]. Hankkeen takana olivat ministeri Colbert ja kuningas Ludvig XIV, ja yhdessä Garonnen sivukanavan kanssa Canal du Midi muodostaa [[Canal des Deux Mers'n]] eli väylän Atlantilta Välimerelle.
+
+Tavara kulki kanavalla päiviä, mutta kirje lensi nopeammin, ja setäni kantoi aikanaan kursseja Reuterille Aachenin ja Brysselin väliä, kunnes lennätin vei työn. Hänelle tämäkin kanava olisi ollut vain hidas vesiputki, ja suvun puolustuksessa voisin jatkaa tästä vaikka iltaan asti. Kanava. Se yhdisti kaksi merta, ja hyvä niin.
+KYSYMYS: Kerro lisää: Gibraltarin salmea
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Miksi kanava rakennettiin alun perin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän liittyy iso ajatus. Kanavan tarkoitus oli yhdistää Atlantti ja Välimeri Ranskan halki, jolloin laivojen ei tarvinnut kiertää [[Iberian niemimaata]] ja [[Gibraltarin salmea]]. Hankkeen takana olivat ministeri Colbert ja kuningas Ludvig XIV, ja yhdessä Garonnen sivukanavan kanssa Canal du Midi muodostaa [[Canal des Deux Mers'n]] eli väylän Atlantilta Välimerelle.
+
+Tavara kulki kanavalla päiviä, mutta kirje lensi nopeammin, ja setäni kantoi aikanaan kursseja Reuterille Aachenin ja Brysselin väliä, kunnes lennätin vei työn. Hänelle tämäkin kanava olisi ollut vain hidas vesiputki, ja suvun puolustuksessa voisin jatkaa tästä vaikka iltaan asti. Kanava. Se yhdisti kaksi merta, ja hyvä niin.
+KYSYMYS: Kerro lisää: Canal des Deux Mers'n
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mihin kanavaa käytetään nykyään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tää on helppo. Nykyään Canal du Midiä käytetään pääasiassa matkailuun ja vapaa-aikaan: kanavalla liikkuu huviveneitä ja asuntoveneitä, ja siellä harrastetaan [[huviveneilyä]]. Kanavan varrella kulkee [[hinauspolku]], jota pitkin kävellään ja pyöräillään. Kanava on ollut Unescon maailmanperintöluettelossa vuodesta 1996. Kanava on siis jäänyt eläkkeelle, mutta se tekee yhä töitä.
+KYSYMYS: Kerro lisää: huviveneilyä
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+AIEMPI KYSYMYS: Mihin kanavaa käytetään nykyään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tää on helppo. Nykyään Canal du Midiä käytetään pääasiassa matkailuun ja vapaa-aikaan: kanavalla liikkuu huviveneitä ja asuntoveneitä, ja siellä harrastetaan [[huviveneilyä]]. Kanavan varrella kulkee [[hinauspolku]], jota pitkin kävellään ja pyöräillään. Kanava on ollut Unescon maailmanperintöluettelossa vuodesta 1996. Kanava on siis jäänyt eläkkeelle, mutta se tekee yhä töitä.
+KYSYMYS: Kerro lisää: hinauspolku
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+AIEMPI KYSYMYS: Miten kappeli saatiin tuon neulan päälle?
+AIEMPI VASTAUS (Livia):
+No jopas, tää on hieno paikka. Kyse on Saint-Michel d'Aiguilhe -kappelista, joka on rakennettu 900-luvulla Le Puyn kaupungissa nousevan jyrkän tulivuorikallion huipulle. Sen rakennutti piispa [[Godescalc]], joka oli tehnyt pyhiinvaelluksen [[Santiago de Compostelaan]]. Rakennusmateriaalit oli kannettava ylös jyrkkää kallionrinnettä, ja kappeli on rakennettu kallion huipun muotoon sopeutuen. Kallion huipulle johtaa edelleen portaikko, jonka kautta kappelille kiivetään. Kaupungin tunnetuin kuva on siis kallionhuippu ja sen kappeli.
+
+Kappelille minä lentäisin ylös kevyesti, mutta ne pyhiinvaeltajat kiipeävät portaat jalan.
+KYSYMYS: Kerro lisää: Godescalc
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+AIEMPI KYSYMYS: Miten kappeli saatiin tuon neulan päälle?
+AIEMPI VASTAUS (Livia):
+No jopas, tää on hieno paikka. Kyse on Saint-Michel d'Aiguilhe -kappelista, joka on rakennettu 900-luvulla Le Puyn kaupungissa nousevan jyrkän tulivuorikallion huipulle. Sen rakennutti piispa [[Godescalc]], joka oli tehnyt pyhiinvaelluksen [[Santiago de Compostelaan]]. Rakennusmateriaalit oli kannettava ylös jyrkkää kallionrinnettä, ja kappeli on rakennettu kallion huipun muotoon sopeutuen. Kallion huipulle johtaa edelleen portaikko, jonka kautta kappelille kiivetään. Kaupungin tunnetuin kuva on siis kallionhuippu ja sen kappeli.
+
+Kappelille minä lentäisin ylös kevyesti, mutta ne pyhiinvaeltajat kiipeävät portaat jalan.
+KYSYMYS: Kerro lisää: Santiago de Compostelaan
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+AIEMPI KYSYMYS: Minne pyhiinvaeltajat lähtevät täältä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, reittikysymys. Le Puy-en-Velaysta alkaa [[Via Podiensis]] eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä. Pyhiinvaeltajat suuntaavat siis Santiago de Compostelaan Luoteis-Espanjaan. Matka kulkee Etelä-Ranskan halki ja ylittää [[Pyreneet]] Espanjan puolelle. Minä lentäisin sen nopeammin, mutta sehän ei ole pointti.
+KYSYMYS: Kerro lisää: Via Podiensis
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+AIEMPI KYSYMYS: Minne pyhiinvaeltajat lähtevät täältä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, reittikysymys. Le Puy-en-Velaysta alkaa [[Via Podiensis]] eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä. Pyhiinvaeltajat suuntaavat siis Santiago de Compostelaan Luoteis-Espanjaan. Matka kulkee Etelä-Ranskan halki ja ylittää [[Pyreneet]] Espanjan puolelle. Minä lentäisin sen nopeammin, mutta sehän ei ole pointti.
+KYSYMYS: Kerro lisää: Pyreneet
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+AIEMPI KYSYMYS: Mikä tekee Le Puyn vihreistä linsseistä erityisiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä ruoasta on pidetty meteliä. Le Puyn seudun [[vihreät linssit]] ovat pieniä ja vihreitä, ja ne kasvavat alueen tulivuoriperäisessä maaperässä Velayssa. Niillä on suojattu [[alkuperänimitys]], joka tarkoittaa, että vain tietyltä alueelta tulevia linssejä saa myydä tällä nimellä. Linssit säilyttävät muotonsa keitettäessä. Columba Livia, vanhaa roomalaista sukua, hyväksyy linssit, mutta pullaa ne eivät voita.
+KYSYMYS: Kerro lisää: vihreät linssit
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+AIEMPI KYSYMYS: Mikä tekee Le Puyn vihreistä linsseistä erityisiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä ruoasta on pidetty meteliä. Le Puyn seudun [[vihreät linssit]] ovat pieniä ja vihreitä, ja ne kasvavat alueen tulivuoriperäisessä maaperässä Velayssa. Niillä on suojattu [[alkuperänimitys]], joka tarkoittaa, että vain tietyltä alueelta tulevia linssejä saa myydä tällä nimellä. Linssit säilyttävät muotonsa keitettäessä. Columba Livia, vanhaa roomalaista sukua, hyväksyy linssit, mutta pullaa ne eivät voita.
+KYSYMYS: Kerro lisää: alkuperänimitys
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Luonto: Kyyhky, jonka päässä on pitsiä] Viktoriankruunukyyhky on maailman suurin nykyinen kyyhkylaji: pituutta on 73–75 senttiä, joskus yli kahdeksankymmentä, ja painoa keskimäärin 2,4 kiloa. Sinertävänharmaan linnun päässä on pitsimäinen töyhtö, jonka sulat päättyvät valkoisiin kärkiin, rinta on tummanpurppurainen ja iiris punainen. Se kävelee kiireettömästi Pohjois-Uuden-Guinean alavien metsien ja suometsien pohjalla ja syö maahan pudonneita hedelmiä. Häirittynä se nousee suoraan ylös latvustoon. Nimi muistaa kuningatar Viktoriaa, ja sukuun kuuluu neljä kruunukyyhkylajia, jotka kaikki elävät vain Uuden-Guinean seudulla.
+- [Irlanti — maalehti / Käsityö: Pitsi, jota ei kudota vaan leikataan] 1846 — Carrickmacrossin pitsi ei ole kudottua vaan ommeltua. Ohut palttina kiinnitetään harsokankaan päälle, kuvio ommellaan reunoja pitkin kiinni ja ylimääräinen kangas leikataan varovasti pois. Tekniikka tuli Irlantiin 1820-luvulla, mutta se levisi laajalle vasta nälänhädän aikana, kun pitsikouluja perustettiin antamaan naisille ansiota. Työ oli hidasta ja tarkkaa, ja hyvästä kauluksesta sai enemmän kuin viikon päiväpalkan. Pitsiä tehdään kaupungissa yhä, ja sitä on käytetty muun muassa kuninkaallisissa hääpuvuissa.
+AIEMPI KYSYMYS: Mitä pitsinnypläys tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, käsitöitä. Pitsinnypläys on käsityö, jossa [[pitsiä]] muodostetaan kiertämällä ja ristimällä lankoja, joita pidetään [[nyplien]] eli pienten puolojen varassa tyynyn päällä. Työ etenee neulatappien avulla, kun kuvio kiinnitetään tyynyyn lanka kerrallaan. Le Puy-en-Velayn alueella pitsiä on valmistettu pitkään, ja kaupunki tunnetaan siitä yhä. Minulla ei ole sormia moiseen, vain siivet.
+KYSYMYS: Kerro lisää: pitsiä
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+AIEMPI KYSYMYS: Mitä pitsinnypläys tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, käsitöitä. Pitsinnypläys on käsityö, jossa [[pitsiä]] muodostetaan kiertämällä ja ristimällä lankoja, joita pidetään [[nyplien]] eli pienten puolojen varassa tyynyn päällä. Työ etenee neulatappien avulla, kun kuvio kiinnitetään tyynyyn lanka kerrallaan. Le Puy-en-Velayn alueella pitsiä on valmistettu pitkään, ja kaupunki tunnetaan siitä yhä. Minulla ei ole sormia moiseen, vain siivet.
+KYSYMYS: Kerro lisää: nyplien
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Rivi tulivuoria luultiin kaivosjätteeksi] 1750-luku — Auvergnessa kohoaa neljänkymmenen kilometrin matkalla yli seitsemänkymmentä tulivuorta peräkkäin: 48 kuonakartiota, kahdeksan laavakupolia ja viisitoista räjähdyskraatteria. Korkein on Puy de Dôme, 1 465 metriä. Vielä 1700-luvun puoliväliin asti kummuista kiisteltiin: monet pitivät niitä ihmisen kasaamina kaivoskasoina tai roomalaisten sulattouuneina, kunnes tutkijat tunnistivat ne tulivuoriksi. Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. Alue pääsi Unescon maailmanperintöluetteloon 2018.
+AIEMPI KYSYMYS: Mikä on Le Puyn tuomiokirkko?
+AIEMPI VASTAUS (Livia):
+Mmm— katedraali. Le Puyn tuomiokirkko on [[Notre-Dame du Puy]], kaupungin tunnettu keskiaikainen kirkko ja Chemin du Puyn lähtöpaikka. Se kuuluu ranskalaisiin Santiago de Compostelan reitteihin, jotka on merkitty [[Unescon]] maailmanperintöön. Kirkko tekee kaupungista pyhiinvaellusreitin tärkeän alkupisteen. Viisas Pöllö osaisi sanoa enemmänkin, mutta hän lupasi palata jo Konstantinopolissa.
+KYSYMYS: Kerro lisää: Notre-Dame du Puy
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+AIEMPI KYSYMYS: Mikä on Le Puyn tuomiokirkko?
+AIEMPI VASTAUS (Livia):
+Mmm— katedraali. Le Puyn tuomiokirkko on [[Notre-Dame du Puy]], kaupungin tunnettu keskiaikainen kirkko ja Chemin du Puyn lähtöpaikka. Se kuuluu ranskalaisiin Santiago de Compostelan reitteihin, jotka on merkitty [[Unescon]] maailmanperintöön. Kirkko tekee kaupungista pyhiinvaellusreitin tärkeän alkupisteen. Viisas Pöllö osaisi sanoa enemmänkin, mutta hän lupasi palata jo Konstantinopolissa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cluny (historia)
+Tietoruudun teksti: Cluny III oli benediktiiniluostarin 1088–1130 rakentama valtava romaaninen basilika, kristikunnan suurin kirkko ennen uutta Pietarinkirkkoa Roomassa. Ranskan vallankumous lakkautti luostarin 1790, ja kaupunki myi rakennuksen kivilouhokseksi — pääosa purettiin 1810–1823 rakennuskiveksi. Vain n. kymmenesosa alkuperäisestä on jäljellä: eteläinen poikkilaiva kellotorneineen sekä läntisen julkisivun tornien alaosat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Dakar — kaupunkilehti / Dakar: Muuri niemen poikki] Kun Cayorin marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina kukistettiin, ja lebut vetäytyivät niemelleen. He rakensivat lateriittilohkareista sarjan puolustusmuureja, joista pisin ulottui koko niemen poikki Yoffista Hanniin, ja torjuivat hyökkäyksen. Voiton jälkeen syntyi itsenäinen valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri tavoin: kaupungin oma artikkeli vuoteen 1795, lebu-kansan artikkeli vuosiin 1776–1812. Senegalin valtio tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi auktoriteetiksi.
+AIEMPI KYSYMYS: Kuinka suuri osa alkuperäisestä kirkosta on jäljellä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vain noin kymmenesosa Cluny III:n alkuperäisestä basilikasta on jäljellä. Säilyneet osat ovat eteläinen [[poikkilaiva]] kellotorneineen sekä läntisen julkisivun tornien alaosat. Basilika rakennettiin vuosina 1088–1130, ja se oli kristikunnan suurin kirkko ennen uutta [[Pietarinkirkkoa]] Roomassa.
+
+Kymmenesosa on vähän, mutta ylhäältä katsoen se riittää kertomaan, miten valtava paikka tämä oli.
+KYSYMYS: Kerro lisää: poikkilaiva
