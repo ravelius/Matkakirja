@@ -1,3 +1,11 @@
+# TILANNE 9.10. klo 04.0x
+
+- **LS1:n lisäpyyntö (juna 171):** Tukholman 8 esittely-v3-kohdetta → jalanjaljet-20261009/jalanjaljet-tukholma-lisa.json (kaikki Wikidatalla). Lähde-json scratchpadissa, koordinaatit 3:lle Wikidatasta. LS1 paketoi nyt vain Tukholman ja Pariisin (muut odottavat omistajaa).
+- **Riddarholmen (LS2):** maan ellipsoidikorkeus riddarholmen/riddarholmen-maankorkeus.json: GLO p10 31,45 (yläraja), todennäköisin noin 29 ± 2.
+- Talvi3-loput käynnissä (aja-talvi3-loput.sh), seuranta taustalla.
+
+---
+
 # TILANNE 9.10. klo 03.5x
 
 - **Swap 15,4 Gt (03.48)** → vahdit pysäyttivät osa2:n (60/78) ja uusinnan (5/20). Muistia vievät myös muiden Blender ja simulaattorit.
