@@ -1,0 +1,1258 @@
+{
+  "task": "varustekuvat-foto-laajennus-20261009",
+  "taskNumber": 51,
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+      "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+      "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+      "readInFull": true
+    },
+    {
+      "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+      "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+      "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+      "readInFull": true
+    }
+  ],
+  "sourceReadInFull": true,
+  "generationCalls": 23,
+  "generationLimit": 29,
+  "primaryGenerationLimit26": 26,
+  "additionalAuthorizedCalls3": 3,
+  "requestedMiniCount": 13,
+  "requestedIsoCount": 16,
+  "imageCount": 8,
+  "miniCount": 3,
+  "isoCount": 5,
+  "partialDelivery": true,
+  "productionComplete": false,
+  "assets": [
+    {
+      "id": "tahdet-mini-v2",
+      "subject": "tahdet",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "mini",
+      "file": "tahdet-foto-mini-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/tahdet-foto-mini-v2.jpg",
+      "sha256": "0559c0cf5f70d1aacddb878135c49f7bf39bbc95f1c6bf018212ef798a85dd93",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fff-c9a1-74d3-927d-4c9226bd719b/exec-77592ba0-2fba-4b34-8ba7-72af66c61c5e.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/original-generation.png",
+      "originalSHA256": "af7fab41d18ff5b6fe9b4837d5b53635e04b9a3cc27a93ccf16bb20d5813bbea",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja equipment catalogue mini icon, a new square 1:1 photographic illustration.\nPrimary request: Generate an entirely new realistic night landscape beside a dark northern lake: a small antique brass telescope on a dark wooden tripod on a gently raised grassy shore, with the clearly recognizable SEVEN main stars of the Big Dipper (Otava) above it and Polaris beyond its pointer stars. This is a complete new image.\nScene/backdrop: calm dark lake, low distant forest silhouette, low grassy hill in the foreground. Sparse dim background stars on a deep navy night sky; keep the main star pattern uncluttered and dominant. Natural soft night light, muted colors, realistic exposure, no HDR.\nSubject accuracy, highest priority: exactly seven conspicuously bright main Big Dipper stars, a four-star irregular bowl on the right and its curved three-star handle extending to the left, plus one separate Polaris well above the bowl. Correct star relationships, not a generic random star arrangement. A helpful precise placement guide in normalized square image coordinates (x from left, y from top) is: Alkaid handle tip (0.393,0.613), Mizar (0.469,0.571), Alioth (0.525,0.575), Megrez at handle-to-bowl junction (0.593,0.572), Phecda lower inner bowl corner (0.627,0.613), Merak outer lower bowl corner (0.716,0.568), Dubhe outer upper bowl corner (0.697,0.506), Polaris (0.620,0.170). These positions describe the real seven-star bowl-and-handle geometry in a north-polar projection. Maintain the ratios and configuration. Extend the imaginary Merak-to-Dubhe direction about five pointer-star separations beyond Dubhe toward Polaris. The line is only imaginary: draw NO connecting lines, arrows, diagrams, or labels.\nComposition/framing: square; all seven Big Dipper stars and Polaris fit well inside a centered circular crop. Telescope is small but clearly readable beneath the pattern, around center x=0.50, y=0.77, tripod feet near y=0.88; leave generous margins. Sky fills most of image; the lake and shore form the low bottom part. The main stars are discrete round luminous points, brighter and larger than the sparse background stars, readable at a 96px icon. Keep correct astronomy more important than decorative star fields.\nStyle/medium: photographic natural astronomy scene, realistic brass tube, wooden tripod, softly textured grass, dark blue water, restrained warm brass glint.\nAvoid: people, faces, hands, buildings, moon, aurora, Milky Way band, shooting stars, star trails, exaggerated star spikes, text, numbers, names, logos, watermarks, frame. Opaque full-color image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md"
+      ],
+      "kuvateksti": "Pieni messinkinen kaukoputki järven rannalla, Otavaa muistuttava tähtiryhmä ja Pohjantähti yötaivaalla. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "fullContentConstraintsPass": false,
+        "checks": {
+          "photorealistic": true,
+          "nativeReviewed": true,
+          "preview480Reviewed": true,
+          "circle512Reviewed": true,
+          "icon96Reviewed": true,
+          "mainSubjectFitsCenteredCircle": true,
+          "textNumbersLogosWatermarksAbsent": true,
+          "peopleFacesHandsAbsent": true,
+          "mainDipperStarCount": 7,
+          "polarisPresent": true,
+          "correctStarGeometry": false,
+          "connectingLinesAbsent": false,
+          "miniIsoSceneContinuity": true
+        },
+        "defects": [
+          "Otavan seitsemän kirkasta päätähteä näkyvät, mutta suhteet ovat muuttuneet: kulhon ja kahvan muodot eivät vastaa koordinaattiohjetta.",
+          "Pohjantähti on noin 21 astetta sivussa Merak–Dubhe-suunnan jatkolta; etäisyys on 4.81 osoittajatähtiväliä.",
+          "Alkuperäisessä kuvassa näkyy hentoja piste-/katkoyhdysviivoja tähtien välillä, vaikka ne kiellettiin."
+        ],
+        "iconReadability": "96px ympyrässä kaukoputki ja kirkkaiden tähtien ryhmä erottuvat; täsmällisen Otavan oikeellisuutta ei voi hyväksyä.",
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "ownerApprovalVerified": false,
+        "retries": 0,
+        "noFurtherGeneration": true,
+        "reviewedAt": "2026-10-09T09:40:46.834450+00:00",
+        "technicalPass": true,
+        "opaqueRGB": true,
+        "sRGB": true,
+        "jpegQuality": 90,
+        "starPatternQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/star-pattern-qa.json",
+        "astronomyReferencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/astronomy-reference.md",
+        "reviewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/original-generation.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/qa-preview-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/qa-icon-96.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/qa-circle-512.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/qa-circle-96.png"
+        ]
+      },
+      "group": "C",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "completeNewGeneration": true,
+      "referenceImagePathsUsed": [],
+      "referencedImagePathsUsed": [],
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/output-hint.txt",
+      "r2Key": "linssikatalogi/tahdet-foto-mini-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "0559c0cf5f70d1aacddb878135c49f7bf39bbc95f1c6bf018212ef798a85dd93",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Seitsemän kirkasta Otavan päätähteä, mutta hentoja yhdysjälkiä ja väärä tähtigeometria; työntekijän suuntapoikkeama-arvio noin21°."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-mini-v2.jpg?t=0559c0cf5f70d1aa",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-mini-v2.jpg",
+      "bytes": 45186,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "tahdet-iso-v2",
+      "subject": "tahdet",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "iso",
+      "file": "tahdet-foto-iso-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/tahdet-foto-iso-v2.jpg",
+      "sha256": "6a4bdcf8ef0d8517fa7034ee589eea7f17c0025be98f5325856cf8558a12e840",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fff-c9a1-74d3-927d-4c9226bd719b/exec-4e5f7d1a-133d-478e-ab74-22d6b687a5d5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/original-generation.png",
+      "originalSHA256": "1e4a84fb157ec4b6ce046f4551e2a06be5d06d6c8b860162452eb420fcab64c5",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja equipment catalogue wide image, new 16:9 landscape photographic illustration.\nPrimary request: Generate an ENTIRELY NEW wide realistic night photograph of the same lakeside landscape and small antique brass telescope as the attached reference. Fully re-render the whole scene. The reference is ONLY for landscape identity, camera angle, lighting, brass telescope, tripod and color continuity. Do not preserve, paste, crop or extend the reference pixels. Re-create its calm dark lake, wooded banks, central opening across the lake, raised grassy shore, telescope and low soft night illumination at a wider field of view.\nHighest-priority astronomy: the reference stars are geometrically imperfect and contain unwanted faint connectors. Do NOT reproduce that star arrangement or connectors. Generate an astronomically correct unmistakable Big Dipper / Otava with EXACTLY SEVEN bright main stars, its four-star irregular bowl on the RIGHT and curved three-star handle extending LEFT from the bowl junction, plus Polaris on the continuation of the Merak-to-Dubhe pointer direction. Use these normalized WIDE 16:9 canvas coordinates (x left-to-right, y top-to-bottom): Alkaid (0.440,0.613), Mizar (0.483,0.571), Alioth (0.514,0.575), Megrez (0.552,0.572), Phecda (0.571,0.613), Merak (0.622,0.568), Dubhe (0.611,0.506), Polaris (0.568,0.170). Correct angular geometry is more important than artistic rearrangement. The bowl consists of Dubhe, Merak, Phecda, Megrez; the three additional handle stars are Alioth, Mizar, Alkaid. The imaginary line from Merak through Dubhe extends upward slightly LEFT for approximately five times their separation to Polaris, NOT upward right. These numerical positions are guidance and must NEVER appear as text.\nAbsolutely no visible connectors of any kind: no solid lines, no dashed lines, no dotted lines, no luminous bridges, no constellation overlay, no guide arrows, no star names. Only isolated round photographic star points on the dark sky; seven Big Dipper stars and Polaris brighter and larger than sparse background stars, with restrained small halos, no large spikes.\nComposition: horizon and forest low around 72% height, telescope centered slightly left at x=0.48, tube around y=0.65 to0.72, tripod around y=0.74 to0.88, just as the mini reference. The sky pattern is fully above telescope. Preserve the reference scene's view and apparent vertical scale, naturally include more lake shore and dark forest at the left and right to fit a wide image, generous margins all sides.\nStyle: natural realistic photography, muted deep navy sky and water, real dark grass and stones, subtle warm antique brass glint, soft restrained nighttime light, no HDR, no illustration look.\nAvoid people, faces, hands, moon, aurora, Milky Way band, buildings, star trails, shooting stars, text, numbers, logos, watermarks, borders or frames. Opaque full-color photograph.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md"
+      ],
+      "kuvateksti": "Messinkinen kaukoputki hämärällä järvenrannalla ja Otavaa muistuttava tähtiryhmä Pohjantähden alapuolella. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "fullContentConstraintsPass": false,
+        "checks": {
+          "photorealistic": true,
+          "nativeReviewed": true,
+          "preview480Reviewed": true,
+          "icon96Reviewed": true,
+          "textNumbersLogosWatermarksAbsent": true,
+          "peopleFacesHandsAbsent": true,
+          "mainDipperStarCount": 6,
+          "polarisPresent": true,
+          "correctStarGeometry": false,
+          "connectingLinesAbsent": false,
+          "miniIsoSceneContinuity": true
+        },
+        "defects": [
+          "Kuusi kirkasta Otavan päätähteä seitsemän sijaan: yksi kahvan välitähti puuttuu erottuvasta kuviosta.",
+          "Pohjantähti on noin 27 astetta sivussa Merak–Dubhe-suunnan jatkolta; etäisyys on 4.12 osoittajatähtiväliä.",
+          "Alkuperäisessä kuvassa näkyy hentoja yhdysviivoja tähtien välillä kiellosta huolimatta.",
+          "Kahvan tähtimäärä ja kuvio eroavat ministä; maisema, messinkinen kaukoputki, tummat puujalat, valo ja kuvakulma ovat yhtenäiset."
+        ],
+        "iconReadability": "96px leveässä esikatselussa kaukoputken siluetti ja tähtien motiivi erottuvat; exact7-vaatimus ei täyty.",
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "ownerApprovalVerified": false,
+        "retries": 0,
+        "noFurtherGeneration": true,
+        "reviewedAt": "2026-10-09T09:40:46.848141+00:00",
+        "technicalPass": true,
+        "opaqueRGB": true,
+        "sRGB": true,
+        "jpegQuality": 90,
+        "starPatternQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/star-pattern-qa.json",
+        "astronomyReferencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/astronomy-reference.md",
+        "reviewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/original-generation.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/qa-preview-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/qa-icon-96.png"
+        ]
+      },
+      "group": "C",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "completeNewGeneration": true,
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/original-generation.png"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-mini-v2/original-generation.png"
+      ],
+      "referenceViewedBeforeCall": true,
+      "referenceRole": "own fresh mini, landscape and telescope identity only; full redraw; imperfect star arrangement excluded",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/tahdet-iso-v2/output-hint.txt",
+      "r2Key": "linssikatalogi/tahdet-foto-iso-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "6a4bdcf8ef0d8517fa7034ee589eea7f17c0025be98f5325856cf8558a12e840",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Vain kuusi kirkasta Otavan päätähteä, hentoja yhdysjälkiä ja väärä geometria; työntekijän suuntapoikkeama-arvio noin27°. Maisema/kaukoputki sama kuin minissä."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-iso-v2.jpg?t=6a4bdcf8ef0d8517",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-iso-v2.jpg",
+      "bytes": 286565,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "yokartta-mini-v2",
+      "subject": "yokartta",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "mini",
+      "file": "yokartta-foto-mini-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/yokartta-foto-mini-v2.jpg",
+      "sha256": "2457c652dc165edc586e3e4758f21d917deecda47bab612a02ab8f240593641b",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11fff-c9a1-74d3-927d-4c9226bd719b/exec-20499501-5c33-47ec-99f6-188def09394a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/original-generation.png",
+      "originalSHA256": "da84ff6f2f84d93b211973dd25dacf64a12c7ee0db73afdae74e42e7cffd6458",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja equipment catalogue mini icon, a completely new square 1:1 realistic photographic illustration.\nPrimary request: Generate an ENTIRELY NEW space view of Europe and North Africa AT NIGHT, matching the view, colors and atmosphere of the attached approved wide night-Earth reference. The reference is a view and color reference only. Fully redraw a new square scene from scratch; do not crop or paste existing pixels.\nSubject: Earth fills almost the whole square, seen from space above Europe toward the curved northern horizon. Accurate recognizable geography: Europe in the upper middle, British Isles, Iberian peninsula, Italy's boot and Mediterranean Sea; North Africa in the lower middle, Egypt's Nile river corridor and delta brightly visible in the lower-right-of-center, not at the edge. The warm golden city-light clusters and the thin connected Nile lights clearly identify the regions. Dark Mediterranean sea separates the continents.\nComposition/framing: adapt the SAME reference view and low-oblique camera direction to square by pulling back just enough for Europe AND North Africa AND the Nile lights to fit the CENTERED CIRCULAR CROP, with generous margins. Keep the main geographic landmarks within the central 75%: Britain around (0.38,0.38), Iberia (0.32,0.53), Italy (0.53,0.52), North Africa (0.47,0.65), Egypt/Nile (0.66,0.66). The visible Earth limb arcs smoothly across the upper part of the image, with a narrow dark-space band beyond it. Earth remains very large and fills the frame; it is not a small floating globe. The curved thin blue atmospheric rim remains visible inside the circle.\nStyle/medium: realistic orbital night photography, natural muted navy and black oceans, faint brown land, warm amber-white cities, restrained soft gray clouds that do not hide Europe or Nile. Same sober blue-and-gold color balance as the approved image. Soft natural exposure, no HDR, no decorative effects. Readable as an under-100px circular icon.\nAvoid: astronaut, person, face, hand, spacecraft, window frame, buildings in foreground, text, map labels, numbers, logos, watermarks, borders, arrows, routes, glowing continent outlines, artificial national borders, daylight, moon, sun, oversized light flares. Opaque full-color square image.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md"
+      ],
+      "kuvateksti": "Euroopan ja Pohjois-Afrikan kaupunkivalot sekä Niilin valoketju maapallon kaarevan horisontin alla. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "fullContentConstraintsPass": true,
+        "checks": {
+          "photorealistic": true,
+          "nativeReviewed": true,
+          "preview480Reviewed": true,
+          "circle512Reviewed": true,
+          "icon96Reviewed": true,
+          "mainSubjectFitsCenteredCircle": true,
+          "textNumbersLogosWatermarksAbsent": true,
+          "peopleFacesHandsAbsent": true,
+          "astronautAbsent": true,
+          "windowFrameAbsent": true,
+          "europeVisible": true,
+          "northAfricaVisible": true,
+          "nileLightsVisible": true,
+          "earthCurveVisible": true,
+          "referenceViewAndToneMatched": true
+        },
+        "defects": [],
+        "notes": [
+          "Eurooppa, Välimeri ja Pohjois-Afrikka sekä Egyptin/Niilin kirkas valoketju ja suisto säilyvät ympyrässä.",
+          "Pohjoisen horisontin sininen kaari näkyy ympyrän yläosassa; maapallo täyttää kuvan.",
+          "Niilin eteläisin jatke lähestyy ympyrän oikeaa alareunaa, mutta keskeinen Egyptin/Niilin aihe säilyy.",
+          "Näkymä ja sininen–kultainen sävy vastaavat hyväksyttyä v2-isoa; neliö näyttää enemmän Saharaa ja Niiliä."
+        ],
+        "iconReadability": "96px ympyrässä Euroopan valot, Välimeri, Pohjois-Afrikka ja oikealla Niilin kirkas ketju erottuvat.",
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "ownerApprovalVerified": false,
+        "retries": 0,
+        "noFurtherGeneration": true,
+        "reviewedAt": "2026-10-09T09:40:46.860064+00:00",
+        "technicalPass": true,
+        "opaqueRGB": true,
+        "sRGB": true,
+        "jpegQuality": 90,
+        "reviewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/original-generation.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/qa-preview-480.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/qa-icon-96.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/qa-circle-512.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/qa-circle-96.png"
+        ]
+      },
+      "group": "C",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "completeNewGeneration": true,
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/yokartta/yokartta-havainne-v2.jpg"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/yokartta/yokartta-havainne-v2.jpg"
+      ],
+      "referenceViewedBeforeCall": true,
+      "referenceRole": "approved #48 wide v2, view and color only, full redraw",
+      "outputHintPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/yokartta-mini-v2/output-hint.txt",
+      "r2Key": "linssikatalogi/yokartta-foto-mini-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "2457c652dc165edc586e3e4758f21d917deecda47bab612a02ab8f240593641b",
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "Hyväksyttyyn isoon verrattava Eurooppa/Pohjois-Afrikka/Niili/Earthcurve; pyöreä rajaus ja96px-luettavuus toimivat."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/yokartta-foto-mini-v2.jpg?t=2457c652dc165edc",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/yokartta-foto-mini-v2.jpg",
+      "bytes": 114851,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "poikkileikkaus-mini-v2",
+      "subject": "poikkileikkaus",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "mini",
+      "file": "poikkileikkaus-foto-mini-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-mini-v2/poikkileikkaus-foto-mini-v2.jpg",
+      "sha256": "0f71b5d697451644036c5ea1d741399ef155ab016256e3811ae1cf7f6ff3e712",
+      "originalGeneratedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-mini-v2/original-generation.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-mini-v2/original-generation.png",
+      "originalSHA256": "e851e054a0b288b1264865e380f25e7d67e8501f3c2400e8a0f61adb56258058",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup\nAsset type: square game catalogue miniature icon, photorealistic historical architectural model.\nPrimary request: Generate a COMPLETE NEW image of a physical cutaway scale model of Olavinlinna castle in its 1499 form on a rocky island surrounded by a quiet lake. The castle model's FRONT HALF HAS BEEN PHYSICALLY REMOVED by a VERTICAL PLANE facing the viewer. The unmistakable open cut face is the main subject: the camera looks DIRECTLY INTO the empty warmly lit rooms, chapel/hall, stone vaults and thick masonry cross sections. The front walls are gone, not transparent, not merely a doorway. The central exposed cross-section occupies most of the castle face and is immediately readable as a cutaway.\nInput images: Images 1, 2 and 3 are EXTERNAL CASTLE SHAPE references only. Use their grey stone cylindrical towers, dark shallow conical roofs, brick upper collars, long connecting keep walls, rocky lake island and low forecastle proportions. They are not edit targets. Completely redraw every pixel in the new photograph; do not copy their scenery, incomplete black modelling areas, or intact closed front wall.\nSubject geometry: EXACTLY THREE main round towers, no other tall towers: tallest left, shorter central/rear tower, smallest right. Each tower remains identifiable as a cylindrical tower with a conical roof behind the cut plane. Cut open the front of the two nearer towers from roof to foundation so broad, thick flat stone edges and several empty stacked rooms are visible. The central keep is also vertically opened, showing a large empty illuminated vaulted chapel/hall and the thick wall edges. Include a modest LOW medieval forecastle extending to the right, without a fourth main tower. No bastions, no modern additions. Retain visible rocky island and narrow lake water around the complete model.\nStyle/medium: A convincing natural CAMERA PHOTOGRAPH of a meticulously crafted physical architectural miniature, tactile rough stone, aged mortar and subtle model craftsmanship. No illustration or diagram appearance, no CGI gloss. Muted grey stone, soft warm light inside, cool grey-blue water. Soft simple out-of-focus neutral background, natural restrained daylight from upper left; no HDR.\nComposition/framing: SQUARE 1:1 image. Whole model centered with its entire island contained in a central area no wider or taller than 60–65 percent of the frame. Generous background margins on every edge so the entire model survives a centered circular crop. Camera at model-room height with only a slight elevation, natural 55mm perspective, looking straight at the vertical cutaway face; no top-down overhead view. Keep the three tower silhouettes distinct. Use broad illuminated openings and strong stone-versus-room contrast so the cut face reads at 96px. The exposed rooms fill the centre of the model; surrounding lake and sky stay simple.\nConstraints: exactly three main towers; clearly physically removed front half; empty illuminated interior rooms and visible vaulted chapel/hall; thick masonry cut edges; whole subject circle-safe. No people, faces, figures, hands, furniture crowds, text, lettering, numbers, labels, diagram lines, arrows, logos, watermarks, frames, national marks or flags. No solid intact front wall concealing the interior. No exploded view. No current-era star bastions. Single image only.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-background.png"
+      ],
+      "kuvateksti": "Olavinlinnan vuoden 1499 pienoismallin avoin poikkileikkaus näyttää tornien huoneet, holvatun salin ja paksut kivimuurit. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewComplete": true,
+        "workerReviewedAt": "2026-10-09T09:37:18.774297+00:00",
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "nativeReviewed": true,
+        "preview480Reviewed": true,
+        "preview96Reviewed": true,
+        "circle512Reviewed": true,
+        "circle96Reviewed": true,
+        "technicalPass": true,
+        "originalByteExact": true,
+        "format": "JPEG q90 RGB sRGB, exact requested dimensions",
+        "mainTowerCount": 3,
+        "mainTowerCountPass": true,
+        "castle1499Shape": "Three grey round main towers with brick upper collars and dark conical roofs, tall left / medium central-rear / small right; low forecastle right, rocky island and lake; no current bastions visible. Minor square wall projections are not extra main towers.",
+        "physicalVerticalCutawayPass": true,
+        "cutawayReadability": "Front wall sections are visibly absent. Broad masonry cut edges, four empty left-tower levels, central vaulted chapel/hall and three right-tower levels face the viewer. The warm exposed interior remains the dominant castle face.",
+        "interiorEmptyPass": true,
+        "noTextNumbersLogosWatermarksFramesNationalMarksHumansPass": true,
+        "photorealisticPass": true,
+        "scaleModelAppearanceNote": "Physical miniature scale is not explicitly established by a tabletop/base or scale cue; the natural lake setting can also read as a full-size architectural cutaway. No additional prop was added.",
+        "pairIdentityPass": true,
+        "pairIdentityNotes": "Same three tower heights and positions, left tower four levels, central hall three vaulted bays with lower arches, right tower three levels, low right forecastle, front wooden landing, grey stone and warm internal illumination. Wide scene naturally extends lake/forest to the sides. Local masonry, windows and lake reflections differ as expected for complete redraw. Same mostly frontal camera; wide background includes a low left sun and slightly warmer sky.",
+        "circleSafePass": false,
+        "mainSubject96pxReadable": true,
+        "readability96Notes": "Three tower silhouette and warmly lit opened chambers/hall remain recognizable; fine vault details soften at 96px.",
+        "deviations": [
+          "Whole island nearly spans image width, exceeding requested 60–65 percent subject envelope; centre circular proof clips outer rocky island tips left/right. Main three towers, central cut face and right forecastle remain within circle."
+        ],
+        "noRetry": true,
+        "generationCallsForPair": 2
+      },
+      "group": "C",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-background.png"
+      ],
+      "referenceImagesViewedBeforeCall": true,
+      "completeNewGeneration": true,
+      "backend": "builtin image_gen",
+      "outputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a12000-32e2-72d0-9e11-17f2c33bc5da as /Users/samireivinen/.codex/generated_images/01a12000-32e2-72d0-9e11-17f2c33bc5da/exec-31606a82-910d-434d-98f9-31e3edd6e1a9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.\n",
+      "castleShapeReferencesViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-background.png"
+      ],
+      "publicationState": {
+        "localProductionComplete": true,
+        "R2Uploaded": false,
+        "mailboxDelivered": false,
+        "editorialAccepted": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "r2Key": "linssikatalogi/poikkileikkaus-foto-mini-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "0f71b5d697451644036c5ea1d741399ef155ab016256e3811ae1cf7f6ff3e712",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Kolme päätornia ja valaistut tyhjät leikkaushuoneet/holvit näkyvät; ympyrä leikkaa saaren ulkoreunoja mutta keskinen leikkaustaso säilyy96px:ssä."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/poikkileikkaus-foto-mini-v2.jpg?t=0f71b5d697451644",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/poikkileikkaus-foto-mini-v2.jpg",
+      "bytes": 85309,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "poikkileikkaus-iso-v2",
+      "subject": "poikkileikkaus",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "iso",
+      "file": "poikkileikkaus-foto-iso-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-iso-v2/poikkileikkaus-foto-iso-v2.jpg",
+      "sha256": "e7df7790c0d6917ea2f29ad2cee1e9eb1f665afb292abc99b04382e438a093dd",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a12000-32e2-72d0-9e11-17f2c33bc5da/exec-b84ecce0-ce69-4751-8d4b-75499287afec.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-iso-v2/original-generation.png",
+      "originalSHA256": "0f6e167d6aa553169b8a4e193fa5b5da4b22616a133c6525fc666fbecd1b950c",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup\nAsset type: wide 16:9 game catalogue photograph of historical architectural scale model.\nPrimary request: Generate a COMPLETE NEW wide photograph of the SAME physical cutaway scale model of Olavinlinna castle in 1499 as the reference image. Redraw the complete scene from scratch; this must be a new generation, not a crop, expansion pasted onto retained pixels, or edit preserving existing pixels. Keep the precise object identity, stone colours, warm room illumination, natural camera angle and grey-blue lake atmosphere. Widen the scene to both sides with simple lake water and a softly blurred forest shore. Output a WIDE LANDSCAPE 16:9 composition, intended for 1600 by 900 pixels.\nInput image 1: my newly generated square image, used as an OBJECT IDENTITY, CAMERA, and LIGHTING REFERENCE only, not an edit target.\nSubject: SAME EXACT THREE main cylindrical towers with brick upper collars and dark shallow conical roofs: tall left tower with four exposed empty levels, shorter central/rear tower above the large vaulted empty hall, small right tower with three exposed levels. Same long connecting stone keep, large central Gothic vaulted hall/chapel, low medieval forecastle to the right, rocky island and small front wooden landing. NO fourth tall tower. No current-era bastions.\nEssential cutaway: The front half of the physical model has been removed along a VERTICAL PLANE. Look directly INTO the empty warmly lit tower chambers and the broad central vaulted chapel/hall. Thick flat cut edges through masonry are clear; floors and stone vaults visible. The cut face remains the main subject and occupies the central area. Do not close the front walls or turn it into a normal intact exterior castle. The viewers must read a physical cutaway immediately.\nStyle/medium: Convincing natural camera photograph of a finely made physical architectural miniature, tactile rough stone, mortar texture, slightly imperfect craft surface; quiet natural daylight from upper left, muted colours, warm interior illumination, gentle depth of field, no HDR or shiny CGI look.\nComposition/framing: Landscape 16:9. Keep the whole model and entire rocky island fully in frame with generous side margins of simple water and out-of-focus forest background. Natural 55mm lens, same mostly head-on camera view with slight elevation as the reference. The central cutaway castle should occupy approximately 60–65 percent of image width and be entirely visible, with open water around its base and breathing room above all roof tips. Maintain recognisable relative tower heights and interior room positions. Expand the surrounding setting sideways, not change the model.\nConstraints: Three main towers exactly. Physically removed front half with broad lit interiors and thick cut stone edges, no glass or transparency trick. Empty rooms, no humans, hands, faces or figures. No text, labels, numbers, arrows, diagram lines, logos, watermarks, frames, national symbols or flags. No bastions, modern buildings or extra towers. Single image only.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-mini-v2/original-generation.png"
+      ],
+      "kuvateksti": "Olavinlinnan vuoden 1499 pienoismallin avoin poikkileikkaus näyttää tornien huoneet, holvatun salin ja paksut kivimuurit järven ympäröimällä saarella. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewComplete": true,
+        "workerReviewedAt": "2026-10-09T09:37:18.774297+00:00",
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": true,
+        "nativeReviewed": true,
+        "preview480Reviewed": true,
+        "preview96Reviewed": true,
+        "circle512Reviewed": "not applicable wide iso",
+        "circle96Reviewed": "not applicable wide iso",
+        "technicalPass": true,
+        "originalByteExact": true,
+        "format": "JPEG q90 RGB sRGB, exact requested dimensions",
+        "mainTowerCount": 3,
+        "mainTowerCountPass": true,
+        "castle1499Shape": "Three grey round main towers with brick upper collars and dark conical roofs, tall left / medium central-rear / small right; low forecastle right, rocky island and lake; no current bastions visible. Minor square wall projections are not extra main towers.",
+        "physicalVerticalCutawayPass": true,
+        "cutawayReadability": "Front wall sections are visibly absent. Broad masonry cut edges, four empty left-tower levels, central vaulted chapel/hall and three right-tower levels face the viewer. The warm exposed interior remains the dominant castle face.",
+        "interiorEmptyPass": true,
+        "noTextNumbersLogosWatermarksFramesNationalMarksHumansPass": true,
+        "photorealisticPass": true,
+        "scaleModelAppearanceNote": "Physical miniature scale is not explicitly established by a tabletop/base or scale cue; the natural lake setting can also read as a full-size architectural cutaway. No additional prop was added.",
+        "pairIdentityPass": true,
+        "pairIdentityNotes": "Same three tower heights and positions, left tower four levels, central hall three vaulted bays with lower arches, right tower three levels, low right forecastle, front wooden landing, grey stone and warm internal illumination. Wide scene naturally extends lake/forest to the sides. Local masonry, windows and lake reflections differ as expected for complete redraw. Same mostly frontal camera; wide background includes a low left sun and slightly warmer sky.",
+        "circleSafePass": "not applicable wide iso",
+        "mainSubject96pxReadable": true,
+        "readability96Notes": "Three tower silhouette and warmly lit opened chambers/hall remain recognizable; fine vault details soften at 96px.",
+        "deviations": [
+          "Physical miniature scale is visually implicit; wide photo can read as full-size castle cutaway. Small surface/window variations relative to mini; layout and room organisation remain consistent."
+        ],
+        "noRetry": true,
+        "generationCallsForPair": 2
+      },
+      "group": "C",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/poikkileikkaus-mini-v2/original-generation.png"
+      ],
+      "referenceImagesViewedBeforeCall": true,
+      "completeNewGeneration": true,
+      "backend": "builtin image_gen",
+      "outputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a12000-32e2-72d0-9e11-17f2c33bc5da as /Users/samireivinen/.codex/generated_images/01a12000-32e2-72d0-9e11-17f2c33bc5da/exec-b84ecce0-ce69-4751-8d4b-75499287afec.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.\n",
+      "castleShapeReferencesViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-background.png"
+      ],
+      "publicationState": {
+        "localProductionComplete": true,
+        "R2Uploaded": false,
+        "mailboxDelivered": false,
+        "editorialAccepted": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "r2Key": "linssikatalogi/poikkileikkaus-foto-iso-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "e7df7790c0d6917ea2f29ad2cee1e9eb1f665afb292abc99b04382e438a093dd",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Sama kolmitorninen malli/leikkaus kuin minissä, ympäristö leveämpänä; mittakaava visuaalisesti tulkinnanvarainen."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/poikkileikkaus-foto-iso-v2.jpg?t=e7df7790c0d6917e",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/poikkileikkaus-foto-iso-v2.jpg",
+      "bytes": 393763,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "ihmisen-matka-2-iso-v2",
+      "subject": "ihmisen-matka-2",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "iso",
+      "file": "ihmisen-matka-2-foto-iso-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/ihmisen-matka-2-iso-v2/ihmisen-matka-2-foto-iso-v2.jpg",
+      "sha256": "b04727d8e38722ca27e9fbea9865e12db43d0a4cd6294645fccc3dc002b67ae8",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1/exec-ff41fd7b-4215-4ac6-8e62-73054a8a0169.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/ihmisen-matka-2-iso-v2/original-generation.png",
+      "originalSHA256": "7b6256a7f9bdbc26e1b5e5fbe2da305db29de28d33e642c3abe06cf0ed456b60",
+      "nativeGeneratedSize": [
+        1672,
+        940
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: scientific-educational.\nAsset type: Matkakirja photorealistic wide equipment catalogue illustration, landscape 16:9, intended final 1600 by 900.\nPrimary request: Generate one entirely NEW complete image from scratch, taking the supplied square mini ONLY as a visual reference for the SAME globe, continental orientation, camera, soft light, muted colors and idea. Redraw the entire scene anew into a spacious wide composition, naturally extending the environment. Do not simply crop, paste or reuse source pixels.\nSubject: A realistic Earth globe floating in space, centered, with the whole sphere visible and generous top/bottom margins. Africa dominates the foreground and Eurasia is above and to the right, like the reference. Both Africa and Eurasia are visibly sunlit in DAYTIME: natural ochre Sahara, green land, blue oceans, white cloud swirls, detailed geography and blue atmospheric rim. All visible continents are daylight lit; no night hemisphere and absolutely no city lights.\nMigration idea: Add a restrained, faint warm golden dotted travel path hugging the globe from East Africa through northeast Africa and the Middle East toward Eurasia. Small soft separated dashes, very subtle, neither text nor lights of cities. Preserve the reference's warm diffuse vertical light beam from above touching the upper globe, with the same gentle warm glow.\nScene/backdrop: Broad softly graded neutral warm gray beige space, dim restrained background; tiny faint distant stars are acceptable. Globe is about 80 percent of the image height, leaving wide quiet surroundings to both sides.\nStyle/medium: Photorealistic educational illustration, photographic Earth textures and atmospheric light, natural muted colors, soft diffuse light, no HDR, no cartoon, no watercolor, no graphic diagrams.\nConstraints: One globe only, same orientation and basic composition as the mini. No people, faces, bodies, footprint, ground footprints, text, labels, numbers, logos, watermarks, national marks, frames or collage. This is the day globe migration topic, not a footprint topic.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md"
+      ],
+      "kuvateksti": "Päivämaapallo, Afrikan ja Euraasian välinen hillitty muuttoreitti ja ylhäältä lankeava valokeila. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1671,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "nonContentEditOnly": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "nativeVisualReviewed": true,
+        "preview480VisualReviewed": true,
+        "preview96VisualReviewPending": false,
+        "circleCropQA": "Not applicable: assigned deliverable is landscape iso; matching mini remains unchanged.",
+        "technicalPass": true,
+        "noTextNumbersLogosWatermarksOrPeopleObserved": true,
+        "reviewStatus": "sample-with-content-limitations",
+        "dayGlobeObserved": true,
+        "AfricaAndEurasiaSunlitObserved": true,
+        "nightHemisphereObserved": false,
+        "cityLightsObserved": false,
+        "migrationRouteObserved": "Faint golden dotted route is clearest from East/Central Africa toward northeast Africa and the Red Sea; continuation further into Eurasia is not clearly verified at 480 px.",
+        "lightBeamObserved": true,
+        "miniIsoIdentity": "Same Africa/Eurasia orientation, globe and warm top beam, similar muted natural palette. New image widens the gray-beige surrounding space and adds fine subdued star flecks. Globe appears slightly larger vertically than the mini proportion.",
+        "exceptions": [
+          "Onward dotted migration route into Eurasia is very subtle and cannot be confidently traced at 480 px; do not describe the complete Eurasian segment as verified."
+        ],
+        "preview96VisualReviewed": true,
+        "preview96Observation": "At 96 by 54 px the day Earth and sunlit Africa/Eurasia remain readable; the migration route is too faint to trace at this size.",
+        "workerVisualReviewComplete": true
+      },
+      "group": "C-addition",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "completeNewGeneration": true,
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/ihmisen-matka-2/varuste-ihmisen-matka-2-foto.jpg"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/ihmisen-matka-2/varuste-ihmisen-matka-2-foto.jpg"
+      ],
+      "referenceImageReceipts": [
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/ihmisen-matka-2/varuste-ihmisen-matka-2-foto.jpg",
+          "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-ihmisen-matka-2-foto.jpg",
+          "sha256": "34e379d7b71b84a4a0b95a885c8fea75bcbc39e39158769c8c07f9b9ea7a177a",
+          "dimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "outputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1 as /Users/samireivinen/.codex/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1/exec-ff41fd7b-4215-4ac6-8e62-73054a8a0169.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.\n",
+      "generationTool": "builtin image_gen",
+      "originalByteExactVerified": true,
+      "workerState": "local-production-and-worker-QA-complete",
+      "r2Key": "linssikatalogi/ihmisen-matka-2-foto-iso-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "b04727d8e38722ca27e9fbea9865e12db43d0a4cd6294645fccc3dc002b67ae8",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Päivämaapallo Afrikan/Euraasian valossa, lämmin valokeila. Reitti Afrikassa/Punaisellamerellä näkyy, jatko Euraasiaan heikko."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-foto-iso-v2.jpg?t=b04727d8e38722ca",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-foto-iso-v2.jpg",
+      "bytes": 353684,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "maapallon-vuosi-iso-v2",
+      "subject": "maapallon-vuosi",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "iso",
+      "file": "maapallon-vuosi-foto-iso-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/maapallon-vuosi-iso-v2/maapallon-vuosi-foto-iso-v2.jpg",
+      "sha256": "aa96c56d77577e05d07ada31ba375c53ec6b6bc46720b661af7aa3bd8dbabd37",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1/exec-d501bf12-be91-4e84-bb2a-b8d8d4dc6a50.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/maapallon-vuosi-iso-v2/original-generation.png",
+      "originalSHA256": "14f25149593ada8f53a4df53d1f2c1d12e97a5cf8719786b9b238e24aa0e3f6a",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: scientific-educational.\nAsset type: Matkakirja photorealistic wide equipment catalogue illustration, landscape 16:9, intended final 1600 by 900.\nPrimary request: Generate one entirely NEW complete image from scratch using the supplied mini solely as a visual reference for the SAME miniature globe, FOUR seasonal landscape islands, camera, lighting, arrangement, materials and soft neutral palette. Entirely redraw a wider scene with more environment. Never just crop or paste the source pixels.\nScene/backdrop: Soft warm beige neutral studio backdrop, gently lit like the mini, simple quiet background, broad empty margins around the group.\nSubject: A small realistic Earth globe in the center with the Americas facing the viewer, blue seas, muted green land and fine white clouds. A physical thin brass axis runs through the globe poles, tilted approximately 23 degrees from vertical toward the viewer's right at the top. Rounded brass knobs at both ends visibly outside the globe. A single delicate physical brass orbital ellipse runs behind and around the globe like the reference.\nExactly FOUR separate floating small rocky landscape islands surround the central globe, same diagonal arrangement as the mini and ALL complete, fully inside frame with generous margins:\ntop left SPRING: pink blossoming tree, young green grass, flowers, little waterfall;\ntop right SUMMER: lush green leafy tree, green grass and yellow flowers;\nbottom right AUTUMN: orange rust colored leafy tree and fallen brown leaves;\nbottom left WINTER: snow covered bare deciduous tree and small snow covered conifer, snow and icicles.\nEach island is one distinct physical miniature rocky piece with visible underside. The four islands are about equal size, smaller than the central globe. No extra islands or extra globes. Keep the overall group under 82 percent of image width and height, spread the four islands laterally for the wide frame while preserving their quadrants and the same camera from the mini.\nStyle/medium: Photorealistic miniature museum display photography, tactile stone and foliage, physical brass metal, natural muted colors, diffuse soft light and subtle shadows, high detail, no HDR, no drawing, no cartoon or vector diagram.\nConstraints: Exactly four season islands, central Earth and visibly tilted physical axis. No people, faces, text, words, labels, numerals, logos, watermarks, national marks, borders or frames.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md"
+      ],
+      "kuvateksti": "Maapallo kallistuneine messinkiakseleineen ja sen ympärillä neljä kevään, kesän, syksyn ja talven pienoismaisemasaarta. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "nonContentEditOnly": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": true,
+        "nativeVisualReviewed": true,
+        "preview480VisualReviewed": true,
+        "preview96VisualReviewPending": false,
+        "circleCropQA": "Not applicable: assigned deliverable is landscape iso; matching mini remains unchanged.",
+        "technicalPass": true,
+        "noTextNumbersLogosWatermarksOrPeopleObserved": true,
+        "reviewStatus": "worker-content-pass-pending-root-review",
+        "seasonIslandCountObserved": 4,
+        "seasonLocationsObserved": {
+          "spring": "upper left",
+          "summer": "upper right",
+          "autumn": "lower right",
+          "winter": "lower left"
+        },
+        "allFourIslandsFullyInFrame": true,
+        "physicalTiltedAxisObserved": true,
+        "axisTiltObservation": "Brass rod with round pole knobs visibly tilted about 25 to 27 degrees in the projected image; brief says approximately 23 degrees, exact physical tilt cannot be measured from the perspective image.",
+        "miniIsoIdentity": "Same central Americas-facing globe, brass axis and orbital ellipse, four seasonal rocky islands in the same quadrants, neutral beige backdrop, soft warm light and high front camera. Islands are spread farther laterally for wide frame; foliage and rock details are newly generated.",
+        "exceptions": [],
+        "preview96VisualReviewed": true,
+        "preview96Observation": "At 96 by 54 px the central globe, brass axis and four distinct seasonal islands remain readable; detailed flowers and exact axis angle are not verifiable at this size.",
+        "workerVisualReviewComplete": true
+      },
+      "group": "C-addition",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "completeNewGeneration": true,
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/varuste-maapallon-vuosi-foto.jpg"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/varuste-maapallon-vuosi-foto.jpg"
+      ],
+      "referenceImageReceipts": [
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/maapallon-vuosi/varuste-maapallon-vuosi-foto.jpg",
+          "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-maapallon-vuosi-foto.jpg",
+          "sha256": "1ff6e0f431728fdc5ae7728d0fbb9897b4c47f7be3cfbda28940e7d67dcf7997",
+          "dimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "outputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1 as /Users/samireivinen/.codex/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1/exec-d501bf12-be91-4e84-bb2a-b8d8d4dc6a50.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.\n",
+      "generationTool": "builtin image_gen",
+      "originalByteExactVerified": true,
+      "workerState": "local-production-and-worker-QA-complete",
+      "r2Key": "linssikatalogi/maapallon-vuosi-foto-iso-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "aa96c56d77577e05d07ada31ba375c53ec6b6bc46720b661af7aa3bd8dbabd37",
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "Neljä kokonaista vuodenaikasaarta samassa järjestyksessä ja sama fyysinen kalteva messinkiakseli, kaikki mahtuvat leveään sommitteluun."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/maapallon-vuosi-foto-iso-v2.jpg?t=aa96c56d77577e05",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/maapallon-vuosi-foto-iso-v2.jpg",
+      "bytes": 336257,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    },
+    {
+      "id": "mylly-iso-v2",
+      "subject": "mylly",
+      "taskNumber": 51,
+      "style": "F",
+      "form": "iso",
+      "file": "mylly-foto-iso-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/mylly-iso-v2/mylly-foto-iso-v2.jpg",
+      "sha256": "507749da5712cf87ca472f32148d71086d9c14347a3b4ce6fb3f8ac9f84d19e6",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1/exec-ebf0b4c0-a72c-4884-b3a9-9eb909a19500.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/mylly-iso-v2/original-generation.png",
+      "originalSHA256": "aecdef5ba62bc1b48921f16950a2629551aabeb253ad350a207aaa1e3cccc18f",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup.\nAsset type: Matkakirja photorealistic wide game catalogue image, landscape 16:9, intended final 1600 by 900.\nPrimary request: Generate one entirely NEW complete photograph-like image from scratch using the supplied square mini solely as a visual reference for the SAME wooden Nine Men's Morris board and round wooden stock pieces, high slightly oblique camera angle, natural light, muted warm beige colors and composition. Redraw everything anew in a wider tabletop scene. Do not crop or paste source pixels.\nScene/backdrop: Same soft neutral warm beige textured tabletop, softly lit from upper left, natural restrained wood colors, expanded gently blurred quiet tabletop to both sides.\nSubject: The SAME complete square honey brown wooden board with rounded corners, visible thickness and natural wood grain, centered and wholly inside frame with generous margins. Same camera angle as the reference: looking down from high above and slightly from the front, board seen as a gentle perspective trapezoid, rear edge narrower than front. The board and pieces together fit within 82 percent of image height.\nBoard diagram must be exact and simple: THREE nested SQUARES, concentric, each made of four straight thin dark engraved sides. Each square has EIGHT small dark circular points: its four corners and the exact midpoint of each of its four sides, totaling exactly TWENTY-FOUR board points. FOUR straight midpoint connectors only: one at top side midpoint, one at right side midpoint, one at bottom side midpoint, one at left side midpoint, joining the outer square through the middle square to the inner square. The midpoint connectors STOP at the inner square; the center of the inner square is completely blank. No connections from corners. No diagonals. No lines crossing the center. Exactly three squares, not diamonds or extra rings.\nIn the tabletop foreground below the board, exactly SIX loose smooth stock pieces in a neat row as in the mini: THREE pale natural wood discs on the left, THREE dark walnut discs on the right. All six are off the board. Board itself has no playing pieces, so all 24 dark board points remain visible.\nStyle/medium: Photorealistic tabletop product photography, authentic wood, fine engraved black lines, soft natural light and gentle shadows, sharp legible game geometry, no HDR, no painting, no illustration, no cartoon.\nConstraints: Whole board including all four corners fully visible, plus all six foreground discs fully visible. No people, hands, faces, text, letters, numerals, labels, logos, watermarks, national marks, frames, additional objects, diagonal connectors or center cross.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+        "sourceCommit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+        "sourceBlob": "2a2b09944425c93f163cc9f824ba6c80e50819cf"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md"
+      ],
+      "kuvateksti": "Puinen myllylauta kolmine sisäkkäisine neliöineen sekä kolme vaaleaa ja kolme tummaa varastonappulaa pöydällä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "nonContentEditOnly": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": true,
+        "nativeVisualReviewed": true,
+        "preview480VisualReviewed": true,
+        "preview96VisualReviewPending": false,
+        "circleCropQA": "Not applicable: assigned deliverable is landscape iso; matching mini remains unchanged.",
+        "technicalPass": true,
+        "noTextNumbersLogosWatermarksOrPeopleObserved": true,
+        "reviewStatus": "worker-content-pass-pending-root-review",
+        "nestedSquareCountObserved": 3,
+        "boardPointCountObserved": 24,
+        "midpointConnectorCountObserved": 4,
+        "noDiagonalCornerConnectorsObserved": true,
+        "noLineThroughCenterObserved": true,
+        "blankInnerCenterObserved": true,
+        "boardFullyVisible": true,
+        "stockPiecesObserved": {
+          "light": 3,
+          "dark": 3,
+          "location": "tabletop foreground, off the board"
+        },
+        "miniIsoIdentity": "Same warm wood square board with rounded corners, high front oblique camera, pale pieces left and dark pieces right, soft upper-left light and beige tabletop. Wide image camera is marginally lower and board appears slightly flatter than mini; wood grain and pieces are newly generated.",
+        "exceptions": [
+          "Minor perspective difference: the board looks slightly flatter than the mini, while the object, piece arrangement, geometry and light match."
+        ],
+        "preview96VisualReviewed": true,
+        "preview96Observation": "At 96 by 54 px the wooden board and nested geometry remain recognizable, plus two groups of light/dark stock discs; exact 24-point and 3+3 counts are confirmed from native and 480 px rather than this small proof.",
+        "workerVisualReviewComplete": true
+      },
+      "group": "C-addition",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-20261009.md",
+          "commit": "f809db28d92dacfec400232a9610ca88d81d86c5",
+          "blob": "2a2b09944425c93f163cc9f824ba6c80e50819cf",
+          "readInFull": true
+        },
+        {
+          "path": "posti/sisaltokirjuri-codex-varustekuvat-foto-laajennus-lisa-20261009.md",
+          "commit": "f320763aa33468873b5d9a120c6ef46585650b93",
+          "blob": "6a5d2faf96738ce20e33016a7a295e0af5a37ed8",
+          "readInFull": true
+        }
+      ],
+      "completeNewGeneration": true,
+      "referenceImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/mylly/varuste-mylly-foto.jpg"
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/mylly/varuste-mylly-foto.jpg"
+      ],
+      "referenceImageReceipts": [
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/varustekuvat-foto/production/mylly/varuste-mylly-foto.jpg",
+          "url": "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/varuste-mylly-foto.jpg",
+          "sha256": "fc1eda62f2762111efdbed71e5c41d0e8cf7fe596ae4fa3275180222f402bc8a",
+          "dimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "outputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1 as /Users/samireivinen/.codex/generated_images/01a12000-9d11-7720-8c57-9e627cee37b1/exec-ebf0b4c0-a72c-4884-b3a9-9eb909a19500.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.\n",
+      "generationTool": "builtin image_gen",
+      "originalByteExactVerified": true,
+      "workerState": "local-production-and-worker-QA-complete",
+      "r2Key": "linssikatalogi/mylly-foto-iso-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "507749da5712cf87ca472f32148d71086d9c14347a3b4ce6fb3f8ac9f84d19e6",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "24 pistettä, kolme neliötä, neljä sivukeskiliitosta, tyhjä keskus,3+3nappulaa. Lauta kokonaan näkyvissä, kamera hieman miniä matalampi."
+        ],
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/qa/root-first8.jpg",
+        "editorAcceptance": false
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/mylly-foto-iso-v2.jpg?t=507749da5712cf87",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/mylly-foto-iso-v2.jpg",
+      "bytes": 380484,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true
+    }
+  ],
+  "comparison": {
+    "file": "20261009-foto-laajennus-kooste-osa8.jpg",
+    "r2Key": "linssikatalogi/20261009-foto-laajennus-kooste-osa8.jpg",
+    "url": "https://media.matkakirja.app/linssikatalogi/20261009-foto-laajennus-kooste-osa8.jpg?t=1b6ab31e4ddc105f",
+    "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/20261009-foto-laajennus-kooste-osa8.jpg",
+    "sha256": "1b6ab31e4ddc105ffbf3971accf38af924db7de8c3730550d625451cdc607d5f",
+    "bytes": 347433,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true,
+    "cacheBustedPreflightHttp": 404,
+    "cacheBustedReadback": true
+  },
+  "heldItems": [],
+  "allR2ReadbacksByteExact": true,
+  "cacheBustedPreflightAndReadback": true,
+  "allContentConstraintsPassed": false,
+  "groupOrder": [
+    "C+addition",
+    "B",
+    "A"
+  ],
+  "satelliteHumanReferenceExcluded": true,
+  "deliveryStatus": "R2verified-prepared-for-normal-mailbox-push",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T10:00:39.951217+00:00"
+}
