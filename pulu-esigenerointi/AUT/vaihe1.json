@@ -191,7 +191,7 @@
   "kohde": "kohde:tonava",
   "kysymys": "Kuka oli Marcus Aurelius?",
   "uusi": true,
-  "vastaus": "Sepä sattui: tän minä oikeasti tiedän. Marcus Aurelius oli Rooman keisari, joka hallitsi vuosina 161–180 ja jota pidetään myös [[stoalaisen]] filosofian edustajana. Hän asui vuosina 172–175 Tonavan rannalla sijainneessa [[Carnuntumissa]], joka oli Ylä-Pannonian pääkaupunki ja Rooman Tonavan-laivaston tukikohta, ja kirjoitti siellä osan [[Itsetutkisteluistaan]]. Teos on hänen henkilökohtaisia mietteitään elämästä, velvollisuudesta ja kuolevaisuudesta, eikä sitä alun perin kirjoitettu julkaistavaksi. Hänen aikaansa leimasivat sotaretket Rooman pohjoisrajalla. Hyvä, että edes kirjoittaminen jaksoi leirissä.",
+  "vastaus": "Sepä sattui: tän minä oikeasti tiedän. Marcus Aurelius oli Rooman keisari, joka hallitsi vuosina 161–180 ja jota pidetään myös [[stoalaisen]] filosofian edustajana. Hän asui 170-luvun alussa Tonavan rannalla sijainneessa [[Carnuntumissa]], joka oli Ylä-Pannonian pääkaupunki ja Rooman Tonavan-laivaston tukikohta, ja kirjoitti siellä osan [[Itsetutkisteluistaan]]. Teos on hänen henkilökohtaisia mietteitään elämästä, velvollisuudesta ja kuolevaisuudesta, eikä sitä alun perin kirjoitettu julkaistavaksi. Hänen aikaansa leimasivat sotaretket Rooman pohjoisrajalla. Hyvä, että edes kirjoittaminen jaksoi leirissä.",
   "linkit": [
    "stoalaisen",
    "Carnuntumissa",
@@ -772,7 +772,7 @@
   "kohde": "kohde:carnuntum",
   "kysymys": "Kuka Marcus Aurelius oli?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Marcus Aurelius oli Rooman keisari 100-luvulla ja tunnettu stoalainen ajattelija. Hän asui [[Carnuntumissa]] vuosina 172–175 ja kirjoitti siellä osan teoksestaan [[Itsetutkisteluja]], jossa hän pohtii omaa elämäänsä ja velvollisuuksiaan. Hänen ajatuksensa ovat säilyneet lukijoilla satoja vuosia. Hmm, keisari joka kirjoittaa päiväkirjaa, siinä on jotain tuttua.",
+  "vastaus": "Hyvä kysymys tuo. Marcus Aurelius oli Rooman keisari 100-luvulla ja tunnettu stoalainen ajattelija. Hän asui [[Carnuntumissa]] 170-luvun alussa ja kirjoitti siellä osan teoksestaan [[Itsetutkisteluja]], jossa hän pohtii omaa elämäänsä ja velvollisuuksiaan. Hänen ajatuksensa ovat säilyneet lukijoilla satoja vuosia. Hmm, keisari joka kirjoittaa päiväkirjaa, siinä on jotain tuttua.",
   "linkit": [
    "Carnuntumissa",
    "Itsetutkisteluja"
