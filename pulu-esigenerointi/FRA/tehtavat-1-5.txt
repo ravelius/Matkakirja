@@ -1,0 +1,221 @@
+================ KOHTA 21 (kohde:dune-du-pilat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dune du Pilat (luonto · vuori)
+Tietoruudun teksti: Dune du Pilat on Euroopan korkein hiekkadyyni, La Teste-de-Buchin kunnassa Arcachonin lahden eteläpuolella noin 60 kilometriä Bordeaux'sta lounaaseen. Vuoden 2018 mittauksessa sen korkeus oli 106,6 metriä merenpinnasta, ja se on noin 500 metriä leveä ja 2,7 kilometriä pitkä; hiekkaa siinä on arviolta 60 miljoonaa kuutiometriä. Dyyni on niin sanottu etudyyni, joka kulkeutuu vähitellen sisämaahan päin ja työntää edessään olevaa mäntymetsää tieltään. Vielä 1700-luvun kartoissa Pilat-niminen paikka merkittiin nykyistä etelämmäksi ja osin merelle — nykyinen sijainti tunnettiin 1930-luvulle asti nimellä Les Sabloneys, "uudet hiekat".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hiekkavuori vaeltaa metsän päälle] nykyään — Bordeaux'n eteläpuolella Atlantin rannalla kohoaa Euroopan korkein hiekkadyyni, Dune du Pilat. Se oli vuonna 2018 mitattuna 106,6 metriä korkea, lähes kolme kilometriä pitkä ja noin puoli kilometriä leveä. Hiekkaa on kuusikymmentä miljoonaa kuutiometriä. Dyyni ei pysy paikallaan vaan siirtyy hitaasti sisämaahan päin ja hautaa alleen mäntymetsää, teitä, taloja ja vanhoja sotabunkkereita. Vielä 1930-luvulla paikkaa kutsuttiin nimellä Les Sabloneys, uudet hiekat.
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+
+### 21.1
+KYSYMYS: Mihin nimi Pilat oikeastaan viittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dune du Pilat (luonto · vuori)
+Tietoruudun teksti: Dune du Pilat on Euroopan korkein hiekkadyyni, La Teste-de-Buchin kunnassa Arcachonin lahden eteläpuolella noin 60 kilometriä Bordeaux'sta lounaaseen. Vuoden 2018 mittauksessa sen korkeus oli 106,6 metriä merenpinnasta, ja se on noin 500 metriä leveä ja 2,7 kilometriä pitkä; hiekkaa siinä on arviolta 60 miljoonaa kuutiometriä. Dyyni on niin sanottu etudyyni, joka kulkeutuu vähitellen sisämaahan päin ja työntää edessään olevaa mäntymetsää tieltään. Vielä 1700-luvun kartoissa Pilat-niminen paikka merkittiin nykyistä etelämmäksi ja osin merelle — nykyinen sijainti tunnettiin 1930-luvulle asti nimellä Les Sabloneys, "uudet hiekat".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hiekkavuori vaeltaa metsän päälle] nykyään — Bordeaux'n eteläpuolella Atlantin rannalla kohoaa Euroopan korkein hiekkadyyni, Dune du Pilat. Se oli vuonna 2018 mitattuna 106,6 metriä korkea, lähes kolme kilometriä pitkä ja noin puoli kilometriä leveä. Hiekkaa on kuusikymmentä miljoonaa kuutiometriä. Dyyni ei pysy paikallaan vaan siirtyy hitaasti sisämaahan päin ja hautaa alleen mäntymetsää, teitä, taloja ja vanhoja sotabunkkereita. Vielä 1930-luvulla paikkaa kutsuttiin nimellä Les Sabloneys, uudet hiekat.
+
+### 21.2
+KYSYMYS: Mitä dyynin alta on löytynyt kaivauksissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dune du Pilat (luonto · vuori)
+Tietoruudun teksti: Dune du Pilat on Euroopan korkein hiekkadyyni, La Teste-de-Buchin kunnassa Arcachonin lahden eteläpuolella noin 60 kilometriä Bordeaux'sta lounaaseen. Vuoden 2018 mittauksessa sen korkeus oli 106,6 metriä merenpinnasta, ja se on noin 500 metriä leveä ja 2,7 kilometriä pitkä; hiekkaa siinä on arviolta 60 miljoonaa kuutiometriä. Dyyni on niin sanottu etudyyni, joka kulkeutuu vähitellen sisämaahan päin ja työntää edessään olevaa mäntymetsää tieltään. Vielä 1700-luvun kartoissa Pilat-niminen paikka merkittiin nykyistä etelämmäksi ja osin merelle — nykyinen sijainti tunnettiin 1930-luvulle asti nimellä Les Sabloneys, "uudet hiekat".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+- [Birdsville — kaupunkilehti / Birdsville: Punainen dyyni autiomaan portilla] Kolmenkymmenenviiden kilometrin päässä Birdsvillestä länteen alkaa Simpsonin aavikko, ja sen ensimmäinen dyyni on kaupungin tunnetuin retkikohde. Big Rediksi kutsuttu hiekkaharju — alkuperäiseltä nimeltään Nappanerica — on nelikymmentä metriä korkea ja värjäytynyt punaiseksi hiekkaan sitoutuneesta raudasta. Se on ensimmäinen yli tuhannesta samansuuntaisesta dyynistä, jotka juovittavat koko aavikkoa idästä länteen. Nykyään harjulle kiivetään auringonlaskun aikaan katsomaan, kun taivas ja hiekka värjäytyvät molemmat oranssinpunaisiksi — ja moni yrittää ajaa harjun yli nelivetoautolla, mikä ei aina onnistu ensiyrittämällä.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-saint-cloud) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Cloud’n linna (historia)
+Tietoruudun teksti: Saint-Cloud’n linna kasvoi 1600-luvulla Orléansin herttuan loisteliaaksi residenssiksi puutarhoineen. Napoleon III käytti sitä kesäpalatsinaan, kunnes rakennus paloi Ranskan–Preussin sodassa 1870. Rauniot purettiin vuonna 1892.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Singapore — kohdekartta / Kohdekartta: Gardens by the Bay] avattu 2012 Gardens by the Bay on satakunta hehtaaria puistoa Marina Bayn rannalla, maalla joka on täytetty merestä. Kolmesta rantapuutarhasta suurin on Bay South, 54 hehtaaria, ja se avattiin yleisölle 29. kesäkuuta 2012. Puiston yleissuunnitelman muoto on otettu orkideasta, joka on maan kansalliskukka: juuret ovat rannassa kasvihuoneina, lehdet maastonmuotoja ja versot polkuja, ja kukat ovat teemapuutarhoja. Puiston tunnus ovat superpuut: kahdeksantoista puumaista teräsrakennelmaa, joiden korkeus vaihtelee 25 metristä 50 metriin. Ne ovat pystypuutarhoja, joiden runkoja peittävät saniaiset, köynnökset, orkideat ja bromeliat. Rakennelmat myös tekevät työtä kuin puut: katoksissa on aurinkoke…
+
+### 22.1
+KYSYMYS: Miltä Saint-Cloud’n linna näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Cloud’n linna (historia)
+Tietoruudun teksti: Saint-Cloud’n linna kasvoi 1600-luvulla Orléansin herttuan loisteliaaksi residenssiksi puutarhoineen. Napoleon III käytti sitä kesäpalatsinaan, kunnes rakennus paloi Ranskan–Preussin sodassa 1870. Rauniot purettiin vuonna 1892.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+
+### 22.2
+KYSYMYS: Miksi Saint-Cloud’n linna katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Cloud’n linna (historia)
+Tietoruudun teksti: Saint-Cloud’n linna kasvoi 1600-luvulla Orléansin herttuan loisteliaaksi residenssiksi puutarhoineen. Napoleon III käytti sitä kesäpalatsinaan, kunnes rakennus paloi Ranskan–Preussin sodassa 1870. Rauniot purettiin vuonna 1892.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Gardens by the Bay] avattu 2012 Gardens by the Bay on satakunta hehtaaria puistoa Marina Bayn rannalla, maalla joka on täytetty merestä. Kolmesta rantapuutarhasta suurin on Bay South, 54 hehtaaria, ja se avattiin yleisölle 29. kesäkuuta 2012. Puiston yleissuunnitelman muoto on otettu orkideasta, joka on maan kansalliskukka: juuret ovat rannassa kasvihuoneina, lehdet maastonmuotoja ja versot polkuja, ja kukat ovat teemapuutarhoja. Puiston tunnus ovat superpuut: kahdeksantoista puumaista teräsrakennelmaa, joiden korkeus vaihtelee 25 metristä 50 metriin. Ne ovat pystypuutarhoja, joiden runkoja peittävät saniaiset, köynnökset, orkideat ja bromeliat. Rakennelmat myös tekevät työtä kuin puut: katoksissa on aurinkoke…
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-pic-du-midi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pic du Midi de Bigorre (luonto · vuori)
+Tietoruudun teksti: Pic du Midi de Bigorre eli lyhyesti Pic du Midi on 2 877 metriä korkea vuori Ranskan Pyreneillä Hautes-Pyrénées'n departementissa. Sen huipulla on Pic du Midin observatorio, jossa tehdään sekä tähtitieteellisiä että säähavaintoja. Samalla huipulla seisoo myös televiestintämasto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Oppi: Tähtitorni yliopiston pihan laidalla] Yliopiston tähtitorni perustettiin vuonna 1753. Sen sai aikaan matematiikan opettaja Tomas Žebrauskas, ja rahat lahjoitti liettualainen aatelisnainen Elžbieta Oginskienė-Puzynina. Tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu latinankielisiä lauseita ja eläinradan merkkejä. Nykyään kaupungin valot ovat niin kirkkaita, ettei taivasta voi enää tarkkailla keskustasta, mutta tutkimustyö jatkuu yhä.
+- [Nome — kaupunkilehti / Nome: Maali tuhannen mailin päässä] Iditarod-koiravaljakkokilpailu on ajettu Anchoragesta Nomeen vuodesta 1973, ja matka on virallisesti 1 049 mailia, luku on symbolinen viittaus Alaskaan 49. osavaltiona. Kilpailu syntyi kunnianosoituksena vuoden 1925 seerumiajolle, jossa parikymmentä valjakkoa kuljetti kurkkumätärokotetta Nenanasta Nomeen 674 mailin matkan viidessä ja puolessa vuorokaudessa. Voittajat ajavat Nomeen nykyään reilussa viikossa, ja koko kaupunki kokoontuu Front Streetin maaliportille lipuin riippumatta kellonajasta tai säästä.
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+
+### 23.1
+KYSYMYS: Miksi tähtitorni rakennettiin juuri tälle huipulle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pic du Midi de Bigorre (luonto · vuori)
+Tietoruudun teksti: Pic du Midi de Bigorre eli lyhyesti Pic du Midi on 2 877 metriä korkea vuori Ranskan Pyreneillä Hautes-Pyrénées'n departementissa. Sen huipulla on Pic du Midin observatorio, jossa tehdään sekä tähtitieteellisiä että säähavaintoja. Samalla huipulla seisoo myös televiestintämasto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Oppi: Tähtitorni yliopiston pihan laidalla] Yliopiston tähtitorni perustettiin vuonna 1753. Sen sai aikaan matematiikan opettaja Tomas Žebrauskas, ja rahat lahjoitti liettualainen aatelisnainen Elžbieta Oginskienė-Puzynina. Tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu latinankielisiä lauseita ja eläinradan merkkejä. Nykyään kaupungin valot ovat niin kirkkaita, ettei taivasta voi enää tarkkailla keskustasta, mutta tutkimustyö jatkuu yhä.
+
+### 23.2
+KYSYMYS: Mitä huipulla mitataan säästä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pic du Midi de Bigorre (luonto · vuori)
+Tietoruudun teksti: Pic du Midi de Bigorre eli lyhyesti Pic du Midi on 2 877 metriä korkea vuori Ranskan Pyreneillä Hautes-Pyrénées'n departementissa. Sen huipulla on Pic du Midin observatorio, jossa tehdään sekä tähtitieteellisiä että säähavaintoja. Samalla huipulla seisoo myös televiestintämasto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nome — kaupunkilehti / Nome: Maali tuhannen mailin päässä] Iditarod-koiravaljakkokilpailu on ajettu Anchoragesta Nomeen vuodesta 1973, ja matka on virallisesti 1 049 mailia, luku on symbolinen viittaus Alaskaan 49. osavaltiona. Kilpailu syntyi kunnianosoituksena vuoden 1925 seerumiajolle, jossa parikymmentä valjakkoa kuljetti kurkkumätärokotetta Nenanasta Nomeen 674 mailin matkan viidessä ja puolessa vuorokaudessa. Voittajat ajavat Nomeen nykyään reilussa viikossa, ja koko kaupunki kokoontuu Front Streetin maaliportille lipuin riippumatta kellonajasta tai säästä.
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-lourdes) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lourdes (historia)
+Tietoruudun teksti: Lourdes on markkinakaupunki Pyreneillä Hautes-Pyrénées'n departementissa Lounais-Ranskassa. Ennen 1800-luvun puoliväliä se tunnettiin lähinnä keskellä kaupunkia kohoavasta kalliolinnastaan. Vuonna 1858 talonpoikaistyttö Bernadette Soubirous kertoi Marian ilmestyksistä, ja kaupungista ja sen Lourdesin Neitsyt Marian pyhäköstä tuli pian yksi maailman tärkeimmistä pyhiinvaelluskohteista. Kaupungin keskusta on noin 410 metrin korkeudella merenpinnasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kaupunkilehti / Aavikon maalarit: Koulun seinämaalaus, josta tuli liike] 1960-luvun lopulla hallitus siirsi useita länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice Springsistä luoteeseen: pintupeja, luritjoja, warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia maalaamaan seinämaalauksen perinteisellä keho- ja hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, 1972, perustettiin osuuskunta Papunya Tula, jonka nimen jälkiosa tulee pienestä kukkulasta Papunyan lähellä — hunajamuurahaisen unipaikasta. Ryhmä tunnetaan länsiaavikon taideliikkeestä eli pistemaalauksesta, ja sen katsotaan tuoneen nykyisen aboriginaalitaiteen maailman tietoisuuteen. Useimmat taiteilijat eivät olleet koskaan maalanneet länsimaise…
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Pyhiinvaellus, joka toi kultaa Kairoon] Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.
+
+### 24.1
+KYSYMYS: Kuka Bernadette Soubirous oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lourdes (historia)
+Tietoruudun teksti: Lourdes on markkinakaupunki Pyreneillä Hautes-Pyrénées'n departementissa Lounais-Ranskassa. Ennen 1800-luvun puoliväliä se tunnettiin lähinnä keskellä kaupunkia kohoavasta kalliolinnastaan. Vuonna 1858 talonpoikaistyttö Bernadette Soubirous kertoi Marian ilmestyksistä, ja kaupungista ja sen Lourdesin Neitsyt Marian pyhäköstä tuli pian yksi maailman tärkeimmistä pyhiinvaelluskohteista. Kaupungin keskusta on noin 410 metrin korkeudella merenpinnasta.
+
+### 24.2
+KYSYMYS: Miten pienestä kaupungista tuli pyhiinvaelluskohde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lourdes (historia)
+Tietoruudun teksti: Lourdes on markkinakaupunki Pyreneillä Hautes-Pyrénées'n departementissa Lounais-Ranskassa. Ennen 1800-luvun puoliväliä se tunnettiin lähinnä keskellä kaupunkia kohoavasta kalliolinnastaan. Vuonna 1858 talonpoikaistyttö Bernadette Soubirous kertoi Marian ilmestyksistä, ja kaupungista ja sen Lourdesin Neitsyt Marian pyhäköstä tuli pian yksi maailman tärkeimmistä pyhiinvaelluskohteista. Kaupungin keskusta on noin 410 metrin korkeudella merenpinnasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kaupunkilehti / Aavikon maalarit: Koulun seinämaalaus, josta tuli liike] 1960-luvun lopulla hallitus siirsi useita länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice Springsistä luoteeseen: pintupeja, luritjoja, warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia maalaamaan seinämaalauksen perinteisellä keho- ja hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, 1972, perustettiin osuuskunta Papunya Tula, jonka nimen jälkiosa tulee pienestä kukkulasta Papunyan lähellä — hunajamuurahaisen unipaikasta. Ryhmä tunnetaan länsiaavikon taideliikkeestä eli pistemaalauksesta, ja sen katsotaan tuoneen nykyisen aboriginaalitaiteen maailman tietoisuuteen. Useimmat taiteilijat eivät olleet koskaan maalanneet länsimaise…
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Pyhiinvaellus, joka toi kultaa Kairoon] Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-canigou) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canigou (luonto · vuori)
+Tietoruudun teksti: Canigó eli ranskaksi Canigou on 2 784 metriä korkea vuori Etelä-Ranskan Pyreneillä, alle 50 kilometrin päässä merestä. Jyrkkien rinteidensä ja rannikonläheisen sijaintinsa takia sitä pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena. Vuori on Pohjois-Kataloniassa ja näkyy Etelä-Kataloniaan asti, ja katalaaneille sillä on historiallinen vertauskuvallinen merkitys.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+
+### 25.1
+KYSYMYS: Miksi vuorta luultiin Pyreneiden korkeimmaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canigou (luonto · vuori)
+Tietoruudun teksti: Canigó eli ranskaksi Canigou on 2 784 metriä korkea vuori Etelä-Ranskan Pyreneillä, alle 50 kilometrin päässä merestä. Jyrkkien rinteidensä ja rannikonläheisen sijaintinsa takia sitä pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena. Vuori on Pohjois-Kataloniassa ja näkyy Etelä-Kataloniaan asti, ja katalaaneille sillä on historiallinen vertauskuvallinen merkitys.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+
+### 25.2
+KYSYMYS: Mitä vuori merkitsee katalaaneille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canigou (luonto · vuori)
+Tietoruudun teksti: Canigó eli ranskaksi Canigou on 2 784 metriä korkea vuori Etelä-Ranskan Pyreneillä, alle 50 kilometrin päässä merestä. Jyrkkien rinteidensä ja rannikonläheisen sijaintinsa takia sitä pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena. Vuori on Pohjois-Kataloniassa ja näkyy Etelä-Kataloniaan asti, ja katalaaneille sillä on historiallinen vertauskuvallinen merkitys.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

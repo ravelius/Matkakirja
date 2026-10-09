@@ -1,0 +1,264 @@
+================ KOHTA 16 (kohde:chambord) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Mandalay: Muurit, vallihauta ja kaksitoista porttia] Suunnitelma oli 144 korttelin ruutukaava, jonka keskellä oli kuudentoista korttelin palatsialue. Linnoitusta ympäröi neljä kahden kilometrin muuria täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä vallihauta. Muuri on tiiltä ja mutalaastia, tyveltä kolme metriä paksu ja lähes seitsemän metriä korkea, ja sen varrella on 48 bastionia kultakärkisine torneineen 169 metrin välein. Portteja on kolme joka sivulla, yhteensä kaksitoista, ja kukin kantaa oman eläinradan merkkinsä. Keskiporttien yllä on seitsemänkerroksinen pyatthat-katos, muiden viisikerroksinen.
+
+### 16.1
+KYSYMYS: Mihin Frans I rakennutti Chambordin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+### 16.2
+KYSYMYS: Miksi linnan muurit ja vallihauta ovat koristeita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chambordin linna (kulttuuri)
+Tietoruudun teksti: Chambord on Loiren laakson suurin linna, ja sen sekoitus keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja rakennustyö kesti vuodesta 1519 vuoteen 1547.
+
+Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot olivat Blois'n ja Amboisen linnoissa. Alkuperäinen suunnitelma katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, keisari Kaarle V:lle.
+
+Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan ollut tarkoitettu puolustukseen, m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Mandalay: Muurit, vallihauta ja kaksitoista porttia] Suunnitelma oli 144 korttelin ruutukaava, jonka keskellä oli kuudentoista korttelin palatsialue. Linnoitusta ympäröi neljä kahden kilometrin muuria täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä vallihauta. Muuri on tiiltä ja mutalaastia, tyveltä kolme metriä paksu ja lähes seitsemän metriä korkea, ja sen varrella on 48 bastionia kultakärkisine torneineen 169 metrin välein. Portteja on kolme joka sivulla, yhteensä kaksitoista, ja kukin kantaa oman eläinradan merkkinsä. Keskiporttien yllä on seitsemänkerroksinen pyatthat-katos, muiden viisikerroksinen.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:douaumont) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Urheilu: Kisassa lasketaan matkaa, ei aikaa] 1970 — Le Mansin kaupungin liepeillä on ajettu vuodesta 1923 kisaa, joka kestää täyden vuorokauden. Voittaja on se auto, joka ehtii ajaa kahdessakymmenessäneljässä tunnissa pisimmälle — nykyään yli viisituhatta kilometriä. Yhtä autoa ajaa kolme kuljettajaa vuorotellen. Ennen kisa alkoi niin, että kuljettajat juoksivat radan poikki autoihinsa, hyppäsivät sisään ja lähtivät. Vuonna 1969 Jacky Ickx käveli juoksemisen sijasta, kiinnitti turvavyönsä rauhassa — ja voitti silti koko kisan. Seuraavana vuonna juoksulähdöstä luovuttiin.
+- [San Francisco — kohdekartta / Kohdekartta: San Franciscon kaupungintalo] 1870–1915 Edellinen kaupungintalo oli varoittava esimerkki. Sen rakentaminen alkoi 1870 vanhan hautausmaan paikalle kolmion muotoiselle tontille, ja Augustus Laverin ja Thomas Stentin suunnitelma valmistui vasta 1897 — kaksikymmentäseitsemän vuotta ja seitsemän pääarkkitehtia myöhemmin. Työtä varjosti korruptio: tiilien huhuttiin olevan kelvottomia ja seinien täytteenä todettiin olevan hiekkaa, lattiat olivat vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys kaatoi talon vajaat kymmenen vuotta sen valmistumisen jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta jäljellä. Uus…
+
+### 17.1
+KYSYMYS: Kuinka pienellä alueella Verdunin taistelu käytiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+
+### 17.2
+KYSYMYS: Kuka vihki hautausmaan 1923?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Douaumontin luukammio (historia)
+Tietoruudun teksti: Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja ranskaksi L'Enfer de Verdun, Verdunin helvetti.
+
+Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä; laatan kustansi kunkin sotilaan perhe.
+
+Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin 1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka myöhemmin hyv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Urheilu: Kisassa lasketaan matkaa, ei aikaa] 1970 — Le Mansin kaupungin liepeillä on ajettu vuodesta 1923 kisaa, joka kestää täyden vuorokauden. Voittaja on se auto, joka ehtii ajaa kahdessakymmenessäneljässä tunnissa pisimmälle — nykyään yli viisituhatta kilometriä. Yhtä autoa ajaa kolme kuljettajaa vuorotellen. Ennen kisa alkoi niin, että kuljettajat juoksivat radan poikki autoihinsa, hyppäsivät sisään ja lähtivät. Vuonna 1969 Jacky Ickx käveli juoksemisen sijasta, kiinnitti turvavyönsä rauhassa — ja voitti silti koko kisan. Seuraavana vuonna juoksulähdöstä luovuttiin.
+- [San Francisco — kohdekartta / Kohdekartta: San Franciscon kaupungintalo] 1870–1915 Edellinen kaupungintalo oli varoittava esimerkki. Sen rakentaminen alkoi 1870 vanhan hautausmaan paikalle kolmion muotoiselle tontille, ja Augustus Laverin ja Thomas Stentin suunnitelma valmistui vasta 1897 — kaksikymmentäseitsemän vuotta ja seitsemän pääarkkitehtia myöhemmin. Työtä varjosti korruptio: tiilien huhuttiin olevan kelvottomia ja seinien täytteenä todettiin olevan hiekkaa, lattiat olivat vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys kaatoi talon vajaat kymmenen vuotta sen valmistumisen jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta jäljellä. Uus…
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:bayeux-seinavaate) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Fès — kohdekartta / Kohdekartta: Nejjarinen funduq] 1711 Funduq on karavaaniseraji: majatalo, varasto ja kauppapaikka samassa rakennuksessa. Fèsin vanhassakaupungissa niitä on yli sata, ja Nejjarinen funduq on niistä tunnetuin. Sen rakennutti amin eli esimies 'Adiyil vuonna 1711 sulttaani Ismail Ibn Sharifin aikana. Samana vuonna perustettu Funduq Sagha medinan pohjoisosassa on hyvin samannäköinen. Nimi tarkoittaa puuseppiä ja viittaa aukion ympärillä olleeseen puuseppien suukiin, jonka uskotaan olleen olemassa marinidiajalta asti. Aukion laidalla on myös Nejjarinen suihkulähde, jonka tilasi 1800-luvulla sulttaani Abd al-Rahman. Rakennus toimi kauppapaikkana ja kauppiaiden varastona läheisessä yhteydessä hallitusvaltaan luultavasti 1900-luvu…
+
+### 18.1
+KYSYMYS: Miksi teos ei ole oikeasti kuvakudos?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+### 18.2
+KYSYMYS: Kuka sen luultavasti tilasi ja miksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayeux'n seinävaate (historia)
+Tietoruudun teksti: Bayeux'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna 1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: kuvat on ommeltu villalangalla karkealle pellavalle neljällä pistolajilla ja kymmenellä luonnonvärillä.
+
+Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia.
+
+Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux'n piispaa Odoa, ja…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Fès — kohdekartta / Kohdekartta: Nejjarinen funduq] 1711 Funduq on karavaaniseraji: majatalo, varasto ja kauppapaikka samassa rakennuksessa. Fèsin vanhassakaupungissa niitä on yli sata, ja Nejjarinen funduq on niistä tunnetuin. Sen rakennutti amin eli esimies 'Adiyil vuonna 1711 sulttaani Ismail Ibn Sharifin aikana. Samana vuonna perustettu Funduq Sagha medinan pohjoisosassa on hyvin samannäköinen. Nimi tarkoittaa puuseppiä ja viittaa aukion ympärillä olleeseen puuseppien suukiin, jonka uskotaan olleen olemassa marinidiajalta asti. Aukion laidalla on myös Nejjarinen suihkulähde, jonka tilasi 1800-luvulla sulttaani Abd al-Rahman. Rakennus toimi kauppapaikkana ja kauppiaiden varastona läheisessä yhteydessä hallitusvaltaan luultavasti 1900-luvu…
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:millaun-silta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Meri palaa saaren ympärille] 2015 — Normandian rannikolla Mont-Saint-Michelin lahdessa vuoroveden korkeusero on noin neljätoista metriä, yksi Euroopan suurimmista. Kalliosaari oli ennen kiinni mantereessa vain laskuveden aikaan. Vuonna 1879 sinne rakennettiin pengertie, mutta se pysäytti veden virtauksen ja lahti alkoi liettyä umpeen. Penger purettiin, tilalle tuli pilareilla seisova silta, ja Couesnon-jokeen padottiin vettä, joka päästetään huuhtomaan lietettä pois. 21. maaliskuuta 2015 poikkeuksellisen korkea vuoksi peitti uuden sillan kokonaan.
+- [Bryssel — kaupunkilehti / Luonto: Pyökkikäytävä, joka kasvatettiin laivastolle] 1700-luku — Zoniënwoudin suorat, jopa 40 metriä korkeat pyökit eivät kasvaneet sattumalta. Itävaltalaisen kuvernöörin Kaarle Lotringilaisen kaudella 1700-luvun puolivälissä metsää ryhdyttiin hoitamaan ranskalaisen metsätalousopin mukaan: puut istutettiin tiheään, jotta ne kasvaisivat suorina ja korkeina kohti valoa — juuri sellaisina, joita laivanrakentajat tarvitsivat mastoiksi ja parruiksi. Isoisän matkan aikaan vanhimmat näistä pyökeistä ovat jo yli vuosisadan ikäisiä, ja niiden väliin muodostuneita pylväikköjä kutsutaan metsän katedraaleiksi valon suodattuessa latvuston läpi kuin kirkon ikkunoista. Osa metsästä on nykyään Unescon maailmanperintökohde muiden Euroopan ikimetsien joukossa.
+
+### 19.1
+KYSYMYS: Miksi sillan rakentamiseen ryhdyttiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Luonto: Pyökkikäytävä, joka kasvatettiin laivastolle] 1700-luku — Zoniënwoudin suorat, jopa 40 metriä korkeat pyökit eivät kasvaneet sattumalta. Itävaltalaisen kuvernöörin Kaarle Lotringilaisen kaudella 1700-luvun puolivälissä metsää ryhdyttiin hoitamaan ranskalaisen metsätalousopin mukaan: puut istutettiin tiheään, jotta ne kasvaisivat suorina ja korkeina kohti valoa — juuri sellaisina, joita laivanrakentajat tarvitsivat mastoiksi ja parruiksi. Isoisän matkan aikaan vanhimmat näistä pyökeistä ovat jo yli vuosisadan ikäisiä, ja niiden väliin muodostuneita pylväikköjä kutsutaan metsän katedraaleiksi valon suodattuessa latvuston läpi kuin kirkon ikkunoista. Osa metsästä on nykyään Unescon maailmanperintökohde muiden Euroopan ikimetsien joukossa.
+- [Chennai — kaupunkilehti / Historia: Satama, joka rakennettiin aallokkoon] Madrasilla ei ollut luonnonsatamaa. Laivat ankkuroivat yli kilometrin päähän rannasta, ja lasti tuotiin maihin masula-veneillä ja katamaraaneilla aallokon läpi. Satamaa ehdotti Warren Hastings jo 1770, mutta ensimmäisiin laituritöihin ryhdyttiin vasta 1850-luvulla kauppakamarin aloitteesta, ja vuosien 1868 ja 1872 myrskyt tekivät laitureista käyttökelvottomia. Uuden sataman peruskiven laski 1875 Britannian tuleva kuningas Edward VII, ja aallonmurtajien kivityöt alkoivat 1876. Kun poikittaispadot romahtivat 1877, eteläistä laituria alettiin rakentaa kolmenkymmenenkolmen tonnin betoniharkoista.
+
+### 19.2
+KYSYMYS: Kuinka korkea rakenne on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millaun silta (tekniikka)
+Tietoruudun teksti: Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman korkein silta.
+
+Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista Béziers'iin ja Montpellier'hen. Rakennuskustannukset olivat noin 394 miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta 2004 ja avattiin liikenteelle kaksi päivää myöhemmin.
+
+1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Meri palaa saaren ympärille] 2015 — Normandian rannikolla Mont-Saint-Michelin lahdessa vuoroveden korkeusero on noin neljätoista metriä, yksi Euroopan suurimmista. Kalliosaari oli ennen kiinni mantereessa vain laskuveden aikaan. Vuonna 1879 sinne rakennettiin pengertie, mutta se pysäytti veden virtauksen ja lahti alkoi liettyä umpeen. Penger purettiin, tilalle tuli pilareilla seisova silta, ja Couesnon-jokeen padottiin vettä, joka päästetään huuhtomaan lietettä pois. 21. maaliskuuta 2015 poikkeuksellisen korkea vuoksi peitti uuden sillan kokonaan.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:camargue) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Camargue (luonto · joki)
+Tietoruudun teksti: Camargue on yli 930 neliökilometrin suistoalue, joka syntyy Rhônen jakautuessa kahdeksi pääuomaksi, Grand Rhôneksi ja Petit Rhôneksi, ennen laskuaan Välimereen Arlesin eteläpuolella — yksi Länsi-Euroopan suurimmista jokisuistoista. Suolaisten laguunien ja ruovikkoisten suomaiden verkosto on koti yli 400 lintulajille, joista tunnetuin on flamingo. Puolivillit valkoiset camarguenhevoset ja camarguenhärät laiduntavat vapaina laumoina, joita gardianit eli alueen paimenet kaitsevat ratsain. Alue rauhoitettiin luonnonpuistoksi vuonna 1970, ja sen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+
+### 20.1
+KYSYMYS: Mistä camarguenhevoset ovat alun perin peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Camargue (luonto · joki)
+Tietoruudun teksti: Camargue on yli 930 neliökilometrin suistoalue, joka syntyy Rhônen jakautuessa kahdeksi pääuomaksi, Grand Rhôneksi ja Petit Rhôneksi, ennen laskuaan Välimereen Arlesin eteläpuolella — yksi Länsi-Euroopan suurimmista jokisuistoista. Suolaisten laguunien ja ruovikkoisten suomaiden verkosto on koti yli 400 lintulajille, joista tunnetuin on flamingo. Puolivillit valkoiset camarguenhevoset ja camarguenhärät laiduntavat vapaina laumoina, joita gardianit eli alueen paimenet kaitsevat ratsain. Alue rauhoitettiin luonnonpuistoksi vuonna 1970, ja sen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+
+### 20.2
+KYSYMYS: Miksi juuri gardianit paimentavat härkiä ratsain?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Camargue (luonto · joki)
+Tietoruudun teksti: Camargue on yli 930 neliökilometrin suistoalue, joka syntyy Rhônen jakautuessa kahdeksi pääuomaksi, Grand Rhôneksi ja Petit Rhôneksi, ennen laskuaan Välimereen Arlesin eteläpuolella — yksi Länsi-Euroopan suurimmista jokisuistoista. Suolaisten laguunien ja ruovikkoisten suomaiden verkosto on koti yli 400 lintulajille, joista tunnetuin on flamingo. Puolivillit valkoiset camarguenhevoset ja camarguenhärät laiduntavat vapaina laumoina, joita gardianit eli alueen paimenet kaitsevat ratsain. Alue rauhoitettiin luonnonpuistoksi vuonna 1970, ja sen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

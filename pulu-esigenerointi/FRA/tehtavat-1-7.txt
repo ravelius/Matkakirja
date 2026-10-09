@@ -1,0 +1,210 @@
+================ KOHTA 31 (kohde:hahmotelma-amiens) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amiensin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Amiensin Notre-Dame on katolinen tuomiokirkko, joka seisoo loivalla harjanteella Somme-joen yllä Amiensissa noin 120 kilometriä Pariisista pohjoiseen. Se rakennettiin lähes kokonaan vuosien 1220 ja noin 1270 välillä, goottilaiseksi katedraaliksi hyvin lyhyessä ajassa, ja siksi sen tyyli on poikkeuksellisen yhtenäinen. Tilavuudeltaan 200 000 kuutiometriä se on Ranskan suurin katedraali, yli kaksi kertaa Pariisin Notre-Damen kokoinen. Kirkko on ollut Unescon maailmanperintökohde vuodesta 1981, ja se tunnetaan erityisesti 1200-luvun alun goottilaisesta kuvanveistosta länsijulkisivullaan ja eteläisen ristivarren portaalissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kaupunkilehti / Quito: Ainoa pääkaupunki näin lähellä toimivaa tulivuorta] Quito on ainoa pääkaupunki, joka on kasvanut näin lähelle aktiivista tulivuorta: kaupungin länsilaidalla kohoaa Pichincha, jonka huiput Ruku Pichincha ja Guagua Pichincha yltävät 4 700 ja 4 794 metriin. Vuoren suurin tunnettu purkaus vuonna 1660 peitti kaupungin yli 25 senttimetrin tuhkakerroksella. Idässä laakson toisella puolella kohoavat Cotopaxi, Sincholagua, Antisana ja Cayambe, lännessä Illiniza, Atacazo ja Pululahua – laakso on rajattu tulivuorilla molemmin puolin.
+- [Salomonsaaret — maalehti / Käsityö: Pää, joka kulki kanootin keulassa] Nguzu nguzu on kanootin keulakuva, joka kiinnitettiin vesirajaan sotakanootin keulaan. Siitä käytetään myös nimiä musu musu ja toto isu. Veistos esittää rintakuvaa, jolla on suuri pää, pienet käsivarret ja pyöreät korvakorut, ja kädet on nostettu leuan alle — toisinaan ne pitelevät toista päätä tai lintua. Ulkoneva leuka oli perinteisesti hengen tuntomerkki, ja kuvan tehtävä oli suojella matkalaisia yliluonnollisilta vaaroilta. Puu tummennettiin mustaksi ja kuvioihin upotettiin helmiäistä.
+
+### 31.1
+KYSYMYS: Miten katedraali valmistui näin nopeasti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amiensin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Amiensin Notre-Dame on katolinen tuomiokirkko, joka seisoo loivalla harjanteella Somme-joen yllä Amiensissa noin 120 kilometriä Pariisista pohjoiseen. Se rakennettiin lähes kokonaan vuosien 1220 ja noin 1270 välillä, goottilaiseksi katedraaliksi hyvin lyhyessä ajassa, ja siksi sen tyyli on poikkeuksellisen yhtenäinen. Tilavuudeltaan 200 000 kuutiometriä se on Ranskan suurin katedraali, yli kaksi kertaa Pariisin Notre-Damen kokoinen. Kirkko on ollut Unescon maailmanperintökohde vuodesta 1981, ja se tunnetaan erityisesti 1200-luvun alun goottilaisesta kuvanveistosta länsijulkisivullaan ja eteläisen ristivarren portaalissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kaupunkilehti / Quito: Ainoa pääkaupunki näin lähellä toimivaa tulivuorta] Quito on ainoa pääkaupunki, joka on kasvanut näin lähelle aktiivista tulivuorta: kaupungin länsilaidalla kohoaa Pichincha, jonka huiput Ruku Pichincha ja Guagua Pichincha yltävät 4 700 ja 4 794 metriin. Vuoren suurin tunnettu purkaus vuonna 1660 peitti kaupungin yli 25 senttimetrin tuhkakerroksella. Idässä laakson toisella puolella kohoavat Cotopaxi, Sincholagua, Antisana ja Cayambe, lännessä Illiniza, Atacazo ja Pululahua – laakso on rajattu tulivuorilla molemmin puolin.
+
+### 31.2
+KYSYMYS: Mitä länsijulkisivun kuvanveisto esittää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amiensin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Amiensin Notre-Dame on katolinen tuomiokirkko, joka seisoo loivalla harjanteella Somme-joen yllä Amiensissa noin 120 kilometriä Pariisista pohjoiseen. Se rakennettiin lähes kokonaan vuosien 1220 ja noin 1270 välillä, goottilaiseksi katedraaliksi hyvin lyhyessä ajassa, ja siksi sen tyyli on poikkeuksellisen yhtenäinen. Tilavuudeltaan 200 000 kuutiometriä se on Ranskan suurin katedraali, yli kaksi kertaa Pariisin Notre-Damen kokoinen. Kirkko on ollut Unescon maailmanperintökohde vuodesta 1981, ja se tunnetaan erityisesti 1200-luvun alun goottilaisesta kuvanveistosta länsijulkisivullaan ja eteläisen ristivarren portaalissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salomonsaaret — maalehti / Käsityö: Pää, joka kulki kanootin keulassa] Nguzu nguzu on kanootin keulakuva, joka kiinnitettiin vesirajaan sotakanootin keulaan. Siitä käytetään myös nimiä musu musu ja toto isu. Veistos esittää rintakuvaa, jolla on suuri pää, pienet käsivarret ja pyöreät korvakorut, ja kädet on nostettu leuan alle — toisinaan ne pitelevät toista päätä tai lintua. Ulkoneva leuka oli perinteisesti hengen tuntomerkki, ja kuvan tehtävä oli suojella matkalaisia yliluonnollisilta vaaroilta. Puu tummennettiin mustaksi ja kuvioihin upotettiin helmiäistä.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-reims) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reims (historia)
+Tietoruudun teksti: Reims on Marnen departementin suurin kaupunki ja Ranskan kahdenneksitoista suurin; se sijaitsee 129 kilometriä Pariisista koilliseen Vesle-joen varrella. Gallialaisten perustamasta paikasta kasvoi Rooman valtakunnan aikana merkittävä kaupunki, ja myöhemmin siitä tuli Ranskan kuninkaiden perinteinen kruunauspaikka. Kuninkaan voitelu tehtiin Reimsin tuomiokirkossa, jossa säilytettiin pyhää ampullia, ja siksi kaupunkia kutsutaan ranskaksi nimellä la cité des sacres. Tuomiokirkko, sen viereinen Tau'n palatsi ja Saint-Remin luostari liitettiin yhdessä Unescon maailmanperintöluetteloon vuonna 1991. Reims on myös Champagnen viinialueen pohjoislaidalla ja kytkeytyy samppanjan tuotantoon ja vientiin.
+
+### 32.1
+KYSYMYS: Miksi kuninkaat kruunattiin juuri Reimsissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reims (historia)
+Tietoruudun teksti: Reims on Marnen departementin suurin kaupunki ja Ranskan kahdenneksitoista suurin; se sijaitsee 129 kilometriä Pariisista koilliseen Vesle-joen varrella. Gallialaisten perustamasta paikasta kasvoi Rooman valtakunnan aikana merkittävä kaupunki, ja myöhemmin siitä tuli Ranskan kuninkaiden perinteinen kruunauspaikka. Kuninkaan voitelu tehtiin Reimsin tuomiokirkossa, jossa säilytettiin pyhää ampullia, ja siksi kaupunkia kutsutaan ranskaksi nimellä la cité des sacres. Tuomiokirkko, sen viereinen Tau'n palatsi ja Saint-Remin luostari liitettiin yhdessä Unescon maailmanperintöluetteloon vuonna 1991. Reims on myös Champagnen viinialueen pohjoislaidalla ja kytkeytyy samppanjan tuotantoon ja vientiin.
+
+### 32.2
+KYSYMYS: Mikä oli se pyhä ampulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reims (historia)
+Tietoruudun teksti: Reims on Marnen departementin suurin kaupunki ja Ranskan kahdenneksitoista suurin; se sijaitsee 129 kilometriä Pariisista koilliseen Vesle-joen varrella. Gallialaisten perustamasta paikasta kasvoi Rooman valtakunnan aikana merkittävä kaupunki, ja myöhemmin siitä tuli Ranskan kuninkaiden perinteinen kruunauspaikka. Kuninkaan voitelu tehtiin Reimsin tuomiokirkossa, jossa säilytettiin pyhää ampullia, ja siksi kaupunkia kutsutaan ranskaksi nimellä la cité des sacres. Tuomiokirkko, sen viereinen Tau'n palatsi ja Saint-Remin luostari liitettiin yhdessä Unescon maailmanperintöluetteloon vuonna 1991. Reims on myös Champagnen viinialueen pohjoislaidalla ja kytkeytyy samppanjan tuotantoon ja vientiin.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-vezelay) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vézelay (historia)
+Tietoruudun teksti: Vézelayn luostari on benediktiini- ja cluniacensiluostari Vézelayn kylässä Yonnen departementissa Itä-Keski-Ranskassa. Se rakennettiin vuosina 1120–1150. Luostarikirkko, nykyinen Sainte-Marie-Madeleinen basilika, on veistettyine kapiteeleineen ja portaaleineen yksi burgundilaisen romaanisen taiteen ja arkkitehtuurin mestariteoksista. Hugenotit ryöstivät rakennuksen vuonna 1569, sitä laiminlyötiin 1600- ja 1700-luvuilla ja se vaurioitui vielä Ranskan vallankumouksen aikana. Kirkko ja Vézelayn kukkula otettiin Unescon maailmanperintöluetteloon vuonna 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kohdekartta / Kohdekartta: Suuri moskeija] 638 alkaen Moskeija ei ole rakennettu Kaaban ympärille kerralla vaan kerroksittain. Aluksi Kaaba seisoi avoimella aukiolla. Kalifi Umar laajensi paikkaa vuonna 637 puolellatoista tuhannella neliömetrillä, jolloin ala nousi kolmeen ja puoleen tuhanteen; Uthmanin aikana tehtiin ensimmäiset katetut pylväskäytävät. Abd Allah ibn al-Zubayr venytti alan vuonna 682 lähes seitsemään ja puoleen tuhanteen neliömetriin, ja kalifi al-Mahdin vuonna 779 aloittama työ nosti sen kahteenkymmeneenkahdeksaantuhanteen — suurempaa laajennusta ei tehty ennen Saudi-Arabian aikaa. Se moskeija, jonka 1800-luvun matkalainen näki, oli osmanien työtä. Vuonna 1570 sulttaani Selim II tilasi korjauksen pääarkkitehti Mima…
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat] Suakinin kautta kulki vuosisatojen ajan kaikkea Afrikan sisämaan tavaraa Arabian niemimaalle ja tuhansia pyhiinvaeltajia matkalla Mekkaan — mutta samaa reittiä kulkivat myös ihmiset, jotka myytiin orjiksi.
+
+### 33.1
+KYSYMYS: Miksi pyhiinvaeltajat kerääntyivät juuri tänne?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vézelay (historia)
+Tietoruudun teksti: Vézelayn luostari on benediktiini- ja cluniacensiluostari Vézelayn kylässä Yonnen departementissa Itä-Keski-Ranskassa. Se rakennettiin vuosina 1120–1150. Luostarikirkko, nykyinen Sainte-Marie-Madeleinen basilika, on veistettyine kapiteeleineen ja portaaleineen yksi burgundilaisen romaanisen taiteen ja arkkitehtuurin mestariteoksista. Hugenotit ryöstivät rakennuksen vuonna 1569, sitä laiminlyötiin 1600- ja 1700-luvuilla ja se vaurioitui vielä Ranskan vallankumouksen aikana. Kirkko ja Vézelayn kukkula otettiin Unescon maailmanperintöluetteloon vuonna 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kohdekartta / Kohdekartta: Suuri moskeija] 638 alkaen Moskeija ei ole rakennettu Kaaban ympärille kerralla vaan kerroksittain. Aluksi Kaaba seisoi avoimella aukiolla. Kalifi Umar laajensi paikkaa vuonna 637 puolellatoista tuhannella neliömetrillä, jolloin ala nousi kolmeen ja puoleen tuhanteen; Uthmanin aikana tehtiin ensimmäiset katetut pylväskäytävät. Abd Allah ibn al-Zubayr venytti alan vuonna 682 lähes seitsemään ja puoleen tuhanteen neliömetriin, ja kalifi al-Mahdin vuonna 779 aloittama työ nosti sen kahteenkymmeneenkahdeksaantuhanteen — suurempaa laajennusta ei tehty ennen Saudi-Arabian aikaa. Se moskeija, jonka 1800-luvun matkalainen näki, oli osmanien työtä. Vuonna 1570 sulttaani Selim II tilasi korjauksen pääarkkitehti Mima…
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat] Suakinin kautta kulki vuosisatojen ajan kaikkea Afrikan sisämaan tavaraa Arabian niemimaalle ja tuhansia pyhiinvaeltajia matkalla Mekkaan — mutta samaa reittiä kulkivat myös ihmiset, jotka myytiin orjiksi.
+
+### 33.2
+KYSYMYS: Mitä portaalin kiviveistokset esittävät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vézelay (historia)
+Tietoruudun teksti: Vézelayn luostari on benediktiini- ja cluniacensiluostari Vézelayn kylässä Yonnen departementissa Itä-Keski-Ranskassa. Se rakennettiin vuosina 1120–1150. Luostarikirkko, nykyinen Sainte-Marie-Madeleinen basilika, on veistettyine kapiteeleineen ja portaaleineen yksi burgundilaisen romaanisen taiteen ja arkkitehtuurin mestariteoksista. Hugenotit ryöstivät rakennuksen vuonna 1569, sitä laiminlyötiin 1600- ja 1700-luvuilla ja se vaurioitui vielä Ranskan vallankumouksen aikana. Kirkko ja Vézelayn kukkula otettiin Unescon maailmanperintöluetteloon vuonna 1979.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-beaune) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beaunen Hôtel-Dieu (kulttuuri)
+Tietoruudun teksti: Hospices de Beaune eli Hôtel-Dieu de Beaune on entinen hyväntekeväisyyden varassa toiminut vaivaistalo Beaunen kaupungissa. Sen perusti vuonna 1443 Burgundin kansleri Nicolas Rolin köyhien sairaalaksi. Alkuperäinen sairaalarakennus Hôtel-Dieu on yksi 1400-luvun burgundilaisen arkkitehtuurin hienoimmista esimerkeistä ja toimii nykyään museona; potilaita hoidetaan uudemmissa sairaalarakennuksissa. Talon nimissä järjestetään joka marraskuu merkittävä hyväntekeväisyysviinihuutokauppa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kreivi Camondo ja köyhien koulu] Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin asuttuun kaupunginosaan — ja osa rabbeista julisti hänet siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi vuotta ja koulutti valtaosan valtakunnan juutalaisista virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. maaliskuuta 1873, ja hänet tuotiin toiveensa mukaan takaisin haudattavaksi Hasköyn hautausmaalle. Galatassa nousevat yhä hänen mukaansa nimetyt portaat.
+- [Slovakia — maalehti / Ruoka: Kansallisruoka köyhien keittiöstä] nykyään — Bryndzové halušky on Slovakian kansallisruokia: perunataikinasta tehtyjä pieniä nyyttejä, joiden päälle sulatetaan pehmeää lampaanjuustoa ja ripotellaan paistettua pekonia. Perunataikina syntyi vuoristossa, jossa peruna menestyi karussakin maassa ja jauhoa tarvittiin vähemmän. Turecká-kylässä järjestetään joka vuosi halušky-festivaali, jossa käydään syöntikilpailu. Perinteinen juoma annoksen kanssa on žinčica, joka syntyy juuston valmistuksen sivutuotteena.
+
+### 34.1
+KYSYMYS: Kuka maksoi köyhien sairaalan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beaunen Hôtel-Dieu (kulttuuri)
+Tietoruudun teksti: Hospices de Beaune eli Hôtel-Dieu de Beaune on entinen hyväntekeväisyyden varassa toiminut vaivaistalo Beaunen kaupungissa. Sen perusti vuonna 1443 Burgundin kansleri Nicolas Rolin köyhien sairaalaksi. Alkuperäinen sairaalarakennus Hôtel-Dieu on yksi 1400-luvun burgundilaisen arkkitehtuurin hienoimmista esimerkeistä ja toimii nykyään museona; potilaita hoidetaan uudemmissa sairaalarakennuksissa. Talon nimissä järjestetään joka marraskuu merkittävä hyväntekeväisyysviinihuutokauppa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kreivi Camondo ja köyhien koulu] Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin asuttuun kaupunginosaan — ja osa rabbeista julisti hänet siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi vuotta ja koulutti valtaosan valtakunnan juutalaisista virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. maaliskuuta 1873, ja hänet tuotiin toiveensa mukaan takaisin haudattavaksi Hasköyn hautausmaalle. Galatassa nousevat yhä hänen mukaansa nimetyt portaat.
+- [Slovakia — maalehti / Ruoka: Kansallisruoka köyhien keittiöstä] nykyään — Bryndzové halušky on Slovakian kansallisruokia: perunataikinasta tehtyjä pieniä nyyttejä, joiden päälle sulatetaan pehmeää lampaanjuustoa ja ripotellaan paistettua pekonia. Perunataikina syntyi vuoristossa, jossa peruna menestyi karussakin maassa ja jauhoa tarvittiin vähemmän. Turecká-kylässä järjestetään joka vuosi halušky-festivaali, jossa käydään syöntikilpailu. Perinteinen juoma annoksen kanssa on žinčica, joka syntyy juuston valmistuksen sivutuotteena.
+
+### 34.2
+KYSYMYS: Miten talo elättää itsensä nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beaunen Hôtel-Dieu (kulttuuri)
+Tietoruudun teksti: Hospices de Beaune eli Hôtel-Dieu de Beaune on entinen hyväntekeväisyyden varassa toiminut vaivaistalo Beaunen kaupungissa. Sen perusti vuonna 1443 Burgundin kansleri Nicolas Rolin köyhien sairaalaksi. Alkuperäinen sairaalarakennus Hôtel-Dieu on yksi 1400-luvun burgundilaisen arkkitehtuurin hienoimmista esimerkeistä ja toimii nykyään museona; potilaita hoidetaan uudemmissa sairaalarakennuksissa. Talon nimissä järjestetään joka marraskuu merkittävä hyväntekeväisyysviinihuutokauppa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kaupunkilehti / St. John’s: Turska, ja mitä sen jälkeen tuli] Kaupungin edustalla ovat Grand Banks, vedenalaiset tasangot, joilla kylmä Labradorin virta kohtaa lämpimän Golfvirran. Sekoittuminen nostaa ravinteet pintaan ja teki alueesta yhden maailman rikkaimmista kalavesistä. Vuonna 1992 pohjoisen turskan kanta oli pudonnut prosenttiin historiallisesta tasosta, ja kalastus, joka oli muovannut rannikon elämää viisisataa vuotta, kiellettiin; Grand Banks pysyi suljettuna vuoteen 2024. Sen jälkeen meri elättää kaupunkia toisin: Hibernian, Terra Novan ja White Rosen öljykentät ovat aivan rannikon edustalla, ja St. John’sin alue vastaa noin puolta koko maakunnan taloudesta.
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-ajaccio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Luonto: Riutta keskellä merta, kaukana rannasta] 2016 — Sanganeb on erillinen korallirakennelma keskellä Punaistamerta, kaukana rannikon riutoista. Sadan kolmenkymmenen kilometrin päässä Port Sudanista pohjoiseen aukeaa Dungonabin lahti, jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehänsä. Alue merkittiin Ramsar-kosteikoksi 2009 ja hyväksyttiin maailmanperintöluetteloon 2016 nimellä Sanganeb sekä Dungonabin lahti ja Mukkawarin saari. Lahden rannan mangrovet ja pikkusaaret ovat merkittävä lintualue: siellä elävät muun muassa valkosilmälokki ja nokihaukka.
+
+### 35.1
+KYSYMYS: Kuka hallitsi Korsikaa ennen ranskalaisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+
+### 35.2
+KYSYMYS: Kuinka kaukana manner-Ranska on täältä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Luonto: Riutta keskellä merta, kaukana rannasta] 2016 — Sanganeb on erillinen korallirakennelma keskellä Punaistamerta, kaukana rannikon riutoista. Sadan kolmenkymmenen kilometrin päässä Port Sudanista pohjoiseen aukeaa Dungonabin lahti, jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehänsä. Alue merkittiin Ramsar-kosteikoksi 2009 ja hyväksyttiin maailmanperintöluetteloon 2016 nimellä Sanganeb sekä Dungonabin lahti ja Mukkawarin saari. Lahden rannan mangrovet ja pikkusaaret ovat merkittävä lintualue: siellä elävät muun muassa valkosilmälokki ja nokihaukka.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

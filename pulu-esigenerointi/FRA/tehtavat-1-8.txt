@@ -1,0 +1,216 @@
+================ KOHTA 36 (kohde:hahmotelma-bonifacio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Arki: Kaupunki kallion alla] nykyään — Grund on Luxemburgin kaupungin kaupunginosa, joka lepää Alzette-joen rannalla vanhan kaupungin alapuolella laaksossa. Sinne pääsee kävellen tai hissillä, joka laskeutuu kallion läpi. Asukkaita on vain 983, ja heistä 43,74 prosenttia on luxemburgilaisia (vuoden 2025 lopussa). Illalla Grund herää eloon, sillä se on suosittua yöelämän aluetta. Täällä toimii myös Mosconi, yhden Michelin-tähden ravintola, joka erikoistuu pastaan. Yläpuolella kohoavat vanhan linnoituksen kalliot ja muurit.
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+
+### 36.1
+KYSYMYS: Mikä salmi erottaa Korsikan Sardiniasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+### 36.2
+KYSYMYS: Miksi kaupunki rakennettiin kallion päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Arki: Kaupunki kallion alla] nykyään — Grund on Luxemburgin kaupungin kaupunginosa, joka lepää Alzette-joen rannalla vanhan kaupungin alapuolella laaksossa. Sinne pääsee kävellen tai hissillä, joka laskeutuu kallion läpi. Asukkaita on vain 983, ja heistä 43,74 prosenttia on luxemburgilaisia (vuoden 2025 lopussa). Illalla Grund herää eloon, sillä se on suosittua yöelämän aluetta. Täällä toimii myös Mosconi, yhden Michelin-tähden ravintola, joka erikoistuu pastaan. Yläpuolella kohoavat vanhan linnoituksen kalliot ja muurit.
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-place-stanislas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+### 37.1
+KYSYMYS: Kuka oli Stanislaus, jonka mukaan aukio on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+### 37.2
+KYSYMYS: Miksi aukio näyttää yhdestä puusta veistetyltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-mont-ventoux) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Falkland — kaupunkilehti / Falklandinsaaret: Lampaat valtaavat saaret] Kun purjelaivakauppa oli vielä kukoistava elinkeino, saarille alkoi nousta myös toinen, pysyvämpi talouden muoto: lampaanhoito. Falklandinsaarten yhtiö perustettiin vuonna 1851, ja se toi saarille cheviot-rotuisia lampaita villantuotantoa varten. Karu, puuton ja tuulinen maasto sopi lampaille yllättävän hyvin, sillä laajat ruohoniityt riittivät laumojen laiduntamiseen ympäri vuoden. Malli osoittautui menestykseksi, ja pian muutkin tilalliset perustivat omia lammastiloja saarten eri kolkkiin. Villasta tuli vuosikymmeniksi saarten tärkein vientituote, ja lampaanhoito muovasi maisemaa ja elinkeinorakennetta pitkälle 1900-luvulle asti.
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+- [Nikosia — kaupunkilehti / Arki] Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on puiden alla kolme prosenttia — vähemmän kuin missään muussa Euroopan pääkaupungissa.
+- [Nullarbor — kaupunkilehti / Nullarbor] Nullarbor on maailman suurin yhtenäinen kalkkikivitasanko Etelä- ja Länsi-Australian rajalla: puuton, lähes asumaton aavikko, jonka ensimmäinen eurooppalainen ylitti kävellen vuonna 1841 – lähes hengellään.
+
+### 38.1
+KYSYMYS: Miksi huippu on puuton ja valkoinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Falkland — kaupunkilehti / Falklandinsaaret: Lampaat valtaavat saaret] Kun purjelaivakauppa oli vielä kukoistava elinkeino, saarille alkoi nousta myös toinen, pysyvämpi talouden muoto: lampaanhoito. Falklandinsaarten yhtiö perustettiin vuonna 1851, ja se toi saarille cheviot-rotuisia lampaita villantuotantoa varten. Karu, puuton ja tuulinen maasto sopi lampaille yllättävän hyvin, sillä laajat ruohoniityt riittivät laumojen laiduntamiseen ympäri vuoden. Malli osoittautui menestykseksi, ja pian muutkin tilalliset perustivat omia lammastiloja saarten eri kolkkiin. Villasta tuli vuosikymmeniksi saarten tärkein vientituote, ja lampaanhoito muovasi maisemaa ja elinkeinorakennetta pitkälle 1900-luvulle asti.
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+- [Nikosia — kaupunkilehti / Arki] Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on puiden alla kolme prosenttia — vähemmän kuin missään muussa Euroopan pääkaupungissa.
+- [Nullarbor — kaupunkilehti / Nullarbor] Nullarbor on maailman suurin yhtenäinen kalkkikivitasanko Etelä- ja Länsi-Australian rajalla: puuton, lähes asumaton aavikko, jonka ensimmäinen eurooppalainen ylitti kävellen vuonna 1841 – lähes hengellään.
+
+### 38.2
+KYSYMYS: Kuinka kovaa siellä tuulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-puy-de-sancy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto] Ranskan luonnossa hiekka vaeltaa metsän päälle, meri palaa saaren ympärille kahdesti päivässä ja Massif Centralissa nukkuu rivi sammuneita tulivuoria.
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+
+### 39.1
+KYSYMYS: Milloin tämä tulivuori purkautui viimeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+
+### 39.2
+KYSYMYS: Mikä Massif Central oikein on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto] Ranskan luonnossa hiekka vaeltaa metsän päälle, meri palaa saaren ympärille kahdesti päivässä ja Massif Centralissa nukkuu rivi sammuneita tulivuoria.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-amboise) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+- [Vilna — kohdekartta / Kohdekartta: Gediminaksen torni] 1409 Legenda kertoo, että suurruhtinas Gediminas näki noin vuonna 1323 metsästysretkellä unta rautaisesta sudesta, joka ulvoi kukkulan laella niin kovaa kuin sata sutta yhdessä. Hovin tietäjä Lizdeika selitti unen tarkoittavan, että juuri sille kukkulalle pitäisi rakentaa mahtava linnoituskaupunki. Näin sai alkunsa Vilna. Ensin kukkulalle nousi puulinnoitus, mutta vuonna 1409 suurruhtinas Vytautas rakennutti tilalle punatiilisen linnan. Vuosisatojen saatossa suurin osa linnasta romahti tai purettiin, ja jäljelle jäi vain yksi kolmikerroksinen torni. Se, mitä tornista näkyy tänään, on suurelta osin vuonna 1933 tehdyn jälleenrakennuksen näköinen. Torni on tärkeä koko Liettualle: kun maa alkoi…
+
+### 40.1
+KYSYMYS: Miten kuningas Kaarle VIII kuoli täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Minareetti, joka valmistui voitonriemuun] Kalifi Abu Ya'qub Yusuf käski 1184 rakentaa suurmoskeijalle minareetin, mutta työ pysähtyi samana vuonna: ensin kuoli arkkitehti ja puolitoista kuukautta myöhemmin kalifi itse. Rakentaminen jatkui vasta 1188 ja kulki kolmen arkkitehdin käsien läpi. Torni valmistui 10. maaliskuuta 1198, kun sen huippuun nostettiin neljä kultaista tai pronssista palloa muistoksi voitosta Kastilian Alfonso VIII:sta neljä vuotta aiemmin. Sisällä ei ole portaita vaan 35 loivaa ramppia: aikalaiskronikan mukaan ne tehtiin niin leveiksi, että juhtaeläimetkin pääsivät ylös.
+- [Lagos — kohdekartta / Kohdekartta: Kristuksen katedraali] 1867–1946 Marinan varrella oleva anglikaaninen katedraali on Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali perustettiin 1869 — neljä vuotta ennen isoisän matkaa. Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi piispaksi. Nykyinen rakennus on paljon nuorempi. Työ alkoi arkkitehti Bagan Benjaminin piirustusten mukaan 1. marraskuuta 1924, peruskiven laski Walesin prinssi — myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja kirkko valmistui 1946. Katedraali on ollut vuorollaan Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko Nigerian arkkipiispan ja nykyään Lagosin piispa…
+
+### 40.2
+KYSYMYS: Miksi linnasta purettiin suurin osa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+- [Vilna — kohdekartta / Kohdekartta: Gediminaksen torni] 1409 Legenda kertoo, että suurruhtinas Gediminas näki noin vuonna 1323 metsästysretkellä unta rautaisesta sudesta, joka ulvoi kukkulan laella niin kovaa kuin sata sutta yhdessä. Hovin tietäjä Lizdeika selitti unen tarkoittavan, että juuri sille kukkulalle pitäisi rakentaa mahtava linnoituskaupunki. Näin sai alkunsa Vilna. Ensin kukkulalle nousi puulinnoitus, mutta vuonna 1409 suurruhtinas Vytautas rakennutti tilalle punatiilisen linnan. Vuosisatojen saatossa suurin osa linnasta romahti tai purettiin, ja jäljelle jäi vain yksi kolmikerroksinen torni. Se, mitä tornista näkyy tänään, on suurelta osin vuonna 1933 tehdyn jälleenrakennuksen näköinen. Torni on tärkeä koko Liettualle: kun maa alkoi…
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

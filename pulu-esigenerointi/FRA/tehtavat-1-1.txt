@@ -1,0 +1,244 @@
+================ KOHTA 1 (kohde:tuileries) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kohdekartta / Kohdekartta: Mandalayn palatsi] 1857–1859 Palatsi oli yksikerroksinen tiikkirakennusten kokonaisuus yhdellä ainoalla alustalla. Alusta on pisimmillään 306 metriä ja leveimmillään 175 metriä, ja sen päälle nousi kolmekymmentäyksi porrasta. Rakennusten arvo näkyi kattojen kerrosluvusta: seitsemänkerroksinen kultakärkinen pyatthat kruunasi Leijonavaltaistuimen salin, ja se merkitsi samalla koko kaupungin keskipistettä. Suuri audienssisali oli seitsemänkymmentäseitsemän metriä pohjoisesta etelään. Alueella on kolme rakennusta, jotka kertovat arjesta muurien sisällä. Kellotorni Bahozin on korkea jalusta, jonka päällä neljä pylvästä kannattaa kaksoiskattoista lavaa; siltä lyötiin gongia ja suurta rumpua joka kolmas tunti, sillä…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marm…
+
+### 1.1
+KYSYMYS: Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kohdekartta / Kohdekartta: Mandalayn palatsi] 1857–1859 Palatsi oli yksikerroksinen tiikkirakennusten kokonaisuus yhdellä ainoalla alustalla. Alusta on pisimmillään 306 metriä ja leveimmillään 175 metriä, ja sen päälle nousi kolmekymmentäyksi porrasta. Rakennusten arvo näkyi kattojen kerrosluvusta: seitsemänkerroksinen kultakärkinen pyatthat kruunasi Leijonavaltaistuimen salin, ja se merkitsi samalla koko kaupungin keskipistettä. Suuri audienssisali oli seitsemänkymmentäseitsemän metriä pohjoisesta etelään. Alueella on kolme rakennusta, jotka kertovat arjesta muurien sisällä. Kellotorni Bahozin on korkea jalusta, jonka päällä neljä pylvästä kannattaa kaksoiskattoista lavaa; siltä lyötiin gongia ja suurta rumpua joka kolmas tunti, sillä…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marm…
+
+### 1.2
+KYSYMYS: Mitä palatsin paikalla on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuileries'n palatsi (historia)
+Tietoruudun teksti: Tuileries'n palatsi seisoi Seinen oikealla rannalla suoraan Louvren länsipuolella ja sulki sen suuren pihan lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. toukokuuta 1871 kaksitoista miestä sytytti sen palamaan petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista vuotta ennen kuin ne 1882 päätettiin purkaa.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Katedraali: Kirkko moskeijan paikalla] Sevillan katedraali on maailman suurin goottilainen kirkko pinta-alaltaan, yli 11 500 neliömetriä, rakennettu vuosina 1402–1517. Se seisoo entisen almohadimoskeijan paikalla: kaupungin kristityt valloittajat purkivat moskeijan mutta säästivät sen minareetin, joka tunnetaan nykyään Giraldana ja toimii katedraalin kellotornina. Rakentajien tarina kertoo, että he halusivat kirkon, josta jälkipolvet luulisivat heitä hulluiksi.
+- [Kairo — kohdekartta / Kohdekartta: Abdeenin palatsi] 1874 Kairoa hallittiin keskiajalta asti linnoituskukkulalta, kunnes kediivi Ismail päätti toisin. Hän rakennutti tasamaalle keskustaan eurooppalaistyylisen palatsin ja siirsi hallinnon sinne vuonna 1874 — samalla vuosikymmenellä, jolla hän avasi leveäkatuisen keskustan Pariisin malliin. Palatsi sai nimensä Abdeen Beystä, jonka pieni kartano paikalla oli aiemmin seissyt. Rakentaminen kesti kymmenen vuotta ja piirtäjänä oli ranskalainen arkkitehti Léon Rousseau. Huoneita on 500, ja saleja koristavat kullatut listat ja suuri kellokokoelma. Rahaa paloi: rakennus maksoi 700 000 Egyptin puntaa ja kalustus lähes kolme kertaa enemmän. Kuningas Fuad käytti myöhemmin pelkkiin pariisilaishuonekaluihin…
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:bastilji) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Historia: Lähettilään loppu ja linnoituksen loppu] Syyskuussa 1879 Britannian lähettiläs Kabuliin, Sir Pierre Louis Napoleon Cavagnari, surmattiin Bala Hissarin sisällä. Teko laukaisi yleisen kansannousun ja Toisen anglo-afgaanisodan toisen vaiheen. Linnoitus vaurioitui pahoin: brittiläinen residenssi paloi ja asevarasto räjähti. Wikipedian oma artikkeli kertoo lopusta kahdella tavalla — johdannon mukaan britit tuhosivat linnoituksen 1880, mutta historiaosion mukaan kenraali Frederick Roberts halusi purkaa sen kokonaan, ja lopulta se päinvastoin vahvistettiin keväällä 1880. Emiiri Abdur Rahman Khan laski samana vuonna uuden linnakkeen perustukset, ja Bala Hissar hylättiin 1890-luvulla.
+- [Mosambik — kaupunkilehti / Mosambik: Kirkko muurien sisällä] Linnoituksen muurien sisällä oli oma kirkko, kaivo ja varastot, sillä varuskunnan piti kestää pitkiäkin piirityksiä ilman apua mantereelta. Puolustus oli niin vahva, että Alankomaiden laivastot yrittivät vallata saaren kahdesti, vuosina 1607 ja 1608, mutta molemmat hyökkäykset torjuttiin muurien takaa. Epäonnistumisten jälkeen hollantilaiset hakivat tukikohtia muualta, ja Mosambikin saaresta tuli entistä tärkeämpi Portugalin ainoa pysyvä tukikohta Itä-Afrikan rannikolla vuosisadoiksi eteenpäin.
+
+### 2.1
+KYSYMYS: Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+
+### 2.2
+KYSYMYS: Millaista elämä linnoituksen sisällä oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastilji (historia)
+Tietoruudun teksti: Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Historia: Lähettilään loppu ja linnoituksen loppu] Syyskuussa 1879 Britannian lähettiläs Kabuliin, Sir Pierre Louis Napoleon Cavagnari, surmattiin Bala Hissarin sisällä. Teko laukaisi yleisen kansannousun ja Toisen anglo-afgaanisodan toisen vaiheen. Linnoitus vaurioitui pahoin: brittiläinen residenssi paloi ja asevarasto räjähti. Wikipedian oma artikkeli kertoo lopusta kahdella tavalla — johdannon mukaan britit tuhosivat linnoituksen 1880, mutta historiaosion mukaan kenraali Frederick Roberts halusi purkaa sen kokonaan, ja lopulta se päinvastoin vahvistettiin keväällä 1880. Emiiri Abdur Rahman Khan laski samana vuonna uuden linnakkeen perustukset, ja Bala Hissar hylättiin 1890-luvulla.
+- [Mosambik — kaupunkilehti / Mosambik: Kirkko muurien sisällä] Linnoituksen muurien sisällä oli oma kirkko, kaivo ja varastot, sillä varuskunnan piti kestää pitkiäkin piirityksiä ilman apua mantereelta. Puolustus oli niin vahva, että Alankomaiden laivastot yrittivät vallata saaren kahdesti, vuosina 1607 ja 1608, mutta molemmat hyökkäykset torjuttiin muurien takaa. Epäonnistumisten jälkeen hollantilaiset hakivat tukikohtia muualta, ja Mosambikin saaresta tuli entistä tärkeämpi Portugalin ainoa pysyvä tukikohta Itä-Afrikan rannikolla vuosisadoiksi eteenpäin.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:montblanc) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mali — maalehti / Ruoka: Kansallisruoan nimi on koko resepti] Malin kansallisruoka on tigadegena, ja nimi kertoo reseptin: bambaraksi tiga on maapähkinä, dege tahna ja na kastike. Maapähkinätahna sulatetaan liemeen lihan, tomaatin ja sipulin kanssa, ja kastike hautuu paksuksi. Pataan menee sitä mitä on: kaalia, porkkanaa, bataattia, okraa. Vieressä on riisiä tai hirssitaikinaa, jota sanotaan nimellä to, pohjoisessa fonio-suurimoita. Naapurimaassa Senegalissa lähes sama kastike tunnetaan nimellä mafé, ja siitä kummalle se kuuluu käydään jatkuvaa keskustelua — mandinkojen ja bambarojen keittiö on ollut yhtä kauan molemmin puolin rajaa.
+- [Halifax — kaupunkilehti / Halifax: Kuudes joulukuuta 1917] Ranskalainen rahtialus Mont-Blanc ja norjalainen Imo, joka oli rahdattu Belgian avustustoimikunnalle, törmäsivät Halifaxin satamassa aamulla 6. joulukuuta 1917. Mont-Blanc kuljetti räjähdysaineita; törmäys vaurioitti kannen bentsolitynnyreitä, höyryt syttyivät, ja noin kaksikymmentä minuuttia myöhemmin laiva räjähti. Räjähdys oli aikansa suurin ihmisen aiheuttama. Vähintään 1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui, ja lähes kaikki rakennukset kahdeksansadan metrin säteellä tuhoutuivat. Hyökyaalto vei mennessään Tufts Coven mi'kmaq-yhteisön. Apu tuli Bostonista.
+
+### 3.1
+KYSYMYS: Kuka nousi Mont Blancille ensimmäisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Halifax: Kuudes joulukuuta 1917] Ranskalainen rahtialus Mont-Blanc ja norjalainen Imo, joka oli rahdattu Belgian avustustoimikunnalle, törmäsivät Halifaxin satamassa aamulla 6. joulukuuta 1917. Mont-Blanc kuljetti räjähdysaineita; törmäys vaurioitti kannen bentsolitynnyreitä, höyryt syttyivät, ja noin kaksikymmentä minuuttia myöhemmin laiva räjähti. Räjähdys oli aikansa suurin ihmisen aiheuttama. Vähintään 1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui, ja lähes kaikki rakennukset kahdeksansadan metrin säteellä tuhoutuivat. Hyökyaalto vei mennessään Tufts Coven mi'kmaq-yhteisön. Apu tuli Bostonista.
+
+### 3.2
+KYSYMYS: Kummalle maalle huippu oikeastaan kuuluu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Blanc (luonto · vuori)
+Tietoruudun teksti: Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mali — maalehti / Ruoka: Kansallisruoan nimi on koko resepti] Malin kansallisruoka on tigadegena, ja nimi kertoo reseptin: bambaraksi tiga on maapähkinä, dege tahna ja na kastike. Maapähkinätahna sulatetaan liemeen lihan, tomaatin ja sipulin kanssa, ja kastike hautuu paksuksi. Pataan menee sitä mitä on: kaalia, porkkanaa, bataattia, okraa. Vieressä on riisiä tai hirssitaikinaa, jota sanotaan nimellä to, pohjoisessa fonio-suurimoita. Naapurimaassa Senegalissa lähes sama kastike tunnetaan nimellä mafé, ja siitä kummalle se kuuluu käydään jatkuvaa keskustelua — mandinkojen ja bambarojen keittiö on ollut yhtä kauan molemmin puolin rajaa.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:vignemale) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Ontarion kuninkaallinen museo] 1914 Museo perustettiin 16. huhtikuuta 1912, ja sen avasi yleisölle 19. maaliskuuta 1914 Connaughtin herttua, silloinen Kanadan kenraalikuvernööri. Hallinto oli jaettu Ontarion provinssin ja Toronton yliopiston kesken, ja käytännössä museo oli yliopiston suorassa ohjauksessa vuoteen 1968, jolloin siitä tuli itsenäinen provinssin laitos. Paikka valittiin yliopiston läheisyyden takia, vaikka se oli tuolloin kaupungin rakennetun alueen laidalla kaukana liikekeskustasta. Vanhimman osan — nykyisen länsisiiven — piirsivät torontolaiset arkkitehdit Frank Darling ja John A. Pearson, ja tyyli on italialaisvaikutteisen ja uusromaanisen sekoitus: raskaita massoja, pyöreitä ja kaarevia ikkunoita paksui…
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+- [Soul — kohdekartta / Kohdekartta: Jongmyo] 1394 Kun kuningas Taejo siirsi pääkaupungin tänne vuonna 1394, hän rakennutti palatsin viereen pyhäkön esi-isilleen. Jongmyo on kungfutselainen kuninkaallinen esi-isien pyhäkkö, ja Unescon mukaan se on maailman vanhin säilynyt laatuaan. Paikan idea on kiinalaisesta perinteestä: valtaistuimelta katsottuna esi-isien pyhäkön kuului olla kuninkaan vasemmalla ja maan- ja viljanjumalien pyhäkön oikealla. Päärakennus Jeongjeon oli valmistuessaan arvioiden mukaan Aasian pisimpiä rakennuksia. Siinä oli aluksi seitsemän kammiota, joista kussakin säilytettiin yhden kuninkaan ja hänen puolisoidensa sielutauluja. Kun uusia kuninkaita kuoli, salia jatkettiin aina lännestä itään, ja lopulta kammioita oli …
+
+### 4.1
+KYSYMYS: Miksi huippu on jaettu kahden maan kesken?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Ontarion kuninkaallinen museo] 1914 Museo perustettiin 16. huhtikuuta 1912, ja sen avasi yleisölle 19. maaliskuuta 1914 Connaughtin herttua, silloinen Kanadan kenraalikuvernööri. Hallinto oli jaettu Ontarion provinssin ja Toronton yliopiston kesken, ja käytännössä museo oli yliopiston suorassa ohjauksessa vuoteen 1968, jolloin siitä tuli itsenäinen provinssin laitos. Paikka valittiin yliopiston läheisyyden takia, vaikka se oli tuolloin kaupungin rakennetun alueen laidalla kaukana liikekeskustasta. Vanhimman osan — nykyisen länsisiiven — piirsivät torontolaiset arkkitehdit Frank Darling ja John A. Pearson, ja tyyli on italialaisvaikutteisen ja uusromaanisen sekoitus: raskaita massoja, pyöreitä ja kaarevia ikkunoita paksui…
+- [Soul — kohdekartta / Kohdekartta: Jongmyo] 1394 Kun kuningas Taejo siirsi pääkaupungin tänne vuonna 1394, hän rakennutti palatsin viereen pyhäkön esi-isilleen. Jongmyo on kungfutselainen kuninkaallinen esi-isien pyhäkkö, ja Unescon mukaan se on maailman vanhin säilynyt laatuaan. Paikan idea on kiinalaisesta perinteestä: valtaistuimelta katsottuna esi-isien pyhäkön kuului olla kuninkaan vasemmalla ja maan- ja viljanjumalien pyhäkön oikealla. Päärakennus Jeongjeon oli valmistuessaan arvioiden mukaan Aasian pisimpiä rakennuksia. Siinä oli aluksi seitsemän kammiota, joista kussakin säilytettiin yhden kuninkaan ja hänen puolisoidensa sielutauluja. Kun uusia kuninkaita kuoli, salia jatkettiin aina lännestä itään, ja lopulta kammioita oli …
+
+### 4.2
+KYSYMYS: Millaista on Pyreneiden jäätikkö nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vignemale (luonto · vuori)
+Tietoruudun teksti: Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:valimeri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Ruoka] Libyan keittiössä näkyy neljä perintöä — amazigh, arabi, ottomaani ja Välimeri — ja etelässä viides: aavikon oma taito säilöä ruokaa ilman jääkaappia.
+
+### 5.1
+KYSYMYS: Kuinka kapea Gibraltarinsalmi todella on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+### 5.2
+KYSYMYS: Miksi Välimeri on niin suolainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Ruoka] Libyan keittiössä näkyy neljä perintöä — amazigh, arabi, ottomaani ja Välimeri — ja etelässä viides: aavikon oma taito säilöä ruokaa ilman jääkaappia.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

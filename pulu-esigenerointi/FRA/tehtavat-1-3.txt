@@ -1,0 +1,274 @@
+================ KOHTA 11 (kohde:lascaux) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Neljä poikaa ja koira löysivät luolan] n. 17 000 vuotta sitten — Syyskuussa 1940 neljä teini-ikäistä poikaa etsi koiraansa Dordognen metsässä ja putosi kuoppaan. Alta paljastui luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Maalaukset ovat noin 17 000 vuotta vanhoja. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa käydään yhä.
+- [Tampere — kohdekartta / Kohdekartta: Näsinneula] 1971 Näsinneula avattiin Särkänniemen niemenkärkeen vuonna 1971. Kokonaiskorkeus on 168 metriä, josta itse torniosaa on 134,5 metriä; loppu on huipun antennimasto. Tornia pidettiin Suomen korkeimpana rakennuksena yli viisikymmentä vuotta, ja näkötornina se on maan korkein yhä. Huipulla on kaksi kerrosta: alempi on näköalatasanne ja ylempi ravintola, joka pyörii akselinsa ympäri. Yksi kierros kestää tunnin, eli aterian aikana ehtii nähdä sekä Näsijärven pohjoiseen että Pyhäjärven etelään — ja niiden välissä koko kaupungin. Kun Tukholman Kaknäsin torni suljettiin yleisöltä vuonna 2018, Näsinneulasta tuli samalla Pohjoismaiden korkein näkötorni. Tornin juurella on huvipuisto, akvaario ja Sara …
+
+### 11.1
+KYSYMYS: Kuka löysi luolan ja miten?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Neljä poikaa ja koira löysivät luolan] n. 17 000 vuotta sitten — Syyskuussa 1940 neljä teini-ikäistä poikaa etsi koiraansa Dordognen metsässä ja putosi kuoppaan. Alta paljastui luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Maalaukset ovat noin 17 000 vuotta vanhoja. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa käydään yhä.
+
+### 11.2
+KYSYMYS: Miksi luola suljettiin yleisöltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lascaux (historia)
+Tietoruudun teksti: Lascaux on luolasto lähellä Montignacin kylää Dordognen departementissa Lounais-Ranskassa. Sen seiniä ja kattoja peittää yli kuusisataa maalausta, enimmäkseen suuria eläimiä — juuri niitä lajeja, joita seudun fossiiliaineisto ylemmältä paleoliittiselta kaudelta tuntee. Maalaukset ovat monen sukupolven yhteinen työ, ja niiden iäksi arvioidaan tavallisesti 17 000–22 000 vuotta eli varhaista magdalénien-kautta.
+
+Luolan suuaukko löytyi 12. syyskuuta 1940, kun 18-vuotiaan Marcel Ravidat'n koira tutki kaatuneen puun jättämää kuoppaa. Ravidat palasi paikalle kolmen ystävänsä kanssa, ja he laskeutuivat viidentoista metrin syvyiseen kuiluun uskoen sen olevan tarunomainen salakäytävä läheiseen kartanoon. Käytäville annettiin omat nimensä: Härkien sali, Käytävä, Kuilu, Laiva, Apsis ja Kissaeläinten kammio.
+
+Lascaux otettiin maailmanperintöluetteloon 1979 osana Vézèren laakson esihistoriallisia koh…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kohdekartta / Kohdekartta: Näsinneula] 1971 Näsinneula avattiin Särkänniemen niemenkärkeen vuonna 1971. Kokonaiskorkeus on 168 metriä, josta itse torniosaa on 134,5 metriä; loppu on huipun antennimasto. Tornia pidettiin Suomen korkeimpana rakennuksena yli viisikymmentä vuotta, ja näkötornina se on maan korkein yhä. Huipulla on kaksi kerrosta: alempi on näköalatasanne ja ylempi ravintola, joka pyörii akselinsa ympäri. Yksi kierros kestää tunnin, eli aterian aikana ehtii nähdä sekä Näsijärven pohjoiseen että Pyhäjärven etelään — ja niiden välissä koko kaupungin. Kun Tukholman Kaknäsin torni suljettiin yleisöltä vuonna 2018, Näsinneulasta tuli samalla Pohjoismaiden korkein näkötorni. Tornin juurella on huvipuisto, akvaario ja Sara …
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:chartresin-katedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kaupunkilehti / Historia: Kaupungintalo, jonka ikkunat kertovat rakentajistaan] Perth Town Hall on ainoa vankityövoimalla rakennettu kaupungintalo Australiassa. Perustus laskettiin 24. toukokuuta 1867, talo valmistui 1870 ja oli silloin kaupungin korkein rakennus. Tiilet poltettiin East Perthin savesta, ja koristelu kertoo rakentajien asemasta: ikkunat on muotoiltu vankien univormun nuolimerkin muotoon ja osa koristeista muistuttaa hirsipuun köyttä. Talo seisoo yhä Hay Streetin ja Barrack Streetin kulmassa, ja sen jarrahportaikon seinillä ovat kaikkien ylipormestarien kuvat ensimmäisestä, George Shentonista, alkaen.
+- [Santa Fe — kohdekartta / Kohdekartta: Pyhän Franciscuksen katedraali] 1869 Paavi Pius IX perusti Santa Fen hiippakunnan 1853 ja nimitti ensimmäiseksi piispaksi ranskalaisen Jean Baptiste Lamyn. Lamy piti messuja La Parroquiassa, adobekirkossa, jonka espanjalaiset lähetyssaarnaajat olivat rakentaneet 1714–1717; se oli korvannut samalla paikalla olleen vuoden 1626 kirkon, joka tuhoutui pueblokapinassa 1680. Lamy aloitti uuden katedraalin rakentamisen 1869 ja toi paikalle ranskalaisia arkkitehteja ja italialaisia kivimiehiä. Työtapa oli poikkeuksellinen: uusi katedraali rakennettiin vanhan kirkon YMPÄRILLE, ja La Parroquia purettiin ja kannettiin ulos vasta sitten, kun uusi oli valmis. Vanhasta jäi jäljelle vain pieni kappeli pohjoissivulla. Tulos on jyrkässä ri…
+
+### 12.1
+KYSYMYS: Miksi katedraalin ikkunat ovat niin suuria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kaupunkilehti / Historia: Kaupungintalo, jonka ikkunat kertovat rakentajistaan] Perth Town Hall on ainoa vankityövoimalla rakennettu kaupungintalo Australiassa. Perustus laskettiin 24. toukokuuta 1867, talo valmistui 1870 ja oli silloin kaupungin korkein rakennus. Tiilet poltettiin East Perthin savesta, ja koristelu kertoo rakentajien asemasta: ikkunat on muotoiltu vankien univormun nuolimerkin muotoon ja osa koristeista muistuttaa hirsipuun köyttä. Talo seisoo yhä Hay Streetin ja Barrack Streetin kulmassa, ja sen jarrahportaikon seinillä ovat kaikkien ylipormestarien kuvat ensimmäisestä, George Shentonista, alkaen.
+- [Santa Fe — kohdekartta / Kohdekartta: Pyhän Franciscuksen katedraali] 1869 Paavi Pius IX perusti Santa Fen hiippakunnan 1853 ja nimitti ensimmäiseksi piispaksi ranskalaisen Jean Baptiste Lamyn. Lamy piti messuja La Parroquiassa, adobekirkossa, jonka espanjalaiset lähetyssaarnaajat olivat rakentaneet 1714–1717; se oli korvannut samalla paikalla olleen vuoden 1626 kirkon, joka tuhoutui pueblokapinassa 1680. Lamy aloitti uuden katedraalin rakentamisen 1869 ja toi paikalle ranskalaisia arkkitehteja ja italialaisia kivimiehiä. Työtapa oli poikkeuksellinen: uusi katedraali rakennettiin vanhan kirkon YMPÄRILLE, ja La Parroquia purettiin ja kannettiin ulos vasta sitten, kun uusi oli valmis. Vanhasta jäi jäljelle vain pieni kappeli pohjoissivulla. Tulos on jyrkässä ri…
+
+### 12.2
+KYSYMYS: Mikä Sancta Camisa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chartresin katedraali (kulttuuri)
+Tietoruudun teksti: Chartresin katedraali on katolinen katedraali Chartresissa, noin kahdeksankymmentä kilometriä Pariisista lounaaseen. Se on omistettu Neitsyt Marialle ja rakennettiin pääosin vuosina 1194–1220. Paikalla on ollut ainakin viisi katedraalia siitä lähtien, kun Chartresin hiippakunta perustettiin 300-luvulla. Rakennusta pidetään korkeagotiikan tunnetuimpana ja vaikutusvaltaisimpana esimerkkinä, ja Unesco kutsui sitä 1979 ranskalaisen gotiikan huippukohdaksi.
+
+Ulkoa katedraalia hallitsevat raskaat tukikaaret, jotka siirtävät holvien painon seinien ulkopuolelle. Juuri siksi ikkunat voitiin tehdä paljon suuremmiksi kuin ennen — ja suurin osa alkuperäisistä lasimaalauksista on säilynyt ehjänä. Arkkitehtuuriin on tehty vain vähäisiä muutoksia 1200-luvun alun jälkeen.
+
+Länsipäädyn kaksi tornia ovat keskenään erilaiset: toinen on noin 1160 valmistunut 105-metrinen sileä pyramidi, toinen 113-metrinen…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:pont-du-gard) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+- [Mongolia — maalehti / Kirjallisuus: Kirja, joka säilyi kiinalaisiksi merkeiksi puettuna] 1228 → — Mongolien salainen historia on vanhin säilynyt mongolinkielinen kirjateos. Sen kirjoitti tuntematon tekijä Tšingis-kaanin kuoleman jälkeen, ja loppusanojen mukaan työ valmistui Rotan vuonna Kerulen-joen rannalla. Kirja alkaa taruna: siniharmaa susi ja vaalea naaraskauris saivat ensimmäisen mongolin, ja yhdentoista sukupolven päästä leski Alan Gua sai kolme poikaa hohtavasta miehestä, joka tuli sisään gerin savuaukosta. Alkuperäistä käsikirjoitusta ei ole jäljellä. Teksti säilyi, koska Ming-kauden tulkkikoulu kirjoitti sen ääntämisen kiinalaisin merkein oppikirjaksi. Käännöksiä on yli neljälläkymmenellä kielellä.
+
+### 13.1
+KYSYMYS: Kuinka loivasti akvedukti laskee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 13.2
+KYSYMYS: Miksi silta säilyi Rooman jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pont du Gard (tekniikka)
+Tietoruudun teksti: Pont du Gard on roomalainen akveduktisilta, joka rakennettiin ensimmäisellä vuosisadalla jaa. viemään vettä yli viidenkymmenen kilometrin matkan Nemausukseen eli nykyiseen Nîmesiin. Se ylittää Gardon-joen Vers-Pont-du-Gardin kylän lähellä Etelä-Ranskassa ja on yksi parhaiten säilyneistä roomalaisista akveduktisilloista. Unesco otti sen luetteloonsa 1985.
+
+Sillassa on kolme kaarikerrosta simpukkakalkkikivestä, ja se on 48,8 metriä korkea. Akvedukti kuljetti arviolta 40 000 kuutiometriä vettä vuorokaudessa. Rakennustyön tarkkuus näkyy kaltevuudessa: vesi laskee keskimäärin senttimetrin 182,4 metriä kohti. Vesi kulki mahdollisesti vielä 500-luvulla, mutta kun huolto loppui 300-luvun jälkeen, kivettymät ja roskat tukkivat uoman.
+
+Rooman valtakunnan hajottua silta säilyi lähes ehjänä, koska sille löytyi uusi tehtävä: siitä tuli tullisilta. Paikalliset herrat ja piispat vastasivat kunnossapid…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Kirjallisuus: Kirja, joka säilyi kiinalaisiksi merkeiksi puettuna] 1228 → — Mongolien salainen historia on vanhin säilynyt mongolinkielinen kirjateos. Sen kirjoitti tuntematon tekijä Tšingis-kaanin kuoleman jälkeen, ja loppusanojen mukaan työ valmistui Rotan vuonna Kerulen-joen rannalla. Kirja alkaa taruna: siniharmaa susi ja vaalea naaraskauris saivat ensimmäisen mongolin, ja yhdentoista sukupolven päästä leski Alan Gua sai kolme poikaa hohtavasta miehestä, joka tuli sisään gerin savuaukosta. Alkuperäistä käsikirjoitusta ei ole jäljellä. Teksti säilyi, koska Ming-kauden tulkkikoulu kirjoitti sen ääntämisen kiinalaisin merkein oppikirjaksi. Käännöksiä on yli neljälläkymmenellä kielellä.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:carnacin-kivirivit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut] Kreikan taruja ei ole pantu vain kirjoihin: yksi saari on nimetty pojan mukaan, joka putosi mereen, ja jumalten vuori odotti ensimmäistä kiipeäjäänsä vuoteen 1913.
+
+### 14.1
+KYSYMYS: Kuinka monta pystykiveä alueella on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+
+### 14.2
+KYSYMYS: Mitä tarut kertovat kivistä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnacin kivirivit (historia)
+Tietoruudun teksti: Carnacin kivirivit ovat poikkeuksellisen tiheä megaliittikeskittymä Bretagnen etelärannikon tuntumassa Luoteis-Ranskassa. Kokonaisuuteen kuuluu kivirivistöjä, dolmeneja eli kivihautoja, hautakumpuja ja yksittäisiä menhirejä. Paikallisesta graniitista veistettyjä pystykiviä on yli kolmetuhatta, ja ne pystytti Bretagnen esikelttiläinen väestö; suurempaa keskittymää ei tunneta maailmasta.
+
+Suurin osa kivistä on Carnacin kunnan alueella, osa idempänä La Trinité-sur-Merissä. Ne pystytettiin neoliittisella kaudella, todennäköisesti noin 3300 eaa., mutta jotkin saattavat olla peräisin jo ajalta 4500 eaa.
+
+Kivet ovat synnyttäneet omat tarunsa. Kristillisen legendan mukaan ne olivat pakanasotilaita, jotka ajoivat takaa paavi Corneliusta, kunnes tämä muutti heidät kiveksi. Bretagnessa on myös oma versionsa Arthur-taruista, ja paikallinen perimätieto selittää kivirivien suoruuden sillä, että kysee…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut] Kreikan taruja ei ole pantu vain kirjoihin: yksi saari on nimetty pojan mukaan, joka putosi mereen, ja jumalten vuori odotti ensimmäistä kiipeäjäänsä vuoteen 1913.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:avignonin-paavinpalatsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+
+### 15.1
+KYSYMYS: Montako konklaavia palatsissa pidettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+### 15.2
+KYSYMYS: Miksi paavit halusivat takaisin Roomaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Avignonin paavinpalatsi (historia)
+Tietoruudun teksti: Palais des Papes Avignonissa on yksi Euroopan suurimmista ja tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V 1362, Gregorius XI 1370 ja Benedictus XIII 1394.
+
+Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä ne muodostavat keskiajan suurimman goottilaisen rakennuksen. Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, koristelusta sienalaisen koulukunnan Simone Martini ja Matteo Giovanetti.
+
+Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan humanismin perustaja Petrarca. Suureen kappeliin tu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
