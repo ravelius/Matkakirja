@@ -530,6 +530,7 @@ namespace Matkakirja.Editori
             ("palaute", () => UiNakymat.Hae().Palaute.Avaa(), SuljeKaikki, 1.5),
             ("sähke", () => UiNakymat.Hae().Sahke.Testaa("liuska"), SuljeKaikki, 1.5),
             ("mylly", () => MyllyNakyma.Hae().Avaa(), SuljeKaikki, 1.5),
+            ("tavli", () => TavliNakyma.Hae().Avaa(), SuljeKaikki, 1.5),
         };
 
         static void SuljeKaikki() => UiNakymat.Hae().SuljeKaikki();
