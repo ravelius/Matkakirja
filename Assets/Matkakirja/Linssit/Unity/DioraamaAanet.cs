@@ -338,7 +338,15 @@ namespace Matkakirja.Natiivi
             }
 
             string huone = pelaajaOhjaimissa ? pelaajanHuone : nakyma.KohdeTila;   // kaiku ja mikserin huonekohtaiset säädöt pelaajan huoneesta
-            if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); aanettomat.Clear(); }
+            if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); aanettomat.Clear(); huoneLokiAika = pelaajaOhjaimissa ? Time.unscaledTime + 2f : -1f; }
+            // Todennus (Siirtoseppä 10.10.): 2 s huoneen vaihdon jälkeen soivat silmukat (tila:ääni) lokiin.
+            if (huoneLokiAika > 0 && Time.unscaledTime >= huoneLokiAika)
+            {
+                huoneLokiAika = -1f;
+                var sb = new System.Text.StringBuilder();
+                foreach (var s in sallitut) sb.Append(sb.Length > 0 ? ", " : "").Append(s.Item1).Append(':').Append(s.Item2);
+                Debug.Log($"MATKAKIRJA linssit: seikkailu: äänimaisema soi {huone ?? "-"}: {sb}");
+            }
             bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu || MuuPuheSoi;
             // Sovittimen duckaus puheen ajaksi (0,15); mikserin VaistoKerroin skaalaa väistön (1 = nykyinen, 0 = ei väistöä).
             double duck = puheSoi ? 1.0 - VaistonSyvyys * Kerroin(VaistoKerroin, huone ?? "") : 1.0;
@@ -523,7 +531,7 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
-        int viimeJakso = -1; bool olinPelissa;
+        int viimeJakso = -1; bool olinPelissa; float huoneLokiAika = -1f;
 
         /// <summary>Pelattava pala käynnissä (vene, kävely, yö): linnan esittelyn kertoja ei soi eikä katkaise pelin repliikkejä
         /// (LS2:n botti BUILD 169: kierros alkoi veneessä, "puhevuoro linnalle (muut puheet katkaistu)" kesken pelin; samasta
