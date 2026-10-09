@@ -2200,7 +2200,10 @@ namespace Matkakirja.Natiivi
                         foreach (var a in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
                             if (a.isPlaying && a.volume > 0.001f && !a.mute) soivat.Add($"{a.gameObject.name}/{(a.clip != null ? a.clip.name : "-")} {a.volume:F3}");
                         Kirjaa($"opas: äänet soi {soivat.Count}: {string.Join("; ", soivat)}");
+                        Kirjaa("opas: " + ElavaKaupunki.KaupunkiAanetTila());   // juna 173: kaupunkiäänet (kirkot, suihkut, taustat, vene-ohi)
                     }
+                    // Kaupunkiäänet v1 (juna 173): tila, tai seuraava kirkonkello / maitovaahdotin heti ehtojen täyttyessä (kuuntelu simulla).
+                    else if (osat.Length > 2 && osat[1] == "kaupunkiaanet") { if (osat[2] != "tila") ElavaKaupunki.PakotaKaupunkiAani(osat[2]); Kirjaa($"opas: kaupunkiäänet {osat[2]} → " + ElavaKaupunki.KaupunkiAanetTila()); }
                     else if (osat.Length > 2 && osat[1] == "vuorokausi") { KaupunkiKuva.Valinta = osat[2]; Kirjaa($"opas: vuorokausi {KaupunkiKuva.Valinta}"); }
                     else if (osat.Length > 2 && osat[1] == "ssao") { Kirjaa("opas: " + KaupunkiPassi.Ssao(osat[2] == "tila" ? (bool?)null : osat[2] == "1")); }
                     else if (osat.Length > 3 && osat[1] == "salama" && osat[2] == "pito") { OpasSovitin.SalamaPito = osat[3] == "1"; Kirjaa($"opas: salaman pito {(OpasSovitin.SalamaPito ? "päällä" : "pois")}"); }
