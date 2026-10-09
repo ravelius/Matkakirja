@@ -4675,5 +4675,2348 @@
    "Miksi Kuun vaiheet vaihtelevat?",
    "Miksi Urin ziggurat on säilynyt?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saint-malo",
+  "kasite": "Saint Lawrence -joen",
+  "kysymys": "Kerro lisää: Saint Lawrence -joen",
+  "vastaus": "Saint Lawrence -joki on Pohjois-Amerikan itäosan suuri vesiväylä, joka laskee Atlantin valtamereen. [[Montreal]] kasvoi turkiskaupan varaan joen mutkassa olevalle saarelle, ja 1860-luvulla se oli Brittiläisen Pohjois-Amerikan suurin kaupunki. Joen yli rakennettiin vuosina 1854–1859 [[Victoria-silta]], joka oli valmistuessaan maailman pisin silta ja ensimmäinen, joka ylitti koko joen. Sen suunnitteli insinööri [[Robert Stephenson]] yhdessä Alexander McKenzie Rossin kanssa.",
+  "linkit": [
+   "Montreal",
+   "Victoria-silta",
+   "Robert Stephenson"
+  ],
+  "jatkot": [
+   "Miten Victoria-silta rakennettiin?",
+   "Miksi turkiskauppa kasvatti Montrealin suureksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saint-malo",
+  "kasite": "Uuden Ranskan",
+  "kysymys": "Kerro lisää: Uuden Ranskan",
+  "vastaus": "Uusi Ranska oli Ranskan siirtomaa-alue Pohjois-Amerikassa, jonka ydin oli Saint Lawrence -joen laakso. Siirtokunnan talous nojasi pitkälti [[turkiskauppaan]]. Kaupunki [[Québec]] perustettiin vuonna 1608, ja sen perustajana pidetään tutkimusmatkailija [[Samuel de Champlainia]]. Ranska menetti suurimman osan alueesta Britannialle vuonna 1763 [[Pariisin rauhassa]], joka päätti seitsenvuotisen sodan.",
+  "linkit": [
+   "turkiskauppaan",
+   "Québec",
+   "Samuel de Champlainia",
+   "Pariisin rauhassa"
+  ],
+  "jatkot": [
+   "Miksi Ranska menetti Uuden Ranskan Britannialle?",
+   "Millainen mies Samuel de Champlain oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saint-malo",
+  "kasite": "Kanadan",
+  "kysymys": "Kerro lisää: Kanadan",
+  "vastaus": "Kanada on pinta-alaltaan maailman toiseksi suurin valtio, ja sen pääkaupunki on [[Ottawa]]. Nimen uskotaan periytyvän irokeesien kielen sanasta, joka tarkoittaa kylää tai asutusta; Jacques Cartier kirjasi sen muistiin 1500-luvulla. Maan ilmasto vaihtelee suuresti. Kanadan kuivin kaupunki on Yukonin [[Whitehorse]], jossa sataa vettä noin 161 milliä vuodessa, koska kaupunki sijaitsee Rannikkovuorten sadevarjossa. Kanadan aurinkoisin kesä puolestaan on [[Yellowknifessä]], jossa kesäkuukausina paistetta kertyy keskimäärin 1 034 tuntia.",
+  "linkit": [
+   "Ottawa",
+   "Whitehorse",
+   "Yellowknifessä"
+  ],
+  "jatkot": [
+   "Miksi Whitehorse on Kanadan kuivin kaupunki?",
+   "Miten Yellowknifen kesä ja talvi eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi",
+  "vastaus": "Vuorovesi on meren pinnan säännöllistä nousua ja laskua, jonka aiheuttavat pääasiassa [[Kuun]] ja Auringon vetovoima. Välimerellä korkeusero jää useimmiten muutamaan kymmeneen senttiin, mutta Tunisian [[Gabèsin lahdessa]] vesi nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Lontoon [[Thames]] on vuorovesijoki Teddingtonin sulkuun asti, ja keskustassa vedenkorkeus vaihtelee parhaimmillaan noin seitsemän metriä. Laskuveden aikaan paljastuvalta rannalta etsitään savipiippuja ja astiansirpaleita.",
+  "linkit": [
+   "Kuun",
+   "Gabèsin lahdessa",
+   "Thames"
+  ],
+  "jatkot": [
+   "Miksi Välimerellä on niin vähän vuorovettä?",
+   "Keitä ovat Thamesin rannalla etsivät mudlarkit?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "riuttoja",
+  "kysymys": "Kerro lisää: riuttoja",
+  "vastaus": "Riutta on pinnan alla tai sen tuntumassa oleva kallio-, hiekka- tai korallirakenne, joka voi olla merenkululle vaarallinen. Tavallisesti riuttoja rakentavat korallieläimet, mutta [[Bermudan]] matalissa lahdissa pieni [[putkimato]] rakentaa kalkkisia putkiaan tiiviisti päällekkäin, kunnes syntyy rengasmainen pienoisriutta. Riutta voi myös suojata: [[Dilin]] satamaa kiertävä luonnonriutta suojaa sitä sadekauden pahimmilta säiltä. Satamaan kuljetaan kapeaa väylää kahden riutan välistä, ja riutat on merkitty poijuin, koska ne näkyvät vain laskuvedellä.",
+  "linkit": [
+   "Bermudan",
+   "putkimato",
+   "Dilin"
+  ],
+  "jatkot": [
+   "Miten poijut merkitsevät väylän laivoille?",
+   "Miten korallit rakentavat riuttoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin",
+  "vastaus": "Atlantin valtameri on maailman toiseksi suurin valtameri, ja se erottaa Euroopan ja [[Afrikan]] Amerikan mantereista. Sen rannat ovat hyvin erilaisia. Länsi-Afrikan [[Orjarannikolla]] ranta on leveä ja lähes puuton hiekkaharju, ja avomereltä kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. [[Ouidahin]] seudulla rannalla on nykyisin hiljaista: siellä on muutama kalastajakylä, palmuja ja pieniä valkoisiksi rapattuja majoja.",
+  "linkit": [
+   "Afrikan",
+   "Orjarannikolla",
+   "Ouidahin"
+  ],
+  "jatkot": [
+   "Miksi Länsi-Afrikan rannikolla ei ole luonnollisia satamia?",
+   "Kuinka syvä Atlantti on syvimmillään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "La Vieillen majakka",
+  "kysymys": "Kerro lisää: La Vieillen majakka",
+  "vastaus": "La Vieillen majakka seisoo Raz de Sein -salmessa, ja sen nimi tarkoittaa ranskaksi vanhaa naista. Majakka erottuu selvästi [[Pointe du Razin]] kärjestä, joka kohoaa noin 72 metriä salmen yläpuolelle. [[Raz de Sein]] -salmi on vaarallista vettä, sillä sen virtaus on voimakas, ja majakka antaa merenkulkijoille kiintopisteen. Salmi erottaa niemen [[Seinin saaresta]].",
+  "linkit": [
+   "Pointe du Razin",
+   "Raz de Sein",
+   "Seinin saaresta"
+  ],
+  "jatkot": [
+   "Miten majakan valo näkyy kauas merelle?",
+   "Mikä Seinin saari on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Raz de Sein",
+  "kysymys": "Kerro lisää: Raz de Sein",
+  "vastaus": "Raz de Sein on kapea ja vaarallinen salmi Länsi-Bretagnessa, joka erottaa [[Pointe du Razin]] niemen [[Seinin saaresta]]. Salmesta on peräisin myös niemen nimi: sana raz on lainattu [[normannista]], ja se tarkoittaa voimakasta virtausta. Salmen laidalla seisoo La Vieillen majakka, joka erottuu selvästi niemeltä katsottuna.",
+  "linkit": [
+   "Pointe du Razin",
+   "Seinin saaresta",
+   "normannista"
+  ],
+  "jatkot": [
+   "Mikä Seinin saari on?",
+   "Mikä normannin kieli on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "finis terrae",
+  "kysymys": "Kerro lisää: finis terrae",
+  "vastaus": "Latinan ilmaus tarkoittaa maan päätä eli paikkaa, jota pidettiin mantereen viimeisenä kohtana. Se on antanut nimen Bretagnen läntisimmälle departementille, [[Finistèrelle]]. Samaa alkuperää on nimi Fisterra Espanjan Galiciassa. Pointe du Raz on Plogoffin kunnan läntisin kohta Finistèressä, mutta Manner-Ranskan läntisin kohta on kuitenkin hieman pohjoisempana oleva [[Pointe de Corsen]].",
+  "linkit": [
+   "Finistèrelle",
+   "Pointe de Corsen"
+  ],
+  "jatkot": [
+   "Mikä on Manner-Ranskan läntisin kohta?",
+   "Miksi Fisterra on tärkeä pyhiinvaeltajille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Bretagnen",
+  "kysymys": "Kerro lisää: Bretagnen",
+  "vastaus": "Bretagne on Luoteis-Ranskan niemimaa-alue, joka työntyy Atlanttiin ja jonka rannikko on pitkälti kallioista. Sen läntisin departementti on [[Finistère]], jonka rannikolla Pointe du Raz kohoaa meren yläpuolelle. Pohjoisrannikolla Ille-et-Vilainen departementissa sijaitsee [[Saint-Malo]], jonka muurien ympäröimä vanhakaupunki rakennettiin graniittiselle saarelle. Alueen perinteinen kieli on kelttiläinen [[bretoni]], jonka toivat varhaiskeskiajalla Britanniasta tulleet siirtolaiset.",
+  "linkit": [
+   "Finistère",
+   "Saint-Malo",
+   "bretoni"
+  ],
+  "jatkot": [
+   "Mitä Bretagnen perinteiseen kulttuuriin kuuluu?",
+   "Miten Saint-Malo liittyy kaappareiden historiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Galiciassa",
+  "kysymys": "Kerro lisää: Galiciassa",
+  "vastaus": "Galicia on Espanjan luoteisosan alue, jota Atlantti rajaa lännessä ja pohjoisessa. Sen pääkaupunki on [[Santiago de Compostela]], tunnetun pyhiinvaellusreitin päätepiste. Rannikolta löytyy [[Fisterra]], jonka nimi on samaa alkuperää kuin Finistère ja tarkoittaa maan päätä. Alueen oma kieli on [[galego]], joka on läheistä sukua portugalin kielelle.",
+  "linkit": [
+   "Santiago de Compostela",
+   "Fisterra",
+   "galego"
+  ],
+  "jatkot": [
+   "Miten galegon kieli eroaa espanjasta?",
+   "Millainen on Camino de Santiago -pyhiinvaellusreitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "valokuvionsa",
+  "kysymys": "Kerro lisää: valokuvionsa",
+  "vastaus": "Valokuvio on majakan tunnus: tietty yhdistelmä välähdyksiä, pimeitä taukoja ja valon väriä, joka toistuu aina samanlaisena. Esimerkiksi kaksi lyhyttä välähdystä ja pitkä tauko voi olla yhden majakan rytmi, kun viereinen majakka välkkyy eri tahtiin. Kuviot on merkitty [[merikarttoihin]] ja [[majakkaluetteloihin]], joten merenkulkija voi tarkistaa, minkä majakan hän näkee. Tunnistaminen auttaa paikantamaan oman sijainnin ja välttämään vaaralliset kohdat, kuten [[Raz de Sein]] -salmen.",
+  "linkit": [
+   "merikarttoihin",
+   "majakkaluetteloihin",
+   "Raz de Sein"
+  ],
+  "jatkot": [
+   "Miten merenkulkija määrittää sijaintinsa majakoiden avulla?",
+   "Millaisia värejä majakoiden valoilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "merikarttaan",
+  "kysymys": "Kerro lisää: merikarttaan",
+  "vastaus": "Merikartta kuvaa merialueen, rannikon ja väylät merenkulkijaa varten. Siihen on merkitty [[syvyysluvut]], matalikot, kivet ja riutat sekä majakat ja muut turvalaitteet. Näiden avulla alus voi valita turvallisen väylän ja välttää karille ajon. Perinteisen paperikartan rinnalla käytetään nykyisin sähköisiä merikarttoja, joissa aluksen sijainti näkyy [[satelliittipaikannuksen]] avulla.",
+  "linkit": [
+   "syvyysluvut",
+   "satelliittipaikannuksen"
+  ],
+  "jatkot": [
+   "Miten satelliittipaikannus toimii?",
+   "Mitä merikartan syvyysluvut kertovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "riutoista",
+  "kysymys": "Kerro lisää: riutoista",
+  "vastaus": "Riutat ovat sekä vaaroja merenkululle että tärkeitä elinympäristöjä. Punaisellamerellä [[Sanganeb]] on erillinen korallirakennelma keskellä merta, kaukana rannikon riutoista. Port Sudanista noin 130 kilometriä pohjoiseen aukeaa [[Dungonabin lahti]], jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehä. Alue merkittiin [[Ramsar-kosteikoksi]] vuonna 2009 ja hyväksyttiin maailmanperintöluetteloon vuonna 2016. Lahden mangrovet ja pikkusaaret ovat merkittävä lintualue, jossa elävät muun muassa valkosilmälokki ja nokihaukka.",
+  "linkit": [
+   "Sanganeb",
+   "Dungonabin lahti",
+   "Ramsar-kosteikoksi"
+  ],
+  "jatkot": [
+   "Mikä Ramsar-sopimus on?",
+   "Miksi mangrovemetsät ovat tärkeitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "bretonia",
+  "kysymys": "Kerro lisää: bretonia",
+  "vastaus": "Bretoni, omalla nimellään brezhoneg, on kelttiläinen kieli, joka kuuluu brittiläiseen kielihaaraan ja on sukua kornin ja kymrin kielelle. Se on Manner-Euroopan ainoa kelttiläinen kieli, jota puhutaan yhä alkuperäisenä kielenä. Puhujien määrä on laskenut jyrkästi 1900-luvulla, ja kieltä pidetään elossa muun muassa [[Diwan-kouluissa]], joissa opetus annetaan bretonin kielellä. Kieli kuuluu laajempaan [[kelttiläisten kielten]] joukkoon.",
+  "linkit": [
+   "Diwan-kouluissa",
+   "kelttiläisten kielten"
+  ],
+  "jatkot": [
+   "Miten Diwan-koulujen opetus toimii?",
+   "Mitkä muut kielet ovat kelttiläisiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "kornin",
+  "kysymys": "Kerro lisää: kornin",
+  "vastaus": "Kornin kieli on kelttiläinen kieli, jota puhuttiin perinteisesti [[Cornwallissa]], Englannin lounaiskärjessä. Se on läheistä sukua [[bretonin]] kielelle. Kieli väistyi englannin tieltä, ja sen viimeisten puhujien katsotaan eläneen 1700-luvun lopulla. Kieltä on elvytetty 1900-luvun alusta lähtien, ja sen opiskelu jatkuu yhä.",
+  "linkit": [
+   "Cornwallissa",
+   "bretonin"
+  ],
+  "jatkot": [
+   "Miten kuollutta kieltä voidaan elvyttää?",
+   "Missä muualla puhutaan kelttiläisiä kieliä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "walesin",
+  "kysymys": "Kerro lisää: walesin",
+  "vastaus": "Walesin kieli eli kymri on kelttiläinen kieli, jota puhutaan [[Walesissa]] Ison-Britannian länsiosassa. Se on sukua kornin ja bretonin kielille, ja Walesissa sillä on virallinen asema. Walesin nimi esiintyy myös arvonimessä [[Walesin prinssi]], jota kantaa Britannian kruununperillinen. Arvonimi näkyy paikannimissä: Mumbain museo perustettiin tulevan kuningas Yrjö V:n vierailun muistoksi, ja [[Yellowknifen]] Prince of Walesin pohjoisen perintökeskuksen vihki 1979 prinssi Charles.",
+  "linkit": [
+   "Walesissa",
+   "Walesin prinssi",
+   "Yellowknifen"
+  ],
+  "jatkot": [
+   "Mitä Walesin prinssin arvonimi tarkoittaa?",
+   "Miten kymrin kieltä opetetaan Walesissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "liitukalliot",
+  "kysymys": "Kerro lisää: liitukalliot",
+  "vastaus": "Liitukalliot ovat muinaisen meren pohjaa: liitu syntyi miljardien pikkuruisten merieliöiden kuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Étretat'n yli 90 metriä korkeiden kallioiden lisäksi tunnettu esimerkki on Saksan [[Rügenin]] saaren itärannan liitukallioiden korkein kohta, 118-metrinen [[Königsstuhl]]. Taidemaalari [[Caspar David Friedrich]] maalasi kalliot vuonna 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.",
+  "linkit": [
+   "Rügenin",
+   "Königsstuhl",
+   "Caspar David Friedrich"
+  ],
+  "jatkot": [
+   "Miksi Friedrichin maalaus on Saksan romantiikan tunnuskuva?",
+   "Mitä fossiileja liitukallioista löytyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "Monet",
+  "kysymys": "Kerro lisää: Monet",
+  "vastaus": "Claude Monet (1840–1926) oli impressionismin keskeisimpiä maalareita. Hän työskenteli usein ulkona ja tavoitteli valon ja ilmapiirin hetkellistä vaikutelmaa. Monet maalasi samaa aihetta sarjoina eri vuorokauden- ja vuodenaikoina, esimerkiksi [[heinäsuovia]] ja [[Rouenin katedraalia]], ja myöhäisvuosinaan kotipuutarhansa [[vesililjoja]]. Myös Étretat'n kalliot kuuluivat hänen aiheisiinsa.",
+  "linkit": [
+   "heinäsuovia",
+   "Rouenin katedraalia",
+   "vesililjoja"
+  ],
+  "jatkot": [
+   "Miksi Monet maalasi samaa aihetta monta kertaa?",
+   "Mikä oli impressionistien ensimmäinen näyttely?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "impressionistit",
+  "kysymys": "Kerro lisää: impressionistit",
+  "vastaus": "Impressionistit olivat ryhmä ranskalaisia taidemaalareita, jotka halusivat esittää työnsä itse. Ranskalaista taide-elämää hallitsi tuolloin [[Salon]], ja sen valitsematta jättämä maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan vuosina 1867 ja 1872. Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot, Degas ja muut perustivat oman yhdistyksen. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja [[Nadarin]] ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko [[Louis Leroy]] ivasi Monet'n maalausta Impression, soleil levant ja otsikoi juttunsa Impressionistien näyttely. Pilkkanimestä tuli ryhmän nimi.",
+  "linkit": [
+   "Salon",
+   "Nadarin",
+   "Louis Leroy"
+  ],
+  "jatkot": [
+   "Miksi Salon hylkäsi impressionistien maalaukset?",
+   "Missä Orsayn museossa impressionismia on esillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "merieroosion",
+  "kysymys": "Kerro lisää: merieroosion",
+  "vastaus": "Merieroosio on rannikon kulumista, jonka aiheuttavat aallot, merivirrat ja aallokon mukanaan kantamat kivet ja hiekka. Kivien ja hiekan hankaus eli [[abraasio]] kuluttaa kalliota, ja aalloissa kallion halkeamiin pakottuva vesi työntää niitä auki. Pehmeä liitukivi kuluu nopeasti, ja [[Normandian]] rannikon kalliot vetäytyvät hiljalleen. Sade, pakkanen ja tuuli jatkavat työtä, ja tätä kutsutaan [[rapautumiseksi]].",
+  "linkit": [
+   "abraasio",
+   "Normandian",
+   "rapautumiseksi"
+  ],
+  "jatkot": [
+   "Miten kallio rapautuu pakkasen vaikutuksesta?",
+   "Miksi Normandian rannikon kalliot ovat niin jyrkkiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "liitukalliota",
+  "kysymys": "Kerro lisää: liitukalliota",
+  "vastaus": "Liitukallio on kallio, joka koostuu liidusta, pehmeästä valkoisesta kalkkikivestä. Liitu syntyi merenpohjalle miljardien pikkuruisten merieliöiden kuorista liitukaudella, miljoonia vuosia sitten. Tanskan Mönin saaren itärannikolla kohoaa kuuden kilometrin pituinen liitukallioiden vyö, jonka korkein kohta [[Dronningestolen]] on 128 metriä. Unesco lisäsi [[Mönin liitukalliot]] maailmanperintöluetteloon heinäkuussa 2025. Saksan Rügenillä vastaavasti [[Königsstuhl]] kohoaa 118 metriä. Meri kuluttaa kalliota jatkuvasti, ja lohkeamat paljastavat fossiileja, kuten merisiilejä ja simpukoita.",
+  "linkit": [
+   "Dronningestolen",
+   "Mönin liitukalliot",
+   "Königsstuhl"
+  ],
+  "jatkot": [
+   "Mitä fossiileja liitukalliot paljastavat?",
+   "Miksi Unesco hyväksyi Mönin liitukalliot maailmanperintöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "kaari",
+  "kysymys": "Kerro lisää: kaari",
+  "vastaus": "Kaari on kaareva rakenne, joka voi syntyä luonnossa tai jonka ihminen on rakentanut. Luonnonkaari muodostuu, kun meri kuluttaa kallion läpi. Ihmisen tekemiä kaaria on monenlaisia. Falklandinsaarten Port Stanleyssa kaartuu [[Whalebone Arch]], joka on koottu kahden sinivalaan leukaluusta ja pystytetty vuonna 1933 muistoksi siitä, että brittiläinen siirtokunta oli täyttänyt sata vuotta. Se sijaitsee maailman eteläisimmän anglikaanisen tuomiokirkon, [[Christ Church Cathedralin]], edustalla. Siirtomaa-ajan [[Méridassa]] San Juanin kaupunginosan kaari merkitsi valkoisten kaupungin loppua ja alkuperäisväestön kaupunginosien alkua.",
+  "linkit": [
+   "Whalebone Arch",
+   "Christ Church Cathedralin",
+   "Méridassa"
+  ],
+  "jatkot": [
+   "Miten luonnonkaari muuttuu ajan myötä?",
+   "Missä Falklandinsaaret sijaitsevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "impressionismin",
+  "kysymys": "Kerro lisää: impressionismin",
+  "vastaus": "Impressionismi on 1800-luvun lopun ranskalaisen maalaustaiteen suuntaus, jossa tavoitellaan valon ja hetken vaikutelmaa. Maailman merkittävin kokoelma ranskalaista impressionismia on Pariisin [[Orsayn taidemuseossa]]: siellä ovat esillä muun muassa Manet, Monet, Cézanne, Degas, Renoir ja van Gogh. Museo toimii entisellä rautatieasemalla [[Gare d'Orsay]], joka valmistui vuonna 1900 maailmannäyttelyyn ja suljettiin 1939. Museoksi talo avattiin joulukuussa 1986. Postikorttimyynnin perusteella suosituin teos on Renoirin [[Bal du moulin de la Galette]].",
+  "linkit": [
+   "Orsayn taidemuseossa",
+   "Gare d'Orsay",
+   "Bal du moulin de la Galette"
+  ],
+  "jatkot": [
+   "Millainen oli Pariisin maailmannäyttely vuonna 1900?",
+   "Mistä Renoirin Bal du moulin de la Galette kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "Impression, soleil levant",
+  "kysymys": "Kerro lisää: Impression, soleil levant",
+  "vastaus": "Impression, soleil levant on Claude Monet'n maalaus, jonka nimi tarkoittaa vaikutelmaa, nousevaa aurinkoa. Teos esitettiin impressionistien ensimmäisessä näyttelyssä huhtikuussa 1874 valokuvaaja Nadarin ateljeessa. Kriitikko [[Louis Leroy]] ivasi maalausta ja otsikoi juttunsa Impressionistien näyttely, ja pilkkanimestä tuli suuntauksen nimi. Maalauksen aiheena on [[Le Havren]] satama auringonnousun aikaan, ja teos on nykyään Pariisin [[Musée Marmottan Monet]] -museossa.",
+  "linkit": [
+   "Louis Leroy",
+   "Le Havren",
+   "Musée Marmottan Monet"
+  ],
+  "jatkot": [
+   "Mikä Musée Marmottan Monet on?",
+   "Miksi Louis Leroy arvosteli näyttelyä niin ankarasti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "Givernyssä",
+  "kysymys": "Kerro lisää: Givernyssä",
+  "vastaus": "Giverny on pieni kylä Normandiassa Pariisin luoteispuolella, jossa Claude Monet asui vuodesta 1883 kuolemaansa saakka vuonna 1926. Hän rakensi taloon liittyvän puutarhan itse ja maalasi sitä lukemattomia kertoja. Tunnetuimpia osia ovat [[vesililjalammikko]] ja sen yli kaartuva [[japanilaistyylinen silta]]. Monetin myöhäisvuosien suuret vesililjamaalaukset syntyivät juuri tämän puutarhan ääressä. Talo ja puutarha ovat nykyään avoinna vierailijoille.",
+  "linkit": [
+   "vesililjalammikko",
+   "japanilaistyylinen silta"
+  ],
+  "jatkot": [
+   "Miten Monetin vesililjamaalaukset eroavat aikaisemmista töistä?",
+   "Miksi Monet rakensi puutarhan itse?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "liitukaudella",
+  "kysymys": "Kerro lisää: liitukaudella",
+  "vastaus": "Liitukausi on maapallon geologinen kausi, joka kesti noin 145–66 miljoonaa vuotta sitten ja päättyi [[massasukupuuttoon]], jossa suurin osa dinosauruksista hävisi. Kauden aikana matalat meret peittivät laajoja alueita, ja merenpohjaan kertyi pikkuruisten merieliöiden kuoria, joista liitu syntyi. Noin sata miljoonaa vuotta sitten suuri osa Keski-Australiaa oli matalan [[Eromanga-sisämeren]] peitossa. Kun meri vetäytyi, jäljelle jääneet hiekka- ja savikerrokset rapautuivat eri tahtiin, ja siksi [[Coober Pedyn]] seutu on värikäs. Samasta kerrostumasta on peräisin myös alueen opaali.",
+  "linkit": [
+   "massasukupuuttoon",
+   "Eromanga-sisämeren",
+   "Coober Pedyn"
+  ],
+  "jatkot": [
+   "Mitä liitukauden lopussa tapahtui?",
+   "Miten opaali syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "kalkkikiveä",
+  "kysymys": "Kerro lisää: kalkkikiveä",
+  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin [[kalsiumkarbonaatista]], ja suuri osa siitä on syntynyt merieliöiden kuorista. Liitu on sen pehmeä, hienojakoinen muoto. Kalkkikiveä on yllättäen myös Pariisin [[Roland Garros]] -stadionin tenniskentän punaisen pinnan alla: kenttä ei ole savea, vaan kalkkikiven päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Stadion rakennettiin vuonna 1928 [[Davis Cupia]] varten, ja se nimettiin lentäjän mukaan, joka lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa.",
+  "linkit": [
+   "kalsiumkarbonaatista",
+   "Roland Garros",
+   "Davis Cupia"
+  ],
+  "jatkot": [
+   "Kuka Roland Garros oli?",
+   "Mihin muuhun kalkkikiveä käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "novelleistaan",
+  "kysymys": "Kerro lisää: novelleistaan",
+  "vastaus": "Novelli on lyhyt kertova proosamuoto, ja Maupassant kirjoitti niitä satoja. Hänen tyylilleen ovat ominaisia tiivis kerronta, tarkka havainnointi ja usein ironinen loppu. Hän oli [[Gustave Flaubertin]] oppilas ja ystävä, ja Flaubertkin viihtyi Étretat'n seudulla. Maupassantin kauhunovelleista tunnetuin on [[Le Horla]], ja hänet lasketaan [[naturalismin]] edustajiin.",
+  "linkit": [
+   "Gustave Flaubertin",
+   "Le Horla",
+   "naturalismin"
+  ],
+  "jatkot": [
+   "Millainen kirjailija Gustave Flaubert oli?",
+   "Mistä kauhunovelli Le Horla kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "Boule de Suif",
+  "kysymys": "Kerro lisää: Boule de Suif",
+  "vastaus": "Boule de Suif on Maupassantin novelli vuodelta 1880 ja hänen läpimurtonsa. Se sijoittuu [[Ranskan ja Preussin sodan]] aikaan 1870–1871: matkustajaryhmä pakenee postivaunuissa [[Rouenista]], ja heidän joukossaan on nuori nainen, jota kutsutaan lempinimellä Boule de Suif eli suunnilleen rasvapallo. Novelli on terävää satiiria porvarillisesta tekopyhyydestä. Se julkaistiin kokoelmassa [[Les Soirées de Médan]], jonka kokosi kirjailija [[Émile Zola]].",
+  "linkit": [
+   "Ranskan ja Preussin sodan",
+   "Rouenista",
+   "Les Soirées de Médan",
+   "Émile Zola"
+  ],
+  "jatkot": [
+   "Miten Ranskan ja Preussin sota päättyi?",
+   "Millainen kirjailija Émile Zola oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etretat",
+  "kasite": "Bel Ami",
+  "kysymys": "Kerro lisää: Bel Ami",
+  "vastaus": "Bel Ami on Maupassantin romaani vuodelta 1885. Se seuraa nuorta ja köyhää [[Georges Duroy]] -nimistä miestä, joka nousee Pariisissa sanomalehtimaailmassa ja yhteiskunnassa naisten suosion ja oman häikäilemättömyytensä avulla. Nimi Bel Ami tarkoittaa ranskaksi kaunista ystävää. Romaani on satiiri vallasta, rahasta ja lehdistöstä 1800-luvun lopun [[Pariisissa]].",
+  "linkit": [
+   "Georges Duroy",
+   "Pariisissa"
+  ],
+  "jatkot": [
+   "Millaista Pariisi oli 1800-luvun lopulla?",
+   "Mikä naturalismi oli kirjallisuudessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "goottilaiselle",
+  "kysymys": "Kerro lisää: goottilaiselle",
+  "vastaus": "Goottilainen tyyli on keskiajan arkkitehtuurin suuntaus, joka syntyi Pohjois-Ranskassa 1100-luvun puolivälissä. Varhaisia esimerkkejä on [[Saint-Denis]] -luostarikirkko lähellä Pariisia. Tunnusomaisia piirteitä ovat [[suippokaari]], [[ristikkoholvi]] ja ulkopuoliset tukikaaret, joiden ansiosta seinät saatiin ohuiksi ja ikkunat suuriksi. Amiensin katedraalissa nämä ratkaisut toteutettiin yhtenä lyhyenä rakennusurakkana vuosina 1220–1270, minkä vuoksi tyyli on poikkeuksellisen yhtenäinen.",
+  "linkit": [
+   "Saint-Denis",
+   "suippokaari",
+   "ristikkoholvi"
+  ],
+  "jatkot": [
+   "Miten ristikkoholvi eroaa romaanisen kirkon holvista?",
+   "Mikä suippokaari on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "Amiensin Notre-Damen",
+  "kysymys": "Kerro lisää: Amiensin Notre-Damen",
+  "vastaus": "Amiensin Notre-Dame on katolinen tuomiokirkko, joka seisoo loivalla harjanteella [[Somme-joen]] yllä noin 120 kilometriä Pariisista pohjoiseen. Se rakennettiin lähes kokonaan vuosien 1220 ja noin 1270 välillä, ja siksi sen tyyli on poikkeuksellisen yhtenäinen. Tilavuudeltaan 200 000 kuutiometriä se on Ranskan suurin katedraali, yli kaksi kertaa [[Pariisin Notre-Damen]] kokoinen. Kirkko on ollut [[Unescon]] maailmanperintökohde vuodesta 1981, ja se tunnetaan erityisesti 1200-luvun alun goottilaisesta kuvanveistosta länsijulkisivullaan ja eteläisen ristivarren portaalissa.",
+  "linkit": [
+   "Somme-joen",
+   "Pariisin Notre-Damen",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä Unescon maailmanperintökohde tarkoittaa?",
+   "Miten Amiensin ja Pariisin Notre-Dame eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "kuvanveistosta",
+  "kysymys": "Kerro lisää: kuvanveistosta",
+  "vastaus": "Goottilainen kuvanveisto kehittyi osaksi katedraalien arkkitehtuuria: veistokset sijoitettiin ennen kaikkea [[portaalien]] ympärille, ovien yläpuolisiin [[tympanoneihin]] ja oven kylkiin. Kuvat kertoivat Raamatun tarinoita ja pyhimysten elämiä niille, jotka eivät osanneet lukea. Amiensin katedraali tunnetaan erityisesti 1200-luvun alun goottilaisesta kuvanveistosta länsijulkisivullaan ja eteläisen [[ristivarren]] portaalissa. Yksittäisten hahmojen tarkka luettelo kuuluu asiantuntijalähteisiin.",
+  "linkit": [
+   "portaalien",
+   "tympanoneihin",
+   "ristivarren"
+  ],
+  "jatkot": [
+   "Mitä tympanoni tarkoittaa kirkon portaalissa?",
+   "Miten keskiajan ihmiset oppivat Raamatun kertomukset?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on [[Pariisissa]]. Järjestö vastaa muun muassa [[maailmanperintöluettelosta]], johon hyväksytään kulttuuri- ja luontokohteita. Amiensin katedraali on ollut luettelossa vuodesta 1981. Suomessa luetteloon kuuluu esimerkiksi [[Suomenlinna]].",
+  "linkit": [
+   "Pariisissa",
+   "maailmanperintöluettelosta",
+   "Suomenlinna"
+  ],
+  "jatkot": [
+   "Miten kohde pääsee maailmanperintöluetteloon?",
+   "Mitkä muut suomalaiset kohteet ovat maailmanperintöä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "tukikaarilla",
+  "kysymys": "Kerro lisää: tukikaarilla",
+  "vastaus": "Tukikaari eli lentävä tukikaari on goottilaisen kirkon ulkopuolinen rakenne, joka ottaa vastaan korkean holvin sivusuuntaisen työnnön ja välittää sen ulkoseinän ulkopuolella olevalle [[tukipilarille]]. Näin seinän ei tarvitse kantaa koko kuormaa, ja se voidaan tehdä ohueksi ja täyttää suurilla ikkunoilla. Amiensin katedraalin [[keskilaivan]] holvi on noin 42 metriä korkea, ja tukikaaret mahdollistivat sen rakentamisen.",
+  "linkit": [
+   "tukipilarille",
+   "keskilaivan"
+  ],
+  "jatkot": [
+   "Mikä on tukipilarin tehtävä kirkon seinässä?",
+   "Miksi gotiikassa haluttiin suuria ikkunoita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "gotiikan",
+  "kysymys": "Kerro lisää: gotiikan",
+  "vastaus": "Gotiikka on keskiajan taiteen ja arkkitehtuurin tyylisuunta, joka levisi Ranskasta ympäri Eurooppaa 1100-luvulta 1400-luvulle. Sen tunnusmerkkejä ovat suippokaaret, ristikkoholvit, tukikaaret ja suuret ikkunat. Nimen antoivat myöhemmin [[renessanssin]] oppineet halveksuen: se viittasi [[gooteihin]], vaikka tyyli ei liity heihin. Amiensin katedraali on yksi gotiikan suurimmista ja yhtenäisimmistä esimerkeistä.",
+  "linkit": [
+   "renessanssin",
+   "gooteihin"
+  ],
+  "jatkot": [
+   "Mikä erottaa gotiikan renessanssin tyylistä?",
+   "Missä muissa maissa on tunnettuja goottilaisia katedraaleja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "goottilaisen",
+  "kysymys": "Kerro lisää: goottilaisen",
+  "vastaus": "Goottilaisen arkkitehtuurin keskeinen keksintö oli rakennetekniikka, joka siirsi katon painon ulkopuolisille tukirakenteille ja mahdollisti ohuet seinät, korkeat holvit ja suuret ikkunat. Tyyli syntyi Pohjois-Ranskassa 1100-luvulla ja levisi ympäri Eurooppaa. Se elpyi 1800-luvulla [[uusgoottilaisena]] tyylinä, ja sen mukaisia kirkkoja rakennettiin kauas Euroopan ulkopuolellekin. San Franciscon [[Grace Cathedralin]] piirustukset teki englantilainen goottilaisen tyylin mestari [[George Frederick Bodley]], joka kuoli 1907, ja Siperian [[Irkutskissa]] katolinen seurakunta rakennutti goottilaisen tiilikirkon 1880-luvulla.",
+  "linkit": [
+   "uusgoottilaisena",
+   "Grace Cathedralin",
+   "George Frederick Bodley",
+   "Irkutskissa"
+  ],
+  "jatkot": [
+   "Miten uusgotiikka eroaa keskiajan gotiikasta?",
+   "Missä Irkutsk sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "lasimaalaukset",
+  "kysymys": "Kerro lisää: lasimaalaukset",
+  "vastaus": "Lasimaalaus on värillisestä lasista koottu ikkunakuva, jossa lasinpalat liitetään yhteen lyijykehyksillä. Goottilaisessa kirkossa ohuet seinät ja suuret ikkunat antoivat tilaa lasimaalauksille, jotka täyttivät sisätilan värillisellä valolla ja kertoivat kuvin Raamatun tarinoita. Lasimaalauksia kuljetettiin myös kauas. Santa Fen uusgoottilaisen Loreton kappelin lasimaalaukset tuotiin Ranskasta [[Santa Fe Trailia]] pitkin, ja Projectus Mouly suunnitteli kappelin Pariisin [[Sainte-Chapellen]] mukaan. Kappeli vihittiin vuonna 1878.",
+  "linkit": [
+   "Santa Fe Trailia",
+   "Sainte-Chapellen"
+  ],
+  "jatkot": [
+   "Miten lasimaalaus valmistetaan?",
+   "Mikä Sainte-Chapelle on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amiens",
+  "kasite": "maailmanperintösopimus",
+  "kysymys": "Kerro lisää: maailmanperintösopimus",
+  "vastaus": "Maailmanperintösopimus on Unescon yleiskokouksen vuonna 1972 hyväksymä kansainvälinen sopimus maailman kulttuuri- ja luonnonperinnön suojelusta. Sen osapuolina olevat valtiot sitoutuvat tunnistamaan, suojelemaan ja säilyttämään alueellaan olevat merkittävät kohteet. Kohteet hyväksyy [[maailmanperintökomitea]], ja sopimus yhdistää kulttuuri- ja [[luonnonperinnön]] suojelun samaan järjestelmään. Amiensin katedraali on ollut luettelossa vuodesta 1981.",
+  "linkit": [
+   "maailmanperintökomitea",
+   "luonnonperinnön"
+  ],
+  "jatkot": [
+   "Mitä uhanalaisten maailmanperintökohteiden luettelo on?",
+   "Kuinka monta maailmanperintökohdetta Suomessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "tuomiokirkossa",
+  "kysymys": "Kerro lisää: tuomiokirkossa",
+  "vastaus": "Reimsin tuomiokirkko, Notre-Dame, on goottilainen katedraali, jossa Ranskan kuninkaat perinteisesti kruunattiin. Kuninkaan voitelu tehtiin siellä, ja kirkossa säilytettiin [[pyhää ampullia]], jonka katsottiin sisältävän voiteluöljyn. Tuomiokirkko liitettiin Unescon maailmanperintöluetteloon vuonna 1991 yhdessä viereisen [[Tau'n palatsin]] ja [[Saint-Remin luostarin]] kanssa. Kaupunkia kutsutaan ranskaksi nimellä la cité des sacres, kruunajaisten kaupunki.",
+  "linkit": [
+   "pyhää ampullia",
+   "Tau'n palatsin",
+   "Saint-Remin luostarin"
+  ],
+  "jatkot": [
+   "Mitä pyhä ampulli oli ja mitä sille tapahtui?",
+   "Keitä Ranskan kuninkaita Reimsissä kruunattiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "Klodvigin",
+  "kysymys": "Kerro lisää: Klodvigin",
+  "vastaus": "Klodvig I (noin 466–511) oli frankkien kuningas, joka yhdisti suuren osan Gallian frankkien vallan alle. Hän kuului [[Merovingien]] hallitsijasukuun. Perimätiedon mukaan hänet kastettiin katoliseen uskoon Reimsissä piispa [[Remigiuksen]] toimittamana noin vuoden 500 tienoilla. Kaste vahvisti hänen asemaansa katolisen väestön keskuudessa, ja se liitti Reimsin pysyvästi Ranskan kuninkaiden historiaan. Sen vuoksi myöhemmät kuninkaat halusivat tulla voidelluiksi juuri siellä, jossa [[frankkien]] kuningas oli kastettu.",
+  "linkit": [
+   "Merovingien",
+   "Remigiuksen",
+   "frankkien"
+  ],
+  "jatkot": [
+   "Keitä merovingit olivat?",
+   "Mistä Ranskan nimi on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "toinen käyminen",
+  "kysymys": "Kerro lisää: toinen käyminen",
+  "vastaus": "Toinen käyminen on samppanjan valmistuksen ratkaiseva vaihe. Ensimmäisen käymisen jälkeen perusviini pullotetaan, siihen lisätään sokeria ja [[hiivaa]], ja pullo suljetaan. Hiiva muuttaa sokerin alkoholiksi ja [[hiilidioksidiksi]], joka ei pääse karkaamaan vaan liukenee viiniin ja synnyttää kuplat. Pullossa viini lepää kellareissa pitkään, ja käymisestä jäänyt hiivasakka poistetaan ennen lopullista sulkemista. Menetelmä on [[Champagnen]] alueen perinteinen tapa tehdä kuohuvaa viiniä.",
+  "linkit": [
+   "hiivaa",
+   "hiilidioksidiksi",
+   "Champagnen"
+  ],
+  "jatkot": [
+   "Miten hiivasakka poistetaan samppanjapullosta?",
+   "Mitä rypäleitä samppanjaan käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "samppanjataloja",
+  "kysymys": "Kerro lisää: samppanjataloja",
+  "vastaus": "Samppanjatalot ovat yrityksiä, jotka valmistavat ja myyvät samppanjaa omalla tuotenimellään. Tunnetuimmat niistä sijaitsevat Reimsissä ja [[Épernayssa]], Champagnen viinialueen keskuksissa. Talojen pullot kypsyvät pitkään kellareissa, joita on louhittu alueen kalkkikiveen. Reims on yksi samppanjan tuotannon ja viennin keskuskaupungeista, ja sen ympäristön [[viinitarhat]] toimittavat taloille rypäleet.",
+  "linkit": [
+   "Épernayssa",
+   "viinitarhat"
+  ],
+  "jatkot": [
+   "Mitkä ovat tunnetuimpia samppanjataloja?",
+   "Miksi samppanjakellarit kaivettiin kalkkikiveen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "Notre-Dame-tuomiokirkon",
+  "kysymys": "Kerro lisää: Notre-Dame-tuomiokirkon",
+  "vastaus": "Reimsin Notre-Dame-tuomiokirkko on goottilainen katedraali, jossa Ranskan kuninkaat kruunattiin. Rakennus aloitettiin vuonna 1211 edellisen kirkon tuhouduttua tulipalossa, ja pääosa työstä valmistui 1200-luvulla. Julkisivua koristaa runsas kuvanveisto, jonka tunnetuimpia hahmoja on [[hymyilevä enkeli]]. Kirkko vaurioitui pahoin [[ensimmäisessä maailmansodassa]], ja sitä on korjattu pitkään sen jälkeen. Se kuuluu vuonna 1991 maailmanperintöluetteloon hyväksyttyyn kokonaisuuteen.",
+  "linkit": [
+   "hymyilevä enkeli",
+   "ensimmäisessä maailmansodassa"
+  ],
+  "jatkot": [
+   "Mikä on Reimsin hymyilevä enkeli?",
+   "Miten kirkko korjattiin ensimmäisen maailmansodan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "goottilaisen",
+  "kysymys": "Kerro lisää: goottilaisen",
+  "vastaus": "Goottilainen rakennustaide syntyi Pohjois-Ranskassa 1100-luvulla, ja sen kypsä vaihe 1200-luvulla tunnetaan nimellä [[korkeagotiikka]]. Reimsin Notre-Dame kuuluu tämän ajan keskeisiin teoksiin yhdessä [[Chartresin]] ja Amiensin katedraalien kanssa. Tyyli elpyi 1800-luvulla [[uusgotiikkana]], ja sen mukaisia kirkkoja rakennettiin ympäri maailmaa. San Franciscon Grace Cathedralin piirsi goottilaisen tyylin mestari George Frederick Bodley, ja Irkutskin katolinen kirkko rakennettiin goottilaiseksi tiilikirkoksi 1880-luvulla.",
+  "linkit": [
+   "korkeagotiikka",
+   "Chartresin",
+   "uusgotiikkana"
+  ],
+  "jatkot": [
+   "Mikä erotti korkeagotiikan varhaisgotiikasta?",
+   "Miksi Chartresin katedraali on kuuluisa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "tuomiokirkon",
+  "kysymys": "Kerro lisää: tuomiokirkon",
+  "vastaus": "Tuomiokirkko on hiippakunnan piispan pääkirkko, ja piispan istuin eli kathedra on sen tunnusmerkki. Reimsin tuomiokirkko oli Ranskan kuninkaiden kruunauskirkko, ja siellä kruunattiin kuninkaita keskiajalta 1800-luvulle. Tunnetuimpia kruunajaisia oli [[Kaarle VII:n]] kruunajaiset vuonna 1429, joissa [[Jeanne d'Arc]] seisoi hänen vierellään. Viimeinen kruunajaisseremonia pidettiin siellä vuonna 1825, jolloin kuninkaaksi kruunattiin [[Kaarle X]].",
+  "linkit": [
+   "Kaarle VII:n",
+   "Jeanne d'Arc",
+   "Kaarle X"
+  ],
+  "jatkot": [
+   "Miksi Jeanne d'Arc halusi Kaarle VII:n kruunattavan Reimsissä?",
+   "Miten tuomiokirkko eroaa tavallisesta kirkosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "Saint-Remin",
+  "kysymys": "Kerro lisää: Saint-Remin",
+  "vastaus": "Saint-Remin luostari ja basilika Reimsissä on omistettu piispa [[Remigiukselle]], jonka perimätieto yhdistää frankkien kuninkaan [[Klodvigin]] kasteeseen. Basilikassa on säilytetty pyhimyksen jäännöksiä, ja se rakennettiin pääosin keskiajalla. Luostari liitettiin Unescon maailmanperintöluetteloon vuonna 1991 yhdessä tuomiokirkon ja Tau'n palatsin kanssa.",
+  "linkit": [
+   "Remigiukselle",
+   "Klodvigin"
+  ],
+  "jatkot": [
+   "Kuka oli piispa Remigius?",
+   "Mitä roomalaisen ajan jäänteitä Reimsissä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-reims",
+  "kasite": "museo",
+  "kysymys": "Kerro lisää: museo",
+  "vastaus": "Museo on laitos, joka kerää, säilyttää ja esittelee esineitä ja kertoo niiden avulla menneisyydestä. [[Tau'n palatsin]] museossa esitellään tuomiokirkon alkuperäisiä veistoksia ja kruunajaisiin liittyviä esineitä. Museot voivat syntyä hyvin eri tavoin. [[Nairobin]] kansallismuseo sai alkunsa vuosina 1910–1911 perustetusta harrastajaseurasta, ja [[Porto Alegren]] osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 ilman taloa ja ilman yhtäkään teosta.",
+  "linkit": [
+   "Tau'n palatsin",
+   "Nairobin",
+   "Porto Alegren"
+  ],
+  "jatkot": [
+   "Miten museoiden kokoelmat syntyvät?",
+   "Miksi tuomiokirkon alkuperäiset veistokset siirretään museoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "Sainte-Marie-Madeleinen basilikassa",
+  "kysymys": "Kerro lisää: Sainte-Marie-Madeleinen basilikassa",
+  "vastaus": "Vézelayn basilika on omistettu Maria Magdaleenalle, ja se rakennettiin luostarikirkoksi vuosina 1120–1150. Rakennus on veistettyine kapiteeleineen ja portaaleineen yksi burgundilaisen romaanisen taiteen ja arkkitehtuurin mestariteoksista. [[Hugenotit]] ryöstivät sen vuonna 1569, sitä laiminlyötiin 1600- ja 1700-luvuilla, ja se vaurioitui myös Ranskan vallankumouksen aikana. 1800-luvulla kirkkoa korjasi arkkitehti [[Eugène Viollet-le-Duc]]. Kirkko ja Vézelayn kukkula otettiin Unescon maailmanperintöluetteloon vuonna 1979.",
+  "linkit": [
+   "Hugenotit",
+   "Eugène Viollet-le-Duc"
+  ],
+  "jatkot": [
+   "Kuka oli Maria Magdaleena?",
+   "Kuka Viollet-le-Duc oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "Santiago de Compostelan",
+  "kysymys": "Kerro lisää: Santiago de Compostelan",
+  "vastaus": "Santiago de Compostela on Galician pääkaupunki Espanjan luoteisosassa ja yksi Euroopan tärkeimmistä pyhiinvaelluskohteista. Sen katedraaliin on kävelty tuhat vuotta, ja [[Camino de Santiago]] on pyhiinvaellustie, jota kulkee yhä satojatuhansia ihmisiä vuodessa. Perillä odottaa [[botafumeiro]], 53-kiloinen hopeoitu suitsutusastia, jota kahdeksan miestä heiluttaa köysillä poikki ristilaivan. Se kiihtyy lähes 70 kilometrin tuntinopeuteen ja nousee 21 metrin korkeuteen. Alkuperäinen syy oli arkinen: pitkän matkan kulkeneet pyhiinvaeltajat haisivat. Pyhiinvaelluksen kohteena on [[apostoli Jaakobin]] haudaksi uskottu paikka.",
+  "linkit": [
+   "Camino de Santiago",
+   "botafumeiro",
+   "apostoli Jaakobin"
+  ],
+  "jatkot": [
+   "Miksi Camino de Santiagoa kuljetaan yhä?",
+   "Mikä oli apostoli Jaakobin yhteys Espanjaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "portaaleineen",
+  "kysymys": "Kerro lisää: portaaleineen",
+  "vastaus": "Portaali on kirkon monumentaalinen sisäänkäynti, jota kehystää koristeellinen kuvanveisto. Romaanisessa kirkossa oven yläpuolinen kaarikenttä, [[tympanoni]], oli keskeinen kuvapaikka. Vézelayn pääportaalin tympanonissa on tiettävästi Kristus, joka lähettää apostolit viemään sanomaa kaikkiin kansoihin, ja sitä ympäröivät kuvat eri kansoista. [[Kapiteeleissa]] on raamatullisia kertomuksia ja pyhimysten elämiin liittyviä kohtauksia. Yksityiskohtia ei tässä voida luetella luotettavasti, ja ne kannattaa tarkistaa esimerkiksi Unescon kuvauksesta.",
+  "linkit": [
+   "tympanoni",
+   "Kapiteeleissa"
+  ],
+  "jatkot": [
+   "Mitä apostolien lähettäminen kuvaa kristinuskossa?",
+   "Miksi romaanisissa kirkoissa on kuvallisia kapiteeleja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "symboliikkaa",
+  "kysymys": "Kerro lisää: symboliikkaa",
+  "vastaus": "Romaanisen kuvanveiston symboliikka perustui siihen, että kuvilla oli kristillisessä ajattelussa tunnettu merkitys. Eläinhahmot, hirviöt ja kasvikoristeet esittivät usein hyvän ja pahan vastakkainasettelua, ja kuvat toimivat kertomuksina niille, jotka eivät osanneet lukea. Esimerkiksi kyyhky on kristillisessä taiteessa [[Pyhän Hengen]] vertauskuva. [[Vézelayn]] kaltaisissa kirkoissa symboliikka oli osa rakennuksen opetusta, ja pyhiinvaeltajat lukivat sitä kulkiessaan kirkon läpi.",
+  "linkit": [
+   "Pyhän Hengen",
+   "Vézelayn"
+  ],
+  "jatkot": [
+   "Mitä Pyhä Henki kristinuskossa tarkoittaa?",
+   "Mitä eläinhahmot romaanisessa taiteessa symboloivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "tynnyriholvit",
+  "kysymys": "Kerro lisää: tynnyriholvit",
+  "vastaus": "Tynnyriholvi on yhtenäinen, pitkänomainen ja puolipyöreä holvi, joka muistuttaa tynnyrin puolikasta. Se oli romaanisen rakentamisen perusratkaisu: holvi työntää painoaan sivuille tasaisesti koko pituudeltaan, joten seinien täytyi olla paksut ja ikkunoiden pienet. Haittapuolena sisätila jäi usein hämäräksi. [[Ristiholvi]] syntyy, kun kaksi tynnyriholvia leikkaa toisensa, ja paino keskittyy kulmiin eikä seiniin. Kehitys johti lopulta [[romaanisen]] tyylin jälkeiseen gotiikkaan.",
+  "linkit": [
+   "Ristiholvi",
+   "romaanisen"
+  ],
+  "jatkot": [
+   "Miten ristiholvi eroaa tynnyriholvista?",
+   "Miten holvit rakennettiin ilman nykyaikaisia koneita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "goottilainen",
+  "kysymys": "Kerro lisää: goottilainen",
+  "vastaus": "Goottilainen tyyli seurasi romaanista kautta 1100-luvun puolivälissä Pohjois-Ranskassa. Sen keskeisiä keinoja ovat [[suippokaari]], [[ristikkoholvi]] ja [[lentävät tukikaaret]], jotka siirtävät holvin painon ulkopuolisille tukirakenteille. Tämän ansiosta seinät saatiin ohuiksi ja ikkunat suuriksi, kun romaanisessa kirkossa paksut seinät pitivät sisätilan hämäränä. Tyyli kehittyi varhaisgotiikasta korkeagotiikkaan ja myöhäisgotiikkaan, ja se pysyi käytössä aina 1400-luvulle.",
+  "linkit": [
+   "suippokaari",
+   "ristikkoholvi",
+   "lentävät tukikaaret"
+  ],
+  "jatkot": [
+   "Mikä erottaa romaanisen ja goottilaisen kirkon sisätilan?",
+   "Miksi goottilaisia katedraaleja rakennettiin vuosikymmeniä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "Benedictuksen sääntöä",
+  "kysymys": "Kerro lisää: Benedictuksen sääntöä",
+  "vastaus": "Benedictuksen sääntö on Nursian [[Benedictuksen]] 500-luvun puolivälissä laatima luostarisääntö, joka ohjasi benediktiinimunkkien elämää. Päivä jakautui rukoukseen, työhön ja lukemiseen, ja säännön usein tiivistetään sanoihin [[ora et labora]], rukoile ja työskentele. Yhteisöä johti apotti, ja munkit sitoutuivat pysymään samassa luostarissa. Benediktiinit levittivät sääntöä ympäri Eurooppaa ja sen ulkopuolelle: Rio de Janeiron São Benton luostarin historia alkoi vuonna 1590, kun kaksi Bahiasta tullutta benediktiinimunkkia sai lahjoitusmaata, ja kirkko valmistui vuonna 1671.",
+  "linkit": [
+   "Benedictuksen",
+   "ora et labora"
+  ],
+  "jatkot": [
+   "Mitä ora et labora tarkoittaa?",
+   "Miten benediktiinit levittäytyivät Eurooppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "Cluny",
+  "kysymys": "Kerro lisää: Cluny",
+  "vastaus": "Cluny on Burgundissa sijaitseva benediktiiniluostari, joka perustettiin vuonna 910. Keskiajalla siitä kehittyi vaikutusvaltainen luostariuudistuksen keskus, jonka johtamia luostareita oli ympäri Eurooppaa. Clunyn kolmas luostarikirkko rakennettiin 1000- ja 1100-luvuilla, ja se oli pitkään kristikunnan suurin kirkko, kunnes Rooman [[Pyhän Pietarin basilika]] ohitti sen. Luostari hajotettiin [[Ranskan vallankumouksen]] aikana, ja suurin osa rakennuksista purettiin, joten nykyään jäljellä on vain osa.",
+  "linkit": [
+   "Pyhän Pietarin basilika",
+   "Ranskan vallankumouksen"
+  ],
+  "jatkot": [
+   "Miksi Cluny oli keskiajalla niin vaikutusvaltainen?",
+   "Mitä Clunyn luostarista on jäljellä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "Vézelayn",
+  "kysymys": "Kerro lisää: Vézelayn",
+  "vastaus": "Vézelay on pieni kylä Yonnen departementissa Itä-Keski-Ranskassa. Sen luostari oli benediktiini- ja cluniacensiluostari, ja luostarikirkko, nykyinen Sainte-Marie-Madeleinen basilika, rakennettiin vuosina 1120–1150. Paikka oli keskiajalla tärkeä pyhiinvaellusten lähtöpaikka, ja [[Bernard Clairvauxlainen]] saarnasi siellä vuonna 1146 [[toisen ristiretken]] puolesta. Hugenotit ryöstivät rakennuksen vuonna 1569. Kirkko ja Vézelayn kukkula otettiin Unescon maailmanperintöluetteloon vuonna 1979. Sijaintinsa vuoksi kylä kuuluu [[Yonnen]] departementtiin.",
+  "linkit": [
+   "Bernard Clairvauxlainen",
+   "toisen ristiretken",
+   "Yonnen"
+  ],
+  "jatkot": [
+   "Mikä toinen ristiretki oli?",
+   "Mikä merkitys Bernard Clairvauxlaisella oli keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "protestantteja",
+  "kysymys": "Kerro lisää: protestantteja",
+  "vastaus": "Protestantit ovat kristittyjä, jotka seurasivat 1500-luvun uskonpuhdistusta ja irtautuivat Rooman katolisesta kirkosta. Liikkeen varhaisia johtohahmoja olivat [[Martti Luther]] ja [[Johannes Calvin]]. Ranskassa protestantteja kutsuttiin hugenoteiksi. Marseillen edustalla sijaitseva [[If-linnoitus]], jonka kuningas Frans I rakennutti 1520-luvulla, toimi pelättynä vankilana, jonne suljettiin poliittisten vankien lisäksi protestantteja.",
+  "linkit": [
+   "Martti Luther",
+   "Johannes Calvin",
+   "If-linnoitus"
+  ],
+  "jatkot": [
+   "Mihin Lutherin ja Calvinin opit erosivat toisistaan?",
+   "Miksi If-linnoitus tuli kuuluisaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vezelay",
+  "kasite": "uskonsotia",
+  "kysymys": "Kerro lisää: uskonsotia",
+  "vastaus": "Ranskan uskonsodat olivat katolisten ja protestanttien välisiä sisällissotia, joita käytiin vuosina 1562–1598. Ne olivat raskas ajanjakso, jonka aikana monta ihmistä menetti henkensä, esimerkiksi [[Pyhän Bartolomeuksen yönä]] vuonna 1572. Sodat päättyivät, kun [[Henrik IV]] antoi vuonna 1598 Nantesin ediktin, joka takasi hugenoteille rajatun uskonvapauden. Kuningas Ludvig XIV kumosi ediktin vuonna 1685, ja monet hugenotit lähtivät maasta. Nykyään Ranska on maallinen valtio, jossa uskonnonvapaus on turvattu.",
+  "linkit": [
+   "Pyhän Bartolomeuksen yönä",
+   "Henrik IV"
+  ],
+  "jatkot": [
+   "Mitä Nantesin edikti salli hugenoteille?",
+   "Miksi Nantesin edikti kumottiin vuonna 1685?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "kansleri",
+  "kysymys": "Kerro lisää: kansleri",
+  "vastaus": "Kansleri oli keskiajalla hallitsijan lähimpiä virkamiehiä, joka johti kansliaa eli hallinnon kirjallista työtä. Hän valvoi asiakirjojen laatimista ja piti hallussaan hallitsijan [[sinettiä]], jolla asiakirjat vahvistettiin. Burgundin herttua [[Filip Hyvän]] kanslerina vuodesta 1422 toimi Nicolas Rolin, joka perusti Beaunen Hôtel-Dieun vuonna 1443. Kansleri neuvoi hallitsijaa myös oikeuden- ja ulkopolitiikan asioissa, ja siksi virka toi mukanaan sekä vaikutusvaltaa että rikkautta.",
+  "linkit": [
+   "sinettiä",
+   "Filip Hyvän"
+  ],
+  "jatkot": [
+   "Kuka oli Burgundin herttua Filip Hyvä?",
+   "Miksi sinetillä oli keskiajalla niin suuri merkitys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "burgundilaisen arkkitehtuurin",
+  "kysymys": "Kerro lisää: burgundilaisen arkkitehtuurin",
+  "vastaus": "Burgundilaiselle arkkitehtuurille on tyypillistä värikäs, lasitetuilla laatoilla katettu jyrkkä katto. Beaunen Hôtel-Dieu on 1400-luvun burgundilaisen arkkitehtuurin hienoimpia esimerkkejä, ja sen sisäpihaa kiertävät puiset parvekkeet. Sairaalan perusti vuonna 1443 kansleri [[Nicolas Rolin]], ja hänen tilauksestaan sairaalan pääsaliin maalattiin [[Rogier van der Weyden]] -nimisen taiteilijan alttaritaulu Viimeinen tuomio. Rakennus on säilynyt museona.",
+  "linkit": [
+   "Nicolas Rolin",
+   "Rogier van der Weyden"
+  ],
+  "jatkot": [
+   "Millainen oli Rogier van der Weydenin Viimeinen tuomio?",
+   "Miksi sairaalan sisäpihaa kiertävät parvekkeet ovat puisia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "museona",
+  "kysymys": "Kerro lisää: museona",
+  "vastaus": "Hôtel-Dieu toimii nykyään museona, jossa vierailijat voivat tutustua keskiaikaisen hyväntekeväisyyssairaalan tiloihin. Potilaita hoidetaan uudemmissa sairaalarakennuksissa, ja vanha rakennus on säilytetty nähtävänä. Museon lipputulot ovat yksi talon tulolähde, ja kokoelmiin kuuluvat myös keskiajan [[sairaalan esineet]]. Lisäksi [[Hospices de Beaunen]] nimissä järjestetään joka marraskuu merkittävä hyväntekeväisyysviinihuutokauppa, jonka tuotolla tuetaan laitoksen toimintaa.",
+  "linkit": [
+   "sairaalan esineet",
+   "Hospices de Beaunen"
+  ],
+  "jatkot": [
+   "Miten Hospices de Beaunen viinihuutokauppa toimii?",
+   "Millaista hoitoa keskiajan sairaalassa annettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "hyväntekeväisyysviinihuutokauppa",
+  "kysymys": "Kerro lisää: hyväntekeväisyysviinihuutokauppa",
+  "vastaus": "Hospices de Beaunen hyväntekeväisyysviinihuutokauppa järjestetään joka marraskuu, perinteisesti kuukauden kolmantena sunnuntaina. Huutokaupassa myydään viinejä, jotka tulevat laitokselle lahjoitetuilta [[Burgundin]] viinitarhoilta. Myynnin tuotto käytetään [[Hospices de Beaunen]] toimintaan, ja huutokauppa on yksi viinimaailman tunnetuimmista tapahtumista.",
+  "linkit": [
+   "Burgundin",
+   "Hospices de Beaunen"
+  ],
+  "jatkot": [
+   "Miten Hospices de Beaunelle lahjoitettiin viinitarhoja?",
+   "Kuinka paljon viinejä huutokaupassa myydään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "terroir-käsitettä",
+  "kysymys": "Kerro lisää: terroir-käsitettä",
+  "vastaus": "Terroir on ranskalainen käsite, joka kattaa maaperän, ilmaston, rinteen suunnan ja paikalliset viljelytavat. Yhdessä ne antavat viinille sen tunnusomaisen maun, joka eroaa jo viereisen tilkun viinistä. Burgundissa käsite on erityisen tärkeä, koska viinitarhat on jaettu pieniin ja tarkasti rajattuihin tilkkuihin. Punaviinit tehdään pääosin [[pinot noir]] -rypäleestä ja valkoviinit [[chardonnaysta]]. Beaune sijaitsee [[Côte d'Orin]] viinialueella.",
+  "linkit": [
+   "pinot noir",
+   "chardonnaysta",
+   "Côte d'Orin"
+  ],
+  "jatkot": [
+   "Miten maaperä vaikuttaa viinin makuun?",
+   "Mikä on pinot noir -rypäle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "climats",
+  "kysymys": "Kerro lisää: climats",
+  "vastaus": "Climats ovat Burgundin viinialueen tarkasti rajattuja ja nimettyjä viinitarhatilkkuja, joilla on oma maaperänsä, mikroilmastonsa ja historiansa. Niiden perinne ulottuu keskiajalle, jolloin munkit havaitsivat tilkkujen väliset erot. Burgundin viinitarhojen climats otettiin [[Unescon]] maailmanperintöluetteloon vuonna 2015. Alue ulottuu [[Dijonin]] seudulta Beaunen eteläpuolelle, ja luetteloon kuuluu yli tuhat nimettyä climatia.",
+  "linkit": [
+   "Unescon",
+   "Dijonin"
+  ],
+  "jatkot": [
+   "Miten munkit tutkivat viinitarhojen eroja keskiajalla?",
+   "Mikä on Dijon, ja miksi se on tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "Nicolas Rolin",
+  "kysymys": "Kerro lisää: Nicolas Rolin",
+  "vastaus": "Nicolas Rolin (1376–1462) oli Burgundin kansleri ja yksi aikansa vaikutusvaltaisimmista ja varakkaimmista miehistä. Hän palveli herttua [[Filip Hyvää]] kanslerina vuodesta 1422 kuolemaansa saakka. Rolin perusti vuonna 1443 Beaunen Hôtel-Dieun köyhien sairaalaksi, ja hänen vaimonsa Guigone de Salins oli mukana hankkeessa. Flaamilaismaalari [[Jan van Eyck]] maalasi hänestä muotokuvan Madonna ja kansleri, joka on nykyään Louvren kokoelmissa.",
+  "linkit": [
+   "Filip Hyvää",
+   "Jan van Eyck"
+  ],
+  "jatkot": [
+   "Millainen maalaus Madonna ja kansleri on?",
+   "Miksi Rolin perusti Hôtel-Dieun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "lasitetuilla laatoilla",
+  "kysymys": "Kerro lisää: lasitetuilla laatoilla",
+  "vastaus": "Lasitettu laatta on poltettu savilaatta, jonka pinnalle on sulatettu lasimainen pinnoite eli [[lasite]]. Pinnoite tekee laatasta vettä hylkivän ja kestävän, ja se antaa laatalle värin. Hôtel-Dieun katossa keltaiset, vihreät, punaiset ja mustat laatat muodostavat geometrisia kuvioita, ja kuviot syntyvät värillisten [[savilaattojen]] asettelusta. Katto on entisöity myöhemmin, joten nykyinen ulkoasu ei ole kaikilta osin alkuperäinen.",
+  "linkit": [
+   "lasite",
+   "savilaattojen"
+  ],
+  "jatkot": [
+   "Miten laattojen lasite valmistetaan?",
+   "Millaisia muita kattomateriaaleja Ranskassa käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "Burgundin",
+  "kysymys": "Kerro lisää: Burgundin",
+  "vastaus": "Burgundi eli Bourgogne on historiallinen alue Itä-Keski-Ranskassa. Keskiajalla [[Burgundin herttuat]] olivat Euroopan vaikutusvaltaisimpia ruhtinaita, ja heidän hovinsa oli taiteen ja kaupan keskus, jonka pääkaupunki oli [[Dijon]]. Alue tunnetaan viineistään sekä keskiaikaisista kohteistaan, kuten Beaunen Hôtel-Dieusta, Vézelayn basilikasta ja [[Clunyn]] luostarin raunioista.",
+  "linkit": [
+   "Burgundin herttuat",
+   "Dijon",
+   "Clunyn"
+  ],
+  "jatkot": [
+   "Kuka oli Burgundin herttua Filip Hyvä?",
+   "Miten Burgundi liittyi Ranskan kuningaskuntaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-beaune",
+  "kasite": "flaamilaiselle",
+  "kysymys": "Kerro lisää: flaamilaiselle",
+  "vastaus": "Flaamilainen tarkoittaa Flanderin, nykyisen Belgian pohjoisosan, kulttuuria ja kieltä. Flanderin kaupungit, kuten [[Brugge]] ja [[Gent]], olivat keskiajalla rikkaita kauppa- ja kangaskaupunkeja. Burgundin herttuat hallitsivat Flanderia 1300-luvun lopulta, ja siksi flaamilainen vaikutus näkyy Burgundin taiteessa ja rakennuksissa. Flaamilaista maalaustaidetta edustivat muun muassa Jan van Eyck ja Rogier van der Weyden. Värikkäät laattakatot kuuluvat samaan pohjoiseen eurooppalaiseen perinteeseen.",
+  "linkit": [
+   "Brugge",
+   "Gent"
+  ],
+  "jatkot": [
+   "Miksi Burgundin herttuat hallitsivat Flanderia?",
+   "Mitä flaamilainen maalaustaide oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Genovan tasavalta",
+  "kysymys": "Kerro lisää: Genovan tasavalta",
+  "vastaus": "Genovan tasavalta oli Luoteis-Italian Genovan kaupunkivaltio, joka oli keskiajalla ja uuden ajan alussa merkittävä merenkulku- ja kauppavalta. Se hallitsi [[Korsikaa]] keskiajalta 1700-luvulle ja luovutti saaren Ranskalle vuonna 1768. Genovalaiset kauppiaat ja pankkiirit toimivat laajalti: Genova oli [[Espanjan kruunun]] tärkein pankkikumppani, ja genovalaiset kauppiaat hallitsivat vuodesta 1520 myös [[Panamán]] satamaa ja kauppaa erikoisluvalla. Genovan valtion itsenäisyys päättyi 1700-luvun lopulla.",
+  "linkit": [
+   "Korsikaa",
+   "Espanjan kruunun",
+   "Panamán"
+  ],
+  "jatkot": [
+   "Miksi Genovasta tuli niin vaikutusvaltainen pankkikaupunki?",
+   "Miksi Genova luovutti Korsikan Ranskalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "sitadellin",
+  "kysymys": "Kerro lisää: sitadellin",
+  "vastaus": "Sitadelli on kaupungin yhteyteen tai sen sisälle rakennettu linnake, jonka tehtävänä oli puolustaa kaupunkia ulkoisilta uhilta ja pitää väestö hallinnan alla. Sana tulee italian sanasta cittadella, pieni kaupunki. [[Genovalaiset]] rakensivat [[Ajaccioon]] sitadellin vuonna 1492 vanhan asutuksen eteläpuolelle, ja kaupunki alkoi sen jälkeen kukoistaa uudelleen. Sitadelli piti kaupungin hallussa myös Korsikan tasavallan aikana, kun genovalaiset hallitsivat vielä Ajaccion ja muutaman muun linnoituksen.",
+  "linkit": [
+   "Genovalaiset",
+   "Ajaccioon"
+  ],
+  "jatkot": [
+   "Miten sitadelli eroaa tavallisesta linnasta?",
+   "Miksi sitadelli säilytettiin Korsikan tasavallan aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Pasquale Paoli",
+  "kysymys": "Kerro lisää: Pasquale Paoli",
+  "vastaus": "Pasquale Paoli (1725–1807) oli korsikalainen vapaustaistelija, joka johti Korsikan taistelua Genovan hallintoa vastaan. Vuonna 1755 julistettiin Korsikan tasavalta, ja Paoli toimi sen johtajana. Hän laati tasavallalle perustuslain, jota pidetään aikansa edistyksellisenä. Ranska voitti Korsikan joukot [[Ponte Novun]] taistelussa vuonna 1769, ja Paoli pakeni maanpakoon Englantiin. Napoleonin isä, [[Carlo Buonaparte]], oli ollut Paolin avustajia.",
+  "linkit": [
+   "Ponte Novun",
+   "Carlo Buonaparte"
+  ],
+  "jatkot": [
+   "Miksi Ranska valtasi Korsikan vuonna 1769?",
+   "Millainen oli Korsikan tasavallan perustuslaki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Ajaccio",
+  "kysymys": "Kerro lisää: Ajaccio",
+  "vastaus": "Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on [[Corse-du-Sudin]] departementin prefektuuri ja sijaitsee saaren länsirannikolla, noin 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Ajaccion tunnetuin asukas on [[Napoleon Bonaparte]], joka syntyi kaupungissa vuonna 1769. Hänen sukutalonsa [[Maison Bonaparte]] on nykyään museo.",
+  "linkit": [
+   "Corse-du-Sudin",
+   "Napoleon Bonaparte",
+   "Maison Bonaparte"
+  ],
+  "jatkot": [
+   "Millainen lapsuus Napoleonilla oli Ajaccion kaupungissa?",
+   "Mitä Maison Bonaparten museossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Korsikan",
+  "kysymys": "Kerro lisää: Korsikan",
+  "vastaus": "Korsika on Välimeren neljänneksi suurin saari ja Ranskan alue, jonka pääkaupunki on Ajaccio. Saaren eläimistössä on mielenkiintoinen yhteys Afrikkaan: Pohjois-Afrikan [[berberihirvestä]] tehdyn perimätutkimuksen mukaan Korsikan ja [[Sardinian]] hirvet ovat lähes erottamattomia Pohjois-Afrikan hirvistä. Tästä päätellään, että ihmiset ovat aikoinaan vieneet hirviä Afrikasta saarille. [[Välimeren]] saaret ovat kautta historian olleet kauppareittien ja siirtolaisuuden välietappeja.",
+  "linkit": [
+   "berberihirvestä",
+   "Sardinian",
+   "Välimeren"
+  ],
+  "jatkot": [
+   "Miten ihmiset veivät eläimiä saarille muinaisina aikoina?",
+   "Mitä muita eläimiä Korsikalla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Marseillesta",
+  "kysymys": "Kerro lisää: Marseillesta",
+  "vastaus": "Marseille on Ranskan toiseksi suurin kaupunki ja maan suurin satama Välimeren rannalla. Kaupungin perustivat noin 600 eaa. Vähässä-Aasiassa sijainneesta [[Fokaiasta]] tulleet kreikkalaiset nimellä [[Massalia]], ja sitä pidetään Ranskan vanhimpana kaupunkina. Marseillen edustalla sijaitsee If-linnoitus, ja kaupunki on tärkeä yhteys Korsikalle. Ajaccioon on Marseillesta noin 390 kilometriä kaakkoon.",
+  "linkit": [
+   "Fokaiasta",
+   "Massalia"
+  ],
+  "jatkot": [
+   "Miksi Marseillesta tuli niin tärkeä satamakaupunki?",
+   "Miten Korsikalle matkustetaan Marseillesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Välimeri",
+  "kysymys": "Kerro lisää: Välimeri",
+  "vastaus": "Välimeri on Euroopan, Afrikan ja Aasian välinen sisämeri. Sen yhteys Atlantin valtamereen kulkee [[Gibraltarin salmen]] kautta, ja [[Suezin kanavan]] kautta se on yhteydessä Punaiseenmereen. Meren ympärillä kohtasivat vuosisatojen ajan useat kulttuurit ja kauppareitit. Perintö näkyy esimerkiksi [[Libyan]] keittiössä, jossa vaikuttavat berberi-, arabi- ja ottomaaniperintö sekä Välimeri.",
+  "linkit": [
+   "Gibraltarin salmen",
+   "Suezin kanavan",
+   "Libyan"
+  ],
+  "jatkot": [
+   "Miksi Gibraltarin salmi on niin strategisesti tärkeä?",
+   "Miten Suezin kanava vaikutti maailmankauppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "korsikan kieltä",
+  "kysymys": "Kerro lisää: korsikan kieltä",
+  "vastaus": "Korsikan kieli, omalla nimellään [[corsu]], on romaaninen kieli, joka on läheistä sukua Toscanan italialaisille murteille. Sitä on puhuttu saarella vuosisatojen ajan, ja nykyään sitä opetetaan koulussa ja käytetään kulttuurissa. Ranska on kuitenkin Korsikan virallinen kieli, ja useimmat korsikalaiset puhuvat sitä päivittäin. Italian vaikutus näkyy myös saaren paikannimissä ja musiikissa. Kieli kuuluu [[romaanisten kielten]] joukkoon.",
+  "linkit": [
+   "corsu",
+   "romaanisten kielten"
+  ],
+  "jatkot": [
+   "Miten korsikan kieli eroaa italian kielestä?",
+   "Miten korsikan kieltä opetetaan kouluissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "korsikalaisessa laulussa",
+  "kysymys": "Kerro lisää: korsikalaisessa laulussa",
+  "vastaus": "Korsikalainen perinteinen laulu on usein monikuuloista, saatetaan laulaa ilman säestystä eli [[a cappella]]. Tunnettu perinteinen muoto on [[paghjella]], kolmiääninen laulu. Italialaisvaikutus on selvä, mutta korsikalainen laulutapa on silti omansa. Nykyään perinteitä jatkavat esimerkiksi ryhmät [[I Muvrini]] ja Canta u Populu Corsu, jotka ovat tuoneet saaren musiikkia laajemman yleisön tietoon.",
+  "linkit": [
+   "a cappella",
+   "paghjella",
+   "I Muvrini"
+  ],
+  "jatkot": [
+   "Mitä a cappella -laulu tarkoittaa?",
+   "Millaista musiikkia I Muvrini esittää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Sitadelli",
+  "kysymys": "Kerro lisää: Sitadelli",
+  "vastaus": "Sitadelli on linnoitustyyppi, joka rakennettiin kaupungin yhteyteen tai sisälle. Sen tehtävänä oli suojata kaupunkia ulkoiselta uhalta ja toisaalta pitää kaupunkilaiset hallinnan alla. Sitadellissa oli sotilasvartio, aseita ja varusteita, ja se auttoi hallitsemaan satamaa. Uuden ajan alussa sitadellit rakennettiin usein tähtimäisiksi [[bastioni]]linnoituksiksi, joissa tykit voivat ampua joka suuntaan. [[Ajaccion]] sitadelli rakennettiin vuonna 1492 vanhan asutuksen eteläpuolelle, ja se säilytti merkityksensä Korsikan tasavallan aikana.",
+  "linkit": [
+   "bastioni",
+   "Ajaccion"
+  ],
+  "jatkot": [
+   "Miten bastioni suojasi linnoitusta tykkitulelta?",
+   "Miten sitadellien merkitys muuttui ajan myötä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Korsikan tasavallan",
+  "kysymys": "Kerro lisää: Korsikan tasavallan",
+  "vastaus": "Korsikan tasavalta julistettiin vuonna 1755, kun saaren asukkaat irrottautuivat Genovan vallasta. Sen johtohahmo oli [[Pasquale Paoli]], joka antoi saarelle oman perustuslain. Genovan hallinto säilytti kuitenkin otteensa Ajaccion ja muutaman muun linnoituksen osalta, joten [[genovalaiset]] eivät menettäneet saarta kokonaan. Tasavallan aika päättyi, kun ranskalaiset ottivat saaren haltuunsa; ratkaiseva taistelu käytiin vuonna 1769 [[Ponte Novun]] sillan luona.",
+  "linkit": [
+   "Pasquale Paoli",
+   "genovalaiset",
+   "Ponte Novun"
+  ],
+  "jatkot": [
+   "Kuka oli Pasquale Paoli?",
+   "Miten Korsika päätyi Ranskan hallintaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Napoleon Bonaparte",
+  "kysymys": "Kerro lisää: Napoleon Bonaparte",
+  "vastaus": "Napoleon Bonaparte syntyi Ajaccion kaupungissa vuonna 1769, ja hänen sukutalonsa [[Maison Bonaparte]] on nykyään museo. Keisari kuoli maanpaossa [[Pyhän Helenan]] saarella, ja hänet haudattiin kaislaverhoiseen laaksoon, jota hän oli kävelyillään kutsunut [[Geraniumilaaksoksi]]; virallisesti sen nimi on Sane Valley. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tuleeko siihen lukea pelkkä Napoleon vai Napoleon Bonaparte. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan ja kuuluu saaren suosituimpiin nähtävyyksiin.",
+  "linkit": [
+   "Maison Bonaparte",
+   "Pyhän Helenan",
+   "Geraniumilaaksoksi"
+  ],
+  "jatkot": [
+   "Miksi Napoleon joutui maanpakoon Pyhälle Helenalle?",
+   "Mitä Napoleonin ruumiille tapahtui vuonna 1840?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Napoleonin sodiksi",
+  "kysymys": "Kerro lisää: Napoleonin sodiksi",
+  "vastaus": "Napoleonin sodat olivat Euroopan suurvaltojen välisten sotien sarja 1800-luvun alussa, joissa Ranska taisteli vuoroin eri valtioiden muodostamia liittoumia vastaan. Ne seurasivat Ranskan vallankumouksen aikaisia [[vallankumoussotia]] ja alkoivat noin vuonna 1803. Napoleon kruunautui keisariksi vuonna 1804, ja hänen valtansa ulottui laajalle osalle mannerta. Sotien loppu tuli vuonna 1815 [[Waterloon taistelussa]], jonka jälkeen [[Wienin kongressi]] järjesti Euroopan rajat ja valtasuhteet uudelleen.",
+  "linkit": [
+   "vallankumoussotia",
+   "Waterloon taistelussa",
+   "Wienin kongressi"
+  ],
+  "jatkot": [
+   "Mitä Wienin kongressissa päätettiin?",
+   "Miksi Napoleon hävisi Waterloon taistelun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ajaccio",
+  "kasite": "Napoleonin laki",
+  "kysymys": "Kerro lisää: Napoleonin laki",
+  "vastaus": "Napoleonin laki tarkoittaa lakikirjaa, jonka nimi on [[Code civil]] ja joka otettiin Ranskassa käyttöön vuonna 1804. Se yhtenäisti maan [[siviilioikeuden]] korvaamalla alueittain vaihtelevat säännökset yhdellä kaikille yhteisellä lailla. Lakikirjan keskeisiä periaatteita olivat kansalaisten yhdenvertaisuus lain edessä ja omistusoikeuden suoja. Sen vaikutus ulottui Ranskan rajojen ulkopuolelle, ja monet maat ottivat siitä mallia omille laeilleen. Osa Ranskan nykyisestä siviililainsäädännöstä perustuu yhä samaan pohjaan.",
+  "linkit": [
+   "Code civil",
+   "siviilioikeuden"
+  ],
+  "jatkot": [
+   "Mitkä maat ottivat mallia Napoleonin laista?",
+   "Mitä siviilioikeus tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Bonifacionsalmi",
+  "kysymys": "Kerro lisää: Bonifacionsalmi",
+  "vastaus": "Bonifacionsalmi on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkka luku vaihtelee lähteiden mukaan. Salmi yhdistää [[Välimeren]] läntistä ja itäistä osaa ja erottaa Korsikan eteläkärjen [[Sardinian]] pohjoiskärjestä. Salmi on tunnettu vaativista purjehdusoloistaan, sillä voimakkaat tuulet ja matalikot edellyttävät huolellista navigointia. Salmen eteläpuolella sijaitsevat [[Lavezzin saaret]], jotka kuuluvat luonnonsuojelualueeseen. Bonifacion kaupunki valvoi aikoinaan salmen laivareittejä korkealta törmältään.",
+  "linkit": [
+   "Välimeren",
+   "Sardinian",
+   "Lavezzin saaret"
+  ],
+  "jatkot": [
+   "Millaisia saaria Lavezzin saaret ovat?",
+   "Miksi salmessa purjehtiminen on vaativaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Bonifacion",
+  "kysymys": "Kerro lisää: Bonifacion",
+  "vastaus": "Bonifacio on kaupunki Korsikan eteläosassa Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin [[luonnonsatamalle]]. Sijainti on strategisesti edullinen, koska sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin nimen sanotaan juontuvan varhaiskeskiajan toscanalaisesta [[Bonifaciosta]], mutta tarkkaa taustaa en voi vahvistaa. Kaupungin mukaan on nimetty myös Korsikan ja Sardinian erottava Bonifacionsalmi, josta kaupunki näkyy kauas.",
+  "linkit": [
+   "luonnonsatamalle",
+   "Bonifaciosta"
+  ],
+  "jatkot": [
+   "Milloin genovalaiset ottivat Bonifacion hallintaansa?",
+   "Miten Bonifacion linnoitus on säilynyt nykypäiviin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "linnoitus",
+  "kysymys": "Kerro lisää: linnoitus",
+  "vastaus": "Linnoitus on puolustustarkoituksiin rakennettu kohde, jonka paksut muurit ja korkea sijainti vaikeuttavat hyökkääjän etenemistä. Bonifacion linnoitus kohoaa kalkkikivitörmällä, ja sieltä voitiin valvoa Korsikan ja Sardinian välistä salmea sekä sen laivaliikennettä. Kaupungin hallinta merkitsi näin myös väylän hallintaa. [[Genovalaiset]] ottivat kaupungin haltuunsa 1100-luvun lopulla, ja heidän aikanaan se kehittyi tärkeäksi tukikohdaksi. Linnoituksen turvin myös [[luonnonsatama]] oli suojassa sekä merelle että maalle päin.",
+  "linkit": [
+   "Genovalaiset",
+   "luonnonsatama"
+  ],
+  "jatkot": [
+   "Miten kaupunki ja linnoitus kestivät piirityksiä?",
+   "Millainen on Bonifacion luonnonsatama?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "kalkkikivitörmälle",
+  "kysymys": "Kerro lisää: kalkkikivitörmälle",
+  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin [[kalsiumkarbonaatista]]. Suuri osa kalkkikivestä on syntynyt muinaisen meren pohjalle kerrostuneista eliöiden kuorista ja luurangoista. Kivi liukenee hitaasti happamaan veteen, minkä vuoksi kalkkikivialueille syntyy usein [[luolia]] ja muita [[karstimuodostumia]]. Myös merenaallot kuluttavat kalkkikivitörmää ja voivat kaivertaa siihen onkaloita. Bonifacion jyrkkä törmä on tällaista kalkkikiveä, ja se on antanut kaupungille sekä puolustuksen että näkyvän erityisen ilmeen.",
+  "linkit": [
+   "kalsiumkarbonaatista",
+   "luolia",
+   "karstimuodostumia"
+  ],
+  "jatkot": [
+   "Miten luolat syntyvät kalkkikiveen?",
+   "Mikä on karsti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "luonnonsatamaa",
+  "kysymys": "Kerro lisää: luonnonsatamaa",
+  "vastaus": "Luonnonsatama on rannikon muodon luontaisesti suojaama ankkuripaikka, jossa alukset pysyvät turvassa aallokolta ilman rakennettuja aallonmurtajia. Bonifacion satama sijaitsee kalkkikivitörmän suojassa, ja kapea lahti ulottuu syvälle kaupungin juurelle. Tällainen satama oli historiassa arvokas, koska se tarjosi suojaa myrskyiltä ja antoi tukikohdan [[laivastoille]] ja kauppa-aluksille. Sataman merkitys kasvoi, kun kaupungin linnoitus suojeli sitä hyökkäyksiltä. Sijainnin ansiosta kaupunki pystyi myös valvomaan ohi kulkevia [[laivareittejä]].",
+  "linkit": [
+   "laivastoille",
+   "laivareittejä"
+  ],
+  "jatkot": [
+   "Mitä purjealuksille tapahtui myrskyssä satamien ulkopuolella?",
+   "Mikä erottaa luonnonsataman keinotekoisesta satamasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Napoleon Bonaparte",
+  "kysymys": "Kerro lisää: Napoleon Bonaparte",
+  "vastaus": "Napoleon Bonaparte syntyi Korsikalla vuonna 1769 ja nousi nuorena upseerina huomiota herättäneeksi kenraaliksi [[Toulonin]] piirityksessä vuonna 1793. Hänestä tuli Ranskan ensimmäinen konsuli vuonna 1799 ja keisari vuonna 1804. Hänen valtakautensa päättyi lopullisesti vuonna 1815, jonka jälkeen hänet karkotettiin [[Pyhälle Helenalle]], missä hän kuoli vuonna 1821. Hänet haudattiin kaislaverhoiseen laaksoon, joka tunnetaan nimellä [[Geraniumilaakso]]; ruumis vietiin Ranskaan vuonna 1840, mutta tyhjä hauta on yhä nähtävyys.",
+  "linkit": [
+   "Toulonin",
+   "Pyhälle Helenalle",
+   "Geraniumilaakso"
+  ],
+  "jatkot": [
+   "Mitä tapahtui Toulonin piirityksessä vuonna 1793?",
+   "Millaista Napoleonin elämä oli Pyhällä Helenalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Ajaccio",
+  "kysymys": "Kerro lisää: Ajaccio",
+  "vastaus": "Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se sijaitsee saaren länsirannikolla noin 390 kilometriä [[Marseillesta]] kaakkoon ja on [[Corse-du-Sudin]] departementin prefektuuri. Kaupunki taantui keskiajalla mutta alkoi kukoistaa uudelleen, kun genovalaiset rakensivat vuonna 1492 [[sitadellin]] vanhan asutuksen eteläpuolelle. Tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa [[Maison Bonaparte]] on nykyään museo.",
+  "linkit": [
+   "Marseillesta",
+   "Corse-du-Sudin",
+   "sitadellin",
+   "Maison Bonaparte"
+  ],
+  "jatkot": [
+   "Millainen on Ajaccion sitadelli?",
+   "Miten Ajaccio liittyy Napoleonin lapsuuteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Korsikan",
+  "kysymys": "Kerro lisää: Korsikan",
+  "vastaus": "Korsika on Välimeren neljänneksi suurin saari, ja se kuuluu Ranskaan erityisasemaisena alueena. Saaren pääkaupunki on [[Ajaccio]], ja eteläpuolella kapea [[Bonifacionsalmi]] erottaa sen Sardiniasta. Saaren eläimistö kertoo myös ihmisten liikkeistä: perimän tutkimus on osoittanut, että Korsikan ja Sardinian hirvet ovat lähes erottamattomia Pohjois-Afrikan [[berberihirvistä]]. Tämän perusteella ihmiset ovat aikoinaan tuoneet hirvet Afrikasta saarille.",
+  "linkit": [
+   "Ajaccio",
+   "Bonifacionsalmi",
+   "berberihirvistä"
+  ],
+  "jatkot": [
+   "Mikä on berberihirvi?",
+   "Miten Korsika liitettiin Ranskaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Sardinian",
+  "kysymys": "Kerro lisää: Sardinian",
+  "vastaus": "Sardinia on Välimeren toiseksi suurin saari Sisilian jälkeen, ja se kuuluu [[Italian]] itsehallinnolliseen alueeseen. Saaren suurin kaupunki ja hallinnollinen keskus on [[Cagliari]], ja sen pohjoispuolella Bonifacionsalmi erottaa sen Korsikasta. Perimän tutkimus on osoittanut, että Sardinian hirvet ovat lähes erottamattomia Pohjois-Afrikan [[berberihirvistä]]. Tämän perusteella ihmiset ovat aikoinaan vieneet hirvet Afrikasta saarelle.",
+  "linkit": [
+   "Italian",
+   "Cagliari",
+   "berberihirvistä"
+  ],
+  "jatkot": [
+   "Mikä tekee Sardiniasta itsehallinnollisen alueen?",
+   "Milloin ihmiset toivat hirvet saarelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "merenkulun",
+  "kysymys": "Kerro lisää: merenkulun",
+  "vastaus": "Merenkulku tarkoittaa alusliikennettä ja siihen liittyviä toimintoja, kuten reittien suunnittelua, satamien käyttöä ja turvallisen kulun varmistamista. Kapeat salmet ovat merenkululle sekä hyödyllisiä että vaativia: ne lyhentävät matkaa, mutta tuuli, virtaukset ja karikot edellyttävät huolellista navigointia. Bonifacionsalmi on ollut tällainen väylä, ja kaupungin sijainti mahdollisti salmen laivaliikenteen valvonnan. Turvallisuutta ovat vuosisatojen ajan lisänneet [[majakat]] ja muut merimerkit. Tärkeitä solmukohtia ovat olleet myös [[satamat]], joissa alukset ovat voineet ankkuroitua suojaan.",
+  "linkit": [
+   "majakat",
+   "satamat"
+  ],
+  "jatkot": [
+   "Miten majakat ohjaavat laivoja?",
+   "Miten salmen virtaukset vaikuttavat laivaliikenteeseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Corse-du-Sudin",
+  "kysymys": "Kerro lisää: Corse-du-Sudin",
+  "vastaus": "Corse-du-Sud on Korsikan eteläinen departementti, jonka tunnus on 2A. Sen hallinnollinen keskus eli prefektuuri on saaren pääkaupunki [[Ajaccio]], joka sijaitsee länsirannikolla. Departementin eteläosassa on [[Bonifacio]], jonka mukaan on nimetty Korsikan ja Sardinian erottava salmi. Saaren pohjoisosa kuuluu toiseen departementtiin, jonka nimi on [[Haute-Corse]]. Departementtijako on osa Ranskan hallintorakennetta, ja Korsikalla on lisäksi oma erityinen asemansa.",
+  "linkit": [
+   "Ajaccio",
+   "Bonifacio",
+   "Haute-Corse"
+  ],
+  "jatkot": [
+   "Mikä on Haute-Corse?",
+   "Mitä erityisasema tarkoittaa Korsikan kohdalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Napoleon",
+  "kysymys": "Kerro lisää: Napoleon",
+  "vastaus": "Napoleon vietti elämänsä viimeiset vuodet maanpaossa Pyhän Helenan saarella, jossa hän kuoli vuonna 1821. Saaren pääkaupungissa [[Jamestownissa]] pääkadun nimi on osuvasti Napoleon Street. Kadun varrella on [[Konsulaatti]]-niminen hotelli, 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Rakennus edustaa Itä-Intian kauppakomppanian ajan [[georgiaanista]] rakennustyyliä, joka antaa koko kaupungille sen tunnusomaisen ilmeen. Hotellin sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen patsas, joka esittää Napoleonia univormussaan.",
+  "linkit": [
+   "Jamestownissa",
+   "Konsulaatti",
+   "georgiaanista"
+  ],
+  "jatkot": [
+   "Mikä oli Itä-Intian kauppakomppania?",
+   "Millaista georgiaaninen rakennustyyli on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bonifacio",
+  "kasite": "Bonifacio",
+  "kysymys": "Kerro lisää: Bonifacio",
+  "vastaus": "Bonifacio on kaupunki ja satama Korsikan eteläkärjessä, ja se kuuluu Corse-du-Sudin departementtiin. Vanha kaupunki ja linnoitus on rakennettu korkealle kalkkikivitörmälle, jonka jyrkät seinämät laskeutuvat suoraan mereen. Törmän suojaama luonnonsatama ja strateginen sijainti tekivät kaupungista tärkeän paikan laivareittien valvonnassa. Selkeällä säällä salmen yli voi nähdä [[Sardinian]] rannikon. Kaupungin mukaan nimetty [[Bonifacionsalmi]] on tärkeä merenkulun väylä.",
+  "linkit": [
+   "Sardinian",
+   "Bonifacionsalmi"
+  ],
+  "jatkot": [
+   "Miten Bonifacioon pääsee nykyään?",
+   "Miksi kaupunki on rakennettu jyrkän törmän päälle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Stanislaus I",
+  "kysymys": "Kerro lisää: Stanislaus I",
+  "vastaus": "Stanislaus I eli Stanisław Leszczyński oli Puolan entinen kuningas ja Liettuan suuriruhtinas. Valtaistuimen menetettyään hän sai vuonna 1737 [[Lorrainen]] herttuakunnan hallittavakseen. Hänen tyttärensä Marie Leszczyńska oli [[Ludvig XV:n]] puoliso ja siten Ranskan kuningatar, mikä selittää hänen asemaansa Ranskan vallan piirissä. Herttuana hän kehitti Nancya, ja hänen käskystään rakennettiin vuosina 1752–1756 kaupungin suuri kävelyaukio, joka kantaa hänen nimeään. Kaupungista tuli Ranskan osa hänen kuolemansa jälkeen, tiettävästi vuonna 1766.",
+  "linkit": [
+   "Lorrainen",
+   "Ludvig XV:n"
+  ],
+  "jatkot": [
+   "Miten Stanislaus menetti Puolan kruunun?",
+   "Millainen on Place Stanislas nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945. Sen päämaja sijaitsee [[Pariisissa]]. Järjestön tunnetuimpia tehtäviä on maailmanperintöluettelon ylläpito, mutta se vaalii myös [[aineetonta kulttuuriperintöä]]. Esimerkiksi arabialaisen kahvin eli [[gahwa]]n tarjoilutapa lisättiin aineettoman kulttuuriperinnön luetteloon vuonna 2015. Nancyn Place Stanislas on kuulunut maailmanperintökohteisiin vuodesta 1983.",
+  "linkit": [
+   "Pariisissa",
+   "aineetonta kulttuuriperintöä",
+   "gahwa"
+  ],
+  "jatkot": [
+   "Mitä aineeton kulttuuriperintö tarkoittaa?",
+   "Miten kohde pääsee maailmanperintöluetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Lorrainen",
+  "kysymys": "Kerro lisää: Lorrainen",
+  "vastaus": "Lorraine on historiallinen alue Koillis-Ranskassa, ja sen keskus oli aikoinaan Nancy. Alue oli pitkään itsenäinen herttuakunta, ja viimeinen herttua oli Stanislaus I. Se liitettiin Ranskaan hänen kuolemansa jälkeen, tiettävästi vuonna 1766. Alue sijaitsee Ranskan ja Saksan välisellä rajaseudulla, ja osa siitä kuului vuoteen 1918 saakka [[Alsace-Lorrainen]] nimellä Saksan keisarikuntaan. Nykyään Lorraine on osa suurempaa hallinnollista aluetta ja sen kaupunkeihin kuuluu [[Nancy]].",
+  "linkit": [
+   "Alsace-Lorrainen",
+   "Nancy"
+  ],
+  "jatkot": [
+   "Miten Alsace-Lorraine siirtyi Saksalle?",
+   "Mikä on Lorrainen herttuakunnan historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Place Stanislas",
+  "kysymys": "Kerro lisää: Place Stanislas",
+  "vastaus": "Place Stanislas on suuri kävelyaukio Nancyn keskustassa, ja se rakennettiin vuosina 1752–1756 [[Stanislaus I:n]] käskystä. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Se muodostaa akselinsa jatkeiden eli [[Place de la Carrièren]] ja [[Place d'Alliancen]] kanssa kokonaisuuden. Kolmikko on ollut [[Unescon]] maailmanperintökohde vuodesta 1983.",
+  "linkit": [
+   "Stanislaus I:n",
+   "Place de la Carrièren",
+   "Place d'Alliancen",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Millainen on Place de la Carrière?",
+   "Mitä tarkoittaa monumentaalinen kaupunkiaukio?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "arkkitehtuuristaan",
+  "kysymys": "Kerro lisää: arkkitehtuuristaan",
+  "vastaus": "Nancyn arkkitehtuuri on yhdistelmä kahta aikakautta. Ensimmäinen on 1700-luvun monumentaalinen kaupunkirakentaminen, jonka tärkeimmät esimerkit ovat Place Stanislas ja [[Place de la Carrière]] ja jotka kuuluvat Unescon maailmanperintöön vuodesta 1983. Toinen on 1900-luvun taitteen [[jugend]], jota kaupungissa edustaa Nancyn koulukunta eli [[École de Nancy]]. Siihen kuuluneet taiteilijat suunnittelivat lasia, huonekaluja ja rakennuksia, joissa kasvit ja luonnon muodot näkyvät koristeissa. Kaksi tyyliä tekee kaupungista poikkeuksellisen monikerroksisen.",
+  "linkit": [
+   "Place de la Carrière",
+   "jugend",
+   "École de Nancy"
+  ],
+  "jatkot": [
+   "Mikä on jugend?",
+   "Ketkä kuuluivat Nancyn koulukuntaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "maailmanperintölista",
+  "kysymys": "Kerro lisää: maailmanperintölista",
+  "vastaus": "Maailmanperintöluettelo on Unescon ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Se perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]]. Kohteet jaetaan [[kulttuurikohteisiin]], [[luontokohteisiin]] ja sekakohteisiin, jotka täyttävät molempien ehdot. Jokainen kohde on arvioitava ennen luetteloon hyväksymistä, ja luetteloon ottamisen jälkeen kohteen suojelu on osa kansainvälistä yhteistyötä. Place Stanislas liitettiin luetteloon vuonna 1983 yhdessä kahden naapuriaukion kanssa.",
+  "linkit": [
+   "maailmanperintösopimukseen",
+   "kulttuurikohteisiin",
+   "luontokohteisiin"
+  ],
+  "jatkot": [
+   "Mitkä kohteet voivat poistua maailmanperintöluettelosta?",
+   "Kuinka monta kohdetta luettelossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Nancy",
+  "kysymys": "Kerro lisää: Nancy",
+  "vastaus": "Nancy on Lorrainen entinen herttuakunnan keskus Koillis-Ranskassa, ja se oli 1900-luvun taitteessa jugendin eli Art nouveaun tärkeä keskus. Kaupungissa toimi Nancyn koulukunta, johon kuuluneet taiteilijat ja käsityöläiset tekivät lasia, huonekaluja ja rakennuksia. Heidän töissään kasvit ja luonnon muodot näkyvät koristeina. Kaupungin keskustan 1700-luvun aukio [[Place Stanislas]] on Unescon maailmanperintökohde. Nancy yhdistää siis kaksi eri aikakautta, ja kummallakin on oma tunnusomainen tyylinsä. Alue on myös tunnettu [[Lorrainen]] historiasta.",
+  "linkit": [
+   "Place Stanislas",
+   "Lorrainen"
+  ],
+  "jatkot": [
+   "Mitä jugend tarkoittaa?",
+   "Mikä Nancyn koulukunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "École de Nancy",
+  "kysymys": "Kerro lisää: École de Nancy",
+  "vastaus": "École de Nancy eli Nancyn koulukunta oli taiteilijoiden ja käsityöläisten yhteenliittymä, joka perustettiin vuonna 1901 edistämään jugendia. Sen tärkeimpiä hahmoja olivat lasitaiteilija [[Émile Gallé]], huonekalusuunnittelija [[Louis Majorelle]] ja lasityöpaja [[Daum]]. Koulukunnan työt hakivat aiheensa luonnosta: kasvit, hyönteiset ja virtaavat muodot ovat tavallisia koristeita. Tavoitteena oli tuoda taide arjen esineisiin eikä pelkästään maalauksiin ja patsaisiin. Koulukunnan töitä on nähtävillä Nancyn museossa.",
+  "linkit": [
+   "Émile Gallé",
+   "Louis Majorelle",
+   "Daum"
+  ],
+  "jatkot": [
+   "Mikä on jugend?",
+   "Mitä Daumin lasityöt ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Émile Gallé",
+  "kysymys": "Kerro lisää: Émile Gallé",
+  "vastaus": "Émile Gallé syntyi vuonna 1846 ja kuoli vuonna 1904, ja hän työskenteli Nancyssa lasitaiteilijana ja huonekalusuunnittelijana. Hän kiinnostui voimakkaasti kasvitieteestä, ja kasvit ovat hänen töidensä tärkein aihe. Gallé tunnetaan erityisesti monikerroksisesta [[kameolasista]], jossa päällimmäinen värikerros hiotaan tai syövytetään kuviolle. Hän oli [[École de Nancyn]] perustaja ja tärkeä hahmo jugendin leviämisessä Ranskassa. Hänen lasimaljakkonsa ovat nykyään keräilijöiden arvostamia.",
+  "linkit": [
+   "kameolasista",
+   "École de Nancyn"
+  ],
+  "jatkot": [
+   "Miten kameolasi valmistetaan?",
+   "Kuka johti Nancyn koulukuntaa Gallén jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Mont Ventoux'n",
+  "kysymys": "Kerro lisää: Mont Ventoux'n",
+  "vastaus": "Mont Ventoux on Provencen korkein vuori, ja se kohoaa 1 910 metriin noin 20 kilometriä Carpentras'sta koilliseen. Pääosa vuoresta kuuluu [[Vauclusen]] departementtiin, ja pohjoisessa se rajautuu [[Drômen]] departementtiin. Vuori on saanut lisänimikseen Provencen pedon, Provencen jättiläisen ja Kalju vuoren. Tunnetuksi se on tullut [[Ranskan ympäriajon]] etappina: vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.",
+  "linkit": [
+   "Vauclusen",
+   "Drômen",
+   "Ranskan ympäriajon"
+  ],
+  "jatkot": [
+   "Mistä Mont Ventoux'n nimi on peräisin?",
+   "Miksi Ranskan ympäriajo kulkee Mont Ventoux'n kautta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Kalju vuori",
+  "kysymys": "Kerro lisää: Kalju vuori",
+  "vastaus": "Kalju vuori on yksi Mont Ventoux'n lisänimistä, ja se viittaa vuoren paljaaseen, vaaleaan huippuun. Muita lisänimiä ovat [[Provencen peto]] ja [[Provencen jättiläinen]]. Vuoren huippuosa on pääosin [[kalkkikiveä]], joka näyttää kaukaa vaalealta. Puuttomuuden syinä mainitaan ankara korkeusilmasto ja tuuli sekä historiallinen metsien hakkuu, mutta tarkkaa selitystä en voi vahvistaa. Huippu erottuu maisemasta kauas, sillä vuori kohoaa 1 910 metriin ja on alueensa korkein.",
+  "linkit": [
+   "Provencen peto",
+   "Provencen jättiläinen",
+   "kalkkikiveä"
+  ],
+  "jatkot": [
+   "Mitä kasveja Mont Ventoux'n huipulla kasvaa?",
+   "Miksi vuoren huipulla tuulee voimakkaasti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "kasvillisuus",
+  "kysymys": "Kerro lisää: kasvillisuus",
+  "vastaus": "Kasvillisuus muuttuu vuoristossa korkeuden mukana, koska lämpötila laskee, tuuli voimistuu ja maaperä ohenee ylöspäin mentäessä. Alimpana kasvaa usein lehti- tai havumetsää, ja ylempänä puut harvenevat, kunnes [[puuraja]] on ylitetty. Sen yläpuolella kasvaa matalia pensaita, ruohoja ja sammalia. Tällaiset [[kasvillisuusvyöhykkeet]] näkyvät selvästi Mont Ventoux'n kaltaisilla vuorilla, jotka kohoavat yli 1 900 metriin. Puurajan korkeus riippuu leveysasteesta ja paikallisesta ilmastosta.",
+  "linkit": [
+   "puuraja",
+   "kasvillisuusvyöhykkeet"
+  ],
+  "jatkot": [
+   "Millä korkeudella puuraja on Alpeilla?",
+   "Miten ilmasto muuttuu vuorilla ylöspäin mentäessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Mont Ventoux",
+  "kysymys": "Kerro lisää: Mont Ventoux",
+  "vastaus": "Mont Ventoux on Etelä-Ranskan Provencessa sijaitseva vuori, joka kohoaa 1 910 metriin ja on alueensa korkein. Sen lisänimiä ovat [[Provencen peto]], [[Provencen jättiläinen]] ja Kalju vuori. Vuori sijaitsee Vauclusen departementissa noin 20 kilometriä Carpentras'sta koilliseen. Se on tullut tunnetuksi [[Ranskan ympäriajon]] vuoristoetappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.",
+  "linkit": [
+   "Provencen peto",
+   "Provencen jättiläinen",
+   "Ranskan ympäriajon"
+  ],
+  "jatkot": [
+   "Millainen on nousu Mont Ventoux'n huipulle?",
+   "Mikä on Vauclusen departementti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Provencessa",
+  "kysymys": "Kerro lisää: Provencessa",
+  "vastaus": "Provence on historiallinen alue Etelä-Ranskassa Välimeren rannikolla. Siihen kuuluu esimerkiksi [[Marseille]] ja sen lähistöllä sijaitsee Mont Ventoux. Alueeseen liittyy myös urheiluhistoriaa: kuulapelin [[pétanque]] syntyi vuonna 1910 La Ciotat'n kaupungissa. Tuolloin Provencessa pelattiin kuulapeliä, jossa heittäjä otti ensin kolme juoksuaskelta, mutta nivelkipujen vuoksi pelaamasta joutunut Jules Lenoir sai ystävältään, kahvilanpitäjä [[Ernest Pitiot]]ilta, uudet säännöt. Rata puolitettiin ja heittäjä seisoo paikallaan ympyrässä, jalat maassa. Nimi tulee provensaalin sanoista pè tancat, jalat kiinni maassa.",
+  "linkit": [
+   "Marseille",
+   "pétanque",
+   "Ernest Pitiot"
+  ],
+  "jatkot": [
+   "Miten pétanque-peliä pelataan?",
+   "Mitä tarkoittaa pétanque-pelin cochonnet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Ranskan ympäriajon",
+  "kysymys": "Kerro lisää: Ranskan ympäriajon",
+  "vastaus": "Ranskan ympäriajo eli Tour de France aloitettiin vuonna 1903, ja sen perustajana pidetään [[Henri Desgrangea]]. Kilpailun johtajaa kutsutaan kokonaiskilpailun keltaisessa paidassa ajavaksi pyöräilijäksi, ja [[keltainen paita]] on kilpailun tunnetuin tunnus. Reitti vaihtelee vuosittain, ja se kulkee usein sekä Alppien että [[Pyreneiden]] kautta. Mont Ventoux on tunnettu kohta, jossa vuonna 2009 ratkaistiin toiseksi viimeisen päivän vuoristomaali. Kilpailu on yksi maailman katsotuimmista urheilutapahtumista.",
+  "linkit": [
+   "Henri Desgrangea",
+   "keltainen paita",
+   "Pyreneiden"
+  ],
+  "jatkot": [
+   "Mitä muita paitoja Ranskan ympäriajossa on?",
+   "Miten kilpailun reitti valitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Ranskan ympäriajo",
+  "kysymys": "Kerro lisää: Ranskan ympäriajo",
+  "vastaus": "Ranskan ympäriajon etapit jaetaan tyypeittäin: tasamaaetappeihin, [[vuoristoetappeihin]] ja [[aika-ajoihin]], joissa kukin ajaja kilpailee yksin kelloa vastaan. Kokonaiskilpailua johtaa keltaisessa paidassa ajava pyöräilijä. Muita kilpailuja ovat [[pistekilpailu]], jonka johtaja ajaa vihreässä paidassa, sekä mäkikilpailu, jonka johtaja ajaa pallokuvioisessa paidassa. Etappien ajat lasketaan yhteen, ja pienin kokonaisaika ratkaisee voiton. Mont Ventoux on kuulunut kilpailun vuoristokohteisiin.",
+  "linkit": [
+   "vuoristoetappeihin",
+   "aika-ajoihin",
+   "pistekilpailu"
+  ],
+  "jatkot": [
+   "Mitä aika-ajo tarkoittaa pyöräilyssä?",
+   "Miten pistekilpailu eroaa kokonaiskilpailusta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "ratatouille",
+  "kysymys": "Kerro lisää: ratatouille",
+  "vastaus": "Ratatouille on provencelainen kasvisruoka, jonka alkuperä liitetään usein [[Nizzan]] seutuun. Sen pääraaka-aineita ovat [[munakoiso]], [[kesäkurpitsa]], tomaatti, paprika ja sipuli, ja maku haetaan oliiviöljystä ja Provencen yrteistä. Ainekset voidaan kypsentää yhdessä padassa tai erikseen ennen yhdistämistä. Ruoka on perinteisesti ollut maalaisten arkiruoka, ja kasvisten maku nousee esiin sesongin aikaan parhaiten. Ratatouille tarjoillaan sekä lämpimänä että kylmänä.",
+  "linkit": [
+   "Nizzan",
+   "munakoiso",
+   "kesäkurpitsa"
+  ],
+  "jatkot": [
+   "Millaisia yrttejä Provencessa käytetään?",
+   "Miten ratatouille eroaa muista kasvisruoista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "bouillabaisse",
+  "kysymys": "Kerro lisää: bouillabaisse",
+  "vastaus": "Bouillabaisse on Marseillen tunnetuin ruoka, ja se oli alun perin kalastajien kotiruokaa. Kattilaan meni se osa saaliista, jota kukaan ei ostanut, esimerkiksi piikikkäät [[rascasse]]-kalat ja muut ulkonäöltään epäedulliset lajit. Nykyään annos on kallis, ja vuonna 1980 kaupungin ravintoloitsijat allekirjoittivat oman [[peruskirjan]], jossa määriteltiin aidon annoksen ainekset. Annos tuodaan pöytään kahdessa osassa: ensin liemi [[valkosipulileivän]] kanssa ja sitten kalat.",
+  "linkit": [
+   "rascasse",
+   "peruskirjan",
+   "valkosipulileivän"
+  ],
+  "jatkot": [
+   "Mitä rascasse-kala on?",
+   "Mitä aitoon bouillabaisseen kuuluu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Departementti",
+  "kysymys": "Kerro lisää: Departementti",
+  "vastaus": "Departementti on Ranskan hallinnollinen alue, jonka perustamisesta päätettiin vuonna 1790 vallankumouksen aikana. Alkuperäinen tarkoitus oli jakaa maa tasakokoisiin alueisiin, joiden hallintokaupunkiin pääsi päivässä. Departementtia johtaa valtion nimittämä [[prefekti]], ja sen tunnus on numero, joka perustuu alun perin aakkosjärjestykseen. Departementteja on myös merentakaisilla alueilla, esimerkiksi [[Ranskan Guayanassa]]. Siellä kohtaavat kreolikulttuuri, alkuperäiskansat sekä Laosista paenneet [[hmongit]] ja jokien varsilla kultaa etsivät.",
+  "linkit": [
+   "prefekti",
+   "Ranskan Guayanassa",
+   "hmongit"
+  ],
+  "jatkot": [
+   "Mikä on prefekti?",
+   "Millainen Ranskan Guayana on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Puy de Sancy",
+  "kysymys": "Kerro lisää: Puy de Sancy",
+  "vastaus": "Puy de Sancy on Ranskan keskiylängön eli [[Massif Centralin]] korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee [[Puy-de-Dômen]] departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa [[kerrostulivuorta]], joka on purkautunut viimeksi yli 220 000 vuotta sitten. Vuoren seudulla on myös [[Dordogne-joen]] lähteet. Nykyään pohjoisia ja eteläisiä rinteitä käytetään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.",
+  "linkit": [
+   "Massif Centralin",
+   "Puy-de-Dômen",
+   "kerrostulivuorta",
+   "Dordogne-joen"
+  ],
+  "jatkot": [
+   "Miten Dordogne-joki saa alkunsa?",
+   "Mitä muita tulivuoria Massif Centralissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Massif Central",
+  "kysymys": "Kerro lisää: Massif Central",
+  "vastaus": "Massif Central eli Ranskan keskiylänkö on vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Sen korkein vuori on [[Puy de Sancy]], jonka huippu on 1 886 metrin korkeudessa. Alueella nukkuu rivi [[sammuneita tulivuoria]], ja niiden joukossa on [[Chaîne des Puys]] -tulivuoriketju. Se on kirjattu Unescon maailmanperintökohteiden joukkoon vuonna 2018. Tarkkoja pinta-alalukuja en anna, koska luvut vaihtelevat rajauksen mukaan.",
+  "linkit": [
+   "Puy de Sancy",
+   "sammuneita tulivuoria",
+   "Chaîne des Puys"
+  ],
+  "jatkot": [
+   "Mikä on Chaîne des Puys?",
+   "Mitkä joet saavat alkunsa Massif Centralissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "keskiylänkö",
+  "kysymys": "Kerro lisää: keskiylänkö",
+  "vastaus": "Ylänkö on laaja, ympäristöään korkeampi alue, jonka pinnanmuodot ovat vuoristoa loivempia. Ranskan keskiylänkö eli Massif Central sijaitsee Etelä-Keski-Ranskassa, ja sen korkein huippu on [[Puy de Sancy]]. Alueella on sammuneita tulivuoria, ja siellä saa alkunsa myös Ranskan pisin joki [[Loire]]. Ylänkö vaikuttaa ilmastoon, koska korkeus tekee ilmasta viileämpää kuin alankoalueilla. Rajat ja tarkka laajuus vaihtelevat lähteiden mukaan, joten niitä en esitä.",
+  "linkit": [
+   "Puy de Sancy",
+   "Loire"
+  ],
+  "jatkot": [
+   "Mistä Loire-joen lähde löytyy?",
+   "Miten ylänkö eroaa vuoristosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "tulivuoritoiminnan",
+  "kysymys": "Kerro lisää: tulivuoritoiminnan",
+  "vastaus": "Tulivuoritoiminta tarkoittaa sitä, että maan sisältä nousee pinnalle [[magmaa]], laavaa, tuhkaa ja kaasuja. Massif Centralissa tulivuoritoimintaa on ollut eri aikoina, ja jäljet näkyvät vuorten kartiomuotoina ja kraatterien jäänteinä. Puy de Sancyn vuoren viimeisin purkaus ajoittuu yli 220 000 vuoden taakse, joten se on vanhempaa toimintaa. Alueen nuoremmat tulivuoret kuuluvat [[Chaîne des Puys]] -ketjuun, joka on Unescon maailmanperintökohde. Ketjun viimeisimmät purkaukset ovat tapahtuneet vuosituhansia sitten, mutta tarkkaa ikää en voi vahvistaa.",
+  "linkit": [
+   "magmaa",
+   "Chaîne des Puys"
+  ],
+  "jatkot": [
+   "Mitä magma tarkoittaa?",
+   "Voiko Massif Centralin tulivuori vielä purkautua?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Kerrostulivuori",
+  "kysymys": "Kerro lisää: Kerrostulivuori",
+  "vastaus": "Kerrostulivuori on tulivuoren tyyppi, joka on kasvanut korkeaksi ja kartiomaiseksi, kun purkaukset ovat kerrostaneet laavaa ja tuhkaa päällekkäin. Magma on tällaisissa tulivuorissa usein hyvin sitkeää, minkä vuoksi purkaukset ovat usein räjähdysmäisiä. Tunnettuja esimerkkejä ovat Japanin [[Fuji-vuori]] ja Italian [[Vesuvius]]. Tämän tyyppisiä ovat myös monet muut maailman tunnetuimmista tulivuorista. Puy de Sancy on osa vanhaa kerrostulivuorta, joka ei ole purkautunut yli 220 000 vuoteen.",
+  "linkit": [
+   "Fuji-vuori",
+   "Vesuvius"
+  ],
+  "jatkot": [
+   "Miten kerrostulivuori eroaa kilpitulivuoresta?",
+   "Milloin Vesuvius on purkautunut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Sammunut tulivuori",
+  "kysymys": "Kerro lisää: Sammunut tulivuori",
+  "vastaus": "Sammunut tulivuori on tulivuori, jonka magman syöttö on päättynyt eikä purkausta odoteta enää. Ajan myötä [[eroosio]] kuluttaa vuoren kartiota, ja jäljelle voi jäädä pelkkä tulppa. Esimerkiksi Sitkan salmea vartioi [[Mount Edgecumbe]], sammunut tulivuori, jonka lumihuippuinen punertava tuhkakartio kohoaa merestä. Myanmarissa [[Popa]] on sammunut tulivuori noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Luokittelu perustuu tutkijoiden arvioon, ei takuuseen.",
+  "linkit": [
+   "eroosio",
+   "Mount Edgecumbe",
+   "Popa"
+  ],
+  "jatkot": [
+   "Mitä Popa-vuoren Taung Kalat -laavatulppa on?",
+   "Miten Sitkan salmi muodostui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Uinuva tulivuori",
+  "kysymys": "Kerro lisää: Uinuva tulivuori",
+  "vastaus": "Uinuva tulivuori ei ole purkautunut pitkään aikaan, mutta se voi vielä herätä. Esimerkkinä on Kilimanjaron korkein huippu [[Kibo]], joka kohoaa 5895 metriin ja on yhä uinuva, sillä sen kraatterista purkautuu edelleen rikkikaasuja. Kilimanjaro ei ole yksi vuori vaan kolmen tulivuorikartion massiivi: sammunut [[Mawenzi]] on Kibon itäpuolella, ja lännempänä kohoaa matalin ja vanhin Shira. Kaikki kolme syntyivät [[Itä-Afrikan hautavajoaman]] alueella. Kibon viimeisin purkaus ajoittuu noin 150 000–200 000 vuoden taakse.",
+  "linkit": [
+   "Kibo",
+   "Mawenzi",
+   "Itä-Afrikan hautavajoaman"
+  ],
+  "jatkot": [
+   "Miten tutkijat seuraavat uinuvia tulivuoria?",
+   "Miksi Kilimanjarolla on kolme tulivuorikartiota?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Mont Blanc",
+  "kysymys": "Kerro lisää: Mont Blanc",
+  "vastaus": "Mont Blanc on Alppien korkein huippu, ja se kohoaa noin 4 800 metriin Ranskan ja Italian rajalla. Huipun tarkasta rajasta on ollut erimielisyyttä, ja sen korkeus on vaihdellut eri mittausten mukaan. Ensimmäisen kerran huipulle nousivat vuonna 1786 [[Jacques Balmat]] ja lääkäri Michel-Gabriel Paccard. Ranskan puoleinen portti vuorelle on [[Chamonix]]'n kylä. Mont Blancin alla kulkee myös tieliikenteen maantietunneli, mutta sen tarkemmat tiedot en vahvista.",
+  "linkit": [
+   "Jacques Balmat",
+   "Chamonix"
+  ],
+  "jatkot": [
+   "Millä reitillä Mont Blancille noustaan?",
+   "Miksi vuoren korkeus muuttuu mittauksissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Kaarle VIII",
+  "kysymys": "Kerro lisää: Kaarle VIII",
+  "vastaus": "Kaarle VIII hallitsi Ranskaa vuodesta 1483 vuoteen 1498. Hänet muistetaan erityisesti [[Italian sotien]] aloittajana, sillä hän johti sotaretken Italiaan vuonna 1494 ja valtasi hetkellisesti [[Napolin]] vuonna 1495. Hän on syntynyt Amboisen linnassa vuonna 1470 ja myös kuollut siellä vuonna 1498, kun hän löi päänsä oven kamanaan. Hänellä ei ollut elossa olevaa perillistä, joten kruunu siirtyi serkulle [[Ludvig XII:lle]]. Linna oli kuninkaalle rakas asuinpaikka, ja hän rakennutti sitä laajasti uudelleen.",
+  "linkit": [
+   "Italian sotien",
+   "Napolin",
+   "Ludvig XII:lle"
+  ],
+  "jatkot": [
+   "Mitä Italian sodat olivat?",
+   "Miten Ludvig XII nousi valtaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Amboisen linna",
+  "kysymys": "Kerro lisää: Amboisen linna",
+  "vastaus": "Amboisen linna kohoaa Loiren laaksossa Amboisen kaupungissa Indre-et-Loiren departementissa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka. Perimätiedon mukaan [[Leonardo da Vinci]] on haudattu linnan alueelle. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin, mutta osa säilyi ja on sittemmin kunnostettu ulomman torni- ja muurikehän kanssa. Se on ollut [[historiallinen monumentti]] vuodesta 1840, ja laaksolla on Unescon asema.",
+  "linkit": [
+   "Leonardo da Vinci",
+   "historiallinen monumentti"
+  ],
+  "jatkot": [
+   "Mitä Amboisen linnasta on jäljellä?",
+   "Missä Leonardo da Vincin hauta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Ranskan kulttuuriministeriö",
+  "kysymys": "Kerro lisää: Ranskan kulttuuriministeriö",
+  "vastaus": "Ranskan kulttuuriministeriö on valtion elin, joka vastaa muun muassa kulttuuriperinnön suojelusta. Ministeriö perustettiin vuonna 1959, ja sen ensimmäinen ministeri oli kirjailija [[André Malraux]]. Suojeltavien rakennusten luokittelu on kuitenkin vanhempaa: valtion tarkastajana toimi 1800-luvulla kirjailija [[Prosper Mérimée]], joka vei eteenpäin [[historiallisten monumenttien]] luettelon laatimista. Ensimmäinen luettelo valmistui vuonna 1840, samana vuonna kuin Amboisen linnan luokittelu. Ministeriön nimi ja tehtävät ovat vaihdelleet vuosikymmenten mittaan.",
+  "linkit": [
+   "André Malraux",
+   "Prosper Mérimée",
+   "historiallisten monumenttien"
+  ],
+  "jatkot": [
+   "Kuka oli Prosper Mérimée?",
+   "Mitä André Malraux teki ministerinä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "historialliseksi monumentiksi",
+  "kysymys": "Kerro lisää: historialliseksi monumentiksi",
+  "vastaus": "Ranskassa historiallinen monumentti, ranskaksi monument historique, on viranomaisen suojeluun ottama rakennus tai kohde. Suojelun asteita on kaksi: ylempi on luokittelu, ranskaksi [[classé]], ja alempi on lisäluetteloon merkintä, ranskaksi [[inscrit]]. Luokiteltuun kohteeseen tehtävät muutokset vaativat viranomaisen luvan. Tällaisia kohteita on Ranskassa tuhansia, mutta tarkkaa lukumäärää en voi vahvistaa. Amboisen linna on kuulunut suojeltuihin kohteisiin vuodesta 1840.",
+  "linkit": [
+   "classé",
+   "inscrit"
+  ],
+  "jatkot": [
+   "Mitkä muut linnat ovat Ranskan suojeltuja kohteita?",
+   "Mitä suojelu käytännössä tarkoittaa omistajalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Loiren laakso",
+  "kysymys": "Kerro lisää: Loiren laakso",
+  "vastaus": "Loiren laakso on Loire-joen varrella sijaitseva alue, joka tunnetaan linnoistaan, viinitarhoistaan ja maalaismaisemistaan. Loire on Ranskan pisin joki, noin tuhat kilometriä pitkä. Alueella sijaitsevat esimerkiksi [[Chambordin]] ja [[Chenonceaun]] linnat sekä Amboisen linna. Laakson viinialueilla tuotetaan myös tunnettuja viinejä, kuten [[Sancerren]] alueen valkoviinejä. Laakso on kirjattu Unescon maailmanperintökohteiden joukkoon kulttuurimaisemana, tiettävästi vuonna 2000.",
+  "linkit": [
+   "Chambordin",
+   "Chenonceaun",
+   "Sancerren"
+  ],
+  "jatkot": [
+   "Millainen on Chambordin linna?",
+   "Mikä Loire-joki on pituudeltaan Euroopan joista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco",
+  "vastaus": "Unescon toimintaan kuuluu useampi luettelo: maailmanperintökohteet, aineettoman kulttuuriperinnön luettelo ja [[Muistin maailma]] -rekisteri, johon kootaan arvokkaita asiakirjoja. Maailmanperintölistalla on esimerkiksi [[Loiren laakson]] kulttuurimaisema, tiettävästi vuodesta 2000. Aineettoman kulttuuriperinnön puolelle kuuluu arabialaisen kahvin eli [[gahwa]]-kahvin tarjoilutapa, jonka Unesco lisäsi luetteloon vuonna 2015. Gahwa kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti, ja vieras heiluttaa tyhjää kuppia kiitoksen merkiksi.",
+  "linkit": [
+   "Muistin maailma",
+   "Loiren laakson",
+   "gahwa"
+  ],
+  "jatkot": [
+   "Mitä Muistin maailma -rekisteri sisältää?",
+   "Miten gahwa-kahvia valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Amboisen",
+  "kysymys": "Kerro lisää: Amboisen",
+  "vastaus": "Amboise on kaupunki Loire-joen varrella. Leonardo da Vinci muutti sinne vuonna 1516 [[Franciscus I:n]] kutsusta ja asui lähellä linnaa sijaitsevassa [[Clos Lucén]] kartanossa. Hän kuoli Amboisessa vuonna 1519. Perimätiedon mukaan hänet on haudattu linnan alueella olevaan kappeliin, mutta yksityiskohdista en ole varma. Kaupunki on osa [[Loire-joen]] laakson linnojen ketjua, ja vierailijat tulevat sinne sekä linnan että Leonardon vuoksi.",
+  "linkit": [
+   "Franciscus I:n",
+   "Clos Lucén",
+   "Loire-joen"
+  ],
+  "jatkot": [
+   "Millainen on Clos Lucén kartano?",
+   "Miksi Franciscus I kutsui Leonardon Ranskaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Ranskan kuningas",
+  "kysymys": "Kerro lisää: Ranskan kuningas",
+  "vastaus": "Leonardo da Vincin kutsui Ranskaan kuningas Franciscus I, joka hallitsi vuosina 1515–1547. Hän oli renessanssin ihailija, ja hänen hovinsa veti puoleensa italialaisia taiteilijoita. Hänen kautensa alku tunnetaan [[Marignanon taistelusta]] vuonna 1515, jonka jälkeen Ranska oli vahvoilla Italiassa. Kuningas vietti lapsuuttaan [[Amboisen linnassa]], joten kaupunki oli hänelle tuttu. Hän antoi Leonardolle asuinpaikaksi kartanon lähellä Amboisen linnaa ja kunnioitti häntä suuresti. Leonardo toi hovin piiriin italialaista [[renessanssia]].",
+  "linkit": [
+   "Marignanon taistelusta",
+   "Amboisen linnassa",
+   "renessanssia"
+  ],
+  "jatkot": [
+   "Miksi Franciscus I ihaili italialaista renessanssia?",
+   "Mikä oli Marignanon taistelu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Clos Lucén",
+  "kysymys": "Kerro lisää: Clos Lucén",
+  "vastaus": "Clos Lucé on kartano Amboisen kaupungissa lähellä [[Amboisen linnaa]]. [[Leonardo da Vinci]] asui siellä elämänsä viimeiset vuodet kuninkaan kutsusta. Kartanosta on nykyään tehty museo, ja sen tunnetuimpiin nähtävyyksiin kuuluvat Leonardon keksintöjen mallit ja piirrokset. Nimi tulee kartanon aikaisemmasta nimestä, mutta tarkkaa historiaa en voi vahvistaa. Kartano oli [[Franciscus I:n]] ystävällisyyden osoitus, ja se auttoi Leonardoa työskentelemään rauhassa.",
+  "linkit": [
+   "Amboisen linnaa",
+   "Leonardo da Vinci",
+   "Franciscus I:n"
+  ],
+  "jatkot": [
+   "Millaisia keksintöjä Leonardo suunnitteli?",
+   "Millainen oli Franciscus I:n suhde taiteilijoihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-amboise",
+  "kasite": "Historiallinen monumentti",
+  "kysymys": "Kerro lisää: Historiallinen monumentti",
+  "vastaus": "Historiallisen monumentin luokittelu vaikuttaa kohteen käyttöön: luokiteltuun rakennukseen tehtäviin muutoksiin tarvitaan viranomaisen lupa, ja omistaja voi saada tukea korjauksiin. Kohteet on koottu julkiseen [[Mérimée-tietokantaan]], joka on nimetty 1800-luvun kirjailijan ja valtion tarkastajan [[Prosper Mérimée]]n mukaan. Tietokannasta voi hakea kohteita alueen tai tyypin mukaan. Amboisen linna on kuulunut suojeltuihin kohteisiin vuodesta 1840.",
+  "linkit": [
+   "Mérimée-tietokantaan",
+   "Prosper Mérimée"
+  ],
+  "jatkot": [
+   "Mitä Prosper Mérimée kirjoitti?",
+   "Miten kohde saa luokittelun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Nîmesin areena",
+  "kysymys": "Kerro lisää: Nîmesin areena",
+  "vastaus": "Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa, ja se rakennettiin noin vuonna 100 jaa. Se on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä. Ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta sekä yhteensä 60 kaariaukkoa. Rakennus valmistui vain parikymmentä vuotta [[Colosseumin]] jälkeen, ja se on yksi parhaiten säilyneistä roomalaisista [[amfiteattereista]]. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa.",
+  "linkit": [
+   "Colosseumin",
+   "amfiteattereista"
+  ],
+  "jatkot": [
+   "Miten Nîmesin areena rakennettiin?",
+   "Mihin areenaa käytettiin roomalaisaikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Rooman Colosseumin",
+  "kysymys": "Kerro lisää: Rooman Colosseumin",
+  "vastaus": "Rooman Colosseumin rakentamisen aloitti keisari [[Vespasianus]] vuonna 72, ja hänen poikansa [[Titus]] vihki sen käyttöön vuonna 80. Avajaisia juhlittiin sadan päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri, ja lempinimi Colosseum tulee sen vierestä kohonneesta jättiläismäisestä [[Colossus-patsaasta]]. Katsomoon mahtui 50 000–80 000 katsojaa. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä, ja eläimiä tuotiin kaukaa Afrikasta.",
+  "linkit": [
+   "Vespasianus",
+   "Titus",
+   "Colossus-patsaasta"
+  ],
+  "jatkot": [
+   "Mikä oli Colossus-patsas?",
+   "Millaisia näytöksiä Colosseumilla järjestettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "amfiteattereista",
+  "kysymys": "Kerro lisää: amfiteattereista",
+  "vastaus": "Amfiteatteri on roomalainen rakennustyyppi, jossa katsomo kiertää areenan kaikilta puolilta. Näitä rakennuksia nousi eri puolille Rooman valtakuntaa, ja niissä järjestettiin gladiaattoritaisteluita ja eläinnäytöksiä. Yksi vanhimmista säilyneistä on [[Pompejin]] amfiteatteri. Muita tunnettuja esimerkkejä ovat [[Veronan]] ja [[Arlesin]] amfiteatterit sekä Nîmesin areena. Rakennustyyppi vaihteli kokonsa ja säilyneisyytensä mukaan, ja moni rakennus on myöhemmin saanut uuden käyttötarkoituksen.",
+  "linkit": [
+   "Pompejin",
+   "Veronan",
+   "Arlesin"
+  ],
+  "jatkot": [
+   "Miten Pompejin amfiteatteri säilyi?",
+   "Mikä on Veronan areena?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Itálican",
+  "kysymys": "Kerro lisää: Itálican",
+  "vastaus": "Itálica on roomalainen kaupunki yhdeksän kilometrin päässä Sevillasta. [[Scipio]] perusti sen vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi sen Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyivät keisarit [[Trajanus]] ja [[Hadrianus]]. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka asukkaita arvioidaan olleen noin 8 000. Rauniot toimivat myöhemmin rakennuskivien lähteenä, ja vuonna 1740 amfiteatterin muurit määrättiin purettaviksi Guadalquivirin padon rakentamista varten.",
+  "linkit": [
+   "Scipio",
+   "Trajanus",
+   "Hadrianus"
+  ],
+  "jatkot": [
+   "Millainen keisari Trajanus oli?",
+   "Mitä Itálicasta on jäljellä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Guadalquivirin",
+  "kysymys": "Kerro lisää: Guadalquivirin",
+  "vastaus": "Guadalquivir on Andalusian pääjoki, ja sen nimi juontuu arabian sanoista, jotka tarkoittavat suurta jokea. Joki virtaa [[Sevillan]] kautta Atlantin valtamereen. Joen mataloituminen siirsi kaupan vähitellen alavirtaan: laivastot siirtyivät [[Cádiziin]] vuonna 1680 ja Amerikan-kaupan virasto Casa de Contratación vuonna 1717. Jo vuonna 1171 maurit rakensivat Sevillan ja Trianan välille [[venesillan]], joka palveli lähes seitsemän vuosisataa. Joen suistoon jäänyt [[Doñana]] on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka.",
+  "linkit": [
+   "Sevillan",
+   "Cádiziin",
+   "venesillan",
+   "Doñana"
+  ],
+  "jatkot": [
+   "Millainen linnusto Doñanassa on?",
+   "Miksi Guadalquivir mataloitui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Colosseum",
+  "kysymys": "Kerro lisää: Colosseum",
+  "vastaus": "Colosseum, jonka oikea nimi oli Flavolaisten amfiteatteri, valmistui vuonna 80 ja sai nykyisen lempinimensä viereisestä jättiläismäisestä [[Colossus-patsaasta]]. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä, ja sinne tuotiin leijonia, norsuja ja jopa [[sarvikuonoja]] Afrikasta. Areena voitiin myös täyttää vedellä. Avajaisia juhlittiin sadan päivän ajan.",
+  "linkit": [
+   "Colossus-patsaasta",
+   "sarvikuonoja"
+  ],
+  "jatkot": [
+   "Miten Colosseumin areena täytettiin vedellä?",
+   "Miten Colosseum on säilynyt nykypäiviin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Vespasianus",
+  "kysymys": "Kerro lisää: Vespasianus",
+  "vastaus": "Vespasianus oli Rooman keisari vuosina 69–79, ja hän perusti keisarisuvun, josta käytetään nimeä [[Flavialaiset]]. Hän nousi valtaan neljän keisarin vuoden eli vuoden 69 sekavien vaiheiden jälkeen. Hänen kaksi poikaansa, [[Titus]] ja [[Domitianus]], seurasivat häntä keisareina. Vespasianus aloitti Colosseumin rakentamisen vuonna 72, ja Titus vihki sen käyttöön kahdeksan vuotta myöhemmin. Vespasianus kuoli vuonna 79, joten hän ei nähnyt rakennuksen valmistumista.",
+  "linkit": [
+   "Flavialaiset",
+   "Titus",
+   "Domitianus"
+  ],
+  "jatkot": [
+   "Mikä oli neljän keisarin vuosi?",
+   "Millainen keisari Titus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "amfiteatteri",
+  "kysymys": "Kerro lisää: amfiteatteri",
+  "vastaus": "Amfiteatteri on rakennus, jossa katsomo kiertää areenan täyden ympyrän tai soikion muotoisena. Roomalaiset rakensivat niitä valtakuntansa kaupunkeihin gladiaattoritaisteluiden ja eläinnäytösten tarpeisiin. Hispanian [[Itálicassa]] amfiteatteriin mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Rakennus oli aikanaan valtakunnan kolmanneksi suurin. [[Nîmesin areena]] on säilynyt huomattavasti paremmin, ja sen vuoksi se kuuluu parhaiten säilyneiden joukkoon.",
+  "linkit": [
+   "Itálicassa",
+   "Nîmesin areena"
+  ],
+  "jatkot": [
+   "Miksi pienessä kaupungissa oli suuri amfiteatteri?",
+   "Mitä näytöksiä amfiteattereissa järjestettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "areena",
+  "kysymys": "Kerro lisää: areena",
+  "vastaus": "Areena-sana tulee latinan sanasta harena, joka tarkoittaa hiekkaa. Roomalaisissa amfiteattereissa keskusta peitettiin hiekalla, ja siitä sana siirtyi tarkoittamaan koko esityspaikkaa. Sofian vanha roomalainen kaupunki [[Serdica]] sai oman amfiteatterinsa: vuonna 1919 löytynyt kivilaatta kuvasi sen julkisivua ja ohjelmaa, mutta itse areena paljastui vasta vuonna 2004 hotellin perustuksia kaivettaessa. Nykyään sana tarkoittaa myös suurta urheilustadionia, kuten Manausin [[Amazonas-areenaa]], jossa on 42 924 istumapaikkaa.",
+  "linkit": [
+   "Serdica",
+   "Amazonas-areenaa"
+  ],
+  "jatkot": [
+   "Millaisia löytöjä Serdican areenalta tehtiin?",
+   "Milloin Amazonas-areena rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "ferioihin",
+  "kysymys": "Kerro lisää: ferioihin",
+  "vastaus": "Féria on juhla, joka järjestetään Etelä-Ranskassa vuosittain, ja sana on lainattu [[espanjan]] kielestä, jossa feria tarkoittaa juhlaa tai markkinoita. Nîmesissä järjestetään perinteisesti keväällä helluntain aikaan [[Féria de Pentecôte]] sekä syksyllä toinen féria. Juhlien ohjelmaan kuuluvat katukulkueet, musiikki ja areenan tapahtumat. Härkätaistelut ovat osa tätä perinnettä Etelä-Ranskassa. Tarkkaa ajankohtaa ja ohjelmaa kannattaa tiedustella kaupungin omista lähteistä.",
+  "linkit": [
+   "espanjan",
+   "Féria de Pentecôte"
+  ],
+  "jatkot": [
+   "Miten Nîmesin féria tavallisesti etenee?",
+   "Mistä espanjalainen feria-perinne on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "härkätaistelut",
+  "kysymys": "Kerro lisää: härkätaistelut",
+  "vastaus": "Härkätaistelu eli [[corrida]] on Etelä-Ranskassa, Espanjassa ja eräissä muissa maissa pitkään jatkunut perinne. Ranskassa se on sallittu vain niillä alueilla, joilla perinne on ollut katkeamaton. Kannattajat pitävät sitä kulttuuriperintönä ja paikallisena juhlana. Vastustajat, kuten [[eläinsuojelujärjestöt]], pitävät sitä tarpeettomana eläimen kärsimyksenä. Aihe jakaa mielipiteitä Ranskassa, ja kaksi kantaa on vakiintunut vuosikymmenten ajan. Perinteen taustalla on yhteys [[Espanjan]] kulttuuriin.",
+  "linkit": [
+   "corrida",
+   "eläinsuojelujärjestöt",
+   "Espanjan"
+  ],
+  "jatkot": [
+   "Mikä on corridan historia Espanjassa?",
+   "Miksi härkätaistelu on kiistanalainen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "Rouenin tuomiokirkossa",
+  "kysymys": "Kerro lisää: Rouenin tuomiokirkossa",
+  "vastaus": "Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko, ja sitä rakennettiin sekä uudelleen rakennettiin yli kahdeksansadan vuoden ajan. Siksi rakennuksessa on piirteitä varhaisgotiikasta myöhäiseen [[liekkigotiikkaan]] ja renessanssiin, ja kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Kirkko tunnetaan myös [[Claude Monet]]n maalaamasta sarjasta, jossa se esiintyy eri valoissa. Rakennus on [[Normandian]] tunnetuimpia kulttuurikohteita.",
+  "linkit": [
+   "liekkigotiikkaan",
+   "Claude Monet",
+   "Normandian"
+  ],
+  "jatkot": [
+   "Kuinka monta maalausta Monet teki kirkosta?",
+   "Mikä on liekkigotiikka?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "liekkigotiikasta",
+  "kysymys": "Kerro lisää: liekkigotiikasta",
+  "vastaus": "Liekkigotiikka eli ranskaksi gothique flamboyant on myöhäisgotiikan tyyli, joka levisi Ranskassa 1300-luvun lopulta alkaen. Sen tunnusmerkki on aaltoilevat, liekkimäiset kaarevat kuviot ikkunoiden kivirungossa. Tyyli on gotiikan koristeellisin vaihe. Ranskassa tyylin tunnettuja esimerkkejä ovat [[Rouenin tuomiokirkko]] ja kaupungin [[Saint-Maclou]]-kirkko. Tarkat vuosiluvut vaihtelevat alueittain, joten ne jätän avoimiksi.",
+  "linkit": [
+   "Rouenin tuomiokirkko",
+   "Saint-Maclou"
+  ],
+  "jatkot": [
+   "Mikä on Saint-Maclou-kirkko Rouenissa?",
+   "Mikä erottaa liekkigotiikan varhaisemmasta gotiikasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "Normandian",
+  "kysymys": "Kerro lisää: Normandian",
+  "vastaus": "Normandia on historiallinen alue Pohjois-Ranskassa Englannin kanavan rannalla. Sen herttua [[Vilhelm]] valloitti Englannin vuonna 1066, ja tapahtuma on kuvattu lähes seitsemänkymmentä metriä pitkällä [[Bayeux'n seinävaatteella]], joka on kirjottu villalangalla pellavakankaalle. Rannikolla sijaitsee myös [[Mont-Saint-Michelin]] lahti, jossa vuoroveden korkeusero on noin neljätoista metriä, yksi Euroopan suurimmista. Rouen on alueen historiallinen keskus, ja sen tuomiokirkko on Normandian arkkipiispan istuin.",
+  "linkit": [
+   "Vilhelm",
+   "Bayeux'n seinävaatteella",
+   "Mont-Saint-Michelin"
+  ],
+  "jatkot": [
+   "Mitä Bayeux'n seinävaate esittää?",
+   "Miten Mont-Saint-Michelin lahden vuorovesi toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "Kölnin tuomiokirkolle",
+  "kysymys": "Kerro lisää: Kölnin tuomiokirkolle",
+  "vastaus": "Kölnin tuomiokirkon rakentaminen alkoi vuonna 1248 ja valmistui vuonna 1880, joten rakennusaika oli yli kuusisataa vuotta. Siitä tuli tuolloin maailman korkein rakennus, ja se oli sitä muutaman vuoden ajan. Kirkon korkeus on noin 157 metriä, ja se on Unescon maailmanperintökohde. Rakennus toimi mallina myös toisaalla: New Yorkin [[Pyhän Patrickin katedraalin]] suunnittelija James Renwick nuorempi haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Titteli siirtyi sen jälkeen [[Washington-monumentille]].",
+  "linkit": [
+   "Pyhän Patrickin katedraalin",
+   "Washington-monumentille"
+  ],
+  "jatkot": [
+   "Miksi Kölnin tuomiokirkon rakentaminen kesti niin kauan?",
+   "Millainen Pyhän Patrickin katedraali New Yorkissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "kärkitorni",
+  "kysymys": "Kerro lisää: kärkitorni",
+  "vastaus": "Kärkitorni on tornin ylin, suippeneva osa, joka kohoaa rakennuksen pääosan yläpuolelle. Rouenin tuomiokirkossa se rakennettiin [[valurautaa]] käyttäen, ja se nosti kirkon maailman korkeimmaksi rakennukseksi vuosina 1876–1880. Aiemmin kirkossa oli puinen kärkitorni, joka tiettävästi tuhoutui salamaniskussa, mutta tarkkoja vuosilukuja en voi vahvistaa. Valurautaa käytettiin rakennusmateriaalina 1800-luvulla uutena ja vahvana vaihtoehtona kivelle. Kirkon korkeus ylitti tuolloin myös [[Kölnin tuomiokirkon]] tornit.",
+  "linkit": [
+   "valurautaa",
+   "Kölnin tuomiokirkon"
+  ],
+  "jatkot": [
+   "Miksi kärkitorni tehtiin valuraudasta?",
+   "Kuinka korkea Rouenin tuomiokirkon torni on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "Claude Monet",
+  "kysymys": "Kerro lisää: Claude Monet",
+  "vastaus": "Claude Monet eli vuosina 1840–1926, ja hän oli impressionismin tärkeimpiä maalareita. Suuntauksen nimi juontuu hänen vuonna 1872 maalaamastaan teoksesta Impression, soleil levant. Rouenin tuomiokirkon julkisivusta hän maalasi kolmisenkymmentä työtä 1890-luvun alussa. Samalla tavoin hän teki sarjan Venetsian [[San Giorgio Maggioren]] kirkosta. Monet asui myöhemmin [[Giverny]]ssä, jossa hän maalasi puutarhansa [[vesililjoja]].",
+  "linkit": [
+   "San Giorgio Maggioren",
+   "Giverny",
+   "vesililjoja"
+  ],
+  "jatkot": [
+   "Millaisia teoksia Monet maalasi Givernyssä?",
+   "Mikä on teos Impression, soleil levant?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "impressionismiin",
+  "kysymys": "Kerro lisää: impressionismiin",
+  "vastaus": "Impressionismi on 1800-luvun lopun ranskalainen maalaustaiteen suuntaus, jonka maalarit pyrkivät tallentamaan valon ja värin vaihtelun yhdellä hetkellä. Ensimmäinen yhteinen näyttely järjestettiin Pariisissa vuonna 1874. Tunnettuja suuntauksen taiteilijoita olivat [[Pierre-Auguste Renoir]] ja [[Camille Pissarro]]. Tyyli levisi myös muualle: venezuelalainen [[Cristóbal Rojas]] siirtyi Louvren toistuvien käyntien myötä jälkiromantiikasta impressionismiin. Suuntaus muutti sen, miten maalarit kuvasivat luontoa ja kaupunkia.",
+  "linkit": [
+   "Pierre-Auguste Renoir",
+   "Camille Pissarro",
+   "Cristóbal Rojas"
+  ],
+  "jatkot": [
+   "Miksi suuntausta kutsutaan impressionismiksi?",
+   "Mikä erotti impressionistit akateemisesta maalauksesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "Liekkigotiikka",
+  "kysymys": "Kerro lisää: Liekkigotiikka",
+  "vastaus": "Liekkigotiikka on tyyli, jossa ikkunoiden kivirunko muodostaa aaltoilevia ja liekin muotoisia kuvioita. Ranskaksi tyylin nimi on [[gothique flamboyant]]. Se kuuluu [[myöhäisgotiikkaan]], ja Rouenin tuomiokirkossa on tämän tyylin piirteitä, jotka ovat peräisin eri rakennusvaiheista. Tyylin koristeellisuus näkyy erityisesti julkisivuissa ja ikkunoissa. Tarkat rakennusvuodet vaihtelevat lähteittäin, joten en esitä niitä.",
+  "linkit": [
+   "gothique flamboyant",
+   "myöhäisgotiikkaan"
+  ],
+  "jatkot": [
+   "Mitä muita liekkigoottilaisia rakennuksia on?",
+   "Mitä tarkoittaa myöhäisgotiikka?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "ikkunapuitteet",
+  "kysymys": "Kerro lisää: ikkunapuitteet",
+  "vastaus": "Ikkunapuitteet eli goottilaisessa rakentamisessa käytetty kuvioitu kivirunko jakaa suuren ikkunan osiin ja kannattelee lasia. Gotiikassa niiden ansiosta seinään voitiin tehdä erittäin suuria aukkoja, joihin kiinnitettiin värikkäitä [[lasimaalauksia]]. Suurimmissa [[ruusuikkunoissa]] kivirunko muodostaa säteittäisen kuvion, joka muistuttaa kukkaa. Liekkigotiikassa kuvio muuttuu aaltoilevaksi ja liekinmuotoiseksi. Ikkunapuitteet olivat siis sekä rakenteellinen osa että koriste.",
+  "linkit": [
+   "lasimaalauksia",
+   "ruusuikkunoissa"
+  ],
+  "jatkot": [
+   "Miten lasimaalauksia tehdään?",
+   "Mikä on ruusuikkuna?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "tuomiokirkko",
+  "kysymys": "Kerro lisää: tuomiokirkko",
+  "vastaus": "Tuomiokirkko on piispan tai arkkipiispan istuinkirkko, ja siinä sijaitsee hiippakunnan johtajan istuin. Norjassa Tromssan tuomiokirkko on harvinainen: se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu kokonaan puusta. Keltainen kirkko valmistui vuonna 1861 arkkitehti [[Christian Heinrich Groschin]] piirustusten mukaan, ja sinne mahtuu yli 600 kirkkovierasta. Paikalla on ollut kirkko jo satoja vuosia: kuningas [[Håkon IV]] rakennutti sinne kappelin vuonna 1252.",
+  "linkit": [
+   "Christian Heinrich Groschin",
+   "Håkon IV"
+  ],
+  "jatkot": [
+   "Miksi Tromssan tuomiokirkko on tehty puusta?",
+   "Mitä eroa on tuomiokirkolla ja tavallisella kirkolla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "cathedra",
+  "kysymys": "Kerro lisää: cathedra",
+  "vastaus": "Cathedra on latinan sana, joka tarkoittaa istuinta, ja se on peräisin kreikan samaa tarkoittavasta sanasta. Piispan istuin sijaitsi hiippakunnan pääkirkossa, ja siitä kirkko sai nimekseen cathedral eli tuomiokirkko. Sana elää myös sanonnassa [[ex cathedra]], joka tarkoittaa virallisesti ja auktoriteetilla puhumista. Suomen kielessä sama sana on tullut käyttöön muodossa [[katederi]], joka tarkoittaa opettajan korotettua puhujapönttöä. Näin yksi sana yhdistää kirkon, opetuksen ja arvovallan.",
+  "linkit": [
+   "ex cathedra",
+   "katederi"
+  ],
+  "jatkot": [
+   "Mitä ex cathedra tarkoittaa paavin kohdalla?",
+   "Mistä sana katedraali tulee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rouen",
+  "kasite": "Arkkipiispa",
+  "kysymys": "Kerro lisää: Arkkipiispa",
+  "vastaus": "Arkkipiispa on piispa, jolla on korkeampi asema kirkkoprovinssin johtajana, ja hän johtaa yleensä useampaa hiippakuntaa. Esimerkiksi Karol [[Wojtyła]] toimi Krakovan arkkipiispana neljätoista vuotta ennen paaviksi valintaansa. Hänet muistetaan Wawelin katedraalin patsaassa juuri tässä roolissa, ennen kuin maailma tunsi hänet nimellä [[Johannes Paavali II]]. Wojtyła syntyi Wadowicessa, viidenkymmenen kilometrin päässä Krakovasta. Arkkipiispan asema on esimerkki siitä, miten kirkon hallinto muodostaa useita tasoja.",
+  "linkit": [
+   "Wojtyła",
+   "Johannes Paavali II"
+  ],
+  "jatkot": [
+   "Mitä arkkipiispa tekee?",
+   "Miten arkkipiispa eroaa tavallisesta piispasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rocamadour",
+  "kasite": "Rocamadourin",
+  "kysymys": "Kerro lisää: Rocamadourin",
+  "vastaus": "Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä [[Quercyn]] maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle. Pyhäkön tunnetuin esine on perimätiedon mukaan [[Musta Madonna]] -patsas, mutta tarkempia yksityiskohtia en voi vahvistaa. Kylän mukaan on nimetty myös pieni [[vuohenmaitojuusto]] Rocamadour, joka sai AOC-suojauksen vuonna 1996. Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen.",
+  "linkit": [
+   "Quercyn",
+   "Musta Madonna",
+   "vuohenmaitojuusto"
+  ],
+  "jatkot": [
+   "Mikä on AOC-suojaus?",
+   "Mikä on Musta Madonna?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rocamadour",
+  "kasite": "pyhiinvaeltajia",
+  "kysymys": "Kerro lisää: pyhiinvaeltajia",
+  "vastaus": "Pyhiinvaellus on uskonnollinen matka pyhälle paikalle, ja sellaisia tehdään monissa uskonnoissa. Rocamadour on yksi kristillisistä pyhiinvaelluskohteista, ja sen yhteys [[Santiago de Compostelan]] reittiin on tunnettu, joskaan tarkkoja yksityiskohtia en esitä. Muslimien pyhiinvaellus suuntautuu [[Mekkaan]]. Pohjois-Afrikasta ja Länsi-Afrikasta matkaajat ylittivät Punaisenmeren laivalla, ja 1400-luvun jälkeen tärkein lähtösatama oli [[Suakin]]. Siellä pyhiinvaeltajat odottivat suotuisia tuulia tai vapaata laivapaikkaa viikkoja tai kuukausia.",
+  "linkit": [
+   "Santiago de Compostelan",
+   "Mekkaan",
+   "Suakin"
+  ],
+  "jatkot": [
+   "Miten Suakinin satama toimi pyhiinvaeltajien reittinä?",
+   "Mikä on Santiago de Compostelan reitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rocamadour",
+  "kasite": "Neitsyt Marian",
+  "kysymys": "Kerro lisää: Neitsyt Marian",
+  "vastaus": "Neitsyt Maria on kristinuskossa Jeesuksen äiti, ja häntä kunnioitetaan erityisesti katolisessa ja ortodoksisessa perinteessä. Ranskassa hänelle on omistettu lukuisia pyhäkköjä. [[Notre-Dame de la Garde]] -basilika kohoaa Marseillen korkeimmalla kalliolla 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Marseillelaiset kutsuvat patsasta nimellä [[La Bonne Mère]], hyvä äiti. Merenkulkijat ovat jättäneet basilikaan kiitoslahjoja, ja seinillä riippuu satoja pienoislaivoja. Myös [[Rocamadourin]] pyhäkkö on omistettu Marialle.",
+  "linkit": [
+   "Notre-Dame de la Garde",
+   "La Bonne Mère",
+   "Rocamadourin"
+  ],
+  "jatkot": [
+   "Miksi merenkulkijat kunnioittavat Neitsyt Mariaa?",
+   "Milloin Notre-Dame de la Garde rakennettiin?"
+  ]
  }
 ]
