@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (170)",
+   "paiva": "2026-10-09",
+   "teksti": "Kuumailmapallo: vapaa lento ja paluu kierrokselle, vaihtuva sää (kuurot, märät kadut), sininen hetki ja kaupungin valot, linnut, lentokoneet, laivojen vanat, kompassi, elokuvamainen sävy ja omia 3D-malleja. Olavinlinna: harhautusheitto lentää katseen suuntaan."
+  },
+  {
    "versio": "1.1 (169)",
    "paiva": "2026-10-09",
    "teksti": "Olavinlinna aukeaa taas, kertoja ei puhu pelin päälle ja linnan pinnat ja vaatteet ovat tarkemmat. Kuumailmapallo lentää matalammin ja rauhallisemmin, kertoo jo lennon aikana ja kiertää kohteita. Kuvat tulevat reunalle, yöllä valikot ovat tummat ja mikseri löytyy pallosta."
