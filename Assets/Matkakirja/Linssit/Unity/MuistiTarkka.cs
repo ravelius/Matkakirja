@@ -126,6 +126,8 @@ namespace Matkakirja.Natiivi
         readonly HashSet<int> seuratut = new HashSet<int>();
         readonly HashSet<int> tunnetut = new HashSet<int>();
         Cesium3DTileset google;
+        readonly List<CesiumCameraManager> hallinnat = new List<CesiumCameraManager>();
+        readonly Dictionary<string, int> kamLaskuri = new Dictionary<string, int>();
 
         static ProfilerRecorder R(string nimi)
         {
@@ -170,6 +172,7 @@ namespace Matkakirja.Natiivi
             sb.Append($"U {t} rt {nyt:F2} kehys {vali:F0}/{maxMs:F0} used {Mt(Arvo(rUsed))} res {Mt(Arvo(rRes))} gc {Mt(Arvo(rGc))}/{Mt(Arvo(rGcRes))} " +
                       $"aud {Mt(Arvo(rAudio))} vid {Mt(Arvo(rVideo))} appres {Mt(Arvo(rAppRes))} sys {Mt(Arvo(rSys))} tex {Mt((long)Texture.currentTextureMemory)}");
             if (google != null) { try { sb.Append($" g% {google.ComputeLoadProgress():F0}"); } catch (Exception) { } }
+            Kamerat(sb);
             foreach (var kv in ryhmat)
             {
                 var r = kv.Value;
@@ -177,6 +180,27 @@ namespace Matkakirja.Natiivi
                 r.Luotu = 0; r.Tuhottu = 0;
             }
             Kirjoita(sb.ToString());
+        }
+
+        /// <summary>Cesiumin laattavalinnan kamerat (pää P, esilataus E, reitti R, karkea K, lähi L, muu ?) ja pikselikorkeus suhteessa
+        /// näyttöön, esim. "kam P E1.0 R0.5×3": lisäkamerat valitsevat laatat kuten pääkamera (esilataus, reitti, karkea vaihe).</summary>
+        void Kamerat(StringBuilder sb)
+        {
+            foreach (var h in hallinnat)
+            {
+                if (h == null) continue;
+                kamLaskuri.Clear();
+                sb.Append(" kam").Append(h.useMainCamera ? " P" : "");
+                foreach (var c in h.additionalCameras)
+                {
+                    if (c == null) continue;
+                    string n = c.name;
+                    char k = n.Contains("reitin") ? 'R' : n.Contains("esilataus") ? 'E' : n.Contains("karkea") ? 'K' : n.Contains("lähi") ? 'L' : '?';
+                    string avain = $"{k}{c.pixelRect.height / Math.Max(1, Screen.height):F1}";
+                    kamLaskuri[avain] = kamLaskuri.TryGetValue(avain, out var x) ? x + 1 : 1;
+                }
+                foreach (var kv in kamLaskuri) sb.Append(' ').Append(kv.Key).Append(kv.Value > 1 ? $"×{kv.Value}" : "");
+            }
         }
 
         static string RyhmanNimi(Cesium3DTileset ts)
@@ -194,6 +218,12 @@ namespace Matkakirja.Natiivi
             Cesium3DTileset[] kaikki;
             try { kaikki = FindObjectsByType<Cesium3DTileset>(FindObjectsInactive.Include, FindObjectsSortMode.None); }
             catch (Exception) { return; }
+            try
+            {
+                hallinnat.Clear();
+                foreach (var h in FindObjectsByType<CesiumCameraManager>(FindObjectsInactive.Exclude, FindObjectsSortMode.None)) if (h != null) hallinnat.Add(h);
+            }
+            catch (Exception) { }
             foreach (var ts in kaikki)
             {
                 if (ts == null || !seuratut.Add(ts.GetInstanceID())) continue;
