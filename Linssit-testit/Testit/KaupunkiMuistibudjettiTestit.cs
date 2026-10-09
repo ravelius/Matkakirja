@@ -85,13 +85,13 @@ namespace Matkakirja.Linssit.Testit
             Lahella(ilman.Kerroin, KaupunkiMuistibudjetti.Valitse(5.5, 1.71, true, 0).Kerroin, "omaGt 0 = ennallaan");
         }
 
-        // Juna 173 (LS1 iPad 22.4x): pienellä muistilla kasvumalli ×1,75, kerroin enintään ×2,5 ja välimuisti 64 Mt; iPad 3,0 Gt vapaata
-        // → kerroin yli 2,72:n (entinen katto), mallin kasvu mahtuu budjettiin tai kerroin on katossa.
+        // Juna 173 (LS1 iPad 22.4x; katto PT 9.10. 23.2x + mittaus 10.10.): pienellä muistilla kasvumalli ×1,75 ja välimuisti 64 Mt, mutta
+        // kerroin enintään ×1,6 kuten muilla (4,25 pois): iPad 3,0 Gt vapaata → kerroin katossa 2,72.
         [Testi] static void PieniMuistiKalibroitu()
         {
             var t = KaupunkiMuistibudjetti.Valitse(3.0, 1.70, true, KaupunkiMuistibudjetti.OmaSisaltoGt, true);
-            Oleta.Tosi(t.Kerroin > 1.70 * KaupunkiMuistibudjetti.KarkeinLisa + 1e-6, "pieni iPad karkeampi kuin entinen katto: " + t.Kerroin);
-            Oleta.Tosi(t.Kerroin <= 1.70 * KaupunkiMuistibudjetti.PieniKarkeinLisa + 1e-9, "katossa enintään ×2,5");
+            Lahella(1.70 * KaupunkiMuistibudjetti.KarkeinLisa, t.Kerroin, "pieni iPad katossa 2,72");
+            Oleta.Tosi(t.Kerroin <= 1.70 * KaupunkiMuistibudjetti.PieniKarkeinLisa + 1e-9, "katossa enintään ×1,6");
             Oleta.Sama(KaupunkiMuistibudjetti.PieniValimuisti, t.Valimuisti, "välimuisti 64 Mt");
             Oleta.Sama(1.0, KaupunkiMuistibudjetti.ValitseLahella(3.0, 1.70, true, -1, 0.3, true).Lahi, "ei lähikameraa");
             // Isot laitteet ennallaan.

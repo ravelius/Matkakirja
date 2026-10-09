@@ -24,8 +24,10 @@ namespace Matkakirja.Linssit.Kierros
         /// ~0,3 Gt), joka ei ole Googlen laattoja: vähennetään budjetista ennen kertoimen valintaa.</summary>
         public const double OmaSisaltoGt = 0.3;
         /// <summary>PIENI MUISTI (< 12 Gt, juna 173, LS1:n iPad-ajot 9.10. 22.4x): mallin kasvu aliarvioi laitteella ~1,75× (kertoimella 2,72
-        /// täysi lataus 1388 laattaa, tekstuurit 1,91 Gt, vapaa 3,0 → 0,06 Gt), ja kerroin saa karketa ×2,5 (SSE ~68). Välimuisti 64 Mt.</summary>
-        public const double PieniKasvuKerroin = 1.75, PieniKarkeinLisa = 2.5;
+        /// täysi lataus 1388 laattaa, tekstuurit 1,91 Gt, vapaa 3,0 → 0,06 Gt). Välimuisti 64 Mt. KATTO ×1,6 kuten muilla (PT 9.10. 23.2x:
+        /// ×2,5 eli kerroin 4,25 pois; Natiiviseppä mittasi 10.10.: iPadin jetsam ei ollut Googlen laattoja vaan Notre-Damen mallin 90
+        /// puutekstuuria, ja ilman sitä kertoimella 2,72 koko kierros jää ≥ 0,82 Gt vapaaksi; raportti muistimittaus-juna173-20261010.md).</summary>
+        public const double PieniKasvuKerroin = 1.75, PieniKarkeinLisa = 1.6;
         public const long PieniValimuisti = 64L << 20;
         public const long ValimuistiPerus = 256L << 20, ValimuistiMax = 1536L << 20;
 
