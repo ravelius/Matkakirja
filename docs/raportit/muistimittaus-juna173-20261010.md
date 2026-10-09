@@ -18,7 +18,10 @@ Cesium-laatat ryhmittäin (Google G, omat mallit O) ja laattavalinnan kamerat.
   vain 12 kuvaa (71 Mt). Lod0:n rakenne on sama, joten ND vie yhteensä ~1,1 Gt GPU:ta. Lisäksi purun CPU-kopiot jäävät muistiin:
   kaupungin avauksessa malloc +577 Mt, eikä se palaudu.
 - **BUILD 172: sama data.** 172 lukee osoitinta uusin-2 → v6b. Sen ND lod1/lod0:ssa on sama 103 solmun puurakenne (tarkistettu
-  glb:stä). "172 kaatuu samoin" on siis R2-datan regressio, ei koodin. Laiteajo 172 + mittausloki vahvistaa (rivi alla).
+  glb:stä). "172 kaatuu samoin" on siis R2-datan regressio, ei koodin. **Laitteella vahvistettu (R4, 00.21):** 172:ssa omat mallit
+  vievät jo avauksessa 635 Mt GPU:ta (3 laattaa: ND lod2 + lod1 + Concorde lod2). Google kertoimella 1,70 (SSE 27) on 394
+  laattaa (329 Mt), ja RT:t MSAA 4× ovat 420 Mt. Footprint on 5,04–5,09 Gt ja vapaata 33–76 Mt 15 s ajan. Kierroksen alussa
+  reittikamerat käynnistyvät (g% 100 → 39) → jetsam.
 - **Ilman omia malleja** (diagnostiikka-asetus `omatmallit 0`) koko kierros menee läpi:
   - kerroin 4,25: fp ennen kierrosta 2,72 Gt, kierroksella max 3,94 Gt, vapaa min 1,18 Gt
   - kerroin 2,72: fp 2,82 Gt → max 4,30 Gt, vapaa min 0,82 Gt (portti ≥ 0,5 Gt täyttyy)
@@ -56,7 +59,7 @@ Cesium-laatat ryhmittäin (Google G, omat mallit O) ja laattavalinnan kamerat.
 | R2 | 173 + loki b5b927bda | 4,25, omatmallit 0 | läpi, vapaa min 1,18 Gt |
 | R3 | b5b927bda | 2,72 | jetsam kierroksen 1. s (ND lod1 557 Mt, lod0 latautumassa) |
 | R3b | b5b927bda | 2,72, omatmallit 0 | läpi, vapaa min 0,82 Gt |
-| R4 | 172 + loki 65db09ce5 | 172 sellaisenaan | (vahvistus, ks. posti) |
+| R4 | 172 + loki 65db09ce5 | 172 sellaisenaan (1,70) | jetsam kierroksen 1. s; jo ennen sitä vapaa 33–76 Mt (omat 635 Mt) |
 
 - Lokit: `proto-3d/lokit/natiiviseppa-muistitarkka-<aika>-<ajo>/` (muisti-tarkka.log, analyysi.txt, konsoli.txt, ruudut).
 - Mittausloki: proto `natiiviseppa/muistitarkka-173` (b7150aed6 → b5b927bda; Plugins/iOS/MatkakirjaMuisti.mm +
