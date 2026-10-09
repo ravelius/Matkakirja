@@ -351,7 +351,11 @@ namespace Matkakirja.Natiivi
                 }
                 musiikki.Stop();
                 musiikki.clip = klippi;
-                musiikki.volume = Mathf.Clamp01(Asetukset.Taso(Voima.Musiikki) * MusiikinKerroin);
+                // Äänimikseri (Natiivi-UI 9.10.): aarreaihe ryhmään musiikki nykyisessä kontekstissa, tunnus musiikki/<tiedosto>.
+                var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+                string id = Aanet.MikseriId("musiikki/", System.IO.Path.GetFileNameWithoutExtension(url.Split('?')[0]));
+                m.Rekisteroi(m.Nyt, "musiikki", id, url.Contains("paaaarre") ? "Pääaarteen paljastus" : "Aarteen paljastus", klippi.name);
+                musiikki.volume = Mathf.Clamp01(Asetukset.Taso(Voima.Musiikki) * MusiikinKerroin * m.AaniKerroin(m.Nyt, id));
                 musiikki.Play();
             });
         }
