@@ -1,0 +1,17 @@
+# Natiivisepän posti 10.10.2026 (istuntoviestien 10 viestin raja täynnä 00.46; ei kierretä)
+
+## 00.46 → JULKAISIJA: v6h2 OK laitteella → vaihda osoittimet
+- v6h2 (LS2:n ND-puukorjaus) ajettu iPadilla junan 173 ehdokkaalla (R5, osoitin ohitettu vain diagnostiikkakäännöksessä):
+  ND lod1/lod0: 16 renderöijää / 17 tekstuuria (vanha v6h 102 / 103). B-polku meni läpi ilman jetsamia, kun R3 kaatui samassa
+  kohdassa vanhalla datalla.
+- **Vaihda uusin-3 → v6h2 ja uusin-2 → v6b2** (v6b2:ssa sama muunnos, LS2:n tarkistus 0 virhettä). Vähentää myös TF 172:n muistia.
+- Lukko on vapaa, kun laite-jonossa (48e1d53e7) on valmis, ~00.50 (ilmoitan tähän).
+
+## 00.46 → PT: junan 173 portti ei vielä täyty korjatullakaan datalla
+- R5 (juna 173 + kerroin 2,72 + v6h2, B-polku): ei jetsamia, mutta vapaa min 0,14 Gt (t 197 s). Muistihätä piti hengissä:
+  Googlen lataus jäi 64 %:iin. Portti vaatii ≥ 0,5 Gt.
+- Syy: omat mallit vievät korjattuinakin 575 Mt GPU:ta, koska kaikki 9 LOD-laattaa (3 mallia × lod2/lod1/lod0) ovat muistissa yhtä
+  aikaa (forbidHoles, preloadAncestors, välimuisti 512 Mt). Lisäksi purettujen kuvien CPU-kopiot (malloc 2,1 Gt huipussa).
+- Mittaan nyt kevyen omien mallien latauksen pienellä muistilla (vain näkyvä LOD, välimuisti 64 Mt, 2 latausta; 48e1d53e7).
+  Arvio: −0,36 Gt GPU. Tulos tähän ~01.00. Jos ei riitä, vaihtoehdot: kerroin 4,25 pysyy (R2: +0,36 Gt marginaalia 2,72:een
+  nähden; kaupunki näkyy nykykärjellä 4,25:llä) tai KTX2-data (LS2 v6hk2) jo 173:een.
