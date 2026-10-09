@@ -1,5 +1,5 @@
 /* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
- * ÄLÄ MUOKKAA KÄSIN. lähde 085961b73cfd. Tuodaan ensimmäisenä (Matkakirja.tss). */
+ * ÄLÄ MUOKKAA KÄSIN. lähde eb1498a45a7e. Tuodaan ensimmäisenä (Matkakirja.tss). */
 
 :root {
     --bg: #1d1610;
@@ -298,6 +298,20 @@
     --tk-erikois-ihme-1-a55: rgba(30, 9, 8, 0.55);
     --tk-erikois-ihme-2: #8b3d38;
     --tk-erikois-ihme-3: #b8862b;
+    --tk-erikois-isskytkin-1: #1f241f;
+    --tk-erikois-isskytkin-2-a96: rgba(33, 34, 38, 0.96);
+    --tk-erikois-isskytkin-3: #29292b;
+    --tk-erikois-isskytkin-4: #33302b;
+    --tk-erikois-isskytkin-5: #383b40;
+    --tk-erikois-isskytkin-6: #4c524c;
+    --tk-erikois-isskytkin-7: #5c5e66;
+    --tk-erikois-isskytkin-8-a85: rgba(184, 41, 31, 0.85);
+    --tk-erikois-isskytkin-9: #8c8f94;
+    --tk-erikois-isskytkin-10: #59f273;
+    --tk-erikois-isskytkin-11: #ffb852;
+    --tk-erikois-isskytkin-12: #8cf299;
+    --tk-erikois-isskytkin-13: #dbd6c7;
+    --tk-erikois-isskytkin-14: #d9dbe0;
     --tk-erikois-kartuscha-1-a85: rgba(150, 30, 22, 0.85);
     --tk-erikois-kartuscha-2: #d8342a;
     --tk-erikois-leima-1-a62: rgba(72, 74, 116, 0.62);
@@ -314,6 +328,28 @@
     --tk-erikois-opas-3: #b3775f;
     --tk-erikois-radio-1: #3a1408;
     --tk-erikois-radio-2: #ffd682;
+    --tk-erikois-radiopaletti-1: #0d0803;
+    --tk-erikois-radiopaletti-2: #160b03;
+    --tk-erikois-radiopaletti-3-a09: rgba(24, 12, 4, 0.09);
+    --tk-erikois-radiopaletti-4: #1a1006;
+    --tk-erikois-radiopaletti-5: #221204;
+    --tk-erikois-radiopaletti-6: #3a1408;
+    --tk-erikois-radiopaletti-7: #4a2e12;
+    --tk-erikois-radiopaletti-8: #543310;
+    --tk-erikois-radiopaletti-10: #603a12;
+    --tk-erikois-radiopaletti-11: #6b4423;
+    --tk-erikois-radiopaletti-12: #c2452f;
+    --tk-erikois-radiopaletti-13: #ff6e46;
+    --tk-erikois-radiopaletti-14: #f2c05e;
+    --tk-erikois-radiopaletti-15: #ffc458;
+    --tk-erikois-radiopaletti-16: #ffe4a6;
+    --tk-erikois-radiopaletti-17: #ffefc0;
+    --tk-erikois-radiopaletti-18: #ffeccc;
+    --tk-erikois-radiopaletti-19: #fff3cc;
+    --tk-erikois-radiopaletti-20: #ffeed0;
+    --tk-erikois-radiopaletti-21: #fff4d0;
+    --tk-erikois-radiopaletti-22: #fff0d6;
+    --tk-erikois-radiopaletti-22-a04: rgba(255, 240, 214, 0.045);
     --tk-erikois-saa-1: #4c6478;
     --tk-erikois-saa-2: #f6ddc8;
     --tk-erikois-saa-3: #e0eae7;

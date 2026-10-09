@@ -57,9 +57,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Detaljit (juna 169): tilan alimeshien pinnat, leivottujen tilojen pintakohtaiset kloonit ja asetetut detaljit.</summary>
         readonly Dictionary<string, string[]> tilaPinnat = new Dictionary<string, string[]>();
         readonly Dictionary<string, Material> leivotutKloonit = new Dictionary<string, Material>();
-        readonly Dictionary<string, (Texture2D A, Texture2D N, Texture2D K, Vector4 P)> detaljit = new Dictionary<string, (Texture2D, Texture2D, Texture2D, Vector4)>();
+        readonly Dictionary<string, (Texture2D A, Texture2D N, Texture2D K, Vector4 P, Texture2D H, Vector4 Pom)> detaljit = new Dictionary<string, (Texture2D, Texture2D, Texture2D, Vector4, Texture2D, Vector4)>();
         static readonly int IdDetalji = Shader.PropertyToID("_Detalji"), IdDetaljiAlbedo = Shader.PropertyToID("_DetaljiAlbedo"),
-            IdDetaljiNormaali = Shader.PropertyToID("_DetaljiNormaali"), IdDetaljiKarheus = Shader.PropertyToID("_DetaljiKarheus");
+            IdDetaljiNormaali = Shader.PropertyToID("_DetaljiNormaali"), IdDetaljiKarheus = Shader.PropertyToID("_DetaljiKarheus"),
+            IdDetaljiKorkeus = Shader.PropertyToID("_DetaljiKorkeus"), IdDetaljiPom = Shader.PropertyToID("_DetaljiPom");
         readonly Dictionary<string, Material> leivotut = new Dictionary<string, Material>();
         /// <summary>Tilan liput (pinta "lippu"): sama atlas, heiluva materiaali (DioraamaLeivottu _Heilunta 1).</summary>
         readonly Dictionary<string, Material> leivotutLiput = new Dictionary<string, Material>();
@@ -320,13 +321,15 @@ namespace Matkakirja.Natiivi
         static string PintaAvain(Rakennus rakennus, string pinta)
             => pinta != null && rakennus?.Pinnat != null && !rakennus.Pinnat.ContainsKey(pinta) && PintaAliakset.TryGetValue(pinta, out var a) ? a : pinta;
 
-        static void KirjoitaDetalji(Material m, (Texture2D A, Texture2D N, Texture2D K, Vector4 P) d)
+        static void KirjoitaDetalji(Material m, (Texture2D A, Texture2D N, Texture2D K, Vector4 P, Texture2D H, Vector4 Pom) d)
         {
             if (m == null || !m.HasProperty(IdDetalji)) return;
             if (d.A != null) m.SetTexture(IdDetaljiAlbedo, d.A);
             if (d.N != null) m.SetTexture(IdDetaljiNormaali, d.N);
             if (d.K != null) m.SetTexture(IdDetaljiKarheus, d.K);
+            if (d.H != null && m.HasProperty(IdDetaljiKorkeus)) m.SetTexture(IdDetaljiKorkeus, d.H);
             m.SetVector(IdDetalji, d.P);
+            if (m.HasProperty(IdDetaljiPom)) m.SetVector(IdDetaljiPom, d.Pom);
         }
 
         /// <summary>
@@ -334,10 +337,14 @@ namespace Matkakirja.Natiivi
         /// ja kävelyosat), kävelyosien valo-kloonit ja leivottujen tilojen alimeshit (pintakohtainen klooni tilan leivotusta materiaalista,
         /// vaihdetaan rendererin materiaalilistaan). Myöhemmin lisättävät tilat saavat detaljin LisaaTila-vaiheessa.
         /// </summary>
-        public void AsetaDetalji(string pinta, Texture2D albedo, Texture2D normaali, Texture2D karheus, double m, double voima)
+        public void AsetaDetalji(string pinta, Texture2D albedo, Texture2D normaali, Texture2D karheus, double m, double voima,
+            Texture2D korkeus = null, double syvyysM = 0)
         {
             if (string.IsNullOrEmpty(pinta)) return;
-            var d = (albedo, normaali, karheus, new Vector4(1f / (float)Math.Max(0.05, m), (float)voima, albedo != null || normaali != null ? 1f : 0f, 0f));
+            // POM vain Ultralla (LR v45s, juna 169): syvyys UV-yksiköissä = syvyys_m / m.
+            bool pom = korkeus != null && syvyysM > 0 && Laatutaso.Ultra;
+            var d = (albedo, normaali, karheus, new Vector4(1f / (float)Math.Max(0.05, m), (float)voima, albedo != null || normaali != null ? 1f : 0f, 0f),
+                korkeus, new Vector4(pom ? (float)(syvyysM / Math.Max(0.05, m)) : 0f, pom ? 1f : 0f, 0f, 0f));
             detaljit[pinta] = d;
             if (materiaalit.TryGetValue(pinta, out var pm)) KirjoitaDetalji(pm, d);
             foreach (var k in valoKloonit.Values) if (k.Pohja == pm && pm != null) KirjoitaDetalji(k.Klooni, d);

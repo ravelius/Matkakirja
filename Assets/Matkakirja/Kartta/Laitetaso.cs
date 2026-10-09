@@ -28,6 +28,19 @@ namespace Matkakirja
             return paa >= 13 && Array.IndexOf(ASarjanIpadit, malli) < 0;
         }
 
+        /// <summary>
+        /// AJALLINEN REUNANPEHMENNYS (TAA; omistaja 8.10. 19.5x, raportti #4220 kohta 7; Natiiviseppä, juna 169): Ultra- ja Huippu-tason
+        /// laitteet eli M-sarja ja iPhone 16 -sarja tai uudempi (mallitunnus iPhone17,x+, sama raja kuin DioraamaLaatu.Laiteluokka).
+        /// </summary>
+        public static bool OnkoAjallinen(string malli, string prosessori, bool mac)
+        {
+            if (OnkoMSarja(malli, prosessori, mac)) return true;
+            malli ??= "";
+            if (!malli.StartsWith("iPhone", StringComparison.Ordinal)) return false;
+            int pilkku = malli.IndexOf(',');
+            return pilkku > 6 && int.TryParse(malli.Substring(6, pilkku - 6), out int paa) && paa >= 17;
+        }
+
         /// <summary>Tason nimi QualitySettingsissa: Ultra M-sarjalle, muuten alustan nykyinen oletus (iOS Mobile, Mac PC).</summary>
         public static string Valitse(string malli, string prosessori, bool mac) =>
             OnkoMSarja(malli, prosessori, mac) ? Ultra : mac ? PC : Mobile;

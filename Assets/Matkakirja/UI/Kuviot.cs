@@ -17,6 +17,10 @@ namespace Matkakirja.Natiivi
 {
     public static class Kuviot
     {
+        /// <summary>Väri annetulla alfalla (pohjavahti 11, Päätoimittaja 8.10.2026): tokenin tai värin läpikuultavuus koodista ilman
+        /// uutta värivakiota.</summary>
+        public static Color Alfalla(Color c, float a) { c.a = a; return c; }
+
         static readonly Dictionary<string, Texture2D> valimuisti = new Dictionary<string, Texture2D>();
 
         public static Color Vari(string hex, float alfa = 1f)

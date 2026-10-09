@@ -88,7 +88,7 @@
     font-size: var(--tk-koko-otsikko);
     letter-spacing: 16.01px; /* web 3.33px */
     color: var(--map-ink-92);
-    text-shadow: 0 0 4px rgb(244, 232, 205);
+    text-shadow: 0 0 4px rgb(244, 232, 205); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 /* Löydös 141 (omistaja, build 16): pienennetty (kiinni oleva) kartussi oli iPadilla hieman liian iso, iPhonella
@@ -106,7 +106,7 @@
 
 .mk-kartuscha.mk-auki .mk-kartuscha__nimi,
 .mk-kartuscha.mk-auki .mk-kartuscha__alarivi {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 /* Lippu nimen perässä vain avattuna (web .maapaneeli-lippukuva: 1cap korkea, 0,34 em väli). */
@@ -142,7 +142,7 @@
     letter-spacing: 7.38px; /* web 0.9px */
     color: var(--map-ink-90);
     white-space: normal;
-    text-shadow: 0 0 3px rgb(244, 232, 205);
+    text-shadow: 0 0 3px rgb(244, 232, 205); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-kartuscha--tabletti .mk-kartuscha__alarivi {
@@ -408,7 +408,7 @@
     -unity-text-align: middle-center;
     font-size: 24px; /* fonttipoikkeus: 24 px, lähin asteikon koko 26 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--overlay-card);
-    text-shadow: 0 0 4px rgb(244, 232, 205);
+    text-shadow: 0 0 4px rgb(244, 232, 205); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 /* --- karttaselite -------------------------------------------------------- */

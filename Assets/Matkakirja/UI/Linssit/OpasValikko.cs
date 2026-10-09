@@ -173,7 +173,7 @@ namespace Matkakirja.Natiivi
 
         public readonly VisualElement Juuri;
         readonly VisualElement ryhma, valikko, sirurivi;
-        readonly Button puhuSiru, kuvaNappi, taukoNappi, seuraavaNappi;
+        readonly Button puhuSiru, taukoNappi, seuraavaNappi;
         // OHJAINRIVI (omistaja 6.10. 23.3x, juna 156): ‖/▶ ja ›| OHJAUSNAPPI-ryhmänä oikean tapin alla (iPhonella tapin ja
         // nappirivin välissä); näkyy koko oppaan ajan, myös lennolla, joten tauko ei enää ole ☰:n vieressä.
         readonly VisualElement ohjainRivi;
@@ -199,6 +199,7 @@ namespace Matkakirja.Natiivi
             }
         }
         readonly VisualElement kuvaKortti, kuvaEl;
+        readonly OpasKuvanosto kuvanosto;
         readonly Label kuvaLaskuri;
         Kuvasuurennos suurennos;
         OpasKuva naytettyKuva;
@@ -260,19 +261,16 @@ namespace Matkakirja.Natiivi
             ohjainRivi.style.top = StyleKeyword.Auto;
             taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { OpasSovitin.Tauko(!OpasSovitin.Tauolla); Debug.Log("MATKAKIRJA opas: tauko-nappi → " + OpasSovitin.Tauolla); }, ohjainRivi);
             seuraavaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Seuraava kohde", () => Debug.Log("MATKAKIRJA opas: seuraava-nappi → " + OpasSovitin.Seuraava()), ohjainRivi);
-            kuvaNappi = Ohjausnappi.Nappi(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni, KuvatPaalla ? "Kuvat päällä" : "Kuvat pois",
-                VaihdaKuvat, ryhma);
             // Omistaja 6.10. 12.1x: "piilota pause ja kuva nappi hampurilaisen sisään": ruudulla vain ☰; tauko ja kuvat valikon riveinä.
             // Omistaja 6.10. 16.3x: tauko taas aina näkyvissä ☰:n vasemmalla (kumoaa 12.1x:n tauon osalta); kuvat jäävät ☰:n sisään.
             // Juna 156: tauko siirtyi ohjainriville oikean tapin alle (Seuraavan viereen); ylänurkassa ■ ja ☰.
-            kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
             // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila.
             // SÄÄTILA (omistaja 8.10. 09.1x–09.2x "kumpikin toiminto saman napin alle"; Päätoimittaja): sama nappi avaa listan, jossa
             // AIKA (päivä | yö) ja SÄÄ (pois | automaatti | käsin); valinta Ydin Saatila-luokkaan (LS1 tehosteet, Pelikoodari säähaku).
-            aikaRyhma = Ohjausnappi.Ryhma(Juuri);
-            aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
-            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Aika ja sää", () => { SuljeSaaVihje(); if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
+            // ☀ suoraan oikeaan ryhmään ☰:n vasemmalle (SijoitaAikaNappi); erillinen vasen ryhmä jäi tyhjäksi (poistettu 9.10.).
+            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Aika ja sää", () => { SuljeSaaVihje(); if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, ryhma);
+            aikaNappi.RemoveFromHierarchy(); ryhma.Insert(0, aikaNappi);   // ☀ ■ ☰ -järjestys
             LueSaatila();
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
@@ -289,6 +287,8 @@ namespace Matkakirja.Natiivi
             // pystyvedosta, ja sitä pienempi liike on napautus.
             Kosketusvieritys.Liita(valikko, () => aloitus && aloitusSuosikit != null && aloitusSuosikit.worldBound.Contains(viimeKohta) ? aloitusSuosikit : rivit);
             kerros.JokaRuutu += TarkistaOhiNapautus;
+            kerros.JokaRuutu += TarkistaAikaKierto;
+            kerros.JokaRuutu += PaivitaYoTeema;
 
             // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
             sirurivi = Rakenne.El("tk-teema-harmaa mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
@@ -380,6 +380,13 @@ namespace Matkakirja.Natiivi
             kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
             kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += PaivitaKuva;
+            // KUVANOSTO (omistaja TF 168): yksityiskohtakuva pienenä reunaan, napautuksesta suurena (LS1:n ajoitus).
+            kuvanosto = new OpasKuvanosto(Juuri);
+            kerros.JokaRuutu += () =>
+            {
+                var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+                kuvanosto.Este = !nakyy || Auki || (chat?.Auki ?? false) || (siirtyma != null && siirtyma.style.display != DisplayStyle.None);
+            };
             kerros.JokaRuutu += PaivitaTauko;
             // TÄKYLUETTELO (omistaja 5.10.2026 klo 23.5x): opas alkaa täkyillä ja odottaa valintaa (Linssiseppä 3bbb18d2).
             OpasSovitin.TakyAvaus = true;
@@ -468,14 +475,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Oppaan alarivin nappi LIIKU-pohjalla: teksti (Kysy, Liiku) tai pelkkä kuvake (mikrofoni, näppäimistö), keskitettynä.</summary>
         OpasMetrolinja metro;
         float metroKoysiVasen;
-        VisualElement aikaRyhma;
 
         /// <summary>Vuorokausinappi: iPhonella oikean yläkulman ryhmään ■ ≡ -nappien vasemmalle (omistaja 12.3x), iPadilla vasemmalle.</summary>
         void SijoitaAikaNappi()
         {
             if (float.IsNaN(Juuri.layout.width) || Juuri.layout.width <= 0) return;
             var isa = ryhma;   // omistaja 14.2x: myös iPadilla oikean ryhmän riviin (metrolinja vasempaan yläkulmaan)
-            if (aikaNappi.parent == isa) return;
+            if (aikaNappi.parent == isa && isa.IndexOf(aikaNappi) == 0) return;
             aikaNappi.RemoveFromHierarchy();
             isa.Insert(0, aikaNappi);
         }
@@ -507,6 +513,8 @@ namespace Matkakirja.Natiivi
             // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
             // vasemmalle puolelle; pystysuunnassa ennallaan.
             if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
+            // Omistaja 9.10.2026: "aavistuksen irti vasemmasta reunasta lisää ainakin ipadilla vaakamuodossa".
+            if (LeveaRuutu && w > h) vasen += IpadVaakaLisaPt;
             metro.Kompakti = false; metro.IslandAlaY = 0f;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             // Omistaja 14.2x: iPadilla vasempaan yläkulmaan 6 pt reunasta, linja ja kaikki nimet köyden päällä (ei rajausta).
@@ -556,7 +564,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
         /// <summary>iPadin metrolinjan marginaali ruudun vasemmasta reunasta (pt).</summary>
-        const float ReunaPt = 6f;
+        const float ReunaPt = 6f, IpadVaakaLisaPt = 12f;
         const float KulmaVaraPt = 22f, IslandLeveysPt = 126f, IslandOikeaPt = 48f;
 
         VisualElement esitysRivi;
@@ -654,6 +662,13 @@ namespace Matkakirja.Natiivi
             siirtymaAlku = Time.realtimeSinceStartup;
             siirtymaKerta++;
             AsetaPalloKuva(OpasSovitin.Kaupunkitila);
+            // Taustaäänet hiljaisiksi latauskuvan ajaksi (omistaja TF 168: "saisiko äänet pois taustalta kun kip latautuu?").
+            AaniVaimennus.Aseta(true, "pallon latauskuva");
+            // Kaupunkitila voi alkaa hetken siirtymän jälkeen (BUILD 167 -ajo 9.10.: Pariisi ja Tukholma mustina 20 s): kuva pyydetään,
+            // kun tila alkaa, vaikka kiertoa tai PalloTekstuuriValmista ei tule.
+            int pk = siirtymaKerta;
+            siirtyma.schedule.Execute(() => { if (pk == siirtymaKerta && siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && palloNimi == null && !palloKerroksetNakyy) AsetaPalloKuva(true); })
+                .Every(150).Until(() => pk != siirtymaKerta || siirtyma.style.display == DisplayStyle.None || palloNimi != null || palloKerroksetNakyy);
             // Ion-logo vain siirtymän omana (tasavälein, omistaja 15.3x); krediittikerroksen oma logo piiloon siirtymän ajaksi
             // (PaivitaAvausIon: IonOmaPiirto), muuten se piirtyi kiinteästi 10 pt vasemmalle krediittirivien päälle.
             AsetaSiirtymaIon();
@@ -793,11 +808,18 @@ namespace Matkakirja.Natiivi
             var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
             // Kääreen marginaali (ei ruudun pehmuste: absoluuttinen ion-logo mitataan ruudun reunasta).
             siirtymaTeksti.style.marginBottom = Mathf.Max(koko.y, 1f) * 0.07f;
+            // Kerrokset haetaan heti, stillistä riippumatta (BUILD 167 -ajo 9.10.: kuormassa vaakastillin purku ei valmistunut
+            // siirtymän aikana, ja kerrokset odottivat sitä → musta ruutu). Kumpi ehtii ensin, näkyy.
+            HaePalloKerrokset(n);
             var t = OpasSovitin.PalloTekstuuri(n);
-            if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+            if (t == null)
+            {
+                Debug.Log($"MATKAKIRJA opas: pallon latauskuva purkuun {n} ({Time.realtimeSinceStartup - siirtymaAlku:F1} s siirtymästä)");
+                OpasSovitin.PalloTekstuuriMuistiin(n);   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+                return;
+            }
             SovitaPalloKuva(t);
             palloNimi = n; palloKuvaNyt = t;
-            HaePalloKerrokset(n);
             siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
             // Kierron rajausvaihto (kuva jo näkyvissä) vaihtaa suoraan ilman häivytystä mustasta.
             bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
@@ -868,7 +890,7 @@ namespace Matkakirja.Natiivi
                 int j = i;
                 Kuvat.Hae(PalloKerrosUrl(r, nimet[i]), t =>
                 {
-                    if (kerta != palloKerrosKerta || !palloNakyy) return;
+                    if (kerta != palloKerrosKerta || siirtyma.style.display == DisplayStyle.None) return;
                     if (palloKerrosKuvat[j] != null && palloKerrosKuvat[j] != t) Kuvat.Vapauta(palloKerrosKuvat[j]);
                     palloKerrosKuvat[j] = t;
                     if (t != null) Kuvat.Kiinnita(t);
@@ -940,6 +962,7 @@ namespace Matkakirja.Natiivi
             if (siirtyma.style.display == DisplayStyle.None) return;
             siirtymaKierros?.Pause();
             siirtymaPalkki.Arvo = 1f;
+            AaniVaimennus.Aseta(false, "kierros alkaa");
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
             // Kertalaskuri (NUI 7.10. 15.4x): häivytyksen jälkeen piiloon aina, ellei uusi siirtymä alkanut välissä (peiton tarkistus
@@ -962,6 +985,7 @@ namespace Matkakirja.Natiivi
             siirtyma.RemoveFromClassList("mk-astroavaus--haipyy");
             siirtyma.style.display = DisplayStyle.None;
             AsetaPalloKuva(false);
+            AaniVaimennus.Aseta(false, "siirtymä peruttu");
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä peruttu (opas suljettu)");
@@ -1425,9 +1449,6 @@ namespace Matkakirja.Natiivi
         void VaihdaKuvat()
         {
             KuvatPaalla = !KuvatPaalla;
-            kuvaNappi.Clear();
-            kuvaNappi.Add(new SvgIkoni(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni));
-            kuvaNappi.tooltip = KuvatPaalla ? "Kuvat päällä" : "Kuvat pois";
             Debug.Log("MATKAKIRJA opas: kuvat " + (KuvatPaalla ? "päällä" : "pois"));
         }
 
@@ -1667,6 +1688,17 @@ namespace Matkakirja.Natiivi
                     // Tauko ja kuvat valikon riveinä, tila tekstissä (omistaja 6.10. 12.1x).
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
+                    // MIKSERI (omistaja 9.10.2026 klo 00.5x: "mikseriin pitäisi päästä kun ollaan kuumailmapallossa"): sama Äänentasot-
+                    // paneeli kuin päävalikon Peli › Mikseri (kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää);
+                    // aukeaa pallon päälle (Valikot-kerros), lento jatkuu taustalla.
+                    Komento("Mikseri", () =>
+                    {
+                        var at = UiNakymat.Hae()?.Aanentasot;
+                        if (at == null) return;
+                        // ☰:n alle kuten oppaan muut listat (katselmointi 9.10.); pohja ennallaan.
+                        if (nappi.panel != null) at.YlaOhitus = nappi.worldBound.yMax + 8f;
+                        at.AvaaOsa(Aanentasot.Osa.Aanet);
+                    });
                     // LÄHTEET (omistaja 7.10. 22.5x: kuvien tekijät eivät näy kuvissa, vaan täällä; sama alanäkymä kuin linnan Lähteet).
                     Alanakyma("Lähteet", () => Avaa(Nakyma.Lahteet));
                     Viiva();
@@ -2075,7 +2107,12 @@ namespace Matkakirja.Natiivi
             float x = nb.center.x, y = nb.yMax + 4f;
             saaVihjeViiva.style.left = x - 0.75f; saaVihjeViiva.style.top = y; saaVihjeViiva.style.height = 12f;
             saaVihjeLappu.style.top = y + 12f;
-            saaVihjeLappu.style.left = Mathf.Max(8f, nb.xMin);
+            // Ruudun sisään (pallotilan katselmointi 9.10.: ☀ on ☰:n vieressä oikealla, lappu leikkautui oikeasta reunasta).
+            float lev = Juuri.layout.width, lw = saaVihjeLappu.layout.width;
+            if (float.IsNaN(lw) || lw <= 0) lw = 220f;
+            float vasen = Mathf.Max(8f, nb.xMin);
+            if (!float.IsNaN(lev) && lev > 0) vasen = Mathf.Clamp(Mathf.Min(vasen, nb.xMax - lw), 8f, Mathf.Max(8f, lev - lw - 8f));
+            saaVihjeLappu.style.left = vasen;
         }
 
         void AsetaSaaVihje(bool n)
@@ -2151,6 +2188,7 @@ namespace Matkakirja.Natiivi
             // sarakkeina LIVEn alla (AIKA | SÄÄ 1–4 | SÄÄ 5–7), jotta lista mahtuu korkeuteen (iPhone vaaka ~393 pt) ja peitto pysyy
             // pienenä; pystyssä yksi sarake kuten ennen.
             bool vaaka = Screen.width > Screen.height;
+            aikaVaaka = vaaka;
             VisualElement Sarake(VisualElement rivi)
             {
                 var s = Rakenne.El(null, rivi, PickingMode.Ignore);
@@ -2192,6 +2230,25 @@ namespace Matkakirja.Natiivi
                     Debug.Log("MATKAKIRJA opas: sää " + sv);
                 }, i++ < puoli ? saa1 : saa2);
             }
+        }
+
+        bool aikaVaaka;
+        bool yoTeema;
+
+        /// <summary>Yöllä listat tummalla teemalla (omistaja 9.10.2026 "Tee vain niin"), päivällä harmaalla.</summary>
+        void PaivitaYoTeema()
+        {
+            bool yo = Saatila.Aika == PalloAika.Yo;
+            if (yo == yoTeema) return;
+            yoTeema = yo;
+            valikko.EnableInClassList("tk-teema-harmaa", !yo);
+            valikko.EnableInClassList("tk-teema-tumma", yo);
+        }
+
+        /// <summary>Kierto ☀-listan ollessa auki: lista rakennetaan uudelleen uuden asennon asettelulla (katselmointi 9.10.).</summary>
+        void TarkistaAikaKierto()
+        {
+            if (Auki && nakyma == Nakyma.Aika && aikaVaaka != (Screen.width > Screen.height)) Avaa(Nakyma.Aika);
         }
 
         /// <summary>Vaakatilan sarakkeen vähimmäisleveys (pisin rivi "Ukkonen  ✓" mahtuu; LINSSIN VALIKON rivi).</summary>
@@ -2291,7 +2348,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<string> AaniLahteet()
@@ -2402,6 +2459,19 @@ namespace Matkakirja.Natiivi
             switch (k)
             {
                 case "sulje": Sulje(); return "opas: valikko kiinni";
+                case "kuvanosto":
+                {
+                    // ui opasvalikko kuvanosto [url|suureksi|pois]: kuvanoston koe ilman kierrosta.
+                    string a = o.Length > 1 ? o[1] : "";
+                    if (a == "pois") kuvanosto.Piilota();
+                    else if (a == "suureksi") kuvanosto.GetType().GetMethod("Suureksi", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(kuvanosto, null);
+                    else kuvanosto.Nayta(new Matkakirja.Linssit.Kierros.OpasYksityiskohdat.Kuva
+                    {
+                        Url = a.StartsWith("http") ? a : "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/esittely.jpg",
+                        Kuvateksti = "Kuvanoston koe", Ankkuri = "koe",
+                    });
+                    return "opas: " + kuvanosto.Kuvaus();
+                }
                 case "teksti": NaytaTeksti(); return "opas: teksti auki";
                 case "kuvatesti":
                     testiKuva = new OpasKuva

@@ -63,10 +63,10 @@ namespace Matkakirja.Natiivi
         public static bool KuvatPaikalla => Kuva(Moduuli.Pohja, Tila.Perus) != null;
 
         // ---- Paikkamerkkien värit (Cupolan tumma ohjaamo: kulunut anodisoitu metalli, lämmin valo) ----
-        static readonly Color Metalli = new Color(0.22f, 0.23f, 0.25f), MetalliVaalea = new Color(0.36f, 0.37f, 0.40f),
-            Reuna = (Color)Tyylikirja.Kuulto.Musta100, Ruuvi = new Color(0.55f, 0.56f, 0.58f), Teksti = new Color(0.86f, 0.84f, 0.78f),
-            Valo = new Color(1f, 0.72f, 0.32f), Vihrea = new Color(0.35f, 0.95f, 0.45f), Lcd = (Color)Tyylikirja.Kuulto.LasiAvaruusPinta100,
-            LcdTeksti = new Color(0.55f, 0.95f, 0.6f), Suoja = new Color(0.72f, 0.16f, 0.12f, 0.85f);
+        static readonly Color Metalli = (Color)Tyylikirja.Erikois.Isskytkin5, MetalliVaalea = (Color)Tyylikirja.Erikois.Isskytkin7,
+            Reuna = (Color)Tyylikirja.Kuulto.Musta100, Ruuvi = (Color)Tyylikirja.Erikois.Isskytkin9, Teksti = (Color)Tyylikirja.Erikois.Isskytkin13,
+            Valo = (Color)Tyylikirja.Erikois.Isskytkin11, Vihrea = (Color)Tyylikirja.Erikois.Isskytkin10, Lcd = (Color)Tyylikirja.Kuulto.LasiAvaruusPinta100,
+            LcdTeksti = (Color)Tyylikirja.Erikois.Isskytkin12, Suoja = (Color)Tyylikirja.Erikois.Isskytkin8A85;
 
         /// <summary>Kytkinmoduulin pohja: tila, kuva tai paikkamerkki.</summary>
         public abstract class Kytkin : VisualElement
@@ -162,7 +162,7 @@ namespace Matkakirja.Natiivi
             }
             protected override void Paikkamerkki(Painter2D p, Rect r)
             {
-                Levy(p, r, 10f, new Color(0.13f, 0.135f, 0.15f, 0.96f), MetalliVaalea, 1.5f);
+                Levy(p, r, 10f, (Color)Tyylikirja.Erikois.Isskytkin2A96, MetalliVaalea, 1.5f);
                 Ruuvit(p, r, 7f);
             }
         }
@@ -185,7 +185,7 @@ namespace Matkakirja.Natiivi
                     if (Kuva() != null) return;
                     var c = lamppu.contentRect.center;
                     bool paalla = NykyTila == Tila.Aktiivinen;
-                    Ympyra(mgc.painter2D, c, 7f, paalla ? (meripihka ? Valo : Vihrea) : new Color(0.12f, 0.14f, 0.12f), Reuna, 1.2f);
+                    Ympyra(mgc.painter2D, c, 7f, paalla ? (meripihka ? Valo : Vihrea) : (Color)Tyylikirja.Erikois.Isskytkin1, Reuna, 1.2f);
                 };
                 Add(lamppu);
                 Nimi = Nimio(this, nimi, 8.5f);
@@ -229,7 +229,7 @@ namespace Matkakirja.Natiivi
                 KaksiRivia = kaksi;
                 Ilmoita();
             }
-            protected override void Paikkamerkki(Painter2D p, Rect r) => Levy(p, r, 4f, Lcd, new Color(0.3f, 0.32f, 0.3f), 1.5f);
+            protected override void Paikkamerkki(Painter2D p, Rect r) => Levy(p, r, 4f, Lcd, (Color)Tyylikirja.Erikois.Isskytkin6, 1.5f);
         }
 
         /// <summary>Moduuli, jolla on otsikko alla ja kosketusala vähintään 44 × 44 pt.</summary>
@@ -368,7 +368,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (IssKytkimet.Kuva(Moduuli.NupinNuppi, NykyTila) != null) return;
                     var p = mgc.painter2D; var c = korkki.contentRect.center;
-                    Ympyra(p, c, 15f, new Color(0.16f, 0.16f, 0.17f), Reuna, 1.5f);
+                    Ympyra(p, c, 15f, (Color)Tyylikirja.Erikois.Isskytkin3, Reuna, 1.5f);
                     p.strokeColor = Valo; p.lineWidth = 2.5f; p.lineCap = LineCap.Round;
                     p.BeginPath(); p.MoveTo(c + new Vector2(0, -6f)); p.LineTo(c + new Vector2(0, -14f)); p.Stroke();
                 };
@@ -457,7 +457,7 @@ namespace Matkakirja.Natiivi
                 var lr = new Rect(c.x - 23, c.y - 20, 46, 40);
                 Levy(p, lr, 5f, MetalliVaalea, Reuna, 1.5f);
                 var sisa = new Rect(lr.x + 4, lr.y + 4, lr.width - 8, lr.height - 8);
-                Levy(p, sisa, 3f, NykyTila == Tila.Aktiivinen ? Valo : new Color(0.2f, 0.19f, 0.17f), Reuna, 1f);
+                Levy(p, sisa, 3f, NykyTila == Tila.Aktiivinen ? Valo : (Color)Tyylikirja.Erikois.Isskytkin4, Reuna, 1f);
             }
         }
 
@@ -480,7 +480,7 @@ namespace Matkakirja.Natiivi
                     var p = mgc.painter2D; var c = vipu.contentRect.center;
                     Levy(p, new Rect(c.x - 20, c.y - 22, 40, 44), 5f, Metalli, Reuna, 1.2f);
                     Ympyra(p, c, 6f, Ruuvi, Reuna, 1f);
-                    p.strokeColor = new Color(0.85f, 0.86f, 0.88f); p.lineWidth = 4f; p.lineCap = LineCap.Round;
+                    p.strokeColor = (Color)Tyylikirja.Erikois.Isskytkin14; p.lineWidth = 4f; p.lineCap = LineCap.Round;
                     p.BeginPath(); p.MoveTo(c); p.LineTo(c + new Vector2(0, alhaalla ? 15f : -15f)); p.Stroke();
                 };
                 kansi = new VisualElement { pickingMode = PickingMode.Ignore };

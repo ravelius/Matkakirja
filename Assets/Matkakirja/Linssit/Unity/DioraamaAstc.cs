@@ -44,6 +44,10 @@ namespace Matkakirja.Natiivi
         // --- KAISTOITTAIN (linnan piikit, iPad 2.10.: 8k-atlaksen 89 Mt:n kertalataus vei renderisäikeeltä 64–85 ms) -----------
         /// <summary>Kehittäjän vertailu ("poikki kaistat 0|1"): null/true = isot (≥ 4096) tekstuurit kaistoina.</summary>
         public static bool? KaistatPakotettu;
+        /// <summary>Laite tukee ASTC:tä (4×4 ja 6×6; iOS-simulaattorin GPU ei tue, BUILD 167 -löydös 9.10.): ilman tukea ASTC-tiedostoja
+        /// ei edes haeta, vaan käytetään suoraan JPEG/PNG-varaa (simulaattorin linnan lataus kuormassa 60–90 s → nopeammin).</summary>
+        public static bool AstcTuettu => astcTuettu ??= SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_4x4) && SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_6x6);
+        static bool? astcTuettu;
         const int KaistaTavuja = 8 << 20, KaistaRaja = 4096;
         static int budjettiRuutu = -1, budjettiTavut;
 

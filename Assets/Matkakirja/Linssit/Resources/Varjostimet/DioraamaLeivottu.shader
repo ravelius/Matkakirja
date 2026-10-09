@@ -26,6 +26,8 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
         _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
         _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
         _DetaljiKarheus ("Detalji: karheus (R)", 2D) = "white" {}
+        _DetaljiKorkeus ("Detalji: korkeus (POM, lineaarinen)", 2D) = "white" {}
+        _DetaljiPom ("POM (x = syvyys UV, y = päällä)", Vector) = (0, 0, 0, 0)
     }
     SubShader
     {
@@ -72,6 +74,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 float _Leikattava;
                 float _Markyys;
                 float4 _Detalji;
+                float4 _DetaljiPom;
             CBUFFER_END
 
             // Sama leikkaustilavuus kuin DioraamaKuori.shaderissa (globaalit DioraamaUlkokuori.PaivitaLeikkaus): tilat, joita
@@ -131,7 +134,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
 
                 // Detalji (DioraamaDetalji.hlsl, juna 169): albedo-overlay ja kohokuvio leivotun valon päälle.
                 float3 nW = normalize(i.normaaliW);
-                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, nW);
+                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, nW, _DetaljiPom);
                 vari *= dt.albedo * dt.valo;
                 // Märkyys (DioraamaMarkyys.hlsl) detaljinormaalilla; liekkien lämpö kiiltää märällä, sileällä pinnalla enemmän.
                 half mm = DioraamaMarkyys(vari, _Markyys, dt.normaali, i.paikkaW);

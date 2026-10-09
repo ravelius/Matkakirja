@@ -32,7 +32,7 @@ def laske():
         # Ympäristöanimaatiot (latauskuvat, heilunta, intro, näytökset; Päätoimittaja 8.10.) merkitään poikkeuksiksi: eivät UI-siirtymiä.
         raaka = re.sub(r'transition-duration:[^;]*;[ \t]*/\*\s*ympäristöanimaatio[^*]*\*/', '', raaka)
         # Hyväksytyt väripoikkeukset perusteluineen (Päätoimittaja 8.10., pohjavahti 7): deklaraatio + /* väripoikkeus: syy */.
-        raaka = re.sub(r'[-a-z]+:[^;{}]*;[ \t]*/\*\s*väripoikkeus:[^*]*\*/', '', raaka)
+        raaka = re.sub(r'[-a-z0-9]+:[^;{}]*;[ \t]*/\*\s*väripoikkeus:[^*]*\*/', '', raaka)
         # Hyväksytyt fonttikokopoikkeukset (Päätoimittaja 8.10., pohjavahti 8): font-size: Npx; /* fonttipoikkeus: syy */.
         raaka = re.sub(r'font-size:[^;{}]*;[ \t]*/\*\s*fonttipoikkeus:[^*]*\*/', '', raaka)
         s = re.sub(r'/\*.*?\*/', '', raaka, flags=re.S)

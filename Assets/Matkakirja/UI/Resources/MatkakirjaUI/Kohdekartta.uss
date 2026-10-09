@@ -197,7 +197,7 @@
     white-space: normal;
     -unity-text-align: upper-center;
     color: var(--bg);
-    text-shadow: 0 0 3px rgba(247, 239, 220, 0.95);
+    text-shadow: 0 0 3px rgba(247, 239, 220, 0.95); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.22s; /* UI-siirtymä ≤ 250 ms (pohjavahti 8.10., oli 0.35s) */
@@ -449,7 +449,7 @@
     padding: 0;
     font-size: 30.4px; /* fonttipoikkeus: 30.4 px, lähin asteikon koko 34 px (ero 3.6 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--tk-paperi-pinta);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 /* Web .avauskortti-esittely: padding 0.65rem 0.9rem 0.5rem. */

@@ -21,7 +21,7 @@ Shader "Matkakirja/Linssit/SaaKerros"
         {
             Name "SaaKerros"
             Tags { "LightMode" = "UniversalForward" }
-            Blend SrcAlpha OneMinusSrcAlpha
+            Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha   // alfa "over": KaupunkiKooste-RT esikerrottu (Linssiseppä 8.10.)
             ZWrite Off
             ZTest Always
             Cull Off

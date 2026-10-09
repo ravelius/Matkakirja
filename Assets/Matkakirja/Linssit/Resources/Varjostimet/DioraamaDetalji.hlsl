@@ -9,6 +9,27 @@
 TEXTURE2D(_DetaljiAlbedo); SAMPLER(sampler_DetaljiAlbedo);
 TEXTURE2D(_DetaljiNormaali); SAMPLER(sampler_DetaljiNormaali);
 TEXTURE2D(_DetaljiKarheus); SAMPLER(sampler_DetaljiKarheus);
+TEXTURE2D(_DetaljiKorkeus); SAMPLER(sampler_DetaljiKorkeus);
+
+// PARALLAKSI (POM, LR v45s, juna 169, vain Ultra): korkeuskartta (lineaarinen, 1 = ylin) hallitsevan projektiotason UV:lle; muut
+// tasot pelkällä normaalilla. pom.x = syvyys UV-yksiköissä (syvyys_m / m), pom.y = päällä. Häivytys 6–10 m ja loiva kulma (< 15°) pois.
+float2 DioraamaParallaksi(float2 uv, float3 V, float3 akseliU, float3 akseliV, float3 akseliN, float syvyys)
+{
+    float vn = abs(dot(V, akseliN));
+    float2 suunta = float2(dot(V, akseliU), dot(V, akseliV)) / max(vn, 0.25);
+    const int ASKELIA = 10;
+    float2 dUv = suunta * syvyys / ASKELIA;
+    float2 gx = ddx(uv), gy = ddy(uv);
+    float kerros = 0, syva = 1.0 - SAMPLE_TEXTURE2D_GRAD(_DetaljiKorkeus, sampler_DetaljiKorkeus, uv, gx, gy).r;
+    float2 p = uv;
+    [loop] for (int i = 0; i < ASKELIA; i++)
+    {
+        if (kerros >= syva) break;
+        p -= dUv; kerros += 1.0 / ASKELIA;
+        syva = 1.0 - SAMPLE_TEXTURE2D_GRAD(_DetaljiKorkeus, sampler_DetaljiKorkeus, p, gx, gy).r;
+    }
+    return p;
+}
 
 struct DetaljiTulos
 {
@@ -18,13 +39,25 @@ struct DetaljiTulos
     half valo;         // kohokuvion valokerroin leivotulle valolle (1 = ennallaan)
 };
 
-DetaljiTulos DioraamaDetalji(float4 detalji, float3 p, float3 n)
+DetaljiTulos DioraamaDetalji(float4 detalji, float3 p, float3 n, float4 pom)
 {
     DetaljiTulos t;
     t.albedo = 1; t.normaali = n; t.karheus = 1; t.valo = 1;
     if (detalji.z < 0.5) return t;
     float3 w = pow(abs(n), 4.0); w /= max(1e-4, w.x + w.y + w.z);
     float2 uvX = p.zy * detalji.x, uvY = p.xz * detalji.x, uvZ = p.xy * detalji.x;
+    if (pom.y > 0.5 && pom.x > 0)
+    {
+        float3 V = _WorldSpaceCameraPos - p; float matka = length(V); V /= max(matka, 1e-4);
+        float hiv = saturate((10.0 - matka) / 4.0) * step(0.26, abs(dot(V, n)));   // 6–10 m, kulma > 15°
+        float syv = pom.x * hiv;
+        if (syv > 1e-5)
+        {
+            if (w.x >= w.y && w.x >= w.z) uvX = DioraamaParallaksi(uvX, V, float3(0, 0, 1), float3(0, 1, 0), float3(1, 0, 0), syv);
+            else if (w.y >= w.z) uvY = DioraamaParallaksi(uvY, V, float3(1, 0, 0), float3(0, 0, 1), float3(0, 1, 0), syv);
+            else uvZ = DioraamaParallaksi(uvZ, V, float3(1, 0, 0), float3(0, 1, 0), float3(0, 0, 1), syv);
+        }
+    }
     half v = (half)detalji.y;
 
     half3 a = SAMPLE_TEXTURE2D(_DetaljiAlbedo, sampler_DetaljiAlbedo, uvX).rgb * (half)w.x
