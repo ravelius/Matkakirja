@@ -43,6 +43,7 @@ namespace Matkakirja.Editori
             Lopeta, OdotaLoppua, Valmis }
 
         static int kokoNro, kehyksia;
+        static LinnaValikko linna;
         static double vaiheAlku;
         static Vaihe vaihe;
         static readonly List<string> rivit = new List<string>();
@@ -154,8 +155,12 @@ namespace Matkakirja.Editori
                 case Vaihe.Linna:
                     // Linnan HUD ilman SeikkailuPelaajaa: tapit näkyviin ja toimintonappi poimi-tilaan (testikytkimet). Oppaan
                     // esitysrivi (Kysy-rivi, tauko) pois: linnassa ei ole kierrosta.
+                    // Linnassa oppaan napit eivät näy (DioraamaTaulu näyttää LinnaValikon): opas piiloon, linnan valikko näkyviin.
                     OpasValikko.Hae().Komento("esitys auto");
                     OpasValikko.Hae().Komento("sulje");
+                    OpasValikko.Hae().Nayta(false);
+                    linna = new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
+                    linna.Nayta(true);
                     SeikkailuTapit.TestiNakyy = true;
                     SeikkailuTapit.TestiToiminto = "poimi";
                     Siirry(Vaihe.OdotaLinna);
@@ -177,6 +182,7 @@ namespace Matkakirja.Editori
                     if (kehyksia < 10) return;
                     TarkistaLoyto(paljastus);
                     paljastus.Sulje();
+                    linna?.Nayta(false);
                     Siirry(Vaihe.Lopeta);
                     break;
                 case Vaihe.Lopeta:
@@ -245,10 +251,11 @@ namespace Matkakirja.Editori
 
         static void TarkistaLinna()
         {
-            var juuri = OpasValikko.Hae().TestiJuuri;
-            if (juuri?.panel == null) { Virhe("oppaan paneeli puuttuu"); return; }
+            var juuri = linna?.Juuri;
+            if (juuri?.panel == null) { Virhe("linnan valikon paneeli puuttuu"); return; }
             var turva = TurvaAlue(juuri);
-            var napit = Nakyvat(OpasValikko.Hae().TestiAvainnapit()).ToList();
+            var napit = Nakyvat(linna.TestiAvainnapit()).ToList();
+            foreach (var (nimi, e) in napit) Kokonaan(e, turva, "linna: " + nimi);
             foreach (var (nimi, e) in Nakyvat(SeikkailuTapit.TestiAvainnapit()))
             {
                 Kokonaan(e, turva, "linna: " + nimi);
@@ -315,17 +322,25 @@ namespace Matkakirja.Editori
             else Virhe($"{nimi} {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
         }
 
+        /// <summary>
+        /// Näkyvä osa = vieritysikkunan, ScrollViewn ja sen isän (paneeli, esim. oppaan valikko) leikkaus: maxHeightilla rajattu
+        /// paneeli leikkaa listan, vaikka vieritysikkuna jatkuisi sen alle.
+        /// </summary>
         static void IlmanVieritysta(VisualElement e, string nimi)
         {
             for (var p = e.parent; p != null; p = p.parent)
             {
                 if (!(p is ScrollView sv)) continue;
-                var ikkuna = sv.contentViewport.worldBound;
+                var ikkuna = Leikkaa(sv.contentViewport.worldBound, sv.worldBound);
+                if (sv.parent != null) ikkuna = Leikkaa(ikkuna, sv.parent.worldBound);
                 var b = e.worldBound;
                 if (b.yMin < ikkuna.yMin - 0.5f || b.yMax > ikkuna.yMax + 0.5f)
                     Virhe($"{nimi} {Laatikko(b)} vaatii vierityksen (näkyvä osa {Laatikko(ikkuna)})");
             }
         }
+
+        static Rect Leikkaa(Rect a, Rect b) =>
+            Rect.MinMaxRect(Mathf.Max(a.xMin, b.xMin), Mathf.Max(a.yMin, b.yMin), Mathf.Min(a.xMax, b.xMax), Mathf.Min(a.yMax, b.yMax));
 
         static float Peitto(VisualElement e, VisualElement juuri)
         {
