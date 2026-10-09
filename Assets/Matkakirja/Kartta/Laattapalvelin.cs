@@ -97,6 +97,11 @@ namespace Matkakirja
         /// (kesän aineistoa) ei käytetä.
         /// </summary>
         public static volatile string S2EuroopanKausi = S2EuroopanVersio;
+        /// <summary>
+        /// Talvi (9.10., Karttasepän talvi/v1): S2 vain Euroopan lohkossa; maailman (kesän) laatat ja korjauskerrokset tyhjinä,
+        /// jolloin alla näkyy BMNG:n tammikuu lumineen. AstronauttiKerros asettaa kauden mukaan (Iss.Vuodenaika.S2VainEurooppa).
+        /// </summary>
+        public static volatile bool S2VainEurooppa;
         public const int S2ValimuistiMt = 200;
 
         TcpListener[] kuuntelijat;
@@ -396,7 +401,8 @@ namespace Matkakirja
             int piste = osat.Length == 3 ? osat[2].IndexOf('.') : -1;
             if (osat.Length != 3 || !int.TryParse(osat[0], out int z) || !int.TryParse(osat[1], out int x)
                 || !int.TryParse(piste < 0 ? osat[2] : osat[2].Substring(0, piste), out int y)) { tyhja = true; return polku; }
-            var korjaus = s2MaailmaKorjausPolku?.Invoke(z, x, y);
+            bool vainEu = S2VainEurooppa;
+            var korjaus = vainEu ? null : s2MaailmaKorjausPolku?.Invoke(z, x, y);
             if (korjaus != null) return korjaus + polku.Substring(juuri.Length);
             if (z >= 6 && z <= 10)
             {
@@ -409,7 +415,7 @@ namespace Matkakirja
                     return $"{ek ?? S2Polku + "/" + kausi + "/"}{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
                 }
             }
-            tyhja = !onko(z, x, y);
+            tyhja = vainEu || !onko(z, x, y);
             return polku;
         }
 
