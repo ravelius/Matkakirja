@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "732115e38deae77f",
-  "kansio": "dioraama/olavinlinna/blender/732115e38deae77f/",
+  "hash": "b51d67e98e7acc63",
+  "kansio": "dioraama/olavinlinna/blender/b51d67e98e7acc63/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2539,14 +2539,19 @@
       "tavuja": 4295884
     },
     {
+      "polku": "vaiheet/restaurointi.glb",
+      "sha256": "1c96b93ed92a4c6a3142156fe09790e26a7a7259462c6877fdeb1baef950c468",
+      "tavuja": 1197216
+    },
+    {
       "polku": "vaiheet/tyhja-saari.glb",
       "sha256": "f16fb7d874064fc67fc9661e79933401b1b2f823180b0a040a3c2dce7bfefcbb",
       "tavuja": 1171480
     },
     {
       "polku": "vaiheet/vaiheet.json",
-      "sha256": "a82020806910ed1aea2575621a9fc05f41cfa370f903bddb6cd7567e7f76527e",
-      "tavuja": 374
+      "sha256": "c92a7c13d71d0c794e7a9408b9686d928d1a9151ec632c54d4d4e1e6b59884cb",
+      "tavuja": 480
     },
     {
       "polku": "valot/fatabuuri-2k-4x4.astcm",
@@ -3508,6 +3513,12 @@
       "vuodesta": 1868,
       "vuoteen": 1872,
       "leikkaukset": "vaiheet/palon-jaljet-leikkaukset.json"
+    },
+    {
+      "id": "restaurointi",
+      "glb": "vaiheet/restaurointi.glb",
+      "vuodesta": 1961,
+      "vuoteen": 1975
     }
   ]
 }
