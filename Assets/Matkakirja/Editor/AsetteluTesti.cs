@@ -535,6 +535,9 @@ namespace Matkakirja.Editori
         {
             var b = e.worldBound;
             if (!(b.width >= 1f && b.height >= 1f)) return false;
+            // Kokonaan ruudun ulkopuolella (esim. pudotusvalikon piilotetut napit oikean reunan takana) = ei näkyvissä.
+            var koko = e.panel.visualTree.layout;
+            if (b.xMin >= koko.width || b.xMax <= 0f || b.yMin >= koko.height || b.yMax <= 0f) return false;
             for (var p = e; p != null; p = p.parent)
                 if (p.resolvedStyle.display == DisplayStyle.None || p.resolvedStyle.visibility == Visibility.Hidden || p.resolvedStyle.opacity < 0.01f)
                     return false;
@@ -554,8 +557,10 @@ namespace Matkakirja.Editori
                 var b = e.worldBound;
                 if (sv != null)
                 {
+                    // Vierityslistassa vain näkyvä osa (vieritysikkuna rajaa pystysuunnassa); sivusuunta tarkistetaan kokonaan.
                     var ikkuna = sv.contentViewport.worldBound;
                     if (b.yMax < ikkuna.yMin || b.yMin > ikkuna.yMax) continue;   // vierityksen takana: ei tarkisteta
+                    b = Rect.MinMaxRect(b.xMin, Mathf.Max(b.yMin, ikkuna.yMin), b.xMax, Mathf.Min(b.yMax, ikkuna.yMax));
                 }
                 var koko = e.panel.visualTree.layout;
                 var turva = RuudunTurva(koko);
