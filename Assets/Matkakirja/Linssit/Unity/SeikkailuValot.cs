@@ -155,7 +155,7 @@ namespace Matkakirja.Natiivi
             if (tyyppiValo == null) return;
             isot.Clear(); liekit.IsotLiekit(1.4f, isot);
             foreach (var g in isot)
-                if (hehkuLiekit.Add(g.GetInstanceID()))
+                if (hehkuLiekit.Add(g.GetHashCode()))
                     Hehku(g.transform, Vector3.zero, new Color(1f, 0.6f, 0.28f), 0.8f, 2.5f, false, kerros);
         }
 

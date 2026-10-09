@@ -179,7 +179,7 @@ namespace Matkakirja.Natiivi
             if (IslandAlaY > 0f && rivi.worldBound.yMin < IslandAlaY) tila = Mathf.Min(tila, IslandKapea - 20f);
             float nyt = nimi.resolvedStyle.fontSize;
             if (tila <= 0f || nyt <= 0f || float.IsNaN(tila)) return (korostusKoko, korostusRivit);
-            string avain = nimi.text + "|" + Mathf.Round(tila) + "|" + nimi.resolvedStyle.unityFontDefinition.fontAsset?.GetInstanceID() + nimi.resolvedStyle.unityFont?.GetInstanceID();
+            string avain = nimi.text + "|" + Mathf.Round(tila) + "|" + nimi.resolvedStyle.unityFontDefinition.fontAsset?.GetHashCode() + nimi.resolvedStyle.unityFont?.GetHashCode();
             if (avain == sovitusAvain) return (sovitusKoko, sovitusRivit);
             float PerPt(string t) { float l = nimi.MeasureTextSize(t, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined).x; return l / nyt; }
             float yksi = PerPt(nimi.text);
