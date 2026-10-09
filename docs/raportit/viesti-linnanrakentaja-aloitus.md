@@ -36,22 +36,23 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      - Kattosaumat kulkevat lappeen suuntaan (`_uv_lappeet`). pelti_kl:n arkkisävy on 0,025, ja katoilla on patinalaikut.
      - LS2 tekee v6h:n ja kuvaparin. Vertailukuva: `esikatselu/kl_v3c_vertailu.jpg`. `KL_SYVYYS` tuottaa syvyyskuvat esikatseluista
        Karttasepän tekoälypintakokeeseen (`_tyo/karttaseppa/tekoalypinnat-koe/`).
-   - **Tekoälypinnat (PT 9.10. ilta; omistaja hyväksyi kokeen)** tehdään Karttasepän ComfyUI/SDXL-työnkululla
-     (`/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat/pinta.py`, LUEMINUT samassa kansiossa).
-     - Omat työkalut kansiossa `kaupunkipinnat-v1/lahde/`:
-       - `tekoaly_syotteet.py <codex-ohje/näkymä>` tekee syvyys16-, reunat-, normaali-, maski-, pohja- ja kamera.json-kuvat kansioon
-         `<näkymä>/tekoaly/`.
-       - `tekoaly_takaisin.py <näkymä> <tulos> <tunniste> [--vertaa kuva nimi]` palauttaa tuloksen RGBA:na täyteen kehykseen ja mittaa
-         reunat.
-       - Sen jälkeen ajetaan `kohdista.py` ja `projisoi.py -- nd <ulos> --lahde tekoaly`.
-     - Ensimmäinen kierros on PT:llä (`_valmiit/tekoalypinnat-koe-20261009/`).
-       - ND etelä: tekoäly osuu malliin paremmin kuin Codex (jäännös 0,19 vs 0,28 m), mutta 1 Mpx on vain 8 px/m.
-       - Olavinlinna s1: v2:ssa ei ole tileä eikä viitekuvaa; kieltolistalla ovat putket ja varjot.
-     - Seuraavaksi palageneraatio (noin 25 px/m) ja ND:n katot omasta näkymästään.
-     - ND:n Codex-pilotti hylättiin, eikä ND:tä kohdisteta ennen PT:n päätöstä. Olavinlinnan seinä 1:n Codex-pilotti tulee
-       Sisältökirjurilta, ja se kohdistetaan.
+   - **Tekoälypinnat (PT 9.10. ilta, kierros 2): työnjako ja jono.** Karttaseppä ajaa ComfyUI:n (jono: ND etela, katot, pohjoinen,
+     lansi, apsis, spiira → KL → Olavinlinna v25). Loki: `tekoalypinnat/aja-yo.log`, tulokset:
+     `/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat/tulokset/<nd|kl>_<näkymä>_v1.png`. Älä aja ComfyUI:ta rinnakkain.
+     - Minun osani: syötteet `codex-ohje/<näkymä>/tekoaly/` (1 Mpx) ja `…/tekoaly-pala/` (25 px/m; `tekoaly_syotteet.py --pxm 25 --ulos`).
+       Tulosten jälkeen ajetaan `zsh kaupunkipinnat-v1/lahde/tekoaly_koko.zsh <nd|kl> v1 <ulos>` (takaisin, kohdista ja projisoi koko malli).
+       Sitten vienti → LS2:n pelikuva valokuvan rinnalla → PT.
+     - PT:n järjestys: ND ensin (lyijykatto sileän harmaa, pystysaumat, ei tummia raitoja), sitten KL G3 (rappaus 153/146/131, kupari ja
+       paneelit lukittu), sitten Olavinlinna.
+     - Palakoe ND etelä (`tekoaly_palat.py`, denoise 0,5): saumoja ei näy, mutta yksityiskohtaa tuli vähän. Suositus Karttasepälle:
+       0,65–0,75.
+     - Olavinlinnan seinä 1: syöksytorvi on tasoitettu kuoreen (`kuori_tasoita.py`, jatkuva kuvaus).
+       - Kuori on kansiossa `linna-laatu/ulkokuori-v25-koe/` (3 LOD-tasoa, EI viety). Uudet ohjeet ovat kansiossa
+         `olavinlinna-codex-ohje-v25/seina1/`.
+       - Atlakseen projisoi `kuori_projisoi.py` (8k, toimii, todennettu renderillä).
+       - Seinien 2–5 syötteet ovat valmiina. Ohuita suikaleita jää, koska fotogrammetrian kolmioiden kiertosuunta on alun perin sekalainen.
    - **Vouti v4** on peilissä `52825516ed687fd3` (blender af2f13bfbff521a7, v45b 5b1c57031), uusina nimillä `hahmot/vouti-1500-mh*`.
-     Siirtoseppä kytkee sen junaan 173.
+     Siirtoseppä kytkee sen junaan 173. v45b-worktree on poistettu (haara on originissa).
    - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
    - **Riddarholmen v2** on valmis ja odottaa PT:tä ja omistajaa. Vertailukuva:
      `riddarholmen-v1/esikatselu/riddarholmen_v2_vertailu_valokuva.jpg`. v1 on tallessa kansiossa `glb-v1/`.
