@@ -5,6 +5,15 @@ Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Workt
 Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
 (`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
 
+## TILA 15.5x
+- Omistaja ND v8/KL v2b: "ei näytä ollenkaan hyvälle … erinäköinen kuin Googlen rakennukset", osoitinta ei vaihdeta.
+- Tehty PT:lle: docs/raportit/vertailu-nd-kl-valokuvat-20261009.md (Commons-vertailu + tyylikoe, 67ed47be5).
+- Koehaara linssiseppa2/google-tyyli 594f971a6 (app lokit/linssiseppa2-app-tyyli = abef6bf30; worktree wt/proto-linssiseppa2-tyyli):
+  asetukset omatyyli/omapehmeys/omavaihtelu/omasat/omakontrasti/omasavyr-g-b ja omavarjot/omavarjomatka. Google-tyyli toimii
+  KL:llä, ND:llä latteampi. VARJOT EIVÄT NÄKYNEET: lisää lokitus (luotiinko valo, RenderSettings.sun, shadowDistance) ennen
+  seuraavaa ajoa; epäillyt: kartan Aurinko.cs vs RenderSettings.sun, URP-kaskadit, Kamera()-kutsu.
+- Skriptit scratchpadissa: tyyli-koe.sh (variantit tyyli-variantit.txt), kuvat-tyyli.sh, kaanna-tyyli.sh; Commons-kuvat scratchpad/commons.
+
 ## TILA 15.0x
 - pbr-173 kärki a72f1ee21 (Natiivisepällä): + osoitin uusin-3.json (173+ lukee; Julkaisija loi → v6b; uusin-2 = v6b vanhoille).
   v9 vain uusin-3:een ja vasta omistajan hyväksynnän jälkeen. Versiokansiot muuttumattomia.
