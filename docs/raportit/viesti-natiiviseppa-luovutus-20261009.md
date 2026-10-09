@@ -1,0 +1,66 @@
+# Natiiviseppä: luovutus 9.10.2026 13.5x (nollaus PT:n pyynnöstä, konteksti täynnä)
+
+Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
+juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
+
+## Heti tehtävä (seuraaja)
+
+1. **TF 172:** Julkaisija lähettää iOS-ajon id:n ja alkuajan. Käynnistä Mac TF -odottaja ajo-id:llä (4. argumentti, ks. alla):
+   `perl -e 'use POSIX; exit if fork; setsid; open STDOUT, ">>", "/Users/Shared/Claude/proto-3d/lokit/natiiviseppa-mac-tf-172.log"; open STDERR, ">&STDOUT"; exec "zsh", "/Users/Shared/Claude/proto-3d/lokit/natiiviseppa-skriptit/mac-tf-odottaja.sh", "1c2ecbe3", "172", "<ISO-alku>", "<ajo-id>"'`
+   (juna/b13 on jo siirretty 936c84e6:een 13.45, juna.log kirjattu.)
+2. **Mac TF 171** -odottaja ajo-id:llä 37899933691 käynnistettiin 10.41 (loki `lokit/natiiviseppa-mac-tf-171.log`, vahti `lokit/natiiviseppa-mac-tf-vahti.txt`). Tarkista, että Mac 171 meni läpi.
+
+## Junat
+
+| Juna | Master | Runko | Käännös | Tila |
+|---|---|---|---|---|
+| 169 | 5b91b1a2c | e9802f2d1 | 2ee9aea8e | TF tehty |
+| 170 | 4a140064e | d213127c1 | b508936fb | iOS TF tehty; Mac TF 170 jäi (vanha odottaja luki perutun yöajon), Julkaisija: 171 riittää |
+| 171 | d338b8c8f | e13868971 | 024035e6f | omistajan pyynnöstä heti: kaatumiskorjaus pallon tauolla; TF 37899933691 |
+| **172** | **1c2ecbe32ebef7a85b937ad240765e72be3242e7** | **936c84e66** | **105df6483** (13.45, 0 virhettä, CFBundleDisplayName "Matkakirja" todennettu) | **lukittu 13.45, TF Julkaisijalla** |
+
+Junan 172 muutosloki (PT, 268 merkkiä / 274 tavua): "Olavinlinna: historia elokuvana, uusia esineitä, aukeavat ovet ja äänet. Pallo:
+sadekuurot, märät kadut, salamat, iltaikkunat, Pariisin jokilaivat ja saapumismusiikki, tarkemmat Notre-Dame ja Kuninkaanlinna. Uudet
+varustekuvat, iPhone pystyssä. Nimi on nyt Matkakirja." Osoitin v6b julkaisussa (PT); ND/KL v9 vasta omistajan kuvahyväksynnän jälkeen.
+
+Junan 172 sisältö (omistaja: junat 172–175 yhtenä): Siirtoseppä 553edcdc4, NUI e7c7474d2 + cd4553c8d, LS1 11408f46f + 219ce1cd3,
+LS2 51799391e + 657676845 + 2996980aa, Pelikoodari ade5ad9f3 + 049e4ce21 + cf0a1547d, omat 86a016ed5 (näyttönimi "Matkakirja": iOS
+PostProcessBuild 190, Mac `MacNayttonimi` plutil `Rakennus.MacOS`:ssa; productName "Matkakirja 3D" ja bundle-tunnus ennallaan),
+9781342ed (STP-skaalain, kaupunki.Ajallinen yhä 0), a1b13e5ee (ENABLE_BITCODE NO). **Steam Audio poistettu** (revertit a090dbc25, fb79756d9).
+
+## Junan 173 jono (kokoa BUILD 172:n päälle uuteen worktreehen)
+
+- **Steam Audio** LS1 4869a5dc9 + a13a6bac8 (kytkin oletuksena pois). ESTE: iOS-kirjastot (phonon, audioplugin_phonon, mysofa, pffft) ovat
+  vain laitteen arm64:ää → simulaattorikäännös kaatuu linkitykseen ("building for iOS-simulator, but linking … built for iOS").
+  Suunniteltu korjaus: `Rakennus.IosSimulaattori` asettaa määritteen MATKAKIRJA_EI_STEAMAUDIO ja poistaa
+  `Assets/Plugins/SteamAudio/Binaries/iOS/*` iOS-yhteensopivuudesta (PluginImporter, palautus finallyssä — huom. `Kaanna` kutsuu
+  EditorApplication.Exit(1) virheessä, joten palautus ei aina aja; käännöskopio resetoidaan gitillä joka kerta), SteamAudioUnity- ja
+  Editor-asmdefeihin `defineConstraints: ["!MATKAKIRJA_EI_STEAMAUDIO"]`, SteamAudioKoe.cs:lle `#else`-tynkä samalla API:lla (Rekisteroi,
+  Paivita, Komento, Tila, Asetus, Paalla, Pakko, AsetusAvain). SteamAudioPoisTestit lukee lähdetekstiä: Liita/Kaynnista vain
+  SteamAudioKoe.cs:ssä. PT: todennetaan uudelleen Unity 6.7:llä. Mac: proto3d-mac-testflight allekirjoittaa .bundlet jo.
+- Pelikoodari valmisluentojen varareitti 90edb9c44 (masterin d338b8c8f päällä; Puhe.cs, Valmisluennat.cs).
+- NUI Pulu: pulu-valmiit 80625b5c2 (⊇ e7c7474d2), odottaa PT:n kuittausta.
+- LS2: OmaMallin normaalikartat (tulossa). Codexin loput fotot (NUI). Saari v2c / v46e (Siirtoseppä/LR) jos ei ehtinyt 172:een.
+
+## Unity 6.7 (omistaja 13.3x)
+
+Junan 172 JÄLKEEN erillinen haara: Cesium 1.25.1 tai 6.7-yhteensopiva, Steam Audio, OmaMalli- ja DioraamaValaistu-varjostimet, URP-asetukset,
+iOS- ja Mac-käännös, testit → raportti PT:lle (mitä rikkoutuu ja mitä korjataan; URP reaaliaikainen GI, SSR, Fast Build Profile) →
+päähaaraan vasta LTS:n (loka–joulu) ja raportin jälkeen.
+
+## Työkalut ja polut
+
+- Worktreet: vain `/Users/Shared/Claude/wt/proto-natiiviseppa-j172` (proto-repon `git worktree`; `tools/uusi-worktree.sh --poista` koskee vain
+  Matkakirja-fablea). Luo 173: `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto worktree add -b natiiviseppa/juna-173 /Users/Shared/Claude/wt/proto-natiiviseppa-j173 1c2ecbe32`.
+- Testit rungossa: `./Kartta-testit/kaanna.sh`, `./Peli-testit/kaanna.sh`, `./Linssit-testit/kaanna.sh`, `./Linssit-testit/unity-tarkistus.sh`,
+  `./Peli-testit/unity-tarkistus.sh`, `./tyokalut/tarkista.sh`; .meta-tarkistus uusille Assets-tiedostoille (.bundle-sisällöt eivät tarvitse).
+- Käännös (vain NYT:llä): `PROTO_APP_KOPIO=/Users/Shared/Claude/proto-3d/lokit/natiiviseppa-app-<juna>-<runko> zsh /Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh <runko>`
+  (loki `lokit/kaannospalvelu/<aika>-<runko>.log`; "ld:" grep osuu myös "xcodebuild"-riviin → tarkista rivit).
+- BUILD-merge: proto masterissa `git merge --no-ff <runko> -F <viesti>`; tarkista `git diff --quiet HEAD <runko>`.
+- Mac TF -odottaja `lokit/natiiviseppa-skriptit/mac-tf-odottaja.sh <sha8> <build> <ISO-alku> [ajo-id]` (korjattu 9.10.: ajo-id tai
+  `--event workflow_dispatch`; varmuuskopio `.ennen-ajoid`).
+- Hätätoisto (taukokaatuminen): scratchpadin `hata-ajo.sh <app-kansio> <tunniste>` kirjoittaa `Documents/kaupunki-vapaa-muisti.txt` = 0.5
+  30 s tauon jälkeen (VapaaMuisti lukee sen 2 s välein) → MUISTIHÄTÄ; skenaario `proto-3d/tyokalut/natiiviseppa-ajot/sk-hata-tukholma.txt`.
+  Todennus 171:llä: näkymä pysyy (LS2 9e15ec414: karkea laattavalinta, ei SSE-vaihtoa, koska Cesiumin SSE/välimuistiasettimet kutsuvat
+  RecreateTileset():iä, Cesium3DTileset.cs:255/366).
+- Skenaariot `proto-3d/tyokalut/natiiviseppa-ajot/`: sk-yo170-*, sk-yopaiva170-tukholma, sk-filmi170-*, filmi-arkki.py (vaaka-arkki raakakuvista).
