@@ -90,8 +90,10 @@ export function sijoitaTila(tila) {
   // Final IK (5.10.): hahmon kädet kahvoihin (tartu: maailman paikka ja kierto; kanna on käden paikallinen, ei muunneta)
   // ja vuoron osoituskohde.
   for (const h of t.hahmot ?? []) {
+    // 9.10. (juna 174): tartu-rivi, jonka esine on saman hahmon kanna-rivin esine (kannettu kirja), on esineen kehyksessä → ei muunneta.
+    const kannetut = new Set((h.kadet ?? []).filter((k) => k.tyyppi === 'kanna' && k.esine).map((k) => k.esine));
     for (const k of h.kadet ?? []) {
-      if (k.tyyppi !== 'tartu') continue;
+      if (k.tyyppi !== 'tartu' || kannetut.has(k.esine)) continue;
       pisteeksi(k, 'paikka');
       if (Array.isArray(k.kierto) && k.kierto.length === 4) k.kierto = m.kierto(k.kierto);
     }

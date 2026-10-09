@@ -206,3 +206,15 @@ test('Final IK: tartu-k채den paikka ja kierto sek채 vuoron osoituskohde siirtyv�
   lahella(vx, [0, 0, 1]);
   assert.deepEqual(kadet[0].paikka, [2, 1, 1], 'alkuper채ist채 ei muuteta');
 });
+
+test('tartu kannettuun esineeseen (sama esine kuin kanna-rivill채) on esineen kehyksess채 eik채 siirry; maailman kahvat siirtyv채t', () => {
+  const kadet = [
+    { tyyppi: 'kanna', esine: 'kirja', kasi: 'r', kehys: 'kammen', siirto: [0, -0.035, 0.08], kierto: [0.707107, 0, 0.707107, 0], milloin: 'tyo' },
+    { tyyppi: 'tartu', esine: 'kirja', kasi: 'l', paikka: [0, 0.035, 0.03], kierto: [0, 1, 0, 0], milloin: 'tyo' },
+    { tyyppi: 'tartu', esine: 'pulpetti', kasi: 'l', paikka: [2, 1, 1], kierto: [0, 0, 0, 1], milloin: 'puhe' },
+  ];
+  const u = sijoitaTila({ ...tila(), hahmot: [{ id: 'h', paikka: [2, 1, 1], kadet }], sijoitus: S({ ankkuri: [1, 0, 1], paikka: [10, 2, 10], suunta: 90 }) });
+  assert.deepEqual(u.hahmot[0].kadet[0], kadet[0]);
+  assert.deepEqual(u.hahmot[0].kadet[1], kadet[1], 'kannetun kirjan kehys ennallaan');
+  lahella(u.hahmot[0].kadet[2].paikka, u.hahmot[0].paikka);
+});
