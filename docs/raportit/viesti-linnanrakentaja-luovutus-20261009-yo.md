@@ -176,3 +176,13 @@ Seuraavaksi:
   - Ruusu, sokeakaaret ja listat ovat nyt ruusutasossa `sb(t)` ≈ s 3. v9:ssä ne leijuivat 3 m edessä.
 - **Kolmiot lod0** (ilman maata ja puita): 90,8 k.
 - **Täysi ajo odottaa PT:n lupaa:** vapaata on 24 Gt, mutta swap pysyy 23 Gt:ssa, joten muistisäännön ehto swap alle 2 Gt ei täyty.
+
+### 9.10. klo 21.1x: ND v10 viety ja ohjauskuvat valmiit
+- **Sakaristo** (`sakaristo()`): ikkunat, päätykolmiot, pinaakkelit ja kaide. Osan 2 katon korkeus on 5 m.
+- **glb/:** lod0 599 k, lod1 406 k ja lod2 5 k kolmiota. Ajo kestää noin 1 min: `scratchpad aja_v10.sh` eli
+  `Blender -b --factory-startup -P lahde/notre_dame.py`.
+- **codex-ohje on ajettu uudelleen** (ortho_ohje + merkinnat + tekoaly_syotteet 1 Mpx ja `--pxm 25`). Vanha on kansiossa
+  `codex-ohje-v9`. Kehys muuttui (ppm 26,75), joten v2:n tekoälytulokset eivät enää sovi.
+- **Karttaseppä on saanut v3-tilauksen.** Tulosten jälkeen ajetaan `zsh tekoaly_koko.zsh nd v3 <ulos>`, sitten LS2:n pelikuva ja PT.
+- **Jonossa (Siirtoseppä, juna 174):** Olavinlinnan kuoren `Olavinlinna_vedessa2.003` on litteä ruskea vesitaso (y −6,5…−5,5,
+  ~3 400 m²). Se leikataan pois tai lasketaan veden (−7) alle.
