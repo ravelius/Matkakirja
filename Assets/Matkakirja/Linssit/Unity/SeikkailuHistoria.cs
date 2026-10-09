@@ -263,7 +263,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuKavely.VainVuosileikkaukset = true;
                 Shader.SetGlobalVector(IdMustaKorvaus, MustaKorvaus);
                 PiilotaKavelyosat();
-                bool ranta = Historiajana.Ranta1499Nakyy(vuosi);   // arvio 10 virhe 3: 1499-täyttö pois, kun bastionit alkavat kasvaa
+                bool ranta = Historiajana.Ranta1499Nakyy(vuosi, DioraamaSovitin.Linssi?.Rakennus?.Ulkokuori?.Asu1499 == true);   // arvio 10 virhe 3 (vain v24-kuori)
                 foreach (var r in tasaisetRannat) if (r != null && r.enabled != ranta) r.enabled = ranta;
                 if (rakentuu)
                 {
