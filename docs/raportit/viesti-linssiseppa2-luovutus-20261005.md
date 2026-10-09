@@ -35,7 +35,17 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 07.2x (uusin)
+## TILA 9.10. klo 08.2x (uusin)
+- JUNA 170 PYSÄYTETTY YÖKUVISTA (PT, takaraja 13.00). Oma osuus valmis ja kuvattu: linssiseppa2/laivat-170 ea60457f9 → Natiiviseppä
+  (c5d5fe101 revert + caf9a0506 vesi index-v4 + 86a4cf2d8 sininen hetki taivas/vesi + ea60457f9 laatat ja ReikaTayte loppuiltaan).
+  Kuvat lokit/linssiseppa2-yotaivas3-pariisi/vertailu-pariisi-tukholma.png (käännös b1784bcea). Syy: fysikaalinen taivas −7°:ssa liian
+  himmeä (ei passit eikä filmi). Jäljellä LS1:lle: Tukholman kultainen vesi + kultaiset ruudut yövalopassista.
+- Vesi: Karttaseppä index-v4 (pariisi3/tukholma3, altaat pois, kanavat suojattu) Julkaisijalla ennen TF:ää; koodin alasuodatin peruttu
+  (pudotti Canal Saint-Martinin altaat).
+- Odottaa: ympäristövalo-171 cf576df34 kuvapari (aja-171y.sh, vienti17: Kuninkaanlinna v1.4, ND v3 + Google-vertailu) → PT → Natiiviseppä.
+  171 sade-erä: tummat matalat sadepilvet + KaupunkiIlmakeha.Salama-API (_IlmSalama) LS1:lle; LS1 tekee märkien katujen valojuovat _IlmSaa.x:llä.
+
+## TILA 9.10. klo 07.2x
 - JUNA 171: ympäristövalo cf576df34 (proto linssiseppa2/ymparistovalo-171, wt proto-linssiseppa2-ymparistovalo): Trilight kartan
   ambientista (Ydin YmparistoValo), asetus "ymparistovalo 0|1". Natiivisepälle lähetetty. KUVAPARI Kuninkaanlinnan pohjoissivu 0/1
   171:n käännöksellä → PT.
