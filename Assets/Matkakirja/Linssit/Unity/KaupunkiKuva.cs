@@ -428,7 +428,8 @@ namespace Matkakirja.Natiivi
                 var gr = kaupunki.Georef; float mt = gr != null ? gr.transform.lossyScale.x : 1f;
                 float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
                 // LS1:n automaattiset kuurot (kierros-170 PalloKuurot, OpasSovitin.KuuroVoima): heijastuksella, ettei haara riipu toisesta.
-                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = System.Math.Max(OpasKuuroVoima(), Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima);
+                // Sään sade (PalloSaaVaikutus.Sade, PT junaan 171: sade = tummat matalat pilvet + märät kadut) samaan maksimiin.
+                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = System.Math.Max(System.Math.Max(OpasKuuroVoima(), Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima), KaupunkiKuva.Saa.Sade);
                 Matkakirja.Linssit.Kierros.KaupunkiKuuro.Paivita(Time.deltaTime);
                 KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.45f, 0.95f, harmaus),
                     KaupunkiIlmakeha.TuuliMs * Time.time, mt);

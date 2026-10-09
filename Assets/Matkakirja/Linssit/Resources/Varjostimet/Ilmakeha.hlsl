@@ -16,6 +16,7 @@ float4 _IlmPilviParam;  // x peitto 0–1, y varjon voima, z jakso m (uv1), w pi
 float4 _IlmTuuli;       // xy pilvikentän siirtymä m (tuuli × aika)
 float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala), y kauko-udun kerroin (≥ 1; KaupunkiIlmakeha.KaukoUtu), z kaupungin valot 0–1, w taivaan hämärävalotus (≥ 1)
 float4 _IlmPilviKerros; // x pilvikerros 0/1 (KaupunkiIlmakeha.Pilvet), y pohja m, z paksuus m (pallon pilvet, raportin kohta 6a)
+float4 _IlmSalama;      // xyz salaman suunta (maailma), w välähdys 0–1 (KaupunkiIlmakeha.Salama; LS1:n salamat, juna 171)
 float4 _IlmHamara;      // x sinisen hetken voima 0–1 (aurinko −2…−7°), y valotuksen kompensointi (2^−EV; KaupunkiIlmakeha)
 float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot), z aamusumu veden yllä 0–1, w sateenkaari 0–1
 
@@ -128,6 +129,8 @@ float4 IlmPilviKerros(float3 d)
         float2 kohti = xz + s.xz / max(s.y, 0.1) * paksuus * 0.5;
         float itse = exp(-2.5 * IlmPilviPeitto(kohti, _IlmPilviParam.x));
         float3 valo = (IlmLapaisy(h, s.y) * itse * vaihe * 0.32 * paiva + ymparisto * (0.6 + 0.4 * (1.0 - itse))) * (1.0 - _IlmSaa.y) * (0.7 + 0.15 * i);
+        // Salaman välähdys (LS1:n pultti): pilven sisus hehkuu kylmänvalkoisena salaman suunnassa (keila ~25°), koko kerros hieman.
+        valo += float3(0.85, 0.9, 1.0) * _IlmSalama.w * (6.0 * pow(saturate(dot(d, _IlmSalama.xyz)), 24.0) + 0.25);
         float3 sironta, lapaisy; IlmIlmaperspektiivi(t, d, sironta, lapaisy);
         valo = valo * lapaisy + sironta;
         float hiipuma = (1.0 - smoothstep(40000.0, 80000.0, t)) * (1.0 - smoothstep(pohja - 600.0, pohja - 300.0, kamera));
