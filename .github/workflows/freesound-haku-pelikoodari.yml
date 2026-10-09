@@ -1,4 +1,4 @@
-# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026, Olavinlinnan aanet-fp-v2; 9.10. kaupunkikohtainen sorina Tukholma ja Pariisi (PT: ei vieraskielistä puhetta)). Vain tämän haaran pushista; ei mergetä.
+# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026; 9.10. ilta Soundly-aukot r016 tupa, r080 kaksitaso, r075 höyrylaiva (PT); Olavinlinnan aanet-fp-v2; 9.10. kaupunkikohtainen sorina Tukholma ja Pariisi (PT: ei vieraskielistä puhetta)). Vain tämän haaran pushista; ei mergetä.
 name: Freesound-haku (Pelikoodari)
 on:
   push:
@@ -18,20 +18,18 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "lippu|flag flapping wind|10|120|by"
-          "lippu|flag flutter|10|120|by"
-          "poltin|hot air balloon burner|1|60|by"
-          "poltin|propane burner|1|60|by"
-          "raitiovaunu|tram pass by|3|60|by"
-          "pyoran-kello|bicycle bell|0.3|4|by"
-          "laivan-torvi|ship horn|1|20|by"
-          "laivan-torvi|ferry horn|1|20|by"
-          "nauru|laughter outdoor|1|10|by"
-          "lapsi|child laughing|0.5|6|by"
-          "sorina|crowd walla passing|3|40|by"
-          "katusoittaja|street musician accordion|15|180|by"
-          "katusoittaja|busker guitar|15|180|by"
-          "katusoittaja|busker violin|15|180|by"
+          "r016-tupa|tavern ambience crowd laughter|20|300|by"
+          "r016-tupa|medieval inn crowd|20|300|by"
+          "r016-tupa|pub walla laughter|20|300|by"
+          "r016-tupa|great hall feast crowd|20|300|by"
+          "r080-kaksitaso|tiger moth|3|300|by"
+          "r080-kaksitaso|biplane engine|3|300|by"
+          "r080-kaksitaso|vintage propeller plane flyby|3|300|by"
+          "r080-kaksitaso|radial engine start idle|3|300|by"
+          "r075-hoyrylaiva|steamship engine|5|300|by"
+          "r075-hoyrylaiva|paddle steamer|5|300|by"
+          "r075-hoyrylaiva|steam engine room|5|300|by"
+          "r075-hoyrylaiva|steamboat whistle departure|3|120|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
