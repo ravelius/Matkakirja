@@ -206,14 +206,17 @@ namespace Matkakirja.Natiivi
             if (tulos == OviTulos.Lukossa)
             {
                 // Kahva kolahtaa (6 m); Kellotornin ovi ei aukea huoneessa 7 (takaa vaimea Fatabuuri-kohtaus).
-                SeikkailuAanet.Soita("kivi-kolahdus", c, 0.6f, 1.3f); SeikkailuVartijat.Aani(c, LukittuOvi.KahvaM);
+                SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoRavistus, "kivi-kolahdus", c, 0.7f, 1.3f); SeikkailuVartijat.Aani(c, LukittuOvi.KahvaM);   // lukittu ovi ravisee (sonniss-aanet-v3)
                 p.KasiEle("raapaisu");
                 kirjaa?.Invoke($"seikkailu: ovi {o.M.Tunnus} lukossa");
                 return;
             }
             o.Auki = true; if (o.Go != null) o.Go.SetActive(false);
-            SeikkailuAanet.Soita("avain-lukko", c, 0.8f);
-            if (tulos == OviTulos.AukiNarahtaa) { SeikkailuAanet.SoitaTaiVara("ovi-narahdus", "luukku-narahdus", c, 0.9f); SeikkailuVartijat.Aani(c, o.M.AaniNopeaM > 0 ? o.M.AaniNopeaM : 4); }
+            // Lukko vain lukitussa ovessa (hidas avaus: avain raapii, sitten lukko aukeaa); portti narahtaa omalla äänellään (sonniss-aanet-v3).
+            bool portti = o.M.Tunnus.StartsWith("vesiportti", StringComparison.Ordinal);
+            if (o.M.Lukko) { if (tulos == OviTulos.AukiHiljaa) SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoRaapaisu, null, c, 0.5f); SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", c, 0.8f); }
+            else if (portti && tulos == OviTulos.AukiHiljaa) SeikkailuAanet.SoitaTaiVara("portin-salpa", null, c, 0.6f);
+            if (tulos == OviTulos.AukiNarahtaa) { if (portti) SeikkailuAanet.SoitaTaiVara("portti-narahdus", "luukku-narahdus", c, 0.9f); else SeikkailuAanet.SoitaJokin(SeikkailuAanet.OviNarina, "luukku-narahdus", c, 0.9f); SeikkailuVartijat.Aani(c, o.M.AaniNopeaM > 0 ? o.M.AaniNopeaM : 4); }
             p.KasiEle("poiminta");
             kirjaa?.Invoke($"seikkailu: ovi {o.M.Tunnus} auki ({(tulos == OviTulos.AukiNarahtaa ? "nopeasti, narahti" : "hitaasti, hiljaa")})");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: ovi " + o.M.Tunnus);

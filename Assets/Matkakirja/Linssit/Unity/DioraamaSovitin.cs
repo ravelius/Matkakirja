@@ -1221,6 +1221,12 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v3/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen, märät askeleet, vihje-kimallus
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-tuulet-v1/manifest.json");   // Pelikoodari 9.10.: tuuli-korkea, tuuli-kostea
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-aanet-v2/manifest.json", "tuuli-metsa");   // PT 9.10.: vain tuuli-metsa (kirkonkellot eivät linnaan)
+                // sonniss-aanet-v3 (PT 9.10., juna 172): lukot, salvat, ovet, arkku, kolikot, sirkat ja rannan vesi; ei nappula-puuta (Mylly/Tavli),
+                // ei kesayo-sirkat-koiria (koira on jo aanet-lapi-v1:ssä) eikä askel-puuta (silmukka; askeljärjestelmä on kertaäänin).
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-aanet-v3/manifest.json", "lukko-ulko-1-a", "lukko-ulko-1-b", "lukko-ulko-2-a", "lukko-ulko-2-b",
+                    "lukko-raapaisu-a", "lukko-raapaisu-b", "lukko-ravistus-a", "lukko-ravistus-b", "salpa-2", "puuovi-narina-1-a", "puuovi-narina-1-b",
+                    "puuovi-narina-2-a", "puuovi-narina-2-b", "portti-narahdus", "portin-salpa", "raskas-ovi-avain-a", "raskas-ovi-avain-b", "arkku-kansi",
+                    "kolikot-1", "kolikot-2", "kesayo-sirkat", "satama-vesi");
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuSade.Luo(nayttamo.transform);
             }

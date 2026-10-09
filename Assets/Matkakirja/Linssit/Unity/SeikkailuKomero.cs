@@ -177,11 +177,11 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Auki(SeikkailuPelaaja p, Vector3 a)
         {
-            SeikkailuAanet.Soita("luukku-narahdus", a + Vector3.up * 0.4f, 0.8f);
+            SeikkailuAanet.SoitaTaiVara("arkku-kansi", "luukku-narahdus", a + Vector3.up * 0.4f, 0.8f);   // sonniss-aanet-v3
             kirjaa?.Invoke("seikkailu: arkku auki (kilvet 45° toisiaan kohti)");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: arkku auki");
             yield return new WaitForSeconds(0.8f);
-            SeikkailuAanet.Soita("hopea-kilahdus", a + Vector3.up * 0.4f, 0.8f);
+            SeikkailuAanet.SoitaJokin(SeikkailuAanet.Kolikot, "hopea-kilahdus", a + Vector3.up * 0.4f, 0.8f);   // kolikot ja hopea arkussa
             SeikkailuAanet.Soita("loyto-kantele", p.transform.position + Vector3.up * 1.6f, 0.8f);
             var t = typeof(SeikkailuKomero).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
