@@ -41,11 +41,24 @@ namespace Matkakirja.Linssit.Testit
                 }
         }
 
-        [Testi] static void IndeksiV4Ensin()
+        [Testi] static void IndeksiV5EnsinJaPaluuV4()
         {
-            // Karttaseppä 9.10.: v4 = pienet erilliset altaat poistettu (Tuileries'n leijuva kiekko), kanava-altaat suojattu; vanhat varalla.
+            // Karttaseppä 9.10.: v5 = Tukholmaan kauko2 48 m 20–40 km, Pariisin 16 m 40 km:iin; v4 ja vanhemmat varalla (Natiivisepän ehto 4).
+            Oleta.Tosi(string.Join(",", VesiIndeksi.Nimet) == "index-v5.json,index-v4.json,index-v3.json,index-v2.json,index.json", "v5 → v4 → v3 → v2 → index");
+            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => n == "index-v5.json" ? null : n == "index-v4.json" ? "v4" : "vanha") == "v4", "v5 puuttuu → v4");
+            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => "x" + n) == "xindex-v5.json", "v5 ensin");
             string s = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiVesi.cs"));
-            Oleta.Tosi(s.Contains("new[] { \"index-v4.json\", \"index-v3.json\", \"index-v2.json\", \"index.json\" }"), "v4 → v3 → v2 → index");
+            Oleta.Tosi(s.Contains("foreach (var nimi in VesiIndeksi.Nimet)"), "KaupunkiVesi käy VesiIndeksi.Nimet");
+        }
+
+        [Testi] static void TasotTarkkuuksista()
+        {
+            var (t, r) = VesiIndeksi.Tasot(new[] { "6m", "16m", "48m" });
+            Oleta.Tosi(t.Length == 3 && t[2].Ruutu == "48m" && t[2].Taso == 2 && r == VesiIndeksi.KaukoM, $"Tukholma v5: 3 tasoa, kauko {r}");
+            (t, r) = VesiIndeksi.Tasot(new[] { "6m", "16m" });
+            Oleta.Tosi(t.Length == 2 && r == VesiIndeksi.KaukoM2, $"Pariisi v5: 16 m 40 km:iin, kauko {r}");
+            (t, r) = VesiIndeksi.Tasot(null);
+            Oleta.Tosi(t.Length == 2 && r == VesiIndeksi.KaukoM, $"v4: ennallaan, kauko {r}");
         }
 
         [Testi] static void KolmiotUnityssaMyotapaivaanYlhaalta()

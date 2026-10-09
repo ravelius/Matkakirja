@@ -25,9 +25,8 @@ namespace Matkakirja.Natiivi
         public static string[] OletusKohteet = { "tukholma", "pariisi" };   // kehityskaupungit (omistaja 20.4x); Pariisi index-v2:sta
         public static string VesiJuuri = "https://media.matkakirja.app/vesi/";
         public const float LahiM = 3000f, KaukoM = 20000f, PaivitysM = 400f;
-        /// <summary>VESI 40 KM:IIN (index-v5, Karttaseppä + LS2 9.10.): Tukholman saaristo 20–40 km:ssä oli Googlen vettä. Kolmas taso
-        /// "kauko2" (48 m) KaukoM–KaukoM2, kun indeksin tarkkuuksissa on 48m; muuten (Pariisi) 16 m:n taso jatkuu KaukoM2:een.</summary>
-        public const float KaukoM2 = 40000f;
+        /// <summary>VESI 40 KM:IIN (index-v5, Karttaseppä + LS2 9.10.): Tukholman saaristo 20–40 km:ssä oli Googlen vettä. Tasot VesiIndeksi.Tasot.</summary>
+        public const float KaukoM2 = VesiIndeksi.KaukoM2;
         public static float NostoM = 0.4f;
         /// <summary>Asetus "vesinosto" annettu: jsonin nosto_m_suositus ei ohita sitä (LS1:n katselmointi).</summary>
         public static bool NostoAsetettu;
@@ -102,7 +101,7 @@ namespace Matkakirja.Natiivi
             string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false; string[] tarkkuudet = null;
             // v4 (Karttaseppä 9.10., LS1 + PT: Tuileries'n altaan päällä leijuva kiekko): pienet erilliset altaat ja suihkulähteet poistettu
             // aineistosta, kanava-altaat (Saint-Martin, Ourcq) suojattu OSM:n vesiväylillä; muoto sama kuin v3.
-            foreach (var nimi in new[] { "index-v5.json", "index-v4.json", "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
+            foreach (var nimi in VesiIndeksi.Nimet)   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
             {
                 using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
                 r0.timeout = 15; yield return r0.SendWebRequest();
@@ -129,8 +128,8 @@ namespace Matkakirja.Natiivi
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
             string pohja = juuriUrl + (string.IsNullOrEmpty(tiedosto) ? k : tiedosto);
             VesiVerkko l = null, ka = null, ka2 = null; (double Lat, double Lon)? origo = null;
-            bool v5 = tarkkuudet != null, kauko2 = v5 && Array.IndexOf(tarkkuudet, "48m") >= 0;
-            foreach (var (ruutu, taso) in kauko2 ? new[] { ("6m", 0), ("16m", 1), ("48m", 2) } : new[] { ("6m", 0), ("16m", 1) })
+            var (ruudut, raja) = VesiIndeksi.Tasot(tarkkuudet);
+            foreach (var (ruutu, taso) in ruudut)
             {
                 string json = null; byte[] tavut = null;
                 using (var r = UnityWebRequest.Get($"{pohja}-{ruutu}.json")) { r.timeout = 20; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) json = r.downloadHandler.text; }
@@ -150,7 +149,7 @@ namespace Matkakirja.Natiivi
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var sh = Shader.Find("Matkakirja/Linssit/VesiPinta");
             if (sh != null) mat = new Material(sh) { name = "KaupunkiVesi" };
-            lahi = l; kauka = ka; kauka2 = ka2; kaukaRaja = v5 && !kauko2 ? KaukoM2 : KaukoM;
+            lahi = l; kauka = ka; kauka2 = ka2; kaukaRaja = raja;
             KrediittiNyt = string.IsNullOrEmpty(krediitti) ? "Vesi: © OpenStreetMap contributors, ESA WorldCover" : krediitti;
             Debug.Log($"MATKAKIRJA kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi-, {kauka?.Palat.Length ?? 0} kauko- ja {kauka2?.Palat.Length ?? 0} kauko2-palaa, kauko {kaukaRaja / 1000:F0} km{(kauka2 != null ? $", kauko2 {KaukoM2 / 1000:F0} km" : "")}, nosto {NostoM:F1} m)");
         }
