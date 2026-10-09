@@ -372,4 +372,25 @@ namespace Matkakirja.Linssit.Seikkailu
             Valppaus = valpas ? ValppausS : 0; tunnistusS = 0;
         }
     }
+    /// <summary>
+    /// SYKE HÄLYTYKSESSÄ (PT 10.10., juna 175): rauhallinen sydän (sydan-silmukka-02, 58 BPM) ristihäivyttyy nopeaan (sydan-nopea-01, 100 BPM),
+    /// kun jokin vartija on hälytyksessä tai jahtaa, ja palaa, kun hälytys loppuu. Tempo 70–120 sävelkorkeutena kummankin omasta tahdista,
+    /// voimakkuus kuten ennen (0,55–0,9); puheen aikana −6 dB, jotta repliikit ja kuunnelma jäävät vähintään 6 dB sykkeen yläpuolelle.
+    /// </summary>
+    public static class SykeSekoitus
+    {
+        public const double NopeaBpm = 100, HaivytysS = 1.5, PuheKerroin = 0.5;
+        /// <summary>Nopean osuus 0–1 kohti tavoitetta (hälytys = 1) HaivytysS:n lineaarisella liu'ulla.</summary>
+        public static double Osuus(double nyt, bool halytys, double dt) =>
+            Math.Max(0, Math.Min(1, nyt + (halytys ? 1 : -1) * dt / HaivytysS));
+        /// <summary>Rauhallisen ja nopean voimakkuus ja sävelkorkeus tempolle (70–120) ja nopean osuudelle; puhe = −6 dB.</summary>
+        public static (double Rauhallinen, double Nopea, double SavelR, double SavelN) Tasot(double tempo, double osuus, bool puhe)
+        {
+            double v = 0.55 + 0.35 * Math.Max(0, Math.Min(1, (tempo - 70) / 50));
+            if (puhe) v *= PuheKerroin;
+            // Tasatehoinen ristihäivytys (cos/sin): kokonaisäänekkyys ei notkahda kesken siirtymän.
+            double r = v * Math.Cos(osuus * Math.PI / 2), n = v * Math.Sin(osuus * Math.PI / 2);
+            return (r, n, Math.Max(0.8, Math.Min(1.8, tempo / 70)), Math.Max(0.8, Math.Min(1.25, tempo / NopeaBpm)));
+        }
+    }
 }
