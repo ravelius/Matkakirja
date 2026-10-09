@@ -155,7 +155,7 @@ const tksMuutokset = {};
 
 function tksTeemat(isa, tk) {
   isa.appendChild(tksSolmu('h2', null, 'Teemat'));
-  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Teeman valitsee konteksti, ei pinta: PAPERI (oletus), TUMMA (kuvan tai yön päällä), LASI (linssin ohjaimet).'));
+  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Teeman valitsee konteksti, ei pinta: PAPERI (oletus), TUMMA (kuvan päällä, videopeleissä ja muissa pimeissä näkymissä, kuten yöllä), LASI (linssin ohjaimet). Hyväksytty pohja käy vastaaviin tilanteisiin.'));
   const ruudukko = tksSolmu('div', 'tks-teemat');
   for (const [teema, roolit] of Object.entries(tk.teemat ?? {})) {
     if (teema.startsWith('_') || typeof roolit !== 'object') continue;

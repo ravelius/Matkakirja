@@ -5,6 +5,7 @@
  *   tiet:       media.matkakirja.app/kartta/tiet-v1/<id>.json tai tiet_polut[id] (yövalot, Linssiseppä)
  *   esittely:   media.matkakirja.app/opas/esittely-v1/<id>.json tai esittely_polut[id] (esigeneroitu kerronta; worker tarjoaa
  *               valmiin, natiivi lukee avauksen)
+ *   historia:   historia_polut[id] (historia- ja arkiosiot lentojen ajaksi, kehityskaupungit 9.10.)
  *   aanikartta: media.matkakirja.app/aanet/aanikartta-v1/<id>.json (kaupunkiäänimaisema, Siirtoseppä; lisätään vasta,
  *               kun kaupungin silmukat ovat ämpärissä)
  * Id: kaupungin nimi pienaakkosin, ä/å → a, ö/ø → o, é → e, välit ja muut merkit → "-" (pariisi, koopenhamina).
@@ -62,7 +63,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     sisilia: 'opas/esittely-aaneton-v3/sisilia.json',
     sofia: 'opas/esittely-aaneton-v3/sofia.json',
     tampere: 'opas/esittely-aaneton-v3/tampere.json',
-    tukholma: 'opas/esittely-v2/tukholma.json',   // 8.10. omistaja: kehityskaupunki, kertojan äänet (avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
+    tukholma: 'opas/esittely-v3/tukholma.json',   // 9.10. omistaja: kohteita lähempää; v2 + 5 lähikohdetta, kierros 14 kohdetta lyhimpänä reittinä (v2: avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
     valletta: 'opas/esittely-aaneton-v3/valletta.json',
     venetsia: 'opas/esittely-aaneton-v3/venetsia.json',
     vilna: 'opas/esittely-aaneton-v3/vilna.json',
@@ -79,7 +80,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v2/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v3/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     // erät 5–6 (8.10.)
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
@@ -96,5 +97,15 @@ export const OPAS_AINEISTOT = Object.freeze({
     luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json',
+  },
+  // Historia- ja arkiosiot lentojen ajaksi (omistaja 9.10.: vähemmän taukoja ja pelkkiä siirtymiä; kehityskaupungit):
+  // { kaupunki, versio, osiot: [{ tunnus, otsikko, teksti, sha, kesto_s, lahteet }] }, ääni R2 opas/<sha>.mp3|pcm|ajat.json.
+  historia_polut: {
+    tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json',
+  },
+  // Historiaosioiden yksityiskohtakuvat (Sisältökirjuri 9.10.): kohde_id = osion tunnus, ankkuri osion tekstissä.
+  historia_yksityiskohdat_polut: {
+    tukholma: 'esittely/tukholma-historia-v1/tukholma-historia-yksityiskohdat.json',
+    pariisi: 'esittely/pariisi-historia-v1/pariisi-historia-yksityiskohdat.json',
   },
 });
