@@ -1116,10 +1116,33 @@ namespace Matkakirja.Natiivi
         static IReadOnlyList<string> KysyLista =>
             OpasSovitin.KierrosIndeksi >= 0 && OpasSovitin.KysyKysymykset is IReadOnlyList<string> kk && kk.Count > 0 ? kk : OpasSovitin.Kysymykset;
 
+        bool kysyKuvakkeina;
+
         void RakennaKysy()
         {
             Vieritys();
-            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.opas.kysy-oppaalta-2"), "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
+            // IPHONE VAAKA (asettelutesti 9.10.2026 20.18, Päätoimittaja): matalaan ruutuun ei mahdu kahdeksan riviä, joten Puhu ja
+            // Kirjoita OHJAUSNAPPI-kuvakkeina (mikki, näppäimistö kuten esitysrivillä) otsikkorivillä; kysymysjärjestys ennallaan.
+            kysyKuvakkeina = !LeveaRuutu && !PuhelinPysty && Juuri.layout.width > 0;
+            VisualElement otsikkoIsa = rivit;
+            if (kysyKuvakkeina)
+            {
+                otsikkoIsa = Rakenne.El(null, rivit, PickingMode.Ignore);
+                otsikkoIsa.style.flexDirection = FlexDirection.Row;
+                otsikkoIsa.style.alignItems = Align.Center;
+                otsikkoIsa.style.justifyContent = Justify.SpaceBetween;
+            }
+            var otsikko = Rakenne.Teksti(Kieli.T("ui.opas.kysy-oppaalta-2"), "mk-linssivalitsin__valiotsikko", otsikkoIsa);
+            Kirjasimet.Aseta(otsikko, Kirjasin.ModerniLihava);
+            if (kysyKuvakkeina)
+            {
+                otsikko.style.flexShrink = 1;
+                var ryhma = Ohjausnappi.Ryhma(otsikkoIsa);
+                ryhma.style.position = Position.Relative;
+                ryhma.style.top = StyleKeyword.Auto; ryhma.style.right = StyleKeyword.Auto;
+                Ohjausnappi.Nappi(PuluChat.MikkiIkoni, Kieli.T("ui.opas.puhu-oppaalle"), () => { Sulje(); Puhu(); }, ryhma);
+                Ohjausnappi.Nappi(PuluChat.NappaimistoIkoni, Kieli.T("ui.opas.kirjoita-oppaalle"), () => { Sulje(); Kirjoita(); }, ryhma);
+            }
             // Omistaja 7.10. 10.3x: ensimmäisenä "Kerro lisää" (LS1:n KysyKysymykset tuo sen kierroksella listan kärkeen,
             // OpasSovitin.KerroLisaaTeksti), sitten viisi valmista kysymystä ja lopuksi mikrofoni ja näppäimistö (PuhuJaKirjoita).
             if (!(KysyLista is IReadOnlyList<string> kys) || kys.Count == 0)
@@ -1152,6 +1175,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kysy-valikon loppuun mikrofoni ja näppäimistö (omistaja 7.10. 10.3x) TOIMINTO-riveinä.</summary>
         void PuhuJaKirjoita()
         {
+            if (kysyKuvakkeina) return;   // iPhone vaaka: otsikkorivillä (RakennaKysy)
             Viiva();
             Komento(Kieli.T("ui.opas.puhu-oppaalle"), Puhu, rivit);
             Komento(Kieli.T("ui.opas.kirjoita-oppaalle"), Kirjoita, rivit);
