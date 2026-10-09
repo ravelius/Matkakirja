@@ -1,0 +1,684 @@
+{
+  "task": "olavinlinna-pinnat-20261008",
+  "taskNumber": 44,
+  "source": {
+    "sourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+    "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+    "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+    "sourceContentSHA1": "e87dfae63c02e19cd290e5433da62d48eb21764e"
+  },
+  "sourceReadInFull": true,
+  "backingReportReadInFull": true,
+  "generationCalls": 14,
+  "generationLimit": 22,
+  "requestedUniqueSurfaces": 22,
+  "requestedFinalPNGs": 23,
+  "imageCount": 6,
+  "partialDelivery": true,
+  "sourceImagePixelsUsed": false,
+  "assets": [
+    {
+      "id": "tott-vaakuna-maalattu",
+      "number": "2",
+      "file": "tott-vaakuna-maalattu.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tott-vaakuna-maalattu/tott-vaakuna-maalattu.png",
+      "sha256": "de9bc3e4f4a21f44a796091bb24aca0c49d1ab4cd729a8a6c99d42584b82314e",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-95d7-7840-90b9-76447865052c/exec-703c7372-e2f3-4965-86dc-911a0332c9d8.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tott-vaakuna-maalattu/original-generation.png",
+      "originalSHA256": "a5cb05b614ada61aaf9accf50de79303947b6d22b756fcbbf4eeeb81f75b2eda",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "nativeGeneratedMode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square transparent heraldic paint decal for a late-15th-century chapel vault, final 1024 × 1024 pixels.\nPrimary request: A completely new original photorealistic flat faded mineral-pigment painting of Erik Axelsson Tott's coat of arms: one shield divided into EXACTLY FOUR plain equal fields by one vertical and one horizontal division. Seen by the viewer, UPPER LEFT and LOWER RIGHT are muted red; UPPER RIGHT and LOWER LEFT are dull gold-yellow. NO symbols, figures, stripes or motifs inside the four fields.\nAbove the shield is one simply painted medieval helmet, surmounted by EXACTLY TWO curved horns. The helmet and two horns belong to the same flat historic mural painting, not actual three-dimensional metal objects. No crown and no extra crest.\nStyle/medium: diffuse-light surface photograph appearance of genuine worn, cracked, faded late-1400s painted pigment, not clean vector clipart, not a contemporary logo. Subtle granular paint texture, tiny worn holes, muted colors.\nComposition/framing: whole shield, helmet and two horns clearly visible centered with a small transparent margin, perfectly flat frontal orthographic plane, no perspective.\nTransparency: actual RGBA transparency around all painted contours and through missing-pigment worn holes; painted fields themselves mostly opaque with worn fading. There is NO opaque plaster patch, no wall substrate and no background, no checkerboard illustration. Clean generated alpha without glow.\nLighting: fully uniform diffuse lighting, no hard shadows, no vignette.\nConstraints: new original artwork from this text only, no collection replica, no source-image pixels; no text, letters, numbers, modern words, watermark, additional field motifs, people, faces, modern materials or dramatic lighting.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "kind": "text-only production order",
+          "item": "2",
+          "brief": "**Erik Axelsson Tottin nelijaettu vaakunakilpi** maalattuna holviin: kilpi **nelijaettu, 1. ja 4. kenttä punainen, 2. ja 3. kenttä kulta (keltainen)**, yläpuolella kypärä, kypärän koristeena **kaksi sarvea**; haalistunut maalaus, ei tekstiä, ei lisäkuviota kentissä."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "kind": "text-only backing report",
+          "item": "2"
+        }
+      ],
+      "kuvateksti": "Tottin nelijaettu punainen ja kullankeltainen vaakunakilpi sekä kypärä ja kaksi sarvea kuluneena maalauksena. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGBA",
+      "alpha": true,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": {
+        "originalPreservedByteExact": true,
+        "resizeMethod": "full-frame Lanczos resampling; no crop",
+        "alphaMethod": "native generated alpha preserved; spatial resampling only",
+        "seamMethod": "none yet; native wrapping inspected via 2×2 QA",
+        "colorSpace": "embedded sRGB ICC profile",
+        "creativePostEditing": false
+      },
+      "QA": {
+        "nativeViewed": false,
+        "preview480Viewed": false,
+        "alphaLightDarkViewed": false,
+        "tile2x2Viewed": null,
+        "alphaStats": {
+          "extrema": [
+            0,
+            255
+          ],
+          "transparentPixels": 696467,
+          "opaquePixels": 1098,
+          "partialPixels": 351011,
+          "transparentFraction": 0.6642026901245117,
+          "partialFraction": 0.3347501754760742
+        },
+        "seamMetrics": {},
+        "editorialReviewPending": true,
+        "limitations": []
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "de9bc3e4f4a21f44a796091bb24aca0c49d1ab4cd729a8a6c99d42584b82314e",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/root-first7.jpg",
+        "technicalChecksPassed": true,
+        "nativeFullImageReview": false,
+        "visualNotes": "Flat surface, muted material, correct object geometry; no readable text/people. Heraldic palette remains interpretive pending editor historical review.",
+        "reviewedAt": "2026-10-09T06:02:45.672812+00:00"
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tott-vaakuna-maalattu.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tott-vaakuna-maalattu.png",
+      "bytes": 994700,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "sture-vaakuna-laatta",
+      "number": "3",
+      "file": "sture-vaakuna-laatta.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/sture-vaakuna-laatta/sture-vaakuna-laatta.png",
+      "sha256": "2e84b35f8bdf122cb5a96d6b9f3bcceaf8c36c59bafe774aa7d21fd17ab89de0",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-95d7-7840-90b9-76447865052c/exec-b5325d9f-8986-4a89-ab22-6f4d01386adf.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/sture-vaakuna-laatta/original-generation.png",
+      "originalSHA256": "49b5e11a41a7b00bb46241c88153d542974225da14d16ebc1281b8a6c7a5c403",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square opaque RGB limestone/slate surface texture for a late-15th-century heraldic plaque, final 1024 × 1024 pixels.\nPrimary request: Create a completely new original photorealistic straight-on surface image of a worn gray limestone or slate plaque bearing Sten Sture's three water-lily leaves (sjöblad) as very shallow stone relief. EXACTLY THREE clearly separate stylized leaves: TWO across the upper half and ONE centered below them. Each leaf is heart-shaped with two rounded upper lobes, a small cleft at the top center, and a tapered pointed tip directed DOWNWARD; no long stalks, no flowers.\nMaterials/textures: entirely unpainted muted gray limestone/slate; leaf relief is the same natural gray stone as the entire plaque. Authentic fine grain, subtle pitting, abrasion, softened worn carving edges suitable for 1499. Relief is shallow with minimal tonal depth, not deeply carved holes.\nComposition/framing: flat texture plane filling the entire square; no perspective, no beveled plaque border, no frame, no surrounding environment, no foreground objects.\nLighting: completely even diffuse lighting, no strong shadow, no dramatic side light, no vignette.\nConstraints: opaque surface; no paint, blue, red, gold, silver pigment or colored symbols; no other symbols; no text, numbers, letters, watermark, people, faces, modern materials. New original text-only generation; do not replicate an actual museum artifact or use source-image pixels.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "kind": "text-only production order",
+          "item": "3",
+          "brief": "**Sten Sturen vaakuna (kolme lumpeenlehteä / sjöblad)** kalkkikivi-/liuskelaatassa: kulunut matala kohokuvio, kolmen lumpeenlehden (sydänmäisten, kärki alas) järjestys 2 + 1; laatan väri harmaa liuske/kalkkikivi, **ei maalia**."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "kind": "text-only backing report",
+          "item": "3"
+        }
+      ],
+      "kuvateksti": "Sturen kolme lumpeenlehteä kuluneena matalana kohokuviona harmaassa maalaamattomassa kivipinnassa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": {
+        "originalPreservedByteExact": true,
+        "resizeMethod": "full-frame Lanczos resampling; no crop",
+        "alphaMethod": "opaque RGB conversion",
+        "seamMethod": "none yet; native wrapping inspected via 2×2 QA",
+        "colorSpace": "embedded sRGB ICC profile",
+        "creativePostEditing": false
+      },
+      "QA": {
+        "nativeViewed": false,
+        "preview480Viewed": false,
+        "alphaLightDarkViewed": null,
+        "tile2x2Viewed": null,
+        "alphaStats": {},
+        "seamMetrics": {},
+        "editorialReviewPending": true,
+        "limitations": []
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "2e84b35f8bdf122cb5a96d6b9f3bcceaf8c36c59bafe774aa7d21fd17ab89de0",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/root-first7.jpg",
+        "technicalChecksPassed": true,
+        "nativeFullImageReview": false,
+        "visualNotes": "Flat surface, muted material, correct object geometry; no readable text/people. Heraldic palette remains interpretive pending editor historical review.",
+        "reviewedAt": "2026-10-09T06:02:45.669367+00:00"
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/sture-vaakuna-laatta.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/sture-vaakuna-laatta.png",
+      "bytes": 2387151,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "ovi-tammi-heloin",
+      "number": "8",
+      "file": "ovi-tammi-heloin.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/ovi-tammi-heloin/ovi-tammi-heloin.png",
+      "sha256": "7454f5fa701aabd5122ca846868208c1fa892b0f944fcd1e91dde869a6a7952e",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-e9af-7a81-bced-415988fdf649/exec-c30c6db7-e836-4be7-9933-09a42d8cba1a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/ovi-tammi-heloin/original-generation.png",
+      "originalGeneratedSHA256": "4f00c7ad692388bf3f04f554c1a8056222eb9d66a84fefc6c1eb0cff0222f555",
+      "preservedOriginalSHA256": "4f00c7ad692388bf3f04f554c1a8056222eb9d66a84fefc6c1eb0cff0222f555",
+      "nativeGeneratedSize": [
+        887,
+        1774
+      ],
+      "dimensions": [
+        1024,
+        2048
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic albedo surface texture for a medieval game, 1499 appearance.\nPrimary request: the complete flat face of a worn oak plank door with wrought iron strap hinges and hand-forged nails. Vertical oak planks, greyed weathered oak with muted natural grain, grain scars and wear. Two simple long black forged-iron strap hinges fixed with uneven handmade nail heads.\nComposition/framing: a tall rectangular portrait texture, width 1024 height 2048, exact 1:2 aspect. True orthographic frontal view with camera perfectly perpendicular to the door. The flat door panel fills the whole image edge to edge, with clean straight rectangular outer edges suitable for a modeled door frame. All visible surface lies in one front plane; no side thickness, surroundings or perspective.\nStyle/medium: highly realistic material surface photography, fine tactile oak and matte black hammered iron, not a painted illustration. Original invented door, no copy of a museum artifact.\nLighting: uniform neutral diffuse illumination across the entire face, flat albedo appearance, restrained microcontrast. No directional shadows, hotspot, vignette, ambient room shading, gradient or cinematic lighting.\nConstraints: opaque RGB surface. Nothing outside the panel. No threshold, wall, door frame, floor, handle, additional ornaments, people, faces, letters, numbers, symbols, text, watermark, electric or modern manufactured parts. No HDR or saturated colors. New composition from this text only, no source-image pixels.",
+      "generationTool": "builtin image_gen",
+      "generationIntent": "new text-only generation",
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "sourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "referenceType": "text-only production brief",
+          "number": "8",
+          "excerpt": "**Tammilankkuovi**, pystylankut, **takorautaiset saranat ja naulat**, kulunut, harmaantunut tammi; reunat siistit suorat (mallin kehykseen), ei kynnystä eikä seinää."
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "sourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "referenceType": "text-only backing report",
+          "number": "8",
+          "supports": "tammikappaleen käyttökohta, kuvakoko ja läpinäkymätön pintakuva; ei lähdekuvapikseleitä"
+        }
+      ],
+      "kuvateksti": "Olavinlinnan harmaantunut tammilankkuovi takorautasaranoin ja nauloin vuoden 1499 asussa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "technicalProcessing": {
+        "method": "Full-frame LANCZOS resize, same aspect ratio; no crop, padding, seam work or creative edits.",
+        "inputDimensions": [
+          887,
+          1774
+        ],
+        "outputDimensions": [
+          1024,
+          2048
+        ],
+        "rgbHandling": "RGB original preserved; RGB output kept opaque; no alpha added or extracted.",
+        "colorHandling": "Tool output has no embedded ICC. Pixel values interpreted as sRGB; standard sRGB ICC profile attached without color or tone changes.",
+        "metadata": "Description and Source both carry required Havainnekuva label; caption also embedded.",
+        "originalPreservedByteExact": true,
+        "nativeResolutionLimitation": "Final portrait is resized upward from 887×1774; no new native detail added.",
+        "creativeContentChanged": false,
+        "resamplingChangedPixelValues": true
+      },
+      "QA": {
+        "state": "worker visual QA passed with documented limitations; independent root QA pending",
+        "technicalChecksPassed": true,
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "independentRootQA": false,
+        "editorialAccepted": false,
+        "gameIntegrated": false,
+        "delivered": false,
+        "seamCheck": "not requested; seamAxes empty",
+        "visualChecksPassed": true,
+        "observations": [
+          "Kohtisuora koko kuvapinnan täyttävä ovi, pystylankut, kaksi taottua saranaa ja naulat. Ei kehystä, seinää, kynnystä tai ylimääräisiä esineitä.",
+          "Vaimeat harmaantuneet tammen sävyt, realistinen kuluma, tasainen kokonaisvalaistus. Raudan ja naulojen mikrokohokuvassa on hienoinen paikallinen tummuus; voimakasta varjoa tai vinjettiä ei havaittu.",
+          "Natiivi 887×1774 on suurennettu 1024×2048 kokoon samalla kuvasuhteella. Tämä ei lisää alkuperäistä yksityiskohtaresoluutiota."
+        ],
+        "noModernReadableText": true,
+        "noHumansOrFaces": true,
+        "frontFacingSurface": true,
+        "opaqueRGB": true,
+        "dimensionsVerified": true,
+        "embeddedColorProfile": "sRGB built-in",
+        "requiredMetadataVerified": true,
+        "originalByteExactVerified": true,
+        "limitations": [
+          "Generated microrelief includes slight local baked shading; these are not measured physically neutral albedo scans.",
+          "Native resolution is 887×1774; final 1024×2048 is a technical enlargement."
+        ]
+      },
+      "outputProduced": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "7454f5fa701aabd5122ca846868208c1fa892b0f944fcd1e91dde869a6a7952e",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/root-first7.jpg",
+        "technicalChecksPassed": true,
+        "nativeFullImageReview": false,
+        "visualNotes": "Frontal worn oak and iron surface; no perspective room/background or game pieces.",
+        "reviewedAt": "2026-10-09T06:02:45.661157+00:00"
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/ovi-tammi-heloin.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/ovi-tammi-heloin.png",
+      "bytes": 3807003,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "arkku-kansi",
+      "number": "10",
+      "file": "arkku-kansi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/arkku-kansi/arkku-kansi.png",
+      "sha256": "8aa907a5f4d82c841fe3f19ea4d6e28ed3213679d02420992331c8d69eed2d32",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-e9af-7a81-bced-415988fdf649/exec-3bf5fd7c-1e84-403d-8efc-75a8fa58f85b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/arkku-kansi/original-generation.png",
+      "originalGeneratedSHA256": "59fc3037fa99ec2c9f4ba147cf1b0f9d781d98ac03f44229270c93491c41a154",
+      "preservedOriginalSHA256": "59fc3037fa99ec2c9f4ba147cf1b0f9d781d98ac03f44229270c93491c41a154",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic albedo surface texture for a medieval game, 1499 appearance.\nPrimary request: only the flat top surface of a bailiff's worn oak chest lid, viewed directly from above. Oak planks with natural muted worn grey-brown grain; exactly three simple parallel black wrought-iron reinforcing bands crossing the planks, attached by hand-forged nail heads. Sparse small faded red flowers and muted green stems/leaves painted directly on the oak between the bands, much of the pigment worn away. A small simple late-15th-century flower pattern, not an elaborate decorative painting.\nComposition/framing: square 1024 by 1024. Camera exactly perpendicular to the flat lid, orthographic top down. The lid surface fills every pixel edge to edge. No visible chest sides or thickness, no surrounding background, no frame or border, no perspective.\nStyle/medium: highly realistic material surface photography; matte oak grain, forged iron, visibly thin abraded paint integrated with grain. Original invented ornament, not a replica of museum artwork.\nLighting: uniform neutral diffuse illumination across the entire plane, restrained microcontrast, flat albedo appearance. No strong shadows, spotlight, vignette, gradient, cinematic glow or reflections.\nConstraints: opaque RGB. No objects resting on lid, no hands, people, faces, modern materials, readable writing, letters, numbers, logos, watermark. Muted weathered 1499 palette, no HDR or vivid saturation. New artwork from this text only, no source-image pixels.",
+      "generationTool": "builtin image_gen",
+      "generationIntent": "new text-only generation",
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "sourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "referenceType": "text-only production brief",
+          "number": "10",
+          "excerpt": "**Voudin arkun kansi** päältä: tammilankut, **rautavanteet** (2–3), **maalattu kukkakuvio** (punaiset/vihreät pienet kukat) haalistuneena."
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "sourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "referenceType": "text-only backing report",
+          "number": "10",
+          "supports": "tammikappaleen käyttökohta, kuvakoko ja läpinäkymätön pintakuva; ei lähdekuvapikseleitä"
+        }
+      ],
+      "kuvateksti": "Olavinlinnan voudin arkun kulunut tammikansi, kolme rautavannetta ja haalistuneet punavihreät kukkamaalaukset. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "technicalProcessing": {
+        "method": "Full-frame LANCZOS resize, same aspect ratio; no crop, padding, seam work or creative edits.",
+        "inputDimensions": [
+          1254,
+          1254
+        ],
+        "outputDimensions": [
+          1024,
+          1024
+        ],
+        "rgbHandling": "RGB original preserved; RGB output kept opaque; no alpha added or extracted.",
+        "colorHandling": "Tool output has no embedded ICC. Pixel values interpreted as sRGB; standard sRGB ICC profile attached without color or tone changes.",
+        "metadata": "Description and Source both carry required Havainnekuva label; caption also embedded.",
+        "originalPreservedByteExact": true,
+        "nativeResolutionLimitation": "Final square resized downward from 1254×1254.",
+        "creativeContentChanged": false,
+        "resamplingChangedPixelValues": true
+      },
+      "QA": {
+        "state": "worker visual QA passed with documented limitations; independent root QA pending",
+        "technicalChecksPassed": true,
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "independentRootQA": false,
+        "editorialAccepted": false,
+        "gameIntegrated": false,
+        "delivered": false,
+        "seamCheck": "not requested; seamAxes empty",
+        "visualChecksPassed": true,
+        "observations": [
+          "Neliö, kohtisuora kannen pinta ilman arkun kylkiä tai ympäristöä; kolme rautavannetta ja kuluneet punaiset kukat vihreine lehtineen.",
+          "Kukkamaalaus on haalistunut ja puunsyy näkyy läpi. Koko pinta on tasaisesti valaistu; pieni naulojen mikrokohokuvan tummuus on kuvassa.",
+          "Natiivi 1254×1254 pienennetty 1024×1024 kokoon."
+        ],
+        "noModernReadableText": true,
+        "noHumansOrFaces": true,
+        "frontFacingSurface": true,
+        "opaqueRGB": true,
+        "dimensionsVerified": true,
+        "embeddedColorProfile": "sRGB built-in",
+        "requiredMetadataVerified": true,
+        "originalByteExactVerified": true,
+        "limitations": [
+          "Generated microrelief includes slight local baked shading; these are not measured physically neutral albedo scans."
+        ]
+      },
+      "outputProduced": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "8aa907a5f4d82c841fe3f19ea4d6e28ed3213679d02420992331c8d69eed2d32",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/root-first7.jpg",
+        "technicalChecksPassed": true,
+        "nativeFullImageReview": false,
+        "visualNotes": "Frontal worn oak and iron surface; no perspective room/background or game pieces.",
+        "reviewedAt": "2026-10-09T06:02:45.658057+00:00"
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/arkku-kansi.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/arkku-kansi.png",
+      "bytes": 2168586,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lippu-sture",
+      "number": "18",
+      "file": "lippu-sture.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/lippu-sture/lippu-sture.png",
+      "sha256": "8e767b8b0073bc2d99a41f119305dccaceb4ee58378216f54beaf7317f8e47bd",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-95d7-7840-90b9-76447865052c/exec-c849cf44-3e9f-4d00-8566-38cc389eb579.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/lippu-sture/original-generation.png",
+      "originalSHA256": "1f9f32fba5b384051cc32721ac25b1e0a4104739d3d4f83330e810fbe3e359c3",
+      "nativeGeneratedSize": [
+        1774,
+        887
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: flat rectangular opaque textile surface texture for a late-15th-century Sture castle banner, final 1024 × 512 pixels, exact 2:1 landscape composition.\nPrimary request: Create a completely new original photorealistic frontal textile surface image of a late-1400s castle flag in interpreted Sture colors: muted DARK NAVY BLUE woven cloth bearing EXACTLY THREE pale silver/off-white water-lily leaf (sjöblad) cloth motifs. Leaves arranged TWO above and ONE below centered as a compact heraldic group. Each leaf heart-shaped with two rounded upper lobes, a small cleft at the top, and a pointed lower tip facing DOWNWARD; no stalks or flowers.\nMaterials/textures: old worn woven cloth with visible subtle fibers, mildly faded blue, weathered silver/off-white textile motifs, no modern printing sheen. The cloth is only slightly rippled while remaining a flat texture plane.\nComposition/framing: exact wide 2:1 rectangle filled edge to edge by cloth. Whole three-leaf group visible with enough textile around it. No flagpole, no hanging flag in a scene, no transparent margin, no banner outline, no perspective.\nLighting: uniform diffuse surface illumination, no strong fold shadows, no vignette.\nConstraints: opaque RGB material, no Swedish or Finnish modern cross flag, no cross, no stars, no text, numbers, letters, watermark, people or faces. This dark-blue and pale-silver scheme is an explicitly provisional historical interpretation for editorial review. Entirely new original artwork from text only; no source-image pixels, no museum artifact replica.",
+      "viitteet": [
+        {
+          "source": "sources/01-tilaus.md",
+          "kind": "text-only production order",
+          "item": "18",
+          "brief": "**Linnan viiri/lippu Sturen väreissä**, kangas, **kolme lumpeenlehteä** (sjöblad) kangaskuviona; kangas hieman aaltoileva mutta kuva pysyy tasaisena tekstuurina; **ei Suomen/Ruotsin nykylippua**. Väritys: Sturen tarkka värimaailma tulkinta (tummansininen pohja, vaaleat/hopeiset lumpeenlehdet) — **Päätoimittaja tarkistaa näytteestä**."
+        },
+        {
+          "source": "sources/02-linnanrakentajan-raportti.md",
+          "kind": "text-only backing report",
+          "item": "18"
+        }
+      ],
+      "kuvateksti": "Sturen lippupinta tummansinisessä ja vaaleassa hopeisessa tulkintavärityksessä, kolme lumpeenlehteä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": {
+        "originalPreservedByteExact": true,
+        "resizeMethod": "full-frame Lanczos resampling; no crop",
+        "alphaMethod": "opaque RGB conversion",
+        "seamMethod": "none yet; native wrapping inspected via 2×2 QA",
+        "colorSpace": "embedded sRGB ICC profile",
+        "creativePostEditing": false
+      },
+      "QA": {
+        "nativeViewed": false,
+        "preview480Viewed": false,
+        "alphaLightDarkViewed": null,
+        "tile2x2Viewed": null,
+        "alphaStats": {},
+        "seamMetrics": {},
+        "editorialReviewPending": true,
+        "limitations": []
+      },
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "8e767b8b0073bc2d99a41f119305dccaceb4ee58378216f54beaf7317f8e47bd",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/root-first7.jpg",
+        "technicalChecksPassed": true,
+        "nativeFullImageReview": false,
+        "visualNotes": "Flat surface, muted material, correct object geometry; no readable text/people. Heraldic palette remains interpretive pending editor historical review.",
+        "reviewedAt": "2026-10-09T06:02:45.678198+00:00"
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/lippu-sture.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/lippu-sture.png",
+      "bytes": 1061937,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "pelikortit-noppa",
+      "number": "19",
+      "file": "pelikortit-noppa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/pelikortit-noppa/pelikortit-noppa.png",
+      "sha256": "b02228bbe3ad735f453ccf21b8b5669dc3a1b9cceb3de397563e3154af147b33",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f3c-e9af-7a81-bced-415988fdf649/exec-49961d18-6bdb-46ac-b4d5-5d6170c86d5a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/pelikortit-noppa/original-generation.png",
+      "originalGeneratedSHA256": "23b849abbc806da8d91810ed2b0498f05da58ec7e743ba625c6f00e6bcc834c7",
+      "preservedOriginalSHA256": "23b849abbc806da8d91810ed2b0498f05da58ec7e743ba625c6f00e6bcc834c7",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic albedo surface texture for a medieval game, 1499 appearance.\nPrimary request: only an empty worn oak-plank tabletop surface in the castle common room used for a dice game. No game pieces are shown. Broad dull grey-brown oak planks with rubbed wear, small irregular knife cuts and scratches, several tiny off-white candle-wax drips and small flattened wax stains directly on the wood, and one faint diffuse soot smudge. Natural surface wear, sparse marks, medieval handmade timber.\nComposition/framing: square 1024 by 1024. True orthographic top-down camera exactly perpendicular to the surface. The oak surface fills every pixel edge to edge, showing plank joints but no table outer edge, sides or legs. Absolutely no perspective or environment.\nStyle/medium: realistic surface photography, precise tactile oak grain, subtle wax residue and dull soot. Flat albedo map appearance. Original surface, no reference-image pixels.\nLighting: perfectly even soft neutral diffuse lighting across the entire plane. No strong shadows, vignette, gradients, spotlight, reflections, HDR, glossy varnish or cinematic color.\nConstraints: opaque RGB. ONLY the tabletop material with its wear and residue. No cards, no dice, no coins, no cups, no candles, no candle holders, no tools, no objects of any kind, no people, no hands, no faces. No text, letters, numbers, engraved symbols, logos or watermark. No modern materials, bright colors or stylized illustration.",
+      "generationTool": "builtin image_gen",
+      "generationIntent": "new text-only generation",
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "sourcePath": "posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md",
+          "referenceType": "text-only production brief",
+          "number": "19",
+          "excerpt": "**Linnantuvan noppapelin pöydän pinta**: tammilankut, **kulumajäljet, viiltoja, kynttilävahan tippoja ja pieniä vahatahroja**, himmeä nokiläiskä; ei nopparyhmää eikä esineitä pinnalla, ei tekstiä."
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "sourcePath": "docs/raportit/codex-pinnat-olavinlinna-20261008.md",
+          "referenceType": "text-only backing report",
+          "number": "19",
+          "supports": "tammikappaleen käyttökohta, kuvakoko ja läpinäkymätön pintakuva; ei lähdekuvapikseleitä"
+        }
+      ],
+      "kuvateksti": "Olavinlinnan Linnantuvan kulunut tammipöytäpinta viiltoineen, kynttilävahan jälkineen ja himmeine nokiläiskineen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "seamAxes": [],
+      "technicalProcessing": {
+        "method": "Full-frame LANCZOS resize, same aspect ratio; no crop, padding, seam work or creative edits.",
+        "inputDimensions": [
+          1254,
+          1254
+        ],
+        "outputDimensions": [
+          1024,
+          1024
+        ],
+        "rgbHandling": "RGB original preserved; RGB output kept opaque; no alpha added or extracted.",
+        "colorHandling": "Tool output has no embedded ICC. Pixel values interpreted as sRGB; standard sRGB ICC profile attached without color or tone changes.",
+        "metadata": "Description and Source both carry required Havainnekuva label; caption also embedded.",
+        "originalPreservedByteExact": true,
+        "nativeResolutionLimitation": "Final square resized downward from 1254×1254.",
+        "creativeContentChanged": false,
+        "resamplingChangedPixelValues": true
+      },
+      "QA": {
+        "state": "worker visual QA passed with documented limitations; independent root QA pending",
+        "technicalChecksPassed": true,
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "independentRootQA": false,
+        "editorialAccepted": false,
+        "gameIntegrated": false,
+        "delivered": false,
+        "seamCheck": "not requested; seamAxes empty",
+        "visualChecksPassed": true,
+        "observations": [
+          "Vain tammilankkuinen pöytäpinta: viillot ja kuluma, vahapisarat ja pienet vahatahrat sekä himmeä nokiläiskä. Ei kortteja, noppia, kynttilöitä tai pinnalla lepääviä esineitä.",
+          "Pinnan reunoilla on pieniä kiinteiden naulanpäiden kaltaisia tummia pisteitä puun rakenteessa; ne eivät ole irrallista pelirekvisiittaa. Root tarkistaa nämä itsenäisesti.",
+          "Vahapisaroissa on hieman paikallista mikrokohokuvan tummuutta. Ei voimakasta suuntavaloa tai vinjettiä; nokiläiskä on materiaalijälki.",
+          "Natiivi 1254×1254 pienennetty 1024×1024 kokoon."
+        ],
+        "noModernReadableText": true,
+        "noHumansOrFaces": true,
+        "frontFacingSurface": true,
+        "opaqueRGB": true,
+        "dimensionsVerified": true,
+        "embeddedColorProfile": "sRGB built-in",
+        "requiredMetadataVerified": true,
+        "originalByteExactVerified": true,
+        "limitations": [
+          "Generated microrelief includes slight local baked shading; these are not measured physically neutral albedo scans."
+        ]
+      },
+      "outputProduced": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "b02228bbe3ad735f453ccf21b8b5669dc3a1b9cceb3de397563e3154af147b33",
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/root-first7.jpg",
+        "technicalChecksPassed": true,
+        "nativeFullImageReview": false,
+        "visualNotes": "Frontal worn oak and iron surface; no perspective room/background or game pieces.",
+        "reviewedAt": "2026-10-09T06:02:45.663682+00:00"
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/pelikortit-noppa.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/pelikortit-noppa.png",
+      "bytes": 2046183,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-osa-6.jpg",
+    "r2Key": "julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-6.jpg",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-6.jpg",
+    "sha256": "2ce606d9fab83317a05f78f2d8550a6fe8649326da0cb6f0864c8fce84bfa54a",
+    "bytes": 127341,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "tileProofs": [],
+  "item13Resolution": {
+    "method": "one new pairedcomponentRGBA master for item13; opaque left letter/seal panel and right isolated truealpha waxseal; technicalcrops/resizes produce two1024squarePNGfiles",
+    "extraGeneration": false,
+    "generatedAlphaPreserved": true,
+    "resolutionOwner": "root, technical interpretation within explicit22calls and23-file delivery; editorialreviewpending"
+  },
+  "productionComplete": false,
+  "allR2ReadbacksByteExact": true,
+  "deliveryStatus": "R2-byte-exact-verified-mailbox-push-pending",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "pendingItems": [
+    "holvi-lehvasto",
+    "tott-vaakuna-maalattu",
+    "sture-vaakuna-laatta",
+    "kuvakudos-sali",
+    "villa-punainen",
+    "villa-sininen",
+    "villa-ruskea",
+    "brokadi-alttari",
+    "pellava-liina",
+    "ovi-tammi-heloin",
+    "helat-decal",
+    "arkku-kansi",
+    "tilikirja-aukeama",
+    "kirja-kansi",
+    "asiakirja-sinetti",
+    "alttarikaappi",
+    "tyrma-raapustukset",
+    "takka-noki",
+    "lasitetut-laatat",
+    "lippu-sture",
+    "pelikortit-noppa",
+    "kangas-saakki"
+  ],
+  "omittedItems": [],
+  "updatedAt": "2026-10-09T06:04:30.951422+00:00"
+}
