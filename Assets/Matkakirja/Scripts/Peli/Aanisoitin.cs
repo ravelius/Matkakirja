@@ -600,23 +600,24 @@ namespace Matkakirja.Natiivi
         /// kohtauksen 1 tästä ruudusta. Argumentti: kaupunki ja nopean kappaleen kohta sekunteina (0 = juuri alkoi).
         /// </summary>
         public static event Action<string, float> KaupunkiIntroAlkoi;
-        string introKaupunki, introUrl;
-        float introKatkoS, introHaivytysS, introHidasS, introT0 = -1f;
-        bool introKatkottu, introHidasAlkoi;
+        readonly KaupunkiIntroKello intro = new KaupunkiIntroKello();
+        string introUrl;
 
         /// <summary>
         /// Intro pyytää kaupunkijakson ajoitusta: nopea katkeaa katkoS:ssä (häivytys haivytysS) ja hidas alkaa hidasS:ssä ilman
         /// jakson taukoa. Kutsutaan saapumisen yhteydessä (ennen tai jälkeen Paikka-tapahtuman) tai linssin ollessa auki
-        /// (AaniTila.JaksonIntroAlusta: nopea alkaa heti pidon ohi, hitaan loppu palauttaa pidon); false = kaupungilla ei jaksoa.
+        /// (AaniTila.JaksonIntroAlusta: nopea alkaa heti pidon ohi, hitaan loppu palauttaa pidon). Jos musiikki ei voi soida
+        /// (musiikki tai äänimaisema pois), kello käy hiljaa ja KaupunkiIntroAlkoi(k, 0) laukeaa heti. false = kaupungilla ei jaksoa.
         /// </summary>
         public bool KaupunkiIntro(string kaupunki, float katkoS = 31f, float haivytysS = 2f, float hidasS = 32f)
         {
             var polku = Tila?.JaksonNopea(kaupunki);
             if (polku == null) return false;
-            introKaupunki = kaupunki; introUrl = AaniOsoite.Url(polku);
-            introKatkoS = katkoS; introHaivytysS = haivytysS; introHidasS = hidasS;
-            introT0 = -1f; introKatkottu = introHidasAlkoi = introOhita = false;
-            Tila.JaksonIntroAlusta(kaupunki); // linssi auki (pallon opas): nopea alusta pidon ohi; muuten Paikka käynnistää jakson
+            introUrl = AaniOsoite.Url(polku);
+            bool hiljainen = !Tila.JaksoVoiSoida(kaupunki);
+            intro.Aloita(kaupunki, katkoS, haivytysS, hidasS, hiljainen);
+            if (!hiljainen) Tila.JaksonIntroAlusta(kaupunki); // linssi auki (pallon opas): nopea alusta pidon ohi; muuten Paikka käynnistää jakson
+            else Debug.Log($"MATKAKIRJA aani: kaupunki-intro {kaupunki} hiljaisella kellolla (musiikki pois)");
             return true;
         }
 
@@ -627,34 +628,20 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool KaupunkiIntroOhita()
         {
-            if (introKaupunki == null) return false;
-            introOhita = true;
+            if (!intro.Ohita()) return false;
+            Debug.Log($"MATKAKIRJA aani: kaupunki-intro {intro.Kaupunki} ohitettu");
             return true;
         }
-        bool introOhita;
 
         void PaivitaIntro(float nyt, Action<Action> tee)
         {
-            if (introKaupunki == null) return;
+            if (!intro.Kaynnissa) return;
             var l = nykyiset[(int)Kanava.Pohja];
-            if (introOhita)
-            {
-                introOhita = false;
-                // Siirretään intron kello niin, että katko on tässä ruudussa; jo tehty katko ei toistu, hidas tulee ajallaan.
-                if (!introKatkottu) introT0 = nyt - introKatkoS;
-                Debug.Log($"MATKAKIRJA aani: kaupunki-intro {introKaupunki} ohitettu");
-            }
-            if (introT0 < 0f)
-            {
-                if (l == null || !l.Kaynnistetty || l.A == null || l.Url != introUrl) return;
-                introT0 = nyt - l.A.time;
-                string k = introKaupunki; float kohta = l.A.time;
-                tee(() => KaupunkiIntroAlkoi?.Invoke(k, kohta));
-                Debug.Log($"MATKAKIRJA aani: kaupunki-intro {k} alkoi (nopea {kohta:0.00} s)");
-            }
-            float s = nyt - introT0;
-            if (!introKatkottu && s >= introKatkoS) { introKatkottu = true; int ms = (int)(introHaivytysS * 1000); tee(() => Tila.JaksonIntroKatko(ms)); }
-            if (!introHidasAlkoi && s >= introHidasS) { introHidasAlkoi = true; tee(() => Tila.JaksonIntroHidas()); introKaupunki = null; }
+            float? kohta = l != null && l.Kaynnistetty && l.A != null && l.Url == introUrl ? l.A.time : (float?)null;
+            intro.Paivita(nyt, kohta,
+                (k, t) => { tee(() => KaupunkiIntroAlkoi?.Invoke(k, t)); Debug.Log($"MATKAKIRJA aani: kaupunki-intro {k} alkoi (nopea {t:0.00} s)"); },
+                ms => tee(() => Tila.JaksonIntroKatko(ms)),
+                () => tee(() => Tila.JaksonIntroHidas()));
         }
 
         void Update()

@@ -517,6 +517,9 @@ namespace Matkakirja.Peli
             JatkaJaksoa();
         });
 
+        /// <summary>Voiko kaupungin jakso soida (musiikki ja äänimaisema päällä, jakso olemassa); false = intron kello käy hiljaa.</summary>
+        public bool JaksoVoiSoida(string kaupunki) => Aanimaisema && Musiikki && kaupunki != null && t.Jaksot.ContainsKey(kaupunki);
+
         /// <summary>Jakson seuraava vaihe: intron aikana suoraan jaksosta (pito ja tilaraidat ohi), muuten pohjan valinnan kautta.</summary>
         void JatkaJaksoa()
         {
