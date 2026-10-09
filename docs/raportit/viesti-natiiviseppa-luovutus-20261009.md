@@ -3,6 +3,13 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 18.3x — runko 779bd8e6b
+
+- + NUI kielierä 6 7d1bf4a63 (PT kuittasi; viimeinen UI-erä). Yhdistelmävika: Pelikoodarin ValmisluennatManifestiTestit haki
+  `ElevenAanet = new[]`, ja NUI muutti sen muotoon `=> new[]`. Korjaus 779bd8e6b (regex `=>?`). Linssit 1246, Peli 442, Kartta 453, unity 0, tarkista 0.
+- Omien mallien varjojen kustannusarvio PT:lle: docs/raportit/varjot-kustannus-natiiviseppa-20261009.md (d0b937eec). Atlas ei kerrannu
+  kaskadeilla: Ultra 32 Mt, PC 8 Mt. Mobile pois, oletus pois junaan.
+
 ## TILA 9.10. 18.0x — JUNA 173 AUKI (omistaja 17.4x: kerätään kunnes omistaja sanoo julkaisun hetken)
 
 - **Runko** `natiiviseppa/juna-173` **806283a20**. Testit Linssit 1246, Peli 442, Kartta 453, unity 0, tarkista 0. Simukäännös 30dadb2e0 17.27 OK.
