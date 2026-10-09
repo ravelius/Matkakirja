@@ -33,15 +33,16 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Toinen manifesti samaan pankkiin (8.10.: aanet-fp-v1, pelattavuusmallin kohta 10: askeleet oljella/soralla/vedessä,
         /// löytömerkki); puuttuva manifesti vain lokiin, tunnukset eivät korvaa jo ladattuja.</summary>
-        public static void LisaaManifest(string manifestUrl)
+        /// <param name="vain">Vain nämä tunnukset (iso yhteinen manifest, esim. sonniss-aanet-v2: muut silmukat eivät vie muistia); null = kaikki.</param>
+        public static void LisaaManifest(string manifestUrl, params string[] vain)
         {
             var a = Aktiivinen; if (a == null || string.IsNullOrEmpty(manifestUrl)) return;
-            a.StartCoroutine(a.Lataa(manifestUrl));
+            a.StartCoroutine(a.Lataa(manifestUrl, vain != null && vain.Length > 0 ? new HashSet<string>(vain) : null));
         }
 
         static string Lyhyt(string url) { int i = url.LastIndexOf('/'); int k = i > 0 ? url.LastIndexOf('/', i - 1) : -1; return k >= 0 ? url.Substring(k + 1) : url; }
 
-        IEnumerator Lataa(string url)
+        IEnumerator Lataa(string url, HashSet<string> vain = null)
         {
             using var q = UnityWebRequest.Get(url + "?v=1"); q.timeout = 20;
             yield return q.SendWebRequest();
@@ -52,7 +53,7 @@ namespace Matkakirja.Natiivi
             {
                 var o = MiniJson.ObjektiTaiNull(x); string t = MiniJson.Teksti(o, "tunnus");
                 string polku = MiniJson.Teksti(o, "aani");
-                if (!string.IsNullOrEmpty(t) && !aanet.ContainsKey(t) && !string.IsNullOrEmpty(polku))
+                if (!string.IsNullOrEmpty(t) && !aanet.ContainsKey(t) && !string.IsNullOrEmpty(polku) && (vain == null || vain.Contains(t)))
                     aanet[t] = new Aani { Tunnus = t, Polku = pohja + polku, Silmukka = MiniJson.Kentta(o, "silmukka") is bool b && b };
             }
             Valmis = true;

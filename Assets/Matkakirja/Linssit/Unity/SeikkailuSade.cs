@@ -17,6 +17,7 @@ namespace Matkakirja.Natiivi
         public const float KorkeallaY = 8.5f;
         static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
+            "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)
             "yolinnut", "koira" };   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
         readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
         readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
@@ -33,7 +34,7 @@ namespace Matkakirja.Natiivi
         public static void Poista() { var s = Aktiivinen; Aktiivinen = null; if (s != null) Destroy(s.gameObject); }
 
         /// <summary>Tavoitevoimakkuudet (0–1 ennen Sää-voimaa) pelaajan paikasta; testattava ilman Unityä ei ole tarpeen (puhdas taulukko).</summary>
-        public static void Tavoitteet(double markyys, bool veneessa, bool puulla, IDictionary<string, float> ulos, bool korkealla = false)
+        public static void Tavoitteet(double markyys, bool veneessa, bool puulla, IDictionary<string, float> ulos, bool korkealla = false, bool ulkopuolella = false)
         {
             bool ulkona = veneessa || markyys >= 0.5;
             bool vesi = veneessa || markyys >= 0.8;
@@ -45,12 +46,20 @@ namespace Matkakirja.Natiivi
             ulos["tippuminen-muuri"] = ulkona ? 0f : markyys > 0 ? 0.5f : 0.28f;
             ulos["ukkonen-jyly"] = ulkona ? 0.45f : 0.3f;
             // Kostea tuuli sateen ja yön alla (ulkona ja veneessä, sisällä vaimeana), korkea tuuli muurin harjalla ja tornissa.
-            ulos["tuuli-kostea"] = veneessa ? 0.5f : ulkona ? 0.4f : 0.1f;
+            // Männikkö (rannan mäntymetsä, laituri, muurin ulkopuoli; veneessä hento): kostea tuuli väistyy samassa suhteessa, ettei
+            // kaksi laajaa tuulta kerrostu; muurin harjalla korkea tuuli hallitsee ja metsä jää taustalle; pihalla tuskin kuuluvissa.
+            float metsa = veneessa ? 0.2f : korkealla ? 0.2f : ulkopuolella ? 0.45f : ulkona ? 0.1f : 0f;
+            ulos["tuuli-metsa"] = metsa;
+            ulos["tuuli-kostea"] = (veneessa ? 0.5f : ulkona ? 0.4f : 0.1f) * (1f - 0.6f * metsa / 0.45f);
             ulos["tuuli-korkea"] = korkealla && !veneessa ? 0.55f : 0f;
             // Yön elämä ulkona (huuhkaja, kaukainen koira rannalta) sateen alla hiljaa; sisällä tuskin kuuluvissa.
             ulos["yolinnut"] = ulkona ? (korkealla ? 0.4f : 0.3f) : 0.06f;
             ulos["koira"] = veneessa ? 0.25f : ulkona ? 0.18f : 0f;
         }
+
+        /// <summary>Kävelyosa muurin ulkopuolella (ranta, vesiportti, laituri, ulkoalue; LR:n osat v45x).</summary>
+        public static bool MuurinUlkopuolella(string osa) => osa != null && (osa == "vesiportti" || osa == "ulkoalue" || osa.StartsWith("ranta", StringComparison.Ordinal)
+            || osa.StartsWith("laituri", StringComparison.Ordinal));
 
         void Update()
         {
@@ -60,7 +69,7 @@ namespace Matkakirja.Natiivi
                 tarkistusT = Time.unscaledTime + 0.5f;
                 var p = SeikkailuPelaaja.Aktiivinen;
                 bool veneessa = p == null && SeikkailuVene.Aktiivinen != null;
-                double markyys = 0; bool puulla = false;
+                double markyys = 0; bool puulla = false, ulkopuolella = false;
                 var d = SeikkailuKavely.Data;
                 if (p != null && d != null)
                 {
@@ -69,14 +78,14 @@ namespace Matkakirja.Natiivi
                     {
                         if (x < o.RajatMin[0] - 0.5 || x > o.RajatMax[0] + 0.5 || z < o.RajatMin[2] - 0.5 || z > o.RajatMax[2] + 0.5 || y < o.RajatMin[1] - 1 || y > o.RajatMax[1] + 1) continue;
                         double tilavuus = (o.RajatMax[0] - o.RajatMin[0]) * (o.RajatMax[1] - o.RajatMin[1] + 1) * (o.RajatMax[2] - o.RajatMin[2]);
-                        if (tilavuus < pienin) { pienin = tilavuus; markyys = o.Markyys; }
+                        if (tilavuus < pienin) { pienin = tilavuus; markyys = o.Markyys; ulkopuolella = MuurinUlkopuolella(o.Id); }
                     }
                     foreach (var m in d.Merkit)
                         if (m.Laji == "pinta" && m.Tunnus != null && m.Tunnus.StartsWith("puu", StringComparison.Ordinal)
                             && (m.X - x) * (m.X - x) + (m.Z - z) * (m.Z - z) < 36 && Math.Abs(m.Y - y) < 3) { puulla = true; if (m.Markyys > markyys) markyys = m.Markyys; break; }
                 }
                 bool korkealla = p != null && markyys >= 0.5 && p.transform.position.y > KorkeallaY;
-                Tavoitteet(markyys, veneessa, puulla, tavoite, korkealla);
+                Tavoitteet(markyys, veneessa, puulla, tavoite, korkealla, ulkopuolella);
             }
             float saaTaso = Asetukset.Taso(Voima.Saa), taustaTaso = Asetukset.Taso(Voima.Tausta);
             foreach (var t in Tunnukset)

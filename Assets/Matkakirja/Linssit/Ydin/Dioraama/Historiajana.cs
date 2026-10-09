@@ -38,8 +38,8 @@ namespace Matkakirja.Linssit.Dioraama
     {
         /// <summary>Sisältökirjurin faktatarkistus tehty (PT:n ehto 1). Ennen sitä historiatila vain kehityskomennolla.</summary>
         public const bool Lukittu = true;   // Sisältökirjuri 9.10., PT-hyväksytty
-        /// <summary>Avainsana näkyy vaiheen alusta AvainsanaAlkuS:sta AvainsanaS:n ajan.</summary>
-        public const double AvainsanaAlkuS = 0.8, AvainsanaS = 5.0;
+        /// <summary>Avainsana näkyy vaiheen alusta AvainsanaAlkuS:sta AvainsanaS:n ajan (4 s kuten esittelyssä, PT 9.10.).</summary>
+        public const double AvainsanaAlkuS = 0.8, AvainsanaS = 4.0;
         /// <summary>Drone kiertää linnaa koko historian ajan (astetta); vaihteen korkeus ja etäisyys siirtyvät vaiheen alun
         /// SiirtymaOsuus-osuudella.</summary>
         public const double KiertoAsteet = 300, SiirtymaOsuus = 0.4, Fov = 50;

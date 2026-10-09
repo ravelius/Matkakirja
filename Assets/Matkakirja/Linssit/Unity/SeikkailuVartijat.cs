@@ -28,6 +28,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Varusteiden kilinän kuuluvuus (m): vain lähin kävelevä vartija.</summary>
         const float VarusteetM = 14f;
+        /// <summary>Työäänet (LR: lakaisu:<henkilö> {henkilo, aani "luuta"}): soi, kun henkilö seisoo merkin lähellä; tauko soittojen välissä.</summary>
+        const float TyoM = 1.5f, TyoTaukoS = 7f;
+        List<KavelyMerkki> tyot;
 
         sealed class V
         {
@@ -35,7 +38,7 @@ namespace Matkakirja.Natiivi
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
-            public float RepliikkiAsti; public int RepliikkiLaskuri;
+            public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti;
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             public bool Tunnisti;
@@ -363,6 +366,17 @@ namespace Matkakirja.Natiivi
                 }
                 float v2 = new Vector2(ag.velocity.x, ag.velocity.z).magnitude;
                 v.Kavelee = v2 > 0.15f;
+                if (tyot == null && SeikkailuKavely.Data != null) { tyot = new List<KavelyMerkki>(); foreach (var m in SeikkailuKavely.Data.Lajia("lakaisu")) if (m.Aani != null) tyot.Add(m); }
+                if (!v.Kavelee && tyot != null && tyot.Count > 0 && Time.unscaledTime > v.TyoAsti)
+                    foreach (var m in tyot)
+                    {
+                        if (m.Henkilo != null && m.Henkilo != v.Henkilo) continue;
+                        float dx = vp.x - (float)m.X, dz = vp.z + (float)m.Z;
+                        if (dx * dx + dz * dz > TyoM * TyoM || Mathf.Abs(vp.y - (float)m.Y) > 1.5f) continue;
+                        SeikkailuAanet.Soita(m.Aani, vp + Vector3.up * 0.3f, 0.8f);
+                        v.TyoAsti = Time.unscaledTime + TyoTaukoS;
+                        break;
+                    }
                 if (v.Kavelee && p != null && v.Aivot.Profiili == VartijaProfiili.Vartija)
                 {
                     float dv = (vp - p.transform.position).sqrMagnitude;
