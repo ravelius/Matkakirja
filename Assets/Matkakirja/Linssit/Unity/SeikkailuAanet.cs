@@ -75,7 +75,7 @@ namespace Matkakirja.Natiivi
             if (p.result == UnityWebRequest.Result.Success) { a.Klippi = DownloadHandlerAudioClip.GetContent(p); a.Klippi.name = "Tehoste:" + a.Tunnus; }
         }
 
-        /// <summary>Satunnainen ladattu muunnelma (sonniss-aanet-v3: lukko-ulko-1-a/b …), muuten vara.</summary>
+        /// <summary>Satunnainen ladattu muunnelma (sonniss-aanet-v4: lukko-ulko-1-a/b …), muuten vara.</summary>
         public static void SoitaJokin(string[] tunnukset, string vara, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
         {
             int n = 0; foreach (var t in tunnukset) if (Klippi(t) != null) n++;
@@ -84,8 +84,9 @@ namespace Matkakirja.Natiivi
             foreach (var t in tunnukset) if (Klippi(t) != null && valinta-- == 0) { Soita(t, paikka, voimakkuus); return; }
         }
         public static readonly string[] LukkoAuki = { "lukko-ulko-1-a", "lukko-ulko-1-b", "lukko-ulko-2-a", "lukko-ulko-2-b" },
-            LukkoRavistus = { "lukko-ravistus-a", "lukko-ravistus-b" }, LukkoRaapaisu = { "lukko-raapaisu-a", "lukko-raapaisu-b" },
-            OviNarina = { "puuovi-narina-1-a", "puuovi-narina-1-b" }, PaksuOviNarina = { "puuovi-narina-2-a", "puuovi-narina-2-b" },
+            LukkoRavistus = { "lukko-ravistus" }, LukkoRaapaisu = { "lukko-raapaisu-a", "lukko-raapaisu-b" },
+            // sonniss-aanet-v4: puuovi-narina-1 poistettiin (ei ovi), joten tavallinen ovi narisee samalla paksun puuoven narinalla.
+            OviNarina = { "puuovi-narina-2-a", "puuovi-narina-2-b" }, PaksuOviNarina = { "puuovi-narina-2-a", "puuovi-narina-2-b" },
             RaskasOviAvain = { "raskas-ovi-avain-a", "raskas-ovi-avain-b" }, Kolikot = { "kolikot-1", "kolikot-2" };
 
         /// <summary>M-osa (aanet-fp-v2): uusi tunnus, jos ladattu, muuten vara (olemassa oleva ääni).</summary>
