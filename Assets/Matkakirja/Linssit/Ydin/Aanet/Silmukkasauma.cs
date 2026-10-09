@@ -63,6 +63,11 @@ namespace Matkakirja.Linssit.Aanet
         public static double LoppuHetki(double kohta0, double t0, long loppu, int taajuus, double savel)
             => t0 + Math.Max(0, loppu - kohta0) / (taajuus * Math.Max(1e-3, savel));
 
+        /// <summary>Seuraavan kierroksen käynnistyshetki klipin ALUSTA (ei hakua): alkuviive (alku näytettä) soi hiljaisuutena edellisen
+        /// kierroksen lopun alla, ja kelvollinen alku osuu tasan liitoshetkeen. Hakuton liitos toimii myös pakatulle ja striimatulle
+        /// datalle, jonka haku ei ole näytetarkka (loppumusiikki).</summary>
+        public static double KaynnistysHetki(double liitos, long alku, int taajuus, double savel) => liitos - alku / (taajuus * Math.Max(1e-3, savel));
+
         /// <summary>Aloituskohta kelvollisen alueen sisällä (pyydetty kohta näytteinä, esim. satunnainen alku): rajataan [alku, loppu − 1].</summary>
         public static long Aloitus(long pyydetty, long alku, long loppu) => Math.Max(alku, Math.Min(Math.Max(alku, loppu - 1), pyydetty));
     }
