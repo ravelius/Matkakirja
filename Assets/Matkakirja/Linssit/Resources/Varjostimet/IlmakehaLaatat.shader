@@ -96,7 +96,9 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 {
                     float3 dv = kohti / max(1e-4, length(kohti));
                     float3 ranta = IlmSininenHetki(normalize(float3(dv.x, -0.2, dv.z))) / _IlmHamara.x;   // sama "maa" kuin taivaan alapuolisko (laattojen reuna sulautuu)
-                    c = lerp(c, ranta, saturate((etM - 2500.0) / 11500.0) * 0.85 * _IlmHamara.x);
+                    // Alku ja pituus kasvavat kameran korkeuden mukana (simu 9.10. 10.4x: 12 km:stä koko kaupunki liukui tasaiseksi siniseksi).
+                    float alkuM = 2500.0 + _IlmParam.x * 1.5, pitM = 11500.0 + _IlmParam.x * 2.0;
+                    c = lerp(c, ranta, saturate((etM - alkuM) / pitM) * 0.85 * _IlmHamara.x);
                 }
                 return half4(MixFog((half3)c, v.sumu), 1);
             }
