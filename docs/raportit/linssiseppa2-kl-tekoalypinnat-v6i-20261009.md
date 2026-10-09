@@ -30,3 +30,23 @@ pelikuvat valokuva | v6h | v6i.
   (venytetty projektio); itäsiiven sisälape tasainen ilman kuviota; itäjulkisivu (varjopuoli) haaleampi ja ikkunat ääriviivamaisia.
 - Räystään repaleinen kaistale ja ilmassa leijuva kappale itäjulkisivun edessä ovat Googlen laattojen jäänteitä (näkyvät myös
   v6h:ssa): leikkauspolygoni ei kata Logårdenin puolta kokonaan.
+
+## v6j (PT 9.10. 23.0x, valmis 23.3x)
+Paketti `proto-3d/_valmiit/omat-mallit-vienti-20261009p/kartta/omat-mallit/v6j`; arkki `kaappaukset/linssiseppa2-kl6i-20261009/kl-valokuva-v6i-v6j.jpg`.
+1. **Kaksi sävyä** (`kl-tekoaly/savyta.py`, LR:n luokkamaskit): seinä + sokkeli + urat lohenpunainen 168/130/112, kivikoriste + listat
+   vaalean kellanharmaa 196/188/168, luminanssi säilyy; ikkunat, puitteet ja ovet ennallaan. Varapintojen v3c-materiaalit samoin
+   (`leivo_kl6j.py`). Pelivalon kerroin mitattu v6i:n pelikuvasta: aurinkoinen eteläseinä pelissä ≈ leivottu tekstuuri (R/G 1,05 → 1,06–1,09),
+   joten Riddarholmenin (0,81, 0,85, 1,12) ei päde. Rappauksen R/G tekstuurissa 1,26.
+2. **Googlen jäänteet pois:** LR:n alue.py / maa.py / kuninkaanlinna.py kopiona `kl-tekoaly/kl-v6j/`: 8 m:n marginaali myös itään,
+   Logården omaksi maaksi ja `itapuoli()` takaisin (tukimuuri, portaat, vesipeilit, 12 kartiopuuta; v2 oli kytkenyt pois). Terassin
+   porrasreunat päälle (TIUKKA koskee enää Lejonbackenin ramppeja) ja rakennuksen alla sisäpihan taso vasta > 4 m reunasta (muuten
+   kiilat julkisivun eteen). Leikkaus = uusi alue.json (75 pistettä, 29 130 m²). Itäräystään kaistale ja leijuva kappale poissa.
+3. **Pilasterit:** kohdista.py-kopioon `KOHDISTUS=akseli` (dx(x), dy(y), kaistat 2,6 m / 1,5 m, kolme kierrosta) → suorat pilasterit
+   ja vaakasuorat listat. Mediaani 0,07–0,17 m, p90 0,15–0,74 m (muutama tekoälyn väärin piirtämä ikkuna jää paikalleen).
+   **Pylväikkö:** toisen kierroksen pinnat näytteistävät 0,15 m × |n⊥| sisäänpäin; juovat lievenivät, eivät poistuneet.
+   Näkyvyysraja 0,6 → 0,4.
+
+Auki (itse tarkistettu pelikuvista): kaakkoissiiven sahalaitakolmiot räystään ja ikkunoiden alla (myös v6i:ssä; isot seinäkolmiot
+jakautuvat projektion ja varapinnan kesken), portiikin juurella muutama valkoinen läikkä (maanrajan pinnat näytteistävät tekoälykuvan
+valkoista taustaa), ohuet vaaleat vaakaviivat listojen kohdalla, itäjulkisivun tekoälykuva haaleampi (ikkunat ääriviivamaisia),
+Logårdenin nurmi tasainen ilman kuviota.
