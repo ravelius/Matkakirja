@@ -5,7 +5,7 @@ Rooli: Linssiseppä (Opus, high). Proto-worktreet:
 - `wt/proto-linssiseppa-kaupunkiaanet`: haara `linssiseppa/soundly-173`.
 - `wt/proto-linssiseppa-nykyintro`: haara `linssiseppa/nykyintro-173`.
 
-Pääreposta käytössä on `wt/linssiseppa-intro-arvio` (PR #4300 auki, poista mergen jälkeen `tools/uusi-worktree.sh --poista linssiseppa-intro-arvio`). Simulaattori on 00CF62C2 (T7). Simuvuoro pyydetään aina Julkaisijalta. Kuva-arkit ajetaan aina tuoreella .app-kopiolla: `proto-3d/lokit/linssiseppa-app/<nimi>.app`, ja kaannos.txt tarkistetaan.
+Pääreposta ei ole avoimia worktreitä (intro-arvio poistettu #4300:n mergen jälkeen). Simulaattori on 00CF62C2 (T7). Simuvuoro pyydetään aina Julkaisijalta. Kuva-arkit ajetaan aina tuoreella .app-kopiolla: `proto-3d/lokit/linssiseppa-app/<nimi>.app`, ja kaannos.txt tarkistetaan.
 
 ## Junat
 
@@ -15,19 +15,18 @@ Pääreposta käytössä on `wt/linssiseppa-intro-arvio` (PR #4300 auki, poista 
   - `tukholma-muodot` 6c3e385b6
   - `esilataus-173` 2b9ba3189 (nopean lennon esilataus samalta radalta)
   - `kaupunkiaanet-173` 5fe96a74d (pallon kaupunkiäänet v1 + satamavesi; kellot ja kahvila vain lähellä lähdettä; tasotesti kertojan alla)
-- **173, odottaa PT:n kuittausta** (lähetetty PT:lle 16.0x):
+- **173, kuitattu 16.1x (PT ilmoitti Natiivisepälle itse):**
   - `linssiseppa/nykyintro-173` bf0017f1b: Pariisin nykyintro. Mukana Pelikoodarin 2ae1b0e1a ja NUI:n NytRivi c3270b673. Kori pois nykyotoksista. Linssit 1219, Peli 432, unity 0.
   - `linssiseppa/soundly-173` f5088ce94: Soundly-erä 1 kaupunkiaanet-173:n päällä, korvaa 5fe96a74d:n. 1224/1224, unity 0. Ei vielä kuunneltu.
-  - **Kun PT kuittaa:** SHA:t Natiivisepälle yhdellä viestillä.
 
 ## Docs
 
 - Mergetty: #4282 (kuva-arkki 1), #4286 (nykyintron kuvakäsikirjoitus), #4292 (C5 OSM-referenssi, kuva-arkki 2 ja arvio 2).
-- Auki: #4300 (intron kuva-arkki beb3fe9d, arvio ja musiikkilinjaus). PT mergeää.
+- Mergetty myös #4300 (intron kuva-arkki beb3fe9d, arvio ja musiikkilinjaus).
 
 ## Kesken ja seuraavaksi (jono)
 
-1. **C5 v2:** odottaa PT:n päätöstä. Codexin C5 on eri rajaus kuin pelin kamera (noin 2,5× lähempänä, lännestä). Jos PT hyväksyy, Sisältökirjuri tilaa uuden referenssillä `proto-3d/_tyo/linssiseppa/nykyintro-20261009/c5-sommittelu-osm.png`. Ohje: koko kuva-ala kuten referenssissä, Notre-Dame pienenä keskellä alhaalla. Linjaus: Googlen laattoja sisältävää pelikuvaa EI anneta generoinnin pohjaksi (PT kirjasi).
+1. **C5 v2:** PT tilasi sen Sisältökirjurilta tiukalla rajausohjeella. Kun se on ämpärissä (sama nimi pariisi-nykyintro-c5.jpg), aja intron kuva-arkki uudelleen. Codexin C5 on eri rajaus kuin pelin kamera (noin 2,5× lähempänä, lännestä). Jos PT hyväksyy, Sisältökirjuri tilaa uuden referenssillä `proto-3d/_tyo/linssiseppa/nykyintro-20261009/c5-sommittelu-osm.png`. Ohje: koko kuva-ala kuten referenssissä, Notre-Dame pienenä keskellä alhaalla. Linjaus: Googlen laattoja sisältävää pelikuvaa EI anneta generoinnin pohjaksi (PT kirjasi).
 2. **Pelikoodarin puhdas tuuli** `aanet/pallo-tuuli-soundly-v1/` (tuuli-puhdas-01/02, 50 s stereo, −23 LUFS, Voima-säädin): kytke, kun se on 200. Nykyinen tuuli tulee kaupunkiäänimaisemasta (KaupunkiAanimaisema.TuuliMaa/TuuliYla). Kaksi kerrosta eri vaiheeseen. Tasotesti `AanitasotKaikissaKaupungeissa` (tuuli + sade ≥ 10 dB kertojan alla).
 3. **Simulla kuunneltavaa:** Soundly- ja kaupunkiäänet (agentin lista: `opas tunti 11.99` kirkon vieressä, Tukholman laiturit, pariisilainen aukio). Ääni vain natiivikaappauksella, ei kaiuttimia.
 4. **Uusi intron kuva-arkki** korin korjauksen (bf0017f1b) jälkeen ja, kun C5 v2 tulee, skenaario `proto-3d/tyokalut/linssiseppa-ajot/sk-nykyintro-pariisi.txt`. Erillinen ajo: ohitus noin 10 s:ssa.
@@ -48,3 +47,5 @@ Pääreposta käytössä on `wt/linssiseppa-intro-arvio` (PR #4300 auki, poista 
 - Skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/`. Vanhat yövalodiagnoosit ovat alikansiossa `vanhat/`.
 - Ajo: `ajo-yovalot-diag.sh <app> <sha8> <skenaario>`. Käännös: `proto-kaanna.sh <haara>[+haara] 00CF62C2-2FE6-4993-8475-5786CC40A7A3`.
 - Simu on sammutettu (16.0x), eikä taustalla ole ajoja tai agentteja.
+
+- Sumennusläiskä (prefektuurin kortteli) on LS2:n jonossa (PT).
