@@ -37,7 +37,7 @@ Avoimet työt:
 
 ## TILA 9.10. klo 06.5x (uusin)
 - ÄMPÄRI v4 (Julkaisija 06.55): uusin-2 → v4 (Giza, Riddarholmen + korjattu tekijärivi, Kuninkaanlinna v1.2, Concorde v2.2);
-  uusin → v2/mallit-giza.json (vanhat appit). Julkaisija selvittää, miksi uusin-2 palasi välillä v2:een (ei LS2).
+  uusin → v2/mallit-giza.json (vanhat appit). (Väitetty paluu v2:een oli Julkaisijan skriptin virhetuloste, ei anomaliaa.)
 - Juna 170: 52c736c4d (leikkaus) mukana käännöksessä dc6128c8f; välkekorjaus fb3b9f27a Natiivisepälle (PT: junaan 170).
 - Kuvat lokit/linssiseppa2-170g-*: Concorde puhdas. Notre-Dame: seinät tummat (normaalit?), Googlen nosturipuomit polygonin ulkopuolella,
   sahalaitainen rantahelma → LR. Vasa v1: mastot OK, kattoalue liian vaalea + musta seinälaatikko → LR. Kuninkaanlinnan pahvimaisuus LR:n jonoon.
