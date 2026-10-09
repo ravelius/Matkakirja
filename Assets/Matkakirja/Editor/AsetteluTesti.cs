@@ -49,7 +49,7 @@ namespace Matkakirja.Editori
             "Liuskekivi on kannettava alttari: pieni kivilaatta, jonka päällä messu voitiin pitää missä tahansa. Kiven keskellä on syvennys, johon pyhäinjäännös suljettiin vahalla.",
         };
 
-        enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Mikseri, OdotaMikseri, Linna, OdotaLinna, Loyto, OdotaLoyto,
+        enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Pallo, OdotaPallo, Mikseri, OdotaMikseri, Linna, OdotaLinna, Loyto, OdotaLoyto,
             Tietokerros, AvaaTietokerros, OdotaTietokerros,
             Lopeta, OdotaLoppua, Valmis }
 
@@ -161,8 +161,25 @@ namespace Matkakirja.Editori
                     // Sää odottaa enintään NytRivi.SaanOdotusS; rivi näkyy ~3 s (Nimikyltti).
                     if (Kulunut < Matkakirja.Natiivi.NytRivi.SaanOdotusS + 0.8) return;
                     TarkistaNytRivi();
+                    Siirry(Vaihe.Pallo);
+                    break;
+                case Vaihe.Pallo:
+                {
+                    // Pallon kierros (UI-kuva-arkki u02): metrolinja, esitysrivi, ■, Mikä tämä on ja tapit (vapaa tila) yhtä aikaa.
+                    var o = OpasValikko.Hae();
+                    o.Komento("esitys on"); o.Komento("metro 0"); o.Komento("mika"); o.Komento("lopeta"); o.Komento("sulje");
+                    Siirry(Vaihe.OdotaPallo);
+                    break;
+                }
+                case Vaihe.OdotaPallo:
+                {
+                    if (kehyksia < 20 || Kulunut < 1.0) return;
+                    TarkistaPallo();
+                    var o = OpasValikko.Hae();
+                    o.Komento("metro auto"); o.Komento("mika pois"); o.Komento("lopeta pois"); o.Komento("esitys auto"); o.Komento("sulje");
                     Siirry(Vaihe.Mikseri);
                     break;
+                }
                 case Vaihe.Mikseri:
                     // Pallon mikseri (UI-kuva-arkki u06): demolähde ja paneeli auki (kuten `ui mikseri demo` + `ui mikseri auki`).
                     MikseriPaneeli.LappuPiilossa = false;
@@ -321,6 +338,55 @@ namespace Matkakirja.Editori
             Kokonaan(jatka, turva, "löytö: Jatka matkaa");
             var nimi = Etsi(jatka, "Liinanyytti");
             if (nimi == null) Virhe("löytö: nimi puuttuu"); else Kokonaan(nimi, turva, "löytö: nimi");
+        }
+
+        static void TarkistaPallo()
+        {
+            var opas = OpasValikko.Hae();
+            var juuri = opas.TestiJuuri;
+            if (juuri?.panel == null) { Virhe("pallo: oppaan paneeli puuttuu"); return; }
+            var turva = TurvaAlue(juuri);
+            var koko = juuri.panel.visualTree.layout;
+            var napit = Nakyvat(opas.TestiAvainnapit()).ToList();
+            var ohjaimet = Nakyvat(opas.TestiPallonOhjaimet()).ToList();
+            foreach (var (nimi, _) in opas.TestiPallonOhjaimet()) if (!ohjaimet.Any(n => n.Nimi == nimi)) Kirjaa($"-- pallo: {nimi} ei näkyvissä");
+            for (int i = 0; i < ohjaimet.Count; i++)
+            {
+                var (nimi, e) = ohjaimet[i];
+                Kokonaan(e, turva, "pallo: " + nimi);
+                // Oppaan napit ja muut ohjaimet (kukin pari kerran).
+                foreach (var (n2, e2) in napit.Concat(ohjaimet.Skip(i + 1)))
+                    if (e.worldBound.Overlaps(e2.worldBound))
+                        Virhe($"pallo: {nimi} {Laatikko(e.worldBound)} on päällekkäin: {n2} {Laatikko(e2.worldBound)}");
+            }
+            // Metrolinja: tarkoituksella turva-alueen reunan yli (iPhone: Islandin viereen, OpasValikko.PaivitaMetro), joten ehto on
+            // ruudulla pysyminen ja ettei se ole minkään ohjaimen päällä.
+            var metro = opas.TestiMetro;
+            if (metro == null || metro.panel == null || !Nakyvissa(metro)) { Virhe("pallo: metrolinja ei näkyvissä"); return; }
+            var mb = SisallonLaatikko(metro);
+            if (mb.xMin < -0.5f || mb.yMin < -0.5f || mb.xMax > koko.width + 0.5f || mb.yMax > koko.height + 0.5f)
+                Virhe($"pallo: metrolinja {Laatikko(mb)} ei ole kokonaan ruudulla");
+            else Kirjaa($"OK pallo: metrolinja {Laatikko(mb)}");
+            foreach (var (n2, e2) in napit.Concat(ohjaimet))
+                if (mb.Overlaps(e2.worldBound)) Virhe($"pallo: metrolinja {Laatikko(mb)} on päällekkäin: {n2} {Laatikko(e2.worldBound)}");
+            var nyt = Matkakirja.Natiivi.NytRivi.TestiLappu;
+            if (nyt?.panel != null && Nakyvissa(nyt) && nyt.resolvedStyle.opacity > 0.5f && mb.Overlaps(nyt.worldBound))
+                Virhe($"pallo: metrolinja on nyt-rivin päällä {Laatikko(nyt.worldBound)}");
+        }
+
+        /// <summary>Näkyvien tekstien ja pisteiden yhteinen laatikko (linjan juuri voi olla koko ruudun kokoinen).</summary>
+        static Rect SisallonLaatikko(VisualElement juuri)
+        {
+            Rect? r = null;
+            juuri.Query<VisualElement>().ForEach(e =>
+            {
+                if (e == juuri || e.childCount > 0 || !Nakyvissa(e) || e.resolvedStyle.visibility == Visibility.Hidden) return;
+                var b = e.worldBound;
+                if (!(b.width >= 1f && b.height >= 1f)) return;
+                r = r == null ? b : Rect.MinMaxRect(Mathf.Min(r.Value.xMin, b.xMin), Mathf.Min(r.Value.yMin, b.yMin),
+                    Mathf.Max(r.Value.xMax, b.xMax), Mathf.Max(r.Value.yMax, b.yMax));
+            });
+            return r ?? juuri.worldBound;
         }
 
         static void TarkistaMikseri()

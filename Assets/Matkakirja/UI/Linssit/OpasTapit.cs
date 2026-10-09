@@ -125,6 +125,9 @@ namespace Matkakirja.Natiivi
         public float Ala { get; private set; }
 
         public bool Nakyy => nakyy;
+        /// <summary>Asettelutesti: tappien juuret.</summary>
+        internal VisualElement TestiVasen => vasen?.Juuri;
+        internal VisualElement TestiOikea => oikea?.Juuri;
         public Rect VasenLaatikko => vasen.Juuri.worldBound;
         public Rect OikeaLaatikko => oikea.Juuri.worldBound;
 

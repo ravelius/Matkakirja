@@ -1126,6 +1126,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Asettelutesti: paneeli (valikko) ja ruudulla pysyvät avainnapit nimineen.</summary>
         public VisualElement TestiJuuri => Juuri;
         public VisualElement TestiValikko => valikko;
+        public VisualElement TestiMetro => metro?.TestiJuuri;
+        /// <summary>Asettelutesti: pallon kierroksen ohjaimet (tapit, Mikä tämä on, kuvakortti).</summary>
+        public IEnumerable<(string Nimi, VisualElement E)> TestiPallonOhjaimet()
+        {
+            yield return ("vasen tappi", tapit?.TestiVasen);
+            yield return ("oikea tappi", tapit?.TestiOikea);
+            yield return ("mikä tämä on", mikaRivi);
+            yield return ("kuvakortti", kuvaKortti);
+        }
         public IEnumerable<(string Nimi, VisualElement E)> TestiAvainnapit()
         {
             yield return ("☰", nappi);
