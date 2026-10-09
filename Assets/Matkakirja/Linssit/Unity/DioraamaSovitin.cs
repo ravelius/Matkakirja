@@ -1279,6 +1279,9 @@ namespace Matkakirja.Natiivi
                     "kolikot-1", "kolikot-2", "kesayo-sirkat", "satama-vesi", "askel-puu");
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v2/manifest.json");   // generoidut (PT 9.10.): sytytys, hanska, kauha, nauris, tarjotin; puuttuva = hiljaa
+                // Soundly-pankki (Pelikoodari 9.10., erä 1b, 205 ääntä vuodelle 1499): pakattuna muistiin; korvaa varmat vastineet
+                // (SeikkailuAanet.Korvaavat) ja pelaajan askeleet kertaääninä (SeikkailuAanet.Askel); puuttuva = vanhat äänet.
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/olavinlinna-soundly-v1/manifest.json");
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }

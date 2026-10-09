@@ -484,6 +484,29 @@ namespace Matkakirja.Natiivi
         {
             if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; }
             var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa, markyys);
+            // SOUNDLY-ASKELEET (olavinlinna-soundly-v1, Siirtoseppä 9.10.): pinnalle, jolla on pankissa kertaääniä, yksi askel askelpituuden
+            // välein (hiipiminen 0,55, kävely 0,75, juoksu 1,1 m), muunnelma satunnaisesti, hiivinnässä vaatteen kahina päälle; puu ja laituri
+            // jäävät silmukoiksi. Ilman pankkia kuten ennen.
+            bool liikkeessa = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa;
+            string pintaN = pinta != null && Askelaani.Pinnat.ContainsKey(pinta) ? pinta : "kivi";
+            bool marka = markyys >= Askelaani.MarkaRaja;
+            if (SeikkailuAanet.Askel(pintaN, marka) != null)
+            {
+                if (omatAskeleet.isPlaying) omatAskeleet.Stop();
+                var vaaka = new Vector3(jalat.x, 0f, jalat.z);
+                if (!liikkeessa || edellinenJalka is not Vector3 ed) { edellinenJalka = vaaka; askelMatka = 0f; return; }
+                askelMatka += Vector3.Distance(ed, vaaka); edellinenJalka = vaaka;
+                float pituus = p.Tila.Tapa == Liiketapa.Hiipiminen ? 0.55f : p.Tila.Tapa == Liiketapa.Juoksu ? 1.1f : 0.75f;
+                if (askelMatka < pituus) return;
+                askelMatka = 0f;
+                var k = SeikkailuAanet.Askel(pintaN, marka);
+                float taso = voima * SeikkailuAanet.Taso("tehosteet", PelaajanAskeleet);
+                omatAskeleet.volume = 1f; omatAskeleet.pitch = 1f;
+                omatAskeleet.PlayOneShot(k, taso * UnityEngine.Random.Range(0.85f, 1f));
+                if (p.Tila.Tapa == Liiketapa.Hiipiminen && SeikkailuAanet.Kahina() is AudioClip kh) omatAskeleet.PlayOneShot(kh, taso * 0.6f);
+                return;
+            }
+            edellinenJalka = null;
             AudioClip klippi = null;
             foreach (var t in tunnukset) { klippi = SeikkailuAanet.Klippi(t) ?? (AskelKlipit.TryGetValue(t, out var k) ? k : null); if (klippi != null) break; }
             klippi ??= AskelKlippi;
@@ -495,6 +518,7 @@ namespace Matkakirja.Natiivi
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
 
+        Vector3? edellinenJalka; float askelMatka;
         const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f;
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
