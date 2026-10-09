@@ -5,6 +5,8 @@
 //  - Kelvinin kiila: kaksi aaltoharjaa 19,47° (tan 0,354) perän kulmista, vaimeampi vaahto;
 //  - keula-aalto: pieni vaahtokaari keulan edessä.
 // Voimakkuus kasvaa nopeuden mukaan (täysi NopeusTaysiMs:ssä); paikallaan oleva vene ei jätä vanaa.
+// OMISTAJA TF 169 (PT 9.10. 10.0x): "pieni vana perässä, joka näkyy koko ajan" → lyhyempi (3,5 × pituus), kapeampi ja himmeämpi; ElavaKaupunki
+// häivyttää vanan tauolla 4 s:ssa ja käynnistyksessä 2 s:ssa (ei ajoittaisia suihkuja).
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +15,7 @@ namespace Matkakirja.Linssit.Ilmakeha
     public sealed class VesiVanat
     {
         public const int VanojaMax = 16;
-        public const double VanhentuuS = 0.5, PituusKerroin = 6, NopeusTaysiMs = 6, KiilaTan = 0.354, LeveysOsuus = 0.18;
+        public const double VanhentuuS = 0.5, PituusKerroin = 3.5, NopeusTaysiMs = 6, KiilaTan = 0.354, LeveysOsuus = 0.14;
 
         public struct Vana { public double X, Z, Dx, Dz, Nopeus, Pituus, Aika; }
         readonly Dictionary<int, Vana> vanat = new Dictionary<int, Vana>();
@@ -48,7 +50,7 @@ namespace Matkakirja.Linssit.Ilmakeha
             double keski = taakse > 0 ? Math.Exp(-sivu * sivu / (leveys * leveys * (1 + taakse * 0.02))) : 0;
             double varsi = KiilaTan * Math.Max(0, taakse) + leveys * 0.5, kaari = Math.Exp(-Math.Pow((sivu - varsi) / (2.5 + taakse * 0.05), 2));
             double keula = Math.Exp(-Math.Pow((taakse + pituus * 0.5) / (pituus * 0.15), 2)) * Math.Exp(-sivu * sivu / (leveys * leveys));
-            return (keski * 0.6 + kaari * 0.15) * haivy + keula * 0.4 * n;
+            return (keski * 0.45 + kaari * 0.12) * haivy + keula * 0.25 * n;
         }
     }
 }
