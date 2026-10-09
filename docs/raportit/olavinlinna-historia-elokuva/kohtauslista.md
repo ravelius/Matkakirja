@@ -23,4 +23,4 @@ Aloitusasento: 130° / 38° / 3,4. Loppu 2:16 (135,8 s).
 ## Tarkistettavat kohdat kuva-arkissa (kohta 4)
 
 Jokaisen kohtauksen keskikohta ja loppu, sekä nopeimmat siirtymät: kohtausten 8→9→10 rajat (lyhyt kohtaus 9) ja
-kohtaus 7 (bastionit kasvavat). Kuva-arkki ja kolme suurinta virhettä: `arvio-1.md`–`arvio-4.md`.
+kohtaus 7 (bastionit kasvavat). Kuva-arkki ja kolme suurinta virhettä: `arvio-1.md`–`arvio-5.md`.
