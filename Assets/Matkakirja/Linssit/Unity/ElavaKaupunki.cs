@@ -321,6 +321,65 @@ namespace Matkakirja.Natiivi
                     p.Oikea[j].localRotation = Quaternion.Euler(0, 0, siipi);
                 }
             }
+            PaivitaAanet(c);
+        }
+
+        // ---- ELÄVÄN KAUPUNGIN ÄÄNET (Päätoimittaja 9.10., juna 170; Pelikoodari aanet/elava-kaupunki-v1, −23 LUFS, etäisyys soittimessa):
+        // lähimmän lokkiparven silmukka etäisyyden mukaan (alle LokkiKuuluuM), kyyhkyjen siivet satunnaisesti aukion lähellä (alle
+        // KyyhkyKuuluuM) ja kaukainen lentokone harvoin. Kaikki mikserin Äänimaisema-kytkimellä ja kertojan alla väistäen (OpasAanitasot.Maisema). ----
+        public const string AaniJuuri = "https://media.matkakirja.app/aanet/elava-kaupunki-v1/";
+        public const float LokkiKuuluuM = 600f, KyyhkyKuuluuM = 250f, LokkiTaso = 0.5f, KyyhkyTaso = 0.45f, KoneTaso = 0.22f;
+        static AudioClip lokkiKlippi, kyyhky1Klippi, kyyhky2Klippi, koneKlippi; static bool aanetLadattu;
+        AudioSource lokkiLahde, kertaLahde; float seuraavaKyyhky = 20f, seuraavaKone = 150f;
+
+        System.Collections.IEnumerator LataaAanet()
+        {
+            aanetLadattu = true;
+            string[] nimet = { "lokkiparvi", "kyyhkyt-1", "kyyhkyt-2", "lentokone" };
+            var klipit = new AudioClip[nimet.Length];
+            for (int i = 0; i < nimet.Length; i++)
+                using (var r = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniJuuri + nimet[i] + ".mp3", AudioType.MPEG))
+                {
+                    r.timeout = 20;
+                    yield return r.SendWebRequest();
+                    if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klipit[i] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(r);
+                }
+            lokkiKlippi = klipit[0]; kyyhky1Klippi = klipit[1]; kyyhky2Klippi = klipit[2]; koneKlippi = klipit[3];
+            Debug.Log($"MATKAKIRJA kaupunki: elävän kaupungin äänet {System.Array.FindAll(klipit, x => x != null).Length}/{nimet.Length}");
+        }
+
+        void PaivitaAanet(Vector3 c)
+        {
+            if (!aanetLadattu) StartCoroutine(LataaAanet());
+            bool paalla = Matkakirja.Natiivi.Asetukset.Paalla(Matkakirja.Natiivi.Kytkin.Aanimaisema) && OpasSovitin.Auki;
+            float lokkiD = float.MaxValue, kyyhkyD = float.MaxValue;
+            foreach (var p in parvet)
+            {
+                if (!p.Juuri.activeSelf) continue;
+                float y = double.IsNaN(p.Pinta) ? c.y : (float)p.Pinta;
+                float d = Mathf.Max(0f, Vector3.Distance(new Vector3((float)p.Paikka.X, y, (float)p.Paikka.Z), c) - (float)p.Paikka.Alue * 0.5f);
+                if (p.Paikka.Kyyhky) kyyhkyD = Mathf.Min(kyyhkyD, d); else lokkiD = Mathf.Min(lokkiD, d);
+            }
+            if (lokkiLahde == null) { lokkiLahde = gameObject.AddComponent<AudioSource>(); lokkiLahde.loop = true; lokkiLahde.playOnAwake = false; lokkiLahde.spatialBlend = 0; lokkiLahde.volume = 0; }
+            if (kertaLahde == null) { kertaLahde = gameObject.AddComponent<AudioSource>(); kertaLahde.playOnAwake = false; kertaLahde.spatialBlend = 0; }
+            bool vaisto = OpasSovitin.OpasAaniSoi;
+            float lokkiOsuus = Mathf.Clamp01(1f - lokkiD / LokkiKuuluuM);
+            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) : 0f;
+            if (lokkiTavoite > 0.001f && !lokkiLahde.isPlaying) { lokkiLahde.clip = lokkiKlippi; lokkiLahde.Play(); }
+            lokkiLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(lokkiLahde.volume, lokkiTavoite, Time.unscaledDeltaTime);
+            if (lokkiLahde.isPlaying && lokkiLahde.volume < 0.0005f && lokkiTavoite <= 0) lokkiLahde.Stop();
+            float tu = Time.unscaledTime;
+            if (paalla && kyyhkyD < KyyhkyKuuluuM && tu > seuraavaKyyhky && kyyhky2Klippi != null)
+            {
+                seuraavaKyyhky = tu + UnityEngine.Random.Range(15f, 35f);
+                var klippi = kyyhky1Klippi != null && UnityEngine.Random.value < 0.3f ? kyyhky1Klippi : kyyhky2Klippi;
+                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto));
+            }
+            if (paalla && tu > seuraavaKone && koneKlippi != null && !vaisto)
+            {
+                seuraavaKone = tu + UnityEngine.Random.Range(240f, 420f);
+                kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false));
+            }
         }
 
         void OnDestroy() { if (Nykyinen == this) { Nykyinen = null; Krediitti = null; } }
