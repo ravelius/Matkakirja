@@ -2,7 +2,9 @@
 // jäljet 1868–1872) omina glb:inään dioraaman kehyksessä (kuoren koordinaatit, vesi y −7). SeikkailuHistoria näyttää kunkin mallin
 // vain sen vuosina (HistoriaVaihemalli.Nakyy), piilottaa linnan ennen kivilinnaa (Historiajana.LinnaNakyy) ja asettaa palon
 // leikkaukset (kuoren katot piiloon) SeikkailuKavelyn historiaosiin. Materiaali per glb-materiaali (puuvarustus: olki + puu),
-// DioraamaMaasto-varjostin kuten ympäristön malleissa; kuvaton materiaali (hiili) baseColorin värillä.
+// DioraamaValaistu (B, maalattu: aurinko, varjot ja pistevalot kuten esineillä; arvio 2 9.10.: valaisematon DioraamaMaasto näytti
+// tyhjän saaren toistuvan kalliokuvan litteänä ruskeana ruudukkona ja puuvarustuksen haaleana), vara DioraamaMaasto; kuvaton
+// materiaali (hiili) baseColorin värillä. Värikanavat kuten esineillä: AO 1, ei lämpöä, B 0,5.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -38,7 +40,7 @@ namespace Matkakirja.Natiivi
 
         public readonly List<Vaihe> Vaiheet = new List<Vaihe>();
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
-        static readonly int IdKuva = Shader.PropertyToID("_Kuva");
+        static readonly int IdKuva = Shader.PropertyToID("_Kuva"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva"), IdTila = Shader.PropertyToID("_Tila");
 
         /// <summary>Lataa vaiheet (juuri = paketin blender-kansio, esim. ".../blender/"); puuttuva vaiheet.json = ei vaiheita (vanha paketti).</summary>
         public static IEnumerator Lataa(string juuri, Func<string, string> url, Transform isa, Action<string> kirjaa, Action<SeikkailuVaiheet> valmis)
@@ -99,7 +101,8 @@ namespace Matkakirja.Natiivi
                 }
                 return tr;
             }
-            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
+            var valaistu = Shader.Find("Matkakirja/Linssit/DioraamaValaistu");
+            var varjostin = valaistu != null ? valaistu : Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
             var materiaalit = new Dictionary<string, Material>(StringComparer.Ordinal);
             var kuvat = new Dictionary<int, Texture2D>();
             var mat = new Matrix4x4[malli.Solmut.Count]; var valmis = new bool[malli.Solmut.Count];
@@ -125,6 +128,7 @@ namespace Matkakirja.Natiivi
                     }
                     var me = new Mesh { name = "Vaihe:" + id, indexFormat = k > 65000 ? UnityEngine.Rendering.IndexFormat.UInt32 : UnityEngine.Rendering.IndexFormat.UInt16 };
                     me.vertices = p; me.normals = n; me.uv = uv; me.triangles = o.Kolmiot; me.RecalculateBounds();
+                    if (valaistu != null) { var vc = new Color[k]; for (int i = 0; i < k; i++) vc[i] = new Color(1f, 0f, 0.5f, 1f); me.colors = vc; }
                     luodut.Add(me);
                     string avain = o.Kuva + "|" + (o.Vari != null ? string.Join(",", o.Vari) : "");
                     if (!materiaalit.TryGetValue(avain, out var ma) && varjostin != null)
@@ -142,7 +146,7 @@ namespace Matkakirja.Natiivi
                             var c = o.Vari != null && o.Vari.Length >= 3 ? new Color(o.Vari[0], o.Vari[1], o.Vari[2]) : new Color(0.3f, 0.3f, 0.3f);
                             t = new Texture2D(1, 1, TextureFormat.RGBA32, false) { name = "Vaihe:" + id + ":vari" }; t.SetPixel(0, 0, c); t.Apply(false, true); luodut.Add(t);
                         }
-                        ma.SetTexture(IdKuva, t);
+                        if (valaistu != null) { ma.SetFloat(IdTila, 1f); ma.SetTexture(IdPohjaKuva, t); } else ma.SetTexture(IdKuva, t);
                         materiaalit[avain] = ma;
                     }
                     var go = new GameObject("Osa:" + (o.Pinta ?? "")) { layer = DioraamaNayttamo.Kerros };
