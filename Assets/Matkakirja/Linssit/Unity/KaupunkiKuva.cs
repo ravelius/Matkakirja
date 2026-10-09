@@ -145,6 +145,7 @@ namespace Matkakirja.Natiivi
             kameraNyt = kamera;
             AsetaReunat();
             Laatutaso.Muuttui -= AsetaReunat; Laatutaso.Muuttui += AsetaReunat;
+            if (PieniMuisti && KaupunkiPassi.Ssao(null).Contains("päällä")) { ssaoPois = true; Debug.Log("MATKAKIRJA kaupunki: pieni muisti → " + KaupunkiPassi.Ssao(false)); }
 
             if (Volyymi) LuoVolyymi();
             ajo = new GameObject("KaupunkiKuva").AddComponent<KaupunkiKuvaAjo>();
@@ -156,6 +157,17 @@ namespace Matkakirja.Natiivi
         // (jälkikäsittely päälle; overlayt KaupunkiKoosteessa, joten pinoa ei ole); muuten MSAA Msaa× kuten ennen. Muuttui (lämpö,
         // pakotus) vaihtaa kesken näkymän; kori, sää ja kortti siirtyvät koosteen ja pinon välillä omalla tarkistuksellaan.
         static Camera kameraNyt;
+        /// <summary>PIENI MUISTI (juna 173, iPad Pro 13 M1 8 Gt jetsam Pariisissa): kaupunkikameran pinon pysyvät värikohteet A/B ja syvyys
+        /// MSAA 4×:llä ~350–430 Mt 2732×2048:lla (URP: pinossa ei muistittomia MSAA-pintoja) + SSAO täydellä resoluutiolla ~69 Mt.
+        /// Alle 12 Gt:n laitteilla MSAA 2× ja SSAO pois kaupungissa (~210–250 Mt). Isommilla (16 Gt iPad, Mac) ennallaan.</summary>
+        public static bool PieniMuisti => SystemInfo.systemMemorySize > 0 && SystemInfo.systemMemorySize < 12000;
+        /// <summary>Kytkimet (asetukset.json; LS1:n A-polku samalla käännöksellä): kaupunki.PieniMsaa 1|2|4 (oletus 2) ja
+        /// kaupunki.PieniSkaala 0,7–1 (oletus 1 = pois): renderScale pienellä muistilla ilman STP:tä (pino säilyy, RT:t ×skaala²).</summary>
+        public static int MsaaKatto => PieniMuisti ? Mathf.Clamp(PieniMsaaPakko > 0 ? PieniMsaaPakko : Matkakirja.Peli.Asetus.Kokonais("kaupunki.PieniMsaa", 2), 1, 4) : 4;
+        public static float PieniSkaala => PieniMuisti ? Mathf.Clamp(PieniSkaalaPakko > 0f ? PieniSkaalaPakko : Matkakirja.Peli.Asetus.Luku("kaupunki.PieniSkaala", 1f), 0.7f, 1f) : 1f;
+        /// <summary>Testikytkimet Documents/kaupunki-kuva-asetukset.txt: "pienimsaa 1|2|4", "pieniskaala 0.8" (−1 = asetukset.json).</summary>
+        public static int PieniMsaaPakko = -1; public static float PieniSkaalaPakko = -1f;
+        static bool ssaoPois;
         /// <summary>Komento `opas ajallinen`: reunanpehmennys heti kesken näkymän (overlayt vaihtavat tilaa omalla tarkistuksellaan).</summary>
         public static void PaivitaReunat() => AsetaReunat();
         static void AsetaReunat()
@@ -168,16 +180,18 @@ namespace Matkakirja.Natiivi
                 Matkakirja.Peli.Asetus.Luku("kaupunki.RenderScale", Matkakirja.Linssit.Kierros.KaupunkiSkaalain.StpOletus), Terava);
             if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp)
             {
-                urp.msaaSampleCount = taa ? 1 : Mathf.Max(1, Msaa);
+                urp.msaaSampleCount = taa ? 1 : Mathf.Min(Mathf.Max(1, Msaa), MsaaKatto);
+                Ruudunpaivitys.MsaaKatto = MsaaKatto;
                 if (skaalaTallessa < 0f) { skaalaTallessa = urp.renderScale; suodinTallessa = urp.upscalingFilter; }
-                urp.renderScale = sk.Stp ? sk.RenderScale : skaalaTallessa;
+                urp.renderScale = sk.Stp ? sk.RenderScale : Mathf.Min(skaalaTallessa, PieniSkaala);
+                Ruudunpaivitys.SkaalaKatto = sk.Stp ? 1f : PieniSkaala;
                 urp.upscalingFilter = sk.Stp ? UpscalingFilterSelection.STP : suodinTallessa;
             }
             if (taa) { var d = kamera.GetUniversalAdditionalCameraData(); if (d != null) d.renderPostProcessing = true; }
             Laatutaso.KaytaAjallista(kamera, taa);
             kamera.allowMSAA = !taa;
             KaupunkiTerava.Aseta(sk.Terava);
-            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(sk.Stp ? $"STP (renderScale {sk.RenderScale:F2}, terävöitys {sk.Terava:F2}, MSAA 1, overlayt koosteessa)" : taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Msaa}x")}");
+            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(sk.Stp ? $"STP (renderScale {sk.RenderScale:F2}, terävöitys {sk.Terava:F2}, MSAA 1, overlayt koosteessa)" : taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Mathf.Min(Mathf.Max(1, Msaa), MsaaKatto)}x{(PieniMuisti ? $" (pieni muisti {SystemInfo.systemMemorySize} Mt, renderScale {PieniSkaala:F2})" : "")}")}");
         }
 
         // Skaalaimen alkuperäiset URP-arvot (palautetaan sulkiessa; −1 = ei tallessa).
@@ -196,6 +210,8 @@ namespace Matkakirja.Natiivi
             tallennettu = false;
             Laatutaso.Muuttui -= AsetaReunat;
             if (kameraNyt != null) Laatutaso.KaytaAjallista(kameraNyt, false);
+            if (ssaoPois) { ssaoPois = false; KaupunkiPassi.Ssao(true); }
+            Ruudunpaivitys.MsaaKatto = 4; Ruudunpaivitys.SkaalaKatto = 1f; PieniMsaaPakko = -1; PieniSkaalaPakko = -1f;
             PalautaSkaalain();
             kameraNyt = null;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
@@ -245,6 +261,8 @@ namespace Matkakirja.Natiivi
                         case "maasto": MaastoSse = v; break;
                         case "rakennus": RakennusSse = v; break;
                         case "msaa": Msaa = (int)v; break;
+                        case "pienimsaa": PieniMsaaPakko = (int)v; break;   // juna 173: pienen muistin MSAA-katto (testi)
+                        case "pieniskaala": PieniSkaalaPakko = v; break;   // juna 173: pienen muistin renderScale (testi)
                         case "sumu": Sumu = v != 0; break;
                         case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
