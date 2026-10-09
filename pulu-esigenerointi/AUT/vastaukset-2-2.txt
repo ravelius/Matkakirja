@@ -143,7 +143,7 @@ Mitä Mauthausen-oikeudenkäynnissä tapahtui?
 Miten vangit saivat apua vapautumisen jälkeen?
 
 ### 105
-Mauthausenin vapautuspäivänä, 5. toukokuuta 1945, amerikkalainen tiedusteluosasto saapui leirille. Vapautus tapahtui kolme päivää ennen sodan päättymistä Euroopassa, ja leirillä oli tuolloin kymmeniätuhansia vankeja. Tammikuussa 1945 leireillä oli ollut noin 85 000 vankia. Sodan jälkeen Itävalta jaettiin neljän voittajavallan miehitysvyöhykkeisiin vuosiksi 1945–1955, ja maa sai täyden itsenäisyytensä takaisin vuonna 1955 allekirjoitetulla [[Itävallan valtiosopimuksella]]. Leirin alueesta tuli myöhemmin muistopaikka.
+Mauthausenin vapautuspäivänä, 5. toukokuuta 1945, amerikkalainen tiedusteluosasto saapui leirille. Vapautus tapahtui kolme päivää ennen sodan päättymistä Euroopassa, ja leirillä oli tuolloin kymmeniätuhansia vankeja. Tammikuussa 1945 leireillä oli ollut noin 85 000 vankia. Sodan jälkeen Itävalta jaettiin neljän voittajavallan miehitysvyöhykkeisiin vuosiksi 1945–1955, ja maa sai täyden itsenäisyytensä takaisin vuonna 1955 allekirjoitetulla [[Itävallan valtiosopimuksella]]. Leirin alueesta tuli myöhemmin [[muistopaikka]].
 JATKOT:
 Mitä Itävallan valtiosopimus sääti?
 Miten Itävalta jaettiin miehitysvyöhykkeisiin?
@@ -347,7 +347,7 @@ Mikä karstialue on?
 Mitä muita luolia Salzburgin alueella on?
 
 ### 139
-Hochkogel on Tennengebirgen vuoriston osa, jonka sisällä Eisriesenwelt-luola sijaitsee. Luolan sisäänkäynti on vuoren rinteessä korkealla, noin 1 640 metrin korkeudessa, ja luolan käytävät kulkevat yli 42 kilometrin verran vuoren sisällä. Vuori on kalkkikiveä, johon vesi on kuluttanut tilaa vuosituhansien aikana. [[Werfenin]] kaupunki on lähin asutuskeskus. Luolan jäätä on vain ensimmäisessä kilometrissä.
+Hochkogel on [[Tennengebirgen]] vuoriston osa, jonka sisällä Eisriesenwelt-luola sijaitsee. Luolan sisäänkäynti on vuoren rinteessä korkealla, noin 1 640 metrin korkeudessa, ja luolan käytävät kulkevat yli 42 kilometrin verran vuoren sisällä. Vuori on kalkkikiveä, johon vesi on kuluttanut tilaa vuosituhansien aikana. [[Werfenin]] kylä on lähin asutuskeskus. Luolan jäätä on vain ensimmäisessä kilometrissä.
 JATKOT:
 Miten Eisriesenwelt-luolalle pääsee?
 Kuinka korkealla luolan sisäänkäynti on?
@@ -437,7 +437,7 @@ Mikä raakarauta on?
 Miten teräs valmistetaan raakaraudasta?
 
 ### 154
-Teräs on raudan ja hiilen seos, jossa hiiltä on enintään noin kaksi prosenttia. Ruostumattomassa teräksessä on lisäksi kromia vähintään noin 10,5 prosenttia, mikä estää ruostumisen. Teräs valmistetaan raakaraudasta vähentämällä hiilen määrää, esimerkiksi [[Bessemer-menetelmällä]], jonka englantilainen Henry Bessemer kehitti 1850-luvulla. Terästä käytetään rakennuksissa, silloissa, koneissa ja laivoissa. Se on myös yksi eniten kierrätetyistä materiaaleista.
+[[Teräs]] on raudan ja hiilen seos, jossa hiiltä on enintään noin kaksi prosenttia. Ruostumattomassa teräksessä on lisäksi kromia vähintään noin 10,5 prosenttia, mikä estää ruostumisen. Teräs valmistetaan raakaraudasta vähentämällä hiilen määrää, esimerkiksi [[Bessemer-menetelmällä]], jonka englantilainen Henry Bessemer kehitti 1850-luvulla. Terästä käytetään rakennuksissa, silloissa, koneissa ja laivoissa. Se on myös yksi eniten kierrätetyistä materiaaleista.
 JATKOT:
 Mikä on ruostumaton teräs?
 Miten Bessemer-menetelmä toimi?

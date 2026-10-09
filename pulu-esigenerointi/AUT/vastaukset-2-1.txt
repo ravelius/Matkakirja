@@ -83,7 +83,7 @@ Miten Ötzi löydettiin?
 Miten Ötztalin jäätiköt ovat muuttuneet?
 
 ### 15
-Rofenin laakso on Ötztalin Alpeilla Pohjois-Tirolissa sijaitseva korkea vuoristolaakso Wildspitzen läheisyydessä. Laakson tunnetuin nimi on Leander Klotz, karjatilallinen ja opas, joka nousi vuonna 1848 Wildspitzen huipulle nimettömän naapurinsa kanssa. Elinkeinona korkeissa laaksoissa on perinteisesti ollut karjanpito: karja on laiduntanut kesällä ylänköjen niityillä, ja karjatilalliset ovat toimineet myös oppaina vuoristoon. Laakson tarkasta asutuksesta ja jäätiköiden nimistä ei ole varmaa tietoa tässä, joten ne on parempi jättää tarkistettavaksi paikallisista lähteistä.
+Rofenin laakso on [[Ötztalin Alppien]] korkea vuoristolaakso Tirolissa, [[Wildspitzen]] juurella. Korkeissa laaksoissa on perinteisesti harjoitettu karjanpitoa: karja on laiduntanut kesällä ylänköjen niityillä, ja karjatilalliset ovat toimineet myös oppaina vuoristoon. Laakson tarkasta asutuksesta ja jäätiköiden nimistä en ole varma, joten ne kannattaa tarkistaa paikallisista lähteistä.
 JATKOT:
 Millaista karjanpito on Alpeilla?
 Miksi paikalliset toimivat vuorioppaina?
@@ -263,7 +263,7 @@ Mitä Passaussa kannattaa katsoa?
 Miksi Innin vesi on vihertävää?
 
 ### 45
-Ilz on pieni joki, joka tulee [[Baijerinmetsän]], saksaksi Bayerischer Wald, vuoristoisesta metsäseudusta ja laskee Tonavaan Passaussa pohjoisesta. Se on kolmesta Passaun joesta pienin. Veden tumma sävy johtuu todennäköisesti metsä- ja suoalueiden humusaineista, ja kun joet kohtaavat, tumma Ilz, vihertävä Inn ja sinertävä Tonava kulkevat hetken rinnakkain omina väreinään ennen sekoittumistaan.
+Ilz on pieni joki, joka tulee [[Baijerinmetsän]], saksaksi Bayerischer Wald, vuoristoisesta metsäseudusta ja laskee [[Tonavaan]] Passaussa pohjoisesta. Se on kolmesta Passaun joesta pienin. Veden tumma sävy johtuu todennäköisesti metsä- ja suoalueiden humusaineista, ja kun joet kohtaavat, tumma Ilz, vihertävä Inn ja sinertävä Tonava kulkevat hetken rinnakkain omina väreinään ennen sekoittumistaan.
 JATKOT:
 Mikä Baijerinmetsä on?
 Miksi joet eivät sekoitu heti Passaussa?
@@ -419,7 +419,7 @@ Mitä Benedictuksen sääntö määrää?
 Mikä Monte Cassino on?
 
 ### 71
-Benedictuksen sääntö on 500-luvulla Benedictus Nursialaisen kokoama ohjeisto munkkiyhteisön elämälle, ja se jakautuu 73 lukuun. Sääntö ohjaa päivän rytmiä, jossa vuorottelevat yhteinen rukous, työ ja pyhien tekstien hidas lukeminen eli [[lectio divina]], ja siinä painottuvat tottelevaisuus, vaatimattomuus ja pysyminen samassa yhteisössä. Yhteisöä johtaa [[apotti]], jonka valtaa rajoittaa velvollisuus kuunnella veljiä. Säännön mukaan vieraat on otettava vastaan kuin Kristus, minkä vuoksi luostareissa on perinteisesti ollut vieraanvaraisuutta. Sääntö on maltillinen ja käytännöllinen, ja se levisi Euroopan luostareiden pohjaksi; [[Melkin reformi]] 1400-luvulla pyrki palauttamaan sen tarkan noudattamisen.
+Benedictuksen sääntö on 500-luvulla Benedictus Nursialaisen kokoama sääntökokoelma munkkiyhteisön elämälle, ja se jakautuu 73 lukuun. Sääntö ohjaa päivän rytmiä, jossa vuorottelevat yhteinen rukous, työ ja pyhien tekstien hidas lukeminen eli [[lectio divina]], ja siinä painottuvat tottelevaisuus, vaatimattomuus ja pysyminen samassa yhteisössä. Yhteisöä johtaa [[apotti]], jonka valtaa rajoittaa velvollisuus kuunnella veljiä. Säännön mukaan vieraat on otettava vastaan kuin Kristus, minkä vuoksi luostareissa on perinteisesti ollut vieraanvaraisuutta. Sääntö on maltillinen ja käytännöllinen, ja se levisi Euroopan luostareiden pohjaksi; [[Melkin reformi]] 1400-luvulla pyrki palauttamaan sen tarkan noudattamisen.
 JATKOT:
 Mikä on apotin tehtävä luostarissa?
 Mitä lectio divina tarkoittaa?
