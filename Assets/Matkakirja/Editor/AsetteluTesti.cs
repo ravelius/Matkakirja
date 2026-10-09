@@ -537,11 +537,24 @@ namespace Matkakirja.Editori
             ("linnan äänet", () => LinnanValikko("aanet"), SuljeLinna, 1.0),
             ("linnan lähteet", () => LinnanValikko("lahteet"), SuljeLinna, 1.0),
             // Pallon vapaa lento: Mikä tämä on, vapaan lennon nappi ja tapit (testikytkimet kuten `ui opasvalikko mika|vapaalento`).
+            // Linssien omat näkymät LinssiKomennot-esimerkeillä (PT 10.10.2026; ajattelijat ja ISS-ohjaamo tarvitsevat linssin
+            // sovittimen eivätkä aukea tyhjässä kohtauksessa).
+            ("keksinnöt", () => Linssi("keksinnot pysakki 0"), SuljeLinssi, 2.0),
+            ("aikajanan valikko", () => Linssi("valikko keksinnot"), SuljeLinssi, 2.0),
+            ("ihmisen matka", () => Linssi("matka jakso 0"), () => { Linssi("matka pois"); SuljeLinssi(); }, 2.0),
+            ("ihmisen matkan valikko", () => Linssi("valikko matka"), () => { Linssi("matka pois"); SuljeLinssi(); }, 2.0),
+            ("radio", () => Linssi("radio"), SuljeLinssi, 1.5),
+            ("karttavalikko", () => Linssi("karttavalikko auki"), SuljeLinssi, 1.0),
+            ("maan kyltti", () => Linssi("maa ITA"), SuljeLinssi, 1.0),
+            ("linssin selite", () => Linssi("selite"), () => { Linssi("selite pois"); SuljeLinssi(); }, 1.0),
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
                 () => { var o = OpasValikko.Hae(); o.Komento("mika pois"); o.Komento("vapaalento pois"); o.Komento("sulje"); }, 1.0),
         };
 
         static void SuljeKaikki() => UiNakymat.Hae().SuljeKaikki();
+
+        static void Linssi(string komento) => LinssiKomennot.Aja(UiNakymat.Hae(), komento);
+        static void SuljeLinssi() { Linssi("pois"); UiNakymat.Hae().SuljeKaikki(); }
 
         static void LinnanValikko(string mita)
         {
