@@ -212,6 +212,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 if (_ValoDebug.x > 13.5 && _ValoDebug.x < 14.5) return Merkki(lisa + wKohde);   // ikkunoiden jälkeen
                 // v6 veden heijastukset: vaakapinta vesimaskissa; rantavalot ja maamerkit katsesuunnassa juovina.
                 float vesi = _VesiAlue.w > 0.0 ? Vesi(p) * saturate((n.y - 0.9) / 0.08) : 0.0;
+                lisa *= 1.0 - 0.75 * saturate(vesi);   // v10: valosaaste ei sävytä vettä ruskeaksi (Tukholma 9.10.); vedellä vain heijastukset
                 if (vesi > 0.01)
                 {
                     float3 kohti = p - _KameraP.xyz; float et = length(kohti);
