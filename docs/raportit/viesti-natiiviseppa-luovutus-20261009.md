@@ -3,6 +3,22 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 22.5x — juna 173 runko cbef6c66b, odottaa LS1:n iPad-muistiajoa
+
+- Runko `natiiviseppa/juna-173` **cbef6c66b**. Testit: Linssit 1251, Peli 442, Kartta 453, unity 0, tarkista 0. LISÄÄ MUISTIA: ei, vähentää.
+  21.0x:n jälkeen: Siirtoseppä 5a1cfa7c2 (v46k), NUI 32933db69 + e8b853b97 (asettelutesti), muistikorjaukset ec4d1773e (budjetti ×1,6,
+  HataGt 1,0), 68b015299 (opas tekstuurit), 89509417e (< 12 Gt: MSAA 2×, SSAO pois kaupungissa; kytkimet pienimsaa/pieniskaala),
+  cbef6c66b (muisti-174: taustan esilataus seis kaupungissa + saapumislaatat perutaan, OmaSisaltoGt 0,3).
+- iPad-jetsam (iPad Pro 13 M1 8 Gt, Pariisi; myös TF 172 kaatuu): kaupunki on vakaa ~1,35 Gt vapaalla. Kaatumisen laukaisi intron
+  Eiffel-esilataus. LS1 lisää intron korjauksen (< 12 Gt: ei Eiffel-aluetta; ≥ 12 Gt: esilataus vain vapaa ≥ 2,0 Gt; < 1,0 Gt → intro ohi)
+  cbef6c66b:n päälle ja ajaa muistiajon. OMISTAJA 21.58: jetsam tai < 0,5 Gt vapaata pysäyttää junan.
+- MUUTOSLOKI 173 (PT kuittasi, VAIN kun muistiajo on läpi → Julkaisijalle VIE:n mukaan): "Pariisi alkaa nykyajan introlla, ja Pariisissa
+  ja Tukholmassa kuuluvat kirkonkellot, suihkulähteet ja satamavesi. Olavinlinnan historiassa kivilinna rakentuu vuosi vuodelta, ja
+  linnan väki puhuu kasvotusten. Varustekuvat ovat valokuvamaisia, eikä peli enää kaadu iPadilla Pariisissa."
+- Unity 6.7: simu-A/B valmis (raportti 205bd6133). iPad-ABAB kun 173:n laitetyöt ovat ohi: A = lokit/natiiviseppa-app-ab63-laite (9dba62a6),
+  B = scratchpad unity67-laite.sh (T7) → lokit/natiiviseppa-app-ab67-laite; skripti scratchpad ab67/ipad-ab-ajo.sh.
+- KTX2/ASTC omille malleille → LS2:n jono (PT).
+
 ## TILA 9.10. 21.0x — runko 8e01e2457 (PT:lle; istuntoviestit taas 10:n rajalla)
 
 - Avoin juna 173 `natiiviseppa/juna-173` **8e01e2457**. 19.2x:n jälkeen: LS1 2e784cc5c → e0f2d4b37 (pehmeä jarrutus); Siirtoseppä
