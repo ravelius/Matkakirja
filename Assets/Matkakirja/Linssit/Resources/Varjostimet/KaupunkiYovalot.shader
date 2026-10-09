@@ -46,7 +46,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float4 _KameraP;                // kamera paikallisessa ENU:ssa (m)
             float4 _Maamerkit[8];           // xyz = maapiste paikallisessa ENU:ssa, w = säde (m); w = 0 tyhjä
             float4 _MaamerkkiParam;         // x = määrä, y = voima
-            float4 _ValoDebug;              // x: 0 = normaali, 1 = passin tunniste (violetti), 2 = maailmanpaikka, 3 = Black Marble, 4 = lisävalo × 5
+            float4 _ValoDebug;              // x: 0 = normaali, 1 = passin tunniste (violetti), 2 = maailmanpaikka, 3 = Black Marble, 4 = lisävalo × 5; y = valotuksen kompensointi
 
             float3 Hash32(float2 p)
             {
@@ -99,7 +99,9 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 #else
                 if (syvyys >= 1.0 - 1e-7) return c;
                 #endif
-                float3 p = mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                float3 pw = ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP);
+                if (distance(pw, _WorldSpaceCameraPos) < 30.0) return c;   // päällyskameran kori ja kupu (v8: passi myös niille)
+                float3 p = mul(_MaailmaPaikallinen, float4(pw, 1.0)).xyz;
                 if (_ValoDebug.x > 1.5 && _ValoDebug.x < 2.5) return half4((half3)frac(float3(p.x / 200.0, p.y / 50.0, p.z / 200.0)), 1.0h);
                 float bm = BlackMarble(p);
                 if (_ValoDebug.x > 2.5 && _ValoDebug.x < 3.5) return half4((half3)saturate(bm * 2.0), 1.0h);
@@ -229,7 +231,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     lisa += heij * vesi * fresnel * valke * _VesiAlue.w;
                 }
                 if (_ValoDebug.x > 3.5) return half4((half3)saturate(lisa * 5.0), 1.0h);
-                float3 tulos = c.rgb + lisa * _ValoParam.x;
+                float3 tulos = c.rgb + lisa * _ValoParam.x * max(1.0, _ValoDebug.y);
                 // Kohteen valaistus (v4): lämmin valonheitto kohteen ympärille maasta ylöspäin (Eiffel kultaisena).
                 if (wKohde > 0.0)
                 {

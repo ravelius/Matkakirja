@@ -101,7 +101,10 @@ namespace Matkakirja.Natiivi
             materiaali = new Material(v) { name = "KohdeKorostus" };
             feature = ScriptableObject.CreateInstance<FullScreenPassRendererFeature>();
             feature.name = "Matkakirja kohteen muotokorostus";
-            feature.injectionPoint = FullScreenPassRendererFeature.InjectionPoint.AfterRenderingPostProcessing;
+            // JUURISYY 9.10. (oma simudiagnoosi 3910d569: passi violettina koko ruudulla, maailmanpaikka tyhjä): AfterRenderingPostProcessing
+            // ajetaan kamerapinossa vain viimeiselle kameralle (korin ja kuvun päällyskamerat), jonka syvyys on tyhjä → kaupungin pikselit
+            // ohitettiin taivaana. Peruskameran vaiheessa ennen jälkikäsittelyä syvyys on kaupungin (valotus kompensoidaan varjostimessa).
+            feature.injectionPoint = FullScreenPassRendererFeature.InjectionPoint.BeforeRenderingPostProcessing;
             feature.fetchColorBuffer = true; feature.requirements = ScriptableRenderPassInput.Depth;
             feature.passMaterial = materiaali; feature.passIndex = 0;
             data.rendererFeatures.Add(feature); data.SetDirty();

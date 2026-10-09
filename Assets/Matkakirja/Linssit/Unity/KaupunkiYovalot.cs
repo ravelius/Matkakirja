@@ -102,7 +102,8 @@ namespace Matkakirja.Natiivi
             materiaali.SetMatrix(IdMatriisi, georef.transform.worldToLocalMatrix);
             materiaali.SetVector(IdAlue, new Vector4(kulma.Value.lon, kulma.Value.lat, (float)georef.latitude, (float)georef.longitude));
             materiaali.SetVector(IdParam, new Vector4((float)osuus, Hehku, Pisteet, Mathf.Max(5f, SoluM)));
-            materiaali.SetVector(IdDebug, new Vector4(Diagnoosi, 0f, 0f, 0f));
+            // y = valotuksen kompensointi: passi on nyt ennen jälkikäsittelyn valotusta (yöllä −1,9 EV), joten valot kerrotaan takaisin.
+            materiaali.SetVector(IdDebug, new Vector4(Diagnoosi, Mathf.Pow(2f, -KaupunkiKuva.KoriValotusEV), 0f, 0f));
             materiaali.SetVector(IdVari, new Vector4(Vari.r, Vari.g, Vari.b, Vari.a));
             materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), 0f, 0f));
             materiaali.SetTexture(IdTiet, tiet != null ? tiet : Texture2D.blackTexture);
@@ -307,7 +308,10 @@ namespace Matkakirja.Natiivi
             materiaali = new Material(varjostin) { name = "KaupunkiYovalot" };
             feature = ScriptableObject.CreateInstance<FullScreenPassRendererFeature>();
             feature.name = "Matkakirja kaupunki yövalot";
-            feature.injectionPoint = FullScreenPassRendererFeature.InjectionPoint.AfterRenderingPostProcessing;
+            // JUURISYY 9.10. (oma simudiagnoosi 3910d569: passi violettina koko ruudulla, maailmanpaikka tyhjä): AfterRenderingPostProcessing
+            // ajetaan kamerapinossa vain viimeiselle kameralle (korin ja kuvun päällyskamerat), jonka syvyys on tyhjä → kaupungin pikselit
+            // ohitettiin taivaana. Peruskameran vaiheessa ennen jälkikäsittelyä syvyys on kaupungin (valotus kompensoidaan varjostimessa).
+            feature.injectionPoint = FullScreenPassRendererFeature.InjectionPoint.BeforeRenderingPostProcessing;
             feature.fetchColorBuffer = true;
             feature.requirements = ScriptableRenderPassInput.Depth;
             feature.passMaterial = materiaali;

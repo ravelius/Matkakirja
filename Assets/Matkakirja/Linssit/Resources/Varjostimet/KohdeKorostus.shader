@@ -36,7 +36,9 @@ Shader "Matkakirja/Linssit/KohdeKorostus"
                 #else
                 if (syvyys >= 1.0 - 1e-7) return c;
                 #endif
-                float3 p = mul(_MaailmaKohde, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                float3 pw = ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP);
+                if (distance(pw, _WorldSpaceCameraPos) < 30.0) return c;   // päällyskameran kori ja kupu
+                float3 p = mul(_MaailmaKohde, float4(pw, 1.0)).xyz;
                 float2 muv = (p.xz - _MaskiAlue.xy) / _MaskiAlue.z;
                 if (any(muv < 0.0) || any(muv > 1.0)) return c;
                 float m = SAMPLE_TEXTURE2D_LOD(_Maski, sampler_Maski, muv, 0).r;
