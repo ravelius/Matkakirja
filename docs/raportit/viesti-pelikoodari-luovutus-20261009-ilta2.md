@@ -20,6 +20,8 @@ Työkansio: `/Users/Shared/Claude/proto-3d/_tyo/soundly-erat/` (kaikki skriptit,
 ## 2. Aukot (ei aikakauteen sopivaa Soundlyssa / Sonnississa)
 - r067 sytytys piikivellä ja teräksellä / soihtu (vain tulitikkuja = anakronismi 1499), r125 nopea syke (vain yksi hidas), r074 kaivon ämpäri ja vinssi,
   r016 tupa vain 2 Soundlysta. "Väärin"-UI-ääneksi ei akustista. Rajatapaukset r081 ilmavirta, r145 rosvo. PT kokoaa ostolistan omistajalle; EI ostoja.
+- 21.5x (PT): Sonnississa ei näitä; Freesound-ehdokkaat lisätty originaalilistaan (nyt 39): r067 piikivi+teräs 3 + soihtu (heilutus) 1,
+  r125 nopea syke 5, r074 kaivo 3 (ämpäri kaivoon, täysi ämpäri, puukampi köydellä). Haku `freesound-aukot/haku-1b-aukot/`; portti originaaleista.
 
 ## 3. Freesound (PT 9.10.: esikuuntelu-mp3:t EIVÄT mene peliin)
 - Haku Actionsilla (avain vain secretsissä): haara `pelikoodari-freesound-haku` (worktree `/Users/Shared/Claude/wt/pelikoodari-freesound`), workflow
