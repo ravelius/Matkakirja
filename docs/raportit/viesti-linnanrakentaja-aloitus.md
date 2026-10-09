@@ -11,6 +11,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009.md`** (UUSIN 9.10.: ND v8 / KL v2b omistajan hyväksyttävinä,
    LS2:n hiontalista, historian ranta-1499-täyttö v46g / arvio 6, PBR-pinnat ja kaukokuvan sävyerot). Päivän tarkka loki
    (hashit, SHA:t) on tiedoston `…-20261005b.md` lopussa.
+3. **UUSI LINJA PT 15.0x (9.10.):** ND v8 ja KL v2b hylättiin (erottuvat Googlesta), ja osoitin jää ennalleen. Codex tekee
+   valokuvamaiset pinnat. Ohjekuvat, kohdistus (`kohdista.py`) ja projektio + atlas + AO (`projisoi.py`) ovat valmiina:
+   `docs/raportit/linnanrakentaja-codex-pinnat-projektio-20261009.md`. Pilotti (ND etelä + katot) on tilattu Sisältökirjurin kautta,
+   ja kuvat tulevat nimillä `codex-ohje/<näkymä>/nd_<näkymä>_codex_v1.png`. Seuraavat vaiheet: kohdista → projisoi → LS2:n pelikuva.
 
 ## Säännöt, jotka opittiin
 
