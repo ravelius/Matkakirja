@@ -1,0 +1,1001 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Mikä on Lombardian pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lombardian pääkaupunki on [[Milano]], Italian pohjoisosan suuri talouskeskus. Cremona sijaitsee Lombardian eteläosassa [[Po-joen]] vasemmalla rannalla; Cremona on tunnettu viulunrakennuksesta, Milano muun muassa [[La Scalan]] oopperatalosta. Kyllä tässä alkoi pullanälkä.
+KYSYMYS: Kerro lisää: Po-joen
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Kaupunginteatteri] 1918 Teatteri rakennettiin 1918 Donceles-kadun numeroon 36 vanhan Teatro Xicoténcatlin paikalle, ja se nimettiin primadonna Esperanza Iriksen mukaan. Iris — oikealta nimeltään María Esperanza Bonfil — oli Tabascon osavaltiosta kotoisin oleva operettilaulaja, jonka ura kukoisti Mexico Cityssä, Havannassa ja Madridissa ja joka kiersi laajalti Amerikoissa. Tunnetuimpia rooleja olivat Iloinen leski, Luxemburgin kreivi ja La princesa del dólar; 1930-luvulla hän näytteli myös elokuvissa. Iris rahoitti teatteria itse edellisen kiertueensa tuotoilla. Arkkitehdit Capetillo Servín ja Federico Mariscal ottivat esikuvaksi Milanon La Scalan. Teatteri avattiin 25. toukokuuta 1918 kaksi päivää sen jälkeen…
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Mikä on Lombardian pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lombardian pääkaupunki on [[Milano]], Italian pohjoisosan suuri talouskeskus. Cremona sijaitsee Lombardian eteläosassa [[Po-joen]] vasemmalla rannalla; Cremona on tunnettu viulunrakennuksesta, Milano muun muassa [[La Scalan]] oopperatalosta. Kyllä tässä alkoi pullanälkä.
+KYSYMYS: Kerro lisää: La Scalan
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+AIEMPI KYSYMYS: Mistä Portofinon nimi tulee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän kuulin kerran laiturilta. Portofinon nimi palautuu roomalaisaikaan: [[Plinius Vanhempi]] mainitsi paikan nimellä [[Portus Delphini]], eli Delfiinin satama. Nimi on siis kuvannut sitä, mikä paikka on ollut alusta asti, pientä luonnonsatamaa. Miten muoto Portus Delphini muuttui vähitellen nykyiseksi nimeksi, en osaa tarkasti kertoa. Delfiinit olivat siis nimessä ennen kyyhkyjä, ja se kirvelee hieman.
+KYSYMYS: Kerro lisää: Plinius Vanhempi
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Mistä Portofinon nimi tulee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän kuulin kerran laiturilta. Portofinon nimi palautuu roomalaisaikaan: [[Plinius Vanhempi]] mainitsi paikan nimellä [[Portus Delphini]], eli Delfiinin satama. Nimi on siis kuvannut sitä, mikä paikka on ollut alusta asti, pientä luonnonsatamaa. Miten muoto Portus Delphini muuttui vähitellen nykyiseksi nimeksi, en osaa tarkasti kertoa. Delfiinit olivat siis nimessä ennen kyyhkyjä, ja se kirvelee hieman.
+KYSYMYS: Kerro lisää: Portus Delphini
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Montevideo: Luonnonsatama joka nousi Buenos Airesin rinnalle] Montevideon lahti antaa laivoille luonnollisen suojan, ja satama oli yksi syy koko kaupungin perustamiseen. Uruguayn pääkaupungin satama kasvoi nopeasti Buenos Airesin kilpailijaksi Río de la Platan meriliikenteen hallinnasta. Vuonna 1776 Espanja teki Montevideosta Etelä-Atlantin pääasiallisen laivastotukikohtansa, Real Apostadero de Marinan, jonka toimivalta ulottui Argentiinan rannikolta Falklandinsaarille ja Länsi-Afrikan Fernando Poohon asti. Koko 1700-luvun lopun kaupunki pysyi linnoitettuna alueena niemen kärjessä — juuri sitä aluetta kutsutaan nykyään Ciudad Viejaksi, vanhaksikaupungiksi.
+AIEMPI KYSYMYS: Miksi talot ovat värikkäitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on sellainen, josta kerrotaan monta tarinaa. Portofinon värikkäiksi maalatut talot ovat kylän tunnusmerkki, mutta varmaa tietoa maalauksen syystä ei ole. Yleisimmin kerrotaan, että kalastajat maalasivat kotinsa eri väreillä, jotta oman talonsa tunnisti jo merelle sumussakin, mutta en ole varma, pitääkö tarina paikkansa. Kylän [[luonnonsatama]] tuki aikoinaan kalastusvenekuntaa, joten selitys ei ole epäuskottava, ja talot reunustavat rantaa [[Italian Rivieralla]].
+
+Ylhäältä katsottuna värit erottuvat todella hyvin, joten minusta tarina on ainakin uskottava. Jos jollain on laiturilla maritozzo, olen kuulolla.
+KYSYMYS: Kerro lisää: luonnonsatama
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Miksi talot ovat värikkäitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on sellainen, josta kerrotaan monta tarinaa. Portofinon värikkäiksi maalatut talot ovat kylän tunnusmerkki, mutta varmaa tietoa maalauksen syystä ei ole. Yleisimmin kerrotaan, että kalastajat maalasivat kotinsa eri väreillä, jotta oman talonsa tunnisti jo merelle sumussakin, mutta en ole varma, pitääkö tarina paikkansa. Kylän [[luonnonsatama]] tuki aikoinaan kalastusvenekuntaa, joten selitys ei ole epäuskottava, ja talot reunustavat rantaa [[Italian Rivieralla]].
+
+Ylhäältä katsottuna värit erottuvat todella hyvin, joten minusta tarina on ainakin uskottava. Jos jollain on laiturilla maritozzo, olen kuulolla.
+KYSYMYS: Kerro lisää: Italian Rivieralla
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Missä Portofino sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Portofino sijaitsee Italian luoteisosassa [[Liguriassa]], [[Italian Rivieralla]] eli Ligurianmeren rannalla, [[Genovan]] itäpuolella. Kylä sijaitsee pienen satamansa ympärillä, ja hallinnollisesti se kuuluu Genovan suurkaupunkialueeseen. Kyyhkylle tämä olisi vain lyhyt lenkki.
+KYSYMYS: Kerro lisää: Liguriassa
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Panamá: Kaupunki hopeatien päässä] Espanjalainen Pedro Arias de Ávila perusti Panamán 15. elokuuta 1519 kapean satamansuun rannalle. Muutamassa vuodessa kaupungista tuli lähtöpiste Perun valloitukselle ja kauttakulkupaikka Espanjaan matkaavalle kullalle ja hopealle: lasti purettiin maihin Tyynenmeren puolella ja vietiin muulikaravaaneilla kannaksen yli Nombre de Diosin ja myöhemmin Portobelon markkinoille. Vuodesta 1520 kaupungin satamaa ja kauppaa — etenkin orjakauppaa — hallitsivat genovalaiset kauppiaat, joille Espanjan kruunu myönsi erikoisluvan; Genovan tasavalta oli Espanjan tärkein pankkikumppani.
+AIEMPI KYSYMYS: Missä Portofino sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Portofino sijaitsee Italian luoteisosassa [[Liguriassa]], [[Italian Rivieralla]] eli Ligurianmeren rannalla, [[Genovan]] itäpuolella. Kylä sijaitsee pienen satamansa ympärillä, ja hallinnollisesti se kuuluu Genovan suurkaupunkialueeseen. Kyyhkylle tämä olisi vain lyhyt lenkki.
+KYSYMYS: Kerro lisää: Genovan
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Mikä oli Sardinian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä riittäis juttua. Sardinian kuningaskunta oli [[Savoijin]] hallitsijasuvun johtama valtio, jonka pääkaupunki oli [[Torino]] ja jonka alueeseen kuului Sardinian saaren lisäksi muun muassa Piemonte. Vuoden 1815 jälkeen siihen liitettiin myös Genovan alue, minkä vuoksi Portofino siirtyi sen alaisuuteen. Kuningaskunta oli keskeisessä asemassa [[Italian yhdistymisessä]], ja vuonna 1861 syntyi yhtenäinen Italia. Aikamoinen vyyhti, mutta kyllä sen kyyhky muistaa.
+KYSYMYS: Kerro lisää: Savoijin
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+AIEMPI KYSYMYS: Mikä oli Sardinian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä riittäis juttua. Sardinian kuningaskunta oli [[Savoijin]] hallitsijasuvun johtama valtio, jonka pääkaupunki oli [[Torino]] ja jonka alueeseen kuului Sardinian saaren lisäksi muun muassa Piemonte. Vuoden 1815 jälkeen siihen liitettiin myös Genovan alue, minkä vuoksi Portofino siirtyi sen alaisuuteen. Kuningaskunta oli keskeisessä asemassa [[Italian yhdistymisessä]], ja vuonna 1861 syntyi yhtenäinen Italia. Aikamoinen vyyhti, mutta kyllä sen kyyhky muistaa.
+KYSYMYS: Kerro lisää: Torino
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Mikä oli Sardinian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä riittäis juttua. Sardinian kuningaskunta oli [[Savoijin]] hallitsijasuvun johtama valtio, jonka pääkaupunki oli [[Torino]] ja jonka alueeseen kuului Sardinian saaren lisäksi muun muassa Piemonte. Vuoden 1815 jälkeen siihen liitettiin myös Genovan alue, minkä vuoksi Portofino siirtyi sen alaisuuteen. Kuningaskunta oli keskeisessä asemassa [[Italian yhdistymisessä]], ja vuonna 1861 syntyi yhtenäinen Italia. Aikamoinen vyyhti, mutta kyllä sen kyyhky muistaa.
+KYSYMYS: Kerro lisää: Italian yhdistymisessä
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mistä genovalainen pesto tehdään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä saa nälän. Genovalainen pesto eli pesto alla genovese tehdään tuoreesta [[basilikasta]], [[pinjansiemenistä]], valkosipulista, oliiviöljystä ja [[parmesaanista]] tai pecorino-juustosta, ja perinteisesti aineet survotaan huhmareessa. Resepti on kotoisin Ligurian alueelta, jonka pääkaupunki on Genova, ja se tarjotaan perinteisesti pastan kanssa. Pinjansiemenet kuulostavat ihan kyyhkylle sopivilta, mutta pullaa ne eivät korvaa.
+KYSYMYS: Kerro lisää: basilikasta
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Mistä genovalainen pesto tehdään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä saa nälän. Genovalainen pesto eli pesto alla genovese tehdään tuoreesta [[basilikasta]], [[pinjansiemenistä]], valkosipulista, oliiviöljystä ja [[parmesaanista]] tai pecorino-juustosta, ja perinteisesti aineet survotaan huhmareessa. Resepti on kotoisin Ligurian alueelta, jonka pääkaupunki on Genova, ja se tarjotaan perinteisesti pastan kanssa. Pinjansiemenet kuulostavat ihan kyyhkylle sopivilta, mutta pullaa ne eivät korvaa.
+KYSYMYS: Kerro lisää: pinjansiemenistä
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+AIEMPI KYSYMYS: Mistä genovalainen pesto tehdään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä saa nälän. Genovalainen pesto eli pesto alla genovese tehdään tuoreesta [[basilikasta]], [[pinjansiemenistä]], valkosipulista, oliiviöljystä ja [[parmesaanista]] tai pecorino-juustosta, ja perinteisesti aineet survotaan huhmareessa. Resepti on kotoisin Ligurian alueelta, jonka pääkaupunki on Genova, ja se tarjotaan perinteisesti pastan kanssa. Pinjansiemenet kuulostavat ihan kyyhkylle sopivilta, mutta pullaa ne eivät korvaa.
+KYSYMYS: Kerro lisää: parmesaanista
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Mitä Carraran marmorista on tehty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tost minä muistan monta paikkaa. Carraran marmoria on käytetty muun muassa Rooman [[Pantheonissa]] ja [[Trajanuksen pylväässä]], ja monet renessanssin veistokset on veistetty siitä; esimerkiksi [[Michelangelon]] Daavid on tehty Carraran marmorista. Marmori on valkoista tai sinertävänharmaata, ja sitä louhitaan kaupungin ympäristössä edelleen. Painavaa tavaraa, enkä minä sitä kantaisi.
+KYSYMYS: Kerro lisää: Pantheonissa
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Intia — maalehti / Historia] Intian vanhimmat jäljet eivät ole kirjoituksissa vaan kivessä ja raudassa: hiotussa leijonanpäässä, kallioon kaiverretussa luostarissa ja pylväässä, joka ei suostu ruostumaan.
+AIEMPI KYSYMYS: Mitä Carraran marmorista on tehty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tost minä muistan monta paikkaa. Carraran marmoria on käytetty muun muassa Rooman [[Pantheonissa]] ja [[Trajanuksen pylväässä]], ja monet renessanssin veistokset on veistetty siitä; esimerkiksi [[Michelangelon]] Daavid on tehty Carraran marmorista. Marmori on valkoista tai sinertävänharmaata, ja sitä louhitaan kaupungin ympäristössä edelleen. Painavaa tavaraa, enkä minä sitä kantaisi.
+KYSYMYS: Kerro lisää: Trajanuksen pylväässä
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Mitä Carraran marmorista on tehty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tost minä muistan monta paikkaa. Carraran marmoria on käytetty muun muassa Rooman [[Pantheonissa]] ja [[Trajanuksen pylväässä]], ja monet renessanssin veistokset on veistetty siitä; esimerkiksi [[Michelangelon]] Daavid on tehty Carraran marmorista. Marmori on valkoista tai sinertävänharmaata, ja sitä louhitaan kaupungin ympäristössä edelleen. Painavaa tavaraa, enkä minä sitä kantaisi.
+KYSYMYS: Kerro lisää: Michelangelon
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Miksi kaupungin tunnuksessa on pyörä?
+AIEMPI VASTAUS (Livia):
+No niin. Tän minä tiedän, vaikken itse pyörillä kulje. Carraran mottona on latinankielinen [[Fortitudo mea in rota]], voimani on pyörässä, ja se viittaa [[marmorin]] kuljetukseen. Marmoria on kuljetettu louhoksilta kaupunkiin ja sieltä eteenpäin jo roomalaisajoista lähtien, joten pyörä kuvaa kaupungin elinkeinoa ja sen voimaa. Kyllä kyyhky arvostaa kuljetustyötä, kun toiset tekevät sen puolestaan.
+KYSYMYS: Kerro lisää: Fortitudo mea in rota
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Miksi kaupungin tunnuksessa on pyörä?
+AIEMPI VASTAUS (Livia):
+No niin. Tän minä tiedän, vaikken itse pyörillä kulje. Carraran mottona on latinankielinen [[Fortitudo mea in rota]], voimani on pyörässä, ja se viittaa [[marmorin]] kuljetukseen. Marmoria on kuljetettu louhoksilta kaupunkiin ja sieltä eteenpäin jo roomalaisajoista lähtien, joten pyörä kuvaa kaupungin elinkeinoa ja sen voimaa. Kyllä kyyhky arvostaa kuljetustyötä, kun toiset tekevät sen puolestaan.
+KYSYMYS: Kerro lisää: marmorin
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Missä Carrara sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Carrara sijaitsee [[Toscanan]] pohjoisosassa, noin sata kilometriä [[Firenzestä]] länsi-luoteeseen, [[Ligurianmeren]] rannikon läheisyydessä. Kaupungin ympäristössä louhitaan valkoista tai sinertävänharmaata marmoria, josta alue on tunnettu. Tämän vastauksen kanssa en eksynyt kertaakaan.
+KYSYMYS: Kerro lisää: Toscanan
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Firenze] Toscanan pääkaupunki on niin pieni, että sen kävelee ristiin puolessa tunnissa — ja niin täynnä, että siihen ei riitä viikko. Arno jakaa sen kahtia, ja kupoli näkyy joka kadunkulmasta.
+AIEMPI KYSYMYS: Missä Carrara sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Carrara sijaitsee [[Toscanan]] pohjoisosassa, noin sata kilometriä [[Firenzestä]] länsi-luoteeseen, [[Ligurianmeren]] rannikon läheisyydessä. Kaupungin ympäristössä louhitaan valkoista tai sinertävänharmaata marmoria, josta alue on tunnettu. Tämän vastauksen kanssa en eksynyt kertaakaan.
+KYSYMYS: Kerro lisää: Firenzestä
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Missä Carrara sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Carrara sijaitsee [[Toscanan]] pohjoisosassa, noin sata kilometriä [[Firenzestä]] länsi-luoteeseen, [[Ligurianmeren]] rannikon läheisyydessä. Kaupungin ympäristössä louhitaan valkoista tai sinertävänharmaata marmoria, josta alue on tunnettu. Tämän vastauksen kanssa en eksynyt kertaakaan.
+KYSYMYS: Kerro lisää: Ligurianmeren
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Mitä anarkismi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Anarkismi on poliittinen aate, jonka kannattajat vastustavat valtiota ja muuta pakkovaltaa ja haluavat rakentaa yhteiskunnan vapaaehtoisen yhteistyön varaan; aatteen suuntauksia on useita. [[Carrarassa]] aate sai kannatusta 1800-luvun lopulla erityisesti [[louhijoiden]] parissa, ja kaupunkia on kutsuttu Italian anarkismin kehdoksi. Yllättävä pala marmorikaupungin historiaa.
+KYSYMYS: Kerro lisää: Carrarassa
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Mitä anarkismi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Anarkismi on poliittinen aate, jonka kannattajat vastustavat valtiota ja muuta pakkovaltaa ja haluavat rakentaa yhteiskunnan vapaaehtoisen yhteistyön varaan; aatteen suuntauksia on useita. [[Carrarassa]] aate sai kannatusta 1800-luvun lopulla erityisesti [[louhijoiden]] parissa, ja kaupunkia on kutsuttu Italian anarkismin kehdoksi. Yllättävä pala marmorikaupungin historiaa.
+KYSYMYS: Kerro lisää: louhijoiden
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Miten marmoria louhitaan?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Nykyään marmorilohkareet irrotetaan vuoresta yleensä [[timanttivaijerisahoilla]], joissa timanttihelmillä varustettu teräsvaijeri leikkaa kiveä, ja suuria lohkareita siirretään raskailla koneilla. Aiemmin louhinta oli paljon raskaampaa työtä: lohkot irrotettiin muun muassa kiiloilla ja [[mustaruudilla]], ja ne kuljetettiin alas vuoresta ihmis- ja eläinvoimin. Kärsivällisyyttä siinä tarvitaan, kuten kyyhkyn työssäkin.
+KYSYMYS: Kerro lisää: timanttivaijerisahoilla
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+AIEMPI KYSYMYS: Miten marmoria louhitaan?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Nykyään marmorilohkareet irrotetaan vuoresta yleensä [[timanttivaijerisahoilla]], joissa timanttihelmillä varustettu teräsvaijeri leikkaa kiveä, ja suuria lohkareita siirretään raskailla koneilla. Aiemmin louhinta oli paljon raskaampaa työtä: lohkot irrotettiin muun muassa kiiloilla ja [[mustaruudilla]], ja ne kuljetettiin alas vuoresta ihmis- ja eläinvoimin. Kärsivällisyyttä siinä tarvitaan, kuten kyyhkyn työssäkin.
+KYSYMYS: Kerro lisää: mustaruudilla
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Miten maan höyrystä saadaan sähköä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä kysymys. Sähköntuotannossa maasta purkautuva kuuma höyry johdetaan putkia pitkin [[turbiiniin]], jonka höyry saa pyörimään. Turbiini pyörittää [[generaattoria]], joka muuttaa liike-energian sähköksi. Larderellossa tämä otettiin käytäntöön vuonna 1904, kun höyryn tuottamalla sähköllä sytytettiin lamppuja, ja vuonna 1911 rakennettiin maailman ensimmäinen [[geoterminen voimala]]. Kuumaa asiaa, kirjaimellisesti.
+KYSYMYS: Kerro lisää: turbiiniin
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Miten maan höyrystä saadaan sähköä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä kysymys. Sähköntuotannossa maasta purkautuva kuuma höyry johdetaan putkia pitkin [[turbiiniin]], jonka höyry saa pyörimään. Turbiini pyörittää [[generaattoria]], joka muuttaa liike-energian sähköksi. Larderellossa tämä otettiin käytäntöön vuonna 1904, kun höyryn tuottamalla sähköllä sytytettiin lamppuja, ja vuonna 1911 rakennettiin maailman ensimmäinen [[geoterminen voimala]]. Kuumaa asiaa, kirjaimellisesti.
+KYSYMYS: Kerro lisää: generaattoria
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Managua — kaupunkilehti / Järvi ja tulivuoret: Momotombo, tulivuori joka näkyy kauas] Momotombo kohoaa 1 297 metriä Xolotlán-järven rannalta, ja sen symmetrinen huippu näkyy kauas — se on ilmestynyt jopa tulitikkuaskien kylkeen. Vuoden 1610 purkaus oli niin tuhoisa, että koko León-kaupunki siirrettiin uuteen paikkaan; myöhemmät purkaukset osuivat vuosiin 1886, 1905 ja viimeksi 2015–2016. Runoilija Rubén Darío omisti vuorelle oman runonsa, ja sen kupeella toimii geoterminen voimala, joka hyödyntää tulivuoren lämpöä sähköksi. Pieni saari nimeltä Momotombito, "pikku-Momotombo", kohoaa lähellä järven pinnalta samannimisen emovuoren edustalla.
+AIEMPI KYSYMYS: Miten maan höyrystä saadaan sähköä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä kysymys. Sähköntuotannossa maasta purkautuva kuuma höyry johdetaan putkia pitkin [[turbiiniin]], jonka höyry saa pyörimään. Turbiini pyörittää [[generaattoria]], joka muuttaa liike-energian sähköksi. Larderellossa tämä otettiin käytäntöön vuonna 1904, kun höyryn tuottamalla sähköllä sytytettiin lamppuja, ja vuonna 1911 rakennettiin maailman ensimmäinen [[geoterminen voimala]]. Kuumaa asiaa, kirjaimellisesti.
+KYSYMYS: Kerro lisää: geoterminen voimala
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Syyria — maalehti / Käsityö: Maali menee lasin päälle, ei sisään] Damaskoksessa lasiin maalataan käsin ohuella siveltimellä. Kuvan maljassa työ on kesken juuri siinä vaiheessa, jossa ääriviivat ovat valmiit mutta värikentät vasta osittain täytetty. Aiheet ovat lähes aina kasveja: kukkia, lehtiä ja kiertyviä varsia. Kaupungin lasi oli keskiajalla haluttua kauppatavaraa Eurooppaa myöten, ja lasinpuhaltamoja on toiminut vanhassakaupungissa polvesta polveen. Työ tehdään ilman koneita ja ilman kaavaa, joten kahta samanlaista kappaletta ei synny.
+AIEMPI KYSYMYS: Mihin boorihappoa käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä en oo ihan varma joka kohdasta. Boorihappoa on käytetty monin tavoin: se toimii heikkona antiseptisenä aineena, ja sitä käytetään muun muassa [[lasin]] ja [[keramiikan]] valmistuksessa sekä puun suoja-aineena. Larderellon alueella ranskalainen [[François Jacques de Larderel]] keksi vuonna 1827 tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty kylä. Millaista oli tarkasti 1800-luvun käyttö kylässä, sitä en osaa sanoa. Höyryllä on tässä kylässä ollut monta tehtävää.
+KYSYMYS: Kerro lisää: lasin
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salta — kohdekartta / Kohdekartta: Korkean vuoriston arkeologian museo] 2004 MAAM eli Museo de Arqueología de Alta Montaña perustettiin yhtä löytöä varten. Arkeologit Johan Reinhard ja María Constanza Ceruti löysivät 16. maaliskuuta 1999 retkikuntansa kanssa kolmen inkalapsen haudan lähes 6 700 metrin korkeudesta Llullaillacon tulivuoren huipulta. Lapset kuolivat vuosien 1462 ja 1507 välillä capacocha-menossa, ja heidät haudattiin puolentoista metrin syvyyteen kulta-, hopea- ja simpukkakuvioiden, kudonnaisten ja keramiikan kanssa. Vuoren kylmyys ja aavikon kuivuus säilyttivät pehmytkudokset, hiukset ja sisäelimet, ja siksi museo rakennettiin kylmäsäilytyksen ympärille. Ruumiit ovat kapseleissa, joissa happipitoisuutta on alennettu, lämpötila pidetään vakaana ka…
+- [Tunisia — maalehti / Kuvataide: Ryhmän ainoa nainen, koulun ensimmäinen johtaja] 1949–1966 — Safia Farhat syntyi Radèsissa 1924 ja kuoli samassa kaupungissa 2004. Hän liittyi École de Tunisin ryhmään vuonna 1949 sen ainoana naisena, ja hänet muistetaan ennen kaikkea siitä, että hän toi maahan modernin kuvakudoksen; hän työskenteli myös muotoilun, keramiikan ja lasimaalauksen parissa ja rakensi yhteistyötä taiteilijoiden ja käsityöläisten välille. Vuonna 1959 hän perusti Faïza-lehden, ensimmäisen arabialais-afrikkalaisen naistenlehden. Hän oli ensimmäinen nainen ja ensimmäinen tunisialainen Tunisin taideakatemian johtajana, ja se avasi koulun ovet kokonaiselle naistaiteilijoiden sukupolvelle; vuodesta 1966 hän johti taideinstituuttia ja sen uutta arkkitehtuurikoulua.
+AIEMPI KYSYMYS: Mihin boorihappoa käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä en oo ihan varma joka kohdasta. Boorihappoa on käytetty monin tavoin: se toimii heikkona antiseptisenä aineena, ja sitä käytetään muun muassa [[lasin]] ja [[keramiikan]] valmistuksessa sekä puun suoja-aineena. Larderellon alueella ranskalainen [[François Jacques de Larderel]] keksi vuonna 1827 tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty kylä. Millaista oli tarkasti 1800-luvun käyttö kylässä, sitä en osaa sanoa. Höyryllä on tässä kylässä ollut monta tehtävää.
+KYSYMYS: Kerro lisää: keramiikan
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Mihin boorihappoa käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä en oo ihan varma joka kohdasta. Boorihappoa on käytetty monin tavoin: se toimii heikkona antiseptisenä aineena, ja sitä käytetään muun muassa [[lasin]] ja [[keramiikan]] valmistuksessa sekä puun suoja-aineena. Larderellon alueella ranskalainen [[François Jacques de Larderel]] keksi vuonna 1827 tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty kylä. Millaista oli tarkasti 1800-luvun käyttö kylässä, sitä en osaa sanoa. Höyryllä on tässä kylässä ollut monta tehtävää.
+KYSYMYS: Kerro lisää: François Jacques de Larderel
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Mitä geoterminen energia on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Geoterminen energia tarkoittaa maapallon sisäistä lämpöä, joka on peräisin osittain planeetan syntyajoilta ja osittain [[radioaktiivisten alkuaineiden]] hajoamisesta. Sitä voidaan hyödyntää suoraan lämmityksessä tai, kun lämpötila on riittävän korkea, sähköntuotannossa, kuten [[Larderellossa]], jossa kuuma höyry purkautuu maasta. Lämmin asia minulle, kun talvella jalat jäätyvät.
+KYSYMYS: Kerro lisää: radioaktiivisten alkuaineiden
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Mitä geoterminen energia on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Geoterminen energia tarkoittaa maapallon sisäistä lämpöä, joka on peräisin osittain planeetan syntyajoilta ja osittain [[radioaktiivisten alkuaineiden]] hajoamisesta. Sitä voidaan hyödyntää suoraan lämmityksessä tai, kun lämpötila on riittävän korkea, sähköntuotannossa, kuten [[Larderellossa]], jossa kuuma höyry purkautuu maasta. Lämmin asia minulle, kun talvella jalat jäätyvät.
+KYSYMYS: Kerro lisää: Larderellossa
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+AIEMPI KYSYMYS: Millaisia roomalaiset kylpylät olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää juttua. Roomalaiset kylpylät, thermae, olivat julkisia kylpylaitoksia, joissa oli eri lämpöisiä altaita: kuuma [[caldarium]], haalea tepidarium ja kylmä [[frigidarium]]. Ne olivat myös kokoontumispaikkoja, joissa käytiin keskusteluja ja hoidettiin asioita. Larderellon alueen [[rikkilähteitä]] roomalaiset käyttivät kylpemiseen.
+
+Kyyhky kylpee mieluummin kaupungin suihkulähteessä, mutta kuuma vesi kuulostaa kyllä houkuttelevalta. Rikinhajuun minä en ole tottunut.
+KYSYMYS: Kerro lisää: caldarium
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+AIEMPI KYSYMYS: Millaisia roomalaiset kylpylät olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää juttua. Roomalaiset kylpylät, thermae, olivat julkisia kylpylaitoksia, joissa oli eri lämpöisiä altaita: kuuma [[caldarium]], haalea tepidarium ja kylmä [[frigidarium]]. Ne olivat myös kokoontumispaikkoja, joissa käytiin keskusteluja ja hoidettiin asioita. Larderellon alueen [[rikkilähteitä]] roomalaiset käyttivät kylpemiseen.
+
+Kyyhky kylpee mieluummin kaupungin suihkulähteessä, mutta kuuma vesi kuulostaa kyllä houkuttelevalta. Rikinhajuun minä en ole tottunut.
+KYSYMYS: Kerro lisää: frigidarium
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Millaisia roomalaiset kylpylät olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää juttua. Roomalaiset kylpylät, thermae, olivat julkisia kylpylaitoksia, joissa oli eri lämpöisiä altaita: kuuma [[caldarium]], haalea tepidarium ja kylmä [[frigidarium]]. Ne olivat myös kokoontumispaikkoja, joissa käytiin keskusteluja ja hoidettiin asioita. Larderellon alueen [[rikkilähteitä]] roomalaiset käyttivät kylpemiseen.
+
+Kyyhky kylpee mieluummin kaupungin suihkulähteessä, mutta kuuma vesi kuulostaa kyllä houkuttelevalta. Rikinhajuun minä en ole tottunut.
+KYSYMYS: Kerro lisää: rikkilähteitä
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Mikä alkuaine boori on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Boori on kemiallinen alkuaine, jonka merkki on B ja järjestysluku 5. Se on [[puolimetalli]], jota ei esiinny luonnossa puhtaana vaan yhdisteinä; tunnettuja boorin yhdisteitä ovat [[booraksi]] ja [[boorihappo]]. Viides alkuaine, ja sen osaan laskea ilman sormia.
+KYSYMYS: Kerro lisää: puolimetalli
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Mikä alkuaine boori on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Boori on kemiallinen alkuaine, jonka merkki on B ja järjestysluku 5. Se on [[puolimetalli]], jota ei esiinny luonnossa puhtaana vaan yhdisteinä; tunnettuja boorin yhdisteitä ovat [[booraksi]] ja [[boorihappo]]. Viides alkuaine, ja sen osaan laskea ilman sormia.
+KYSYMYS: Kerro lisää: booraksi
+
+### 600
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+AIEMPI KYSYMYS: Mikä alkuaine boori on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Boori on kemiallinen alkuaine, jonka merkki on B ja järjestysluku 5. Se on [[puolimetalli]], jota ei esiinny luonnossa puhtaana vaan yhdisteinä; tunnettuja boorin yhdisteitä ovat [[booraksi]] ja [[boorihappo]]. Viides alkuaine, ja sen osaan laskea ilman sormia.
+KYSYMYS: Kerro lisää: boorihappo
+
+### 601
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Miksi Brennerin sola on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Brennerin sola on tärkeä, koska se on Alppien ylikulkusola, jonka kautta kulkee yhteys Italian ja Itävallan välillä, ja alueen Itäalppien solista se on matalin. Solan kautta kulkevat nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää [[Bolzanon]] ja [[Innsbruckin]]. Reitti on ollut käytössä jo [[roomalaisten]] ajoista, ja Itävallan keisarikunnan aikana siihen rakennettiin [[Brennerin rautatie]], joka valmistui vaiheittain vuosina 1853–1867. Ei oo ihme, että kaikki haluavat kulkea sitä kautta.
+KYSYMYS: Kerro lisää: Bolzanon
+
+### 602
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Mäki, joka räjäytettiin ja rakennettiin uudelleen] 2002 — Innsbruckin Bergiselillä hypättiin ensimmäisen kerran 23. tammikuuta 1927. Vanha mäki räjäytettiin, ja tilalle nousi Zaha Hadidin suunnittelema torni, joka otettiin käyttöön 50. mäkiviikolle vuonna 2002. Rakennus maksoi 12 miljoonaa euroa. Tornin huipulla on kahvila ja näköalatasanne, joihin pääsee vinohissillä. Mäkiviikko perustettiin vuonna 1952, ja sen neljästä kilpailupaikasta kaksi on Itävallassa: Innsbruck ja Bischofshofen.
+AIEMPI KYSYMYS: Miksi Brennerin sola on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Brennerin sola on tärkeä, koska se on Alppien ylikulkusola, jonka kautta kulkee yhteys Italian ja Itävallan välillä, ja alueen Itäalppien solista se on matalin. Solan kautta kulkevat nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää [[Bolzanon]] ja [[Innsbruckin]]. Reitti on ollut käytössä jo [[roomalaisten]] ajoista, ja Itävallan keisarikunnan aikana siihen rakennettiin [[Brennerin rautatie]], joka valmistui vaiheittain vuosina 1853–1867. Ei oo ihme, että kaikki haluavat kulkea sitä kautta.
+KYSYMYS: Kerro lisää: Innsbruckin
+
+### 603
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+AIEMPI KYSYMYS: Miksi Brennerin sola on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Brennerin sola on tärkeä, koska se on Alppien ylikulkusola, jonka kautta kulkee yhteys Italian ja Itävallan välillä, ja alueen Itäalppien solista se on matalin. Solan kautta kulkevat nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää [[Bolzanon]] ja [[Innsbruckin]]. Reitti on ollut käytössä jo [[roomalaisten]] ajoista, ja Itävallan keisarikunnan aikana siihen rakennettiin [[Brennerin rautatie]], joka valmistui vaiheittain vuosina 1853–1867. Ei oo ihme, että kaikki haluavat kulkea sitä kautta.
+KYSYMYS: Kerro lisää: roomalaisten
+
+### 604
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Miksi Brennerin sola on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Brennerin sola on tärkeä, koska se on Alppien ylikulkusola, jonka kautta kulkee yhteys Italian ja Itävallan välillä, ja alueen Itäalppien solista se on matalin. Solan kautta kulkevat nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää [[Bolzanon]] ja [[Innsbruckin]]. Reitti on ollut käytössä jo [[roomalaisten]] ajoista, ja Itävallan keisarikunnan aikana siihen rakennettiin [[Brennerin rautatie]], joka valmistui vaiheittain vuosina 1853–1867. Ei oo ihme, että kaikki haluavat kulkea sitä kautta.
+KYSYMYS: Kerro lisää: Brennerin rautatie
+
+### 605
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Miksi rautatiessä ei ole suurta tunnelia?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Brennerin sola on Itäalppien solista matalin, joten rautatie pystyttiin johtamaan sen yli korkeimmillaan 1 371 metrin korkeudessa ilman suurta tunnelia. Reitti seurasi maastoa solan kautta, ja radan kaltevuus pysyi hallittavana. Täsmällisiä rakennusteknisiä perusteita en tunne, mutta matala sola on tavallisesti syynä siihen, ettei pitkää tunnelia tarvita. Nykyisin on rakenteilla [[Brennerin pohjatunneli]]; sen valmistumisaikataulusta en ole varma.
+
+Minä en tunneleita ole koskaan ymmärtänyt, koska ylhäältä näkee aina enemmän. Solan yli lentäisin mieluummin kuin ajaisin junalla, vaikka juna on kyllä lämpimämpi.
+KYSYMYS: Kerro lisää: Brennerin pohjatunneli
+
+### 606
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+AIEMPI KYSYMYS: Mitkä maat Alppien alueeseen kuuluvat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Alppien alueeseen luetaan tavallisesti kuuluvaksi Ranska, Italia, [[Sveitsi]], Itävalta, Saksa, [[Slovenia]], [[Liechtenstein]] ja Monaco. Brennerin sola on Italian ja Itävallan rajalla. Monta maata yhdellä vuoristolla, ja jokaisesta maasta löytyy varmasti oma pullansa.
+KYSYMYS: Kerro lisää: Sveitsi
+
+### 607
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia: Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna] Primož Trubar oli protestanttinen uudistaja, joka saarnasi Ljubljanassa 1530-luvulta ja joutui lähtemään kaupungista vuonna 1547. Saksassa hän kirjoitti vuonna 1550 kaksi ensimmäistä sloveniankielistä kirjaa, Catechismuksen ja Abecedariumin, jotka painettiin Schwäbisch Hallissa. Kaikkiaan hän kirjoitti 22 sloveniankielistä kirjaa ja käänsi koko Uuden testamentin. Kirjakielen pohjaksi hän valitsi Ljubljanan puheen, koska piti sitä sopivimpana.
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+- [Slovenia — maalehti / Ruoka: Harmaa mehiläinen Krainista] nykyään — Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen italianmehiläisen jälkeen. EU:n suojaamiin ruokatuotteisiin kuuluu myös slovenialainen hunaja.
+AIEMPI KYSYMYS: Mitkä maat Alppien alueeseen kuuluvat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Alppien alueeseen luetaan tavallisesti kuuluvaksi Ranska, Italia, [[Sveitsi]], Itävalta, Saksa, [[Slovenia]], [[Liechtenstein]] ja Monaco. Brennerin sola on Italian ja Itävallan rajalla. Monta maata yhdellä vuoristolla, ja jokaisesta maasta löytyy varmasti oma pullansa.
+KYSYMYS: Kerro lisää: Slovenia
+
+### 608
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Mitkä maat Alppien alueeseen kuuluvat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Alppien alueeseen luetaan tavallisesti kuuluvaksi Ranska, Italia, [[Sveitsi]], Itävalta, Saksa, [[Slovenia]], [[Liechtenstein]] ja Monaco. Brennerin sola on Italian ja Itävallan rajalla. Monta maata yhdellä vuoristolla, ja jokaisesta maasta löytyy varmasti oma pullansa.
+KYSYMYS: Kerro lisää: Liechtenstein
+
+### 609
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Mikä Bolzano on?
+AIEMPI VASTAUS (Livia):
+Ai se. Bolzano on [[Etelä-Tirolin]] eli Alto Adigen maakunnan pääkaupunki Pohjois-Italiassa, ja se sijaitsee Brennerin solan eteläpuolella. Kaupungin saksankielinen nimi on [[Bozen]], ja alueella puhutaan sekä italiaa että saksaa. Kaupunki on Brennerin rautatie- ja moottoritiekäytävän tärkeä pysähdyspaikka. Kaksikielinen kaupunki, hyvä paikka viestinviejälle.
+KYSYMYS: Kerro lisää: Etelä-Tirolin
+
+### 610
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Mikä Bolzano on?
+AIEMPI VASTAUS (Livia):
+Ai se. Bolzano on [[Etelä-Tirolin]] eli Alto Adigen maakunnan pääkaupunki Pohjois-Italiassa, ja se sijaitsee Brennerin solan eteläpuolella. Kaupungin saksankielinen nimi on [[Bozen]], ja alueella puhutaan sekä italiaa että saksaa. Kaupunki on Brennerin rautatie- ja moottoritiekäytävän tärkeä pysähdyspaikka. Kaksikielinen kaupunki, hyvä paikka viestinviejälle.
+KYSYMYS: Kerro lisää: Bozen
+
+### 611
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Miksi raja kulkee juuri Brennerin solassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Raja sijoittuu Brennerin solaan, koska se kulkee Alppien vedenjakajalla, ja nykyinen rajalinja vahvistettiin ensimmäisen maailmansodan jälkeen. [[Etelä-Tirol]] liitettiin Italiaan vuonna 1919 allekirjoitetulla [[Saint-Germainin rauhansopimuksella]], ja sitä ennen alue kuului Itävalta-Unkarille. Olen tässä melko varma, mutta tarkat yksityiskohdat kannattaa tarkistaa historiankirjoista. Raja on ollut siinä siitä lähtien.
+KYSYMYS: Kerro lisää: Etelä-Tirol
+
+### 612
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+AIEMPI KYSYMYS: Miksi raja kulkee juuri Brennerin solassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Raja sijoittuu Brennerin solaan, koska se kulkee Alppien vedenjakajalla, ja nykyinen rajalinja vahvistettiin ensimmäisen maailmansodan jälkeen. [[Etelä-Tirol]] liitettiin Italiaan vuonna 1919 allekirjoitetulla [[Saint-Germainin rauhansopimuksella]], ja sitä ennen alue kuului Itävalta-Unkarille. Olen tässä melko varma, mutta tarkat yksityiskohdat kannattaa tarkistaa historiankirjoista. Raja on ollut siinä siitä lähtien.
+KYSYMYS: Kerro lisää: Saint-Germainin rauhansopimuksella
+
+### 613
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Raatihuone] 1872–1883 Wienin komea raatihuone rakennettiin vuosina 1872–1883 arkkitehti Friedrich von Schmidtin suunnitelmien mukaan. Rakennuksesta tuli niin kallis — peräti 14 miljoonaa guldenia — että sekä kaupunki että keisarikunta maksoivat siitä yhdessä. Talo on valtava: siellä on 1575 huonetta ja 2035 ikkunaa. Torni kohoaa 98 metrin korkeuteen, ja sen huipulla seisoo rautainen ritarihahmo nimeltä Rathausmann, joka nostaa kokonaiskorkeuden yli sataan metriin. Rakennuksen juhlasali on Itävallan suurin historiallinen sali. Toisen maailmansodan pommitukset vaurioittivat raatihuonetta pahoin, mutta se korjattiin. Nykyään se on Wienin pormestarin työpaikka ja koko kaupungin sydän, jonka edustalla Ratha…
+AIEMPI KYSYMYS: Kuinka jyrkkä Stelvion tie on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost tiestä minä tiedän sen verran, että mutkia riittää. Stelvion tie nousee noin 1 871 metriä 2 757 metrin korkeuteen, ja sen kiemurat ovat tunnettuja: pohjoispuolella on lähteiden mukaan noin 48 serpentiinikäännöstä, mutta en ole aivan varma tarkasta luvusta. Suurimmat kaltevuudet ovat arviolta noin kahdentoista prosentin luokkaa, eli tie on jyrkkä mutta kuitenkin tarkoitettu kuljettavaksi. Tien rakennutti [[Itävallan keisarikunta]] vuosina 1820–1825, ja insinöörinä toimi [[Carlo Donegani]]. Tie kulkee [[Ortlerin Alpeilla]] Stilfsin ja Bormion välillä. Siivillä nousu olis kyllä paljon helpompi.
+KYSYMYS: Kerro lisää: Itävallan keisarikunta
+
+### 614
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Kuinka jyrkkä Stelvion tie on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost tiestä minä tiedän sen verran, että mutkia riittää. Stelvion tie nousee noin 1 871 metriä 2 757 metrin korkeuteen, ja sen kiemurat ovat tunnettuja: pohjoispuolella on lähteiden mukaan noin 48 serpentiinikäännöstä, mutta en ole aivan varma tarkasta luvusta. Suurimmat kaltevuudet ovat arviolta noin kahdentoista prosentin luokkaa, eli tie on jyrkkä mutta kuitenkin tarkoitettu kuljettavaksi. Tien rakennutti [[Itävallan keisarikunta]] vuosina 1820–1825, ja insinöörinä toimi [[Carlo Donegani]]. Tie kulkee [[Ortlerin Alpeilla]] Stilfsin ja Bormion välillä. Siivillä nousu olis kyllä paljon helpompi.
+KYSYMYS: Kerro lisää: Carlo Donegani
+
+### 615
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Kuinka jyrkkä Stelvion tie on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost tiestä minä tiedän sen verran, että mutkia riittää. Stelvion tie nousee noin 1 871 metriä 2 757 metrin korkeuteen, ja sen kiemurat ovat tunnettuja: pohjoispuolella on lähteiden mukaan noin 48 serpentiinikäännöstä, mutta en ole aivan varma tarkasta luvusta. Suurimmat kaltevuudet ovat arviolta noin kahdentoista prosentin luokkaa, eli tie on jyrkkä mutta kuitenkin tarkoitettu kuljettavaksi. Tien rakennutti [[Itävallan keisarikunta]] vuosina 1820–1825, ja insinöörinä toimi [[Carlo Donegani]]. Tie kulkee [[Ortlerin Alpeilla]] Stilfsin ja Bormion välillä. Siivillä nousu olis kyllä paljon helpompi.
+KYSYMYS: Kerro lisää: Ortlerin Alpeilla
+
+### 616
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Mitä Kolmen kielen huippu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost nimestä minä pidän. Kolmen kielen huippu on Stelvion solan yläpuolella oleva huippu, joka on saanut nimensä siitä, että italian, saksan ja [[retoromaanin]] puhealueet kohtaavat siinä. Nimi kuvaa siis kieliä eikä valtioita: paikka on kolmen kielialueen yhtymäkohta. Alue on Italian ja [[Sveitsin]] rajaseutua, jossa [[Etelä-Tirolin]] saksa ja italia elävät rinnakkain. Kyyhkylle riittää yks kieli, ja sekin on kuherrusta.
+KYSYMYS: Kerro lisää: retoromaanin
+
+### 617
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Mitä Kolmen kielen huippu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost nimestä minä pidän. Kolmen kielen huippu on Stelvion solan yläpuolella oleva huippu, joka on saanut nimensä siitä, että italian, saksan ja [[retoromaanin]] puhealueet kohtaavat siinä. Nimi kuvaa siis kieliä eikä valtioita: paikka on kolmen kielialueen yhtymäkohta. Alue on Italian ja [[Sveitsin]] rajaseutua, jossa [[Etelä-Tirolin]] saksa ja italia elävät rinnakkain. Kyyhkylle riittää yks kieli, ja sekin on kuherrusta.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 618
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Mitä Kolmen kielen huippu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost nimestä minä pidän. Kolmen kielen huippu on Stelvion solan yläpuolella oleva huippu, joka on saanut nimensä siitä, että italian, saksan ja [[retoromaanin]] puhealueet kohtaavat siinä. Nimi kuvaa siis kieliä eikä valtioita: paikka on kolmen kielialueen yhtymäkohta. Alue on Italian ja [[Sveitsin]] rajaseutua, jossa [[Etelä-Tirolin]] saksa ja italia elävät rinnakkain. Kyyhkylle riittää yks kieli, ja sekin on kuherrusta.
+KYSYMYS: Kerro lisää: Etelä-Tirolin
+
+### 619
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Miksi Itävalta rakennutti Stelvion tien?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän tien tarina on oikeastaan aika selkeä. Tie rakennettiin vuosina 1820–1825 yhdistämään [[Lombardia]] Itävaltaan: Lombardia oli [[Wienin kongressin]] jälkeen Itävallan hallinnassa, ja keisarikunta tarvitsi sen ja muun valtakuntansa välille kunnollisen kulkuyhteyden, jonka kerrotaan palvelleen sekä hallintoa että sotaväkeä ja kauppaa. Hankkeen insinöörinä ja projektipäällikkönä toimi [[Carlo Donegani]]. Kyyhkyt ei kyllä tarvinnu tietä ollenkaan.
+KYSYMYS: Kerro lisää: Lombardia
+
+### 620
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Miksi Itävalta rakennutti Stelvion tien?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän tien tarina on oikeastaan aika selkeä. Tie rakennettiin vuosina 1820–1825 yhdistämään [[Lombardia]] Itävaltaan: Lombardia oli [[Wienin kongressin]] jälkeen Itävallan hallinnassa, ja keisarikunta tarvitsi sen ja muun valtakuntansa välille kunnollisen kulkuyhteyden, jonka kerrotaan palvelleen sekä hallintoa että sotaväkeä ja kauppaa. Hankkeen insinöörinä ja projektipäällikkönä toimi [[Carlo Donegani]]. Kyyhkyt ei kyllä tarvinnu tietä ollenkaan.
+KYSYMYS: Kerro lisää: Wienin kongressin
+
+### 621
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Mikä on Stelviota korkeampi Alppien sola?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Seitsemän metriä vaan. Stelviota korkeampi Alppien päällystetty sola on Ranskan [[Col de l'Iseran]], joka on seitsemän metriä Stelviota korkeammalla, eli noin 2 764 metrin korkeudessa. Stelvio on 2 757 metrin korkeudessa ja on silti [[Itäalppien]] korkein päällystetty sola sekä Alppien toiseksi korkein. Seitsemän metriä, sitä ei kyllä kyyhky huomaa.
+KYSYMYS: Kerro lisää: Col de l'Iseran
+
+### 622
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Mikä on Stelviota korkeampi Alppien sola?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Seitsemän metriä vaan. Stelviota korkeampi Alppien päällystetty sola on Ranskan [[Col de l'Iseran]], joka on seitsemän metriä Stelviota korkeammalla, eli noin 2 764 metrin korkeudessa. Stelvio on 2 757 metrin korkeudessa ja on silti [[Itäalppien]] korkein päällystetty sola sekä Alppien toiseksi korkein. Seitsemän metriä, sitä ei kyllä kyyhky huomaa.
+KYSYMYS: Kerro lisää: Itäalppien
+
+### 623
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Mikä Ortler on?
+AIEMPI VASTAUS (Livia):
+Mmm— Ortler, se on komea. Ortler on [[Ortlerin Alppien]] korkein huippu ja myös [[Etelä-Tirolin]] korkein vuori, korkeudeltaan noin 3 900 metriä. Sitä peittävät jäätiköt, ja sen ympärillä on [[Stelvion kansallispuisto]], jonka alueella Stelvion sola sijaitsee. Yli kolme tuhatta metriä on kyyhkyllekin jo korkealla.
+KYSYMYS: Kerro lisää: Ortlerin Alppien
+
+### 624
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+AIEMPI KYSYMYS: Mikä Ortler on?
+AIEMPI VASTAUS (Livia):
+Mmm— Ortler, se on komea. Ortler on [[Ortlerin Alppien]] korkein huippu ja myös [[Etelä-Tirolin]] korkein vuori, korkeudeltaan noin 3 900 metriä. Sitä peittävät jäätiköt, ja sen ympärillä on [[Stelvion kansallispuisto]], jonka alueella Stelvion sola sijaitsee. Yli kolme tuhatta metriä on kyyhkyllekin jo korkealla.
+KYSYMYS: Kerro lisää: Stelvion kansallispuisto
+
+### 625
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+- [Etelä-Sudan — maalehti / Musiikki: Juban yöt, jolloin soittivat Skylarks ja Rejaf Jazz] 1970–1980-luvut — Juba oli 1970- ja 1980-luvuilla vilkkaan yöelämän kaupunki, ja lavalla soittivat muun muassa Skylarks ja Rejaf Jazz. Musiikissa kuului koko naapuruston kirjo: monet muusikot lauloivat englanniksi, suahiliksi, juba-arabiaksi, omalla kielellään tai sekoittaen niitä kaikkia. Myöhemmin tähän tuli lisää sävyjä, kun eteläsudanilaisia asui pitkiä aikoja Etiopiassa, Keniassa ja Ugandassa ja oppi sikäläiset kielet ja tyylit. Emmanuel Kembe laulaa kansanmusiikkia, reggaeta ja afrobeatia, Yaba Angelosi afrobeatia, r&b:tä ja zoukia.
+AIEMPI KYSYMYS: Mitä Olivetti valmisti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tost yrityksestä minä tiedän, kirjoituskoneet on tuttuja. Olivetti valmisti [[kirjoituskoneita]], mekaanisia [[laskukoneita]] ja myöhemmin [[tietokoneita]]. Yrityksen pääkonttori oli Ivreassa, ja siitä tuli 1900-luvulla kaupungin kansainvälisesti tunnetuin nimi. Olivetti-alue merkittiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2018. Kyyhky kirjoittaa vaan nokalla, ja sekin on hidasta.
+KYSYMYS: Kerro lisää: kirjoituskoneita
+
+### 626
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Mitä Olivetti valmisti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tost yrityksestä minä tiedän, kirjoituskoneet on tuttuja. Olivetti valmisti [[kirjoituskoneita]], mekaanisia [[laskukoneita]] ja myöhemmin [[tietokoneita]]. Yrityksen pääkonttori oli Ivreassa, ja siitä tuli 1900-luvulla kaupungin kansainvälisesti tunnetuin nimi. Olivetti-alue merkittiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2018. Kyyhky kirjoittaa vaan nokalla, ja sekin on hidasta.
+KYSYMYS: Kerro lisää: laskukoneita
+
+### 627
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Tiede: Ensimmäinen tietokone syntyi kotona] Berliiniläinen rakennusinsinööri Konrad Zuse kyllästyi laskemaan samoja kaavoja käsin ja alkoi rakentaa laskukonetta vanhempiensa olohuoneeseen. Vuonna 1941 valmistunut Z3 oli maailman ensimmäinen ohjelmoitava tietokone: se luki ohjelmansa rei'itetyltä filminauhalta ja laski 2 600 releen naksuessa. Kone tuhoutui pommituksessa 1943, eikä maailma huomannut koko keksintöä ennen kuin vuosia myöhemmin. Zuse rakensi koneensa uudelleen — ja jäljennös naksuttaa nykyään museossa Münchenissä.
+AIEMPI KYSYMYS: Mitä Olivetti valmisti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tost yrityksestä minä tiedän, kirjoituskoneet on tuttuja. Olivetti valmisti [[kirjoituskoneita]], mekaanisia [[laskukoneita]] ja myöhemmin [[tietokoneita]]. Yrityksen pääkonttori oli Ivreassa, ja siitä tuli 1900-luvulla kaupungin kansainvälisesti tunnetuin nimi. Olivetti-alue merkittiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2018. Kyyhky kirjoittaa vaan nokalla, ja sekin on hidasta.
+KYSYMYS: Kerro lisää: tietokoneita
+
+### 628
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Mitä Olivetti valmisti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tost yrityksestä minä tiedän, kirjoituskoneet on tuttuja. Olivetti valmisti [[kirjoituskoneita]], mekaanisia [[laskukoneita]] ja myöhemmin [[tietokoneita]]. Yrityksen pääkonttori oli Ivreassa, ja siitä tuli 1900-luvulla kaupungin kansainvälisesti tunnetuin nimi. Olivetti-alue merkittiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2018. Kyyhky kirjoittaa vaan nokalla, ja sekin on hidasta.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 629
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / Musiikki: Karnevaali jonka värit valittiin 1872] Ensimmäinen tunnettu Mardi Gras -juhla Louisianassa pidettiin 2. maaliskuuta 1699 Mississippin suulla, mutta järjestäytynyt katukarnevaali alkoi vasta 1856, kun kaksikymmentäyksi liikemiestä perusti Mistick Krewe of Comuksen; sen ensimmäinen soihtukulkue nähtiin 1857. Rex perustettiin 1872 venäläisen suurruhtinaan Aleksei Aleksandrovitšin vierailun kunniaksi, ja se kehotti jo ensimmäisen kulkueensa alla verhoamaan parvekkeet violettiin, vihreään ja kultaan — samat värit ovat yhä karnevaalin tunnusvärit. Zulu-seuran kultamaalatut kookospähkinät ojennetaan katsojille kädestä: heittäminen kiellettiin loukkaantumisvaaran vuoksi 1988.
+AIEMPI KYSYMYS: Mikä on Appelsiinitaistelu?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hurja juttu. Minä katson sen mieluummin katolta. Appelsiinitaistelu on Ivrean [[karnevaalin]] tunnetuin osa: kaupunkilaiset heittelevät toisiaan [[appelsiineilla]] joukkueina, kun jalan liikkuvat heittäjät kohtaavat vaunuista heittävät. Perinteen kerrotaan palautuvan tarinaan kaupunkilaisten kapinasta tyrannia vastaan, mutta en ole varma sen tarkasta alkuperästä. Karnevaali on [[Ivrean]] suurin vuotuinen tapahtuma. Katolla pysyn, kiitos.
+KYSYMYS: Kerro lisää: karnevaalin
+
+### 630
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Mikä on Appelsiinitaistelu?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hurja juttu. Minä katson sen mieluummin katolta. Appelsiinitaistelu on Ivrean [[karnevaalin]] tunnetuin osa: kaupunkilaiset heittelevät toisiaan [[appelsiineilla]] joukkueina, kun jalan liikkuvat heittäjät kohtaavat vaunuista heittävät. Perinteen kerrotaan palautuvan tarinaan kaupunkilaisten kapinasta tyrannia vastaan, mutta en ole varma sen tarkasta alkuperästä. Karnevaali on [[Ivrean]] suurin vuotuinen tapahtuma. Katolla pysyn, kiitos.
+KYSYMYS: Kerro lisää: appelsiineilla
+
+### 631
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Mikä on Appelsiinitaistelu?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hurja juttu. Minä katson sen mieluummin katolta. Appelsiinitaistelu on Ivrean [[karnevaalin]] tunnetuin osa: kaupunkilaiset heittelevät toisiaan [[appelsiineilla]] joukkueina, kun jalan liikkuvat heittäjät kohtaavat vaunuista heittävät. Perinteen kerrotaan palautuvan tarinaan kaupunkilaisten kapinasta tyrannia vastaan, mutta en ole varma sen tarkasta alkuperästä. Karnevaali on [[Ivrean]] suurin vuotuinen tapahtuma. Katolla pysyn, kiitos.
+KYSYMYS: Kerro lisää: Ivrean
+
+### 632
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Missä Ivrea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on Pohjois-Italiassa, ylhäältä helppo bongata. Ivrea sijaitsee [[Piemontessa]] Luoteis-Italiassa [[Dora Baltea]] -joen molemmin puolin, ja se kuuluu [[Torinon]] suurkaupunkialueeseen. Torinosta matkaa on suunnilleen viisikymmentä kilometriä, mutta en ole aivan varma tarkasta luvusta. Roomalaiset perustivat kaupungin nimellä Eporedia. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Piemontessa
+
+### 633
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Missä Ivrea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on Pohjois-Italiassa, ylhäältä helppo bongata. Ivrea sijaitsee [[Piemontessa]] Luoteis-Italiassa [[Dora Baltea]] -joen molemmin puolin, ja se kuuluu [[Torinon]] suurkaupunkialueeseen. Torinosta matkaa on suunnilleen viisikymmentä kilometriä, mutta en ole aivan varma tarkasta luvusta. Roomalaiset perustivat kaupungin nimellä Eporedia. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Dora Baltea
+
+### 634
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+AIEMPI KYSYMYS: Missä Ivrea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on Pohjois-Italiassa, ylhäältä helppo bongata. Ivrea sijaitsee [[Piemontessa]] Luoteis-Italiassa [[Dora Baltea]] -joen molemmin puolin, ja se kuuluu [[Torinon]] suurkaupunkialueeseen. Torinosta matkaa on suunnilleen viisikymmentä kilometriä, mutta en ole aivan varma tarkasta luvusta. Roomalaiset perustivat kaupungin nimellä Eporedia. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Torinon
+
+### 635
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Mikä oli Ivrean marssi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on keskiaikaista hallintoa, mut selviää. Marssi oli keskiajalla rajamaakunta, jota hallitsi [[markkreivi]] ja jonka tehtävä oli puolustaa aluetta. Ivrean marssin keskus oli Ivrea, ja 1000-luvulla kaupungista tuli hetkeksi [[Italian kuningaskunnan]] pääkaupunki. Lähteiden mukaan marssin markkreivi [[Arduin]] kruunattiin Italian kuninkaaksi noin vuonna 1002, mutta en ole varma kaikista yksityiskohdista. Kuka tahansa saa hallita, kunhan minä vien viestin perille.
+KYSYMYS: Kerro lisää: markkreivi
+
+### 636
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+- [Murzuk — kaupunkilehti / Murzuk: Italian lippu nousee, ja jälleen laskee] Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+AIEMPI KYSYMYS: Mikä oli Ivrean marssi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on keskiaikaista hallintoa, mut selviää. Marssi oli keskiajalla rajamaakunta, jota hallitsi [[markkreivi]] ja jonka tehtävä oli puolustaa aluetta. Ivrean marssin keskus oli Ivrea, ja 1000-luvulla kaupungista tuli hetkeksi [[Italian kuningaskunnan]] pääkaupunki. Lähteiden mukaan marssin markkreivi [[Arduin]] kruunattiin Italian kuninkaaksi noin vuonna 1002, mutta en ole varma kaikista yksityiskohdista. Kuka tahansa saa hallita, kunhan minä vien viestin perille.
+KYSYMYS: Kerro lisää: Italian kuningaskunnan
+
+### 637
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+AIEMPI KYSYMYS: Mikä oli Ivrean marssi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on keskiaikaista hallintoa, mut selviää. Marssi oli keskiajalla rajamaakunta, jota hallitsi [[markkreivi]] ja jonka tehtävä oli puolustaa aluetta. Ivrean marssin keskus oli Ivrea, ja 1000-luvulla kaupungista tuli hetkeksi [[Italian kuningaskunnan]] pääkaupunki. Lähteiden mukaan marssin markkreivi [[Arduin]] kruunattiin Italian kuninkaaksi noin vuonna 1002, mutta en ole varma kaikista yksityiskohdista. Kuka tahansa saa hallita, kunhan minä vien viestin perille.
+KYSYMYS: Kerro lisää: Arduin
+
+### 638
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Miksi Olivetti-alue on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tää on mielenkiintoinen juttu. Olivetti-alue "Industrial City of the 20th Century" merkittiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2018. Alueeseen kuuluu tehdasrakennuksia sekä työntekijöille tarkoitettuja asuin- ja palvelurakennuksia, ja perusteluna pidetään 1900-luvun [[modernia arkkitehtuuria]] sekä ajatusta yrityksestä, joka huolehtii myös työntekijöidensä elinympäristöstä; en ole varma kaikista kohteista. Alueen yritys oli [[Olivetti]], joka tunnettiin kirjoituskoneistaan. Hieno juttu, että tehtaatkin saa olla näkyvillä.
+KYSYMYS: Kerro lisää: modernia arkkitehtuuria
+
+### 639
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kohdekartta / Kohdekartta: Olive Pinkin puutarha] 1956 Olive Pinkin kasvitieteellinen puutarha on kuudentoista hehtaarin alue Todd-joen itäpuolella kaupungin keskustan eteläreunassa, ja se on erikoistunut Keski-Australian kuivan alueen kasveihin. Alue määrättiin 1956 Australian kuivien alueiden kasvistoreserviksi sen jälkeen, kun sen perustaja ja ensimmäinen kunniakuraattori Olive Muriel Pink oli lobannut asiaa sitkeästi. Ennen vuotta 1956 maa oli ollut käyttämätöntä ja siellä olivat laiduntaneet villivuohet, kanit ja karja, niin että tulvatasangon kasvillisuus oli muuttunut perusteellisesti eikä puita tai pensaita ollut jäljellä. Pink ja hänen warlpiri-avustajansa käyttivät seuraavat kaksi vuosikymmentä kuivuutta ja lähes olematonta rahoi…
+AIEMPI KYSYMYS: Miksi Olivetti-alue on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tää on mielenkiintoinen juttu. Olivetti-alue "Industrial City of the 20th Century" merkittiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2018. Alueeseen kuuluu tehdasrakennuksia sekä työntekijöille tarkoitettuja asuin- ja palvelurakennuksia, ja perusteluna pidetään 1900-luvun [[modernia arkkitehtuuria]] sekä ajatusta yrityksestä, joka huolehtii myös työntekijöidensä elinympäristöstä; en ole varma kaikista kohteista. Alueen yritys oli [[Olivetti]], joka tunnettiin kirjoituskoneistaan. Hieno juttu, että tehtaatkin saa olla näkyvillä.
+KYSYMYS: Kerro lisää: Olivetti
+
+### 640
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Manilan katedraali] nykyinen rakennus 1958 Manilan seurakuntakirkko perustettiin 1571 Meksikon arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII perusti Manilan hiippakunnan 6. helmikuuta 1579. Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin pyhäinjäännökset, joita varten pääkirkon viereen rakennettiin oma sivurakennus. Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen pääalttari veistettiin molave-puusta 1662, ja firenzeläinen munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. Viides muistutti Rooman Il Gesùa, ku…
+AIEMPI KYSYMYS: Mitä Canossan matka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä ilmaus, tän minä tunnen. Canossan matka tarkoittaa nöyrtymistä ja anteeksipyyntöä vastapuolen edessä. Ilmaus periytyy vuoteen 1077, jolloin paavi [[Gregorius VII]] oli Canossassa ja keisari [[Henrik IV]] tuli sinne hakemaan synninpäästöä, ja välirikko sovittiin. Taustalla oli [[investituuririita]], jossa kiisteltiin siitä, kuka saa nimittää piispat. Tarinan mukaan keisari odotti linnan portilla useita päiviä, mutta yksityiskohdat vaihtelevat lähteissä. Kyyhky ei kyllä ois jaksanut odottaa lumessa.
+KYSYMYS: Kerro lisää: Gregorius VII

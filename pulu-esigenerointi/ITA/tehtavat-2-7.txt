@@ -1,0 +1,1017 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Millaisesta rypäleestä Brunello di Montalcino tehdään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Brunello di Montalcino tehdään [[Sangiovese-rypäleestä]], tarkemmin sanoen sen paikallisesta muunnoksesta, jota kutsutaan nimellä brunello. Viini valmistetaan [[Montalcinon]] kukkuloilla, ja se kuuluu Italian tarkimmin säänneltyihin [[DOCG]]-viineihin, joiden täytyy vanheta useita vuosia ennen myyntiä. Tuloksena on tanniinipitoinen ja pitkään säilyvä punaviini. Minä pysyn kyl vedessä ja pullassa.
+KYSYMYS: Kerro lisää: DOCG
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+AIEMPI KYSYMYS: Millainen vuori Monte Amiata on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monte Amiata on [[sammunut tulivuori]] Toscanan eteläosassa, ja se kohoaa [[Sienan]] ja [[Grosseton]] maakuntien rajalla noin 1 700 metrin korkeuteen. Se on seudun huomattavin huippu ja näkyy kauas Val d'Orcian kukkuloille. Rinteillä kasvaa laajoja pyökkimetsiä, ja talvisin vuorella on pieni laskettelukeskus. Katolta se näkyy hyvin, mut yli lentäminen ottaa kyllä voimille.
+KYSYMYS: Kerro lisää: sammunut tulivuori
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Millainen vuori Monte Amiata on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monte Amiata on [[sammunut tulivuori]] Toscanan eteläosassa, ja se kohoaa [[Sienan]] ja [[Grosseton]] maakuntien rajalla noin 1 700 metrin korkeuteen. Se on seudun huomattavin huippu ja näkyy kauas Val d'Orcian kukkuloille. Rinteillä kasvaa laajoja pyökkimetsiä, ja talvisin vuorella on pieni laskettelukeskus. Katolta se näkyy hyvin, mut yli lentäminen ottaa kyllä voimille.
+KYSYMYS: Kerro lisää: Sienan
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Millainen vuori Monte Amiata on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monte Amiata on [[sammunut tulivuori]] Toscanan eteläosassa, ja se kohoaa [[Sienan]] ja [[Grosseton]] maakuntien rajalla noin 1 700 metrin korkeuteen. Se on seudun huomattavin huippu ja näkyy kauas Val d'Orcian kukkuloille. Rinteillä kasvaa laajoja pyökkimetsiä, ja talvisin vuorella on pieni laskettelukeskus. Katolta se näkyy hyvin, mut yli lentäminen ottaa kyllä voimille.
+KYSYMYS: Kerro lisää: Grosseton
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Miksi Val d'Orcian maisema suojeltiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Val d'Orcia merkittiin maailmanperintökohteeksi vuonna 2004, koska sen maisema on poikkeuksellinen esimerkki siitä, miten alue muokattiin [[renessanssin]] aikana vastaamaan hyvän hallinnon ja kauneuden ihanteita. Loivien viljelykukkuloiden ja pienten kaupunkien kokonaisuus on säilynyt hyvin, ja maisemaa kuvaavat usein [[kypressirivit]]. [[Sienan]] kaupunkivaltio vaikutti alueen kehitykseen keskiajalla, ja maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. Ylhäältä tuo näyttää postikortilta, ja valokuvaajat ovat huomanneet saman.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Miksi Val d'Orcian maisema suojeltiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Val d'Orcia merkittiin maailmanperintökohteeksi vuonna 2004, koska sen maisema on poikkeuksellinen esimerkki siitä, miten alue muokattiin [[renessanssin]] aikana vastaamaan hyvän hallinnon ja kauneuden ihanteita. Loivien viljelykukkuloiden ja pienten kaupunkien kokonaisuus on säilynyt hyvin, ja maisemaa kuvaavat usein [[kypressirivit]]. [[Sienan]] kaupunkivaltio vaikutti alueen kehitykseen keskiajalla, ja maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. Ylhäältä tuo näyttää postikortilta, ja valokuvaajat ovat huomanneet saman.
+KYSYMYS: Kerro lisää: kypressirivit
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Miksi Alban valkoinen tryffeli on niin arvokas?
+AIEMPI VASTAUS (Livia):
+Mmm— tryffeli. Alban valkoinen tryffeli on arvokas ensinnäkin siksi, että sitä ei voida viljellä luotettavasti: se kasvaa maan alla yhteiselossa tiettyjen puiden, kuten tammien ja poppelien, juurten kanssa, ja sitä etsitään syksyllä koulutettujen koirien avulla. Toiseksi sen tuoksu on hyvin voimakas mutta haihtuu nopeasti, joten sitä syödään tuoreena ohuina lastuina esimerkiksi pastan tai munien päällä. Alba on lajin tunnettu kotipaikka, ja kaupungissa järjestetään syksyisin kansainväliset [[tryffelimessut]]. Samaa lajia, [[Tuber magnatum]], kasvaa myös [[Istriassa]] Kroatiassa, ja [[Motovunin]] metsästä löydettiin vuonna 1999 lähes 1,3 kilon painoinen valkotryffeli.
+
+Minä en ole koskaan maistanut tryffeliä, mutta koirien työ kiehtoo minua: ne haistavat maan alta sen, minkä minä näen vain ylhäältä. Nöyryyttävää, kyl.
+KYSYMYS: Kerro lisää: tryffelimessut
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Miksi Alban valkoinen tryffeli on niin arvokas?
+AIEMPI VASTAUS (Livia):
+Mmm— tryffeli. Alban valkoinen tryffeli on arvokas ensinnäkin siksi, että sitä ei voida viljellä luotettavasti: se kasvaa maan alla yhteiselossa tiettyjen puiden, kuten tammien ja poppelien, juurten kanssa, ja sitä etsitään syksyllä koulutettujen koirien avulla. Toiseksi sen tuoksu on hyvin voimakas mutta haihtuu nopeasti, joten sitä syödään tuoreena ohuina lastuina esimerkiksi pastan tai munien päällä. Alba on lajin tunnettu kotipaikka, ja kaupungissa järjestetään syksyisin kansainväliset [[tryffelimessut]]. Samaa lajia, [[Tuber magnatum]], kasvaa myös [[Istriassa]] Kroatiassa, ja [[Motovunin]] metsästä löydettiin vuonna 1999 lähes 1,3 kilon painoinen valkotryffeli.
+
+Minä en ole koskaan maistanut tryffeliä, mutta koirien työ kiehtoo minua: ne haistavat maan alta sen, minkä minä näen vain ylhäältä. Nöyryyttävää, kyl.
+KYSYMYS: Kerro lisää: Tuber magnatum
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Miksi Alban valkoinen tryffeli on niin arvokas?
+AIEMPI VASTAUS (Livia):
+Mmm— tryffeli. Alban valkoinen tryffeli on arvokas ensinnäkin siksi, että sitä ei voida viljellä luotettavasti: se kasvaa maan alla yhteiselossa tiettyjen puiden, kuten tammien ja poppelien, juurten kanssa, ja sitä etsitään syksyllä koulutettujen koirien avulla. Toiseksi sen tuoksu on hyvin voimakas mutta haihtuu nopeasti, joten sitä syödään tuoreena ohuina lastuina esimerkiksi pastan tai munien päällä. Alba on lajin tunnettu kotipaikka, ja kaupungissa järjestetään syksyisin kansainväliset [[tryffelimessut]]. Samaa lajia, [[Tuber magnatum]], kasvaa myös [[Istriassa]] Kroatiassa, ja [[Motovunin]] metsästä löydettiin vuonna 1999 lähes 1,3 kilon painoinen valkotryffeli.
+
+Minä en ole koskaan maistanut tryffeliä, mutta koirien työ kiehtoo minua: ne haistavat maan alta sen, minkä minä näen vain ylhäältä. Nöyryyttävää, kyl.
+KYSYMYS: Kerro lisää: Istriassa
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Miksi Alban valkoinen tryffeli on niin arvokas?
+AIEMPI VASTAUS (Livia):
+Mmm— tryffeli. Alban valkoinen tryffeli on arvokas ensinnäkin siksi, että sitä ei voida viljellä luotettavasti: se kasvaa maan alla yhteiselossa tiettyjen puiden, kuten tammien ja poppelien, juurten kanssa, ja sitä etsitään syksyllä koulutettujen koirien avulla. Toiseksi sen tuoksu on hyvin voimakas mutta haihtuu nopeasti, joten sitä syödään tuoreena ohuina lastuina esimerkiksi pastan tai munien päällä. Alba on lajin tunnettu kotipaikka, ja kaupungissa järjestetään syksyisin kansainväliset [[tryffelimessut]]. Samaa lajia, [[Tuber magnatum]], kasvaa myös [[Istriassa]] Kroatiassa, ja [[Motovunin]] metsästä löydettiin vuonna 1999 lähes 1,3 kilon painoinen valkotryffeli.
+
+Minä en ole koskaan maistanut tryffeliä, mutta koirien työ kiehtoo minua: ne haistavat maan alta sen, minkä minä näen vain ylhäältä. Nöyryyttävää, kyl.
+KYSYMYS: Kerro lisää: Motovunin
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä Barolo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Barolo on Piemontin [[Langhen]] kukkuloilta kotoisin oleva punaviini, joka valmistetaan [[Nebbiolo-rypäleestä]] ja jolla on [[DOCG]]-asema eli Italian ylin viinien alkuperänimitysluokka. Nimi tulee myös Barolon kylästä Alban lähellä, ja viiniä kutsutaan usein viinien kuninkaaksi. Sillä on tiukat tuotantosäännöt, ja sen täytyy vanheta useita vuosia ennen myyntiä. Samasta rypäleestä valmistetaan myös [[Barbarescoa]], toista alueen DOCG-viiniä. Ei se kyyhkylle kuulu, mut kyl minä sen nimen tunnen.
+KYSYMYS: Kerro lisää: Langhen
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä Barolo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Barolo on Piemontin [[Langhen]] kukkuloilta kotoisin oleva punaviini, joka valmistetaan [[Nebbiolo-rypäleestä]] ja jolla on [[DOCG]]-asema eli Italian ylin viinien alkuperänimitysluokka. Nimi tulee myös Barolon kylästä Alban lähellä, ja viiniä kutsutaan usein viinien kuninkaaksi. Sillä on tiukat tuotantosäännöt, ja sen täytyy vanheta useita vuosia ennen myyntiä. Samasta rypäleestä valmistetaan myös [[Barbarescoa]], toista alueen DOCG-viiniä. Ei se kyyhkylle kuulu, mut kyl minä sen nimen tunnen.
+KYSYMYS: Kerro lisää: Nebbiolo-rypäleestä
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä Barolo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Barolo on Piemontin [[Langhen]] kukkuloilta kotoisin oleva punaviini, joka valmistetaan [[Nebbiolo-rypäleestä]] ja jolla on [[DOCG]]-asema eli Italian ylin viinien alkuperänimitysluokka. Nimi tulee myös Barolon kylästä Alban lähellä, ja viiniä kutsutaan usein viinien kuninkaaksi. Sillä on tiukat tuotantosäännöt, ja sen täytyy vanheta useita vuosia ennen myyntiä. Samasta rypäleestä valmistetaan myös [[Barbarescoa]], toista alueen DOCG-viiniä. Ei se kyyhkylle kuulu, mut kyl minä sen nimen tunnen.
+KYSYMYS: Kerro lisää: DOCG
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä Barolo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Barolo on Piemontin [[Langhen]] kukkuloilta kotoisin oleva punaviini, joka valmistetaan [[Nebbiolo-rypäleestä]] ja jolla on [[DOCG]]-asema eli Italian ylin viinien alkuperänimitysluokka. Nimi tulee myös Barolon kylästä Alban lähellä, ja viiniä kutsutaan usein viinien kuninkaaksi. Sillä on tiukat tuotantosäännöt, ja sen täytyy vanheta useita vuosia ennen myyntiä. Samasta rypäleestä valmistetaan myös [[Barbarescoa]], toista alueen DOCG-viiniä. Ei se kyyhkylle kuulu, mut kyl minä sen nimen tunnen.
+KYSYMYS: Kerro lisää: Barbarescoa
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Kuka keisari Pertinax oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Publius Helvius Pertinax syntyi [[Alba Pompeiassa]], nykyisessä Albassa, ja hänestä tuli Rooman keisari vuonna 193. Hän nousi vaatimattomasta taustasta sotilasuran ja valtion virkojen kautta senaattoriksi ja konsuliksi, ja keisariksi hänet julistettiin sen jälkeen, kun edeltäjä [[Commodus]] oli surmattu. Hänen hallituskautensa jäi lyhyeksi, noin kolmeen kuukauteen, sillä [[pretoriaanikaartin]] sotilaat surmasivat hänet. Hänen kuolemansa jälkeen valta joutui kiistan kohteeksi, ja vuotta 193 kutsutaan [[viiden keisarin vuodeksi]]. Onneksi siitä on jo yli tuhat kahdeksansataa vuotta.
+KYSYMYS: Kerro lisää: Alba Pompeiassa
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Kuka keisari Pertinax oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Publius Helvius Pertinax syntyi [[Alba Pompeiassa]], nykyisessä Albassa, ja hänestä tuli Rooman keisari vuonna 193. Hän nousi vaatimattomasta taustasta sotilasuran ja valtion virkojen kautta senaattoriksi ja konsuliksi, ja keisariksi hänet julistettiin sen jälkeen, kun edeltäjä [[Commodus]] oli surmattu. Hänen hallituskautensa jäi lyhyeksi, noin kolmeen kuukauteen, sillä [[pretoriaanikaartin]] sotilaat surmasivat hänet. Hänen kuolemansa jälkeen valta joutui kiistan kohteeksi, ja vuotta 193 kutsutaan [[viiden keisarin vuodeksi]]. Onneksi siitä on jo yli tuhat kahdeksansataa vuotta.
+KYSYMYS: Kerro lisää: Commodus
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ouro Preto — kaupunkilehti / Ouro Preto] Ouro Preto kyyristyy Minas Geraisin vuorten rinteille, missä 1690-luvun kultaryntäys teki köyhästä louhosleiristä hetkessä Amerikan rikkaimman kaupungin. Isoisän matkavuonna 1873 se oli yhä provinssin pääkaupunki.
+AIEMPI KYSYMYS: Kuka keisari Pertinax oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Publius Helvius Pertinax syntyi [[Alba Pompeiassa]], nykyisessä Albassa, ja hänestä tuli Rooman keisari vuonna 193. Hän nousi vaatimattomasta taustasta sotilasuran ja valtion virkojen kautta senaattoriksi ja konsuliksi, ja keisariksi hänet julistettiin sen jälkeen, kun edeltäjä [[Commodus]] oli surmattu. Hänen hallituskautensa jäi lyhyeksi, noin kolmeen kuukauteen, sillä [[pretoriaanikaartin]] sotilaat surmasivat hänet. Hänen kuolemansa jälkeen valta joutui kiistan kohteeksi, ja vuotta 193 kutsutaan [[viiden keisarin vuodeksi]]. Onneksi siitä on jo yli tuhat kahdeksansataa vuotta.
+KYSYMYS: Kerro lisää: pretoriaanikaartin
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Sadut: Lupa huvipuistolle annettiin viideksi vuodeksi kerrallaan] Luvan huvipuistolle antoi kuningas Christian VIII viideksi vuodeksi kerrallaan. Perustaja Georg Carstensen sai luvan perustelemalla asian suoraan: kun kansa huvittelee, se ei ajattele politiikkaa. Puisto rakennettiin kaupungin linnoitusvallin ulkopuolelle noin kuudenkymmenenyhden tuhannen neliömetrin alalle, ja 1850-luvulle asti sinne mentiin Vesterportin eli länsiportin kautta. Puiston järvi ei ole koriste vaan jäänne vanhasta vallihaudasta, ja ilotulitukset heijastuivat siitä. Pimeän tultua puutarha valaistiin värillisillä lampuilla, ja musiikista vastasi kolmenkymmenen vuoden ajan Hans Christian Lumbye, jota sanottiin Pohjolan Straussiksi.
+- [Venetsia — kaupunkilehti / Musiikki: Neljä vuodenaikaa unohdettiin sadaksi vuodeksi] 1725 — Vivaldin tunnetuin teos, Neljä vuodenaikaa, julkaistiin 1725 osana kaksitoista viulukonserttoa sisältävää kokoelmaa. Kukin konsertto kuvaa yhtä vuodenaikaa säkeiden ohjaamana — ukkonen, jäätynyt maa, kesän helle — ja teos oli aikanaan suosittu kautta Euroopan. Vivaldin kuoltua köyhänä Wienissä 1741 hänen musiikkinsa unohtui lähes kokonaan yli sadaksi vuodeksi, kunnes 1900-luvulla löydetyt käsikirjoitukset toivat sen takaisin — isoisän matkan aikaan Vivaldi on jo unohdettu säveltäjä.
+AIEMPI KYSYMYS: Kuka keisari Pertinax oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Publius Helvius Pertinax syntyi [[Alba Pompeiassa]], nykyisessä Albassa, ja hänestä tuli Rooman keisari vuonna 193. Hän nousi vaatimattomasta taustasta sotilasuran ja valtion virkojen kautta senaattoriksi ja konsuliksi, ja keisariksi hänet julistettiin sen jälkeen, kun edeltäjä [[Commodus]] oli surmattu. Hänen hallituskautensa jäi lyhyeksi, noin kolmeen kuukauteen, sillä [[pretoriaanikaartin]] sotilaat surmasivat hänet. Hänen kuolemansa jälkeen valta joutui kiistan kohteeksi, ja vuotta 193 kutsutaan [[viiden keisarin vuodeksi]]. Onneksi siitä on jo yli tuhat kahdeksansataa vuotta.
+KYSYMYS: Kerro lisää: viiden keisarin vuodeksi
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä tuotteita Ferrero valmistaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, kyl minä niiden paketit tunnen. Ferrero on Albassa kotipaikkaansa pitävä italialainen konditoriakonserni, jonka Pietro Ferrero perusti 1940-luvun puolivälissä ja jonka tunnetuimpia tuotteita ovat [[Nutella]]-suklaalevite, [[Ferrero Rocher]] -suklaakonvehdit ja [[Kinder]]-tuotteet. Yrityksen menestys liittyy vahvasti Piemontin [[hasselpähkinöihin]], joita seudulla on viljelty pitkään. Nutellan alkuperän kerrotaan olevan sotien jälkeisessä kaakaopulassa, jolloin suklaata jatkettiin hasselpähkinämassalla.
+
+Minä olen tässä asiassa puolueeton, mutta Nutella pullan päällä kuulostaa minusta ihan kohtuulliselta ajatukselta.
+KYSYMYS: Kerro lisää: Nutella
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä tuotteita Ferrero valmistaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, kyl minä niiden paketit tunnen. Ferrero on Albassa kotipaikkaansa pitävä italialainen konditoriakonserni, jonka Pietro Ferrero perusti 1940-luvun puolivälissä ja jonka tunnetuimpia tuotteita ovat [[Nutella]]-suklaalevite, [[Ferrero Rocher]] -suklaakonvehdit ja [[Kinder]]-tuotteet. Yrityksen menestys liittyy vahvasti Piemontin [[hasselpähkinöihin]], joita seudulla on viljelty pitkään. Nutellan alkuperän kerrotaan olevan sotien jälkeisessä kaakaopulassa, jolloin suklaata jatkettiin hasselpähkinämassalla.
+
+Minä olen tässä asiassa puolueeton, mutta Nutella pullan päällä kuulostaa minusta ihan kohtuulliselta ajatukselta.
+KYSYMYS: Kerro lisää: Ferrero Rocher
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Kinde, hu hu ja survimet] Kinde on jousiharppu, jota griot-perinteessä soitetaan viisikielisenä. Hu hu:n kaikupohjina ovat kalebassit, ja kakaki on pitkä peltitorvi. Loput soittimista kertovat, kenen kylässä ollaan: fulanit soittavat yksilehdykkäisiä huiluja, sarat suosivat vihellyspillejä, balafoneja, harppuja ja kodjo-rumpuja, ja kanembut yhdistävät rummut huilumaisiin soittimiin. Baguirmilaiset tunnetaan rumpu- ja sitramusiikistaan sekä tanssista, jossa käydään näytöstaistelu suurin survimin. Yhtä tšadilaista soitinta ei siis ole, vaan niitä on toistakymmentä.
+AIEMPI KYSYMYS: Mitä tuotteita Ferrero valmistaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, kyl minä niiden paketit tunnen. Ferrero on Albassa kotipaikkaansa pitävä italialainen konditoriakonserni, jonka Pietro Ferrero perusti 1940-luvun puolivälissä ja jonka tunnetuimpia tuotteita ovat [[Nutella]]-suklaalevite, [[Ferrero Rocher]] -suklaakonvehdit ja [[Kinder]]-tuotteet. Yrityksen menestys liittyy vahvasti Piemontin [[hasselpähkinöihin]], joita seudulla on viljelty pitkään. Nutellan alkuperän kerrotaan olevan sotien jälkeisessä kaakaopulassa, jolloin suklaata jatkettiin hasselpähkinämassalla.
+
+Minä olen tässä asiassa puolueeton, mutta Nutella pullan päällä kuulostaa minusta ihan kohtuulliselta ajatukselta.
+KYSYMYS: Kerro lisää: Kinder
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mitä tuotteita Ferrero valmistaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, kyl minä niiden paketit tunnen. Ferrero on Albassa kotipaikkaansa pitävä italialainen konditoriakonserni, jonka Pietro Ferrero perusti 1940-luvun puolivälissä ja jonka tunnetuimpia tuotteita ovat [[Nutella]]-suklaalevite, [[Ferrero Rocher]] -suklaakonvehdit ja [[Kinder]]-tuotteet. Yrityksen menestys liittyy vahvasti Piemontin [[hasselpähkinöihin]], joita seudulla on viljelty pitkään. Nutellan alkuperän kerrotaan olevan sotien jälkeisessä kaakaopulassa, jolloin suklaata jatkettiin hasselpähkinämassalla.
+
+Minä olen tässä asiassa puolueeton, mutta Nutella pullan päällä kuulostaa minusta ihan kohtuulliselta ajatukselta.
+KYSYMYS: Kerro lisää: hasselpähkinöihin
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Historia: Ranskalaisten kolme vuotta] Vuonna 1746 ranskalaiset valtasivat Madrasin ja Fort St. Georgen kenraali La Bourdonnais’n johdolla; hän oli tuolloin Mauritiuksen kuvernööri. Britit saivat kaupungin takaisin 1749 Aix-la-Chapellen rauhassa, joka päätti Itävallan perimyssodan. Sen jälkeen kuusimetrisiä muureja vahvistettiin yhä uudelleen: ranskalaiset yrittivät piiritystä 1759, ja 1769 Mysoren Hyder Ali uhkasi kaupunkia ensimmäisessä Anglo-Mysore-sodassa, joka päättyi Madrasin sopimukseen. Linnoituksessa on yhä museo, jonka kokoelmissa on komppanian ajan esineistöä.
+AIEMPI KYSYMYS: Mikä oli Cheraskon sopimus?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Cheraskon sopimus tehtiin keväällä 1631, ja se päätti [[Mantovan perimyssodan]], jota oli käyty vuodesta 1628 Mantovan ja [[Monferraton]] herttuakuntien perimyksestä. Sopimuksessa [[Savoijin]] herttuakunta sai osan Monferratosta, mukaan lukien Alban, joka siirtyi näin lopullisesti Savoijin hallintaan. Alba pysyi sen jälkeen pitkään Savoijin vallan alla. Sopimuksia tulee ja menee, mut kyl se Alba pysyy.
+KYSYMYS: Kerro lisää: Mantovan perimyssodan
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mikä oli Cheraskon sopimus?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Cheraskon sopimus tehtiin keväällä 1631, ja se päätti [[Mantovan perimyssodan]], jota oli käyty vuodesta 1628 Mantovan ja [[Monferraton]] herttuakuntien perimyksestä. Sopimuksessa [[Savoijin]] herttuakunta sai osan Monferratosta, mukaan lukien Alban, joka siirtyi näin lopullisesti Savoijin hallintaan. Alba pysyi sen jälkeen pitkään Savoijin vallan alla. Sopimuksia tulee ja menee, mut kyl se Alba pysyy.
+KYSYMYS: Kerro lisää: Monferraton
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+AIEMPI KYSYMYS: Mikä oli Cheraskon sopimus?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Cheraskon sopimus tehtiin keväällä 1631, ja se päätti [[Mantovan perimyssodan]], jota oli käyty vuodesta 1628 Mantovan ja [[Monferraton]] herttuakuntien perimyksestä. Sopimuksessa [[Savoijin]] herttuakunta sai osan Monferratosta, mukaan lukien Alban, joka siirtyi näin lopullisesti Savoijin hallintaan. Alba pysyi sen jälkeen pitkään Savoijin vallan alla. Sopimuksia tulee ja menee, mut kyl se Alba pysyy.
+KYSYMYS: Kerro lisää: Savoijin
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Mikä on Prosecco?
+AIEMPI VASTAUS (Livia):
+Katotaas. Prosecco on kuohuva valkoviini, joka valmistetaan pääosin [[Glera-rypäleestä]] Pohjois-Italiassa Venetossa ja [[Friuli-Venezia Giulian]] alueella. Sen kuplat syntyvät yleensä [[Charmat-menetelmällä]], jossa toinen käyminen tapahtuu suurissa teräsammeissa eikä yksittäisissä pulloissa, ja tulos on kevyt, hedelmäinen ja tuoksuva viini. Parhaan Proseccon kotiseutu on Conegliano–Valdobbiadenen kukkula-alue, joka on myös UNESCOn maailmanperintökohde. Kuplia en ole koskaan kokeillut, mut hauskoilta ne katolta näyttävät.
+KYSYMYS: Kerro lisää: Glera-rypäleestä
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Mikä on Prosecco?
+AIEMPI VASTAUS (Livia):
+Katotaas. Prosecco on kuohuva valkoviini, joka valmistetaan pääosin [[Glera-rypäleestä]] Pohjois-Italiassa Venetossa ja [[Friuli-Venezia Giulian]] alueella. Sen kuplat syntyvät yleensä [[Charmat-menetelmällä]], jossa toinen käyminen tapahtuu suurissa teräsammeissa eikä yksittäisissä pulloissa, ja tulos on kevyt, hedelmäinen ja tuoksuva viini. Parhaan Proseccon kotiseutu on Conegliano–Valdobbiadenen kukkula-alue, joka on myös UNESCOn maailmanperintökohde. Kuplia en ole koskaan kokeillut, mut hauskoilta ne katolta näyttävät.
+KYSYMYS: Kerro lisää: Friuli-Venezia Giulian
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Mikä on Prosecco?
+AIEMPI VASTAUS (Livia):
+Katotaas. Prosecco on kuohuva valkoviini, joka valmistetaan pääosin [[Glera-rypäleestä]] Pohjois-Italiassa Venetossa ja [[Friuli-Venezia Giulian]] alueella. Sen kuplat syntyvät yleensä [[Charmat-menetelmällä]], jossa toinen käyminen tapahtuu suurissa teräsammeissa eikä yksittäisissä pulloissa, ja tulos on kevyt, hedelmäinen ja tuoksuva viini. Parhaan Proseccon kotiseutu on Conegliano–Valdobbiadenen kukkula-alue, joka on myös UNESCOn maailmanperintökohde. Kuplia en ole koskaan kokeillut, mut hauskoilta ne katolta näyttävät.
+KYSYMYS: Kerro lisää: Charmat-menetelmällä
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Mitä Glera tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Glera on valkoinen rypälelajike, josta valmistetaan [[Proseccoa]]. Lajiketta kutsuttiin ennen Prosecco-rypäleeksi, mutta vuonna 2009 nimi Prosecco varattiin suojatuksi alkuperänimeksi viinille, ja rypäle sai nimekseen Glera. Nimen tarkasta alkuperästä en ole varma. Rypälettä viljellään [[Venetossa]] ja [[Friuli-Venezia Giulian]] alueella, ja Valdobbiadenen seudun ilmasto sopii sille hyvin. Rypäleet näyttävät ylhäältä kaikki samalta, valitettavasti.
+KYSYMYS: Kerro lisää: Proseccoa
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Mitä Glera tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Glera on valkoinen rypälelajike, josta valmistetaan [[Proseccoa]]. Lajiketta kutsuttiin ennen Prosecco-rypäleeksi, mutta vuonna 2009 nimi Prosecco varattiin suojatuksi alkuperänimeksi viinille, ja rypäle sai nimekseen Glera. Nimen tarkasta alkuperästä en ole varma. Rypälettä viljellään [[Venetossa]] ja [[Friuli-Venezia Giulian]] alueella, ja Valdobbiadenen seudun ilmasto sopii sille hyvin. Rypäleet näyttävät ylhäältä kaikki samalta, valitettavasti.
+KYSYMYS: Kerro lisää: Venetossa
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle] elokuu 1888 — Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave…
+AIEMPI KYSYMYS: Miten Prosecco eroaa samppanjasta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suurin ero on alkuperä ja valmistustapa. Samppanja tuotetaan Ranskan [[Champagnen]] alueella, ja sen perusrypäleet ovat yleensä Chardonnay, Pinot noir ja Pinot Meunier; kuplat syntyvät pullossa tapahtuvassa toisessa käymisessä. Prosecco valmistetaan pääosin [[Glera-rypäleestä]] Pohjois-Italiassa, ja sen toinen käyminen tehdään tavallisesti suurissa teräsammeissa [[Charmat-menetelmällä]], jolloin viinistä tulee tuoreempi, kevyempi ja hedelmäisempi. Tuotantotapa tekee Proseccosta yleensä myös edullisemman.
+
+Kuplat nousevat aina ylöspäin, ja se on ainoa suunta, josta minä ymmärrän jotain.
+KYSYMYS: Kerro lisää: Champagnen
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Santa Croce] 1294–1442 Santa Croce on fransiskaanien kirkko, ja se on maailman suurin: 115 metriä pitkä kolmilaivainen halli, jonka rakentaminen alkoi vuonna 1294 ja joka vihittiin 1442. Fransiskaanit olivat köyhyyslupauksen tehnyt veljeskunta, ja siksi kirkon katto on paljasta puuta eikä holvattu kivi — mutta kaupungin rikkaat suvut maksoivat sen kappelit ja saivat vastineeksi hautapaikkansa. Niin siitä tuli Firenzen hautakirkko. Lattian alla ja seinustoilla lepäävät Michelangelo, Galileo Galilei, Niccolò Machiavelli ja säveltäjä Gioacchino Rossini. Danten valtava muistomerkki on sekin täällä, mutta arkku on tyhjä: runoilija kuoli karkotettuna Ravennassa, eikä kaupunki ole saanut häntä takaisin. Sivuka…
+AIEMPI KYSYMYS: Kuka Venantius Fortunatus oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Venantius Fortunatus oli 500-luvulla elänyt latinankielinen runoilija ja hymnien kirjoittaja, joka syntyi Valdobbiadenen seudulla Trevison lähellä. Hän opiskeli [[Ravennassa]] ja siirtyi sen jälkeen frankkien valtakuntaan, jossa hänestä tuli lopulta Poitiersin piispa. Perinteisesti hänen nimiinsä liitetään muun muassa hymnit [[Vexilla regis]] ja [[Pange lingua]]. Hänet muistetaan pyhimyksenä, ja hänen runojaan pidetään tärkeänä lähteenä varhaiskeskiajan Galliasta. Runoilijoita ja kyyhkyjä yhdistää se, että molemmat kantavat viestejä.
+KYSYMYS: Kerro lisää: Ravennassa
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Kuka Venantius Fortunatus oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Venantius Fortunatus oli 500-luvulla elänyt latinankielinen runoilija ja hymnien kirjoittaja, joka syntyi Valdobbiadenen seudulla Trevison lähellä. Hän opiskeli [[Ravennassa]] ja siirtyi sen jälkeen frankkien valtakuntaan, jossa hänestä tuli lopulta Poitiersin piispa. Perinteisesti hänen nimiinsä liitetään muun muassa hymnit [[Vexilla regis]] ja [[Pange lingua]]. Hänet muistetaan pyhimyksenä, ja hänen runojaan pidetään tärkeänä lähteenä varhaiskeskiajan Galliasta. Runoilijoita ja kyyhkyjä yhdistää se, että molemmat kantavat viestejä.
+KYSYMYS: Kerro lisää: Vexilla regis
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kaupunkilehti / Kauppa ja käsityö: Kieli, jolla kauppa käydään] Kanon kauppa kulki kielellä, joka on jäänyt: hausa on alueen lingua franca, ja sitä puhuu yli seitsemänkymmentä miljoonaa ihmistä. Kaupunki oli vuosisatoja ennen brittihallintoa vahvasti kosmopoliittinen, ja siellä asui vakinaisesti arabeja, tuaregeja ja kanureita — kaupunki kasvoi juuri siitä, että vieras jäi asumaan. Kanon oma tavaramerkki oli indigolla värjätty kangas, ja se kulki Tripoliin, Tšad-järvelle ja Timbuktuun asti. Vuoden 1903 brittiläinen lehtikirjoitus kutsui kaupunkia Nigerian Manchesteriksi juuri tekstiilinvalmistuksen ja indigovärjäyksen takia.
+AIEMPI KYSYMYS: Kuka Venantius Fortunatus oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Venantius Fortunatus oli 500-luvulla elänyt latinankielinen runoilija ja hymnien kirjoittaja, joka syntyi Valdobbiadenen seudulla Trevison lähellä. Hän opiskeli [[Ravennassa]] ja siirtyi sen jälkeen frankkien valtakuntaan, jossa hänestä tuli lopulta Poitiersin piispa. Perinteisesti hänen nimiinsä liitetään muun muassa hymnit [[Vexilla regis]] ja [[Pange lingua]]. Hänet muistetaan pyhimyksenä, ja hänen runojaan pidetään tärkeänä lähteenä varhaiskeskiajan Galliasta. Runoilijoita ja kyyhkyjä yhdistää se, että molemmat kantavat viestejä.
+KYSYMYS: Kerro lisää: Pange lingua
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Missä Dolomiitit sijaitsevat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Dolomiitit ovat vuoristo Koillis-Italiassa, [[Alppien]] eteläosassa, ja ne ulottuvat [[Etelä-Tirolin]], Trentinon ja Veneton alueille. Korkein huippu on [[Marmolada]], jonka korkeus on noin 3 300 metriä. Vuoret tunnetaan vaaleista kalkkikivi- ja dolomiittikallioistaan, jotka hehkuvat auringonlaskussa vaaleanpunaisina, ja ne kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2009. Reitti Dolomiittien yli on yksi harvoista, joita minä en kyllä suosittele.
+KYSYMYS: Kerro lisää: Alppien
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Missä Dolomiitit sijaitsevat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Dolomiitit ovat vuoristo Koillis-Italiassa, [[Alppien]] eteläosassa, ja ne ulottuvat [[Etelä-Tirolin]], Trentinon ja Veneton alueille. Korkein huippu on [[Marmolada]], jonka korkeus on noin 3 300 metriä. Vuoret tunnetaan vaaleista kalkkikivi- ja dolomiittikallioistaan, jotka hehkuvat auringonlaskussa vaaleanpunaisina, ja ne kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2009. Reitti Dolomiittien yli on yksi harvoista, joita minä en kyllä suosittele.
+KYSYMYS: Kerro lisää: Etelä-Tirolin
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Missä Dolomiitit sijaitsevat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Dolomiitit ovat vuoristo Koillis-Italiassa, [[Alppien]] eteläosassa, ja ne ulottuvat [[Etelä-Tirolin]], Trentinon ja Veneton alueille. Korkein huippu on [[Marmolada]], jonka korkeus on noin 3 300 metriä. Vuoret tunnetaan vaaleista kalkkikivi- ja dolomiittikallioistaan, jotka hehkuvat auringonlaskussa vaaleanpunaisina, ja ne kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2009. Reitti Dolomiittien yli on yksi harvoista, joita minä en kyllä suosittele.
+KYSYMYS: Kerro lisää: Marmolada
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Kuka Pyhä Franciscus oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pyhä Franciscus Assisilainen syntyi Assisissa noin vuonna 1181 varakkaan kankaankauppiaan poikana ja luopui nuorena omaisuudestaan eläen köyhyydessä ja saarnaten. Hän perusti [[minoriittien]] eli pikkuveljien veljeskunnan, josta kehittyi fransiskaanien ritarikunta, ja kuoli Assisissa vuonna 1226. Paavi [[Gregorius IX]] julisti hänet pyhimykseksi 16. heinäkuuta 1228, ja Assisin basilikan rakentaminen alkoi samana vuonna. Franciscus tunnetaan luonnonrakkaudestaan ja [[Aurinkolaulusta]], ja häntä pidetään eläinten ja ympäristön suojelijana.
+
+Legendan mukaan hän saarnasi linnuille, joten minulla on häneen henkilökohtainen suhde. Toivottavasti ne pysyivät paikallaan loppuun asti.
+KYSYMYS: Kerro lisää: minoriittien
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Manilan katedraali] nykyinen rakennus 1958 Manilan seurakuntakirkko perustettiin 1571 Meksikon arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII perusti Manilan hiippakunnan 6. helmikuuta 1579. Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin pyhäinjäännökset, joita varten pääkirkon viereen rakennettiin oma sivurakennus. Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen pääalttari veistettiin molave-puusta 1662, ja firenzeläinen munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. Viides muistutti Rooman Il Gesùa, ku…
+AIEMPI KYSYMYS: Kuka Pyhä Franciscus oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pyhä Franciscus Assisilainen syntyi Assisissa noin vuonna 1181 varakkaan kankaankauppiaan poikana ja luopui nuorena omaisuudestaan eläen köyhyydessä ja saarnaten. Hän perusti [[minoriittien]] eli pikkuveljien veljeskunnan, josta kehittyi fransiskaanien ritarikunta, ja kuoli Assisissa vuonna 1226. Paavi [[Gregorius IX]] julisti hänet pyhimykseksi 16. heinäkuuta 1228, ja Assisin basilikan rakentaminen alkoi samana vuonna. Franciscus tunnetaan luonnonrakkaudestaan ja [[Aurinkolaulusta]], ja häntä pidetään eläinten ja ympäristön suojelijana.
+
+Legendan mukaan hän saarnasi linnuille, joten minulla on häneen henkilökohtainen suhde. Toivottavasti ne pysyivät paikallaan loppuun asti.
+KYSYMYS: Kerro lisää: Gregorius IX
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kaupunkilehti / Salalah: Aurinko katoaa kolmeksi kuukaudeksi] Khareef on arabian puhekielinen sana syksylle, mutta Dhofarissa se tarkoittaa kesämonsuunia kesäkuun ja syyskuun alun välillä. Rannan edustalla nousee kylmää vettä syvyydestä, ja pinnan lämpötila pysyy siellä runsaassa kahdessakymmenessä asteessa, kun ulompana ollaan lähempänä kolmeakymmentä. Mereltä puhaltava lämmin ja kostea ilma jäähtyy tämän yllä, ja siitä tiivistyy sumu. Sadetta mitataan silti vähän: lentoasemalla heinäkuussa 20,6 ja elokuussa 18,6 millimetriä. Aurinko sen sijaan katoaa lähes kokonaan — toukokuun 335 paistetunnista jäljelle jää heinäkuussa 44.
+- [Irlanti — maalehti / Historia: Aurinko käy sisällä kerran vuodessa] 3200 eaa — Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain parillekymmenelle.
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+AIEMPI KYSYMYS: Kuka Pyhä Franciscus oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pyhä Franciscus Assisilainen syntyi Assisissa noin vuonna 1181 varakkaan kankaankauppiaan poikana ja luopui nuorena omaisuudestaan eläen köyhyydessä ja saarnaten. Hän perusti [[minoriittien]] eli pikkuveljien veljeskunnan, josta kehittyi fransiskaanien ritarikunta, ja kuoli Assisissa vuonna 1226. Paavi [[Gregorius IX]] julisti hänet pyhimykseksi 16. heinäkuuta 1228, ja Assisin basilikan rakentaminen alkoi samana vuonna. Franciscus tunnetaan luonnonrakkaudestaan ja [[Aurinkolaulusta]], ja häntä pidetään eläinten ja ympäristön suojelijana.
+
+Legendan mukaan hän saarnasi linnuille, joten minulla on häneen henkilökohtainen suhde. Toivottavasti ne pysyivät paikallaan loppuun asti.
+KYSYMYS: Kerro lisää: Aurinkolaulusta
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Ketkä maalasivat basilikan freskot?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä riittää nimiä. Basilikan ylä- ja alakirkon freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat [[Cimabue]], [[Giotto]], [[Simone Martini]] ja [[Pietro Lorenzetti]]. Cimabue työskenteli yläkirkossa, Simone Martini tunnetaan alakirkon pyhän Martinuksen kappelin freskoista, ja Lorenzetti teki alakirkkoon muun muassa Kristuksen kärsimystä kuvaavia kohtauksia. Yläkirkon Franciscuksen elämää esittävä freskosarja on perinteisesti liitetty Giottoon, mutta tutkijat ovat kiistelleet asiasta. Neljä nimeä yhdessä vastauksessa, aika hyvä muistikyyhkyltä.
+KYSYMYS: Kerro lisää: Cimabue
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Ketkä maalasivat basilikan freskot?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä riittää nimiä. Basilikan ylä- ja alakirkon freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat [[Cimabue]], [[Giotto]], [[Simone Martini]] ja [[Pietro Lorenzetti]]. Cimabue työskenteli yläkirkossa, Simone Martini tunnetaan alakirkon pyhän Martinuksen kappelin freskoista, ja Lorenzetti teki alakirkkoon muun muassa Kristuksen kärsimystä kuvaavia kohtauksia. Yläkirkon Franciscuksen elämää esittävä freskosarja on perinteisesti liitetty Giottoon, mutta tutkijat ovat kiistelleet asiasta. Neljä nimeä yhdessä vastauksessa, aika hyvä muistikyyhkyltä.
+KYSYMYS: Kerro lisää: Giotto
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Ketkä maalasivat basilikan freskot?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä riittää nimiä. Basilikan ylä- ja alakirkon freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat [[Cimabue]], [[Giotto]], [[Simone Martini]] ja [[Pietro Lorenzetti]]. Cimabue työskenteli yläkirkossa, Simone Martini tunnetaan alakirkon pyhän Martinuksen kappelin freskoista, ja Lorenzetti teki alakirkkoon muun muassa Kristuksen kärsimystä kuvaavia kohtauksia. Yläkirkon Franciscuksen elämää esittävä freskosarja on perinteisesti liitetty Giottoon, mutta tutkijat ovat kiistelleet asiasta. Neljä nimeä yhdessä vastauksessa, aika hyvä muistikyyhkyltä.
+KYSYMYS: Kerro lisää: Simone Martini
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Ketkä maalasivat basilikan freskot?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä riittää nimiä. Basilikan ylä- ja alakirkon freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat [[Cimabue]], [[Giotto]], [[Simone Martini]] ja [[Pietro Lorenzetti]]. Cimabue työskenteli yläkirkossa, Simone Martini tunnetaan alakirkon pyhän Martinuksen kappelin freskoista, ja Lorenzetti teki alakirkkoon muun muassa Kristuksen kärsimystä kuvaavia kohtauksia. Yläkirkon Franciscuksen elämää esittävä freskosarja on perinteisesti liitetty Giottoon, mutta tutkijat ovat kiistelleet asiasta. Neljä nimeä yhdessä vastauksessa, aika hyvä muistikyyhkyltä.
+KYSYMYS: Kerro lisää: Pietro Lorenzetti
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Mikä on Franciscuksen Aurinkolaulu?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kaunis aihe. [[Cantico delle creature]] eli Aurinkolaulu on Franciscuksen noin vuosina 1224–1225 kirjoittama ylistyslaulu. Sitä pidetään yhtenä varhaisimmista italian kielen kirjallisista teoksista, sillä se on kirjoitettu Umbrian kansankielellä eikä [[latinaksi]]. Laulussa ylistetään Jumalaa luomakunnan kautta: aurinkoa, kuuta, tuulta, vettä ja maata puhutellaan veljinä ja sisarina. Myöhemmin laulua täydennettiin lisäsäkeistöillä. Kaunis teksti, ja ilmaiseksi luettavissa, mikä on kyyhkyn mielestä paras hinta.
+KYSYMYS: Kerro lisää: Cantico delle creature
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+- [Venetsia — kohdekartta / Kohdekartta: Aldon paino] Tässä kaupungissa keksittiin se, mitä isoisäsi kantoi takintaskussaan. Aldo Manuzio muutti Venetsiaan 1490 ja perusti painonsa 1494; ensimmäinen kirja ilmestyi seuraavana keväänä. Siihen aikaan kirja oli huonekalu. Klassikoihin painettiin selitykset tekstin ympärille, niteestä tuli painava, ja kirjastoissa kirjat oli usein ketjutettu pulpettiin kiinni — lukija ei liikkunut, kirja liikkui vielä vähemmän. Manuzio käänsi asetelman ympäri. Hän jätti selitykset pois, pienensi sivun noin postikortin kokoiseksi ja kutsui tulosta latinaksi kannettaviksi pikkukirjoiksi. Vuonna 1501 hän painoi tässä koossa Vergiliuksen. Sitä varten hän tilasi bolognalaiselta Francesco Griffolta kirjasimen, joka jälji…
+AIEMPI KYSYMYS: Mikä on Franciscuksen Aurinkolaulu?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kaunis aihe. [[Cantico delle creature]] eli Aurinkolaulu on Franciscuksen noin vuosina 1224–1225 kirjoittama ylistyslaulu. Sitä pidetään yhtenä varhaisimmista italian kielen kirjallisista teoksista, sillä se on kirjoitettu Umbrian kansankielellä eikä [[latinaksi]]. Laulussa ylistetään Jumalaa luomakunnan kautta: aurinkoa, kuuta, tuulta, vettä ja maata puhutellaan veljinä ja sisarina. Myöhemmin laulua täydennettiin lisäsäkeistöillä. Kaunis teksti, ja ilmaiseksi luettavissa, mikä on kyyhkyn mielestä paras hinta.
+KYSYMYS: Kerro lisää: latinaksi
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Milloin fransiskaaniveljeskunta sai paavin hyväksynnän?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Franciscus sai veljeskunnalleen paavin suullisen hyväksynnän noin vuonna 1209, jolloin paavi [[Innocentius III]] hyväksyi hänen ja ensimmäisten seuraajiensa yksinkertaisen elämänsäännön. Varsinaisen säännön, niin sanotun [[Regula bullata]] -säännön, vahvisti vuonna 1223 paavi [[Honorius III]]. Veljeskunnan nimeksi vakiintui minoriitit eli pikkuveljet. Vuosiluvuissa minä liikun varoen, mut kai tuo noin menee.
+KYSYMYS: Kerro lisää: Innocentius III
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Milloin fransiskaaniveljeskunta sai paavin hyväksynnän?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Franciscus sai veljeskunnalleen paavin suullisen hyväksynnän noin vuonna 1209, jolloin paavi [[Innocentius III]] hyväksyi hänen ja ensimmäisten seuraajiensa yksinkertaisen elämänsäännön. Varsinaisen säännön, niin sanotun [[Regula bullata]] -säännön, vahvisti vuonna 1223 paavi [[Honorius III]]. Veljeskunnan nimeksi vakiintui minoriitit eli pikkuveljet. Vuosiluvuissa minä liikun varoen, mut kai tuo noin menee.
+KYSYMYS: Kerro lisää: Regula bullata
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Milloin fransiskaaniveljeskunta sai paavin hyväksynnän?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Franciscus sai veljeskunnalleen paavin suullisen hyväksynnän noin vuonna 1209, jolloin paavi [[Innocentius III]] hyväksyi hänen ja ensimmäisten seuraajiensa yksinkertaisen elämänsäännön. Varsinaisen säännön, niin sanotun [[Regula bullata]] -säännön, vahvisti vuonna 1223 paavi [[Honorius III]]. Veljeskunnan nimeksi vakiintui minoriitit eli pikkuveljet. Vuosiluvuissa minä liikun varoen, mut kai tuo noin menee.
+KYSYMYS: Kerro lisää: Honorius III
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Miksi Assisi tunnetaan rauhan kaupunkina?
+AIEMPI VASTAUS (Livia):
+Ai tota. Assisi tunnetaan rauhan kaupunkina Franciscuksen perinnön vuoksi: hänen veljeskuntansa tervehdys oli perinteisesti "pax et bonum", rauha ja hyvä, ja hän on yksi rauhan ja sovinnon tunnetuimmista esikuvista kristikunnassa. Vuonna 1986 paavi [[Johannes Paavali II]] kutsui Assisiin eri uskontojen edustajat rukoilemaan rauhan puolesta, ja vastaavia kokoontumisia on järjestetty myöhemminkin. Lisäksi [[Perugiasta]] Assisiin kävellään rauhanmarssi, jonka aloittajana pidetään [[Aldo Capitinia]] ja jota on järjestetty vuodesta 1961. Minulle rauha tarkoittaa lähinnä sitä, että pullatarjotin on koskematon.
+KYSYMYS: Kerro lisää: Johannes Paavali II
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+AIEMPI KYSYMYS: Miksi Assisi tunnetaan rauhan kaupunkina?
+AIEMPI VASTAUS (Livia):
+Ai tota. Assisi tunnetaan rauhan kaupunkina Franciscuksen perinnön vuoksi: hänen veljeskuntansa tervehdys oli perinteisesti "pax et bonum", rauha ja hyvä, ja hän on yksi rauhan ja sovinnon tunnetuimmista esikuvista kristikunnassa. Vuonna 1986 paavi [[Johannes Paavali II]] kutsui Assisiin eri uskontojen edustajat rukoilemaan rauhan puolesta, ja vastaavia kokoontumisia on järjestetty myöhemminkin. Lisäksi [[Perugiasta]] Assisiin kävellään rauhanmarssi, jonka aloittajana pidetään [[Aldo Capitinia]] ja jota on järjestetty vuodesta 1961. Minulle rauha tarkoittaa lähinnä sitä, että pullatarjotin on koskematon.
+KYSYMYS: Kerro lisää: Perugiasta
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Aldon paino] Tässä kaupungissa keksittiin se, mitä isoisäsi kantoi takintaskussaan. Aldo Manuzio muutti Venetsiaan 1490 ja perusti painonsa 1494; ensimmäinen kirja ilmestyi seuraavana keväänä. Siihen aikaan kirja oli huonekalu. Klassikoihin painettiin selitykset tekstin ympärille, niteestä tuli painava, ja kirjastoissa kirjat oli usein ketjutettu pulpettiin kiinni — lukija ei liikkunut, kirja liikkui vielä vähemmän. Manuzio käänsi asetelman ympäri. Hän jätti selitykset pois, pienensi sivun noin postikortin kokoiseksi ja kutsui tulosta latinaksi kannettaviksi pikkukirjoiksi. Vuonna 1501 hän painoi tässä koossa Vergiliuksen. Sitä varten hän tilasi bolognalaiselta Francesco Griffolta kirjasimen, joka jälji…
+AIEMPI KYSYMYS: Miksi Assisi tunnetaan rauhan kaupunkina?
+AIEMPI VASTAUS (Livia):
+Ai tota. Assisi tunnetaan rauhan kaupunkina Franciscuksen perinnön vuoksi: hänen veljeskuntansa tervehdys oli perinteisesti "pax et bonum", rauha ja hyvä, ja hän on yksi rauhan ja sovinnon tunnetuimmista esikuvista kristikunnassa. Vuonna 1986 paavi [[Johannes Paavali II]] kutsui Assisiin eri uskontojen edustajat rukoilemaan rauhan puolesta, ja vastaavia kokoontumisia on järjestetty myöhemminkin. Lisäksi [[Perugiasta]] Assisiin kävellään rauhanmarssi, jonka aloittajana pidetään [[Aldo Capitinia]] ja jota on järjestetty vuodesta 1961. Minulle rauha tarkoittaa lähinnä sitä, että pullatarjotin on koskematon.
+KYSYMYS: Kerro lisää: Aldo Capitinia
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+AIEMPI KYSYMYS: Kuka Federico da Montefeltro oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Federico da Montefeltro hallitsi Urbinoa vuodesta 1444 vuoteen 1482, ja hänet muistetaan sekä sotapäällikkönä että renessanssin suurena suojelijana. Hän toimi palkkasoturijohtajana eli condottierena eri ruhtinaiden palveluksessa ja käytti ansaitsemansa varat taiteeseen ja oppineisuuteen. Hänen aikanaan Urbinoon rakennettiin [[Palazzo Ducale]], jonka suunnittelusta vastasi osin [[Luciano Laurana]], ja hänen kirjastoaan pidettiin aikansa arvostettuna. [[Piero della Francesca]] maalasi hänestä tunnetun profiilimuotokuvan. Sotapäällikkö ja kirjaston omistaja samassa miehessä, sellaista harvoin näkee.
+KYSYMYS: Kerro lisää: Palazzo Ducale
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Historia: Rautainen palatsi jossa Vapauttaja katsoo yhä alas] Plaza Bolívarin länsipuolelle Guzmán Blanco rakennutti vuodesta 1872 uuden kongressirakennuksen entisen luostarin paikalle. Palacio Federal Legislativo eli Capitolio nousi valurautarunkoisena ja valkoiseksi maalattuna arkkitehti Juan Hurtado Manriquen suunnitelmien mukaan, insinööreinä Luciano Urdaneta ja Roberto García. Kullatun soikean kupolin alle jäi Elliptinen sali, jonka kattoon Martín Tovar y Tovar maalasi Carabobon taistelun. Julkisivun päätykolmiossa on Simón Bolívarin ja Guzmán Blancon rintakuvat vierekkäin: presidentti asetti itsensä muistomerkkiin samalle tasolle vapauttajan kanssa.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+AIEMPI KYSYMYS: Kuka Federico da Montefeltro oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Federico da Montefeltro hallitsi Urbinoa vuodesta 1444 vuoteen 1482, ja hänet muistetaan sekä sotapäällikkönä että renessanssin suurena suojelijana. Hän toimi palkkasoturijohtajana eli condottierena eri ruhtinaiden palveluksessa ja käytti ansaitsemansa varat taiteeseen ja oppineisuuteen. Hänen aikanaan Urbinoon rakennettiin [[Palazzo Ducale]], jonka suunnittelusta vastasi osin [[Luciano Laurana]], ja hänen kirjastoaan pidettiin aikansa arvostettuna. [[Piero della Francesca]] maalasi hänestä tunnetun profiilimuotokuvan. Sotapäällikkö ja kirjaston omistaja samassa miehessä, sellaista harvoin näkee.
+KYSYMYS: Kerro lisää: Luciano Laurana
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+AIEMPI KYSYMYS: Kuka Federico da Montefeltro oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Federico da Montefeltro hallitsi Urbinoa vuodesta 1444 vuoteen 1482, ja hänet muistetaan sekä sotapäällikkönä että renessanssin suurena suojelijana. Hän toimi palkkasoturijohtajana eli condottierena eri ruhtinaiden palveluksessa ja käytti ansaitsemansa varat taiteeseen ja oppineisuuteen. Hänen aikanaan Urbinoon rakennettiin [[Palazzo Ducale]], jonka suunnittelusta vastasi osin [[Luciano Laurana]], ja hänen kirjastoaan pidettiin aikansa arvostettuna. [[Piero della Francesca]] maalasi hänestä tunnetun profiilimuotokuvan. Sotapäällikkö ja kirjaston omistaja samassa miehessä, sellaista harvoin näkee.
+KYSYMYS: Kerro lisää: Piero della Francesca
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Miksi Urbino on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Mmm— Urbino on maailmanperintökohde, koska se on poikkeuksellisen hyvin säilynyt esimerkki italialaisesta [[renessanssin]] kaupungista. Kaupungin kulttuurinen kukoistus osui herttua [[Federico da Montefeltron]] aikaan 1400-luvulla, jolloin hovi kokosi oppineita ja taiteilijoita. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään, ja sen tunnetuin rakennus on [[Palazzo Ducale]]. Kaupungissa syntyi myös taidemaalari [[Rafael]]. Mäen päälle kasaantunut kaupunki näyttää ylhäältä melkein pullalta, ja se on kehu.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Marseille — kaupunkilehti / Marseille: Monte Criston linnasaari] Sataman suulla olevalle kalliosaarelle rakennettiin 1500-luvulla linnoitus, josta tuli pian vankila. Alexandre Dumas sijoitti sinne romaaninsa Monte Criston kreivi, ja kirjasta tuli niin kuuluisa, että saarelle tehtiin turisteja varten Faria-isän selli, vaikka romaanin pappi on Dumas’n keksintöä eikä koskaan istunut siellä. Oikeat vangit eivät päässeet minnekään: saarelta ei tiettävästi ole koskaan paennut kukaan.
+AIEMPI KYSYMYS: Miksi Urbino on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Mmm— Urbino on maailmanperintökohde, koska se on poikkeuksellisen hyvin säilynyt esimerkki italialaisesta [[renessanssin]] kaupungista. Kaupungin kulttuurinen kukoistus osui herttua [[Federico da Montefeltron]] aikaan 1400-luvulla, jolloin hovi kokosi oppineita ja taiteilijoita. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään, ja sen tunnetuin rakennus on [[Palazzo Ducale]]. Kaupungissa syntyi myös taidemaalari [[Rafael]]. Mäen päälle kasaantunut kaupunki näyttää ylhäältä melkein pullalta, ja se on kehu.
+KYSYMYS: Kerro lisää: Federico da Montefeltron
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Plaza Sotomayor] 1886 Aukio on rakennettu mereltä vallatulle maalle, ja sen nimi on vaihtunut monta kertaa: ensin Plaza de la Aduana eli tulliaukio, sitten Plaza del Palacio ja Plaza Intendencia, ja lopulta Rafael Sotomayorin mukaan Plaza Sotomayor. Alun perin paikalla oli esplanadi, jonka läpi San Agustínin rotkon likavesi valui hitaasti mereen. Kesäkuun 10. päivänä 1825 myrsky katkaisi fregatti Valdivian ankkuriköydet ja ajoi aluksen tähän rantaan; viranomaiset täyttivät hylyn hiekalla ja käyttivät sitä kaupungin ensimmäisen matkustajalaiturin perustana. Varsinaista laituria alettiin rakentaa 1831, ja sen jäänteet ovat nähtävissä aukion alle tehdyssä museossa. Aukion ympärille kertyi 1800-luvun mittaan ko…
+- [Havanna — kohdekartta / Kohdekartta: Bacardí-talo] 1930 Bacardí-rommiyhtiö halusi pääkonttorin ja järjesti suunnittelukilpailun: se kutsui joukon arkkitehteja ja lupasi voittajalle tuhat pesoa. Tuomaristossa istuivat yhtiön johtaja Henri Schueg Chassin sekä arkkitehdit Leonardo Morales y Pedroso, Enrique Gil, Emilio de Soto ja Pedro Martínez Inclán. Voiton veivät Esteban Rodríguez-Castells ja Rafael Fernández Ruenes. Tontti on 1 320 neliömetriä Monserraten ja San Juan de Diosin kulmassa Las Murallasin kaupunginosassa — sillä kaistalla, jonka purettu kaupunginmuuri jätti jälkeensä. Työ alkoi 6. tammikuuta 1930, ja yhtiö oli asettanut sille 300 päivän määräajan; talo valmistui joulukuussa saman vuoden puolella. Maaperä oli huono, joten perust…
+AIEMPI KYSYMYS: Miksi Urbino on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Mmm— Urbino on maailmanperintökohde, koska se on poikkeuksellisen hyvin säilynyt esimerkki italialaisesta [[renessanssin]] kaupungista. Kaupungin kulttuurinen kukoistus osui herttua [[Federico da Montefeltron]] aikaan 1400-luvulla, jolloin hovi kokosi oppineita ja taiteilijoita. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään, ja sen tunnetuin rakennus on [[Palazzo Ducale]]. Kaupungissa syntyi myös taidemaalari [[Rafael]]. Mäen päälle kasaantunut kaupunki näyttää ylhäältä melkein pullalta, ja se on kehu.
+KYSYMYS: Kerro lisää: Rafael
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+AIEMPI KYSYMYS: Missä päin Italiaa Urbino sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Urbino sijaitsee Italian keskiosassa [[Marchen]] alueella, [[Pesaron]] lounaispuolella ja noin kolmenkymmenen kilometrin päässä [[Adrianmeren]] rannikolta. Kaupunki on rakennettu korkealle kukkulan rinteelle Apenniinien juurelle, ja sen vanha ydin on säilyttänyt paljon keskiaikaista ilmettään. Korkealta mäeltä se näkyy hyvin, mikä sopii kyyhkylle.
+KYSYMYS: Kerro lisää: Marchen
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+AIEMPI KYSYMYS: Missä päin Italiaa Urbino sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Urbino sijaitsee Italian keskiosassa [[Marchen]] alueella, [[Pesaron]] lounaispuolella ja noin kolmenkymmenen kilometrin päässä [[Adrianmeren]] rannikolta. Kaupunki on rakennettu korkealle kukkulan rinteelle Apenniinien juurelle, ja sen vanha ydin on säilyttänyt paljon keskiaikaista ilmettään. Korkealta mäeltä se näkyy hyvin, mikä sopii kyyhkylle.
+KYSYMYS: Kerro lisää: Pesaron
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Missä päin Italiaa Urbino sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Urbino sijaitsee Italian keskiosassa [[Marchen]] alueella, [[Pesaron]] lounaispuolella ja noin kolmenkymmenen kilometrin päässä [[Adrianmeren]] rannikolta. Kaupunki on rakennettu korkealle kukkulan rinteelle Apenniinien juurelle, ja sen vanha ydin on säilyttänyt paljon keskiaikaista ilmettään. Korkealta mäeltä se näkyy hyvin, mikä sopii kyyhkylle.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: San Giorgio Maggiore] 1566 San Giorgio Maggiore on pieni saari aivan Pyhän Markuksen torin edustalla, ja sen valkoinen kirkko on yksi Venetsian tunnetuimmista näkymistä. Munkki Giovanni Morosini perusti saarelle luostarin jo vuonna 982 kuivattuaan ensin suot. Nykyinen kirkko alkoi nousta vuonna 1566 kuuluisan arkkitehti Andrea Palladion piirustusten mukaan. Sen korkea tiilinen kellotorni ja valkoinen marmorijulkisivu näkyvät kauas yli laguunin. Maalari Claude Monet maalasi kirkosta kokonaisen sarjan tauluja. Nykyään saarella toimii kulttuurisäätiö, kirjasto ja ulkoilmateatteri, ja tornissa soi yhdeksän kellon sarja.
+AIEMPI KYSYMYS: Mikä Palazzo Ducale on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Palazzo Ducale on Urbinon herttuan palatsi ja kaupungin tunnetuin rakennus, jonka herttua Federico da Montefeltro rakennutti 1400-luvulla. Rakennuksen uudelleenrakentamisesta vastasi [[Luciano Laurana]], ja työtä jatkoi myöhemmin [[Francesco di Giorgio Martini]]. Julkisivua leimaavat kaksi pyöreää tornia, ja nykyään palatsissa toimii [[Galleria Nazionale delle Marche]], jonka kokoelmiin kuuluvat muun muassa [[Piero della Francescan]] maalaukset. Linnasta museoksi, sellaista kehitystä minä kannatan.
+KYSYMYS: Kerro lisää: Francesco di Giorgio Martini
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+AIEMPI KYSYMYS: Mikä Palazzo Ducale on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Palazzo Ducale on Urbinon herttuan palatsi ja kaupungin tunnetuin rakennus, jonka herttua Federico da Montefeltro rakennutti 1400-luvulla. Rakennuksen uudelleenrakentamisesta vastasi [[Luciano Laurana]], ja työtä jatkoi myöhemmin [[Francesco di Giorgio Martini]]. Julkisivua leimaavat kaksi pyöreää tornia, ja nykyään palatsissa toimii [[Galleria Nazionale delle Marche]], jonka kokoelmiin kuuluvat muun muassa [[Piero della Francescan]] maalaukset. Linnasta museoksi, sellaista kehitystä minä kannatan.
+KYSYMYS: Kerro lisää: Galleria Nazionale delle Marche
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+AIEMPI KYSYMYS: Mikä Palazzo Ducale on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Palazzo Ducale on Urbinon herttuan palatsi ja kaupungin tunnetuin rakennus, jonka herttua Federico da Montefeltro rakennutti 1400-luvulla. Rakennuksen uudelleenrakentamisesta vastasi [[Luciano Laurana]], ja työtä jatkoi myöhemmin [[Francesco di Giorgio Martini]]. Julkisivua leimaavat kaksi pyöreää tornia, ja nykyään palatsissa toimii [[Galleria Nazionale delle Marche]], jonka kokoelmiin kuuluvat muun muassa [[Piero della Francescan]] maalaukset. Linnasta museoksi, sellaista kehitystä minä kannatan.
+KYSYMYS: Kerro lisää: Piero della Francescan
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Vanha kaupungintalo] 1898–1901 Porto Alegren kaupunginjohto toimi 1800-luvun lopulla vuokratiloissa siellä täällä vanhassa keskustassa. Kun José Montaury valittiin 1897 intendantiksi, hän lupasi rakentaa kaupungille oman talon. Rahat kerättiin myymällä kaupungin kiinteistöjä ja täyttämällä maata Doca do Carvãossa. Ensimmäinen suunnitelma oli insinööri Oscar Bittencourtin, mutta se kaadettiin poliittisista syistä, ja uusi tilattiin venetsialaiselta insinööriltä Giovanni Colfoscolta. Peruskivi laskettiin 5. huhtikuuta 1898, työ alkoi saman vuoden 28. syyskuuta ja talo valmistui huhtikuussa 1901. Toukokuun 15. päivästä alkaen siihen muuttivat kaupunginvaltuusto, sihteeristö, kirjanpito, rahasto ja verotus sekä jul…
+- [Nikosia — kohdekartta / Kohdekartta: Selimiyen moskeija] 1570 Perustuskivi laskettiin 1209, ja vihkiminen ehti vasta vuoteen 1326. Väliin osui kaksi maanjäristystä, 1267 ja 1303, ja keskilaiva ja länsijulkisivu valmistuivat vasta arkkipiispa Giovanni del Conten aikana 1319–1326. Sisämitat ovat 66 × 21 metriä, ja rakennus on Kyproksen vanhin ja suurin säilynyt goottilainen kirkko. Pohjakaava on lainattu Pariisista: kuoria kiertää käytävä eikä apsidiin tehty kappeleita, kuten Notre-Damessa. Ranskalaisen Lusignan-suvun kuninkaat kruunattiin täällä. Syyskuussa 1570 rakennus sai toisen elämän. Ensimmäinen perjantairukous pidettiin 15. syyskuuta, ja samana vuonna länsipäätyyn nousi kaksi minareettia. Sisällä muutos oli käytännöllinen: patsaat ja kirkon…
+AIEMPI KYSYMYS: Miksi Rafael liittyy Urbinoon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Rafael eli Raffaello Sanzio syntyi Urbinossa vuonna 1483, ja hänen isänsä [[Giovanni Santi]] oli kaupungin herttuan hovimaalari. Myöhemmin Rafael työskenteli Firenzessä ja Roomassa, missä hän maalasi muun muassa [[Ateenan koulun]] Vatikaanin huoneisiin. Hän kuoli Roomassa vuonna 1520 vain 37-vuotiaana. Urbinossa on yhä hänen syntymäkotinsa, joka toimii museona. Taide kulki siinä perheessä, kuten postinkanto minun suvussani.
+KYSYMYS: Kerro lisää: Giovanni Santi
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historian hetki: Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä] 10.4.1896 — Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hop…
+- [Ateena — kohdekartta / Kohdekartta: Louis 1896] Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hopeamaljan. Kr…
+AIEMPI KYSYMYS: Miksi Rafael liittyy Urbinoon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Rafael eli Raffaello Sanzio syntyi Urbinossa vuonna 1483, ja hänen isänsä [[Giovanni Santi]] oli kaupungin herttuan hovimaalari. Myöhemmin Rafael työskenteli Firenzessä ja Roomassa, missä hän maalasi muun muassa [[Ateenan koulun]] Vatikaanin huoneisiin. Hän kuoli Roomassa vuonna 1520 vain 37-vuotiaana. Urbinossa on yhä hänen syntymäkotinsa, joka toimii museona. Taide kulki siinä perheessä, kuten postinkanto minun suvussani.
+KYSYMYS: Kerro lisää: Ateenan koulun
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Cremonan viuluja ei ole ylitetty] Pienessä Cremonan kaupungissa rakennettiin 1600- ja 1700-luvuilla maailman parhaat viulut, eikä kukaan ole sen jälkeen tehnyt parempia. Antonio Stradivari valmisti työpajassaan yli tuhat soitinta, joista noin 650 on säilynyt — ja niillä soitetaan yhä, sillä parhaat maksavat enemmän kuin kerrostalo. Salaisuutta on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Cremonassa on edelleen yli sata viulunrakentajan verstasta, ja käsityö jatkuu.
+AIEMPI KYSYMYS: Kuka Antonio Stradivari oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, tän minä tiedän. Antonio Stradivari oli cremonalainen viulunrakentaja, joka työskenteli 1600- ja 1700-luvuilla ja jonka soittimia pidetään yhtenä maailman arvostetuimmista. Hänen verstaassaan valmistui yli tuhat soitinta, joista noin 650 on säilynyt, ja niillä soitetaan yhä. Hän kuului [[Cremonan]] viulunrakentajien joukkoon, johon kuuluivat myös [[Amatin]] suvun jäsenet ja [[Guarneri]]; salaisuutta soittimien äänen takana on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Aika hyvin muistin, kun ottaa huomioon kyyhkyn pään koon.
+KYSYMYS: Kerro lisää: Cremonan
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Kuka Antonio Stradivari oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, tän minä tiedän. Antonio Stradivari oli cremonalainen viulunrakentaja, joka työskenteli 1600- ja 1700-luvuilla ja jonka soittimia pidetään yhtenä maailman arvostetuimmista. Hänen verstaassaan valmistui yli tuhat soitinta, joista noin 650 on säilynyt, ja niillä soitetaan yhä. Hän kuului [[Cremonan]] viulunrakentajien joukkoon, johon kuuluivat myös [[Amatin]] suvun jäsenet ja [[Guarneri]]; salaisuutta soittimien äänen takana on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Aika hyvin muistin, kun ottaa huomioon kyyhkyn pään koon.
+KYSYMYS: Kerro lisää: Amatin
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Kuka Antonio Stradivari oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, tän minä tiedän. Antonio Stradivari oli cremonalainen viulunrakentaja, joka työskenteli 1600- ja 1700-luvuilla ja jonka soittimia pidetään yhtenä maailman arvostetuimmista. Hänen verstaassaan valmistui yli tuhat soitinta, joista noin 650 on säilynyt, ja niillä soitetaan yhä. Hän kuului [[Cremonan]] viulunrakentajien joukkoon, johon kuuluivat myös [[Amatin]] suvun jäsenet ja [[Guarneri]]; salaisuutta soittimien äänen takana on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Aika hyvin muistin, kun ottaa huomioon kyyhkyn pään koon.
+KYSYMYS: Kerro lisää: Guarneri
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Miksi viulut tehtiin juuri Cremonassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän ei oo ihan yhtä selvää vastausta. Cremona alkoi 1500-luvulta lähtien tulla tunnetuksi soitinvalmistuksen keskuksena, ja [[Amatin]] viulujen perään tulivat [[Rugerin]], [[Guarnerin]] ja [[Stradivarin]] verstaat, joten taito siirtyi mestareilta seuraaville sukupolville. Tarkkaa syytä sille, miksi juuri tämä kaupunki, ei tiedetä varmasti, enkä ole varma, mikä tekijä painaa eniten; viulunrakentajien jatkuva ketju on kuitenkin varmasti auttanut. Jos joku tietää tarkemmin, minä kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Rugerin
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Miksi viulut tehtiin juuri Cremonassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän ei oo ihan yhtä selvää vastausta. Cremona alkoi 1500-luvulta lähtien tulla tunnetuksi soitinvalmistuksen keskuksena, ja [[Amatin]] viulujen perään tulivat [[Rugerin]], [[Guarnerin]] ja [[Stradivarin]] verstaat, joten taito siirtyi mestareilta seuraaville sukupolville. Tarkkaa syytä sille, miksi juuri tämä kaupunki, ei tiedetä varmasti, enkä ole varma, mikä tekijä painaa eniten; viulunrakentajien jatkuva ketju on kuitenkin varmasti auttanut. Jos joku tietää tarkemmin, minä kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Guarnerin
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Cremonan viuluja ei ole ylitetty] Pienessä Cremonan kaupungissa rakennettiin 1600- ja 1700-luvuilla maailman parhaat viulut, eikä kukaan ole sen jälkeen tehnyt parempia. Antonio Stradivari valmisti työpajassaan yli tuhat soitinta, joista noin 650 on säilynyt — ja niillä soitetaan yhä, sillä parhaat maksavat enemmän kuin kerrostalo. Salaisuutta on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Cremonassa on edelleen yli sata viulunrakentajan verstasta, ja käsityö jatkuu.
+AIEMPI KYSYMYS: Miksi viulut tehtiin juuri Cremonassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän ei oo ihan yhtä selvää vastausta. Cremona alkoi 1500-luvulta lähtien tulla tunnetuksi soitinvalmistuksen keskuksena, ja [[Amatin]] viulujen perään tulivat [[Rugerin]], [[Guarnerin]] ja [[Stradivarin]] verstaat, joten taito siirtyi mestareilta seuraaville sukupolville. Tarkkaa syytä sille, miksi juuri tämä kaupunki, ei tiedetä varmasti, enkä ole varma, mikä tekijä painaa eniten; viulunrakentajien jatkuva ketju on kuitenkin varmasti auttanut. Jos joku tietää tarkemmin, minä kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Stradivarin
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Minne Po-joki virtaa ja mistä se saa alkunsa?
+AIEMPI VASTAUS (Livia):
+No niin. Po on tuttu joki jopa kyyhkylle. Po saa alkunsa Alpeilla [[Monviso]]-vuoren juurella Piemontessa, virtaa itään [[Po-tasangon]] halki ja laskee [[Adrianmereen]], jonne se muodostaa laajan suiston. Se on Italian pisin joki, pituudeltaan noin 650 kilometriä, ja sen varrella sijaitsevat muun muassa [[Torino]] ja Cremona. Pitkä joki, ja minä kuljen sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Monviso
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande: Maracaju-vuoret - tasangon raja] Campo Granden länsipuolella kohoaa Serra de Maracaju, hiekkakivestä muodostunut ylänkö, joka jakaa nykyisen Mato Grosso do Sulin kahtia: idässä avautuu Cerrado-savanni, lännessä alkaa Pantanalin kosteikko. Jyrkät, punertavat kalliojyrkänteet nousevat tasaisen tasangon yllä satojen metrien korkeuteen, ja korkeimmat kohdat lähellä Aquidauanaa yltävät noin 750 metriin. Vuorijono tarjosi vuosisatoja seudun alkuperäiskansoille luonnollisen suoja-alueen, jonne muun muassa Terenat vetäytyivät myös Paraguayn sodan miehitysvuosina 1860-luvulla. Isoisän 1873 matkareitti olisi kulkenut tämän ylängön tuntumassa.
+- [Adelaide — kaupunkilehti / Adelaide: Kaurnat, tasangon oma kansa] Kaurnat ovat Adelaiden tasangon perinteinen kansa, ja keskustan kaurnankielinen nimi Tarndanya tarkoittaa punaisen kengurun kalliota. Siirtokunnan perustamisen aikaan 1836 kaurnoja oli enää noin 700, vaikka heitä oli aiemmin ollut useita tuhansia. Ivaritji, todennäköisesti viimeinen täysin kaurnalaista syntyperää ollut ihminen ja kielen viimeinen tunnettu puhuja, kuoli 1929. Kieli ei silti kadonnut: 1970-luvulta alkaen vanhimmat Lewis O’Brien, Gladys Elphick ja Alitya Rigney johtivat kulttuurin elvytystä, ja maaliskuussa 2018 kaurnat tunnustettiin koko Adelaiden alueen perinteisiksi omistajiksi.
+AIEMPI KYSYMYS: Minne Po-joki virtaa ja mistä se saa alkunsa?
+AIEMPI VASTAUS (Livia):
+No niin. Po on tuttu joki jopa kyyhkylle. Po saa alkunsa Alpeilla [[Monviso]]-vuoren juurella Piemontessa, virtaa itään [[Po-tasangon]] halki ja laskee [[Adrianmereen]], jonne se muodostaa laajan suiston. Se on Italian pisin joki, pituudeltaan noin 650 kilometriä, ja sen varrella sijaitsevat muun muassa [[Torino]] ja Cremona. Pitkä joki, ja minä kuljen sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Po-tasangon
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Minne Po-joki virtaa ja mistä se saa alkunsa?
+AIEMPI VASTAUS (Livia):
+No niin. Po on tuttu joki jopa kyyhkylle. Po saa alkunsa Alpeilla [[Monviso]]-vuoren juurella Piemontessa, virtaa itään [[Po-tasangon]] halki ja laskee [[Adrianmereen]], jonne se muodostaa laajan suiston. Se on Italian pisin joki, pituudeltaan noin 650 kilometriä, ja sen varrella sijaitsevat muun muassa [[Torino]] ja Cremona. Pitkä joki, ja minä kuljen sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Adrianmereen
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+AIEMPI KYSYMYS: Minne Po-joki virtaa ja mistä se saa alkunsa?
+AIEMPI VASTAUS (Livia):
+No niin. Po on tuttu joki jopa kyyhkylle. Po saa alkunsa Alpeilla [[Monviso]]-vuoren juurella Piemontessa, virtaa itään [[Po-tasangon]] halki ja laskee [[Adrianmereen]], jonne se muodostaa laajan suiston. Se on Italian pisin joki, pituudeltaan noin 650 kilometriä, ja sen varrella sijaitsevat muun muassa [[Torino]] ja Cremona. Pitkä joki, ja minä kuljen sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Torino
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kazakstan — maalehti / Musiikki: Kaksi kieltä ja tarina, joka kerrotaan ensin] Dombra on kaksikielinen pitkäkaulainen luuttu ja Kazakstanin kansallissoitin. Kaikukoppa veistetään männystä, kuusesta tai aprikoosipuusta, ja nauhat sidottiin ennen jänteestä, nyt siimasta. Lännessä soitetaan tökpe-tekniikalla, jossa molemmat kielet soivat yhtä aikaa nopeina alas-ylös-vetoina; idässä ja keskimaassa käytetään šertpeä, jossa kielet näppäillään erikseen sormenpäillä. Lauluun riittää kahdeksan nauhaa, küy-ohjelmistoon tarvitaan jopa 24. Unesco otti küyn luetteloonsa 2014, ja heinäkuun ensimmäinen sunnuntai on dombrapäivä.
+AIEMPI KYSYMYS: Mistä puusta viulu yleensä tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Viulun kansi tehdään tavallisesti [[kuusesta]], ja pohja, sivut ja kaula yleensä [[vaahterasta]]; otelauta valmistetaan perinteisesti [[eebenpuusta]]. Puun valinnalla on suuri merkitys soittimen äänelle, ja rakentajat valitsevat sen huolella ja kuivattavat sen pitkään. Cremonan mestareiden soittimista on etsitty salaisuutta myös puusta, lakasta ja liimasta, mutta varmaa vastausta ei ole.
+
+Kuusen oksalle istuessa neulaset pistelevät siipiin, mutta jos alla soitetaan viulua, kestän sen.
+KYSYMYS: Kerro lisää: kuusesta
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Mistä puusta viulu yleensä tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Viulun kansi tehdään tavallisesti [[kuusesta]], ja pohja, sivut ja kaula yleensä [[vaahterasta]]; otelauta valmistetaan perinteisesti [[eebenpuusta]]. Puun valinnalla on suuri merkitys soittimen äänelle, ja rakentajat valitsevat sen huolella ja kuivattavat sen pitkään. Cremonan mestareiden soittimista on etsitty salaisuutta myös puusta, lakasta ja liimasta, mutta varmaa vastausta ei ole.
+
+Kuusen oksalle istuessa neulaset pistelevät siipiin, mutta jos alla soitetaan viulua, kestän sen.
+KYSYMYS: Kerro lisää: vaahterasta
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+AIEMPI KYSYMYS: Mistä puusta viulu yleensä tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Viulun kansi tehdään tavallisesti [[kuusesta]], ja pohja, sivut ja kaula yleensä [[vaahterasta]]; otelauta valmistetaan perinteisesti [[eebenpuusta]]. Puun valinnalla on suuri merkitys soittimen äänelle, ja rakentajat valitsevat sen huolella ja kuivattavat sen pitkään. Cremonan mestareiden soittimista on etsitty salaisuutta myös puusta, lakasta ja liimasta, mutta varmaa vastausta ei ole.
+
+Kuusen oksalle istuessa neulaset pistelevät siipiin, mutta jos alla soitetaan viulua, kestän sen.
+KYSYMYS: Kerro lisää: eebenpuusta
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Mikä on Lombardian pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lombardian pääkaupunki on [[Milano]], Italian pohjoisosan suuri talouskeskus. Cremona sijaitsee Lombardian eteläosassa [[Po-joen]] vasemmalla rannalla; Cremona on tunnettu viulunrakennuksesta, Milano muun muassa [[La Scalan]] oopperatalosta. Kyllä tässä alkoi pullanälkä.
+KYSYMYS: Kerro lisää: Milano

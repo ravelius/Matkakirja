@@ -1,0 +1,1079 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+AIEMPI KYSYMYS: Mikä Aquileian patriarkaatti oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aquileian patriarkaatti oli kirkollinen hallintoalue, jonka johtaja käytti patriarkan arvonimeä ja jonka vaikutus ulottui pitkään Koillis-Italiasta myös pohjoisiin naapurialueisiin. Keskiajalla patriarkat hallitsivat tiettävästi myös [[Friulin]] aluetta maallisina ruhtinaina, kunnes [[Venetsia]] valtasi alueen 1400-luvun alkupuolella. Patriarkaatti lakkautettiin 1751, ja sen tilalle perustettiin muun muassa [[Udinen]] ja Gorizian arkkihiippakunnat. Monta arvonimeä, mutta ei yhtään kyyhkylle.
+KYSYMYS: Kerro lisää: Udinen
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä muuta Aquileiassa voi nähdä basilikan lisäksi?
+AIEMPI VASTAUS (Livia):
+Mmm— lisää nähtävää. Aquileiassa on säilynyt laajoja antiikin raunioita: kuvausten mukaan kaivauksissa on tullut esiin muun muassa [[forumin]] osia, satamarakenteita ja asuintaloja, joiden lattioita koristavat mosaiikit. Kaupungissa toimii myös arkeologinen museo, joka esittelee löytöjä. Alue kirjattiin vuonna 1998 [[Unescon]] maailmanperintöluetteloon. Raunioita katsoo parhaiten ylhäältä, väitän.
+KYSYMYS: Kerro lisää: forumin
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+AIEMPI KYSYMYS: Mitä muuta Aquileiassa voi nähdä basilikan lisäksi?
+AIEMPI VASTAUS (Livia):
+Mmm— lisää nähtävää. Aquileiassa on säilynyt laajoja antiikin raunioita: kuvausten mukaan kaivauksissa on tullut esiin muun muassa [[forumin]] osia, satamarakenteita ja asuintaloja, joiden lattioita koristavat mosaiikit. Kaupungissa toimii myös arkeologinen museo, joka esittelee löytöjä. Alue kirjattiin vuonna 1998 [[Unescon]] maailmanperintöluetteloon. Raunioita katsoo parhaiten ylhäältä, väitän.
+KYSYMYS: Kerro lisää: Unescon
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Mistä limoncellon sitruunat tulevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Limoncellossa käytetään Amalfin rannikon [[sfusato amalfitano]] -sitruunoita, jotka kasvavat rinteillä [[terassipuutarhoissa]]. Sitruunat ovat kookkaita ja pitkulaisia, ja limoncelloon käytetään pääasiassa kuorta, joka liuotetaan alkoholiin ja makeutetaan sokerilla ja vedellä. Myös [[Sorrenton]] seudun sitruunat ovat tunnettuja limoncellon raaka-aineena, ja juoman tarkka alkuperä on kiistanalainen.
+
+Sitruuna kasvaa terassilla ja minä istun terassin kaiteella, joten tavallaan olemme kollegoja. Pullaa tarjotaan siellä muuten harvoin, mutta sitruunainen leivonnainen kelpaisi kyllä.
+KYSYMYS: Kerro lisää: sfusato amalfitano
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Poggin terassi] Kun hovi tuli, kaupunki oli väärän kokoinen. Firenzen ympärillä seisoivat yhä keskiaikaiset muurit, sisällä oli kujia ja puutarhoja, ja ulkopuolella alkoi heti toinen kunta. Kaupunki tilasi arkkitehti Giuseppe Poggilta laajennussuunnitelman, ja hän luovutti sen 18. helmikuuta 1865 — kaksi viikkoa sen jälkeen, kun kuningas oli saapunut. Työt alkoivat saman vuoden toukokuussa ja kestivät viisi vuotta. Muurit purettiin joen pohjoispuolelta, ja niiden tilalle vedettiin leveät puurivistöiset bulevardit Pariisin malliin; vanhojen kaupunginporttien kohdille avattiin isot aukiot. Joen eteläpuolelle raivattiin kahdeksan kilometrin panoraamatie, viale dei Colli, ja sen päätteeksi kukkulalle tehtiin v…
+- [Persepolis — kaupunkilehti / Persepolis: Neljän kuninkaan terassi] Persepolis ei ole yhden hallitsijan työ vaan neljän. Vanhimmat jäänteet ajoittuvat vuoteen 515 eKr., ja Dareios I rakennutti terassin ja sen ensimmäiset palatsit. Poika Xerxes viimeisteli pylvässalin, aloitti valtaistuinsalin ja rakensi oman palatsinsa Hadishin. Artakserkses I sai valtaistuinsalin valmiiksi, ja Artakserkses III jätti oman porttinsa kesken. Terassi on 125 000 neliömetriä: osa siitä on louhittu suoraan Rahmat-vuoren kylkeen, osa muurattu tasangolle päin.
+AIEMPI KYSYMYS: Mistä limoncellon sitruunat tulevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Limoncellossa käytetään Amalfin rannikon [[sfusato amalfitano]] -sitruunoita, jotka kasvavat rinteillä [[terassipuutarhoissa]]. Sitruunat ovat kookkaita ja pitkulaisia, ja limoncelloon käytetään pääasiassa kuorta, joka liuotetaan alkoholiin ja makeutetaan sokerilla ja vedellä. Myös [[Sorrenton]] seudun sitruunat ovat tunnettuja limoncellon raaka-aineena, ja juoman tarkka alkuperä on kiistanalainen.
+
+Sitruuna kasvaa terassilla ja minä istun terassin kaiteella, joten tavallaan olemme kollegoja. Pullaa tarjotaan siellä muuten harvoin, mutta sitruunainen leivonnainen kelpaisi kyllä.
+KYSYMYS: Kerro lisää: terassipuutarhoissa
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Mistä limoncellon sitruunat tulevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Limoncellossa käytetään Amalfin rannikon [[sfusato amalfitano]] -sitruunoita, jotka kasvavat rinteillä [[terassipuutarhoissa]]. Sitruunat ovat kookkaita ja pitkulaisia, ja limoncelloon käytetään pääasiassa kuorta, joka liuotetaan alkoholiin ja makeutetaan sokerilla ja vedellä. Myös [[Sorrenton]] seudun sitruunat ovat tunnettuja limoncellon raaka-aineena, ja juoman tarkka alkuperä on kiistanalainen.
+
+Sitruuna kasvaa terassilla ja minä istun terassin kaiteella, joten tavallaan olemme kollegoja. Pullaa tarjotaan siellä muuten harvoin, mutta sitruunainen leivonnainen kelpaisi kyllä.
+KYSYMYS: Kerro lisää: Sorrenton
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Kuka ryösti Amalfin vuonna 1137?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Amalfin ryösti vuonna 1137 [[Pisan]] kaupunkivaltion väki; pisalaiset olivat Amalfin kilpailijoita merikaupassa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, mutta tiettävästi se oli 1100-luvun alkupuolella jo joutunut [[normannien]] vallan alle, ja hyökkäys iski kaupunkiin sen heikentyneessä vaiheessa. Sen jälkeen Amalfin merkitys merikauppiaana väheni. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pisan
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Sisilia — kaupunkilehti / Kuvataide: Kuningas, jonka kruunasi Kristus itse] Roger II:n amiraali Yrjö Antiokialainen, syyrialainen ortodoksikristitty kuninkaan palveluksessa, rakennutti Martoranan kirkon Palermoon 1143. Kirkon mosaiikeissa on kuva, jossa Kristus itse asettaa kruunun Roger II:n päähän — ei paavi eikä piispa, vaan suoraan taivaasta. Kuva oli poliittinen kannanotto: se väitti kuninkaan vallan tulevan suoraan Jumalalta ilman kirkon väliintuloa, samaan aikaan kun paavius riiteli normannien kanssa Sisilian herruudesta. Kirkko tunnetaan yhä kansanomaisesti Martoranan nimellä läheisen, myöhemmin siihen liitetyn nunnaluostarin mukaan.
+AIEMPI KYSYMYS: Kuka ryösti Amalfin vuonna 1137?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Amalfin ryösti vuonna 1137 [[Pisan]] kaupunkivaltion väki; pisalaiset olivat Amalfin kilpailijoita merikaupassa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, mutta tiettävästi se oli 1100-luvun alkupuolella jo joutunut [[normannien]] vallan alle, ja hyökkäys iski kaupunkiin sen heikentyneessä vaiheessa. Sen jälkeen Amalfin merkitys merikauppiaana väheni. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: normannien
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Miksi Amalfin rannikon talot nojaavat jyrkkiin rinteisiin?
+AIEMPI VASTAUS (Livia):
+No niin, kyllä sen rinteen näkee ylhäältä. Amalfin rannikolla vuoret laskeutuvat jyrkästi suoraan mereen, joten tasaista maata on vähän ja asutus on rakennettu rinteisiin portaittain. Rinteisiin on vuosisatojen ajan tehty terasseja, joilla viljellään [[sitruunoita]] ja muita kasveja, ja kylät kuten [[Positano]] ja [[Ravello]] kiipeävät rinnettä ylös. Kapeat portaat ja kujat yhdistävät taloja, ja rannikon halki kulkee mutkainen tie. Täällä kyyhkyllä on etu.
+KYSYMYS: Kerro lisää: sitruunoita
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Miksi Amalfin rannikon talot nojaavat jyrkkiin rinteisiin?
+AIEMPI VASTAUS (Livia):
+No niin, kyllä sen rinteen näkee ylhäältä. Amalfin rannikolla vuoret laskeutuvat jyrkästi suoraan mereen, joten tasaista maata on vähän ja asutus on rakennettu rinteisiin portaittain. Rinteisiin on vuosisatojen ajan tehty terasseja, joilla viljellään [[sitruunoita]] ja muita kasveja, ja kylät kuten [[Positano]] ja [[Ravello]] kiipeävät rinnettä ylös. Kapeat portaat ja kujat yhdistävät taloja, ja rannikon halki kulkee mutkainen tie. Täällä kyyhkyllä on etu.
+KYSYMYS: Kerro lisää: Positano
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Miksi Amalfin rannikon talot nojaavat jyrkkiin rinteisiin?
+AIEMPI VASTAUS (Livia):
+No niin, kyllä sen rinteen näkee ylhäältä. Amalfin rannikolla vuoret laskeutuvat jyrkästi suoraan mereen, joten tasaista maata on vähän ja asutus on rakennettu rinteisiin portaittain. Rinteisiin on vuosisatojen ajan tehty terasseja, joilla viljellään [[sitruunoita]] ja muita kasveja, ja kylät kuten [[Positano]] ja [[Ravello]] kiipeävät rinnettä ylös. Kapeat portaat ja kujat yhdistävät taloja, ja rannikon halki kulkee mutkainen tie. Täällä kyyhkyllä on etu.
+KYSYMYS: Kerro lisää: Ravello
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mistä Amalfi tunnettiin merikauppakaupunkina?
+AIEMPI VASTAUS (Livia):
+Ai se, kauppavalta. Amalfi oli keskiajan alussa yksi Etelä-Italian merkittävistä merikaupungeista. Sen kauppiaat kävivät kauppaa [[Bysantin]] ja arabimaailman satamissa, ja kaupunki oli itsenäinen herttuakunta 900- ja 1000-luvuilla. Amalfin merenkulkusääntöjen, [[Tabula de Amalpha]] -nimisen kokoelman, kerrotaan olleen laajalti käytössä Välimerellä. Perimätiedon mukaan kaupunki liittyy myös [[kompassin]] kehitykseen, mutta tämän tarkkuudesta en ole varma. Kauppiaat kantoivat tavaraa, minä kirjeitä.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Mistä Amalfi tunnettiin merikauppakaupunkina?
+AIEMPI VASTAUS (Livia):
+Ai se, kauppavalta. Amalfi oli keskiajan alussa yksi Etelä-Italian merkittävistä merikaupungeista. Sen kauppiaat kävivät kauppaa [[Bysantin]] ja arabimaailman satamissa, ja kaupunki oli itsenäinen herttuakunta 900- ja 1000-luvuilla. Amalfin merenkulkusääntöjen, [[Tabula de Amalpha]] -nimisen kokoelman, kerrotaan olleen laajalti käytössä Välimerellä. Perimätiedon mukaan kaupunki liittyy myös [[kompassin]] kehitykseen, mutta tämän tarkkuudesta en ole varma. Kauppiaat kantoivat tavaraa, minä kirjeitä.
+KYSYMYS: Kerro lisää: Tabula de Amalpha
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki] Townsville on tropiikissa mutta kuivalla kaistaleella, ja syy on rannikon suunnassa. Sama geologia, joka teki keskustan kalliosta 286-metrisen, nostaa merestä saaren, joka vei kapteeni Cookin kompassin.
+AIEMPI KYSYMYS: Mistä Amalfi tunnettiin merikauppakaupunkina?
+AIEMPI VASTAUS (Livia):
+Ai se, kauppavalta. Amalfi oli keskiajan alussa yksi Etelä-Italian merkittävistä merikaupungeista. Sen kauppiaat kävivät kauppaa [[Bysantin]] ja arabimaailman satamissa, ja kaupunki oli itsenäinen herttuakunta 900- ja 1000-luvuilla. Amalfin merenkulkusääntöjen, [[Tabula de Amalpha]] -nimisen kokoelman, kerrotaan olleen laajalti käytössä Välimerellä. Perimätiedon mukaan kaupunki liittyy myös [[kompassin]] kehitykseen, mutta tämän tarkkuudesta en ole varma. Kauppiaat kantoivat tavaraa, minä kirjeitä.
+KYSYMYS: Kerro lisää: kompassin
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Mikä on Ravello ja miksi siellä käydään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Ravello on kylä Amalfin rannikon yläpuolella, kukkulalla satojen metrien korkeudessa merenpinnasta, ja siellä käydään erityisesti näköalojen ja puutarhojen vuoksi. Tunnetuimpia nähtävyyksiä ovat [[Villa Rufolo]] ja [[Villa Cimbrone]] puutarhoineen. Perimätiedon mukaan säveltäjä [[Richard Wagner]] vieraili Villa Rufolossa vuonna 1880 ja sai paikasta innoitusta, ja nykyään kylässä järjestetään musiikkifestivaali. Korkealla on hyvä olla, sen minä tiedän.
+KYSYMYS: Kerro lisää: Villa Rufolo
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+AIEMPI KYSYMYS: Mikä on Ravello ja miksi siellä käydään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Ravello on kylä Amalfin rannikon yläpuolella, kukkulalla satojen metrien korkeudessa merenpinnasta, ja siellä käydään erityisesti näköalojen ja puutarhojen vuoksi. Tunnetuimpia nähtävyyksiä ovat [[Villa Rufolo]] ja [[Villa Cimbrone]] puutarhoineen. Perimätiedon mukaan säveltäjä [[Richard Wagner]] vieraili Villa Rufolossa vuonna 1880 ja sai paikasta innoitusta, ja nykyään kylässä järjestetään musiikkifestivaali. Korkealla on hyvä olla, sen minä tiedän.
+KYSYMYS: Kerro lisää: Villa Cimbrone
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+AIEMPI KYSYMYS: Mikä on Ravello ja miksi siellä käydään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Ravello on kylä Amalfin rannikon yläpuolella, kukkulalla satojen metrien korkeudessa merenpinnasta, ja siellä käydään erityisesti näköalojen ja puutarhojen vuoksi. Tunnetuimpia nähtävyyksiä ovat [[Villa Rufolo]] ja [[Villa Cimbrone]] puutarhoineen. Perimätiedon mukaan säveltäjä [[Richard Wagner]] vieraili Villa Rufolossa vuonna 1880 ja sai paikasta innoitusta, ja nykyään kylässä järjestetään musiikkifestivaali. Korkealla on hyvä olla, sen minä tiedän.
+KYSYMYS: Kerro lisää: Richard Wagner
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Millä rannikolla Tropea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä näen katolta joka aamu. Tropea sijaitsee Italian eteläosassa, [[Calabrian]] länsirannikolla, [[Tyrrhenanmeren]] rannalla [[Sant'Eufemian lahden]] reunalla. Paikallisesti tätä rantaa kutsutaan usein nimellä [[Costa degli Dei]], eli jumalten rannikko, ja kaupunki istuu korkealla rannan yläpuolella. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Calabrian
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Millä rannikolla Tropea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä näen katolta joka aamu. Tropea sijaitsee Italian eteläosassa, [[Calabrian]] länsirannikolla, [[Tyrrhenanmeren]] rannalla [[Sant'Eufemian lahden]] reunalla. Paikallisesti tätä rantaa kutsutaan usein nimellä [[Costa degli Dei]], eli jumalten rannikko, ja kaupunki istuu korkealla rannan yläpuolella. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Tyrrhenanmeren
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Millä rannikolla Tropea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä näen katolta joka aamu. Tropea sijaitsee Italian eteläosassa, [[Calabrian]] länsirannikolla, [[Tyrrhenanmeren]] rannalla [[Sant'Eufemian lahden]] reunalla. Paikallisesti tätä rantaa kutsutaan usein nimellä [[Costa degli Dei]], eli jumalten rannikko, ja kaupunki istuu korkealla rannan yläpuolella. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Sant'Eufemian lahden
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Millä rannikolla Tropea sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä näen katolta joka aamu. Tropea sijaitsee Italian eteläosassa, [[Calabrian]] länsirannikolla, [[Tyrrhenanmeren]] rannalla [[Sant'Eufemian lahden]] reunalla. Paikallisesti tätä rantaa kutsutaan usein nimellä [[Costa degli Dei]], eli jumalten rannikko, ja kaupunki istuu korkealla rannan yläpuolella. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Costa degli Dei
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Millaisella kalliolla Santa Maria dell'Isola on?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Santa Maria dell'Isola seisoo kallionkielekkeellä, joka työntyy mereen niin, että kirkko ja luostari näyttävät melkein erilliseltä saarelta; siitä tulee myös nimi. Kirkolle kuljetaan kaupungin korkealta rannikolta, joten näkymä avautuu ylhäältä. Paikka liitetään [[benediktiiniläisiin]], ja [[Santa Maria dell'Isola]] on Tropean tunnetuin kuva. Muuten, kallion tarkasta geologisesta laadusta en ole varma.
+
+Ylhäältä katsottuna se on kyllä kaunein pysähdyspaikka koko rannikolla, ja siellä jaksaisi istua vaikka kokonaisen pullapäivän.
+KYSYMYS: Kerro lisää: benediktiiniläisiin
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Millaisella kalliolla Santa Maria dell'Isola on?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Santa Maria dell'Isola seisoo kallionkielekkeellä, joka työntyy mereen niin, että kirkko ja luostari näyttävät melkein erilliseltä saarelta; siitä tulee myös nimi. Kirkolle kuljetaan kaupungin korkealta rannikolta, joten näkymä avautuu ylhäältä. Paikka liitetään [[benediktiiniläisiin]], ja [[Santa Maria dell'Isola]] on Tropean tunnetuin kuva. Muuten, kallion tarkasta geologisesta laadusta en ole varma.
+
+Ylhäältä katsottuna se on kyllä kaunein pysähdyspaikka koko rannikolla, ja siellä jaksaisi istua vaikka kokonaisen pullapäivän.
+KYSYMYS: Kerro lisää: Santa Maria dell'Isola
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Keitä benediktiiniläiset olivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä kyllä muistan. [[Benediktiiniläiset]] ovat katolisen kirkon munkkien ja nunnien ritarikunta, joka perustuu 500-luvulla elänyttä pyhää [[Benedictus Nursialaista]] seuraavaan luostarisääntöön. Sääntö korostaa yhteistä elämää, rukousta ja työtä, ja sen tunnetuin ohje kuuluu latinaksi ora et labora, rukoile ja tee työtä. Luostarit toimivat Euroopassa vuosisatojen ajan oppineisuuden, kirjojen jäljentämisen ja maanviljelyn keskuksina. Tarkkoja vuosilukuja Tropean luostarin vaiheista en ole varma.
+
+Ja minä kun luulin, että ora et labora tarkoittaa jotain pullaan liittyvää.
+KYSYMYS: Kerro lisää: Benediktiiniläiset
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Keitä benediktiiniläiset olivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä kyllä muistan. [[Benediktiiniläiset]] ovat katolisen kirkon munkkien ja nunnien ritarikunta, joka perustuu 500-luvulla elänyttä pyhää [[Benedictus Nursialaista]] seuraavaan luostarisääntöön. Sääntö korostaa yhteistä elämää, rukousta ja työtä, ja sen tunnetuin ohje kuuluu latinaksi ora et labora, rukoile ja tee työtä. Luostarit toimivat Euroopassa vuosisatojen ajan oppineisuuden, kirjojen jäljentämisen ja maanviljelyn keskuksina. Tarkkoja vuosilukuja Tropean luostarin vaiheista en ole varma.
+
+Ja minä kun luulin, että ora et labora tarkoittaa jotain pullaan liittyvää.
+KYSYMYS: Kerro lisää: Benedictus Nursialaista
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Mikä Tyrrhenanmeri on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, olen lentänyt sen yli. [[Tyrrhenanmeri]] on Välimeren osa, joka sijaitsee Italian mantereen länsipuolella. Sitä rajaavat idässä Italian niemimaa, pohjoisessa Toscanan rannikko ja lännessä Korsika, [[Sardinia]] ja [[Sisilia]]. Nimi tulee etruskeista, joita antiikin kreikkalaiset kutsuivat tyrrhenolaisiksi. Meri on syvä, ja sen pohjalla on tulivuoritoimintaa, esimerkiksi Liparisaarten alueella. Tarkkoja syvyyslukuja en ole varma, joten jätän ne pois.
+KYSYMYS: Kerro lisää: Tyrrhenanmeri
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Mikä Tyrrhenanmeri on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, olen lentänyt sen yli. [[Tyrrhenanmeri]] on Välimeren osa, joka sijaitsee Italian mantereen länsipuolella. Sitä rajaavat idässä Italian niemimaa, pohjoisessa Toscanan rannikko ja lännessä Korsika, [[Sardinia]] ja [[Sisilia]]. Nimi tulee etruskeista, joita antiikin kreikkalaiset kutsuivat tyrrhenolaisiksi. Meri on syvä, ja sen pohjalla on tulivuoritoimintaa, esimerkiksi Liparisaarten alueella. Tarkkoja syvyyslukuja en ole varma, joten jätän ne pois.
+KYSYMYS: Kerro lisää: Sardinia
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Sisilia] Saari, jossa nukketeatterin ritarit taistelevat narujen varassa, leivos täytetään vasta tilauksesta, ja torilla huudetaan laulaen.
+AIEMPI KYSYMYS: Mikä Tyrrhenanmeri on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, olen lentänyt sen yli. [[Tyrrhenanmeri]] on Välimeren osa, joka sijaitsee Italian mantereen länsipuolella. Sitä rajaavat idässä Italian niemimaa, pohjoisessa Toscanan rannikko ja lännessä Korsika, [[Sardinia]] ja [[Sisilia]]. Nimi tulee etruskeista, joita antiikin kreikkalaiset kutsuivat tyrrhenolaisiksi. Meri on syvä, ja sen pohjalla on tulivuoritoimintaa, esimerkiksi Liparisaarten alueella. Tarkkoja syvyyslukuja en ole varma, joten jätän ne pois.
+KYSYMYS: Kerro lisää: Sisilia
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+AIEMPI KYSYMYS: Mikä on Tropean punasipuli?
+AIEMPI VASTAUS (Livia):
+Ai se, tuo kuuluisa sipuli. [[Tropean punasipuli]], italiaksi cipolla rossa di Tropea, on Calabrian rannikolla viljelty makea punainen sipuli, joka tunnetaan miedosta ja hieman sokeriselta maistuvasta mausta. Sitä syödään usein raakana salaateissa, ja siitä tehdään myös hilloa ja suolakurkun kaltaisia säilykkeitä. Tuotteella on Euroopan unionin suojattu maantieteellinen merkintä, mutta tarkkaa merkinnän vuotta en ole varma. Kaupungin torilla sipulit riippuvat usein nippuina, ja ne ovat tavallinen matkamuisto.
+
+Nimi on ehkä liioiteltu, mutta sipulista minä en pullaa tee.
+KYSYMYS: Kerro lisää: Tropean punasipuli
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+AIEMPI KYSYMYS: Mistä Geracen tuomiokirkon 13 pylvästä on peräisin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän minä muistan hyvin. Geracen normannityylisen tuomiokirkon laivaa jakavat 13 pylvästä, jotka on tuotu [[Locrin]] muinaisista temppeleistä. Locri sijaitsee rannikolla, noin kymmenen kilometrin päässä sisämaahan, ja sen antiikin kaupungin rakennuksia käytettiin siis uudelleen keskiajan kirkossa. Tämä oli Euroopassa yleinen tapa: vanhoja pylväitä ja kiviä kierrätettiin uusiin rakennuksiin. Kirkko kuuluu [[Calabrian]] suurimpiin uskonnollisiin rakennuksiin.
+
+Meikäläisten muistiinpanojen mukaan kivet olivat painavia, joten onneksi minun ei tarvinnut kantaa niitä.
+KYSYMYS: Kerro lisää: Locrin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+AIEMPI KYSYMYS: Mistä Geracen tuomiokirkon 13 pylvästä on peräisin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän minä muistan hyvin. Geracen normannityylisen tuomiokirkon laivaa jakavat 13 pylvästä, jotka on tuotu [[Locrin]] muinaisista temppeleistä. Locri sijaitsee rannikolla, noin kymmenen kilometrin päässä sisämaahan, ja sen antiikin kaupungin rakennuksia käytettiin siis uudelleen keskiajan kirkossa. Tämä oli Euroopassa yleinen tapa: vanhoja pylväitä ja kiviä kierrätettiin uusiin rakennuksiin. Kirkko kuuluu [[Calabrian]] suurimpiin uskonnollisiin rakennuksiin.
+
+Meikäläisten muistiinpanojen mukaan kivet olivat painavia, joten onneksi minun ei tarvinnut kantaa niitä.
+KYSYMYS: Kerro lisää: Calabrian
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Sisilia — kaupunkilehti / Kuvataide: Kuningas, jonka kruunasi Kristus itse] Roger II:n amiraali Yrjö Antiokialainen, syyrialainen ortodoksikristitty kuninkaan palveluksessa, rakennutti Martoranan kirkon Palermoon 1143. Kirkon mosaiikeissa on kuva, jossa Kristus itse asettaa kruunun Roger II:n päähän — ei paavi eikä piispa, vaan suoraan taivaasta. Kuva oli poliittinen kannanotto: se väitti kuninkaan vallan tulevan suoraan Jumalalta ilman kirkon väliintuloa, samaan aikaan kun paavius riiteli normannien kanssa Sisilian herruudesta. Kirkko tunnetaan yhä kansanomaisesti Martoranan nimellä läheisen, myöhemmin siihen liitetyn nunnaluostarin mukaan.
+AIEMPI KYSYMYS: Minkä valloittajan käsiin kaupunki joutui vuonna 1059?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on helppo. Gerace joutui vuonna 1059 [[normannien]] valtaan. Normannit olivat pohjoisranskalaisia ja skandinaavisia sukuja, jotka asettuivat 1000-luvulla Etelä-Italiaan ja valtasivat alueita sieltä, missä aiemmin olivat vallanneet bysanttilaiset ja arabit. Sen jälkeen kaupungin tuomiokirkko rakennettiin normannityyliin. Perimätiedon mukaan rannikon asukkaat olivat paenneet [[saraseenien]] hyökkäyksiä vuorille vuonna 915, ja [[haukka]] johdatti heidät paikalle.
+KYSYMYS: Kerro lisää: normannien
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+AIEMPI KYSYMYS: Minkä valloittajan käsiin kaupunki joutui vuonna 1059?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on helppo. Gerace joutui vuonna 1059 [[normannien]] valtaan. Normannit olivat pohjoisranskalaisia ja skandinaavisia sukuja, jotka asettuivat 1000-luvulla Etelä-Italiaan ja valtasivat alueita sieltä, missä aiemmin olivat vallanneet bysanttilaiset ja arabit. Sen jälkeen kaupungin tuomiokirkko rakennettiin normannityyliin. Perimätiedon mukaan rannikon asukkaat olivat paenneet [[saraseenien]] hyökkäyksiä vuorille vuonna 915, ja [[haukka]] johdatti heidät paikalle.
+KYSYMYS: Kerro lisää: saraseenien
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [San Ambrosio — kaupunkilehti / Linnut maailman reunalla: Oma haukka kalliojyrkänteillä] San Ambrosiolla elää amerikantuulihaukan (Falco sparverius) oma alalajinsa, jota ei tavata missään muualla maailmassa. Tutkijat ovat kuvanneet sen erilliseksi Desventuradas-saarten omaksi muodoksi, kun taas kauempana etelässä Juan Fernándezin saarilla elää jälleen oma, tästä erillinen pienen haukan alalajinsa. Kummankin saariryhmän pitkä eristyneisyys on siis synnyttänyt oman linnun aivan itsenäisesti. San Ambrosion haukka pesii saaren jyrkillä kallioseinämillä ja saalistaa lähinnä hyönteisiä ja pieniä lintuja, sillä muuta maaselkärankaisravintoa saarelta ei juuri löydy.
+AIEMPI KYSYMYS: Minkä valloittajan käsiin kaupunki joutui vuonna 1059?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on helppo. Gerace joutui vuonna 1059 [[normannien]] valtaan. Normannit olivat pohjoisranskalaisia ja skandinaavisia sukuja, jotka asettuivat 1000-luvulla Etelä-Italiaan ja valtasivat alueita sieltä, missä aiemmin olivat vallanneet bysanttilaiset ja arabit. Sen jälkeen kaupungin tuomiokirkko rakennettiin normannityyliin. Perimätiedon mukaan rannikon asukkaat olivat paenneet [[saraseenien]] hyökkäyksiä vuorille vuonna 915, ja [[haukka]] johdatti heidät paikalle.
+KYSYMYS: Kerro lisää: haukka
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+AIEMPI KYSYMYS: Mikä Locri Epizephyrii oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Locri Epizephyrii]] oli muinainen kreikkalainen siirtokaupunki Calabrian Joonianmeren rannikolla, ja sen muinaiset temppelit ovat Geracen tuomiokirkon pylväiden alkuperä. Kaupunki perustettiin antiikin aikana suuren kreikkalaisen siirtolaisuuden aikana, ja se tuli tunnetuksi lainsäädännöstään, jonka laati [[Zaleukos]]. Tarkkaa perustamisvuotta en ole varma, mutta lähteissä puhutaan 600-luvusta eaa. Nykyään alueella on arkeologinen puisto ja museo.
+KYSYMYS: Kerro lisää: Locri Epizephyrii
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+AIEMPI KYSYMYS: Mikä Locri Epizephyrii oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Locri Epizephyrii]] oli muinainen kreikkalainen siirtokaupunki Calabrian Joonianmeren rannikolla, ja sen muinaiset temppelit ovat Geracen tuomiokirkon pylväiden alkuperä. Kaupunki perustettiin antiikin aikana suuren kreikkalaisen siirtolaisuuden aikana, ja se tuli tunnetuksi lainsäädännöstään, jonka laati [[Zaleukos]]. Tarkkaa perustamisvuotta en ole varma, mutta lähteissä puhutaan 600-luvusta eaa. Nykyään alueella on arkeologinen puisto ja museo.
+KYSYMYS: Kerro lisää: Zaleukos
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+- [Valparaíso — kohdekartta / Kohdekartta: Plaza Sotomayor] 1886 Aukio on rakennettu mereltä vallatulle maalle, ja sen nimi on vaihtunut monta kertaa: ensin Plaza de la Aduana eli tulliaukio, sitten Plaza del Palacio ja Plaza Intendencia, ja lopulta Rafael Sotomayorin mukaan Plaza Sotomayor. Alun perin paikalla oli esplanadi, jonka läpi San Agustínin rotkon likavesi valui hitaasti mereen. Kesäkuun 10. päivänä 1825 myrsky katkaisi fregatti Valdivian ankkuriköydet ja ajoi aluksen tähän rantaan; viranomaiset täyttivät hylyn hiekalla ja käyttivät sitä kaupungin ensimmäisen matkustajalaiturin perustana. Varsinaista laituria alettiin rakentaa 1831, ja sen jäänteet ovat nähtävissä aukion alle tehdyssä museossa. Aukion ympärille kertyi 1800-luvun mittaan ko…
+AIEMPI KYSYMYS: Mikä krypta on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, annas kun muistelen. [[Krypta]] on kirkon alla oleva tila, usein holvattu, jossa säilytettiin alun perin pyhimysten ja tärkeiden henkilöiden hautoja ja pyhäinjäännöksiä. Keskiajalla kryptoja rakennettiin kirkkojen kuorin alle, ja niissä pidettiin myös jumalanpalveluksia. Geracen tuomiokirkossa kryptaan pääsee alas, ja se on yksi kirkon nähtävyyksistä. Kryptojen koko ja koristelu vaihtelevat paljon eri maissa. Tarkkaa vuotta Geracen krypan rakentamiselle en ole varma.
+KYSYMYS: Kerro lisää: Krypta
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Minä vuonna roomalaiset valtasivat Saepinumin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Roomalaiset valtasivat Saepinumin vuonna 293 eaa. Alue kuului tuolloin [[samnilaisille]], ja Rooman laajentuminen Keski-Italiassa oli osa pitkää sotien sarjaa. Myöhemmin paikasta kasvoi roomalainen kaupunki, jonka muurit rakennettiin vuosien 2 eaa. ja 4 jaa. välillä. Saepinum sijaitsee [[Molisessa]], noin viidentoista kilometrin päässä [[Campobassosta]] etelään.
+
+Aika pitkä aika, kun miettii, että kaupunki on yhä pystyssä.
+KYSYMYS: Kerro lisää: samnilaisille
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Minä vuonna roomalaiset valtasivat Saepinumin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Roomalaiset valtasivat Saepinumin vuonna 293 eaa. Alue kuului tuolloin [[samnilaisille]], ja Rooman laajentuminen Keski-Italiassa oli osa pitkää sotien sarjaa. Myöhemmin paikasta kasvoi roomalainen kaupunki, jonka muurit rakennettiin vuosien 2 eaa. ja 4 jaa. välillä. Saepinum sijaitsee [[Molisessa]], noin viidentoista kilometrin päässä [[Campobassosta]] etelään.
+
+Aika pitkä aika, kun miettii, että kaupunki on yhä pystyssä.
+KYSYMYS: Kerro lisää: Molisessa
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande] Vuonna 1873 nykyisen Campo Granden seutu ei ollut kenenkään eurooppalaisen kartalla: laajaa cerrado-savannia asuttivat vuosisatoja Terena- ja Guató-kansat, kaupungin perustamista vailla vielä 26 vuotta.
+AIEMPI KYSYMYS: Minä vuonna roomalaiset valtasivat Saepinumin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Roomalaiset valtasivat Saepinumin vuonna 293 eaa. Alue kuului tuolloin [[samnilaisille]], ja Rooman laajentuminen Keski-Italiassa oli osa pitkää sotien sarjaa. Myöhemmin paikasta kasvoi roomalainen kaupunki, jonka muurit rakennettiin vuosien 2 eaa. ja 4 jaa. välillä. Saepinum sijaitsee [[Molisessa]], noin viidentoista kilometrin päässä [[Campobassosta]] etelään.
+
+Aika pitkä aika, kun miettii, että kaupunki on yhä pystyssä.
+KYSYMYS: Kerro lisää: Campobassosta
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Bysanttilainen kirkko] 400-luvun jälkipuolisko Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se oli käytössä uskonnollisena rakennuksena 600-luvun alkuun asti, jolloin se tuhoutui tulipalossa. Rakennuksessa yhdistyvät nabatealainen kallioon hakattu rakentaminen ja roomalais-hellenistinen mosaiikkiperinne. Keskilaivan lattia on opus sectile -työtä eli kuvioitu leikatuista kivilaatoista, ja kapeammissa sivulaivoissa on värikkäät kuviomosaiikit. Mosaiikkien aiheina ovat vuodenajat, eläimet, ihmiset, saviastiat ja kasvit. Tyyli muistuttaa läheisesti Gazan koulukuntaa ja lainaa myös hellenistisestä ja roomalaisesta kuvastosta. Kuudennella vuosisadalla kirkkoon rakennettiin atrium, joka yhdisti kirkkosalin ja kast…
+AIEMPI KYSYMYS: Millä tekniikalla Saepinumin alakaupungin muurit rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Muurit rakennettiin [[opus reticulatum]] -tekniikalla, jossa pienet pyramidinmuotoiset kivet asetetaan seinän pintaan vinoruudukoksi, eli verkkomaiseksi kuvioksi, ja sisus täytetään laastilla ja kivimurskalla. Muurit rakennettiin vuosien 2 eaa. ja 4 jaa. välillä. Ne ympäröivät noin 12 hehtaaria, ja niissä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten [[Porta Bojano]].
+
+Verkkokuvio on ylhäältä katsottuna aika siisti, vaikka ei se pullataikinaa voita.
+KYSYMYS: Kerro lisää: opus reticulatum
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Millä tekniikalla Saepinumin alakaupungin muurit rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Muurit rakennettiin [[opus reticulatum]] -tekniikalla, jossa pienet pyramidinmuotoiset kivet asetetaan seinän pintaan vinoruudukoksi, eli verkkomaiseksi kuvioksi, ja sisus täytetään laastilla ja kivimurskalla. Muurit rakennettiin vuosien 2 eaa. ja 4 jaa. välillä. Ne ympäröivät noin 12 hehtaaria, ja niissä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten [[Porta Bojano]].
+
+Verkkokuvio on ylhäältä katsottuna aika siisti, vaikka ei se pullataikinaa voita.
+KYSYMYS: Kerro lisää: Porta Bojano
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Millainen alue Molise on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pieni mutta sinnikäs maakunta. [[Molise]] on Etelä-Italian alue Apenniinien vuoristossa, ja se on yksi Italian pienimmistä alueista pinta-alaltaan ja asukasluvultaan. Sen pääkaupunki on [[Campobasso]], ja alueella on rannikkoa Adrianmerellä. Maasto on enimmäkseen kumpuilevaa ja vuoristoista. Tarkkoja lukuja alueen asukasmäärästä en ole varma. Italiassa aluetta on joskus kuvattu unohdetuksi, vaikka sieltä löytyy muun muassa [[Saepinum]] ja [[Termoli]].
+KYSYMYS: Kerro lisää: Molise
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande] Vuonna 1873 nykyisen Campo Granden seutu ei ollut kenenkään eurooppalaisen kartalla: laajaa cerrado-savannia asuttivat vuosisatoja Terena- ja Guató-kansat, kaupungin perustamista vailla vielä 26 vuotta.
+AIEMPI KYSYMYS: Millainen alue Molise on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pieni mutta sinnikäs maakunta. [[Molise]] on Etelä-Italian alue Apenniinien vuoristossa, ja se on yksi Italian pienimmistä alueista pinta-alaltaan ja asukasluvultaan. Sen pääkaupunki on [[Campobasso]], ja alueella on rannikkoa Adrianmerellä. Maasto on enimmäkseen kumpuilevaa ja vuoristoista. Tarkkoja lukuja alueen asukasmäärästä en ole varma. Italiassa aluetta on joskus kuvattu unohdetuksi, vaikka sieltä löytyy muun muassa [[Saepinum]] ja [[Termoli]].
+KYSYMYS: Kerro lisää: Campobasso
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Millainen alue Molise on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pieni mutta sinnikäs maakunta. [[Molise]] on Etelä-Italian alue Apenniinien vuoristossa, ja se on yksi Italian pienimmistä alueista pinta-alaltaan ja asukasluvultaan. Sen pääkaupunki on [[Campobasso]], ja alueella on rannikkoa Adrianmerellä. Maasto on enimmäkseen kumpuilevaa ja vuoristoista. Tarkkoja lukuja alueen asukasmäärästä en ole varma. Italiassa aluetta on joskus kuvattu unohdetuksi, vaikka sieltä löytyy muun muassa [[Saepinum]] ja [[Termoli]].
+KYSYMYS: Kerro lisää: Saepinum
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Millainen alue Molise on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pieni mutta sinnikäs maakunta. [[Molise]] on Etelä-Italian alue Apenniinien vuoristossa, ja se on yksi Italian pienimmistä alueista pinta-alaltaan ja asukasluvultaan. Sen pääkaupunki on [[Campobasso]], ja alueella on rannikkoa Adrianmerellä. Maasto on enimmäkseen kumpuilevaa ja vuoristoista. Tarkkoja lukuja alueen asukasmäärästä en ole varma. Italiassa aluetta on joskus kuvattu unohdetuksi, vaikka sieltä löytyy muun muassa [[Saepinum]] ja [[Termoli]].
+KYSYMYS: Kerro lisää: Termoli
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+AIEMPI KYSYMYS: Mitä foorumi tarkoitti roomalaisessa kaupungissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä riittää kerrottavaa. [[Foorumi]] oli roomalaisen kaupungin keskeinen aukio, jonka ympärillä sijaitsivat tärkeimmät julkiset rakennukset: temppelit, oikeudenkäytön tilat, kauppapaikat ja hallintorakennukset. Se oli sekä kaupankäynnin että politiikan ja uskonnon paikka. Saepinumissa foorumi oli kaupungin keskus, ja kaupunkiin kuului myös [[teatteri]]. Kuuluisin foorumi on [[Forum Romanum]] Roomassa.
+
+Ja torilla minä viihtyisin, siellä on aina murusia.
+KYSYMYS: Kerro lisää: Foorumi
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [New Orleans — kohdekartta / Kohdekartta: Saenger-teatteri] 1927 Teatteri avattiin 4. helmikuuta 1927. Salissa oli neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät tuhannet ihmiset kulkueeseen Canal Streetille. Kallein lippu maksoi 65 senttiä, ja samalla lipulla näki mykkäelokuvan ja näytelmän sekä kuuli talon oman orkesterin. Saenger oli veljesten Julian ja Abe Saengerin teatteriketjun lippulaiva, ja se on niitä harvoja ketjun elokuvapalatseja, jotka ovat yhä pystyssä. Arkkitehti Emile Weil suunnitteli sisätilan atmosfääriteatteriksi, joka jäljittelee italialaista barokkipihaa. Kattoon asennettiin 150 lamppua tähtikuvioiden muotoon, ja erikoistehostekoneet heijastivat sisälle liikkuvia p…
+AIEMPI KYSYMYS: Mitä foorumi tarkoitti roomalaisessa kaupungissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä riittää kerrottavaa. [[Foorumi]] oli roomalaisen kaupungin keskeinen aukio, jonka ympärillä sijaitsivat tärkeimmät julkiset rakennukset: temppelit, oikeudenkäytön tilat, kauppapaikat ja hallintorakennukset. Se oli sekä kaupankäynnin että politiikan ja uskonnon paikka. Saepinumissa foorumi oli kaupungin keskus, ja kaupunkiin kuului myös [[teatteri]]. Kuuluisin foorumi on [[Forum Romanum]] Roomassa.
+
+Ja torilla minä viihtyisin, siellä on aina murusia.
+KYSYMYS: Kerro lisää: teatteri
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä foorumi tarkoitti roomalaisessa kaupungissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä riittää kerrottavaa. [[Foorumi]] oli roomalaisen kaupungin keskeinen aukio, jonka ympärillä sijaitsivat tärkeimmät julkiset rakennukset: temppelit, oikeudenkäytön tilat, kauppapaikat ja hallintorakennukset. Se oli sekä kaupankäynnin että politiikan ja uskonnon paikka. Saepinumissa foorumi oli kaupungin keskus, ja kaupunkiin kuului myös [[teatteri]]. Kuuluisin foorumi on [[Forum Romanum]] Roomassa.
+
+Ja torilla minä viihtyisin, siellä on aina murusia.
+KYSYMYS: Kerro lisää: Forum Romanum
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+AIEMPI KYSYMYS: Millaisia teattereita roomalaiset rakensivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on kiinnostava. Roomalaiset teatterit olivat yleensä puoliympyrän muotoisia, ja katsomo nojasi usein holveihin eikä rinteeseen, toisin kuin kreikkalaisissa. Edessä oli näyttämö ja sen takana koristeellinen seinä. Teattereita rakennettiin ympäri [[Rooman valtakuntaa]], ja ne olivat tärkeitä kaupunkien kulttuurielämälle. Tarkka istumapaikkamäärä vaihteli kaupungista toiseen, enkä ole varma Saepinumin teatterin mitoista.
+KYSYMYS: Kerro lisää: Rooman valtakuntaa
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+AIEMPI KYSYMYS: Kuka rakennutti linnan 1000-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tämä on selvä. Termolin linnan normannikauden rakennuksen rakennutti 1000-luvulla [[Loritellon]] kreivi [[Robert I]]. Linna tunnetaan myös nimellä Castello Svevo, ja se hallitsee Adrianmeren rannalla sijaitsevan [[Termolin]] vanhaa kaupunkia. Fredrik II:n aikana, vuonna 1240, linnaa kunnostettiin sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä.
+
+Isoisäni on varmasti lentänyt sen ylitse, ja minusta se on edelleen komea.
+KYSYMYS: Kerro lisää: Loritellon
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+AIEMPI KYSYMYS: Kuka rakennutti linnan 1000-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tämä on selvä. Termolin linnan normannikauden rakennuksen rakennutti 1000-luvulla [[Loritellon]] kreivi [[Robert I]]. Linna tunnetaan myös nimellä Castello Svevo, ja se hallitsee Adrianmeren rannalla sijaitsevan [[Termolin]] vanhaa kaupunkia. Fredrik II:n aikana, vuonna 1240, linnaa kunnostettiin sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä.
+
+Isoisäni on varmasti lentänyt sen ylitse, ja minusta se on edelleen komea.
+KYSYMYS: Kerro lisää: Robert I
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+AIEMPI KYSYMYS: Kuka rakennutti linnan 1000-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tämä on selvä. Termolin linnan normannikauden rakennuksen rakennutti 1000-luvulla [[Loritellon]] kreivi [[Robert I]]. Linna tunnetaan myös nimellä Castello Svevo, ja se hallitsee Adrianmeren rannalla sijaitsevan [[Termolin]] vanhaa kaupunkia. Fredrik II:n aikana, vuonna 1240, linnaa kunnostettiin sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä.
+
+Isoisäni on varmasti lentänyt sen ylitse, ja minusta se on edelleen komea.
+KYSYMYS: Kerro lisää: Termolin
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+- [Kypros — maalehti / Käsityö: Kangasta poistetaan, ei lisätä] Lefkaralainen pitsi eli lefkaritika ommellaan pellavaan puuvillalangalla, ja työ koostuu neljästä osasta: reikäompeleesta, leikkaustyöstä, laakapistotäytteistä ja neulapitsireunuksista. Kaksi ensimmäistä tarkoittavat sitä, että osa kuviosta syntyy poistamalla lankoja kankaasta — kuviossa on yhtä paljon reikää kuin lankaa. Perinne ulottuu Lefkaran kylässä ainakin 1300-luvulle. Unesco mainitsee vaikutteina paikallisen käsityön, venetsialaisten hovipukujen kirjonnan sekä antiikin kreikkalaiset ja bysanttilaiset geometriset kuviot. Väriskaala on kapea: valkoinen, ruskea ja ekru. Kylässä kerrotaan, että Leonardo da Vinci olisi ostanut sieltä liinan Milanon tuomiokirkolle vuonna 1481, mutta aikal…
+AIEMPI KYSYMYS: Mikä vahingoitti linnaa ennen vuoden 1240 kunnostusta?
+AIEMPI VASTAUS (Livia):
+Joo, selvä. Termolin linnaa oli vahingoittanut [[venetsialaisten]] laivasto, ja vuonna 1240, [[Fredrik II:n]] aikana, linnaa kunnostettiin. Venetsia oli keskiajalla merkittävä merivalta Adrianmerellä, ja sen laivasto toimi usein rannikkokaupunkien lähellä. Tarkkoja yksityiskohtia vahingosta tai sen vuodesta en ole varma. Linna on silti yhä Termolin vanhan kaupungin näkyvin maamerkki.
+KYSYMYS: Kerro lisää: venetsialaisten
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Mikä vahingoitti linnaa ennen vuoden 1240 kunnostusta?
+AIEMPI VASTAUS (Livia):
+Joo, selvä. Termolin linnaa oli vahingoittanut [[venetsialaisten]] laivasto, ja vuonna 1240, [[Fredrik II:n]] aikana, linnaa kunnostettiin. Venetsia oli keskiajalla merkittävä merivalta Adrianmerellä, ja sen laivasto toimi usein rannikkokaupunkien lähellä. Tarkkoja yksityiskohtia vahingosta tai sen vuodesta en ole varma. Linna on silti yhä Termolin vanhan kaupungin näkyvin maamerkki.
+KYSYMYS: Kerro lisää: Fredrik II:n
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Keitä normannit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Normannit]] olivat pohjoisranskalaisia ja skandinaavisia vaikutteita saaneita sotureita ja ritarisukuja, jotka tulivat alun perin viikinkien jälkeläisinä Normandiaan. 1000-luvulla heitä asettui Etelä-Italiaan, jossa he valtasivat alueita ja perustivat omia kreivikuntia ja myöhemmin [[Sisilian kuningaskunnan]]. [[Loritellon]] kreivi Robert I kuului näihin etelän normannivaltiaisiin. Normannit tunnetaan myös linnoista ja kirkoista, joita he rakensivat. Tarkkoja vuosilukuja heidän ensimmäisistä valloituksistaan en ole varma.
+
+Kyllä siinä oli sukua, kun sukuhaarat levisivät joka suuntaan.
+KYSYMYS: Kerro lisää: Normannit
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Keitä normannit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Normannit]] olivat pohjoisranskalaisia ja skandinaavisia vaikutteita saaneita sotureita ja ritarisukuja, jotka tulivat alun perin viikinkien jälkeläisinä Normandiaan. 1000-luvulla heitä asettui Etelä-Italiaan, jossa he valtasivat alueita ja perustivat omia kreivikuntia ja myöhemmin [[Sisilian kuningaskunnan]]. [[Loritellon]] kreivi Robert I kuului näihin etelän normannivaltiaisiin. Normannit tunnetaan myös linnoista ja kirkoista, joita he rakensivat. Tarkkoja vuosilukuja heidän ensimmäisistä valloituksistaan en ole varma.
+
+Kyllä siinä oli sukua, kun sukuhaarat levisivät joka suuntaan.
+KYSYMYS: Kerro lisää: Sisilian kuningaskunnan
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Kuka oli keisari Fredrik II?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hänestä on kerrottavaa. [[Fredrik II]] oli Hohenstaufen-sukuinen keisari, joka eli 1200-luvulla ja hallitsi sekä Pyhää saksalais-roomalaista keisarikuntaa että [[Sisilian kuningaskuntaa]]. Hän tunnettiin oppineisuudestaan ja kiinnostuksestaan tieteisiin ja lakiin, ja hänen hovinsa oli monikulttuurinen. Eteläisessä Italiassa hän rakennutti ja kunnosti useita linnoja, jonka vuoksi ne tunnetaan Svevo- eli Swabian-linnoina. Tarkkoja syntymä- ja kuolinvuosia en ole aivan varma, enkä siksi mainitse niitä.
+
+Kiinnostava mies, vaikka minun sukuni ei häntä tavannut.
+KYSYMYS: Kerro lisää: Fredrik II
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Kuka oli keisari Fredrik II?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hänestä on kerrottavaa. [[Fredrik II]] oli Hohenstaufen-sukuinen keisari, joka eli 1200-luvulla ja hallitsi sekä Pyhää saksalais-roomalaista keisarikuntaa että [[Sisilian kuningaskuntaa]]. Hän tunnettiin oppineisuudestaan ja kiinnostuksestaan tieteisiin ja lakiin, ja hänen hovinsa oli monikulttuurinen. Eteläisessä Italiassa hän rakennutti ja kunnosti useita linnoja, jonka vuoksi ne tunnetaan Svevo- eli Swabian-linnoina. Tarkkoja syntymä- ja kuolinvuosia en ole aivan varma, enkä siksi mainitse niitä.
+
+Kiinnostava mies, vaikka minun sukuni ei häntä tavannut.
+KYSYMYS: Kerro lisää: Sisilian kuningaskuntaa
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+AIEMPI KYSYMYS: Millainen meri Adrianmeri on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mukava kysymys. [[Adrianmeri]] on Välimeren pitkä ja kapea lahti Italian niemimaan ja Balkanin niemimaan välissä. Italian puolella sen rannikko on pitkälti tasaista ja hiekkaista, kun taas itäinen Kroatian rannikko on vuoristoinen ja täynnä saaria. Adrianmeren pohjoisosassa on [[Venetsian laguuni]]. Meri on pohjoisosastaan matala, ja eteläosa on syvempi, mutta tarkkoja syvyyslukuja en ole varma. Termoli sijaitsee sen länsirannalla.
+
+Siellä on parhaat pullatuoksut koko rannikolla, ainakin kuvittelen niin.
+KYSYMYS: Kerro lisää: Adrianmeri
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Laguuni, joka on nimensä toisinto] Lagosin laguuni on yli viisikymmentä kilometriä pitkä ja kolmesta kolmeentoista kilometriä leveä, ja sen erottaa Atlantista pitkä hiekkasärkkä. Se on Guineanlahden suurin laguuni ja pinta-alaltaan noin 6 355 neliökilometriä, mutta niin matala, ettei valtamerialus pääse sinne — vain proomut ja veneet. Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu mereen Lagosin sataman kautta, joka on puolesta kilometristä kilometriin leveä ja kymmenen kilometriä pitkä väylä keskellä kaupunkia. Nimi on huvittava toisinto itsestään: Lagos tarkoittaa portugaliksi järviä, joten Lagosin laguuni on kaksi kertaa sama sana.
+AIEMPI KYSYMYS: Millainen meri Adrianmeri on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mukava kysymys. [[Adrianmeri]] on Välimeren pitkä ja kapea lahti Italian niemimaan ja Balkanin niemimaan välissä. Italian puolella sen rannikko on pitkälti tasaista ja hiekkaista, kun taas itäinen Kroatian rannikko on vuoristoinen ja täynnä saaria. Adrianmeren pohjoisosassa on [[Venetsian laguuni]]. Meri on pohjoisosastaan matala, ja eteläosa on syvempi, mutta tarkkoja syvyyslukuja en ole varma. Termoli sijaitsee sen länsirannalla.
+
+Siellä on parhaat pullatuoksut koko rannikolla, ainakin kuvittelen niin.
+KYSYMYS: Kerro lisää: Venetsian laguuni
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+AIEMPI KYSYMYS: Miltä Circus Maximus näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, kuvittelepa. [[Circus Maximus]] oli pitkä, kapea ja toisesta päästä pyöristetty vaunukilparata, jonka molemmilla sivuilla oli porrastetut katsomot. Radan keskellä kulki matala keskiosa, spina, jonka ympäri vaunut ajoivat kierroksia, ja toisessa päässä olivat lähtöportit. Katsomoihin mahtui yli 150 000 ihmistä, vaikka eri lähteet antavat hieman eri lukuja. Kilpailuja järjestettiin lähes tuhannen vuoden ajan, ja se oli yksi [[Rooman]] suosituimmista huvituksista. Tarkkoja koristelun yksityiskohtia en ole varma.
+
+Ylhäältä katsottuna se olisi ollut aikamoinen näky, ja minä olisin istunut korkeimmalla kaiteella.
+KYSYMYS: Kerro lisää: Circus Maximus
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+- [Italia — maalehti / Kuvataide: Caravaggio maalasi valonheittimellä] Caravaggio toi 1600-luvun alussa maalaukseen pimeyden ja valokiilan: hänen kuvissaan tavalliset ihmiset likaisine jalkoineen astuvat esiin mustasta taustasta kuin näyttämölle. Kirkonmiehet närkästyivät, kun pyhimyksillä oli kadunkulmien kasvot, mutta tyyli muutti koko eurooppalaisen taiteen suunnan. Mies itse eli kuin seikkailuromaanin konna: riitoja, pakomatkoja ja varhainen kuolema epäselvissä oloissa. Rooman kirkoissa hänen teoksiaan voi yhä katsoa ilmaiseksi — kolikolla valot syttyvät.
+- [Italia — maalehti / Historia] Italia on nuori valtio vanhalla maalla: Rooman valtakunnasta on kaksituhatta vuotta, mutta yhtenäinen Italia on nuorempi kuin moni sen kahviloista.
+- [Italia — maalehti / Keittiö] Rooman omat ruoat ovat lähtöisin köyhistä keittiöistä: muutama aine, kuuma pannu tai kiehuva öljy — ja tiukka sääntö siitä, mitä niihin ei panna.
+AIEMPI KYSYMYS: Miltä Circus Maximus näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, kuvittelepa. [[Circus Maximus]] oli pitkä, kapea ja toisesta päästä pyöristetty vaunukilparata, jonka molemmilla sivuilla oli porrastetut katsomot. Radan keskellä kulki matala keskiosa, spina, jonka ympäri vaunut ajoivat kierroksia, ja toisessa päässä olivat lähtöportit. Katsomoihin mahtui yli 150 000 ihmistä, vaikka eri lähteet antavat hieman eri lukuja. Kilpailuja järjestettiin lähes tuhannen vuoden ajan, ja se oli yksi [[Rooman]] suosituimmista huvituksista. Tarkkoja koristelun yksityiskohtia en ole varma.
+
+Ylhäältä katsottuna se olisi ollut aikamoinen näky, ja minä olisin istunut korkeimmalla kaiteella.
+KYSYMYS: Kerro lisää: Rooman
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+AIEMPI KYSYMYS: Miksi Circus Maximus katosi?
+AIEMPI VASTAUS (Livia):
+No niin, tähän ei ole yhtä syytä. Viimeiset kisat järjestettiin vuonna 549, ja sen jälkeen rakenteet alkoivat rapistua ja muuttuivat [[kivilouhokseksi]]. Rooman kaupunki pieneni myöhäisantiikissa ja keskiajalla huomattavasti, eikä valtavan radan ylläpitoon enää ollut varaa. Kiviä käytettiin uusiin rakennuksiin, ja alue peittyi myöhemmin maahan. Tarkkoja yksityiskohtia, kuten tulvien tai maanjäristysten osuutta, en ole varma. Nykyään paikalla on avoin nurmikenttä Rooman keskustassa.
+
+Onpas siitä pitkä aika, kun kaikki joutui kierrätykseen.
+KYSYMYS: Kerro lisää: kivilouhokseksi
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+AIEMPI KYSYMYS: Miten vaunukilpailut käytiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vaunukilpailuissa useita vaunuja ajettiin yhtä aikaa radalla, ja kilpailijat kiersivät keskiosan ympäri sovitun määrän kierroksia; yleisin luku lähteissä on seitsemän. Vaunuja vetivät tavallisesti neljä hevosta, ja ajajat edustivat eri ryhmittymiä, joilla oli omat värinsä. Kilpailut olivat vaarallisia, ja kolarit olivat tavallisia, etenkin käännöksissä. [[Circus Maximuksessa]] kilpailuja järjestettiin lähes tuhannen vuoden ajan. Tarkkoja sääntöjä en ole varma, koska ne vaihtelivat ajan mittaan.
+KYSYMYS: Kerro lisää: Circus Maximuksessa
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+AIEMPI KYSYMYS: Mitä Circus Maximuksesta on nykyään jäljellä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katsotaas. [[Circus Maximuksen]] paikalla on nykyään pitkä, avoin ruohoalue Rooman keskustassa, jossa voi kävellä ja jossa järjestetään välillä konsertteja ja tapahtumia. Katsomoista on näkyvissä vain vähän, ja suurin osa rakenteista on maan alla tai kadonnut kokonaan sen jälkeen, kun kivi on käytetty uudelleen muualla. Radan muoto on silti helposti tunnistettavissa maastosta. Tarkkoja nykyisiä kaivaustietoja en ole varma.
+
+Ja minä kun odotin kunnon katsomoa.
+KYSYMYS: Kerro lisää: Circus Maximuksen
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+AIEMPI KYSYMYS: Keitä vaunujen ajajat olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää tarinaa. Vaunujen ajajat olivat roomalaisessa yhteiskunnassa usein orjia tai vapautettuja, mutta menestyneimmät saattoivat saavuttaa suuren maineen ja vaurauden. He ajoivat jonkin ryhmittymän väreissä, ja yleisö kannatti heitä kiihkeästi. Ura oli vaarallinen, ja moni kuoli nuorena. Tunnetuimpia ajajia oli esimerkiksi [[Gaius Appuleius Diocles]], jonka urasta on säilynyt kirjoitus; tarkat voittomäärät en ole varma, joten jätän ne pois.
+
+Hyvä että minä olen lintu, ei tarvitse ajaa vaunuja.
+KYSYMYS: Kerro lisää: Gaius Appuleius Diocles
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+AIEMPI KYSYMYS: Miltä Vanha Pietarinkirkko näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vanha Pietarinkirkko oli keisari [[Konstantinuksen]] 300-luvulla rakennuttama [[basilika]], ja lähteiden mukaan se oli pitkä viisilaivainen sali, jonka korkeaa keskilaivaa kannattelivat pylväsrivit. Kirkon edessä oli pylväiden ympäröimä esipiha, ja sisätiloja koristivat mosaiikit. Pyhäkön keskipisteenä oli apostoli [[Pietarin]] haudan päälle rakennettu paikka, ja basilikassa kruunattiin vuonna 800 [[Kaarle Suuri]]. Yksityiskohdat vaihtelivat vuosisatojen mittaan, sillä kirkkoa korjattiin ja koristeltiin yhä uudelleen, eikä kaikesta ole säilynyt tarkkaa kuvausta. Kyl sitä ois ollut kiva nähdä ylhäältä.
+KYSYMYS: Kerro lisää: Konstantinuksen
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Miltä Vanha Pietarinkirkko näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vanha Pietarinkirkko oli keisari [[Konstantinuksen]] 300-luvulla rakennuttama [[basilika]], ja lähteiden mukaan se oli pitkä viisilaivainen sali, jonka korkeaa keskilaivaa kannattelivat pylväsrivit. Kirkon edessä oli pylväiden ympäröimä esipiha, ja sisätiloja koristivat mosaiikit. Pyhäkön keskipisteenä oli apostoli [[Pietarin]] haudan päälle rakennettu paikka, ja basilikassa kruunattiin vuonna 800 [[Kaarle Suuri]]. Yksityiskohdat vaihtelivat vuosisatojen mittaan, sillä kirkkoa korjattiin ja koristeltiin yhä uudelleen, eikä kaikesta ole säilynyt tarkkaa kuvausta. Kyl sitä ois ollut kiva nähdä ylhäältä.
+KYSYMYS: Kerro lisää: basilika
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Pyhän Pietarin kirkko] 1209–1746 Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja se on yksi kaupungin vanhimmista rakennuksista. Sen torni on ollut vuosisatojen ajan Riian korkein rakennelma – mutta myös yksi onnettomimmista: torni on romahtanut ja palanut useita kertoja historian aikana. Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja se oli 148 metriä korkea – tuolloin koko Euroopan korkein puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja seuraava, matalampi torni valmistui vasta 1746. Toisessa maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja nykyinen torni valmistui jälleenrakennettuna vasta 1970-luvulla.…
+AIEMPI KYSYMYS: Miltä Vanha Pietarinkirkko näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vanha Pietarinkirkko oli keisari [[Konstantinuksen]] 300-luvulla rakennuttama [[basilika]], ja lähteiden mukaan se oli pitkä viisilaivainen sali, jonka korkeaa keskilaivaa kannattelivat pylväsrivit. Kirkon edessä oli pylväiden ympäröimä esipiha, ja sisätiloja koristivat mosaiikit. Pyhäkön keskipisteenä oli apostoli [[Pietarin]] haudan päälle rakennettu paikka, ja basilikassa kruunattiin vuonna 800 [[Kaarle Suuri]]. Yksityiskohdat vaihtelivat vuosisatojen mittaan, sillä kirkkoa korjattiin ja koristeltiin yhä uudelleen, eikä kaikesta ole säilynyt tarkkaa kuvausta. Kyl sitä ois ollut kiva nähdä ylhäältä.
+KYSYMYS: Kerro lisää: Pietarin
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miltä Vanha Pietarinkirkko näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vanha Pietarinkirkko oli keisari [[Konstantinuksen]] 300-luvulla rakennuttama [[basilika]], ja lähteiden mukaan se oli pitkä viisilaivainen sali, jonka korkeaa keskilaivaa kannattelivat pylväsrivit. Kirkon edessä oli pylväiden ympäröimä esipiha, ja sisätiloja koristivat mosaiikit. Pyhäkön keskipisteenä oli apostoli [[Pietarin]] haudan päälle rakennettu paikka, ja basilikassa kruunattiin vuonna 800 [[Kaarle Suuri]]. Yksityiskohdat vaihtelivat vuosisatojen mittaan, sillä kirkkoa korjattiin ja koristeltiin yhä uudelleen, eikä kaikesta ole säilynyt tarkkaa kuvausta. Kyl sitä ois ollut kiva nähdä ylhäältä.
+KYSYMYS: Kerro lisää: Kaarle Suuri
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kohdekartta / Kohdekartta: Wolvendaalin kirkko] 1749–1757 Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei tullut, ja pattitilanne aukesi vasta kuvernööri Julius Valentyn Stein van Gollenessen tultua virkaan 1743: hän päätti, että uusi kirkko nousee muurien ulkopuolelle suomaalle. Eurooppalaiset luulivat seudun sakaaleja susiksi, ja alue sai nimen Wolvendaal eli suden laakso. Perustukset laskettiin 1749, ja rakentaminen kesti kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. Rakennus on doorilainen ja pohjaltaan tasavartinen risti. Seinät ovat lähes puolitoista metri…
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+AIEMPI KYSYMYS: Miksi Vanha Pietarinkirkko katosi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vanha Pietarinkirkko ei oikeastaan kadonnut vaan se purettiin. Yli tuhat vuotta vanha rakennus oli keskiajan lopulla ränsistynyt, ja paavi [[Julius II]] päätti 1500-luvun alussa rakennuttaa tilalle kokonaan uuden kirkon. Uuden [[Pietarinkirkon]] rakennustyöt alkoivat vuonna 1506, ja vanhaa basilikaa purettiin vaiheittain sitä mukaa kuin uusi nousi; purkutyöt saatiin päätökseen vuoteen 1605 mennessä. Uusi kirkko valmistui vuonna 1626, ja sen suunnitteluun osallistui useita arkkitehteja, heidän joukossaan [[Michelangelo]]. Pitkä tarina, mut sain sen mahtumaan.
+KYSYMYS: Kerro lisää: Julius II
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Miksi Vanha Pietarinkirkko katosi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vanha Pietarinkirkko ei oikeastaan kadonnut vaan se purettiin. Yli tuhat vuotta vanha rakennus oli keskiajan lopulla ränsistynyt, ja paavi [[Julius II]] päätti 1500-luvun alussa rakennuttaa tilalle kokonaan uuden kirkon. Uuden [[Pietarinkirkon]] rakennustyöt alkoivat vuonna 1506, ja vanhaa basilikaa purettiin vaiheittain sitä mukaa kuin uusi nousi; purkutyöt saatiin päätökseen vuoteen 1605 mennessä. Uusi kirkko valmistui vuonna 1626, ja sen suunnitteluun osallistui useita arkkitehteja, heidän joukossaan [[Michelangelo]]. Pitkä tarina, mut sain sen mahtumaan.
+KYSYMYS: Kerro lisää: Pietarinkirkon
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: David, kivestä vapautettu] Michelangelo veisti Davidin 1501–1504 marmorilohkareesta, jota kaksi muuta kuvanveistäjää oli jo ehtinyt pitää pilalle hakattuna. Hän oli 26-vuotias. Viisimetrinen David esittää hetkeä ennen taistelua jättiläistä vastaan: kulmat kurtussa, linko olalla, jännitys näkyy käden suonissa asti. Michelangelo sanoi, ettei hän veistänyt patsaita vaan vapautti ne — hahmo odotti valmiina kiven sisällä, ja hän poisti vain ylimääräisen. Alkuperäinen on Firenzen galleriassa; aukiolla seisoo kopio.
+AIEMPI KYSYMYS: Miksi Vanha Pietarinkirkko katosi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vanha Pietarinkirkko ei oikeastaan kadonnut vaan se purettiin. Yli tuhat vuotta vanha rakennus oli keskiajan lopulla ränsistynyt, ja paavi [[Julius II]] päätti 1500-luvun alussa rakennuttaa tilalle kokonaan uuden kirkon. Uuden [[Pietarinkirkon]] rakennustyöt alkoivat vuonna 1506, ja vanhaa basilikaa purettiin vaiheittain sitä mukaa kuin uusi nousi; purkutyöt saatiin päätökseen vuoteen 1605 mennessä. Uusi kirkko valmistui vuonna 1626, ja sen suunnitteluun osallistui useita arkkitehteja, heidän joukossaan [[Michelangelo]]. Pitkä tarina, mut sain sen mahtumaan.
+KYSYMYS: Kerro lisää: Michelangelo
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kohdekartta / Kohdekartta: Artakserkses III:n hauta] n. 358–338 eKr. Terassin takana vuoren kyljessä on kolme kallioon louhittua hautaa. Kaksi on valmiita ja kolmas jäi kesken kilometrin päähän. Kenen haudat ovat, ei lue missään, vaan nimet päätellään: Ktesias kertoo, että kuningas valmistutti hautansa eläessään, ja Naqsh-e Rustamin neljä hautaa on tavallisesti luettu Dareios I:lle, Xerxes I:lle, Artakserkses I:lle ja Dareios II:lle. Jäljelle jäävät Artakserkses II ja Artakserkses III, ja heille nämä kaksi valmista hautaa annetaan. Artakserkses III rakensi Persepolikseen myöhään: hän pystytti oman palatsinsa, louhi hautansa isänsä haudan viereen ja aloitti pitkiä hankkeita, jotka jäivät kesken — keskeneräisen portin ja kolmenkymmenenkahden py…
+AIEMPI KYSYMYS: Miksi Kaarle Suuri kruunattiin juuri Roomassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaarle Suuri kruunattiin Roomassa, koska kaupungissa oli paavin istuin ja se oli läntisen kristikunnan keskeisimpiä pyhiä paikkoja. Joulupäivänä vuonna 800 paavi [[Leo III]] kruunasi [[frankkien]] kuninkaan keisariksi vanhassa Pietarinkirkossa. Lähteiden mukaan Leo III oli joutunut Rooman aatelisten hyökkäyksen kohteeksi vuonna 799 ja saanut apua Kaarlelta, joten kruunaus sitoi paavin ja frankkien hallitsijan tiiviisti toisiinsa. Tapahtuma elvytti [[Rooman keisarin]] arvon Länsi-Euroopassa, ja se vaikutti keskiajan keisarillisiin perinteisiin pitkään. Hyvä, että pysyin aikataulussa.
+KYSYMYS: Kerro lisää: Leo III
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+AIEMPI KYSYMYS: Miksi Kaarle Suuri kruunattiin juuri Roomassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaarle Suuri kruunattiin Roomassa, koska kaupungissa oli paavin istuin ja se oli läntisen kristikunnan keskeisimpiä pyhiä paikkoja. Joulupäivänä vuonna 800 paavi [[Leo III]] kruunasi [[frankkien]] kuninkaan keisariksi vanhassa Pietarinkirkossa. Lähteiden mukaan Leo III oli joutunut Rooman aatelisten hyökkäyksen kohteeksi vuonna 799 ja saanut apua Kaarlelta, joten kruunaus sitoi paavin ja frankkien hallitsijan tiiviisti toisiinsa. Tapahtuma elvytti [[Rooman keisarin]] arvon Länsi-Euroopassa, ja se vaikutti keskiajan keisarillisiin perinteisiin pitkään. Hyvä, että pysyin aikataulussa.
+KYSYMYS: Kerro lisää: frankkien
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Historia: Kuningatar, joka hautasi keisarin pään portaiden alle] 25–22 eaa. — Kushin hallitsijan arvonimi kandake tarkoitti kuningatarta tai kuningataräitiä, ja kun sen kantaja hallitsi itse, hän käytti myös kuninkaan arvoa qore. Kandake Amanirenas johti sotaa Rooman Egyptiä vastaan vuosina 25–22 eaa. Sotaretkeltä tuotiin saaliina keisari Augustuksen pronssinen pää, joka haudattiin Meroëssa temppelin portaiden alle — niin että kaikki temppeliin tulijat astuivat sen päälle. Britti John Garstang löysi pään joulukuussa 1910 kahden ja puolen metrin syvyydestä puhtaasta hiekasta, ja se on nyt Britannian museossa.
+AIEMPI KYSYMYS: Miksi Kaarle Suuri kruunattiin juuri Roomassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaarle Suuri kruunattiin Roomassa, koska kaupungissa oli paavin istuin ja se oli läntisen kristikunnan keskeisimpiä pyhiä paikkoja. Joulupäivänä vuonna 800 paavi [[Leo III]] kruunasi [[frankkien]] kuninkaan keisariksi vanhassa Pietarinkirkossa. Lähteiden mukaan Leo III oli joutunut Rooman aatelisten hyökkäyksen kohteeksi vuonna 799 ja saanut apua Kaarlelta, joten kruunaus sitoi paavin ja frankkien hallitsijan tiiviisti toisiinsa. Tapahtuma elvytti [[Rooman keisarin]] arvon Länsi-Euroopassa, ja se vaikutti keskiajan keisarillisiin perinteisiin pitkään. Hyvä, että pysyin aikataulussa.
+KYSYMYS: Kerro lisää: Rooman keisarin
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Millainen aukio Pietarinkirkon edessä on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan ylhäältä. Pietarinkirkon edessä on [[Pietarinaukio]], jonka [[Bernini]] suunnitteli 1600-luvun puolivälissä. Aukion ympärillä kaareutuvat kaksinkertaiset pylväskäytävät, jotka muistuttavat avoimia käsivarsia ja ottavat vastaan kirkkoon saapuvat ihmiset. Keskellä aukiota kohoaa muinainen obeliski, ja koko tila on suunniteltu vastaanottamaan suuria väkijoukkoja. Aukio on tärkeä paikka suurille kirkollisille juhlille ja [[Vatikaanin]] vierailijoille.
+
+Ylhäältä katsottuna pylväskäytävät näyttävät todella sylin kaarelta, ja minä olen laskeutunut sinne kerran tai kaksi. Mut ihmisiä siellä on enemmän kuin kyyhkyjä.
+KYSYMYS: Kerro lisää: Pietarinaukio
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pietarinkirkko] 1506–1626 Nykyisen kirkon paikalla seisoi ennen toinen, paljon vanhempi kirkko, jonka roomalainen keisari Konstantinus rakennutti jo 300-luvulla. Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. Monta kuuluisaa arkkitehtia ehti työstää sitä matkan varrella: Michelangelo suunnitteli kirkon jättimäisen kupolin, ja Bernini rakensi eteen aukion, jota kiertävät pylväskäytävät kuin avoimet käsivarret. Kupoli kohoaa lähes 137 metrin korkeuteen ja on maailman korkein kirkonkupoli. Sisään mahtuu seisomaan jopa 60 000 ihmistä yhtä aikaa. Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen…
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+AIEMPI KYSYMYS: Millainen aukio Pietarinkirkon edessä on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan ylhäältä. Pietarinkirkon edessä on [[Pietarinaukio]], jonka [[Bernini]] suunnitteli 1600-luvun puolivälissä. Aukion ympärillä kaareutuvat kaksinkertaiset pylväskäytävät, jotka muistuttavat avoimia käsivarsia ja ottavat vastaan kirkkoon saapuvat ihmiset. Keskellä aukiota kohoaa muinainen obeliski, ja koko tila on suunniteltu vastaanottamaan suuria väkijoukkoja. Aukio on tärkeä paikka suurille kirkollisille juhlille ja [[Vatikaanin]] vierailijoille.
+
+Ylhäältä katsottuna pylväskäytävät näyttävät todella sylin kaarelta, ja minä olen laskeutunut sinne kerran tai kaksi. Mut ihmisiä siellä on enemmän kuin kyyhkyjä.
+KYSYMYS: Kerro lisää: Bernini
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Vatikaanin palatsi] Rooman valtaus kesti yhden aamupäivän. Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870, ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko Porta Pian viereen; siitä joukot virtasivat kaupunkiin, ja Pietarinkirkon kupoliin nostettiin valkoinen lippu. Paaville tarjottiin omaa pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin eikä poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen vuotta 1929. Pietarinaukiolle …
+- [Rooma — kaupunkilehti / Historian hetki] Vatikaanin kappelin holvin alla seisoi vuonna 1510 kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti päivän laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.
+AIEMPI KYSYMYS: Millainen aukio Pietarinkirkon edessä on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan ylhäältä. Pietarinkirkon edessä on [[Pietarinaukio]], jonka [[Bernini]] suunnitteli 1600-luvun puolivälissä. Aukion ympärillä kaareutuvat kaksinkertaiset pylväskäytävät, jotka muistuttavat avoimia käsivarsia ja ottavat vastaan kirkkoon saapuvat ihmiset. Keskellä aukiota kohoaa muinainen obeliski, ja koko tila on suunniteltu vastaanottamaan suuria väkijoukkoja. Aukio on tärkeä paikka suurille kirkollisille juhlille ja [[Vatikaanin]] vierailijoille.
+
+Ylhäältä katsottuna pylväskäytävät näyttävät todella sylin kaarelta, ja minä olen laskeutunut sinne kerran tai kaksi. Mut ihmisiä siellä on enemmän kuin kyyhkyjä.
+KYSYMYS: Kerro lisää: Vatikaanin

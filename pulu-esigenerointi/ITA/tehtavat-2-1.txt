@@ -1,0 +1,1049 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+- [Italia — maalehti / Historian hetki] Napolinlahden kaupungissa satoi vuonna 79 ensin kevyttä hohkakiveä, ja se oli viimeinen tilaisuus lähteä — kuumat tuhkavyöryt tulivat yöllä, ja Plinius kirjoitti pilvestä, joka näytti pinjapuulta.
+AIEMPI KYSYMYS: Miksi vuoren juurella asutaan yhä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo on napolilaisillekin vanha kysymys. Vesuviuksen ympäristö sijaitsee [[Napolinlahden]] rannalla, ja tulivuoren tuhka tekee maasta poikkeuksellisen hedelmällistä: viiniköynnökset, tomaatit ja sitrushedelmät menestyvät siellä hyvin, ja rinteiden viineistä tunnetuin on [[Lacryma Christi]]. Alue on lisäksi vanhaa asuttua seutua, jossa on satama, kauppareitit ja lauhkea ilmasto, joten kylät ja kaupungit ovat kasvaneet vuoren viereen sukupolvien kuluessa. Purkausten vaara tiedetään, ja siksi vuorta seurataan jatkuvasti: sitä tarkkailee 1800-luvulla perustettu [[Vesuviuksen observatorio]], ja alueelle on laadittu evakuointisuunnitelma satojentuhansien asukkaiden varalle. Minä asun mieluummin katolla, sieltä näkee pakoreitin.
+KYSYMYS: Kerro lisää: Napolinlahden
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+AIEMPI KYSYMYS: Miksi vuoren juurella asutaan yhä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo on napolilaisillekin vanha kysymys. Vesuviuksen ympäristö sijaitsee [[Napolinlahden]] rannalla, ja tulivuoren tuhka tekee maasta poikkeuksellisen hedelmällistä: viiniköynnökset, tomaatit ja sitrushedelmät menestyvät siellä hyvin, ja rinteiden viineistä tunnetuin on [[Lacryma Christi]]. Alue on lisäksi vanhaa asuttua seutua, jossa on satama, kauppareitit ja lauhkea ilmasto, joten kylät ja kaupungit ovat kasvaneet vuoren viereen sukupolvien kuluessa. Purkausten vaara tiedetään, ja siksi vuorta seurataan jatkuvasti: sitä tarkkailee 1800-luvulla perustettu [[Vesuviuksen observatorio]], ja alueelle on laadittu evakuointisuunnitelma satojentuhansien asukkaiden varalle. Minä asun mieluummin katolla, sieltä näkee pakoreitin.
+KYSYMYS: Kerro lisää: Lacryma Christi
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+AIEMPI KYSYMYS: Miksi vuoren juurella asutaan yhä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo on napolilaisillekin vanha kysymys. Vesuviuksen ympäristö sijaitsee [[Napolinlahden]] rannalla, ja tulivuoren tuhka tekee maasta poikkeuksellisen hedelmällistä: viiniköynnökset, tomaatit ja sitrushedelmät menestyvät siellä hyvin, ja rinteiden viineistä tunnetuin on [[Lacryma Christi]]. Alue on lisäksi vanhaa asuttua seutua, jossa on satama, kauppareitit ja lauhkea ilmasto, joten kylät ja kaupungit ovat kasvaneet vuoren viereen sukupolvien kuluessa. Purkausten vaara tiedetään, ja siksi vuorta seurataan jatkuvasti: sitä tarkkailee 1800-luvulla perustettu [[Vesuviuksen observatorio]], ja alueelle on laadittu evakuointisuunnitelma satojentuhansien asukkaiden varalle. Minä asun mieluummin katolla, sieltä näkee pakoreitin.
+KYSYMYS: Kerro lisää: Vesuviuksen observatorio
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+AIEMPI KYSYMYS: Mistä laulu Funiculì, Funiculà kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se soi kyllä joka toisella torilla. Laulu sepitettiin vuonna 1880 Vesuviuksen köysiradan avajaisiin, ja sen sävelsi [[Luigi Denza]]; sanoittajana mainitaan yleensä [[Peppino Turco]]. Sanat ovat iloinen, rakkautta ja nopeaa nousua ylistävä kutsu nousta köysiradalla vuoren huipulle, ja toistuva sana "jammo" tarkoittaa napolilaisittain suunnilleen "mennään". Laulu levisi nopeasti ympäri maailmaa, ja se kuuluu nykyään [[Napolin laulujen]] tunnetuimpiin. Nyt se jää taas päähän soimaan.
+KYSYMYS: Kerro lisää: Luigi Denza
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Plaza Garibaldi] 1920 Aukio on Eje Centralin varrella Hondurasin ja Perun tasavallan katujen välissä, muutaman korttelin pohjoispuolella Palacio de Bellas Artesia. Sen alkuperäinen nimi oli Plaza Santa Cecilia. Nykyisen nimensä se sai 1920 Meksikon vallankumouksen päätyttyä everstiluutnantti Peppino Garibaldin mukaan, joka liittyi maderistien joukkoihin Casas Grandesin hyökkäyksessä Chihuahuassa. Aukio on Mexico Cityn mariachi-musiikin koti. Aukion pohjoislaidalla toimii yhä Salón Tenampa, josta tuli mariachin päänäyttämö 1920-luvulla, kun Cirilo Marmolejo orkestereineen alkoi soittaa siellä säännöllisesti. Muut soittajat seurasivat perässä, ja aukiolla alettiin maksaa muusikoille siitä, että he lauloivat t…
+AIEMPI KYSYMYS: Mistä laulu Funiculì, Funiculà kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se soi kyllä joka toisella torilla. Laulu sepitettiin vuonna 1880 Vesuviuksen köysiradan avajaisiin, ja sen sävelsi [[Luigi Denza]]; sanoittajana mainitaan yleensä [[Peppino Turco]]. Sanat ovat iloinen, rakkautta ja nopeaa nousua ylistävä kutsu nousta köysiradalla vuoren huipulle, ja toistuva sana "jammo" tarkoittaa napolilaisittain suunnilleen "mennään". Laulu levisi nopeasti ympäri maailmaa, ja se kuuluu nykyään [[Napolin laulujen]] tunnetuimpiin. Nyt se jää taas päähän soimaan.
+KYSYMYS: Kerro lisää: Peppino Turco
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+AIEMPI KYSYMYS: Mistä laulu Funiculì, Funiculà kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se soi kyllä joka toisella torilla. Laulu sepitettiin vuonna 1880 Vesuviuksen köysiradan avajaisiin, ja sen sävelsi [[Luigi Denza]]; sanoittajana mainitaan yleensä [[Peppino Turco]]. Sanat ovat iloinen, rakkautta ja nopeaa nousua ylistävä kutsu nousta köysiradalla vuoren huipulle, ja toistuva sana "jammo" tarkoittaa napolilaisittain suunnilleen "mennään". Laulu levisi nopeasti ympäri maailmaa, ja se kuuluu nykyään [[Napolin laulujen]] tunnetuimpiin. Nyt se jää taas päähän soimaan.
+KYSYMYS: Kerro lisää: Napolin laulujen
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+AIEMPI KYSYMYS: Voiko Vesuviukselle kiivetä nykyään?
+AIEMPI VASTAUS (Livia):
+No niin, kiivetä voi. Siivin se on tosin paljon helpompaa. Vuorelle voi nousta, sillä se on osa [[Vesuviuksen kansallispuistoa]]. Tietä pitkin pääsee noin tuhannen metrin korkeuteen, ja sieltä jatketaan kävellen polkua pitkin kraatterin reunalle; nousu kestää noin puoli tuntia. Huippu on noin 1 280 metrin korkeudessa, ja reunalta avautuu laaja näkymä [[Napolinlahdelle]] ja ympäröivälle maisemalle. Pääsylippu tarvitaan, ja sää- ja turvallisuussyistä pääsyä voidaan rajoittaa, joten ajantasaiset tiedot kannattaa tarkistaa ennen lähtöä. Ylhäällä minä olisin perillä ennen sinua.
+KYSYMYS: Kerro lisää: Vesuviuksen kansallispuistoa
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+AIEMPI KYSYMYS: Voiko Vesuviukselle kiivetä nykyään?
+AIEMPI VASTAUS (Livia):
+No niin, kiivetä voi. Siivin se on tosin paljon helpompaa. Vuorelle voi nousta, sillä se on osa [[Vesuviuksen kansallispuistoa]]. Tietä pitkin pääsee noin tuhannen metrin korkeuteen, ja sieltä jatketaan kävellen polkua pitkin kraatterin reunalle; nousu kestää noin puoli tuntia. Huippu on noin 1 280 metrin korkeudessa, ja reunalta avautuu laaja näkymä [[Napolinlahdelle]] ja ympäröivälle maisemalle. Pääsylippu tarvitaan, ja sää- ja turvallisuussyistä pääsyä voidaan rajoittaa, joten ajantasaiset tiedot kannattaa tarkistaa ennen lähtöä. Ylhäällä minä olisin perillä ennen sinua.
+KYSYMYS: Kerro lisää: Napolinlahdelle
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Miten Vesuvius eroaa Etnasta?
+AIEMPI VASTAUS (Livia):
+Ai se. Naapureita ne ovat, mutta ihan eri tyyppiä. [[Etna]] on [[Sisilian]] suuri tulivuori, yli kolmetuhatta metriä korkea ja lähes jatkuvasti toiminnassa, ja sen purkaukset ovat yleensä hitaita laavavirtoja ja tuhkasuihkuja. Vesuvius on matalampi, noin 1 280 metriä, ja sen [[magma]] on kaasuisempaa ja jäykempää, minkä vuoksi purkaukset voivat olla räjähtäviä, kuten vuonna 79. Vesuviuksen ympärillä asuu lisäksi erittäin paljon ihmisiä, joten sitä pidetään usein yhtenä maailman vaarallisimmista tulivuorista, vaikka se on ollut hiljaa vuodesta 1944. Eri luonteet, sama naapurusto, kuten meidän suvussakin.
+KYSYMYS: Kerro lisää: Etna
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Miten Vesuvius eroaa Etnasta?
+AIEMPI VASTAUS (Livia):
+Ai se. Naapureita ne ovat, mutta ihan eri tyyppiä. [[Etna]] on [[Sisilian]] suuri tulivuori, yli kolmetuhatta metriä korkea ja lähes jatkuvasti toiminnassa, ja sen purkaukset ovat yleensä hitaita laavavirtoja ja tuhkasuihkuja. Vesuvius on matalampi, noin 1 280 metriä, ja sen [[magma]] on kaasuisempaa ja jäykempää, minkä vuoksi purkaukset voivat olla räjähtäviä, kuten vuonna 79. Vesuviuksen ympärillä asuu lisäksi erittäin paljon ihmisiä, joten sitä pidetään usein yhtenä maailman vaarallisimmista tulivuorista, vaikka se on ollut hiljaa vuodesta 1944. Eri luonteet, sama naapurusto, kuten meidän suvussakin.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+- [Galápagos — kaupunkilehti / Galápagossaaret: Tulivuorista noussut saaristo] Galápagossaaret ovat syntyneet keskellä Tyyntämerta kuuman pisteen yllä, jossa maankuoren alla virtaava magma on työntänyt esiin tulivuoria miljoonien vuosien ajan. Espanjalainen piispa Tomás de Berlanga törmäsi saaristoon vahingossa vuonna 1535, kun hänen laivansa ajelehti tyynellä säällä Panamasta Peruun matkatessa. Kolme vuosisataa myöhemmin, vuonna 1835, saariston rannoille nousi nuori luonnontutkija Charles Darwin HMS Beaglelta. Hänen huomionsa saariston omalaatuisesta eläimistöstä kypsyi vuosikymmenten varrella teokseksi Lajien synty (1859) — isoisän matkavuosi 1873 sijoittuu vain 14 vuotta sen jälkeen.
+AIEMPI KYSYMYS: Miten Vesuvius eroaa Etnasta?
+AIEMPI VASTAUS (Livia):
+Ai se. Naapureita ne ovat, mutta ihan eri tyyppiä. [[Etna]] on [[Sisilian]] suuri tulivuori, yli kolmetuhatta metriä korkea ja lähes jatkuvasti toiminnassa, ja sen purkaukset ovat yleensä hitaita laavavirtoja ja tuhkasuihkuja. Vesuvius on matalampi, noin 1 280 metriä, ja sen [[magma]] on kaasuisempaa ja jäykempää, minkä vuoksi purkaukset voivat olla räjähtäviä, kuten vuonna 79. Vesuviuksen ympärillä asuu lisäksi erittäin paljon ihmisiä, joten sitä pidetään usein yhtenä maailman vaarallisimmista tulivuorista, vaikka se on ollut hiljaa vuodesta 1944. Eri luonteet, sama naapurusto, kuten meidän suvussakin.
+KYSYMYS: Kerro lisää: magma
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mitä tapahtui, kun Vesuvius purkautui viimeksi 1944?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vakava asia. Purkaus tapahtui maaliskuussa 1944, [[toisen maailmansodan]] aikana. Laava valui rinteitä alas ja hävitti vuoren kyljellä sijainneita kyliä, muun muassa [[San Sebastiano]] ja [[Massa di Somma]], ja tuhka peitti ympäristöä laajalti. Vuoren huipulle vienyt köysirata tuhoutui myös. Asukkaat ehdittiin pääosin evakuoida, ja uhreja oli kuitenkin suhteellisen vähän. Sen jälkeen vuori on ollut hiljaa. Onneksi siitä on jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: toisen maailmansodan
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kohdekartta / Kohdekartta: Pyhän Yrjön katedraali] 1896 Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta muusta kaupungissa. Se rakennettiin vanhemman, 1400-luvulta peräisin olevan kirkon raunioille, ja nimi tulee siitä, että kirkon tabot eli arkku kannettiin Adwan taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; nykyisen rakennuksen suunnitteli ja rakensi italialainen insinööri Sebastiano Castagna 1911. Molemmat luvut ovat oikein, koska ne kertovat eri asiasta. Katedraali seisoo Churchill Roadin pohjoispäässä ja on ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen kruunajaisten takia kirkosta tuli myöhemmin myös rastafarien pyhiinvaelluskohde. Kirkon yhteydessä on museo…
+AIEMPI KYSYMYS: Mitä tapahtui, kun Vesuvius purkautui viimeksi 1944?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vakava asia. Purkaus tapahtui maaliskuussa 1944, [[toisen maailmansodan]] aikana. Laava valui rinteitä alas ja hävitti vuoren kyljellä sijainneita kyliä, muun muassa [[San Sebastiano]] ja [[Massa di Somma]], ja tuhka peitti ympäristöä laajalti. Vuoren huipulle vienyt köysirata tuhoutui myös. Asukkaat ehdittiin pääosin evakuoida, ja uhreja oli kuitenkin suhteellisen vähän. Sen jälkeen vuori on ollut hiljaa. Onneksi siitä on jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: San Sebastiano
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+AIEMPI KYSYMYS: Mitä tapahtui, kun Vesuvius purkautui viimeksi 1944?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vakava asia. Purkaus tapahtui maaliskuussa 1944, [[toisen maailmansodan]] aikana. Laava valui rinteitä alas ja hävitti vuoren kyljellä sijainneita kyliä, muun muassa [[San Sebastiano]] ja [[Massa di Somma]], ja tuhka peitti ympäristöä laajalti. Vuoren huipulle vienyt köysirata tuhoutui myös. Asukkaat ehdittiin pääosin evakuoida, ja uhreja oli kuitenkin suhteellisen vähän. Sen jälkeen vuori on ollut hiljaa. Onneksi siitä on jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Massa di Somma
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Astana — kohdekartta / Kohdekartta: Astana Opera] 2010–2013 Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan ja Sara. Suunnittelusta vastasi italialainen arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; pelkkää näyttämöalaa on 3 000 neliömetriä. Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja orkesterisyvennys, johon mahtuu 120 soittajaa; kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 tonnia. Akustiikan suunnittelivat italialaiset Enrico Moretti ja Maria Cairoli. Julkisivu on antiikin kreik…
+AIEMPI KYSYMYS: Mitä kaivauksissa on löytynyt talojen sisältä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuosta riittää kertomista. Taloista on löytynyt ennen kaikkea arjen jälkiä: seinämaalauksia eli [[freskoja]], lattiamosaiikkeja, kotialttareita, ruoka-astioita, lamppuja, kolikoita ja työkaluja. Tunnettu esimerkki on [[Faunin talo]], jonka suuri lattiamosaiikki on nykyään [[Napolin kansallisessa arkeologisessa museossa]]. Seinillä on myös raaputettuja ja maalattuja kirjoituksia, jotka kertovat asukkaiden arjesta ja viesteistä toisilleen. Tuhka säilytti sellaistakin, mikä yleensä katoaa, kuten hiiltyneitä leipiä ja ruoan jäänteitä keittiöissä. Pitkä lista tuli, vaikka vain raapaisin pintaa.
+KYSYMYS: Kerro lisää: freskoja
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Mitä kaivauksissa on löytynyt talojen sisältä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuosta riittää kertomista. Taloista on löytynyt ennen kaikkea arjen jälkiä: seinämaalauksia eli [[freskoja]], lattiamosaiikkeja, kotialttareita, ruoka-astioita, lamppuja, kolikoita ja työkaluja. Tunnettu esimerkki on [[Faunin talo]], jonka suuri lattiamosaiikki on nykyään [[Napolin kansallisessa arkeologisessa museossa]]. Seinillä on myös raaputettuja ja maalattuja kirjoituksia, jotka kertovat asukkaiden arjesta ja viesteistä toisilleen. Tuhka säilytti sellaistakin, mikä yleensä katoaa, kuten hiiltyneitä leipiä ja ruoan jäänteitä keittiöissä. Pitkä lista tuli, vaikka vain raapaisin pintaa.
+KYSYMYS: Kerro lisää: Faunin talo
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+AIEMPI KYSYMYS: Mitä kaivauksissa on löytynyt talojen sisältä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuosta riittää kertomista. Taloista on löytynyt ennen kaikkea arjen jälkiä: seinämaalauksia eli [[freskoja]], lattiamosaiikkeja, kotialttareita, ruoka-astioita, lamppuja, kolikoita ja työkaluja. Tunnettu esimerkki on [[Faunin talo]], jonka suuri lattiamosaiikki on nykyään [[Napolin kansallisessa arkeologisessa museossa]]. Seinillä on myös raaputettuja ja maalattuja kirjoituksia, jotka kertovat asukkaiden arjesta ja viesteistä toisilleen. Tuhka säilytti sellaistakin, mikä yleensä katoaa, kuten hiiltyneitä leipiä ja ruoan jäänteitä keittiöissä. Pitkä lista tuli, vaikka vain raapaisin pintaa.
+KYSYMYS: Kerro lisää: Napolin kansallisessa arkeologisessa museossa
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Kaivetaanko Pompejia vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, kaivetaan. Pompejin kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä, sillä noin kolmasosa kaupungista on edelleen tuhkan alla. Nykyään työ on enemmän tutkimista ja säilyttämistä kuin uusien alueiden avaamista, koska tavoitteena on pitää jo esiin kaivetut rakennukset kunnossa. Silti uusia löytöjä tehdään säännöllisesti, ja viime vuosina esiin on tullut muun muassa roomalainen pikaruokatiski eli [[termopolium]] sekä Pompejin läheltä, [[Civita Giulianan]] kaivauksilta, [[seremoniavaunu]].
+
+Minua kiinnostaa eniten se leipomo, jonka uuniin leivät jäivät. Kaksituhatta vuotta vanha leipä ei houkuttele edes minua, ja se on sanomista.
+KYSYMYS: Kerro lisää: termopolium
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Kaivetaanko Pompejia vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, kaivetaan. Pompejin kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä, sillä noin kolmasosa kaupungista on edelleen tuhkan alla. Nykyään työ on enemmän tutkimista ja säilyttämistä kuin uusien alueiden avaamista, koska tavoitteena on pitää jo esiin kaivetut rakennukset kunnossa. Silti uusia löytöjä tehdään säännöllisesti, ja viime vuosina esiin on tullut muun muassa roomalainen pikaruokatiski eli [[termopolium]] sekä Pompejin läheltä, [[Civita Giulianan]] kaivauksilta, [[seremoniavaunu]].
+
+Minua kiinnostaa eniten se leipomo, jonka uuniin leivät jäivät. Kaksituhatta vuotta vanha leipä ei houkuttele edes minua, ja se on sanomista.
+KYSYMYS: Kerro lisää: Civita Giulianan
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Kaivetaanko Pompejia vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, kaivetaan. Pompejin kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä, sillä noin kolmasosa kaupungista on edelleen tuhkan alla. Nykyään työ on enemmän tutkimista ja säilyttämistä kuin uusien alueiden avaamista, koska tavoitteena on pitää jo esiin kaivetut rakennukset kunnossa. Silti uusia löytöjä tehdään säännöllisesti, ja viime vuosina esiin on tullut muun muassa roomalainen pikaruokatiski eli [[termopolium]] sekä Pompejin läheltä, [[Civita Giulianan]] kaivauksilta, [[seremoniavaunu]].
+
+Minua kiinnostaa eniten se leipomo, jonka uuniin leivät jäivät. Kaksituhatta vuotta vanha leipä ei houkuttele edes minua, ja se on sanomista.
+KYSYMYS: Kerro lisää: seremoniavaunu
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+- [Italia — maalehti / Historian hetki] Napolinlahden kaupungissa satoi vuonna 79 ensin kevyttä hohkakiveä, ja se oli viimeinen tilaisuus lähteä — kuumat tuhkavyöryt tulivat yöllä, ja Plinius kirjoitti pilvestä, joka näytti pinjapuulta.
+AIEMPI KYSYMYS: Miksi Pompeji hautautui niin nopeasti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on vakava juttu. Purkaus tapahtui vuonna 79, siis noin 1 950 vuotta sitten. Aluksi kaupungin päälle satoi tuntien ajan [[hohkakiveä]], jota kasautui katoille lähes kolmen metrin kerros, ja monet katot romahtivat sen painosta. Sen jälkeen vuoresta syöksyi kuumia kaasu- ja tuhkavirtoja eli [[pyroklastisia virtoja]], jotka peittivät jäljellä olevat osat kaupungista seuraavan aamun mittaan, ja monet ihmiset menehtyivät. Näin nopea hautautuminen säilytti rakennuksia, esineitä ja arjen jälkiä poikkeuksellisen hyvin. Tapahtumaa seurasi lahden toiselta puolelta ja kuvasi myöhemmin kirjeessään Tacitukselle [[nuorempi Plinius]]. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: hohkakiveä
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Miksi Pompeji hautautui niin nopeasti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on vakava juttu. Purkaus tapahtui vuonna 79, siis noin 1 950 vuotta sitten. Aluksi kaupungin päälle satoi tuntien ajan [[hohkakiveä]], jota kasautui katoille lähes kolmen metrin kerros, ja monet katot romahtivat sen painosta. Sen jälkeen vuoresta syöksyi kuumia kaasu- ja tuhkavirtoja eli [[pyroklastisia virtoja]], jotka peittivät jäljellä olevat osat kaupungista seuraavan aamun mittaan, ja monet ihmiset menehtyivät. Näin nopea hautautuminen säilytti rakennuksia, esineitä ja arjen jälkiä poikkeuksellisen hyvin. Tapahtumaa seurasi lahden toiselta puolelta ja kuvasi myöhemmin kirjeessään Tacitukselle [[nuorempi Plinius]]. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: pyroklastisia virtoja
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+AIEMPI KYSYMYS: Miksi Pompeji hautautui niin nopeasti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on vakava juttu. Purkaus tapahtui vuonna 79, siis noin 1 950 vuotta sitten. Aluksi kaupungin päälle satoi tuntien ajan [[hohkakiveä]], jota kasautui katoille lähes kolmen metrin kerros, ja monet katot romahtivat sen painosta. Sen jälkeen vuoresta syöksyi kuumia kaasu- ja tuhkavirtoja eli [[pyroklastisia virtoja]], jotka peittivät jäljellä olevat osat kaupungista seuraavan aamun mittaan, ja monet ihmiset menehtyivät. Näin nopea hautautuminen säilytti rakennuksia, esineitä ja arjen jälkiä poikkeuksellisen hyvin. Tapahtumaa seurasi lahden toiselta puolelta ja kuvasi myöhemmin kirjeessään Tacitukselle [[nuorempi Plinius]]. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: nuorempi Plinius
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Miten Pompejin uhrien kipsivalokset tehdään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aihe on raskas, joten kerron sen asiallisesti. Menetelmän kehitti [[Giuseppe Fiorelli]] 1860-luvulla. Tuhka koveni ruumiiden ympärillä, ja kun ruumiit ajan myötä maatuivat, jäljelle jäi ihmisen muotoinen tyhjä onkalo. Onkaloon tehtiin aukko ja sen sisään kaadettiin nestemäistä kipsiä; kun kipsi oli kovettunut, ympäröivä tuhka poistettiin, ja esiin tuli ihmisen asento ja usein vaatteiden laskokset. Nykyisin joissakin valoksissa käytetään kipsin sijaan läpinäkyvää hartsia, ja luita voidaan tutkia [[tietokonetomografialla]]. Hiljaa tästä aiheesta kerrotaan.
+KYSYMYS: Kerro lisää: Giuseppe Fiorelli
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Tiede: Ensimmäinen tietokone syntyi kotona] Berliiniläinen rakennusinsinööri Konrad Zuse kyllästyi laskemaan samoja kaavoja käsin ja alkoi rakentaa laskukonetta vanhempiensa olohuoneeseen. Vuonna 1941 valmistunut Z3 oli maailman ensimmäinen ohjelmoitava tietokone: se luki ohjelmansa rei'itetyltä filminauhalta ja laski 2 600 releen naksuessa. Kone tuhoutui pommituksessa 1943, eikä maailma huomannut koko keksintöä ennen kuin vuosia myöhemmin. Zuse rakensi koneensa uudelleen — ja jäljennös naksuttaa nykyään museossa Münchenissä.
+AIEMPI KYSYMYS: Miten Pompejin uhrien kipsivalokset tehdään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aihe on raskas, joten kerron sen asiallisesti. Menetelmän kehitti [[Giuseppe Fiorelli]] 1860-luvulla. Tuhka koveni ruumiiden ympärillä, ja kun ruumiit ajan myötä maatuivat, jäljelle jäi ihmisen muotoinen tyhjä onkalo. Onkaloon tehtiin aukko ja sen sisään kaadettiin nestemäistä kipsiä; kun kipsi oli kovettunut, ympäröivä tuhka poistettiin, ja esiin tuli ihmisen asento ja usein vaatteiden laskokset. Nykyisin joissakin valoksissa käytetään kipsin sijaan läpinäkyvää hartsia, ja luita voidaan tutkia [[tietokonetomografialla]]. Hiljaa tästä aiheesta kerrotaan.
+KYSYMYS: Kerro lisää: tietokonetomografialla
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kaupunkilehti / Arki ja keittiö: Tahna survotaan huhmareessa] Muhammara on Aleppossa syntynyt tahna, ja nimi tarkoittaa arabiaksi punaiseksi muuttunutta. Pohjana ovat tuoreet punaiset paprikat, jotka voidaan myös kuivata auringossa tai grillata ensin. Joukkoon jauhetaan saksanpähkinöitä, jotka antavat rakenteen, korppujauhoa, joka sitoo massan, valkosipulia, Aleppon pippuria, suolaa ja oliiviöljyä. Makean ja happaman vivahteen tuo granaattiomenasiirappi. Perinteisesti seos survotaan huhmareessa, jolloin massa jää hieman karkeaksi. Damaskoksessa mukaan lisätään toisinaan tahinia, ja läntisessä Turkissa tahna tunnetaan nimellä acuka.
+- [Tunisia — maalehti / Ruoka: Tahna, joka tuli Amerikasta ja jäi] Harissan kotiseutu on Kap Bonin niemi ja sen päätuotantopaikka Nabeul. Tahnaan tulee paahdettuja punaisia paprikoita, baklouti-paprikaa, valkosipulia, kuminan- ja korianterinsiemeniä, juustokuminaa ja oliiviöljyä, joka kantaa rasvaliukoiset maut. Chilipaprika ei ole Välimeren oma kasvi: se tuli tunisialaiseen keittiöön Kolumbuksen vaihdon myötä, oletettavasti Espanjan miehityksen aikana 1535–1574. Tunisia on nykyään maailman suurin valmiin harissan viejä, ja Unesco otti harissan tiedot, taidot ja tavat aineettoman kulttuuriperinnön luetteloon vuonna 2022.
+- [Ranska — maalehti / Arki: Saippuassa lukee 72] 1688 — Marseillen saippuaa on keitetty oliiviöljystä ja soodasta keskiajalta asti. Lokakuun 5. päivänä 1688 kuninkaan asetus kielsi käyttämästä siihen rasvaa tai voita — vain puhdasta oliiviöljyä, tai tavarat takavarikoitiin. Perinteisen 600 gramman kuution kylkeen leimataan valmistajan nimi ja luku 72, joka kertoo öljyn osuuden prosentteina. Vuonna 1913 kaupunki tuotti saippuaa 180 000 tonnia; nykyään vanhalla tavalla keittäviä saippuatehtaita on enää kourallinen.
+AIEMPI KYSYMYS: Mitä pompejilaiset söivät?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Ruoka on minun aiheeni. Arkiruoka oli yksinkertaista: leipää, viljapuuroa, [[oliiviöljyä]], palkokasveja, juustoa, kalaa, hedelmiä, pähkinöitä ja viiniä. Kaupunki oli tunnettu myös kalakastikkeesta nimeltä [[garum]], jota valmistettiin kalasta ja suolasta antamalla seoksen käydä, ja kaivauksissa on löytynyt hiiltyneitä viikunoita, oliiveja ja leipiä. Kadunvarsien pikaruokatiskit eli [[termopoliumit]] myivät lämmintä ruokaa niille, joilla ei ollut kotona omaa keittiötä. Pullaa ei ilmeisesti ollut, mikä on minusta jo sääli.
+KYSYMYS: Kerro lisää: oliiviöljyä
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Mitä pompejilaiset söivät?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Ruoka on minun aiheeni. Arkiruoka oli yksinkertaista: leipää, viljapuuroa, [[oliiviöljyä]], palkokasveja, juustoa, kalaa, hedelmiä, pähkinöitä ja viiniä. Kaupunki oli tunnettu myös kalakastikkeesta nimeltä [[garum]], jota valmistettiin kalasta ja suolasta antamalla seoksen käydä, ja kaivauksissa on löytynyt hiiltyneitä viikunoita, oliiveja ja leipiä. Kadunvarsien pikaruokatiskit eli [[termopoliumit]] myivät lämmintä ruokaa niille, joilla ei ollut kotona omaa keittiötä. Pullaa ei ilmeisesti ollut, mikä on minusta jo sääli.
+KYSYMYS: Kerro lisää: garum
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+AIEMPI KYSYMYS: Mitä pompejilaiset söivät?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Ruoka on minun aiheeni. Arkiruoka oli yksinkertaista: leipää, viljapuuroa, [[oliiviöljyä]], palkokasveja, juustoa, kalaa, hedelmiä, pähkinöitä ja viiniä. Kaupunki oli tunnettu myös kalakastikkeesta nimeltä [[garum]], jota valmistettiin kalasta ja suolasta antamalla seoksen käydä, ja kaivauksissa on löytynyt hiiltyneitä viikunoita, oliiveja ja leipiä. Kadunvarsien pikaruokatiskit eli [[termopoliumit]] myivät lämmintä ruokaa niille, joilla ei ollut kotona omaa keittiötä. Pullaa ei ilmeisesti ollut, mikä on minusta jo sääli.
+KYSYMYS: Kerro lisää: termopoliumit
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi kuulostaa hämäävältä, mutta se selviää. Kahden Sisilian kuningaskunta oli Etelä-Italian suuri valtio, jonka pääkaupunki oli Napoli. Se perustettiin vuonna 1816, kun Napolin kuningaskunta ja [[Sisilian]] kuningaskunta yhdistettiin yhdeksi valtioksi [[Bourbon-suvun]] hallitsijan alaisuudessa. Nimi johtuu siitä, että sekä mantereen eteläosaa että saarta oli historiassa kutsuttu Sisiliaksi, joten kuningas hallitsi kahta "Sisiliaa". Valtio kaatui Italian yhdistymisen aikana, kun [[Giuseppe Garibaldi]] johti vuonna 1860 vapaaehtoisjoukkoja Sisiliaan ja Etelä-Italiaan, ja alue liitettiin Italiaan 1861. Kaksi Sisiliaa ja yksi kyyhky, joka ei meinaa pysyä mukana.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+- [Saint Helena — maalehti / Ruoka: Kahvi, joka tuli Mokasta 1733] 1733–1994 — Vuonna 1733 komppanian laiva The Houghton toi Jemenin Mokan satamasta Green Tipped Bourbon -kahvin siemeniä, jotka istutettiin eri puolille saarta. Kasvit menestyivät, vaikka niitä ei juuri hoidettu. Lontoolainen kahvikauppahuone Wm Burnie & Co kuvasi 1839 saaren kahvia laadultaan ja maultaan ylivertaiseksi, ja 1845 sitä myytiin Lontoossa pennyllä naulalta — maailman kalleimpana ja harvinaisimpana. Vuonna 1851 Bamboo Hedge Estaten sato voitti pääpalkinnon Lontoon maailmannäyttelyssä. Kaupallinen viljely herätettiin uudelleen henkiin 1994, ja pensaat polveutuvat yhä samasta 1733 tuodusta erästä.
+AIEMPI KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi kuulostaa hämäävältä, mutta se selviää. Kahden Sisilian kuningaskunta oli Etelä-Italian suuri valtio, jonka pääkaupunki oli Napoli. Se perustettiin vuonna 1816, kun Napolin kuningaskunta ja [[Sisilian]] kuningaskunta yhdistettiin yhdeksi valtioksi [[Bourbon-suvun]] hallitsijan alaisuudessa. Nimi johtuu siitä, että sekä mantereen eteläosaa että saarta oli historiassa kutsuttu Sisiliaksi, joten kuningas hallitsi kahta "Sisiliaa". Valtio kaatui Italian yhdistymisen aikana, kun [[Giuseppe Garibaldi]] johti vuonna 1860 vapaaehtoisjoukkoja Sisiliaan ja Etelä-Italiaan, ja alue liitettiin Italiaan 1861. Kaksi Sisiliaa ja yksi kyyhky, joka ei meinaa pysyä mukana.
+KYSYMYS: Kerro lisää: Bourbon-suvun
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+AIEMPI KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi kuulostaa hämäävältä, mutta se selviää. Kahden Sisilian kuningaskunta oli Etelä-Italian suuri valtio, jonka pääkaupunki oli Napoli. Se perustettiin vuonna 1816, kun Napolin kuningaskunta ja [[Sisilian]] kuningaskunta yhdistettiin yhdeksi valtioksi [[Bourbon-suvun]] hallitsijan alaisuudessa. Nimi johtuu siitä, että sekä mantereen eteläosaa että saarta oli historiassa kutsuttu Sisiliaksi, joten kuningas hallitsi kahta "Sisiliaa". Valtio kaatui Italian yhdistymisen aikana, kun [[Giuseppe Garibaldi]] johti vuonna 1860 vapaaehtoisjoukkoja Sisiliaan ja Etelä-Italiaan, ja alue liitettiin Italiaan 1861. Kaksi Sisiliaa ja yksi kyyhky, joka ei meinaa pysyä mukana.
+KYSYMYS: Kerro lisää: Giuseppe Garibaldi
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+AIEMPI KYSYMYS: Millainen on oikea napolilainen pizza?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä Napolissa kiistellään aina. Aito napolilainen pizza on pehmeäreunainen ja melko ohut: taikina tehdään vain jauhoista, vedestä, suolasta ja hiivasta, ja pizza paistuu kuumassa [[puu-uunissa]] alle kahdessa minuutissa. Reuna on pehmeä eikä rapea. Tunnetuin versio on [[Margherita]], jonka tarinan mukaan napolilainen leipuri teki kuningatar Margheritalle vuonna 1889 Italian lipun väreissä: tomaattia, mozzarellaa ja basilikaa. Napolilaisen pizzanpaiston taito otettiin [[Unescon]] aineettoman kulttuuriperinnön luetteloon 2017.
+
+Minä pidän pizzasta, mutta pullan puolella olen silti. Italiassa pulla on maritozzo, kermalla täytetty pehmeä sämpylä, ja sitä katselisin kyllä ikkunasta tunnin.
+KYSYMYS: Kerro lisää: puu-uunissa
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+AIEMPI KYSYMYS: Millainen on oikea napolilainen pizza?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä Napolissa kiistellään aina. Aito napolilainen pizza on pehmeäreunainen ja melko ohut: taikina tehdään vain jauhoista, vedestä, suolasta ja hiivasta, ja pizza paistuu kuumassa [[puu-uunissa]] alle kahdessa minuutissa. Reuna on pehmeä eikä rapea. Tunnetuin versio on [[Margherita]], jonka tarinan mukaan napolilainen leipuri teki kuningatar Margheritalle vuonna 1889 Italian lipun väreissä: tomaattia, mozzarellaa ja basilikaa. Napolilaisen pizzanpaiston taito otettiin [[Unescon]] aineettoman kulttuuriperinnön luetteloon 2017.
+
+Minä pidän pizzasta, mutta pullan puolella olen silti. Italiassa pulla on maritozzo, kermalla täytetty pehmeä sämpylä, ja sitä katselisin kyllä ikkunasta tunnin.
+KYSYMYS: Kerro lisää: Margherita
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+AIEMPI KYSYMYS: Millainen on oikea napolilainen pizza?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä Napolissa kiistellään aina. Aito napolilainen pizza on pehmeäreunainen ja melko ohut: taikina tehdään vain jauhoista, vedestä, suolasta ja hiivasta, ja pizza paistuu kuumassa [[puu-uunissa]] alle kahdessa minuutissa. Reuna on pehmeä eikä rapea. Tunnetuin versio on [[Margherita]], jonka tarinan mukaan napolilainen leipuri teki kuningatar Margheritalle vuonna 1889 Italian lipun väreissä: tomaattia, mozzarellaa ja basilikaa. Napolilaisen pizzanpaiston taito otettiin [[Unescon]] aineettoman kulttuuriperinnön luetteloon 2017.
+
+Minä pidän pizzasta, mutta pullan puolella olen silti. Italiassa pulla on maritozzo, kermalla täytetty pehmeä sämpylä, ja sitä katselisin kyllä ikkunasta tunnin.
+KYSYMYS: Kerro lisää: Unescon
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / João Pessoa: Sokerin vuosisadat ja kasvava kaupunki] Isoisän matkavuonna 1873 Parahyba oli sokerin kaupunki: ruokopellot ja niitä pyörittävät engenho-myllyt olivat hallinneet seudun taloutta jo kolmen vuosisadan ajan perustamisesta lähtien. Väestönlaskennassa vuotta aiemmin, 1872, kaupungissa asui 24 714 henkeä, mikä teki siitä maakunnan neljänneksi väkirikkaimman paikkakunnan. Seuraavina vuosikymmeninä kaupunki vaurastui, ja näkyvin merkki siitä oli 3. marraskuuta 1889 avattu Teatro Santa Roza, Parahyban maakunnan tärkein teatteri. Vaaleanpunainen rakennus seisoo yhä samalla paikalla, muutaman korttelin päässä joenrannasta, jonka varrelle isoisän aikainen sokerikaupunki oli kasvanut.
+- [Buenos Aires — kaupunkilehti / Historia: Ensimmäinen Teatro Colón seisoi eri paikassa] Ennen nykyistä oopperataloa kaupungissa oli toinen Teatro Colón, joka seisoi suoraan Plaza de Mayon laidalla ja oli isoisän vierailun aikaan kuudentoista vuoden ikäinen. Se avattiin 27. huhtikuuta 1857 Verdin La traviatalla, vain neljä vuotta oopperan italialaisen kantaesityksen jälkeen, ja sen kahdentuhannenviidensadan paikan joukossa oli oma aitiorivi suruvaatteisille vieraille. Talo suljettiin 13. syyskuuta 1888 uuden teatterin tieltä, mutta nykyinen Teatro Colón avattiin vasta kaksikymmentä vuotta myöhemmin, 25. toukokuuta 1908.
+AIEMPI KYSYMYS: Millainen oopperatalo Napolissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Se on yksi Euroopan kuuluisimpia. [[Teatro di San Carlo]] valmistui vuonna 1737, ja sitä pidetään Euroopan vanhimpana yhä toimivana oopperatalona. Sen rakennutti Napolin Bourbon-kuningas Kaarle, ja se on vanhempi kuin Milanon [[La Scala]]. Talo paloi vuonna 1816 mutta rakennettiin uudelleen lähes heti, ja salia pidetään yhtenä Italian upeimmista punaisen ja kullan sävyineen. Se on edelleen käytössä oopperan ja baletin esityksiin. Siellä kuuntelisin mieluummin katonrajasta.
+KYSYMYS: Kerro lisää: Teatro di San Carlo
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Millainen oopperatalo Napolissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Se on yksi Euroopan kuuluisimpia. [[Teatro di San Carlo]] valmistui vuonna 1737, ja sitä pidetään Euroopan vanhimpana yhä toimivana oopperatalona. Sen rakennutti Napolin Bourbon-kuningas Kaarle, ja se on vanhempi kuin Milanon [[La Scala]]. Talo paloi vuonna 1816 mutta rakennettiin uudelleen lähes heti, ja salia pidetään yhtenä Italian upeimmista punaisen ja kullan sävyineen. Se on edelleen käytössä oopperan ja baletin esityksiin. Siellä kuuntelisin mieluummin katonrajasta.
+KYSYMYS: Kerro lisää: La Scala
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+AIEMPI KYSYMYS: Miksi Napolin vanhakaupunki on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Se on aika erikoinen kerrostuma. Napolin historiallinen keskusta otettiin [[Unescon]] maailmanperintöluetteloon vuonna 1995. Kaupungin katuverkko noudattaa yhä pääpiirteissään antiikin kreikkalaista ja roomalaista ruudukkoa, ja sen läpi kulkee suora [[Spaccanapoli]]-katu, joka halkaisee vanhankaupungin. Alueella on lisäksi linnoja, kirkkoja ja palatseja eri vuosisadoilta, esimerkiksi meren rannalla oleva [[Castel dell'Ovo]], jonka nimi tarkoittaa munalinnaa. Yhdistelmä osoittaa, miten kaupunki on uusiutunut vuosisatojen mittaan mutta säilyttänyt vanhaa. Täältä ylhäältä se näyttää yhdeltä isolta kivipalalta.
+KYSYMYS: Kerro lisää: Spaccanapoli
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+AIEMPI KYSYMYS: Miksi Napolin vanhakaupunki on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Se on aika erikoinen kerrostuma. Napolin historiallinen keskusta otettiin [[Unescon]] maailmanperintöluetteloon vuonna 1995. Kaupungin katuverkko noudattaa yhä pääpiirteissään antiikin kreikkalaista ja roomalaista ruudukkoa, ja sen läpi kulkee suora [[Spaccanapoli]]-katu, joka halkaisee vanhankaupungin. Alueella on lisäksi linnoja, kirkkoja ja palatseja eri vuosisadoilta, esimerkiksi meren rannalla oleva [[Castel dell'Ovo]], jonka nimi tarkoittaa munalinnaa. Yhdistelmä osoittaa, miten kaupunki on uusiutunut vuosisatojen mittaan mutta säilyttänyt vanhaa. Täältä ylhäältä se näyttää yhdeltä isolta kivipalalta.
+KYSYMYS: Kerro lisää: Castel dell'Ovo
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+AIEMPI KYSYMYS: Mitä Napolin kaupungin alla on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täällä katolla sitä ei ajattele. Napolin alla on laaja maanalainen tunneli- ja luolaverkosto. Kaupunki on rakennettu pehmeän keltaisen [[tuffin]] päälle, ja kiveä on louhittu rakennusaineeksi jo antiikista asti, mikä jätti alle suuria onkaloita. Siellä kulkee myös vanhoja [[akvedukteja]] ja vesisäiliöitä, jotka toimittivat kaupungille vettä satojen vuosien ajan. [[Toisen maailmansodan]] aikana osa tiloista toimi väestönsuojina, ja nykyään osaan pääsee opastetuille kierroksille nimellä [[Napoli Sotterranea]]. Maan alle en lennä, mutta kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: tuffin
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Mitä Napolin kaupungin alla on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täällä katolla sitä ei ajattele. Napolin alla on laaja maanalainen tunneli- ja luolaverkosto. Kaupunki on rakennettu pehmeän keltaisen [[tuffin]] päälle, ja kiveä on louhittu rakennusaineeksi jo antiikista asti, mikä jätti alle suuria onkaloita. Siellä kulkee myös vanhoja [[akvedukteja]] ja vesisäiliöitä, jotka toimittivat kaupungille vettä satojen vuosien ajan. [[Toisen maailmansodan]] aikana osa tiloista toimi väestönsuojina, ja nykyään osaan pääsee opastetuille kierroksille nimellä [[Napoli Sotterranea]]. Maan alle en lennä, mutta kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: akvedukteja
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mitä Napolin kaupungin alla on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täällä katolla sitä ei ajattele. Napolin alla on laaja maanalainen tunneli- ja luolaverkosto. Kaupunki on rakennettu pehmeän keltaisen [[tuffin]] päälle, ja kiveä on louhittu rakennusaineeksi jo antiikista asti, mikä jätti alle suuria onkaloita. Siellä kulkee myös vanhoja [[akvedukteja]] ja vesisäiliöitä, jotka toimittivat kaupungille vettä satojen vuosien ajan. [[Toisen maailmansodan]] aikana osa tiloista toimi väestönsuojina, ja nykyään osaan pääsee opastetuille kierroksille nimellä [[Napoli Sotterranea]]. Maan alle en lennä, mutta kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Toisen maailmansodan
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+AIEMPI KYSYMYS: Mitä Napolin kaupungin alla on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täällä katolla sitä ei ajattele. Napolin alla on laaja maanalainen tunneli- ja luolaverkosto. Kaupunki on rakennettu pehmeän keltaisen [[tuffin]] päälle, ja kiveä on louhittu rakennusaineeksi jo antiikista asti, mikä jätti alle suuria onkaloita. Siellä kulkee myös vanhoja [[akvedukteja]] ja vesisäiliöitä, jotka toimittivat kaupungille vettä satojen vuosien ajan. [[Toisen maailmansodan]] aikana osa tiloista toimi väestönsuojina, ja nykyään osaan pääsee opastetuille kierroksille nimellä [[Napoli Sotterranea]]. Maan alle en lennä, mutta kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Napoli Sotterranea
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+AIEMPI KYSYMYS: Miksi tornia ei suoristettu kokonaan?
+AIEMPI VASTAUS (Livia):
+Just niin, moni kysyy samaa. Se on järkevä kysymys. Lähteiden mukaan [[Pisan tuomiokirkon]] kellotornin pelastustyön tavoite ei ollut oikaista tornia vaan pysäyttää sen kallistuminen ja vakauttaa se turvalliseen tilaan. Kallistumaa vähennettiin 5,5 asteesta 3,97 asteeseen eli torni palautettiin vuoden 1838 asentoonsa, ja sen jälkeen se on pysynyt vakaana. Täysin pystyssä torni olisi menettänyt tunnusmerkkinsä, ja suuri suoristus olisi vaatinut myös paljon laajempia muutoksia maaperään ja lisännyt riskejä. Torni on osa [[Ihmeiden aukion]] maailmanperintökohdetta, jossa sen ominaispiirteet halutaan säilyttää. Vähän vinossa, kuten minunkin lentoni tuulessa.
+KYSYMYS: Kerro lisää: Pisan tuomiokirkon
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Las Nazarenasin pyhäkkö] 1771 Pyhäkössä on seinämaalaus ristiinnaulitusta Kristuksesta, ja se on Liman tunnetuin kuva. Nimi Señor de los Milagros, Ihmeiden Herra, syntyi 1600- ja 1700-luvuilla: vuosien 1655, 1687 ja 1746 maanjäristykset kaatoivat suurimman osan kaupungista, mutta maalauksen seinä jäi joka kerta pystyyn. Kunnioitus alkoi afroperulaisena, ja kolmannen järistyksen jälkeen 1700-luvulla myös kreolikeskiluokka omaksui sen. Kaupunginvaltuusto julisti Ihmeiden Herran Liman suojelijaksi jo 1715. Kirkko rakennettiin Nazarenasin luostarin yhteyteen, ja se valmistui suuren maanjäristyksen jälkeen 1771. Vuonna 2005 Perun valtio julisti juhlan kansalliseksi kulttuuriperinnöksi ja Vatikaani antoi kuvalle Perun ka…
+- [Sansibar — kohdekartta / Kohdekartta: Sulttaanin palatsi] 1800-luvun loppu Mizingani Roadilla, Ihmeiden talon ja vanhan apteekin välissä, seisoo kolmikerroksinen valkoinen talo, jonka kattoreunaa kiertää hammastus. Se on rakennettu aiemman palatsin Bait As-Sahelin paikalle; edellinen tuhoutui vuoden 1896 sodassa. Nykyinen talo valmistui 1800-luvun lopulla sulttaanin perheen asunnoksi. Vuonna 1964 talo nimettiin Kansan palatsiksi ja otettiin hallinnon käyttöön. Museoksi se muutettiin 1994. Kokoelma kertoo Sansibarin hallitsijasuvusta ja kaupungin historiasta: esillä on huonekaluja ja perheen esineitä, jotka antavat kuvan siitä, millaista elämä palatsissa oli 1800-luvulla. Yksi kerros on omistettu sulttaani Sir Khalifa bin Harubille ja toinen Sayyid…
+AIEMPI KYSYMYS: Miksi tornia ei suoristettu kokonaan?
+AIEMPI VASTAUS (Livia):
+Just niin, moni kysyy samaa. Se on järkevä kysymys. Lähteiden mukaan [[Pisan tuomiokirkon]] kellotornin pelastustyön tavoite ei ollut oikaista tornia vaan pysäyttää sen kallistuminen ja vakauttaa se turvalliseen tilaan. Kallistumaa vähennettiin 5,5 asteesta 3,97 asteeseen eli torni palautettiin vuoden 1838 asentoonsa, ja sen jälkeen se on pysynyt vakaana. Täysin pystyssä torni olisi menettänyt tunnusmerkkinsä, ja suuri suoristus olisi vaatinut myös paljon laajempia muutoksia maaperään ja lisännyt riskejä. Torni on osa [[Ihmeiden aukion]] maailmanperintökohdetta, jossa sen ominaispiirteet halutaan säilyttää. Vähän vinossa, kuten minunkin lentoni tuulessa.
+KYSYMYS: Kerro lisää: Ihmeiden aukion
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Las Nazarenasin pyhäkkö] 1771 Pyhäkössä on seinämaalaus ristiinnaulitusta Kristuksesta, ja se on Liman tunnetuin kuva. Nimi Señor de los Milagros, Ihmeiden Herra, syntyi 1600- ja 1700-luvuilla: vuosien 1655, 1687 ja 1746 maanjäristykset kaatoivat suurimman osan kaupungista, mutta maalauksen seinä jäi joka kerta pystyyn. Kunnioitus alkoi afroperulaisena, ja kolmannen järistyksen jälkeen 1700-luvulla myös kreolikeskiluokka omaksui sen. Kaupunginvaltuusto julisti Ihmeiden Herran Liman suojelijaksi jo 1715. Kirkko rakennettiin Nazarenasin luostarin yhteyteen, ja se valmistui suuren maanjäristyksen jälkeen 1771. Vuonna 2005 Perun valtio julisti juhlan kansalliseksi kulttuuriperinnöksi ja Vatikaani antoi kuvalle Perun ka…
+- [Sansibar — kohdekartta / Kohdekartta: Sulttaanin palatsi] 1800-luvun loppu Mizingani Roadilla, Ihmeiden talon ja vanhan apteekin välissä, seisoo kolmikerroksinen valkoinen talo, jonka kattoreunaa kiertää hammastus. Se on rakennettu aiemman palatsin Bait As-Sahelin paikalle; edellinen tuhoutui vuoden 1896 sodassa. Nykyinen talo valmistui 1800-luvun lopulla sulttaanin perheen asunnoksi. Vuonna 1964 talo nimettiin Kansan palatsiksi ja otettiin hallinnon käyttöön. Museoksi se muutettiin 1994. Kokoelma kertoo Sansibarin hallitsijasuvusta ja kaupungin historiasta: esillä on huonekaluja ja perheen esineitä, jotka antavat kuvan siitä, millaista elämä palatsissa oli 1800-luvulla. Yksi kerros on omistettu sulttaani Sir Khalifa bin Harubille ja toinen Sayyid…
+AIEMPI KYSYMYS: Mitä muuta samalla aukiolla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornin seuralaiset ovat yhtä komeita. Torni seisoo [[Ihmeiden aukiolla]], jota kutsutaan myös tuomiokirkkoaukioksi. Sen vieressä on valkomarmorinen [[Pisan tuomiokirkko]], jonka kellotorni on tuo kallistunut torni, suuri pyöreä [[kastekappeli]] sekä [[Camposanto]]-hautausmaa, jonka maan kerrotaan tuodun Jerusalemista. Kokonaisuus kuuluu [[Unescon]] maailmanperintökohteisiin. Marmoria joka suunnalla, ja minä vain katselen sitä katolta.
+KYSYMYS: Kerro lisää: Ihmeiden aukiolla
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+AIEMPI KYSYMYS: Mitä muuta samalla aukiolla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornin seuralaiset ovat yhtä komeita. Torni seisoo [[Ihmeiden aukiolla]], jota kutsutaan myös tuomiokirkkoaukioksi. Sen vieressä on valkomarmorinen [[Pisan tuomiokirkko]], jonka kellotorni on tuo kallistunut torni, suuri pyöreä [[kastekappeli]] sekä [[Camposanto]]-hautausmaa, jonka maan kerrotaan tuodun Jerusalemista. Kokonaisuus kuuluu [[Unescon]] maailmanperintökohteisiin. Marmoria joka suunnalla, ja minä vain katselen sitä katolta.
+KYSYMYS: Kerro lisää: Pisan tuomiokirkko
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Katedraali] 1878 Manausin katedraali on kaupungin emäkirkko. Sen tarina alkaa karmeliittalähetystyöntekijöistä, jotka rakensivat paikalle Neitsyt Marian kirkon 1695. Provinssin presidentti Manoel da Gama Lobo D’Almada rakennutti sen uudestaan ja laajensi sitä, mutta tuo talo tuhoutui tulipalossa 1850. Nykyinen kirkko on kreikkalaistyylinen, ja suuri osa rakennusaineesta tuotiin Euroopasta ja etenkin Portugalista. Kuusi kelloa valettiin portugalilaisessa valimossa, ja kappeli, kastekappeli ja kolme alttaria ovat lissabonilaista kalkkikiveä. Laatat tulivat lähempää: Nova Rainhasta, joka on nykyään Parintins. Kirkko vihittiin virallisesti 1878. Amazonasin hiippakunta perustettiin vasta 1892, ja kirkko kor…
+AIEMPI KYSYMYS: Mitä muuta samalla aukiolla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornin seuralaiset ovat yhtä komeita. Torni seisoo [[Ihmeiden aukiolla]], jota kutsutaan myös tuomiokirkkoaukioksi. Sen vieressä on valkomarmorinen [[Pisan tuomiokirkko]], jonka kellotorni on tuo kallistunut torni, suuri pyöreä [[kastekappeli]] sekä [[Camposanto]]-hautausmaa, jonka maan kerrotaan tuodun Jerusalemista. Kokonaisuus kuuluu [[Unescon]] maailmanperintökohteisiin. Marmoria joka suunnalla, ja minä vain katselen sitä katolta.
+KYSYMYS: Kerro lisää: kastekappeli
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande] Vuonna 1873 nykyisen Campo Granden seutu ei ollut kenenkään eurooppalaisen kartalla: laajaa cerrado-savannia asuttivat vuosisatoja Terena- ja Guató-kansat, kaupungin perustamista vailla vielä 26 vuotta.
+AIEMPI KYSYMYS: Mitä muuta samalla aukiolla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornin seuralaiset ovat yhtä komeita. Torni seisoo [[Ihmeiden aukiolla]], jota kutsutaan myös tuomiokirkkoaukioksi. Sen vieressä on valkomarmorinen [[Pisan tuomiokirkko]], jonka kellotorni on tuo kallistunut torni, suuri pyöreä [[kastekappeli]] sekä [[Camposanto]]-hautausmaa, jonka maan kerrotaan tuodun Jerusalemista. Kokonaisuus kuuluu [[Unescon]] maailmanperintökohteisiin. Marmoria joka suunnalla, ja minä vain katselen sitä katolta.
+KYSYMYS: Kerro lisää: Camposanto
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+AIEMPI KYSYMYS: Mitä muuta samalla aukiolla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornin seuralaiset ovat yhtä komeita. Torni seisoo [[Ihmeiden aukiolla]], jota kutsutaan myös tuomiokirkkoaukioksi. Sen vieressä on valkomarmorinen [[Pisan tuomiokirkko]], jonka kellotorni on tuo kallistunut torni, suuri pyöreä [[kastekappeli]] sekä [[Camposanto]]-hautausmaa, jonka maan kerrotaan tuodun Jerusalemista. Kokonaisuus kuuluu [[Unescon]] maailmanperintökohteisiin. Marmoria joka suunnalla, ja minä vain katselen sitä katolta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+AIEMPI KYSYMYS: Mitä Galileo Galilei teki Pisassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pisa on hänestä aika ylpeä. Galileo Galilei syntyi Pisassa vuonna 1564, aloitti siellä yliopisto-opinnot lääketieteestä mutta siirtyi matematiikkaan, ja hän opetti matematiikkaa [[Pisan yliopistossa]] 1500-luvun lopulla. Kuuluisan tarinan mukaan hän pudotti tornista eripainoisia esineitä osoittaakseen, että ne putoavat yhtä nopeasti. Tarinan kertoi hänen oppilaansa [[Vincenzo Viviani]] vasta vuosikymmeniä myöhemmin, ja historiantutkijat pitävät sitä todennäköisesti legendana.
+
+Putoavista asioista minulla on omakohtaista kokemusta. Uskon kyllä, että ne putoavat yhtä nopeasti, mutta minä pysyn mieluummin ilmassa.
+KYSYMYS: Kerro lisää: Pisan yliopistossa
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+AIEMPI KYSYMYS: Mitä Galileo Galilei teki Pisassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pisa on hänestä aika ylpeä. Galileo Galilei syntyi Pisassa vuonna 1564, aloitti siellä yliopisto-opinnot lääketieteestä mutta siirtyi matematiikkaan, ja hän opetti matematiikkaa [[Pisan yliopistossa]] 1500-luvun lopulla. Kuuluisan tarinan mukaan hän pudotti tornista eripainoisia esineitä osoittaakseen, että ne putoavat yhtä nopeasti. Tarinan kertoi hänen oppilaansa [[Vincenzo Viviani]] vasta vuosikymmeniä myöhemmin, ja historiantutkijat pitävät sitä todennäköisesti legendana.
+
+Putoavista asioista minulla on omakohtaista kokemusta. Uskon kyllä, että ne putoavat yhtä nopeasti, mutta minä pysyn mieluummin ilmassa.
+KYSYMYS: Kerro lisää: Vincenzo Viviani
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Voiko Pisan tornin huipulle kiivetä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyllä voi. Pelastustyön jälkeen [[kellotornin]] huipulle pääsee taas, ja kiertäviä portaita on noin kaksisataa viisikymmentä. Nousu tehdään pienissä ryhmissä ajanvarauksella, joten lippu kannattaa varata etukäteen, ja voimassa olevat ehdot kannattaa tarkistaa ennen vierailua. Ylhäällä on seitsemän kelloa, ja huipulta näkee [[Ihmeiden aukion]] rakennusten yli kaupungin kattoihin. Kallistuman kuulemma tuntee portaissa, kun seinä on välillä lähellä ja välillä kaukana. Minä käytän portaiden sijaan siipiä.
+KYSYMYS: Kerro lisää: kellotornin
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Panamá: Kaupunki hopeatien päässä] Espanjalainen Pedro Arias de Ávila perusti Panamán 15. elokuuta 1519 kapean satamansuun rannalle. Muutamassa vuodessa kaupungista tuli lähtöpiste Perun valloitukselle ja kauttakulkupaikka Espanjaan matkaavalle kullalle ja hopealle: lasti purettiin maihin Tyynenmeren puolella ja vietiin muulikaravaaneilla kannaksen yli Nombre de Diosin ja myöhemmin Portobelon markkinoille. Vuodesta 1520 kaupungin satamaa ja kauppaa — etenkin orjakauppaa — hallitsivat genovalaiset kauppiaat, joille Espanjan kruunu myönsi erikoisluvan; Genovan tasavalta oli Espanjan tärkein pankkikumppani.
+AIEMPI KYSYMYS: Miksi Pisa oli ennen tärkeä merikaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nyt merta ei näy lainkaan. Pisa oli keskiajalla yksi Välimeren merkittävistä kauppakaupungeista ja itsenäinen merenkulkutasavalta, joka kilpaili [[Genovan]] ja Venetsian kanssa. Kaupunki sijaitsi [[Arno-joen]] varrella, jota pitkin laivat pääsivät merelle, ja sen laivasto kuljetti kauppatavaroita ja sotajoukkoja myös ristiretkien aikaan. Rikkaus rahoitti Ihmeiden aukion rakennukset. Kilpailu Genovan kanssa päättyi Pisan tappioon [[Meloriassa]] vuonna 1284, ja sen jälkeen kaupunki heikkeni. Joen tuoma liete siirsi myös rantaviivaa, ja nykyään meri on noin kymmenen kilometrin päässä. Meri lähti pois, mutta torni jäi.
+KYSYMYS: Kerro lisää: Genovan
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Santa Croce] 1294–1442 Santa Croce on fransiskaanien kirkko, ja se on maailman suurin: 115 metriä pitkä kolmilaivainen halli, jonka rakentaminen alkoi vuonna 1294 ja joka vihittiin 1442. Fransiskaanit olivat köyhyyslupauksen tehnyt veljeskunta, ja siksi kirkon katto on paljasta puuta eikä holvattu kivi — mutta kaupungin rikkaat suvut maksoivat sen kappelit ja saivat vastineeksi hautapaikkansa. Niin siitä tuli Firenzen hautakirkko. Lattian alla ja seinustoilla lepäävät Michelangelo, Galileo Galilei, Niccolò Machiavelli ja säveltäjä Gioacchino Rossini. Danten valtava muistomerkki on sekin täällä, mutta arkku on tyhjä: runoilija kuoli karkotettuna Ravennassa, eikä kaupunki ole saanut häntä takaisin. Sivuka…
+- [Firenze — kaupunkilehti / Firenze] Toscanan pääkaupunki on niin pieni, että sen kävelee ristiin puolessa tunnissa — ja niin täynnä, että siihen ei riitä viikko. Arno jakaa sen kahtia, ja kupoli näkyy joka kadunkulmasta.
+AIEMPI KYSYMYS: Miksi Pisa oli ennen tärkeä merikaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nyt merta ei näy lainkaan. Pisa oli keskiajalla yksi Välimeren merkittävistä kauppakaupungeista ja itsenäinen merenkulkutasavalta, joka kilpaili [[Genovan]] ja Venetsian kanssa. Kaupunki sijaitsi [[Arno-joen]] varrella, jota pitkin laivat pääsivät merelle, ja sen laivasto kuljetti kauppatavaroita ja sotajoukkoja myös ristiretkien aikaan. Rikkaus rahoitti Ihmeiden aukion rakennukset. Kilpailu Genovan kanssa päättyi Pisan tappioon [[Meloriassa]] vuonna 1284, ja sen jälkeen kaupunki heikkeni. Joen tuoma liete siirsi myös rantaviivaa, ja nykyään meri on noin kymmenen kilometrin päässä. Meri lähti pois, mutta torni jäi.
+KYSYMYS: Kerro lisää: Arno-joen
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+AIEMPI KYSYMYS: Miksi Pisa oli ennen tärkeä merikaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nyt merta ei näy lainkaan. Pisa oli keskiajalla yksi Välimeren merkittävistä kauppakaupungeista ja itsenäinen merenkulkutasavalta, joka kilpaili [[Genovan]] ja Venetsian kanssa. Kaupunki sijaitsi [[Arno-joen]] varrella, jota pitkin laivat pääsivät merelle, ja sen laivasto kuljetti kauppatavaroita ja sotajoukkoja myös ristiretkien aikaan. Rikkaus rahoitti Ihmeiden aukion rakennukset. Kilpailu Genovan kanssa päättyi Pisan tappioon [[Meloriassa]] vuonna 1284, ja sen jälkeen kaupunki heikkeni. Joen tuoma liete siirsi myös rantaviivaa, ja nykyään meri on noin kymmenen kilometrin päässä. Meri lähti pois, mutta torni jäi.
+KYSYMYS: Kerro lisää: Meloriassa
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tabriz — kohdekartta / Kohdekartta: Azerbaidžanin museo] 1958 Museo avattiin huhtikuussa 1958 Sinisen moskeijan viereen. Sen piirsi ranskalainen André Godard (1881–1965), joka johti Iranin arkeologista tutkimuslaitosta vuosina 1928–1953 ja uudelleen 1956–1960 ja suunnitteli Teheranin kansallismuseon. Talossa on kolme näyttelysalia, sivupiha, toimistohuoneita ja kirjasto, jossa on yli 2 500 käsin kirjoitettua ja painettua kirjaa historiasta, arkeologiasta, taiteesta ja Iranin kulttuurista. Ensimmäinen sali etenee aikajärjestyksessä: vanhimmat löydöt ovat 5. vuosituhannelta eaa., sitten seuraavat Urartu, akhaimenidien valtakunta ja lopuksi sasanidikausi 224–651 jaa. Toinen sali on kahtia: toisessa päässä islamilaisen ajan arkeologiaa, toisessa koli…
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+AIEMPI KYSYMYS: Miten luolaan pääsee sisään?
+AIEMPI VASTAUS (Livia):
+Ai se. Sisäänpääsy on yllättävän ahdas. [[Sinisen luolan]] suuaukko [[Caprin]] luoteisrannikolla on vain noin metrin korkuinen, joten luolaan päästään vain pienillä soutuveneillä, joihin mahtuu muutama matkustaja. Isommalta aluksesta siirrytään veneeseen luolan edessä, ja venettä ohjataan sisään usein seinässä olevaa ketjua käyttäen; matkustajat painavat päänsä alas tai makaavat veneen pohjalla, kun vene liukuu aukosta aallon laskiessa. Pääsy riippuu säästä ja aallokosta, ja kovalla merenkäynnillä luola suljetaan käytännössä kokonaan. Minä jättäisin soutajan työt soutajille.
+KYSYMYS: Kerro lisää: Sinisen luolan
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+AIEMPI KYSYMYS: Miten luolaan pääsee sisään?
+AIEMPI VASTAUS (Livia):
+Ai se. Sisäänpääsy on yllättävän ahdas. [[Sinisen luolan]] suuaukko [[Caprin]] luoteisrannikolla on vain noin metrin korkuinen, joten luolaan päästään vain pienillä soutuveneillä, joihin mahtuu muutama matkustaja. Isommalta aluksesta siirrytään veneeseen luolan edessä, ja venettä ohjataan sisään usein seinässä olevaa ketjua käyttäen; matkustajat painavat päänsä alas tai makaavat veneen pohjalla, kun vene liukuu aukosta aallon laskiessa. Pääsy riippuu säästä ja aallokosta, ja kovalla merenkäynnillä luola suljetaan käytännössä kokonaan. Minä jättäisin soutajan työt soutajille.
+KYSYMYS: Kerro lisää: Caprin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Muuri ladottiin viiden metrin laatoista] Kouklian kylässä Pafoksesta itään on Palaipafos eli Vanha Pafos. Sinne pystytettiin noin 1200–1100 eaa. suuri pyhäkkö, ja jumalatarta palvottiin samalla paikalla 300-luvulle jaa. asti. Säilyneet jäännökset muodostuvat kahdesta suorakaiteen muotoisesta osasta. Eteläinen oli avoin piha, jota rajaa lännessä muuri jättimäisistä työstetyistä kalkkikivilaatoista: pisimmät ovat viisi metriä pitkiä ja 2,2 metriä korkeita. Kulttikuva ei esittänyt ihmistä. Roomalainen historioitsija Tacitus kuvaa sen pyöreäksi möhkäleeksi, joka kohoaa leveästä pohjasta kartiona kapeaan huippuun. Alttarilla ei uhrattu verta vaan pelkkiä rukouksia ja puhdasta liekkiä.
+AIEMPI KYSYMYS: Miksi keisari halusi asua saarella?
+AIEMPI VASTAUS (Livia):
+No jopas. Tuohon on useita selityksiä. Tiberius muutti Caprille vuonna 27 ja hallitsi valtakuntaa saarelta kuolemaansa asti. Syistä ei ole varmaa tietoa: antiikin kirjoittajat, kuten [[Tacitus]] ja [[Suetonius]], kertovat hänen vetäytyneen pois Rooman politiikasta ja sen juonitteluista, mutta he kirjoittivat myöhemmin ja heidän kertomuksensa ovat osin ennakkoluuloisia. Saari oli myös turvallinen ja jyrkkien kallioidensa vuoksi helposti vartioitavissa, ja sinne rakennettiin [[Villa Jovis]]. Osa historioitsijoista näkee muutossa sekä yksityisyyden kaipuun että varovaisuuden vallan vaaroja kohtaan.
+
+Korkea paikka ja rauha, sitä minäkin haluaisin. Huone, josta näkee koko lahden, olisi minusta hyvä työpaikka.
+KYSYMYS: Kerro lisää: Tacitus
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+AIEMPI KYSYMYS: Miksi keisari halusi asua saarella?
+AIEMPI VASTAUS (Livia):
+No jopas. Tuohon on useita selityksiä. Tiberius muutti Caprille vuonna 27 ja hallitsi valtakuntaa saarelta kuolemaansa asti. Syistä ei ole varmaa tietoa: antiikin kirjoittajat, kuten [[Tacitus]] ja [[Suetonius]], kertovat hänen vetäytyneen pois Rooman politiikasta ja sen juonitteluista, mutta he kirjoittivat myöhemmin ja heidän kertomuksensa ovat osin ennakkoluuloisia. Saari oli myös turvallinen ja jyrkkien kallioidensa vuoksi helposti vartioitavissa, ja sinne rakennettiin [[Villa Jovis]]. Osa historioitsijoista näkee muutossa sekä yksityisyyden kaipuun että varovaisuuden vallan vaaroja kohtaan.
+
+Korkea paikka ja rauha, sitä minäkin haluaisin. Huone, josta näkee koko lahden, olisi minusta hyvä työpaikka.
+KYSYMYS: Kerro lisää: Suetonius
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+AIEMPI KYSYMYS: Miksi keisari halusi asua saarella?
+AIEMPI VASTAUS (Livia):
+No jopas. Tuohon on useita selityksiä. Tiberius muutti Caprille vuonna 27 ja hallitsi valtakuntaa saarelta kuolemaansa asti. Syistä ei ole varmaa tietoa: antiikin kirjoittajat, kuten [[Tacitus]] ja [[Suetonius]], kertovat hänen vetäytyneen pois Rooman politiikasta ja sen juonitteluista, mutta he kirjoittivat myöhemmin ja heidän kertomuksensa ovat osin ennakkoluuloisia. Saari oli myös turvallinen ja jyrkkien kallioidensa vuoksi helposti vartioitavissa, ja sinne rakennettiin [[Villa Jovis]]. Osa historioitsijoista näkee muutossa sekä yksityisyyden kaipuun että varovaisuuden vallan vaaroja kohtaan.
+
+Korkea paikka ja rauha, sitä minäkin haluaisin. Huone, josta näkee koko lahden, olisi minusta hyvä työpaikka.
+KYSYMYS: Kerro lisää: Villa Jovis
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+- [Italia — maalehti / Historian hetki] Napolinlahden kaupungissa satoi vuonna 79 ensin kevyttä hohkakiveä, ja se oli viimeinen tilaisuus lähteä — kuumat tuhkavyöryt tulivat yöllä, ja Plinius kirjoitti pilvestä, joka näytti pinjapuulta.
+AIEMPI KYSYMYS: Mitä Caprin keisarin huvilasta on jäljellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Siitä on yllättävän paljon jäljellä. [[Villa Jovis]] eli Jupiterin huvila oli yksi Tiberiuksen Caprille rakennuttamista huviloista, ja sen rauniot sijaitsevat saaren itäosassa kalliolla yli kolmensadan metrin korkeudessa. Kompleksista on säilynyt paksuja muureja, holvattuja käytäviä, vesisäiliöitä ja palatsin perustuksia, ja sen sanotaan olevan Italian parhaiten säilyneitä keisariajan huviloita. Rauniolle nousee polku Caprin kaupungista kävellen, ja siellä näkymä ulottuu yli [[Napolinlahden]]. Tiberiuksen aikana huvila toimi keisarin hallintokeskuksena. Siellä on hyvä istua, jos osaa olla huomaamatta.
+KYSYMYS: Kerro lisää: Napolinlahden
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+AIEMPI KYSYMYS: Missä Capri sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, se on lähempänä kuin luulisi. Capri on saari Etelä-Italiassa [[Napolinlahden]] eteläpuolella [[Tyrrhenanmeren]] rannikolla, noin 30 kilometrin päässä Napolista ja vain muutaman kilometrin päässä Sorrenton niemimaan kärjestä. Saarella on kaksi pääkylää, Capri ja [[Anacapri]], jotka sijaitsevat eri korkeuksilla. Kartalla se on pieni täplä, mutta ylhäältä komea.
+KYSYMYS: Kerro lisää: Tyrrhenanmeren
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+AIEMPI KYSYMYS: Missä Capri sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, se on lähempänä kuin luulisi. Capri on saari Etelä-Italiassa [[Napolinlahden]] eteläpuolella [[Tyrrhenanmeren]] rannikolla, noin 30 kilometrin päässä Napolista ja vain muutaman kilometrin päässä Sorrenton niemimaan kärjestä. Saarella on kaksi pääkylää, Capri ja [[Anacapri]], jotka sijaitsevat eri korkeuksilla. Kartalla se on pieni täplä, mutta ylhäältä komea.
+KYSYMYS: Kerro lisää: Anacapri
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+AIEMPI KYSYMYS: Miksi vesi luolassa hehkuu sinisenä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä ei ole taikaa vaan fysiikkaa. [[Sinisen luolan]] suuaukko on pinnan yläpuolella pieni, mutta veden alla on suurempi aukko, josta auringonvalo tulee sisään meren läpi. Merivesi imee valon punaisia ja keltaisia aallonpituuksia, joten sisään pääsee lähinnä sininen valo, joka heijastuu luolan pohjasta ja seinistä ylös. Siksi vesi näyttää hehkuvan sinisenä, ja veteen joutuvat esineet ja uimarit näyttävät hopeisilta. Luolan uudelleen löytänyt saksalainen [[August Kopisch]] teki sen kuuluisaksi vuonna 1826. Hienoa fysiikkaa, vaikkei siinä ole yhtään pullaa.
+KYSYMYS: Kerro lisää: August Kopisch
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Mitä terasseilla kasvatetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rinteitä katsoo kyllä mieluusti ylhäältä. Terasseilla kasvatetaan ennen kaikkea viiniköynnöksiä, joista valmistetaan alueen valkoviiniä ja makeaa [[Sciacchetrà]]-jälkiviiniä, sekä [[oliivipuita]] ja sitruunoita. Kapeat tasanteet on tuettu käsin ladotuilla [[kuivakivimuureilla]], jotka pitävät ohuen maan paikallaan jyrkässä rinteessä. Työ on ollut raskasta, ja suuri osa siitä tehdään yhä käsin. Pullaa ei kasva terasseilla, olen tarkistanut.
+KYSYMYS: Kerro lisää: Sciacchetrà
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Putous, jonka nimi tarkoittaa jauhamista] Ouzoud on yhteisnimi useille putouksille Azilalin maakunnassa Keski-Atlaksessa. Vesi putoaa kaikkiaan 110 metriä kolmessa portaassa El-Abid-joen rotkoon; joen nimi tarkoittaa orjien jokea. Azilalin kaupunkiin on matkaa 36 kilometriä ja Marrakechiin 150. Nimi ouzoud tarkoittaa berberiksi viljan jauhamista, ja se kertoo, mihin vettä käytettiin ennen kuin sitä tultiin katsomaan: putouksen yläpuolella on yhä pieniä vesimyllyjä, joissa jauhettiin kylän vilja. Alempana rotkossa kasvaa oliivipuita, joita kastellaan samasta joesta.
+- [Egypti — maalehti / Luonto: Keidas keskellä ei-mitään] Siwan keidas on aavikon saari: lähimpään kaupunkiin on satoja kilometrejä hiekkaa, mutta keitaalla pulppuaa satoja lähteitä, joiden varassa kasvaa satojatuhansia taateli- ja oliivipuita. Eristyksissä siwalaiset säilyttivät oman berberikielensä, jota muualla Egyptissä ei puhuta. Kuuluisin vieras saapui vuonna 331 eaa.: Aleksanteri Suuri vaelsi aavikon poikki kysymään neuvoa keitaan oraakkelilta.
+- [Kreeta — kaupunkilehti / Kreeta] Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän kuin ihmisiä.
+AIEMPI KYSYMYS: Mitä terasseilla kasvatetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rinteitä katsoo kyllä mieluusti ylhäältä. Terasseilla kasvatetaan ennen kaikkea viiniköynnöksiä, joista valmistetaan alueen valkoviiniä ja makeaa [[Sciacchetrà]]-jälkiviiniä, sekä [[oliivipuita]] ja sitruunoita. Kapeat tasanteet on tuettu käsin ladotuilla [[kuivakivimuureilla]], jotka pitävät ohuen maan paikallaan jyrkässä rinteessä. Työ on ollut raskasta, ja suuri osa siitä tehdään yhä käsin. Pullaa ei kasva terasseilla, olen tarkistanut.
+KYSYMYS: Kerro lisää: oliivipuita
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Mitä terasseilla kasvatetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rinteitä katsoo kyllä mieluusti ylhäältä. Terasseilla kasvatetaan ennen kaikkea viiniköynnöksiä, joista valmistetaan alueen valkoviiniä ja makeaa [[Sciacchetrà]]-jälkiviiniä, sekä [[oliivipuita]] ja sitruunoita. Kapeat tasanteet on tuettu käsin ladotuilla [[kuivakivimuureilla]], jotka pitävät ohuen maan paikallaan jyrkässä rinteessä. Työ on ollut raskasta, ja suuri osa siitä tehdään yhä käsin. Pullaa ei kasva terasseilla, olen tarkistanut.
+KYSYMYS: Kerro lisää: kuivakivimuureilla
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Miten kylät ovat säilyneet ennallaan?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä havainto. Kylät ovat säilyneet pitkälti siksi, että jyrkkä rannikko ja huonot tiet ovat pitäneet laajan rakentamisen poissa: kyliin kuljetaan polkuja pitkin, junalla ja veneellä, ja autolla vain vaivalloisesti. Rakennukset ovat ahtautuneet pieniin laaksoihin ja kallioille, eikä niiden ympärille ole ollut tilaa kasvaa. Lisäksi alue on [[kansallispuisto]] ja Unescon [[maailmanperintökohde]], mikä rajoittaa uudisrakentamista. Täysin muuttumatonta mikään kylä ei kuitenkaan ole, sillä matkailu on muokannut arkea. Hyvin sanottu, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: kansallispuisto
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miten kylät ovat säilyneet ennallaan?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä havainto. Kylät ovat säilyneet pitkälti siksi, että jyrkkä rannikko ja huonot tiet ovat pitäneet laajan rakentamisen poissa: kyliin kuljetaan polkuja pitkin, junalla ja veneellä, ja autolla vain vaivalloisesti. Rakennukset ovat ahtautuneet pieniin laaksoihin ja kallioille, eikä niiden ympärille ole ollut tilaa kasvaa. Lisäksi alue on [[kansallispuisto]] ja Unescon [[maailmanperintökohde]], mikä rajoittaa uudisrakentamista. Täysin muuttumatonta mikään kylä ei kuitenkaan ole, sillä matkailu on muokannut arkea. Hyvin sanottu, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: maailmanperintökohde
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Mikä on Via dell'Amore -polku?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi on kyllä romanttinen. [[Via dell'Amore]] eli rakkauden polku on noin kilometrin mittainen rantapolku [[Manarolan]] ja [[Riomaggioren]] välillä, ja se kulkee suoraan meren yläpuolella kallioon louhittuna. Polun osia on suljettu ajoittain kalliopudotusten ja maanvyöryjen vuoksi, joten en ole varma sen nykyisestä tilasta, ja ajantasaisen tiedon saa puiston omilta sivuilta. Pariskunnat ovat perinteisesti jättäneet sinne lukkoja. Kyllä kyyhky tuntee reitin, jota lentää koko matkan suoraan.
+KYSYMYS: Kerro lisää: Via dell'Amore
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Mikä on Via dell'Amore -polku?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi on kyllä romanttinen. [[Via dell'Amore]] eli rakkauden polku on noin kilometrin mittainen rantapolku [[Manarolan]] ja [[Riomaggioren]] välillä, ja se kulkee suoraan meren yläpuolella kallioon louhittuna. Polun osia on suljettu ajoittain kalliopudotusten ja maanvyöryjen vuoksi, joten en ole varma sen nykyisestä tilasta, ja ajantasaisen tiedon saa puiston omilta sivuilta. Pariskunnat ovat perinteisesti jättäneet sinne lukkoja. Kyllä kyyhky tuntee reitin, jota lentää koko matkan suoraan.
+KYSYMYS: Kerro lisää: Manarolan
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Mikä on Via dell'Amore -polku?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi on kyllä romanttinen. [[Via dell'Amore]] eli rakkauden polku on noin kilometrin mittainen rantapolku [[Manarolan]] ja [[Riomaggioren]] välillä, ja se kulkee suoraan meren yläpuolella kallioon louhittuna. Polun osia on suljettu ajoittain kalliopudotusten ja maanvyöryjen vuoksi, joten en ole varma sen nykyisestä tilasta, ja ajantasaisen tiedon saa puiston omilta sivuilta. Pariskunnat ovat perinteisesti jättäneet sinne lukkoja. Kyllä kyyhky tuntee reitin, jota lentää koko matkan suoraan.
+KYSYMYS: Kerro lisää: Riomaggioren
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Mitä pesto on ja mistä se on kotoisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tuoksusta jo erottaa. Pesto on kotoisin [[Liguriasta]], erityisesti [[Genovasta]], ja perinteinen pesto valmistetaan tuoreesta [[basilikasta]], pinjansiemenistä, valkosipulista, oliiviöljystä ja juustosta, kuten parmesaanista tai pecorinosta. Aineet survotaan perinteisesti marmorisessa huhmareessa. Nimi tulee sanasta, joka tarkoittaa survottua tai jauhettua, ja kastike sopii etenkin pastalle.
+
+Ligurian rinteillä kasvaa se basilika, jonka tuoksun tunnistan korkealta taivaalta asti. Täytyy myöntää, että italialaisilla on ruoka-asioissa vakava ote, eikä pulloja ja purkkeja katsota hyvällä.
+KYSYMYS: Kerro lisää: Liguriasta
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Plaza de Armas] 1520-luku Kun espanjalaiset perustivat kaupungin 1519, tapaan kuului varata heti tilaa julkiselle aukiolle. Plaza de Armas syntyi 1520-luvun alussa vanhankaupungin ensimmäiseksi aukioksi, ja se oli sotilaiden ja hallinnon paikka — nimi tarkoittaa aseiden aukiota. 1580-luvulle tultaessa se oli otettu kokonaan sotilaskäyttöön. Vuonna 1896 aukiota kuvattiin neljäksi ceibapuiden varjostamaksi puistoksi, joiden keskellä seisoi Ferdinand VII:n marmoripatsas. Aukion itälaidalla on kuvernöörien palatsi. Kuvernööri Felipe de Fondesviela, markiisi de la Torre, esitti kaupunginvaltuustolle 28. tammikuuta 1773, että vanha pääkirkko puretaan ja tilalle rakennetaan palatsi. Työ alkoi 1776 kuubalaisen ins…
+AIEMPI KYSYMYS: Mitä pesto on ja mistä se on kotoisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tuoksusta jo erottaa. Pesto on kotoisin [[Liguriasta]], erityisesti [[Genovasta]], ja perinteinen pesto valmistetaan tuoreesta [[basilikasta]], pinjansiemenistä, valkosipulista, oliiviöljystä ja juustosta, kuten parmesaanista tai pecorinosta. Aineet survotaan perinteisesti marmorisessa huhmareessa. Nimi tulee sanasta, joka tarkoittaa survottua tai jauhettua, ja kastike sopii etenkin pastalle.
+
+Ligurian rinteillä kasvaa se basilika, jonka tuoksun tunnistan korkealta taivaalta asti. Täytyy myöntää, että italialaisilla on ruoka-asioissa vakava ote, eikä pulloja ja purkkeja katsota hyvällä.
+KYSYMYS: Kerro lisää: Genovasta
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mitä pesto on ja mistä se on kotoisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tuoksusta jo erottaa. Pesto on kotoisin [[Liguriasta]], erityisesti [[Genovasta]], ja perinteinen pesto valmistetaan tuoreesta [[basilikasta]], pinjansiemenistä, valkosipulista, oliiviöljystä ja juustosta, kuten parmesaanista tai pecorinosta. Aineet survotaan perinteisesti marmorisessa huhmareessa. Nimi tulee sanasta, joka tarkoittaa survottua tai jauhettua, ja kastike sopii etenkin pastalle.
+
+Ligurian rinteillä kasvaa se basilika, jonka tuoksun tunnistan korkealta taivaalta asti. Täytyy myöntää, että italialaisilla on ruoka-asioissa vakava ote, eikä pulloja ja purkkeja katsota hyvällä.
+KYSYMYS: Kerro lisää: basilikasta
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Marseille — kaupunkilehti / Marseille: Monte Criston linnasaari] Sataman suulla olevalle kalliosaarelle rakennettiin 1500-luvulla linnoitus, josta tuli pian vankila. Alexandre Dumas sijoitti sinne romaaninsa Monte Criston kreivi, ja kirjasta tuli niin kuuluisa, että saarelle tehtiin turisteja varten Faria-isän selli, vaikka romaanin pappi on Dumas’n keksintöä eikä koskaan istunut siellä. Oikeat vangit eivät päässeet minnekään: saarelta ei tiettävästi ole koskaan paennut kukaan.
+AIEMPI KYSYMYS: Miten Monterosso eroaa muista kylistä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viidestä kylästä tämä on se tasaisin. [[Monterosso al Mare]] on lähteiden mukaan viidestä kylästä suurin, ja se on ainoa, jolla on pitkä hiekkaranta ja jonka maasto on suhteellisen tasaista. Muut kylät, kuten [[Vernazza]], [[Corniglia]], [[Manarola]] ja [[Riomaggiore]], ovat ahtaampia ja nousevat jyrkästi rinteille. Monterosso jakautuu myös vanhaan ja uudempaan kaupunginosaan. Ihan kaiken tästä muistin ilman paperia.
+KYSYMYS: Kerro lisää: Monterosso al Mare
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Miten Monterosso eroaa muista kylistä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viidestä kylästä tämä on se tasaisin. [[Monterosso al Mare]] on lähteiden mukaan viidestä kylästä suurin, ja se on ainoa, jolla on pitkä hiekkaranta ja jonka maasto on suhteellisen tasaista. Muut kylät, kuten [[Vernazza]], [[Corniglia]], [[Manarola]] ja [[Riomaggiore]], ovat ahtaampia ja nousevat jyrkästi rinteille. Monterosso jakautuu myös vanhaan ja uudempaan kaupunginosaan. Ihan kaiken tästä muistin ilman paperia.
+KYSYMYS: Kerro lisää: Vernazza
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Miten Monterosso eroaa muista kylistä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viidestä kylästä tämä on se tasaisin. [[Monterosso al Mare]] on lähteiden mukaan viidestä kylästä suurin, ja se on ainoa, jolla on pitkä hiekkaranta ja jonka maasto on suhteellisen tasaista. Muut kylät, kuten [[Vernazza]], [[Corniglia]], [[Manarola]] ja [[Riomaggiore]], ovat ahtaampia ja nousevat jyrkästi rinteille. Monterosso jakautuu myös vanhaan ja uudempaan kaupunginosaan. Ihan kaiken tästä muistin ilman paperia.
+KYSYMYS: Kerro lisää: Corniglia
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Miten Monterosso eroaa muista kylistä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viidestä kylästä tämä on se tasaisin. [[Monterosso al Mare]] on lähteiden mukaan viidestä kylästä suurin, ja se on ainoa, jolla on pitkä hiekkaranta ja jonka maasto on suhteellisen tasaista. Muut kylät, kuten [[Vernazza]], [[Corniglia]], [[Manarola]] ja [[Riomaggiore]], ovat ahtaampia ja nousevat jyrkästi rinteille. Monterosso jakautuu myös vanhaan ja uudempaan kaupunginosaan. Ihan kaiken tästä muistin ilman paperia.
+KYSYMYS: Kerro lisää: Manarola
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+AIEMPI KYSYMYS: Miten Monterosso eroaa muista kylistä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viidestä kylästä tämä on se tasaisin. [[Monterosso al Mare]] on lähteiden mukaan viidestä kylästä suurin, ja se on ainoa, jolla on pitkä hiekkaranta ja jonka maasto on suhteellisen tasaista. Muut kylät, kuten [[Vernazza]], [[Corniglia]], [[Manarola]] ja [[Riomaggiore]], ovat ahtaampia ja nousevat jyrkästi rinteille. Monterosso jakautuu myös vanhaan ja uudempaan kaupunginosaan. Ihan kaiken tästä muistin ilman paperia.
+KYSYMYS: Kerro lisää: Riomaggiore

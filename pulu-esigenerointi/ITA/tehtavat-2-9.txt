@@ -1,0 +1,1159 @@
+### 641
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mitä Canossan matka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä ilmaus, tän minä tunnen. Canossan matka tarkoittaa nöyrtymistä ja anteeksipyyntöä vastapuolen edessä. Ilmaus periytyy vuoteen 1077, jolloin paavi [[Gregorius VII]] oli Canossassa ja keisari [[Henrik IV]] tuli sinne hakemaan synninpäästöä, ja välirikko sovittiin. Taustalla oli [[investituuririita]], jossa kiisteltiin siitä, kuka saa nimittää piispat. Tarinan mukaan keisari odotti linnan portilla useita päiviä, mutta yksityiskohdat vaihtelevat lähteissä. Kyyhky ei kyllä ois jaksanut odottaa lumessa.
+KYSYMYS: Kerro lisää: Henrik IV
+
+### 642
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mitä Canossan matka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä ilmaus, tän minä tunnen. Canossan matka tarkoittaa nöyrtymistä ja anteeksipyyntöä vastapuolen edessä. Ilmaus periytyy vuoteen 1077, jolloin paavi [[Gregorius VII]] oli Canossassa ja keisari [[Henrik IV]] tuli sinne hakemaan synninpäästöä, ja välirikko sovittiin. Taustalla oli [[investituuririita]], jossa kiisteltiin siitä, kuka saa nimittää piispat. Tarinan mukaan keisari odotti linnan portilla useita päiviä, mutta yksityiskohdat vaihtelevat lähteissä. Kyyhky ei kyllä ois jaksanut odottaa lumessa.
+KYSYMYS: Kerro lisää: investituuririita
+
+### 643
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Kuka Matilda Toscanalainen oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Hänestä on kuultu paljon kirjeissä. Matilda Toscanalainen oli keskiajan Italian vaikutusvaltaisimpia hallitsijoita: hän omisti [[Canossan linnan]] ja oli paavin ystävä. Hän hallitsi laajoja alueita Pohjois-Italiassa ja [[Toscanassa]], ja Canossassa vuonna 1077 oleskeli paavi [[Gregorius VII]], jonka ystävä Matilda oli. Hän kuoli vuonna 1115 ja määräsi maansa kuolemansa jälkeen kirkolle. Hallitsija, joka sai keisarin ja paavin neuvottelemaan omalla pihallaan, ansaitsee kyyhkyltä kumarruksen.
+KYSYMYS: Kerro lisää: Canossan linnan
+
+### 644
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Kuka Matilda Toscanalainen oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Hänestä on kuultu paljon kirjeissä. Matilda Toscanalainen oli keskiajan Italian vaikutusvaltaisimpia hallitsijoita: hän omisti [[Canossan linnan]] ja oli paavin ystävä. Hän hallitsi laajoja alueita Pohjois-Italiassa ja [[Toscanassa]], ja Canossassa vuonna 1077 oleskeli paavi [[Gregorius VII]], jonka ystävä Matilda oli. Hän kuoli vuonna 1115 ja määräsi maansa kuolemansa jälkeen kirkolle. Hallitsija, joka sai keisarin ja paavin neuvottelemaan omalla pihallaan, ansaitsee kyyhkyltä kumarruksen.
+KYSYMYS: Kerro lisää: Toscanassa
+
+### 645
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mikä oli investituuririita?
+AIEMPI VASTAUS (Livia):
+No jopas, tää on iso aihe. Investituuririita oli 1000-luvun lopulla ja 1100-luvun alussa käyty kiista siitä, kuka saa nimittää ja virkaan asettaa piispat ja apotit: paavi vai maallinen hallitsija, kuten keisari. Kiista kärjistyi paavi Gregorius VII:n ja keisari Henrik IV:n välille, ja sen tunnetuin käänne oli [[Canossan]] tapaus vuonna 1077, jossa keisari [[Henrik IV]] haki paavin anteeksiantoa. Riita päättyi lopulta [[Wormsin konkordaattiin]] vuonna 1122. Pitkä riita, ja sen aikana ehti vaihtua moni kyyhkysukupolvi.
+KYSYMYS: Kerro lisää: Canossan
+
+### 646
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Mikä oli investituuririita?
+AIEMPI VASTAUS (Livia):
+No jopas, tää on iso aihe. Investituuririita oli 1000-luvun lopulla ja 1100-luvun alussa käyty kiista siitä, kuka saa nimittää ja virkaan asettaa piispat ja apotit: paavi vai maallinen hallitsija, kuten keisari. Kiista kärjistyi paavi Gregorius VII:n ja keisari Henrik IV:n välille, ja sen tunnetuin käänne oli [[Canossan]] tapaus vuonna 1077, jossa keisari [[Henrik IV]] haki paavin anteeksiantoa. Riita päättyi lopulta [[Wormsin konkordaattiin]] vuonna 1122. Pitkä riita, ja sen aikana ehti vaihtua moni kyyhkysukupolvi.
+KYSYMYS: Kerro lisää: Wormsin konkordaattiin
+
+### 647
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mitä Canossan linnalle tapahtui myöhemmin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnat kokee kovia. Canossan linna menetti merkityksensä keskiajan lopulla: [[Reggion]] joukot tuhosivat sen vuonna 1255, ja sen jälkeen [[Este-suku]] omisti paikan vuoteen 1796 asti. Linna on siis ollut pitkään raunioina, ja nykyään paikalla on lähinnä jäännöksiä; en ole varma, kuinka paljon alkuperäisestä on säilynyt. Linnat ne vaan hajoaa, mut kyyhkyt jatkaa.
+KYSYMYS: Kerro lisää: Reggion
+
+### 648
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kiipeilijä jolle jyrkänne ei ole este] Aavikonlampaat liikkuvat Grand Canyonin pystysuorilla kallioseinämillä yhtä varmasti kuin muut eläimet tasamaalla: niiden sorkkien kumimaiset alustat tarttuvat kapeisiinkin kielekkeisiin, ja ne osaavat hypätä useiden metrien pudotuksia vahingoittumatta. Pässien kierteiset sarvet voivat painaa yli 13 kiloa – enemmän kuin niiden kaikkien muiden luiden yhteispaino – ja niitä käytetään sekä puolustukseen että kilpataisteluissa toisia pässejä vastaan kiima-aikana. Lampaat selviävät myös ilman juomavettä pitkiä aikoja, sillä ne saavat nesteestään kasveista ja voivat juoda kerralla suuria määriä löytäessään lähteen tai sadeveden täyttämän kalliokuopan.
+AIEMPI KYSYMYS: Mitä Canossan linnalle tapahtui myöhemmin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnat kokee kovia. Canossan linna menetti merkityksensä keskiajan lopulla: [[Reggion]] joukot tuhosivat sen vuonna 1255, ja sen jälkeen [[Este-suku]] omisti paikan vuoteen 1796 asti. Linna on siis ollut pitkään raunioina, ja nykyään paikalla on lähinnä jäännöksiä; en ole varma, kuinka paljon alkuperäisestä on säilynyt. Linnat ne vaan hajoaa, mut kyyhkyt jatkaa.
+KYSYMYS: Kerro lisää: Este-suku
+
+### 649
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mikä suku Este oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Este oli italialainen ruhtinassuku, joka hallitsi keskiajalta alkaen muun muassa [[Ferraraa]] ja [[Modenaa]], ja Reggion alue kuului sukuun pitkään. [[Canossan linna]] oli suvun omistuksessa vuoteen 1796 asti. Suvun nimi periytyy lähteiden mukaan Este-nimisestä paikasta Pohjois-Italiassa, mutta en ole varma sen tarkasta alkuperästä. Vanha suku, mut meikäläisten sukupuu on silti vanhempi.
+KYSYMYS: Kerro lisää: Ferraraa
+
+### 650
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mikä suku Este oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Este oli italialainen ruhtinassuku, joka hallitsi keskiajalta alkaen muun muassa [[Ferraraa]] ja [[Modenaa]], ja Reggion alue kuului sukuun pitkään. [[Canossan linna]] oli suvun omistuksessa vuoteen 1796 asti. Suvun nimi periytyy lähteiden mukaan Este-nimisestä paikasta Pohjois-Italiassa, mutta en ole varma sen tarkasta alkuperästä. Vanha suku, mut meikäläisten sukupuu on silti vanhempi.
+KYSYMYS: Kerro lisää: Modenaa
+
+### 651
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+AIEMPI KYSYMYS: Mikä suku Este oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Este oli italialainen ruhtinassuku, joka hallitsi keskiajalta alkaen muun muassa [[Ferraraa]] ja [[Modenaa]], ja Reggion alue kuului sukuun pitkään. [[Canossan linna]] oli suvun omistuksessa vuoteen 1796 asti. Suvun nimi periytyy lähteiden mukaan Este-nimisestä paikasta Pohjois-Italiassa, mutta en ole varma sen tarkasta alkuperästä. Vanha suku, mut meikäläisten sukupuu on silti vanhempi.
+KYSYMYS: Kerro lisää: Canossan linna
+
+### 652
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Historia: Saarto jonka kestoa lasketaan kahdella tavalla] Manuel Oriben joukot piirittivät Montevideota Guerra Granden aikana, ja kaupungin puolustus lepäsi vasta vapautettujen orjien 5 000 hengen joukko-osaston ja ulkomaisten pakolaisten varassa: italialaista legioonaa johti Giuseppe Garibaldi, ja rinnalla toimivat ranskalainen ja baskilaisten legioona sekä brittiläis-ranskalainen laivastotuki. Vuonna 1843 kaupungin 30 000 asukkaasta uruguaylaisia oli vain kolmasosa. Saarron kesto riippuu laskutavasta: Montevideo-artikkeli puhuu kahdeksan vuoden piirityksestä 1843–1851, mutta päivämäärien mukaan saarto alkoi jo joulukuussa 1842 ja purkautui vasta helmikuussa 1852.
+AIEMPI KYSYMYS: Miten Hannibal voitti suuremman armeijan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Cannaen taistelussa Hannibal käytti [[saartoliikettä]]. Hannibal oli ylittänyt Alpit vuonna 218 eaa. ja voittanut roomalaiset jo aiemmin, mutta Cannaessa hän asetti kelttiläisistä ja iberialaisista joukoista koostuvan keskustan kaarena roomalaisia kohti. Kun roomalaiset työnsivät keskustaa taaksepäin, Hannibalin vahvemmat siipijoukot ja [[ratsuväki]] kiersivät sivuilta ja takaa, ja roomalaiset ahtautuivat niin tiiviisti yhteen, etteivät pystyneet käyttämään voimaansa. Taistelu käytiin [[Ofanto-joen]] rannalla 2. elokuuta 216 eaa., mutta lukumääristä lähteet ovat eri mieltä, enkä ole niistä varma. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: saartoliikettä
+
+### 653
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Panssaroitu ratsuväki] Kanem-Bornun sotilaallinen mahti nojasi vuosisatojen ajan raskaaseen ratsuväkeen: sekä hevonen että ratsastaja saatettiin verhota paksuun, tikattuun suojavaatetukseen, joka toimi eräänlaisena panssarina nuolia ja keihäitä vastaan. Perinne periytyi keskiajalta ja oli yhä elossa 1900-luvun alun valokuvissa, jotka siirtomaavirkailijat ottivat Bornun alueella. Tällaisilla raskailla ratsujoukoilla Bornun hallitsijat pystyivät sekä puolustamaan valtakuntaansa että hallitsemaan laajoja alueita ja niiden kauppareittejä, ja juuri tämä sotilaallinen voima piti Kanem-Bornun pystyssä kauemmin kuin yhdenkään toisen läntisen Sudanin valtakunnan.
+- [Tšad — maalehti / Historia: Ratsuväki, jota Keski-Afrikassa ei ollut nähty] 1221–1259 — Mai Dunama II Dibalemi kokosi noin neljäkymmentätuhatta ratsumiestä aikana, jolloin ratsuväkeä ei Keski-Afrikassa vielä käytetty — Malin valtakunta seurasi perässä vasta 1330-luvulla. Kuninkaanluettelo girgam kutsuu häntä soturiksi, joka on tulta kuumempi; sota toubouja vastaan kesti perimätiedon mukaan seitsemän vuotta, seitsemän kuukautta ja seitsemän päivää, ja Tšadjärvellä oli oma laivasto. Vuonna 1257 hän lähetti kirahvin lahjaksi hafsidihallitsijalle Ifriqiyaan. Muistetuin teko on silti se, että hän avasi munen — esineen, jonka luonnetta kukaan ei enää tiedä ja jonka avaamista pidettiin vuosisatoja onnettomuutena.
+AIEMPI KYSYMYS: Miten Hannibal voitti suuremman armeijan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Cannaen taistelussa Hannibal käytti [[saartoliikettä]]. Hannibal oli ylittänyt Alpit vuonna 218 eaa. ja voittanut roomalaiset jo aiemmin, mutta Cannaessa hän asetti kelttiläisistä ja iberialaisista joukoista koostuvan keskustan kaarena roomalaisia kohti. Kun roomalaiset työnsivät keskustaa taaksepäin, Hannibalin vahvemmat siipijoukot ja [[ratsuväki]] kiersivät sivuilta ja takaa, ja roomalaiset ahtautuivat niin tiiviisti yhteen, etteivät pystyneet käyttämään voimaansa. Taistelu käytiin [[Ofanto-joen]] rannalla 2. elokuuta 216 eaa., mutta lukumääristä lähteet ovat eri mieltä, enkä ole niistä varma. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ratsuväki
+
+### 654
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+AIEMPI KYSYMYS: Miten Hannibal voitti suuremman armeijan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Cannaen taistelussa Hannibal käytti [[saartoliikettä]]. Hannibal oli ylittänyt Alpit vuonna 218 eaa. ja voittanut roomalaiset jo aiemmin, mutta Cannaessa hän asetti kelttiläisistä ja iberialaisista joukoista koostuvan keskustan kaarena roomalaisia kohti. Kun roomalaiset työnsivät keskustaa taaksepäin, Hannibalin vahvemmat siipijoukot ja [[ratsuväki]] kiersivät sivuilta ja takaa, ja roomalaiset ahtautuivat niin tiiviisti yhteen, etteivät pystyneet käyttämään voimaansa. Taistelu käytiin [[Ofanto-joen]] rannalla 2. elokuuta 216 eaa., mutta lukumääristä lähteet ovat eri mieltä, enkä ole niistä varma. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ofanto-joen
+
+### 655
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+AIEMPI KYSYMYS: Mitä taistelun jälkeen tapahtui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on raskas aihe, mut kerron. Rooma ei antautunut tappion jälkeen. Osa Etelä-Italian kaupungeista siirtyi Hannibalin puolelle, muun muassa [[Capua]], mutta Rooma kokosi uudet joukot ja vältti suuria avotaisteluita Hannibalia vastaan vuosien ajan. Hannibal ei hyökännyt Roomaan, ja sota jatkui Italiassa ja [[Espanjassa]]. Lopulta [[Scipio]] voitti Hannibalin Zaman taistelussa vuonna 202 eaa., joka päätti toisen puunilaissodan. Kaukana on se aika, onneksi.
+KYSYMYS: Kerro lisää: Capua
+
+### 656
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia: Britit valtasivat Havannan – ja Espanja osti sen takaisin] Seitsenvuotinen sota tuli Karibialle kesällä 1762. Kesäkuun 6. päivän aamunkoitteessa yli 50 aluksen ja yli 11 000 miehen brittijoukko nousi maihin Havannan itäpuolelle, ja piiritys päättyi kaupungin antautumiseen elokuussa. Miehityksen aikana britit avasivat Havannan kaupalle Pohjois-Amerikan ja Karibian siirtokuntiensa kanssa, mikä muutti Kuuban taloutta nopeasti. Alle vuosi valtauksesta solmittu Pariisin rauha palautti Havannan Espanjalle – vastineeksi Espanja luovutti Floridan briteille.
+AIEMPI KYSYMYS: Mitä taistelun jälkeen tapahtui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on raskas aihe, mut kerron. Rooma ei antautunut tappion jälkeen. Osa Etelä-Italian kaupungeista siirtyi Hannibalin puolelle, muun muassa [[Capua]], mutta Rooma kokosi uudet joukot ja vältti suuria avotaisteluita Hannibalia vastaan vuosien ajan. Hannibal ei hyökännyt Roomaan, ja sota jatkui Italiassa ja [[Espanjassa]]. Lopulta [[Scipio]] voitti Hannibalin Zaman taistelussa vuonna 202 eaa., joka päätti toisen puunilaissodan. Kaukana on se aika, onneksi.
+KYSYMYS: Kerro lisää: Espanjassa
+
+### 657
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Mitä taistelun jälkeen tapahtui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on raskas aihe, mut kerron. Rooma ei antautunut tappion jälkeen. Osa Etelä-Italian kaupungeista siirtyi Hannibalin puolelle, muun muassa [[Capua]], mutta Rooma kokosi uudet joukot ja vältti suuria avotaisteluita Hannibalia vastaan vuosien ajan. Hannibal ei hyökännyt Roomaan, ja sota jatkui Italiassa ja [[Espanjassa]]. Lopulta [[Scipio]] voitti Hannibalin Zaman taistelussa vuonna 202 eaa., joka päätti toisen puunilaissodan. Kaukana on se aika, onneksi.
+KYSYMYS: Kerro lisää: Scipio
+
+### 658
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+AIEMPI KYSYMYS: Kuka Hannibal oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: norsumies. Hannibal oli karthagolainen sotapäällikkö, jonka isä [[Hamilcar Barca]] oli myös kenraali. Toisessa puunilaissodassa hän johti armeijansa [[Alppien]] yli Italiaan vuonna 218 eaa. ja voitti roomalaiset [[Cannaessa]] vuonna 216 eaa. Sodan lopussa hän kuitenkin hävisi Zamassa vuonna 202 eaa. Hän kuoli maanpaossa noin vuonna 183 eaa.; vuosiluku on lähteissä hieman epävarma. Norsujen kanssa vuorille, siihen ei kyllä kyyhkyn rohkeus riittäis.
+KYSYMYS: Kerro lisää: Hamilcar Barca
+
+### 659
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Kuka Hannibal oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: norsumies. Hannibal oli karthagolainen sotapäällikkö, jonka isä [[Hamilcar Barca]] oli myös kenraali. Toisessa puunilaissodassa hän johti armeijansa [[Alppien]] yli Italiaan vuonna 218 eaa. ja voitti roomalaiset [[Cannaessa]] vuonna 216 eaa. Sodan lopussa hän kuitenkin hävisi Zamassa vuonna 202 eaa. Hän kuoli maanpaossa noin vuonna 183 eaa.; vuosiluku on lähteissä hieman epävarma. Norsujen kanssa vuorille, siihen ei kyllä kyyhkyn rohkeus riittäis.
+KYSYMYS: Kerro lisää: Alppien
+
+### 660
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+AIEMPI KYSYMYS: Kuka Hannibal oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: norsumies. Hannibal oli karthagolainen sotapäällikkö, jonka isä [[Hamilcar Barca]] oli myös kenraali. Toisessa puunilaissodassa hän johti armeijansa [[Alppien]] yli Italiaan vuonna 218 eaa. ja voitti roomalaiset [[Cannaessa]] vuonna 216 eaa. Sodan lopussa hän kuitenkin hävisi Zamassa vuonna 202 eaa. Hän kuoli maanpaossa noin vuonna 183 eaa.; vuosiluku on lähteissä hieman epävarma. Norsujen kanssa vuorille, siihen ei kyllä kyyhkyn rohkeus riittäis.
+KYSYMYS: Kerro lisää: Cannaessa
+
+### 661
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+- [Italia — maalehti / Kuvataide: Caravaggio maalasi valonheittimellä] Caravaggio toi 1600-luvun alussa maalaukseen pimeyden ja valokiilan: hänen kuvissaan tavalliset ihmiset likaisine jalkoineen astuvat esiin mustasta taustasta kuin näyttämölle. Kirkonmiehet närkästyivät, kun pyhimyksillä oli kadunkulmien kasvot, mutta tyyli muutti koko eurooppalaisen taiteen suunnan. Mies itse eli kuin seikkailuromaanin konna: riitoja, pakomatkoja ja varhainen kuolema epäselvissä oloissa. Rooman kirkoissa hänen teoksiaan voi yhä katsoa ilmaiseksi — kolikolla valot syttyvät.
+- [Italia — maalehti / Historia] Italia on nuori valtio vanhalla maalla: Rooman valtakunnasta on kaksituhatta vuotta, mutta yhtenäinen Italia on nuorempi kuin moni sen kahviloista.
+- [Italia — maalehti / Keittiö] Rooman omat ruoat ovat lähtöisin köyhistä keittiöistä: muutama aine, kuuma pannu tai kiehuva öljy — ja tiukka sääntö siitä, mitä niihin ei panna.
+AIEMPI KYSYMYS: Mikä oli toinen puunilaissota?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on pitkä tarina, mut tiivistän. Toinen puunilaissota käytiin vuosina 218–201 eaa. Rooman ja Karthagon välillä. Sodan aikana Hannibal ylitti Alpit ja voitti roomalaiset useissa taisteluissa, kuten [[Cannaessa]], mutta [[Rooman]] valtio selvisi ja vei sodan lopulta Pohjois-Afrikkaan, missä Zaman taistelu ratkaisi sen. Sodan seurauksena Karthago menetti [[Espanjan]] alueensa, ja Rooma vahvistui Välimeren alueen johtavaksi voimaksi. Pitkä sota, ja onneksi kaukana.
+KYSYMYS: Kerro lisää: Rooman
+
+### 662
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia: USS Mainen tuho ja Espanjan vallan loppu] Yhdysvaltain taistelulaiva USS Maine upposi Havannan satamassa 1898, ja siitä tuli Espanjan ja Yhdysvaltain välisen sodan välitön syy. Kuubassa sota oli huipennus jo kolme vuotta käynnissä olleelle itsenäisyyssodalle. Espanja luopui Kuuban ylivallasta 12. elokuuta 1898, ja sen neljä vuosisataa kestänyt läsnäolo Amerikan mantereella päättyi. Kuuban tasavalta syntyi kuitenkin vasta 1902, ja silloin Havannasta tuli sen pääkaupunki: kaupunki isännöi maan ensimmäisen presidentin Tomás Estrada Palman virkaanastujaisia.
+- [Espanja — maalehti / Luonto: Espanjan korkein vuori on Afrikan edustalla] Espanjan korkein kohta ei ole Pyreneillä vaan Teneriffalla: Teide nousee 3 715 metriin, ja merenpohjasta mitattuna se on yli seitsemän kilometriä korkea eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon Marsia, että Euroopan avaruusjärjestö on koekäyttänyt siellä mönkijöitään. Vuori purkautui viimeksi 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, sata kilometriä Marokon rannikolta.
+AIEMPI KYSYMYS: Mikä oli toinen puunilaissota?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on pitkä tarina, mut tiivistän. Toinen puunilaissota käytiin vuosina 218–201 eaa. Rooman ja Karthagon välillä. Sodan aikana Hannibal ylitti Alpit ja voitti roomalaiset useissa taisteluissa, kuten [[Cannaessa]], mutta [[Rooman]] valtio selvisi ja vei sodan lopulta Pohjois-Afrikkaan, missä Zaman taistelu ratkaisi sen. Sodan seurauksena Karthago menetti [[Espanjan]] alueensa, ja Rooma vahvistui Välimeren alueen johtavaksi voimaksi. Pitkä sota, ja onneksi kaukana.
+KYSYMYS: Kerro lisää: Espanjan
+
+### 663
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+AIEMPI KYSYMYS: Missä Cannae sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— Apulia, se on kärjessä. Cannae eli nykyisin Canne della Battaglia sijaitsee [[Apulian]] alueella Kaakkois-Italiassa, [[Ofanto-joen]] oikealla rannalla noin yhdeksän kilometriä [[Barletasta]] lounaaseen. Se kuuluu Barletan kuntaan. Historioitsijat kiistelevät kuitenkin yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla. Apulian leipä on kuulemma hyvää, mut sen nimeä en tiedä.
+KYSYMYS: Kerro lisää: Apulian
+
+### 664
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+AIEMPI KYSYMYS: Missä Cannae sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— Apulia, se on kärjessä. Cannae eli nykyisin Canne della Battaglia sijaitsee [[Apulian]] alueella Kaakkois-Italiassa, [[Ofanto-joen]] oikealla rannalla noin yhdeksän kilometriä [[Barletasta]] lounaaseen. Se kuuluu Barletan kuntaan. Historioitsijat kiistelevät kuitenkin yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla. Apulian leipä on kuulemma hyvää, mut sen nimeä en tiedä.
+KYSYMYS: Kerro lisää: Barletasta
+
+### 665
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+AIEMPI KYSYMYS: Kuka Henry Dunant oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Henry Dunant oli sveitsiläinen liikemies, joka kiersi [[Solferinon]] taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti [[Geneven sopimuksiin]] ja [[Punaisen Ristin]] perustamiseen. Dunant sai vuonna 1901 yhdessä Frédéric Passyn kanssa ensimmäisen [[Nobelin rauhanpalkinnon]]. Hiljaisesta järkytyksestä syntyi iso hyvä asia.
+KYSYMYS: Kerro lisää: Solferinon
+
+### 666
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Historia: Kaksi kansanäänestystä ja sama päivämäärä] 1962 — Neuvottelut päättyivät maaliskuussa 1962 Évianin sopimuksiin. Ranskan äänestäjät hyväksyivät ne 8. huhtikuuta 1962: puolesta äänesti 91 prosenttia. Algeriassa äänestettiin 1. heinäkuuta, ja itsenäisyyden puolesta annettiin 99,72 prosenttia äänistä. Itsenäisyyspäiväksi valittiin 5. heinäkuuta 1962 — täsmälleen sama päivä, jona Ranska oli vallannut Algerin vuonna 1830. Väliin mahtui 132 vuotta, joista maa oli ollut virallisesti osa Ranskaa vuodesta 1848. Päivämäärän valinta oli tietoinen: kalenteri palautti sen, minkä kalenteri oli vienyt.
+- [Itävalta — maalehti / Ruoka: Pallo, jonka pyöreys on sovittu] 1890 — Salzburgilainen sokerileipuri Paul Fürst teki vuonna 1890 makeisen, jota hän kutsui Mozart-bonboniksi. Pistaasimarsipaanipallo peitetään nougatilla, pistetään puutikun nokkaan, kastetaan tummaan suklaaseen ja jätetään tikun varaan kovettumaan. Lopuksi tikun jättämä reikä täytetään suklaalla ja pallo kääritään folioon. Fürst ei patentoinut keksintöään, joten kopioita tuli heti. Riidat päättyivät sopimuksiin: tehtaista vain yksi saa tehdä täysin pyöreitä palloja, muiden on litistettävä pohja.
+AIEMPI KYSYMYS: Kuka Henry Dunant oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Henry Dunant oli sveitsiläinen liikemies, joka kiersi [[Solferinon]] taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti [[Geneven sopimuksiin]] ja [[Punaisen Ristin]] perustamiseen. Dunant sai vuonna 1901 yhdessä Frédéric Passyn kanssa ensimmäisen [[Nobelin rauhanpalkinnon]]. Hiljaisesta järkytyksestä syntyi iso hyvä asia.
+KYSYMYS: Kerro lisää: Geneven sopimuksiin
+
+### 667
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+- [Irkutsk — kohdekartta / Kohdekartta: Ristin ylentämisen kirkko] 1747–1758 Tämä on Siperian barokin omaperäisin rakennus. Nimitys syntyi vasta 1924, kun irkutskilainen kotiseuduntutkija D. A. Boldyrev-Kazarin otti sen käyttöön; tyylillä tarkoitetaan 1700-luvun Siperian kivikirkkoja, joita laskettiin vuonna 1803 kaikkiaan 115. Ne ovat venäläisen barokin maakunnallinen muunnos, johon tuli vaikutteita ukrainalaisesta barokista ja paikoin myös lamalaisesta kuvastosta. Parhaiten tyyli on säilynyt Irkutskissa, Tobolskissa ja Tomskissa. Ristin ylentämisen kirkko rakennettiin vuosina 1747–1758, ja sitä on kutsuttu tyylin parhaaksi esimerkiksi. Sen buddhalaisvaikutteiset koristeaiheet kiinnostivat tutkijoita jo ennen vallankumousta. Boldyrev-Kazarin arveli burjaa…
+AIEMPI KYSYMYS: Kuka Henry Dunant oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Henry Dunant oli sveitsiläinen liikemies, joka kiersi [[Solferinon]] taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti [[Geneven sopimuksiin]] ja [[Punaisen Ristin]] perustamiseen. Dunant sai vuonna 1901 yhdessä Frédéric Passyn kanssa ensimmäisen [[Nobelin rauhanpalkinnon]]. Hiljaisesta järkytyksestä syntyi iso hyvä asia.
+KYSYMYS: Kerro lisää: Punaisen Ristin
+
+### 668
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Kirjat: Pieni maa sai Nobelin] Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955. Hänen kirjansa kertovat tavallisista islantilaisista: lampaista, sitkeydestä ja köyhyydestä, mutta niin että lukija nauraa ja liikuttuu samaan aikaan. Tunnetuin on Sallittu ihminen eli Sjálfstætt fólk, tarina lampuriperheestä, joka ei suostu ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle sataseitsemänkymmentätuhatta asukasta — pienin maa, josta kirjallisuuden Nobel oli siihen asti tullut.
+AIEMPI KYSYMYS: Kuka Henry Dunant oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Henry Dunant oli sveitsiläinen liikemies, joka kiersi [[Solferinon]] taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti [[Geneven sopimuksiin]] ja [[Punaisen Ristin]] perustamiseen. Dunant sai vuonna 1901 yhdessä Frédéric Passyn kanssa ensimmäisen [[Nobelin rauhanpalkinnon]]. Hiljaisesta järkytyksestä syntyi iso hyvä asia.
+KYSYMYS: Kerro lisää: Nobelin rauhanpalkinnon
+
+### 669
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Bakteeri, joka sai maan nimen] 1905 — Hapanmaitoa on valmistettu Bulgarian kylissä sukupolvelta toiselle jo ennen kuin kukaan tiesi miksi maito hapantuu. Vuonna 1905 nuori bulgarialainen lääketieteen opiskelija Stamen Grigorov tutki Geneven yliopistossa professori Léon Massolin laboratoriossa kotikylästään tuomiaan jogurttinäytteitä mikroskoopilla. Hän löysi sauvamaisen bakteerin, joka sai maidon happanemaan ja paksuuntumaan, ja kuvaili sen tarkasti tiedejulkaisussa. Tiedeyhteisö nimesi bakteerin Grigorovin kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä tänä päivänä yksi maailman jogurttituotannon tärkeimmistä hapatteista.
+- [Sofia — kaupunkilehti / Ruoka: Bakteeri sai nimensä Bulgariasta] Perinteinen bulgarialainen jogurtti, kiselo mlyako, käy paksuksi bakteerilla, joka sai tieteellisen nimensä "Lactobacillus bulgaricus" juuri Bulgarian mukaan — bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti oli tunnettu Balkanilla vuosisatoja ennen sitä, ja perinteisesti sitä tehdään lampaanmaidosta savisissa astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä suoraan valmistajilta.
+AIEMPI KYSYMYS: Mitä Punainen Risti tekee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on tärkeä asia. Punainen Risti on kansainvälinen humanitaarinen liike, joka auttaa sodan, onnettomuuksien ja katastrofien uhreja puolueettomasti. Sen työhön kuuluvat muun muassa sodan haavoittuneiden ja vankien auttaminen, ensiapu ja katastrofiapu sekä [[Geneven sopimusten]] edistäminen. Liikkeeseen kuuluu Kansainvälinen Punaisen Ristin komitea Genevessä ja kansallisia yhdistyksiä, kuten [[Suomen Punainen Risti]]. Tärkeää työtä, jota ei kyyhky voi tehdä.
+KYSYMYS: Kerro lisää: Geneven sopimusten
+
+### 670
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+- [Helsinki — kaupunkilehti / Tiede: Helsinki sai oman tähtitornin suomalaista aikaa varten] 1834 — Helsingin tähtitorni valmistui Kaivopuiston kukkulalle 1834, ja sen suunnitteli sama arkkitehti Carl Ludvig Engel, joka piirsi Senaatintorin rakennukset. Tornin tehtävä ei ollut vain tähtien tarkkailu: se määritti Helsingille tarkan paikallisajan ja maantieteelliset koordinaatit, joita tarvittiin sekä laivaliikenteessä että maanmittauksessa. Torni oli pitkään Suomen johtava tähtitieteellinen ja geodeettinen laitos, ja isoisän matkan aikaan se on ollut toiminnassa jo lähes neljäkymmentä vuotta.
+AIEMPI KYSYMYS: Mitä Punainen Risti tekee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on tärkeä asia. Punainen Risti on kansainvälinen humanitaarinen liike, joka auttaa sodan, onnettomuuksien ja katastrofien uhreja puolueettomasti. Sen työhön kuuluvat muun muassa sodan haavoittuneiden ja vankien auttaminen, ensiapu ja katastrofiapu sekä [[Geneven sopimusten]] edistäminen. Liikkeeseen kuuluu Kansainvälinen Punaisen Ristin komitea Genevessä ja kansallisia yhdistyksiä, kuten [[Suomen Punainen Risti]]. Tärkeää työtä, jota ei kyyhky voi tehdä.
+KYSYMYS: Kerro lisää: Suomen Punainen Risti
+
+### 671
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+- [Persepolis — kohdekartta / Kohdekartta: Artakserkses III:n hauta] n. 358–338 eKr. Terassin takana vuoren kyljessä on kolme kallioon louhittua hautaa. Kaksi on valmiita ja kolmas jäi kesken kilometrin päähän. Kenen haudat ovat, ei lue missään, vaan nimet päätellään: Ktesias kertoo, että kuningas valmistutti hautansa eläessään, ja Naqsh-e Rustamin neljä hautaa on tavallisesti luettu Dareios I:lle, Xerxes I:lle, Artakserkses I:lle ja Dareios II:lle. Jäljelle jäävät Artakserkses II ja Artakserkses III, ja heille nämä kaksi valmista hautaa annetaan. Artakserkses III rakensi Persepolikseen myöhään: hän pystytti oman palatsinsa, louhi hautansa isänsä haudan viereen ja aloitti pitkiä hankkeita, jotka jäivät kesken — keskeneräisen portin ja kolmenkymmenenkahden py…
+AIEMPI KYSYMYS: Mikä oli Italian toinen itsenäisyyssota?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä kerron lyhyesti. Italian toinen itsenäisyyssota käytiin vuonna 1859 Itävaltaa vastaan, ja siinä Ranskan keisari [[Napoleon III]] ja [[Piemonte-Sardinian]] kuningaskunta olivat liittolaisia. Ratkaisevia taisteluita olivat Magenta ja Solferino kesäkuussa, ja sota päättyi Villafrancan aselepoon heinäkuussa. Itävalta menetti [[Lombardian]], joka siirtyi Piemonte-Sardiniaan, ja sota edisti Italian yhdistymistä, vaikka Itävalta piti Venetsiaa vielä vuoteen 1866. Pitkä tie se oli yhtenäiseen Italiaan.
+KYSYMYS: Kerro lisää: Napoleon III
+
+### 672
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Luonto: Afrikan ainoa oma hirvi] Berberihirvi on saksanhirven alalaji ja ainoa Afrikassa alkuperäinen hirvieläin — toinen, jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja Zéraldan seuduilla. Marokosta hirvi metsästettiin sukupuuttoon, ja se palautettiin sinne 1990-luvulla Tunisian kannasta. Perimää tutkittaessa selvisi jotain yllättävää: Pohjois-Afrikan hirvet ovat lähes erottamattomia Sardinian ja Korsikan hirvistä, joten ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.
+AIEMPI KYSYMYS: Mikä oli Italian toinen itsenäisyyssota?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä kerron lyhyesti. Italian toinen itsenäisyyssota käytiin vuonna 1859 Itävaltaa vastaan, ja siinä Ranskan keisari [[Napoleon III]] ja [[Piemonte-Sardinian]] kuningaskunta olivat liittolaisia. Ratkaisevia taisteluita olivat Magenta ja Solferino kesäkuussa, ja sota päättyi Villafrancan aselepoon heinäkuussa. Itävalta menetti [[Lombardian]], joka siirtyi Piemonte-Sardiniaan, ja sota edisti Italian yhdistymistä, vaikka Itävalta piti Venetsiaa vielä vuoteen 1866. Pitkä tie se oli yhtenäiseen Italiaan.
+KYSYMYS: Kerro lisää: Piemonte-Sardinian
+
+### 673
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+AIEMPI KYSYMYS: Mikä oli Italian toinen itsenäisyyssota?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä kerron lyhyesti. Italian toinen itsenäisyyssota käytiin vuonna 1859 Itävaltaa vastaan, ja siinä Ranskan keisari [[Napoleon III]] ja [[Piemonte-Sardinian]] kuningaskunta olivat liittolaisia. Ratkaisevia taisteluita olivat Magenta ja Solferino kesäkuussa, ja sota päättyi Villafrancan aselepoon heinäkuussa. Itävalta menetti [[Lombardian]], joka siirtyi Piemonte-Sardiniaan, ja sota edisti Italian yhdistymistä, vaikka Itävalta piti Venetsiaa vielä vuoteen 1866. Pitkä tie se oli yhtenäiseen Italiaan.
+KYSYMYS: Kerro lisää: Lombardian
+
+### 674
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+AIEMPI KYSYMYS: Mikä on Geneven sopimus?
+AIEMPI VASTAUS (Livia):
+No niin, tää on tärkeä. Geneven sopimukset ovat kansainvälisiä sopimuksia, jotka suojaavat sodassa haavoittuneita, sairaita, [[sotavankeja]] ja siviilejä. Ensimmäinen sopimus tehtiin vuonna 1864, ja nykyinen järjestelmä perustuu neljään sopimukseen vuodelta 1949. Sopimukset syntyivät pitkälti [[Henry Dunantin]] aloitteen ja [[Punaisen Ristin]] työn seurauksena. Onneksi tällaisia sääntöjä on kirjoitettu.
+KYSYMYS: Kerro lisää: sotavankeja
+
+### 675
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+AIEMPI KYSYMYS: Mikä on Geneven sopimus?
+AIEMPI VASTAUS (Livia):
+No niin, tää on tärkeä. Geneven sopimukset ovat kansainvälisiä sopimuksia, jotka suojaavat sodassa haavoittuneita, sairaita, [[sotavankeja]] ja siviilejä. Ensimmäinen sopimus tehtiin vuonna 1864, ja nykyinen järjestelmä perustuu neljään sopimukseen vuodelta 1949. Sopimukset syntyivät pitkälti [[Henry Dunantin]] aloitteen ja [[Punaisen Ristin]] työn seurauksena. Onneksi tällaisia sääntöjä on kirjoitettu.
+KYSYMYS: Kerro lisää: Henry Dunantin
+
+### 676
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Ritarikunnan loppu ja ranskalaisten kaksi vuotta] Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. syyskuuta 1800, kun heidän ruokavaransa…
+AIEMPI KYSYMYS: Kuka Napoleon III oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Hänet minä muistan sukuna. Napoleon III oli Ranskan keisari vuosina 1852–1870 ja [[Napoleon Bonaparten]] veljenpoika. Hän johti Ranskan armeijaa Solferinon taistelussa vuonna 1859. Hän joutui vangiksi [[Sedanin taistelussa]] vuonna 1870 Saksan ja Ranskan sodassa, minkä jälkeen keisarikunta kaatui, ja hän kuoli maanpaossa [[Englannissa]] vuonna 1873. Kato, vuosi 1873 kuulostaa kyl tutulta.
+KYSYMYS: Kerro lisää: Napoleon Bonaparten
+
+### 677
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+AIEMPI KYSYMYS: Kuka Napoleon III oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Hänet minä muistan sukuna. Napoleon III oli Ranskan keisari vuosina 1852–1870 ja [[Napoleon Bonaparten]] veljenpoika. Hän johti Ranskan armeijaa Solferinon taistelussa vuonna 1859. Hän joutui vangiksi [[Sedanin taistelussa]] vuonna 1870 Saksan ja Ranskan sodassa, minkä jälkeen keisarikunta kaatui, ja hän kuoli maanpaossa [[Englannissa]] vuonna 1873. Kato, vuosi 1873 kuulostaa kyl tutulta.
+KYSYMYS: Kerro lisää: Sedanin taistelussa
+
+### 678
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+AIEMPI KYSYMYS: Kuka Napoleon III oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Hänet minä muistan sukuna. Napoleon III oli Ranskan keisari vuosina 1852–1870 ja [[Napoleon Bonaparten]] veljenpoika. Hän johti Ranskan armeijaa Solferinon taistelussa vuonna 1859. Hän joutui vangiksi [[Sedanin taistelussa]] vuonna 1870 Saksan ja Ranskan sodassa, minkä jälkeen keisarikunta kaatui, ja hän kuoli maanpaossa [[Englannissa]] vuonna 1873. Kato, vuosi 1873 kuulostaa kyl tutulta.
+KYSYMYS: Kerro lisää: Englannissa
+
+### 679
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Nuukin taidemuseo] 2005–2007 Nuuk Kunstmuseum perustettiin 22. toukokuuta 2005 entiseen adventtikirkon rakennukseen Kissarneqqortuunnguaqissa. Liikemies Svend Junge ja Helene Junge lahjoittivat kokoelmansa ja talon kaupunkilaisille, ja museo vihittiin 21. kesäkuuta 2007, Grönlannin kansallispäivänä. Esillä on noin 250 maalausta, akvarellia, valokuvaa, piirustusta ja grafiikan lehteä sekä noin viisikymmentä veistosta luusta, syöksyhampaasta, puusta ja vuolukivestä. Runsaan kuudensadan neliömetrin tiloihin mahtuu myös vaihtuvia näyttelyitä. Kokoelman ydin on yli 150 Emanuel A. Petersenin maalausta. Museo on kuratoitu yhden kysymyksen ympärille: miten Grönlanti on näyttäytynyt ulkopuolisille ja miten grönlantila…
+- [Oslo — kohdekartta / Kohdekartta: Oslon tuomiokirkko] 1694–1697 Oslon tuomiokirkko on kaupungin pääkirkko, mutta se on jo kolmas kirkko, joka on kantanut tätä tehtävää. Ensimmäinen, keskiaikainen Hallvardin katedraali, jäi liian kauas uudesta kaupungista, kun kuningas Kristian IV siirsi koko Oslon lähemmäs Akershusin linnoitusta suuren tulipalon jälkeen vuonna 1624. Toinen kirkko paloi vain 50 vuoden käytön jälkeen, joten uuden peruskivi muurattiin vuonna 1694. Kirkko vihittiin käyttöön marraskuussa 1697, ja se on seissyt Stortorvetin torin laidalla siitä asti. Kirkon ovet ovat pronssia, ja ikkunoissa on taiteilija Emanuel Vigelandin suunnittelemia lasimaalauksia. Kirkossa on vietetty kuuluisia kuninkaallisia häitä: kuningas Harald ja kuningat…
+AIEMPI KYSYMYS: Miksi Garibaldi luovutti vallan kuninkaalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on yksi suosikkikohdistani. Garibaldi oli vakaumukseltaan tasavaltalainen, mutta hän piti yhtenäistä Italiaa tärkeämpänä kuin omaa toivettaan valtiomuodosta. Syksyllä 1860 hän oli vallannut Kahden Sisilian kuningaskunnan alueita, ja Sardinian kuningas [[Viktor Emanuel II]] eteni samaan aikaan joukkoineen etelään; kiista vallasta olisi voinut hajottaa koko hankkeen. Siksi Garibaldi tervehti [[Teanossa]] 26. lokakuuta 1860 kuninkaan Italian kuninkaana ja luovutti valloittamansa alueet hänelle, ja yhtenäinen Italia syntyi vuonna 1861. Lähteiden mukaan hän uhrasi tasavaltalaiset toiveensa nimenomaan yhtenäisyyden vuoksi, ja [[Napolin]] valloitus jäi siten osaksi uutta kuningaskuntaa. Ei oo helppoo luopua unelmasta kädenpuristuksella.
+KYSYMYS: Kerro lisää: Viktor Emanuel II
+
+### 680
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+AIEMPI KYSYMYS: Miksi Garibaldi luovutti vallan kuninkaalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on yksi suosikkikohdistani. Garibaldi oli vakaumukseltaan tasavaltalainen, mutta hän piti yhtenäistä Italiaa tärkeämpänä kuin omaa toivettaan valtiomuodosta. Syksyllä 1860 hän oli vallannut Kahden Sisilian kuningaskunnan alueita, ja Sardinian kuningas [[Viktor Emanuel II]] eteni samaan aikaan joukkoineen etelään; kiista vallasta olisi voinut hajottaa koko hankkeen. Siksi Garibaldi tervehti [[Teanossa]] 26. lokakuuta 1860 kuninkaan Italian kuninkaana ja luovutti valloittamansa alueet hänelle, ja yhtenäinen Italia syntyi vuonna 1861. Lähteiden mukaan hän uhrasi tasavaltalaiset toiveensa nimenomaan yhtenäisyyden vuoksi, ja [[Napolin]] valloitus jäi siten osaksi uutta kuningaskuntaa. Ei oo helppoo luopua unelmasta kädenpuristuksella.
+KYSYMYS: Kerro lisää: Teanossa
+
+### 681
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+AIEMPI KYSYMYS: Miksi Garibaldi luovutti vallan kuninkaalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on yksi suosikkikohdistani. Garibaldi oli vakaumukseltaan tasavaltalainen, mutta hän piti yhtenäistä Italiaa tärkeämpänä kuin omaa toivettaan valtiomuodosta. Syksyllä 1860 hän oli vallannut Kahden Sisilian kuningaskunnan alueita, ja Sardinian kuningas [[Viktor Emanuel II]] eteni samaan aikaan joukkoineen etelään; kiista vallasta olisi voinut hajottaa koko hankkeen. Siksi Garibaldi tervehti [[Teanossa]] 26. lokakuuta 1860 kuninkaan Italian kuninkaana ja luovutti valloittamansa alueet hänelle, ja yhtenäinen Italia syntyi vuonna 1861. Lähteiden mukaan hän uhrasi tasavaltalaiset toiveensa nimenomaan yhtenäisyyden vuoksi, ja [[Napolin]] valloitus jäi siten osaksi uutta kuningaskuntaa. Ei oo helppoo luopua unelmasta kädenpuristuksella.
+KYSYMYS: Kerro lisää: Napolin
+
+### 682
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+- [Saint Helena — maalehti / Ruoka: Kahvi, joka tuli Mokasta 1733] 1733–1994 — Vuonna 1733 komppanian laiva The Houghton toi Jemenin Mokan satamasta Green Tipped Bourbon -kahvin siemeniä, jotka istutettiin eri puolille saarta. Kasvit menestyivät, vaikka niitä ei juuri hoidettu. Lontoolainen kahvikauppahuone Wm Burnie & Co kuvasi 1839 saaren kahvia laadultaan ja maultaan ylivertaiseksi, ja 1845 sitä myytiin Lontoossa pennyllä naulalta — maailman kalleimpana ja harvinaisimpana. Vuonna 1851 Bamboo Hedge Estaten sato voitti pääpalkinnon Lontoon maailmannäyttelyssä. Kaupallinen viljely herätettiin uudelleen henkiin 1994, ja pensaat polveutuvat yhä samasta 1733 tuodusta erästä.
+AIEMPI KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kahden Sisilian kuningaskunta oli [[Bourbon-suvun]] hallitsema valtio, johon kuuluivat [[Sisilian]] saari ja koko Italian niemimaan eteläosa [[Napolin]] ympärillä; pääkaupunki oli Napoli. Valtio syntyi vuonna 1816, kun Napolin ja Sisilian kruunut yhdistettiin, ja sen alueella sijaitsee muun muassa Sisilian tulivuori [[Etna]]. Kuningaskunta lakkasi olemasta vuosina 1860–1861, kun Garibaldin vapaaehtoiset valtasivat Sisilian ja sen jälkeen etelän, ja alue liitettiin uuteen Italian kuningaskuntaan. Vajaa viiskyt vuotta, ja sit se oli menoa.
+KYSYMYS: Kerro lisää: Bourbon-suvun
+
+### 683
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kahden Sisilian kuningaskunta oli [[Bourbon-suvun]] hallitsema valtio, johon kuuluivat [[Sisilian]] saari ja koko Italian niemimaan eteläosa [[Napolin]] ympärillä; pääkaupunki oli Napoli. Valtio syntyi vuonna 1816, kun Napolin ja Sisilian kruunut yhdistettiin, ja sen alueella sijaitsee muun muassa Sisilian tulivuori [[Etna]]. Kuningaskunta lakkasi olemasta vuosina 1860–1861, kun Garibaldin vapaaehtoiset valtasivat Sisilian ja sen jälkeen etelän, ja alue liitettiin uuteen Italian kuningaskuntaan. Vajaa viiskyt vuotta, ja sit se oli menoa.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 684
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kahden Sisilian kuningaskunta oli [[Bourbon-suvun]] hallitsema valtio, johon kuuluivat [[Sisilian]] saari ja koko Italian niemimaan eteläosa [[Napolin]] ympärillä; pääkaupunki oli Napoli. Valtio syntyi vuonna 1816, kun Napolin ja Sisilian kruunut yhdistettiin, ja sen alueella sijaitsee muun muassa Sisilian tulivuori [[Etna]]. Kuningaskunta lakkasi olemasta vuosina 1860–1861, kun Garibaldin vapaaehtoiset valtasivat Sisilian ja sen jälkeen etelän, ja alue liitettiin uuteen Italian kuningaskuntaan. Vajaa viiskyt vuotta, ja sit se oli menoa.
+KYSYMYS: Kerro lisää: Etna
+
+### 685
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+AIEMPI KYSYMYS: Mikä oli yhtenäisen Italian ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Yhtenäisen Italian ensimmäinen pääkaupunki oli [[Torino]], joka oli ollut Sardinian kuningaskunnan keskus ja jossa uusi Italian kuningaskunta julistettiin vuonna 1861. Pääkaupunki siirrettiin 1860-luvun puolivälissä [[Firenzeen]], ja [[Rooma]] otettiin pääkaupungiksi vuonna 1871 sen jälkeen, kun kaupunki oli liitetty Italiaan. Kolme pääkaupunkia kymmenessä vuodessa, melkoista muuttohommaa kyyhkyllekin.
+KYSYMYS: Kerro lisää: Torino
+
+### 686
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Porcellino] Kultaseppien sillalta on muutaman minuutin kävely kauppahallin holvien alle, jossa istuu pronssinen villisika kitansa auki. Firenzeläiset sanovat sitä porsaaksi, vaikka se ei ole porsas. Pietro Tacca valoi sen vähän ennen vuotta 1634, ja mallina oli marmoripatsas, joka oli itsekin kopio — roomalainen jäljennös hellenistisestä alkuperäisestä. Se marmori löytyi Roomasta, Medicit toivat sen Firenzeen 1500-luvun puolivälissä, ja jo silloin sitä sanottiin Kalydonian villisiaksi, tarujen pedoksi. Pronssi oli tarkoitettu Bobolin puutarhaan, mutta se päätyi kauppahallin kulmaan, ensin apteekin eteen — apteekki sai siitä nimekseen Villisian apteekki — ja myöhemmin sivummalle, jotta markkinoilla maht…
+- [Firenze — kaupunkilehti / Historia: Munkki, joka näki tulevan tuhon] Dominikaanimunkki Girolamo Savonarola nousi 1490-luvulla Firenzen todelliseksi vallanpitäjäksi saarnoillaan, joissa hän ennusti Jumalan rangaistusta kaupungin ylellisyydestä ja synnistä. Hänen ansiostaan Firenzeen perustettiin lyhytaikainen tasavalta Medici-suvun karkotuksen jälkeen. Tämän muotokuvan maalasi Fra Bartolomeo, joka oli itse yksi Savonarolan uskollisimmista seuraajista, samana vuonna kuin suuri Turhuuksien rovio.
+AIEMPI KYSYMYS: Mikä oli yhtenäisen Italian ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Yhtenäisen Italian ensimmäinen pääkaupunki oli [[Torino]], joka oli ollut Sardinian kuningaskunnan keskus ja jossa uusi Italian kuningaskunta julistettiin vuonna 1861. Pääkaupunki siirrettiin 1860-luvun puolivälissä [[Firenzeen]], ja [[Rooma]] otettiin pääkaupungiksi vuonna 1871 sen jälkeen, kun kaupunki oli liitetty Italiaan. Kolme pääkaupunkia kymmenessä vuodessa, melkoista muuttohommaa kyyhkyllekin.
+KYSYMYS: Kerro lisää: Firenzeen
+
+### 687
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mikä oli yhtenäisen Italian ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Yhtenäisen Italian ensimmäinen pääkaupunki oli [[Torino]], joka oli ollut Sardinian kuningaskunnan keskus ja jossa uusi Italian kuningaskunta julistettiin vuonna 1861. Pääkaupunki siirrettiin 1860-luvun puolivälissä [[Firenzeen]], ja [[Rooma]] otettiin pääkaupungiksi vuonna 1871 sen jälkeen, kun kaupunki oli liitetty Italiaan. Kolme pääkaupunkia kymmenessä vuodessa, melkoista muuttohommaa kyyhkyllekin.
+KYSYMYS: Kerro lisää: Rooma
+
+### 688
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+AIEMPI KYSYMYS: Onko Rocca Monfina vielä aktiivinen tulivuori?
+AIEMPI VASTAUS (Livia):
+Ai tota. Rocca Monfina on sammunut tulivuori, eikä sen ole tiedetty purkautuneen historiallisena aikana. Lähteiden mukaan viimeisistä purkauksista on kulunut kymmeniä tuhansia vuosia, mutta en ole varma tarkasta ajankohdasta. Tulivuori sijaitsee [[Campanian]] alueella, ja sen kaakkoisrinteellä on Teanon kaupunki. Tilanne on toinen kuin Sisilian [[Etnalla]], joka purkautuu lähes joka vuosi. Siinä missä Etna ei nuku, tää on nukkunut jo ikuisuuden.
+KYSYMYS: Kerro lisää: Campanian
+
+### 689
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+AIEMPI KYSYMYS: Onko Rocca Monfina vielä aktiivinen tulivuori?
+AIEMPI VASTAUS (Livia):
+Ai tota. Rocca Monfina on sammunut tulivuori, eikä sen ole tiedetty purkautuneen historiallisena aikana. Lähteiden mukaan viimeisistä purkauksista on kulunut kymmeniä tuhansia vuosia, mutta en ole varma tarkasta ajankohdasta. Tulivuori sijaitsee [[Campanian]] alueella, ja sen kaakkoisrinteellä on Teanon kaupunki. Tilanne on toinen kuin Sisilian [[Etnalla]], joka purkautuu lähes joka vuosi. Siinä missä Etna ei nuku, tää on nukkunut jo ikuisuuden.
+KYSYMYS: Kerro lisää: Etnalla
+
+### 690
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Miksi italiaa osasi 1861 vain harva?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Italia oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka puhuivat eri murteita, eikä yhteistä kieltä osannut juuri kukaan arkielämässä. Kun valtio syntyi vuonna 1861, yhteinen italia oli lähinnä kirjoitettua kieltä, ja sen pohjana oli pitkälti [[toscanan]] murre ja [[Firenzen]] kirjallinen perinne. Kieli levisi kansan suuhun vasta vähitellen koulun, radion ja television kautta. Onneksi koulu hoiti sen eikä kyyhky.
+KYSYMYS: Kerro lisää: toscanan
+
+### 691
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: David, kivestä vapautettu] Michelangelo veisti Davidin 1501–1504 marmorilohkareesta, jota kaksi muuta kuvanveistäjää oli jo ehtinyt pitää pilalle hakattuna. Hän oli 26-vuotias. Viisimetrinen David esittää hetkeä ennen taistelua jättiläistä vastaan: kulmat kurtussa, linko olalla, jännitys näkyy käden suonissa asti. Michelangelo sanoi, ettei hän veistänyt patsaita vaan vapautti ne — hahmo odotti valmiina kiven sisällä, ja hän poisti vain ylimääräisen. Alkuperäinen on Firenzen galleriassa; aukiolla seisoo kopio.
+AIEMPI KYSYMYS: Miksi italiaa osasi 1861 vain harva?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Italia oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka puhuivat eri murteita, eikä yhteistä kieltä osannut juuri kukaan arkielämässä. Kun valtio syntyi vuonna 1861, yhteinen italia oli lähinnä kirjoitettua kieltä, ja sen pohjana oli pitkälti [[toscanan]] murre ja [[Firenzen]] kirjallinen perinne. Kieli levisi kansan suuhun vasta vähitellen koulun, radion ja television kautta. Onneksi koulu hoiti sen eikä kyyhky.
+KYSYMYS: Kerro lisää: Firenzen
+
+### 692
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Vatikaanin palatsi] Rooman valtaus kesti yhden aamupäivän. Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870, ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko Porta Pian viereen; siitä joukot virtasivat kaupunkiin, ja Pietarinkirkon kupoliin nostettiin valkoinen lippu. Paaville tarjottiin omaa pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin eikä poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen vuotta 1929. Pietarinaukiolle …
+AIEMPI KYSYMYS: Miksi Forum jäi lopulta autioksi?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä ei oo yhtä syytä. Forumin autioituminen tapahtui hitaasti [[Rooman valtakunnan]] länsiosan heikennyttyä noin 400-luvulla. Rakennuksia vaurioittivat tulipalot, tulvat ja maanjäristykset, vanhan uskonnon temppelit menettivät asemansa kristinuskon vakiinnuttua, eikä kukaan enää ylläpitänyt isoja julkisia rakennuksia. Marmoria poltettiin kalkiksi ja kiviä kuljetettiin uusiin rakennuksiin, ja keskiajalla aukiolla laidunsivat karja ja lampaat, minkä vuoksi sitä kutsuttiin nimellä [[Campo Vaccino]]. Järjestelmälliset kaivaukset alkoivat vasta 1800-luvulla. Lehmille ei kai kukaan kertonut, että laidun oli entinen keisarien aukio.
+KYSYMYS: Kerro lisää: Rooman valtakunnan
+
+### 693
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi Forum jäi lopulta autioksi?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä ei oo yhtä syytä. Forumin autioituminen tapahtui hitaasti [[Rooman valtakunnan]] länsiosan heikennyttyä noin 400-luvulla. Rakennuksia vaurioittivat tulipalot, tulvat ja maanjäristykset, vanhan uskonnon temppelit menettivät asemansa kristinuskon vakiinnuttua, eikä kukaan enää ylläpitänyt isoja julkisia rakennuksia. Marmoria poltettiin kalkiksi ja kiviä kuljetettiin uusiin rakennuksiin, ja keskiajalla aukiolla laidunsivat karja ja lampaat, minkä vuoksi sitä kutsuttiin nimellä [[Campo Vaccino]]. Järjestelmälliset kaivaukset alkoivat vasta 1800-luvulla. Lehmille ei kai kukaan kertonut, että laidun oli entinen keisarien aukio.
+KYSYMYS: Kerro lisää: Campo Vaccino
+
+### 694
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä Forumin aukiolla tehtiin tavallisena päivänä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Forum oli Rooman jokapäiväisen elämän keskus, jossa hoidettiin lähes kaikki yhteinen: siellä pidettiin puheita, äänestettiin, käytiin oikeutta ja tehtiin kauppaa, ja aukiolle pystytettiin kaupungin johtajien patsaita. Juhlapäivinä siellä kuljettiin myös voittokulkueissa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen [[Basilica Aemiliaan]], ja noin 130 vuotta myöhemmin [[Julius Caesar]] rakennutti [[Basilica Julian]] sekä uuden senaatintalon.
+
+Kyyhkyn silmin se on unelmapaikka: paljon puhetta, paljon kauppaa ja joka suunnalta putoilee murusia. Pullaa ei kai silloin vielä tunnettu, mutta leipä kyllä oli.
+KYSYMYS: Kerro lisää: Basilica Aemiliaan
+
+### 695
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä Forumin aukiolla tehtiin tavallisena päivänä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Forum oli Rooman jokapäiväisen elämän keskus, jossa hoidettiin lähes kaikki yhteinen: siellä pidettiin puheita, äänestettiin, käytiin oikeutta ja tehtiin kauppaa, ja aukiolle pystytettiin kaupungin johtajien patsaita. Juhlapäivinä siellä kuljettiin myös voittokulkueissa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen [[Basilica Aemiliaan]], ja noin 130 vuotta myöhemmin [[Julius Caesar]] rakennutti [[Basilica Julian]] sekä uuden senaatintalon.
+
+Kyyhkyn silmin se on unelmapaikka: paljon puhetta, paljon kauppaa ja joka suunnalta putoilee murusia. Pullaa ei kai silloin vielä tunnettu, mutta leipä kyllä oli.
+KYSYMYS: Kerro lisää: Julius Caesar
+
+### 696
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä Forumin aukiolla tehtiin tavallisena päivänä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Forum oli Rooman jokapäiväisen elämän keskus, jossa hoidettiin lähes kaikki yhteinen: siellä pidettiin puheita, äänestettiin, käytiin oikeutta ja tehtiin kauppaa, ja aukiolle pystytettiin kaupungin johtajien patsaita. Juhlapäivinä siellä kuljettiin myös voittokulkueissa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen [[Basilica Aemiliaan]], ja noin 130 vuotta myöhemmin [[Julius Caesar]] rakennutti [[Basilica Julian]] sekä uuden senaatintalon.
+
+Kyyhkyn silmin se on unelmapaikka: paljon puhetta, paljon kauppaa ja joka suunnalta putoilee murusia. Pullaa ei kai silloin vielä tunnettu, mutta leipä kyllä oli.
+KYSYMYS: Kerro lisää: Basilica Julian
+
+### 697
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Keitä vestaalit olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vestaalit olivat Vestan, kotitulen jumalattaren, papittaria Roomassa. Heitä oli perinteen mukaan kuusi, ja heidät valittiin nuorina tyttöinä palvelemaan noin kolmenkymmenen vuoden ajan. Heidän tärkein tehtävänsä oli pitää yllä [[Vestan temppelin]] pyhää tulta, jonka sammumisen uskottiin ennustavan kaupungille onnettomuutta. Vestaalit asuivat Forumin vieressä omassa talossaan, [[Vestaalien talossa]], ja heitä kunnioitettiin suuresti. Kolmekymmentä vuotta saman tulen vahtina, minä en jaksaisi kolmea päivää.
+KYSYMYS: Kerro lisää: Vestan temppelin
+
+### 698
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Keitä vestaalit olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vestaalit olivat Vestan, kotitulen jumalattaren, papittaria Roomassa. Heitä oli perinteen mukaan kuusi, ja heidät valittiin nuorina tyttöinä palvelemaan noin kolmenkymmenen vuoden ajan. Heidän tärkein tehtävänsä oli pitää yllä [[Vestan temppelin]] pyhää tulta, jonka sammumisen uskottiin ennustavan kaupungille onnettomuutta. Vestaalit asuivat Forumin vieressä omassa talossaan, [[Vestaalien talossa]], ja heitä kunnioitettiin suuresti. Kolmekymmentä vuotta saman tulen vahtina, minä en jaksaisi kolmea päivää.
+KYSYMYS: Kerro lisää: Vestaalien talossa
+
+### 699
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Mikä Capitolium-kukkula oli muinaisessa Roomassa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Capitolium oli yksi Rooman seitsemästä kukkulasta ja kaupungin uskonnollinen sydän. Sen huipulla sijaitsi ylimmälle jumalalle [[Jupiterille]] omistettu temppeli, johon voittokulkueet päättyivät. Nykyään kukkulan huipulla on [[Michelangelon]] suunnittelema aukio, jota ympäröivät [[Capitoliumin museot]]. Seitsemän kukkulaa, ja kyyhky on istunut ainakin kuudella.
+KYSYMYS: Kerro lisää: Jupiterille
+
+### 700
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pietarinkirkko] 1506–1626 Nykyisen kirkon paikalla seisoi ennen toinen, paljon vanhempi kirkko, jonka roomalainen keisari Konstantinus rakennutti jo 300-luvulla. Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. Monta kuuluisaa arkkitehtia ehti työstää sitä matkan varrella: Michelangelo suunnitteli kirkon jättimäisen kupolin, ja Bernini rakensi eteen aukion, jota kiertävät pylväskäytävät kuin avoimet käsivarret. Kupoli kohoaa lähes 137 metrin korkeuteen ja on maailman korkein kirkonkupoli. Sisään mahtuu seisomaan jopa 60 000 ihmistä yhtä aikaa. Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen…
+AIEMPI KYSYMYS: Mikä Capitolium-kukkula oli muinaisessa Roomassa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Capitolium oli yksi Rooman seitsemästä kukkulasta ja kaupungin uskonnollinen sydän. Sen huipulla sijaitsi ylimmälle jumalalle [[Jupiterille]] omistettu temppeli, johon voittokulkueet päättyivät. Nykyään kukkulan huipulla on [[Michelangelon]] suunnittelema aukio, jota ympäröivät [[Capitoliumin museot]]. Seitsemän kukkulaa, ja kyyhky on istunut ainakin kuudella.
+KYSYMYS: Kerro lisää: Michelangelon
+
+### 701
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mikä Capitolium-kukkula oli muinaisessa Roomassa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Capitolium oli yksi Rooman seitsemästä kukkulasta ja kaupungin uskonnollinen sydän. Sen huipulla sijaitsi ylimmälle jumalalle [[Jupiterille]] omistettu temppeli, johon voittokulkueet päättyivät. Nykyään kukkulan huipulla on [[Michelangelon]] suunnittelema aukio, jota ympäröivät [[Capitoliumin museot]]. Seitsemän kukkulaa, ja kyyhky on istunut ainakin kuudella.
+KYSYMYS: Kerro lisää: Capitoliumin museot
+
+### 702
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+- [Manila — kohdekartta / Kohdekartta: Kansallinen taidemuseo] valmistui 1921 Rakennuksen suunnittelivat 1918 Ralph Harrington Doane ja Antonio Toledo, ja sen piti Daniel Burnhamin kaupunkisuunnitelman mukaan olla kansalliskirjasto. Filippiinien lakiasäätävä kokous päätti kuitenkin 1926 muuttaa siihen itse, ja Juan M. Arellano muutti pohjapiirrokset sen mukaan. Talo valmistui 1921 ja vihittiin lakiasäätävän kokouksen taloksi 16. heinäkuuta 1926; kansalliskirjasto toimi siinä silti vuodet 1928–1944. Vuoden 1945 taisteluissa rakennuksesta jäi pystyyn vain keskiosa. Se rakennettiin uudelleen samoihin mittoihin mutta vähemmin koristein, ja työ tehtiin suurelta osin muistin varassa, koska piirustuksista oli säilynyt vain muutama. Työ alkoi 1949 ja siivet va…
+AIEMPI KYSYMYS: Mitä Curia Juliassa tehtiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Curia Julia oli Rooman [[senaatin]] kokoontumispaikka, senaatintalo, jossa senaattorit keskustelivat ja päättivät valtion asioista. [[Julius Caesar]] rakennutti uuden senaatintalon, ja nykyinen rakennus on myöhemmin uudelleen rakennettu. Lähteiden mukaan se on säilynyt hyvin siksi, että se muutettiin keskiajalla kirkoksi. Senaattoreille riitti puhetta, minulle riittää penkki.
+KYSYMYS: Kerro lisää: senaatin
+
+### 703
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Kuka maksoi Colosseumin rakentamisen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rakentamisen rahoitus tuli lähteiden mukaan pääosin keisari [[Vespasianuksen]] Juudean sodasta saamasta sotasaaliista. Vespasianus aloitti työn vuonna 72, ja hänen poikansa [[Titus]] vihki rakennuksen käyttöön vuonna 80. Paikaksi valittiin [[Neron]] entisen tekojärven alue keskellä Roomaa, minkä usein sanotaan palauttaneen kaupungin keskustan kansan käyttöön. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Vespasianuksen
+
+### 704
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Kuka maksoi Colosseumin rakentamisen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rakentamisen rahoitus tuli lähteiden mukaan pääosin keisari [[Vespasianuksen]] Juudean sodasta saamasta sotasaaliista. Vespasianus aloitti työn vuonna 72, ja hänen poikansa [[Titus]] vihki rakennuksen käyttöön vuonna 80. Paikaksi valittiin [[Neron]] entisen tekojärven alue keskellä Roomaa, minkä usein sanotaan palauttaneen kaupungin keskustan kansan käyttöön. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Titus
+
+### 705
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Bahr el Ghazal: Ilmakuva suosta ja pyöreistä kylistä] Bahr el Ghazal laskee lopulta Sudd-suohon, joka tulva-aikaan kasvaa yli 130 000 neliökilometrin laajuiseksi ja nielee haihdunnassaan noin 55 prosenttia siihen virtaavasta vedestä — yksi syy, miksi Niilin lähteiden etsijät joutuivat vuosisatojen ajan kiertämään sen maitse. Jo keisari Neron lähettämät roomalaissotilaat pysähtyivät suohon vuonna 61 jaa. eivätkä päässeet sitä pidemmälle Afrikan sisäosiin. Sveitsiläisen lento-uranuurtajan Walter Mittelholzerin vuosien 1929–1930 Kilimanjaro-lennolla otettu ilmakuva paljastaa, miltä seudun asutus näyttää ylhäältä: pyöreät majat ja karjatarhat ryhmittyvät ympyröiksi joen mutkan ja lammikon tuntumaan.
+AIEMPI KYSYMYS: Kuka maksoi Colosseumin rakentamisen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rakentamisen rahoitus tuli lähteiden mukaan pääosin keisari [[Vespasianuksen]] Juudean sodasta saamasta sotasaaliista. Vespasianus aloitti työn vuonna 72, ja hänen poikansa [[Titus]] vihki rakennuksen käyttöön vuonna 80. Paikaksi valittiin [[Neron]] entisen tekojärven alue keskellä Roomaa, minkä usein sanotaan palauttaneen kaupungin keskustan kansan käyttöön. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Neron
+
+### 706
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Miksi rakennusta alettiin kutsua Colosseumiksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä kyyhkyllä on mielipide. Rakennuksen oikea nimi oli [[Flavolaisten amfiteatteri]], koska sen rakennuttivat keisarit Vespasianus ja Titus, jotka kuuluivat Flavius-sukuun. Lempinimi Colosseum tulee sen vierestä kohonneesta jättiläismäisestä [[Colossus-patsaasta]], ei areenasta itsestään. En ole varma, milloin nimi tarkalleen vakiintui yleiseen käyttöön. Aika hassua, että nimi on jäänyt elämään mutta patsas ei.
+KYSYMYS: Kerro lisää: Flavolaisten amfiteatteri
+
+### 707
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Miksi rakennusta alettiin kutsua Colosseumiksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä kyyhkyllä on mielipide. Rakennuksen oikea nimi oli [[Flavolaisten amfiteatteri]], koska sen rakennuttivat keisarit Vespasianus ja Titus, jotka kuuluivat Flavius-sukuun. Lempinimi Colosseum tulee sen vierestä kohonneesta jättiläismäisestä [[Colossus-patsaasta]], ei areenasta itsestään. En ole varma, milloin nimi tarkalleen vakiintui yleiseen käyttöön. Aika hassua, että nimi on jäänyt elämään mutta patsas ei.
+KYSYMYS: Kerro lisää: Colossus-patsaasta
+
+### 708
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten 50 000 katsojaa pääsi sisään ja ulos?
+AIEMPI VASTAUS (Livia):
+Katotaas. Katsomoon pääsi kahdeksankymmentä numeroidusta portista, ja jokaisella katsojalla oli lipuke, jonka uskotaan ohjanneen hänet oikeaan porttiin ja katsomon osaan. Portit johtivat kaarikäytäviin ja portaikkoihin, joita kutsutaan nimellä [[vomitoria]], ja niiden ansiosta suuri yleisö pääsi liikkumaan rakennuksessa ja poistumaan siitä verrattain nopeasti. [[Colosseumin]] katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa.
+
+Minä pidän järjestelmästä, jossa jokaisella on numero ja paikka. Kyyhkyparvessa ei ole mitään sellaista, ja se kyllä näkyy.
+KYSYMYS: Kerro lisää: vomitoria
+
+### 709
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Miten 50 000 katsojaa pääsi sisään ja ulos?
+AIEMPI VASTAUS (Livia):
+Katotaas. Katsomoon pääsi kahdeksankymmentä numeroidusta portista, ja jokaisella katsojalla oli lipuke, jonka uskotaan ohjanneen hänet oikeaan porttiin ja katsomon osaan. Portit johtivat kaarikäytäviin ja portaikkoihin, joita kutsutaan nimellä [[vomitoria]], ja niiden ansiosta suuri yleisö pääsi liikkumaan rakennuksessa ja poistumaan siitä verrattain nopeasti. [[Colosseumin]] katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa.
+
+Minä pidän järjestelmästä, jossa jokaisella on numero ja paikka. Kyyhkyparvessa ei ole mitään sellaista, ja se kyllä näkyy.
+KYSYMYS: Kerro lisää: Colosseumin
+
+### 710
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten velarium suojasi yleisöä auringolta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Velarium oli suuri purjekangaskatos, joka lepäsi köysiverkon varassa katsomon yllä ja piti auringon ja sateen poissa yleisön päältä. Se kiinnitettiin [[Colosseumin]] ylimmän kerroksen 240 mastonpidikkeeseen, ja kangas vedettiin ja kelattiin köysillä paikoilleen. Työn tekivät uskotaan [[Misenumin laivaston]] merimiehet, mutta en ole varma yksityiskohdista. Aurinkovarjoksi aika kunnianhimoinen.
+KYSYMYS: Kerro lisää: Misenumin laivaston
+
+### 711
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kaupunkilehti / San Francisco: Maanjäristys ja päiväkausia tulta] Kello 5.12 aamulla 18. huhtikuuta 1906 voimakas maanjäristys ravisteli San Franciscoa ja Pohjois-Kaliforniaa. Sortuneiden talojen katkenneista kaasuputkista syttyi tulipaloja, jotka levisivät hallitsemattomina useiden päivien ajan, ja kun vesijohdot olivat poikki, Presidion tykistö räjäytti kokonaisia kortteleita palokujiksi. Arvion mukaan yli kolme neljäsosaa kaupungista ja koko keskusta jäi raunioiksi, ja yli puolet 400 000 asukkaasta menetti kotinsa. Uhriluvusta ei ole yksimielisyyttä: aikalaisraporteissa kuolleita oli 498, nykyarvioissa useita tuhansia. Jälleenrakennus oli nopeaa, ja kaupunki juhli toipumistaan maailmannäyttelyssä 1915.
+- [Valparaíso — kaupunkilehti / Historia: Maanjäristys joka piirsi kadut uusiksi] 16. elokuuta 1906 kello 19.55 kaupunkia järisytti maanjäristys, jonka voimakkuudeksi on laskettu 8,2 ja jonka keskus oli edustan merellä. Uhriluvusta on kaksi lukemaa: kaupungin yleisesitys sanoo 3 000 kuollutta ja yli 20 000 loukkaantunutta, kun järistyksen oma artikkeli antaa Chilen yliopiston tarkemman luvun 3 882. Jälleenrakennuksessa katuja levennettiin, Jaimen ja Deliciasin purot katettiin bulevardeiksi ja Pedro Montt -pääkatu linjattiin. Jo 19. marraskuuta 1822 järistys oli jättänyt 16 000 asukkaan kaupungin raunioiksi.
+AIEMPI KYSYMYS: Mitä Colosseumille tapahtui keskiajalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän liittyy kiviä. Keskiajalla Colosseumin holveissa asuttiin ja tehtiin työtä, eli rakennus sai uutta käyttöä. Vuoden 1349 [[maanjäristys]] kaatoi eteläisen ulkomuurin, ja sen kiviä kannettiin muualle Roomaan rakennusaineeksi, ja marmoria poltettiin lähteiden mukaan kalkiksi. Rakennus on silti yhä pystyssä, mikä on kyyhkyn silmään vaikuttavaa.
+KYSYMYS: Kerro lisää: maanjäristys
+
+### 712
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Trevin suihkulähde] 1732–1762 Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi peräti 22 kilometriä. Nykyinen upea lähde on paljon uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen 1732, ja se valmistui vasta 1762, 11 vuotta hänen kuolemansa jälkeen. Lähde on maailman suurin barokkityylinen suihkulähde: se on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä komeilee merenjumala Neptunus vaunuillaan, joita vetävät kaksi hevosta — toinen rauhallinen ja toinen villi, kuvaamassa meren kahta puolta. Perinteen mukaan olan yli lähteeseen heitetty kolikko takaa paluun Roomaan. Kolikoita…
+AIEMPI KYSYMYS: Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?
+AIEMPI VASTAUS (Livia):
+Ai niin, tämä. Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli, ja tarinan mukaan se takaa paluun Roomaan. En ole varma, mistä tarkalleen juuri tämä tapa juontuu, eikä sille tunneta täysin varmaa selitystä; sen sanotaan vain kuuluvan [[Trevin lähteeseen]] liittyvään perinteeseen. Käytännössä rahat putoavat veteen, ja ne lahjoitetaan [[Caritakselle]] hyväntekeväisyyteen.
+
+Minä en ole koskaan tarvinnut kolikkoa, koska kyyhky löytää takaisin ihan itsekin. Silti kunnioitan perinnettä.
+KYSYMYS: Kerro lisää: Trevin lähteeseen
+
+### 713
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Kolikko olan yli] Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+AIEMPI KYSYMYS: Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?
+AIEMPI VASTAUS (Livia):
+Ai niin, tämä. Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli, ja tarinan mukaan se takaa paluun Roomaan. En ole varma, mistä tarkalleen juuri tämä tapa juontuu, eikä sille tunneta täysin varmaa selitystä; sen sanotaan vain kuuluvan [[Trevin lähteeseen]] liittyvään perinteeseen. Käytännössä rahat putoavat veteen, ja ne lahjoitetaan [[Caritakselle]] hyväntekeväisyyteen.
+
+Minä en ole koskaan tarvinnut kolikkoa, koska kyyhky löytää takaisin ihan itsekin. Silti kunnioitan perinnettä.
+KYSYMYS: Kerro lisää: Caritakselle
+
+### 714
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Trevin suihkulähde] 1732–1762 Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi peräti 22 kilometriä. Nykyinen upea lähde on paljon uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen 1732, ja se valmistui vasta 1762, 11 vuotta hänen kuolemansa jälkeen. Lähde on maailman suurin barokkityylinen suihkulähde: se on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä komeilee merenjumala Neptunus vaunuillaan, joita vetävät kaksi hevosta — toinen rauhallinen ja toinen villi, kuvaamassa meren kahta puolta. Perinteen mukaan olan yli lähteeseen heitetty kolikko takaa paluun Roomaan. Kolikoita…
+- [Rooma — kohdekartta / Kohdekartta: Aqua Virgo] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+AIEMPI KYSYMYS: Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta talteen?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kolikoita putoaa [[Trevin lähteen]] veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään altaan pohjasta talteen. En ole varma, miten keräys tarkalleen tehdään tai kuinka usein, joten en halua arvata yksityiskohtia. Tiedetään kuitenkin, että kerätyt rahat lahjoitetaan [[Caritakselle]] ruoka-apuun, ja omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni. Minä en ainakaan ole koskaan yrittänyt, vaikka kolikot kimaltavat houkuttelevasti.
+KYSYMYS: Kerro lisää: Trevin lähteen
+
+### 715
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Katolinen yliopisto] 1928 Yliopisto perustettiin maaliskuussa 1928 Isabel Caces de Brownin runsaan lahjoituksen turvin. Sitäkin vanhempi on oikeustieteellinen tiedekunta: pyhien sydänten isät perustivat sen 1894 itsenäiseksi korkeakouluksi, ja se liitettiin myöhemmin yliopistoon, koska molemmat olivat katolisen kirkon yksiköitä. Ensimmäiset tutkinnot olivat sähkötekniikka, rakentaminen, kemia, kaivostoiminta, liikkeenjohto, konetekniikka, koristetaiteet ja kauppamerenkulku. Casa Central on keskustassa muutaman korttelin päässä kongressitalosta, metrosta ja merestä, ja juuri se on kaupunkiyliopiston ongelma: alkuperäisellä paikalla ei ole tilaa kasvaa. Osa yksiköistä on siksi hajallaan Valparaísossa, Viña del Ma…
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1868–1928 Ensimmäisen katolisen kirkon peruskiven laski kuvernööri Macquarie 29. lokakuuta 1821. Pappi John Therry oli pyytänyt tonttia kaupungin länsilaidalta Darling Harbourin suunnalta, mutta hänelle annettiin maa idästä Macquarien omien rakennushankkeiden vierestä, tiilenpolttopaikan yläpuolelta — samalta alueelta, joka on nykyään Hyde Park. Kirkko paloi 29. kesäkuuta 1865. Arkkipiispa John Bede Polding kirjoitti Lontooseen William Wardellille, joka oli Augustus Welby Puginin oppilas, ja antoi tälle vapaat kädet: mikä tahansa suunnitelma, mikä tahansa tyyli, mikä tahansa kaunis ja suuri, siihen asti kuin varamme riittävät. Peruskivi laskettiin 1868. Väliaikainen puukirkko paloi sekin vu…
+AIEMPI KYSYMYS: Mihin Caritaksen ruoka-apu Roomassa menee?
+AIEMPI VASTAUS (Livia):
+Ai se. Lähteestä kerätyt rahat lahjoitetaan Caritakselle, ja ne käytetään ruoka-apuun kaupungin vähävaraisille. Caritas on [[katolisen kirkon]] hyväntekeväisyysjärjestö, joka toimii Roomassakin. En ole varma, mihin ruokapisteisiin tai muihin kohteisiin apu tarkalleen kulkeutuu, joten en halua arvata niitä. Raha päätyy siis [[Trevin lähteen]] kolikoista tavallisten ihmisten ruokapöytään. Kyllä kolikoilla joku muukin syö kuin kyyhky.
+KYSYMYS: Kerro lisää: katolisen kirkon
+
+### 716
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Aqua Virgo] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+AIEMPI KYSYMYS: Mistä Trevin lähteen vesi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Trevin lähteen vesi tulee muinaisesta [[Aqua Virgo -akveduktista]], jonka rakennutti vuonna 19 eaa. [[Marcus Agrippa]]. Lähteiden mukaan sama vesijohto tuo vettä Roomaan yhä edelleen.
+
+Kaksi tuhatta vuotta vanha vesijohto toimii yhä, mikä on enemmän kuin voi sanoa useimmista nykyajan putkista. Kyyhkyt arvostavat kestävää rakentamista.
+KYSYMYS: Kerro lisää: Aqua Virgo -akveduktista
+
+### 717
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Mistä Trevin lähteen vesi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Trevin lähteen vesi tulee muinaisesta [[Aqua Virgo -akveduktista]], jonka rakennutti vuonna 19 eaa. [[Marcus Agrippa]]. Lähteiden mukaan sama vesijohto tuo vettä Roomaan yhä edelleen.
+
+Kaksi tuhatta vuotta vanha vesijohto toimii yhä, mikä on enemmän kuin voi sanoa useimmista nykyajan putkista. Kyyhkyt arvostavat kestävää rakentamista.
+KYSYMYS: Kerro lisää: Marcus Agrippa
+
+### 718
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Trevin suihkulähde] 1732–1762 Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi peräti 22 kilometriä. Nykyinen upea lähde on paljon uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen 1732, ja se valmistui vasta 1762, 11 vuotta hänen kuolemansa jälkeen. Lähde on maailman suurin barokkityylinen suihkulähde: se on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä komeilee merenjumala Neptunus vaunuillaan, joita vetävät kaksi hevosta — toinen rauhallinen ja toinen villi, kuvaamassa meren kahta puolta. Perinteen mukaan olan yli lähteeseen heitetty kolikko takaa paluun Roomaan. Kolikoita…
+AIEMPI KYSYMYS: Kuka suunnitteli Trevin lähteen?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä minulla on tietoa. Trevin lähteen suunnitteli arkkitehti [[Nicola Salvi]], ja se valmistui vuonna 1762, hänen kuolemansa jälkeen. Keskellä seisoo meren jumala [[Okeanoksen]] patsas simpukkarattaillaan, ja barokkityylinen lähde nojaa palatsin seinään. Kauniin työn takana oli kai monta vuosikymmentä.
+KYSYMYS: Kerro lisää: Nicola Salvi
+
+### 719
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Kuka suunnitteli Trevin lähteen?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä minulla on tietoa. Trevin lähteen suunnitteli arkkitehti [[Nicola Salvi]], ja se valmistui vuonna 1762, hänen kuolemansa jälkeen. Keskellä seisoo meren jumala [[Okeanoksen]] patsas simpukkarattaillaan, ja barokkityylinen lähde nojaa palatsin seinään. Kauniin työn takana oli kai monta vuosikymmentä.
+KYSYMYS: Kerro lisää: Okeanoksen
+
+### 720
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Miten kaksikerroksinen kellari käytävineen rakennettiin areenan alle?
+AIEMPI VASTAUS (Livia):
+No niin, tässä pitää olla tarkka. En ole varma rakennustekniikan yksityiskohdista, mutta kellari eli [[hypogeum]] oli kaksikerroksinen käytävien ja häkkien verkko areenan alla. Tutkijoiden mukaan se lisättiin rakennukseen vasta [[Domitianuksen]] aikana, Colosseumin avajaisten jälkeen, joten sitä ei ollut alkuperäisessä suunnitelmassa. Lattian alla oli myös kahdeksankymmentä pystykuilua, joiden kautta vinssi nosti häkit lattian tasalle. Rakentajilla ois ollu ihmettelemistä.
+KYSYMYS: Kerro lisää: hypogeum

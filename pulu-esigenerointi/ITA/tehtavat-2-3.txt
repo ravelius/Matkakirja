@@ -1,0 +1,1027 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Po (luonto · joki)
+Tietoruudun teksti: Po on Italian pisin joki, 652 kilometriä. Se alkaa Cottian Alpeilla kivisestä rinteestä pulppuavana lähteenä Monviso-vuoren alta ja päätyy leveään suistoon Adrianmerellä. Vesimäärältään se on Rhônen ja Niilin ohella Välimeren suurimpia jokia — ja siksi myös tulvii, minkä takia yli puolet uomasta on penkereiden välissä. Milanoon Po on yhdistetty kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Somalia — maalehti / Ruoka: Federaatio on riisiä ja spagettia samalla lautasella] Spagetti eli baasto jäi Somaliaan italialaisilta, mutta se syödään paksun lihamuhennoksen kanssa eikä pastakastikkeessa. Ravintolassa voi tilata annoksen, jonka nimi on federaatio: soikealle vadille tulee yhtä suuri kasa riisiä ja yhtä suuri kasa spagettia vierekkäin, päälle haudutettua lihaa ja kasviksia, viereen salaattia ja halutessa banaani. Nimen arvellaan tulevan kahden ruokalajin liitosta ja annoksen koosta. Kotona sitä tehdään harvoin — kukapa keittäisi samalle aterialle sekä riisin että pastan.
+- [Itävalta — maalehti / Luonto: Järvi, jonka pohjalla kasvatettiin riisiä] 1864–1870 — Neusiedlerjärvi on arojärvi, joka ei ole missään kohtaa 1,8 metriä syvempi eikä laske vettään mihinkään jokeen. Vuosina 1864–1870 se kuivui kokonaan, ja tyhjään pohjaan kylvettiin riisiä. Vuonna 1872 järvi oli taas täynnä. Noin puolet pinta-alasta on ruovikkoa, joka on Tonavan suiston jälkeen Euroopan laajin. Järvi on 34 kilometriä pitkä, ja matka riittää maapallon kaarevuuteen: 22 kilometrin päähän toiselle rannalle ei näy kymmenmetrisessä mastossa palava varoitusvalo.
+AIEMPI KYSYMYS: Mitä Pon laaksossa viljellään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pon laakso on Italian tärkein maatalousalue, ja sen hedelmällisillä tasangoilla viljellään erityisesti [[riisiä]], maissia, vehnää ja tomaatteja. Riisinviljelyalueita on muun muassa Vercellin, Novaran ja Pavian seudulla, ja riisistä valmistetaan tunnettua [[risottoa]]. Laaksossa tehdään myös karjataloutta, ja siellä valmistetaan [[Parmigiano-Reggiano]]-juustoa. Italian ruokakulttuurin sydän on kyllä täällä, ja minä haaveilen siellä maritozzosta, vaikka se tulee Roomasta.
+KYSYMYS: Kerro lisää: riisiä
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Po (luonto · joki)
+Tietoruudun teksti: Po on Italian pisin joki, 652 kilometriä. Se alkaa Cottian Alpeilla kivisestä rinteestä pulppuavana lähteenä Monviso-vuoren alta ja päätyy leveään suistoon Adrianmerellä. Vesimäärältään se on Rhônen ja Niilin ohella Välimeren suurimpia jokia — ja siksi myös tulvii, minkä takia yli puolet uomasta on penkereiden välissä. Milanoon Po on yhdistetty kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Supplì soi kuin puhelin] 1847 — Supplì on soikea riisikroketti: tomaattista risottoa, mozzarellan pala keskellä, korppujauhoa ympärillä ja kiehuvaa öljyä. Kun kuuman supplìn katkaisee kahtia, sulanut juusto venyy puolikkaiden väliin pitkäksi langaksi. Se muistutti roomalaisia vanhan puhelimen johdosta, ja siitä tuli nimi supplì al telefono. Sana supplì itsessään on väännös ranskan sanasta surprise, yllätys, ja roomalaiselta ruokalistalta se löytyy jo vuodelta 1847.
+AIEMPI KYSYMYS: Mitä Pon laaksossa viljellään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pon laakso on Italian tärkein maatalousalue, ja sen hedelmällisillä tasangoilla viljellään erityisesti [[riisiä]], maissia, vehnää ja tomaatteja. Riisinviljelyalueita on muun muassa Vercellin, Novaran ja Pavian seudulla, ja riisistä valmistetaan tunnettua [[risottoa]]. Laaksossa tehdään myös karjataloutta, ja siellä valmistetaan [[Parmigiano-Reggiano]]-juustoa. Italian ruokakulttuurin sydän on kyllä täällä, ja minä haaveilen siellä maritozzosta, vaikka se tulee Roomasta.
+KYSYMYS: Kerro lisää: risottoa
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Po (luonto · joki)
+Tietoruudun teksti: Po on Italian pisin joki, 652 kilometriä. Se alkaa Cottian Alpeilla kivisestä rinteestä pulppuavana lähteenä Monviso-vuoren alta ja päätyy leveään suistoon Adrianmerellä. Vesimäärältään se on Rhônen ja Niilin ohella Välimeren suurimpia jokia — ja siksi myös tulvii, minkä takia yli puolet uomasta on penkereiden välissä. Milanoon Po on yhdistetty kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Parmigiano kypsyy vuosia] Parmigiano Reggiano -kiekko painaa noin 40 kiloa ja kypsyy vähintään vuoden, usein kolmekin, ennen kuin tarkastaja koputtaa sitä vasaralla ja kuuntelee, onko sisus ehjä. Vain Parman seudulla tehty juusto saa kantaa nimeä, ja resepti on ollut sama lähes tuhat vuotta: maitoa, suolaa ja aikaa. Kiekot ovat niin arvokkaita, että jotkut italialaiset pankit hyväksyvät niitä lainan vakuudeksi — holveissa kypsyy juustoa kuin kultaharkkoja.
+AIEMPI KYSYMYS: Mitä Pon laaksossa viljellään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pon laakso on Italian tärkein maatalousalue, ja sen hedelmällisillä tasangoilla viljellään erityisesti [[riisiä]], maissia, vehnää ja tomaatteja. Riisinviljelyalueita on muun muassa Vercellin, Novaran ja Pavian seudulla, ja riisistä valmistetaan tunnettua [[risottoa]]. Laaksossa tehdään myös karjataloutta, ja siellä valmistetaan [[Parmigiano-Reggiano]]-juustoa. Italian ruokakulttuurin sydän on kyllä täällä, ja minä haaveilen siellä maritozzosta, vaikka se tulee Roomasta.
+KYSYMYS: Kerro lisää: Parmigiano-Reggiano
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Ketkä nuraghe-tornit rakensivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tornit rakensi [[nuraghe-kulttuuri]], eli Sardinian pronssikauden asukkaat, jotka elivät saarella noin vuosina 1800–500 eaa. Heidän kirjoitustaan ei tunneta, joten heidän omaa nimeään tai kieltään ei tiedetä. Torneja on säilynyt lähteiden mukaan noin seitsemän tuhatta, ja ne rakennettiin suurista kivilohkareista ilman laastia. Tunnetuin kohde on [[Su Nuraxi]] Barumini-kylässä, joka on [[Unescon]] maailmanperintökohde. Ei paha tulos rakentajilta, joilla ei ollut edes siipiä.
+KYSYMYS: Kerro lisää: nuraghe-kulttuuri
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Ketkä nuraghe-tornit rakensivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tornit rakensi [[nuraghe-kulttuuri]], eli Sardinian pronssikauden asukkaat, jotka elivät saarella noin vuosina 1800–500 eaa. Heidän kirjoitustaan ei tunneta, joten heidän omaa nimeään tai kieltään ei tiedetä. Torneja on säilynyt lähteiden mukaan noin seitsemän tuhatta, ja ne rakennettiin suurista kivilohkareista ilman laastia. Tunnetuin kohde on [[Su Nuraxi]] Barumini-kylässä, joka on [[Unescon]] maailmanperintökohde. Ei paha tulos rakentajilta, joilla ei ollut edes siipiä.
+KYSYMYS: Kerro lisää: Su Nuraxi
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Ketkä nuraghe-tornit rakensivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tornit rakensi [[nuraghe-kulttuuri]], eli Sardinian pronssikauden asukkaat, jotka elivät saarella noin vuosina 1800–500 eaa. Heidän kirjoitustaan ei tunneta, joten heidän omaa nimeään tai kieltään ei tiedetä. Torneja on säilynyt lähteiden mukaan noin seitsemän tuhatta, ja ne rakennettiin suurista kivilohkareista ilman laastia. Tunnetuin kohde on [[Su Nuraxi]] Barumini-kylässä, joka on [[Unescon]] maailmanperintökohde. Ei paha tulos rakentajilta, joilla ei ollut edes siipiä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+- [Brasilia — maalehti / Historia: Viisivuotias jäi valtaistuimelle] 1831–1873 — Kun Pedro I luopui kruunusta 1831 ja purjehti takaisin Portugaliin, Brasilian valtaistuimelle jäi hänen viisivuotias poikansa. Täysivaltaiseksi hallitsijaksi Pedro II julistettiin vasta 1840, ja vuoteen 1873 mennessä hän oli hallinnut yli kolmekymmentä vuotta ainoaa monarkiaa, joka Amerikan mantereella oli — ympärillä pelkkiä tasavaltoja. Keisari piti itseään ennen kaikkea oppineena: hän luki kymmentä kieltä latinasta arabiaan ja tupiin, ja hänen palatsissaan São Cristóvãossa oli kolme kirjastoa ja yli 60 000 kirjaa.
+AIEMPI KYSYMYS: Miten sardin kieli eroaa italiasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Sardi on romaaninen kieli, jota monet kielitieteilijät pitävät omana kielenään eikä italian murteena. Se on säilyttänyt paljon [[latinasta]] periytyviä piirteitä: esimerkiksi sana domus tarkoittaa taloa, kun italiassa sanotaan casa, ja luku sata lausutaan kovalla k-äänellä. Sardista on kaksi pääryhmää, [[Logudoro]] pohjoisessa ja [[Campidano]] etelässä. Kirjoitin tämän vakavalla naamalla, vaikka olen vain kyyhky.
+KYSYMYS: Kerro lisää: latinasta
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Miten sardin kieli eroaa italiasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Sardi on romaaninen kieli, jota monet kielitieteilijät pitävät omana kielenään eikä italian murteena. Se on säilyttänyt paljon [[latinasta]] periytyviä piirteitä: esimerkiksi sana domus tarkoittaa taloa, kun italiassa sanotaan casa, ja luku sata lausutaan kovalla k-äänellä. Sardista on kaksi pääryhmää, [[Logudoro]] pohjoisessa ja [[Campidano]] etelässä. Kirjoitin tämän vakavalla naamalla, vaikka olen vain kyyhky.
+KYSYMYS: Kerro lisää: Logudoro
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Miten sardin kieli eroaa italiasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Sardi on romaaninen kieli, jota monet kielitieteilijät pitävät omana kielenään eikä italian murteena. Se on säilyttänyt paljon [[latinasta]] periytyviä piirteitä: esimerkiksi sana domus tarkoittaa taloa, kun italiassa sanotaan casa, ja luku sata lausutaan kovalla k-äänellä. Sardista on kaksi pääryhmää, [[Logudoro]] pohjoisessa ja [[Campidano]] etelässä. Kirjoitin tämän vakavalla naamalla, vaikka olen vain kyyhky.
+KYSYMYS: Kerro lisää: Campidano
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Mikä on casu marzu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Casu marzu]] on sardinialainen pecorino-juusto, jota käsitellään niin, että sen sisällä kasvaa juustokärpäsen toukkia, jotka hajottavat juuston rasvaa ja tekevät siitä pehmeän ja voimakkaan makuisen. Juusto on perinteinen paikallinen erikoisuus, mutta sen myynti on Euroopan unionin elintarvikesääntöjen vuoksi kielletty, vaikka sitä edelleen valmistetaan ja nautitaan saarella. Terveysviranomaiset varoittavat, että elävien toukkien syöminen voi aiheuttaa vatsavaivoja. Minä pysyn leivässä, kiitos.
+KYSYMYS: Kerro lisää: Casu marzu
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Luonto: Afrikan ainoa oma hirvi] Berberihirvi on saksanhirven alalaji ja ainoa Afrikassa alkuperäinen hirvieläin — toinen, jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja Zéraldan seuduilla. Marokosta hirvi metsästettiin sukupuuttoon, ja se palautettiin sinne 1990-luvulla Tunisian kannasta. Perimää tutkittaessa selvisi jotain yllättävää: Pohjois-Afrikan hirvet ovat lähes erottamattomia Sardinian ja Korsikan hirvistä, joten ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.
+AIEMPI KYSYMYS: Miksi Savoijin kuningaskuntaa kutsuttiin Sardiniaksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Savoijin suku sai [[Sardinian]] saaren haltuunsa 1700-luvun alussa, kun se sai sen Sisilian vaihdossa osana suurvaltojen rauhanjärjestelyjä. Suku sai samalla kuninkaan arvon, ja valtion nimeksi tuli Sardinian kuningaskunta, vaikka sen todellinen keskus oli [[Torino]] mantereella ja suurin osa väestöstä asui [[Piemontessa]]. Kuningaskunta johti 1800-luvulla Italian yhdistymistä, ja vuonna 1861 siitä tuli Italian kuningaskunta. Nimi jäi siis elämään, vaikka saari oli sivuosassa.
+KYSYMYS: Kerro lisää: Sardinian
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+AIEMPI KYSYMYS: Miksi Savoijin kuningaskuntaa kutsuttiin Sardiniaksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Savoijin suku sai [[Sardinian]] saaren haltuunsa 1700-luvun alussa, kun se sai sen Sisilian vaihdossa osana suurvaltojen rauhanjärjestelyjä. Suku sai samalla kuninkaan arvon, ja valtion nimeksi tuli Sardinian kuningaskunta, vaikka sen todellinen keskus oli [[Torino]] mantereella ja suurin osa väestöstä asui [[Piemontessa]]. Kuningaskunta johti 1800-luvulla Italian yhdistymistä, ja vuonna 1861 siitä tuli Italian kuningaskunta. Nimi jäi siis elämään, vaikka saari oli sivuosassa.
+KYSYMYS: Kerro lisää: Torino
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Miksi Savoijin kuningaskuntaa kutsuttiin Sardiniaksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Savoijin suku sai [[Sardinian]] saaren haltuunsa 1700-luvun alussa, kun se sai sen Sisilian vaihdossa osana suurvaltojen rauhanjärjestelyjä. Suku sai samalla kuninkaan arvon, ja valtion nimeksi tuli Sardinian kuningaskunta, vaikka sen todellinen keskus oli [[Torino]] mantereella ja suurin osa väestöstä asui [[Piemontessa]]. Kuningaskunta johti 1800-luvulla Italian yhdistymistä, ja vuonna 1861 siitä tuli Italian kuningaskunta. Nimi jäi siis elämään, vaikka saari oli sivuosassa.
+KYSYMYS: Kerro lisää: Piemontessa
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Mikä on Sardinian suurin kaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sardinian pääkaupunki on [[Cagliari]], joka on myös asukasluvultaan saaren suurin kaupunki, ja toiseksi suurin on [[Sassari]] pohjoisessa. Cagliari sijaitsee saaren etelärannalla, ja sen vanhin osa, Castello, on kukkulalla. Kaupungin lähellä on [[Molentargiuksen]] suolaiset laguunit, joissa tavataan flamingoja. Sieltä tulee varmasti hyvä leivonnainen, mutta en ole varma sen nimestä.
+KYSYMYS: Kerro lisää: Cagliari
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Mikä on Sardinian suurin kaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sardinian pääkaupunki on [[Cagliari]], joka on myös asukasluvultaan saaren suurin kaupunki, ja toiseksi suurin on [[Sassari]] pohjoisessa. Cagliari sijaitsee saaren etelärannalla, ja sen vanhin osa, Castello, on kukkulalla. Kaupungin lähellä on [[Molentargiuksen]] suolaiset laguunit, joissa tavataan flamingoja. Sieltä tulee varmasti hyvä leivonnainen, mutta en ole varma sen nimestä.
+KYSYMYS: Kerro lisää: Sassari
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+AIEMPI KYSYMYS: Mikä on Sardinian suurin kaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sardinian pääkaupunki on [[Cagliari]], joka on myös asukasluvultaan saaren suurin kaupunki, ja toiseksi suurin on [[Sassari]] pohjoisessa. Cagliari sijaitsee saaren etelärannalla, ja sen vanhin osa, Castello, on kukkulalla. Kaupungin lähellä on [[Molentargiuksen]] suolaiset laguunit, joissa tavataan flamingoja. Sieltä tulee varmasti hyvä leivonnainen, mutta en ole varma sen nimestä.
+KYSYMYS: Kerro lisää: Molentargiuksen
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+- [Italia — maalehti / Kuvataide: Caravaggio maalasi valonheittimellä] Caravaggio toi 1600-luvun alussa maalaukseen pimeyden ja valokiilan: hänen kuvissaan tavalliset ihmiset likaisine jalkoineen astuvat esiin mustasta taustasta kuin näyttämölle. Kirkonmiehet närkästyivät, kun pyhimyksillä oli kadunkulmien kasvot, mutta tyyli muutti koko eurooppalaisen taiteen suunnan. Mies itse eli kuin seikkailuromaanin konna: riitoja, pakomatkoja ja varhainen kuolema epäselvissä oloissa. Rooman kirkoissa hänen teoksiaan voi yhä katsoa ilmaiseksi — kolikolla valot syttyvät.
+- [Italia — maalehti / Historia] Italia on nuori valtio vanhalla maalla: Rooman valtakunnasta on kaksituhatta vuotta, mutta yhtenäinen Italia on nuorempi kuin moni sen kahviloista.
+- [Italia — maalehti / Keittiö] Rooman omat ruoat ovat lähtöisin köyhistä keittiöistä: muutama aine, kuuma pannu tai kiehuva öljy — ja tiukka sääntö siitä, mitä niihin ei panna.
+AIEMPI KYSYMYS: Miksi Venetsia rakennettiin juuri tänne?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Venetsian synty on pitkä tarina. Kaupunki syntyi paetessa: 400- ja 500-luvuilla [[Rooman]] valtakunnan hajotessa niemimaan asukkaat pakenivat hyökkääjiä matalalle [[laguunille]], jonka saaret ja vetiset kulkuväylät tarjosivat suojaa. Matala vesi esti suurten laivojen ja ratsuväen pääsyn, ja sijainti [[Adrianmeren]] pohjukassa teki laguunista erinomaisen kauppapaikan. Rakennukset pystytettiin pitkien puupaalujen varaan. Täältä ylhäältä katsottuna se näyttää yhä ihmeeltä.
+KYSYMYS: Kerro lisää: Rooman
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Laguuni, joka on nimensä toisinto] Lagosin laguuni on yli viisikymmentä kilometriä pitkä ja kolmesta kolmeentoista kilometriä leveä, ja sen erottaa Atlantista pitkä hiekkasärkkä. Se on Guineanlahden suurin laguuni ja pinta-alaltaan noin 6 355 neliökilometriä, mutta niin matala, ettei valtamerialus pääse sinne — vain proomut ja veneet. Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu mereen Lagosin sataman kautta, joka on puolesta kilometristä kilometriin leveä ja kymmenen kilometriä pitkä väylä keskellä kaupunkia. Nimi on huvittava toisinto itsestään: Lagos tarkoittaa portugaliksi järviä, joten Lagosin laguuni on kaksi kertaa sama sana.
+AIEMPI KYSYMYS: Miksi Venetsia rakennettiin juuri tänne?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Venetsian synty on pitkä tarina. Kaupunki syntyi paetessa: 400- ja 500-luvuilla [[Rooman]] valtakunnan hajotessa niemimaan asukkaat pakenivat hyökkääjiä matalalle [[laguunille]], jonka saaret ja vetiset kulkuväylät tarjosivat suojaa. Matala vesi esti suurten laivojen ja ratsuväen pääsyn, ja sijainti [[Adrianmeren]] pohjukassa teki laguunista erinomaisen kauppapaikan. Rakennukset pystytettiin pitkien puupaalujen varaan. Täältä ylhäältä katsottuna se näyttää yhä ihmeeltä.
+KYSYMYS: Kerro lisää: laguunille
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Miksi Venetsia rakennettiin juuri tänne?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Venetsian synty on pitkä tarina. Kaupunki syntyi paetessa: 400- ja 500-luvuilla [[Rooman]] valtakunnan hajotessa niemimaan asukkaat pakenivat hyökkääjiä matalalle [[laguunille]], jonka saaret ja vetiset kulkuväylät tarjosivat suojaa. Matala vesi esti suurten laivojen ja ratsuväen pääsyn, ja sijainti [[Adrianmeren]] pohjukassa teki laguunista erinomaisen kauppapaikan. Rakennukset pystytettiin pitkien puupaalujen varaan. Täältä ylhäältä katsottuna se näyttää yhä ihmeeltä.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mikä Otranton salmi on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Otranton salmi]] on merenkulkuväylä, joka yhdistää [[Adrianmeren]] [[Joonianmereen]] ja erottaa Italian niemimaan "kantapään" [[Albaniasta]]. Salmi on kapeimmillaan noin seitsemänkymmentä kilometriä leveä, ja nimensä se on saanut Italian puolella sijaitsevasta Otranton kaupungista. Se on tärkeä laivaliikenteen reitti, ja kirkkaalla säällä rannat voi hyvin erottaa toisistaan. Tämä kuului ehdottomasti kyyhkyn reittiin.
+KYSYMYS: Kerro lisää: Otranton salmi
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mikä Otranton salmi on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Otranton salmi]] on merenkulkuväylä, joka yhdistää [[Adrianmeren]] [[Joonianmereen]] ja erottaa Italian niemimaan "kantapään" [[Albaniasta]]. Salmi on kapeimmillaan noin seitsemänkymmentä kilometriä leveä, ja nimensä se on saanut Italian puolella sijaitsevasta Otranton kaupungista. Se on tärkeä laivaliikenteen reitti, ja kirkkaalla säällä rannat voi hyvin erottaa toisistaan. Tämä kuului ehdottomasti kyyhkyn reittiin.
+KYSYMYS: Kerro lisää: Joonianmereen
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mikä Otranton salmi on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Otranton salmi]] on merenkulkuväylä, joka yhdistää [[Adrianmeren]] [[Joonianmereen]] ja erottaa Italian niemimaan "kantapään" [[Albaniasta]]. Salmi on kapeimmillaan noin seitsemänkymmentä kilometriä leveä, ja nimensä se on saanut Italian puolella sijaitsevasta Otranton kaupungista. Se on tärkeä laivaliikenteen reitti, ja kirkkaalla säällä rannat voi hyvin erottaa toisistaan. Tämä kuului ehdottomasti kyyhkyn reittiin.
+KYSYMYS: Kerro lisää: Albaniasta
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Serbia — maalehti / Tiede: Teslan huvila Krunska-kadulla] 1952 — Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa -rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa kultaisessa pallossa.
+AIEMPI KYSYMYS: Mitkä ovat Adrianmeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren suurimmat saaret ovat [[Kroatian]] rannikolla, ja kaksi suurinta ovat [[Krk]] ja [[Cres]], jotka ovat lähes yhtä suuria: kumpikin on pinta-alaltaan noin 400 neliökilometriä. Lähteet ovat ristiriitaisia siitä, kumpi on hieman suurempi, joten en ole varma. Niiden jälkeen tulevat muun muassa [[Brač]] ja [[Hvar]], jotka ovat suosittuja matkailukohteita. Hyvä, että tämä kysymys osui kohdalle, kun minä muistan vain tämän verran.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mitkä ovat Adrianmeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren suurimmat saaret ovat [[Kroatian]] rannikolla, ja kaksi suurinta ovat [[Krk]] ja [[Cres]], jotka ovat lähes yhtä suuria: kumpikin on pinta-alaltaan noin 400 neliökilometriä. Lähteet ovat ristiriitaisia siitä, kumpi on hieman suurempi, joten en ole varma. Niiden jälkeen tulevat muun muassa [[Brač]] ja [[Hvar]], jotka ovat suosittuja matkailukohteita. Hyvä, että tämä kysymys osui kohdalle, kun minä muistan vain tämän verran.
+KYSYMYS: Kerro lisää: Krk
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mitkä ovat Adrianmeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren suurimmat saaret ovat [[Kroatian]] rannikolla, ja kaksi suurinta ovat [[Krk]] ja [[Cres]], jotka ovat lähes yhtä suuria: kumpikin on pinta-alaltaan noin 400 neliökilometriä. Lähteet ovat ristiriitaisia siitä, kumpi on hieman suurempi, joten en ole varma. Niiden jälkeen tulevat muun muassa [[Brač]] ja [[Hvar]], jotka ovat suosittuja matkailukohteita. Hyvä, että tämä kysymys osui kohdalle, kun minä muistan vain tämän verran.
+KYSYMYS: Kerro lisää: Cres
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Mitkä ovat Adrianmeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren suurimmat saaret ovat [[Kroatian]] rannikolla, ja kaksi suurinta ovat [[Krk]] ja [[Cres]], jotka ovat lähes yhtä suuria: kumpikin on pinta-alaltaan noin 400 neliökilometriä. Lähteet ovat ristiriitaisia siitä, kumpi on hieman suurempi, joten en ole varma. Niiden jälkeen tulevat muun muassa [[Brač]] ja [[Hvar]], jotka ovat suosittuja matkailukohteita. Hyvä, että tämä kysymys osui kohdalle, kun minä muistan vain tämän verran.
+KYSYMYS: Kerro lisää: Brač
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mitkä ovat Adrianmeren suurimmat saaret?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren suurimmat saaret ovat [[Kroatian]] rannikolla, ja kaksi suurinta ovat [[Krk]] ja [[Cres]], jotka ovat lähes yhtä suuria: kumpikin on pinta-alaltaan noin 400 neliökilometriä. Lähteet ovat ristiriitaisia siitä, kumpi on hieman suurempi, joten en ole varma. Niiden jälkeen tulevat muun muassa [[Brač]] ja [[Hvar]], jotka ovat suosittuja matkailukohteita. Hyvä, että tämä kysymys osui kohdalle, kun minä muistan vain tämän verran.
+KYSYMYS: Kerro lisää: Hvar
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mikä on Dalmatian rannikko?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Dalmatia]] on Kroatian Adrianmeren rannikon pitkä ja kapea alue, jonka takana kohoavat Dinaarien vuoret. Rannikon edustalla on tuhansia saaria, ja alueen kaupungeista tunnetuimpia ovat [[Split]], jossa on Rooman keisarin Diocletianuksen palatsi, sekä muurien ympäröimä [[Dubrovnik]]. Alue tunnetaan lämpimästä ilmastosta, kirkkaasta merestä ja venetsialaisesta perinnöstä. Fritule maistuisi nyt, mutta ne taitavat olla Kroatian jouluherkku.
+
+Täältä katolta minä muuten kuvittelen aina, että kaikki Dalmatian valkoiset kivitalot ovat leipomoita. Ne eivät ole, mutta ihan syystä näin ajattelen.
+KYSYMYS: Kerro lisää: Dalmatia
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+AIEMPI KYSYMYS: Mikä on Dalmatian rannikko?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Dalmatia]] on Kroatian Adrianmeren rannikon pitkä ja kapea alue, jonka takana kohoavat Dinaarien vuoret. Rannikon edustalla on tuhansia saaria, ja alueen kaupungeista tunnetuimpia ovat [[Split]], jossa on Rooman keisarin Diocletianuksen palatsi, sekä muurien ympäröimä [[Dubrovnik]]. Alue tunnetaan lämpimästä ilmastosta, kirkkaasta merestä ja venetsialaisesta perinnöstä. Fritule maistuisi nyt, mutta ne taitavat olla Kroatian jouluherkku.
+
+Täältä katolta minä muuten kuvittelen aina, että kaikki Dalmatian valkoiset kivitalot ovat leipomoita. Ne eivät ole, mutta ihan syystä näin ajattelen.
+KYSYMYS: Kerro lisää: Split
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik] Kalkkikivinen kaupunki Adrianmeren rannalla oli satojen vuosien ajan oma pieni tasavaltansa: sillä oli oma laivasto, omat lait ja tapa selvitä naapureiden välissä sopimalla eikä sotimalla.
+AIEMPI KYSYMYS: Mikä on Dalmatian rannikko?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Dalmatia]] on Kroatian Adrianmeren rannikon pitkä ja kapea alue, jonka takana kohoavat Dinaarien vuoret. Rannikon edustalla on tuhansia saaria, ja alueen kaupungeista tunnetuimpia ovat [[Split]], jossa on Rooman keisarin Diocletianuksen palatsi, sekä muurien ympäröimä [[Dubrovnik]]. Alue tunnetaan lämpimästä ilmastosta, kirkkaasta merestä ja venetsialaisesta perinnöstä. Fritule maistuisi nyt, mutta ne taitavat olla Kroatian jouluherkku.
+
+Täältä katolta minä muuten kuvittelen aina, että kaikki Dalmatian valkoiset kivitalot ovat leipomoita. Ne eivät ole, mutta ihan syystä näin ajattelen.
+KYSYMYS: Kerro lisää: Dubrovnik
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Luonto: Tuuli, joka värjää Italian sateen] Libyan aavikolta puhaltaa tuuli, jota sanotaan täällä qibliyyksi, qiblan suunnasta tulevaksi, ja Euroopassa sirokoksi. Se yltää Pohjois-Afrikassa ja Etelä-Euroopassa hirmumyrskyn nopeuksiin, ja satakilometriset puuskat ovat tavallisimpia keväällä ja syksyllä, huipussaan maaliskuussa ja marraskuussa. Matkalla Välimeren yli tuuli kerää kosteutta, ja Etelä-Italiassa sataa niin sanottua veresadetta: pisaroiden mukana tulee alas Libyan punainen hiekka. Kun sirokko osuu nousuveden kanssa yksiin, Venetsian laguuniin nousee acqua alta. Pöly hankaa koneita ja tunkeutuu talojen sisään.
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Mikä on acqua alta?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tuttu. [[Acqua alta]] on italiaa ja tarkoittaa "korkeaa vettä": kyse on Venetsian laguunin tulvista, joita esiintyy yleensä syksyllä ja talvella, kun nousuvesi, sirokko-tuuli ja matala ilmanpaine nostavat meren pintaa. Adrianmerellä vuorovesiero on Välimeren mittakaavassa poikkeuksellisen suuri. Venetsian tulvasuojaksi on rakennettu [[MOSE]]-niminen liikuteltava tulvaportti, joka otettiin ensimmäisen kerran käyttöön 2020-luvun taitteessa. Tästä on kyllä jo kirjoitettu enemmän kuin minä jaksan lukea.
+KYSYMYS: Kerro lisää: Acqua alta
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Mikä on acqua alta?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tuttu. [[Acqua alta]] on italiaa ja tarkoittaa "korkeaa vettä": kyse on Venetsian laguunin tulvista, joita esiintyy yleensä syksyllä ja talvella, kun nousuvesi, sirokko-tuuli ja matala ilmanpaine nostavat meren pintaa. Adrianmerellä vuorovesiero on Välimeren mittakaavassa poikkeuksellisen suuri. Venetsian tulvasuojaksi on rakennettu [[MOSE]]-niminen liikuteltava tulvaportti, joka otettiin ensimmäisen kerran käyttöön 2020-luvun taitteessa. Tästä on kyllä jo kirjoitettu enemmän kuin minä jaksan lukea.
+KYSYMYS: Kerro lisää: MOSE
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Keitä tyrrhenialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Tyrrhenialaiset oli kreikkalaisten käyttämä nimi kansasta, jonka roomalaiset tunsivat nimellä [[etruskit]] ja johon nimi on nykytutkimuksessa samastettu. He asuivat Keski-Italiassa nykyisen [[Toscanan]] seudulla, ja Toscanan nimi periytyy roomalaisten heistä käyttämästä nimestä. He kävivät laajaa merikauppaa ja käyttivät kreikasta lainattua aakkostoa, mutta heidän kielensä ymmärretään yhä vain osittain. Heidän kaupunkivaltionsa joutuivat vähitellen [[roomalaisten]] hallintaan, ja siksi kansa tunnetaan pitkälti vain hautalöytöjen sekä kreikkalaisten ja roomalaisten kuvausten kautta. Hyvä, että edes meri muistaa.
+KYSYMYS: Kerro lisää: etruskit
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Keitä tyrrhenialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Tyrrhenialaiset oli kreikkalaisten käyttämä nimi kansasta, jonka roomalaiset tunsivat nimellä [[etruskit]] ja johon nimi on nykytutkimuksessa samastettu. He asuivat Keski-Italiassa nykyisen [[Toscanan]] seudulla, ja Toscanan nimi periytyy roomalaisten heistä käyttämästä nimestä. He kävivät laajaa merikauppaa ja käyttivät kreikasta lainattua aakkostoa, mutta heidän kielensä ymmärretään yhä vain osittain. Heidän kaupunkivaltionsa joutuivat vähitellen [[roomalaisten]] hallintaan, ja siksi kansa tunnetaan pitkälti vain hautalöytöjen sekä kreikkalaisten ja roomalaisten kuvausten kautta. Hyvä, että edes meri muistaa.
+KYSYMYS: Kerro lisää: Toscanan
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+AIEMPI KYSYMYS: Keitä tyrrhenialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Tyrrhenialaiset oli kreikkalaisten käyttämä nimi kansasta, jonka roomalaiset tunsivat nimellä [[etruskit]] ja johon nimi on nykytutkimuksessa samastettu. He asuivat Keski-Italiassa nykyisen [[Toscanan]] seudulla, ja Toscanan nimi periytyy roomalaisten heistä käyttämästä nimestä. He kävivät laajaa merikauppaa ja käyttivät kreikasta lainattua aakkostoa, mutta heidän kielensä ymmärretään yhä vain osittain. Heidän kaupunkivaltionsa joutuivat vähitellen [[roomalaisten]] hallintaan, ja siksi kansa tunnetaan pitkälti vain hautalöytöjen sekä kreikkalaisten ja roomalaisten kuvausten kautta. Hyvä, että edes meri muistaa.
+KYSYMYS: Kerro lisää: roomalaisten
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uluru — kaupunkilehti / Kivi ja väri: Pystyyn nostettu kerrostuma] Kun hiekkakivi oli kovettunut, se makasi alun perin vaakatasossa muun kerrostuman seassa. Noin 400–300 miljoonaa vuotta sitten alueen maankuori rutistui uudelleen mannerlaattojen liikkeissä, ja kerrokset kääntyivät lähes pystyyn — niin jyrkästi, että alkuperäiset vaakasuorat kerrosrajat näkyvät nykyään kallion kyljessä pystysuorina uurteina ylhäältä alas asti. Juuri nämä pystysuorat urat antavat Ulurulle sen tunnusomaisen ryppyisen ulkonäön kaukaa katsottuna. Samasta liikkeestä ja myöhemmästä rapautumisesta ovat syntyneet myös kallion suuret, kaarevat onkalot, joissa pehmeämpi kivi on kulunut ympäristöään nopeammin.
+- [Oman — maalehti / Vuoret: Merenpohja työntyi maan päälle] Omanin vuoristo ei ole tavallista mannerkalliota. Samailin ofioliitti on pala valtameren pohjaa ja sen alla ollutta vaippaa, joka työntyi mannerlaattojen liikkeessä kuivalle maalle noin sata miljoonaa vuotta sitten. Se on maailman laajimpia ja parhaiten paljastuneita: kalliota on satatuhatta neliökilometriä, ja siitä näkyy koko merenpohjan kerrossarja. Wadi Jizzissä pinta on täynnä tyynylaavaa — pyöreitä pötköjä, joita syntyy kun sula laava purkautuu veden alla ja jähmettyy heti ulkopinnalta. Geologit tulevat tänne katsomaan sitä, mitä muualla pitäisi porata merenpohjasta.
+AIEMPI KYSYMYS: Miksi meren pohjassa on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tyrrhenanmeren pohjassa on tulivuoria, koska meri sijaitsee kohdassa, jossa Afrikan ja Euraasian [[mannerlaattojen]] reunat kohtaavat ja työntyvät toisiaan vasten. Tutkijoiden mukaan laatan reuna painuu osin meren alle, ja syvällä sulava kivi nousee magmana pintaan ja rakentaa tulivuoria; samalla merenpohja on venynyt ja ohentunut. Tällaisia ovat vedenalainen [[Marsili]] sekä pinnan yläpuolelle yltävät [[Aiolian saaret]] ja [[Stromboli]], vaikka yksityiskohdista tutkijat keskustelevat yhä. Vuoria vedenalla, kuka olisi arvannut.
+KYSYMYS: Kerro lisää: mannerlaattojen
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Miksi meren pohjassa on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tyrrhenanmeren pohjassa on tulivuoria, koska meri sijaitsee kohdassa, jossa Afrikan ja Euraasian [[mannerlaattojen]] reunat kohtaavat ja työntyvät toisiaan vasten. Tutkijoiden mukaan laatan reuna painuu osin meren alle, ja syvällä sulava kivi nousee magmana pintaan ja rakentaa tulivuoria; samalla merenpohja on venynyt ja ohentunut. Tällaisia ovat vedenalainen [[Marsili]] sekä pinnan yläpuolelle yltävät [[Aiolian saaret]] ja [[Stromboli]], vaikka yksityiskohdista tutkijat keskustelevat yhä. Vuoria vedenalla, kuka olisi arvannut.
+KYSYMYS: Kerro lisää: Marsili
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Miksi meren pohjassa on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tyrrhenanmeren pohjassa on tulivuoria, koska meri sijaitsee kohdassa, jossa Afrikan ja Euraasian [[mannerlaattojen]] reunat kohtaavat ja työntyvät toisiaan vasten. Tutkijoiden mukaan laatan reuna painuu osin meren alle, ja syvällä sulava kivi nousee magmana pintaan ja rakentaa tulivuoria; samalla merenpohja on venynyt ja ohentunut. Tällaisia ovat vedenalainen [[Marsili]] sekä pinnan yläpuolelle yltävät [[Aiolian saaret]] ja [[Stromboli]], vaikka yksityiskohdista tutkijat keskustelevat yhä. Vuoria vedenalla, kuka olisi arvannut.
+KYSYMYS: Kerro lisää: Aiolian saaret
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Miksi meren pohjassa on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tyrrhenanmeren pohjassa on tulivuoria, koska meri sijaitsee kohdassa, jossa Afrikan ja Euraasian [[mannerlaattojen]] reunat kohtaavat ja työntyvät toisiaan vasten. Tutkijoiden mukaan laatan reuna painuu osin meren alle, ja syvällä sulava kivi nousee magmana pintaan ja rakentaa tulivuoria; samalla merenpohja on venynyt ja ohentunut. Tällaisia ovat vedenalainen [[Marsili]] sekä pinnan yläpuolelle yltävät [[Aiolian saaret]] ja [[Stromboli]], vaikka yksityiskohdista tutkijat keskustelevat yhä. Vuoria vedenalla, kuka olisi arvannut.
+KYSYMYS: Kerro lisää: Stromboli
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Kuinka usein Stromboli purkautuu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Stromboli on poikkeuksellinen, koska se ei purkaudu satunnaisesti vaan toimii lähes jatkuvasti: pieniä räjähdysmäisiä purkauksia tapahtuu tavallisesti noin muutaman kerran tunnissa, ja ne sinkoavat hehkuvaa laavaa ja tuhkaa kraatterin yllä. Tästä syystä saarta on kutsuttu Välimeren majakaksi. Suuremmat ja vaarallisemmat purkaukset ovat harvinaisempia, eikä niitä voi ennustaa yhtä tarkasti. Saari kuuluu [[Aiolian saarten]] ryhmään [[Sisilian]] pohjoispuolella. Jos jollain on ikuinen vuoro, niin tuolla.
+KYSYMYS: Kerro lisää: Aiolian saarten
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Kuinka usein Stromboli purkautuu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Stromboli on poikkeuksellinen, koska se ei purkaudu satunnaisesti vaan toimii lähes jatkuvasti: pieniä räjähdysmäisiä purkauksia tapahtuu tavallisesti noin muutaman kerran tunnissa, ja ne sinkoavat hehkuvaa laavaa ja tuhkaa kraatterin yllä. Tästä syystä saarta on kutsuttu Välimeren majakaksi. Suuremmat ja vaarallisemmat purkaukset ovat harvinaisempia, eikä niitä voi ennustaa yhtä tarkasti. Saari kuuluu [[Aiolian saarten]] ryhmään [[Sisilian]] pohjoispuolella. Jos jollain on ikuinen vuoro, niin tuolla.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Mitä Caprera-kanjonin syvyyksissä elää?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuhannen metrin syvyydessä avautuvasta kanjonista on löydetty harvinaisia sieni- ja [[korallikasvustoja]], jotka ovat yleensä hitaasti kasvavia ja herkkiä ympäristönsä muutoksille. Tällaiset kasvustot tarjoavat tavallisesti suojaa ja ravintoa myös muille pohjan eliöille. Uhkina ovat [[pohjatroolaus]] sekä liikenteen päästöt, eikä kanjoni ole suojeltu. Kyyhky ei sukella, joten tämä on kyllä toisten tuttavien juttua.
+KYSYMYS: Kerro lisää: korallikasvustoja
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+AIEMPI KYSYMYS: Mitä Caprera-kanjonin syvyyksissä elää?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuhannen metrin syvyydessä avautuvasta kanjonista on löydetty harvinaisia sieni- ja [[korallikasvustoja]], jotka ovat yleensä hitaasti kasvavia ja herkkiä ympäristönsä muutoksille. Tällaiset kasvustot tarjoavat tavallisesti suojaa ja ravintoa myös muille pohjan eliöille. Uhkina ovat [[pohjatroolaus]] sekä liikenteen päästöt, eikä kanjoni ole suojeltu. Kyyhky ei sukella, joten tämä on kyllä toisten tuttavien juttua.
+KYSYMYS: Kerro lisää: pohjatroolaus
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+AIEMPI KYSYMYS: Mitkä suuret saaret rajaavat Tyrrhenanmerta?
+AIEMPI VASTAUS (Livia):
+Mmm— saaria. Tyrrhenanmerta rajaavat kolme suurta saarta: luoteessa Korsika, lännessä Sardinia ja etelässä Sisilia, kun taas idässä meri rajautuu Italian niemimaan rannikkoon. Sisilian pohjoispuolella ovat lisäksi [[Aiolian saaret]], ja Toscanan rannikon edustalla on pienempiä saaria, joista tunnetuimpiin kuulunee [[Elba]]. Saaria saaren perään, ylhäältä ne näyttävät kuin leivänmurut.
+KYSYMYS: Kerro lisää: Elba
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Keitä liguurit olivat?
+AIEMPI VASTAUS (Livia):
+No jopas, vanhaa väkeä. [[Liguurit]] olivat muinainen kansa, joka asui Ligurianmeren rannikolla ja sen takana vuoristossa nykyisen [[Ligurian]] seudulla; antiikin kirjailijat mainitsevat heidät, ja alue on saanut nimensä heistä. Heidän alkuperänsä on epävarma ja kielestä tiedetään vähän. [[Roomalaiset]] valtasivat alueen pitkien sotien jälkeen, ja liguurit sulautuivat vähitellen Rooman maailmaan. Alueen suurin kaupunki on nykyään [[Genova]]. Pitkä matka antiikkiin, mutta perille minä pääsin.
+KYSYMYS: Kerro lisää: Liguurit
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Keitä liguurit olivat?
+AIEMPI VASTAUS (Livia):
+No jopas, vanhaa väkeä. [[Liguurit]] olivat muinainen kansa, joka asui Ligurianmeren rannikolla ja sen takana vuoristossa nykyisen [[Ligurian]] seudulla; antiikin kirjailijat mainitsevat heidät, ja alue on saanut nimensä heistä. Heidän alkuperänsä on epävarma ja kielestä tiedetään vähän. [[Roomalaiset]] valtasivat alueen pitkien sotien jälkeen, ja liguurit sulautuivat vähitellen Rooman maailmaan. Alueen suurin kaupunki on nykyään [[Genova]]. Pitkä matka antiikkiin, mutta perille minä pääsin.
+KYSYMYS: Kerro lisää: Ligurian
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+AIEMPI KYSYMYS: Keitä liguurit olivat?
+AIEMPI VASTAUS (Livia):
+No jopas, vanhaa väkeä. [[Liguurit]] olivat muinainen kansa, joka asui Ligurianmeren rannikolla ja sen takana vuoristossa nykyisen [[Ligurian]] seudulla; antiikin kirjailijat mainitsevat heidät, ja alue on saanut nimensä heistä. Heidän alkuperänsä on epävarma ja kielestä tiedetään vähän. [[Roomalaiset]] valtasivat alueen pitkien sotien jälkeen, ja liguurit sulautuivat vähitellen Rooman maailmaan. Alueen suurin kaupunki on nykyään [[Genova]]. Pitkä matka antiikkiin, mutta perille minä pääsin.
+KYSYMYS: Kerro lisää: Roomalaiset
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Keitä liguurit olivat?
+AIEMPI VASTAUS (Livia):
+No jopas, vanhaa väkeä. [[Liguurit]] olivat muinainen kansa, joka asui Ligurianmeren rannikolla ja sen takana vuoristossa nykyisen [[Ligurian]] seudulla; antiikin kirjailijat mainitsevat heidät, ja alue on saanut nimensä heistä. Heidän alkuperänsä on epävarma ja kielestä tiedetään vähän. [[Roomalaiset]] valtasivat alueen pitkien sotien jälkeen, ja liguurit sulautuivat vähitellen Rooman maailmaan. Alueen suurin kaupunki on nykyään [[Genova]]. Pitkä matka antiikkiin, mutta perille minä pääsin.
+KYSYMYS: Kerro lisää: Genova
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Mikä Välimeren valassuojelualue on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyseessä on [[Pelagos]]-niminen kansainvälinen valassuojelualue, jonka perustivat vuonna 1999 Ranska, Italia ja [[Monaco]]. Se kattaa noin 84 000 neliökilometriä ja ulottuu sekä rantavaltioiden aluevesille että avomerelle. Alueella elää useita valas- ja delfiinilajeja, ja yleisin valas on tiettävästi [[sillivalas]]. Samoilla vesillä liikkuu myös runsaasti laivoja, minkä vuoksi suojelu on tarpeen. Hyvä, että joku vahtii, minä vahdin vain kattoja.
+KYSYMYS: Kerro lisää: Pelagos
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Mikä Välimeren valassuojelualue on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyseessä on [[Pelagos]]-niminen kansainvälinen valassuojelualue, jonka perustivat vuonna 1999 Ranska, Italia ja [[Monaco]]. Se kattaa noin 84 000 neliökilometriä ja ulottuu sekä rantavaltioiden aluevesille että avomerelle. Alueella elää useita valas- ja delfiinilajeja, ja yleisin valas on tiettävästi [[sillivalas]]. Samoilla vesillä liikkuu myös runsaasti laivoja, minkä vuoksi suojelu on tarpeen. Hyvä, että joku vahtii, minä vahdin vain kattoja.
+KYSYMYS: Kerro lisää: Monaco
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Silli syödään pyrstöstä] Keväisin — Hollandse Nieuwe on kevään ensimmäinen suolasilli, ja sen saa myydä vasta kun kalan rasvapitoisuus on noussut noin 16 prosenttiin. Perkauksessa haima jätetään paikalleen: sen entsyymit kypsyttävät lihan muutamassa päivässä. Nimi on suojattu: kalan pitää olla vähintään kolmivuotias, ja pyytää sen saa vain touko–elokuussa. Kojulla silli kastetaan sipuliin ja lasketaan suuhun pyrstöstä pidellen.
+AIEMPI KYSYMYS: Mikä Välimeren valassuojelualue on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyseessä on [[Pelagos]]-niminen kansainvälinen valassuojelualue, jonka perustivat vuonna 1999 Ranska, Italia ja [[Monaco]]. Se kattaa noin 84 000 neliökilometriä ja ulottuu sekä rantavaltioiden aluevesille että avomerelle. Alueella elää useita valas- ja delfiinilajeja, ja yleisin valas on tiettävästi [[sillivalas]]. Samoilla vesillä liikkuu myös runsaasti laivoja, minkä vuoksi suojelu on tarpeen. Hyvä, että joku vahtii, minä vahdin vain kattoja.
+KYSYMYS: Kerro lisää: sillivalas
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Panamá: Kaupunki hopeatien päässä] Espanjalainen Pedro Arias de Ávila perusti Panamán 15. elokuuta 1519 kapean satamansuun rannalle. Muutamassa vuodessa kaupungista tuli lähtöpiste Perun valloitukselle ja kauttakulkupaikka Espanjaan matkaavalle kullalle ja hopealle: lasti purettiin maihin Tyynenmeren puolella ja vietiin muulikaravaaneilla kannaksen yli Nombre de Diosin ja myöhemmin Portobelon markkinoille. Vuodesta 1520 kaupungin satamaa ja kauppaa — etenkin orjakauppaa — hallitsivat genovalaiset kauppiaat, joille Espanjan kruunu myönsi erikoisluvan; Genovan tasavalta oli Espanjan tärkein pankkikumppani.
+AIEMPI KYSYMYS: Miksi Genova kasvoi merenkulun suurvallaksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Genova]] sijaitsee luonnollisen sataman äärellä, ja sen takana kohoavat vuoret tekivät maaliikenteestä hankalaa, joten kaupunki hakeutui merelle. Keskiajalla siitä kehittyi itsenäinen kaupunkivaltio, [[Genovan tasavalta]], joka kilpaili merikaupasta muun muassa Venetsian ja Pisan kanssa ja perusti kauppa-asemia Välimeren ja Mustanmeren rannoille. Perimätiedon mukaan kaupungista lähti myös [[Kolumbus]], jota pidetään yleisesti genovalaisena, vaikka syntymäpaikasta on esitetty kiistoja.
+
+Genovan satama näyttää ylhäältä laivojen ja kattojen sekamelskalta, ja minä olen kerran eksynyt sinne kesken kirjeen. Pullaa en löytänyt, mutta focaccian tuoksu pysäytti minut telakan kaiteelle.
+KYSYMYS: Kerro lisää: Genovan tasavalta
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Historian hetki: Lissabon 1484 — kartta, jota kukaan ei osta] 1484 — Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja pudistavat päätään — taas kerran. Loukkaus on tuttu eikä siksi yhtään helpompi. Epäilijät osuvat siihen, mikä on olennaista: Kolumbus on laskenut maapallon liian pieneksi ja Aasian aivan liian lähelle, ja purjehdus, jonka hän lupaa, olisi todellisuudessa moninkertainen. Juhana II:n hovi ei silti hylkää suunnitelmaa vain laskuvirheen takia. Portugalin laivat etenevät jo Afrikan rannikkoa etelään, ja se tie Intiaan näyttää varmalta — miksi maksaa arvauksesta? Lissabonista lähtee mies, jolla ei ole …
+- [Lissabon — kohdekartta / Kohdekartta: Kolumbus 1484] Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja pudistavat päätään — taas kerran. Loukkaus on tuttu eikä siksi yhtään helpompi. Epäilijät osuvat siihen, mikä on olennaista: Kolumbus on laskenut maapallon liian pieneksi ja Aasian aivan liian lähelle, ja purjehdus, jonka hän lupaa, olisi todellisuudessa moninkertainen. Juhana II:n hovi ei silti hylkää suunnitelmaa vain laskuvirheen takia. Portugalin laivat etenevät jo Afrikan rannikkoa etelään, ja se tie Intiaan näyttää varmalta — miksi maksaa arvauksesta? Lissabonista lähtee mies, jolla ei ole laivaa …
+- [Lissabon — kaupunkilehti / Historian hetki] Kolumbus asui Lissabonissa toistakymmentä vuotta ja esitti suunnitelmansa ensin Portugalin kuninkaalle — joka sanoi ei, ja oli laskuopin puolesta oikeassa.
+AIEMPI KYSYMYS: Miksi Genova kasvoi merenkulun suurvallaksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Genova]] sijaitsee luonnollisen sataman äärellä, ja sen takana kohoavat vuoret tekivät maaliikenteestä hankalaa, joten kaupunki hakeutui merelle. Keskiajalla siitä kehittyi itsenäinen kaupunkivaltio, [[Genovan tasavalta]], joka kilpaili merikaupasta muun muassa Venetsian ja Pisan kanssa ja perusti kauppa-asemia Välimeren ja Mustanmeren rannoille. Perimätiedon mukaan kaupungista lähti myös [[Kolumbus]], jota pidetään yleisesti genovalaisena, vaikka syntymäpaikasta on esitetty kiistoja.
+
+Genovan satama näyttää ylhäältä laivojen ja kattojen sekamelskalta, ja minä olen kerran eksynyt sinne kesken kirjeen. Pullaa en löytänyt, mutta focaccian tuoksu pysäytti minut telakan kaiteelle.
+KYSYMYS: Kerro lisää: Kolumbus
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Mitä tarkoittavat Riviera di Levante ja Riviera di Ponente?
+AIEMPI VASTAUS (Livia):
+Mmm— rantaa. Riviera tarkoittaa italiaksi rannikkoa, ja Ligurian rannikko jakautuu Genovan kohdalta kahteen osaan. [[Riviera di Levante]] ulottuu Genovasta itään ja Riviera di Ponente länteen Ranskan rajalle asti; nimet viittaavat auringon nousuun ja laskuun. Levanten puolella ovat muun muassa [[Portofino]] ja [[Cinque Terre]], Ponenten puolella muun muassa [[Sanremo]]. Itä tai länsi, kyyhky löytää molemmat.
+KYSYMYS: Kerro lisää: Riviera di Levante
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Porto Velho] Porto Velho versoi Rio Madeiran rantaan sademetsän keskelle vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen tulvista, kumista, tinasta ja soijasta.
+AIEMPI KYSYMYS: Mitä tarkoittavat Riviera di Levante ja Riviera di Ponente?
+AIEMPI VASTAUS (Livia):
+Mmm— rantaa. Riviera tarkoittaa italiaksi rannikkoa, ja Ligurian rannikko jakautuu Genovan kohdalta kahteen osaan. [[Riviera di Levante]] ulottuu Genovasta itään ja Riviera di Ponente länteen Ranskan rajalle asti; nimet viittaavat auringon nousuun ja laskuun. Levanten puolella ovat muun muassa [[Portofino]] ja [[Cinque Terre]], Ponenten puolella muun muassa [[Sanremo]]. Itä tai länsi, kyyhky löytää molemmat.
+KYSYMYS: Kerro lisää: Portofino
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Saaret: Mies, joka pyysi jäädä saarelle] 1704–1709 — Skotlantilainen Alexander Selkirk purjehti Cinque Ports -aluksella, jota hän piti merikelvottomana. Syyskuussa 1704 hän pyysi jäädä Juan Fernándezin saarelle 670 kilometrin päähän mantereesta — ja oli oikeassa, sillä alus upposi myöhemmin. Selkirk eli saarella neljä vuotta ja neljä kuukautta, pyydysti pari kolme vuohta päivässä ja auttoi keripukkiin sairastuneen miehistön jalkeille, kun Woodes Rogersin laivat noutivat hänet 2. helmikuuta 1709. Vuonna 1869 HMS Topazen miehistö asetti saarelle muistolaatan.
+AIEMPI KYSYMYS: Mitä tarkoittavat Riviera di Levante ja Riviera di Ponente?
+AIEMPI VASTAUS (Livia):
+Mmm— rantaa. Riviera tarkoittaa italiaksi rannikkoa, ja Ligurian rannikko jakautuu Genovan kohdalta kahteen osaan. [[Riviera di Levante]] ulottuu Genovasta itään ja Riviera di Ponente länteen Ranskan rajalle asti; nimet viittaavat auringon nousuun ja laskuun. Levanten puolella ovat muun muassa [[Portofino]] ja [[Cinque Terre]], Ponenten puolella muun muassa [[Sanremo]]. Itä tai länsi, kyyhky löytää molemmat.
+KYSYMYS: Kerro lisää: Cinque Terre
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Mitä tarkoittavat Riviera di Levante ja Riviera di Ponente?
+AIEMPI VASTAUS (Livia):
+Mmm— rantaa. Riviera tarkoittaa italiaksi rannikkoa, ja Ligurian rannikko jakautuu Genovan kohdalta kahteen osaan. [[Riviera di Levante]] ulottuu Genovasta itään ja Riviera di Ponente länteen Ranskan rajalle asti; nimet viittaavat auringon nousuun ja laskuun. Levanten puolella ovat muun muassa [[Portofino]] ja [[Cinque Terre]], Ponenten puolella muun muassa [[Sanremo]]. Itä tai länsi, kyyhky löytää molemmat.
+KYSYMYS: Kerro lisää: Sanremo
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+AIEMPI KYSYMYS: Miksi valaat viihtyvät juuri Ligurianmerellä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ligurianmerellä merenpohja syvenee rannikon läheisyydessä nopeasti, ja avomerellä virtaukset nostavat tutkijoiden mukaan ravinteita pintaan. Se tekee alueesta rikkaan ravinnonlähteen: [[plankton]]ia ja pieniä äyriäisiä, joita tiettävästi [[sillivalaat]] syövät, riittää, ja syvissä vesissä ruokaa löytävät myös syvälle sukeltavat lajit. Alueen yli on kuitenkin runsaasti laivaliikennettä, mikä on valaille oma riskinsä. Minä suosin kattoja, mutta ymmärrän valaita.
+KYSYMYS: Kerro lisää: plankton
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Silli syödään pyrstöstä] Keväisin — Hollandse Nieuwe on kevään ensimmäinen suolasilli, ja sen saa myydä vasta kun kalan rasvapitoisuus on noussut noin 16 prosenttiin. Perkauksessa haima jätetään paikalleen: sen entsyymit kypsyttävät lihan muutamassa päivässä. Nimi on suojattu: kalan pitää olla vähintään kolmivuotias, ja pyytää sen saa vain touko–elokuussa. Kojulla silli kastetaan sipuliin ja lasketaan suuhun pyrstöstä pidellen.
+AIEMPI KYSYMYS: Miksi valaat viihtyvät juuri Ligurianmerellä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ligurianmerellä merenpohja syvenee rannikon läheisyydessä nopeasti, ja avomerellä virtaukset nostavat tutkijoiden mukaan ravinteita pintaan. Se tekee alueesta rikkaan ravinnonlähteen: [[plankton]]ia ja pieniä äyriäisiä, joita tiettävästi [[sillivalaat]] syövät, riittää, ja syvissä vesissä ruokaa löytävät myös syvälle sukeltavat lajit. Alueen yli on kuitenkin runsaasti laivaliikennettä, mikä on valaille oma riskinsä. Minä suosin kattoja, mutta ymmärrän valaita.
+KYSYMYS: Kerro lisää: sillivalaat
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Mikä oli Kharybdis?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä tiedän. Kharybdis oli kreikkalaisessa mytologiassa merihirviö, joka nieli veden ja syöksi sen sitten takaisin, jolloin syntyi vaarallinen pyörre. Homeroksen [[Odysseiassa]] Kharybdis vaanii kapean salmen toisella puolella ja [[Skylla]] toisella; [[Odysseus]] kulki Skyllan puolelta ja menetti kuusi miestään, koska pyörre olisi vienyt koko aluksen. Kreikkalaiset sijoittivat paikan Messinansalmeen, jossa Kharybdis vastaa Sisilian edustan pyörrettä ja Skylla Calabrian puoleista kalliota. Salmen vuorovesivirrat ovat voimakkaita ja synnyttävät todellakin paikallisia pyörteitä. Sellaisen yli minä lennän mielelläni kaukaa.
+KYSYMYS: Kerro lisää: Odysseiassa
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+AIEMPI KYSYMYS: Mikä oli Kharybdis?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä tiedän. Kharybdis oli kreikkalaisessa mytologiassa merihirviö, joka nieli veden ja syöksi sen sitten takaisin, jolloin syntyi vaarallinen pyörre. Homeroksen [[Odysseiassa]] Kharybdis vaanii kapean salmen toisella puolella ja [[Skylla]] toisella; [[Odysseus]] kulki Skyllan puolelta ja menetti kuusi miestään, koska pyörre olisi vienyt koko aluksen. Kreikkalaiset sijoittivat paikan Messinansalmeen, jossa Kharybdis vastaa Sisilian edustan pyörrettä ja Skylla Calabrian puoleista kalliota. Salmen vuorovesivirrat ovat voimakkaita ja synnyttävät todellakin paikallisia pyörteitä. Sellaisen yli minä lennän mielelläni kaukaa.
+KYSYMYS: Kerro lisää: Skylla
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Saari, jolta Odysseus ei tahtonut lähteä] 2023 — Djerba on 514 neliökilometriä ja Pohjois-Afrikan suurin saari; vuoden 2014 laskennassa siellä asui 163 726 ihmistä. Saarta on pidetty lootuksensyöjien saarena, jonne Odysseus ajautui ja jossa miehistö unohti kotimatkan; kreikkalaisille se tunnettiin nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin temppelin tuhoutuessa paenneet papit toivat mukanaan oven ja kiviä, jotka muurattiin rakennukseen. Unesco otti koko saaren maailmanperintöluetteloon vuonna 2023.
+AIEMPI KYSYMYS: Mikä oli Kharybdis?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä tiedän. Kharybdis oli kreikkalaisessa mytologiassa merihirviö, joka nieli veden ja syöksi sen sitten takaisin, jolloin syntyi vaarallinen pyörre. Homeroksen [[Odysseiassa]] Kharybdis vaanii kapean salmen toisella puolella ja [[Skylla]] toisella; [[Odysseus]] kulki Skyllan puolelta ja menetti kuusi miestään, koska pyörre olisi vienyt koko aluksen. Kreikkalaiset sijoittivat paikan Messinansalmeen, jossa Kharybdis vastaa Sisilian edustan pyörrettä ja Skylla Calabrian puoleista kalliota. Salmen vuorovesivirrat ovat voimakkaita ja synnyttävät todellakin paikallisia pyörteitä. Sellaisen yli minä lennän mielelläni kaukaa.
+KYSYMYS: Kerro lisää: Odysseus
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Punainen silta Euroopan kortteleihin] Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli 69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, Euroopan investointipankki ja parlamentin sihteeristö, jossa työskentelee yli 4 000 ihmistä.
+AIEMPI KYSYMYS: Miksi salmen yli ei vieläkään kulje siltaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Siltaa on suunniteltu salmen yli vuosikymmeniä, mutta hanke on törmännyt kerta toisensa jälkeen esteisiin. Italian hallitus hyväksyi hankkeen elokuussa 2025, mutta [[tilintarkastustuomioistuin]] kaatoi päätöksen jo lokakuussa, joten rakentaminen ei ole päässyt alkamaan. Silta yhdistäisi [[Sisilian]] ja [[Calabrian]], ja usein esitettyjä huolia ovat hankkeen hinta, voimakkaat tuulet ja virtaukset sekä alueen maanjäristysvaara. En ole varma, mikä tilanne on juuri nyt, sillä päätökset ovat voineet muuttua. Siltoja en tarvitse, siivet ovat valmiina.
+KYSYMYS: Kerro lisää: tilintarkastustuomioistuin
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Miksi salmen yli ei vieläkään kulje siltaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Siltaa on suunniteltu salmen yli vuosikymmeniä, mutta hanke on törmännyt kerta toisensa jälkeen esteisiin. Italian hallitus hyväksyi hankkeen elokuussa 2025, mutta [[tilintarkastustuomioistuin]] kaatoi päätöksen jo lokakuussa, joten rakentaminen ei ole päässyt alkamaan. Silta yhdistäisi [[Sisilian]] ja [[Calabrian]], ja usein esitettyjä huolia ovat hankkeen hinta, voimakkaat tuulet ja virtaukset sekä alueen maanjäristysvaara. En ole varma, mikä tilanne on juuri nyt, sillä päätökset ovat voineet muuttua. Siltoja en tarvitse, siivet ovat valmiina.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+AIEMPI KYSYMYS: Miksi salmen yli ei vieläkään kulje siltaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Siltaa on suunniteltu salmen yli vuosikymmeniä, mutta hanke on törmännyt kerta toisensa jälkeen esteisiin. Italian hallitus hyväksyi hankkeen elokuussa 2025, mutta [[tilintarkastustuomioistuin]] kaatoi päätöksen jo lokakuussa, joten rakentaminen ei ole päässyt alkamaan. Silta yhdistäisi [[Sisilian]] ja [[Calabrian]], ja usein esitettyjä huolia ovat hankkeen hinta, voimakkaat tuulet ja virtaukset sekä alueen maanjäristysvaara. En ole varma, mikä tilanne on juuri nyt, sillä päätökset ovat voineet muuttua. Siltoja en tarvitse, siivet ovat valmiina.
+KYSYMYS: Kerro lisää: Calabrian
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+AIEMPI KYSYMYS: Mikä on Fata Morgana -kangastus?
+AIEMPI VASTAUS (Livia):
+No niin, kangastuksia. Fata Morgana on ilmakehän valonmurtumisesta syntyvä kangastus, jossa kaukaiset kohteet, kuten rannat, rakennukset tai laivat, näyttävät kohoavan, venyvän tai leijuvan horisontin yllä. Ilmiö syntyy, kun eri lämpöisten ilmakerrosten raja taivuttaa valon kulkua. Nimi on italiaa ja tarkoittaa keiju Morganaa, joka tunnetaan [[Arthur-kuninkaan]] tarustosta, ja [[Messinansalmen]] kangastuksia on perinteisesti selitetty hänen loitsuillaan.
+
+Olen nähnyt ylhäältä monenlaista, mutta kangastusta en ole oppinut ottamaan vakavasti. Ensin on rantaviiva, sitten ei enää ole, ja pulla on aina kauempana kuin luulin.
+KYSYMYS: Kerro lisää: Arthur-kuninkaan
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+AIEMPI KYSYMYS: Mikä on Fata Morgana -kangastus?
+AIEMPI VASTAUS (Livia):
+No niin, kangastuksia. Fata Morgana on ilmakehän valonmurtumisesta syntyvä kangastus, jossa kaukaiset kohteet, kuten rannat, rakennukset tai laivat, näyttävät kohoavan, venyvän tai leijuvan horisontin yllä. Ilmiö syntyy, kun eri lämpöisten ilmakerrosten raja taivuttaa valon kulkua. Nimi on italiaa ja tarkoittaa keiju Morganaa, joka tunnetaan [[Arthur-kuninkaan]] tarustosta, ja [[Messinansalmen]] kangastuksia on perinteisesti selitetty hänen loitsuillaan.
+
+Olen nähnyt ylhäältä monenlaista, mutta kangastusta en ole oppinut ottamaan vakavasti. Ensin on rantaviiva, sitten ei enää ole, ja pulla on aina kauempana kuin luulin.
+KYSYMYS: Kerro lisää: Messinansalmen
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+AIEMPI KYSYMYS: Miten miekkakalaa pyydetään salmessa?
+AIEMPI VASTAUS (Livia):
+Kato, perinteinen homma. Miekkakalan harppuunapyynti Messinansalmessa on vanha perinne: kuvausten mukaan kalastajat käyttävät veneitä, joissa on korkea [[tähystysmasto]] ja pitkä keula-ulokke, ja kalaa etsitään silmämääräisesti pinnalta. Kun miekkakala havaitaan, vene lähestyy sitä hiljaa ja harppuuna heitetään keulasta käsin. En ole varma, kuinka suuri osa pyynnistä tehdään nykyään vielä näin, sillä menetelmät ja säännöt ovat muuttuneet. Pyyntiä tunnetaan [[Sisilian]] ja [[Calabrian]] välisessä salmessa. Minä pyydän vain leivänmurusia.
+KYSYMYS: Kerro lisää: tähystysmasto
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+AIEMPI KYSYMYS: Miksi Messinansalmessa on niin voimakkaat virrat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Virrat syntyvät tutkijoiden mukaan siitä, että [[Tyrrhenanmeren]] ja [[Joonianmeren]] [[vuorovesi]] ei ole samassa vaiheessa, joten vesi pyrkii tasoittumaan kapean salmen läpi edestakaisin. Salmi on kapeimmillaan vain 3,1 kilometriä leveä, ja ahtaus kiihdyttää virtausta, kun taas pohjan syvyyden vaihtelu lisää pyörteitä. Seurauksena salmessa kulkee vahvoja virtauksia, jotka huuhtovat joskus syvänmeren kaloja rannalle. Sellaisessa virrassa en lentäisi alas juomaan.
+KYSYMYS: Kerro lisää: Tyrrhenanmeren
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Llogaran sola Joonianmeren yllä] vuodesta 1966 — Llogaran solassa tie nousee 1 027 metrin korkeuteen Ceraunian-vuoristossa, ja kohdalta avautuu näkymä Albanian Rivieralle ja meren saarille. Ympäröivä Llogaran kansallispuisto perustettiin vuonna 1966, ja sen pinta-ala on 17,7 neliökilometriä. Puiston korkeus vaihtelee noin 200 metristä yli 2 000 metriin, ja Maja e Çikës nousee 2 045 metriin. Metsissä kasvaa mustamäntyä ja hopeakuusta sekä lehtipuita, ja seudulla elää muun muassa maakotkia, korppikotkia, metsäkauriita ja susia. Lähellä oleva Caesarin sola viittaa siihen, että Julius Caesar ajoi Pompeiusta takaa seudun halki.
+AIEMPI KYSYMYS: Miksi Messinansalmessa on niin voimakkaat virrat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Virrat syntyvät tutkijoiden mukaan siitä, että [[Tyrrhenanmeren]] ja [[Joonianmeren]] [[vuorovesi]] ei ole samassa vaiheessa, joten vesi pyrkii tasoittumaan kapean salmen läpi edestakaisin. Salmi on kapeimmillaan vain 3,1 kilometriä leveä, ja ahtaus kiihdyttää virtausta, kun taas pohjan syvyyden vaihtelu lisää pyörteitä. Seurauksena salmessa kulkee vahvoja virtauksia, jotka huuhtovat joskus syvänmeren kaloja rannalle. Sellaisessa virrassa en lentäisi alas juomaan.
+KYSYMYS: Kerro lisää: Joonianmeren
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Miksi Messinansalmessa on niin voimakkaat virrat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Virrat syntyvät tutkijoiden mukaan siitä, että [[Tyrrhenanmeren]] ja [[Joonianmeren]] [[vuorovesi]] ei ole samassa vaiheessa, joten vesi pyrkii tasoittumaan kapean salmen läpi edestakaisin. Salmi on kapeimmillaan vain 3,1 kilometriä leveä, ja ahtaus kiihdyttää virtausta, kun taas pohjan syvyyden vaihtelu lisää pyörteitä. Seurauksena salmessa kulkee vahvoja virtauksia, jotka huuhtovat joskus syvänmeren kaloja rannalle. Sellaisessa virrassa en lentäisi alas juomaan.
+KYSYMYS: Kerro lisää: vuorovesi
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+AIEMPI KYSYMYS: Miksi pikkukaupungissa on niin suuri basilika?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä huomio. Aquileia oli antiikissa yksi Rooman valtakunnan merkittävistä kaupungeista: roomalaiset perustivat sen sotilassiirtokunnaksi vuosina 180–181 eaa., ja toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Kaupungista tuli myös kristillinen keskus, ja [[Aquileian patriarkaatti]] säilyi vuoteen 1751 asti vaikutusvaltaisena kirkollisena toimijana. Nykyisen basilikan rakennutti [[Poppo]] vuonna 1031, ja se uudistettiin goottilaiseen tyyliin vuosina 1365–1381. Kaupungin asema heikkeni myöhäisantiikissa muun muassa [[Attilan]] hunnien hyökkäyksen myötä, ja suuri kirkko kertoo vanhasta asemasta.
+
+Iso kirkko pienen kaupungin keskellä kertoo, että kaupungilla on ollut joskus paljon sanottavaa. Ylhäältä sen näkee heti: kaikki muu on pientä, ja kirkko vain jatkaa.
+KYSYMYS: Kerro lisää: Aquileian patriarkaatti
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+AIEMPI KYSYMYS: Miksi pikkukaupungissa on niin suuri basilika?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä huomio. Aquileia oli antiikissa yksi Rooman valtakunnan merkittävistä kaupungeista: roomalaiset perustivat sen sotilassiirtokunnaksi vuosina 180–181 eaa., ja toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Kaupungista tuli myös kristillinen keskus, ja [[Aquileian patriarkaatti]] säilyi vuoteen 1751 asti vaikutusvaltaisena kirkollisena toimijana. Nykyisen basilikan rakennutti [[Poppo]] vuonna 1031, ja se uudistettiin goottilaiseen tyyliin vuosina 1365–1381. Kaupungin asema heikkeni myöhäisantiikissa muun muassa [[Attilan]] hunnien hyökkäyksen myötä, ja suuri kirkko kertoo vanhasta asemasta.
+
+Iso kirkko pienen kaupungin keskellä kertoo, että kaupungilla on ollut joskus paljon sanottavaa. Ylhäältä sen näkee heti: kaikki muu on pientä, ja kirkko vain jatkaa.
+KYSYMYS: Kerro lisää: Poppo
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+AIEMPI KYSYMYS: Miksi pikkukaupungissa on niin suuri basilika?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä huomio. Aquileia oli antiikissa yksi Rooman valtakunnan merkittävistä kaupungeista: roomalaiset perustivat sen sotilassiirtokunnaksi vuosina 180–181 eaa., ja toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Kaupungista tuli myös kristillinen keskus, ja [[Aquileian patriarkaatti]] säilyi vuoteen 1751 asti vaikutusvaltaisena kirkollisena toimijana. Nykyisen basilikan rakennutti [[Poppo]] vuonna 1031, ja se uudistettiin goottilaiseen tyyliin vuosina 1365–1381. Kaupungin asema heikkeni myöhäisantiikissa muun muassa [[Attilan]] hunnien hyökkäyksen myötä, ja suuri kirkko kertoo vanhasta asemasta.
+
+Iso kirkko pienen kaupungin keskellä kertoo, että kaupungilla on ollut joskus paljon sanottavaa. Ylhäältä sen näkee heti: kaikki muu on pientä, ja kirkko vain jatkaa.
+KYSYMYS: Kerro lisää: Attilan
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Milloin roomalaiset perustivat Aquileian?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: roomalaiset perustivat Aquileian sotilassiirtokunnaksi vuosina 181–180 eaa., eli yli kaksi tuhatta vuotta sitten. Perustamisen tarkoituksena oli tiettävästi vahvistaa Rooman asemaa koillisrajalla, ja sijainti lähellä [[Adrianmeren]] pohjukkaa teki siirtokunnasta nopeasti tärkeän kauppakaupungin, jonka kautta kulki reittejä Italiasta pohjoiseen ja itään. Nykyään kaupunki sijaitsee [[Friuli-Venezia Giulian]] alueella Koillis-Italiassa. Kaksi tuhatta vuotta, ja minä muistin sen ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+AIEMPI KYSYMYS: Milloin roomalaiset perustivat Aquileian?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: roomalaiset perustivat Aquileian sotilassiirtokunnaksi vuosina 181–180 eaa., eli yli kaksi tuhatta vuotta sitten. Perustamisen tarkoituksena oli tiettävästi vahvistaa Rooman asemaa koillisrajalla, ja sijainti lähellä [[Adrianmeren]] pohjukkaa teki siirtokunnasta nopeasti tärkeän kauppakaupungin, jonka kautta kulki reittejä Italiasta pohjoiseen ja itään. Nykyään kaupunki sijaitsee [[Friuli-Venezia Giulian]] alueella Koillis-Italiassa. Kaksi tuhatta vuotta, ja minä muistin sen ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Friuli-Venezia Giulian
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Kisanin portti] Portti seisoo vanhankaupungin muurin kaakkoiskulmassa. Muurin kehä on 4,5 kilometriä ja se rajaa 86 hehtaaria. Muurin rakensivat roomalaiset, ja ajjubidit ja mamelukit vahvistivat sitä myöhemmin; vuoden 634 piirityksen kuvauksissa muuri on 11 metriä korkea. Julkisivu on ladottu suurista vaaleista kivilohkareista, ja kahden ulkonevan tornin väliin jäävä keskiosa on koristeltu hakatuin listoin ja pyörein kivimedaljongein. Roomalaiset omistivat kunkin portin yhdelle taivaankappaleelle, ja Kisanin portti sai Saturnuksen. Porttien lukumäärässä on lähteiden välillä hajontaa: vuoden 634 piirityksestä kertovassa luettelossa niitä on kuusi. Nimensä Kisanin portti sai orjasta, joka tuli tunnetuksi ka…
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+AIEMPI KYSYMYS: Mitä Aquileian basilikan mosaiikkilattiassa on kuvattu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Basilikan lattiaa peittää laaja varhaiskristillinen mosaiikki, joka tiettävästi ajoittuu 300-luvulle ja kuuluu Euroopan tunnetuimpiin tällaisiin lattioihin. Kuvissa on muun muassa merielämää ja kalastajia, lintuja sekä [[Raamatun]] [[Joonan]] tarina, ja kuvamaailma sekoittaa kristillistä ja antiikin perinnettä. Lattia oli pitkään hautautuneena, ja se tuli esiin kaivauksissa 1900-luvun alussa. Lattialla kävellään, katosta lennetään.
+KYSYMYS: Kerro lisää: Raamatun
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Nabi Yunusin kumpu] assyrialainen asevarasto, moskeija 1365 Nabi Yunusin kumpu on Niniven toinen kumpu, kilometrin verran Kuyunjikista etelään Khosr-joen toisella puolella. Sanheribin tekstien perusteella sitä on pidetty Niniven asevarastona, ja kummun alla on Asarhaddonin ja Assurbanipalin palatsi. Vuoden 1990 kaivauksissa paljastui monumentaalinen sisäänkäynti: suuria kaiverrettuja orthostaatteja ja härkämiespatsaita, joista osa oli jäänyt kesken. Kummun päällä oli pitkään kristillinen luostari. Vuonna 1349 idän kirkon jäsenet kaivoivat siellä esiin patriarkka Hnanisho I:n jäännökset. Historioitsija Amr, joka näki ruumiin omin silmin, kertoi sen olleen plataanipuisessa arkussa hämmästyttävän hyvin säilynyt, …
+AIEMPI KYSYMYS: Mitä Aquileian basilikan mosaiikkilattiassa on kuvattu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Basilikan lattiaa peittää laaja varhaiskristillinen mosaiikki, joka tiettävästi ajoittuu 300-luvulle ja kuuluu Euroopan tunnetuimpiin tällaisiin lattioihin. Kuvissa on muun muassa merielämää ja kalastajia, lintuja sekä [[Raamatun]] [[Joonan]] tarina, ja kuvamaailma sekoittaa kristillistä ja antiikin perinnettä. Lattia oli pitkään hautautuneena, ja se tuli esiin kaivauksissa 1900-luvun alussa. Lattialla kävellään, katosta lennetään.
+KYSYMYS: Kerro lisää: Joonan
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+AIEMPI KYSYMYS: Mikä Aquileian patriarkaatti oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aquileian patriarkaatti oli kirkollinen hallintoalue, jonka johtaja käytti patriarkan arvonimeä ja jonka vaikutus ulottui pitkään Koillis-Italiasta myös pohjoisiin naapurialueisiin. Keskiajalla patriarkat hallitsivat tiettävästi myös [[Friulin]] aluetta maallisina ruhtinaina, kunnes [[Venetsia]] valtasi alueen 1400-luvun alkupuolella. Patriarkaatti lakkautettiin 1751, ja sen tilalle perustettiin muun muassa [[Udinen]] ja Gorizian arkkihiippakunnat. Monta arvonimeä, mutta ei yhtään kyyhkylle.
+KYSYMYS: Kerro lisää: Friulin
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Mikä Aquileian patriarkaatti oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aquileian patriarkaatti oli kirkollinen hallintoalue, jonka johtaja käytti patriarkan arvonimeä ja jonka vaikutus ulottui pitkään Koillis-Italiasta myös pohjoisiin naapurialueisiin. Keskiajalla patriarkat hallitsivat tiettävästi myös [[Friulin]] aluetta maallisina ruhtinaina, kunnes [[Venetsia]] valtasi alueen 1400-luvun alkupuolella. Patriarkaatti lakkautettiin 1751, ja sen tilalle perustettiin muun muassa [[Udinen]] ja Gorizian arkkihiippakunnat. Monta arvonimeä, mutta ei yhtään kyyhkylle.
+KYSYMYS: Kerro lisää: Venetsia

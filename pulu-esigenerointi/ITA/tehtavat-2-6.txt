@@ -1,0 +1,1021 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+AIEMPI KYSYMYS: Miksi betoni mahdollisti kaarevat muodot?
+AIEMPI VASTAUS (Livia):
+Just niin, betoni. Roomalainen betoni valmistettiin kalkkilaastista, vulkaanisesta tuhkasta eli [[pozzolanasta]] ja kivimurskasta. Massa valettiin muotteihin pehmeänä ja se kovettui kiinteäksi, joten siitä sai valettua holveja ja kupoleita, joita ei olisi voinut tehdä yksittäisistä kivilohkoista yhtä helposti. [[Pantheonin]] kupoli on yhä maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Kyl se on komea, kun kupoli pysyy pystyssä.
+KYSYMYS: Kerro lisää: pozzolanasta
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+AIEMPI KYSYMYS: Miksi betoni mahdollisti kaarevat muodot?
+AIEMPI VASTAUS (Livia):
+Just niin, betoni. Roomalainen betoni valmistettiin kalkkilaastista, vulkaanisesta tuhkasta eli [[pozzolanasta]] ja kivimurskasta. Massa valettiin muotteihin pehmeänä ja se kovettui kiinteäksi, joten siitä sai valettua holveja ja kupoleita, joita ei olisi voinut tehdä yksittäisistä kivilohkoista yhtä helposti. [[Pantheonin]] kupoli on yhä maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Kyl se on komea, kun kupoli pysyy pystyssä.
+KYSYMYS: Kerro lisää: Pantheonin
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kiipeilijä jolle jyrkänne ei ole este] Aavikonlampaat liikkuvat Grand Canyonin pystysuorilla kallioseinämillä yhtä varmasti kuin muut eläimet tasamaalla: niiden sorkkien kumimaiset alustat tarttuvat kapeisiinkin kielekkeisiin, ja ne osaavat hypätä useiden metrien pudotuksia vahingoittumatta. Pässien kierteiset sarvet voivat painaa yli 13 kiloa – enemmän kuin niiden kaikkien muiden luiden yhteispaino – ja niitä käytetään sekä puolustukseen että kilpataisteluissa toisia pässejä vastaan kiima-aikana. Lampaat selviävät myös ilman juomavettä pitkiä aikoja, sillä ne saavat nesteestään kasveista ja voivat juoda kerralla suuria määriä löytäessään lähteen tai sadeveden täyttämän kalliokuopan.
+AIEMPI KYSYMYS: Mitä muuta Tivolissa on nähtävää huvilan lisäksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tivolissa on huvilan lisäksi muun muassa [[Villa d'Este]], 1500-luvun renessanssihuvila, jonka puutarhat tunnetaan lukuisista suihkulähteistään. Kaupungissa on myös [[Villa Gregoriana]], rotkossa sijaitseva puisto, jossa on vesiputous. Vettä riittää siellä joka suuntaan, kyl lintu viihtyisi.
+KYSYMYS: Kerro lisää: Villa d'Este
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+AIEMPI KYSYMYS: Mitä muuta Tivolissa on nähtävää huvilan lisäksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tivolissa on huvilan lisäksi muun muassa [[Villa d'Este]], 1500-luvun renessanssihuvila, jonka puutarhat tunnetaan lukuisista suihkulähteistään. Kaupungissa on myös [[Villa Gregoriana]], rotkossa sijaitseva puisto, jossa on vesiputous. Vettä riittää siellä joka suuntaan, kyl lintu viihtyisi.
+KYSYMYS: Kerro lisää: Villa Gregoriana
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+AIEMPI KYSYMYS: Mitä Pompeijille tapahtui?
+AIEMPI VASTAUS (Livia):
+Joo. Tuo on vakava aihe. Pompeiji oli roomalainen kaupunki [[Vesuviuksen]] juurella Napolin lähellä, ja se tuhoutui vuonna 79 jKr. tulivuoren purkauksessa, jossa kaupunki hautautui tuhkan ja kiviaineksen alle. Tapahtuma sijoittuu Rooman keisarikunnan aikaan, yli 1900 vuotta sitten, ja monet asukkaat menehtyivät. Paksu tuhkakerros säilytti rakennuksia ja esineitä poikkeuksellisen hyvin, ja kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä. Myös [[Herculaneum]] tuhoutui samassa purkauksessa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Vesuviuksen
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+AIEMPI KYSYMYS: Mitä Pompeijille tapahtui?
+AIEMPI VASTAUS (Livia):
+Joo. Tuo on vakava aihe. Pompeiji oli roomalainen kaupunki [[Vesuviuksen]] juurella Napolin lähellä, ja se tuhoutui vuonna 79 jKr. tulivuoren purkauksessa, jossa kaupunki hautautui tuhkan ja kiviaineksen alle. Tapahtuma sijoittuu Rooman keisarikunnan aikaan, yli 1900 vuotta sitten, ja monet asukkaat menehtyivät. Paksu tuhkakerros säilytti rakennuksia ja esineitä poikkeuksellisen hyvin, ja kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä. Myös [[Herculaneum]] tuhoutui samassa purkauksessa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Herculaneum
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mitä doorilainen temppeli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, pylväskysymys. Doorilainen temppeli edustaa doorilaista tyyliä, yhtä antiikin kreikkalaisen rakennustaiteen kolmesta pääjärjestyksestä, joista muut ovat ioonialainen ja korinttilainen. Doorilaiselle tyylille ovat ominaisia vankat, ylöspäin kapenevat pylväät, joilla ei ole omaa jalustaa, sekä yksinkertainen pylvään pääty. Hirsikerroksen friisissä vuorottelevat [[triglyfit]] ja [[metoopit]]. Doorilaista tyyliä edustaa myös Ateenan [[Parthenon]]. Paestumin temppelit ovat kyl aika komeassa kunnossa.
+KYSYMYS: Kerro lisää: triglyfit
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mitä doorilainen temppeli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, pylväskysymys. Doorilainen temppeli edustaa doorilaista tyyliä, yhtä antiikin kreikkalaisen rakennustaiteen kolmesta pääjärjestyksestä, joista muut ovat ioonialainen ja korinttilainen. Doorilaiselle tyylille ovat ominaisia vankat, ylöspäin kapenevat pylväät, joilla ei ole omaa jalustaa, sekä yksinkertainen pylvään pääty. Hirsikerroksen friisissä vuorottelevat [[triglyfit]] ja [[metoopit]]. Doorilaista tyyliä edustaa myös Ateenan [[Parthenon]]. Paestumin temppelit ovat kyl aika komeassa kunnossa.
+KYSYMYS: Kerro lisää: metoopit
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Puolet Parthenonin veistoksista lähti laivalla] Thomas Bruce, seitsemäs Elginin jaarli, oli Britannian suurlähettiläänä Konstantinopolissa vuodesta 1799. Hänen miehensä irrottivat vuosina 1801–1812 noin puolet Parthenonin säilyneistä veistoksista sekä paloja Propylaiasta ja Erekhtheionista. Lupa perustui osmanihallinnon kirjeeseen, jonka alkuperäistä ei ole löytynyt: jäljellä on vain italiankielinen käännös, ja juuri siitä kiistellään yhä. Yksi kuljetuslaivoista upposi Kytheran edustalla 1802, ja laatikot nostettiin merestä kahden vuoden työllä. Elginin varat loppuivat, ja parlamentti osti kokoelman 1816 British Museumille 35 000 punnalla. Akropoliin museo avattiin 2009, ja siinä on sali valmiina veistosten paluuta varten.
+- [Ateena — kohdekartta / Kohdekartta: Akropolis] 460–430 eaa. Akropolis kohoaa 150 metrin korkeuteen jyrkällä kalliolla keskellä Ateenaa. Ensimmäiset ihmiset asuivat kalliolla jo tuhansia vuosia sitten, ja pronssikaudella sen ympärille rakennettiin valtava puolustusmuuri, joka oli peräti 760 metriä pitkä. Persialaiset tuhosivat kukkulan temppelit vuonna 480 eaa., mutta valtiomies Perikleen johdolla Ateena rakensi tilalle vielä komeamman kokonaisuuden vuosina 460–430 eaa. Silloin nousivat muun muassa Parthenon ja Erekhteion, jonka pylväinä seisoo kuusi naishahmoista patsasta. Toisen maailmansodan aikana, vuonna 1941, nuori Manolis Glezos kiipesi salaa yöllä Akropolikselle ja repi alas natsi-Saksan lipun — rohkea teko, josta tuli koko Kreik…
+AIEMPI KYSYMYS: Mitä doorilainen temppeli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, pylväskysymys. Doorilainen temppeli edustaa doorilaista tyyliä, yhtä antiikin kreikkalaisen rakennustaiteen kolmesta pääjärjestyksestä, joista muut ovat ioonialainen ja korinttilainen. Doorilaiselle tyylille ovat ominaisia vankat, ylöspäin kapenevat pylväät, joilla ei ole omaa jalustaa, sekä yksinkertainen pylvään pääty. Hirsikerroksen friisissä vuorottelevat [[triglyfit]] ja [[metoopit]]. Doorilaista tyyliä edustaa myös Ateenan [[Parthenon]]. Paestumin temppelit ovat kyl aika komeassa kunnossa.
+KYSYMYS: Kerro lisää: Parthenon
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Miksi kaupunki unohtui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kaupungin perustivat noin vuonna 600 eaa. [[Sybariksen]] uudisasukkaat nimellä Poseidonia, ja roomalaiset valtasivat sen vuonna 273 eaa. Myöhemmin kauppareitit muuttuivat, tulvat ja soistuminen vaivasivat seutua, ja kaupunki ajautui rappioon. Lähteiden mukaan soistuminen teki seudusta epäterveellisen, mahdollisesti [[malarian]] takia, mutta tästä en ole täysin varma. Kaupunki hylättiin varhaiskeskiajalla ja unohtui lähes kokonaan 1700-luvulle asti. Ihme että temppelit säilyi.
+KYSYMYS: Kerro lisää: Sybariksen
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Rebmannin lumihavainto] Saksalais-sveitsiläinen lähetyssaarnaaja Johannes Rebmann näki Kilimanjaron ensimmäisenä eurooppalaisena vuonna 1848 ja kirjasi päiväkirjaansa marraskuussa, ettei huipulla hohtava valkoinen voinut olla mitään muuta kuin lunta. Väite julkaistiin 1849, mutta Lontoon maantieteellinen seura piti sitä mahdottomana: lumen ei uskottu voivan pysyä päiväntasaajan tuntumassa, ja Rebmannin havainnon arveltiin johtuvan malarian aiheuttamista harhoista. Vasta 1861, kun saksalaiset tutkimusmatkailijat vahvistivat näkemänsä, epäily lopulta hälveni.
+AIEMPI KYSYMYS: Miksi kaupunki unohtui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kaupungin perustivat noin vuonna 600 eaa. [[Sybariksen]] uudisasukkaat nimellä Poseidonia, ja roomalaiset valtasivat sen vuonna 273 eaa. Myöhemmin kauppareitit muuttuivat, tulvat ja soistuminen vaivasivat seutua, ja kaupunki ajautui rappioon. Lähteiden mukaan soistuminen teki seudusta epäterveellisen, mahdollisesti [[malarian]] takia, mutta tästä en ole täysin varma. Kaupunki hylättiin varhaiskeskiajalla ja unohtui lähes kokonaan 1700-luvulle asti. Ihme että temppelit säilyi.
+KYSYMYS: Kerro lisää: malarian
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mille jumalille Paestumin temppelit omistettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, jumalakysymys. Kaupungin kreikkalainen nimi Poseidonia viittaa merenjumala [[Poseidoniin]]. Alueen kolmesta doorilaisesta temppelistä kaksi on tutkimuksessa yleensä liitetty [[Heraan]] ja yksi [[Athenaan]]. Perinteisesti yhtä niistä on kutsuttu Neptunuksen temppeliksi, mutta nimeä pidetään harhaanjohtavana; yksityiskohdista en ole täysin varma. Jumalia riittää, pullaa ei.
+KYSYMYS: Kerro lisää: Poseidoniin
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mille jumalille Paestumin temppelit omistettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, jumalakysymys. Kaupungin kreikkalainen nimi Poseidonia viittaa merenjumala [[Poseidoniin]]. Alueen kolmesta doorilaisesta temppelistä kaksi on tutkimuksessa yleensä liitetty [[Heraan]] ja yksi [[Athenaan]]. Perinteisesti yhtä niistä on kutsuttu Neptunuksen temppeliksi, mutta nimeä pidetään harhaanjohtavana; yksityiskohdista en ole täysin varma. Jumalia riittää, pullaa ei.
+KYSYMYS: Kerro lisää: Heraan
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mille jumalille Paestumin temppelit omistettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, jumalakysymys. Kaupungin kreikkalainen nimi Poseidonia viittaa merenjumala [[Poseidoniin]]. Alueen kolmesta doorilaisesta temppelistä kaksi on tutkimuksessa yleensä liitetty [[Heraan]] ja yksi [[Athenaan]]. Perinteisesti yhtä niistä on kutsuttu Neptunuksen temppeliksi, mutta nimeä pidetään harhaanjohtavana; yksityiskohdista en ole täysin varma. Jumalia riittää, pullaa ei.
+KYSYMYS: Kerro lisää: Athenaan
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Keitä lukaanit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lukaanit olivat Etelä-Italian muinaisia heimoja, joiden kielen katsotaan olleen sukua [[oskin]] kielelle ja jotka olivat läheistä sukua [[samniiteille]]. He valtasivat [[Poseidonian]] vuonna 400 eaa., ja roomalaiset ottivat kaupungin haltuunsa vuonna 273 eaa., jolloin se sai nykyisen nimensä. Antiikin heimoja on kyl vaikea pitää järjestyksessä.
+KYSYMYS: Kerro lisää: oskin
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Keitä lukaanit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lukaanit olivat Etelä-Italian muinaisia heimoja, joiden kielen katsotaan olleen sukua [[oskin]] kielelle ja jotka olivat läheistä sukua [[samniiteille]]. He valtasivat [[Poseidonian]] vuonna 400 eaa., ja roomalaiset ottivat kaupungin haltuunsa vuonna 273 eaa., jolloin se sai nykyisen nimensä. Antiikin heimoja on kyl vaikea pitää järjestyksessä.
+KYSYMYS: Kerro lisää: samniiteille
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Keitä lukaanit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lukaanit olivat Etelä-Italian muinaisia heimoja, joiden kielen katsotaan olleen sukua [[oskin]] kielelle ja jotka olivat läheistä sukua [[samniiteille]]. He valtasivat [[Poseidonian]] vuonna 400 eaa., ja roomalaiset ottivat kaupungin haltuunsa vuonna 273 eaa., jolloin se sai nykyisen nimensä. Antiikin heimoja on kyl vaikea pitää järjestyksessä.
+KYSYMYS: Kerro lisää: Poseidonian
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mistä Paestum oli kuuluisa roomalaisten runoilijoiden mukaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kukkakysymys. Roomalaiset runoilijat, kuten [[Vergilius]] ja [[Ovidius]], ylistivät Paestumin ruusuja, jotka kukkivat kahdesti vuodessa. Ruusuista tuli kaupungille tunnusomainen maine antiikin aikana, ja ne mainitaan jo Vergiliuksen runoelmassa maanviljelystä.
+
+Ruusut ovat kauniita, mutta jos kaupungin ympärillä kasvaisi pullaa, minä asuisin siellä vielä tänäkin päivänä.
+KYSYMYS: Kerro lisää: Vergilius
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+AIEMPI KYSYMYS: Mistä Paestum oli kuuluisa roomalaisten runoilijoiden mukaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kukkakysymys. Roomalaiset runoilijat, kuten [[Vergilius]] ja [[Ovidius]], ylistivät Paestumin ruusuja, jotka kukkivat kahdesti vuodessa. Ruusuista tuli kaupungille tunnusomainen maine antiikin aikana, ja ne mainitaan jo Vergiliuksen runoelmassa maanviljelystä.
+
+Ruusut ovat kauniita, mutta jos kaupungin ympärillä kasvaisi pullaa, minä asuisin siellä vielä tänäkin päivänä.
+KYSYMYS: Kerro lisää: Ovidius
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+AIEMPI KYSYMYS: Miksi temppeli sai nimen Concordia?
+AIEMPI VASTAUS (Livia):
+Kato, tää nimi onkin vähän huijaus. Temppeli on saanut nimensä roomalaisen harmonian jumalattaren [[Concordian]] mukaan, koska läheltä löydettiin latinankielinen kirjoitus, jossa tämä nimi esiintyy. Kirjoitus ei kuitenkaan liity itse temppeliin, joten nimi on myöhempi eikä rakentajien antama. Temppelin rakensivat kreikkalaiset noin vuosina 440–430 eaa. [[Agrigenton]] laaksoon, ja sen alkuperäisestä nimestä en ole varma. Kreikkalainen temppeli roomalaisella nimellä, kyl se vähän naurattaa.
+KYSYMYS: Kerro lisää: Concordian
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+AIEMPI KYSYMYS: Miksi temppeli sai nimen Concordia?
+AIEMPI VASTAUS (Livia):
+Kato, tää nimi onkin vähän huijaus. Temppeli on saanut nimensä roomalaisen harmonian jumalattaren [[Concordian]] mukaan, koska läheltä löydettiin latinankielinen kirjoitus, jossa tämä nimi esiintyy. Kirjoitus ei kuitenkaan liity itse temppeliin, joten nimi on myöhempi eikä rakentajien antama. Temppelin rakensivat kreikkalaiset noin vuosina 440–430 eaa. [[Agrigenton]] laaksoon, ja sen alkuperäisestä nimestä en ole varma. Kreikkalainen temppeli roomalaisella nimellä, kyl se vähän naurattaa.
+KYSYMYS: Kerro lisää: Agrigenton
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+AIEMPI KYSYMYS: Miksi Concordian temppeli säilyi ehjänä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on käytännöllinen vastaus. [[Concordian temppeli]] säilyi niin hyvin, koska se muutettiin 500-luvulla kristilliseksi kirkoksi. Tällöin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin, joten se ei jäänyt rapistumaan. Muut [[Agrigenton]] temppelit jäivät raunioiksi, ja niiden kiviä vietiin muualle rakennusaineeksi. Näin pakanallisten palvontapaikkojen tuho ohitti tämän yhden rakennuksen.
+
+Kirkoksi muuttaminen oli aika fiksu veto, sillä pyhä paikka jäi rauhaan. Minä pidän itsekin katosta, joka ei sada niskaan, kyl.
+KYSYMYS: Kerro lisää: Concordian temppeli
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+- [Colombo — kohdekartta / Kohdekartta: Wolvendaalin kirkko] 1749–1757 Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei tullut, ja pattitilanne aukesi vasta kuvernööri Julius Valentyn Stein van Gollenessen tultua virkaan 1743: hän päätti, että uusi kirkko nousee muurien ulkopuolelle suomaalle. Eurooppalaiset luulivat seudun sakaaleja susiksi, ja alue sai nimen Wolvendaal eli suden laakso. Perustukset laskettiin 1749, ja rakentaminen kesti kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. Rakennus on doorilainen ja pohjaltaan tasavartinen risti. Seinät ovat lähes puolitoista metri…
+AIEMPI KYSYMYS: Mitä tarkoittaa doorilainen temppeli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana [[doorilainen]] viittaa antiikin kreikkalaisen rakennustaiteen vanhimpaan ja yksinkertaisimpaan pylvästyyliin. Doorilaisen temppelin pylväät nousevat suoraan perustalta ilman erillistä jalustaa, ja pylväänpäät ovat selkeät ja koristeettomat. Kaksi muuta kreikkalaista tyyliä, [[joonialainen]] ja [[korinttilainen]], ovat koristeellisempia. Concordian temppeli on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli, ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Suoraviivaista tyyliä, kyl minäkin arvostan.
+KYSYMYS: Kerro lisää: doorilainen
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot: Kaupungin tori tehtiin pyöreähköksi] Jerash oli roomalaisajan vauras kaupunki, ja sen keskellä on epätavallinen tori: se ei ole neliö vaan soikea. Muoto syntyi siitä, että vanha pyhäkköalue ja uusi pylväskatu piti sovittaa yhteen, ja tori venytettiin niiden väliin. Toria kiertää yhtenäinen joonialainen pylväsrivi, ja kivetys on yhä alkuperäinen: kivet on ladottu kaareviin riveihin torin muodon mukaan. Kaupunki tyhjeni maanjäristyksen jälkeen ja peittyi hiekkaan, mistä syystä se on säilynyt näin hyvin.
+AIEMPI KYSYMYS: Mitä tarkoittaa doorilainen temppeli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana [[doorilainen]] viittaa antiikin kreikkalaisen rakennustaiteen vanhimpaan ja yksinkertaisimpaan pylvästyyliin. Doorilaisen temppelin pylväät nousevat suoraan perustalta ilman erillistä jalustaa, ja pylväänpäät ovat selkeät ja koristeettomat. Kaksi muuta kreikkalaista tyyliä, [[joonialainen]] ja [[korinttilainen]], ovat koristeellisempia. Concordian temppeli on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli, ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Suoraviivaista tyyliä, kyl minäkin arvostan.
+KYSYMYS: Kerro lisää: joonialainen
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Vanha kaupungintalo] 1898–1901 Porto Alegren kaupunginjohto toimi 1800-luvun lopulla vuokratiloissa siellä täällä vanhassa keskustassa. Kun José Montaury valittiin 1897 intendantiksi, hän lupasi rakentaa kaupungille oman talon. Rahat kerättiin myymällä kaupungin kiinteistöjä ja täyttämällä maata Doca do Carvãossa. Ensimmäinen suunnitelma oli insinööri Oscar Bittencourtin, mutta se kaadettiin poliittisista syistä, ja uusi tilattiin venetsialaiselta insinööriltä Giovanni Colfoscolta. Peruskivi laskettiin 5. huhtikuuta 1898, työ alkoi saman vuoden 28. syyskuuta ja talo valmistui huhtikuussa 1901. Toukokuun 15. päivästä alkaen siihen muuttivat kaupunginvaltuusto, sihteeristö, kirjanpito, rahasto ja verotus sekä jul…
+- [Punta Arenas — kohdekartta / Kohdekartta: Sagrado Corazónin katedraali] 1892–1901 Aukion laidalla oleva katedraali on salesiaanien perustama, ja sen renessanssitorni erottuu keskustan kattojen yli. Rakennustyö alkoi 28. joulukuuta 1892 salesiaani-isä Juan Bernabén piirustusten mukaan, ja kirkko valmistui 1. kesäkuuta 1901. Se oli aikanaan alueella virstanpylväs jo materiaalinsa takia: tästä talosta tuli tiilirakentamisen esimerkki. Sisätila on basilikamainen ja kolmilaivainen. Laivat erottaa toisistaan korinttilainen pylväsrivi, holvit ovat romaaniset, ja mitat ovat 46 metriä pitkä, 18 leveä ja 30,60 korkea. Kellotorni nostettiin 1898, ja se on kolmekymmentä metriä ristiin asti. Kirkko on omistettu Jeesuksen pyhälle sydämelle, ja se vihittiin 4. joulukuuta 1977…
+AIEMPI KYSYMYS: Mitä tarkoittaa doorilainen temppeli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana [[doorilainen]] viittaa antiikin kreikkalaisen rakennustaiteen vanhimpaan ja yksinkertaisimpaan pylvästyyliin. Doorilaisen temppelin pylväät nousevat suoraan perustalta ilman erillistä jalustaa, ja pylväänpäät ovat selkeät ja koristeettomat. Kaksi muuta kreikkalaista tyyliä, [[joonialainen]] ja [[korinttilainen]], ovat koristeellisempia. Concordian temppeli on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli, ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Suoraviivaista tyyliä, kyl minäkin arvostan.
+KYSYMYS: Kerro lisää: korinttilainen
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maailmanperintökohde on [[Unescon]] [[maailmanperintöluetteloon]] hyväksytty paikka, jolla katsotaan olevan poikkeuksellinen kulttuurinen tai luonnonarvo koko ihmiskunnalle. Luettelo perustuu vuonna 1972 hyväksyttyyn yleissopimukseen, ja kohteiden suojelu on yhteinen sitoumus, vaikka vastuu kuuluu ensisijaisesti kohteen omalle valtiolle. [[Agrigenton]] temppelilaakso on yksi tällainen kohde. Ei huono lista, minä olen lentänyt useamman päältä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maailmanperintökohde on [[Unescon]] [[maailmanperintöluetteloon]] hyväksytty paikka, jolla katsotaan olevan poikkeuksellinen kulttuurinen tai luonnonarvo koko ihmiskunnalle. Luettelo perustuu vuonna 1972 hyväksyttyyn yleissopimukseen, ja kohteiden suojelu on yhteinen sitoumus, vaikka vastuu kuuluu ensisijaisesti kohteen omalle valtiolle. [[Agrigenton]] temppelilaakso on yksi tällainen kohde. Ei huono lista, minä olen lentänyt useamman päältä.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Onko Sisilia oma maa vai osa Italiaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sisilia kuuluu Italiaan, mutta sillä on autonomisen alueen asema, mikä tarkoittaa tavallista laajempaa itsehallintoa. Se on [[Välimeren]] suurin saari, ja sen pääkaupunki on [[Palermo]]. Saaren omaleimaisuus kumpuaa pitkästä historiasta: kreikkalaiset rakensivat sinne temppeleitä, kuten [[Agrigenton]] laakson, ja saari on ollut monen vallan hallussa. Sisilialla on vahva oma paikallinen kulttuurinsa. Saari, jolla on omat säännöt, kyl se kyyhkyä miellyttää.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Historia: Kapinallinen amiraali avasi tien Sisiliaan] 827–902 — Aghlabidit hallitsivat Ifriqiyaa vuosina 800–909 abbasidien nimellisenä vasallina, ja heidän pääkaupunkinsa oli Kairouan. Kesäkuussa 827 avautui tilaisuus: Sisilian bysanttilaisen laivaston komentaja Eufemios kapinoi keisari Mikael II:ta vastaan, hävisi ja pyysi aghlabideilta apua. Retkikunnan johtoon asetettiin oppinut tuomari Asad ibn al-Furat. Ensimmäinen hyökkäys Syrakusaan epäonnistui, mutta vuonna 831 valloitettiin Palermo, josta tuli uuden maakunnan pääkaupunki. Viimeinen suuri bysanttilaislinnake Taormina kaatui vasta 902 — valloitus kesti siis 75 vuotta.
+AIEMPI KYSYMYS: Onko Sisilia oma maa vai osa Italiaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sisilia kuuluu Italiaan, mutta sillä on autonomisen alueen asema, mikä tarkoittaa tavallista laajempaa itsehallintoa. Se on [[Välimeren]] suurin saari, ja sen pääkaupunki on [[Palermo]]. Saaren omaleimaisuus kumpuaa pitkästä historiasta: kreikkalaiset rakensivat sinne temppeleitä, kuten [[Agrigenton]] laakson, ja saari on ollut monen vallan hallussa. Sisilialla on vahva oma paikallinen kulttuurinsa. Saari, jolla on omat säännöt, kyl se kyyhkyä miellyttää.
+KYSYMYS: Kerro lisää: Palermo
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+AIEMPI KYSYMYS: Miksi linna on kahdeksankulmainen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kahdeksankulmainen pohjakaava on [[Castel del Monten]] tunnetuin piirre, mutta varmaa syytä siihen ei tunneta. Kuningas [[Fredrik II]] rakennutti linnan 1240-luvulla, ja se jäljittelee antiikin yksityiskohtia. Linnassa ei ole vallihautaa eikä nostosiltaa, minkä vuoksi jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Kahdeksankulmion tarkoituksesta on esitetty selityksiä, mutta minulla ei ole varmaa tietoa siitä, mikä niistä on oikea. Kahdeksan kulmaa ja nolla vastausta, kyl se vähän ärsyttää.
+KYSYMYS: Kerro lisää: Castel del Monten
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Miksi linna on kahdeksankulmainen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kahdeksankulmainen pohjakaava on [[Castel del Monten]] tunnetuin piirre, mutta varmaa syytä siihen ei tunneta. Kuningas [[Fredrik II]] rakennutti linnan 1240-luvulla, ja se jäljittelee antiikin yksityiskohtia. Linnassa ei ole vallihautaa eikä nostosiltaa, minkä vuoksi jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Kahdeksankulmion tarkoituksesta on esitetty selityksiä, mutta minulla ei ole varmaa tietoa siitä, mikä niistä on oikea. Kahdeksan kulmaa ja nolla vastausta, kyl se vähän ärsyttää.
+KYSYMYS: Kerro lisää: Fredrik II
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+AIEMPI KYSYMYS: Kenen käytössä linna oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ainakin osittain. Linnan rakennutti kuningas [[Fredrik II]] 1240-luvulla, mutta linna jäi keskeneräiseksi. Usein oletetaan, että se olisi ollut hänen metsästysmajansa, mutta siitä ei ole todisteita. Sen varsinainen käyttötarkoitus on jäänyt epäselväksi, ja siitä, ketkä siellä myöhemmin asuivat, en ole varma. Nykyään linna on [[Unescon]] maailmanperintökohde, ja UNESCO merkitsi sen luetteloon vuonna 1996. Salaperäinen kukkulalinna, kyl se kiehtoo.
+KYSYMYS: Kerro lisää: Unescon
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+AIEMPI KYSYMYS: Kuka Fredrik II oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hän on kiinnostava mies. Fredrik II eli vuosina 1194–1250 ja kuului [[Hohenstaufen]]-sukuun. Hän oli [[Sisilian]] kuningas ja myöhemmin Pyhän saksalais-roomalaisen keisarikunnan keisari. Hänen hovinsa tunnettiin tieteiden ja taiteiden suosimisesta, ja hänen kerrotaan osanneen useita kieliä. Hän rakennutti 1240-luvulla myös [[Castel del Monten]]. Keisari ja linnanrakentaja, ja minä kannan vain kirjeitä.
+KYSYMYS: Kerro lisää: Hohenstaufen
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Kuka Fredrik II oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hän on kiinnostava mies. Fredrik II eli vuosina 1194–1250 ja kuului [[Hohenstaufen]]-sukuun. Hän oli [[Sisilian]] kuningas ja myöhemmin Pyhän saksalais-roomalaisen keisarikunnan keisari. Hänen hovinsa tunnettiin tieteiden ja taiteiden suosimisesta, ja hänen kerrotaan osanneen useita kieliä. Hän rakennutti 1240-luvulla myös [[Castel del Monten]]. Keisari ja linnanrakentaja, ja minä kannan vain kirjeitä.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+AIEMPI KYSYMYS: Millainen alue Apulia on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Apulia on Etelä-Italian alue, joka muodostaa suuren osan Italian niemimaan niin sanotun saappaan kantapäästä. Se tunnetaan oliivilehdoistaan, [[orecchiette]]-pastastaan ja [[trulli]]-taloistaan, pyöreistä kivirakennuksista kartiomaisine kattoineen. Alueella sijaitsee myös [[Castel del Monte]], kahdeksankulmainen linna 540 metrin korkeudessa kukkulalla. Pastaa ja oliiveja, kyl siellä kelpaisi laskeutua.
+KYSYMYS: Kerro lisää: orecchiette
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+AIEMPI KYSYMYS: Millainen alue Apulia on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Apulia on Etelä-Italian alue, joka muodostaa suuren osan Italian niemimaan niin sanotun saappaan kantapäästä. Se tunnetaan oliivilehdoistaan, [[orecchiette]]-pastastaan ja [[trulli]]-taloistaan, pyöreistä kivirakennuksista kartiomaisine kattoineen. Alueella sijaitsee myös [[Castel del Monte]], kahdeksankulmainen linna 540 metrin korkeudessa kukkulalla. Pastaa ja oliiveja, kyl siellä kelpaisi laskeutua.
+KYSYMYS: Kerro lisää: trulli
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+AIEMPI KYSYMYS: Millainen alue Apulia on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Apulia on Etelä-Italian alue, joka muodostaa suuren osan Italian niemimaan niin sanotun saappaan kantapäästä. Se tunnetaan oliivilehdoistaan, [[orecchiette]]-pastastaan ja [[trulli]]-taloistaan, pyöreistä kivirakennuksista kartiomaisine kattoineen. Alueella sijaitsee myös [[Castel del Monte]], kahdeksankulmainen linna 540 metrin korkeudessa kukkulalla. Pastaa ja oliiveja, kyl siellä kelpaisi laskeutua.
+KYSYMYS: Kerro lisää: Castel del Monte
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Vanhemmat menivät kadulle, ja maa sai pyörätiet] 1972 — Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua. Vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, ja heidän joukossaan oli satoja lapsia. Vanhemmat perustivat liikkeen nimeltä Stop de Kindermoord, marssivat parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+AIEMPI KYSYMYS: Mikä on kahdeksankulmio?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kahdeksankulmio eli oktagoni on monikulmio, jossa on kahdeksan sivua ja kahdeksan kulmaa. Säännöllisessä kahdeksankulmiossa kaikki sivut ovat yhtä pitkät ja jokainen kulma on 135 astetta. Arkielämässä sen tunnistaa helposti liikennemerkistä: [[STOP-merkki]] on kahdeksankulmio. Rakennustaiteessa kahdeksankulmaista pohjaa on käytetty esimerkiksi [[kastekappeleissa]], ja yksi tunnetuimmista kahdeksankulmaisista rakennuksista on [[Castel del Monte]]. Kahdeksan sivua, joka kulmalle mahtuu yksi kyyhky.
+KYSYMYS: Kerro lisää: STOP-merkki
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+AIEMPI KYSYMYS: Mikä on kahdeksankulmio?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kahdeksankulmio eli oktagoni on monikulmio, jossa on kahdeksan sivua ja kahdeksan kulmaa. Säännöllisessä kahdeksankulmiossa kaikki sivut ovat yhtä pitkät ja jokainen kulma on 135 astetta. Arkielämässä sen tunnistaa helposti liikennemerkistä: [[STOP-merkki]] on kahdeksankulmio. Rakennustaiteessa kahdeksankulmaista pohjaa on käytetty esimerkiksi [[kastekappeleissa]], ja yksi tunnetuimmista kahdeksankulmaisista rakennuksista on [[Castel del Monte]]. Kahdeksan sivua, joka kulmalle mahtuu yksi kyyhky.
+KYSYMYS: Kerro lisää: kastekappeleissa
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Keitä etruskit olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vanha ja kiehtova aihe. Etruskit olivat antiikin kansa, joka asui nykyisen Keski-Italian alueella, muun muassa [[Toscanassa]], jo ennen [[Rooman]] nousua. He rakensivat kaupunkeja, kävivät kauppaa ja tekivät taidokasta metallityötä ja keramiikkaa, ja heidän kulttuurinsa vaikutti voimakkaasti varhaiseen Roomaan. [[Tarquinia]] oli yksi heidän tärkeimmistä kaupungeistaan. Etruskien alkuperästä on keskusteltu pitkään: yksi vanha näkemys tuo heidät idästä, toinen pitää heitä paikallisen väestön kehittämänä kulttuurina.
+
+Etruskeilta on säilynyt kirjoituksia, mutta niistä ymmärretään vain osa, mikä on harmillista viestinviejälle, joka lukee kaiken mikä vain taittuu auki. Kyl siinä olisi ollut ainesta.
+KYSYMYS: Kerro lisää: Toscanassa
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+- [Italia — maalehti / Kuvataide: Caravaggio maalasi valonheittimellä] Caravaggio toi 1600-luvun alussa maalaukseen pimeyden ja valokiilan: hänen kuvissaan tavalliset ihmiset likaisine jalkoineen astuvat esiin mustasta taustasta kuin näyttämölle. Kirkonmiehet närkästyivät, kun pyhimyksillä oli kadunkulmien kasvot, mutta tyyli muutti koko eurooppalaisen taiteen suunnan. Mies itse eli kuin seikkailuromaanin konna: riitoja, pakomatkoja ja varhainen kuolema epäselvissä oloissa. Rooman kirkoissa hänen teoksiaan voi yhä katsoa ilmaiseksi — kolikolla valot syttyvät.
+- [Italia — maalehti / Historia] Italia on nuori valtio vanhalla maalla: Rooman valtakunnasta on kaksituhatta vuotta, mutta yhtenäinen Italia on nuorempi kuin moni sen kahviloista.
+- [Italia — maalehti / Keittiö] Rooman omat ruoat ovat lähtöisin köyhistä keittiöistä: muutama aine, kuuma pannu tai kiehuva öljy — ja tiukka sääntö siitä, mitä niihin ei panna.
+AIEMPI KYSYMYS: Keitä etruskit olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vanha ja kiehtova aihe. Etruskit olivat antiikin kansa, joka asui nykyisen Keski-Italian alueella, muun muassa [[Toscanassa]], jo ennen [[Rooman]] nousua. He rakensivat kaupunkeja, kävivät kauppaa ja tekivät taidokasta metallityötä ja keramiikkaa, ja heidän kulttuurinsa vaikutti voimakkaasti varhaiseen Roomaan. [[Tarquinia]] oli yksi heidän tärkeimmistä kaupungeistaan. Etruskien alkuperästä on keskusteltu pitkään: yksi vanha näkemys tuo heidät idästä, toinen pitää heitä paikallisen väestön kehittämänä kulttuurina.
+
+Etruskeilta on säilynyt kirjoituksia, mutta niistä ymmärretään vain osa, mikä on harmillista viestinviejälle, joka lukee kaiken mikä vain taittuu auki. Kyl siinä olisi ollut ainesta.
+KYSYMYS: Kerro lisää: Rooman
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Keitä etruskit olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vanha ja kiehtova aihe. Etruskit olivat antiikin kansa, joka asui nykyisen Keski-Italian alueella, muun muassa [[Toscanassa]], jo ennen [[Rooman]] nousua. He rakensivat kaupunkeja, kävivät kauppaa ja tekivät taidokasta metallityötä ja keramiikkaa, ja heidän kulttuurinsa vaikutti voimakkaasti varhaiseen Roomaan. [[Tarquinia]] oli yksi heidän tärkeimmistä kaupungeistaan. Etruskien alkuperästä on keskusteltu pitkään: yksi vanha näkemys tuo heidät idästä, toinen pitää heitä paikallisen väestön kehittämänä kulttuurina.
+
+Etruskeilta on säilynyt kirjoituksia, mutta niistä ymmärretään vain osa, mikä on harmillista viestinviejälle, joka lukee kaiken mikä vain taittuu auki. Kyl siinä olisi ollut ainesta.
+KYSYMYS: Kerro lisää: Tarquinia
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mitä hautakammioiden seinillä on?
+AIEMPI VASTAUS (Livia):
+Ai se, tuo on kaunis aihe. [[Tarquinian]] hautausmaat ovat antiikin tärkeimpiä maalattuja hautoja. Muistini mukaan [[etruskien]] seinämaalauksissa esiintyy juhla- ja ateriakohtauksia, tanssijoita ja soittajia sekä metsästystä ja kalastusta, eli arkea ja juhlaa. Tarkkoja tulkintoja en ole varma, ja kaivaukset paljastavat yhä uutta. Kuvia tuijottaisin vaikka koko päivän.
+KYSYMYS: Kerro lisää: Tarquinian
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mitä hautakammioiden seinillä on?
+AIEMPI VASTAUS (Livia):
+Ai se, tuo on kaunis aihe. [[Tarquinian]] hautausmaat ovat antiikin tärkeimpiä maalattuja hautoja. Muistini mukaan [[etruskien]] seinämaalauksissa esiintyy juhla- ja ateriakohtauksia, tanssijoita ja soittajia sekä metsästystä ja kalastusta, eli arkea ja juhlaa. Tarkkoja tulkintoja en ole varma, ja kaivaukset paljastavat yhä uutta. Kuvia tuijottaisin vaikka koko päivän.
+KYSYMYS: Kerro lisää: etruskien
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Miksi Tarquinia ennen oli nimeltään Corneto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaupungin entinen nimi oli [[Corneto]], ja nykyinen nimi Tarquinia otettiin käyttöön vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Antiikin [[Tarquinii]] oli yksi muinaisten [[etruskien]] tärkeimmistä kaupungeista, mutta sen jäänteitä on maan päällä vähän. Siitä, mistä Corneto-nimi alun perin tulee, en ole varma. Yli sata vuotta vanha nimi, kyl se kyyhkylle on vielä uusi.
+KYSYMYS: Kerro lisää: Corneto
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Miksi Tarquinia ennen oli nimeltään Corneto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaupungin entinen nimi oli [[Corneto]], ja nykyinen nimi Tarquinia otettiin käyttöön vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Antiikin [[Tarquinii]] oli yksi muinaisten [[etruskien]] tärkeimmistä kaupungeista, mutta sen jäänteitä on maan päällä vähän. Siitä, mistä Corneto-nimi alun perin tulee, en ole varma. Yli sata vuotta vanha nimi, kyl se kyyhkylle on vielä uusi.
+KYSYMYS: Kerro lisää: Tarquinii
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mikä alue Latium on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Latium]] on Keski-Italian alue [[Tyrrhenanmeren]] rannikolla, ja sen pääkaupunki on [[Rooma]]. Alueen nimi liittyy latinalaisiin, muinaiseen kansaan, jonka kieli oli [[latina]]. Tarquinia sijaitsee Latiumin pohjoisosassa lähellä Toscanan rajaa. Roomassa on muuten maritozzo, ja minä haaveilen siitä ny.
+KYSYMYS: Kerro lisää: Latium
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mikä alue Latium on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Latium]] on Keski-Italian alue [[Tyrrhenanmeren]] rannikolla, ja sen pääkaupunki on [[Rooma]]. Alueen nimi liittyy latinalaisiin, muinaiseen kansaan, jonka kieli oli [[latina]]. Tarquinia sijaitsee Latiumin pohjoisosassa lähellä Toscanan rajaa. Roomassa on muuten maritozzo, ja minä haaveilen siitä ny.
+KYSYMYS: Kerro lisää: Tyrrhenanmeren
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mikä alue Latium on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Latium]] on Keski-Italian alue [[Tyrrhenanmeren]] rannikolla, ja sen pääkaupunki on [[Rooma]]. Alueen nimi liittyy latinalaisiin, muinaiseen kansaan, jonka kieli oli [[latina]]. Tarquinia sijaitsee Latiumin pohjoisosassa lähellä Toscanan rajaa. Roomassa on muuten maritozzo, ja minä haaveilen siitä ny.
+KYSYMYS: Kerro lisää: Rooma
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mikä alue Latium on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Latium]] on Keski-Italian alue [[Tyrrhenanmeren]] rannikolla, ja sen pääkaupunki on [[Rooma]]. Alueen nimi liittyy latinalaisiin, muinaiseen kansaan, jonka kieli oli [[latina]]. Tarquinia sijaitsee Latiumin pohjoisosassa lähellä Toscanan rajaa. Roomassa on muuten maritozzo, ja minä haaveilen siitä ny.
+KYSYMYS: Kerro lisää: latina
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mitä nekropoli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No jopas, sana kuulostaa synkemmältä kuin onkaan. Nekropoli tarkoittaa suurta hautausmaata, ja sana tulee kreikasta: kirjaimellisesti se merkitsee kuolleiden kaupunkia. Antiikissa tällaisia hautausmaita sijaitsi usein asuinkaupungin ulkopuolella. [[Tarquinian]] [[etruskien]] nekropoleissa on muun muassa maalattuja hautakammioita, ja ne kuuluvat [[UNESCOn]] maailmanperintöön. Se on vain vanhaa kreikkaa, mut kyl sana saa ensin säikähtämään.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+AIEMPI KYSYMYS: Kuka Benedictus oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nursian Benedictus oli italialainen munkki, joka eli 500-luvun alkupuolella ja perusti noin vuonna 529 [[Monte Cassinon]] luostarin, benediktiiniläisluostarikunnan ensimmäisen talon. Hänen nimiinsä tunnettu [[Pyhän Benedictuksen sääntö]] kirjoitettiin tämän yhteisön käyttöön, ja se ohjasi luostarielämää rukouksen ja työn rytmissä. Sääntö levisi myöhemmin lähes kaikkialle Länsi-Eurooppaan, ja Benedictus on julistettu Euroopan suojeluspyhimykseksi. Puolitoista tuhatta vuotta ja minä muistan vielä nimen.
+KYSYMYS: Kerro lisää: Monte Cassinon
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Kuka Benedictus oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nursian Benedictus oli italialainen munkki, joka eli 500-luvun alkupuolella ja perusti noin vuonna 529 [[Monte Cassinon]] luostarin, benediktiiniläisluostarikunnan ensimmäisen talon. Hänen nimiinsä tunnettu [[Pyhän Benedictuksen sääntö]] kirjoitettiin tämän yhteisön käyttöön, ja se ohjasi luostarielämää rukouksen ja työn rytmissä. Sääntö levisi myöhemmin lähes kaikkialle Länsi-Eurooppaan, ja Benedictus on julistettu Euroopan suojeluspyhimykseksi. Puolitoista tuhatta vuotta ja minä muistan vielä nimen.
+KYSYMYS: Kerro lisää: Pyhän Benedictuksen sääntö
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1944?
+AIEMPI VASTAUS (Livia):
+Joo, tämä on raskas aihe. Vuonna 1944, [[toisen maailmansodan]] aikana, [[liittoutuneiden]] pommitukset tuhosivat luostarin rakennuksen. Kukkulan luostari oli tuolloin keskellä Italiassa käytyjä raskaita taisteluita. Luostari rakennettiin sodan jälkeen uudelleen, ja sen paikalla on nykyään jälleen [[benediktiiniluostari]]. Tapahtumasta on yli kahdeksankymmentä vuotta, ja se oli yksi sodan tunnetuimmista menetyksistä kulttuurille. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: toisen maailmansodan
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: ANZAC-aukio] 1930 Ensimmäinen maailmansota verotti Australiaa raskaasti. Noin viiden miljoonan asukkaan maasta kaatui 60 000 sotilasta ja haavoittui 152 000; tappio-osuus 68,5 prosenttia oli liittoutuneiden korkein. Ajatus suuresta muistopuistosta keskelle kaupunkia esitettiin jo 1916. Alkuperäinen suunnitelma varasi koko korttelin Annin, Edwardin, Adelaiden ja Creekin katujen välissä, mutta neuvottelut kutistivat alueen; 1928 valtio ja liittovaltio luovuttivat maat ja lupasivat rakentaa reunoille yhtenäisen suunnitelman mukaiset talot. Muistokappelin suunnittelukilpailun voittivat 1928 sydneyläiset arkkitehdit Buchanan ja Cowper. Queenslandin kuvernööri sir John Goodwin vihki aukion ja kappelin aselepo…
+- [Brisbane — kohdekartta / Kohdekartta: MacArthurin talo] 1934 Talo rakennettiin 1931–1934 vakuutusyhtiö AMP:n Queenslandin pääkonttoriksi, ja se korvasi kaksi aiempaa AMP:n taloa samalla tontilla. Ajoitus kertoo yhtiön vahvuudesta: konttori nousi 1930-luvun laman pahimpina vuosina. Suunnittelijoina olivat Francis Richard Hall ja Harold M. Cook, rakentajana Brisbanen mestarirakentaja George A. Stronach, ja hinta oli noin 255 000 puntaa. Jalustan graniitti testautettiin Queenslandin yliopistolla ennen rakentamista, ja teräsrunko koottiin pulteilla eikä niiteillä — vuoden 1932 Brisbanessa se oli uutta. Pääsisäänkäynnin yläpuolisen kuvaelman veisti sydneyläinen Fred Gowan sisilialaisesta marmorista. Se kuvittaa yhtiön tunnuslausetta ”Amicus certus in…
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1944?
+AIEMPI VASTAUS (Livia):
+Joo, tämä on raskas aihe. Vuonna 1944, [[toisen maailmansodan]] aikana, [[liittoutuneiden]] pommitukset tuhosivat luostarin rakennuksen. Kukkulan luostari oli tuolloin keskellä Italiassa käytyjä raskaita taisteluita. Luostari rakennettiin sodan jälkeen uudelleen, ja sen paikalla on nykyään jälleen [[benediktiiniluostari]]. Tapahtumasta on yli kahdeksankymmentä vuotta, ja se oli yksi sodan tunnetuimmista menetyksistä kulttuurille. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: liittoutuneiden
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1944?
+AIEMPI VASTAUS (Livia):
+Joo, tämä on raskas aihe. Vuonna 1944, [[toisen maailmansodan]] aikana, [[liittoutuneiden]] pommitukset tuhosivat luostarin rakennuksen. Kukkulan luostari oli tuolloin keskellä Italiassa käytyjä raskaita taisteluita. Luostari rakennettiin sodan jälkeen uudelleen, ja sen paikalla on nykyään jälleen [[benediktiiniluostari]]. Tapahtumasta on yli kahdeksankymmentä vuotta, ja se oli yksi sodan tunnetuimmista menetyksistä kulttuurille. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: benediktiiniluostari
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Mitä benediktiinimunkit tekevät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Benediktiinimunkit noudattavat [[Pyhän Benedictuksen sääntöä]], ja heidän tunnuslauseensa on [[ora et labora]], rukoile ja tee työtä. Päivä jakautuu yhteiseen rukoukseen, työhön ja lepoon. Keskiajalla luostarit olivat tärkeitä oppineisuuden keskuksia, ja munkit kopioivat [[käsikirjoituksia]] ja säilyttivät näin kirjallista perinnettä. Monet luostarit myös viljelivät maata ja hoitivat sairaita. Käsin kopioimista, kyl minä pysyn mieluummin lentämässä.
+KYSYMYS: Kerro lisää: Pyhän Benedictuksen sääntöä
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+AIEMPI KYSYMYS: Mitä benediktiinimunkit tekevät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Benediktiinimunkit noudattavat [[Pyhän Benedictuksen sääntöä]], ja heidän tunnuslauseensa on [[ora et labora]], rukoile ja tee työtä. Päivä jakautuu yhteiseen rukoukseen, työhön ja lepoon. Keskiajalla luostarit olivat tärkeitä oppineisuuden keskuksia, ja munkit kopioivat [[käsikirjoituksia]] ja säilyttivät näin kirjallista perinnettä. Monet luostarit myös viljelivät maata ja hoitivat sairaita. Käsin kopioimista, kyl minä pysyn mieluummin lentämässä.
+KYSYMYS: Kerro lisää: ora et labora
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+- [Lhasa — kohdekartta / Kohdekartta: Jokhang-temppeli] 600-luvun puoliväli, laajennettu 1610 Jokhang on nelikerroksinen ja peittää kaksi ja puoli hehtaaria. Katot on päällystetty kullatuilla pronssitiilillä, ja harjoilla seisovat kultaiset kauriit opinkehrän kummallakin puolella, voitonliput ja kalahahmot. Pohjakaava on intialaisen vihara-luostarin mallia, ja siihen on myöhemmin sekoittunut nepalilaista ja Tang-kauden kiinalaista rakennustapaa. Ovenpielet, pylväät ja huiput ovat 600- ja 700-luvun newar-työtä Kathmandun laaksosta, ja kattopalkkien on radiohiiliajoituksella todettu olevan alkuperäisiä. Sisällä kierretään ympyrää: uloimmalla kehällä on rivi suuria rukousmyllyjä, ja sen sisäpuolella on päähalli kappeleineen. Päähallissa on puolitoi…
+AIEMPI KYSYMYS: Mitä benediktiinimunkit tekevät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Benediktiinimunkit noudattavat [[Pyhän Benedictuksen sääntöä]], ja heidän tunnuslauseensa on [[ora et labora]], rukoile ja tee työtä. Päivä jakautuu yhteiseen rukoukseen, työhön ja lepoon. Keskiajalla luostarit olivat tärkeitä oppineisuuden keskuksia, ja munkit kopioivat [[käsikirjoituksia]] ja säilyttivät näin kirjallista perinnettä. Monet luostarit myös viljelivät maata ja hoitivat sairaita. Käsin kopioimista, kyl minä pysyn mieluummin lentämässä.
+KYSYMYS: Kerro lisää: käsikirjoituksia
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Keitä langobardit olivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne nimenomaan ryöstivät sen luostarin. Langobardit olivat germaaninen kansa, joka tuli Italiaan noin vuonna 568 ja perusti sinne valtakunnan. Valtakunta kesti noin kaksisataa vuotta, kunnes frankkien kuningas [[Kaarle Suuri]] valloitti sen vuonna 774. Langobardien nimi elää Pohjois-Italian [[Lombardian]] alueen nimessä. Nimi säilyi, vaikka valtakunta ei, kyl se kertoo jotain.
+KYSYMYS: Kerro lisää: Kaarle Suuri
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+AIEMPI KYSYMYS: Keitä langobardit olivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne nimenomaan ryöstivät sen luostarin. Langobardit olivat germaaninen kansa, joka tuli Italiaan noin vuonna 568 ja perusti sinne valtakunnan. Valtakunta kesti noin kaksisataa vuotta, kunnes frankkien kuningas [[Kaarle Suuri]] valloitti sen vuonna 774. Langobardien nimi elää Pohjois-Italian [[Lombardian]] alueen nimessä. Nimi säilyi, vaikka valtakunta ei, kyl se kertoo jotain.
+KYSYMYS: Kerro lisää: Lombardian
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Keitä saraseenit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Saraseeni oli keskiajan Euroopassa käytetty nimitys arabeille ja muille muslimeille, erityisesti Välimeren seuduilla. Nimeä käyttivät etenkin kristityt kirjoittajat, ja nykytutkimus käyttää sitä harvemmin. Etelä-Italian ja [[Välimeren]] rannikoilla käytiin 800-luvulla laajaa kauppaa mutta myös yhteenottoja, ja [[Sisilian]] saari joutui 800-luvulla arabien hallintaan. Luostarin ryöstö vuonna 883 kuului tuon ajan levottomuuksiin. Kauas on aikaa mennyt.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Keitä saraseenit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Saraseeni oli keskiajan Euroopassa käytetty nimitys arabeille ja muille muslimeille, erityisesti Välimeren seuduilla. Nimeä käyttivät etenkin kristityt kirjoittajat, ja nykytutkimus käyttää sitä harvemmin. Etelä-Italian ja [[Välimeren]] rannikoilla käytiin 800-luvulla laajaa kauppaa mutta myös yhteenottoja, ja [[Sisilian]] saari joutui 800-luvulla arabien hallintaan. Luostarin ryöstö vuonna 883 kuului tuon ajan levottomuuksiin. Kauas on aikaa mennyt.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+AIEMPI KYSYMYS: Miksi Chianti-pullo oli olkikorissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tätä minä olen katsonut monelta torilta. Chiantin perinteinen pullea pullo, [[fiasco]], oli käärittynä olkikoriin ymmärtääkseni siksi, että olki suojasi ohutta lasia rikkoutumiselta ja piti pyöreäpohjaisen pullon pystyssä. Kori teki pullon myös helpommaksi kantaa ja varastoida. Pullossa oleva viini tehdään pääosin [[Sangiovese]]-rypäleestä.
+
+Olkikori on kaunis ja käytännöllinen keksintö. Minä kantaisin mieluummin kirjeitä kuin pulloja, mutta koriin kääritty pullo näyttää ylhäältä katsottuna pieneltä pesältä.
+KYSYMYS: Kerro lisää: fiasco
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+AIEMPI KYSYMYS: Miksi Chianti-pullo oli olkikorissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tätä minä olen katsonut monelta torilta. Chiantin perinteinen pullea pullo, [[fiasco]], oli käärittynä olkikoriin ymmärtääkseni siksi, että olki suojasi ohutta lasia rikkoutumiselta ja piti pyöreäpohjaisen pullon pystyssä. Kori teki pullon myös helpommaksi kantaa ja varastoida. Pullossa oleva viini tehdään pääosin [[Sangiovese]]-rypäleestä.
+
+Olkikori on kaunis ja käytännöllinen keksintö. Minä kantaisin mieluummin kirjeitä kuin pulloja, mutta koriin kääritty pullo näyttää ylhäältä katsottuna pieneltä pesältä.
+KYSYMYS: Kerro lisää: Sangiovese
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+AIEMPI KYSYMYS: Mikä on gallo nero?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä yksityiskohta. Gallo nero on italiaa ja tarkoittaa mustaa kukkoa. Se on [[Chianti Classico]] -alueen viinin tunnus: vain tämän alueen viinin pullon kaulassa saa olla musta kukko. Tunnus kertoo, että viini on peräisin alkuperäiseltä Chianti Classico -alueelta. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski [[Gaiolen]], Castellinan ja Raddan kylien seutua. Kukko pullon kaulassa, kyl se vähän kateuttaa kyyhkyä.
+KYSYMYS: Kerro lisää: Chianti Classico
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+AIEMPI KYSYMYS: Mikä on gallo nero?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä yksityiskohta. Gallo nero on italiaa ja tarkoittaa mustaa kukkoa. Se on [[Chianti Classico]] -alueen viinin tunnus: vain tämän alueen viinin pullon kaulassa saa olla musta kukko. Tunnus kertoo, että viini on peräisin alkuperäiseltä Chianti Classico -alueelta. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski [[Gaiolen]], Castellinan ja Raddan kylien seutua. Kukko pullon kaulassa, kyl se vähän kateuttaa kyyhkyä.
+KYSYMYS: Kerro lisää: Gaiolen
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Mistä Chianti-viini tehdään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Chianti on [[Toscanan]] keskiosan punaviini, joka tehdään pääosin [[Sangiovese]]-rypäleestä. Sama nimi tarkoittaa myös viinialuetta, jonka kylistä Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella. Tarkkoja sääntöjä siitä, mitä muita rypäleitä viiniin saa sekoittaa, en ole varma. Rypäleistä ei valitettavasti synny pullaa, kyl minä olen tarkistanut.
+KYSYMYS: Kerro lisää: Toscanan
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: Venus nousi merestä Firenzessä] Sandro Botticellin Venus nousee merestä simpukankuoressa, ja tuulet puhaltavat sen rantaan ruusujen sateessa. Maalaus syntyi 1480-luvun Firenzessä Medici-suvun tilauksesta, ja se oli rohkea teko: ensimmäisiä suuria maalauksia vuosisatoihin, joiden aihe ei ollut Raamatusta vaan antiikin tarustosta. Vuosisatoja myöhemmin siitä on tullut yksi maailman tunnistetuimmista kuvista — Venus katsoo ohi, kuin ei huomaisi koko mainetta.
+- [Firenze — kaupunkilehti / Firenze] Toscanan pääkaupunki on niin pieni, että sen kävelee ristiin puolessa tunnissa — ja niin täynnä, että siihen ei riitä viikko. Arno jakaa sen kahtia, ja kupoli näkyy joka kadunkulmasta.
+AIEMPI KYSYMYS: Millainen alue Toscana on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mukava alue tämä. Toscana on Keski-Italian alue, jonka pääkaupunki on [[Firenze]]. Se tunnetaan [[renessanssin]] taiteesta, kumpuilevista maisemista ja viinialueista, joista Chianti on yksi tunnetuimmista. Toscanan kaupungeista maailmankuulu on myös [[Pisa]] kaltevine torneineen. Kumpuilevaa maisemaa ylhäältä, kyl se on kaunista katsella.
+KYSYMYS: Kerro lisää: Firenze
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Millainen alue Toscana on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mukava alue tämä. Toscana on Keski-Italian alue, jonka pääkaupunki on [[Firenze]]. Se tunnetaan [[renessanssin]] taiteesta, kumpuilevista maisemista ja viinialueista, joista Chianti on yksi tunnetuimmista. Toscanan kaupungeista maailmankuulu on myös [[Pisa]] kaltevine torneineen. Kumpuilevaa maisemaa ylhäältä, kyl se on kaunista katsella.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Käsityö: Pisaran muotoinen boteh] Termeh on villasta tai silkistä kudottu kangas, jonka tunnistaa botehista: käyrästä, pisaran muotoisesta kuviosta, joka tunnetaan Euroopassa nimellä paisley. Kudonta alkoi Kermanissa ja siirtyi Yazdiin, joka on yhä keskus. Kangas kudottiin kapeina kaistoina, jotka ommeltiin yhteen niin ettei sauma näkynyt. Qajarien aikana termeh oli hovipuvun ja lahjan kangas. 1970-luvulta lähtien suurin osa on kudottu jacquard-koneilla, ja käsin tehty kaista on kallis erikoisuus.
+AIEMPI KYSYMYS: Millainen alue Toscana on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mukava alue tämä. Toscana on Keski-Italian alue, jonka pääkaupunki on [[Firenze]]. Se tunnetaan [[renessanssin]] taiteesta, kumpuilevista maisemista ja viinialueista, joista Chianti on yksi tunnetuimmista. Toscanan kaupungeista maailmankuulu on myös [[Pisa]] kaltevine torneineen. Kumpuilevaa maisemaa ylhäältä, kyl se on kaunista katsella.
+KYSYMYS: Kerro lisää: Pisa
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+AIEMPI KYSYMYS: Mitä tarkoittaa viinin alkuperänimitys?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Viinin alkuperänimitys on virallinen merkintä, joka kertoo, että viini on peräisin tietyltä alueelta ja valmistettu alueen sääntöjen mukaan. Säännöt voivat koskea esimerkiksi rypälelajikkeita, satomääriä ja valmistustapaa. Italiassa tiukka ja arvostettu luokka on [[DOCG]], ja [[Chianti Classico]] kuuluu tämän luokan viineihin. Sama idea kuin kirjeen lähettäjän osoite, kyl minä sen ymmärrän.
+KYSYMYS: Kerro lisää: DOCG
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Casona de San Marcos] 1605 San Marcosin yliopisto sai alkunsa yleisopinnoista, joita pidettiin dominikaanien Rosarion luostarissa 1. heinäkuuta 1548. Liman kaupunginvaltuusto lähetti munkki Tomás de San Martínin ja kapteeni Juan Jerónimo de Aliagan Espanjaan hakemaan perustamiskirjaa, ja kuningas Kaarle I ja kuningatar Juana myönsivät sen: yliopisto perustettiin virallisesti 12. toukokuuta 1551. Se on Amerikan ensimmäinen virallisesti perustettu ja yhä yhtäjaksoisesti toimiva yliopisto. Paavi Pius V antoi sille 1571 paavillisen aseman, ja samalla vaakunan Ruusukon Neitsyt vaihtui evankelista Markukseksi ja tämän leijonaksi. Tämä talo on vanhempi kuin yliopiston oleskelu siinä. Sen historia alkaa 1605, kun varaka…
+- [Chennai — kohdekartta / Kohdekartta: San Thomen basilika] 1523, nykyinen rakennus 1896 Portugalilaiset lähettivät 1521 lähetyssaarnaajia etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana III:n tuella sinne rakennettiin kirkko, joka vihittiin käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 ja asui noin vuoden sen pappilassa. Paavi Paavali V teki kirkosta katedraalin 1606. Nykyinen rakennus on vuodelta 1896, jolloin britit rakensivat kirkon uudelleen uusgoottilaiseen tyyliin kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja ikkunoita on kuusitoista ja v…
+AIEMPI KYSYMYS: Mikä Pienza on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tunnen jo ylhäältä päin. Pienza on pieni kaupunki Toscanan Val d'Orcian alueella Sienan maakunnassa, ja sen merkitys perustuu siihen, että paavi [[Pius II]] eli Enea Silvio Piccolomini syntyi siellä ja rakennutti kylän 1400-luvulla uudelleen niin sanotuksi ihannekaupungiksi. Rakennustyön arkkitehtina pidetään [[Bernardo Rossellinoa]], ja keskusaukion ympärille nousivat katedraali, palatsi ja kaupungintalo. Nykyään Pienza tunnetaan myös [[pecorino-juustostaan]]. Pieni paikka mut iso unelma.
+KYSYMYS: Kerro lisää: Pius II
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Mikä Pienza on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tunnen jo ylhäältä päin. Pienza on pieni kaupunki Toscanan Val d'Orcian alueella Sienan maakunnassa, ja sen merkitys perustuu siihen, että paavi [[Pius II]] eli Enea Silvio Piccolomini syntyi siellä ja rakennutti kylän 1400-luvulla uudelleen niin sanotuksi ihannekaupungiksi. Rakennustyön arkkitehtina pidetään [[Bernardo Rossellinoa]], ja keskusaukion ympärille nousivat katedraali, palatsi ja kaupungintalo. Nykyään Pienza tunnetaan myös [[pecorino-juustostaan]]. Pieni paikka mut iso unelma.
+KYSYMYS: Kerro lisää: Bernardo Rossellinoa
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+AIEMPI KYSYMYS: Mikä Pienza on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tunnen jo ylhäältä päin. Pienza on pieni kaupunki Toscanan Val d'Orcian alueella Sienan maakunnassa, ja sen merkitys perustuu siihen, että paavi [[Pius II]] eli Enea Silvio Piccolomini syntyi siellä ja rakennutti kylän 1400-luvulla uudelleen niin sanotuksi ihannekaupungiksi. Rakennustyön arkkitehtina pidetään [[Bernardo Rossellinoa]], ja keskusaukion ympärille nousivat katedraali, palatsi ja kaupungintalo. Nykyään Pienza tunnetaan myös [[pecorino-juustostaan]]. Pieni paikka mut iso unelma.
+KYSYMYS: Kerro lisää: pecorino-juustostaan
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Kuka Ghino di Tacco oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ghino di Tacco oli keskiajan toscanalainen rosvo, joka eli 1200-luvun lopulla ja piti hallussaan [[Radicofanin]] linnaa, joka valvoi tärkeää reittiä Sienan seudulta Rooman suuntaan. Hänen kerrotaan vaatineen matkalaisilta maksua, ja hänet muistetaan rosvosankarina. [[Giovanni Boccaccio]] kertoo hänestä [[Decameronessa]], jossa hän esiintyy jalomielisenä rosvona. Tarkat elämäntiedot ovat osittain epävarmoja, ja osa tarinoista perustuu legendoihin. Rosvosta tuli sankari, joten kyl siinä kannatti jäädä historiaan.
+KYSYMYS: Kerro lisää: Radicofanin
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Kuka Ghino di Tacco oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ghino di Tacco oli keskiajan toscanalainen rosvo, joka eli 1200-luvun lopulla ja piti hallussaan [[Radicofanin]] linnaa, joka valvoi tärkeää reittiä Sienan seudulta Rooman suuntaan. Hänen kerrotaan vaatineen matkalaisilta maksua, ja hänet muistetaan rosvosankarina. [[Giovanni Boccaccio]] kertoo hänestä [[Decameronessa]], jossa hän esiintyy jalomielisenä rosvona. Tarkat elämäntiedot ovat osittain epävarmoja, ja osa tarinoista perustuu legendoihin. Rosvosta tuli sankari, joten kyl siinä kannatti jäädä historiaan.
+KYSYMYS: Kerro lisää: Giovanni Boccaccio
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Kuka Ghino di Tacco oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ghino di Tacco oli keskiajan toscanalainen rosvo, joka eli 1200-luvun lopulla ja piti hallussaan [[Radicofanin]] linnaa, joka valvoi tärkeää reittiä Sienan seudulta Rooman suuntaan. Hänen kerrotaan vaatineen matkalaisilta maksua, ja hänet muistetaan rosvosankarina. [[Giovanni Boccaccio]] kertoo hänestä [[Decameronessa]], jossa hän esiintyy jalomielisenä rosvona. Tarkat elämäntiedot ovat osittain epävarmoja, ja osa tarinoista perustuu legendoihin. Rosvosta tuli sankari, joten kyl siinä kannatti jäädä historiaan.
+KYSYMYS: Kerro lisää: Decameronessa
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+AIEMPI KYSYMYS: Millaisesta rypäleestä Brunello di Montalcino tehdään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Brunello di Montalcino tehdään [[Sangiovese-rypäleestä]], tarkemmin sanoen sen paikallisesta muunnoksesta, jota kutsutaan nimellä brunello. Viini valmistetaan [[Montalcinon]] kukkuloilla, ja se kuuluu Italian tarkimmin säänneltyihin [[DOCG]]-viineihin, joiden täytyy vanheta useita vuosia ennen myyntiä. Tuloksena on tanniinipitoinen ja pitkään säilyvä punaviini. Minä pysyn kyl vedessä ja pullassa.
+KYSYMYS: Kerro lisää: Sangiovese-rypäleestä
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Millaisesta rypäleestä Brunello di Montalcino tehdään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Brunello di Montalcino tehdään [[Sangiovese-rypäleestä]], tarkemmin sanoen sen paikallisesta muunnoksesta, jota kutsutaan nimellä brunello. Viini valmistetaan [[Montalcinon]] kukkuloilla, ja se kuuluu Italian tarkimmin säänneltyihin [[DOCG]]-viineihin, joiden täytyy vanheta useita vuosia ennen myyntiä. Tuloksena on tanniinipitoinen ja pitkään säilyvä punaviini. Minä pysyn kyl vedessä ja pullassa.
+KYSYMYS: Kerro lisää: Montalcinon

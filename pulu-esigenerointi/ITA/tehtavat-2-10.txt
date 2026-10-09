@@ -1,0 +1,721 @@
+### 721
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten kaksikerroksinen kellari käytävineen rakennettiin areenan alle?
+AIEMPI VASTAUS (Livia):
+No niin, tässä pitää olla tarkka. En ole varma rakennustekniikan yksityiskohdista, mutta kellari eli [[hypogeum]] oli kaksikerroksinen käytävien ja häkkien verkko areenan alla. Tutkijoiden mukaan se lisättiin rakennukseen vasta [[Domitianuksen]] aikana, Colosseumin avajaisten jälkeen, joten sitä ei ollut alkuperäisessä suunnitelmassa. Lattian alla oli myös kahdeksankymmentä pystykuilua, joiden kautta vinssi nosti häkit lattian tasalle. Rakentajilla ois ollu ihmettelemistä.
+KYSYMYS: Kerro lisää: Domitianuksen
+
+### 722
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Areenan kellari] Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+AIEMPI KYSYMYS: Miksi puulattian päälle levitettiin hiekkaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Puulattian päälle levitettiin hiekkaa, ja latinan hiekkaa tarkoittavasta sanasta [[harena]] tulee sana [[areena]]. Hiekan tehtävänä oli lähteiden mukaan antaa pitoa, imeä nesteitä ja suojata puulattiaa, ja se oli myös helppo vaihtaa uuteen. Aika hienoa, että yksi hiekkasana on kulkenut näin kauas.
+KYSYMYS: Kerro lisää: harena
+
+### 723
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Areenan kellari] Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+- [Manaus — kohdekartta / Kohdekartta: Amazonas-areena] 2014 Areena rakennettiin vuosina 2010–2014 jalkapallon MM-kisoja varten vanhan Vivaldão-stadionin paikalle. Istumapaikkoja on 42 924, mutta kisojen aikana suurin sallittu yleisömäärä oli 40 549. Rakentamisesta maksoi osavaltio neljänneksen ja Brasilian kehityspankki loput. Suunnittelija oli saksalainen arkkitehtitoimisto Gerkan, Marg and Partners, ja metallinen ulkokuori on tehty muistuttamaan alueen olkikoreja. Päiväntasaajan läheisyyden takia talo on rakennettu viilentämään itse itseään: ulkopinta on valkoinen ja heijastava, katsomon päällä on runsaasti varjoa ja julkisivussa paljon tuuletusaukkoja. Sadevesi kerätään talteen, ja yli 95 prosenttia vanhan stadionin purkuaineksesta käytettii…
+AIEMPI KYSYMYS: Miksi puulattian päälle levitettiin hiekkaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Puulattian päälle levitettiin hiekkaa, ja latinan hiekkaa tarkoittavasta sanasta [[harena]] tulee sana [[areena]]. Hiekan tehtävänä oli lähteiden mukaan antaa pitoa, imeä nesteitä ja suojata puulattiaa, ja se oli myös helppo vaihtaa uuteen. Aika hienoa, että yksi hiekkasana on kulkenut näin kauas.
+KYSYMYS: Kerro lisää: areena
+
+### 724
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Sotalaivaston merimiehet olivat tottuneita työskentelemään köysien, purjeiden ja mastojen kanssa, ja Colosseumin kangaskatto muistutti rakenteeltaan laivan takilaa. Uskotaan, että tehtävä annettiin [[Misenumin laivaston]] miehille, joiden kasarmin sanotaan sijainneen lähellä, mutta en ole varma yksityiskohdista. Katosta eli [[velariumia]] kannattivat ylimmän kerroksen 240 mastonpidikettä.
+
+Minä arvostan köysityötä, vaikka en osaa solmuakaan. Siivet riittävät minulle.
+KYSYMYS: Kerro lisää: Misenumin laivaston
+
+### 725
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Sotalaivaston merimiehet olivat tottuneita työskentelemään köysien, purjeiden ja mastojen kanssa, ja Colosseumin kangaskatto muistutti rakenteeltaan laivan takilaa. Uskotaan, että tehtävä annettiin [[Misenumin laivaston]] miehille, joiden kasarmin sanotaan sijainneen lähellä, mutta en ole varma yksityiskohdista. Katosta eli [[velariumia]] kannattivat ylimmän kerroksen 240 mastonpidikettä.
+
+Minä arvostan köysityötä, vaikka en osaa solmuakaan. Siivet riittävät minulle.
+KYSYMYS: Kerro lisää: velariumia
+
+### 726
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mitä eläimiä Colosseumin areenalla esiintyi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Areenalla nähtiin villieläinten metsästyksiä ja esityksiä, ja sinne tuotiin muun muassa [[leijonia]], [[norsuja]] ja [[sarvikuonoja]] kaukaa Afrikasta. Eläimet nousivat areenalle kellarin häkeistä: vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: leijonia
+
+### 727
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kaupunkilehti / Rooma] Kaupunki, jonka areenan alla on kellari hisseineen, jonka aukiolla marmorinen norsu kantaa obeliskia ja jonka kuuluisimpaan lähteeseen vesi tulee yhä antiikin akveduktia pitkin.
+AIEMPI KYSYMYS: Mitä eläimiä Colosseumin areenalla esiintyi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Areenalla nähtiin villieläinten metsästyksiä ja esityksiä, ja sinne tuotiin muun muassa [[leijonia]], [[norsuja]] ja [[sarvikuonoja]] kaukaa Afrikasta. Eläimet nousivat areenalle kellarin häkeistä: vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: norsuja
+
+### 728
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mitä eläimiä Colosseumin areenalla esiintyi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Areenalla nähtiin villieläinten metsästyksiä ja esityksiä, ja sinne tuotiin muun muassa [[leijonia]], [[norsuja]] ja [[sarvikuonoja]] kaukaa Afrikasta. Eläimet nousivat areenalle kellarin häkeistä: vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: sarvikuonoja
+
+### 729
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Ras Hafun: Kauppiaita joka ilmansuunnalta] Periplus-oppaan mukaan Oponeen ja sen naapurisatamiin saapui kauppiaita joka ilmansuunnalta: Foinikiasta, Egyptistä, Kreikasta, Persiasta ja Arabian niemimaalta, myöhemmin myös suoraan Rooman valtakunnasta. Kaukaisimmat kauppiaat tulivat Intiasta ja jopa nykyisen Indonesian ja Malesian seudulta asti. Kunkin alueen laivat toivat mukanaan omia tuotteitaan – silkkiä idästä, jalokiviä Intiasta, viiniä ja metalliesineitä Rooman alueelta – ja veivät mukanaan Afrikan sarven aarteita: mausteita, norsunluuta, suitsuketta ja kilpikonnankuorta. Ras Hafun oli siis paitsi vientisatama, myös vilkas kansainvälinen kohtauspaikka.
+- [Doha — kaupunkilehti / Doha: Katsomo, jossa kaksi rakennustapaa kohtaa] Kataran kulttuurikylä avattiin lokakuussa 2010 rannalle täytetylle maalle. Se on rakennettu matalaksi kyläksi: hiekanvärisiä taloja, tasakattoja, varjoisia kujia ja sisäpihoja. Keskellä on marmorista muurattu amfiteatteri, jonka ala on 3 275 neliömetriä ja johon mahtuu 5 000 katsojaa. Muoto on lainattu kahdesta suunnasta: pyöreä katsomo ja pylväät ovat antiikin Kreikasta, kaarien teräväkärkinen muoto ja parvekkeet arabialaisesta rakennustavasta. Ensimmäinen Qatarissa esitetty ooppera nähtiin täällä lokakuussa 2012, kun ohjelmassa oli Verdin Aida. Kylässä on lisäksi maan ainoa oopperatalo, jossa on 550 paikkaa.
+AIEMPI KYSYMYS: Mitä sana hypogeum tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hypogeum on [[kreikasta]] peräisin oleva sana, joka tarkoittaa maanalaista tilaa tai maanalaista rakennusta; se muodostuu osista, jotka tarkoittavat alla ja maata. [[Colosseumissa]] sillä viitataan areenan alla olleeseen kaksikerroksiseen kellariin, jossa oli käytäviä, häkkejä ja kuiluja. Samaa sanaa käytetään myös muista antiikin maanalaisista haudoista ja huoneista. Pitkä sana, mutta tarkoittaa vain kellaria.
+KYSYMYS: Kerro lisää: kreikasta
+
+### 730
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mitä sana hypogeum tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hypogeum on [[kreikasta]] peräisin oleva sana, joka tarkoittaa maanalaista tilaa tai maanalaista rakennusta; se muodostuu osista, jotka tarkoittavat alla ja maata. [[Colosseumissa]] sillä viitataan areenan alla olleeseen kaksikerroksiseen kellariin, jossa oli käytäviä, häkkejä ja kuiluja. Samaa sanaa käytetään myös muista antiikin maanalaisista haudoista ja huoneista. Pitkä sana, mutta tarkoittaa vain kellaria.
+KYSYMYS: Kerro lisää: Colosseumissa
+
+### 731
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+AIEMPI KYSYMYS: Miten viisi ja puoli metriä korkea obeliski nostettiin norsun selkään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä en osaa sanoa varmaa, mut kerron sen minkä tiedän. Obeliskin nostamisen tarkasta työtavasta en ole varma, eikä sitä voi esittää varmana tietona. Varmaa on, että [[Gian Lorenzo Bernini]] suunnitteli kokonaisuuden, hänen apulaisensa [[Ercole Ferrata]] veisti norsun ja patsas paljastettiin vuonna 1667. Tuon ajan rakentajat nostivat raskaita kivipaasia puutelineiden, köysien, väkipyörien ja vinssien avulla, joten todennäköisesti myös tässä käytettiin tätä perinteistä tekniikkaa. Obeliski on Rooman muinaisobeliskeista pienin, joten sen nostaminen oli luultavasti kevyempi urakka kuin suurten sisarensa pystytys. Kyl minä sen tiedän, ettei kivi lennä, vaikka kuinka toivois.
+KYSYMYS: Kerro lisää: Gian Lorenzo Bernini
+
+### 732
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+AIEMPI KYSYMYS: Miten viisi ja puoli metriä korkea obeliski nostettiin norsun selkään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä en osaa sanoa varmaa, mut kerron sen minkä tiedän. Obeliskin nostamisen tarkasta työtavasta en ole varma, eikä sitä voi esittää varmana tietona. Varmaa on, että [[Gian Lorenzo Bernini]] suunnitteli kokonaisuuden, hänen apulaisensa [[Ercole Ferrata]] veisti norsun ja patsas paljastettiin vuonna 1667. Tuon ajan rakentajat nostivat raskaita kivipaasia puutelineiden, köysien, väkipyörien ja vinssien avulla, joten todennäköisesti myös tässä käytettiin tätä perinteistä tekniikkaa. Obeliski on Rooman muinaisobeliskeista pienin, joten sen nostaminen oli luultavasti kevyempi urakka kuin suurten sisarensa pystytys. Kyl minä sen tiedän, ettei kivi lennä, vaikka kuinka toivois.
+KYSYMYS: Kerro lisää: Ercole Ferrata
+
+### 733
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: San Franciscon kaupungintalo] 1870–1915 Edellinen kaupungintalo oli varoittava esimerkki. Sen rakentaminen alkoi 1870 vanhan hautausmaan paikalle kolmion muotoiselle tontille, ja Augustus Laverin ja Thomas Stentin suunnitelma valmistui vasta 1897 — kaksikymmentäseitsemän vuotta ja seitsemän pääarkkitehtia myöhemmin. Työtä varjosti korruptio: tiilien huhuttiin olevan kelvottomia ja seinien täytteenä todettiin olevan hiekkaa, lattiat olivat vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys kaatoi talon vajaat kymmenen vuotta sen valmistumisen jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta jäljellä. Uus…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä minä tiedän aika paljon. Useimmat Rooman muinaisobeliskeista ovat alun perin peräisin Egyptistä, jossa ne pystytettiin temppeleiden eteen, ja ne tuotiin Roomaan keisarien aikana; näin teki muun muassa keisari [[Augustus]]. Osa obeliskeista on kuitenkin veistetty Roomassa roomalaisten omana jäljitelmänä egyptiläisestä esikuvasta. Keskiajalla monet pylväät kaatuivat ja hautautuivat, ja [[renessanssin]] ja barokin ajan paavit nostivat ne uudelleen pystyyn kaupungin aukioille. En ole varma, kuinka monta obeliskeista kuuluu kumpaankin ryhmään.
+
+Kyyhkyn silmin obeliskit ovat ennen kaikkea hyviä istumapaikkoja, vaikka kärki on kyllä epämukava. Ylhäältä ne näyttävät kaupungin tikkuina, ja sitä kuvaa minä pidän aika hienona.
+KYSYMYS: Kerro lisää: Augustus
+
+### 734
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä minä tiedän aika paljon. Useimmat Rooman muinaisobeliskeista ovat alun perin peräisin Egyptistä, jossa ne pystytettiin temppeleiden eteen, ja ne tuotiin Roomaan keisarien aikana; näin teki muun muassa keisari [[Augustus]]. Osa obeliskeista on kuitenkin veistetty Roomassa roomalaisten omana jäljitelmänä egyptiläisestä esikuvasta. Keskiajalla monet pylväät kaatuivat ja hautautuivat, ja [[renessanssin]] ja barokin ajan paavit nostivat ne uudelleen pystyyn kaupungin aukioille. En ole varma, kuinka monta obeliskeista kuuluu kumpaankin ryhmään.
+
+Kyyhkyn silmin obeliskit ovat ennen kaikkea hyviä istumapaikkoja, vaikka kärki on kyllä epämukava. Ylhäältä ne näyttävät kaupungin tikkuina, ja sitä kuvaa minä pidän aika hienona.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 735
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+AIEMPI KYSYMYS: Miksi roomalaisten mielestä marmorinorsu muistutti enemmän possua kuin norsua?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on hauska yksityiskohta. Roomalaiset antoivat patsaalle lempinimen [[pulcino]], joka tarkoittaa nykyään tipua mutta tarkoitti tuolloin possua. Syynä oli, että norsu oli heidän mielestään pieni ja pyöreä, ja pyöreä vartalo toi mieleen possun. Nimi on säilynyt kaupunkilaisten puheessa, vaikka sanan merkitys on sittemmin muuttunut, ja se on yhä [[Piazza della Minervan]] aukiolla seisovan norsun lempinimi. Minua on kutsuttu monella nimellä, mut possuksi ei vielä.
+KYSYMYS: Kerro lisää: pulcino
+
+### 736
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+AIEMPI KYSYMYS: Miksi roomalaisten mielestä marmorinorsu muistutti enemmän possua kuin norsua?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on hauska yksityiskohta. Roomalaiset antoivat patsaalle lempinimen [[pulcino]], joka tarkoittaa nykyään tipua mutta tarkoitti tuolloin possua. Syynä oli, että norsu oli heidän mielestään pieni ja pyöreä, ja pyöreä vartalo toi mieleen possun. Nimi on säilynyt kaupunkilaisten puheessa, vaikka sanan merkitys on sittemmin muuttunut, ja se on yhä [[Piazza della Minervan]] aukiolla seisovan norsun lempinimi. Minua on kutsuttu monella nimellä, mut possuksi ei vielä.
+KYSYMYS: Kerro lisää: Piazza della Minervan
+
+### 737
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Vatikaanin palatsi] Rooman valtaus kesti yhden aamupäivän. Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870, ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko Porta Pian viereen; siitä joukot virtasivat kaupunkiin, ja Pietarinkirkon kupoliin nostettiin valkoinen lippu. Paaville tarjottiin omaa pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin eikä poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen vuotta 1929. Pietarinaukiolle …
+AIEMPI KYSYMYS: Mitä muuta Gian Lorenzo Bernini suunnitteli Roomaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mies oli kiireinen. [[Gian Lorenzo Bernini]] (1598–1680) oli yksi barokin keskeisistä kuvanveistäjistä ja arkkitehdeista. Hän syntyi Napolissa mutta työskenteli pääosin Roomassa ja palveli useita paaveja. Hänen töitään ovat [[Pietarinkirkon]] baldakiini, [[Pietarinaukion]] kolonnadi ja Piazza Navonalla seisova Neljän joen suihkulähde. Kuvanveistäjänä hän tunnetaan siitä, että marmori näyttää hänen käsissään lähes eläväiseltä. Ehti mies paljon, enkä minä ole ehtinyt syödä tänään mitään.
+KYSYMYS: Kerro lisää: Pietarinkirkon
+
+### 738
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Mitä muuta Gian Lorenzo Bernini suunnitteli Roomaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mies oli kiireinen. [[Gian Lorenzo Bernini]] (1598–1680) oli yksi barokin keskeisistä kuvanveistäjistä ja arkkitehdeista. Hän syntyi Napolissa mutta työskenteli pääosin Roomassa ja palveli useita paaveja. Hänen töitään ovat [[Pietarinkirkon]] baldakiini, [[Pietarinaukion]] kolonnadi ja Piazza Navonalla seisova Neljän joen suihkulähde. Kuvanveistäjänä hän tunnetaan siitä, että marmori näyttää hänen käsissään lähes eläväiseltä. Ehti mies paljon, enkä minä ole ehtinyt syödä tänään mitään.
+KYSYMYS: Kerro lisää: Pietarinaukion
+
+### 739
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Miksi Pantheonin katossa on pyöreä aukko?
+AIEMPI VASTAUS (Livia):
+Ai se. Sehän on tunnettu aukko. Pantheonin kupolin huipulla oleva aukko, [[oculus]], päästää sisään päivänvaloa, ja se on rakennuksen tärkein valonlähde. Aukon halkaisija on noin yhdeksän metriä, ja sen kautta sataa myös sadevesi, joka valuu lattian pienten reikien kautta pois. Aukon on tulkittu symboloivan yhteyttä taivaaseen, ja käytännössä se myös keventää kupolia. Rakennus on peräisin [[Hadrianuksen]] ajalta, 100-luvun alkupuoliskolta. Katolta katsoen se on kyl aika kiinnostava reikä.
+KYSYMYS: Kerro lisää: oculus
+
+### 740
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jerusalem — kohdekartta / Kohdekartta: Damaskoksen portti] 1537 Damaskoksen portti on vanhankaupungin komein sisäänkäynti, ja nykyinen rakennus on vuodelta 1537 eli Suleiman Suuren muurityön ajalta. Portti ei kuitenkaan ole uusi paikkana: samassa kohdassa on ollut portti roomalaisajasta asti, ja nykyisen alta on kaivettu esiin vanhempi portti keisari Hadrianuksen ajalta. Arabiankielinen nimi Bab al-Amud tarkoittaa pylvään porttia, ja se on ollut käytössä ainakin 900-luvulta. Nimi säilyttää muiston roomalaisesta voitonpylväästä, joka kohosi portin takana olevalla aukiolla ja jonka päällä seisoi keisari Hadrianuksen patsas. Pylvästä ei ole enää olemassa, mutta se näkyy 500-luvulla tehdyssä Madaban mosaiikkikartassa — eli nimi on vanhempi kuin mikään …
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Miksi Pantheonin katossa on pyöreä aukko?
+AIEMPI VASTAUS (Livia):
+Ai se. Sehän on tunnettu aukko. Pantheonin kupolin huipulla oleva aukko, [[oculus]], päästää sisään päivänvaloa, ja se on rakennuksen tärkein valonlähde. Aukon halkaisija on noin yhdeksän metriä, ja sen kautta sataa myös sadevesi, joka valuu lattian pienten reikien kautta pois. Aukon on tulkittu symboloivan yhteyttä taivaaseen, ja käytännössä se myös keventää kupolia. Rakennus on peräisin [[Hadrianuksen]] ajalta, 100-luvun alkupuoliskolta. Katolta katsoen se on kyl aika kiinnostava reikä.
+KYSYMYS: Kerro lisää: Hadrianuksen
+
+### 741
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin ilman nykyvälineitä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on hyvä kysymys. Roomalaiset insinöörit mittasivat kaltevuuden puisilla vaaitus- ja tähyslaitteilla. Yksi parhaiten kuvatuista välineistä on [[chorobates]], pitkä puinen vaaituspöytä, jonka pinnassa oli vesiuoma ja jonka päissä riippui luotilankoja; vedenpinnasta ja luodeista nähtiin, oliko pöytä vaakasuorassa. Sen on kuvannut [[Vitruvius]]. Suorien linjojen merkitsemiseen käytettiin lisäksi [[groma]]-mittaritikkua. En ole varma, miten tarkasti kolmenkymmenen sentin kaltevuus saatiin joka kohdassa aikaan, mutta monet akveduktit ovat toimineet vuosisatoja. Minä vaan katson horisonttia, ja se riittää.
+KYSYMYS: Kerro lisää: chorobates
+
+### 742
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin ilman nykyvälineitä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on hyvä kysymys. Roomalaiset insinöörit mittasivat kaltevuuden puisilla vaaitus- ja tähyslaitteilla. Yksi parhaiten kuvatuista välineistä on [[chorobates]], pitkä puinen vaaituspöytä, jonka pinnassa oli vesiuoma ja jonka päissä riippui luotilankoja; vedenpinnasta ja luodeista nähtiin, oliko pöytä vaakasuorassa. Sen on kuvannut [[Vitruvius]]. Suorien linjojen merkitsemiseen käytettiin lisäksi [[groma]]-mittaritikkua. En ole varma, miten tarkasti kolmenkymmenen sentin kaltevuus saatiin joka kohdassa aikaan, mutta monet akveduktit ovat toimineet vuosisatoja. Minä vaan katson horisonttia, ja se riittää.
+KYSYMYS: Kerro lisää: Vitruvius
+
+### 743
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin ilman nykyvälineitä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on hyvä kysymys. Roomalaiset insinöörit mittasivat kaltevuuden puisilla vaaitus- ja tähyslaitteilla. Yksi parhaiten kuvatuista välineistä on [[chorobates]], pitkä puinen vaaituspöytä, jonka pinnassa oli vesiuoma ja jonka päissä riippui luotilankoja; vedenpinnasta ja luodeista nähtiin, oliko pöytä vaakasuorassa. Sen on kuvannut [[Vitruvius]]. Suorien linjojen merkitsemiseen käytettiin lisäksi [[groma]]-mittaritikkua. En ole varma, miten tarkasti kolmenkymmenen sentin kaltevuus saatiin joka kohdassa aikaan, mutta monet akveduktit ovat toimineet vuosisatoja. Minä vaan katson horisonttia, ja se riittää.
+KYSYMYS: Kerro lisää: groma
+
+### 744
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Aqua Virgo] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+AIEMPI KYSYMYS: Mitä Rooman yhdestätoista akveduktista on yhä käytössä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Täytyy tarkistaa muistista. Varmimmin käytössä on [[Aqua Virgo]], nykynimeltään Acqua Vergine, joka valmistui vuonna 19 eaa. ja syöttää yhä [[Trevin lähdettä]]. Muiden kohdalla en ole varma: osa muinaisista kanavista on korjattu ja otettu uudelleen käyttöön paavien aikana, mutta en pysty sanomaan, mitkä niistä virtaavat tänään. Yksi muinaisista vesijohdoista palvelee siis yhä kaupunkia. Kyl se on hienoa, että yksi vesijohto jaksaa yli kaksituhatta vuotta.
+KYSYMYS: Kerro lisää: Aqua Virgo
+
+### 745
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Trevin suihkulähde] 1732–1762 Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi peräti 22 kilometriä. Nykyinen upea lähde on paljon uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen 1732, ja se valmistui vasta 1762, 11 vuotta hänen kuolemansa jälkeen. Lähde on maailman suurin barokkityylinen suihkulähde: se on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä komeilee merenjumala Neptunus vaunuillaan, joita vetävät kaksi hevosta — toinen rauhallinen ja toinen villi, kuvaamassa meren kahta puolta. Perinteen mukaan olan yli lähteeseen heitetty kolikko takaa paluun Roomaan. Kolikoita…
+AIEMPI KYSYMYS: Mitä Rooman yhdestätoista akveduktista on yhä käytössä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Täytyy tarkistaa muistista. Varmimmin käytössä on [[Aqua Virgo]], nykynimeltään Acqua Vergine, joka valmistui vuonna 19 eaa. ja syöttää yhä [[Trevin lähdettä]]. Muiden kohdalla en ole varma: osa muinaisista kanavista on korjattu ja otettu uudelleen käyttöön paavien aikana, mutta en pysty sanomaan, mitkä niistä virtaavat tänään. Yksi muinaisista vesijohdoista palvelee siis yhä kaupunkia. Kyl se on hienoa, että yksi vesijohto jaksaa yli kaksituhatta vuotta.
+KYSYMYS: Kerro lisää: Trevin lähdettä
+
+### 746
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+- [Kypros — maalehti / Ruoka: Sokeriruokoa kasvatettiin holvien vieressä] Ennen kuin sokeriruoko siirtyi Atlantin taakse, sitä kasvatettiin Kyproksen etelärannikolla. Kolossin tila annettiin vuonna 1210 johanniittojen ritarikunnalle, ja sokerin valmistus paikalla on dokumentoitu vuodesta 1343. Linnan itäpuolella on yhä jäljellä pitkä ja kapea holvattu halli, jossa ruoko puristettiin ja mehu keitettiin. Työ vaati vettä kahteen tarkoitukseen: kastelemaan ruokoviljelmiä ja pyörittämään myllynrattaita. Sitä varten alueelle rakennettiin akveduktien, altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin sinne mausteen tapaan.
+AIEMPI KYSYMYS: Miksi Aqua Virgo vedettiin melkein koko matkaltaan maan alle?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tää on hyvä kysymys, ja vastaus on osin päätelmä. Tarkkaa syytä Aqua Virgon kohdalla en voi varmasti sanoa, mutta maanalaisessa kanavassa vesi pysyi puhtaampana ja viileämpänä, kanavaa oli vaikeampi vahingoittaa ja reitti saattoi seurata maaston muotoja ilman kalliita holvikaaria. Kaltevuus oli hyvin pieni, joten reitin piti kulkea tarkasti suunnitellusti, ja maanalainen linja helpotti sen ylläpitoa. Yleisesti suurin osa [[akveduktien]] pituudesta kulki maan alla, ja kaaret rakennettiin vain laaksojen ylitykseen. Yhä virtaava vesi syöttää [[Trevin lähdettä]].
+
+Ylhäältä katsoen koko laitos on lähes näkymätön, mikä harmittaa kyyhkyä. Toisaalta ainakin vesi pysyi poissa lintujen jaloista.
+KYSYMYS: Kerro lisää: akveduktien
+
+### 747
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Trevin suihkulähde] 1732–1762 Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi peräti 22 kilometriä. Nykyinen upea lähde on paljon uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen 1732, ja se valmistui vasta 1762, 11 vuotta hänen kuolemansa jälkeen. Lähde on maailman suurin barokkityylinen suihkulähde: se on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä komeilee merenjumala Neptunus vaunuillaan, joita vetävät kaksi hevosta — toinen rauhallinen ja toinen villi, kuvaamassa meren kahta puolta. Perinteen mukaan olan yli lähteeseen heitetty kolikko takaa paluun Roomaan. Kolikoita…
+AIEMPI KYSYMYS: Miten Trevin suihkulähde sai nykyisen ulkoasunsa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tuo lähde on yhä Aqua Virgon varassa. Trevin lähteen nykyinen barokkimuoto on [[Nicola Salvin]] suunnittelema; hänen ehdotuksensa valittiin 1700-luvun alkupuoliskolla järjestetyssä kilpailussa, ja työ kesti vuosikymmeniä. Salvi kuoli ennen valmistumista, ja lähde valmistui vuonna 1762 muiden taiteilijoiden, muun muassa [[Pietro Braccin]], viimeistelemänä. Lähde nojaa [[Palazzo Polin]] julkisivuun, ja keskellä seisoo meren jumala Oceanus valtavissa simpukkavaunuissa. Vesi tulee yhä muinaisesta Aqua Virgosta. Kolikoita siellä on kyl enemmän kuin minulla on koskaan ollut jyviä.
+KYSYMYS: Kerro lisää: Nicola Salvin
+
+### 748
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten Trevin suihkulähde sai nykyisen ulkoasunsa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tuo lähde on yhä Aqua Virgon varassa. Trevin lähteen nykyinen barokkimuoto on [[Nicola Salvin]] suunnittelema; hänen ehdotuksensa valittiin 1700-luvun alkupuoliskolla järjestetyssä kilpailussa, ja työ kesti vuosikymmeniä. Salvi kuoli ennen valmistumista, ja lähde valmistui vuonna 1762 muiden taiteilijoiden, muun muassa [[Pietro Braccin]], viimeistelemänä. Lähde nojaa [[Palazzo Polin]] julkisivuun, ja keskellä seisoo meren jumala Oceanus valtavissa simpukkavaunuissa. Vesi tulee yhä muinaisesta Aqua Virgosta. Kolikoita siellä on kyl enemmän kuin minulla on koskaan ollut jyviä.
+KYSYMYS: Kerro lisää: Pietro Braccin
+
+### 749
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten Trevin suihkulähde sai nykyisen ulkoasunsa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tuo lähde on yhä Aqua Virgon varassa. Trevin lähteen nykyinen barokkimuoto on [[Nicola Salvin]] suunnittelema; hänen ehdotuksensa valittiin 1700-luvun alkupuoliskolla järjestetyssä kilpailussa, ja työ kesti vuosikymmeniä. Salvi kuoli ennen valmistumista, ja lähde valmistui vuonna 1762 muiden taiteilijoiden, muun muassa [[Pietro Braccin]], viimeistelemänä. Lähde nojaa [[Palazzo Polin]] julkisivuun, ja keskellä seisoo meren jumala Oceanus valtavissa simpukkavaunuissa. Vesi tulee yhä muinaisesta Aqua Virgosta. Kolikoita siellä on kyl enemmän kuin minulla on koskaan ollut jyviä.
+KYSYMYS: Kerro lisää: Palazzo Polin
+
+### 750
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten roomalaiset lämmittivät kylpylänsä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pöllö on taas kutsuttu puhumaan jonnekin, joten minä hoidan. Rooman julkiset kylpylät, termit, lämmitettiin lattian alle rakennetulla [[hypokaustum]]-järjestelmällä: lattia nostettiin pylväiden varaan, ja uunissa tuotettu kuuma ilma kulki sen alla ja seinien putkissa. Kylpylöissä oli kuumia, haaleita ja kylmiä kylpyjä, ja vesi tuotiin akvedukteja pitkin. Tunnetuimpia ovat [[Caracallan kylpylät]], jotka valmistuivat 200-luvun alussa. Orjat ja työläiset pitivät uuneja yllä, mikä oli raskasta työtä. Minä pysyn mieluummin ulkona, kiitos.
+KYSYMYS: Kerro lisää: hypokaustum
+
+### 751
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+AIEMPI KYSYMYS: Miten roomalaiset lämmittivät kylpylänsä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pöllö on taas kutsuttu puhumaan jonnekin, joten minä hoidan. Rooman julkiset kylpylät, termit, lämmitettiin lattian alle rakennetulla [[hypokaustum]]-järjestelmällä: lattia nostettiin pylväiden varaan, ja uunissa tuotettu kuuma ilma kulki sen alla ja seinien putkissa. Kylpylöissä oli kuumia, haaleita ja kylmiä kylpyjä, ja vesi tuotiin akvedukteja pitkin. Tunnetuimpia ovat [[Caracallan kylpylät]], jotka valmistuivat 200-luvun alussa. Orjat ja työläiset pitivät uuneja yllä, mikä oli raskasta työtä. Minä pysyn mieluummin ulkona, kiitos.
+KYSYMYS: Kerro lisää: Caracallan kylpylät
+
+### 752
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kohdekartta / Kohdekartta: Campbell Streetin vankila] 1821 Vankila alkoi vuonna 1821 vankityönä rakennettuna Hobart Townin vankikasarmina, johon mahtui 640 miestä. Vankeja saapui tuhansittain joka vuosi, ja kasarmi osoittautui liian pieneksi lähes heti: sitä laajennettiin seuraavan vuosikymmenen ajan vaiheittain, kunnes se veti yli 1 200 miestä. Tilaa otettiin joka tuumasta, myös kattoonteloista. Vuodesta 1846 laitos toimi vähitellen siviilivankilana, ja kun vankikuljetukset päättyivät 1853, siitä tuli Hobartin vankila Murray Streetin vanhan ja rakenteiltaan pettäneen talon tilalle. Campbell Street oli yksi Tasmanian kolmesta vankilasta, joissa kuolemantuomiot pantiin täytäntöön. Vuosina 1857–1946 täällä teloitettiin 32 ihmistä, joukossa yksi …
+AIEMPI KYSYMYS: Miksi nasoneiden annetaan juosta yötä päivää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Siihen ei oo ihan yksinkertaista vastausta. Syytä en osaa varmasti sanoa, mutta yleisesti selitetään, että pylväissä ei ole hanaa, jolloin rakenne on yksinkertainen ja huoltovapaa, ja jatkuva virtaus pitää veden raikkaana. Käytön jälkeen vesi valuu [[viemäriin]]. Veden hukkaamisesta on keskusteltu, ja kuivina kesinä on pohdittu, pitäisikö virtausta rajoittaa. Vanhimpia yhä toimivia pylväistä seisoo [[Pantheonin]] vieressä. Kyyhky ei kyl osaa tukkia putkea sormella, joten minä juon lätäköstä.
+KYSYMYS: Kerro lisää: viemäriin
+
+### 753
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Miksi nasoneiden annetaan juosta yötä päivää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Siihen ei oo ihan yksinkertaista vastausta. Syytä en osaa varmasti sanoa, mutta yleisesti selitetään, että pylväissä ei ole hanaa, jolloin rakenne on yksinkertainen ja huoltovapaa, ja jatkuva virtaus pitää veden raikkaana. Käytön jälkeen vesi valuu [[viemäriin]]. Veden hukkaamisesta on keskusteltu, ja kuivina kesinä on pohdittu, pitäisikö virtausta rajoittaa. Vanhimpia yhä toimivia pylväistä seisoo [[Pantheonin]] vieressä. Kyyhky ei kyl osaa tukkia putkea sormella, joten minä juon lätäköstä.
+KYSYMYS: Kerro lisää: Pantheonin
+
+### 754
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Mistä nasoneiden vesi tulee kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on tuttu aihe. Nasoneiden vesi on samaa kuin kotihanoissa, eli se tulee Rooman yleisestä vesijohtoverkosta. Verkko saa vetensä pääosin [[Apenniinien]] lähteiltä, ja ainakin Peschieran ja Le Capore -lähteet Rietin seudulla ovat sen keskeisiä lähteitä, joista vesi virtaa kaupunkiin pitkiä kanavia ja putkia pitkin. Osa vedestä tulee yhä muinaisten [[akveduktien]] perillisiltä reiteiltä. Tarkkoja osuuksia en osaa sanoa. Ei paha matka vedelle, jolla ei oo edes siipiä.
+KYSYMYS: Kerro lisää: Apenniinien
+
+### 755
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+- [Kypros — maalehti / Ruoka: Sokeriruokoa kasvatettiin holvien vieressä] Ennen kuin sokeriruoko siirtyi Atlantin taakse, sitä kasvatettiin Kyproksen etelärannikolla. Kolossin tila annettiin vuonna 1210 johanniittojen ritarikunnalle, ja sokerin valmistus paikalla on dokumentoitu vuodesta 1343. Linnan itäpuolella on yhä jäljellä pitkä ja kapea holvattu halli, jossa ruoko puristettiin ja mehu keitettiin. Työ vaati vettä kahteen tarkoitukseen: kastelemaan ruokoviljelmiä ja pyörittämään myllynrattaita. Sitä varten alueelle rakennettiin akveduktien, altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin sinne mausteen tapaan.
+AIEMPI KYSYMYS: Mistä nasoneiden vesi tulee kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on tuttu aihe. Nasoneiden vesi on samaa kuin kotihanoissa, eli se tulee Rooman yleisestä vesijohtoverkosta. Verkko saa vetensä pääosin [[Apenniinien]] lähteiltä, ja ainakin Peschieran ja Le Capore -lähteet Rietin seudulla ovat sen keskeisiä lähteitä, joista vesi virtaa kaupunkiin pitkiä kanavia ja putkia pitkin. Osa vedestä tulee yhä muinaisten [[akveduktien]] perillisiltä reiteiltä. Tarkkoja osuuksia en osaa sanoa. Ei paha matka vedelle, jolla ei oo edes siipiä.
+KYSYMYS: Kerro lisää: akveduktien
+
+### 756
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+- [Murzuk — kaupunkilehti / Murzuk: Italian lippu nousee, ja jälleen laskee] Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+AIEMPI KYSYMYS: Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se liittyy kaupungin asemaan. Vuonna 1870 Rooma liitettiin [[Italian kuningaskuntaan]] ja siitä tuli sen pääkaupunki; sitä ennen se oli paavin hallitseman [[kirkkovaltion]] pääkaupunki. Kaupunki alkoi kasvaa ja nykyaikaistua, ja uudet viranomaiset rakensivat vesi- ja katuinfrastruktuuria; juomavesipylväät sopivat tähän kehitykseen. Tarkkaa päätöstä en ole varma, mutta ajoitus sopii yhteen kaupungin uuden aseman kanssa.
+
+Isoisä kirjoitti vuonna 1873 hallitsijoiden vaihtumisesta, ja kyllä, vain muutama vuosi aiemmin oli vaihtunut juuri se tärkein hallitsija. Myönnän, että isoisä osui tässä oikeaan.
+KYSYMYS: Kerro lisää: Italian kuningaskuntaan
+
+### 757
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se liittyy kaupungin asemaan. Vuonna 1870 Rooma liitettiin [[Italian kuningaskuntaan]] ja siitä tuli sen pääkaupunki; sitä ennen se oli paavin hallitseman [[kirkkovaltion]] pääkaupunki. Kaupunki alkoi kasvaa ja nykyaikaistua, ja uudet viranomaiset rakensivat vesi- ja katuinfrastruktuuria; juomavesipylväät sopivat tähän kehitykseen. Tarkkaa päätöstä en ole varma, mutta ajoitus sopii yhteen kaupungin uuden aseman kanssa.
+
+Isoisä kirjoitti vuonna 1873 hallitsijoiden vaihtumisesta, ja kyllä, vain muutama vuosi aiemmin oli vaihtunut juuri se tärkein hallitsija. Myönnän, että isoisä osui tässä oikeaan.
+KYSYMYS: Kerro lisää: kirkkovaltion
+
+### 758
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi Roomaa kutsutaan ikuiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on hyvä kysymys. Ilmaus ikuinen kaupunki, latinaksi [[Urbs Aeterna]], on peräisin antiikin ajalta: roomalaiset runoilijat, kuten [[Tibullus]], kutsuivat Roomaa ikuiseksi kaupungiksi, ja ilmaus kuvasi uskoa, ettei kaupunki koskaan häviä. Perimätiedon mukaan kaupungin perusti [[Romulus]] vuonna 753 eaa. Ilmaus on säilynyt kaupungin tunnuksena näihin päiviin asti. Ikuinen kaupunki, ja minä sen ikuinen vierailija.
+KYSYMYS: Kerro lisää: Urbs Aeterna
+
+### 759
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi Roomaa kutsutaan ikuiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on hyvä kysymys. Ilmaus ikuinen kaupunki, latinaksi [[Urbs Aeterna]], on peräisin antiikin ajalta: roomalaiset runoilijat, kuten [[Tibullus]], kutsuivat Roomaa ikuiseksi kaupungiksi, ja ilmaus kuvasi uskoa, ettei kaupunki koskaan häviä. Perimätiedon mukaan kaupungin perusti [[Romulus]] vuonna 753 eaa. Ilmaus on säilynyt kaupungin tunnuksena näihin päiviin asti. Ikuinen kaupunki, ja minä sen ikuinen vierailija.
+KYSYMYS: Kerro lisää: Tibullus
+
+### 760
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miksi Roomaa kutsutaan ikuiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on hyvä kysymys. Ilmaus ikuinen kaupunki, latinaksi [[Urbs Aeterna]], on peräisin antiikin ajalta: roomalaiset runoilijat, kuten [[Tibullus]], kutsuivat Roomaa ikuiseksi kaupungiksi, ja ilmaus kuvasi uskoa, ettei kaupunki koskaan häviä. Perimätiedon mukaan kaupungin perusti [[Romulus]] vuonna 753 eaa. Ilmaus on säilynyt kaupungin tunnuksena näihin päiviin asti. Ikuinen kaupunki, ja minä sen ikuinen vierailija.
+KYSYMYS: Kerro lisää: Romulus
+
+### 761
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Espresso juodaan seisten] Italialainen kahvila on pikapysäkki: espresso tilataan tiskiltä, juodaan parilla kulauksella seisten ja jatketaan matkaa. Pieneen kuppiin mahtuu yllättävän monta sääntöä — cappuccino kuuluu vain aamuun, eikä maitokahvia tilata aterian päälle. Espressokone on italialainen keksintö 1900-luvun alusta, ja sana espresso tarkoittaa puristettua ja pikaista. Monessa baarissa kahvi maksaa tiskillä vähemmän kuin pöydässä: istumisesta veloitetaan, kahvista ei juuri.
+AIEMPI KYSYMYS: Miten roomalaiset juovat kahvinsa baarissa?
+AIEMPI VASTAUS (Livia):
+Just niin, tähän minä katolta olen kiinnittänyt huomiota. Monet roomalaiset juovat [[espresson]] nopeasti baarin tiskillä seisaaltaan, ja tiskillä juotu kahvi on yleensä edullisempi kuin pöydässä istuen nautittu. Aamulla suositaan [[cappuccinoa]], jonka seuraksi otetaan usein makea leivonnainen, ja iltapäivällä juodaan yleensä pieni espresso. Tavat vaihtelevat, eikä kaikki roomalaiset noudata niitä.
+
+Roomassa se makea pulla on [[maritozzo]], kermalla täytetty ja pehmeä, ja minä muistelen sitä ikkunalaudoilta kaiken aikaa. Pöydässä istuvalla on kyllä paremmat mahdollisuudet saada murujakin kyyhkyille.
+KYSYMYS: Kerro lisää: espresson
+
+### 762
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Espresso juodaan seisten] Italialainen kahvila on pikapysäkki: espresso tilataan tiskiltä, juodaan parilla kulauksella seisten ja jatketaan matkaa. Pieneen kuppiin mahtuu yllättävän monta sääntöä — cappuccino kuuluu vain aamuun, eikä maitokahvia tilata aterian päälle. Espressokone on italialainen keksintö 1900-luvun alusta, ja sana espresso tarkoittaa puristettua ja pikaista. Monessa baarissa kahvi maksaa tiskillä vähemmän kuin pöydässä: istumisesta veloitetaan, kahvista ei juuri.
+AIEMPI KYSYMYS: Miten roomalaiset juovat kahvinsa baarissa?
+AIEMPI VASTAUS (Livia):
+Just niin, tähän minä katolta olen kiinnittänyt huomiota. Monet roomalaiset juovat [[espresson]] nopeasti baarin tiskillä seisaaltaan, ja tiskillä juotu kahvi on yleensä edullisempi kuin pöydässä istuen nautittu. Aamulla suositaan [[cappuccinoa]], jonka seuraksi otetaan usein makea leivonnainen, ja iltapäivällä juodaan yleensä pieni espresso. Tavat vaihtelevat, eikä kaikki roomalaiset noudata niitä.
+
+Roomassa se makea pulla on [[maritozzo]], kermalla täytetty ja pehmeä, ja minä muistelen sitä ikkunalaudoilta kaiken aikaa. Pöydässä istuvalla on kyllä paremmat mahdollisuudet saada murujakin kyyhkyille.
+KYSYMYS: Kerro lisää: cappuccinoa
+
+### 763
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten roomalaiset juovat kahvinsa baarissa?
+AIEMPI VASTAUS (Livia):
+Just niin, tähän minä katolta olen kiinnittänyt huomiota. Monet roomalaiset juovat [[espresson]] nopeasti baarin tiskillä seisaaltaan, ja tiskillä juotu kahvi on yleensä edullisempi kuin pöydässä istuen nautittu. Aamulla suositaan [[cappuccinoa]], jonka seuraksi otetaan usein makea leivonnainen, ja iltapäivällä juodaan yleensä pieni espresso. Tavat vaihtelevat, eikä kaikki roomalaiset noudata niitä.
+
+Roomassa se makea pulla on [[maritozzo]], kermalla täytetty ja pehmeä, ja minä muistelen sitä ikkunalaudoilta kaiken aikaa. Pöydässä istuvalla on kyllä paremmat mahdollisuudet saada murujakin kyyhkyille.
+KYSYMYS: Kerro lisää: maritozzo
