@@ -27,12 +27,16 @@ Shader "Matkakirja/Linssit/OmaMalli"
         CBUFFER_END
         float4 _OmaValo;   // x valotus (1), y julkisivuvalaistuksen voima illalla, z hehkun voimistus illalla, w varjopuolen nosto
         float2 Kanava(float2 a, float2 b, float2 c, float2 d, float i) { return i < 0.5 ? a : i < 1.5 ? b : i < 2.5 ? c : d; }
+        // Kuten CesiumDefaultTilesetShader: alfaleikkaus 0,5 perusvärin alfasta (LR:n korttipuut alphaMode MASK) ja kaksipuolinen piirto.
+        TEXTURE2D(_baseColorTexture); SAMPLER(sampler_baseColorTexture);
+        float2 PerusUv(float2 a, float2 b, float2 c, float2 d) { return Kanava(a, b, c, d, _baseColorTextureCoordinateIndex) * _baseColorTexture_ST.xy + _baseColorTexture_ST.zw; }
+        void Alfa(float2 uv) { clip(SAMPLE_TEXTURE2D(_baseColorTexture, sampler_baseColorTexture, uv).a * _baseColorFactor.a - 0.5); }
         ENDHLSL
         Pass
         {
             Name "OmaMalli"
             Tags { "LightMode" = "UniversalForward" }
-            Cull Back
+            Cull Off
             ZWrite On
             HLSLPROGRAM
             #pragma vertex vert
@@ -41,22 +45,22 @@ Shader "Matkakirja/Linssit/OmaMalli"
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Ilmakeha.hlsl"
-            TEXTURE2D(_baseColorTexture); SAMPLER(sampler_baseColorTexture);
             TEXTURE2D(_emissiveTexture); SAMPLER(sampler_emissiveTexture);
             struct A { float4 p : POSITION; float3 n : NORMAL; float4 c : COLOR; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; float2 uv2 : TEXCOORD2; float2 uv3 : TEXCOORD3; };
             struct V { float4 p : SV_POSITION; float2 uv : TEXCOORD0; float3 w : TEXCOORD1; float3 n : TEXCOORD2; float4 c : TEXCOORD3; float2 uvE : TEXCOORD4; float sumu : TEXCOORD5; };
             V vert(A a)
             {
                 V v; v.w = TransformObjectToWorld(a.p.xyz); v.p = TransformWorldToHClip(v.w); v.n = TransformObjectToWorldNormal(a.n);
-                float2 uv = Kanava(a.uv0, a.uv1, a.uv2, a.uv3, _baseColorTextureCoordinateIndex);
-                v.uv = uv * _baseColorTexture_ST.xy + _baseColorTexture_ST.zw;
+                v.uv = PerusUv(a.uv0, a.uv1, a.uv2, a.uv3);
                 v.uvE = Kanava(a.uv0, a.uv1, a.uv2, a.uv3, _emissiveTextureCoordinateIndex) * _emissiveTexture_ST.xy + _emissiveTexture_ST.zw;
                 v.c = a.c; v.sumu = ComputeFogFactor(v.p.z); return v;
             }
-            half4 frag(V v) : SV_Target
+            half4 frag(V v, bool etu : SV_IsFrontFace) : SV_Target
             {
-                float3 albedo = SAMPLE_TEXTURE2D(_baseColorTexture, sampler_baseColorTexture, v.uv).rgb * _baseColorFactor.rgb * v.c.rgb;
-                float3 n = normalize(v.n);
+                float4 pv = SAMPLE_TEXTURE2D(_baseColorTexture, sampler_baseColorTexture, v.uv);
+                clip(pv.a * _baseColorFactor.a - 0.5);
+                float3 albedo = pv.rgb * _baseColorFactor.rgb * v.c.rgb;
+                float3 n = normalize(v.n) * (etu ? 1.0 : -1.0);   // kaksipuoliset lehtikortit
                 float m = _IlmMaailma.x;
                 float3 kohti = v.w - _WorldSpaceCameraPos; float etM = length(kohti) * m; float3 d = kohti / max(1e-4, length(kohti));
                 // Aurinko: päävalo (URP), pehmeä kääre (Googlen leivottu valo on pehmeä), varjot jos käytössä, pilvien varjot kuten laatoissa.
@@ -85,14 +89,15 @@ Shader "Matkakirja/Linssit/OmaMalli"
         {
             Name "ShadowCaster"
             Tags { "LightMode" = "ShadowCaster" }
-            ZWrite On ColorMask 0
+            ZWrite On ColorMask 0 Cull Off
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             float3 _LightDirection;
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
-            struct A { float4 p : POSITION; float3 n : NORMAL; };
-            float4 vert(A a) : SV_POSITION
+            struct A { float4 p : POSITION; float3 n : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; float2 uv2 : TEXCOORD2; float2 uv3 : TEXCOORD3; };
+            struct V { float4 p : SV_POSITION; float2 uv : TEXCOORD0; };
+            V vert(A a)
             {
                 float3 w = TransformObjectToWorld(a.p.xyz), n = TransformObjectToWorldNormal(a.n);
                 float4 p = TransformWorldToHClip(ApplyShadowBias(w, n, _LightDirection));
@@ -101,35 +106,37 @@ Shader "Matkakirja/Linssit/OmaMalli"
                 #else
                 p.z = max(p.z, UNITY_NEAR_CLIP_VALUE);
                 #endif
-                return p;
+                V v; v.p = p; v.uv = PerusUv(a.uv0, a.uv1, a.uv2, a.uv3); return v;
             }
-            half4 frag() : SV_Target { return 0; }
+            half4 frag(V v) : SV_Target { Alfa(v.uv); return 0; }
             ENDHLSL
         }
         Pass
         {
             Name "DepthOnly"
             Tags { "LightMode" = "DepthOnly" }
-            ZWrite On ColorMask R
+            ZWrite On ColorMask R Cull Off
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            float4 vert(float4 p : POSITION) : SV_POSITION { return TransformObjectToHClip(p.xyz); }
-            half frag() : SV_Target { return 0; }
+            struct A { float4 p : POSITION; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; float2 uv2 : TEXCOORD2; float2 uv3 : TEXCOORD3; };
+            struct V { float4 p : SV_POSITION; float2 uv : TEXCOORD0; };
+            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.uv = PerusUv(a.uv0, a.uv1, a.uv2, a.uv3); return v; }
+            half frag(V v) : SV_Target { Alfa(v.uv); return 0; }
             ENDHLSL
         }
         Pass
         {
             Name "DepthNormals"
             Tags { "LightMode" = "DepthNormals" }
-            ZWrite On
+            ZWrite On Cull Off
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            struct A { float4 p : POSITION; float3 n : NORMAL; };
-            struct V { float4 p : SV_POSITION; float3 n : TEXCOORD0; };
-            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.n = TransformObjectToWorldNormal(a.n); return v; }
-            half4 frag(V v) : SV_Target { return half4(normalize(v.n), 0.0); }
+            struct A { float4 p : POSITION; float3 n : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; float2 uv2 : TEXCOORD2; float2 uv3 : TEXCOORD3; };
+            struct V { float4 p : SV_POSITION; float3 n : TEXCOORD0; float2 uv : TEXCOORD1; };
+            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.n = TransformObjectToWorldNormal(a.n); v.uv = PerusUv(a.uv0, a.uv1, a.uv2, a.uv3); return v; }
+            half4 frag(V v, bool etu : SV_IsFrontFace) : SV_Target { Alfa(v.uv); return half4(normalize(v.n) * (etu ? 1.0 : -1.0), 0.0); }
             ENDHLSL
         }
     }
