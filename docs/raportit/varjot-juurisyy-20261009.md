@@ -44,3 +44,14 @@ Simulaattorissa ei näy selvää kustannusta, paitsi KL:n kulmassa, jossa samaan
   varjosta omia malleja. Vastaanotto Googlen laattoihin vaatisi niiden varjostimeen varjokartan lukemisen (laattavarjostimen muutos).
 - Kaukotason rajaus koskee vain kaupunkinäkymää varjojen ollessa päällä, joten horisontin taakse jääviä laattoja ei piirretä.
   Kuvissa ei näkynyt eroa horisontissa.
+
+## Laattavarjokoe (PT 9.10. ilta, KOE google-tyyli ce615b071)
+Googlen laatat (IlmakehaLaatat) lukevat varjokartan, eli omien mallien varjot lankeavat Googlen taloihin ja maahan (`omalaattavarjo 1`, kerroin 0,55).
+Kuvat `kaappaukset/linssiseppa2-varjot-20261009/laattavarjot-*.jpg`: klo 10 ja 16, vain mallit / myös laatat; prefektuuri, Notre-Dame ja KL.
+- Ero on pieni. Notre-Damen varjo tummentaa iltapäivällä itäpuolen Googlen taloja, mutta KL:ssä ja prefektuurissa varjo osuu lähinnä
+  mallin omaan maahan (leikkausalue), joten laattavarjo ei näy.
+- Ristiriita: Googlen kuviin leivotut varjot (puut, obeliski, talojen sisäpihat) pysyvät samoina kellonajasta riippumatta. Aamulla ja illalla
+  elävä varjo osoittaa eri suuntaan kuin leivotut. Keskipäivällä ne ovat lähes samansuuntaiset.
+- Kustannus: jokainen Googlen laattapikseli lukee varjokartan (koko kaupunki), vaikka hyöty kohdistuu muutamaan taloon.
+SUOSITUS: laattavarjot jäävät pois (KOE säilyy haarassa). Kontaktivarjoa (decal) ei tarvita nyt, koska omat mallit seisovat omalla maallaan
+leikkausalueen sisällä eivätkä leiju. Palataan asiaan, jos jokin malli näyttää irtonaiselta Googlen maan päällä.
