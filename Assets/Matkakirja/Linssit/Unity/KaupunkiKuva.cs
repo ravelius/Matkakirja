@@ -378,7 +378,9 @@ namespace Matkakirja.Natiivi
             // Yövalot (kuvanlaatujärjestys kohta 2): hämärästä yöhön auringon tai valitun kellonajan mukaan.
             double yoOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusTunnista(tunti)
                 : Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusAuringosta(aurinko);
-            KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus);
+            double ikkunaOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.IkkunatTunnista(tunti)
+                : Matkakirja.Linssit.Kierros.KaupunkiYovalot.IkkunatAuringosta(aurinko);
+            KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus, ikkunaOsuus);
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
             float harmaus = Mathf.SmoothStep(0f, 1f, (float)KaupunkiKuva.Saa.Harmaus);

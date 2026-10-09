@@ -81,13 +81,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Kerran kehyksessä kaupunkinäkymässä. osuus 0–1 (hämärä → yö); isanta ajaa latauskorutiinit.</summary>
         /// <summary>Yön osuus 0–1 viimeisimmästä päivityksestä (KohdeKorostus: julkisivuvalo yöllä).</summary>
         public static float Osuus { get; private set; }
-        public static void Paivita(MonoBehaviour isanta, CesiumGeoreference georef, Camera kamera, double osuus)
+        /// <summary>Ikkunavalojen osuus 0–1 (iltaikkunat: syttyvät ennen katuvaloja).</summary>
+        public static float IkkunaOsuusNyt { get; private set; }
+        public static void Paivita(MonoBehaviour isanta, CesiumGeoreference georef, Camera kamera, double osuus, double ikkunaOsuus = -1)
         {
+            if (ikkunaOsuus < 0) ikkunaOsuus = osuus;
+            IkkunaOsuusNyt = Kaytossa ? (float)System.Math.Max(0, System.Math.Min(1, System.Math.Max(osuus, ikkunaOsuus))) : 0f;
             Osuus = Kaytossa && georef != null ? (float)System.Math.Max(0, System.Math.Min(1, osuus)) : 0f;
             viimeKamera = kamera; KaupunkiPassi.Kamera = kamera;
             // Koe (diagnoosi): MSAA pois yöllä, jos syvyys jää tyhjäksi esivaiheessa (opas yovalotmsaa 0).
             if (MsaaPois != null && kamera != null) { bool sallittu = !(MsaaPois.Value && Kaytossa && osuus > 0.001); if (kamera.allowMSAA != sallittu) kamera.allowMSAA = sallittu; }
-            if (!Kaytossa || osuus <= 0.001 || georef == null || kamera == null) { Pois(); return; }
+            if (!Kaytossa || System.Math.Max(osuus, ikkunaOsuus) <= 0.001 || georef == null || kamera == null) { Pois(); return; }
             var ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed(new double3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z));
             var llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
             double lat = llh.y, lon = llh.x;
@@ -109,7 +113,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdParam, new Vector4((float)osuus, Hehku, Pisteet, Mathf.Max(5f, SoluM)));
             materiaali.SetVector(IdDebug, new Vector4(Diagnoosi, 1f, 0f, 0f));   // y = 1: passi jälkikäsittelyn jälkeen (ei valotuksen kompensointia)
             materiaali.SetVector(IdVari, new Vector4(Vari.r, Vari.g, Vari.b, Vari.a));
-            materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), 0f, 0f));
+            materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), IkkunaOsuusNyt, 0f));   // z = iltaikkunoiden osuus
             materiaali.SetTexture(IdTiet, tiet != null ? tiet : Texture2D.blackTexture);
             materiaali.SetVector(IdTieAlue, tieKeskus is (double, double) tk ? new Vector4((float)tk.lat, (float)tk.lon, tieSivu, 1f) : Vector4.zero);
             if (Kohde is (double, double, double, double) ko)
