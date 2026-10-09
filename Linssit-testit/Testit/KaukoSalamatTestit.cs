@@ -10,7 +10,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var s = new KaukoSalamat(7); const double dt = 0.05;
             for (double t = 0; t < 120; t += dt) { s.Paivita(dt, 0.1); Oleta.Tosi(!s.Alkoi && s.Nykyinen == null, "heikolla ukkosella ei iskuja"); }
-            int iskuja = 0; double viive = -1, alkoi = -1;
+            int iskuja = 0, kumahduksia = 0, lahia = 0; double viive = -1, alkoi = -1; bool kuului = false;
             for (double t = 0; t < 600; t += dt)
             {
                 s.Paivita(dt, 1);
@@ -19,17 +19,19 @@ namespace Matkakirja.Linssit.Testit
                     iskuja++;
                     var i = s.Nykyinen.Value;
                     Oleta.Tosi(i.EtaisyysM >= KaukoSalamat.EtMinM && i.EtaisyysM <= KaukoSalamat.EtMaxM, $"etäisyys {i.EtaisyysM:F0} m");
-                    if (i.EtaisyysM < KaukoSalamat.AaniMaxM && viive < 0) { viive = i.EtaisyysM / KaukoSalamat.AaniMs; alkoi = t; }
+                    if (i.EtaisyysM < KaukoSalamat.AaniMaxM) lahia++;
+                    if (i.EtaisyysM < KaukoSalamat.AaniMaxM && viive < 0 && !kuului) { viive = i.EtaisyysM / KaukoSalamat.AaniMs; alkoi = t; }
                 }
+                if (s.Kumahdus > 0) kumahduksia++;
                 if (s.Kumahdus > 0 && alkoi >= 0 && viive > 0)
                 {
                     Oleta.Tosi(Math.Abs(t - alkoi - viive) < 0.2, $"jyrinä {t - alkoi:F1} s, odotettu {viive:F1} s");
                     Oleta.Tosi(s.Kumahdus >= 0.3 && s.Kumahdus <= 1, "jyrinän voima rajoissa");
-                    viive = -2;
+                    viive = -1; kuului = true;
                 }
             }
             Oleta.Tosi(iskuja >= 30 && iskuja <= 150, $"10 min ukkosta: {iskuja} iskua");
-            Oleta.Tosi(viive == -2, "lähin isku kuului");
+            Oleta.Tosi(kuului, $"lähin isku kuului (lähiä {lahia}, jyrinöitä {kumahduksia}, viive {viive:F1})");
         }
 
         [Testi] static void ValahdysJaMuoto()
