@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 06.5x (uusin)
+## TILA 9.10. klo 07.2x (uusin)
+- JUNA 171: ympäristövalo cf576df34 (proto linssiseppa2/ymparistovalo-171, wt proto-linssiseppa2-ymparistovalo): Trilight kartan
+  ambientista (Ydin YmparistoValo), asetus "ymparistovalo 0|1". Natiivisepälle lähetetty. KUVAPARI Kuninkaanlinnan pohjoissivu 0/1
+  171:n käännöksellä → PT.
+- Kuvat 170h: Vasa v1.1 valmis (ehdotettu v5 = v4 + Vasa, odottaa PT:n kuittausta → paketti Julkaisijalle); Notre-Dame v2.1: nosturit
+  poissa, seinät harmaat (valaistus → 171), rantamuuri sahalaitainen + ruskeat puut → LR. Putki vienti14 (ND leikkaus lahde/alue.json).
+
+## TILA 9.10. klo 06.5x
 - ÄMPÄRI v4 (Julkaisija 06.55): uusin-2 → v4 (Giza, Riddarholmen + korjattu tekijärivi, Kuninkaanlinna v1.2, Concorde v2.2);
   uusin → v2/mallit-giza.json (vanhat appit). (Väitetty paluu v2:een oli Julkaisijan skriptin virhetuloste, ei anomaliaa.)
 - Juna 170: 52c736c4d (leikkaus) mukana käännöksessä dc6128c8f; välkekorjaus fb3b9f27a Natiivisepälle (PT: junaan 170).
