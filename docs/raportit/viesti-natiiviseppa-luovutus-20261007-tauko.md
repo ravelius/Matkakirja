@@ -6,7 +6,9 @@ Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpän
 ## TILA 9.10. 07.4x (UUSIN)
 **JUNA 170 runko b6e2c2dc7** (wt/proto-natiiviseppa-j170): ... + LS1 yövalot 51c1392d0 (LinssiOhjain-konflikti: molempien komennot, vuorokausi kerran) = 93ae0750e
 (käännös 0ae254189, yökuvat lokit/yo170-arkki-{pariisi,tukholma}-0ae25418.png: valot näkyvät, MUTTA taivas musta, vesi kultaraidat, Tukholman sahalaita)
-+ LS2 c5d5fe101 = a3e1aa556 (käännös b4022c6f8 07.41) + LS2 caf9a0506 (revert c5d5 + index-v4; PT KUITTASI, EHTO: index-v4 ämpärissä 200 ennen TF:ää) = b6e2c2dc7; 453/419/1140, unity 0.
++ LS2 c5d5fe101 = a3e1aa556 (käännös b4022c6f8 07.41) + LS2 caf9a0506 (revert c5d5 + index-v4; PT KUITTASI, EHTO: index-v4 ämpärissä 200 ennen TF:ää) = b6e2c2dc7 + LS1 v10 7db9f0222 (PT kuittasi 08.0x) = **7397de0a4**; 453/419/1140, unity 0.
+Seuraava: LS2:n taivas 86a4cf2d8 PT-kuittauksella → YKSI käännös + yökuvapari → PT. Varasuunnitelma 13.00: lukitus ilman LS2:ta, yövalot oletuksena pois
+(kytkin-commit pyydetty LS1:ltä).
 PT 07.4x: EI LUKITUSTA; LS1 (v9 0f96d1830: veden heijastus + kaukohehku) ja LS2 (taivas) korjaavat, TAKARAJA 13.00, muuten yövalot oletuksena pois
 (kytkin) ja 170 lukitaan ilman. Sitten: käännös + yökuvapari (scratchpad yo170-ajo.sh <runko> kaanna|simu) → PT → lukitus + muutosloki PT:ltä → BUILD 170
 masterin 5b91b1a2c päälle → täysi SHA Julkaisijalle; TF omistajan TF 169 -palautteen jälkeen. index-v4 ämpäriin Karttasepältä.
