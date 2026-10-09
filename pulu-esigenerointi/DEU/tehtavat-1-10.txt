@@ -1,0 +1,210 @@
+================ KOHTA 46 (kohde:hahmotelma-oberammergau) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Kansanperinne: Näytelmä, jossa vanha mies huijaa kuvernööriä] 1500-luku — El Güegüense on satiirinen naamionäytelmä ja Nicaraguan tunnetuin kansanteos. Sen kirjoitti tuntematon tekijä 1500-luvulla, ja se on läntisen pallonpuoliskon vanhimpia alkuperäiskansojen tanssinäytelmiä. Nimi tulee nawatin sanasta wewej, vanha tai viisas mies. Vuorosanoja on 314, ja ne ovat sekaisin nawatia ja espanjaa; hahmoja on neljätoista, joukossa kuvernööri Tastuanes ja neljä muulia. Näytelmä esitetään Diriambassa 17.–27. tammikuuta, ja Unesco nimesi sen mestariteokseksi 2005.
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+- [Guatemala — maalehti / Musiikki: Näytelmä, jota on esitetty samana päivänä vuosisatoja] 25. tammikuuta — Rabinal Achí on kʼicheʼnkielinen tanssinäytelmä, jonka oma nimi on Xajoj Tun, "rummun tanssi". Se esitetään joka vuosi 25. tammikuuta Rabinalissa Baja Verapazissa Pyhän Paavalin päivänä, ja koko kylä osallistuu. Soittimina ovat rakorumpu ja kaksi torvea, ja hahmot erottaa toisistaan puunaamioista. Juoni kertoo Rabinalin ja kʼicheʼien todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi näytelmän ihmiskunnan mestariteokseksi 2005.
+
+### 46.1
+KYSYMYS: Miksi näytelmä esitetään kymmenen vuoden välein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Kansanperinne: Näytelmä, jossa vanha mies huijaa kuvernööriä] 1500-luku — El Güegüense on satiirinen naamionäytelmä ja Nicaraguan tunnetuin kansanteos. Sen kirjoitti tuntematon tekijä 1500-luvulla, ja se on läntisen pallonpuoliskon vanhimpia alkuperäiskansojen tanssinäytelmiä. Nimi tulee nawatin sanasta wewej, vanha tai viisas mies. Vuorosanoja on 314, ja ne ovat sekaisin nawatia ja espanjaa; hahmoja on neljätoista, joukossa kuvernööri Tastuanes ja neljä muulia. Näytelmä esitetään Diriambassa 17.–27. tammikuuta, ja Unesco nimesi sen mestariteokseksi 2005.
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+- [Guatemala — maalehti / Musiikki: Näytelmä, jota on esitetty samana päivänä vuosisatoja] 25. tammikuuta — Rabinal Achí on kʼicheʼnkielinen tanssinäytelmä, jonka oma nimi on Xajoj Tun, "rummun tanssi". Se esitetään joka vuosi 25. tammikuuta Rabinalissa Baja Verapazissa Pyhän Paavalin päivänä, ja koko kylä osallistuu. Soittimina ovat rakorumpu ja kaksi torvea, ja hahmot erottaa toisistaan puunaamioista. Juoni kertoo Rabinalin ja kʼicheʼien todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi näytelmän ihmiskunnan mestariteokseksi 2005.
+
+### 46.2
+KYSYMYS: Mitä ruttolupaus tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Rutto, joka tappoi joka toisen kaupunkilaisen] Rutto saapui Marseilleen toukokuussa 1720 kauppalaiva Grand-Saint-Antoinen mukana Levantista, ja sairaus levisi nopeasti kaupunkiin, jonka viranomaiset olivat aluksi kieltäytyneet asettamasta laivaa karanteeniin kauppaetujen takia. Tauti tappoi lopulta noin puolet kaupungin sadastatuhannesta asukkaasta kahden vuoden aikana. Taiteilija Michel Serre eli itse epidemian keskellä ja maalasi katukohtauksia, joissa ruumiita kasataan kärryihin kadulle — hänen teoksensa ovat harvinaisia silminnäkijäkuvia siitä, miltä ruttoepidemia näytti todellisuudessa. Katastrofi johti tiukempiin karanteenisäännöksiin koko Ranskan satamissa.
+- [Iso-Britannia — maalehti / Tiede: Rutto sulki yliopiston ja avasi maailman] Kun rutto sulki Cambridgen yliopiston 1665, 23-vuotias Isaac Newton palasi kotitilalleen Woolsthorpeen. Siellä vietetyn puolentoista vuoden aikana hän kehitti differentiaalilaskennan, selvitti valon jakautumisen väreiksi prisman avulla ja muotoili painovoiman lain. Hän itse kertoi myöhemmin, että ajatus lähti puutarhan omenapuusta: miksi omena putoaa aina suoraan alas? Newton oli myös rahapajan johtaja ja jahtasi väärentäjiä katujen kapakoissa — hän lähetti heistä useita hirsipuuhun.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-voelklingen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Monterrey: Masuuni jäi puistoon seisomaan] Fundidora Monterrey oli Latinalaisen Amerikan ensimmäinen rauta- ja terästehdas. Se meni konkurssiin 1986, alue pakkolunastettiin 1988 ja rakennustyöt alkoivat 1989 — ensin suojelemalla historiallisesti tärkeät rakennukset ja purkamalla muut. Puisto avattiin 24. helmikuuta 2001 sadanneljäntoista hehtaarin kokoisena, ja se sai lisänimen teollisen arkeologian museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin kanava, ja ala nousi 144 hehtaariin, josta 80 on vihreää. Paikallaan seisovat yhä 27 suurta teollisuusrakennelmaa ja 127 teräksentekokonetta.
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+
+### 47.1
+KYSYMYS: Miksi rautatehdas on maailmanperintökohde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kaupunkilehti / Jakutsk: Rauta hampaita vasten, suu resonaattorina] Khomus on jakuuttien munniharppu: hevosenkengän muotoinen rautakehys, jonka keskellä värähtelee ohut kieleke. Soittaja painaa kehyksen hampaitaan vasten ja näpäyttää kielekettä; ääni syntyy kielekkeen värähtelystä, ja suuontelo toimii kaikukoppana — sävy muuttuu suun muotoa vaihtamalla. Jakutskin Kirovinkadulla avattiin 30. marraskuuta 1990 maailman kansojen khomusin museo, jonka pohjana oli professori Ivan Aleksejevin kokoelma; soittimia on 1 613 ja maita 52. Spiridon Šišigin oli 1991 niiden ensimmäisten joukossa, joille myönnettiin maailman khomusvirtuoosin arvonimi, ja vuonna 2011 kaupungin sirkustalossa soitti yhtä aikaa 1 344 khomusistia.
+
+### 47.2
+KYSYMYS: Mitä masuuni tekee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Monterrey: Masuuni jäi puistoon seisomaan] Fundidora Monterrey oli Latinalaisen Amerikan ensimmäinen rauta- ja terästehdas. Se meni konkurssiin 1986, alue pakkolunastettiin 1988 ja rakennustyöt alkoivat 1989 — ensin suojelemalla historiallisesti tärkeät rakennukset ja purkamalla muut. Puisto avattiin 24. helmikuuta 2001 sadanneljäntoista hehtaarin kokoisena, ja se sai lisänimen teollisen arkeologian museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin kanava, ja ala nousi 144 hehtaariin, josta 80 on vihreää. Paikallaan seisovat yhä 27 suurta teollisuusrakennelmaa ja 127 teräksentekokonetta.
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-freiberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+### 48.1
+KYSYMYS: Miksi Freibergia sanotaan hopeakaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+### 48.2
+KYSYMYS: Mikä on Bergakademie?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (kohde:hahmotelma-meissen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+- [Algeria — maalehti / Ruoka: Viinimaa, joka lakkasi olemasta] 1930–1970-luku — Viininviljely alkoi Algeriassa foinikialaisten ja roomalaisten aikana ja hiipui islamin tultua. Ranskan vallan alettua 1830 tarhat istutettiin uudelleen, ja kun viinikirva tuhosi Ranskan omat viinitarhat 1800-luvun puolivälissä, algerialainen viini täytti aukon: tuotanto kasvoi 25 000 hehtolitrasta vuonna 1854 kymmeneen miljoonaan vuonna 1915. Huipulla 1930-luvun lopulla tarhoja oli yli neljätuhatta neliökilometriä. Ennen itsenäisyyttä Algeria oli maailman suurin viininviejä, ja sen tumma, väkevä punaviini päätyi sekoitukseksi Etelä-Ranskan viineihin. Itsenäistymisen jälkeen markkina katosi, ja tarhat vaihdettiin viljaan ja syötäviin rypäleisiin.
+
+### 49.1
+KYSYMYS: Miksi posliini oli niin arvokasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+
+### 49.2
+KYSYMYS: Kuka Augustus II Väkevä oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Ruoka: Viinimaa, joka lakkasi olemasta] 1930–1970-luku — Viininviljely alkoi Algeriassa foinikialaisten ja roomalaisten aikana ja hiipui islamin tultua. Ranskan vallan alettua 1830 tarhat istutettiin uudelleen, ja kun viinikirva tuhosi Ranskan omat viinitarhat 1800-luvun puolivälissä, algerialainen viini täytti aukon: tuotanto kasvoi 25 000 hehtolitrasta vuonna 1854 kymmeneen miljoonaan vuonna 1915. Huipulla 1930-luvun lopulla tarhoja oli yli neljätuhatta neliökilometriä. Ennen itsenäisyyttä Algeria oli maailman suurin viininviejä, ja sen tumma, väkevä punaviini päätyi sekoitukseksi Etelä-Ranskan viineihin. Itsenäistymisen jälkeen markkina katosi, ja tarhat vaihdettiin viljaan ja syötäviin rypäleisiin.
+- [Marokko — maalehti / Ruoka: Mauste, jossa on kaksikymmentäseitsemän ainesta] Ras el hanout tarkoittaa kaupan parasta, ja siihen voidaan yhdistää jopa kaksikymmentäseitsemän maustetta. Osa niistä tuli idästä arabien mukana, mutta moni on maan omaa satoa: sahrami Taliouinesta, minttu ja oliivit Meknèsistä, appelsiinit ja sitruunat Fèsistä. Marokkolaisen ruoan tunnistaa säilötystä sitruunasta, arganöljystä, kuivatuista hedelmistä ja smenistä, suolatusta ja kypsytetystä voista, jonka tuoksu on väkevä. Perusvilja on nykyään vehnä ja riisi, mutta 1900-luvun puoliväliin asti etelässä syötiin ennen kaikkea ohraa.
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (kohde:hahmotelma-jena) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+### 50.1
+KYSYMYS: Mitä Carl Zeiss valmisti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+### 50.2
+KYSYMYS: Miksi Jena oli optiikan keskus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+### 50.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

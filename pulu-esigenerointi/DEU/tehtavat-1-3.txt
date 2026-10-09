@@ -1,0 +1,201 @@
+================ KOHTA 11 (kohde:tonava~3) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 11.1
+KYSYMYS: Miksi Tonava oli Rooman valtakunnan raja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 11.2
+KYSYMYS: Mistä Tonavan nimi alkaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:oder) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+
+### 12.1
+KYSYMYS: Mikä Oder–Neisse-linja on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+
+### 12.2
+KYSYMYS: Mihin Oder lopulta laskee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:weser) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Weser (luonto · joki)
+Tietoruudun teksti: Weser on pisin kokonaan Saksassa virtaava joki. Se saa alkunsa Hannoversch Mündenissä, jossa Werra ja Fulda yhtyvät, ja virtaa Thüringenin metsästä Pohjanmerelle Bremerhavenin luona. Matkalla se kulkee hansakaupunki Bremenin läpi, ja suu on siitä vielä viisikymmentä kilometriä pohjoiseen. Weser itse on 452 kilometriä pitkä, mutta Werran kanssa laskettuna 744 — ja juuri siksi sitä sanotaan Saksan pisimmäksi omaksi joeksi. Joki liittyy myös Pohjois-Saksan tasangon poikki kulkevaan kanavaverkkoon.
+
+### 13.1
+KYSYMYS: Missä Weser saa nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Weser (luonto · joki)
+Tietoruudun teksti: Weser on pisin kokonaan Saksassa virtaava joki. Se saa alkunsa Hannoversch Mündenissä, jossa Werra ja Fulda yhtyvät, ja virtaa Thüringenin metsästä Pohjanmerelle Bremerhavenin luona. Matkalla se kulkee hansakaupunki Bremenin läpi, ja suu on siitä vielä viisikymmentä kilometriä pohjoiseen. Weser itse on 452 kilometriä pitkä, mutta Werran kanssa laskettuna 744 — ja juuri siksi sitä sanotaan Saksan pisimmäksi omaksi joeksi. Joki liittyy myös Pohjois-Saksan tasangon poikki kulkevaan kanavaverkkoon.
+
+### 13.2
+KYSYMYS: Miksi Bremerhaven perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Weser (luonto · joki)
+Tietoruudun teksti: Weser on pisin kokonaan Saksassa virtaava joki. Se saa alkunsa Hannoversch Mündenissä, jossa Werra ja Fulda yhtyvät, ja virtaa Thüringenin metsästä Pohjanmerelle Bremerhavenin luona. Matkalla se kulkee hansakaupunki Bremenin läpi, ja suu on siitä vielä viisikymmentä kilometriä pohjoiseen. Weser itse on 452 kilometriä pitkä, mutta Werran kanssa laskettuna 744 — ja juuri siksi sitä sanotaan Saksan pisimmäksi omaksi joeksi. Joki liittyy myös Pohjois-Saksan tasangon poikki kulkevaan kanavaverkkoon.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:sanssouci) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sanssouci (kulttuuri)
+Tietoruudun teksti: Sanssouci on Preussin kuninkaan Fredrik Suuren kesälinna Potsdamissa Berliinin kupeessa. Sitä on tapana verrata Versaillesiin, mutta se on paljon pienempi ja rokokootyylisenä myös arkisempi: yksikerroksinen huvila, jossa on kymmenen päähuonetta, terassirinteen harjalla keskellä puistoa. Georg Wenzeslaus von Knobelsdorff suunnitteli ja rakensi sen 1745–1747, ja kuningas halusi siitä yksityisasunnon, johon paeta hovin juhlamenoja. Nimi on ranskaa: sans souci, "ilman huolia". Kuninkaan oma maku näkyy talossa niin vahvasti, että tyyliä sanotaan fredrikiläiseksi rokokooksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+
+### 14.1
+KYSYMYS: Millainen hallitsija Fredrik Suuri oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sanssouci (kulttuuri)
+Tietoruudun teksti: Sanssouci on Preussin kuninkaan Fredrik Suuren kesälinna Potsdamissa Berliinin kupeessa. Sitä on tapana verrata Versaillesiin, mutta se on paljon pienempi ja rokokootyylisenä myös arkisempi: yksikerroksinen huvila, jossa on kymmenen päähuonetta, terassirinteen harjalla keskellä puistoa. Georg Wenzeslaus von Knobelsdorff suunnitteli ja rakensi sen 1745–1747, ja kuningas halusi siitä yksityisasunnon, johon paeta hovin juhlamenoja. Nimi on ranskaa: sans souci, "ilman huolia". Kuninkaan oma maku näkyy talossa niin vahvasti, että tyyliä sanotaan fredrikiläiseksi rokokooksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+
+### 14.2
+KYSYMYS: Mitä rokokoo tarkoittaa rakennuksessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sanssouci (kulttuuri)
+Tietoruudun teksti: Sanssouci on Preussin kuninkaan Fredrik Suuren kesälinna Potsdamissa Berliinin kupeessa. Sitä on tapana verrata Versaillesiin, mutta se on paljon pienempi ja rokokootyylisenä myös arkisempi: yksikerroksinen huvila, jossa on kymmenen päähuonetta, terassirinteen harjalla keskellä puistoa. Georg Wenzeslaus von Knobelsdorff suunnitteli ja rakensi sen 1745–1747, ja kuningas halusi siitä yksityisasunnon, johon paeta hovin juhlamenoja. Nimi on ranskaa: sans souci, "ilman huolia". Kuninkaan oma maku näkyy talossa niin vahvasti, että tyyliä sanotaan fredrikiläiseksi rokokooksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Rust en Vreugd] 1778 Rust en Vreugd tarkoittaa lepoa ja iloa. Se on 1700-luvun kaupunkitalo Buitenkant Streetin varrella, ja sitä pidetään yhtenä Kapkaupungin hienoimmista säilyneistä kaupunkiasunnoista. Talon veistetty rokokoo-ovi ja sen yläpuolinen parveke ovat esimerkki siitä tyylistä, jota Kapissa rakennettiin, kun hollantilainen, saksalainen, ranskalainen ja indonesialainen perinne kohtasivat. Kapkaupungissa on maailman suurin Cape Dutch -tyylisten rakennusten tiheys. Tyyli näkyy selvimmin Constantiassa, keskustan vanhoissa hallintorakennuksissa ja Long Streetin varrella. Rust en Vreugd on kaupunkitalon versio samasta tyylistä: yhtä leveä sali, symmetrinen julkisivu ja koristeltu pääsisäänkäynti, mutt…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hampuri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampuri (merenkulku)
+Tietoruudun teksti: Hampurin virallinen nimi on yhä Vapaa hansakaupunki Hampuri, ja nimi kertoo koko tarinan: se kuului keskiajan Hansaliittoon ja oli Pyhän saksalais-roomalaisen keisarikunnan vapaa kaupunki. Ennen Saksan yhdistymistä 1871 se oli täysin itsenäinen kaupunkivaltio, ja vasta 1919 asti sitä johti perinnöllinen suurporvarisääty. Kaupunki on Jyllannin niemen tyvellä siinä, missä 110 kilometriä pitkä Elben suisto alkaa. Hampurin satama on Saksan suurin ja Euroopan kolmanneksi suurin. Isoisän matkan aikaan kaupungissa oli yhä tuoreena vuoden 1842 suurpalon muisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+
+### 15.1
+KYSYMYS: Mikä Hansaliitto oli ja miksi se päättyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampuri (merenkulku)
+Tietoruudun teksti: Hampurin virallinen nimi on yhä Vapaa hansakaupunki Hampuri, ja nimi kertoo koko tarinan: se kuului keskiajan Hansaliittoon ja oli Pyhän saksalais-roomalaisen keisarikunnan vapaa kaupunki. Ennen Saksan yhdistymistä 1871 se oli täysin itsenäinen kaupunkivaltio, ja vasta 1919 asti sitä johti perinnöllinen suurporvarisääty. Kaupunki on Jyllannin niemen tyvellä siinä, missä 110 kilometriä pitkä Elben suisto alkaa. Hampurin satama on Saksan suurin ja Euroopan kolmanneksi suurin. Isoisän matkan aikaan kaupungissa oli yhä tuoreena vuoden 1842 suurpalon muisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+
+### 15.2
+KYSYMYS: Miksi Hampuri oli oma valtionsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampuri (merenkulku)
+Tietoruudun teksti: Hampurin virallinen nimi on yhä Vapaa hansakaupunki Hampuri, ja nimi kertoo koko tarinan: se kuului keskiajan Hansaliittoon ja oli Pyhän saksalais-roomalaisen keisarikunnan vapaa kaupunki. Ennen Saksan yhdistymistä 1871 se oli täysin itsenäinen kaupunkivaltio, ja vasta 1919 asti sitä johti perinnöllinen suurporvarisääty. Kaupunki on Jyllannin niemen tyvellä siinä, missä 110 kilometriä pitkä Elben suisto alkaa. Hampurin satama on Saksan suurin ja Euroopan kolmanneksi suurin. Isoisän matkan aikaan kaupungissa oli yhä tuoreena vuoden 1842 suurpalon muisto.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

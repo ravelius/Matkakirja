@@ -1,0 +1,196 @@
+================ KOHTA 1 (kohde:zugspitze) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zugspitze (luonto · vuori)
+Tietoruudun teksti: Zugspitze on 2 962 metriä korkea Wettersteinin vuoriston ja koko Saksan korkein huippu. Se kohoaa Garmisch-Partenkirchenin yläpuolelle, ja sen läntisen huipun poikki kulkee Itävallan raja — sama vuori on siis kahden maan katolla yhtä aikaa. Rinteillä ovat Saksan kaksi suurinta jäätikköä, Pohjoinen Schneeferner ja Höllentalferner. Ensimmäisen kerran huipulle noustiin 27. elokuuta 1820: Josef Naus, hänen mittausapulaisensa Maier ja opas Johann Georg Tauschl. Isoisän matkan aikaan 1873 tuo nousu oli siis vain runsaan viidenkymmenen vuoden takainen uutinen, ja huipulle päästäkseen oli yhä kiivettävä omin jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Jumalten vuorelle noustiin vasta 1913] 1913 — Antiikin kreikkalaiset sijoittivat kahdentoista jumalan kodin Olympokselle, Kreikan korkeimmalle vuorelle. Sen ylin huippu Mytikas on 2 917 metriä korkea, ja nimi tarkoittaa nenää. Vuori kohoaa lähes kolmeen kilometriin vain 18 kilometrin päässä Litochoron kaupungista. Huipulla ei silti käynyt kukaan ennen 2. elokuuta 1913. Silloin sinne kiipesivät sveitsiläiset Frédéric Boissonnas ja Daniel Baud-Bovy sekä litochorolainen vuohenmetsästäjä Christos Kakkalos, joka tunsi vuoren parhaiten ja nousi kolmikosta ensimmäisenä huipulle. Olympoksesta tuli 1938 Kreikan ensimmäinen kansallispuisto.
+
+### 1.1
+KYSYMYS: Miten vuorelle noustiin ennen hammasratasrataa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zugspitze (luonto · vuori)
+Tietoruudun teksti: Zugspitze on 2 962 metriä korkea Wettersteinin vuoriston ja koko Saksan korkein huippu. Se kohoaa Garmisch-Partenkirchenin yläpuolelle, ja sen läntisen huipun poikki kulkee Itävallan raja — sama vuori on siis kahden maan katolla yhtä aikaa. Rinteillä ovat Saksan kaksi suurinta jäätikköä, Pohjoinen Schneeferner ja Höllentalferner. Ensimmäisen kerran huipulle noustiin 27. elokuuta 1820: Josef Naus, hänen mittausapulaisensa Maier ja opas Johann Georg Tauschl. Isoisän matkan aikaan 1873 tuo nousu oli siis vain runsaan viidenkymmenen vuoden takainen uutinen, ja huipulle päästäkseen oli yhä kiivettävä omin jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Jumalten vuorelle noustiin vasta 1913] 1913 — Antiikin kreikkalaiset sijoittivat kahdentoista jumalan kodin Olympokselle, Kreikan korkeimmalle vuorelle. Sen ylin huippu Mytikas on 2 917 metriä korkea, ja nimi tarkoittaa nenää. Vuori kohoaa lähes kolmeen kilometriin vain 18 kilometrin päässä Litochoron kaupungista. Huipulla ei silti käynyt kukaan ennen 2. elokuuta 1913. Silloin sinne kiipesivät sveitsiläiset Frédéric Boissonnas ja Daniel Baud-Bovy sekä litochorolainen vuohenmetsästäjä Christos Kakkalos, joka tunsi vuoren parhaiten ja nousi kolmikosta ensimmäisenä huipulle. Olympoksesta tuli 1938 Kreikan ensimmäinen kansallispuisto.
+
+### 1.2
+KYSYMYS: Mitä Saksan jäätiköille on tapahtumassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zugspitze (luonto · vuori)
+Tietoruudun teksti: Zugspitze on 2 962 metriä korkea Wettersteinin vuoriston ja koko Saksan korkein huippu. Se kohoaa Garmisch-Partenkirchenin yläpuolelle, ja sen läntisen huipun poikki kulkee Itävallan raja — sama vuori on siis kahden maan katolla yhtä aikaa. Rinteillä ovat Saksan kaksi suurinta jäätikköä, Pohjoinen Schneeferner ja Höllentalferner. Ensimmäisen kerran huipulle noustiin 27. elokuuta 1820: Josef Naus, hänen mittausapulaisensa Maier ja opas Johann Georg Tauschl. Isoisän matkan aikaan 1873 tuo nousu oli siis vain runsaan viidenkymmenen vuoden takainen uutinen, ja huipulle päästäkseen oli yhä kiivettävä omin jaloin.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:watzmann) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Watzmann (luonto · vuori)
+Tietoruudun teksti: Watzmann kohoaa Berchtesgadenin Alpeissa kylän eteläpuolella. Se on Saksan kolmanneksi korkein vuori ja niistä korkein, joka on kokonaan Saksan puolella rajaa — Zugspitzen huippu jakautuu Itävallan kanssa. Massiivin länsipuolella kulkee pohjois-eteläsuuntainen harjanne, jolla on kolme päähuippua: Hocheck (2 651 m), Mittelspitze (2 713 m) ja Südspitze (2 712 m). Niiden vieressä ovat matalampi Watzmannfrau eli "Watzmannin vaimo" (2 307 m) ja viisi vielä matalampaa huippua, joita kutsutaan Watzmannin lapsiksi. Koko massiivi kuuluu nykyään Berchtesgadenin kansallispuistoon.
+
+### 2.1
+KYSYMYS: Mitä Watzmannin huiput on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Watzmann (luonto · vuori)
+Tietoruudun teksti: Watzmann kohoaa Berchtesgadenin Alpeissa kylän eteläpuolella. Se on Saksan kolmanneksi korkein vuori ja niistä korkein, joka on kokonaan Saksan puolella rajaa — Zugspitzen huippu jakautuu Itävallan kanssa. Massiivin länsipuolella kulkee pohjois-eteläsuuntainen harjanne, jolla on kolme päähuippua: Hocheck (2 651 m), Mittelspitze (2 713 m) ja Südspitze (2 712 m). Niiden vieressä ovat matalampi Watzmannfrau eli "Watzmannin vaimo" (2 307 m) ja viisi vielä matalampaa huippua, joita kutsutaan Watzmannin lapsiksi. Koko massiivi kuuluu nykyään Berchtesgadenin kansallispuistoon.
+
+### 2.2
+KYSYMYS: Millainen paikka Berchtesgadenin kansallispuisto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Watzmann (luonto · vuori)
+Tietoruudun teksti: Watzmann kohoaa Berchtesgadenin Alpeissa kylän eteläpuolella. Se on Saksan kolmanneksi korkein vuori ja niistä korkein, joka on kokonaan Saksan puolella rajaa — Zugspitzen huippu jakautuu Itävallan kanssa. Massiivin länsipuolella kulkee pohjois-eteläsuuntainen harjanne, jolla on kolme päähuippua: Hocheck (2 651 m), Mittelspitze (2 713 m) ja Südspitze (2 712 m). Niiden vieressä ovat matalampi Watzmannfrau eli "Watzmannin vaimo" (2 307 m) ja viisi vielä matalampaa huippua, joita kutsutaan Watzmannin lapsiksi. Koko massiivi kuuluu nykyään Berchtesgadenin kansallispuistoon.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:feldberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Feldberg (luonto · vuori)
+Tietoruudun teksti: Feldberg on Schwarzwaldin korkein huippu: 1 494 metriä, ja samalla koko Baden-Württembergin korkein kohta. Se on myös Saksan korkein vuori Alppien ja Baijerin ulkopuolella — pohjoisempana maassa ei ole mitään tämän korkuista. Vuoren juurella oleva kunta sai nimensä vuorelta, ei päinvastoin. Isoisän matkan aikaan Schwarzwald tunnettiin Euroopassa kellosepistään ja metsätaloudestaan; Reinin laaksosta katsottuna sen tumma kuusikko näyttää yhä siltä, mistä nimi "musta metsä" tulee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Vila — kaupunkilehti / Port Vila: Kunta, joka julistautui itsenäiseksi] Uusilla Hebrideillä ei ollut 1880-luvulla toimivaa hallintoa, ja se turhautti asukkaita. Ranskalaisia haittasi erityisesti se, että Ranskan laki tunnusti vain siviilivihkimisen ja lähin viranomainen oli Uudessa-Kaledoniassa. Franceville — nykyinen Port Vila — julistautui 9. elokuuta 1889 itsenäiseksi kunnaksi ja valitsi johtajakseen Ferdinand-Albert Chevillardin. Asukkaita oli noin viisisataa. Yhteisö oli yksi ensimmäisistä tunnetun historian itsehallinnoista, jotka toteuttivat yleisen äänioikeuden sukupuoleen ja rotuun katsomatta. Kesäkuuhun 1890 mennessä kunta oli hajonnut, mutta vuoden 1905 kartassa nimi Franceville luki yhä Port Vilan rinnalla.
+- [Saksa — maalehti / Luonto: Metsä, joka oppi tekemään kelloja] Schwarzwald, Mustametsä, on niin tiheää kuusikkoa, että se näyttää kaukaa mustalta — siitä nimi. Talvet olivat pitkiä, ja 1700-luvulla maatilojen väki alkoi vuolla pimeinä kuukausina puusta kelloja, joita kaupattiin keväällä selässä kannettavilla telineillä ympäri Eurooppaa. Kelloon lisättiin lintu, joka kertoo tunnit kukkumalla — käki siksi, että sen kutsu on helppo matkia kahdella urkupillillä. Schonachin kylässä voi kävellä sisään maailman suurimpaan käkikelloon.
+
+### 3.1
+KYSYMYS: Millainen vuoristo Schwarzwald on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Feldberg (luonto · vuori)
+Tietoruudun teksti: Feldberg on Schwarzwaldin korkein huippu: 1 494 metriä, ja samalla koko Baden-Württembergin korkein kohta. Se on myös Saksan korkein vuori Alppien ja Baijerin ulkopuolella — pohjoisempana maassa ei ole mitään tämän korkuista. Vuoren juurella oleva kunta sai nimensä vuorelta, ei päinvastoin. Isoisän matkan aikaan Schwarzwald tunnettiin Euroopassa kellosepistään ja metsätaloudestaan; Reinin laaksosta katsottuna sen tumma kuusikko näyttää yhä siltä, mistä nimi "musta metsä" tulee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Metsä, joka oppi tekemään kelloja] Schwarzwald, Mustametsä, on niin tiheää kuusikkoa, että se näyttää kaukaa mustalta — siitä nimi. Talvet olivat pitkiä, ja 1700-luvulla maatilojen väki alkoi vuolla pimeinä kuukausina puusta kelloja, joita kaupattiin keväällä selässä kannettavilla telineillä ympäri Eurooppaa. Kelloon lisättiin lintu, joka kertoo tunnit kukkumalla — käki siksi, että sen kutsu on helppo matkia kahdella urkupillillä. Schonachin kylässä voi kävellä sisään maailman suurimpaan käkikelloon.
+
+### 3.2
+KYSYMYS: Miksi kunta sai nimensä vuorelta eikä toisin päin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Feldberg (luonto · vuori)
+Tietoruudun teksti: Feldberg on Schwarzwaldin korkein huippu: 1 494 metriä, ja samalla koko Baden-Württembergin korkein kohta. Se on myös Saksan korkein vuori Alppien ja Baijerin ulkopuolella — pohjoisempana maassa ei ole mitään tämän korkuista. Vuoren juurella oleva kunta sai nimensä vuorelta, ei päinvastoin. Isoisän matkan aikaan Schwarzwald tunnettiin Euroopassa kellosepistään ja metsätaloudestaan; Reinin laaksosta katsottuna sen tumma kuusikko näyttää yhä siltä, mistä nimi "musta metsä" tulee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Vila — kaupunkilehti / Port Vila: Kunta, joka julistautui itsenäiseksi] Uusilla Hebrideillä ei ollut 1880-luvulla toimivaa hallintoa, ja se turhautti asukkaita. Ranskalaisia haittasi erityisesti se, että Ranskan laki tunnusti vain siviilivihkimisen ja lähin viranomainen oli Uudessa-Kaledoniassa. Franceville — nykyinen Port Vila — julistautui 9. elokuuta 1889 itsenäiseksi kunnaksi ja valitsi johtajakseen Ferdinand-Albert Chevillardin. Asukkaita oli noin viisisataa. Yhteisö oli yksi ensimmäisistä tunnetun historian itsehallinnoista, jotka toteuttivat yleisen äänioikeuden sukupuoleen ja rotuun katsomatta. Kesäkuuhun 1890 mennessä kunta oli hajonnut, mutta vuoden 1905 kartassa nimi Franceville luki yhä Port Vilan rinnalla.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:grosser-arber) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großer Arber (luonto · vuori)
+Tietoruudun teksti: Großer Arber — tšekiksi Velký Javor eli "suuri vaahtera" — on Baijerin metsän ja Böömin metsän vuorijonon korkein huippu, 1 455,5 metriä. Se on samalla Ala-Baijerin korkein kohta, ja siksi sitä kutsutaan Regenin ja Chamin seuduilla "Baijerin metsän kuninkaaksi". Huippualue on paragneissiä eli muinaisista sedimenteistä puristunutta liuskekiveä. Vuori seisoo Saksan ja Böömin vanhalla rajalla: isoisän matkan aikaan sen toisella puolella alkoi Itävalta-Unkari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+
+### 4.1
+KYSYMYS: Miksi vuorta kutsutaan Baijerin metsän kuninkaaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großer Arber (luonto · vuori)
+Tietoruudun teksti: Großer Arber — tšekiksi Velký Javor eli "suuri vaahtera" — on Baijerin metsän ja Böömin metsän vuorijonon korkein huippu, 1 455,5 metriä. Se on samalla Ala-Baijerin korkein kohta, ja siksi sitä kutsutaan Regenin ja Chamin seuduilla "Baijerin metsän kuninkaaksi". Huippualue on paragneissiä eli muinaisista sedimenteistä puristunutta liuskekiveä. Vuori seisoo Saksan ja Böömin vanhalla rajalla: isoisän matkan aikaan sen toisella puolella alkoi Itävalta-Unkari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+
+### 4.2
+KYSYMYS: Mikä on paragneissi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großer Arber (luonto · vuori)
+Tietoruudun teksti: Großer Arber — tšekiksi Velký Javor eli "suuri vaahtera" — on Baijerin metsän ja Böömin metsän vuorijonon korkein huippu, 1 455,5 metriä. Se on samalla Ala-Baijerin korkein kohta, ja siksi sitä kutsutaan Regenin ja Chamin seuduilla "Baijerin metsän kuninkaaksi". Huippualue on paragneissiä eli muinaisista sedimenteistä puristunutta liuskekiveä. Vuori seisoo Saksan ja Böömin vanhalla rajalla: isoisän matkan aikaan sen toisella puolella alkoi Itävalta-Unkari.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:brocken) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brocken (luonto · vuori)
+Tietoruudun teksti: Brocken on 1 141 metriä korkea vuori Harzilla, Weserin ja Elben välissä. Se on Harzin ja koko Pohjois-Saksan korkein kohta, ja sen pikkuilmasto muistuttaa lähes tuhat metriä korkeampia vuoria: lumi viipyy syyskuusta toukokuuhun, sumu peittää huipun jopa kolmesataa päivää vuodessa, ja vuoden keskilämpötila on vain 2,9 astetta. Vuori on aina kuulunut tarinoihin noidista ja paholaisista, ja Johann Wolfgang von Goethe otti ne mukaan Faustiinsa. Sumuisella huipulla näkee myös Brockenin haamun: kiipeäjän oma varjo lankeaa sumuun ja kasvaa jättiläiseksi.
+
+### 5.1
+KYSYMYS: Mikä on Brockenin haamu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brocken (luonto · vuori)
+Tietoruudun teksti: Brocken on 1 141 metriä korkea vuori Harzilla, Weserin ja Elben välissä. Se on Harzin ja koko Pohjois-Saksan korkein kohta, ja sen pikkuilmasto muistuttaa lähes tuhat metriä korkeampia vuoria: lumi viipyy syyskuusta toukokuuhun, sumu peittää huipun jopa kolmesataa päivää vuodessa, ja vuoden keskilämpötila on vain 2,9 astetta. Vuori on aina kuulunut tarinoihin noidista ja paholaisista, ja Johann Wolfgang von Goethe otti ne mukaan Faustiinsa. Sumuisella huipulla näkee myös Brockenin haamun: kiipeäjän oma varjo lankeaa sumuun ja kasvaa jättiläiseksi.
+
+### 5.2
+KYSYMYS: Miksi Goethe sijoitti noidat juuri tälle vuorelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brocken (luonto · vuori)
+Tietoruudun teksti: Brocken on 1 141 metriä korkea vuori Harzilla, Weserin ja Elben välissä. Se on Harzin ja koko Pohjois-Saksan korkein kohta, ja sen pikkuilmasto muistuttaa lähes tuhat metriä korkeampia vuoria: lumi viipyy syyskuusta toukokuuhun, sumu peittää huipun jopa kolmesataa päivää vuodessa, ja vuoden keskilämpötila on vain 2,9 astetta. Vuori on aina kuulunut tarinoihin noidista ja paholaisista, ja Johann Wolfgang von Goethe otti ne mukaan Faustiinsa. Sumuisella huipulla näkee myös Brockenin haamun: kiipeäjän oma varjo lankeaa sumuun ja kasvaa jättiläiseksi.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

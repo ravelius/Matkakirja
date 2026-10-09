@@ -1,0 +1,215 @@
+================ KOHTA 36 (kohde:hahmotelma-saalburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saalburg (historia)
+Tietoruudun teksti: Saalburg on roomalainen kohorttilinnake Taunuksen pääharjanteella Bad Homburgin luoteispuolella Hessenissä, osa Limes Germanicus -rajalinjaa, joka oli Rooman Germanian provinssien rajalinnoitus. Se on Saksan täydellisimmin jälleenrakennettu roomalainen linnake ja osa UNESCOn maailmanperintökohdetta vuodesta 2005. Ensimmäiset tutkimukset tehtiin vuosina 1853–1862 Nassaun antiikkiyhdistyksen johdolla Friedrich Gustav Habelin ohjauksessa. Vuonna 1897 keisari Wilhelm II määräsi linnakkeen jälleenrakennettavaksi kaivaustulosten perusteella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kohdekartta / Kohdekartta: Al Koot -linnake] Al Koot -linnake tunnetaan myös nimellä Dohan linnake, ja se seisoo Al Biddan kaupunginosassa Souq Waqifin laidalla. Pohjakaava on neliö, muurit on rapattu valkoisiksi ja niiden harjalla kiertää rivi kolmiomaisia sakaroita. Kulmatorneja on neljä, mutta ne eivät ole keskenään samanlaisia: kolme on pyöreää ja yksi nelikulmainen. Muurissa on kapeita pystysuoria aukkoja, ja sisään mennään vaatimattomasta puuovesta keskellä seinää. Vuosiluvuista on eri tietoja, mutta useimmin toistettu kulku menee näin: paikalle rakennettiin poliisiasema vuonna 1880, tilat otettiin vankilakäyttöön 1906, ja kun osmanit olivat jättäneet linnakkeen, sheikki Abdullah bin Jassim Al Thani rakennutti sen uudelleen vuon…
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+
+### 36.1
+KYSYMYS: Mikä Limes oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saalburg (historia)
+Tietoruudun teksti: Saalburg on roomalainen kohorttilinnake Taunuksen pääharjanteella Bad Homburgin luoteispuolella Hessenissä, osa Limes Germanicus -rajalinjaa, joka oli Rooman Germanian provinssien rajalinnoitus. Se on Saksan täydellisimmin jälleenrakennettu roomalainen linnake ja osa UNESCOn maailmanperintökohdetta vuodesta 2005. Ensimmäiset tutkimukset tehtiin vuosina 1853–1862 Nassaun antiikkiyhdistyksen johdolla Friedrich Gustav Habelin ohjauksessa. Vuonna 1897 keisari Wilhelm II määräsi linnakkeen jälleenrakennettavaksi kaivaustulosten perusteella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Ruoka: Kala joka kypsyy limessä] Ceviche on Perun kansallisruoka. Tuore kala leikataan paloiksi ja jätetään limemehuun, jonka happamuus kypsentää sen ilman lämpöä; mukaan tulevat suola, valkosipuli, sipuli ja chili. Alue vaihtelee reseptiä: pohjoisessa käytetään mustia simpukoita ja äyriäisiä, Andeilla taimenta ja jopa kanaa. Lime itsessään ei ole kotoisin Perusta – sitrushedelmät ovat peräisin Aasiasta ja tulivat mantereelle espanjalaisten mukana. Yhtä vanhaa ruokalajia, causa limeñaa, selitetään kolmella eri tarinalla, eikä yhtäkään niistä ole voitu todistaa.
+
+### 36.2
+KYSYMYS: Miksi linnake rakennettiin uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saalburg (historia)
+Tietoruudun teksti: Saalburg on roomalainen kohorttilinnake Taunuksen pääharjanteella Bad Homburgin luoteispuolella Hessenissä, osa Limes Germanicus -rajalinjaa, joka oli Rooman Germanian provinssien rajalinnoitus. Se on Saksan täydellisimmin jälleenrakennettu roomalainen linnake ja osa UNESCOn maailmanperintökohdetta vuodesta 2005. Ensimmäiset tutkimukset tehtiin vuosina 1853–1862 Nassaun antiikkiyhdistyksen johdolla Friedrich Gustav Habelin ohjauksessa. Vuonna 1897 keisari Wilhelm II määräsi linnakkeen jälleenrakennettavaksi kaivaustulosten perusteella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kohdekartta / Kohdekartta: Al Koot -linnake] Al Koot -linnake tunnetaan myös nimellä Dohan linnake, ja se seisoo Al Biddan kaupunginosassa Souq Waqifin laidalla. Pohjakaava on neliö, muurit on rapattu valkoisiksi ja niiden harjalla kiertää rivi kolmiomaisia sakaroita. Kulmatorneja on neljä, mutta ne eivät ole keskenään samanlaisia: kolme on pyöreää ja yksi nelikulmainen. Muurissa on kapeita pystysuoria aukkoja, ja sisään mennään vaatimattomasta puuovesta keskellä seinää. Vuosiluvuista on eri tietoja, mutta useimmin toistettu kulku menee näin: paikalle rakennettiin poliisiasema vuonna 1880, tilat otettiin vankilakäyttöön 1906, ja kun osmanit olivat jättäneet linnakkeen, sheikki Abdullah bin Jassim Al Thani rakennutti sen uudelleen vuon…
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-hohenzollern) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohenzollernin linna (historia)
+Tietoruudun teksti: Hohenzollernin linna on entisen keisarillisen Hohenzollern-suvun kantalinna. Se sijaitsee Hechingenin eteläpuolella Hohenzollern-vuoren huipulla Schwäbische Alb -vuoriston reunalla Baden-Württembergissä. Nykyinen linna on kolmas samalla paikalla: ensimmäinen 1000-luvun linna tuhottiin täysin vuonna 1423 kymmenen kuukauden piirityksen jälkeen, ja toinen rakennettiin vuosina 1454–1461 mutta rappeutui 1700-luvun loppuun mennessä. Nykyinen linna rakennettiin vuosina 1846–1867 sukumuistomerkiksi Preussin kuningas Fredrik Vilhelm IV:n aloitteesta, ja arkkitehti Friedrich August Stüler otti mallia englantilaisesta uusgotiikasta ja Loiren linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 37.1
+KYSYMYS: Keitä Hohenzollernit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohenzollernin linna (historia)
+Tietoruudun teksti: Hohenzollernin linna on entisen keisarillisen Hohenzollern-suvun kantalinna. Se sijaitsee Hechingenin eteläpuolella Hohenzollern-vuoren huipulla Schwäbische Alb -vuoriston reunalla Baden-Württembergissä. Nykyinen linna on kolmas samalla paikalla: ensimmäinen 1000-luvun linna tuhottiin täysin vuonna 1423 kymmenen kuukauden piirityksen jälkeen, ja toinen rakennettiin vuosina 1454–1461 mutta rappeutui 1700-luvun loppuun mennessä. Nykyinen linna rakennettiin vuosina 1846–1867 sukumuistomerkiksi Preussin kuningas Fredrik Vilhelm IV:n aloitteesta, ja arkkitehti Friedrich August Stüler otti mallia englantilaisesta uusgotiikasta ja Loiren linnoista.
+
+### 37.2
+KYSYMYS: Miksi linna rakennettiin uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohenzollernin linna (historia)
+Tietoruudun teksti: Hohenzollernin linna on entisen keisarillisen Hohenzollern-suvun kantalinna. Se sijaitsee Hechingenin eteläpuolella Hohenzollern-vuoren huipulla Schwäbische Alb -vuoriston reunalla Baden-Württembergissä. Nykyinen linna on kolmas samalla paikalla: ensimmäinen 1000-luvun linna tuhottiin täysin vuonna 1423 kymmenen kuukauden piirityksen jälkeen, ja toinen rakennettiin vuosina 1454–1461 mutta rappeutui 1700-luvun loppuun mennessä. Nykyinen linna rakennettiin vuosina 1846–1867 sukumuistomerkiksi Preussin kuningas Fredrik Vilhelm IV:n aloitteesta, ja arkkitehti Friedrich August Stüler otti mallia englantilaisesta uusgotiikasta ja Loiren linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-quedlinburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Kansanperinne: Kaupunki, jota sanotaan kansanperinteen kehdoksi] Masayaa kutsutaan Nicaraguan kansanperinteen kehdoksi ja käsityön sydämeksi. Kaupungin päätorilla myydään käsin kudottuja riippumattoja, kirjottuja puseroita, puuveistoksia ja hamppupunoksia, ja järven puoleisessa kaupunginosassa on kokonainen kortteli, joka tekee vain riippumattoja. Vanhaan 1900-luvun alun markkinahalliin on kunnostettu erillinen käsityötori, jossa esitetään torstai-iltaisin kansantansseja. Monimbón kaupunginosa on Masayan alkuperäisasutuksista ainoa, joka on säilyttänyt oman identiteettinsä.
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+
+### 38.1
+KYSYMYS: Kuka Henrik Linnustaja oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+
+### 38.2
+KYSYMYS: Miksi Quedlinburgia sanotaan valtakunnan kehdoksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Kansanperinne: Kaupunki, jota sanotaan kansanperinteen kehdoksi] Masayaa kutsutaan Nicaraguan kansanperinteen kehdoksi ja käsityön sydämeksi. Kaupungin päätorilla myydään käsin kudottuja riippumattoja, kirjottuja puseroita, puuveistoksia ja hamppupunoksia, ja järven puoleisessa kaupunginosassa on kokonainen kortteli, joka tekee vain riippumattoja. Vanhaan 1900-luvun alun markkinahalliin on kunnostettu erillinen käsityötori, jossa esitetään torstai-iltaisin kansantansseja. Monimbón kaupunginosa on Masayan alkuperäisasutuksista ainoa, joka on säilyttänyt oman identiteettinsä.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-maulbronn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Saint-Sulpicen seminaari] 1684–1687 Saint-Sulpicen vanha seminaari on Montrealin toiseksi vanhin rakennus. Sulpisiaanien pappisveljeskunta perustettiin kaupunkiin 1657, ja se on omistanut talon yhtäjaksoisesti siitä lähtien, kun rakentaminen alkoi 1684 veljeskunnan johtajan François Dollier de Cassonin toimesta. Talo valmistui 1687; myöhemmät lisäykset, kello mukaan lukien, olivat valmiina 1713. Se on U-kirjaimen muotoinen ja tyyliltään palatsimainen, ja se seisoo Notre-Damen basilikan vieressä Place d’Armes’n laidalla. Julkisivun kello asennettiin 1701. Sen taulu tehtiin Pariisissa, kaiverruksen teki Paul Labrosse ja kultauksen Notre-Damen sisarkunnan sisaret. Kello on lajissaan yksi Pohjois-Amerikan vanhimmista. S…
+
+### 39.1
+KYSYMYS: Keitä sisterssiläiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+### 39.2
+KYSYMYS: Miksi luostari muuttui seminaariksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Saint-Sulpicen seminaari] 1684–1687 Saint-Sulpicen vanha seminaari on Montrealin toiseksi vanhin rakennus. Sulpisiaanien pappisveljeskunta perustettiin kaupunkiin 1657, ja se on omistanut talon yhtäjaksoisesti siitä lähtien, kun rakentaminen alkoi 1684 veljeskunnan johtajan François Dollier de Cassonin toimesta. Talo valmistui 1687; myöhemmät lisäykset, kello mukaan lukien, olivat valmiina 1713. Se on U-kirjaimen muotoinen ja tyyliltään palatsimainen, ja se seisoo Notre-Damen basilikan vieressä Place d’Armes’n laidalla. Julkisivun kello asennettiin 1701. Sen taulu tehtiin Pariisissa, kaiverruksen teki Paul Labrosse ja kultauksen Notre-Damen sisarkunnan sisaret. Kello on lajissaan yksi Pohjois-Amerikan vanhimmista. S…
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-rothenburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Musiikki: Sana, joka tarkoitti tanssipaikkaa] 1789 — Buenos Airesin kaupunginhallinto yritti jo vuonna 1789 kieltää tilaisuudet, joissa orjuutetut afrikkalaiset kokoontuivat tanssimaan; asiakirjoissa niitä kutsuttiin nimillä tango ja tambo. Sana tarkoitti tuolloin paikkaa ja tilaisuutta, ei tanssia, jonka maailma myöhemmin oppi tuntemaan. Candombe-rummutus ja -tanssi, joita länsiafrikkalaisten jälkeläiset ylläpitivät Buenos Airesissa ja Montevideossa, on yksi kolmesta juuresta espanjalais-kuubalaisen habaneran ja pampan milongan rinnalla. Vuonna 1873 nämä perinteet elävät rinnakkain, mutta kukaan ei vielä kutsu niiden yhdistelmää tangoksi.
+
+### 40.1
+KYSYMYS: Mikä Romanttinen tie on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+### 40.2
+KYSYMYS: Mitä vapaa keisarillinen kaupunki tarkoitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Musiikki: Sana, joka tarkoitti tanssipaikkaa] 1789 — Buenos Airesin kaupunginhallinto yritti jo vuonna 1789 kieltää tilaisuudet, joissa orjuutetut afrikkalaiset kokoontuivat tanssimaan; asiakirjoissa niitä kutsuttiin nimillä tango ja tambo. Sana tarkoitti tuolloin paikkaa ja tilaisuutta, ei tanssia, jonka maailma myöhemmin oppi tuntemaan. Candombe-rummutus ja -tanssi, joita länsiafrikkalaisten jälkeläiset ylläpitivät Buenos Airesissa ja Montevideossa, on yksi kolmesta juuresta espanjalais-kuubalaisen habaneran ja pampan milongan rinnalla. Vuonna 1873 nämä perinteet elävät rinnakkain, mutta kukaan ei vielä kutsu niiden yhdistelmää tangoksi.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

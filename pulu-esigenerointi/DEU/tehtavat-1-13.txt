@@ -1,0 +1,325 @@
+================ KOHTA 61 (nosto:hattupainen-ukkeli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hattupäinen ukkeli sai jäädä
+Tietoruudun teksti: Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Berliini: Hattupäinen ukkeli sai jäädä] Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+- [Berliini — kohdekartta / Kohdekartta: Hattupäinen ukkeli] Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 61.1
+KYSYMYS: Miksi leveä hahmo erottuu risteyksessä kauempaa kuin kapea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hattupäinen ukkeli sai jäädä
+Tietoruudun teksti: Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Berliini: Hattupäinen ukkeli sai jäädä] Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+- [Berliini — kohdekartta / Kohdekartta: Hattupäinen ukkeli] Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+
+### 61.2
+KYSYMYS: Miksi berliiniläiset halusivat pitää juuri tämän hahmon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hattupäinen ukkeli sai jäädä
+Tietoruudun teksti: Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 61.3
+KYSYMYS: Mitä muuta Itä-Saksasta on jäänyt yhdistyneen Berliinin arkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hattupäinen ukkeli sai jäädä
+Tietoruudun teksti: Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota myydään matkamuistona.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Turrbal ja jagera tänään] Brisbanen seudulla on asuttu yli 22 000 vuotta, ja alueen kansoja ovat turrbalit, jagerat eli yuggerat sekä lahden puolella quandamookat. Tutkijat ovat eri mieltä siitä, kulkeeko kansojen raja joen mukana vai onko kyse saman kansan osista; kummankin jälkeläiset pitävät itseään alueen perinteisinä haltijoina. Joen eteläpuolen Musgrave Park oli yksi suurista leiripaikoista, ja siellä toimii nykyään Jagera Community Hall. Kieli on jäänyt kaupungin arkeen: kaupunginosien nimet Woolloongabba, Toowong, Bulimba ja Indooroopilly ovat turrbalin ja yagaran sanoja, ja australianenglannin yakka eli raadanta tulee yagaran sanasta yaga.
+- [Nigeria — maalehti / Kirjallisuus: Torin painokoneet keksivät pokkarin] 1950-luku — Itä-Nigerian Onitshassa torikauppiaiden painokoneet seisoivat hiljaisina kuukausina tyhjinä. 1950-luvun alussa painajat alkoivat täyttää taukoja omilla vihkosillaan: rakkaustarinoilla, matkakertomuksilla, näytelmillä ja käytännön oppailla. Läpimurto tuli 1956, kun Ogali A. Ogalin näytelmä Veronica My Daughter myi kaiken. Sen jälkeen syntyi satoja vihkosia, joista suuri osa oli kirjoitettu pidgininglanniksi. Tutkijoille ne ovat nyt ainutlaatuinen ikkuna aikansa arkeen, ja lukijalle iloa tuottaa niiden vauhdikas, sääntöjä kaihtava kieli.
+
+### 61.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+================ KOHTA 62 (nosto:gaertnerin-berliini) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Gaertner maalasi Berliinin talo talolta
+Tietoruudun teksti: Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+- [Teheran — kohdekartta / Kohdekartta: Golestanin palatsi] 1865 Naser al-Din Shah halusi pääkaupunkiinsa talon, joka kilpailisi Isfahanin Ali Qapun kanssa: korkean rakennuksen, jonka katolta hän näkisi koko Teheranin. Työ alkoi hänen käskystään 1865 ja valmistui kahdessa vuodessa. Shams-ol-Emareh eli auringon rakennus on 35 metriä korkea, siinä on viisi kerrosta ja kaksi samanmuotoista tornia. Se oli valmistuessaan Teheranin korkein rakennus. Suunnittelijana mainitaan Moayer ol-Mamalek ja arkkitehtina Ali Mohammed Kashi. Kuistin alla kulkee kaakelipaneeli, jossa seisoo rivi tummiin takkeihin ja päähineisiin puettuja hahmoja. Se oli myös ensimmäinen talo kaupungissa, jonka rakenteissa käytettiin metallia: ylempien kerrosten pylväät ovat kaikki valur…
+
+### 62.1
+KYSYMYS: Mitä maalaus voi kertoa kaupungista, mitä valokuva ei kerro?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Gaertner maalasi Berliinin talo talolta
+Tietoruudun teksti: Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Golestanin palatsi] 1865 Naser al-Din Shah halusi pääkaupunkiinsa talon, joka kilpailisi Isfahanin Ali Qapun kanssa: korkean rakennuksen, jonka katolta hän näkisi koko Teheranin. Työ alkoi hänen käskystään 1865 ja valmistui kahdessa vuodessa. Shams-ol-Emareh eli auringon rakennus on 35 metriä korkea, siinä on viisi kerrosta ja kaksi samanmuotoista tornia. Se oli valmistuessaan Teheranin korkein rakennus. Suunnittelijana mainitaan Moayer ol-Mamalek ja arkkitehtina Ali Mohammed Kashi. Kuistin alla kulkee kaakelipaneeli, jossa seisoo rivi tummiin takkeihin ja päähineisiin puettuja hahmoja. Se oli myös ensimmäinen talo kaupungissa, jonka rakenteissa käytettiin metallia: ylempien kerrosten pylväät ovat kaikki valur…
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+
+### 62.2
+KYSYMYS: Miksi Gaertner maalasi myös katutyömaat ja ikkunoissa kuivuvat pyykit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Gaertner maalasi Berliinin talo talolta
+Tietoruudun teksti: Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 62.3
+KYSYMYS: Mikä Gaertnerin maalaamasta Berliinistä on kadonnut kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Gaertner maalasi Berliinin talo talolta
+Tietoruudun teksti: Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 62.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+================ KOHTA 63 (nosto:marlene-dietrich) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyttö Schönebergistä lauloi maailman ympäri
+Tietoruudun teksti: Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Marlene Dietrich] Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+
+### 63.1
+KYSYMYS: Miksi natsihallinto halusi juuri hänet mainoskasvokseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyttö Schönebergistä lauloi maailman ympäri
+Tietoruudun teksti: Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Marlene Dietrich] Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+
+### 63.2
+KYSYMYS: Miksi Lili Marleenia kuunneltiin molemmin puolin rintamaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyttö Schönebergistä lauloi maailman ympäri
+Tietoruudun teksti: Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Marlene Dietrich] Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+
+### 63.3
+KYSYMYS: Mitä kansalaisuuden vaihtaminen merkitsi 1930-luvun lopulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyttö Schönebergistä lauloi maailman ympäri
+Tietoruudun teksti: Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+### 63.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+================ KOHTA 64 (nosto:paavin-kosto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Aurinko piirsi torniin ristin
+Tietoruudun teksti: Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Paavin kosto] Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+- [Berliini — kaupunkilehti / Historian hetki: Bernauer Straße 1961 — piikkilanka kadun poikki] 13.8.1961 — Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on l…
+
+### 64.1
+KYSYMYS: Miksi Itä-Saksa halusi rakentaa juuri tornin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Aurinko piirsi torniin ristin
+Tietoruudun teksti: Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historian hetki: Bernauer Straße 1961 — piikkilanka kadun poikki] 13.8.1961 — Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on l…
+- [Berliini — kohdekartta / Kohdekartta: Muuri 1961] Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on lähtenyt vuod…
+
+### 64.2
+KYSYMYS: Miksi kukaan ei osannut ennakoida ristin heijastusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Aurinko piirsi torniin ristin
+Tietoruudun teksti: Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Paavin kosto] Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+
+### 64.3
+KYSYMYS: Miten pilkkanimi levisi kaupungissa, jonka halki kulki muuri?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Aurinko piirsi torniin ristin
+Tietoruudun teksti: Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Mutamaja] 1883 Rinteessä Hughes Avenuen ja Kitchener Driven välissä seisoi talo, jota kutsuttiin Mutamajaksi. Virallinen nimi oli Aspendale, ja pilkkanimi kuului Knightin hulluus. Sen rakensi 1883 arkkitehti John George Knight, joka toimi 1890–1892 Pohjoisterritorion hallintomiehenä. Talo oli kaksikerroksinen ja vain yhden huoneen levyinen, ja sen ympäri kiersivät leveät kuistit. Seinät muurattiin tiilistä, joita lähde kutsuu egyptiläisiksi. Ivanimestä huolimatta talosta on tullut trooppisen rakentamisen kekseliäisyyden vertauskuva. Se paloi uudenvuodenaattona 1933 tyhjillään ollessaan — asukkaat olivat lomamatkalla. Tutkinnassa ei saatu selville varmaa syytä, mutta lopulta syy pantiin sähkövalojen p…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseneksi liittyvän piti luopua Salonista kokonaan. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa "Impressionistien näyttely". Pilkkanimi…
+
+### 64.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+================ KOHTA 65 (nosto:maailmankello) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kelloa pyöritti Trabantin vaihteisto
+Tietoruudun teksti: Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Maailmankello] Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+- [Exmouth — kaupunkilehti / Exmouth: Maailman suurin rantariutta] Ningaloo on maailman suurin rantariutta: se seuraa Länsi-Australian rannikkoa yli 260 kilometrin matkan Exmouthista etelään. Toisin kuin useimmat suuret koralliriutat, jotka kasvavat kaukana avomerellä, Ningaloo kiertyy lähes kiinni mantereeseen — paikoin riutan harjalle pääsee jo alle 500 metrin päästä rannasta kahlaamalla. Läheisyys tekee riutasta poikkeuksellisen helposti tavoitettavan: veneen sijaan riittää usein pelkkä uimapuku ja snorkkeli. Alue suojeltiin Ningaloo Marine Parkiksi vuonna 1987, kun rannikon ainutlaatuinen luonto haluttiin turvata pysyvästi tulevillekin sukupolville.
+- [Saksa — maalehti / Musiikki] Saksasta tulivat kanttori, joka sävelsi joka viikoksi uutta, kuuroutunut säveltäjä, jonka sävelmä on nyt Euroopan hymni — ja muurin kaatumisen jälkeen kellareista noussut tekno.
+
+### 65.1
+KYSYMYS: Miksi maailman ajat haluttiin näkyviin juuri torille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kelloa pyöritti Trabantin vaihteisto
+Tietoruudun teksti: Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Exmouth — kaupunkilehti / Exmouth: Maailman suurin rantariutta] Ningaloo on maailman suurin rantariutta: se seuraa Länsi-Australian rannikkoa yli 260 kilometrin matkan Exmouthista etelään. Toisin kuin useimmat suuret koralliriutat, jotka kasvavat kaukana avomerellä, Ningaloo kiertyy lähes kiinni mantereeseen — paikoin riutan harjalle pääsee jo alle 500 metrin päästä rannasta kahlaamalla. Läheisyys tekee riutasta poikkeuksellisen helposti tavoitettavan: veneen sijaan riittää usein pelkkä uimapuku ja snorkkeli. Alue suojeltiin Ningaloo Marine Parkiksi vuonna 1987, kun rannikon ainutlaatuinen luonto haluttiin turvata pysyvästi tulevillekin sukupolville.
+- [Alice Springs — kaupunkilehti / Aavikon maalarit: Koulun seinämaalaus, josta tuli liike] 1960-luvun lopulla hallitus siirsi useita länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice Springsistä luoteeseen: pintupeja, luritjoja, warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia maalaamaan seinämaalauksen perinteisellä keho- ja hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, 1972, perustettiin osuuskunta Papunya Tula, jonka nimen jälkiosa tulee pienestä kukkulasta Papunyan lähellä — hunajamuurahaisen unipaikasta. Ryhmä tunnetaan länsiaavikon taideliikkeestä eli pistemaalauksesta, ja sen katsotaan tuoneen nykyisen aboriginaalitaiteen maailman tietoisuuteen. Useimmat taiteilijat eivät olleet koskaan maalanneet länsimaise…
+
+### 65.2
+KYSYMYS: Miksi kellon koneistoon kelpasi auton vaihteisto?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kelloa pyöritti Trabantin vaihteisto
+Tietoruudun teksti: Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Maailmankello] Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+
+### 65.3
+KYSYMYS: Mitä 146 paikannimen valinta kertoo Itä-Saksasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kelloa pyöritti Trabantin vaihteisto
+Tietoruudun teksti: Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki] Saksasta tulivat kanttori, joka sävelsi joka viikoksi uutta, kuuroutunut säveltäjä, jonka sävelmä on nyt Euroopan hymni — ja muurin kaatumisen jälkeen kellareista noussut tekno.
+- [Berliini — kohdekartta / Kohdekartta: Maailmankello] Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle pystytettiin kymmenmetrinen maailmankello. Erich Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista purettu vaihteisto.
+- [Berliini — kohdekartta / Kohdekartta: Checkpoint Charlie] 1961 Checkpoint Charlie oli yksi kolmesta liittoutuneiden rajanylityspaikasta — nimi tulee Naton aakkosista, C niin kuin Charlie. Se rakennettiin elokuussa 1961, kun Itä-Saksa pystytti muurin estämään ihmisten pakenemisen länteen. Lokakuussa 1961 tarkastuspisteellä seisoi kymmenen amerikkalaista ja kymmenen neuvostovaunua piipun mitan päässä toisistaan — tilanne laukesi rauhanomaisesti vasta seuraavana päivänä. Monet yrittivät paeta juuri täältä, ja osa maksoi siitä hengellään. Muuri avautui 1989, ja alkuperäinen vartiokoppi purettiin 1990. Nykyinen koppi on jälkeenpäin rakennettu jäljennös, jonka luona tuhannet turistit pysähtyvät joka päivä.
+
+### 65.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI

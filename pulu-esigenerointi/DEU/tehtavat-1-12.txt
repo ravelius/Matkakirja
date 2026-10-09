@@ -1,0 +1,313 @@
+================ KOHTA 56 (kohde:hahmotelma-krautturm) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+
+### 56.1
+KYSYMYS: Miksi ranskalaiset räjäyttivät tornin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+
+### 56.2
+KYSYMYS: Kuinka paljon ruutia räjäytykseen käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+### 56.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+================ KOHTA 57 (nosto:kopenickin-kapteeni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Haymarketin aukio] 1886 Yhdysvaltalainen työntekijä teki 1880-luvulla keskimäärin runsaat kuusikymmentä tuntia viikossa kuutena päivänä. Chicagossa kymmenettuhannet saksalaiset ja böömiläiset siirtolaiset ansaitsivat noin puolitoista dollaria päivässä. Ammattiliittojen kattojärjestö päätti lokakuussa 1884, että 1. toukokuuta 1886 alkaen kahdeksan tuntia on laillinen työpäivä, ja kun päivä koitti, lakkoon meni koko maassa arviolta 300 000–500 000 työntekijää. Chicagossa lakkolaisia oli 30 000–40 000. Maanantaina 3. toukokuuta poliisi ampui McCormickin maatalouskonetehtaan portilla väkijoukkoa ja tappoi kaksi lakkolaista. Seuraavana iltana Haymarketin aukiolla pidettiin protestikokous, joka alkoi rauhallisena. …
+- [Berliini — kaupunkilehti / Historia] Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta 1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta museo maksoi 20 000 kultamarkkaa. Jokainen neljästä on nyt oma merkkinsä kartalla.
+
+### 57.1
+KYSYMYS: Miksi sotilaat tottelivat vierasta miestä univormussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historia] Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta 1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta museo maksoi 20 000 kultamarkkaa. Jokainen neljästä on nyt oma merkkinsä kartalla.
+
+### 57.2
+KYSYMYS: Miksi keisari armahti Köpenickin kapteenin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Haymarketin aukio] 1886 Yhdysvaltalainen työntekijä teki 1880-luvulla keskimäärin runsaat kuusikymmentä tuntia viikossa kuutena päivänä. Chicagossa kymmenettuhannet saksalaiset ja böömiläiset siirtolaiset ansaitsivat noin puolitoista dollaria päivässä. Ammattiliittojen kattojärjestö päätti lokakuussa 1884, että 1. toukokuuta 1886 alkaen kahdeksan tuntia on laillinen työpäivä, ja kun päivä koitti, lakkoon meni koko maassa arviolta 300 000–500 000 työntekijää. Chicagossa lakkolaisia oli 30 000–40 000. Maanantaina 3. toukokuuta poliisi ampui McCormickin maatalouskonetehtaan portilla väkijoukkoa ja tappoi kaksi lakkolaista. Seuraavana iltana Haymarketin aukiolla pidettiin protestikokous, joka alkoi rauhallisena. …
+
+### 57.3
+KYSYMYS: Mitä univormu merkitsi keisarillisessa Saksassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historia] Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta 1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta museo maksoi 20 000 kultamarkkaa. Jokainen neljästä on nyt oma merkkinsä kartalla.
+
+### 57.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+================ KOHTA 58 (nosto:neuschwanstein) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kuuro säveltäjä kuuli musiikin päässään] Bonnissa syntynyt Ludwig van Beethoven alkoi menettää kuuloaan alle kolmekymppisenä — säveltäjälle pahin mahdollinen kohtalo. Hän ei lopettanut vaan sävelsi päänsä sisällä: keskustelut käytiin vihkoihin kirjoittamalla, ja flyygelistä hän sahasi jalat, jotta tunsi sävelet lattian värinänä. Yhdeksännen sinfonian kantaesityksessä 1824 täysin kuuro Beethoven piti kääntää kasvot yleisöön päin, jotta hän näki suosionosoitukset, joita ei kuullut. Sinfonian loppuhymni Oodi ilolle on nykyään Euroopan unionin hymni.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+
+### 58.1
+KYSYMYS: Miksi 1800-luvulla rakennettiin keskiaikaisen näköisiä linnoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+
+### 58.2
+KYSYMYS: Mistä Ludwig II sai rahat rakennustöihin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kuuro säveltäjä kuuli musiikin päässään] Bonnissa syntynyt Ludwig van Beethoven alkoi menettää kuuloaan alle kolmekymppisenä — säveltäjälle pahin mahdollinen kohtalo. Hän ei lopettanut vaan sävelsi päänsä sisällä: keskustelut käytiin vihkoihin kirjoittamalla, ja flyygelistä hän sahasi jalat, jotta tunsi sävelet lattian värinänä. Yhdeksännen sinfonian kantaesityksessä 1824 täysin kuuro Beethoven piti kääntää kasvot yleisöön päin, jotta hän näki suosionosoitukset, joita ei kuullut. Sinfonian loppuhymni Oodi ilolle on nykyään Euroopan unionin hymni.
+
+### 58.3
+KYSYMYS: Mitä Neuschwansteinista oli valmiina 1870-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+### 58.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+================ KOHTA 59 (kohde:brandenburgin-portti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brandenburgin portti (historia)
+Tietoruudun teksti: Brandenburgin portti on 1700-luvun klassistinen monumentti Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin paikalle — siitä alkoi tie Brandenburg an der Haveliin, Brandenburgin markkreivikunnan entiseen pääkaupunkiin. Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. Portista alkaa Unter den Linden, bulevardi, joka vie suoraan vanhalle kaupunginlinnalle.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+- [Berliini — kohdekartta / Kohdekartta: Brandenburgin portti] 1791 Portin suunnitteli arkkitehti Carl Gotthard Langhans, ja se rakennettiin 1788–1791 antiikin temppelien malliin. Harjalla seisoo pronssinen kvadriga, jonka Napoleon vei sotasaaliina Pariisiin 1806 — se palautettiin vasta 1814. Kun Berliinin muuri nousi 1961, se kulki juuri portin ohi ja sulki koko alueen. Portti seisoi lähes 30 vuotta tyhjän kaistaleen keskellä, kunnes muuri avautui marraskuussa 1989. Nykyään portti on Saksan tunnetuin yhtenäisyyden symboli, ja sen ympärillä oleva Pariser Platz on autoton kävelyalue. "Mr. Gorbachev, tear down this wall! — Herra Gorbatšov, purkakaa tämä muuri!" — Presidentti Ronald Reagan puheessaan Brandenburgin portin edustalla 12. kesäkuuta 1987
+
+### 59.1
+KYSYMYS: Mikä kvadriga on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brandenburgin portti (historia)
+Tietoruudun teksti: Brandenburgin portti on 1700-luvun klassistinen monumentti Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin paikalle — siitä alkoi tie Brandenburg an der Haveliin, Brandenburgin markkreivikunnan entiseen pääkaupunkiin. Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. Portista alkaa Unter den Linden, bulevardi, joka vie suoraan vanhalle kaupunginlinnalle.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Brandenburgin portti] 1791 Portin suunnitteli arkkitehti Carl Gotthard Langhans, ja se rakennettiin 1788–1791 antiikin temppelien malliin. Harjalla seisoo pronssinen kvadriga, jonka Napoleon vei sotasaaliina Pariisiin 1806 — se palautettiin vasta 1814. Kun Berliinin muuri nousi 1961, se kulki juuri portin ohi ja sulki koko alueen. Portti seisoi lähes 30 vuotta tyhjän kaistaleen keskellä, kunnes muuri avautui marraskuussa 1989. Nykyään portti on Saksan tunnetuin yhtenäisyyden symboli, ja sen ympärillä oleva Pariser Platz on autoton kävelyalue. "Mr. Gorbachev, tear down this wall! — Herra Gorbatšov, purkakaa tämä muuri!" — Presidentti Ronald Reagan puheessaan Brandenburgin portin edustalla 12. kesäkuuta 1987
+
+### 59.2
+KYSYMYS: Millainen kaupunki Berliini oli 1873?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brandenburgin portti (historia)
+Tietoruudun teksti: Brandenburgin portti on 1700-luvun klassistinen monumentti Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin paikalle — siitä alkoi tie Brandenburg an der Haveliin, Brandenburgin markkreivikunnan entiseen pääkaupunkiin. Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. Portista alkaa Unter den Linden, bulevardi, joka vie suoraan vanhalle kaupunginlinnalle.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 59.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+================ KOHTA 60 (nosto:archaeopteryx) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maanviljelijä myi maailman kuuluisimman fossiilin — hinta oli yksi lehmä
+Tietoruudun teksti: Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää.
+
+Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin putkipostin.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Lehmän hinnalla] Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies,…
+- [Berliini — kaupunkilehti / Historia] Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta 1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta museo maksoi 20 000 kultamarkkaa. Jokainen neljästä on nyt oma merkkinsä kartalla.
+- [Marokko — maalehti / Luonto: Leijona, jonka harja ulottui kyynärpäihin] 1960-luku — Atlasleijona eli Pohjois-Afrikassa Marokosta Egyptiin. Metsästys- ja havaintotietojen läpikäynti osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa 1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; sen jälkeen laji on luonnosta hävinnyt. Museoiden täytetyt urokset ovat kuonosta hännänpäähän 2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 senttimetriä pitkiä; osalla harja jatkui hartioiden yli ja vatsan alta kyynärpäihin asti. Selitykseksi on tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. Rabatin eläintarhan leijonat olivat aatelisten ja berberien lahjoja kuningasperheelle: kun perhe joutui 1953 maanpakoon, niitä oli 21.
+
+### 60.1
+KYSYMYS: Miksi Archaeopteryx on niin kuuluisa fossiili?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maanviljelijä myi maailman kuuluisimman fossiilin — hinta oli yksi lehmä
+Tietoruudun teksti: Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää.
+
+Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin putkipostin.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Lehmän hinnalla] Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies,…
+
+### 60.2
+KYSYMYS: Miten höyhenet voivat säilyä kivessä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maanviljelijä myi maailman kuuluisimman fossiilin — hinta oli yksi lehmä
+Tietoruudun teksti: Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää.
+
+Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin putkipostin.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Leijona, jonka harja ulottui kyynärpäihin] 1960-luku — Atlasleijona eli Pohjois-Afrikassa Marokosta Egyptiin. Metsästys- ja havaintotietojen läpikäynti osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa 1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; sen jälkeen laji on luonnosta hävinnyt. Museoiden täytetyt urokset ovat kuonosta hännänpäähän 2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 senttimetriä pitkiä; osalla harja jatkui hartioiden yli ja vatsan alta kyynärpäihin asti. Selitykseksi on tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. Rabatin eläintarhan leijonat olivat aatelisten ja berberien lahjoja kuningasperheelle: kun perhe joutui 1953 maanpakoon, niitä oli 21.
+
+### 60.3
+KYSYMYS: Paljonko 20 000 kultamarkkaa oli 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maanviljelijä myi maailman kuuluisimman fossiilin — hinta oli yksi lehmä
+Tietoruudun teksti: Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää.
+
+Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin putkipostin.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historia] Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta 1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta museo maksoi 20 000 kultamarkkaa. Jokainen neljästä on nyt oma merkkinsä kartalla.
+
+### 60.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI

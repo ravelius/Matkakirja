@@ -1,0 +1,205 @@
+================ KOHTA 16 (kohde:kolnin-tuomiokirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kölnin tuomiokirkko (historia)
+Tietoruudun teksti: Kölner Dom on Kölnin arkkipiispan istuin ja saksalaisen gotiikan tunnetuin rakennus. Sen kaksi tornia kohoavat 157 metriin: se on maailman korkein kaksitorninen kirkko ja Euroopan kolmanneksi korkein kirkko. Rakentaminen alkoi 1248 ja pysähtyi 1560-luvun tienoilla — keskeneräinen kirkko seisoi nostokurki tornissaan kolmisensataa vuotta. Työ käynnistyi uudestaan 1814 ja sai kunnon rahoituksen vasta 1840-luvulla; valmiiksi alkuperäisen keskiaikaisen suunnitelman mukaan se tuli 1880. Isoisä olisi siis 1873 nähnyt kirkon vielä telineissä. Keskiajan rakentajat suunnittelivat sen säilyttämään kolmen kuninkaan reliikkiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kohdekartta / Kohdekartta: Yu-puutarha] 1559–1577 Pan Yunduan aloitti puutarhan rakentamisen vuonna 1559 Ming-kaudella lahjaksi isälleen, ministeri Pan Enille, tämän vanhuudenpäiviksi. Hän ryhtyi työhön reputettuaan yhden keisarillisista virkatutkinnoista. Nimi Yu tarkoittaa vanhempia miellyttävää ja tyydyttävää. Työ keskeytyi lähes kahdeksikymmeneksi vuodeksi, kun Pan nimitettiin Sichuanin maaherraksi, ja jatkui vasta 1577. Puutarhassa on yli neljäkymmentä erillistä näkymää: paviljonkeja, kivimuodostelmia, lampia ja käytäviä, jotka kaikki kiertyvät keskussalin ympärille. Kuuluisin yksittäinen esine on Hieno jadekivi, 3,3 metriä korkea ja viisi tonnia painava huokoinen lohkare. Kerrotaan, että se oli matkalla Song-dynastian keisa…
+- [Mumbai — kohdekartta / Kohdekartta: St. Thomasin katedraali] peruskivi 1676, vihitty 1718 Kaupungin vanhin kirkko sai alkunsa kuvernööri Gerald Aungierin aikana. Hän rakennutti Bombay Greenin laidalle sairaalan, oikeussalin ja kirkon, ja kirkon peruskivi laskettiin 1676 — mutta rakentaminen keskeytyi yli neljäksikymmeneksi vuodeksi. Pappi Richard Cobbe sai työn valmiiksi vuosina 1715–1718, ja kirkko avattiin jumalanpalvelukseen jouluna 1718. Pyhälle Tuomaalle se omistettiin 1816 ja katedraaliksi vihittiin heinäkuussa 1837; torni ja kello lisättiin 1838, ja kuoria laajennettiin vuoteen 1865 mennessä. Linnoituksen portti, joka johti kirkolle, sai nimen Churchgate. Portti ja muurit purettiin 1860-luvulla, ja portin paikalle nousi Flora Fountain — mutta …
+
+### 16.1
+KYSYMYS: Miksi rakennustyö keskeytyi kolmeksisadaksi vuodeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kölnin tuomiokirkko (historia)
+Tietoruudun teksti: Kölner Dom on Kölnin arkkipiispan istuin ja saksalaisen gotiikan tunnetuin rakennus. Sen kaksi tornia kohoavat 157 metriin: se on maailman korkein kaksitorninen kirkko ja Euroopan kolmanneksi korkein kirkko. Rakentaminen alkoi 1248 ja pysähtyi 1560-luvun tienoilla — keskeneräinen kirkko seisoi nostokurki tornissaan kolmisensataa vuotta. Työ käynnistyi uudestaan 1814 ja sai kunnon rahoituksen vasta 1840-luvulla; valmiiksi alkuperäisen keskiaikaisen suunnitelman mukaan se tuli 1880. Isoisä olisi siis 1873 nähnyt kirkon vielä telineissä. Keskiajan rakentajat suunnittelivat sen säilyttämään kolmen kuninkaan reliikkiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kohdekartta / Kohdekartta: Yu-puutarha] 1559–1577 Pan Yunduan aloitti puutarhan rakentamisen vuonna 1559 Ming-kaudella lahjaksi isälleen, ministeri Pan Enille, tämän vanhuudenpäiviksi. Hän ryhtyi työhön reputettuaan yhden keisarillisista virkatutkinnoista. Nimi Yu tarkoittaa vanhempia miellyttävää ja tyydyttävää. Työ keskeytyi lähes kahdeksikymmeneksi vuodeksi, kun Pan nimitettiin Sichuanin maaherraksi, ja jatkui vasta 1577. Puutarhassa on yli neljäkymmentä erillistä näkymää: paviljonkeja, kivimuodostelmia, lampia ja käytäviä, jotka kaikki kiertyvät keskussalin ympärille. Kuuluisin yksittäinen esine on Hieno jadekivi, 3,3 metriä korkea ja viisi tonnia painava huokoinen lohkare. Kerrotaan, että se oli matkalla Song-dynastian keisa…
+- [Mumbai — kohdekartta / Kohdekartta: St. Thomasin katedraali] peruskivi 1676, vihitty 1718 Kaupungin vanhin kirkko sai alkunsa kuvernööri Gerald Aungierin aikana. Hän rakennutti Bombay Greenin laidalle sairaalan, oikeussalin ja kirkon, ja kirkon peruskivi laskettiin 1676 — mutta rakentaminen keskeytyi yli neljäksikymmeneksi vuodeksi. Pappi Richard Cobbe sai työn valmiiksi vuosina 1715–1718, ja kirkko avattiin jumalanpalvelukseen jouluna 1718. Pyhälle Tuomaalle se omistettiin 1816 ja katedraaliksi vihittiin heinäkuussa 1837; torni ja kello lisättiin 1838, ja kuoria laajennettiin vuoteen 1865 mennessä. Linnoituksen portti, joka johti kirkolle, sai nimen Churchgate. Portti ja muurit purettiin 1860-luvulla, ja portin paikalle nousi Flora Fountain — mutta …
+
+### 16.2
+KYSYMYS: Keitä olivat kolme kuningasta, joiden reliikkejä kirkko säilyttää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kölnin tuomiokirkko (historia)
+Tietoruudun teksti: Kölner Dom on Kölnin arkkipiispan istuin ja saksalaisen gotiikan tunnetuin rakennus. Sen kaksi tornia kohoavat 157 metriin: se on maailman korkein kaksitorninen kirkko ja Euroopan kolmanneksi korkein kirkko. Rakentaminen alkoi 1248 ja pysähtyi 1560-luvun tienoilla — keskeneräinen kirkko seisoi nostokurki tornissaan kolmisensataa vuotta. Työ käynnistyi uudestaan 1814 ja sai kunnon rahoituksen vasta 1840-luvulla; valmiiksi alkuperäisen keskiaikaisen suunnitelman mukaan se tuli 1880. Isoisä olisi siis 1873 nähnyt kirkon vielä telineissä. Keskiajan rakentajat suunnittelivat sen säilyttämään kolmen kuninkaan reliikkiä.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:munchen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: München (kaupungit)
+Tietoruudun teksti: München on Baijerin pääkaupunki ja Berliinin ja Hampurin jälkeen Saksan kolmanneksi suurin kaupunki. Se on Isar-joen varrella Alppien pohjoispuolella. Ensimmäinen maininta kaupungista on vuodelta 1158. Uskonpuhdistuksen aikana se pysyi katolisena tukikohtana, ja vuonna 1806 siitä tuli Baijerin kuningaskunnan pääkaupunki — juuri sitä se oli isoisän matkan aikaan 1873, sillä Baijeri säilyi kuningaskuntana Saksan keisarikunnan sisällä. Wittelsbachin suku hallitsi kaupunkia, ja sen kaudella Münchenistä kasvoi taiteen, arkkitehtuurin ja tieteen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+- [Bergen — kohdekartta / Kohdekartta: Korskirken] n. 1150 Ensimmäinen kirkko rakennettiin paikalle noin vuonna 1150, ja se mainitaan ensi kerran Sverren saagassa 1185. Silloin kirkko seisoi Vågenin rannalla ja merkitsi todennäköisesti Bergenin asutuksen eteläistä rajaa. Nimi ei viittaa ristin muotoiseen pohjakaavaan vaan Pyhään Ristiin: Korskirken oli yksi harvoista Norjan kirkoista, joilla oli hallussaan pala Kristuksen ristiä. Uskonpuhdistuksessa Tanskan kuningas vei sen, kuten muutkin pyhäinjäännökset ympäri maata. Kirkko vaurioitui paloissa 1198, 1248, 1413, 1582, 1623, 1640 ja 1702. Alun perin siinä oli kaksi tornia, mutta toinen tuhoutui vuoden 1582 palossa eikä sitä rakennettu uudelleen. Pohjakaava oli suora suorakaide, ja ristin mu…
+
+### 17.1
+KYSYMYS: Keitä Wittelsbachit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: München (kaupungit)
+Tietoruudun teksti: München on Baijerin pääkaupunki ja Berliinin ja Hampurin jälkeen Saksan kolmanneksi suurin kaupunki. Se on Isar-joen varrella Alppien pohjoispuolella. Ensimmäinen maininta kaupungista on vuodelta 1158. Uskonpuhdistuksen aikana se pysyi katolisena tukikohtana, ja vuonna 1806 siitä tuli Baijerin kuningaskunnan pääkaupunki — juuri sitä se oli isoisän matkan aikaan 1873, sillä Baijeri säilyi kuningaskuntana Saksan keisarikunnan sisällä. Wittelsbachin suku hallitsi kaupunkia, ja sen kaudella Münchenistä kasvoi taiteen, arkkitehtuurin ja tieteen keskus.
+
+### 17.2
+KYSYMYS: Miksi München pysyi katolisena uskonpuhdistuksessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: München (kaupungit)
+Tietoruudun teksti: München on Baijerin pääkaupunki ja Berliinin ja Hampurin jälkeen Saksan kolmanneksi suurin kaupunki. Se on Isar-joen varrella Alppien pohjoispuolella. Ensimmäinen maininta kaupungista on vuodelta 1158. Uskonpuhdistuksen aikana se pysyi katolisena tukikohtana, ja vuonna 1806 siitä tuli Baijerin kuningaskunnan pääkaupunki — juuri sitä se oli isoisän matkan aikaan 1873, sillä Baijeri säilyi kuningaskuntana Saksan keisarikunnan sisällä. Wittelsbachin suku hallitsi kaupunkia, ja sen kaudella Münchenistä kasvoi taiteen, arkkitehtuurin ja tieteen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+- [Bergen — kohdekartta / Kohdekartta: Korskirken] n. 1150 Ensimmäinen kirkko rakennettiin paikalle noin vuonna 1150, ja se mainitaan ensi kerran Sverren saagassa 1185. Silloin kirkko seisoi Vågenin rannalla ja merkitsi todennäköisesti Bergenin asutuksen eteläistä rajaa. Nimi ei viittaa ristin muotoiseen pohjakaavaan vaan Pyhään Ristiin: Korskirken oli yksi harvoista Norjan kirkoista, joilla oli hallussaan pala Kristuksen ristiä. Uskonpuhdistuksessa Tanskan kuningas vei sen, kuten muutkin pyhäinjäännökset ympäri maata. Kirkko vaurioitui paloissa 1198, 1248, 1413, 1582, 1623, 1640 ja 1702. Alun perin siinä oli kaksi tornia, mutta toinen tuhoutui vuoden 1582 palossa eikä sitä rakennettu uudelleen. Pohjakaava oli suora suorakaide, ja ristin mu…
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:dresden) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+
+### 18.1
+KYSYMYS: Miksi Dresdeniä sanotaan Elben Firenzeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+
+### 18.2
+KYSYMYS: Millaista maastoa Elben laakso Dresdenin kohdalla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:wartburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 19.1
+KYSYMYS: Miksi Luther piileskeli linnassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 19.2
+KYSYMYS: Mikä Wartburgin juhla 1817 oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:ruhrin-alue) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+
+### 20.1
+KYSYMYS: Mistä Ruhrin alueen hiili tuli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+
+### 20.2
+KYSYMYS: Mikä Hellweg oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

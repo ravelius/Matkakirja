@@ -1,0 +1,222 @@
+================ KOHTA 6 (kohde:pohjanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välissä: yli 970 kilometriä pitkä ja 580 leveä, kaikkiaan 570 000 neliökilometriä. Se on matala meri Euroopan mannerjalustalla ja yhdistyy Atlanttiin etelässä Englannin kanaalin ja pohjoisessa Norjanmeren kautta. Täällä kulkevat Pohjois-Euroopan tärkeimmät laivaväylät, ja täältä kalastetaan. Meri oli viikinkien nousun näyttämö, ja myöhemmin siitä kilpailivat Hansaliitto, Alankomaiden tasavalta ja Britannia — se, joka hallitsi Pohjanmerta, pääsi maailman markkinoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+- [Helsinki — kohdekartta / Kohdekartta: Suomi herää 1899] Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kieltää kuvaelma…
+
+### 6.1
+KYSYMYS: Mikä Hansaliitto oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välissä: yli 970 kilometriä pitkä ja 580 leveä, kaikkiaan 570 000 neliökilometriä. Se on matala meri Euroopan mannerjalustalla ja yhdistyy Atlanttiin etelässä Englannin kanaalin ja pohjoisessa Norjanmeren kautta. Täällä kulkevat Pohjois-Euroopan tärkeimmät laivaväylät, ja täältä kalastetaan. Meri oli viikinkien nousun näyttämö, ja myöhemmin siitä kilpailivat Hansaliitto, Alankomaiden tasavalta ja Britannia — se, joka hallitsi Pohjanmerta, pääsi maailman markkinoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+
+### 6.2
+KYSYMYS: Miten vuorovesi muokkaa Saksan rannikkoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välissä: yli 970 kilometriä pitkä ja 580 leveä, kaikkiaan 570 000 neliökilometriä. Se on matala meri Euroopan mannerjalustalla ja yhdistyy Atlanttiin etelässä Englannin kanaalin ja pohjoisessa Norjanmeren kautta. Täällä kulkevat Pohjois-Euroopan tärkeimmät laivaväylät, ja täältä kalastetaan. Meri oli viikinkien nousun näyttämö, ja myöhemmin siitä kilpailivat Hansaliitto, Alankomaiden tasavalta ja Britannia — se, joka hallitsi Pohjanmerta, pääsi maailman markkinoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+- [Helsinki — kohdekartta / Kohdekartta: Suomi herää 1899] Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kieltää kuvaelma…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:itameri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 7.1
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 7.2
+KYSYMYS: Mitä Tanskan salmet ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:bodensee) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Pallo, jonka pyöreys on sovittu] 1890 — Salzburgilainen sokerileipuri Paul Fürst teki vuonna 1890 makeisen, jota hän kutsui Mozart-bonboniksi. Pistaasimarsipaanipallo peitetään nougatilla, pistetään puutikun nokkaan, kastetaan tummaan suklaaseen ja jätetään tikun varaan kovettumaan. Lopuksi tikun jättämä reikä täytetään suklaalla ja pallo kääritään folioon. Fürst ei patentoinut keksintöään, joten kopioita tuli heti. Riidat päättyivät sopimuksiin: tehtaista vain yksi saa tehdä täysin pyöreitä palloja, muiden on litistettävä pohja.
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+
+### 8.1
+KYSYMYS: Miksi järven valtionrajoista ei ole sovittu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Pallo, jonka pyöreys on sovittu] 1890 — Salzburgilainen sokerileipuri Paul Fürst teki vuonna 1890 makeisen, jota hän kutsui Mozart-bonboniksi. Pistaasimarsipaanipallo peitetään nougatilla, pistetään puutikun nokkaan, kastetaan tummaan suklaaseen ja jätetään tikun varaan kovettumaan. Lopuksi tikun jättämä reikä täytetään suklaalla ja pallo kääritään folioon. Fürst ei patentoinut keksintöään, joten kopioita tuli heti. Riidat päättyivät sopimuksiin: tehtaista vain yksi saa tehdä täysin pyöreitä palloja, muiden on litistettävä pohja.
+
+### 8.2
+KYSYMYS: Miten Rein kulkee järven läpi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Kolme suojelualuetta kaupungin sisällä] Dilin alueella on kolme suojeltua luonnon monimuotoisuuden aluetta. Cristo Rein suojelualue on vuoristossa, joka erottaa keskustan Heran kaupunginosasta idässä. Tasitolu on kaupungin länsilaidalla Liquiçán kunnan rajan tuntumassa ja kattaa sekä maata että rannikkovesiä; sitä kehitetään virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau kattaa suuren osan itäisen Dilin edustan merestä sekä rannikkoa Herassa ja siitä itään, ja se on ehdotuksista uusin — hallitus harkitsee sen korvaamista pienemmillä alueilla. BirdLife International on määrittänyt Cristo Rein alueen ja Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille alueille on mahdollista valtion luvalla.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:rein~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+
+### 9.1
+KYSYMYS: Mikä Loreleyn tarina on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+### 9.2
+KYSYMYS: Miksi Reinin varrella on niin paljon linnoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:elbe) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+- [Iran — maalehti / Ruoka: Kuori aukeaa napsahtaen] Pistaasipuu kantaa satonsa terttuina, ja kypsyessään hedelmän ulkokuori vaihtaa vihreän punertavaan. Sisällä oleva kova kuori halkeaa itsestään pituussuunnassa, ja avautuminen kuuluu napsahduksena. Puu alkaa tuottaa kunnolla vasta 7–10 vuoden iässä, on parhaimmillaan noin kahdenkymmenen ja voi elää kolmesataa vuotta. Iran on Yhdysvaltain ja Turkin ohella kolmen suurimman tuottajan joukossa: vuonna 2024 sato oli noin 316 000 tonnia. Tärkein alue on Kermanin maakunnan Rafsanjan, jonka kastelu ottaa vetensä pohjavedestä — ja jonka maanpinta on siksi painunut.
+- [Jemen — maalehti / Rakennukset: Palatsi seisoo yhden kallion varassa] Wadi Dharissa noin viidentoista kilometrin päässä pääkaupungista on yksinäinen hiekkakivipaasi. Sen päällä on Dar al-Hajar, monikerroksinen palatsi, joka sai nykyisen muotonsa vuonna 1920 imaami Yahyan kesäasunnoksi. Paikalla oli jo rakennus vuodelta 1786. Pohjakaava ei ole säännöllinen, koska se noudattaa kallion muotoa: huoneet asettuvat siihen, mihin paasi antaa myöten. Alimmat kerrokset on muurattu mustasta basaltista ja ylemmät poltetusta tiilestä. Kallion sisässä on kaivo, josta talo sai vetensä. Palatsi on nykyään museo.
+
+### 10.1
+KYSYMYS: Mistä Elbe saa vetensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+- [Iran — maalehti / Ruoka: Kuori aukeaa napsahtaen] Pistaasipuu kantaa satonsa terttuina, ja kypsyessään hedelmän ulkokuori vaihtaa vihreän punertavaan. Sisällä oleva kova kuori halkeaa itsestään pituussuunnassa, ja avautuminen kuuluu napsahduksena. Puu alkaa tuottaa kunnolla vasta 7–10 vuoden iässä, on parhaimmillaan noin kahdenkymmenen ja voi elää kolmesataa vuotta. Iran on Yhdysvaltain ja Turkin ohella kolmen suurimman tuottajan joukossa: vuonna 2024 sato oli noin 316 000 tonnia. Tärkein alue on Kermanin maakunnan Rafsanjan, jonka kastelu ottaa vetensä pohjavedestä — ja jonka maanpinta on siksi painunut.
+- [Jemen — maalehti / Rakennukset: Palatsi seisoo yhden kallion varassa] Wadi Dharissa noin viidentoista kilometrin päässä pääkaupungista on yksinäinen hiekkakivipaasi. Sen päällä on Dar al-Hajar, monikerroksinen palatsi, joka sai nykyisen muotonsa vuonna 1920 imaami Yahyan kesäasunnoksi. Paikalla oli jo rakennus vuodelta 1786. Pohjakaava ei ole säännöllinen, koska se noudattaa kallion muotoa: huoneet asettuvat siihen, mihin paasi antaa myöten. Alimmat kerrokset on muurattu mustasta basaltista ja ylemmät poltetusta tiilestä. Kallion sisässä on kaivo, josta talo sai vetensä. Palatsi on nykyään museo.
+
+### 10.2
+KYSYMYS: Miksi Hampuri rakennettiin niin kauas merestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

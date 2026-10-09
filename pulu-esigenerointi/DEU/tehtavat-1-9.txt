@@ -1,0 +1,196 @@
+================ KOHTA 41 (kohde:hahmotelma-bayreuth) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+
+### 41.1
+KYSYMYS: Miksi Wagner rakennutti oman oopperatalon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+
+### 41.2
+KYSYMYS: Mikä Nibelungin sormus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-ruedesheim) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+### 42.1
+KYSYMYS: Mikä Rheingau on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+### 42.2
+KYSYMYS: Mitä Niederwalddenkmal esittää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-bernkastel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+
+### 43.1
+KYSYMYS: Kuka Nikolaus von Kues oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+
+### 43.2
+KYSYMYS: Mikä Spitzhäuschen on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-triberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto] Caracasin yllä kohoava Ávila on vasta esimakua. Venezuelassa on maailman korkein vesiputous ja järvenselkä, jonka yllä salamoi lähes joka yö.
+
+### 44.1
+KYSYMYS: Kuinka korkeat Tribergin putoukset ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+### 44.2
+KYSYMYS: Mikä on Saksan korkein vesiputous?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto] Caracasin yllä kohoava Ávila on vasta esimakua. Venezuelassa on maailman korkein vesiputous ja järvenselkä, jonka yllä salamoi lähes joka yö.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-hameln) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittaja, jota seurattiin kaupungista] 1284 — Hamelnin kaupungin kirjoihin merkittiin 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui — vasta myöhemmin tarinaan liitettiin rotat, jotka soittaja houkutteli ensin jokeen. Hamelnissa tarina elää yhä: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia — kunnioituksesta kadonneita kohtaan.
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+
+### 45.1
+KYSYMYS: Mitä Hamelnin pillipiiparille tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittaja, jota seurattiin kaupungista] 1284 — Hamelnin kaupungin kirjoihin merkittiin 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui — vasta myöhemmin tarinaan liitettiin rotat, jotka soittaja houkutteli ensin jokeen. Hamelnissa tarina elää yhä: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia — kunnioituksesta kadonneita kohtaan.
+
+### 45.2
+KYSYMYS: Mikä Hansaliitto oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

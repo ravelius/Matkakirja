@@ -1,0 +1,191 @@
+================ KOHTA 26 (kohde:hahmotelma-pantaleonstor) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+
+### 26.1
+KYSYMYS: Miltä Pantaleonstor näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+
+### 26.2
+KYSYMYS: Miksi Pantaleonstor katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-saechsische-schweiz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+### 27.1
+KYSYMYS: Miksi aluetta sanotaan Sveitsiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+### 27.2
+KYSYMYS: Mikä Königsteinin linnoitus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-ruegen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+
+### 28.1
+KYSYMYS: Mistä Königsstuhlin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+
+### 28.2
+KYSYMYS: Kuinka korkea kallio on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-sylt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+### 29.1
+KYSYMYS: Miksi Sylt menettää maata?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+### 29.2
+KYSYMYS: Mikä Hindenburgdamm on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-helgoland) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Historia: Housut yhdestä napista] 1890 — Saksa ja Britannia sopivat 1. heinäkuuta 1890 Itä-Afrikan etupiireistä. Saksa sai Helgolandin saaren Pohjanmerellä, Caprivin kaistaleen ja vapaat kädet Dar es Salaamin rannikolla, josta tuli Saksan Itä-Afrikan ydin; Britannia sai Witun, Sansibarin ja juuri sen maakaistaleen, jota se tarvitsi rautatielle Viktorianjärvelle. Samalla sopimuksella vedettiin rajat myös Togon ja Kultarannikon sekä Kamerunin ja Nigerian välille. Entinen liittokansleri Bismarck pilkkasi seuraajaansa siitä, että tämä vaihtoi housut yhteen nappiin — nimitys Helgoland–Sansibar-sopimus jäi hänen jäljiltään.
+
+### 30.1
+KYSYMYS: Miksi Helgoland kuului Britannialle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Historia: Housut yhdestä napista] 1890 — Saksa ja Britannia sopivat 1. heinäkuuta 1890 Itä-Afrikan etupiireistä. Saksa sai Helgolandin saaren Pohjanmerellä, Caprivin kaistaleen ja vapaat kädet Dar es Salaamin rannikolla, josta tuli Saksan Itä-Afrikan ydin; Britannia sai Witun, Sansibarin ja juuri sen maakaistaleen, jota se tarvitsi rautatielle Viktorianjärvelle. Samalla sopimuksella vedettiin rajat myös Togon ja Kultarannikon sekä Kamerunin ja Nigerian välille. Entinen liittokansleri Bismarck pilkkasi seuraajaansa siitä, että tämä vaihtoi housut yhteen nappiin — nimitys Helgoland–Sansibar-sopimus jäi hänen jäljiltään.
+
+### 30.2
+KYSYMYS: Mikä on Deutschlandlied?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

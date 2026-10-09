@@ -1,0 +1,174 @@
+================ KOHTA 31 (kohde:hahmotelma-lueneburger-heide) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+
+### 31.1
+KYSYMYS: Miksi nummi on kulttuurimaisema?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+
+### 31.2
+KYSYMYS: Mikä on heidschnucke?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-spreewald) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spreewald (luonto · järvi)
+Tietoruudun teksti: Spreewald eli Spreen metsä on Spree-joen laaja sisämaan suisto ja historiallinen kulttuurimaisema Ala-Lausitzissa Brandenburgissa, noin 100 kilometriä Berliinistä kaakkoon. Alue on sorbien asuinaluetta, ja se on virallisesti kaksikielinen, saksa ja alasorbi. UNESCO nimesi sen biosfäärialueeksi vuonna 1991. Sitä leimaa perinteinen kasteluverkosto, jossa on yli 200 pientä kanavaa, joiden yhteispituus on 1 300 kilometriä, sekä litteäpohjaiset Spreewaldkähne-veneet. Yksi tunnetuimmista kaupungeista on Lübbenau, jonka Lehden ja Leipen kylissä kanavat korvaavat kadut.
+
+### 32.1
+KYSYMYS: Keitä sorbit ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spreewald (luonto · järvi)
+Tietoruudun teksti: Spreewald eli Spreen metsä on Spree-joen laaja sisämaan suisto ja historiallinen kulttuurimaisema Ala-Lausitzissa Brandenburgissa, noin 100 kilometriä Berliinistä kaakkoon. Alue on sorbien asuinaluetta, ja se on virallisesti kaksikielinen, saksa ja alasorbi. UNESCO nimesi sen biosfäärialueeksi vuonna 1991. Sitä leimaa perinteinen kasteluverkosto, jossa on yli 200 pientä kanavaa, joiden yhteispituus on 1 300 kilometriä, sekä litteäpohjaiset Spreewaldkähne-veneet. Yksi tunnetuimmista kaupungeista on Lübbenau, jonka Lehden ja Leipen kylissä kanavat korvaavat kadut.
+
+### 32.2
+KYSYMYS: Miten Spreewaldissa liikutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spreewald (luonto · järvi)
+Tietoruudun teksti: Spreewald eli Spreen metsä on Spree-joen laaja sisämaan suisto ja historiallinen kulttuurimaisema Ala-Lausitzissa Brandenburgissa, noin 100 kilometriä Berliinistä kaakkoon. Alue on sorbien asuinaluetta, ja se on virallisesti kaksikielinen, saksa ja alasorbi. UNESCO nimesi sen biosfäärialueeksi vuonna 1991. Sitä leimaa perinteinen kasteluverkosto, jossa on yli 200 pientä kanavaa, joiden yhteispituus on 1 300 kilometriä, sekä litteäpohjaiset Spreewaldkähne-veneet. Yksi tunnetuimmista kaupungeista on Lübbenau, jonka Lehden ja Leipen kylissä kanavat korvaavat kadut.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-chiemsee) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chiemsee (luonto · järvi)
+Tietoruudun teksti: Chiemsee on makean veden järvi Baijerissa Rosenheimin lähellä, ja sitä kutsutaan usein Baijerin mereksi. Järveen laskevat etelästä Tiroler Achen ja Prien, ja Alz-joki virtaa siitä pohjoiseen Inniin ja sitä kautta Tonavaan. Järvi syntyi noin 10 000 vuotta sitten viime jääkauden lopussa jäätikön kaivamaan altaaseen; alun perin se oli noin 240 neliökilometrin kokoinen, mutta on kutistunut noin 80 neliökilometriin. Järvellä on kolme pääsaarta: Herreninsel, Fraueninsel ja asumaton Krautinsel. Herreninsel-saarella on kuningas Ludwig II:n vuonna 1878 rakennuttama Herrenchiemsee-palatsi.
+
+### 33.1
+KYSYMYS: Miksi Chiemseetä sanotaan Baijerin mereksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chiemsee (luonto · järvi)
+Tietoruudun teksti: Chiemsee on makean veden järvi Baijerissa Rosenheimin lähellä, ja sitä kutsutaan usein Baijerin mereksi. Järveen laskevat etelästä Tiroler Achen ja Prien, ja Alz-joki virtaa siitä pohjoiseen Inniin ja sitä kautta Tonavaan. Järvi syntyi noin 10 000 vuotta sitten viime jääkauden lopussa jäätikön kaivamaan altaaseen; alun perin se oli noin 240 neliökilometrin kokoinen, mutta on kutistunut noin 80 neliökilometriin. Järvellä on kolme pääsaarta: Herreninsel, Fraueninsel ja asumaton Krautinsel. Herreninsel-saarella on kuningas Ludwig II:n vuonna 1878 rakennuttama Herrenchiemsee-palatsi.
+
+### 33.2
+KYSYMYS: Mikä Herrenchiemsee on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chiemsee (luonto · järvi)
+Tietoruudun teksti: Chiemsee on makean veden järvi Baijerissa Rosenheimin lähellä, ja sitä kutsutaan usein Baijerin mereksi. Järveen laskevat etelästä Tiroler Achen ja Prien, ja Alz-joki virtaa siitä pohjoiseen Inniin ja sitä kautta Tonavaan. Järvi syntyi noin 10 000 vuotta sitten viime jääkauden lopussa jäätikön kaivamaan altaaseen; alun perin se oli noin 240 neliökilometrin kokoinen, mutta on kutistunut noin 80 neliökilometriin. Järvellä on kolme pääsaarta: Herreninsel, Fraueninsel ja asumaton Krautinsel. Herreninsel-saarella on kuningas Ludwig II:n vuonna 1878 rakennuttama Herrenchiemsee-palatsi.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-hermannsdenkmal) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hermannsdenkmal (historia)
+Tietoruudun teksti: Hermannsdenkmal on muistomerkki Detmoldin lounaispuolella Lippen piirikunnassa Nordrhein-Westfalenissa. Se seisoo tiheän metsän peittämällä Grotenburgin kukkulalla (386 metriä) Teutoburgin metsässä muinaisen kehävallin jäänteiden sisällä. Muistomerkki rakennettiin vuosina 1838–1875 kunnioittamaan keruskien sotapäällikköä Arminiusta, saksaksi Hermannia, ja hänen voittoaan Rooman legioonista Teutoburgin metsän taistelussa vuonna 9 jKr. Patsasta pystytettäessä paikkaa pidettiin alkuperäisen taistelupaikan läheisenä, mutta asiantuntijat arvelevat nyt taistelun käydyn lähempänä Kalkriesea, noin 100 kilometriä luoteeseen.
+
+### 34.1
+KYSYMYS: Kuka Arminius oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hermannsdenkmal (historia)
+Tietoruudun teksti: Hermannsdenkmal on muistomerkki Detmoldin lounaispuolella Lippen piirikunnassa Nordrhein-Westfalenissa. Se seisoo tiheän metsän peittämällä Grotenburgin kukkulalla (386 metriä) Teutoburgin metsässä muinaisen kehävallin jäänteiden sisällä. Muistomerkki rakennettiin vuosina 1838–1875 kunnioittamaan keruskien sotapäällikköä Arminiusta, saksaksi Hermannia, ja hänen voittoaan Rooman legioonista Teutoburgin metsän taistelussa vuonna 9 jKr. Patsasta pystytettäessä paikkaa pidettiin alkuperäisen taistelupaikan läheisenä, mutta asiantuntijat arvelevat nyt taistelun käydyn lähempänä Kalkriesea, noin 100 kilometriä luoteeseen.
+
+### 34.2
+KYSYMYS: Missä Teutoburgin metsän taistelu käytiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hermannsdenkmal (historia)
+Tietoruudun teksti: Hermannsdenkmal on muistomerkki Detmoldin lounaispuolella Lippen piirikunnassa Nordrhein-Westfalenissa. Se seisoo tiheän metsän peittämällä Grotenburgin kukkulalla (386 metriä) Teutoburgin metsässä muinaisen kehävallin jäänteiden sisällä. Muistomerkki rakennettiin vuosina 1838–1875 kunnioittamaan keruskien sotapäällikköä Arminiusta, saksaksi Hermannia, ja hänen voittoaan Rooman legioonista Teutoburgin metsän taistelussa vuonna 9 jKr. Patsasta pystytettäessä paikkaa pidettiin alkuperäisen taistelupaikan läheisenä, mutta asiantuntijat arvelevat nyt taistelun käydyn lähempänä Kalkriesea, noin 100 kilometriä luoteeseen.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-externsteine) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Externsteine (historia)
+Tietoruudun teksti: Externsteine on hiekkakivimuodostuma Teutoburgin metsässä Horn-Bad Meinbergin kaupungin lähellä Lippen piirikunnassa Nordrhein-Westfalenissa. Muodostuma koostuu korkeista, kapeista kalliopylväistä, jotka nousevat jyrkästi ympäröivistä metsäisistä kukkuloista, ja Hermannsweg-vaellusreitti kulkee sen läpi. Suositun perinteen mukaan paikka oli pakanallisten saksien pyhä paikka ja siellä olisi seissyt Kaarle Suuren tuhoama Irminsul-patsas, mutta arkeologista näyttöä tästä ei ole. Keskiajalla kallioilla oli erakon asuinpaikka ja viimeistään ylemmällä keskiajalla kristillinen kappeli. Kallioon veistetty Externsteinen reliefi on keskiaikainen kuvaus Ristiltä ottamisesta.
+
+### 35.1
+KYSYMYS: Mikä Irminsul oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Externsteine (historia)
+Tietoruudun teksti: Externsteine on hiekkakivimuodostuma Teutoburgin metsässä Horn-Bad Meinbergin kaupungin lähellä Lippen piirikunnassa Nordrhein-Westfalenissa. Muodostuma koostuu korkeista, kapeista kalliopylväistä, jotka nousevat jyrkästi ympäröivistä metsäisistä kukkuloista, ja Hermannsweg-vaellusreitti kulkee sen läpi. Suositun perinteen mukaan paikka oli pakanallisten saksien pyhä paikka ja siellä olisi seissyt Kaarle Suuren tuhoama Irminsul-patsas, mutta arkeologista näyttöä tästä ei ole. Keskiajalla kallioilla oli erakon asuinpaikka ja viimeistään ylemmällä keskiajalla kristillinen kappeli. Kallioon veistetty Externsteinen reliefi on keskiaikainen kuvaus Ristiltä ottamisesta.
+
+### 35.2
+KYSYMYS: Mitä Externsteinen reliefi esittää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Externsteine (historia)
+Tietoruudun teksti: Externsteine on hiekkakivimuodostuma Teutoburgin metsässä Horn-Bad Meinbergin kaupungin lähellä Lippen piirikunnassa Nordrhein-Westfalenissa. Muodostuma koostuu korkeista, kapeista kalliopylväistä, jotka nousevat jyrkästi ympäröivistä metsäisistä kukkuloista, ja Hermannsweg-vaellusreitti kulkee sen läpi. Suositun perinteen mukaan paikka oli pakanallisten saksien pyhä paikka ja siellä olisi seissyt Kaarle Suuren tuhoama Irminsul-patsas, mutta arkeologista näyttöä tästä ei ole. Keskiajalla kallioilla oli erakon asuinpaikka ja viimeistään ylemmällä keskiajalla kristillinen kappeli. Kallioon veistetty Externsteinen reliefi on keskiaikainen kuvaus Ristiltä ottamisesta.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

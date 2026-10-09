@@ -1,0 +1,205 @@
+================ KOHTA 21 (kohde:schwerinin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+- [Havanna — kaupunkilehti / Linnoitukset: Morro ja ketju satamansuun poikki] Morron linna kohoaa kalliolla sataman suuaukolla, ja sen suunnitteli italialainen sotilasinsinööri Battista Antonelli (1547–1616). Työ alkoi 1500-luvun lopulla ja jatkui 1600-luvun puolelle; lähteet antavat valmistumisvuodeksi 1589 ja työn päättymisvuodeksi 1630. Espanjan sana morro tarkoittaa merelle näkyvää kalliota, joka toimii merimiesten maamerkkinä. Satamansuu suljettiin vetämällä este Morrosta Puntaan, ja 1630 linnojen väliin laskettiin raskas kupariketju. Morro oli sataman pääpuolustus siihen asti, kunnes La Cabaña valmistui 1774.
+
+### 21.1
+KYSYMYS: Minkä ranskalaisten linnojen mukaan Schwerinin linna on muotoiltu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Linnoitukset: Morro ja ketju satamansuun poikki] Morron linna kohoaa kalliolla sataman suuaukolla, ja sen suunnitteli italialainen sotilasinsinööri Battista Antonelli (1547–1616). Työ alkoi 1500-luvun lopulla ja jatkui 1600-luvun puolelle; lähteet antavat valmistumisvuodeksi 1589 ja työn päättymisvuodeksi 1630. Espanjan sana morro tarkoittaa merelle näkyvää kalliota, joka toimii merimiesten maamerkkinä. Satamansuu suljettiin vetämällä este Morrosta Puntaan, ja 1630 linnojen väliin laskettiin raskas kupariketju. Morro oli sataman pääpuolustus siihen asti, kunnes La Cabaña valmistui 1774.
+
+### 21.2
+KYSYMYS: Mikä toimii nykyään linnassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:bambergin-vanhakaupunki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+
+### 22.1
+KYSYMYS: Miten Bambergin raatihuoneeseen pääsee keskelle jokea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+
+### 22.2
+KYSYMYS: Kuka keisari on haudattu Bambergin tuomiokirkkoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:naumburgin-tuomiokirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+### 23.1
+KYSYMYS: Milloin Naumburgin tuomiokirkon rakentaminen alkoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+### 23.2
+KYSYMYS: Keitä Naumburgin lahjoittajahahmot esittävät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:bremenin-raatihuone) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: MuCEM] 2013 MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo avattiin vuonna 2013, samana vuonna kun Marseille oli Euroopan kulttuuripääkaupunki. Se seisoo aivan meren rannalla Vanhansataman suulla. Rakennus on harmaa kivikuutio, jota ympäröi musta, pitsimäinen betoniverkko — se muistuttaa hieman kalaverkkoa tai koralliriuttaa. 130 metriä pitkä silta yhdistää museon vieressä kohoavaan vanhaan Saint-Jeanin linnaan. Museossa kerrotaan Euroopan ja Välimeren kansojen historiasta muinaisajasta nykypäivään. Jo kolmen ensimmäisen vuoden aikana museossa kävi 8,5 miljoonaa vierailijaa. "Rakensimme sen kivestä, vedestä ja tuulesta." — Arkkitehdit Rudy Ricciotti ja Roland Carta kuvailivat näin MuCEMia
+- [Ranska — maalehti / Urheilu: Tenniskisa on nimetty lentäjän mukaan] 1928 — Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se nimettiin hänen mukaansa, ja samaa nimeä kantaa yhä Ranskan avoin tennisturnaus. Kentän kuuluisa punainen pinta ei ole savea vaan kalkkikiveä, jonka päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan raahaamalla sen yli ketjumattoa.
+
+### 24.1
+KYSYMYS: Minä vuonna raatihuone ja Roland liitettiin UNESCOn maailmanperintöön?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: MuCEM] 2013 MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo avattiin vuonna 2013, samana vuonna kun Marseille oli Euroopan kulttuuripääkaupunki. Se seisoo aivan meren rannalla Vanhansataman suulla. Rakennus on harmaa kivikuutio, jota ympäröi musta, pitsimäinen betoniverkko — se muistuttaa hieman kalaverkkoa tai koralliriuttaa. 130 metriä pitkä silta yhdistää museon vieressä kohoavaan vanhaan Saint-Jeanin linnaan. Museossa kerrotaan Euroopan ja Välimeren kansojen historiasta muinaisajasta nykypäivään. Jo kolmen ensimmäisen vuoden aikana museossa kävi 8,5 miljoonaa vierailijaa. "Rakensimme sen kivestä, vedestä ja tuulesta." — Arkkitehdit Rudy Ricciotti ja Roland Carta kuvailivat näin MuCEMia
+- [Ranska — maalehti / Urheilu: Tenniskisa on nimetty lentäjän mukaan] 1928 — Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se nimettiin hänen mukaansa, ja samaa nimeä kantaa yhä Ranskan avoin tennisturnaus. Kentän kuuluisa punainen pinta ei ole savea vaan kalkkikiveä, jonka päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan raahaamalla sen yli ketjumattoa.
+
+### 24.2
+KYSYMYS: Kuinka korkea Roland-patsas on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: MuCEM] 2013 MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo avattiin vuonna 2013, samana vuonna kun Marseille oli Euroopan kulttuuripääkaupunki. Se seisoo aivan meren rannalla Vanhansataman suulla. Rakennus on harmaa kivikuutio, jota ympäröi musta, pitsimäinen betoniverkko — se muistuttaa hieman kalaverkkoa tai koralliriuttaa. 130 metriä pitkä silta yhdistää museon vieressä kohoavaan vanhaan Saint-Jeanin linnaan. Museossa kerrotaan Euroopan ja Välimeren kansojen historiasta muinaisajasta nykypäivään. Jo kolmen ensimmäisen vuoden aikana museossa kävi 8,5 miljoonaa vierailijaa. "Rakensimme sen kivestä, vedestä ja tuulesta." — Arkkitehdit Rudy Ricciotti ja Roland Carta kuvailivat näin MuCEMia
+- [Ranska — maalehti / Urheilu: Tenniskisa on nimetty lentäjän mukaan] 1928 — Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se nimettiin hänen mukaansa, ja samaa nimeä kantaa yhä Ranskan avoin tennisturnaus. Kentän kuuluisa punainen pinta ei ole savea vaan kalkkikiveä, jonka päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan raahaamalla sen yli ketjumattoa.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-hampurin-vanha-raatihuone) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+
+### 25.1
+KYSYMYS: Miltä Hampurin vanha raatihuone näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+
+### 25.2
+KYSYMYS: Miksi Hampurin vanha raatihuone katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

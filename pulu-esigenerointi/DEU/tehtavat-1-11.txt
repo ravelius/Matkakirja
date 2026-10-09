@@ -1,0 +1,199 @@
+================ KOHTA 51 (kohde:hahmotelma-muengsten) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Lohikäärmeet keisarin kunniaksi] 1901 — Ljubljanan Lohikäärmesilta avattiin liikenteelle 4. lokakuuta 1901, ja alun perin sen nimi oli Keisari Frans Joosefin juhlasilta. Sen oli määrä juhlistaa keisarin nelikymmenvuotista hallitusta. Silta korvasi vuonna 1819 rakennetun tammisillan, jonka maanjäristys vaurioitti vuonna 1895. Se oli Ljubljanan ensimmäinen betonisilta ja Melan-menetelmällä tehty, ja avattaessa sen kaari oli Euroopan kolmanneksi suurin. Lohikäärmepatsaat suunnitteli arkkitehti Giorgio Zaninović ja ne valmistettiin Wienissä. Nykyisen nimensä silta sai heinäkuussa 1919, ja sitä pidetään usein Wienin secession kauneimpana siltana.
+- [Kolkata — kohdekartta / Kohdekartta: Howrah-silta] ponttonisilta 1874, nykyinen 1943 Nykyinen Howrah-silta korvasi samalla paikalla olleen ponttonisillan, ja siksi sen alkuperäinen nimi oli New Howrah Bridge. Rakennustyö alkoi 1936 ja valmistui 1942; liikenteelle silta avattiin 3. helmikuuta 1943. Nimi vaihtui 14. kesäkuuta 1965 Rabindra Setuksi runoilija Rabindranath Tagoren mukaan, mutta puheessa se on yhä Howrah-silta. Sillassa ei ole yhtään mutteria eikä pulttia: koko rakenne on niitattu. Terästä kului 26 500 tonnia, ja siitä 23 000 tonnia oli Tata Steelin kehittämää Tiscrom-lujuusterästä. Perustuksia varten upotettiin valtavat kaivinkaivot, ja yhtenä yönä maa niiden alla petti niin että koko massa vajosi kerralla kaksi jalkaa — tärähdy…
+
+### 51.1
+KYSYMYS: Kuinka korkea silta on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kohdekartta / Kohdekartta: Howrah-silta] ponttonisilta 1874, nykyinen 1943 Nykyinen Howrah-silta korvasi samalla paikalla olleen ponttonisillan, ja siksi sen alkuperäinen nimi oli New Howrah Bridge. Rakennustyö alkoi 1936 ja valmistui 1942; liikenteelle silta avattiin 3. helmikuuta 1943. Nimi vaihtui 14. kesäkuuta 1965 Rabindra Setuksi runoilija Rabindranath Tagoren mukaan, mutta puheessa se on yhä Howrah-silta. Sillassa ei ole yhtään mutteria eikä pulttia: koko rakenne on niitattu. Terästä kului 26 500 tonnia, ja siitä 23 000 tonnia oli Tata Steelin kehittämää Tiscrom-lujuusterästä. Perustuksia varten upotettiin valtavat kaivinkaivot, ja yhtenä yönä maa niiden alla petti niin että koko massa vajosi kerralla kaksi jalkaa — tärähdy…
+- [Sydney — kohdekartta / Kohdekartta: Pyrmontin silta] 1858 ja 1902 Ensimmäinen Pyrmontin silta avattiin 17. maaliskuuta 1858. Se oli puupaalusilta, jonka keskellä oli rautainen kääntyvä osa laivoja varten, ja ylityksestä perittiin pennin tulli. Kahden ensimmäisen viikon aikana tullin maksoi 20 000 jalankulkijaa, ja sillan yli kulki 932 kärryä ja rahtirattaita, 43 kevyttä kaksipyöräistä, 17 vaunua sekä 125 hevosta ratsastajineen. Tämä silta oli paikallaan isoisän matkan aikaan. Hallitus osti sen sillanomistajayhtiöltä 1884 hintaan 52 500 puntaa ja poisti tullin. Uudesta sillasta järjestettiin kilpailu 1891, mutta lama pysäytti hankkeen. Vasta 1894 julkisten töiden komitea valitsi noin kahdestakymmenestäkuudesta ehdotuksesta oman viraston teräsr…
+
+### 51.2
+KYSYMYS: Miksi silta sai alun perin keisarin nimen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Lohikäärmeet keisarin kunniaksi] 1901 — Ljubljanan Lohikäärmesilta avattiin liikenteelle 4. lokakuuta 1901, ja alun perin sen nimi oli Keisari Frans Joosefin juhlasilta. Sen oli määrä juhlistaa keisarin nelikymmenvuotista hallitusta. Silta korvasi vuonna 1819 rakennetun tammisillan, jonka maanjäristys vaurioitti vuonna 1895. Se oli Ljubljanan ensimmäinen betonisilta ja Melan-menetelmällä tehty, ja avattaessa sen kaari oli Euroopan kolmanneksi suurin. Lohikäärmepatsaat suunnitteli arkkitehti Giorgio Zaninović ja ne valmistettiin Wienissä. Nykyisen nimensä silta sai heinäkuussa 1919, ja sitä pidetään usein Wienin secession kauneimpana siltana.
+
+### 51.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (kohde:hahmotelma-hambach) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 52.1
+KYSYMYS: Mitä Hambachin juhlassa vaadittiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+
+### 52.2
+KYSYMYS: Miksi linna oli rauniona?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 52.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (kohde:hahmotelma-bad-ems) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+
+### 53.1
+KYSYMYS: Mikä Emsin sähke oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+
+### 53.2
+KYSYMYS: Miksi Bad Ems oli kuuluisa kylpylä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+
+### 53.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (kohde:hahmotelma-rammelsberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Historia: Kaivos, joka maksoi itsenäisyyden ja sulki itsensä] 1972–1998 — Bougainvillen saaren Crown Prince -vuoristosta löytyi 1960-luvulla valtava kuparimalmiesiintymä, ja Pangunan kaivos aloitti tuotannon 1972. Se oli tuolloin maailman suurin kuparin ja kullan avolouhos, tuotti 12 prosenttia maan bruttokansantuotteesta ja yli 45 prosenttia vientituloista, ja sen voitoilla rahoitettiin osaltaan Papua-Uuden-Guinean itsenäistyminen 1975. Bougainvillelaiset saivat voitosta 0,5–1,25 prosenttia, ja rikastushiekka laskettiin suoraan Jaba-jokeen. Vuonna 1988 alkoi kapina, kaivos suljettiin 1989, ja kymmenvuotinen konflikti päättyi 1998 rauhansopimukseen ja autonomiseen hallintoon.
+- [Krakova — kaupunkilehti / Historia: Kaivos, jonka pohjalle veistettiin kirkkosali] Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien; vanhin asiakirja on vuodelta 1044. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Suolakivi ei muuten ole valkoista vaan eri sävyistä harmaata. Vuoteen 1871 mennessä kaivosta pidettiin yhtenä maailman tuottoisimmista. Louhinta jatkui yhtäjaksoisesti vuoteen 1996, jolloin suolan hinnan lasku ja veden nousu lopettivat sen. Jäljelle jäi 287 kilometriä käytävää, 327 metriä syvyyttä, järvi maan alla, neljä kappelia ja kaivosmiesten veistämiä patsaita — kaikki samasta aineesta, jota käytiin hakemassa pois.
+
+### 54.1
+KYSYMYS: Miten Rammelsbergin hopea löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+
+### 54.2
+KYSYMYS: Miksi kaivos on maailmanperintökohde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Historia: Kaivos, joka maksoi itsenäisyyden ja sulki itsensä] 1972–1998 — Bougainvillen saaren Crown Prince -vuoristosta löytyi 1960-luvulla valtava kuparimalmiesiintymä, ja Pangunan kaivos aloitti tuotannon 1972. Se oli tuolloin maailman suurin kuparin ja kullan avolouhos, tuotti 12 prosenttia maan bruttokansantuotteesta ja yli 45 prosenttia vientituloista, ja sen voitoilla rahoitettiin osaltaan Papua-Uuden-Guinean itsenäistyminen 1975. Bougainvillelaiset saivat voitosta 0,5–1,25 prosenttia, ja rikastushiekka laskettiin suoraan Jaba-jokeen. Vuonna 1988 alkoi kapina, kaivos suljettiin 1989, ja kymmenvuotinen konflikti päättyi 1998 rauhansopimukseen ja autonomiseen hallintoon.
+- [Krakova — kaupunkilehti / Historia: Kaivos, jonka pohjalle veistettiin kirkkosali] Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien; vanhin asiakirja on vuodelta 1044. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Suolakivi ei muuten ole valkoista vaan eri sävyistä harmaata. Vuoteen 1871 mennessä kaivosta pidettiin yhtenä maailman tuottoisimmista. Louhinta jatkui yhtäjaksoisesti vuoteen 1996, jolloin suolan hinnan lasku ja veden nousu lopettivat sen. Jäljelle jäi 287 kilometriä käytävää, 327 metriä syvyyttä, järvi maan alla, neljä kappelia ja kaivosmiesten veistämiä patsaita — kaikki samasta aineesta, jota käytiin hakemassa pois.
+
+### 54.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (kohde:hahmotelma-ansbach) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+
+### 55.1
+KYSYMYS: Kuka Kaspar Hauser oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+
+### 55.2
+KYSYMYS: Keitä Brandenburg-Ansbachin markkreivit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+
+### 55.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
