@@ -270,7 +270,7 @@ namespace Matkakirja.Natiivi
             if (palaaSilmukka == null || keinuntaSilmukka == null) return;
             palaaSilmukka.Paivita(KoriTaso(Matkakirja.Linssit.Aanet.PalloLentoAanet.Palaa(poltin.Taso), Matkakirja.Linssit.Aanet.PalloLentoAanet.PalaaLahi), dt,
                 (float)Matkakirja.Linssit.Aanet.PalloLentoAanet.PalaaLiukuS);
-            double kt = Matkakirja.Linssit.Aanet.PalloLentoAanet.KeinuntaKiihtyvyydesta(viimeKiihtyvyys, NarinaTaso);
+            double kt = keinuntaAallot.Paivita(Time.unscaledTimeAsDouble, viimeKiihtyvyys, NarinaTaso);
             keinuntaSilmukka.Paivita(KoriTaso(kt, Matkakirja.Linssit.Aanet.PalloLentoAanet.Keinunta), dt, (float)Matkakirja.Linssit.Aanet.PalloLentoAanet.KeinuntaLiukuS);
             // Todennus (PT 10.10.: keinunta vain kiihdytyksissä, humahdus liekin kasvuun): rajanylitykset ja liekin syttyminen lokiin.
             bool keinuu = kt > 0;
@@ -278,6 +278,7 @@ namespace Matkakirja.Natiivi
             if (poltin.Syttyi) Debug.Log($"MATKAKIRJA kaupunki: poltin syttyi (t {Time.unscaledTime:F2})");
         }
         bool keinuntaLoki;
+        readonly Matkakirja.Linssit.Aanet.PalloLentoAanet.KeinuntaAallot keinuntaAallot = new Matkakirja.Linssit.Aanet.PalloLentoAanet.KeinuntaAallot();
         /// <summary>Soundly-humahdus (vaihtoehdot ilman peräkkäistä toistoa); false = ei ladattu → vanha Soita.</summary>
         bool SoitaHumahdus(float taso)
         {

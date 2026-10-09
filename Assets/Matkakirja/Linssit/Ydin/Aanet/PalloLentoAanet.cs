@@ -2,7 +2,11 @@
 // −23 LUFS, silmukat saumattomina). Korin omat äänet PalloKoriin (manifestin kaksitaso- ja ilmavirtaäänet lento v3:lle, ei tässä):
 //   poltin-humahdus-01…04   kerta, liekin syttyessä (Poltin.Syttyi), vaihtoehdot ilman peräkkäistä toistoa; korvaa Resources-humahduksen
 //   poltin-palaa-lahi       silmukka liekin palaessa, taso × Poltin.Taso (nousee ja hiipuu liekin mukana)
-//   kori-keinunta           silmukka vain liikkeen muutoksessa (omistaja TF 163: narina hiljaa, ei jatkuvasti); korvaa korin narinan
+//   kori-keinunta           silmukka vain liikkeen muutoksessa (omistaja TF 163: narina hiljaa, ei jatkuvasti); korvaa korin narinan.
+//                           v2 (simu 10.10. 02.4x: tasaisessa lennossa kiihtyvyys 1,1–1,5 m/s² → keinunta soi 20 s): aalto alkaa vain
+//                           kiihtyvyyden noustessa KeinuntaAlkaa-rajan yli levosta (hystereesi: uusi vasta, kun käynyt alle KeinuntaLepo),
+//                           kestää KeinuntaAaltoS, vähintään KeinuntaValiS välein;
+//                           yli PiikkiRaja = origon siirto tai teleportti (simu: 296 ja 374 m/s²), ei liikettä.
 // Puuttuva manifesti tai tiedosto = vanhat Resources-äänet. Mikseri (pallo, tehosteet): humahdukset samaan kori.poltin-ääneen kuin ennen.
 // Puhdas C#: PalloLentoAanetTestit.
 using System;
@@ -51,11 +55,28 @@ namespace Matkakirja.Linssit.Aanet
         }
 
         // ---- tasot (PalloKorin Soita-asteikolla: humahdus 0,8 kuten ennen; narina NarinaTaso 0,25) ----
-        public const double HumahdusTaso = 0.8, PalaaTaso = 0.35, KeinuntaTaso = 0.5, KeinuntaAlkaa = 1.2, KeinuntaTaysi = 4.0;
+        public const double HumahdusTaso = 0.8, PalaaTaso = 0.35, KeinuntaTaso = 0.5, KeinuntaAlkaa = 1.2, KeinuntaLepo = 0.8, KeinuntaTaysi = 4.0,
+            KeinuntaAaltoS = 4.0, KeinuntaValiS = 12.0, PiikkiRaja = 50.0;
         public const double PalaaLiukuS = 0.25, KeinuntaLiukuS = 1.5;
 
         /// <summary>Palamisen silmukan taso liekin voimakkuudesta 0–1.</summary>
         public static double Palaa(double liekki) => PalaaTaso * Math.Max(0, Math.Min(1, liekki));
+
+        /// <summary>Keinunta-aallot: Paivita joka kehys (aika s, vaakakiihtyvyys m/s²) → tavoitetaso; aalto vain rajan ylityksessä.</summary>
+        public sealed class KeinuntaAallot
+        {
+            double loppuu = double.NegativeInfinity, edellinen = double.NegativeInfinity, taso; bool yli;
+            public bool Soi { get; private set; }
+            public double Paivita(double nyt, double kiihtyvyys, double narinaTaso)
+            {
+                if (kiihtyvyys > PiikkiRaja) kiihtyvyys = 0;   // origon siirto, ei liikettä
+                bool nousu = !yli && kiihtyvyys > KeinuntaAlkaa;
+                if (nousu) yli = true; else if (kiihtyvyys < KeinuntaLepo) yli = false;
+                if (nousu && nyt - edellinen >= KeinuntaValiS) { edellinen = nyt; loppuu = nyt + KeinuntaAaltoS; taso = KeinuntaKiihtyvyydesta(Math.Max(kiihtyvyys, KeinuntaAlkaa + 0.5), narinaTaso); }
+                Soi = nyt < loppuu;
+                return Soi ? taso : 0;
+            }
+        }
 
         /// <summary>Keinunnan taso vaakakiihtyvyydestä (m/s²): hiljaa alle kynnyksen (ei jatkuvaa narinaa), täysi KeinuntaTaysi:ssä.</summary>
         public static double KeinuntaKiihtyvyydesta(double kiihtyvyys, double narinaTaso)
