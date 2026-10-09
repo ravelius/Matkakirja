@@ -1,0 +1,670 @@
+{
+  "task": "olavinlinna-katalogikuvat-20261008",
+  "taskNumber": 46,
+  "source": {
+    "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+    "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+    "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea"
+  },
+  "sourceReadInFull": true,
+  "generationCalls": 8,
+  "generationLimit": 8,
+  "imageCount": 5,
+  "requestedImages": 8,
+  "partialDelivery": false,
+  "style": "photorealistic",
+  "sourceImagePixelsUsed": false,
+  "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "assets": [
+    {
+      "id": "tahtitaivas",
+      "file": "tahtitaivas.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/tahtitaivas/tahtitaivas.jpg",
+      "sha256": "eecc9d6dd5ca524b2a06c7fd2fe8e3c96b901e6668bdad5c0cfc49e11c4c5770",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-5f90-7f53-a740-5150c66c4a44/exec-5b8a1c9f-4f30-4b44-aa4b-6e846d7485f5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/tahtitaivas/original-generation.png",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original photographic-looking illustrative image for a game lens catalogue, wide 16:9.\nPrimary request: A believable long-exposure photograph of a clear, dark night sky. Thousands of small sharp stars and the naturally mottled pale Milky Way gently arc across the middle of the frame. A low dark silhouette of a forested mountain ridge occupies only the bottom edge.\nStyle/medium: Real-camera astrophotography, natural restrained colors, subtle blue-black darkness, authentic faint starlight and fine photographic grain; not a painting or a CGI render.\nComposition/framing: Broad horizontal 16:9 composition, 1600 by 900 target. Main Milky Way structure centered and comfortably within the central area. Keep the ridge low; protect the composition for a modest center crop.\nLighting/mood: Naturally dark sky, realistic long exposure brightness, subdued silver and cool blue stars with sparse warmer stars, no exaggerated glow or HDR.\nConstraints: Entirely original text-only generation. Opaque image. No people, aircraft, satellite trails, meteors, constellation lines, digital lines, labels, letters, numbers, logos, watermark, image border. No exaggerated saturation or cinematic color grading.\n",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+        "posti/sisaltokirjuri-codex-katalogikuvat-lisa-20261008.md"
+      ],
+      "kuvateksti": "Linnunrata kaartuu kirkkaalla yötaivaalla matalan metsäisen vuoriharjan yllä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "reviewedAt": "2026-10-09T06:15:35.970293+00:00",
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/tahtitaivas/qa-native.png",
+        "finalPreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/tahtitaivas/qa-final-1600.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/tahtitaivas/qa-preview-480.png",
+        "technical": {
+          "jpeg": true,
+          "dimensionsExact": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "iccDescription": "sRGB built-in",
+          "DescriptionExact": true,
+          "SourceExact": true,
+          "originalByteExact": true,
+          "captionEndsHavainnekuva": true,
+          "XMPDescriptionExact": true,
+          "XMPSourceExact": true,
+          "EXIFUserCommentExact": true,
+          "EXIFImageDescriptionASCIIExact": false,
+          "EXIFImageDescriptionEncodingNote": "EXIF ImageDescription is ASCII, accented letters are replaced by question marks by Pillow; exact Finnish label is preserved in UTF-8 XMP description/source and Unicode EXIF UserComment."
+        },
+        "visual": {
+          "subject": "Pimeä kirkas taivas, tiheä tähtikenttä, keskeltä loivasti kaartuva Linnunrata ja alareunan matala metsäinen vuoriharjan siluetti näkyvät.",
+          "style": "Pitkän valotuksen astrofotografian ilme; vaimeat siniharmaat ja luonnollinen tähtien hieno vaihtelu. Ei HDR-ilmettä.",
+          "geometry": "Linnunrata ulottuu ylävasemmalta oikean alakulman tuntumaan; keskeinen rakenne säilyy lähes 16:9-natiivin teknisessä rajauksessa.",
+          "recommendation": "candidate_for_root_review",
+          "concerns": []
+        },
+        "commonConstraints": {
+          "noTextLettersNumbers": true,
+          "noLogosWatermarksBorders": true,
+          "noIdentifiablePeopleFaces": true,
+          "noSourceImagePixels": true,
+          "noViolence": true
+        },
+        "deliveryRecommendation": "candidate_for_root_review",
+        "technicalChecksPass": true,
+        "visualPreview480Reviewed": true,
+        "visualNativeReviewed": true
+      },
+      "originalSha256": "00fbcf4041a959522ec4ca2f1de0507417571fb1998f9487d41ca3bbb6e8dc13",
+      "r2Key": "linssikatalogi/tahtitaivas-havainne.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "eecc9d6dd5ca524b2a06c7fd2fe8e3c96b901e6668bdad5c0cfc49e11c4c5770",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/root-games3.jpg",
+          "production/ihmisen-matka-2/ihmisen-matka-2.jpg"
+        ],
+        "visualNotes": "Photographic MilkyWay and low wooded/mountain silhouette; no constellation marks/text/trails.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "B-original",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/tahtitaivas-havainne.jpg",
+      "bytes": 429311,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lontoo",
+      "file": "lontoo.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lontoo/lontoo.jpg",
+      "sha256": "f048e6138c7c1e154df11adce39f6fc3fbe5d7180f9869697c571f0c2d5ac22b",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-5f90-7f53-a740-5150c66c4a44/exec-c58c210a-991a-4f82-938e-c11b603967c0.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lontoo/original-generation.png",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original photographic-looking illustrative image for a game lens catalogue, wide 16:9.\nPrimary request: A believable real-camera riverside photograph of London's Tower Bridge and the Thames at dusk. The complete recognizable Tower Bridge is centered: both stone towers, their upper walkway, closed bascules and symmetrical suspension approaches all visible in coherent real architectural geometry. Calm Thames water reflects the softly illuminated bridge. The sky is pale dusky blue with a subdued warm orange band near the horizon.\nStyle/medium: Natural architectural travel photography, realistic stone detail, gentle water ripples, subtle low-light camera texture, restrained colors and exposure.\nComposition/framing: Wide horizontal 16:9 target 1600 by 900. View from a Thames bank at a natural modest oblique angle with the entire bridge fitting comfortably in the middle, generous breathing room around both ends. Bridge towers fit inside the central crop-safe area; water below and soft dusk sky above. Keep all major architectural parts intact.\nLighting/mood: Soft ambient twilight, bridge lights already on, believable warm reflections; no HDR, strong saturation, dramatic colored spotlights or cinematic color grading.\nConstraints: Original text-only generation, opaque image. No visible people or faces, no readable advertisements, street signs, writing or boat names. No letters, numbers, logos, watermark, image border. No oversized foreground boat or invented decorative objects.\n",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+        "posti/sisaltokirjuri-codex-katalogikuvat-lisa-20261008.md"
+      ],
+      "kuvateksti": "Tower Bridge ja tyyni Thames iltahämärässä, sillan valot ja sinioranssi taivas heijastuvat veteen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "reviewedAt": "2026-10-09T06:15:36.598656+00:00",
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lontoo/qa-native.png",
+        "finalPreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lontoo/qa-final-1600.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lontoo/qa-preview-480.png",
+        "technical": {
+          "jpeg": true,
+          "dimensionsExact": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "iccDescription": "sRGB built-in",
+          "DescriptionExact": true,
+          "SourceExact": true,
+          "originalByteExact": true,
+          "captionEndsHavainnekuva": true,
+          "XMPDescriptionExact": true,
+          "XMPSourceExact": true,
+          "EXIFUserCommentExact": true,
+          "EXIFImageDescriptionASCIIExact": false,
+          "EXIFImageDescriptionEncodingNote": "EXIF ImageDescription is ASCII, accented letters are replaced by question marks by Pillow; exact Finnish label is preserved in UTF-8 XMP description/source and Unicode EXIF UserComment."
+        },
+        "visual": {
+          "subject": "Tower Bridge keskellä kokonaisena, molemmat tornit, yläsilta, suljetut nostosillat ja ripustusosat näkyvät; Thames ja valojen heijastukset, sinioranssi iltataivas.",
+          "style": "Luonnollinen matkavalokuvan ilme, vaimeat hämäräsävyt ja maltilliset valot; vesi on rauhallinen pienine laineineen.",
+          "geometry": "Pääarkkitehtuuri yhtenäinen ja tunnistettava, tornit eivät leikkaannu rajauksessa. Sillan lähestymisosan aivan uloin jatko poistuu jo natiivin vasempaan reunaan, mutta koko pääsilta ja molemmat päätyrakenteet näkyvät.",
+          "recommendation": "candidate_for_root_review",
+          "concerns": []
+        },
+        "commonConstraints": {
+          "noTextLettersNumbers": true,
+          "noLogosWatermarksBorders": true,
+          "noIdentifiablePeopleFaces": true,
+          "noSourceImagePixels": true,
+          "noViolence": true
+        },
+        "deliveryRecommendation": "candidate_for_root_review",
+        "technicalChecksPass": true,
+        "visualPreview480Reviewed": true,
+        "visualNativeReviewed": true
+      },
+      "originalSha256": "e1daffe9d0b71a76437d88030c5f62722d015124e8480e023d04059dadf593aa",
+      "r2Key": "linssikatalogi/lontoo-havainne.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "f048e6138c7c1e154df11adce39f6fc3fbe5d7180f9869697c571f0c2d5ac22b",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/root-games3.jpg",
+          "production/ihmisen-matka-2/ihmisen-matka-2.jpg"
+        ],
+        "visualNotes": "Complete centered TowerBridge at blue-orange dusk, natural river reflections, no visible readable signs or identifiable people.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "B-original",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/lontoo-havainne.jpg",
+      "bytes": 432990,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "ihmisen-matka-2",
+      "file": "ihmisen-matka-2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/ihmisen-matka-2/ihmisen-matka-2.jpg",
+      "sha256": "93080687bdae2d380ecf19f50a454a999c0f996a5983ae399dfbcfc679508a56",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-5f90-7f53-a740-5150c66c4a44/exec-9fd87386-443d-420d-8235-f6b1db0f741b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/ihmisen-matka-2/original-generation.png",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original photographic-looking interpretative illustrative image for a game lens catalogue, wide 16:9.\nPrimary request: A believable Earth-from-space photograph at dusk with the dim night surface and a curved daylight boundary. Center the geography so East Africa, the Middle East, Europe and western-to-central Asia are all visible together and geographically recognizable. The otherwise dark Earth is touched by a soft warm luminous suggestion of a human journey: a very fine diffuse amber glow begins in East Africa, continues through the Middle East, gently branches toward Europe and extends east into Asia. This glow is an interpretative atmospheric light, softly feathered and irregular, like a delicate warm beam grazing the surface. It must never become a sharp drawn map route, neon tube, circuit line, dashed path, arrow or diagram.\nStyle/medium: Photographic realism for Earth, natural continental geometry, realistic cloud and ocean textures, subtle real-camera atmosphere. The warm glow is the sole quiet interpretative effect. No illustrated map or glossy CGI treatment.\nComposition/framing: Wide horizontal 16:9 target 1600 by 900. Earth and the full relevant geographic region centered and crop-safe; enough dark space around the globe edge, visible day-night curve and faint thin atmosphere.\nLighting/mood: Dim restrained blue-black Earth and subdued warm amber light, softly graded natural dusk, no HDR, vivid oversaturation or dramatic theatrical bloom.\nConstraints: New text-only image. No text, letters, numbers, city names, labels, political borders, diagram lines, digital lines, directional arrows, logo, watermark, image border, spacecraft, window, people or faces. Opaque image. Keep the path soft, subtle and integrated with Earth's surface.\n",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+        "posti/sisaltokirjuri-codex-katalogikuvat-lisa-20261008.md"
+      ],
+      "kuvateksti": "Pehmeä lämmin hohto tulkitsee ihmisen matkaa Itä-Afrikasta Lähi-idän kautta Eurooppaan ja Aasiaan. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "reviewedAt": "2026-10-09T06:15:36.805422+00:00",
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/ihmisen-matka-2/qa-native.png",
+        "finalPreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/ihmisen-matka-2/qa-final-1600.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/ihmisen-matka-2/qa-preview-480.png",
+        "technical": {
+          "jpeg": true,
+          "dimensionsExact": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "iccDescription": "sRGB built-in",
+          "DescriptionExact": true,
+          "SourceExact": true,
+          "originalByteExact": true,
+          "captionEndsHavainnekuva": true,
+          "XMPDescriptionExact": true,
+          "XMPSourceExact": true,
+          "EXIFUserCommentExact": true,
+          "EXIFImageDescriptionASCIIExact": false,
+          "EXIFImageDescriptionEncodingNote": "EXIF ImageDescription is ASCII, accented letters are replaced by question marks by Pillow; exact Finnish label is preserved in UTF-8 XMP description/source and Unicode EXIF UserComment."
+        },
+        "visual": {
+          "subject": "Itä-Afrikka, Lähi-itä, Eurooppa ja Aasia tunnistettavat, päivä-yöraja oikealla. Pehmeä amberhohto kulkee Itä-Afrikasta Lähi-itään ja haarautuu Eurooppaan sekä Aasiaan.",
+          "style": "Maapinta muistuttaa avaruusvalokuvaa; tulkinnallinen reitti on lämmin pehmeä hohto, ei terävä viiva, nuoli tai katkoviiva.",
+          "geometry": "Keskeiset maat ja reitti säilyvät rajauksessa. Maapallo täyttää ruudun ja leikkautuu ylä- ja alareunasta, mutta briefin maantieteellinen sisältö pysyy keskellä.",
+          "recommendation": "candidate_for_root_review",
+          "concerns": [
+            "Tulkinnallinen hohto on näkyvästi lisättyä valoa; toimituksellinen hyväksyntä päättää sen hienovaraisuuden."
+          ]
+        },
+        "commonConstraints": {
+          "noTextLettersNumbers": true,
+          "noLogosWatermarksBorders": true,
+          "noIdentifiablePeopleFaces": true,
+          "noSourceImagePixels": true,
+          "noViolence": true
+        },
+        "deliveryRecommendation": "candidate_for_root_review",
+        "technicalChecksPass": true,
+        "visualPreview480Reviewed": true,
+        "visualNativeReviewed": true
+      },
+      "originalSha256": "8af5399d19f9e31c74500e9699911133f46fd46144c45c5ad0f5710abb83c4a8",
+      "r2Key": "linssikatalogi/ihmisen-matka-2-havainne.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "93080687bdae2d380ecf19f50a454a999c0f996a5983ae399dfbcfc679508a56",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/root-games3.jpg",
+          "production/ihmisen-matka-2/ihmisen-matka-2.jpg"
+        ],
+        "visualNotes": "Physical photographic Earth appearance with explicitly interpretive soft luminous path from EastAfrica through MiddleEast toward Europe/Asia; not an observed satellite image.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "B-original",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/ihmisen-matka-2-havainne.jpg",
+      "bytes": 404495,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "mylly",
+      "file": "mylly.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/mylly/mylly.jpg",
+      "sha256": "8ec8360b0f9ebceb980e0d9590e1a8d1b1e9875d7e03a3219de2d023a2ea4b6c",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-aa0e-74a1-8df4-01ea05369b7c/exec-9ebc96d2-530e-4206-99a3-627f78abaa50.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/mylly/original-generation.png",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original horizontal Matkakirja catalogue illustration, 16:9, intended final size 1600 × 900.\nCreate a single camera-real photograph of an old, worn wooden Nine Men's Morris board resting flat on a wooden table in a medieval stone room. No reference image is used. The board is fully visible, centered and safely inside the frame; an elevated almost top-down camera makes its precise geometry legible, while the distant stone room is softly out of focus. Warm low side light from a window, quiet natural muted brown tones, realistic wood pores, worn incised grooves, small imperfect circular wooden counters, gentle photographic depth of field.\nThe board's game graph is exact: THREE concentric complete square outlines. Each square has EIGHT legal stations: its four corners and the midpoint of each side, giving exactly 24 stations. Connect the three squares ONLY at the four side midpoints with four short straight cardinal connector segments. The connectors stop at the innermost square. The empty area INSIDE the innermost square contains absolutely no lines, cross, dot, decoration or counters. No diagonal lines. No full central cross. No additional squares or stations. Small round incised dots mark the stations not hidden by counters.\nExactly FOUR dark round wooden counters occupy the FOUR corner stations of the OUTERMOST square. Exactly FOUR light round wooden counters occupy the FOUR corner stations of the MIDDLE square. All eight counters sit precisely on these legal stations, no floating counter and no counter between stations. The innermost square is empty. This is a possible game in progress.\nMake the scene look physically photographed with an ordinary high-quality camera: wood and stone have authentic irregular textures and natural highlights. Not an illustration, not watercolor, not a CGI render. No HDR, no oversaturation, no dramatic cinematic color grading.\nNo hands or people, no faces. No lettering, numbers, labels, symbols, logos, watermark or image border. The precise square-and-midpoint game geometry is the central subject.\n",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+        "posti/sisaltokirjuri-codex-katalogikuvat-lisa-20261008.md"
+      ],
+      "kuvateksti": "Kulunut puinen myllylauta ja kahden värin nappulat lämpimässä ikkunavalossa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "metadataEncoding": "Exact Unicode text in XMP dc:description and dc:source; exact UTF-16BE EXIF UserComment. Legacy ASCII EXIF ImageDescription is not authoritative for Finnish characters."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "status": "worker-pass-awaiting-root-review",
+        "deliveryEligible": true,
+        "photorealism": "Camera-like wood grain, worn incised game grooves and medieval stone-room window light; muted warm natural colors. Background less blurred than prompt but scene is readable.",
+        "geometry": {
+          "status": "pass",
+          "squareCount": 3,
+          "sideMidpointConnectorCount": 4,
+          "legalPointCount": 24,
+          "centralCross": false,
+          "diagonals": false,
+          "emptyInnerArea": true,
+          "darkCounters": 4,
+          "lightCounters": 4,
+          "allCountersOnLegalStations": true,
+          "notes": "Outer-square four corners carry dark counters; innermost-square four corners carry light counters. All remaining square corners and side midpoint dots are visible. Prompt requested light counters at middle-square corners; output moved them to inner-square corners, still valid under the source brief."
+        },
+        "framing": "Complete wooden board centered, comfortable surrounding margins; no game lines lost after one-pixel technical center crop and resize.",
+        "constraints": "No hands, people, faces, visible text, letters, numbers, logos or watermarks. Physical table accessories are peripheral.",
+        "limitations": "Photographic representation of a hypothetical old board; no claim of a photographed museum artifact."
+      },
+      "originalSha256": "30087481e3ffb5f8280fb744d3c4700d06e0f28dc5fe307523f7c0b735f731f5",
+      "nativeQAPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/mylly/qa-native.png",
+      "smallQAPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/mylly/qa-preview-480.png",
+      "technicalVerification": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "dimensions": [
+          1600,
+          900
+        ],
+        "embeddedSrgb": true,
+        "xmpDescriptionExact": true,
+        "xmpSourceExact": true,
+        "unicodeUserCommentExact": true,
+        "jpegQuality": 90,
+        "originalByteExact": true
+      },
+      "additionSourceCommit": "155dc74bc73240c11fe65158180e1c38c08ff602",
+      "additionSourceBlob": "b0eba7ebde7bf2d9297406db53263eccb0b90163",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "deliveryEligible": true,
+      "state": "worker-pass-awaiting-root-review",
+      "r2Key": "linssikatalogi/mylly-havainne.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "8ec8360b0f9ebceb980e0d9590e1a8d1b1e9875d7e03a3219de2d023a2ea4b6c",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/root-games3.jpg",
+          "production/ihmisen-matka-2/ihmisen-matka-2.jpg"
+        ],
+        "visualNotes": "Three nested squares, four midpoint connectors stopping at inner square,24 legalpoints; four dark/fourlight pieces on legalpoints. Warm physical camera appearance.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "B-addition",
+      "fableReceipt": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/mylly-havainne.jpg",
+      "bytes": 461637,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lentopeli",
+      "file": "lentopeli.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lentopeli/lentopeli.jpg",
+      "sha256": "bb49ac66fb5bf32704c7872fad728359928359c450da90ef5584b9fc77ca03c0",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-aa0e-74a1-8df4-01ea05369b7c/exec-e5894a0b-9285-4843-9147-7bc6dcec0b03.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lentopeli/original-generation.png",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original horizontal Matkakirja catalogue illustration, 16:9, intended final size 1600 × 900.\nCreate a single natural camera-real air-to-air photograph of a small 1910–1920-era wooden and fabric biplane flying above a sea of soft foamy clouds. Far mountain summits rise on the distant horizon. The ENTIRE aircraft is in the central part of the frame with generous breathing room around both wing tips, tail and nose; crop-safe, approximately 60 percent of the image width. A slightly elevated three-quarter side view clearly shows two separate horizontal fabric wings, wooden interplane struts and fine rigging wires, the slim wooden-and-linen fuselage, simple tailplane and fixed undercarriage. Authentic period wood and taut cream linen materials with restrained natural wear, a small propeller with physically plausible rotational motion blur. A generic anonymous period biplane, no specific national or commercial aircraft identity.\nGolden-hour natural sunlight gently warms the linen and wing surfaces, with realistic soft shadows, pale sky, muted warm cream and subdued blue-gray cloud shadows. Distant mountains and lower clouds recede naturally into atmospheric haze. It should look like an ordinary high-quality airborne photograph, with realistic scale, materials, perspective, light and photographic texture.\nThe small open cockpit is dark and does not reveal any person, face or human figure. Aircraft surfaces are entirely plain unmarked natural linen and wood: absolutely NO national insignia, roundels, crosses, flags, logos, registration codes, letters, numbers, symbols or decorative markings anywhere on wings, tail or fuselage. No lettering in the clouds or scenery. No text, watermark or image border.\nNo HDR, no oversaturation, no dramatic cinematic grading, no painting, no watercolor, no toy model, no CGI render. Emphasize believable physical early aviation and natural golden-hour photography.\n",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+        "posti/sisaltokirjuri-codex-katalogikuvat-lisa-20261008.md"
+      ],
+      "kuvateksti": "Puu- ja kangasrakenteinen kaksitaso lentää pilvimeren yllä kultaisessa luonnonvalossa, vuoret kaukana horisontissa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "metadataEncoding": "Exact Unicode text in XMP dc:description and dc:source; exact UTF-16BE EXIF UserComment. Legacy ASCII EXIF ImageDescription is not authoritative for Finnish characters."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "status": "worker-pass-awaiting-root-review",
+        "deliveryEligible": true,
+        "photorealism": "Camera-like fabric ribs and seams, wooden struts, rigging, fixed undercarriage and gently blurred rotating propeller. Warm natural sunlight, muted clouds and atmospheric mountain background.",
+        "geometry": {
+          "status": "pass",
+          "twoWingLevels": true,
+          "completeAircraftVisible": true,
+          "woodAndFabricAppearance": true,
+          "periodAppearance": "generic 1910–1920-era biplane",
+          "notes": "Entire nose, wing tips, tail and landing gear inside frame. Physical struts and rigging connect two distinct wing planes."
+        },
+        "framing": "Centered complete aircraft with margins around wings and tail; larger than requested approximate 60-percent width, but final 16:9 crop remains safe.",
+        "constraints": "No national markings, symbols, letters, registration numbers, logos or watermarks seen on aircraft. No visible pilot face or identifiable person. A small dark shape near cockpit could be seat back or an anonymous pilot silhouette; source brief permits at most such a small silhouette.",
+        "limitations": "Aircraft is a hypothetical generic period construction, not an identified historical aircraft; root should independently inspect cockpit shape."
+      },
+      "originalSha256": "193e716209fed6f8bd6dcbf0efb77ca9c7acbef452fce14b61deab1a886fd05e",
+      "nativeQAPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lentopeli/qa-native.png",
+      "smallQAPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lentopeli/qa-preview-480.png",
+      "technicalVerification": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "dimensions": [
+          1600,
+          900
+        ],
+        "embeddedSrgb": true,
+        "xmpDescriptionExact": true,
+        "xmpSourceExact": true,
+        "unicodeUserCommentExact": true,
+        "jpegQuality": 90,
+        "originalByteExact": true
+      },
+      "additionSourceCommit": "155dc74bc73240c11fe65158180e1c38c08ff602",
+      "additionSourceBlob": "b0eba7ebde7bf2d9297406db53263eccb0b90163",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "deliveryEligible": true,
+      "state": "worker-pass-awaiting-root-review",
+      "r2Key": "linssikatalogi/lentopeli-havainne.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "bb49ac66fb5bf32704c7872fad728359928359c450da90ef5584b9fc77ca03c0",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/root-games3.jpg",
+          "production/ihmisen-matka-2/ihmisen-matka-2.jpg"
+        ],
+        "visualNotes": "Wood/fabric biplane, two wings, no readable markings; cockpit dark shape is small unidentifiable seat/allowed silhouette.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "B-addition",
+      "fableReceipt": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/lentopeli-havainne.jpg",
+      "bytes": 307094,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-8.jpg",
+    "r2Key": "linssikatalogi/20261008-toimitetut-8.jpg",
+    "url": "https://media.matkakirja.app/linssikatalogi/20261008-toimitetut-8.jpg",
+    "sha256": "e21423e612c0040ccace5eebcf554220ee6cc2575ae281d839aa476091d46b7e",
+    "bytes": 318723,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "productionComplete": true,
+  "allR2ReadbacksByteExact": true,
+  "omittedItems": [
+    {
+      "id": "yokartta",
+      "brief": "**Maa yöllä**: kuin kansainvälisen avaruusaseman ikkunasta kuvattu näkymä, jossa **Euroopan (ja Pohjois-Afrikan) kaupunkien valot** hehkuvat keltaisina verkostoina tummalla maalla, atmosfäärin ohut vihreä/sininen kaari horisontissa, pilviä vain muutamia; ei tekstiä, ei rajoja, ei viivoja.",
+      "number": 2,
+      "filename": "yokartta.jpg",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/yokartta",
+      "state": "omitted",
+      "deliveryBatch": "B-original",
+      "r2Key": "linssikatalogi/yokartta-havainne.jpg",
+      "omissionReason": "Nighttime coastlines form overly continuous bright light chains and do not meet the required natural camera-photograph appearance. Original candidate preserved; no additional generation under the one-call cap."
+    },
+    {
+      "id": "maapallon-vuosi",
+      "brief": "**Maapallo ja vuodenajat**: Maa avaruudesta, **kallistunut akseli** selvästi nähtävissä (pohjoisnapa kallellaan kohti aurinkoa, napajäätikkö valkoisena, valon ja yön raja kaareutuu), kevyt atmosfäärihohde; ei tekstiä, ei viivoja. Havainnekuva.",
+      "number": 3,
+      "filename": "maapallon-vuosi.jpg",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/maapallon-vuosi",
+      "state": "omitted",
+      "deliveryBatch": "B-original",
+      "r2Key": "linssikatalogi/maapallon-vuosi-havainne.jpg",
+      "omissionReason": "The northern polar ice and daylight are visible, but the requested clear tilt of the North Pole toward the Sun is not demonstrated unambiguously. Original candidate preserved; no additional generation under the one-call cap."
+    },
+    {
+      "id": "tavli",
+      "brief": "**Tavli (backgammon)**: avattu **puinen, intarsiakoristeinen tavlilauta** kahvilapöydällä, kolmiokentät vuorottelevissa ruskeissa/kermanvalkoisissa sävyissä, **pyöreät nappulat kahdessa värissä** (tummanruskea ja norsunluunvalkoinen), **kaksi noppaa** (silmäluvut pisteinä), pieni teekuppi syrjässä; lämmin Välimeren iltavalo ikkunasta; ei ihmisiä eikä käsiä.",
+      "number": 7,
+      "filename": "tavli.jpg",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/tavli",
+      "state": "omitted",
+      "deliveryBatch": "B-addition",
+      "r2Key": "linssikatalogi/tavli-havainne.jpg",
+      "omissionReason": "Board has seven triangles in each of four quadrants (28 total) rather than a valid24-point backgammon board; piece counts also disagree. Original preserved, no replacement generation under the one-call cap."
+    }
+  ],
+  "pendingItems": [],
+  "deliveryStatus": "R2-byte-exact-verified-prepared-for-normal-mailbox-push",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T06:23:34.380889+00:00",
+  "combinedOriginal5AndAddition3": true,
+  "additionSource": {
+    "additionSourcePath": "posti/sisaltokirjuri-codex-katalogikuvat-lisa-20261008.md",
+    "additionSourceCommit": "155dc74bc73240c11fe65158180e1c38c08ff602",
+    "additionSourceBlob": "b0eba7ebde7bf2d9297406db53263eccb0b90163"
+  },
+  "additionReadInFull": true
+}
