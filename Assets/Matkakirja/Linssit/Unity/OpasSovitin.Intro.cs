@@ -93,12 +93,15 @@ namespace Matkakirja.Natiivi
             // kerrallaan (ei viittä purkua yhtä aikaa), ja vähällä muistilla Eiffel-otoksen laattoja ei esiladata intron alusta asti
             // reittikameralla (PT 9.10.: laatat latautuvat vasta otoksen alkaessa).
             long vapaa = CesiumKaupunki.VapaaMuisti();
-            introEiffel = vapaa <= 0 || vapaa / 1e9 >= IntroEiffelRajaGt;
+            // Pienen muistin laite (alle 12 Gt, KaupunkiKuva.PieniMuisti; iPad Pro 13 8 Gt, 173b-todennus 22.3x: vapaa 1,33 Gt ennen
+            // introa ja yli 1 Gt kului kahdessa sekunnissa, kun Trocadérolta lähes vaakasuoraan katsova Eiffel-näkymä alkoi latautua):
+            // ei Eiffel-esilatausta eikä Eiffel-otosta, otos näytetään 3D-avausnäkymänä. Muilla laitteilla vapaan muistin raja.
+            introEiffel = !KaupunkiKuva.PieniMuisti && (vapaa <= 0 || vapaa / 1e9 >= IntroEiffelRajaGt);
             o.StartCoroutine(HaeIntroKuvat(versio));
             // Eiffel-otoksen laatat valmiiksi reittikameralla (PaivitaKamera → IntroReitti) otoksen loppuun asti.
             double eMaa = OmaMaaKehalla(KaupunkiIntro.EiffelLat, KaupunkiIntro.EiffelLon);
             introEsilataus = introEiffel ? KaupunkiIntro.EiffelKulma(0.5, eMaa) : (Kuvakulma?)null;
-            if (!introEiffel) o.Kirjaa($"opas: intro {kaupunkiId}: vapaa muisti {vapaa / 1e9:F2} Gt < {IntroEiffelRajaGt:F1} → Eiffel-otoksen esilataus pois (laatat otoksen alussa)");
+            if (!introEiffel) o.Kirjaa($"opas: intro {kaupunkiId}: {(KaupunkiKuva.PieniMuisti ? "pieni muisti" : $"vapaa muisti {vapaa / 1e9:F2} Gt < {IntroEiffelRajaGt:F1}")} → Eiffel-esilataus ja -otos pois (3D-avausnäkymä)");
             // Avausnäkymän kierto koko intro + avaus (muuten 16 s:n kierto pysähtyisi ja avauksen ääni hyppäisi kulmaa taaksepäin).
             silmukka?.AsetaAvausKesto(KaupunkiIntro.AvausS + KaupunkiIntro.AvausArvioS + AvausLisaS);
             introKerros ??= new IntroKerros();
@@ -172,7 +175,7 @@ namespace Matkakirja.Natiivi
                 if (introKoriEnnen != null && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
                 var tila = KaupunkiIntro.Tila(t, n => introKuvat[n] != null, c5Nyt);
                 if (!KaupunkiIntro.EiffelEsilataus(t)) introEsilataus = null;
-                introKamera = tila.Laji == IntroLaji.Eiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
+                introKamera = tila.Laji == IntroLaji.Eiffel && introEiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
                 introKerros.Aseta(tila, tila.Kuva > 0 ? introKuvat[tila.Kuva] : null);
                 if (tila.Kuva > introNakyvaKuva)
                 {
