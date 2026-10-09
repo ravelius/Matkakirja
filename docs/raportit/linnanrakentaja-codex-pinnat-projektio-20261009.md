@@ -94,41 +94,49 @@ kuvan kohdistuksen (kohta 3.1).
 5. KL:n osien limitysalueet (vähintään 12 %) häivytetään lineaarisesti. Sauma osuu limityksen keskelle, ja jos mahdollista
    pilasterin tai rännin kohdalle. Ennen häivytystä osien kirkkaus ja sävy tasataan limitysalueen keskiarvon mukaan.
 
-### 3.2 Planaariprojektio (työkalu `projisoi.py`, Blender)
+### 3.2 Planaariprojektio ja atlas (työkalu `projisoi.py`, valmis ja testattu 9.10. puhdas-kuvilla)
+
+`_valmiit/kaupunkipinnat-v1/lahde/projisoi.py`. Ajo: `Blender -b --factory-startup -P projisoi.py -- <nd|kl> <ulos> --lahde codex
+--atlas 4096 --ao 64`. Työkalu lukee jokaisesta näkymästä uusimman `<malli>_<näkymä>_codex_v<n>.png`:n. Jos sitä ei ole, se
+käyttää `puhdas.png`:tä, joten koko ketju voidaan ajaa jo nyt.
 
 Jokainen ortonäkymä on projektori, jonka `*_mitat.json` → `kehys` määrää. Pisteen P projektio-UV on:
-`u = (P·oikea − x0) / leveys_m` ja `v = (y0 − P·ylos) / korkeus_m`, missä x0 ja y0 ovat vasemman yläkulman tasokoordinaatit.
+`u = (P·oikea − x0) / leveys_m` ja `v = (y0 − P·ylos) / korkeus_m`.
 
-- **Projektorin valinta** tehdään kolmio kerrallaan: valitaan näkymä, jossa −n·v on suurin. Mukana ovat kaikki näkymät, myös
-  katto ylhäältä. Esimerkiksi ND:n 55°:n laivakatto saa näin pinnan sivunäkymästä (cos 35° = 0,82) eikä ylhäältä (cos 55° = 0,57).
-  Venymä pysyy alle 1,4×.
-- **Näkyvyystesti:** kolmion keskipisteen syvyyttä verrataan näkymän `syvyys.png`:hen. Jos ero on yli 0,25 m, kolmio on peitossa
-  (esimerkiksi tukikaarten takana tai syvällä portaalissa). Silloin valitaan seuraavaksi paras näkymä. Jos sellaista ei ole,
-  kolmio saa nykyisen PBR-pinnan keskisävyn atlakseen. Tällaisten pintojen osuus raportoidaan, ja tavoite on alle 3 % pinta-alasta.
-- **Sisäpiha (KL):** ulkonäkymät eivät näe sisäpihan julkisivuja. Ne näkyvät pallosta vinosti, joten niille tilataan neljä
-  sisäpihanäkymää lisäerässä. Ohjekuvat tehdään samalla työkalulla rajaamalla (`ortho_ohje.py`:hin `--sisapiha`). Siihen asti
-  sisäpiha saa nykyiset pinnat sävytettyinä Codexin julkisivujen keskiväriin.
-- **Pienet osat** (veistokset, patsaat, spiiran koristeet, balustradit) projisoidaan samoin. Niiden kolmiot ovat yleensä
-  näkyvissä, ja valokuvan sävy riittää 300 m:stä.
+- **Projektorin valinta** tehdään kolmio kerrallaan: valitaan näkymä, jossa |n·v| on suurin (> 0,3) ja jossa kolmio näkyy.
+  Normaalin itseisarvo tarvitaan, koska osa OSM-renkaista on väärinpäin. Valitun näkymän kolmiot käännetään kohti kameraa, ja
+  KL:ssä niitä käännettiin 9 200. Ilman kääntöä AO mustui ja pinnat näkyisivät pelissä takapintoina. Esimerkiksi ND:n 55°:n
+  laivakatto saa pinnan sivunäkymästä, koska venymä jää siten alle 1,4×.
+- **Näkyvyys:** näytepisteitä on viisi: keskipiste ja neljä kulmaa 20 % keskelle päin. Näyte on näkyvissä, kun sen syvyys poikkeaa
+  näkymän `syvyys.png`:stä alle 0,25 m (3 × 3 px:n minimi). Kolmio hyväksytään, kun ≥ 60 % maanpäällisistä näytteistä näkyy.
+  Maan alle jäävät näytteet (helma) eivät äänestä.
+- **Atlas (muutos alkuperäiseen suunnitelmaan):** Smart UV Projectin pakkaus jätti projisoiduille pinnoille vain 27 % atlaksesta,
+  ja ND:n tiheys oli 16,6 cm/px 2048²:ssa. Atlas kootaan siksi näkymien rakennusrajauksista suorakaiteina hyllypakkauksella:
+  metrinen tiheys on tasainen ja spiiralla 2×. Kolmiot käyttävät suoraan projektio-UV:ta, joten Codex-kuvaa ei näytteistetä
+  uudelleen eikä julkisivun sisällä ole saumoja. Rakennuksen värit venytetään taustaan 24 px, ja sitä kauempana tausta saa
+  keskivärin, joten mipit eivät vuoda.
+  - Tulos 4096²:ssa: ND 7,15 cm/px ja KL 6,25 cm/px.
+  - Varapinnat (piilossa olevat sisäseinät ja kannet, peitetyt pielet) ovat yhdessä 16 px:n tasavärilohkossa.
+- **Kattavuus pinta-alasta** (testiajo puhdas-kuvilla):
+  - ND: näkymät 30 %, varapinta 70 %. Varapinnoista valtaosa on piilossa OSM:n building:part-prismojen välissä.
+  - KL: näkymät 47 %, varapinta 53 %.
+  - Näkyviä varapintoja on vain KL:n sisäpihalla ja itäsiipien välissä. Niille tilataan lisänäkymät: sisäpiha 4 ja itäsiipien
+    väli 2 (`ortho_ohje.py`:hin rajausvalinta). Siihen asti ne saavat rappauksen keskisävyn.
+- **Rajoite:** osittain peitetty iso kolmio saa peittäjän kuvan peitetylle osalleen. ND:n verkko on tihennetty 2 m:n välein,
+  joten virhe jää alle 2 m:iin. KL:n suurille rappausnelikulmioille tehdään sama tihennys ennen tuotantoajoa.
 
-### 3.3 UV-atlas ja leivonta (työkalu `leivo_atlas.py`, Blender, Cycles)
+### 3.3 AO ja vienti
 
-1. **Atlaksen UV:** lod0:sta tehdään Smart UV Project (kulmaraja 66°, saarten väli 4 px 4096²:ssa). Suuret seinät pysyvät yhtenä
-   saarena. Tekselitiheys on tasainen: ND noin 4 cm/px ja KL noin 5 cm/px yhdessä 4096²-atlaksessa (ND:n pinta-ala noin
-   28 000 m², KL:n noin 45 000 m²). Jos LS2:n budjetti sallii, käytetään kahta atlasta (julkisivut ja katot).
-2. **Värin leivonta:** jokainen projektori on UV-kartta `proj_<näkymä>` ja materiaali, joka lukee kohdistetun Codex-kuvan. Leivonta
-   tehdään tyypillä EMIT atlas-UV:hen, 1 näyte. Kolmioiden reunoille lisätään 8 px:n reunatäyttö (margin), jotta mipit eivät vuoda.
-3. **AO-leivonta:** Cycles AO atlas-UV:hen, 128 näytettä ja etäisyys 6 m. Varjostajina ovat oma maa (maa.glb) ja naapurirakennusten
-   karkea massa OSM:stä, jottei maanraja näytä leijuvalta. AO kerrotaan väriin (voimakkuus 0,7, käyrä pehmeä). LS2:n
-   valaisematon esitys ei lue occlusionTexturea, joten AO:n on oltava itse värissä.
-4. **Nykyinen COLOR_0-AO** (`syvyys.leivo`) poistetaan näistä malleista, jottei syvennyksiä tummenneta kahdesti. Kaukokuvan
-   sävyerot tulevat nyt kuvasta. PBR-pinnat (harkko, arkki ja rappaus) ja niiden normal- ja ORM-kartat jäävät pois, joten
-   materiaali on yksi baseColor ja valaisematon.
-5. **Sävyn sovitus Googleen:** LS2 ottaa pelistä kolme näytettä Googlen laatoista rakennuksen vierestä (maa, naapurijulkisivu ja
-   naapurikatto) samasta kulmasta. Atlakseen sovitetaan yksi globaali vahvistus ja gamma niin, että sama materiaali (kivi ja
-   lyijy tai kupari) osuu ±5 %:iin Googlen luminanssista. Värisävyä ei vääristetä.
-6. **Vienti:** GLB lod0, lod1 ja lod2 samalla atlaksella (lod2 512²-mip), ASTC kuten ennen (astc-mip.swift). Versiokansio on uusi,
-   esimerkiksi ND v10 ja KL v3. Osoitinta ei vaihdeta ennen omistajan hyväksyntää.
+1. **AO** leivotaan atlas-UV:hen Cyclesillä: 64 näytettä ja etäisyys 6 m. Varjostajana on oma maa (maa-objekti). AO kerrotaan
+   väriin voimakkuudella 0,7 vain näkymäsuorakaiteissa. LS2:n valaisematon esitys ei lue occlusionTexturea, joten AO:n on oltava
+   itse värissä.
+2. **Vanha COLOR_0-AO** (`syvyys.leivo`) poistetaan, jottei syvennyksiä tummenneta kahdesti. PBR-pinnat ja niiden normal- ja
+   ORM-kartat jäävät pois. Materiaali on yksi baseColor (karheus 1, metalli 0).
+3. **Sävyn sovitus Googleen:** LS2 ottaa pelistä kolme näytettä Googlen laatoista rakennuksen vierestä (maa, naapurijulkisivu ja
+   naapurikatto). Atlakseen sovitetaan yksi globaali vahvistus ja gamma niin, että sama materiaali osuu ±5 %:iin Googlen
+   luminanssista.
+4. **Vienti:** GLB lod0 (nyt), lod1 ja lod2 samalla atlaksella. Versiokansio on uusi, esimerkiksi ND v10 ja KL v3. Osoitinta ei
+   vaihdeta ennen omistajan hyväksyntää.
 
 ### 3.4 Työnjako ja järjestys
 
@@ -137,7 +145,7 @@ Jokainen ortonäkymä on projektori, jonka `*_mitat.json` → `kehys` määrää
 | Ohjekuvat ND (6) + KL (5 + 14 osaa) | Linnanrakentaja | valmis 9.10. |
 | Commons-referenssit + Codex-tilaukset | Sisältökirjuri | ohjekuvat |
 | Pilotti: ND eteläjulkisivu + ND katot | Codex → Linnanrakentaja | ensimmäiset kaksi kuvaa |
-| kohdista.py, projisoi.py, leivo_atlas.py | Linnanrakentaja (Sonnet-agentit ≤ 150 rivin paloina) | pilottikuvat testiaineistoksi |
+| projisoi.py (valmis 9.10.), kohdista.py | Linnanrakentaja | pilottikuvat |
 | Valaisematon esitys + Google-sävynäytteet | LS2 | atlas-GLB |
 | Pelikuvat omistajalle (kulma ja versio kuvassa) | LS2 → PT | vienti uuteen versiokansioon |
 
@@ -148,7 +156,7 @@ Pilotin jälkeen PT ja omistaja arvioivat yhden julkisivun pelikuvana, ennen kui
 - **Codex ei noudata geometriaa** (aukkoja puuttuu tai on liikaa). Kohdistuksen hyväksyntärajat estävät huonon kuvan, ja palaute
   annetaan aukkolistana. Pitkät KL:n julkisivut tilataan siksi osina.
 - **Valo vaihtelee julkisivujen välillä.** Kaikki tilataan samalla valolla, ja sävy tasataan limityksessä ja Google-sovituksessa.
-- **Atlaksen tarkkuus:** 300–700 m:n etäisyydellä 4–5 cm/px riittää moninkertaisesti. Lähikuvassa (spiira, länsiportaalit)
+- **Atlaksen tarkkuus:** 300–700 m:n etäisyydellä 6–7 cm/px riittää moninkertaisesti. Lähikuvassa (spiira, länsiportaalit)
   pikselöinti voi näkyä, joten spiiralle ja länsijulkisivulle varataan tarvittaessa oma 2048²-alue.
 - **Lupa:** Codexin kuvat ovat omaa generoitua sisältöä. Commons-referenssit ovat vain tyyliohjeita, eikä niistä kopioida paloja
   malliin.
