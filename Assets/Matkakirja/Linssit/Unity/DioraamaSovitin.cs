@@ -1775,11 +1775,25 @@ namespace Matkakirja.Natiivi
         /// yksi glb per HENKILÖ (ei per tila) -- DioraamaGlb.Lue(unityyn:true) peilaa Unityyn samassa kutsussa
         /// kuin rakennus3D:n LataaTila. Virhe (verkko/jäsennys) EI kaada linssiä: 3D-hahmo jää puuttumaan (ks.
         /// DioraamaHahmot3D.cs:n Esiintyma-kommentti "kortti on varalla" -poikkeamasta).</summary>
+        /// <summary>Paikallinen hahmokoe (kehityskomento "poikki hahmokorvaus <glb-nimi> <paikallinen.glb>|pois", LR:n MetaHuman-koe 9.10.):
+        /// paketin glb (tiedostonimen mukaan, esim. vouti-1500-faceit.glb) luetaan paikallisesta tiedostosta ja ASTC-kuvat sen kansion
+        /// astc/<nimi>-<i>-6x6.astcm:stä. Ei junan sisältöä: ei pysyvää tilaa eikä osoittimen vaihtoa.</summary>
+        static readonly Dictionary<string, string> hahmoKorvaus = new Dictionary<string, string>(StringComparer.Ordinal);
+        static string Korvaus(string glbPolku) { int i = glbPolku.LastIndexOf('/'); return hahmoKorvaus.TryGetValue(i >= 0 ? glbPolku.Substring(i + 1) : glbPolku, out var p) ? p : null; }
+        static IEnumerator HaeSuoraan(string url, Action<byte[]> valmis)
+        {
+            using var q = UnityEngine.Networking.UnityWebRequest.Get(url);
+            yield return q.SendWebRequest();
+            valmis(q.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? q.downloadHandler.data : null);
+        }
+
         IEnumerator LataaHahmoGlb(string glbPolku)
         {
             int kerta = avauskerta;
             byte[] tavut = null;
-            yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
+            string korvaus = Korvaus(glbPolku);
+            if (korvaus != null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} → paikallinen koe {korvaus}"); yield return HaeSuoraan("file://" + korvaus, t => tavut = t); }
+            else yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
             if (tavut == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} ei latautunut (hahmo puuttuu)"); yield break; }
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); }
@@ -1793,9 +1807,17 @@ namespace Matkakirja.Natiivi
                 for (int ki = 0; ki < malli.Kuvat.Count; ki++)
                 {
                     string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
-                    if (DioraamaLevyvalimuisti.Manifestissa(url) != true) continue;
                     byte[] a = null;
-                    yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
+                    if (korvaus != null)
+                    {
+                        string kansio = System.IO.Path.GetDirectoryName(korvaus), nimi = System.IO.Path.GetFileNameWithoutExtension(korvaus);
+                        yield return HaeSuoraan("file://" + kansio + "/astc/" + nimi + "-" + ki + "-6x6.astcm", t => a = t);
+                    }
+                    else
+                    {
+                        if (DioraamaLevyvalimuisti.Manifestissa(url) != true) continue;
+                        yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
+                    }
                     string syy = "ei latautunut";
                     var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat, 0, normaaliKuvat.Contains(ki)) : null;
                     if (k == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} kuva {ki} ASTC ei käytössä ({syy}), glb:n kuva"); continue; }
@@ -2234,6 +2256,14 @@ namespace Matkakirja.Natiivi
                 // uusi peli-/Sovitin-instanssi nollaa sen oletukseen, pois).
                 linssi.Leijunta = arvo == "1";
                 o.Kirjaa("poikki: drift " + (arvo == "1" ? "päällä" : "pois"));
+                return;
+            }
+            if (mita == "hahmokorvaus")
+            {
+                // "poikki hahmokorvaus vouti-1500-faceit.glb /polku/vouti-1500-mh.glb" | "poikki hahmokorvaus pois"; sitten "poikki lataa".
+                if (arvo == null || arvo == "pois") hahmoKorvaus.Clear();
+                else if (osat.Length > 3) hahmoKorvaus[arvo] = osat[3];
+                o.Kirjaa("poikki: hahmokorvaus " + (hahmoKorvaus.Count == 0 ? "pois" : string.Join(", ", hahmoKorvaus)));
                 return;
             }
             if (mita == "hahmot")
