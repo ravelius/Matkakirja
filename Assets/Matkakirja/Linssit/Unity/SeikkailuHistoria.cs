@@ -169,12 +169,15 @@ namespace Matkakirja.Natiivi
                 for (var t = r.transform; t != null && t != n.transform; t = t.parent)
                     if (t.name.StartsWith("Tila:kavely:", StringComparison.Ordinal))
                     {
-                        if (t.name != "Tila:kavely:ranta-1499") { r.enabled = false; kavelyPiilossa.Add(r); }   // kieli: ei (tekninen)
+                        if (Array.IndexOf(HistorianKavelyosat, t.name) < 0) { r.enabled = false; kavelyPiilossa.Add(r); }
                         break;
                     }
             }
         }
         readonly HashSet<Renderer> kavelyPiilossa = new HashSet<Renderer>();
+        /// <summary>Historiassa näkyvät kävelyosat (LR 9.10.): ranta-1499 (kalliotäyttö ja vesipohjat leikkausten alla) ja porttikaytava-T102
+        /// ilman sisätilaleikkaustaan (sen seinät täyttävät onton fotogrammetriakuoren porttikäytävän tornin juurella, arvio 4 t = 40–70).</summary>
+        static readonly string[] HistorianKavelyosat = { "Tila:kavely:ranta-1499", "Tila:kavely:porttikaytava-T102" };   // kieli: ei (tekninen)
 
         /// <summary>Rakentuva renderöijä: vain linnan kuori (DioraamaKuori tottelee kävelyleikkauksia). Arvio 4: leivotut huoneet
         /// (DioraamaLeivottu) näkyivät rakentumisen aikana ilman kuorta mustina laatikkoina ja tornien sisus hehkui.</summary>
