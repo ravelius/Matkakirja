@@ -278,7 +278,7 @@ namespace Matkakirja.Natiivi
         /// raja 1,0 / palautus 1,3 pysäytti laattojen latauksen pysyvästi ensimmäisen kohteen jälkeen (Orsay ja Concorde jäivät vedeksi).
         /// Hätä kahdessa portaassa (PieniMuistihata, PT 10.10. 02.2x f): alle HataPieni1Gt esilatauskamerat pois ja päivitys jatkuu
         /// (välimuisti vapauttaa niiden laatat), alle HataPieniGt lataus seis; palautus porras kerrallaan yli rajan + HataPieniPalautusGt,
-        /// tarkistus 0,5 s välein. Asetukset "hataraja1 Gt" ja "hataraja Gt" (testi; hataraja1 0 = vain lataus seis kuten ennen).</summary>
+        /// taso 1 pysyy vähintään 10 s viimeisestä alituksesta, tarkistus 0,5 s välein. Asetukset "hataraja1 Gt" ja "hataraja Gt" (testi; hataraja1 0 = vain lataus seis kuten ennen).</summary>
         public static double HataPieni1Gt = Matkakirja.Linssit.Kierros.PieniMuistihata.Taso1Oletus, HataPieniGt = Matkakirja.Linssit.Kierros.PieniMuistihata.Taso2Oletus,
             HataPieniPalautusGt = Matkakirja.Linssit.Kierros.PieniMuistihata.PalautusOletus;
         readonly Matkakirja.Linssit.Kierros.PieniMuistihata pieniHata = new Matkakirja.Linssit.Kierros.PieniMuistihata();
@@ -305,7 +305,7 @@ namespace Matkakirja.Natiivi
             long v = VapaaMuisti();
             int laattoja = juuri != null ? juuri.GetComponentsInChildren<MeshFilter>(false).Length : 0;
             kirjaa($"muistiloki t {Time.realtimeSinceStartup:F0} vapaa {v / 1e6:F0} Mt, varattu {UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong() >> 20} Mt, " +
-                   $"tekstuurit {(long)Texture.currentTextureMemory >> 20} Mt, laattoja {laattoja}, kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %, hätä {(muistiPysaytys ? 1 : 0)}");
+                   $"tekstuurit {(long)Texture.currentTextureMemory >> 20} Mt, laattoja {laattoja}, kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %, hätä {(KaupunkiKuva.PieniMuisti ? pieniHata.Taso : muistiPysaytys ? 1 : 0)}");
         }
 
         void Muistivahti()
@@ -338,7 +338,7 @@ namespace Matkakirja.Natiivi
         void PieniHata(long v)
         {
             int ennen = pieniHata.Taso;
-            if (!pieniHata.Paivita(v / 1e9, HataPieni1Gt, HataPieniGt, HataPieniPalautusGt)) return;
+            if (!pieniHata.Paivita(v / 1e9, Time.realtimeSinceStartup, HataPieni1Gt, HataPieniGt, HataPieniPalautusGt)) return;
             int nyt = pieniHata.Taso;
             hataSeis = nyt >= 2;
             if (nyt >= 1) { hataKaytetty = true; EsilatausPois(); }
