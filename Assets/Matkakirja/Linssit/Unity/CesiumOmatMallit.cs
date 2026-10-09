@@ -72,7 +72,10 @@ namespace Matkakirja.Linssit
         /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
         /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä
         /// kehityskaupungin koko Googlen kaupunki katoaisi leikkauksen kohdalla.</summary>
-        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-2.json";
+        /// <summary>uusin-3.json (9.10., juna 173; PT/LR: uusi data vain sitä lukeville buildeille): mallit, jotka tarvitsevat
+        /// OmaMallin PBR-kartat, kaupungin auringon ja alfaleikkauksen (ND v5+ korttipuut, COLOR_0-sävyerot). uusin-2 jää vanhoille
+        /// (170–172, nyt v6b), joten niihin ei päädy dataa, jota niiden varjostin ei osaa piirtää.</summary>
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-3.json";
         static string verkkoJson, verkkoJuuri;
         static bool verkkoHaettu, verkkoHaussa;
         /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
