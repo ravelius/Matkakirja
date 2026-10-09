@@ -66,6 +66,37 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261009-ilta.md`. Aloitusv
 - Uusi worktree `wt/linnanrakentaja-linna-v45c` (pohja v45b, haara pushattu 7db694814). Poista se, kun Siirtoseppä on kytkenyt.
 - faceit-vouti on ennallaan (peli käyttää mh-voutia). Siirtoseppä kertoo, jos sitä tarvitaan.
 
+## SEURAAVA TYÖ: Notre-Damen MUOTOKORJAUS (PT 9.10. klo 21, omistaja: "tuleeko ND:stä hyvä")
+
+PT:n uusi järjestys: ND:n muoto korjataan ensin, sitten uudet ohjauskuvat (`ortho_ohje.py` + `ortho_merkinnat.py` +
+`tekoaly_syotteet.py`), ja lopuksi Karttaseppä generoi tunnisteella v3. Ennen pintoja PT:lle vertailukuva (Commons-valokuva | malli)
+samasta kulmasta: etelä, pohjoinen, länsi, apsis ja ylhäältä.
+- Karttaseppä on ohittanut ND:n jäljellä olevat v2-näkymät. `nd_etela_v2` jää vertailuksi.
+- Tarkkuus: lähikuva (omistaja haluaa kameran todella lähelle).
+- Kumarrus-vienti on tehty (v46k).
+
+Diagnoosi 9.10.:
+1. Viitekuva: `nd-etela/01-Paris-Notre-Dame-cathedral-south-facade-20170527-02` (CC BY 2.0). Vertailu: `scratchpad nd_etela_kuva_malli.jpg`.
+   Lähdekoodi: `notre-dame-v1/lahde/notre_dame.py` (730 riviä).
+2. **Eteläinen ruusuikkuna ei näy.** `ruusut()` (r. 353) sijoittaa ⌀ 12,8 m:n ruusun z = 24 kohtaan `harjan_akseli(P(79))`:n päihin s0/s1.
+   - Ortokuvassa ja renderissä päädyssä näkyy kolme suippoikkunaa (`ikkunat()`), mutta ruusua ei.
+   - Ruusu on todennäköisesti päätyseinän takana (P(79):n harja-akselin pää ≠ päätyjulkisivun taso), ja ikkunat peittävät sen.
+   - Korjaus: ruusu päätyseinän pintaan, poikkilaivan päätyjen ikkunat pois sen alta. Ruusun alle lasigalleria (claire-voie) ja ylle
+     pääty, jossa pieni ruusu tai kolmiosyvennys, ja päädyn pinaakkelit. Pohjoispääty samoin.
+3. **Laivan tukikaaret puuttuvat.** `tukikaaret()` (r. 382) tekee vain chevetin ja poikkilaivan kaaret. Laivan molemmille sivuille
+   tarvitaan kaksoistukikaaret sivulaivojen yli pilareista ylemmän laivan seinään, joka välissä (kuvassa noin 7 per sivu).
+4. **Alaseinät ovat tyhjät.** Sivukappelien suippoikkunat ja tukipilarit puuttuvat (`ikkunat()` vain ylälaivassa).
+5. **Länsitornit ovat yksinkertaistetut, ja pyramidikatto on väärin.** Oikeissa torneissa on tasakatto ja kaide.
+   - Kummankin tornin julkisivulla on kaksi korkeaa kellotapulin aukkoa ja kimeerien galleria.
+   - Länsijulkisivulla on kuninkaiden galleria ja kolme portaalia (`julkisivu()`, r. 452).
+   - Länsiruusu on jo koodissa (z 27, r 4,8). Tarkista, näkyykö se.
+6. **Spiiran juuri ja patsaat ovat ohuet** (`spiira()`, r. 400). Apostolipatsaat on tehty, mutta niistä puuttuu mittakaava, ja spiiran
+   juuren kehä ja pinaakkelit ovat ohuet.
+7. Kuoren kaaret ovat jo olemassa. Tarkista niiden mittakaava valokuvaa vasten.
+- Järjestys: 2 (ruusut) → 5 (tornit, länsi) → 3 (laivan tukikaaret) → 4 (kappeli-ikkunat) → 6 (spiira).
+- Joka vaiheen jälkeen ortho- ja perspektiivivertailu valokuvaan samasta kulmasta (`nd_render.py`-mallilla). Pidä kolmioiden budjetti
+  silmällä (lod0, lod1 ja lod2).
+
 ## Työkalut (`_valmiit/kaupunkipinnat-v1/lahde/`)
 
 - **`tekoaly_syotteet.py <näkymä> [--pxm 25 --ulos <kansio>]`** tuottaa:
