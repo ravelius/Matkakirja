@@ -71,8 +71,8 @@ namespace Matkakirja.Natiivi
             rivi.style.alignItems = Align.Center;
             rivi.style.justifyContent = Justify.Center;
             rivi.style.width = Length.Percent(100);
-            pelaaKortti = KorttiValinta(Kieli.T("olavinlinna.alku.olavinlinna"), Kieli.T("olavinlinna.alku.pelaa-kesayo-1499"), Kieli.T("olavinlinna.alku.pelaa"), "mk-nappi--kulta", () => Valitse(true));
-            historiaKortti = KorttiValinta(Kieli.T("olavinlinna.alku.olavinlinna"), Kieli.T("olavinlinna.alku.linnan-historia-noin-3-min"), Kieli.T("olavinlinna.alku.historia"), "mk-nappi--toiminto", () => Valitse(false));
+            pelaaKortti = KorttiValinta(Kieli.T("ui.alku.olavinlinna"), Kieli.T("ui.alku.pelaa-kesayo-1499"), Kieli.T("ui.alku.pelaa"), "mk-nappi--kulta", () => Valitse(true));
+            historiaKortti = KorttiValinta(Kieli.T("ui.alku.olavinlinna"), Kieli.T("ui.alku.linnan-historia-noin-3-min"), Kieli.T("ui.alku.historia"), "mk-nappi--toiminto", () => Valitse(false));
             himmennys.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
         }
 
