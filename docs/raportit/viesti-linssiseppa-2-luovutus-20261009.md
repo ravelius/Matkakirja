@@ -1,0 +1,43 @@
+# Linssiseppä 2 – luovutus 9.10.2026 klo 11.3x (kontekstin nollaus, PT)
+
+Rooli: Linssiseppä 2 (Opus, high). Aiempi pitkä historia: `docs/raportit/viesti-linssiseppa2-luovutus-20261005.md` (TILA-osiot).
+Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Worktreet `/Users/Shared/Claude/wt/proto-linssiseppa2-*`.
+Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
+(`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
+
+## OMISTAJAN LINJA: kaikki suunniteltu → yksi iso JUNA 172 (julkaistaan kun valmis)
+
+### Lähetetty Natiivisepälle / kuitattu
+| Haara | SHA | Sisältö | Tila |
+|---|---|---|---|
+| linssiseppa2/muistihata-171 | 9e15ec414 + 7f1a0c6f2 | Muistihätä ilman RecreateTilesetiä (karkea valinta, suspendUpdate tauolla) + lyhyt jatkuva vana | TF 171 julki |
+| linssiseppa2/ymparistovalo-171 | b4a393994 | Kaupungin Trilight-ympäristövalo | kuitattu (rungossa) |
+| linssiseppa2/mikseri-173 | 2996980aa (ddbee4e70 → 807b14e4e → 8c516911f → 2996980aa) | ISS-äänet mikseriin 8/8 (natiivi-ui/mikseri-173 500126589:n päällä); NUI:n katselmointikorjaus | PT kuittasi 172:een; NUI kuittasi 2996980aa |
+| (juna 170) laivat-170 | ea60457f9, 811d26cf8 ym. | yötaivas, Tukholman yö | junassa 170 |
+
+### KESKEN junaan 172 (ei vielä SHA:ta Natiivisepälle; kuvat ensin)
+| Haara | Kärki | Sisältö | Mitä puuttuu |
+|---|---|---|---|
+| linssiseppa2/laivat-171 | b8da55364 (+657676845 vana) | Pariisin jokilaiva (bateau-mouche) ja kiertoajelu tarkkoina (TarkatVeneet) | simukuva: laivat eivät osuneet kuviin → uusi laaja kulma (aja-172b) |
+| linssiseppa2/omavalo-172 | c5d86a7e2 (sis. kaukomaa-171b) | OmaMalli-varjostin omille malleille (aurinko+SH+varjot, ilma, ilta: julkisivuvalo + lasien hehku ×5, alfaleikkaus kaksipuolisena); kaukomaa: aluskerros > 1200 m (de07812c1, myös PidaMaskista), yön kaukoutu korkeuden mukaan (c783cc796) | kuvaparit ND v5 / KL v1.7 päivä-ilta omavalo 0/1; aluskerroksen loki 12 km:ssä; yö 12 km |
+| linssiseppa2/sade-171 | ad5b874b3 | Sadepilvet, Salama-API, yöpilvet näyttöarvona | LS1 yhdisti kierros-170:een (3fdf75648); konflikti muistihata-171:n kanssa vain testitiedostossa |
+| Seinen vaalea läikkä (Pont Saint-Michel) | – | EI omasta vedestä (näkyy vesi 0:lla) | testi ilmakeha 0/1 (aja-172b) → syy → korjaus |
+
+### SEURAAVA SIMUVUORO (Julkaisijan jonossa ~11.50)
+`scratchpad/kaanna-ja-kuvaa-172b.sh` = KÄÄNNÖS juna-171 + omavalo-172 + laivat-171 → `lokit/linssiseppa2-app-172b`, sitten
+`aja-172b.sh` (vienti21 Documentsiin): kaukomaa Pariisi 12 km päivä/yö, Seine i1/i0 (ilmakeha), Pariisin laivat 700 m,
+ND-valo c0/c1/y1, KL-valo c0/c1/y1. (Scratchpad katoaa nollauksessa → skriptit pitää kirjoittaa uudelleen; malli: kaupunki-vertailu.sh
+JALKEEN="opas kamera lat lon dist kallistus suuntima katse" ASENNETTU=1 KAUPUNGIT=…; ennen kuvia lämmityskäynnistys, koska
+ensimmäinen käynnistys asennuksen jälkeen epäonnistuu.)
+Kuvien jälkeen: SHA:t (laivat-171, omavalo-172) Natiivisepälle, kuvat PT:lle ja LR:lle, lopuksi rivi PT:lle "valmis 172:een".
+
+## Omat mallit (ämpäri)
+- v7 (KL v1.6 + ND v4) ämpärissä 11.02, uusin-2 → v7 junan 172 mukana (nyt v6). uusin.json → v2/mallit-giza.json (vanhat appit).
+- Putki: `proto-3d/_tyo/linssiseppa2/concorde-putki/glb/sijainnit.json` → `python3 -I tyokalut/omat_mallit_tileset.py <putki> <putki>/vientiN`
+  (worktree proto-linssiseppa2-korkeus). Uusin vienti21 (ND v5 korttipuut 137 k + KL v1.7).
+- LR:n jatkolista (PT): ND puut (v5 korttipuut tehty), jokimuurin kiila, KL lämmin rosa (v1.7 tehty); emissive vain lasille (OmaMalli).
+- ND:n lähilento kun LR:n malli valmis (omistaja).
+
+## Muuta
+- Cupolan radiosilmukka tarkoituksella pois (omistaja 3.10.), ämpärin tiedosto käyttämätön → PT:lle ehdotettu manifestimerkintä.
+- Karttasepän index-v4 (vesi ilman altaita) ämpärissä; koodi hakee v4 → v3 → v2.
