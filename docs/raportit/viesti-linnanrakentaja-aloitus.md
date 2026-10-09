@@ -30,6 +30,14 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      - Ilmeiden kartoitus on korjattu: indeksi, iho normaalin mukaan ja hampaat jäykkinä. jawOpen ei enää näytä piikkejä.
      - Tarkistusarkki: `esikatselu/vouti_mh_v3_arkki.jpg`.
    - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
+   - **Riddarholmen v2** on valmis ja odottaa PT:tä ja omistajaa. Vertailukuva:
+     `riddarholmen-v1/esikatselu/riddarholmen_v2_vertailu_valokuva.jpg`. v1 on tallessa kansiossa `glb-v1/`.
+     - Katot ja kupolit on korjattu, ja kappelien lyhdyille tuli neulahuiput.
+     - Tiili on vaaleampi.
+     - Katon aukot on suljettu.
+     - Spiiran tummuus odottaa PT:n päätöstä.
+   - **Vouti v3:n lähikuva:** PT antoi luvan yhteen simulaattoriajoon. Siirtosepän seuraaja ottaa kuvan arvio 10:n jälkeen,
+     ja sen jälkeen vouti v3 viedään kansioon v44/hahmot.
 
 ## Säännöt, jotka opittiin
 
