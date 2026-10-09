@@ -293,6 +293,21 @@ namespace Matkakirja.Natiivi
         /// RecreateTileset():iä (koko tileset ladataan alusta, muistipiikki). Sen sijaan vapaa muisti alle HataGt → laattavalinta karkealle
         /// kameralle (pikselit × HataSkaala, Natiiviseppä: hienot laatat vapautuvat välimuistin rajoissa, ei recreatea) ja lähikamera pois;
         /// yli HataGt + HataPalautusGt → tarkentuu normaalisti. Testi: Documents/kaupunki-vapaa-muisti.txt "0.5".</summary>
+        // MUISTILOKI (Linssiseppä 9.10., PT: juna 173 kaatui iPadilla Pariisin introssa, vika toistetaan ennen korjausta): vain kun
+        // Documents/kaupunki-muistiloki.txt on olemassa, sekunnin välein vapaa muisti (os_proc_available_memory), Unityn varaus,
+        // tekstuurimuisti ja kaupungin laattojen määrä. Diagnostiikka, ei vaikuta muuhun.
+        float muistiLokiAika = -1f; int muistiLokiTila = -1;
+        void MuistiLoki()
+        {
+            if (muistiLokiTila < 0) muistiLokiTila = File.Exists(Path.Combine(Application.persistentDataPath, "kaupunki-muistiloki.txt")) ? 1 : 0;
+            if (muistiLokiTila == 0 || !auki || Time.realtimeSinceStartup - muistiLokiAika < 1f) return;
+            muistiLokiAika = Time.realtimeSinceStartup;
+            long v = VapaaMuisti();
+            int laattoja = juuri != null ? juuri.GetComponentsInChildren<MeshFilter>(false).Length : 0;
+            kirjaa($"muistiloki t {Time.realtimeSinceStartup:F0} vapaa {v / 1e6:F0} Mt, varattu {UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong() >> 20} Mt, " +
+                   $"tekstuurit {(long)Texture.currentTextureMemory >> 20} Mt, laattoja {laattoja}, kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %, hätä {(muistiPysaytys ? 1 : 0)}");
+        }
+
         void Muistivahti()
         {
             if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < (KaupunkiKuva.PieniMuisti ? 0.5f : 2f)) return;
@@ -453,6 +468,7 @@ namespace Matkakirja.Natiivi
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
             if (auki && kamera != null) omat.Kamera(kamera.transform.position);
             Muistivahti();
+            MuistiLoki();
             PaivitaPysaytys();
             if (KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM) TarkistaReiat();   // kaukomaa myös kiinteällä kameralla (simu 9.10. 10.4x: ei laukeamista)
             PaivitaKarkea();
