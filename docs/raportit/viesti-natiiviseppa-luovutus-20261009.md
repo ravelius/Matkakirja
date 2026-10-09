@@ -3,6 +3,13 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 18.5x — runko e0fc13d4a
+
+- + LS2 vesi-v5 f7d6156d2 (index-v5 200) ja varjot-173 9acc8d4a7 (oletus pois; PT: oletus päälle vasta iPad Pro 13 -mittauksen
+  jälkeen, raja +1,5 ms). Linssit 1247, Peli 442, Kartta 453, unity 0, tarkista 0, .metat ok.
+- VIESTIT: Desktopin istuntoviestit ovat tauolla 10 viestin rajan takia (myös mcp__ccd_session_mgmt__send_message kulkee saman
+  tauon läpi). Taukoa ei kierretä. Tila kirjataan tänne, kunnes omistaja kirjoittaa Natiivisepän sessioon.
+
 ## TILA 9.10. 18.3x — runko 779bd8e6b
 
 - + NUI kielierä 6 7d1bf4a63 (PT kuittasi; viimeinen UI-erä). Yhdistelmävika: Pelikoodarin ValmisluennatManifestiTestit haki
