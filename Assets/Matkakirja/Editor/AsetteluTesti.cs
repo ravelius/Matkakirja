@@ -116,6 +116,9 @@ namespace Matkakirja.Editori
             {
                 case Vaihe.Aloita:
                     if (kokoNro >= Koot.Length) { Lopeta(); return; }
+                    // Edellisen koon paneelitekstuurit pois ennen seuraavaa (ajo #14 kaatui GPU-muistin loppumiseen iPad pystyssä).
+                    EditorUtility.UnloadUnusedAssetsImmediate();
+                    GC.Collect();
                     Environment.SetEnvironmentVariable(UiRuutu.TestiMuuttuja, Koot[kokoNro].Arvo);
                     Kirjaa($"== {Koot[kokoNro].Nimi} ({Koot[kokoNro].Arvo})");
                     EditorApplication.EnterPlaymode();
@@ -245,7 +248,7 @@ namespace Matkakirja.Editori
                     // Nosto latautuu paketista: odotetaan korttia enintään 10 s.
                     var nk = UiNakymat.Hae().Nostokortti;
                     bool valmis = nk.Auki && nk.TestiKortti?.panel != null && nk.TestiKortti.worldBound.height >= 1f;
-                    if ((!valmis && Kulunut < 10) || kehyksia < 20 || Kulunut < 1.0) return;
+                    if ((!valmis && Kulunut < 20) || kehyksia < 20 || Kulunut < 1.0) return;
                     if (!nk.Auki) Virhe("nosto: lukunäkymä ei aukea");
                     else TarkistaPaneeli(nk.TestiKortti, UiKerros.Valikot, "nosto");
                     nk.Sulje();
@@ -282,6 +285,8 @@ namespace Matkakirja.Editori
                 {
                     var n = Nakymat[nakymaNro];
                     if (kehyksia < 20 || Kulunut < n.OdotusS) return;
+                    // Sisältö latautuu paketeista (kuormitettu kone, ajo #14): odotetaan uusia näkyviä elementtejä enintään 20 s.
+                    if (Kulunut < 20 && !NakyvatOhjaimet().Any(e => !ennen.Contains(e))) return;
                     TarkistaUudet(n.Nimi);
                     try { n.Sulje(); } catch (Exception e) { Virhe($"{n.Nimi}: sulku kaatui {e.Message}"); }
                     nakymaNro++;
