@@ -25,20 +25,23 @@ namespace Matkakirja.Natiivi
         public static string[] OletusKohteet = { "tukholma", "pariisi" };   // kehityskaupungit (omistaja 20.4x); Pariisi index-v2:sta
         public static string VesiJuuri = "https://media.matkakirja.app/vesi/";
         public const float LahiM = 3000f, KaukoM = 20000f, PaivitysM = 400f;
+        /// <summary>VESI 40 KM:IIN (index-v5, Karttaseppä + LS2 9.10.): Tukholman saaristo 20–40 km:ssä oli Googlen vettä. Kolmas taso
+        /// "kauko2" (48 m) KaukoM–KaukoM2, kun indeksin tarkkuuksissa on 48m; muuten (Pariisi) 16 m:n taso jatkuu KaukoM2:een.</summary>
+        public const float KaukoM2 = 40000f;
         public static float NostoM = 0.4f;
         /// <summary>Asetus "vesinosto" annettu: jsonin nosto_m_suositus ei ohita sitä (LS1:n katselmointi).</summary>
         public static bool NostoAsetettu;
         static bool nostoIndeksista;
         /// <summary>Uusia paloja enintään näin monta kehyksessä (ei nykäystä pallon lennossa; LS1:n katselmointi).</summary>
         public const int PalojaKehyksessa = 4;   // 9.10.: 2 jätti lähipaloja puuttumaan vielä 15 s:n kohdalla (Googlen vesi näkyi terävinä monikulmioina)
-        readonly Queue<(bool, int)> jono = new Queue<(bool, int)>();
+        readonly Queue<(int, int)> jono = new Queue<(int, int)>();   // (taso 0 lähi, 1 kauko, 2 kauko2; pala)
         /// <summary>Veden juuri (paikalliset akselit itä, ylös, pohjoinen; m), null ennen latausta (LS1:n veneet).</summary>
         public Transform Juuri => juuri != null ? juuri.transform : null;
 
         readonly Action<string> kirjaa;
         GameObject juuri; Material mat; int kerros;
-        VesiVerkko lahi, kauka; string krediitti;
-        readonly Dictionary<(bool, int), GameObject> palat = new Dictionary<(bool, int), GameObject>();
+        VesiVerkko lahi, kauka, kauka2; float kaukaRaja = KaukoM; string krediitti;
+        readonly Dictionary<(int, int), GameObject> palat = new Dictionary<(int, int), GameObject>();
         Vector3 edellinen = new Vector3(float.NaN, 0, 0);
         int avaus;
 
@@ -96,10 +99,10 @@ namespace Matkakirja.Natiivi
         {
             // Kohde indexistä: lähin, jonka säteellä kaupunki on.
             // index-v2.json (Tukholma + Pariisi; Karttaseppä 8.10.: uudet kohteet uuteen versioon, vanha ei ylikirjoitu), varana index.json.
-            string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false;
+            string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false; string[] tarkkuudet = null;
             // v4 (Karttaseppä 9.10., LS1 + PT: Tuileries'n altaan päällä leijuva kiekko): pienet erilliset altaat ja suihkulähteet poistettu
             // aineistosta, kanava-altaat (Saint-Martin, Ourcq) suojattu OSM:n vesiväylillä; muoto sama kuin v3.
-            foreach (var nimi in new[] { "index-v4.json", "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
+            foreach (var nimi in new[] { "index-v5.json", "index-v4.json", "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
             {
                 using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
                 r0.timeout = 15; yield return r0.SendWebRequest();
@@ -114,6 +117,8 @@ namespace Matkakirja.Natiivi
                         {
                             k = MiniJson.Teksti(o, "id");
                             tiedosto = MiniJson.Teksti(o, "tiedosto");   // index-v3: uusi aineisto omalla nimellä (ämpäriä ei ylikirjoiteta)
+                            var t = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "tarkkuudet")).Select(x => x as string).Where(x => x != null).ToArray();   // index-v5
+                            if (t.Length > 0) tarkkuudet = t;
                             if (!NostoAsetettu && MiniJson.Luku(o, "nosto_m") is double nk) { NostoM = (float)nk; nostoIndeksista = true; }
                             break;
                         }
@@ -123,8 +128,9 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA kaupunki: vesi indeksi {(indeksi != null ? "ok" : "PUUTTUU")}, kohde {k ?? "-"}");
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
             string pohja = juuriUrl + (string.IsNullOrEmpty(tiedosto) ? k : tiedosto);
-            VesiVerkko l = null, ka = null; (double Lat, double Lon)? origo = null;
-            foreach (var (ruutu, lahiTaso) in new[] { ("6m", true), ("16m", false) })
+            VesiVerkko l = null, ka = null, ka2 = null; (double Lat, double Lon)? origo = null;
+            bool v5 = tarkkuudet != null, kauko2 = v5 && Array.IndexOf(tarkkuudet, "48m") >= 0;
+            foreach (var (ruutu, taso) in kauko2 ? new[] { ("6m", 0), ("16m", 1), ("48m", 2) } : new[] { ("6m", 0), ("16m", 1) })
             {
                 string json = null; byte[] tavut = null;
                 using (var r = UnityWebRequest.Get($"{pohja}-{ruutu}.json")) { r.timeout = 20; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) json = r.downloadHandler.text; }
@@ -133,7 +139,7 @@ namespace Matkakirja.Natiivi
                 if (json == null || tavut == null) { Debug.Log($"MATKAKIRJA kaupunki: vesi {pohja}-{ruutu} ei latautunut"); continue; }
                 var v = Jasenna(json, tavut, out var o);
                 origo ??= o;
-                if (lahiTaso) l = v; else ka = v;
+                if (taso == 0) l = v; else if (taso == 1) ka = v; else ka2 = v;
             }
             if (origo == null || vanhempi0 == null) yield break;
             juuri = new GameObject("Kaupunki vesi " + k) { layer = kerros };
@@ -144,9 +150,9 @@ namespace Matkakirja.Natiivi
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var sh = Shader.Find("Matkakirja/Linssit/VesiPinta");
             if (sh != null) mat = new Material(sh) { name = "KaupunkiVesi" };
-            lahi = l; kauka = ka;
+            lahi = l; kauka = ka; kauka2 = ka2; kaukaRaja = v5 && !kauko2 ? KaukoM2 : KaukoM;
             KrediittiNyt = string.IsNullOrEmpty(krediitti) ? "Vesi: © OpenStreetMap contributors, ESA WorldCover" : krediitti;
-            Debug.Log($"MATKAKIRJA kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi- ja {kauka?.Palat.Length ?? 0} kaukopalaa, nosto {NostoM:F1} m)");
+            Debug.Log($"MATKAKIRJA kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi-, {kauka?.Palat.Length ?? 0} kauko- ja {kauka2?.Palat.Length ?? 0} kauko2-palaa, kauko {kaukaRaja / 1000:F0} km{(kauka2 != null ? $", kauko2 {KaukoM2 / 1000:F0} km" : "")}, nosto {NostoM:F1} m)");
         }
 
         VesiVerkko Jasenna(string json, byte[] tavut, out (double Lat, double Lon)? origo)
@@ -168,7 +174,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka kehys (CesiumKaupunki): palat kameran ympäriltä, kun kamera on siirtynyt yli PaivitysM.</summary>
         public void Paivita(Camera kamera)
         {
-            if (juuri == null || kamera == null || (lahi == null && kauka == null)) return;
+            if (juuri == null || kamera == null || (lahi == null && kauka == null && kauka2 == null)) return;
             // Asetus "vesi 0" kesken näkymän: vesi piiloon (ei mustaa pintaa; kuvapari 8.10.).
             bool nakyy = Pakotettu != false;
             if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);
@@ -178,28 +184,32 @@ namespace Matkakirja.Natiivi
             for (int n = 0; n < PalojaKehyksessa && jono.Count > 0; n++)
             {
                 var h = jono.Dequeue();
-                if (!palat.ContainsKey(h)) palat[h] = LuoPala(h.Item1 ? lahi : kauka, h.Item2, h.Item1);
+                if (!palat.ContainsKey(h)) palat[h] = LuoPala(Taso(h.Item1), h.Item2, h.Item1);
             }
             var p = juuri.transform.InverseTransformPoint(kamera.transform.position);   // paikallinen: x itä, y ylös, z pohjoinen (m)
             if (!float.IsNaN(edellinen.x) && (p - edellinen).sqrMagnitude < PaivitysM * PaivitysM) return;
             edellinen = p;
-            var halutut = new HashSet<(bool, int)>();
-            if (lahi != null) foreach (var i in lahi.Valitse(p.x, p.z, 0, LahiM)) halutut.Add((true, i));
-            if (kauka != null) foreach (var i in kauka.Valitse(p.x, p.z, lahi != null ? LahiM : 0, KaukoM)) halutut.Add((false, i));
+            var halutut = new HashSet<(int, int)>();
+            if (lahi != null) foreach (var i in lahi.Valitse(p.x, p.z, 0, LahiM)) halutut.Add((0, i));
+            if (kauka != null) foreach (var i in kauka.Valitse(p.x, p.z, lahi != null ? LahiM : 0, kaukaRaja)) halutut.Add((1, i));
+            if (kauka2 != null) foreach (var i in kauka2.Valitse(p.x, p.z, kauka != null ? kaukaRaja : 0, KaukoM2)) halutut.Add((2, i));
             foreach (var kv in palat.Where(kv => !halutut.Contains(kv.Key)).ToList()) { UnityEngine.Object.Destroy(kv.Value.GetComponent<MeshFilter>().sharedMesh); UnityEngine.Object.Destroy(kv.Value); palat.Remove(kv.Key); }
             // Uudet jonoon lähimmästä alkaen (luodaan PalojaKehyksessa kehyksessä); vanha jono hylätään.
             jono.Clear();
-            foreach (var h in halutut.Where(h => !palat.ContainsKey(h)).OrderBy(h => (h.Item1 ? lahi : kauka).Etaisyys(h.Item2, p.x, p.z))) jono.Enqueue(h);
+            foreach (var h in halutut.Where(h => !palat.ContainsKey(h)).OrderBy(h => Taso(h.Item1).Etaisyys(h.Item2, p.x, p.z))) jono.Enqueue(h);
         }
 
-        GameObject LuoPala(VesiVerkko v, int i, bool lahiTaso)
+        VesiVerkko Taso(int t) => t == 0 ? lahi : t == 1 ? kauka : kauka2;
+
+        GameObject LuoPala(VesiVerkko v, int i, int taso)
         {
             var paikat = new List<(float X, float Y, float Z)>(); var ranta = new List<float>(); var kolmiot = new List<int>();
             v.Unityyn(i, NostoM, paikat, ranta, kolmiot);
-            var m = new Mesh { name = $"Vesi {(lahiTaso ? "6m" : "16m")} {i}", indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
+            var m = new Mesh { name = $"Vesi {(taso == 0 ? "6m" : taso == 1 ? "16m" : "48m")} {i}", indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
             m.SetVertices(paikat.Select(x => new Vector3(x.X, x.Y, x.Z)).ToList());
             m.SetUVs(0, ranta.Select(d => new Vector2(d, 0)).ToList());
             m.SetTriangles(kolmiot, 0); m.RecalculateBounds();
+            m.UploadMeshData(true);   // Natiiviseppä 9.10. (v5 +16 Mt): CPU-kopio pois; VedenKorkeus lukee VesiVerkkoa, ei meshiä
             var go = new GameObject(m.name) { layer = kerros };
             go.transform.SetParent(juuri.transform, false);
             go.AddComponent<MeshFilter>().sharedMesh = m;
@@ -215,15 +225,15 @@ namespace Matkakirja.Natiivi
             palat.Clear(); jono.Clear();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             if (mat != null) UnityEngine.Object.Destroy(mat);
-            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null; Nakyvissa = false;
+            juuri = null; mat = null; lahi = kauka = kauka2 = null; kaukaRaja = KaukoM; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null; Nakyvissa = false;
         }
 
         /// <summary>Vesipinnan korkeus juuren paikallisessa kehyksessä (x itä, z pohjoinen → y, nosto mukana); false = ei vettä (LS1:n veneet).</summary>
         public bool VedenKorkeus(float x, float z, out float y)
         {
             y = 0;
-            var v = lahi ?? kauka; if (v == null) return false;
-            if (!v.Korkeus(x, z, out var u) && !(kauka != null && v != kauka && kauka.Korkeus(x, z, out u))) return false;
+            var v = lahi ?? kauka ?? kauka2; if (v == null) return false;
+            if (!v.Korkeus(x, z, out var u) && !(kauka != null && v != kauka && kauka.Korkeus(x, z, out u)) && !(kauka2 != null && kauka2.Korkeus(x, z, out u))) return false;
             y = (float)u + NostoM; return true;
         }
 
