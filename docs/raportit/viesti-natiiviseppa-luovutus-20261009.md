@@ -3,6 +3,18 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 21.0x — runko 8e01e2457 (PT:lle; istuntoviestit taas 10:n rajalla)
+
+- Avoin juna 173 `natiiviseppa/juna-173` **8e01e2457**. 19.2x:n jälkeen: LS1 2e784cc5c → e0f2d4b37 (pehmeä jarrutus); Siirtoseppä
+  98f1c06b4 → 7cfbe6710 (kasvovalo, vuoronvaihto, tyhjä saari); NUI ebcb70046, 3e53e0f82, 7b8fe62ce, 940e44961, asettelutesti 0cbe4b5ea;
+  LS2 add6d023e (utu), 27761a321 + 717424516 (välimuisti Cachesiin), 9acc8d4a7 (varjot, oletus pois), 824e213e2 (reikätäyte).
+- KORJAUS 8e01e2457: tarkista.sh kaatui 20.57 alkaen kaikilla 24 × CS0433:een, koska laitekäännös toi SteamAudioUnity.dll:n
+  pääprojektin Library/ScriptAssemblies-kansioon. unity-tarkistus.sh (Linssit + Peli) ohittaa nyt SteamAudio*-kirjastot.
+- Testit: Linssit 1249, Peli 442, Kartta 453, unity 0, tarkista 0, .metat ok.
+- ODOTTAA PT:tä: Siirtoseppä historia 5a1cfa7c2 (v46k 035562fc890cd285, manifest 200, merge-tree ok).
+- Unity 6.7 A/B: A = 6.3 3f1d54d1b (lokit/natiiviseppa-app-ab63-3f1d54d1), B = 6.7 e0f6ab0ae (sama sisältö) käännetään 21.02 →
+  sim-ABAB CDA479DE (scratchpad ab67/ab-ajo.sh). iPad-ABAB, kun LS1 ilmoittaa "iPad vapaa".
+
 ## TILA 9.10. 19.2x — runko 24ae74fea, Unity 6.7 raportti
 
 - + NUI 3e53e0f82 (linnan latauskuva) + 7b8fe62ce (Kysy vaaka 45 %). Linssit 1248, Peli 442, Kartta 453, unity 0, tarkista 0.
