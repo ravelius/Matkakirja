@@ -20,7 +20,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var h = Historiajana.Olavinlinna;
             Oleta.Sama(11, h.Vaiheet.Count);
-            Oleta.Tosi(h.Kesto >= 150 && h.Kesto <= 200, $"historia noin 3 min ({h.Kesto} s)");
+            Oleta.Tosi(h.Kesto >= 120 && h.Kesto <= 200, $"historia 2–3 min ({h.Kesto} s)");
             Oleta.Sama(8.0, Historiajana.K2Lyhyt.Kesto);
             for (int i = 1; i < h.Vaiheet.Count; i++) Oleta.Tosi(h.Vaiheet[i].Vuosi > h.Vaiheet[i - 1].Vuosi, $"vuodet kasvavat ({i})");
             Oleta.Tosi(h.LoppuVuosi > h.Vaiheet[h.Vaiheet.Count - 1].Vuosi, "loppuvuosi viimeisen vaiheen jälkeen");
@@ -47,9 +47,10 @@ namespace Matkakirja.Linssit.Testit
             {
                 double a = h.VaiheenAlku(i);
                 if (h.Vaiheet[i].Avain == null) { Oleta.Tosi(h.Avainsana(a + 2) == null, $"vaihe {i}: ei avainsanaa"); continue; }
+                var v = h.Vaiheet[i];
                 Oleta.Tosi(h.Avainsana(a + 0.2) == null, $"vaihe {i}: ei heti vaihdossa");
-                Oleta.Tosi(h.Avainsana(a + 2) == h.Vaiheet[i], $"vaihe {i}: avainsana alussa");
-                Oleta.Tosi(h.Vaiheet[i].KestoS >= Historiajana.AvainsanaAlkuS + Historiajana.AvainsanaS + 1, $"vaihe {i}: avainsana ehtii häipyä ennen seuraavaa");
+                Oleta.Tosi(h.Avainsana(a + v.AvainsanaAlku + 0.1) == v, $"vaihe {i}: avainsana kun kertoja sanoo vuoden");
+                Oleta.Tosi(v.AvainsanaAlku < v.KestoS - 1, $"vaihe {i}: avainsana ehtii näkyä");
                 Oleta.Tosi(!string.IsNullOrEmpty(h.Vaiheet[i].VuosiTeksti), $"vaihe {i}: vuosiluku");
             }
             Oleta.Tosi(h.Avainsana(h.Kesto + 1) == null && h.Avainsana(-1) == null, "ei avainsanaa historian ulkopuolella");
@@ -206,18 +207,61 @@ namespace Matkakirja.Linssit.Testit
         {
             var h = Historiajana.Olavinlinna;
             var keski = new V3(-20, 15, 0);
-            var (e, _) = Kameraliike.AsentoSijainti(h.Kamera(0, keski, 90, 200));
+            var (e, _) = Kameraliike.AsentoSijainti(h.Kamera(0, keski, 90));
             double maks = 0, minY = double.MaxValue;
             for (double t = 1 / 60.0; t <= h.Kesto; t += 1 / 60.0)
             {
-                var (s, _) = Kameraliike.AsentoSijainti(h.Kamera(t, keski, 90, 200));
+                var (s, _) = Kameraliike.AsentoSijainti(h.Kamera(t, keski, 90));
                 maks = Math.Max(maks, (s - e).Pituus); minY = Math.Min(minY, s.Y);
                 e = s;
             }
             Oleta.Tosi(maks < 1.5, $"kamera enintään 1,5 m / ruutu ({maks:F2})");
             Oleta.Tosi(minY > keski.Y + 30, $"drone linnan yllä ({minY:F1})");
-            var loppu = h.Kamera(h.Kesto, keski, 90, 200);
-            Oleta.Tosi(Math.Abs(loppu.Atsimuutti - (200 + Historiajana.KiertoAsteet)) < 1e-9, "kierto koko historian ajan");
+        }
+
+        /// <summary>LIIKESÄÄNNÖT (Raamattu LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA, juna 174; liikesaannot.md): katsesuunta kääntyy
+        /// enintään 2,5°/s, korkeuskulma 1,5°/s, etäisyys 6 %/s; nopeus jatkuva (kiihtyvyys rajattu, ei nykäyksiä kohtausten rajoilla);
+        /// alku ja loppu pysähtyvät pehmeästi.</summary>
+        [Testi] static void Liikesaannot()
+        {
+            var h = Historiajana.Olavinlinna; var keski = new V3(-20, 15, 0); const double dt = 1 / 30.0;
+            double maksA = 0, maksK = 0, maksE = 0, maksKiihtyvyys = 0, edellinenW = 0;
+            var p0 = h.Kamera(0, keski, 90);
+            for (double t = dt; t <= h.Kesto; t += dt)
+            {
+                var p = h.Kamera(t, keski, 90);
+                double w = Math.Abs(p.Atsimuutti - p0.Atsimuutti) / dt;
+                maksA = Math.Max(maksA, w); maksK = Math.Max(maksK, Math.Abs(p.Korkeus - p0.Korkeus) / dt);
+                maksE = Math.Max(maksE, Math.Abs(p.Etaisyys - p0.Etaisyys) / dt / p.Etaisyys);
+                if (t > dt) maksKiihtyvyys = Math.Max(maksKiihtyvyys, Math.Abs(w - edellinenW) / dt);
+                edellinenW = w; p0 = p;
+            }
+            Console.WriteLine($"      liike: kääntö ≤ {maksA:F2}°/s, korkeus ≤ {maksK:F2}°/s, etäisyys ≤ {maksE * 100:F1} %/s, kääntökiihtyvyys ≤ {maksKiihtyvyys:F2}°/s²; kesto {h.Kesto:F1} s");
+            Oleta.Tosi(maksA <= 2.5 && maksK <= 1.5 && maksE <= 0.06, "hidas ja lähes huomaamaton");
+            Oleta.Tosi(maksKiihtyvyys <= 1.0, "pehmeä kiihdytys ja jarrutus");
+            Oleta.Tosi(Math.Abs(h.Kamera(0.05, keski, 90).Atsimuutti - h.Kamera(0, keski, 90).Atsimuutti) < 0.01, "pehmeä alku");
+        }
+
+        /// <summary>KERTOJA SAMALLA AIKAJANALLA (juna 174): mitatut rivien kestot (ffprobe 9.10., opas/&lt;sha&gt;.mp3) mahtuvat kohtaukseen
+        /// viiveen jälkeen; rivi 9 jatkuu restaurointiin (kohtaus vaihtuu sanaan "suuri restaurointi"); ei päällekkäistä puhetta.</summary>
+        [Testi] static void KertojaMahtuuKohtauksiin()
+        {
+            var h = Historiajana.Olavinlinna;
+            double[] kesto = { 6.95, 7.89, 15.26, 10.66, 9.61, 10.68, 11.62, 16.64, 20.92 };
+            double loppu = 0; int rivi = 0;
+            for (int i = 0; i < h.Vaiheet.Count; i++)
+            {
+                var v = h.Vaiheet[i];
+                if (!v.Kertoja) continue;
+                double alku = h.VaiheenAlku(i) + Historiajana.KertojaViiveS;
+                Oleta.Tosi(alku >= loppu, $"rivi {rivi + 1} ei päällekkäin edellisen kanssa");
+                loppu = alku + kesto[rivi];
+                double seuraava = i + 1 < h.Vaiheet.Count ? h.VaiheenAlku(i + 1) : h.Kesto;
+                if (rivi < 8) Oleta.Tosi(loppu <= seuraava, $"rivi {rivi + 1} mahtuu kohtaukseen ({loppu:F1} ≤ {seuraava:F1})");
+                rivi++;
+            }
+            Oleta.Sama(9, rivi);
+            Oleta.Tosi(loppu <= h.Kesto - 2, $"viimeinen rivi päättyy ennen loppua ({loppu:F1} / {h.Kesto:F1})");
         }
     }
 }

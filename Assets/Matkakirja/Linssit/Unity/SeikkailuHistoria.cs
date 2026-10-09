@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Avainsana nyt (DioraamaTaulu näyttää; null = ei).</summary>
         public static HistoriaVaihe Avainsana { get; private set; }
         /// <summary>Drone-kaaren alkuatsimuutti (kompassi) ja linnan keskipiste/säde Unityssa (SeikkailuNousun luvut).</summary>
-        public static float AlkuAtsimuutti = 200f;
+        public static float AlkuAtsimuutti = 0f;   // siirtää koko kamerakäyrää (kohtauslistan atsimuutit ovat kompassisuuntia)
 
         Action valmis;
         bool lopeta;
@@ -72,7 +72,7 @@ namespace Matkakirja.Natiivi
         {
             if (!kertojaKlipit.TryGetValue(i, out var k)) return;
             if (kertoja == null) { kertoja = gameObject.AddComponent<AudioSource>(); kertoja.spatialBlend = 0f; kertoja.playOnAwake = false; }
-            kertoja.Stop(); kertoja.clip = k; kertoja.volume = DioraamaAanet.PuheTaso * Asetukset.Taso(Voima.Lukija); kertoja.Play();
+            kertoja.Stop(); kertoja.clip = k; kertoja.volume = DioraamaAanet.PuheTaso * Asetukset.Taso(Voima.Lukija); kertoja.PlayDelayed((float)Historiajana.KertojaViiveS);
             kirjaa?.Invoke($"seikkailu: historia kertoja {i} ({k.length:F1} s)");
         }
         readonly List<Renderer> piilotetut = new List<Renderer>(); readonly List<Light> sammutetut = new List<Light>();
@@ -140,7 +140,7 @@ namespace Matkakirja.Natiivi
                 if (i != vaihe)
                 {
                     vaihe = i; kirjaa?.Invoke($"seikkailu: historia vaihe {i} ({h.Vaiheet[i].VuosiTeksti}) {t:F1} s");
-                    SoitaKertoja(i, kirjaa);
+                    if (h.Vaiheet[i].Kertoja) SoitaKertoja(i, kirjaa);   // rivi 9 jatkuu restaurointiin (1961-kohtauksella ei omaa riviä)
                     if (i + 1 < h.Vaiheet.Count) StartCoroutine(HaeKertoja(i + 1, h.Vaiheet[i + 1]));
                 }
                 Avainsana = h.Avainsana(t);
