@@ -70,7 +70,7 @@ namespace Matkakirja.Natiivi
             string runko = LopunNimi.Replace(teksti, "");
             bool tekijaOn = OnTekija(runko), lisenssiOn = OnLisenssi(teksti);
             if (tekijaOn && lisenssiOn) return teksti;
-            string kuka = tekijaOn ? "" : (string.IsNullOrEmpty(tekija) ? "tekijä tuntematon" : tekija);
+            string kuka = tekijaOn ? "" : (string.IsNullOrEmpty(tekija) ? Kieli.T("ui.kuvatekija.tuntematon") : tekija);
             if (runko.Length == 0) return kuka + ", Wikimedia Commons (" + lisenssi + ")";
             string loppu = lisenssiOn ? runko : runko + " (" + lisenssi + ")";
             return kuka.Length > 0 ? kuka + ", " + loppu : loppu;

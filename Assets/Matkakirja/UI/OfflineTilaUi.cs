@@ -97,13 +97,13 @@ namespace Matkakirja.Natiivi
             {
                 long tavut = kaynnissa.Sum(m => Math.Max(0, m.Tavut)), ladattu = kaynnissa.Sum(m => Math.Max(0, m.Ladattu));
                 osuus = tavut > 0 ? Mathf.Clamp01((float)ladattu / tavut) : 0f;
-                string mita = kaynnissa.Count == 1 ? kaynnissa[0].Nimi : kaynnissa.Count + " maata";
-                rivi = (verkoton ? "Odottaa verkkoa · " : "Ladataan ") + mita + " · " + Mathf.RoundToInt(osuus * 100) + " %";
+                string mita = kaynnissa.Count == 1 ? kaynnissa[0].Nimi : Kieli.T("ui.offline.maata", kaynnissa.Count);
+                rivi = Kieli.T(verkoton ? "ui.offline.pilleri-odottaa" : "ui.offline.pilleri-lataa", mita, Mathf.RoundToInt(osuus * 100));
             }
             else if (verkoton)
             {
                 int n = maat.Count(m => m.Tila == OfflineTila.Valmis);
-                rivi = "Ei verkkoa · " + (n == 0 ? "ei ladattuja maita" : n == 1 ? maat.First(m => m.Tila == OfflineTila.Valmis).Nimi + " laitteella" : n + " maata laitteella");
+                rivi = n == 0 ? Kieli.T("ui.offline.pilleri-ei-latauksia") : n == 1 ? Kieli.T("ui.offline.pilleri-yksi", maat.First(m => m.Tila == OfflineTila.Valmis).Nimi) : Kieli.T("ui.offline.pilleri-monta", n);
             }
             bool nakyy = rivi != null && sallittu;
             // Avaus ja sulku animoiden (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot); vain tilan vaihtuessa.
@@ -152,9 +152,9 @@ namespace Matkakirja.Natiivi
                 bool oliKaynnissa = ennen == OfflineTila.Latautuu || ennen == OfflineTila.Jonossa;
                 if (!oliKaynnissa) continue;
                 if (m.Tila == OfflineTila.Valmis)
-                    ylapalkki.Viesti(m.Nimi + " ladattu: kartta ja lehdet toimivat ilman verkkoa.", 4f);
+                    ylapalkki.Viesti(Kieli.T("ui.offline.viesti-ladattu", m.Nimi), 4f);
                 else if (m.Tila == OfflineTila.Virhe)
-                    ylapalkki.Viesti(m.Nimi + ": lataus ei onnistunut" + (string.IsNullOrEmpty(m.Virhe) ? "." : " (" + m.Virhe + ")."), 5f);
+                    ylapalkki.Viesti(string.IsNullOrEmpty(m.Virhe) ? Kieli.T("ui.offline.viesti-virhe", m.Nimi) : Kieli.T("ui.offline.viesti-virhe-syy", m.Nimi, m.Virhe), 5f);
             }
         }
 

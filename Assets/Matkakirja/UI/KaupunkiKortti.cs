@@ -105,14 +105,14 @@ namespace Matkakirja.Natiivi
                 Kuviot.Pysty("liuska-nimivarjo", Kuviot.Vari("#140c04", 0f), Kuviot.Vari("#140c04", 0.62f)));
             kuvanimi = Rakenne.Teksti("", "mk-liuska__kuvanimi", kuva);
             kuva.style.display = DisplayStyle.None;
-            kelausYlos = Kelausrivi("edelliset", KelausYlosIkoni, -1);
+            kelausYlos = Kelausrivi(Kieli.T("ui.kaupunkikortti.edelliset"), KelausYlosIkoni, -1);
             liuska.Add(kelausYlos);
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-liuska__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             liuska.Add(vieritys);
-            kelausAlas = Kelausrivi("lisää", Ikonit.NuoliAlas, 1);
+            kelausAlas = Kelausrivi(Kieli.T("ui.kaupunkikortti.lisaa"), Ikonit.NuoliAlas, 1);
             liuska.Add(kelausAlas);
             vieritys.verticalScroller.valueChanged += _ => PaivitaKelaus();
             vieritys.contentContainer.RegisterCallback<GeometryChangedEvent>(_ => PaivitaKelaus());
@@ -411,15 +411,15 @@ namespace Matkakirja.Natiivi
             if (nahtavyyksia)
             {
                 string id = kaupunki;
-                Rivi("Nähtävyydet", () => UiNakymat.Hae()?.Nahtavyysnakyma.Avaa(id));
+                Rivi(Kieli.T("ui.kaupunkikortti.nahtavyydet"), () => UiNakymat.Hae()?.Nahtavyysnakyma.Avaa(id));
             }
             if (opas != null)
             {
                 var o = opas;
-                Rivi("Turistiopas", () => UiNakymat.Hae()?.Nahtavyydet.AvaaOpas(o));
+                Rivi(Kieli.T("ui.kaupunkikortti.turistiopas"), () => UiNakymat.Hae()?.Nahtavyydet.AvaaOpas(o));
             }
-            if (t.Liiku != null) Rivi(t.LiikuTeksti ?? "Liiku tänne", t.Liiku);
-            if (t.Mannerlento != null) Rivi(t.MannerlentoTeksti ?? "Mannerlento", t.Mannerlento);
+            if (t.Liiku != null) Rivi(t.LiikuTeksti ?? Kieli.T("ui.kaupunkikortti.liiku-tanne"), t.Liiku);
+            if (t.Mannerlento != null) Rivi(t.MannerlentoTeksti ?? Kieli.T("ui.kaupunkikortti.mannerlento"), t.Mannerlento);
             Haitari();
             Porrasta();
         }

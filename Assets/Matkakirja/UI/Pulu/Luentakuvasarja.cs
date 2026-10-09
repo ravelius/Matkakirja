@@ -37,7 +37,7 @@ namespace Matkakirja.Natiivi
         public Luentakuvasarja(UiKerros kerros, VisualElement turva)
         {
             pakka = Rakenne.El("mk-kuvapakka", turva, PickingMode.Ignore);
-            ohita = Rakenne.Nappi("Ohita", "mk-ohita", Ohita, turva);
+            ohita = Rakenne.Nappi(Kieli.T("ui.aloitus.ohita"), "mk-ohita", Ohita, turva);
             Kirjasimet.Aseta(ohita, Kirjasin.Kone);
             ohita.style.display = DisplayStyle.None;
             // OHITA AINA LUENNAN AIKANA (omistaja TF 141, 5.10.2026 klo 00.5x: "Eikä siinä ole Ohita nappia"): myös muu

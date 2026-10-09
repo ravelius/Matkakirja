@@ -62,7 +62,7 @@ namespace Matkakirja.Natiivi
             muste = Rakenne.El("mk-kartuscha__muste", null, PickingMode.Ignore);
             sisus.Insert(0, muste);
             muste.style.display = DisplayStyle.None;
-            (nostotArvo, nostotPalkki) = MusteRivi("NOSTOT");
+            (nostotArvo, nostotPalkki) = MusteRivi(Kieli.T("ui.kartuscha.nostot"));
             mkRivit = Rakenne.El("mk-kartuscha__maakunnat", muste, PickingMode.Ignore);
             MaakuntaTiedot.Lataa(null);
         }

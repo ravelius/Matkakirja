@@ -166,7 +166,7 @@ namespace Matkakirja.Natiivi
             solmut.Clear();
             foreach (var (e, nimi, laji) in ehdokkaat)
             {
-                var s = puu.AddNode(nimi ?? "Nimetön painike");
+                var s = puu.AddNode(nimi ?? Kieli.T("ui.saavutettavuus.nimeton-painike"));
                 var el = e;
                 s.frameGetter = () => Kehys(el);
                 switch (laji)

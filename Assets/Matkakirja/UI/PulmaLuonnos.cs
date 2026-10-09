@@ -246,7 +246,7 @@ namespace Matkakirja.Natiivi
         {
             Vara = true;
             KatkoSuorakulmio(40, 14, 240, 122, 5, 4);
-            Teksti(160, 36, "ISOISÄN LUONNOS", 11);
+            Teksti(160, 36, Kieli.T("ui.pulma.isoisan-luonnos"), 11);
             Ympyra(160, 86, 26);
             Teksti(160, 96, "?", 28);
         }
@@ -418,7 +418,7 @@ namespace Matkakirja.Natiivi
             var rivit = Tekstit(d.TryGetValue("rivit", out var r) ? r : null, new[] { "VII", "XXIV", "LX" });
             var arvot = Tekstit(d.TryGetValue("arvot", out var a) ? a : null, new[] { "7", "24", "60" });
             ruutu = new Vector2(260, 150);
-            Teksti(130, 18, "KIVEEN HAKATUT LUVUT", 11);
+            Teksti(130, 18, Kieli.T("ui.pulma.kiveen-hakatut"), 11);
             Ink("M28,26 L232,26");
             for (int i = 0; i < rivit.Length; i++)
             {
@@ -438,7 +438,7 @@ namespace Matkakirja.Natiivi
         {
             string tyyli = Teksti(d, "kysytty", "joonialainen");
             ruutu = new Vector2(200, 120);
-            Teksti(100, 16, "ISOISÄN LUONNOS", 11);
+            Teksti(100, 16, Kieli.T("ui.pulma.isoisan-luonnos"), 11);
             double x = 100, y = 44;
             Fill(Inv($"M{x - 11},{y} L{x + 11},{y} L{x + 9},{y + 46} L{x - 9},{y + 46} Z"));
             foreach (var dx in new[] { -5, 0, 5 }) Ink(Inv($"M{x + dx},{y + 4} L{x + dx},{y + 44}"));
@@ -455,7 +455,7 @@ namespace Matkakirja.Natiivi
                 Ink(Inv($"M{x - 14},{y - 2} L{x + 14},{y - 2}"));
                 foreach (var dx in new[] { -9, 0, 9 }) Ink(Inv($"M{x + dx},{y - 3} q-4,-8 0,-14 q4,6 0,14"));
             }
-            Teksti(100, 112, "Mikä valokuvista näyttää saman pään?", 9);
+            Teksti(100, 112, Kieli.T("ui.pulma.saman-paan"), 9);
         }
 
         // Dubrovnik (Ston): neljä allasta syvyyksineen, haihtuminen ja päivät alla.
@@ -465,7 +465,7 @@ namespace Matkakirja.Natiivi
             var kirjaimet = Tekstit(d.TryGetValue("kirjaimet", out var k) ? k : null, new[] { "A", "B", "C", "D" });
             double haihtuu = Luku(d, "haihtuu", 2), paivia = Luku(d, "paivia", 5);
             ruutu = new Vector2(260, 160);
-            Teksti(130, 16, "SUOLA-ALTAAT — VEDEN SYVYYS", 11);
+            Teksti(130, 16, Kieli.T("ui.pulma.suola-altaat"), 11);
             for (int i = 0; i < syvyydet.Length; i++)
             {
                 double x = 26 + i * 58, cm = syvyydet[i], h = Math.Min(48, cm * 3);
@@ -475,8 +475,8 @@ namespace Matkakirja.Natiivi
                 Teksti(x + 22, 36, i < kirjaimet.Length ? kirjaimet[i] : "", 13);
             }
             Ink("M14,124 L246,124");
-            Teksti(130, 140, $"Vettä haihtuu {F(haihtuu)} cm päivässä.", 11);
-            Teksti(130, 154, $"Suola on valmista, kun allas on kuiva {F(paivia)} päivän kuluttua.", 11);
+            Teksti(130, 140, Kieli.T("ui.pulma.haihtuu", F(haihtuu)), 11);
+            Teksti(130, 154, Kieli.T("ui.pulma.suola-valmis", F(paivia)), 11);
         }
 
         // Islanti: kolme purkausta kellonaikoineen, neljäs kysymysmerkkinä.
@@ -484,7 +484,7 @@ namespace Matkakirja.Natiivi
         {
             var ajat = Tekstit(d.TryGetValue("ajat", out var a) ? a : null, new[] { "10:00", "10:07", "10:14" });
             ruutu = new Vector2(300, 158);
-            Teksti(150, 16, "GEYSIRIN PURKAUKSET", 11);
+            Teksti(150, 16, Kieli.T("ui.pulma.geysir"), 11);
             Ink("M20,106 L280,106");
             var xs = new[] { 56, 118, 180, 242 };
             for (int i = 0; i < xs.Length; i++)
@@ -502,7 +502,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             Ink("M20,136 L280,136");
-            Teksti(150, 151, "Purkausten väli on aina sama.", 11);
+            Teksti(150, 151, Kieli.T("ui.pulma.purkausten-vali"), 11);
         }
 
         // Venetsia: vedenpinta ja neljä kulkusiltaa senttimetreinä.
@@ -513,7 +513,7 @@ namespace Matkakirja.Natiivi
             const double Pohja = 138;
             double Y(double cm) => Pohja - cm * 0.7;
             ruutu = new Vector2(300, 168);
-            Teksti(150, 16, "VUOROVESI JA KULKUSILLAT", 11);
+            Teksti(150, 16, Kieli.T("ui.pulma.vuorovesi"), 11);
             double yv = Y(vesi);
             Fill($"M14,{F(yv)} L286,{F(yv)} L286,{F(Pohja)} L14,{F(Pohja)} Z");
             Ink($"M14,{F(yv)} L286,{F(yv)}");
@@ -526,7 +526,7 @@ namespace Matkakirja.Natiivi
                 Ink($"M{F(x + 12)},{F(yp)} L{F(x + 12)},{F(Pohja)}");
                 Teksti(x, yp - 6, F(cm) + " cm", 11);
             }
-            Teksti(150, Pohja + 16, $"Vesi nousee {F(vesi)} cm.", 11);
+            Teksti(150, Pohja + 16, Kieli.T("ui.pulma.vesi-nousee", F(vesi)), 11);
         }
 
         // Pariisi: tuulikukko ja pääilmansuunnat; nokka osoittaa suunnan.
@@ -535,11 +535,11 @@ namespace Matkakirja.Natiivi
             double kulma = Luku(d, "kulma", -45);
             const double Cx = 100, Cy = 106;
             ruutu = new Vector2(200, 200);
-            Teksti(Cx, 18, "TUULIKUKKO", 11);
-            Teksti(Cx, Cy - 72, "P", 13);
-            Teksti(Cx + 80, Cy + 4, "I", 13);
-            Teksti(Cx, Cy + 84, "E", 13);
-            Teksti(Cx - 80, Cy + 4, "L", 13);
+            Teksti(Cx, 18, Kieli.T("ui.pulma.tuulikukko"), 11);
+            Teksti(Cx, Cy - 72, Kieli.T("ui.pulma.suunta-p"), 13);
+            Teksti(Cx + 80, Cy + 4, Kieli.T("ui.pulma.suunta-i"), 13);
+            Teksti(Cx, Cy + 84, Kieli.T("ui.pulma.suunta-e"), 13);
+            Teksti(Cx - 80, Cy + 4, Kieli.T("ui.pulma.suunta-l"), 13);
             Ink(Inv($"M{Cx},{Cy - 62} L{Cx},{Cy + 62}"));
             Ink(Inv($"M{Cx - 62},{Cy} L{Cx + 62},{Cy}"));
             double rad = kulma * Math.PI / 180, ux = Math.Cos(rad), uy = Math.Sin(rad);

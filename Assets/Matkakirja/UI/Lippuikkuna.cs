@@ -36,14 +36,14 @@ namespace Matkakirja.Natiivi
                         if (float.IsNaN(w) || w <= 0) w = 300;
                         iso.style.height = Mathf.Round(w * tx.height / Mathf.Max(1f, tx.width));
                     }, LiputIso.Kansio(m.Lippu[0]));   // 1024 px, jos peilissä (terävyys 9.10.2026)
-                Kirjasimet.Aseta(Rakenne.Teksti("Nykyinen lippu", "mk-lippu__valinta", s), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.lippu.nykyinen"), "mk-lippu__valinta", s), Kirjasin.Kone);
                 var symbolit = Rakenne.Lista(MiniJson.Kentta(t, "symboliikka"));
                 if (symbolit != null && symbolit.Count > 0)
                 {
                     var lohko = Rakenne.El("mk-lippu__symbolit", s, PickingMode.Ignore);
                     foreach (var x in symbolit.Select(MiniJson.Objekti).Where(x => x != null))
                     {
-                        var l = Rakenne.Teksti($"<b>{MiniJson.Teksti(x, "osa")} = </b>{MiniJson.Teksti(x, "selite")}", "mk-lippu__symboli", lohko);
+                        var l = Rakenne.Teksti(Kieli.T("ui.lippu.symboli", MiniJson.Teksti(x, "osa"), MiniJson.Teksti(x, "selite")), "mk-lippu__symboli", lohko);
                         Kirjasimet.Aseta(l, Kirjasin.Luku);
                     }
                 }
@@ -112,7 +112,7 @@ namespace Matkakirja.Natiivi
                 });
                 if (versiot.Count > 0)
                 {
-                    Kirjasimet.Aseta(Rakenne.Teksti("MUUT ASUT JA HISTORIALLISET LIPUT", "mk-lippu__versiotyhdys", s), Kirjasin.KoneLihava);
+                    Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.lippu.muut-asut"), "mk-lippu__versiotyhdys", s), Kirjasin.KoneLihava);
                     var rivi = Rakenne.El("mk-lippu__versiot", s, PickingMode.Ignore);
                     foreach (var v in versiot)
                     {
@@ -132,7 +132,7 @@ namespace Matkakirja.Natiivi
                 // Löydös 72 (web liput.js "Vaakunat ja tunnukset"): kuva vasemmalla, nimi ja selite oikealla, rivi on nappi.
                 if (tunnukset.Count > 0)
                 {
-                    Kirjasimet.Aseta(Rakenne.Teksti("Vaakunat ja tunnukset", "mk-lippu__tunnusotsikko", s), Kirjasin.KoneLihava);
+                    Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.lippu.vaakunat"), "mk-lippu__tunnusotsikko", s), Kirjasin.KoneLihava);
                     var lista = Rakenne.El("mk-lippu__tunnukset", s, PickingMode.Ignore);
                     foreach (var x in tunnukset)
                     {

@@ -32,6 +32,16 @@ KOHTEET = ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
            ('ProOsio', 'Tietoja', 'MitaUutta', 'Apuraha', 'Lehti/LehtiFokus', 'Lehti/Mediarivi', 'Lehti/Uutiset', 'Lehti/LehtiSisalto',
             'Lehti/MaaNumeroina', 'UiNakymat', 'Paljastus', 'Asetukset', 'Maakunnat', 'KortinLukija', 'Ylapalkki', 'Pulu/Pulu',
             'Pulu/LivianAvaus', 'Pulu/Matkakirjamerkinnat', 'Pulu/LivianPaljastus', 'Pulu/Saapumisesitys', 'WikiIkkuna', 'Nahtavyysarkki')]   # erä 4–5   # sisääntuloreitti, pallon reitti ja erä 2 (juna 174)
+# KOKO UI-KANSIO (PT 9.10.2026: "jatka kielivahti loppuun"): kaikki Assets/Matkakirja/UI/**/*.cs paitsi tiedostot, joissa ei ole
+# pelaajan UI-tekstiä (syy kirjattu). Yllä oleva KOHTEET-lista kertoo siirron järjestyksen (erät 1–5).
+POIS = {
+    'UiKomennot': 'testikomennot', 'Linssit/LinssiKomennot': 'testikomennot', 'KysymysEsimerkki': 'testikomennon esimerkit',
+    'MoniosumaTesti': 'testi', 'HiiriTesti': 'testi', 'Lehti/Tyohuone': 'kehittäjän liite (ei App Storessa)',
+    'Lehti/Lukijoilta': 'kehittäjän liite', 'Lehti/Tilastot': 'kehittäjän liite (Työhuone)', 'Tyylikirja': 'generoitu',
+    'NostoluentaVienti': 'vientityökalu', 'Pulu/PuluVienti': 'vientityökalu', 'Sijamuodot': 'suomen kielioppi (kielikohtainen)',
+}
+KOHTEET = sorted(set(KOHTEET) | {p for p in glob.glob('Assets/Matkakirja/UI/**/*.cs', recursive=True)
+                                 if p[len('Assets/Matkakirja/UI/'):-3] not in POIS})
 NIELU = re.compile(r'Rakenne\.Teksti\(|Rakenne\.Nappi\(|Ohjausnappi\.Nappi\(|\bKomento\(|\bAlanakyma\(|\bTakaisin\(|tooltip\s*=|\.text\s*=|'
                    r'\bKysy\(|KorttiValinta\(|\bOpasNappi\(|\bKytkin\(|\bTyhja\(|\bKytkinrivi\(|placeholder')
 LIT = re.compile(r'(?<![\$@\w])"((?:[^"\\\n]|\\.)*)"')
@@ -89,15 +99,18 @@ def main():
         for i, rivi in enumerate(open(p, encoding='utf-8'), 1):
             if rivi.strip().startswith('//'): continue
             # Avainmuotoiset literaalit (taulukoiden avaimet), paitsi PlayerPrefs-avaimet ja tiedostonimet.
-            epasuora = set() if re.search(r'Avain\s*=|PlayerPrefs|\.(png|jpg|json|mp3|wav)"', rivi) else set(AVAIN.findall(rivi))
+            epasuora = set() if re.search(r'\bAvain\s*=|PlayerPrefs', rivi) else set(AVAIN.findall(rivi))
             for a in set(KAYTTO.findall(rivi)) | epasuora:
                 kaytetyt.add(a)
                 if a not in taulu: virheet.append(f'{p}:{i}: avain "{a}" puuttuu {TAULU}:sta')
     for p in KOHTEET:
         for i, rivi in enumerate(open(p, encoding='utf-8'), 1):
             s = rivi.strip()
-            if s.startswith('//') or 'Debug.Log' in s or 'Kirjaa(' in s or s.startswith('case "') or 'kieli: ei' in rivi: continue
-            koodi = rivi.split(' //')[0]
+            if s.startswith('//') or s.startswith('case "') or 'kieli: ei' in rivi: continue
+            # Lokikutsu leikataan pois rivin lopusta (ennen: koko rivi ohitettiin, jolloin esim. Nappi("Tauko", () => Debug.Log(…)) jäi näkemättä).
+            koodi = ilman_kommenttia(rivi)
+            loki = re.search(r'Debug\.Log|Kirjaa\(|kirjaa\?\.Invoke', koodi)
+            if loki: koodi = koodi[:loki.start()]
             if not NIELU.search(koodi): continue
             for m in LIT.finditer(koodi):
                 if 'Kieli.T(' in koodi[max(0, m.start() - 9):m.start()]: continue

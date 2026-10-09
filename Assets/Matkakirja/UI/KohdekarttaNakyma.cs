@@ -119,8 +119,8 @@ namespace Matkakirja.Natiivi
             if (!kokoruutu && !this.pelkka)
             {
                 var tyokalut = Rakenne.El("mk-kohdekartta__tyokalut", this, PickingMode.Ignore);
-                var nappi = Rakenne.Nappi("KOKORUUTU", "mk-kohdekartta__kokoruutu", () => KokoruutuPyydetty?.Invoke(), tyokalut, Kokoruutuikoni);
-                nappi.tooltip = "Avaa kartta kokoruudulle";
+                var nappi = Rakenne.Nappi(Kieli.T("ui.kohdekartta.kokoruutu"), "mk-kohdekartta__kokoruutu", () => KokoruutuPyydetty?.Invoke(), tyokalut, Kokoruutuikoni);
+                nappi.tooltip = Kieli.T("ui.kohdekartta.avaa-kokoruudulle");
                 Kirjasimet.Aseta(nappi, Kirjasin.KoneLihava); // web-kuva 94a: lihava versaali
             }
 
@@ -843,7 +843,7 @@ namespace Matkakirja.Natiivi
             r.Nakyma.KohdeAvattu += Avaa;
 
             var sulku = Rakenne.Nappi("×", "mk-kohdekartta-kokoruutu__sulku", Sulje, r.Kortti);
-            sulku.tooltip = "Sulje suurennettu kartta";
+            sulku.tooltip = Kieli.T("ui.kohdekartta.sulje-suurennettu");
             Kirjasimet.Aseta(sulku, Kirjasin.KoneLihava);
 
             if (kortista)
@@ -1002,7 +1002,7 @@ namespace Matkakirja.Natiivi
             {
                 if (k == null) { ilmoita?.Invoke("Kohdekartta: ei karttaa kaupungille " + kaupunki); Debug.LogWarning("MATKAKIRJA ui kohdekartta puuttuu: " + kaupunki); return; }
                 if (kokoruutu) { AvaaKokoruutu(k, Avattu); return; }
-                Minipopup.Avaa("Nähtävyydet", s =>
+                Minipopup.Avaa("Nähtävyydet", s =>   // kieli: ei (testikomento (Testaa), ei pelaajan UI)
                 {
                     var n = new KohdekarttaNakyma(k);
                     n.KohdeAvattu += Avattu;

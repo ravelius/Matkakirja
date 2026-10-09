@@ -22,7 +22,8 @@ namespace Matkakirja.Natiivi
     {
         static readonly Dictionary<string, string> Lyhyet = new Dictionary<string, string>
         {
-            ["paavirta"] = "Pää", ["eurooppa"] = "Eur.", ["siperia"] = "Sib.", ["amerikat"] = "Am.", ["tyynimeri"] = "Tyyni",
+            ["paavirta"] = "ui.ihmisentutkimus.lyhyt-paavirta", ["eurooppa"] = "ui.ihmisentutkimus.lyhyt-eurooppa", ["siperia"] = "ui.ihmisentutkimus.lyhyt-siperia",
+            ["amerikat"] = "ui.ihmisentutkimus.lyhyt-amerikat", ["tyynimeri"] = "ui.ihmisentutkimus.lyhyt-tyynimeri",
         };
         static readonly Color Kulta = Tyylikirja.Kehys.Kulta;
 
@@ -85,7 +86,7 @@ namespace Matkakirja.Natiivi
                 if (puhelin) { b.style.paddingLeft = 6.4f; b.style.paddingRight = 6.4f; }
                 var pilkku = Rakenne.El("mk-vananappi__pilkku", b, PickingMode.Ignore);
                 pilkku.style.backgroundColor = Vari(v.Vari?.Rintama);
-                var nimi = Rakenne.Teksti(puhelin && Lyhyet.TryGetValue(tunnus, out var l) ? l : v.Nimi, "mk-vananappi__nimi", b);
+                var nimi = Rakenne.Teksti(puhelin && Lyhyet.TryGetValue(tunnus, out var l) ? Kieli.T(l) : v.Nimi, "mk-vananappi__nimi", b);
                 Kirjasimet.Aseta(nimi, Kirjasin.Kone);
                 virtanapit.Add((b, tunnus));
             }

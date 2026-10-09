@@ -106,8 +106,8 @@ namespace Matkakirja.Natiivi
         }
         static readonly Dictionary<string, string> Maanosat = new Dictionary<string, string>
         {
-            ["Europe"] = "Eurooppa", ["Asia"] = "Aasia", ["Africa"] = "Afrikka", ["North America"] = "Pohjois-Amerikka",
-            ["South America"] = "Etelä-Amerikka", ["Oceania"] = "Oseania", ["Antarctica"] = "Etelämanner", ["Seven seas (open ocean)"] = "Valtameret",
+            ["Europe"] = "ui.manner.eurooppa", ["Asia"] = "ui.manner.aasia", ["Africa"] = "ui.manner.afrikka", ["North America"] = "ui.manner.pohjois-amerikka",   // arvot Kieli.T-avaimia
+            ["South America"] = "ui.manner.etela-amerikka", ["Oceania"] = "ui.manner.oseania", ["Antarctica"] = "ui.manner.etelamanner", ["Seven seas (open ocean)"] = "ui.manner.valtameret",
         };
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Matkakirja.Natiivi
                         if (maa == iso && varanimet != null && MiniJson.Teksti(varanimet, iso) is string fiNimi) maa = fiNimi;
                         // Oppaan äänet (Pelikoodarin nimet/maat-v1) käyttävät ISO 3166-1 alpha-2 -koodia (DK, IL, PS).
                         string iso2 = string.IsNullOrEmpty(maaTieto?.Iso2) ? iso : maaTieto.Iso2;
-                        string mo = c.Count > 5 && c[5] is string m ? (Maanosat.TryGetValue(m, out var fi) ? fi : m) : "Kaikki maat";
+                        string mo = c.Count > 5 && c[5] is string m ? (Maanosat.TryGetValue(m, out var fi) ? Kieli.T(fi) : m) : Kieli.T("ui.opas.kaikki-maat");
                         tulos.Add(new Kaupunki(c[0] as string, maa, mo, Convert.ToDouble(c[1]), Convert.ToDouble(c[2]), Convert.ToInt64(c[4]), iso2));
                     }
             }
@@ -272,12 +272,12 @@ namespace Matkakirja.Natiivi
             lopetaNappi.style.display = DisplayStyle.None;
             ohjainRivi = Ohjausnappi.Ryhma(Juuri);
             ohjainRivi.style.top = StyleKeyword.Auto;
-            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { OpasSovitin.Tauko(!OpasSovitin.Tauolla); Debug.Log("MATKAKIRJA opas: tauko-nappi → " + OpasSovitin.Tauolla); }, ohjainRivi);
-            seuraavaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Seuraava kohde", () => Debug.Log("MATKAKIRJA opas: seuraava-nappi → " + OpasSovitin.Seuraava()), ohjainRivi);
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, Kieli.T("ui.opas.tauko"), () => { OpasSovitin.Tauko(!OpasSovitin.Tauolla); Debug.Log("MATKAKIRJA opas: tauko-nappi → " + OpasSovitin.Tauolla); }, ohjainRivi);
+            seuraavaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, Kieli.T("ui.opas.seuraava-kohde"), () => Debug.Log("MATKAKIRJA opas: seuraava-nappi → " + OpasSovitin.Seuraava()), ohjainRivi);
             // Omistaja 6.10. 12.1x: "piilota pause ja kuva nappi hampurilaisen sisään": ruudulla vain ☰; tauko ja kuvat valikon riveinä.
             // Omistaja 6.10. 16.3x: tauko taas aina näkyvissä ☰:n vasemmalla (kumoaa 12.1x:n tauon osalta); kuvat jäävät ☰:n sisään.
             // Juna 156: tauko siirtyi ohjainriville oikean tapin alle (Seuraavan viereen); ylänurkassa ■ ja ☰.
-            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
+            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, Kieli.T("ui.linssivalikko.valikko"), () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
             // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila.
             // SÄÄTILA (omistaja 8.10. 09.1x–09.2x "kumpikin toiminto saman napin alle"; Päätoimittaja): sama nappi avaa listan, jossa
             // AIKA (päivä | yö) ja SÄÄ (pois | automaatti | käsin); valinta Ydin Saatila-luokkaan (LS1 tehosteet, Pelikoodari säähaku).
@@ -1828,7 +1828,7 @@ namespace Matkakirja.Natiivi
                     break;
                 case Nakyma.Lahteet:
                     Takaisin(Kieli.T("ui.opas.lahteet"), Nakyma.Paa);
-                    Komento("Kartta- ja maastoaineistot", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
+                    Komento(Kieli.T("ui.opas.kartta-aineistot"), () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
                     // Kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026, CC BY / BY-SA): oma alanäkymä.
                     Alanakyma(Kieli.T("ui.opas.aanet"), () => Avaa(Nakyma.Aanet));
                     // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
@@ -2314,7 +2314,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void RakennaAika()
         {
-            var live = Komento("LIVE", () => { Saatila.Live = !Saatila.Live; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: live " + (Saatila.Live ? "päälle" : "pois")); }, valikko);
+            var live = Komento(Kieli.T("ui.opas.live"), () => { Saatila.Live = !Saatila.Live; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: live " + (Saatila.Live ? "päälle" : "pois")); }, valikko);
             live.AddToClassList("mk-linssivalikko__live");
             live.EnableInClassList("mk-valittu", Saatila.Live);
             live.tooltip = Saatila.Live ? Kieli.T("ui.opas.live-paalla-kohteen-kellonaika-ja") : Kieli.T("ui.opas.live-pois");

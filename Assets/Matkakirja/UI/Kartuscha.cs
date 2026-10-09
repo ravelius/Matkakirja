@@ -92,7 +92,7 @@ namespace Matkakirja.Natiivi
             sisus = Rakenne.El("mk-kartuscha__sisus", kortti);
             sisus.style.display = DisplayStyle.None;
             valtiomuotoRivi = Rakenne.El("mk-kartuscha__vuosi", sisus, PickingMode.Ignore);
-            Rakenne.Teksti("VALTIOMUOTO 1873", "mk-kartuscha__nimike", valtiomuotoRivi);
+            Rakenne.Teksti(Kieli.T("ui.kartuscha.valtiomuoto-1873"), "mk-kartuscha__nimike", valtiomuotoRivi);
             valtiomuoto = Rakenne.Teksti("", "mk-kartuscha__arvo", valtiomuotoRivi);
             tilastot = Rakenne.El("mk-kartuscha__tilastot", sisus);
             tilastot.RegisterCallback<PointerDownEvent>(_ => { sijatAuki = !sijatAuki; tilastot.EnableInClassList("mk-sijat-auki", sijatAuki); });
@@ -469,10 +469,10 @@ namespace Matkakirja.Natiivi
             vertailut.Clear();
             if (m.OnTiedot)
             {
-                Tilasto("VÄKILUKU", m.Vakiluku, m.VakilukuSija);
-                Tilasto("PINTA-ALA", m.PintaAla, m.PintaAlaSija);
-                Tilasto("DEMOKRATIA", m.Demokratia != null ? m.Demokratia + " · V-Dem" : null, m.DemokratiaSija);
-                Tilasto("KESKITULO", m.Keskitulo, m.KeskituloSija);
+                Tilasto(Kieli.T("ui.kartuscha.vakiluku"), m.Vakiluku, m.VakilukuSija);
+                Tilasto(Kieli.T("ui.kartuscha.pinta-ala"), m.PintaAla, m.PintaAlaSija);
+                Tilasto(Kieli.T("ui.kartuscha.demokratia"), m.Demokratia != null ? m.Demokratia + " · V-Dem" : null, m.DemokratiaSija);
+                Tilasto(Kieli.T("ui.kartuscha.keskitulo"), m.Keskitulo, m.KeskituloSija);
             }
             tilastot.style.display = m.OnTiedot || m.Tervehdykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
 
@@ -480,7 +480,7 @@ namespace Matkakirja.Natiivi
             kielet.BringToFront(); // rivien jälkeen
             if (m.Tervehdykset.Count > 0)
             {
-                Kirjasimet.Aseta(Rakenne.Teksti("KIELET", "mk-kartuscha__nimike", kielet), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.kartuscha.kielet"), "mk-kartuscha__nimike", kielet), Kirjasin.Kone);
                 var rivi = Rakenne.El("mk-kartuscha__tervehdykset", kielet, PickingMode.Ignore);
                 foreach (var (teksti, kieli, lippuNimi, _) in m.Tervehdykset)
                 {
