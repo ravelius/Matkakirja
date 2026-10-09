@@ -41,11 +41,13 @@ namespace Matkakirja.Natiivi
                 // Kameran matriisit itse (jälkikäsittelyn jälkeen globaalit voivat olla koko ruudun piirron).
                 // Käänteinen näkymä-projektio osista (9.10. simu 8e75e3c5: paikka NaN kaikissa pikseleissä): projektion käänteismatriisi
                 // erikseen ja kameran maailmamatriisi; yhdistetyn VP:n käänteinen voi rappeutua (Unity palauttaa nollamatriisin).
-                var invP = cam.GetGPUProjectionMatrix(0).inverse;
-                var invVP = cam.camera.cameraToWorldMatrix * invP;
+                // 9.10. simu 49da2106: UniversalCameraData.GetGPUProjectionMatrix antoi tässä vaiheessa determinantin 0 → kameran oma projektio
+                // (renderöinti tekstuuriin: välitekstuuri, ei takapuskuri).
+                var P = GL.GetGPUProjectionMatrix(cam.camera.projectionMatrix, true);
+                var invVP = cam.camera.cameraToWorldMatrix * P.inverse;
                 bool ok = Kelpaa(invVP);
-                if (!ok) { invVP = (cam.GetGPUProjectionMatrix(0) * cam.GetViewMatrix(0)).inverse; }
-                matriisiTila = $"invVP {(Kelpaa(invVP) ? "ok" : "VIRHE")} (osista {(ok ? "ok" : "virhe")}, P det {cam.GetGPUProjectionMatrix(0).determinant:G3}, near {cam.camera.nearClipPlane:G3} far {cam.camera.farClipPlane:G3})";
+                if (!ok) { invVP = (P * cam.camera.worldToCameraMatrix).inverse; }
+                matriisiTila = $"invVP {(Kelpaa(invVP) ? "ok" : "VIRHE")} (osista {(ok ? "ok" : "virhe")}, P det {P.determinant:G3}, URP:n P det {cam.GetGPUProjectionMatrix(0).determinant:G3}, near {cam.camera.nearClipPlane:G3} far {cam.camera.farClipPlane:G3})";
                 materiaali.SetMatrix(IdInvVP, invVP);
                 materiaali.SetVector(IdKamera, cam.camera.transform.position);
                 var kuvaus = rg.GetTextureDesc(res.activeColorTexture);
