@@ -1118,6 +1118,8 @@ namespace Matkakirja.Natiivi
 
         // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10., Päätoimittaja juna 170; napit Natiivi-UI heijastuksella,
         // natiivi-ui/vapaa-lento) ----
+        /// <summary>Vapaan lennon nopeusvipu (Natiivi-UI kirjoittaa; 1 = oletus, OpasVapaaLento.VipuMin…VipuMax).</summary>
+        public static double VapaaNopeus { get => Viimeisin?.silmukka?.Vapaa.Vipu ?? 1; set { if (Viimeisin?.silmukka != null) Viimeisin.silmukka.Vapaa.Vipu = value; } }
         /// <summary>"Vapaa lento" -nappi: kierros käynnissä, ei siirtoruutua.</summary>
         public static bool VapaaLentoKaytettavissa => Auki && Viimeisin.silmukka.VapaaLentoKaytettavissa;
         /// <summary>Kierros keskeytyy (kohde, paikka ja kesken jäänyt kerronta talteen), kertoja vaikenee, käsiohjaus. true = alkoi.</summary>

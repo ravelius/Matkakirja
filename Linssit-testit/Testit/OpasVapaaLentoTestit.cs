@@ -162,5 +162,40 @@ namespace Matkakirja.Linssit.Testit
             var torni = OpasLuotainKuva.Tulkitse(Kuva(62), W, H, fov, alas);
             Oleta.Tosi(Math.Abs(torni.vaaka - 62) < 3, $"seinä 62 m edessä: {torni.vaaka:0}");
         }
+
+        // Päätoimittaja 9.10. (juna 170): alas ja eteen yhtä aikaa myös, kun kehän näytteet ovat kesken (liikkeessä aina), ja nopeusvipu.
+        [Testi]
+        static void AlasJaEteenNaapurustoKesken()
+        {
+            var l = Alussa(0);
+            // Vain kameran ja ennakon näytteet tiedossa (kehä NaN): ennen lasku estyi kokonaan (vNousu = 0).
+            double Osittain(double lat, double lon)
+            {
+                var (el, eo) = l.Ennakko;
+                bool ydin = (Math.Abs(lat - l.Lat) < 1e-12 && Math.Abs(lon - l.Lon) < 1e-12) || (Math.Abs(lat - el) < 1e-12 && Math.Abs(lon - eo) < 1e-12);
+                return ydin ? 200 : double.NaN;
+            }
+            double h0 = l.KorkeusM, lat0 = l.Lat;
+            for (double t = 0; t < 3; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 1, 0, -1, Osittain);
+            Oleta.Tosi(l.KorkeusM < h0 - 20, $"laskee liikkeessä: {h0:0} → {l.KorkeusM:0} m");
+            Oleta.Tosi(l.Lat > lat0, "etenee samalla");
+            Oleta.Tosi(l.KorkeusM >= 200 + OpasVapaaLento.MinKorkeusM * 0.5 - 1, $"ei alle rajan ({l.KorkeusM:0} m)");
+            // Ilman ydinnäytteitä ei laskua.
+            var m = Alussa(0); double h1 = m.KorkeusM;
+            for (double t = 0; t < 2; t += 1 / 60.0) m.Paivita(1 / 60.0, 0, 1, 0, -1, (a, b) => double.NaN);
+            Oleta.Tosi(m.KorkeusM >= h1 - 1, $"ei näytteitä → ei laskua ({h1:0} → {m.KorkeusM:0})");
+        }
+
+        [Testi]
+        static void NopeusvipuKertoo()
+        {
+            var a = Alussa(90); var b = Alussa(90); b.Vipu = 2;
+            double lon0 = a.Lon;
+            Aja(a, 2, 0, 1, 0, 0); Aja(b, 2, 0, 1, 0, 0);
+            double da = a.Lon - lon0, db = b.Lon - lon0;
+            Oleta.Tosi(db > 1.7 * da && db < 2.3 * da, $"vipu 2 → noin kaksinkertainen matka ({da:0.00000} / {db:0.00000})");
+            var c = Alussa(90); c.Vipu = 99; Aja(c, 2, 0, 1, 0, 0);
+            Oleta.Tosi(c.Lon - lon0 < (OpasVapaaLento.VipuMax + 0.3) * da, "vipu rajattu VipuMax:iin");
+        }
     }
 }
