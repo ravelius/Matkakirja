@@ -22,7 +22,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Pudotuksia enintään, ja kierrokselle jää aina vähintään näin monta kohdetta.</summary>
         public const int MaksimiPudotus = 2, VahintaanKohteita = 5;
         /// <summary>Tarkka järjestys (Held–Karp) tähän kokoon asti, sitä suuremmille lähin naapuri + 2-opt.</summary>
-        public const int TarkkaRaja = 10;
+        public const int TarkkaRaja = 14;   // Tukholman uusi kierros 14 kohdetta (Pelikoodari esittely-v3, 9.10.): 2^13 × 14 tilaa, ~1 Mt
 
         /// <summary>Kohteet lyhimpänä avoimena polkuna ensimmäisestä alkaen; kaukaiset pudotetaan (palautetaan pudotetut-listassa
         /// pudotusjärjestyksessä).</summary>
