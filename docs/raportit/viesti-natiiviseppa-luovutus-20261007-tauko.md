@@ -34,6 +34,13 @@ korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauol
   [ ] Siirtoseppä: lähteettömien äänten korvaus ("valmis 172:een" -rivi tulee); LR:n leikkauskorjaus erikseen
   [ ] LR: Codex-pinnat
   [ ] Pelikoodari: musiikkisekvenssi
+  LUKITUSEHDOT 172: (a) omistajan lupa (PT välittää) (b) Siirtosepän arvio 3 -laitekäännös ilman varjostinvirheitä (DioraamaValaistu
+      alfaleikkaus) (c) LR:n prefektuuri, jos ehtii (d) Codex-fotot NUI:lta (loput minikuvat) (e) yksi simukäännös 0 varjostinvirhettä (Steam Audio,
+      OmaMalli, DioraamaValaistu, KaupunkiYovalot) (f) osoitin uusin-2 → v7 Julkaisijalta junan mukana (g) näyttönimi "Matkakirja": Info.plist iOS
+      (PostProcessBuild 190) + Mac (MacNayttonimi plutil Rakennus.MacOS:ssa) — tarkista simu-appin Info.plist käännöksen jälkeen.
+  MUUTOSLOKILUONNOS 172 (260 merkkiä, 274 tavua; PT tarkistaa): "Olavinlinna: linnan historia elokuvana nykypäivään, lisää esineitä, aukeavat ovet
+      ja uusia ääniä. Pallo: sadekuurot, märät kadut, salamat, iltaikkunat, tarkemmat Pariisin laivat ja valaistut omat 3D-mallit. iPhone pystyssä,
+      äänimikseri. Nimi on nyt Matkakirja."
   [ ] simukäännös + PT:n muutosloki + lukitus — OMISTAJA 12.0x: VASTA OMISTAJAN LUVALLA (PT välittää); ei käännöstä ennen sitä
 
 ## TILA 9.10. 09.5x
