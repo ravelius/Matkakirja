@@ -25,6 +25,9 @@ namespace Matkakirja.Natiivi
         /// "yoikkunat" = ikkunoiden voima, "yoikkunaosuus" = palavien ikkunoiden osuus enintään). v2 simun 21.5x kuvista.</summary>
         public static bool Kaytossa = true;
         // v4 (Päätoimittaja 22.3x): valosaaste kevyeksi, katuvalot OSM-katujen mukaan (ei satunnaisia pisteitä), ikkunat harvoiksi.
+        /// <summary>Diagnoosi (komento opas yovalot N): 0 normaali, 1 passi violettina, 2 maailmanpaikka, 3 Black Marble, 4 lisävalo × 5.</summary>
+        public static float Diagnoosi;
+        static readonly int IdDebug = Shader.PropertyToID("_ValoDebug");
         public static float Hehku = 0.04f, Pisteet = 1.4f, SoluM = 18f, Ikkunat = 0.8f, IkkunaOsuus = 0.25f;
         /// <summary>Kohteen valaistus (v4): oppaan nykyinen kohde (lat, lon, maan korkeus ellipsoidista m, säde m) saa yöllä lämpimän
         /// valonheiton (Eiffel kultaisena). OpasSovitin asettaa joka kehys; null = ei kohdetta.</summary>
@@ -79,6 +82,7 @@ namespace Matkakirja.Natiivi
         public static void Paivita(MonoBehaviour isanta, CesiumGeoreference georef, Camera kamera, double osuus)
         {
             Osuus = Kaytossa && georef != null ? (float)System.Math.Max(0, System.Math.Min(1, osuus)) : 0f;
+            viimeKamera = kamera;
             if (!Kaytossa || osuus <= 0.001 || georef == null || kamera == null) { Pois(); return; }
             var ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed(new double3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z));
             var llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
@@ -98,6 +102,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetMatrix(IdMatriisi, georef.transform.worldToLocalMatrix);
             materiaali.SetVector(IdAlue, new Vector4(kulma.Value.lon, kulma.Value.lat, (float)georef.latitude, (float)georef.longitude));
             materiaali.SetVector(IdParam, new Vector4((float)osuus, Hehku, Pisteet, Mathf.Max(5f, SoluM)));
+            materiaali.SetVector(IdDebug, new Vector4(Diagnoosi, 0f, 0f, 0f));
             materiaali.SetVector(IdVari, new Vector4(Vari.r, Vari.g, Vari.b, Vari.a));
             materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), 0f, 0f));
             materiaali.SetTexture(IdTiet, tiet != null ? tiet : Texture2D.blackTexture);
@@ -277,6 +282,19 @@ namespace Matkakirja.Natiivi
             try { Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, tavut); }
             catch (System.Exception e) { Debug.LogWarning("MATKAKIRJA kaupunki: yövalojen välimuisti " + e.Message); }
             valmis(tavut);
+        }
+
+        static Camera viimeKamera;
+        /// <summary>Diagnoosin tila (komento opas yovalot): passi, renderöijä, varjostin, ruudukko ja kamera.</summary>
+        public static string Tila()
+        {
+            var urp = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+            var nyt = urp != null && urp.rendererDataList.Length > 0 ? urp.rendererDataList[0] : null;
+            var ca = viimeKamera != null ? viimeKamera.GetComponent<UniversalAdditionalCameraData>() : null;
+            return $"passi {(feature != null ? (feature.isActive ? "aktiivinen" : "EI aktiivinen") : "ei")}, renderöijä {(data != null ? data.name : "-")} {(data != null && data == nyt ? "= nykyinen" : "≠ nykyinen " + (nyt != null ? nyt.name : "-"))}" +
+                $" (piirteitä {(data != null ? data.rendererFeatures.Count : 0)}, paikka {(data != null && feature != null ? data.rendererFeatures.IndexOf(feature) : -1)}), putki {(urp != null ? urp.name : "-")}, " +
+                $"varjostin {(materiaali != null ? (materiaali.shader.isSupported ? "tuettu" : "EI tuettu") : "-")}, ruudukko {(ruudukko != null ? "on" : "ei")}, kulma {kulma}, " +
+                $"kamera {(viimeKamera != null ? viimeKamera.name : "-")} jälkik. {(ca != null ? ca.renderPostProcessing.ToString() : "?")} syvyys {(ca != null ? ca.requiresDepthOption.ToString() : "?")} tyyppi {(ca != null ? ca.renderType.ToString() : "?")} pino {(ca != null ? ca.cameraStack?.Count ?? 0 : 0)}";
         }
 
         static bool Luo()

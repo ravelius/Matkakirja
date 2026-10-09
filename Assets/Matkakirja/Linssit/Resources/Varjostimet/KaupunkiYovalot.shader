@@ -46,6 +46,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float4 _KameraP;                // kamera paikallisessa ENU:ssa (m)
             float4 _Maamerkit[8];           // xyz = maapiste paikallisessa ENU:ssa, w = säde (m); w = 0 tyhjä
             float4 _MaamerkkiParam;         // x = määrä, y = voima
+            float4 _ValoDebug;              // x: 0 = normaali, 1 = passin tunniste (violetti), 2 = maailmanpaikka, 3 = Black Marble, 4 = lisävalo × 5
 
             float3 Hash32(float2 p)
             {
@@ -91,6 +92,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
                 float2 uv = i.texcoord, px = _BlitTexture_TexelSize.xy;
                 half4 c = SAMPLE_TEXTURE2D_X_LOD(_BlitTexture, sampler_PointClamp, uv, 0);
+                if (_ValoDebug.x > 0.5 && _ValoDebug.x < 1.5) return half4(c.rgb * 0.5h + half3(0.5h, 0.0h, 0.5h), 1.0h);
                 float syvyys = SampleSceneDepth(uv);
                 #if UNITY_REVERSED_Z
                 if (syvyys <= 1e-7) return c;
@@ -98,7 +100,9 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 if (syvyys >= 1.0 - 1e-7) return c;
                 #endif
                 float3 p = mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                if (_ValoDebug.x > 1.5 && _ValoDebug.x < 2.5) return half4((half3)frac(float3(p.x / 200.0, p.y / 50.0, p.z / 200.0)), 1.0h);
                 float bm = BlackMarble(p);
+                if (_ValoDebug.x > 2.5 && _ValoDebug.x < 3.5) return half4((half3)saturate(bm * 2.0), 1.0h);
                 if (bm <= 0.01 && _KohdeP.w < 0.5 && _MaamerkkiParam.x < 0.5) return c;
 
                 // Naapurit: lyhyempi ero kummaltakin akselilta (reunalla pitkä ero on toisen pinnan puolella).
@@ -224,6 +228,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     }
                     lisa += heij * vesi * fresnel * valke * _VesiAlue.w;
                 }
+                if (_ValoDebug.x > 3.5) return half4((half3)saturate(lisa * 5.0), 1.0h);
                 float3 tulos = c.rgb + lisa * _ValoParam.x;
                 // Kohteen valaistus (v4): lämmin valonheitto kohteen ympärille maasta ylöspäin (Eiffel kultaisena).
                 if (wKohde > 0.0)

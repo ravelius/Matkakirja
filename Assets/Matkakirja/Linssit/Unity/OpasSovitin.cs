@@ -715,10 +715,37 @@ namespace Matkakirja.Natiivi
         // PalloSaaVaikutus → KaupunkiKuva (sävy ja sumu) ja PalloSaaKerros (sade, lumi, salama); ukkosen kumahdus kirjastosta.
         readonly PalloSaaVaikutus saaVaikutus = new PalloSaaVaikutus();
         PalloSaaKerros saaKerros;
+        // Sadekuurot itsestään (omistaja TF 168, Päätoimittaja juna 170; Ydin PalloKuurot): kehityskaupungeissa selkeällä tai pilvisellä
+        // säällä harvoin kuuro, osa ukkoskuuroja (alussa kaukainen jyrinä, Pelikoodarin elava-kaupunki-v1); KuuroVoima Linssiseppä 2:lle.
+        readonly PalloKuurot kuurot = new PalloKuurot(Environment.TickCount);
+        /// <summary>Itsestään tulevan kuuron voima 0–1 (Linssiseppä 2:n KaupunkiKuuro.Voima: pilvet ja märät kadut).</summary>
+        public static double KuuroVoima => Viimeisin?.kuurot.Voima ?? 0;
+        AudioClip jyrinaKlippi; bool jyrinaLadataan;
+        IEnumerator SoitaJyrina()
+        {
+            if (jyrinaKlippi == null && !jyrinaLadataan)
+            {
+                jyrinaLadataan = true;
+                using var r = UnityWebRequestMultimedia.GetAudioClip("https://media.matkakirja.app/aanet/elava-kaupunki-v1/ukkonen-kaukainen.mp3", AudioType.MPEG);
+                r.timeout = 20;
+                yield return r.SendWebRequest();
+                if (r.result == UnityWebRequest.Result.Success) jyrinaKlippi = DownloadHandlerAudioClip.GetContent(r);
+                jyrinaLadataan = false;
+            }
+            if (jyrinaKlippi == null || !Asetukset.Paalla(Kytkin.Aanimaisema)) yield break;
+            if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
+            ukkosLahde.volume = UkkosenTavoite();
+            ukkosLahde.PlayOneShot(jyrinaKlippi, 0.8f);
+            o.Kirjaa("opas: ukkoskuuro alkaa (kaukainen jyrinä)");
+        }
+
         void SaaTehosteet()
         {
             float dt = Time.unscaledDeltaTime;
-            saaVaikutus.Paivita(tauolla ? 0 : dt, nakymaAuki ? Saatila.Saa : PalloSaa.Pois, Saatila.Live ? SaaTiedot : null);
+            bool kuuroSallittu = nakymaAuki && OpasSilmukka.PalloLento && Kehityskaupungit.On(NykyinenKaupunkiId) && (Saatila.Saa == PalloSaa.Selkea || Saatila.Saa == PalloSaa.Pilvinen);
+            var kuuro = kuurot.Paivita(tauolla ? 0 : dt, kuuroSallittu);
+            if (kuurot.UkkonenAlkoi && !Testi) o.StartCoroutine(SoitaJyrina());
+            saaVaikutus.Paivita(tauolla ? 0 : dt, nakymaAuki ? Saatila.Saa : PalloSaa.Pois, Saatila.Live ? SaaTiedot : null, kuuro);
             KaupunkiKuva.Saa = saaVaikutus.Nyt; KaupunkiKuva.Salama = saaVaikutus.Salama;
             if (saaKerros == null && saaVaikutus.Nyt.Tyhja) return;
             saaKerros ??= new PalloSaaKerros();

@@ -541,6 +541,7 @@ namespace Matkakirja.Natiivi
                 var lm = new Material(sp != null ? sp : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Kompassin lasi", renderQueue = 3000 };
                 float al = osa.Vari != null && osa.Vari.Length >= 4 ? osa.Vari[3] : 0.16f;
                 lm.color = new Color(0.9f, 0.93f, 0.96f, Mathf.Clamp(al, 0.08f, 0.35f));
+                lasiMat = lm; lasiPerus = lm.color;   // valoisuus AsetaValossa (yöllä valaisematon lasi hehkui valkoisena levynä)
                 r.sharedMaterial = lm; return;
             }
             var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
@@ -766,7 +767,16 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdAla, V(k.TaivasAla));
             var s = KaupunkiKuva.KoriSuodin; float e = Mathf.Pow(2f, KaupunkiKuva.KoriValotusEV);
             Shader.SetGlobalVector(IdValotus, new Vector4(s.r * e, s.g * e, s.b * e, 1f));
+            // Kompassin lasi (Päätoimittaja 9.10.: yöllä valkoinen levy): valaisematon lasi saa taivaan ja auringon valoisuuden ja valotuksen.
+            if (lasiMat != null)
+            {
+                Vector3 valo = V(k.TaivasYla) + V(k.AurinkoVari) * Mathf.Clamp01((float)k.AurinkoY);
+                float l = Mathf.Clamp(0.2126f * valo.x + 0.7152f * valo.y + 0.0722f * valo.z, 0f, 1.2f) * e;
+                l = Mathf.Clamp(l, 0.04f, 1f);
+                lasiMat.color = new Color(lasiPerus.r * l, lasiPerus.g * l, lasiPerus.b * l, lasiPerus.a * Mathf.Lerp(0.5f, 1f, l));
+            }
         }
+        Material lasiMat; Color lasiPerus;
 
         // POLTIN (Linssiseppä 8.10., pallo Unreal-tasolle kohdat 2 ja 7): Ydin Poltin pystynopeudesta (vain nousussa), lämmin valo
         // korin reunaan ylhäältä (_KoriPoltin) ja liekkikuva hehkuineen kuvan yläreunaan (PalloLiekki).
