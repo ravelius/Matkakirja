@@ -6,7 +6,7 @@
 - Yhteensä 1 320 vastausta.
 
 ## Kesto
-- Tämä jatkoajo noin 3 tuntia (erät 2–12, korjaukset, tarkistukset, paketti). Edellisen session aika ei ole mukana.
+- Tämä jatkoajo noin 57 minuuttia (erät 2–12, korjaukset, tarkistukset, paketti). Edellisen session aika ei ole mukana.
 
 ## Agentit (Sonnet, effort low, enintään 2 rinnakkain; yhden hetken ajan 3 rinnakkain erien 5–7 aikana)
 Tokenit yhteensä noin 2,30 miljoonaa (erät 2–11: 2 023 786; V1-korjaus 75 003; V2-korjaus 55 239; erä 12: 148 651). Edellisen session erä 1 ei ole mukana.
