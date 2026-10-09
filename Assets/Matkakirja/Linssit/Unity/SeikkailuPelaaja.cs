@@ -235,12 +235,15 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Botti (vianselvitys): kävele pisteeseen napautuskävelyn tavoin (reitti NavMeshillä). Palauttaa, löytyikö reitti.</summary>
+        /// <summary>Botin viimeisimmän reitin tila (PathComplete / PathPartial = pelaaja NavMesh-saarella / ei reittiä).</summary>
+        public string BottiReitti { get; private set; }
         public bool KaveleKohti(Vector3 kohde)
         {
             napautusReitti.Clear();
             var polku = new NavMeshPath();
             bool ok = NavMesh.SamplePosition(kohde, out var k, 1.0f, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, k.position, NavMesh.AllAreas, polku)
                 && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1;
+            BottiReitti = ok ? polku.status.ToString() : "ei reittiä";
             if (ok) for (int i = 1; i < polku.corners.Length; i++) napautusReitti.Add(polku.corners[i]); else napautusReitti.Add(kohde);
             jumiAika = 0; jumiPaikka = transform.position;
             return ok;

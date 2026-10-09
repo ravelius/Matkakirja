@@ -48,5 +48,24 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(l[0], r[0], "ensimmäinen");
             Oleta.Tosi(OpasReitti.Pituus(r, x => x) <= OpasReitti.Pituus(l, x => x) + 1e-6, "pidempi");
         }
+
+        // Tukholman uusi kierros (Pelikoodari esittely-v3, 9.10.: 5 lähikohdetta, Held–Karp 6,3 km kuninkaanlinnalta): ei pudotuksia,
+        // tarkka järjestys (14 ≤ TarkkaRaja), sama pituus kuin Pelikoodarin. Vanhojen kohteiden paikat kultaisesta datasta / Wikidatasta.
+        [Testi] static void TukholmanUusiKierrosLyhin()
+        {
+            var k = new (string Nimi, double Lat, double Lon)[]
+            {
+                ("Kuninkaanlinna", 59.32667, 18.07167), ("Suurkirkko", 59.32583, 18.07056), ("Stortorget", 59.32500, 18.07083), ("Gamla stan", 59.32500, 18.07083),
+                ("Ritarihuone", 59.32593, 18.06573), ("Riddarholmen", 59.32472, 18.06472), ("Kaupungintalo", 59.32750, 18.05472), ("Valtiopäivätalo", 59.32750, 18.06750),
+                ("Kuninkaanpuisto", 59.33194, 18.07111), ("Kansallismuseo", 59.32861, 18.07806), ("Skeppsholmen", 59.32600, 18.08300), ("Vasa-museo", 59.32807, 18.09139),
+                ("Skansen", 59.32445, 18.10100), ("Katarinan kirkko", 59.31708, 18.07806),
+            };
+            var l = OpasReitti.Lyhin(k, x => (x.Lat, x.Lon), out var pois);
+            double pit = OpasReitti.Pituus(l, x => (x.Lat, x.Lon));
+            Console.WriteLine($"      Tukholma uusi: {pit / 1000:F1} km: {string.Join(" → ", l.ConvertAll(x => x.Nimi))}");
+            Oleta.Sama(0, pois.Count, "ei pudotuksia (kaikki lähellä)");
+            Oleta.Sama("Kuninkaanlinna", l[0].Nimi, "alku pysyy");
+            Oleta.Tosi(pit <= 6400, $"lyhin {pit:F0} m (Pelikoodarin Held–Karp 6,3 km)");
+        }
     }
 }

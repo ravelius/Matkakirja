@@ -14,6 +14,8 @@ namespace Matkakirja.Linssit.Elava
         /// <summary>Pisteiden korkeus (m; veneillä oma vesipinta, ei Googlen laattoja), tai null.</summary>
         public readonly double[] Y;
         public readonly bool Kiertava;
+        /// <summary>Yksisuuntainen katu (B4): kulkija palaa loppupäästä alkuun (kuvassa piilossa päissä), ei käänny.</summary>
+        public bool Yksisuunta;
         public double Pituus => Matka[Matka.Length - 1];
 
         public Reitti(IReadOnlyList<(double x, double z)> pisteet, bool kiertava, IReadOnlyList<double> korkeudet = null)
@@ -74,7 +76,7 @@ namespace Matkakirja.Linssit.Elava
             int n = Math.Max(1, (int)(r.Pituus / Math.Max(1, valiM)));
             for (int i = 0; i < n; i++)
             {
-                var k = new Kulkija { Reitti = ri, S = (i + 0.3 * rnd.NextDouble()) * r.Pituus / n, Nopeus = nopeus * (0.85 + 0.3 * rnd.NextDouble()), Suunta = !r.Kiertava && rnd.NextDouble() < 0.5 ? -1 : 1 };
+                var k = new Kulkija { Reitti = ri, S = (i + 0.3 * rnd.NextDouble()) * r.Pituus / n, Nopeus = nopeus * (0.85 + 0.3 * rnd.NextDouble()), Suunta = !r.Kiertava && !r.Yksisuunta && rnd.NextDouble() < 0.5 ? -1 : 1 };
                 Paikanna(k); Kulkijat.Add(k);
             }
         }
@@ -87,7 +89,8 @@ namespace Matkakirja.Linssit.Elava
                 var r = Reitit[k.Reitti];
                 if (k.Tauko > 0) { k.Tauko -= dt; if (k.Tauko <= 0) k.Suunta = -k.Suunta; else continue; }
                 k.S += k.Suunta * k.Nopeus * dt;
-                if (!r.Kiertava && (k.S <= 0 || k.S >= r.Pituus)) { k.S = Math.Max(0, Math.Min(r.Pituus, k.S)); k.Tauko = PaassaTaukoS; }
+                if (r.Yksisuunta && k.S >= r.Pituus) { k.S = 0; k.Suunta = 1; }
+                else if (!r.Kiertava && (k.S <= 0 || k.S >= r.Pituus)) { k.S = Math.Max(0, Math.Min(r.Pituus, k.S)); k.Tauko = PaassaTaukoS; }
                 Paikanna(k);
             }
         }

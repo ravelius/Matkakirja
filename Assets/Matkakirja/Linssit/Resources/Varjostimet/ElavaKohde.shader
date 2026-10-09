@@ -55,5 +55,23 @@ Shader "Matkakirja/Linssit/ElavaKohde"
             half frag() : SV_Target { return 0; }
             ENDHLSL
         }
+        Pass
+        {
+            Name "DepthNormals"
+            Tags { "LightMode" = "DepthNormals" }
+            Cull Back
+            ZWrite On
+            // URP:n DepthNormals-esipassi (Ultra-renderöijän SSAO, lähde DepthNormals) tuottaa kameran syvyystekstuurin: ilman tätä passia
+            // kohde puuttuu _CameraDepthTexturesta (9.10. simu: yövalot ja muotokorostus näkivät tyhjän syvyyden).
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_instancing
+            struct A { float4 p : POSITION; float3 n : NORMAL; UNITY_VERTEX_INPUT_INSTANCE_ID };
+            struct V { float4 p : SV_POSITION; float3 n : TEXCOORD0; };
+            V vert(A a) { UNITY_SETUP_INSTANCE_ID(a); V v; v.p = TransformObjectToHClip(a.p.xyz); v.n = TransformObjectToWorldNormal(a.n); return v; }
+            half4 frag(V v) : SV_Target { return half4(normalize(v.n), 0.0); }
+            ENDHLSL
+        }
     }
 }

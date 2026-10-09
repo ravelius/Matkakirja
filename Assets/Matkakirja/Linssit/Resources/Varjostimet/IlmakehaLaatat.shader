@@ -26,12 +26,16 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
         CBUFFER_END
         TEXTURE2D(_overlayTexture_Clipping); SAMPLER(sampler_overlayTexture_Clipping);
         float2 Kanava(float2 a, float2 b, float2 c, float2 d, float i) { return i < 0.5 ? a : i < 1.5 ? b : i < 2.5 ? c : d; }
-        /// Cesiumin leikkaus: polygonin sisällä peite (alfa > 0,5) → pikseli pois.
+        /// Cesiumin leikkaus kuten CesiumUnlitTilesetShader: peite → Lerp(musta, näyte, näyte.a) → Split R → OneMinus → Alpha,
+        /// AlphaClipThreshold 0,5. Pikseli säilyy, kun 1 − r·a ≥ 0,5; polygonin sisällä peite valkoinen → pois. Oletuskuva musta
+        /// (Cesiumin oletus): laatat ilman leikkauspeitettä säilyvät. (9.10. 05.0x A/B: alfaehto ei leikannut mitään, koska peitteen
+        /// alfa on 1 kaikkialla; Concorden teltat jäivät.)
         void Leikkaa(float2 uv)
         {
             float4 t = _overlayTranslationAndScale_Clipping;
             float2 q = uv * t.zw + t.xy; q.y = 1.0 - q.y;
-            clip(0.5 - SAMPLE_TEXTURE2D(_overlayTexture_Clipping, sampler_overlayTexture_Clipping, q).a);
+            half4 m = SAMPLE_TEXTURE2D(_overlayTexture_Clipping, sampler_overlayTexture_Clipping, q);
+            clip(0.5 - m.r * m.a);
         }
         ENDHLSL
         Pass
@@ -63,13 +67,37 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 float m = _IlmMaailma.x;
                 float3 kohti = v.w - _WorldSpaceCameraPos;
                 float etM = length(kohti) * m;
+                // LOPPUILTA (PT 9.10.: laatat eivät saa erottua päivänkirkkaina sinistä hetkeä vasten): unlit-laatat himmenevät ja
+                // viilenevät sinisen hetken voimalla (_IlmHamara.x).
+                c *= lerp((float3)1.0, float3(0.55, 0.60, 0.78), _IlmHamara.x);
                 // Pilvien varjot: kenttä auringon suunnassa pisteen yllä, häipyy auringon laskiessa.
                 float varjo = IlmPilvi(v.w * m) * _IlmPilviParam.y * saturate(_IlmAurinko.y * 4.0);
                 c *= 1.0 - varjo;
+                // MÄRÄT KADUT (Ydin KaupunkiKuuro.Markyys; omistaja TF 168): ylöspäin osoittavat pinnat (geometrian normaali derivaatoista,
+                // Googlen laatoissa ei normaaleja) tummuvat ja heijastavat taivasta Fresnelillä; lätäköt kohinasta 3 m:n mittakaavassa.
+                if (_IlmSaa.x > 0.001)
+                {
+                    float3 n = normalize(cross(ddy(v.w), ddx(v.w))); n *= sign(n.y + 1e-4);
+                    float ylos = smoothstep(0.8, 0.95, n.y);
+                    float2 lc = floor(v.w.xz * m / 3.0); float latakko = frac(sin(dot(lc, float2(12.9898, 78.233))) * 43758.5453);
+                    float mark = _IlmSaa.x * ylos * (0.6 + 0.4 * latakko);
+                    float3 dv = kohti / max(1e-4, length(kohti)), r = reflect(dv, float3(0, 1, 0));
+                    float fres = 0.02 + 0.98 * pow(1.0 - saturate(-dv.y), 5.0);
+                    c *= 1.0 - 0.35 * mark;
+                    c = lerp(c, IlmSavytys(IlmTaivas(r) * _IlmParam.y), saturate(fres * mark * 0.8));
+                }
                 // Ilmaperspektiivi: läpäisy kanavittain ja sironta (valotus ja sävytys kuten taivaassa), voimalla A/B.
                 float3 sironta, lapaisy; IlmIlmaperspektiivi(etM, kohti / max(1e-4, length(kohti)), sironta, lapaisy);
                 float3 ap = c * lapaisy + IlmSavytys(sironta * _IlmParam.y);
                 c = lerp(c, ap, _IlmParam.z);
+                // Loppuillan kaukoutu: 2,5–14 km:n laatat liukuvat taivaanrannan sävyyn (yhtenäinen ilta, karkeiden kaukolaattojen
+                // sahalaita ei piirry tummana taivasta vasten; PT 9.10. Tukholma).
+                if (_IlmHamara.x > 0.001)
+                {
+                    float3 dv = kohti / max(1e-4, length(kohti));
+                    float3 ranta = IlmSininenHetki(normalize(float3(dv.x, -0.2, dv.z))) / _IlmHamara.x;   // sama "maa" kuin taivaan alapuolisko (laattojen reuna sulautuu)
+                    c = lerp(c, ranta, saturate((etM - 2500.0) / 11500.0) * 0.85 * _IlmHamara.x);
+                }
                 return half4(MixFog((half3)c, v.sumu), 1);
             }
             ENDHLSL
@@ -87,6 +115,28 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
             struct V { float4 p : SV_POSITION; float2 leik : TEXCOORD0; };
             V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.leik = Kanava(a.uv0, a.uv1, a.uv2, a.uv3, _overlayTextureCoordinateIndex_Clipping); return v; }
             half frag(V v) : SV_Target { Leikkaa(v.leik); return 0; }
+            ENDHLSL
+        }
+        Pass
+        {
+            Name "DepthNormals"
+            Tags { "LightMode" = "DepthNormals" }
+            ZWrite On
+            // URP:n DepthNormals-esipassi (Ultra-renderöijän SSAO, lähde DepthNormals) tuottaa kameran syvyystekstuurin: ilman tätä passia
+            // kohde puuttuu _CameraDepthTexturesta (9.10. simu: yövalot ja muotokorostus näkivät tyhjän syvyyden).
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            struct A { float4 p : POSITION; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; float2 uv2 : TEXCOORD2; float2 uv3 : TEXCOORD3; };
+            struct V { float4 p : SV_POSITION; float3 pw : TEXCOORD0; float2 leik : TEXCOORD1; };
+            V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.pw = TransformObjectToWorld(a.p.xyz); v.leik = Kanava(a.uv0, a.uv1, a.uv2, a.uv3, _overlayTextureCoordinateIndex_Clipping); return v; }
+            half4 frag(V v) : SV_Target
+            {
+                Leikkaa(v.leik);
+                float3 n = normalize(cross(ddy(v.pw), ddx(v.pw)));   // laatoissa ei normaaleja (unlit): pinnan normaali derivaatoista
+                if (dot(n, GetCameraPositionWS() - v.pw) < 0.0) n = -n;
+                return half4(n, 0.0);
+            }
             ENDHLSL
         }
     }

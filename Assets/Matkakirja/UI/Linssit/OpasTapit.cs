@@ -6,6 +6,11 @@
 // Pohja: OHJAUSNAPPI-pohjan TAPPI (Pohjat/ohjausnappi.uss, harmaan lasin tokenit): Ø 64 pt lasi, nuppi Ø 26 pt, levossa
 // himmeä ja kosketuksessa täysin näkyvä, häivytys 200 ms. Nopeusohjaus: nupin poikkeama keskeltä −1…1, irrotus palauttaa
 // nupin keskelle (150 ms) ja arvon nollaan. Kumpikin tappi kaappaa oman osoittimensa (kaksi peukaloa yhtä aikaa).
+// NOPEUSVIPU (omistaja 9.10.2026, juna 170: "vasemmalla keskellä myös pieni säädin vipu, millä voisi vaikuttaa maksiminopeuteen";
+// Päätoimittaja: mikserin liukusäädin pystyasennossa, .mk-saadin--pysty): vain vapaassa lennossa vasemmassa reunassa keskellä,
+// ylös = nopeampi (Ydin VapaaNopeusVipu: ×0,25 … ×3, oletus ×1), asento muistetaan. Kerroin LS1:n OpasSovitin.VapaaNopeus-arvoon
+// joka ruudulla vapaassa tilassa (464ac4b12, sama alue 0,25–3).
+using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -22,11 +27,24 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelaaja koskee jompaakumpaa tappia (silmukka pysäyttää automaattisen kierron ja seuraavaan siirtymisen).</summary>
         public static bool Kosketaan => vasen.Kosketaan || oikea.Kosketaan;
 
+        /// <summary>Nopeusvivun asento (VapaaNopeusVipu.Min … Max, ylös = nopeampi); muistetaan PlayerPrefsissä.</summary>
+        public static float NopeusVipu { get; private set; } = LueVipu();
+        /// <summary>Vapaan lennon enimmäisnopeuden kerroin vivusta (0,25 … 3, oletus 1) → OpasSovitin.VapaaNopeus (LS1).</summary>
+        public static double NopeusKerroin => VapaaNopeusVipu.Kerroin(NopeusVipu);
+        const string VipuAvain = "opas.vapaa.nopeusvipu";
+        public const float VipuKorkeus = 120f, VipuLeveys = 26f;
+
+        static float LueVipu()
+        {
+            try { return PlayerPrefs.GetFloat(VipuAvain, VapaaNopeusVipu.Oletus); } catch { return VapaaNopeusVipu.Oletus; }
+        }
+
         public const float Halkaisija = 64f, Reuna = 12f;
         const string PystyIkoni = "<path d=\"M12 4v16M8 8l4-4 4 4M8 16l4 4 4-4\"/>";
 
         static Tappi vasen = new Tappi(), oikea = new Tappi();
-        bool nakyy;
+        readonly Slider vipu;
+        bool nakyy, vipuNakyy;
 
         public OpasTapit(VisualElement isa)
         {
@@ -34,7 +52,22 @@ namespace Matkakirja.Natiivi
             oikea = new Tappi(isa, "mk-tappi mk-tappi--oikea", Ikonit.PaivitaVersio, v => Oikea = v);
             vasen.Juuri.tooltip = "Lähemmäs ja kauemmas";
             oikea.Juuri.tooltip = "Kierrä kohdetta ja nosta tai laske kameraa";
+            // Pystysäädin: Unityn pystysuunnassa pienin arvo on ylhäällä, inverted kääntää (ylös = nopeampi; `ui opasvalikko vipu`).
+            vipu = new Slider(VapaaNopeusVipu.Min, VapaaNopeusVipu.Max, SliderDirection.Vertical) { pageSize = 0, inverted = true };
+            vipu.AddToClassList("mk-saadin");
+            vipu.AddToClassList("mk-saadin--pysty");
+            vipu.style.position = Position.Absolute;
+            vipu.style.top = Length.Percent(50);
+            vipu.style.marginTop = -VipuKorkeus * 0.5f;
+            vipu.style.display = DisplayStyle.None;
+            vipu.SetValueWithoutNotify(NopeusVipu);
+            vipu.tooltip = VipuNimi();
+            vipu.RegisterValueChangedCallback(e => { NopeusVipu = e.newValue; vipu.tooltip = VipuNimi(); });
+            vipu.RegisterCallback<PointerCaptureOutEvent>(_ => { try { PlayerPrefs.SetFloat(VipuAvain, NopeusVipu); } catch { } });
+            isa.Add(vipu);
         }
+
+        static string VipuNimi() => "Lentonopeus " + VapaaNopeusVipu.Teksti(NopeusVipu);
 
         bool vapaa;
 
@@ -61,6 +94,31 @@ namespace Matkakirja.Natiivi
             Ala = ala;
             if (vasen.Juuri.style.bottom.value.value != ala) { vasen.Juuri.style.bottom = ala; oikea.Juuri.style.bottom = ala; }
             if (vasen.Juuri.style.left.value.value != sivu) { vasen.Juuri.style.left = sivu; oikea.Juuri.style.right = sivu; }
+            // Nopeusvipu vain vapaassa lennossa, vasemman tapin sarakkeen keskellä.
+            bool v = nayta && vapaa;
+            if (vapaa) OpasSovitin.VapaaNopeus = NopeusKerroin;
+            if (v != vipuNakyy) { vipuNakyy = v; vipu.style.display = v ? DisplayStyle.Flex : DisplayStyle.None; }
+            float vl = sivu + (Halkaisija - VipuLeveys) * 0.5f;
+            if (vipu.style.left.value.value != vl) vipu.style.left = vl;
+        }
+
+        public bool VipuNakyy => vipuNakyy;
+
+        /// <summary>Testi `ui opasvalikko vipu [asento]`: asento, kerroin, laatikko ja suunta (nuppi ylempänä, kun nopeampi kuin keskellä).</summary>
+        public string VipuKuvaus(float? aseta)
+        {
+            if (aseta is float a) vipu.value = Mathf.Clamp(a, VapaaNopeusVipu.Min, VapaaNopeusVipu.Max);
+            var r = vipu.worldBound;
+            var nuppi = vipu.Q("unity-dragger");
+            string suunta = "-";
+            if (nuppi != null && r.height > 0f)
+            {
+                float keski = (VapaaNopeusVipu.Min + VapaaNopeusVipu.Max) * 0.5f, ero = NopeusVipu - keski;
+                float ylos = r.center.y - nuppi.worldBound.center.y;
+                suunta = Mathf.Abs(ero) < 0.05f ? "keskellä" : (ero > 0f) == (ylos > 0f) ? "ylös = nopeampi ok" : "VIKA: suunta väärin";
+            }
+            return $"vipu {(vipuNakyy ? "näkyy" : "piilossa")}, asento {NopeusVipu:0.00} = {VapaaNopeusVipu.Teksti(NopeusVipu)}, @ {r.xMin:0},{r.yMin:0} "
+                 + $"{r.width:0}×{r.height:0}, nuppi y {(nuppi != null ? nuppi.worldBound.center.y.ToString("0") : "-")}, {suunta}";
         }
 
         /// <summary>Tappien alareuna (viimeisin Paivita).</summary>
@@ -100,7 +158,8 @@ namespace Matkakirja.Natiivi
                 Juuri.RegisterCallback<PointerMoveEvent>(Liiku);
                 Juuri.RegisterCallback<PointerUpEvent>(e => Ylos(e.pointerId));
                 Juuri.RegisterCallback<PointerCancelEvent>(e => Ylos(e.pointerId));
-                Juuri.RegisterCallback<PointerCaptureOutEvent>(e => Ylos(osoitin));
+                // Vain oma sormi: toisen tapin kaappaus tai irrotus ei nollaa tätä (moniosuma, juna 170).
+                Juuri.RegisterCallback<PointerCaptureOutEvent>(e => Ylos(e.pointerId));
             }
 
             public void Nayta(bool nayta)

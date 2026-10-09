@@ -46,9 +46,13 @@ namespace Matkakirja.Linssit.Kierros
             return nyt < tavoite ? Math.Min(tavoite, nyt + askel) : Math.Max(tavoite, nyt - askel);
         }
 
-        public void Paivita(double dt, PalloSaa s, PalloSaaTiedot t)
+        public void Paivita(double dt, PalloSaa s, PalloSaaTiedot t) => Paivita(dt, s, t, default);
+
+        /// <summary>Kuten Paivita, ja lisäpainot (PalloKuurot) sekoitetaan tavoitteeseen suurimpana.</summary>
+        public void Paivita(double dt, PalloSaa s, PalloSaaTiedot t, SaaPainot lisa)
         {
             var g = Tavoite(s, t);
+            g = new SaaPainot { Harmaus = Math.Max(g.Harmaus, lisa.Harmaus), Sumu = Math.Max(g.Sumu, lisa.Sumu), Sade = Math.Max(g.Sade, lisa.Sade), Lumi = Math.Max(g.Lumi, lisa.Lumi), Ukkonen = Math.Max(g.Ukkonen, lisa.Ukkonen) };
             Nyt = new SaaPainot
             {
                 Harmaus = Lahesty(Nyt.Harmaus, g.Harmaus, dt), Sumu = Lahesty(Nyt.Sumu, g.Sumu, dt), Sade = Lahesty(Nyt.Sade, g.Sade, dt),

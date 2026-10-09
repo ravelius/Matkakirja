@@ -287,7 +287,6 @@ namespace Matkakirja.Natiivi
             // pystyvedosta, ja sitä pienempi liike on napautus.
             Kosketusvieritys.Liita(valikko, () => aloitus && aloitusSuosikit != null && aloitusSuosikit.worldBound.Contains(viimeKohta) ? aloitusSuosikit : rivit);
             kerros.JokaRuutu += TarkistaOhiNapautus;
-            kerros.JokaRuutu += TarkistaAikaKierto;
             kerros.JokaRuutu += PaivitaYoTeema;
 
             // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
@@ -312,10 +311,11 @@ namespace Matkakirja.Natiivi
             // nappirivin lasipohjalla oleva nappi keskitettynä rivin yläpuolelle (LS1: KierrosJatkettavissa, JatkaKierrosta()).
             jatkaRivi = Rakenne.El("tk-teema-harmaa mk-opas-napit", Juuri, PickingMode.Ignore);
             jatkaRivi.style.display = DisplayStyle.None;
-            var jatka = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi", JatkaKierrosta, jatkaRivi);
-            jatka.tooltip = "Jatka keskeytynyttä kaupunkikierrosta";
-            Rakenne.Ikoni(Ikonit.Toista, "mk-ikoni mk-opas-nappi__ikoni", jatka);
-            Kirjasimet.Aseta(Rakenne.Teksti("Jatka kierrosta", "mk-nappi__teksti mk-opas-nappi__teksti", jatka), Kirjasin.ModerniLihava);
+            jatkaNappi = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi", JatkaKierrosta, jatkaRivi);
+            jatkaNappi.tooltip = "Jatka keskeytynyttä kaupunkikierrosta";
+            jatkaIkoni = Rakenne.Ikoni(Ikonit.Toista, "mk-ikoni mk-opas-nappi__ikoni", jatkaNappi);
+            jatkaTeksti = Rakenne.Teksti("Jatka kierrosta", "mk-nappi__teksti mk-opas-nappi__teksti", jatkaNappi);
+            Kirjasimet.Aseta(jatkaTeksti, Kirjasin.ModerniLihava);
             // MIKÄ TÄMÄ ON? (omistaja 6.10. 16.4x, juna 152; LS1 MikaTama*): vapaassa tilassa havainnekuvan paikalla nappirivin
             // vieressä (puhelimella rivin yllä oikealla), nappirivin lasipohjalla; haun aikana odotustila. Pieni tähtäin ruudun
             // keskelle (katsepiste = keskikohdan maapiste).
@@ -351,6 +351,11 @@ namespace Matkakirja.Natiivi
             OpasNappi("Kysy", Ikonit.Puhekupla, () => Avaa(Nakyma.Kysy), "Valmiit kysymykset oppaalle", esitysRivi);
             OpasNappi(null, PuluChat.MikkiIkoni, Puhu, "Puhu oppaalle", esitysRivi);
             OpasNappi(null, PuluChat.NappaimistoIkoni, Kirjoita, "Kirjoita oppaalle", esitysRivi);
+            // VAPAA LENTO (omistaja 9.10.2026: "saisi olla se vapaa lento nappi ja sitten kun se on kytketty päälle olisi palaa
+            // kierrokselle tms nappi"): kierroksen nappirivin kuvakenappi (LIIKU-pohja, kompassi kuten vapaan tilan tappi); LS1 tallentaa
+            // keskeytyskohdan. Näkyy vain, kun LS1:n OpasSovitin.VapaaLentoKaytettavissa on true (rajapinta heijastuksella).
+            vapaaNappi = OpasNappi(null, Ikonit.Viiva["kompassi"], AloitaVapaaLento, "Vapaa lento", esitysRivi);
+            vapaaNappi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += PaivitaSirut;
             // Googlen ja Cesiumin krediitit (logot muuttamattomina, Googlen ehdot): sirurivi niiden yläpuolelle, tarkistus 2 × s.
             sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
@@ -494,6 +499,8 @@ namespace Matkakirja.Natiivi
         {
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool nayta = nakyy && !Auki && !(chat?.Auki ?? false) && (metro.Testi || OpasSovitin.KierrosIndeksi >= 0);
+            // Historiaosion otsikko lennon aikana (LS1 c50c4dcc5, juna 170); testikomento ohittaa.
+            OpasMetrolinja.HistoriaOtsikko = testiHistoria ? testiHistoriaOtsikko : OpasSovitin.HistoriaOtsikko;
             float h = Juuri.layout.height, w = Juuri.layout.width;
             if (float.IsNaN(h) || h <= 0) return;
             // Omistaja 12.3x: iPhonella (pysty ja vaaka) vasempaan yläkulmaan, vuorokausinappi oikean ryhmän riviin; iPadilla
@@ -1144,7 +1151,34 @@ namespace Matkakirja.Natiivi
         }
 
         VisualElement jatkaRivi;
+        Button jatkaNappi, vapaaNappi;
+        SvgIkoni jatkaIkoni;
+        Label jatkaTeksti;
+        bool jatkaPaluuna;
+        bool? testiVapaa, testiPaluu;
+
+        // --- VAPAA LENTO ja PALUU KIERROKSELLE (omistaja 9.10.2026; logiikka LS1:n OpasSovitin, rajapinta sovittu 9.10.):
+        //   bool VapaaLentoKaytettavissa, bool AloitaVapaaLento(), bool PaluuKierrokselleKaytettavissa, bool PalaaKierrokselle().
+        // Suoraan LS1:n rajapintaan (5b23a3b02, juna 170; heijastus pois: puuttuva rajapinta kaatuu käännökseen).
+        bool VapaaLentoKaytettavissa => testiVapaa ?? OpasSovitin.VapaaLentoKaytettavissa;
+        bool PaluuKaytettavissa => testiPaluu ?? OpasSovitin.PaluuKierrokselleKaytettavissa;
+
+        void AloitaVapaaLento()
+        {
+            Debug.Log("MATKAKIRJA opas: vapaa lento");
+            testiVapaa = null;
+            OpasSovitin.AloitaVapaaLento();
+        }
+
+        void PalaaKierrokselle()
+        {
+            Debug.Log("MATKAKIRJA opas: palaa kierrokselle");
+            testiPaluu = null;
+            OpasSovitin.PalaaKierrokselle();
+        }
         bool? testiJatka;
+        bool testiHistoria;
+        string testiHistoriaOtsikko;
         VisualElement mikaRivi, tahtain;
         Button mikaNappi;
         Label mikaTeksti;
@@ -1249,6 +1283,7 @@ namespace Matkakirja.Natiivi
 
         void JatkaKierrosta()
         {
+            if (jatkaPaluuna) { PalaaKierrokselle(); return; }
             Debug.Log("MATKAKIRJA opas: jatka kierrosta");
             testiJatka = null;
             OpasSovitin.JatkaKierrosta();
@@ -1257,7 +1292,21 @@ namespace Matkakirja.Natiivi
         void PaivitaJatka()
         {
             var c0 = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
-            bool nayta = nappiNakyy && !Auki && !(c0?.Auki ?? false) && (testiJatka ?? KierrosKeskeytetty);
+            // Sama rivi kahteen käyttöön: kysymyksen jälkeen "Jatka kierrosta", vapaassa lennossa "Palaa kierrokselle" (9.10.).
+            bool paluu = !(testiJatka ?? KierrosKeskeytetty) && PaluuKaytettavissa;
+            bool nayta = nappiNakyy && !Auki && !(c0?.Auki ?? false) && ((testiJatka ?? KierrosKeskeytetty) || paluu);
+            if (paluu != jatkaPaluuna)
+            {
+                jatkaPaluuna = paluu;
+                jatkaTeksti.text = paluu ? "Palaa kierrokselle" : "Jatka kierrosta";
+                jatkaNappi.tooltip = paluu ? "Palaa kohtaan, jossa kierros keskeytyi, ja jatka siitä" : "Jatka keskeytynyttä kaupunkikierrosta";
+                var uusi = new SvgIkoni(paluu ? Ikonit.Viiva["nuoli"] : Ikonit.Toista);
+                uusi.AddToClassList("mk-ikoni"); uusi.AddToClassList("mk-opas-nappi__ikoni");
+                jatkaNappi.Insert(jatkaNappi.IndexOf(jatkaIkoni), uusi);
+                jatkaIkoni.RemoveFromHierarchy(); jatkaIkoni = uusi;
+            }
+            var vd = VapaaLentoKaytettavissa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (vapaaNappi.style.display != vd) vapaaNappi.style.display = vd;
             var d = nayta ? DisplayStyle.Flex : DisplayStyle.None;
             if (jatkaRivi.style.display != d) jatkaRivi.style.display = d;
             if (nayta) jatkaRivi.style.bottom = krediittiAla + NappiriviKorkeus + KuvaRako;
@@ -1719,11 +1768,17 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Omat 3D-mallit (Päätoimittaja 9.10.2026: Concorde, Riddarholmen, Notre-Dame, Giza): mallit.json:n kohdekohtaiset
+                    // tekijärivit (LS2 0bf2ed7b2: CesiumOmatMallit.Lahderivit; tyhjä, kunnes json on saapunut).
+                    foreach (var m in Matkakirja.Linssit.CesiumOmatMallit.Lahderivit)
+                        if (!string.IsNullOrWhiteSpace(m)) Kirjasimet.Aseta(Rakenne.Teksti(m.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
                     if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    // Historiaosioiden tekstilähteet osion nimellä (LS1 c50c4dcc5: OpasSovitin.HistoriaLahteet; kuvat ovat KuvaLahteissa).
+                    foreach (var l in HistoriaLahteet()) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Aanet:
                     Takaisin("Äänet", Nakyma.Lahteet);
@@ -2050,6 +2105,8 @@ namespace Matkakirja.Natiivi
             if (saatilaLuettu) return;
             saatilaLuettu = true;
             Saatila.Lue(PlayerPrefs.GetString(SaatilaAvain, ""));
+            // Säävalinnat poistuivat listasta (9.10.2026): tallennettu käsisää (esim. ukkonen) ei saa jäädä päälle → selkeä (pois).
+            if (Saatila.SaaValinta != PalloSaa.Pois) Saatila.Lue((Saatila.Live ? "1" : "0") + "|" + Saatila.AikaValinta + "|" + PalloSaa.Pois);
             AikaValinta = Avain(Saatila.Aika);
             Saatila.Muuttui += () =>
             {
@@ -2184,29 +2241,10 @@ namespace Matkakirja.Natiivi
             live.AddToClassList("mk-linssivalikko__live");
             live.EnableInClassList("mk-valittu", Saatila.Live);
             live.tooltip = Saatila.Live ? "Live päällä: kohteen kellonaika ja sää" : "Live pois";
-            // VAAKA (omistaja TF 167, 9.10.2026 klo 00.0x: "Valikko näyttää vaaka tilassa pystyvalikon asettelun"): samat rivit
-            // sarakkeina LIVEn alla (AIKA | SÄÄ 1–4 | SÄÄ 5–7), jotta lista mahtuu korkeuteen (iPhone vaaka ~393 pt) ja peitto pysyy
-            // pienenä; pystyssä yksi sarake kuten ennen.
-            bool vaaka = Screen.width > Screen.height;
-            aikaVaaka = vaaka;
-            VisualElement Sarake(VisualElement rivi)
-            {
-                var s = Rakenne.El(null, rivi, PickingMode.Ignore);
-                s.style.flexDirection = FlexDirection.Column;
-                s.style.minWidth = SarakeLeveys;
-                s.style.marginRight = Tyylikirja.Vali.S;
-                return s;
-            }
-            VisualElement sarakkeet = null, aikaSarake = valikko, saa1 = valikko, saa2 = valikko;
-            if (vaaka)
-            {
-                sarakkeet = Rakenne.El(null, valikko, PickingMode.Ignore);
-                sarakkeet.style.flexDirection = FlexDirection.Row;
-                sarakkeet.style.alignItems = Align.FlexStart;
-                aikaSarake = Sarake(sarakkeet); saa1 = Sarake(sarakkeet); saa2 = Sarake(sarakkeet);
-                saa2.style.marginRight = 0;
-            }
-            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", aikaSarake), Kirjasin.ModerniLihava);
+            // SÄÄVALINNAT POIS (omistaja 9.10.2026: "en ole varma tarvitaanko eri säätiloja, tosin jonkun verran ukkosta ja sadetta voisi
+            // tulla jossain kohdissa itsestään"; Päätoimittaja, juna 170): vain LIVE ja vuorokaudenaika; sää tulee itsestään (LS1, LS2).
+            // Lista on niin lyhyt, että sama asettelu käy pystyyn ja vaakaan (ei sarakkeita).
+            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
             foreach (var (arvo, nimi) in AikaValinnat)
             {
                 var a = arvo;
@@ -2214,25 +2252,10 @@ namespace Matkakirja.Natiivi
                 {
                     Saatila.AikaValinta = a; aikaKuvake = null;
                     Debug.Log("MATKAKIRJA opas: aika " + Avain(a));
-                }, aikaSarake);
-            }
-            if (!vaaka) Viiva();
-            Kirjasimet.Aseta(Rakenne.Teksti("SÄÄ", "mk-linssivalitsin__valiotsikko", saa1), Kirjasin.ModerniLihava);
-            // Toisen säädesarakkeen otsikkorivi tyhjänä, jotta rivit ovat samalla korkeudella.
-            if (vaaka) Kirjasimet.Aseta(Rakenne.Teksti(" ", "mk-linssivalitsin__valiotsikko", saa2), Kirjasin.ModerniLihava);
-            int i = 0, puoli = (SaaValinnat.Length + 1) / 2;
-            foreach (var (arvo, nimi) in SaaValinnat)
-            {
-                var sv = arvo;
-                Komento(nimi + (!Saatila.Live && sv == Saatila.Saa ? "  ✓" : ""), () =>
-                {
-                    Saatila.SaaValinta = sv; aikaKuvake = null;
-                    Debug.Log("MATKAKIRJA opas: sää " + sv);
-                }, i++ < puoli ? saa1 : saa2);
+                });
             }
         }
 
-        bool aikaVaaka;
         bool yoTeema;
 
         /// <summary>Yöllä listat tummalla teemalla (omistaja 9.10.2026 "Tee vain niin"), päivällä harmaalla.</summary>
@@ -2245,14 +2268,6 @@ namespace Matkakirja.Natiivi
             valikko.EnableInClassList("tk-teema-tumma", yo);
         }
 
-        /// <summary>Kierto ☀-listan ollessa auki: lista rakennetaan uudelleen uuden asennon asettelulla (katselmointi 9.10.).</summary>
-        void TarkistaAikaKierto()
-        {
-            if (Auki && nakyma == Nakyma.Aika && aikaVaaka != (Screen.width > Screen.height)) Avaa(Nakyma.Aika);
-        }
-
-        /// <summary>Vaakatilan sarakkeen vähimmäisleveys (pisin rivi "Ukkonen  ✓" mahtuu; LINSSIN VALIKON rivi).</summary>
-        const float SarakeLeveys = 132f;
 
         void LopetaKierros()
         {
@@ -2319,14 +2334,12 @@ namespace Matkakirja.Natiivi
         static List<string> KuvaLahteet()
         {
             var tulos = new List<string>();
-            var p = typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.OpasSovitin")
-                ?.GetProperty("KuvaLahteet", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            if (!(p?.GetValue(null) is System.Collections.IEnumerable lista)) return tulos;
-            foreach (var o in lista)
+            // Suoraan LS1:n OpasSovitin.KuvaLahteet (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen).
+            var lista = OpasSovitin.KuvaLahteet;
+            if (lista == null) return tulos;
+            foreach (var (kohdeN, tekijaN, lisenssiN, havainne) in lista)
             {
-                if (!(o is System.Runtime.CompilerServices.ITuple t) || t.Length < 4) continue;
-                string kohde = t[0] as string, tekija = (t[1] as string ?? "").Trim(), lisenssi = (t[2] as string ?? "").Trim();
-                bool havainne = t[3] is bool b && b;
+                string kohde = kohdeN, tekija = (tekijaN ?? "").Trim(), lisenssi = (lisenssiN ?? "").Trim();
                 var osat = new List<string>();
                 if (!string.IsNullOrWhiteSpace(kohde)) osat.Add(kohde.Trim());
                 if (havainne) osat.Add("Tekoälyllä tuotettu havainnekuva");
@@ -2338,17 +2351,34 @@ namespace Matkakirja.Natiivi
             return tulos;
         }
 
-        /// <summary>LS1:n Matkakirja.Natiivi.ElavaKaupunki.Krediitti heijastuksella (junasta riippumaton); null, jos ei ole.</summary>
-        static string ElavaKrediitti() =>
-            typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.ElavaKaupunki")
-                ?.GetProperty("Krediitti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string;
+        /// <summary>Nykyisen kaupungin historiaosioiden lähteet "otsikko · url" (LS1: OpasSovitin.HistoriaLahteet); kukin kerran.</summary>
+        static List<string> HistoriaLahteet()
+        {
+            var tulos = new List<string>();
+            var lista = OpasSovitin.HistoriaLahteet;
+            if (lista == null) return tulos;
+            foreach (var (otsikko, urlit) in lista)
+            {
+                if (urlit == null) continue;
+                foreach (var u in urlit)
+                {
+                    if (string.IsNullOrWhiteSpace(u)) continue;
+                    string rivi = string.IsNullOrWhiteSpace(otsikko) ? u.Trim() : otsikko.Trim() + " · " + u.Trim();
+                    if (!tulos.Contains(rivi)) tulos.Add(rivi);
+                }
+            }
+            return tulos;
+        }
+
+        /// <summary>LS1:n ElavaKaupunki.Krediitti suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen); null = ei riviä.</summary>
+        static string ElavaKrediitti() => ElavaKaupunki.Krediitti;
 
         [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url; }
         [Serializable] sealed class AaniLahdeTiedosto { public AaniNimeaminen[] nimeamiset; }
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; +3 elävän kaupungin lokit ja kyyhkyt = 54; lisenssikatselmus +19 Pulun tehosteet, äänimaisema v2 ja Ihmisen matka v2 = 73; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<string> AaniLahteet()
@@ -2498,6 +2528,19 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuvasarja (3)";
                 case "peitto": return Peitto();
                 case "tapit": return "opas: " + tapit.Kuvaus();
+                case "historia":
+                    // ui opasvalikko historia [otsikko…|pois]: historiaosion otsikko metrolinjaan (testi ohittaa LS1:n HistoriaOtsikon; pois = LS1).
+                    if (o.Length > 1) { testiHistoria = o[1] != "pois"; testiHistoriaOtsikko = testiHistoria ? string.Join(" ", o, 1, o.Length - 1) : null; }
+                    return "opas: " + metro.HistoriaKuvaus();
+                case "vipu":
+                    // ui opasvalikko vipu [asento −2…1]: vapaan lennon nopeusvipu (OpasTapit, juna 170).
+                    return "opas: " + tapit.VipuKuvaus(o.Length > 1 && float.TryParse(o[1], System.Globalization.NumberStyles.Float,
+                        System.Globalization.CultureInfo.InvariantCulture, out var va) ? va : (float?)null);
+                case "moniosuma":
+                    // ui opasvalikko moniosuma [tulos]: kaksi Input System -sormea tappeihin yhtä aikaa (MoniosumaTesti, juna 170).
+                    if (o.Length > 1 && o[1] == "tulos") return "opas: moniosuma " + MoniosumaTesti.Viimeisin;
+                    return "opas: " + MoniosumaTesti.Aja(UiKerros.Hae(), Juuri, tapit.Nakyy ? tapit.VasenLaatikko : default,
+                        tapit.Nakyy ? tapit.OikeaLaatikko : default, () => (OpasTapit.Vasen, OpasTapit.Oikea, OpasTapit.Kosketaan));
                 case "nimilappu": return "opas: " + nimilappu.Kuvaus();
                 case "kuva":
                     var kb = kuvaKortti.worldBound;
@@ -2523,6 +2566,12 @@ namespace Matkakirja.Natiivi
                     }
                     if (o.Length == 1) Avaa(Nakyma.Aika);
                     return $"opas: live {(Saatila.Live ? "päällä" : "pois")}, aika {Saatila.Aika} (KaupunkiKuva {AikaValinta} / {AikaNyt}), sää {Saatila.Saa}, tallenne {Saatila.Tallenne}";
+                case "vapaalento":
+                    // ui opasvalikko vapaalento [paluu|pois]: Vapaa lento -nappi tai Palaa kierrokselle -rivi näkyviin (testi).
+                    if (o.Length > 1 && o[1] == "pois") { testiVapaa = testiPaluu = null; return "opas: vapaa lento -testi pois"; }
+                    if (o.Length > 1 && o[1] == "paluu") { testiPaluu = true; testiVapaa = false; return "opas: palaa kierrokselle näkyy (testi)"; }
+                    testiVapaa = true; testiPaluu = false;
+                    return "opas: vapaa lento -nappi näkyy (testi)";
                 case "jatka":
                     testiJatka = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");

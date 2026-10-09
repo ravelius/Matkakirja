@@ -41,6 +41,13 @@ namespace Matkakirja.Linssit.Testit
                 }
         }
 
+        [Testi] static void IndeksiV4Ensin()
+        {
+            // Karttaseppä 9.10.: v4 = pienet erilliset altaat poistettu (Tuileries'n leijuva kiekko), kanava-altaat suojattu; vanhat varalla.
+            string s = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiVesi.cs"));
+            Oleta.Tosi(s.Contains("new[] { \"index-v4.json\", \"index-v3.json\", \"index-v2.json\", \"index.json\" }"), "v4 → v3 → v2 → index");
+        }
+
         [Testi] static void KolmiotUnityssaMyotapaivaanYlhaalta()
         {
             var v = Lue("vesi-tukholma-16m-ote"); int cw = 0, ccw = 0;
