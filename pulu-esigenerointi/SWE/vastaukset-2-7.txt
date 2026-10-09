@@ -11,7 +11,7 @@ Miten ooppera syntyi Italiassa?
 Mihin äänialoihin oopperalaulajat jaetaan?
 
 ### 483
-Viulu on neljäkielinen jousisoitin, jota soitetaan leuan ja olkapään väliin tuettuna ja jousella kielille vetäen. Sitä käytetään sekä taidemusiikissa että kansanmusiikissa, ja pohjoismaisessa pelimannimusiikissa se on keskeinen soitin. Viulun sukua ovat muun muassa alttoviulu ja sello. Eri puolilla Eurooppaa ja Aasiaa on lisäksi soittimia, jotka muistuttavat viulua, mutta niiden rakenne ja kielet vaihtelevat. Taalainmaalla viulu on perinteisesti soinut tansseissa ja juhlissa. Ruotsin kansanmusiikissa viulun rinnalla soitetaan [[avainviulua]], joka tunnetaan nimellä nyckelharpa. Soittimen rakenteen ja sävyn eroista tarkemmin en ole varma.
+Viulu on neljäkielinen jousisoitin, jota soitetaan leuan ja olkapään väliin tuettuna ja jousella kielille vetäen. Sitä käytetään sekä taidemusiikissa että kansanmusiikissa, ja pohjoismaisessa pelimannimusiikissa se on keskeinen soitin. Viulun sukua ovat muun muassa [[alttoviulu]] ja [[sello]]. Eri puolilla Eurooppaa ja Aasiaa on lisäksi soittimia, jotka muistuttavat viulua, mutta niiden rakenne ja kielet vaihtelevat. [[Taalainmaalla]] viulu on perinteisesti soinut tansseissa ja juhlissa. Ruotsin kansanmusiikissa viulun rinnalla soitetaan [[avainviulua]], joka tunnetaan nimellä nyckelharpa. Soittimen rakenteen ja sävyn eroista tarkemmin en ole varma.
 JATKOT:
 Mistä viulun soinnin sävy syntyy?
 Mikä erottaa viulun alttoviulusta ja sellosta?
@@ -29,7 +29,7 @@ Millaisia juhlia Siljanin rannoilla vietetään?
 Miten törmäyskraatterin voi tunnistaa maisemasta?
 
 ### 486
-Meteoriitti on avaruudesta peräisin oleva kivi- tai metallikappale, joka on selvinnyt ilmakehän läpi maan pinnalle. Suuret meteoriitit voivat iskeytyessään synnyttää törmäyskraattereita, ja Euroopassakin on tällaisia rakenteita, kuten Siljanin kraatteri. Meksikon Yucatánilla on 66 miljoonaa vuotta sitten iskeytyneen meteoriitin jättämä Chicxulubin kraatteri, mutta se on oma tarinansa. Pienemmät kappaleet palavat ilmakehässä loppuun, ja ne näkyvät taivaalla tähdenlentoina. Meteoriitit ovat tutkijoille arvokkaita, koska ne kertovat aurinkokunnan syntyajoista. Siljanin törmäystä pidetään noin 360–380 miljoonaa vuotta vanhana, mutta tarkka ikä ja kraatterin koko vaihtelevat lähteittäin. Törmäyksen jäljet ovat muokkautuneet jäätiköiden ja [[eroosio]]n myötä.
+Meteoriitti on avaruudesta peräisin oleva kivi- tai metallikappale, joka on selvinnyt ilmakehän läpi maan pinnalle. Suuret meteoriitit voivat iskeytyessään synnyttää törmäyskraattereita, ja Euroopassakin on tällaisia rakenteita, kuten [[Siljanin kraatteri]]. Meksikon Yucatánilla on 66 miljoonaa vuotta sitten iskeytyneen meteoriitin jättämä Chicxulubin kraatteri, mutta se on oma tarinansa. Pienemmät kappaleet palavat ilmakehässä loppuun, ja ne näkyvät taivaalla [[tähdenlentoina]]. Meteoriitit ovat tutkijoille arvokkaita, koska ne kertovat aurinkokunnan syntyajoista. Siljanin törmäystä pidetään noin 360–380 miljoonaa vuotta vanhana, mutta tarkka ikä ja kraatterin koko vaihtelevat lähteittäin. Törmäyksen jäljet ovat muokkautuneet jäätiköiden ja [[eroosio]]n myötä.
 JATKOT:
 Miten tähdenlento eroaa meteoriitista?
 Miten tutkijat tunnistavat vanhan törmäyskraatterin?
@@ -41,31 +41,31 @@ Miten kansanpuvun osat eroavat pitäjästä toiseen?
 Miten kansanpukuperinnettä pidetään yllä nykyään?
 
 ### 488
-Juhannus on kesäpäivänseisauksen aikaan vietetty juhla, joka on Ruotsissa yksi vuoden tärkeimmistä. Perinteisiin kuuluvat kukilla ja lehvillä koristeltu juhannussalko, jonka ympärillä tanssitaan ja lauletaan, sekä yhteiset ateriat ulkona. Pohjoisessa aurinko ei juhannuksena laske lainkaan tai laskee vain hetkeksi, joten yöstäkin tulee valoisa. Taalainmaa on juhannusperinteiden keskeistä seutua, ja taiteilija [[Anders Zorn]] maalasi vuonna 1897 teoksen Midsommardans, joka kuvaa juhannusyön tanssia Moran kylässä. Valo maalauksessa on pohjoisen hämärää, joka on melkein päivä. Zorn maalasi teoksen kotikylässään ja käytti mallina naapureitaan.
+Juhannus on kesäpäivänseisauksen aikaan vietetty juhla, joka on Ruotsissa yksi vuoden tärkeimmistä. Perinteisiin kuuluvat kukilla ja lehvillä koristeltu juhannussalko, jonka ympärillä tanssitaan ja lauletaan, sekä yhteiset ateriat ulkona. Pohjoisessa aurinko ei juhannuksena laske lainkaan tai laskee vain hetkeksi, joten yöstäkin tulee valoisa. [[Taalainmaa]] on juhannusperinteiden keskeistä seutua, ja taiteilija [[Anders Zorn]] maalasi vuonna 1897 teoksen [[Midsommardans]], joka kuvaa juhannusyön tanssia [[Moran]] kylässä. Valo maalauksessa on pohjoisen hämärää, joka on melkein päivä. Zorn maalasi teoksen kotikylässään ja käytti mallina naapureitaan.
 JATKOT:
 Mitä juhannussalko on ja miten se koristellaan?
 Millaisia teoksia Anders Zorn on maalannut?
 
 ### 489
-Saamelaiset ovat Pohjois-Euroopan alkuperäiskansa, jonka perinteinen kotialue ulottuu Norjan, Ruotsin ja Suomen pohjoisosiin sekä Venäjän Kuolan niemimaalle. Heillä on useita omia kieliä, kuten pohjoissaame, lule-saame ja eteläsaame. Perinteisiä elinkeinoja ovat poronhoito, kalastus ja metsästys sekä käsityöt, joita kutsutaan duodjiksi. Saamelaiset ovat tunnettuja värikkäistä puvuistaan ja joiku-laulusta. Jokkmokkissa sijaitsevat muun muassa saamelainen koulutuskeskus ja Ájtte-museo. Ruotsissa saamelaisilla on oma [[saamelaiskäräjät]], ja heidän asemansa on tunnustettu alkuperäiskansana. Tarkkoja väkilukuja en ole varma antaa.
+Saamelaiset ovat Pohjois-Euroopan alkuperäiskansa, jonka perinteinen kotialue ulottuu Norjan, Ruotsin ja Suomen pohjoisosiin sekä Venäjän Kuolan niemimaalle. Heillä on useita omia kieliä, kuten [[pohjoissaame]], lule-saame ja eteläsaame. Perinteisiä elinkeinoja ovat [[poronhoito]], kalastus ja metsästys sekä käsityöt, joita kutsutaan duodjiksi. Saamelaiset ovat tunnettuja värikkäistä puvuistaan ja joiku-laulusta. [[Jokkmokkissa]] sijaitsevat muun muassa saamelainen koulutuskeskus ja Ájtte-museo. Ruotsissa saamelaisilla on oma [[saamelaiskäräjät]], ja heidän asemansa on tunnustettu alkuperäiskansana. Tarkkoja väkilukuja en ole varma antaa.
 JATKOT:
 Mitä joiku on ja miten sitä esitetään?
 Mitä duodji tarkoittaa saamelaisessa käsityöperinteessä?
 
 ### 490
-Jokkmokkin markkinat ovat vanha talvimarkkinaperinne, jota on pidetty vuodesta 1605. Ne järjestetään helmikuun ensimmäisenä torstaina alkavalla viikolla, ja tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Markkinoilla myydään muun muassa käsitöitä, vaatteita, ruokaa ja poronlihatuotteita, ja se on yksi saamelaisten tärkeimmistä yhteisötapahtumista. Pakkanen voi laskea markkinoiden aikana jopa -40 asteeseen. Alun perin markkinat olivat paikka, jossa saamelaiset, kauppiaat ja virkamiehet kohtasivat, ja kauppa oli sidoksissa [[porotalouteen]] ja talviseen liikkumiseen. Tarkkaa ohjelmaa vuosittain en ole varma kertoa.
+Jokkmokkin markkinat ovat vanha talvimarkkinaperinne, jota on pidetty vuodesta 1605. Ne järjestetään helmikuun ensimmäisenä torstaina alkavalla viikolla, ja tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Markkinoilla myydään muun muassa käsitöitä, vaatteita, ruokaa ja [[poronlihatuotteita]], ja se on yksi [[saamelaisten]] tärkeimmistä yhteisötapahtumista. Pakkanen voi laskea markkinoiden aikana jopa -40 asteeseen. Alun perin markkinat olivat paikka, jossa saamelaiset, kauppiaat ja virkamiehet kohtasivat, ja kauppa oli sidoksissa [[porotalouteen]] ja talviseen liikkumiseen. Tarkkaa ohjelmaa vuosittain en ole varma kertoa.
 JATKOT:
 Mitä markkinoilla yleensä myydään?
 Miten markkinat ovat muuttuneet vuosisatojen aikana?
 
 ### 491
-Ájtte on Jokkmokkissa sijaitseva vuoristo- ja saamelaismuseo, jonka nimi tulee lule-saamen sanasta, joka tarkoittaa varastoaitan kaltaista rakennusta. Museo esittelee Lapin vuoristoluontoa sekä saamelaisten historiaa ja kulttuuria, muun muassa elinkeinoja, käsitöitä ja pukuperinnettä. Sen yhteydessä toimii myös vuoristoon liittyvää tietopalvelua. Museo on osa Jokkmokkin saamelaisten laitosten joukkoa, johon kuuluvat myös saamelainen koulutuskeskus ja [[Ruotsin saamelaiskäräjät]]. Tarkkoja kokoelmien esineitä tai kävijämääriä en ole varma kertoa.
+Ájtte on [[Jokkmokkissa]] sijaitseva vuoristo- ja saamelaismuseo, jonka nimi tulee [[lule-saamen]] sanasta, joka tarkoittaa varastoaitan kaltaista rakennusta. Museo esittelee Lapin vuoristoluontoa sekä saamelaisten historiaa ja kulttuuria, muun muassa elinkeinoja, käsitöitä ja pukuperinnettä. Sen yhteydessä toimii myös vuoristoon liittyvää tietopalvelua. Museo on osa Jokkmokkin saamelaisten laitosten joukkoa, johon kuuluvat myös [[saamelainen koulutuskeskus]] ja [[Ruotsin saamelaiskäräjät]]. Tarkkoja kokoelmien esineitä tai kävijämääriä en ole varma kertoa.
 JATKOT:
 Millaisia esineitä saamelaismuseoissa on esillä?
 Mitä saamelainen koulutuskeskus opettaa?
 
 ### 492
-Sápmi on saamelaisten perinteinen kotialue, jonka läpi kulkevat Norjan, Ruotsin, Suomen ja Venäjän rajat. Alue ulottuu Keski-Norjasta ja Keski-Ruotsista pohjoiseen aina Kuolan niemimaalle. Sápmi ei ole valtio vaan kulttuurinen ja historiallinen alue, jossa kieli, puku, laulu ja perinteiset elinkeinot ovat eläviä nykypäivän asioita. Saamelaisilla on oma lippunsa ja oma kansallispäivänsä, jota vietetään 6. helmikuuta. Saamen kielet kuuluvat uralilaisiin kieliin, ja niitä puhutaan useissa eri muodoissa. Nykyisin saamelaisten edustuselimiä ovat maiden [[saamelaiskäräjät]]. Tarkkoja rajoja alueelle ei ole vedetty, joten kartoissa se vaihtelee.
+Sápmi on saamelaisten perinteinen kotialue, jonka läpi kulkevat Norjan, Ruotsin, Suomen ja Venäjän rajat. Alue ulottuu Keski-Norjasta ja Keski-Ruotsista pohjoiseen aina [[Kuolan niemimaalle]]. Sápmi ei ole valtio vaan kulttuurinen ja historiallinen alue, jossa kieli, puku, laulu ja perinteiset elinkeinot ovat eläviä nykypäivän asioita. Saamelaisilla on oma lippunsa ja oma kansallispäivänsä, jota vietetään 6. helmikuuta. Saamen kielet kuuluvat [[uralilaisiin kieliin]], ja niitä puhutaan useissa eri muodoissa. Nykyisin saamelaisten edustuselimiä ovat maiden [[saamelaiskäräjät]]. Tarkkoja rajoja alueelle ei ole vedetty, joten kartoissa se vaihtelee.
 JATKOT:
 Mitä saamelaisen lipun värit ja kuvio tarkoittavat?
 Mihin kieliryhmään saamen kielet kuuluvat?
@@ -77,7 +77,7 @@ Miksi Maan akselin kallistuma aiheuttaa vuodenajat?
 Missä muualla Euroopassa napapiiri kulkee?
 
 ### 494
-Yötön yö tarkoittaa ajanjaksoa, jolloin aurinko ei laske horisontin alapuolelle ja yö pysyy valoisana. Ilmiö koetaan napapiirin pohjoispuolella kesällä, ja mitä pohjoisemmaksi mennään, sitä pidempi jakso on. Syynä on Maan akselin kallistuma, joka kääntää kesäisin pohjoisen pallonpuoliskon kohti aurinkoa. Vastakohta on talvella koettava [[kaamos]], jolloin aurinko ei nouse horisontin yläpuolelle. Napapiirin tuntumassa, kuten Jokkmokkissa, yötön yö kestää vain lyhyen ajan, mutta kesäyöt ovat silti hyvin valoisia pitkän hämärän vuoksi. Tarkkoja päivämääriä en ole varma antaa, sillä ne vaihtelevat paikan mukaan. Ilmiö vaikuttaa myös ihmisten uneen ja eläinten käyttäytymiseen.
+Yötön yö tarkoittaa ajanjaksoa, jolloin aurinko ei laske horisontin alapuolelle ja yö pysyy valoisana. Ilmiö koetaan [[napapiirin]] pohjoispuolella kesällä, ja mitä pohjoisemmaksi mennään, sitä pidempi jakso on. Syynä on Maan akselin kallistuma, joka kääntää kesäisin pohjoisen pallonpuoliskon kohti aurinkoa. Vastakohta on talvella koettava [[kaamos]], jolloin aurinko ei nouse horisontin yläpuolelle. Napapiirin tuntumassa, kuten [[Jokkmokkissa]], yötön yö kestää vain lyhyen ajan, mutta kesäyöt ovat silti hyvin valoisia pitkän hämärän vuoksi. Tarkkoja päivämääriä en ole varma antaa, sillä ne vaihtelevat paikan mukaan. Ilmiö vaikuttaa myös ihmisten uneen ja eläinten käyttäytymiseen.
 JATKOT:
 Miten yötön yö vaikuttaa ihmisten uneen?
 Kuinka pitkä yötön yö on pohjoisimmassa Euroopassa?
@@ -95,19 +95,19 @@ Mitä tarkoittaa, että joiku esittää kohteensa?
 Miten saamen kieliä pidetään elossa?
 
 ### 497
-Saamelaiset ovat Pohjois-Euroopan alkuperäiskansa, joka asuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosissa. Heidän perinteiseen elämäntapaansa kuuluvat poronhoito, kalastus, metsästys ja käsityöt, ja heillä on oma lippu sekä kansallispäivä 6. helmikuuta. Saamelainen musiikki perustuu pitkälti joikuun, ja kansan kokoontumisia ovat muun muassa Jokkmokkin talvimarkkinat sekä Kautokeinossa pääsiäisenä järjestettävä Sámi Grand Prix -laulukilpailu, joka on pidetty vuodesta 1971. Saamelaisia on useita ryhmiä, joilla on omat kielensä ja tapansa, ja heitä edustavat maiden [[saamelaiskäräjät]]. Aiempina vuosisatoina saamelaisia kohdeltiin eri valtioissa eri tavoin, mutta tästä en lähde tarkemmin arvailemaan.
+Saamelaiset ovat Pohjois-Euroopan alkuperäiskansa, joka asuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosissa. Heidän perinteiseen elämäntapaansa kuuluvat poronhoito, kalastus, metsästys ja käsityöt, ja heillä on oma lippu sekä kansallispäivä 6. helmikuuta. Saamelainen musiikki perustuu pitkälti [[joikuun]], ja kansan kokoontumisia ovat muun muassa [[Jokkmokkin talvimarkkinat]] sekä Kautokeinossa pääsiäisenä järjestettävä [[Sámi Grand Prix]] -laulukilpailu, joka on pidetty vuodesta 1971. Saamelaisia on useita ryhmiä, joilla on omat kielensä ja tapansa, ja heitä edustavat maiden [[saamelaiskäräjät]]. Aiempina vuosisatoina saamelaisia kohdeltiin eri valtioissa eri tavoin, mutta tästä en lähde tarkemmin arvailemaan.
 JATKOT:
 Millainen kilpailu Sámi Grand Prix on?
 Miksi saamelaisilla on oma kansallispäivä?
 
 ### 498
-Poronhoito on pohjoisen perinteinen elinkeino, jossa porot kiertävät vuodenaikojen mukaan laitumilta toisille. Talvella ne laiduntavat usein metsissä ja jäkäläisillä mailla, ja kesällä ne siirtyvät vuoristoon tai rannikon läheisille laitumille, jossa on viileämpää ja vähemmän hyönteisiä. Poronhoitajat seuraavat laumojaan, kokoavat ne erotuksiin ja merkitsevät vasat. Porosta hyödynnetään liha, nahka, sarvi ja luu, ja ne ovat kuuluneet käsitöihin, kuten duodjiin. Elinkeinoon vaikuttavat maankäyttö, saalistajat ja sääolot. Ruotsissa poronhoito on perinteisesti ollut osa [[saamelaiskulttuuria]], mutta tarkkoja poromääriä en ole varma antaa.
+Poronhoito on pohjoisen perinteinen elinkeino, jossa porot kiertävät vuodenaikojen mukaan laitumilta toisille. Talvella ne laiduntavat usein metsissä ja jäkäläisillä mailla, ja kesällä ne siirtyvät vuoristoon tai rannikon läheisille laitumille, jossa on viileämpää ja vähemmän hyönteisiä. Poronhoitajat seuraavat laumojaan, kokoavat ne [[erotuksiin]] ja merkitsevät vasat. Porosta hyödynnetään liha, nahka, sarvi ja luu, ja ne ovat kuuluneet käsitöihin, kuten [[duodjiin]]. Elinkeinoon vaikuttavat maankäyttö, saalistajat ja sääolot. Ruotsissa poronhoito on perinteisesti ollut osa [[saamelaiskulttuuria]], mutta tarkkoja poromääriä en ole varma antaa.
 JATKOT:
 Mitä erotukset poronhoidossa tarkoittavat?
 Mitä porosta valmistetaan perinteisessä ruoanlaitossa?
 
 ### 499
-Ilmastonmuutos vaikuttaa pohjoiseen voimakkaasti, sillä Arktisen alueen lämpeneminen on keskimäärin nopeampaa kuin maapallolla yleensä. Poronhoidossa suurin ongelma on talven sääolojen vaihtelu: jos lumi sulaa ja jäätyy uudelleen, laitumille muodostuu jääkerros, joka estää poroja pääsemästä jäkälän luo. Lisäksi kasvukausi, lumipeite ja jäiden kantavuus muuttuvat, mikä vaikeuttaa laidunkiertoa ja liikkumista. Ilmiöön vaikuttavat [[kasvihuonekaasut]], joita päätyy ilmakehään esimerkiksi fossiilisten polttoaineiden käytöstä. Tarkkoja ennusteita eri alueille en ole varma antaa. Muutokset koskettavat myös metsätaloutta ja vesistöjä.
+Ilmastonmuutos vaikuttaa pohjoiseen voimakkaasti, sillä [[Arktisen alueen]] lämpeneminen on keskimäärin nopeampaa kuin maapallolla yleensä. [[Poronhoidossa]] suurin ongelma on talven sääolojen vaihtelu: jos lumi sulaa ja jäätyy uudelleen, laitumille muodostuu jääkerros, joka estää poroja pääsemästä [[jäkälän]] luo. Lisäksi kasvukausi, lumipeite ja jäiden kantavuus muuttuvat, mikä vaikeuttaa laidunkiertoa ja liikkumista. Ilmiöön vaikuttavat [[kasvihuonekaasut]], joita päätyy ilmakehään esimerkiksi fossiilisten polttoaineiden käytöstä. Tarkkoja ennusteita eri alueille en ole varma antaa. Muutokset koskettavat myös metsätaloutta ja vesistöjä.
 JATKOT:
 Miksi jäinen laidun on porolle ongelma?
 Miksi napa-alueet lämpenevät muuta maailmaa nopeammin?
@@ -119,61 +119,61 @@ Miten Peppi Pitkätossu syntyi?
 Mikä on Astrid Lindgren -muistopalkinto?
 
 ### 501
-Emil Lönneberga eli Emil i Lönneberga on Astrid Lindgrenin luoma poikahahmo, jonka tarinat sijoittuvat Smålannin maaseudulle 1900-luvun alun tienoille. Emil on vilkas ja hyväsydäminen poika, joka tekee jatkuvasti kepposia, mutta ne johtuvat yleensä hyvistä aikeista. Kirjat perustuvat osin Lindgrenin omaan lapsuuteen Vimmerbyn seudulla, jossa hän kuuli maaseudun tarinoita. Emilistä on tehty myös elokuvia ja televisiosarja, ja hahmo on Ruotsissa hyvin tunnettu. Tarinoiden maailmaan voi tutustua [[Astrid Lindgrenin maailma]] -huvipuistossa Vimmerbyssä. Tarkkaa kirjojen lukumäärää en ole varma antaa.
+Emil Lönneberga eli Emil i Lönneberga on Astrid Lindgrenin luoma poikahahmo, jonka tarinat sijoittuvat [[Smålannin]] maaseudulle 1900-luvun alun tienoille. Emil on vilkas ja hyväsydäminen poika, joka tekee jatkuvasti kepposia, mutta ne johtuvat yleensä hyvistä aikeista. Kirjat perustuvat osin Lindgrenin omaan lapsuuteen [[Vimmerbyn]] seudulla, jossa hän kuuli maaseudun tarinoita. Emilistä on tehty myös elokuvia ja [[televisiosarja]], ja hahmo on Ruotsissa hyvin tunnettu. Tarinoiden maailmaan voi tutustua [[Astrid Lindgrenin maailma]] -huvipuistossa Vimmerbyssä. Tarkkaa kirjojen lukumäärää en ole varma antaa.
 JATKOT:
 Mitä Emil usein tekee kepposillaan?
 Millainen paikka Smålanti on?
 
 ### 502
-Puutalot ovat Ruotsissa ja muualla Pohjoismaissa pitkä rakennusperinne, jossa vuosisatoja on hyödynnetty runsaita metsävaroja. Vimmerbyssä vanhat puutalot ovat osa kaupungin vanhaa kaupunkikuvaa, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla. Perinteiset talot ovat usein pystylaudoitettuja tai vaakalaudoitettuja, ja ne maalataan tavallisesti [[punamullalla]]. Puutalojen huolto on tärkeää, sillä kosteus ja tulipalot ovat historiassa tuhonneet monia kaupunkeja. Tarkkaa Vimmerbyn vanhimpien talojen ikää en ole varma antaa. Vanhoja puukaupunkeja suojellaan Ruotsissa kulttuuriperintönä.
+Puutalot ovat Ruotsissa ja muualla Pohjoismaissa pitkä rakennusperinne, jossa vuosisatoja on hyödynnetty runsaita metsävaroja. [[Vimmerbyssä]] vanhat puutalot ovat osa kaupungin vanhaa kaupunkikuvaa, ja pääkatu [[Storgatan]] on yhä samassa muodossa kuin keskiajalla. Perinteiset talot ovat usein pystylaudoitettuja tai vaakalaudoitettuja, ja ne maalataan tavallisesti [[punamullalla]]. Puutalojen huolto on tärkeää, sillä kosteus ja tulipalot ovat historiassa tuhonneet monia kaupunkeja. Tarkkaa Vimmerbyn vanhimpien talojen ikää en ole varma antaa. Vanhoja puukaupunkeja suojellaan Ruotsissa [[kulttuuriperintönä]].
 JATKOT:
 Miksi puukaupungit paloivat usein?
 Miten vanhoja puutaloja entisöidään?
 
 ### 503
-Kaupunkioikeudet tarkoittivat keskiajalla ja uuden ajan alussa valtiovallan tai hallitsijan myöntämää asemaa, jonka perusteella asutus sai toimia kaupunkina. Oikeudet antoivat yleensä luvan harjoittaa kauppaa ja käsityötä, ja kaupungilla oli oma hallinto sekä usein oma tuomioistuin. Kaupunkioikeudet erottivat kaupungin ympäröivästä maaseudusta, jossa kauppaa rajoitettiin. Vimmerby sai kaupunkioikeudet jo 1300-luvulla, mikä kuuluu Ruotsin vanhimpiin. Tarkkaa vuotta ei ole syytä arvailla, ja eri lähteet voivat antaa hieman eri ajankohtia. Oikeudet vaikuttivat esimerkiksi [[tulleihin]] ja markkinoiden pitoon.
+Kaupunkioikeudet tarkoittivat keskiajalla ja uuden ajan alussa valtiovallan tai hallitsijan myöntämää asemaa, jonka perusteella asutus sai toimia kaupunkina. Oikeudet antoivat yleensä luvan harjoittaa kauppaa ja käsityötä, ja kaupungilla oli oma hallinto sekä usein oma tuomioistuin. Kaupunkioikeudet erottivat kaupungin ympäröivästä maaseudusta, jossa kauppaa rajoitettiin. [[Vimmerby]] sai kaupunkioikeudet jo 1300-luvulla, mikä kuuluu [[Ruotsin]] vanhimpiin. Tarkkaa vuotta ei ole syytä arvailla, ja eri lähteet voivat antaa hieman eri ajankohtia. Oikeudet vaikuttivat esimerkiksi [[tulleihin]] ja markkinoiden pitoon.
 JATKOT:
 Millaista oli keskiaikainen kauppakaupunki?
 Mitä etuja kaupunkioikeudet toivat asukkaille?
 
 ### 504
-Puutaloja on Ruotsissa rakennettu vuosisatojen ajan, koska metsää on ollut runsaasti ja puu on ollut edullinen ja helposti työstettävä materiaali. Vimmerbyn vanhat talot muodostavat kaupungin tunnelmallisen keskustan, ja kaupungin läpi virtaa pieni Stångån-joki. Perinteinen punainen väri tehtiin usein punamullasta, mutta myös muita värejä, kuten keltaista ja valkoista, on käytetty. Talot ovat usein matalia, ja ne on rakennettu hirrestä tai laudoituksesta. Palon vaara oli historiassa suuri, ja siksi kaupunkeihin on laadittu rakennusmääräyksiä. Vimmerbyn kirkko on sen sijaan uusklassinen ja rakennettu vuosina 1854–1855. Tarkkaa puutalojen lukumäärää en ole varma antaa. Kaupunki on myös [[Astrid Lindgrenin]] kotiseutu.
+Puutaloja on Ruotsissa rakennettu vuosisatojen ajan, koska metsää on ollut runsaasti ja puu on ollut edullinen ja helposti työstettävä materiaali. Vimmerbyn vanhat talot muodostavat kaupungin tunnelmallisen keskustan, ja kaupungin läpi virtaa pieni [[Stångån-joki]]. Perinteinen punainen väri tehtiin usein [[punamullasta]], mutta myös muita värejä, kuten keltaista ja valkoista, on käytetty. Talot ovat usein matalia, ja ne on rakennettu hirrestä tai laudoituksesta. Palon vaara oli historiassa suuri, ja siksi kaupunkeihin on laadittu rakennusmääräyksiä. [[Vimmerbyn kirkko]] on sen sijaan uusklassinen ja rakennettu vuosina 1854–1855. Tarkkaa puutalojen lukumäärää en ole varma antaa. Kaupunki on myös [[Astrid Lindgrenin]] kotiseutu.
 JATKOT:
 Millaisia rakennusmääräyksiä tulipalot aiheuttivat?
 Mitä uusklassismi tarkoittaa rakennustaiteessa?
 
 ### 505
-Stångån on pieni joki, joka virtaa Vimmerbyn läpi Kalmarin läänissä Kaakkois-Ruotsissa. Joki on kuulunut kaupungin maisemaan vuosisatojen ajan, ja vesi on ollut tärkeä kulkureitti ja voimanlähde monissa pienissä asutuksissa. Tarkkaa joen pituutta tai reittiä ei ole syytä arvailla, ja siksi en ole siitä varma. Se laskee lopulta kohti Itämerta. Jokivarret ovat Ruotsissa perinteisesti olleet kauppa- ja asutusreittejä, ja monet kaupungit syntyivät vesistöjen varrelle. Vimmerbyn ympäristö on tunnettua myös [[Smålannin]] maaseutumaisemista.
+Stångån on pieni joki, joka virtaa [[Vimmerbyn]] läpi [[Kalmarin läänissä]] Kaakkois-Ruotsissa. Joki on kuulunut kaupungin maisemaan vuosisatojen ajan, ja vesi on ollut tärkeä kulkureitti ja voimanlähde monissa pienissä asutuksissa. Tarkkaa joen pituutta tai reittiä ei ole syytä arvailla, ja siksi en ole siitä varma. Se laskee lopulta kohti [[Itämerta]]. Jokivarret ovat Ruotsissa perinteisesti olleet kauppa- ja asutusreittejä, ja monet kaupungit syntyivät vesistöjen varrelle. Vimmerbyn ympäristö on tunnettua myös [[Smålannin]] maaseutumaisemista.
 JATKOT:
 Miten joet ovat vaikuttaneet kaupunkien syntyyn?
 Millaista luontoa Smålannissa on?
 
 ### 506
-Peppi Pitkätossu on Astrid Lindgrenin luoma hahmo, tavattoman vahva ja itsenäinen tyttö, joka asuu Huvikumpu-nimisessä talossa ilman vanhempiaan. Hänen seuranaan ovat apina herra Nilsson ja hevonen. Hän on ystävä naapurin lapsille Tommille ja Annikalle. Peppi tuli tunnetuksi 1940-luvulla, ja hänen tarinansa ovat vuosikymmenten ajan innoittaneet lukijoita eri puolilla maailmaa. Hahmon luomiseen liittyy tarina, jonka mukaan Lindgren keksi hänet tyttärensä sairastaessa, mutta tästä en ole aivan varma. Peppi on kirjallisuuden vahva, leikkisä ja anarkistinen lapsihahmo, joka kyseenalaistaa aikuisten sääntöjä. Kirjat on käännetty monille kielille, ja niitä on sovitettu elokuviin sekä [[televisiosarjoiksi]].
+Peppi Pitkätossu on [[Astrid Lindgrenin]] luoma hahmo, tavattoman vahva ja itsenäinen tyttö, joka asuu [[Huvikumpu]]-nimisessä talossa ilman vanhempiaan. Hänen seuranaan ovat apina [[herra Nilsson]] ja hevonen. Hän on ystävä naapurin lapsille Tommille ja Annikalle. Peppi tuli tunnetuksi 1940-luvulla, ja hänen tarinansa ovat vuosikymmenten ajan innoittaneet lukijoita eri puolilla maailmaa. Hahmon luomiseen liittyy tarina, jonka mukaan Lindgren keksi hänet tyttärensä sairastaessa, mutta tästä en ole aivan varma. Peppi on kirjallisuuden vahva, leikkisä ja anarkistinen lapsihahmo, joka kyseenalaistaa aikuisten sääntöjä. Kirjat on käännetty monille kielille, ja niitä on sovitettu elokuviin sekä [[televisiosarjoiksi]].
 JATKOT:
 Millainen talo Huvikumpu on?
 Miksi Pepin hahmo on ollut niin vaikutusvaltainen?
 
 ### 507
-Katto-Kassinen on Astrid Lindgrenin lastenkirjan hahmo, pieni, lihavahko mies, jolla on selässään potkuri ja joka osaa lentää. Hän asuu Tukholmassa talon katolla ja ystävystyy Lillebror-nimisen pojan kanssa. Kirjan ruotsinkielinen nimi on Karlsson på taket. Hahmo on leikkisä, omahyväinen ja huvittava, ja hänen tapansa kehua itseään on kirjan keskeinen vitsi. Teos ilmestyi 1950-luvulla, mutta tarkan vuoden en ole varma. Tarinat ovat tuoneet Tukholman kattojen maiseman lasten mieleen ja niitä on dramatisoitu [[televisioon]] ja elokuviin.
+Katto-Kassinen on [[Astrid Lindgrenin]] lastenkirjan hahmo, pieni, lihavahko mies, jolla on selässään potkuri ja joka osaa lentää. Hän asuu [[Tukholmassa]] talon katolla ja ystävystyy Lillebror-nimisen pojan kanssa. Kirjan ruotsinkielinen nimi on [[Karlsson på taket]]. Hahmo on leikkisä, omahyväinen ja huvittava, ja hänen tapansa kehua itseään on kirjan keskeinen vitsi. Teos ilmestyi 1950-luvulla, mutta tarkan vuoden en ole varma. Tarinat ovat tuoneet Tukholman kattojen maiseman lasten mieleen ja niitä on dramatisoitu [[televisioon]] ja elokuviin.
 JATKOT:
 Miksi Katto-Kassinen kehuu itseään niin paljon?
 Millaisia lastenkirjoja Lindgren kirjoitti vielä?
 
 ### 508
-Punamulta on punainen maaväri eli rautaoksidipigmentti, jota on käytetty maalin raaka-aineena Ruotsissa vuosisatoja. Falunin kuparikaivoksen sivutuotteena saatiin punaista väriainetta, ja siitä valmistettiin edullista maalia, joka suojaa puuta säältä ja hyönteisiltä. Maali sekoitettiin yleensä ruisjauhoista tehtyyn liisteriin sekä öljyyn ja vesipohjaiseen aineeseen, mutta tarkkaa reseptiä en ole varma antaa. Punamullattuja taloja näkee erityisesti maaseudulla, ja väriä pidetään ruotsalaisen maaseudun tunnusmerkkinä. Alkuaan punainen jäljitteli kalliimman tiilen väriä. Väri on edelleen suosittu, ja se on osa maiseman [[perinnerakentamista]].
+Punamulta on punainen maaväri eli [[rautaoksidipigmentti]], jota on käytetty maalin raaka-aineena Ruotsissa vuosisatoja. [[Falunin kuparikaivoksen]] sivutuotteena saatiin punaista väriainetta, ja siitä valmistettiin edullista maalia, joka suojaa puuta säältä ja hyönteisiltä. Maali sekoitettiin yleensä ruisjauhoista tehtyyn liisteriin sekä öljyyn ja vesipohjaiseen aineeseen, mutta tarkkaa reseptiä en ole varma antaa. Punamullattuja taloja näkee erityisesti maaseudulla, ja väriä pidetään ruotsalaisen maaseudun tunnusmerkkinä. Alkuaan punainen jäljitteli kalliimman tiilen väriä. Väri on edelleen suosittu, ja se on osa maiseman [[perinnerakentamista]].
 JATKOT:
 Miksi punainen jäljitteli kalliimpaa tiilirakennusta?
 Mitä muita värejä ruotsalaisissa puutaloissa käytetään?
 
 ### 509
-Falun on kaupunki Dalarnan läänissä, ja se tunnetaan kuparikaivoksestaan, joka oli keskiajalta pitkälle uudelle ajalle Euroopan merkittävimpiä. Kaivoksesta louhittiin kuparia, ja sivutuotteena syntyi punamultaa, jota käytettiin maalina eri puolilla Ruotsia. Falunin suuri kaivos on Unescon maailmanperintökohde, ja se kuuluu Ruotsin teollisuuden historian merkittävimpiin paikkoihin. Kaivostoiminnan tarkat vuosiluvut ja tuotantomäärät vaihtelevat lähteittäin, enkä ole niistä varma. Kaivos vaikutti vahvasti Ruotsin talouteen ja suurvalta-aikaan, kun kupari oli tärkeä vientituote. Kaupunki sijaitsee [[Dalarnan]] alueella, noin Siljanin lähellä.
+Falun on kaupunki Dalarnan läänissä, ja se tunnetaan [[kuparikaivoksestaan]], joka oli keskiajalta pitkälle uudelle ajalle Euroopan merkittävimpiä. Kaivoksesta louhittiin kuparia, ja sivutuotteena syntyi punamultaa, jota käytettiin maalina eri puolilla Ruotsia. Falunin suuri kaivos on [[Unescon maailmanperintökohde]], ja se kuuluu Ruotsin teollisuuden historian merkittävimpiin paikkoihin. Kaivostoiminnan tarkat vuosiluvut ja tuotantomäärät vaihtelevat lähteittäin, enkä ole niistä varma. Kaivos vaikutti vahvasti Ruotsin talouteen ja suurvalta-aikaan, kun kupari oli tärkeä vientituote. Kaupunki sijaitsee [[Dalarnan]] alueella, noin [[Siljanin]] lähellä.
 JATKOT:
 Miten kaivos vaikutti Ruotsin suurvalta-aikaan?
 Miten punamultaa valmistettiin kaivoksen sivutuotteena?
 
 ### 510
-Kalmarin lääni sijaitsee Kaakkois-Ruotsissa Itämeren rannalla, ja sen hallintokaupunki on Kalmar. Lääniin kuuluvat muun muassa Vimmerby, Västervik ja Öland-saari. Alueella on rannikkoa, saaristoa ja sisämaan metsiä, ja se kuuluu historialliseen [[Smålannin]] maakuntaan sekä Öland-saaren osalta omaan maakuntaansa. Kalmar tunnetaan keskiaikaisesta linnastaan, jossa solmittiin Kalmarin unioni, mutta unionin tarkan vuoden ja sisällön en ole aivan varma. Läänin asukasmäärää en ole varma antaa. Alue on suosittu kesämatkailukohde.
+Kalmarin lääni sijaitsee Kaakkois-Ruotsissa Itämeren rannalla, ja sen hallintokaupunki on Kalmar. Lääniin kuuluvat muun muassa [[Vimmerby]], [[Västervik]] ja [[Öland-saari]]. Alueella on rannikkoa, saaristoa ja sisämaan metsiä, ja se kuuluu historialliseen [[Smålannin]] maakuntaan sekä Öland-saaren osalta omaan maakuntaansa. Kalmar tunnetaan keskiaikaisesta linnastaan, jossa solmittiin Kalmarin unioni, mutta unionin tarkan vuoden ja sisällön en ole aivan varma. Läänin asukasmäärää en ole varma antaa. Alue on suosittu kesämatkailukohde.
 JATKOT:
 Mikä oli Kalmarin unioni?
 Millainen saari Öland on?
