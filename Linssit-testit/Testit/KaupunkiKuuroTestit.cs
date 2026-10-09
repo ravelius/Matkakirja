@@ -79,6 +79,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!vahti.Contains("maximumScreenSpaceError") && !vahti.Contains("maximumCachedBytes"), "hädässä ei SSE- eikä välimuistivaihtoa");
             Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = (Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti) || hataSeis;"), "karkea valinta hädässä, suspendUpdate tauolla ja hädän toisessa portaassa");
             Oleta.Tosi(vahti.Contains("hataSeis = true") && c.Contains("HataSeisGt = 0.6"), "hätä 2: lataus seis alle 0,6 Gt (juna 173)");
+            Oleta.Tosi(c.Contains("bool kevyt = KaupunkiKuva.PieniMuisti && KaupunkiKuva.PieniLataus;") && c.Contains("t.forbidHoles = !kevyt;") && c.Contains("t.preloadAncestors = !kevyt;"), "pieni muisti: kevyt laattalataus (juna 173)");
+            Oleta.Tosi(vahti.Contains("if (KaupunkiKuva.PieniMuisti) { hataSeis = true;"), "pieni muisti: hätä 1 pysäyttää latauksen ilman karkeaa kameraa");
         }
 
         [Testi] static void AluskerrosKorkealla()

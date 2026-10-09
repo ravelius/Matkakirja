@@ -167,6 +167,8 @@ namespace Matkakirja.Natiivi
         public static float PieniSkaala => PieniMuisti ? Mathf.Clamp(PieniSkaalaPakko > 0f ? PieniSkaalaPakko : Matkakirja.Peli.Asetus.Luku("kaupunki.PieniSkaala", 1f), 0.7f, 1f) : 1f;
         /// <summary>Testikytkimet Documents/kaupunki-kuva-asetukset.txt: "pienimsaa 1|2|4", "pieniskaala 0.8" (−1 = asetukset.json).</summary>
         public static int PieniMsaaPakko = -1; public static float PieniSkaalaPakko = -1f;
+        /// <summary>Pienen muistin kevyt lataus (CesiumKaupunki.LuoTileset): oletus päällä; "pienilataus 0" asetustiedostossa = entinen (testi).</summary>
+        public static bool PieniLataus = true;
         static bool ssaoPois;
         /// <summary>Komento `opas ajallinen`: reunanpehmennys heti kesken näkymän (overlayt vaihtavat tilaa omalla tarkistuksellaan).</summary>
         public static void PaivitaReunat() => AsetaReunat();
@@ -211,7 +213,7 @@ namespace Matkakirja.Natiivi
             Laatutaso.Muuttui -= AsetaReunat;
             if (kameraNyt != null) Laatutaso.KaytaAjallista(kameraNyt, false);
             if (ssaoPois) { ssaoPois = false; KaupunkiPassi.Ssao(true); }
-            Ruudunpaivitys.MsaaKatto = 4; Ruudunpaivitys.SkaalaKatto = 1f; PieniMsaaPakko = -1; PieniSkaalaPakko = -1f;
+            Ruudunpaivitys.MsaaKatto = 4; Ruudunpaivitys.SkaalaKatto = 1f; PieniMsaaPakko = -1; PieniSkaalaPakko = -1f; PieniLataus = true;
             PalautaSkaalain();
             kameraNyt = null;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
@@ -262,6 +264,7 @@ namespace Matkakirja.Natiivi
                         case "rakennus": RakennusSse = v; break;
                         case "msaa": Msaa = (int)v; break;
                         case "pienimsaa": PieniMsaaPakko = (int)v; break;   // juna 173: pienen muistin MSAA-katto (testi)
+                        case "pienilataus": PieniLataus = v != 0; break;   // juna 173: pienen muistin kevyt laattalataus (testi)
                         case "pieniskaala": PieniSkaalaPakko = v; break;   // juna 173: pienen muistin renderScale (testi)
                         case "laattapienennys": LaattaTekstuurit.Pakotettu = (int)v; break;   // proto 9.10.: Googlen laattakuvat 0 pois, 1 puolikas, 2 neljännes (uudet laatat)
                         case "sumu": Sumu = v != 0; break;

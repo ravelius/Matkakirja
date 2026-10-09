@@ -296,8 +296,11 @@ namespace Matkakirja.Natiivi
             if (!muistiPysaytys && v / 1e9 < HataGt)
             {
                 muistiPysaytys = hataKaytetty = true;
-                karkeaKaytossa = false; Karkeaksi();   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
-                kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
+                // Pienellä muistilla ei karkeaa kameraa (LS1 iPad 23.1x: karkea valinta latasi uudet laatat vanhojen päälle → jetsam
+                // alle sekunnissa), vaan lataus seis heti (hätä 2 -tila).
+                if (KaupunkiKuva.PieniMuisti) { hataSeis = true; if (lahiKaytossa) AsetaLahikamera(null); }
+                else { karkeaKaytossa = false; Karkeaksi(); }   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
+                kirjaa(KaupunkiKuva.PieniMuisti ? $"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattojen lataus seis (pieni muisti)" : $"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
             }
             else if (muistiPysaytys && v / 1e9 > HataGt + HataPalautusGt)
             { muistiPysaytys = false; hataSeis = false; kirjaa($"kaupunki: muisti vapaa {v / 1e9:F2} Gt → hätä ohi, tarkentuu normaalisti"); }
@@ -680,11 +683,16 @@ namespace Matkakirja.Natiivi
             t.ionAccessToken = tunnus;
             t.maximumScreenSpaceError = sse * SseKerroin;   // iso näyttö: sama laattamäärä kuin iPhonella
             t.maximumCachedBytes = valimuisti;
-            t.maximumSimultaneousTileLoads = Rinnakkain;
-            t.preloadAncestors = true;
+            // PIENI MUISTI (< 12 Gt, juna 173, LS1 iPad 23.1x: laskeutumisessa Notre-Damelle vapaa 1,23 → 0,91 Gt sekunnissa): vähemmän
+            // rinnakkaisia latauksia, ei esiladattuja esivanhempia eikä aukkojen estoa (vanhempi + kaikki lapset muistissa yhtä aikaa).
+            // Lyhyitä aukkoja voi näkyä laskeutuessa; kaatuminen on pahempi. Kytkin "pienilataus 0" palauttaa entisen (testi).
+            bool kevyt = KaupunkiKuva.PieniMuisti && KaupunkiKuva.PieniLataus;
+            t.maximumSimultaneousTileLoads = kevyt ? 6u : Rinnakkain;
+            t.preloadAncestors = !kevyt;
             t.preloadSiblings = false;
             // Ei aukkoja: vanhempi laatta pysyy, kunnes kaikki lapset ovat latautuneet (Päätoimittaja 5.10. 21.0x, VIE-este).
-            t.forbidHoles = true;
+            t.forbidHoles = !kevyt;
+            if (kevyt) t.loadingDescendantLimit = 10;
             t.createPhysicsMeshes = false;
             t.showCreditsOnScreen = true;
             LaattaTekstuurit.Kytke(t);   // proto 9.10.: perusvärikuvien pienennys (oletus pois; "laattapienennys" asetuksissa)
