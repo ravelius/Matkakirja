@@ -51,6 +51,9 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
          `olavinlinna-codex-ohje-v25/seina1/`.
        - Atlakseen projisoi `kuori_projisoi.py` (8k, toimii, todennettu renderillä).
        - Seinien 2–5 syötteet ovat valmiina. Ohuita suikaleita jää, koska fotogrammetrian kolmioiden kiertosuunta on alun perin sekalainen.
+   - **Riddarholmen v2c** (PT 9.10. ilta): tornin tiili on sävytetty valokuvan mukaan (`savytetty_kohde`, tekstuuri 222/148/94).
+     Vertailu: `riddarholmen-v1/esikatselu/riddarholmen_v2c_tiili_vertailu.jpg`. v2b on tallessa kansiossa `glb-v2b/`.
+     Vienti v6i:n mukana yhdessä ND/KL-tekoälypintojen kanssa.
    - **Vouti v4** on peilissä `52825516ed687fd3` (blender af2f13bfbff521a7, v45b 5b1c57031), uusina nimillä `hahmot/vouti-1500-mh*`.
      Siirtoseppä kytkee sen junaan 173. v45b-worktree on poistettu (haara on originissa).
    - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
