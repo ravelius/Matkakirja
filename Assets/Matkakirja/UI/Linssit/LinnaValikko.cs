@@ -34,6 +34,14 @@ namespace Matkakirja.Natiivi
         float karttaSuhde = 0.5f;
         Nakyma nakyma;
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: linnan ohjausnapit nimineen.</summary>
+        public IEnumerable<(string Nimi, VisualElement E)> TestiAvainnapit()
+        {
+            yield return ("linnan ☰", nappi);
+            yield return ("pienoiskartta", kartta);
+            yield return ("linnan tauko", taukoNappi);
+            yield return ("linnan ohita", ohitaNappi);
+        }
 
         readonly Button taukoNappi, ohitaNappi;
         bool taukoTauolla;

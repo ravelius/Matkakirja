@@ -102,6 +102,9 @@ namespace Matkakirja.Natiivi
             lappu.style.bottom = ala;
         }
 
+        /// <summary>Asettelutesti (Editor/AsetteluTesti.cs): rivin elementti (null, jos ei vielä luotu).</summary>
+        public static VisualElement TestiLappu => lappu;
+
         /// <summary>Piiloon heti (intro keskeytettiin).</summary>
         public static void Piilota()
         {
