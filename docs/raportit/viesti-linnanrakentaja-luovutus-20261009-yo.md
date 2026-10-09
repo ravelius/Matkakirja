@@ -186,3 +186,18 @@ Seuraavaksi:
 - **Karttaseppä on saanut v3-tilauksen.** Tulosten jälkeen ajetaan `zsh tekoaly_koko.zsh nd v3 <ulos>`, sitten LS2:n pelikuva ja PT.
 - **Jonossa (Siirtoseppä, juna 174):** Olavinlinnan kuoren `Olavinlinna_vedessa2.003` on litteä ruskea vesitaso (y −6,5…−5,5,
   ~3 400 m²). Se leikataan pois tai lasketaan veden (−7) alle.
+
+### 9.10. klo 21.2x: ND:n kolmiobudjetti, Olavinlinnan ruskea laatta ja kappalaisen rukouskirja
+- **ND:n budjetti** (Natiiviseppä, piirretyt kolmiot): lod0 ≤ 250 k, lod1 ≤ 80–100 k, lod2 5 k. v10 ajettiin uudelleen: 244 k / 89 k / 5 k.
+  - `PUU_KEVENNYS` ja `kevenna_puu()`: lehtikortit 25 % / 9 % suurennettuina, kaarna 32 % / 8 %.
+  - Kiven AO-ruudukko on pois, `syvyys.KAISTA_M` 3 m ja lod1:n kivi decimate 0,45.
+  - Lävistäjä on noin 391 m, joten lod1 → lod0 noin 250 m. tileset.json tulee LS2:n viennistä Natiivisepälle.
+- **Ruskea laatta (arvio 10)** on `kavely/ranta-1499.glb`: etuvarustuksen ympäryksen kalliotäyttö noin −6 kuoren ulkopuolella etelä-lounaassa.
+  - Kuoren "ryhmä A" on sisäpihoja, joten kuori jää ennalleen. Scratchpadin `vesilaatta_laske.py`-kokeilua ei viety.
+  - Ehdotus Siirtosepälle: ranta-1499 näkyy vain b1499-leikkausten ajan.
+- **Kappalaisen rukouskirja:**
+  - Kirja: `linna-hahmot/esineet-v1/rukouskirja.glb` (lahde/rukouskirja.py), symlink `v44/hahmot/`. v46l on blender 18ffd8472fe0757c
+    (v45c 560834509).
+  - Data ja `sijoitus.mjs`: haara `linnanrakentaja-kadet-sijoitus` (99f620972). Kanna on kämmenen kehyksessä (`kehys: 'kammen'`),
+    ja tartu l on kirjan kehyksessä.
+  - Siirtoseppä tekee pelin puolen.
