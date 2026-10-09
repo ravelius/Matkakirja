@@ -1,6 +1,6 @@
 // KAUPUNGIN KOKO RUUDUN PASSI (Linssiseppä 9.10.2026; yövalojen juurisyy omilla simudiagnooseilla): FullScreenPassRendererFeature ajoi
 // yövalot ja muotokorostuksen kamerapinon päällyskameroille, joiden syvyys on tyhjä, eikä peruskameran tulosta jäänyt näkyviin. Tämä passi
-// lisätään vain kaupungin peruskameralle (beginCameraRendering, kuten PalloSumennus) ennen jälkikäsittelyä: värikopio → materiaali
+// lisätään vain kaupungin peruskameralle (beginCameraRendering, kuten PalloSumennus) jälkikäsittelyn jälkeen: värikopio → materiaali
 // (Blit.hlsl:n Vert, _BlitTexture) kameran väriin, syvyystekstuuri luettavissa (_CameraDepthTexture). Diagnoosi: Tila.
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +23,9 @@ namespace Matkakirja.Natiivi
             public Vaihe(string n)
             {
                 nimi = n;
-                renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+                // 9.10. rajausajo (dea3b1ab8): peruskameralla vain AfterRenderingPostProcessing näkyy ruudulla (aiemmat vaiheet
+                // korvautuivat jälkikäsittelyssä); syvyys on yhä luettavissa, korin päällyskamera piirtää päälle.
+                renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
                 requiresIntermediateTexture = true;
                 ConfigureInput(ScriptableRenderPassInput.Depth);
                 profilingSampler = new ProfilingSampler(n);
@@ -61,7 +63,7 @@ namespace Matkakirja.Natiivi
         static readonly Dictionary<string, Vaihe> aktiiviset = new Dictionary<string, Vaihe>();
         /// <summary>Kaupungin peruskamera (KaupunkiYovalot.Paivita asettaa joka kehys).</summary>
         public static Camera Kamera;
-        /// <summary>Diagnoosi: passin tapahtuma (opas yovalotvaihe N); null = BeforeRenderingPostProcessing.</summary>
+        /// <summary>Diagnoosi: passin tapahtuma (opas yovalotvaihe N); null = AfterRenderingPostProcessing.</summary>
         public static RenderPassEvent? Tapahtuma;
         static bool kytketty;
 
