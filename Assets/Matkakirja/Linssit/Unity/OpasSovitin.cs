@@ -2706,15 +2706,23 @@ namespace Matkakirja.Natiivi
         {
             if (kaupunki.Pinta == null && !OmaKorkeusPaalla) yield break;
             double r = OpasKuvaus.KehaSade(k.KokoM);
-            var pisteet = new double3[1 + OpasKuvaus.KehaPisteita];
+            // Lisäksi ulkokehät (ESITTELYKORKEUS, omistaja TF 169): ympäröivien kattojen korkeus 1,5 ja 3 säteen päästä (12 + 12 pistettä).
+            const int Ulko = 12;
+            var pisteet = new double3[1 + OpasKuvaus.KehaPisteita + 2 * Ulko];
             pisteet[0] = new double3(k.Lon, k.Lat, 0);
             for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(k.Lat, k.Lon, r, i); pisteet[1 + i] = new double3(lo, la, 0); }
+            for (int i = 0; i < 2 * Ulko; i++)
+            {
+                double ru = i < Ulko ? Math.Max(1.5 * r, 90) : Math.Max(3 * r, 180), a = (i % Ulko) * 2 * Math.PI / Ulko + (i < Ulko ? 0 : Math.PI / Ulko);
+                double la = k.Lat + ru * Math.Cos(a) / 111132.0, lo = k.Lon + ru * Math.Sin(a) / (111320.0 * Math.Cos(k.Lat * Math.PI / 180));
+                pisteet[1 + OpasKuvaus.KehaPisteita + i] = new double3(lo, la, 0);
+            }
             double[] hs = null;
             yield return Pinnat(pisteet, x => hs = x);
             if (hs == null) yield break;
             double H(int i) => hs[i];
             var keha = new List<double>();
-            for (int i = 1; i < pisteet.Length; i++) keha.Add(H(i));
+            for (int i = 1; i <= OpasKuvaus.KehaPisteita; i++) keha.Add(H(i));
             double keskus = H(0);
             if (double.IsNaN(keskus) && keha.TrueForAll(double.IsNaN)) yield break;
             var (maa, korkeus) = OpasKuvaus.MaaJaKorkeus(keskus, keha);
@@ -2722,7 +2730,10 @@ namespace Matkakirja.Natiivi
             viimeMaa = (k.Lat, k.Lon, maa);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
             double vanha = k.KorkeusM;
             if (korkeus > k.KorkeusM) k.KorkeusM = korkeus;   // workerin korkeus_m puuttuu tai on liian pieni
-            o.Kirjaa($"opas: {k.Nimi}: maa {maa:F0} m (keskus {keskus:F0}, kehä r {r:F0} m), korkeus {(vanha > 0 ? vanha.ToString("F0") : "-")} → {k.KorkeusM:F0} m");
+            var ulko = new List<double>();
+            for (int i = 1 + OpasKuvaus.KehaPisteita; i < pisteet.Length; i++) if (!double.IsNaN(H(i))) ulko.Add(H(i) - maa);
+            k.YmparysM = OpasKuvaus.Ymparys(ulko);
+            o.Kirjaa($"opas: {k.Nimi}: maa {maa:F0} m (keskus {keskus:F0}, kehä r {r:F0} m), korkeus {(vanha > 0 ? vanha.ToString("F0") : "-")} → {k.KorkeusM:F0} m, ympäröivät katot {(double.IsNaN(k.YmparysM) ? "-" : k.YmparysM.ToString("F0"))} m");
         }
 
         /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
