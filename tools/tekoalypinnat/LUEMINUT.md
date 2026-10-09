@@ -32,3 +32,8 @@ Koetulokset 9.10. (_tyo/karttaseppa/tekoalypinnat-koe/vertailu-*.jpg; ylhääll�
 | F viivat + tile 0,3 | 99 / 99 | 89 / 86 | 0,12 / 0,09 |
 
 Muut valinnat: --pohja <renderi> --denoise 0.6 (img2img), --tile/--tile-voima, --reunat-loppu, --valaistus ei.
+
+## Levy (PT 9.10.: käynnistyslevy ei täyty)
+
+- Kaikki on T7:llä: venv, mallit, ComfyUI:n input, output ja temp, välimuistit (HF_HOME, TORCH_HOME, PIP_CACHE_DIR ja TMPDIR → tekoalypinnat/valimuisti/, kun pinta.py käynnistää ComfyUI:n).
+- Ajojen tulokset kannattaa kirjoittaa T7:lle tai NASiin, ei kansioon /Users/Shared/…/_tyo (käynnistyslevy). Vain PT:lle menevät vertailukuvat _tyo:hon.

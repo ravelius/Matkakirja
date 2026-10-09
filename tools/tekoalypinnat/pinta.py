@@ -25,7 +25,9 @@ def kaynnissa():
 def kaynnista():
     if kaynnissa(): return
     loki = open(os.path.join(JUURI, 'comfyui.log'), 'a')
-    subprocess.Popen([PY, 'main.py', '--listen', '127.0.0.1', '--port', '8189', '--disable-auto-launch', '--force-fp16'], cwd=COMFY, stdout=loki, stderr=loki, start_new_session=True)
+    ymp = dict(os.environ, HF_HOME=os.path.join(JUURI, 'valimuisti', 'hf'), TORCH_HOME=os.path.join(JUURI, 'valimuisti', 'torch'), PIP_CACHE_DIR=os.path.join(JUURI, 'valimuisti', 'pip'), TMPDIR=os.path.join(JUURI, 'valimuisti', 'tmp'))   # PT: käynnistyslevy ei täyty
+    os.makedirs(ymp['TMPDIR'], exist_ok=True)
+    subprocess.Popen([PY, 'main.py', '--listen', '127.0.0.1', '--port', '8189', '--disable-auto-launch', '--force-fp16', '--temp-directory', ymp['TMPDIR']], cwd=COMFY, stdout=loki, stderr=loki, start_new_session=True, env=ymp)
     for _ in range(180):
         if kaynnissa(): return
         time.sleep(1)
