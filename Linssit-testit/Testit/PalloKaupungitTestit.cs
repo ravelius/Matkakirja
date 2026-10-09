@@ -21,7 +21,7 @@ namespace Matkakirja.Linssit.Testit
         const string Tiedosto = "opas-kierrokset-20261008.json";
 
         public sealed class Kaupunki { public string Id, Nimi; public double Lat, Lon; public OpasKohde[] Kohteet; }
-        struct Ruutu { public double T, E, N, U, EtM, Suunta; public OpasVaihe Vaihe; public int Kohde; public bool Leijuu; }
+        struct Ruutu { public double T, E, N, U, EtM, Suunta, Kall; public OpasVaihe Vaihe; public int Kohde; public bool Leijuu; }
 
         public static List<Kaupunki> Lue()
         {
@@ -73,12 +73,36 @@ namespace Matkakirja.Linssit.Testit
                     var e = OpasKuvaus.KameraPaikka(s.Asento, c.Lat, c.Lon);
                     int kohde = s.Nykyinen == null ? -1 : Array.FindIndex(c.Kohteet, k => k.Id == s.Nykyinen.Id);
                     esit?.Add((t, s.Esilataus(_ => 35), s.Asento, s.Vaihe == OpasVaihe.Puhuu ? s.Nykyinen?.Id : null));
-                    r.Add(new Ruutu { T = t, E = e.e, N = e.n, U = e.u, EtM = s.Asento.EtaisyysM, Suunta = s.Asento.Suuntima, Vaihe = s.Vaihe, Kohde = kohde, Leijuu = s.Leijuu });
+                    r.Add(new Ruutu { T = t, E = e.e, N = e.n, U = e.u, EtM = s.Asento.EtaisyysM, Suunta = s.Asento.Suuntima, Kall = s.Asento.Kallistus, Vaihe = s.Vaihe, Kohde = kohde, Leijuu = s.Leijuu });
                     if (kohde == c.Kohteet.Length - 1 && hiljaa.Count == 0 && s.Vaihe != OpasVaihe.Puhuu && !s.KierrosKaynnissa) break;
                 }
                 return r;
             }
             finally { OpasSilmukka.PalloLento = vanha; }
+        }
+
+        /// <summary>
+        /// VIISTO KATSE LENNOLLA (kuva-arkki 9.10., elokuvalinjan virhe 2): kallistus (0 = suoraan alas) lennon aikana enintään
+        /// OpasKuvaus.PalloLentoJyrkennysMaxAst lähtö- ja tulokallistusta jyrkempi; tulostaa lennoittain pienimmän kallistuksen.
+        /// </summary>
+        [Testi] static void LentoKatseViisto()
+        {
+            foreach (var c0 in Lue().Where(x => x.Id == "pariisi" || x.Id == "tukholma"))
+            {
+                var c = new Kaupunki { Id = c0.Id, Nimi = c0.Nimi, Lat = c0.Lat, Lon = c0.Lon, Kohteet = OpasReitti.Lyhin(c0.Kohteet, k => (k.Lat, k.Lon), out _).ToArray() };
+                var r = Aja(c, false);
+                for (int i = 1; i < r.Count; i++)
+                {
+                    if (r[i].Vaihe != OpasVaihe.Lentaa || r[i - 1].Vaihe == OpasVaihe.Lentaa) continue;
+                    int j = i; while (j + 1 < r.Count && r[j + 1].Vaihe == OpasVaihe.Lentaa) j++;
+                    double k0 = r[i - 1].Kall, k1 = r[Math.Min(r.Count - 1, j + 1)].Kall, kmin = double.MaxValue; int m = i;
+                    for (int k = i; k <= j; k++) if (r[k].Kall < kmin) { kmin = r[k].Kall; m = k; }
+                    string nimi = r[Math.Min(r.Count - 1, j + 1)].Kohde >= 0 ? c.Kohteet[r[Math.Min(r.Count - 1, j + 1)].Kohde].Nimi : "?";
+                    Console.WriteLine($"      {c.Nimi} → {nimi}: kallistus lähtö {k0:F0}°, pienin {kmin:F0}° ({(m - i) * Dt:F1}/{(j - i + 1) * Dt:F1} s, silmä {r[m].U - 35:F0} m), tulo {k1:F0}°");
+                    Oleta.Tosi(kmin >= Math.Min(k0, k1) - OpasKuvaus.PalloLentoJyrkennysMaxAst - 1, $"{c.Nimi} → {nimi}: lennon kallistus {kmin:F0}° ≥ {Math.Min(k0, k1) - OpasKuvaus.PalloLentoJyrkennysMaxAst:F0}°");
+                    i = j;
+                }
+            }
         }
 
         static bool Pysahdyksella(OpasVaihe v) => v == OpasVaihe.Puhuu || v == OpasVaihe.Odottaa;
