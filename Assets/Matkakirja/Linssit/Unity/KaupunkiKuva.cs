@@ -386,6 +386,7 @@ namespace Matkakirja.Natiivi
             double yoOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusTunnista(tunti)
                 : Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusAuringosta(aurinko);
             KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus);
+            KaupunkiIlmakeha.YoOsuus = (float)yoOsuus;   // LS2: kaupungin valojen heijastus omaan veteen
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
             float harmaus = Mathf.SmoothStep(0f, 1f, (float)KaupunkiKuva.Saa.Harmaus);

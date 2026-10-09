@@ -33,6 +33,9 @@ namespace Matkakirja.Natiivi
         /// IltaAurinkoAst horisontin alla (sininen hetki, purppura ja iltarusko taivaanrannassa); kaupungin valot LS1:n yötilan mukaan.</summary>
         public static float IltaAurinkoAst = -7f;
         public static bool IltaYolla = true;
+        /// <summary>Kaupungin valojen osuus 0–1 (KaupunkiKuva, LS1:n KaupunkiYovalot): valojen heijastus omaan veteen (Natiiviseppä 9.10.:
+        /// Seine yöllä lähes musta).</summary>
+        public static float YoOsuus;
         public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PohjaM;
         /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a; omistaja 9.10. "pilviä voisi vähän lisätä taivaalle"): oletus
         /// päällä kehityskaupungeissa (kuten ilmakehä), asetus "pilvet 0|1" pakottaa. Pohja = PilviKorkeusM, paksuus PilviPaksuusM.</summary>
@@ -108,7 +111,7 @@ namespace Matkakirja.Natiivi
                 (float)Matkakirja.Linssit.Ilmakeha.AamuSumu.Voima(aurinkoKorkeusAst, aurinkoAtsimuuttiAst) * Aamusumu,
                 (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Sateenkaari(aurinkoKorkeusAst) * voima));
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
-            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), 0f, 0f));
+            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), YoOsuus, 0f));
             Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));
         }
 

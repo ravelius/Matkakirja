@@ -93,6 +93,17 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float3 c = lerp(_Syva.rgb * saturate(_IlmAurinko.y * 3.0 + 0.15), taivas, fresnel) + aurinko * IlmLapaisy(_IlmParam.x, _IlmAurinko.y);
                 // Vaahto: valkoinen auringon ja taivaan valossa (näyttöavaruudessa kuten _Syva), vain lähellä (ei välkettä kaukana).
                 float vaahtoV = saturate(vaahto) * 0.75 * (1.0 - saturate(et * m / 2500.0));
+                // KAUPUNGIN VALOJEN HEIJASTUS (yöllä, _IlmMaailma.z): lämpimät pitkät välkkeet katsojaa kohti venyneinä (valojen juovat),
+                // rannan lähellä tiheimmin; solut 3 m poikki × 18 m pitkin katsesuuntaa, hidas värinä.
+                if (_IlmMaailma.z > 0.01)
+                {
+                    float2 kd = normalize(kohti.xz + 1e-4), kp = float2(-kd.y, kd.x);
+                    float2 q = float2(dot(pm.xz, kp) / 3.0, dot(pm.xz, kd) / 18.0 + t * 0.15);
+                    float2 qi = floor(q); float h = frac(sin(dot(qi, float2(41.3, 289.1))) * 43758.5453);
+                    float juova = step(0.86, h) * (1.0 - abs(frac(q.x) - 0.5) * 2.0) * (0.6 + 0.4 * sin(t * 2.0 + h * 40.0));
+                    float lahella = exp(-v.ranta / 45.0) * 0.8 + 0.2;
+                    c += float3(1.0, 0.72, 0.42) * juova * lahella * _IlmMaailma.z * 0.55 * (1.0 - saturate(et * m / 3500.0));
+                }
                 c = lerp(c, float3(0.86, 0.9, 0.92) * saturate(_IlmAurinko.y * 2.0 + 0.25), vaahtoV);
                 float3 sironta, lapaisy; IlmIlmaperspektiivi(et * m, d, sironta, lapaisy);
                 c = lerp(c, c * lapaisy + IlmSavytys(sironta * _IlmParam.y), _IlmParam.z);
