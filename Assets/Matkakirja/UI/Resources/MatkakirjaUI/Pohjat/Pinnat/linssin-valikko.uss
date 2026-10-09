@@ -418,7 +418,8 @@
 }
 
 .tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__tila,
-.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__lahde {
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__lahde,
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalitsin__valiotsikko {   /* KYSY OPPAALTA yöllä (UI-kuva-arkki 9.10.: oli tumma tummalla) */
     color: var(--tk-muste-pehmea);
 }
 
