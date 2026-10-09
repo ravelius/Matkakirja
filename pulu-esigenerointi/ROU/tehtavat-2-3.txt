@@ -1,0 +1,1063 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Vuorten eristäytynyt kansa] Solan kautta saapuneista uudisasukkaista suuri osa oli škotti-irlantilaisia siirtolaisia, jotka pakenivat uskonnollista sortoa ja taloudellista ahdinkoa ja asettuivat Appalakkien syrjäisiin laaksoihin. Vaikeakulkuinen maasto ja teiden puute eristivät monet kylät vuosikymmeniksi rannikkoseutujen elämästä, mikä pakotti perheet omavaraisuuteen: kotipuutarhat, metsästys ja kotikutoiset tarvikkeet olivat arjen perusta. Tyypillinen koti oli yksihuoneinen hirsimökki kivipiipuineen, samanlainen kuin Blue Ridge -vuorten historiallisilla tiloilla yhä pystyssä olevat rakennukset.
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa] Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.
+AIEMPI KYSYMYS: Miksi Negoiuta sanotaan säänvaihtelun navaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on aika kiinnostava. Negoiu on korkea ja avoin vuori [[Făgărașin vuorten]] keskellä, jonka ympärillä sää voi muuttua nopeasti, koska kosteat ilmavirrat kohtaavat vuoren rinteet ja nousevat korkeammalle. Samalla ilman lämpötila laskee, ja pilvet sekä sade voivat syntyä hyvin nopeasti. Tällaista vuoristosäätä esiintyy [[Karpaateilla]] muuallakin, ja tarkkaa meteorologista selitystä juuri Negoiulle en ole varma. Retkeilijän kannattaa tarkistaa ennuste aina ennen lähtöä ja varautua äkillisiin muutoksiin. Siivin lennettäessä ukkonen on minulle se huonoin keli.
+KYSYMYS: Kerro lisää: Făgărașin vuorten
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Menovinkit] Romaniassa aarteet ovat verkossa yllättävän hyvin esillä: kansallinen aarreluettelo, kylämuseoiden 3D-kierrokset ja lasilevykuvien arkisto. Karpaateilla riittää katsottavaa myös suorana.
+AIEMPI KYSYMYS: Miksi Negoiuta sanotaan säänvaihtelun navaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on aika kiinnostava. Negoiu on korkea ja avoin vuori [[Făgărașin vuorten]] keskellä, jonka ympärillä sää voi muuttua nopeasti, koska kosteat ilmavirrat kohtaavat vuoren rinteet ja nousevat korkeammalle. Samalla ilman lämpötila laskee, ja pilvet sekä sade voivat syntyä hyvin nopeasti. Tällaista vuoristosäätä esiintyy [[Karpaateilla]] muuallakin, ja tarkkaa meteorologista selitystä juuri Negoiulle en ole varma. Retkeilijän kannattaa tarkistaa ennuste aina ennen lähtöä ja varautua äkillisiin muutoksiin. Siivin lennettäessä ukkonen on minulle se huonoin keli.
+KYSYMYS: Kerro lisää: Karpaateilla
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+AIEMPI KYSYMYS: Mikä on Romanian korkein vuori?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Romanian korkein vuori on [[Moldoveanu]], jonka korkeus on noin 2 544 metriä. Se sijaitsee samoin [[Făgărașin vuoristossa]] kuin Negoiu, joka on noin yhdeksän metriä matalampi. Moldoveanu kuuluu [[Etelä-Karpaatteihin]] ja on myös koko maan korkein huippu. Alue on suosittu retkeilykohde, mutta sää voi muuttua nopeasti, ja korkealla polut ovat usein vaativia. Kartalla näyttää korkealta, mutta lintuperspektiivistä yhdeksän metriä on ihan tyhjää.
+KYSYMYS: Kerro lisää: Moldoveanu
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Kivi, joka näyttää kasvoilta] 1936 — Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.
+- [Romania — maalehti / Luonto: Vuoristo, josta tuli ensimmäinen] 1935 — Retezatin kansallispuisto Hunedoaran alueella oli Romanian ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli 2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita puisto perustettiin alun perin suojelemaan. Retezatista tuli myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi mallin kaikille Romanian myöhemmille suojelualueille.
+AIEMPI KYSYMYS: Mikä on Romanian korkein vuori?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Romanian korkein vuori on [[Moldoveanu]], jonka korkeus on noin 2 544 metriä. Se sijaitsee samoin [[Făgărașin vuoristossa]] kuin Negoiu, joka on noin yhdeksän metriä matalampi. Moldoveanu kuuluu [[Etelä-Karpaatteihin]] ja on myös koko maan korkein huippu. Alue on suosittu retkeilykohde, mutta sää voi muuttua nopeasti, ja korkealla polut ovat usein vaativia. Kartalla näyttää korkealta, mutta lintuperspektiivistä yhdeksän metriä on ihan tyhjää.
+KYSYMYS: Kerro lisää: Făgărașin vuoristossa
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+AIEMPI KYSYMYS: Mikä on Romanian korkein vuori?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Romanian korkein vuori on [[Moldoveanu]], jonka korkeus on noin 2 544 metriä. Se sijaitsee samoin [[Făgărașin vuoristossa]] kuin Negoiu, joka on noin yhdeksän metriä matalampi. Moldoveanu kuuluu [[Etelä-Karpaatteihin]] ja on myös koko maan korkein huippu. Alue on suosittu retkeilykohde, mutta sää voi muuttua nopeasti, ja korkealla polut ovat usein vaativia. Kartalla näyttää korkealta, mutta lintuperspektiivistä yhdeksän metriä on ihan tyhjää.
+KYSYMYS: Kerro lisää: Etelä-Karpaatteihin
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Mikä on Karpaattien korkein huippu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Karpaattien korkein huippu on [[Gerlachovský štít]], jonka korkeus on noin 2 655 metriä. Se sijaitsee [[Korkeissa Tatroissa]] [[Slovakiassa]], lähellä Puolan rajaa. Tatrat ovat Karpaattien korkein osa, kun taas Romanian Karpaateilla korkeimmat huiput jäävät hieman matalammiksi. Monet matkailijat eivät pääse huipulle ilman opasta, koska reitti on vaativa ja vaarallinen. Ei hassumpi muisti kyyhkyltä, vaikka numerot eivät ole vahvuuteni.
+KYSYMYS: Kerro lisää: Gerlachovský štít
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+AIEMPI KYSYMYS: Mikä on Karpaattien korkein huippu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Karpaattien korkein huippu on [[Gerlachovský štít]], jonka korkeus on noin 2 655 metriä. Se sijaitsee [[Korkeissa Tatroissa]] [[Slovakiassa]], lähellä Puolan rajaa. Tatrat ovat Karpaattien korkein osa, kun taas Romanian Karpaateilla korkeimmat huiput jäävät hieman matalammiksi. Monet matkailijat eivät pääse huipulle ilman opasta, koska reitti on vaativa ja vaarallinen. Ei hassumpi muisti kyyhkyltä, vaikka numerot eivät ole vahvuuteni.
+KYSYMYS: Kerro lisää: Korkeissa Tatroissa
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Ruoka: Hapankaalikeitto joulupöytään] Joulupöydässä — Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja syödään myös Puolassa, Ukrainassa ja Venäjällä.
+AIEMPI KYSYMYS: Mikä on Karpaattien korkein huippu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Karpaattien korkein huippu on [[Gerlachovský štít]], jonka korkeus on noin 2 655 metriä. Se sijaitsee [[Korkeissa Tatroissa]] [[Slovakiassa]], lähellä Puolan rajaa. Tatrat ovat Karpaattien korkein osa, kun taas Romanian Karpaateilla korkeimmat huiput jäävät hieman matalammiksi. Monet matkailijat eivät pääse huipulle ilman opasta, koska reitti on vaativa ja vaarallinen. Ei hassumpi muisti kyyhkyltä, vaikka numerot eivät ole vahvuuteni.
+KYSYMYS: Kerro lisää: Slovakiassa
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+AIEMPI KYSYMYS: Millaisia eläimiä Făgărașin vuoristossa elää?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nyt tulee kiinnostava osuus. Făgărașin vuoristossa elää useita suurpetoja ja vuoristolajeja, kuten [[ruskeakarhu]], susi ja ilves. Kallioisilla rinteillä liikkuu myös [[Karpaattien gemssi]], vuorikauris, joka sopeutuu hyvin jyrkkiin maastoihin. Romanian Karpaateilla on yksi Euroopan merkittävimmistä karhukannoista, mutta tarkkoja lukuja en ole varma. Retkeilijän on hyvä muistaa, että suurpetoja kohdatessa täytyy pysyä rauhallisena. Pidän kyllä enemmän kaupungin pulloista kuin karhuista.
+KYSYMYS: Kerro lisää: ruskeakarhu
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+AIEMPI KYSYMYS: Millaisia eläimiä Făgărașin vuoristossa elää?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nyt tulee kiinnostava osuus. Făgărașin vuoristossa elää useita suurpetoja ja vuoristolajeja, kuten [[ruskeakarhu]], susi ja ilves. Kallioisilla rinteillä liikkuu myös [[Karpaattien gemssi]], vuorikauris, joka sopeutuu hyvin jyrkkiin maastoihin. Romanian Karpaateilla on yksi Euroopan merkittävimmistä karhukannoista, mutta tarkkoja lukuja en ole varma. Retkeilijän on hyvä muistaa, että suurpetoja kohdatessa täytyy pysyä rauhallisena. Pidän kyllä enemmän kaupungin pulloista kuin karhuista.
+KYSYMYS: Kerro lisää: Karpaattien gemssi
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi Mustanmeren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on kuuluisa ilmiö. Mustanmeren yläosa on suhteellisen vähäsuolaista, koska siihen virtaa suuria jokia, kuten [[Tonava]], [[Dnepr]] ja [[Dnestr]]. Alta löytyy suolaisempaa vettä, joka on peräisin [[Bosporinsalmesta]] Välimereltä, ja suolaisuuserojen vuoksi vesikerrokset sekoittuvat huonosti. Hapen määrä vähenee siksi syvemmällä, ja noin 150–200 metrin alapuolella vesi on suurelta osin hapetonta ja sisältää rikkivetyä. Tämän vuoksi syvissä osissa ei ole tavallista merielämää. Syvyyttä on yli kaksi kilometriä, joten pimeää riittää.
+KYSYMYS: Kerro lisää: Tonava
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Miksi Mustanmeren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on kuuluisa ilmiö. Mustanmeren yläosa on suhteellisen vähäsuolaista, koska siihen virtaa suuria jokia, kuten [[Tonava]], [[Dnepr]] ja [[Dnestr]]. Alta löytyy suolaisempaa vettä, joka on peräisin [[Bosporinsalmesta]] Välimereltä, ja suolaisuuserojen vuoksi vesikerrokset sekoittuvat huonosti. Hapen määrä vähenee siksi syvemmällä, ja noin 150–200 metrin alapuolella vesi on suurelta osin hapetonta ja sisältää rikkivetyä. Tämän vuoksi syvissä osissa ei ole tavallista merielämää. Syvyyttä on yli kaksi kilometriä, joten pimeää riittää.
+KYSYMYS: Kerro lisää: Dnepr
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Miksi Mustanmeren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on kuuluisa ilmiö. Mustanmeren yläosa on suhteellisen vähäsuolaista, koska siihen virtaa suuria jokia, kuten [[Tonava]], [[Dnepr]] ja [[Dnestr]]. Alta löytyy suolaisempaa vettä, joka on peräisin [[Bosporinsalmesta]] Välimereltä, ja suolaisuuserojen vuoksi vesikerrokset sekoittuvat huonosti. Hapen määrä vähenee siksi syvemmällä, ja noin 150–200 metrin alapuolella vesi on suurelta osin hapetonta ja sisältää rikkivetyä. Tämän vuoksi syvissä osissa ei ole tavallista merielämää. Syvyyttä on yli kaksi kilometriä, joten pimeää riittää.
+KYSYMYS: Kerro lisää: Dnestr
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Miksi Mustanmeren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on kuuluisa ilmiö. Mustanmeren yläosa on suhteellisen vähäsuolaista, koska siihen virtaa suuria jokia, kuten [[Tonava]], [[Dnepr]] ja [[Dnestr]]. Alta löytyy suolaisempaa vettä, joka on peräisin [[Bosporinsalmesta]] Välimereltä, ja suolaisuuserojen vuoksi vesikerrokset sekoittuvat huonosti. Hapen määrä vähenee siksi syvemmällä, ja noin 150–200 metrin alapuolella vesi on suurelta osin hapetonta ja sisältää rikkivetyä. Tämän vuoksi syvissä osissa ei ole tavallista merielämää. Syvyyttä on yli kaksi kilometriä, joten pimeää riittää.
+KYSYMYS: Kerro lisää: Bosporinsalmesta
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Kaupunki, jonka perustivat kreikkalaiset merenkulkijat] Kreikkalaiset siirtolaiset Vähän-Aasian Fokaian kaupungista perustivat Massalian noin vuonna 600 eaa. luonnonsatamaan, joka on nykyinen Vieux-Port. Massaliasta tuli nopeasti tärkeä kauppasatama, joka välitti viiniä, öljyä ja keramiikkaa Välimereltä sisämaahan päin — ja Ranskan vanhin kaupunki oli syntynyt. Kaupungin muinaiset satamamuurit ja rakennusten perustukset ovat säilyneet Jardin des Vestiges -puutarhassa keskellä nykyistä kaupunkia — kaivaukset paljastivat ne 1960-luvulla ostoskeskuksen rakennustöiden yhteydessä.
+AIEMPI KYSYMYS: Mistä meri sai nimensä?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on monta tarinaa. Mustanmeren nimen alkuperää selitetään usein sillä, että meri vaikutti myrskyisältä ja tummalta, mutta varmaa selitystä ei ole. Antiikin [[kreikkalaiset]] kutsuivat sitä ensin nimellä [[Pontos Axeinos]], joka tarkoittaa vieraanvaraa vailla olevaa merta, ja myöhemmin eufemistisesti nimellä Pontos Euxeinos, vieraanvarainen meri. Joidenkin tutkijoiden mukaan alkuperäinen nimi voi olla vanhaa iranilaista alkuperää ja tarkoittaa tummaa tai tyyntä vettä. En ole varma, mikä selitys on oikea. Yksi merkki vanhoista ajoista: nimi kuulostaa tummemmalta kuin meri näyttää ylhäältä.
+KYSYMYS: Kerro lisää: kreikkalaiset
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Mistä meri sai nimensä?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on monta tarinaa. Mustanmeren nimen alkuperää selitetään usein sillä, että meri vaikutti myrskyisältä ja tummalta, mutta varmaa selitystä ei ole. Antiikin [[kreikkalaiset]] kutsuivat sitä ensin nimellä [[Pontos Axeinos]], joka tarkoittaa vieraanvaraa vailla olevaa merta, ja myöhemmin eufemistisesti nimellä Pontos Euxeinos, vieraanvarainen meri. Joidenkin tutkijoiden mukaan alkuperäinen nimi voi olla vanhaa iranilaista alkuperää ja tarkoittaa tummaa tai tyyntä vettä. En ole varma, mikä selitys on oikea. Yksi merkki vanhoista ajoista: nimi kuulostaa tummemmalta kuin meri näyttää ylhäältä.
+KYSYMYS: Kerro lisää: Pontos Axeinos
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+- [Romania — maalehti / Ruoka: Puuro, joka tuli laivalla] 1700-luku — Mämäligä on maissijauhosta keitetty puuro, joka korvasi Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja Valakiasta vuodelta 1723. Tonavan laakso sopi maissille erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja käännetään lautaselle kuin kakku, ja perinteisesti kyljestä leikataan siivuja langalla. Sitä syödään juuston ja smetanan kanssa tai lisäkkeenä lihalle ja kaalikääryleille.
+AIEMPI KYSYMYS: Mitä jokia Mustaanmereen laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mustaanmereen laskevista joista suurin on [[Tonava]], joka päättyy [[Romaniassa]] laajaan suistoon ja on Euroopan toiseksi pisin joki. Muita suuria jokia ovat [[Dnepr]] ja [[Dnestr]], joiden vedet virtaavat Ukrainan läpi. Lisäksi Mustaanmereen laskee pienempiä jokia, kuten Bug, Kizilirmak ja Rioni. Siksi meren valuma-alue ulottuu hyvin laajalle, 24 Euroopan maahan. Tonavan suisto on [[UNESCOn]] maailmanperintökohde. Joet ovat kuin teitä, joita pitkin vesi kulkee, mutta kyyhky valitsee ilmatien.
+KYSYMYS: Kerro lisää: Romaniassa
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Mitä jokia Mustaanmereen laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mustaanmereen laskevista joista suurin on [[Tonava]], joka päättyy [[Romaniassa]] laajaan suistoon ja on Euroopan toiseksi pisin joki. Muita suuria jokia ovat [[Dnepr]] ja [[Dnestr]], joiden vedet virtaavat Ukrainan läpi. Lisäksi Mustaanmereen laskee pienempiä jokia, kuten Bug, Kizilirmak ja Rioni. Siksi meren valuma-alue ulottuu hyvin laajalle, 24 Euroopan maahan. Tonavan suisto on [[UNESCOn]] maailmanperintökohde. Joet ovat kuin teitä, joita pitkin vesi kulkee, mutta kyyhky valitsee ilmatien.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Mikä Bosporinsalmi on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bosporinsalmi on kapea salmi, joka yhdistää Mustanmeren [[Marmaranmereen]] ja sitä kautta [[Välimereen]]. Se kulkee [[Istanbulin]] halki ja erottaa Euroopan ja Aasian toisistaan. Salmi on pituudeltaan noin 30 kilometriä, ja kapeimmillaan se on alle kilometrin levyinen. Se on yksi maailman vilkkaimmista laivaväylistä, ja sillä on suuri merkitys sekä kaupalle että alueen historialle. Lensin ensimmäisen kerran sen yli jo pienenä, eikä se ole sen jälkeen kutistunut.
+KYSYMYS: Kerro lisää: Marmaranmereen
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Mikä Bosporinsalmi on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bosporinsalmi on kapea salmi, joka yhdistää Mustanmeren [[Marmaranmereen]] ja sitä kautta [[Välimereen]]. Se kulkee [[Istanbulin]] halki ja erottaa Euroopan ja Aasian toisistaan. Salmi on pituudeltaan noin 30 kilometriä, ja kapeimmillaan se on alle kilometrin levyinen. Se on yksi maailman vilkkaimmista laivaväylistä, ja sillä on suuri merkitys sekä kaupalle että alueen historialle. Lensin ensimmäisen kerran sen yli jo pienenä, eikä se ole sen jälkeen kutistunut.
+KYSYMYS: Kerro lisää: Välimereen
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Sepahsalarin moskeija] Rakennuttaja Mirza Hosein Khan Sepahsalar oli Naser al-Din Shaahin suurvisiiri 1871–1873 ja sitä ennen Iranin lähettiläs Konstantinopolissa. Työ alkoi hänen käskystään 1879 ja ensimmäinen vaihe valmistui 1884; Sepahsalar kuoli 1881, ja siitä eteenpäin rakennuttajaksi merkitään shaahi. Saman pihan ympärillä on moskeija ja madrasa eli koulu. Pihaa kiertää kaksikerroksinen kaarikäytävä, ja sen takana on oppilashuoneita, kaikkiaan noin 60. Minareetteja on kahdeksan, iranilaisessa moskeijassa poikkeuksellinen määrä, ja kukin on 37 metriä korkea. Rukoussalin kupoli on niin ikään 37 metriä korkea, ja sitä kannattaa 44 pylvästä. Pohjan mitat ovat 62 kertaa 61 metriä; pinta-alaksi lähde ilmoittaa 16…
+- [Istanbul — kohdekartta / Kohdekartta: Camondon portaat] Sinä vuonna, jona isoisäsi pakkasi matkalaukkunsa, tämä kaupunki hautasi rikkaimman pankkiirinsa. Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin asuttuun kaupunginosaan — ja osa rabbeista julisti hänet siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi vuotta ja koulutti valtaosan valtakunnan juutalaisista virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. maaliskuuta 1873, ja hänen toiveensa mukaan hänet tuotiin takaisin tänne: hautajaiset pidettiin 14. huhtikuuta Hasköyn juutalaisella hauta…
+AIEMPI KYSYMYS: Mikä Bosporinsalmi on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bosporinsalmi on kapea salmi, joka yhdistää Mustanmeren [[Marmaranmereen]] ja sitä kautta [[Välimereen]]. Se kulkee [[Istanbulin]] halki ja erottaa Euroopan ja Aasian toisistaan. Salmi on pituudeltaan noin 30 kilometriä, ja kapeimmillaan se on alle kilometrin levyinen. Se on yksi maailman vilkkaimmista laivaväylistä, ja sillä on suuri merkitys sekä kaupalle että alueen historialle. Lensin ensimmäisen kerran sen yli jo pienenä, eikä se ole sen jälkeen kutistunut.
+KYSYMYS: Kerro lisää: Istanbulin
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Eteläisin pullonokkadelfiinilauma] Milford Soundissa elää pysyvästi pieni pullonokkadelfiiniryhmä, joka on maailman eteläisimpänä tunnettu villi pullonokkadelfiinilauma. Toisin kuin useimmat lajitoverinsa lämpimissä merissä, nämä delfiinit ovat sopeutuneet elämään Fiordlandin kylmässä vuonovedessä, jonka pintaa peittää sateiden tuoma makea vesikerros. Matkailuveneiden matkustajat näkevät niitä usein uimassa laivan vanaveden lähellä tai sukeltamassa juuri siinä kohtaa vuonoa, jossa vesiputousten sumu synnyttää sateenkaaria. Tutkijat seuraavat laumaa tarkasti, sillä sen pieni koko ja eristyneisyys tekevät siitä erityisen herkän häiriöille.
+AIEMPI KYSYMYS: Elääkö Mustallamerellä delfiinejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyllä elää. Mustallamerellä esiintyy kolmea valaslajia: [[pullonokkadelfiini]], [[tavallinen delfiini]] ja [[Mustanmeren pyöriäinen]]. Ne ovat sopeutuneet meren erikoisiin oloihin, kuten hapettomaan syvyyteen ja vähäsuolaiseen pintaveteen, ja elävät pääasiassa meren yläosissa. Tarkkoja kantojen kokoja en ole varma, mutta kaikkien kolmen lajin tiedetään kärsineen kalastuksesta ja ihmistoiminnasta. Delfiinit ovat kyllä parempia uimareita kuin minä, ja minä olen parempi lentäjä kuin ne.
+KYSYMYS: Kerro lisää: pullonokkadelfiini
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Delfiini, joka ajaa kalat verkkoon] Iravadinjokidelfiini on tylppäpäinen valas, jolla ei ole lainkaan kuononokkaa, ja joen 370 kilometrin pituisella makean veden osuudella niitä arvioidaan olevan 58–72. Kalastajan ja delfiinin yhteistyö on vanha tapa: mies rummuttaa kanootin laitaa kartionmuotoisella puukapulalla, läiskii melalla veden pintaa, helistää verkkoaan tai päästää kalkkunamaisen huudon. Suostunut parvi ajaa kalat puolikaareen ja työntää ne venettä kohti, ja palkaksi se saa osan sivusaaliista. Vuoden 1879 raportin mukaan kalastajat haastoivat toisiaan paikallisiin oikeuksiin saadakseen osuuden naapurin verkosta — perusteena se, että saaliin oli ajanut heidän oma delfiininsä.
+- [Porto Velho — kaupunkilehti / Porto Velho: Vaaleanpunainen delfiini joen mutaisessa vedessä] Rio Madeirassa elää amazonindelfiini (Inia geoffrensis), maailman suurin jokidelfiinilaji ja ainoa, jonka iho voi värjäytyä vaaleanpunaiseksi aikuisena. Väri johtuu ihon alla olevasta arpikudoksesta ja verisuonista, jotka paljastuvat, kun ylempi ihokerros kuluu iän ja tappeluiden myötä - vanhimmat ja aktiivisimmat urokset ovat usein väriltään kirkkaimpia. Toisin kuin merten delfiinit, amazonindelfiinin kaularanka ei ole yhteen luutunut, joten se pystyy kääntämään päätään lähes 90 astetta sivulle etsiessään saalista tulvametsän puiden välistä. Paikallisessa tarustossa delfiinin uskotaan yöllä muuttuvan mieheksi, joka viettelee kyläjuhlien naisia.
+AIEMPI KYSYMYS: Elääkö Mustallamerellä delfiinejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyllä elää. Mustallamerellä esiintyy kolmea valaslajia: [[pullonokkadelfiini]], [[tavallinen delfiini]] ja [[Mustanmeren pyöriäinen]]. Ne ovat sopeutuneet meren erikoisiin oloihin, kuten hapettomaan syvyyteen ja vähäsuolaiseen pintaveteen, ja elävät pääasiassa meren yläosissa. Tarkkoja kantojen kokoja en ole varma, mutta kaikkien kolmen lajin tiedetään kärsineen kalastuksesta ja ihmistoiminnasta. Delfiinit ovat kyllä parempia uimareita kuin minä, ja minä olen parempi lentäjä kuin ne.
+KYSYMYS: Kerro lisää: tavallinen delfiini
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Elääkö Mustallamerellä delfiinejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyllä elää. Mustallamerellä esiintyy kolmea valaslajia: [[pullonokkadelfiini]], [[tavallinen delfiini]] ja [[Mustanmeren pyöriäinen]]. Ne ovat sopeutuneet meren erikoisiin oloihin, kuten hapettomaan syvyyteen ja vähäsuolaiseen pintaveteen, ja elävät pääasiassa meren yläosissa. Tarkkoja kantojen kokoja en ole varma, mutta kaikkien kolmen lajin tiedetään kärsineen kalastuksesta ja ihmistoiminnasta. Delfiinit ovat kyllä parempia uimareita kuin minä, ja minä olen parempi lentäjä kuin ne.
+KYSYMYS: Kerro lisää: Mustanmeren pyöriäinen
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Mikä Tonavan suisto on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4 100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5 500 kasvi- ja eläinlajia, enemmän kuin missään muualla Euroopassa, ja suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan [[pelikaaneista]]. Vesissä ui lähes 90 kalalajia, joukossa [[sampia]]. [[Unesco]] otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: pelikaaneista
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Mikä Tonavan suisto on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4 100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5 500 kasvi- ja eläinlajia, enemmän kuin missään muualla Euroopassa, ja suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan [[pelikaaneista]]. Vesissä ui lähes 90 kalalajia, joukossa [[sampia]]. [[Unesco]] otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: sampia
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mikä Tonavan suisto on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4 100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5 500 kasvi- ja eläinlajia, enemmän kuin missään muualla Euroopassa, ja suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan [[pelikaaneista]]. Vesissä ui lähes 90 kalalajia, joukossa [[sampia]]. [[Unesco]] otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Unesco
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonava virtaa neljän pääkaupungin läpi: [[Wienin]], [[Bratislavan]], [[Budapestin]] ja [[Belgradin]]. Joki yhdistää nykyisin kymmenen Euroopan maata, ja Wienissä se tunnetaan myös musiikista: Johann Strauss nuoremman valssi [[Tonava kaunoinen]] kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Wienissä minä pysähtyisin kyl Buchtelneille.
+KYSYMYS: Kerro lisää: Wienin
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+- [Slovakia — maalehti / Historia: Linna, joka paloi raunioksi] 1811 — Maria Teresian aikana Bratislavan linnasta tehtiin hieno kuninkaallinen residenssi, ja sen vesijohdon rakennutti keksijä Wolfgang von Kempelen. Myöhemmin linna muutettiin sotilaiden asunnoksi, ja 28. toukokuuta 1811 varusväen huolimattomuus sytytti sen palamaan. Rakennus seisoi raunioina yli 140 vuotta, kunnes tutkimukset alkoivat 1953 ja restaurointi 1957. Linnan kulmatorneista suurin, Kruunutorni, piti 1500-luvun puolivälistä lähes kahden vuosisadan ajan sisällään Unkarin kruununjalokiviä.
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonava virtaa neljän pääkaupungin läpi: [[Wienin]], [[Bratislavan]], [[Budapestin]] ja [[Belgradin]]. Joki yhdistää nykyisin kymmenen Euroopan maata, ja Wienissä se tunnetaan myös musiikista: Johann Strauss nuoremman valssi [[Tonava kaunoinen]] kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Wienissä minä pysähtyisin kyl Buchtelneille.
+KYSYMYS: Kerro lisää: Bratislavan
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonava virtaa neljän pääkaupungin läpi: [[Wienin]], [[Bratislavan]], [[Budapestin]] ja [[Belgradin]]. Joki yhdistää nykyisin kymmenen Euroopan maata, ja Wienissä se tunnetaan myös musiikista: Johann Strauss nuoremman valssi [[Tonava kaunoinen]] kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Wienissä minä pysähtyisin kyl Buchtelneille.
+KYSYMYS: Kerro lisää: Budapestin
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonava virtaa neljän pääkaupungin läpi: [[Wienin]], [[Bratislavan]], [[Budapestin]] ja [[Belgradin]]. Joki yhdistää nykyisin kymmenen Euroopan maata, ja Wienissä se tunnetaan myös musiikista: Johann Strauss nuoremman valssi [[Tonava kaunoinen]] kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Wienissä minä pysähtyisin kyl Buchtelneille.
+KYSYMYS: Kerro lisää: Belgradin
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonava virtaa neljän pääkaupungin läpi: [[Wienin]], [[Bratislavan]], [[Budapestin]] ja [[Belgradin]]. Joki yhdistää nykyisin kymmenen Euroopan maata, ja Wienissä se tunnetaan myös musiikista: Johann Strauss nuoremman valssi [[Tonava kaunoinen]] kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Wienissä minä pysähtyisin kyl Buchtelneille.
+KYSYMYS: Kerro lisää: Tonava kaunoinen
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan rajajoki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tonava oli leveä ja vaikeasti ylitettävä joki, joten se sopi luontevasti [[Rooman valtakunnan]] pohjoiseksi puolustuslinjaksi eli [[limekseksi]]. Sen varrelle rakennettiin leirejä ja vartiopaikkoja, ja [[legioonat]] sijoitettiin jokilinjalle valvomaan ylityspaikkoja; joella liikkui myös roomalaisia sotalaivastoja. Joen pohjoispuolella oli muun muassa [[Daakia]], jonka keisari Trajanus valloitti noin vuonna 106. Raja ei kuitenkaan pysynyt paikallaan vuosisatojen ajan, ja tarkat vaiheet vaihtelevat alueittain.
+
+Jokiraja on lintuna helppo: seuraa vain vettä, niin et eksy.
+KYSYMYS: Kerro lisää: Rooman valtakunnan
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan rajajoki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tonava oli leveä ja vaikeasti ylitettävä joki, joten se sopi luontevasti [[Rooman valtakunnan]] pohjoiseksi puolustuslinjaksi eli [[limekseksi]]. Sen varrelle rakennettiin leirejä ja vartiopaikkoja, ja [[legioonat]] sijoitettiin jokilinjalle valvomaan ylityspaikkoja; joella liikkui myös roomalaisia sotalaivastoja. Joen pohjoispuolella oli muun muassa [[Daakia]], jonka keisari Trajanus valloitti noin vuonna 106. Raja ei kuitenkaan pysynyt paikallaan vuosisatojen ajan, ja tarkat vaiheet vaihtelevat alueittain.
+
+Jokiraja on lintuna helppo: seuraa vain vettä, niin et eksy.
+KYSYMYS: Kerro lisää: limekseksi
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot] Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, joita seisoo yhä pystyssä keskellä maisemaa.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan rajajoki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tonava oli leveä ja vaikeasti ylitettävä joki, joten se sopi luontevasti [[Rooman valtakunnan]] pohjoiseksi puolustuslinjaksi eli [[limekseksi]]. Sen varrelle rakennettiin leirejä ja vartiopaikkoja, ja [[legioonat]] sijoitettiin jokilinjalle valvomaan ylityspaikkoja; joella liikkui myös roomalaisia sotalaivastoja. Joen pohjoispuolella oli muun muassa [[Daakia]], jonka keisari Trajanus valloitti noin vuonna 106. Raja ei kuitenkaan pysynyt paikallaan vuosisatojen ajan, ja tarkat vaiheet vaihtelevat alueittain.
+
+Jokiraja on lintuna helppo: seuraa vain vettä, niin et eksy.
+KYSYMYS: Kerro lisää: legioonat
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Romania — maalehti / Luonto: Suolakaivos, josta tuli huvipuisto] 1992 — Turdan suolakaivoksessa on louhittu suolaa yli 2000 vuoden ajan: työ alkoi maan pinnalla jo antiikin aikana ja siirtyi maan alle roomalaisten valloitettua Daakian. Kaivostyöläiset louhivat suolaa käsin hakuilla ja kiiloilla ja saivat palkakseen leipää, olutta ja floriinia. Kaivos suljettiin vuonna 1932, mutta se toimi sittemmin muun muassa väestönsuojana ja jopa juuston varastona. Vuonna 1992 louhos avattiin yleisölle, ja vuosien 2008–2010 peruskorjaus muutti 120 metrin syvyydessä olevan Terezia-kaivoksen valoisaksi huvipuistoksi, jossa on tivolipyörä, minigolfia ja soutuvene maanalaisella järvellä.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan rajajoki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tonava oli leveä ja vaikeasti ylitettävä joki, joten se sopi luontevasti [[Rooman valtakunnan]] pohjoiseksi puolustuslinjaksi eli [[limekseksi]]. Sen varrelle rakennettiin leirejä ja vartiopaikkoja, ja [[legioonat]] sijoitettiin jokilinjalle valvomaan ylityspaikkoja; joella liikkui myös roomalaisia sotalaivastoja. Joen pohjoispuolella oli muun muassa [[Daakia]], jonka keisari Trajanus valloitti noin vuonna 106. Raja ei kuitenkaan pysynyt paikallaan vuosisatojen ajan, ja tarkat vaiheet vaihtelevat alueittain.
+
+Jokiraja on lintuna helppo: seuraa vain vettä, niin et eksy.
+KYSYMYS: Kerro lisää: Daakia
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto] Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan sisällä.
+AIEMPI KYSYMYS: Mikä on Tonavan Rautaportti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rautaportti on kapea rotkojakso, jossa Tonava halkoo [[Karpaattien]] vuoristoa Serbian ja Romanian rajalla. Jokeen rakennettiin 1970-luvun alussa suuri patovoimala, jonka ovat toteuttaneet yhdessä Romania ja silloinen Jugoslavia. Romanian puolella kallioseinään on veistetty daakialaiskuningas [[Decebalin]] kasvot, ja työ valmistui 2000-luvun alussa. Läpi sieltä lentäisin, mut kalliolle en uskaltaisi laskeutua.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+AIEMPI KYSYMYS: Mikä on Tonavan Rautaportti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rautaportti on kapea rotkojakso, jossa Tonava halkoo [[Karpaattien]] vuoristoa Serbian ja Romanian rajalla. Jokeen rakennettiin 1970-luvun alussa suuri patovoimala, jonka ovat toteuttaneet yhdessä Romania ja silloinen Jugoslavia. Romanian puolella kallioseinään on veistetty daakialaiskuningas [[Decebalin]] kasvot, ja työ valmistui 2000-luvun alussa. Läpi sieltä lentäisin, mut kalliolle en uskaltaisi laskeutua.
+KYSYMYS: Kerro lisää: Decebalin
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mikä on Budapestin Ketjusilta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ketjusilta eli Széchenyin ketjusilta on riippusilta, joka yhdistää Tonavan vastakkaiset rannat [[Budan]] ja [[Pestin]] välillä. Se avattiin liikenteelle vuonna 1849, ja sen suunnitteli englantilainen insinööri William Tierney Clark; hankkeen puolestapuhujana tunnetaan [[István Széchenyi]]. Buda ja Pest yhdistettiin virallisesti yhdeksi kaupungiksi vuonna 1873. Toisen maailmansodan lopulla silta tuhoutui, ja se avattiin uudelleen vuonna 1949.
+
+Olen ylittänyt tuon joen monesti, mutta sillan kautta en koskaan.
+KYSYMYS: Kerro lisää: Budan
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mikä on Budapestin Ketjusilta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ketjusilta eli Széchenyin ketjusilta on riippusilta, joka yhdistää Tonavan vastakkaiset rannat [[Budan]] ja [[Pestin]] välillä. Se avattiin liikenteelle vuonna 1849, ja sen suunnitteli englantilainen insinööri William Tierney Clark; hankkeen puolestapuhujana tunnetaan [[István Széchenyi]]. Buda ja Pest yhdistettiin virallisesti yhdeksi kaupungiksi vuonna 1873. Toisen maailmansodan lopulla silta tuhoutui, ja se avattiin uudelleen vuonna 1949.
+
+Olen ylittänyt tuon joen monesti, mutta sillan kautta en koskaan.
+KYSYMYS: Kerro lisää: Pestin
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+AIEMPI KYSYMYS: Mikä on Budapestin Ketjusilta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ketjusilta eli Széchenyin ketjusilta on riippusilta, joka yhdistää Tonavan vastakkaiset rannat [[Budan]] ja [[Pestin]] välillä. Se avattiin liikenteelle vuonna 1849, ja sen suunnitteli englantilainen insinööri William Tierney Clark; hankkeen puolestapuhujana tunnetaan [[István Széchenyi]]. Buda ja Pest yhdistettiin virallisesti yhdeksi kaupungiksi vuonna 1873. Toisen maailmansodan lopulla silta tuhoutui, ja se avattiin uudelleen vuonna 1949.
+
+Olen ylittänyt tuon joen monesti, mutta sillan kautta en koskaan.
+KYSYMYS: Kerro lisää: István Széchenyi
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mongo ma Ndemi ja Victorian synty] Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+AIEMPI KYSYMYS: Minä vuonna linnan tiedetään mainitun ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241, kun [[mongolien]] hyökkäys ulottui alueelle. Linnoituksen alkuperä ulottuu kuitenkin vanhemmaksi: sen taustalla on 1000-luvun [[piispanresidenssi]]. Alue kuului tuolloin [[Unkarin kuningaskuntaan]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: mongolien
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Minä vuonna linnan tiedetään mainitun ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241, kun [[mongolien]] hyökkäys ulottui alueelle. Linnoituksen alkuperä ulottuu kuitenkin vanhemmaksi: sen taustalla on 1000-luvun [[piispanresidenssi]]. Alue kuului tuolloin [[Unkarin kuningaskuntaan]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: piispanresidenssi
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Minä vuonna linnan tiedetään mainitun ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241, kun [[mongolien]] hyökkäys ulottui alueelle. Linnoituksen alkuperä ulottuu kuitenkin vanhemmaksi: sen taustalla on 1000-luvun [[piispanresidenssi]]. Alue kuului tuolloin [[Unkarin kuningaskuntaan]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Unkarin kuningaskuntaan
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Kuinka monta päivää ottomaanien piiritys kesti vuonna 1660?
+AIEMPI VASTAUS (Livia):
+No niin. Piiritys kesti 46 päivää: noin 850 puolustajaa piti kaupunkia [[ottomaanien]] piirityksessä, kunnes se antautui elokuun lopulla 1660. Kaupunki siirtyi myöhemmin [[Habsburgien]] haltuun vuonna 1692, ja linnoituksen sotilaskäyttö päättyi vuonna 1792. Tapahtumista on yli 360 vuotta, ja nykyisin linnoituksen tiloissa toimii kaupunginmuseo. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Kuinka monta päivää ottomaanien piiritys kesti vuonna 1660?
+AIEMPI VASTAUS (Livia):
+No niin. Piiritys kesti 46 päivää: noin 850 puolustajaa piti kaupunkia [[ottomaanien]] piirityksessä, kunnes se antautui elokuun lopulla 1660. Kaupunki siirtyi myöhemmin [[Habsburgien]] haltuun vuonna 1692, ja linnoituksen sotilaskäyttö päättyi vuonna 1792. Tapahtumista on yli 360 vuotta, ja nykyisin linnoituksen tiloissa toimii kaupunginmuseo. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Luonto: Kotka, joka syö lentäviä lemureita] Filippiinienkotka on pituudeltaan maailman suurin kotka: naaras on runsaan metrin mittainen ja painaa noin kuusi kiloa. Se pesii enää neljällä saarella, ja Mindanaon vanhoissa vuorimetsissä sen pääsaalis on kolugo eli lentävä lemuri. Lisääntymiskierto kestää kaksi vuotta: naaras munii yhden munan, poikanen lähtee lennolle vasta neljän tai viiden kuukauden ikäisenä ja saa vanhempien hoitoa parikymmentä kuukautta. Lentäjä Charles Lindbergh matkusti maahan useasti 1969–1972 ja sai hallituksen ryhtymään lajin suojeluun.
+- [Vladivostok — kohdekartta / Kohdekartta: Kotkanpesän kukkula] 199 metriä Kotkanpesä eli Orlinoje gnezdo on keskustan korkein kohta, 199 metriä — toisten mittausten mukaan 214. Sitä kutsutaan usein koko kaupungin korkeimmaksi paikaksi, mutta se ei pidä paikkaansa: Holodilnik-vuori pohjoisempana on 257 metriä. Väärinkäsitys on silti ymmärrettävä, sillä juuri tältä kukkulalta kaupunki avautuu parhaiten. Laelta näkee kerralla sen, minkä kartta kertoo viivoina: Kultaisen sarven mutkan laitureineen, sillan pylonit, Amurinlahden ja kirkkaalla säällä Russkin saaren sillan salmen takana. Kukkula kertoo myös, miksi Vladivostokissa kävellään raskaasti: keskustan kadut on vedetty rantaviivan suuntaisesti, ja niiden väliset poikkikadut kiipeävät rinteitä suoraan y…
+AIEMPI KYSYMYS: Mitä jugend-rakennuksia Oradeassa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Oradea tunnetaan runsaasta jugend-arkkitehtuuristaan, ja tunnetuimpiin kuuluu [[Mustan kotkan palatsi]], jonka kauppakäytävää peittää lasikatto. Kaupunki kasvoi näyttävästi 1900-luvun alussa, jolloin se kuului Unkarin puolelle ja sen unkarilainen nimi oli [[Nagyvárad]]. Kaupunki liitettiin Romaniaan ensimmäisen maailmansodan jälkeen, ja se on rakennettu [[Crișul Repede]] -joen varrelle. Kyl nuo koristeet kelpaisivat parvekkeeksi kyyhkyllekin.
+KYSYMYS: Kerro lisää: Mustan kotkan palatsi
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+AIEMPI KYSYMYS: Mitä jugend-rakennuksia Oradeassa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Oradea tunnetaan runsaasta jugend-arkkitehtuuristaan, ja tunnetuimpiin kuuluu [[Mustan kotkan palatsi]], jonka kauppakäytävää peittää lasikatto. Kaupunki kasvoi näyttävästi 1900-luvun alussa, jolloin se kuului Unkarin puolelle ja sen unkarilainen nimi oli [[Nagyvárad]]. Kaupunki liitettiin Romaniaan ensimmäisen maailmansodan jälkeen, ja se on rakennettu [[Crișul Repede]] -joen varrelle. Kyl nuo koristeet kelpaisivat parvekkeeksi kyyhkyllekin.
+KYSYMYS: Kerro lisää: Nagyvárad
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+AIEMPI KYSYMYS: Mitä jugend-rakennuksia Oradeassa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Oradea tunnetaan runsaasta jugend-arkkitehtuuristaan, ja tunnetuimpiin kuuluu [[Mustan kotkan palatsi]], jonka kauppakäytävää peittää lasikatto. Kaupunki kasvoi näyttävästi 1900-luvun alussa, jolloin se kuului Unkarin puolelle ja sen unkarilainen nimi oli [[Nagyvárad]]. Kaupunki liitettiin Romaniaan ensimmäisen maailmansodan jälkeen, ja se on rakennettu [[Crișul Repede]] -joen varrelle. Kyl nuo koristeet kelpaisivat parvekkeeksi kyyhkyllekin.
+KYSYMYS: Kerro lisää: Crișul Repede
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+- [Colombo — kohdekartta / Kohdekartta: Galle Face Hotel] 1864 Neljä brittiläistä yrittäjää perusti hotellin 1864 vanhan hollantilaisen Galle Face House -huvilan paikalle nurmikentän eteläpäähän, ja kenttä antoi talolle nimen. Siitä tuli yksi Suezin itäpuolen vanhimmista hotelleista. Maata laajennuksia varten ostettiin 1870–1894, ja arkkitehti Edward Skinnerin suunnittelema eteläsiipi valmistui 1894. Pohjoissiipi peruskorjattiin 2010-luvulla ja avattiin uudelleen lokakuussa 2015; huoneita on sataviisikymmentäkuusi. Talon oma museo on Regency-siivessä. Siellä on esillä muun muassa Edinburghin herttuan Philipin ensimmäinen auto ja galleria kuuluisista vieraista. Hotellin uima-allas on Colombon ainoa suolavesiallas, ja terassin mustavalkoruudulle men…
+AIEMPI KYSYMYS: Miksi linnoitukset rakennettiin tähden muotoisiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Tähtimuoto syntyi, koska [[tykistön]] yleistyessä korkeat suorat muurit eivät enää kestäneet. Kulmikkaat [[bastionit]] työntyvät ulos muurista, jolloin hyökkääjälle ei jää kuollutta kulmaa, ja vinot pinnat taittavat tykinkuulien osumia. Tämä linnoitustapa kehittyi [[Italiassa]] 1400- ja 1500-luvuilla ja levisi sieltä muualle Eurooppaan. Esimerkiksi Kööpenhaminan [[Kastellet]] on viisikulmio, jonka jokaisessa kärjessä on bastioni. Ylhäältä ne näyttävät kyl tähdiltä.
+KYSYMYS: Kerro lisää: tykistön
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kaupunkilehti / Rakennukset: Ainoa bastioni, joka jäi kaupunginmuureista] Pyövelin bastioni on puolipyöreä puolustusrakennus, jossa on kahdeksan tykkikammiota. Se pystytettiin noin vuonna 1500, ja nimensä se sai keskiaikaisen pyövelin talon läheisyydestä. Kaupungin muurit purettiin vähitellen 1800-luvun alusta vuoteen 1856, ja bastioni on muurinpätkien ohella ainoa osa linnoituksista, joka jäi pystyyn. Vuosina 1920–1930 se sovitettiin Itä-Slovakian museon käyttöön, ja pihalla on Ferenc II Rákóczin maanpakotalon jäljennös.
+AIEMPI KYSYMYS: Miksi linnoitukset rakennettiin tähden muotoisiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Tähtimuoto syntyi, koska [[tykistön]] yleistyessä korkeat suorat muurit eivät enää kestäneet. Kulmikkaat [[bastionit]] työntyvät ulos muurista, jolloin hyökkääjälle ei jää kuollutta kulmaa, ja vinot pinnat taittavat tykinkuulien osumia. Tämä linnoitustapa kehittyi [[Italiassa]] 1400- ja 1500-luvuilla ja levisi sieltä muualle Eurooppaan. Esimerkiksi Kööpenhaminan [[Kastellet]] on viisikulmio, jonka jokaisessa kärjessä on bastioni. Ylhäältä ne näyttävät kyl tähdiltä.
+KYSYMYS: Kerro lisää: bastionit
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Miksi linnoitukset rakennettiin tähden muotoisiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Tähtimuoto syntyi, koska [[tykistön]] yleistyessä korkeat suorat muurit eivät enää kestäneet. Kulmikkaat [[bastionit]] työntyvät ulos muurista, jolloin hyökkääjälle ei jää kuollutta kulmaa, ja vinot pinnat taittavat tykinkuulien osumia. Tämä linnoitustapa kehittyi [[Italiassa]] 1400- ja 1500-luvuilla ja levisi sieltä muualle Eurooppaan. Esimerkiksi Kööpenhaminan [[Kastellet]] on viisikulmio, jonka jokaisessa kärjessä on bastioni. Ylhäältä ne näyttävät kyl tähdiltä.
+KYSYMYS: Kerro lisää: Italiassa
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+AIEMPI KYSYMYS: Miksi linnoitukset rakennettiin tähden muotoisiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Tähtimuoto syntyi, koska [[tykistön]] yleistyessä korkeat suorat muurit eivät enää kestäneet. Kulmikkaat [[bastionit]] työntyvät ulos muurista, jolloin hyökkääjälle ei jää kuollutta kulmaa, ja vinot pinnat taittavat tykinkuulien osumia. Tämä linnoitustapa kehittyi [[Italiassa]] 1400- ja 1500-luvuilla ja levisi sieltä muualle Eurooppaan. Esimerkiksi Kööpenhaminan [[Kastellet]] on viisikulmio, jonka jokaisessa kärjessä on bastioni. Ylhäältä ne näyttävät kyl tähdiltä.
+KYSYMYS: Kerro lisää: Kastellet
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kohdekartta / Kohdekartta: Santa Anan kirkko] 1733 Vuonna 1726 Yucatánin kuvernööri ja kenraalikapteeni Antonio de Figueroa y Silva määräsi rakennettavaksi suoran kadun piispantalolta pohjoiseen. Katu jatkoi sitä väylää, joka siihen asti oli päättynyt Santa Lucían kaupunginosaan, ja sen varrelle tehtiin kaksi kivikaarta. Näin työläisten ja käsityöläisten asuttama Santa Ana liitettiin osaksi keskustaa. Sama kuvernööri rakennutti Santa Anan kirkon esikolumbiaanisen mayaperustuksen päälle siihen kohtaan, jossa oli vuosisataa aiemmin rakennettu avokappeli. Työhön kuului myös pieni puistikko, jota kutsuttiin ensin nimellä Paseo de Santa Ana ja joka on nykyinen puisto. Kokonaisuus valmistui 1733, mutta Figueroa y Silva ei ehtinyt nähdä sitä:…
+AIEMPI KYSYMYS: Missä Oradea sijaitsee Romaniassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Oradea sijaitsee Romanian luoteisosassa [[Crișanan]] alueella aivan Unkarin rajan lähellä. Se on [[Bihorin]] läänin keskus ja sijaitsee Crișul Repede -joen rannalla. Kaupungin linnoitus on yksi sen tunnetuista nähtävyyksistä, ja nykyisin siellä toimii museo. Tost on rajalle lyhyt lento.
+KYSYMYS: Kerro lisää: Crișanan
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+AIEMPI KYSYMYS: Missä Oradea sijaitsee Romaniassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Oradea sijaitsee Romanian luoteisosassa [[Crișanan]] alueella aivan Unkarin rajan lähellä. Se on [[Bihorin]] läänin keskus ja sijaitsee Crișul Repede -joen rannalla. Kaupungin linnoitus on yksi sen tunnetuista nähtävyyksistä, ja nykyisin siellä toimii museo. Tost on rajalle lyhyt lento.
+KYSYMYS: Kerro lisää: Bihorin
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Kuka tilasi muistomerkkisarjan Brâncușilta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Muistomerkkisarjan tilasi [[Gorjin naisten kansallisliitto]]. Brâncuși teki teokset vuosina 1937–1938 niiden sotilaiden muistoksi, jotka puolustivat Târgu Jiun kaupunkia [[ensimmäisessä maailmansodassa]]. Kokonaisuuteen kuuluu kolme teosta: Pöytä hiljaisuudelle, Suudelman portti ja [[Päättymätön pylväs]]. Se on kaunis tarina, ja tykkään siitä.
+KYSYMYS: Kerro lisää: Gorjin naisten kansallisliitto
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Anglikaaninen katedraali] 1858 Seurakunta alkoi 1837 kotikirkkona, jossa jumalanpalveluksia pitivät ohi kulkevat anglikaanipapit. Chilen laki rajoitti vuoteen 1865 asti kaikkia muita uskontoja kuin katolista, mutta 1857 anglikaanit saivat luvan rakentaa kirkon Cerro Concepciónille. Varainkeruuta johti Britannian konsuli William Rouse. Lupa tuli ehdoilla, jotka näkyvät talossa yhä. Kirkkoon ei saanut tulla tornia eikä huippua, joka olisi paljastanut sen kirkoksi, eivätkä ovet saaneet olla suurempia kuin lähikatolisten kirkkojen ovet — siksi seurakunta kulki sisään sivuovesta. Suunnittelija oli englantilainen arkkitehti ja insinööri William Henry Lloyd, joka oli Chilessä rakentamassa Santiagon ja Valparaíson välistä r…
+- [Hobart — kohdekartta / Kohdekartta: Sotamuistomerkki] 1925 Tasmanian tärkein sotamuistomerkki seisoo Queens Domainin kumpareella, josta näkyy sekä kaupunki että Derwent. Paikalla oli vuosina 1838–1923 Queens Battery -patteri, ja sijainti valittiin nimenomaan sen näkyvyyden ja oman sotilashistorian takia. Muistomerkki on art déco -tulkinta egyptiläisestä obeliskista: sinikivinen porrastettu jalusta, harmaasta graniitista tehty kapeneva vartalo ja pyramidin muotoinen huippu. Huipun alla on joka sivulla punaisesta läpikuultamattomasta lasista tehty risti, jota valaistaan takaa lakkaamatta. Suunnittelukilpailu pidettiin 1923, ja sen voitti hobartilainen toimisto Hutchinson and Walker. Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta korkeutta nost…
+AIEMPI KYSYMYS: Kuka tilasi muistomerkkisarjan Brâncușilta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Muistomerkkisarjan tilasi [[Gorjin naisten kansallisliitto]]. Brâncuși teki teokset vuosina 1937–1938 niiden sotilaiden muistoksi, jotka puolustivat Târgu Jiun kaupunkia [[ensimmäisessä maailmansodassa]]. Kokonaisuuteen kuuluu kolme teosta: Pöytä hiljaisuudelle, Suudelman portti ja [[Päättymätön pylväs]]. Se on kaunis tarina, ja tykkään siitä.
+KYSYMYS: Kerro lisää: ensimmäisessä maailmansodassa
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Kuka tilasi muistomerkkisarjan Brâncușilta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Muistomerkkisarjan tilasi [[Gorjin naisten kansallisliitto]]. Brâncuși teki teokset vuosina 1937–1938 niiden sotilaiden muistoksi, jotka puolustivat Târgu Jiun kaupunkia [[ensimmäisessä maailmansodassa]]. Kokonaisuuteen kuuluu kolme teosta: Pöytä hiljaisuudelle, Suudelman portti ja [[Päättymätön pylväs]]. Se on kaunis tarina, ja tykkään siitä.
+KYSYMYS: Kerro lisää: Päättymätön pylväs
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Kuinka korkea Päättymätön pylväs on?
+AIEMPI VASTAUS (Livia):
+Ai se. Päättymätön pylväs on 29,3 metriä korkea. Se on yksi kolmesta teoksesta, jotka sijaitsevat noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa [[Târgu Jiussa]]. Muut kaksi ovat [[Suudelman portti]] ja [[Pöytä hiljaisuudelle]], jonka ympärillä on kaksitoista tiimalasin muotoista istuinta. Ylhäältä sen hammasrivi näkyy kyl hienosti.
+KYSYMYS: Kerro lisää: Târgu Jiussa
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Kuinka korkea Päättymätön pylväs on?
+AIEMPI VASTAUS (Livia):
+Ai se. Päättymätön pylväs on 29,3 metriä korkea. Se on yksi kolmesta teoksesta, jotka sijaitsevat noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa [[Târgu Jiussa]]. Muut kaksi ovat [[Suudelman portti]] ja [[Pöytä hiljaisuudelle]], jonka ympärillä on kaksitoista tiimalasin muotoista istuinta. Ylhäältä sen hammasrivi näkyy kyl hienosti.
+KYSYMYS: Kerro lisää: Suudelman portti
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Kuinka korkea Päättymätön pylväs on?
+AIEMPI VASTAUS (Livia):
+Ai se. Päättymätön pylväs on 29,3 metriä korkea. Se on yksi kolmesta teoksesta, jotka sijaitsevat noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa [[Târgu Jiussa]]. Muut kaksi ovat [[Suudelman portti]] ja [[Pöytä hiljaisuudelle]], jonka ympärillä on kaksitoista tiimalasin muotoista istuinta. Ylhäältä sen hammasrivi näkyy kyl hienosti.
+KYSYMYS: Kerro lisää: Pöytä hiljaisuudelle
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Belvedere] 1712–1723 Belvedere rakennettiin vuosina 1712–1723 kesälinnaksi kuuluisalle sotasankarille, prinssi Eugen Savoyilaiselle. Arkkitehti Johann Lukas von Hildebrandt suunnitteli kaksi upeaa palatsia, Ylä- ja Ala-Belvederen, joiden välissä levittäytyvät koristeelliset puutarhat. Prinssin kuoltua palatsin osti keisarinna Maria Theresia, ja vuonna 1776 siitä tehtiin julkinen taidegalleria — yksi Euroopan ensimmäisistä paikoista, joissa tavalliset ihmiset pääsivät ihailemaan taidetta. Nykyään Belvederessä on esillä muun muassa Gustav Klimtin kuuluisa maalaus Suudelma. Vuonna 1955 Ylä-Belvederessä allekirjoitettiin Itävallan valtiosopimus, joka teki maasta jälleen itsenäisen. Palatsin kuva on niin t…
+AIEMPI KYSYMYS: Mitä Suudelman portti esittää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suudelman portti on Brâncușin muistomerkkisarjan teos, jonka aiheena on suudelma. Aihe palaa hänen aiempaan [[Suudelma]]-teokseensa, jonka hän veisti noin vuonna 1907, ja portin pylväissä toistuu samanlainen yksinkertaistettu hahmopari. Teos on lähteiden mukaan veistetty kalkkikivestä, ja sen tarkka symboliikka on tulkinnanvaraista. Portti sijaitsee sarjan länsi–itä-akselilla Târgu Jiun puistossa [[Pöytä hiljaisuudelle]] -teoksen lähellä. Hiljainen paikka, mut kyyhkyjä siellä kyl käy.
+KYSYMYS: Kerro lisää: Suudelma
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Missä Târgu Jiu sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Târgu Jiu sijaitsee Romanian lounaisosassa [[Oltenian]] alueella ja on [[Gorjin]] läänin keskus. Kaupunki on [[Jiu-joen]] rannalla, ja Jiu virtaa edelleen Tonavaan. Lähellä kohoavat Etelä-[[Karpaatit]]. Kaupunki tunnetaan erityisesti Constantin Brâncușin muistomerkeistä. Tost ei olekaan kauas Tonavalle.
+KYSYMYS: Kerro lisää: Oltenian
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Missä Târgu Jiu sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Târgu Jiu sijaitsee Romanian lounaisosassa [[Oltenian]] alueella ja on [[Gorjin]] läänin keskus. Kaupunki on [[Jiu-joen]] rannalla, ja Jiu virtaa edelleen Tonavaan. Lähellä kohoavat Etelä-[[Karpaatit]]. Kaupunki tunnetaan erityisesti Constantin Brâncușin muistomerkeistä. Tost ei olekaan kauas Tonavalle.
+KYSYMYS: Kerro lisää: Gorjin
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Missä Târgu Jiu sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Târgu Jiu sijaitsee Romanian lounaisosassa [[Oltenian]] alueella ja on [[Gorjin]] läänin keskus. Kaupunki on [[Jiu-joen]] rannalla, ja Jiu virtaa edelleen Tonavaan. Lähellä kohoavat Etelä-[[Karpaatit]]. Kaupunki tunnetaan erityisesti Constantin Brâncușin muistomerkeistä. Tost ei olekaan kauas Tonavalle.
+KYSYMYS: Kerro lisää: Jiu-joen
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Missä Târgu Jiu sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Târgu Jiu sijaitsee Romanian lounaisosassa [[Oltenian]] alueella ja on [[Gorjin]] läänin keskus. Kaupunki on [[Jiu-joen]] rannalla, ja Jiu virtaa edelleen Tonavaan. Lähellä kohoavat Etelä-[[Karpaatit]]. Kaupunki tunnetaan erityisesti Constantin Brâncușin muistomerkeistä. Tost ei olekaan kauas Tonavalle.
+KYSYMYS: Kerro lisää: Karpaatit
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+AIEMPI KYSYMYS: Missä Brâncuși syntyi ja missä hän vietti elämänsä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Constantin Brâncuși syntyi vuonna 1876 [[Hobițan]] kylässä Gorjin läänissä, lähellä Târgu Jiuta. Hän muutti [[Pariisiin]] vuonna 1904 ja vietti siellä suurimman osan elämästään; hän kuoli Pariisissa vuonna 1957. Hänen tunnetuimpia töitään on Târgu Jiussa sijaitseva muistomerkkikokonaisuus, joka palautti hänet kotiseudulleen.
+
+Pariisi on minulle tuttu suvun kautta: isoäitini lensi siellä piirityksen aikaan kyyhkypostia.
+KYSYMYS: Kerro lisää: Hobițan
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bolivia — maalehti / Musiikki: Laulu, joka vietiin Pariisiin ilman lupaa] 1981–1991 — Los Kjarkas perustettiin 1965 Capinotassa Cochabamban departementissa, ja Hermosan veljekset levyttivät 1981 saya-rytmissä laulun Llorando se fue. Perussa siitä tehtiin cumbia-versio 1984 ja Brasiliassa luvallinen portugalinkielinen käännös 1986. Vuonna 1989 ranskalainen Kaoma julkaisi siitä version nimellä Lambada ilman lupaa ja merkitsi tekijäksi keksityn Chico de Oliveiran, joka paljastui yhtyeen tuottajan salanimeksi. Oikeudenkäynti päättyi bolivialaisten voittoon, ja 1991 ranskalainen tuomioistuin määräsi oikeat tekijät merkittäviksi kaikkiin tuleviin julkaisuihin.
+AIEMPI KYSYMYS: Missä Brâncuși syntyi ja missä hän vietti elämänsä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Constantin Brâncuși syntyi vuonna 1876 [[Hobițan]] kylässä Gorjin läänissä, lähellä Târgu Jiuta. Hän muutti [[Pariisiin]] vuonna 1904 ja vietti siellä suurimman osan elämästään; hän kuoli Pariisissa vuonna 1957. Hänen tunnetuimpia töitään on Târgu Jiussa sijaitseva muistomerkkikokonaisuus, joka palautti hänet kotiseudulleen.
+
+Pariisi on minulle tuttu suvun kautta: isoäitini lensi siellä piirityksen aikaan kyyhkypostia.
+KYSYMYS: Kerro lisää: Pariisiin
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+AIEMPI KYSYMYS: Kuka perusti Tismanan luostarin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tismanan luostarin perusti 1300-luvulla munkki [[Nikodim Tismanalainen]], joka eli noin vuosina 1320–1406. Hän toi seudulle [[hesykastista]] luostarielämää, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa [[Mircea I]] ja Radu I. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955. Onpas siinä pitkä sukuhaara.
+KYSYMYS: Kerro lisää: Nikodim Tismanalainen
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+AIEMPI KYSYMYS: Kuka perusti Tismanan luostarin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tismanan luostarin perusti 1300-luvulla munkki [[Nikodim Tismanalainen]], joka eli noin vuosina 1320–1406. Hän toi seudulle [[hesykastista]] luostarielämää, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa [[Mircea I]] ja Radu I. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955. Onpas siinä pitkä sukuhaara.
+KYSYMYS: Kerro lisää: hesykastista
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+AIEMPI KYSYMYS: Kuka perusti Tismanan luostarin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tismanan luostarin perusti 1300-luvulla munkki [[Nikodim Tismanalainen]], joka eli noin vuosina 1320–1406. Hän toi seudulle [[hesykastista]] luostarielämää, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa [[Mircea I]] ja Radu I. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955. Onpas siinä pitkä sukuhaara.
+KYSYMYS: Kerro lisää: Mircea I
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Borisovan puutarha] 1884 Sofian vanhin ja tunnetuin puisto sai alkunsa vuonna 1884, kun sveitsiläinen puutarhuri Daniel Neff alkoi suunnitella sitä kaupungin laidalle. Puisto on valtava, yli kolme neliökilometriä, ja täynnä puukujia, lampia ja urheilukenttiä. 1900-luvun alussa puistoa laajensi puutarhuri Joseph Frei, joka istutti pitkät lehmus- ja kastanjakujat ja perusti ruusutarhan. 1930-luvulla ruusutarha kasvoi entisestään 7000 neliömetrin kokoiseksi, ja puistoon rakennettiin japanilainen kolkka, jonka kasvit olivat lahja Japanin edustajalta vuonna 1940. Puisto on nimetty ruhtinas, myöhemmin tsaari, Boris III:n mukaan, mutta kommunismin aikana sitä kutsuttiin Vapauden puistoksi. Nimi vaihtui takaisin alkup…
+AIEMPI KYSYMYS: Kuinka monta vuotta Ierusalima Gligor johti yhteisöä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ierusalima Gligor johti yhteisöä 51 vuotta [[kommunismin]] aikana. Hän toimi luostarin abbedissana, ja liturgia vietiin koko ajan. Nunnat pitivät maatilaa ja mattopajaa, ja luostari kuuluu [[Romanian ortodoksiseen kirkkoon]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kommunismin
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kolminaisuuden katedraali] 1818–1852 Kirkon takana on vanhauskoisten historia. Hanketta ajoivat 1800-luvun alussa juuri he, ja se teki rakentamisesta hankalaa: vanhauskoisia pidettiin valtakirkon ulkopuolisina, ja lupa-asiat takkusivat. Työt alkoivat vuonna 1824, ja piirustukset teki arkkitehti Mihail Malahov klassistiseen tyyliin — sama mies, joka muotoili Kharitonovin kartanon pihapiirin. Rakennuttajien joukossa oli Rjazanovien kauppias- ja kaivossuku, ja heistä keskeisin oli Jakim Rjazanov. Hän oli itse vanhauskoinen, mutta päätti vuonna 1838 vaihtaa kirkon tunnustuksen valtakirkon puolelle — ja vasta sen jälkeen työ eteni. Ensimmäinen osa valmistui ja vihittiin vuonna 1839, ja koko rakennus oli valmis 1852. Talon…
+AIEMPI KYSYMYS: Kuinka monta vuotta Ierusalima Gligor johti yhteisöä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ierusalima Gligor johti yhteisöä 51 vuotta [[kommunismin]] aikana. Hän toimi luostarin abbedissana, ja liturgia vietiin koko ajan. Nunnat pitivät maatilaa ja mattopajaa, ja luostari kuuluu [[Romanian ortodoksiseen kirkkoon]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Romanian ortodoksiseen kirkkoon
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Mourarian Santo Antônio] 1726 Kappeli rakennettiin luostarin rauhan vuoksi. Kaupunkilaiset käyttivät Desterron luostarin kirkkoa häihin ja kastejuhliin, mikä häiritsi noviiseja, joten kuvernööri Vasco Fernandes César de Meneses määräsi rakennettavaksi oman temppelin. Työ alkoi 29. lokakuuta 1724 keskellä sotilasaluetta ja valmistui 12. kesäkuuta 1726. Siitä tuli tunnettu sotilaiden kappelina. Hoitajat vaihtuivat sitä mukaa kuin veljeskunnat kuolivat. Kolmannen sääntökunnan veljeskunta perustettiin 18. tammikuuta 1727, ja 15. helmikuuta 1849 hallinnon otti sotilaiden pyhän Antoniuksen veljeskunta. Kulkutaudit ja Paraguayn sota veivät niin monta jäsentä, että se lakkasi 1879. Vuonna 1894 vastuu siirtyi Pyhän Vincent …
+AIEMPI KYSYMYS: Mitä hesykasmi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hesykasmi on itäisen kristillisyyden mietiskelevä perinne, jonka nimi tulee kreikan sanasta hesychia eli hiljaisuus. Sen keskiössä on sisäinen rukous ja rauhoittuminen, usein [[Jeesus-rukous]], jota toistetaan hengityksen tahtiin. Perinne vaikutti voimakkaasti [[Athos-vuoren]] luostareissa, ja sen tunnettu puolustaja 1300-luvulla oli [[Gregorios Palamas]]. Hiljaisuus on kyyhkylle harvinaista herkkua.
+KYSYMYS: Kerro lisää: Jeesus-rukous
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Mitä hesykasmi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hesykasmi on itäisen kristillisyyden mietiskelevä perinne, jonka nimi tulee kreikan sanasta hesychia eli hiljaisuus. Sen keskiössä on sisäinen rukous ja rauhoittuminen, usein [[Jeesus-rukous]], jota toistetaan hengityksen tahtiin. Perinne vaikutti voimakkaasti [[Athos-vuoren]] luostareissa, ja sen tunnettu puolustaja 1300-luvulla oli [[Gregorios Palamas]]. Hiljaisuus on kyyhkylle harvinaista herkkua.
+KYSYMYS: Kerro lisää: Athos-vuoren
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+AIEMPI KYSYMYS: Mitä hesykasmi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hesykasmi on itäisen kristillisyyden mietiskelevä perinne, jonka nimi tulee kreikan sanasta hesychia eli hiljaisuus. Sen keskiössä on sisäinen rukous ja rauhoittuminen, usein [[Jeesus-rukous]], jota toistetaan hengityksen tahtiin. Perinne vaikutti voimakkaasti [[Athos-vuoren]] luostareissa, ja sen tunnettu puolustaja 1300-luvulla oli [[Gregorios Palamas]]. Hiljaisuus on kyyhkylle harvinaista herkkua.
+KYSYMYS: Kerro lisää: Gregorios Palamas
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+AIEMPI KYSYMYS: Mitä Valakia oli ennen nykyistä Romaniaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valakia oli keskiajalla syntynyt ruhtinaskunta Tonavan pohjoispuolella nykyisen Romanian eteläosassa, ja sen läntinen osa tunnettiin nimellä [[Oltenia]]. Myöhemmin Valakia joutui [[ottomaanien]] yliherruuden alle. Vuonna 1859 Valakia ja [[Moldovan]] ruhtinaskunta valitsivat molemmat ruhtinaakseen [[Alexandru Ioan Cuzan]], ja se aloitti nykyisen Romanian synnyn. Ny on pää täynnä ruhtinaita.
+KYSYMYS: Kerro lisää: Oltenia
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Mitä Valakia oli ennen nykyistä Romaniaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valakia oli keskiajalla syntynyt ruhtinaskunta Tonavan pohjoispuolella nykyisen Romanian eteläosassa, ja sen läntinen osa tunnettiin nimellä [[Oltenia]]. Myöhemmin Valakia joutui [[ottomaanien]] yliherruuden alle. Vuonna 1859 Valakia ja [[Moldovan]] ruhtinaskunta valitsivat molemmat ruhtinaakseen [[Alexandru Ioan Cuzan]], ja se aloitti nykyisen Romanian synnyn. Ny on pää täynnä ruhtinaita.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+AIEMPI KYSYMYS: Mitä Valakia oli ennen nykyistä Romaniaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valakia oli keskiajalla syntynyt ruhtinaskunta Tonavan pohjoispuolella nykyisen Romanian eteläosassa, ja sen läntinen osa tunnettiin nimellä [[Oltenia]]. Myöhemmin Valakia joutui [[ottomaanien]] yliherruuden alle. Vuonna 1859 Valakia ja [[Moldovan]] ruhtinaskunta valitsivat molemmat ruhtinaakseen [[Alexandru Ioan Cuzan]], ja se aloitti nykyisen Romanian synnyn. Ny on pää täynnä ruhtinaita.
+KYSYMYS: Kerro lisää: Moldovan
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+AIEMPI KYSYMYS: Mitä Valakia oli ennen nykyistä Romaniaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valakia oli keskiajalla syntynyt ruhtinaskunta Tonavan pohjoispuolella nykyisen Romanian eteläosassa, ja sen läntinen osa tunnettiin nimellä [[Oltenia]]. Myöhemmin Valakia joutui [[ottomaanien]] yliherruuden alle. Vuonna 1859 Valakia ja [[Moldovan]] ruhtinaskunta valitsivat molemmat ruhtinaakseen [[Alexandru Ioan Cuzan]], ja se aloitti nykyisen Romanian synnyn. Ny on pää täynnä ruhtinaita.
+KYSYMYS: Kerro lisää: Alexandru Ioan Cuzan

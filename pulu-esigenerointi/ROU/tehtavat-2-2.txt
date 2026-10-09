@@ -1,0 +1,1047 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Miltä Pohjankruunun tähdistö näyttää taivaalla?
+AIEMPI VASTAUS (Livia):
+Mmm— tähdistöt ovat ylhäältä katsottuna tuttu juttu. [[Pohjankruunu]] on pieni, kaareva tähtijoukko, joka muistuttaa puoliympyrää tai hevosenkenkää. Sen kirkkain tähti on [[Alphecca]], jota kutsutaan myös nimellä Gemma. Tähdistö löytyy pohjoisen taivaan keväistä ja kesäistä osaa katsoessa, kauhan ja Härkämiehen lähistöltä. Kreikkalaisessa tarustossa kruunun kerrotaan olleen Ariadnen. Sen löytäminen onnistuu parhaiten pimeällä, kaukana kaupunkien valoista. Minä löydän sen yleensä vasta, kun joku näyttää.
+KYSYMYS: Kerro lisää: Alphecca
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Minne Ada Kalehin asukkaat muuttivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Vaikea aihe, mutta kerron mitä tiedän. Ada Kalehin asukkaat jouduttiin siirtämään pois saarelta, kun Tonavan vedenpinta nousi ja saari jäi veden alle 1960–70-lukujen padon rakentamisen aikana. Osa asukkaista muutti Romaniaan, erityisesti [[Dobrudžan]] alueelle, ja suuri osa ihmisistä siirtyi [[Turkkiin]]. Tarkkoja lukuja ja yksittäisten perheiden vaiheita en tunne. Saaren turkkilainen yhteisö eli omalaatuista elämää, ja sen muistoa pidetään yllä sekä Romaniassa että Turkissa. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Dobrudžan
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kaupunkilehti / Kuwait: Museo on maanpinnan alapuolella] Jabriyan asuinkorttelissa on huvila, jonka kokoelma on kokonaan maanpinnan alapuolella. Tareq Rajab -museo avattiin 1980, ja se oli ensimmäinen islamilaisen taiteen museo Kuwaitissa ja koko Persianlahden alueella. Kokoelma on yhden pariskunnan keräämä: Tareq ja Jehan Rajab ajoivat 1960-luvulla autolla Syyriaan, Iraniin ja Turkkiin ja ostivat esineitä kauppiailta ja kylistä. Vitriineissä on Koraaneja 600-luvulta alkaen, keramiikkaa, aseita, pukuja ja yksi maailman laajimmista hopeakorukokoelmista. Museota rahoittaa yhä sama perhe, ja kalligrafialle avattiin 2007 oma talo samaan kaupunginosaan.
+- [Sveitsi — maalehti / Keksinnöt: Takiainen koiran turkissa] 1941 — Insinööri George de Mestral palasi vuonna 1941 metsästysretkeltä ja huomasi, että hänen housuihinsa ja koiran turkkiin oli tarttunut takiaisen siemenkotia. Mikroskoopin alla selvisi miksi: jokaisen piikin kärjessä on pieni koukku, joka tarttuu lankaan tai karvaan. Idean muuttaminen kankaaksi kesti vuosia, ja patentti valmistui 1955. Nimi tuli ranskan sanoista velours ja crochet eli sametti ja koukku. Nykyään samaa kiinnitystä on kengissä, avaruusaluksissa ja verenpainemittareissa.
+- [Sveitsi — maalehti / Keksinnöt] Kolme sveitsiläistä keksintöä, jotka mahtuvat taskuun tai keittiönlaatikkoon — ja joista yksi alkoi koiran turkkiin tarttuneista siemenkodista.
+AIEMPI KYSYMYS: Minne Ada Kalehin asukkaat muuttivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Vaikea aihe, mutta kerron mitä tiedän. Ada Kalehin asukkaat jouduttiin siirtämään pois saarelta, kun Tonavan vedenpinta nousi ja saari jäi veden alle 1960–70-lukujen padon rakentamisen aikana. Osa asukkaista muutti Romaniaan, erityisesti [[Dobrudžan]] alueelle, ja suuri osa ihmisistä siirtyi [[Turkkiin]]. Tarkkoja lukuja ja yksittäisten perheiden vaiheita en tunne. Saaren turkkilainen yhteisö eli omalaatuista elämää, ja sen muistoa pidetään yllä sekä Romaniassa että Turkissa. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Turkkiin
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Kulkevatko laivat rotkon läpi nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyllä kulkevat: [[Tonava]] on yksi Euroopan tärkeimmistä vesiväylistä, ja Rautaportin läpi kulkee tavaraliikennettä sekä risteilyaluksia. Padot ja sulut ovat muuttaneet virran käytännössä hallituksi väyläksi, joten laivat eivät enää tarvitse paikallista luotsia eivätkä vetoveturia kuten ennen. Alueella on kaksi vesivoimalaitosta, ja alukset kulkevat niiden sulkujen kautta. Tonavalta pääsee [[Mustallemerelle]] saakka. Tarkkoja liikennemääriä en ole varma, mutta väylä on ahkerassa käytössä. Ei tarvitse enää arvailla, kuka seuraava laiva on.
+KYSYMYS: Kerro lisää: Tonava
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Kulkevatko laivat rotkon läpi nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyllä kulkevat: [[Tonava]] on yksi Euroopan tärkeimmistä vesiväylistä, ja Rautaportin läpi kulkee tavaraliikennettä sekä risteilyaluksia. Padot ja sulut ovat muuttaneet virran käytännössä hallituksi väyläksi, joten laivat eivät enää tarvitse paikallista luotsia eivätkä vetoveturia kuten ennen. Alueella on kaksi vesivoimalaitosta, ja alukset kulkevat niiden sulkujen kautta. Tonavalta pääsee [[Mustallemerelle]] saakka. Tarkkoja liikennemääriä en ole varma, mutta väylä on ahkerassa käytössä. Ei tarvitse enää arvailla, kuka seuraava laiva on.
+KYSYMYS: Kerro lisää: Mustallemerelle
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Secession-katu ja Jugoslavian korkein talo] Vuoden 1895 maanjäristyksen jälkeen osa Ljubljanasta rakennettiin uudelleen Wienin secession-tyyliin. Miklošičeva-kadun alaosa Prešerenin aukion päässä täyttyi pääosin secession-palatseista, esimerkiksi Grand Hotel Union valmistui vuosina 1903–1905. Vladimir Šubicin suunnittelema Nebotičnik-pilvenpiirtäjä avattiin 21. helmikuuta 1933. Sen 13 kerrosta ja 70,35 metriä tekivät siitä Jugoslavian kuningaskunnan korkeimman rakennuksen, ja tyyliltään se yhdistää uusklassismia ja art decoa.
+AIEMPI KYSYMYS: Mikä on Rautaportin voimalaitos?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on suuri yhteishanke. Rautaportin voimalaitos on Romanian ja entisen [[Jugoslavian]] yhdessä rakentama vesivoimalaitos, joka valmistui 1970-luvun alussa. Se tunnetaan nimellä Iron Gate I tai serbiaksi [[Djerdap]], ja sen yhteydessä on sulut laivaliikennettä varten. Myöhemmin vähän alavirtaan rakennettiin toinen laitos. Padot nostivat Tonavan pintaa kymmeniä metrejä ja muuttivat koko laakson maisemaa. Tarkkoja tehoja en osaa sanoa, mutta laitos on yksi Euroopan suurimmista jokivoimaloista. Hurja työ ihmisiltä, minä en jaksaisi kantaa kiveäkään.
+KYSYMYS: Kerro lisää: Jugoslavian
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Mikä on Rautaportin voimalaitos?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on suuri yhteishanke. Rautaportin voimalaitos on Romanian ja entisen [[Jugoslavian]] yhdessä rakentama vesivoimalaitos, joka valmistui 1970-luvun alussa. Se tunnetaan nimellä Iron Gate I tai serbiaksi [[Djerdap]], ja sen yhteydessä on sulut laivaliikennettä varten. Myöhemmin vähän alavirtaan rakennettiin toinen laitos. Padot nostivat Tonavan pintaa kymmeniä metrejä ja muuttivat koko laakson maisemaa. Tarkkoja tehoja en osaa sanoa, mutta laitos on yksi Euroopan suurimmista jokivoimaloista. Hurja työ ihmisiltä, minä en jaksaisi kantaa kiveäkään.
+KYSYMYS: Kerro lisää: Djerdap
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Montako maata Tonava virtaa läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Tonava]] virtaa kymmenen maan kautta: Saksa, Itävalta, Slovakia, Unkari, Kroatia, Serbia, Romania, Bulgaria, Moldova ja Ukraina. Se saa alkunsa Saksan [[Mustastametsästä]] ja virtaa noin 2 850 kilometriä ennen kuin laskee [[Mustaanmereen]] Romanian ja Ukrainan rajalla [[Tonavan suistossa]]. Joen pituus vaihtelee lähteittäin. Tonava kulkee neljän pääkaupungin läpi: Wien, Bratislava, Budapest ja Belgrad. Mikään toinen Euroopan joki ei kierrä niin montaa maata. Tuota matkaa minä kyllä lentäisin mieluummin kuin uisin.
+KYSYMYS: Kerro lisää: Mustastametsästä
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Montako maata Tonava virtaa läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Tonava]] virtaa kymmenen maan kautta: Saksa, Itävalta, Slovakia, Unkari, Kroatia, Serbia, Romania, Bulgaria, Moldova ja Ukraina. Se saa alkunsa Saksan [[Mustastametsästä]] ja virtaa noin 2 850 kilometriä ennen kuin laskee [[Mustaanmereen]] Romanian ja Ukrainan rajalla [[Tonavan suistossa]]. Joen pituus vaihtelee lähteittäin. Tonava kulkee neljän pääkaupungin läpi: Wien, Bratislava, Budapest ja Belgrad. Mikään toinen Euroopan joki ei kierrä niin montaa maata. Tuota matkaa minä kyllä lentäisin mieluummin kuin uisin.
+KYSYMYS: Kerro lisää: Mustaanmereen
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Montako maata Tonava virtaa läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Tonava]] virtaa kymmenen maan kautta: Saksa, Itävalta, Slovakia, Unkari, Kroatia, Serbia, Romania, Bulgaria, Moldova ja Ukraina. Se saa alkunsa Saksan [[Mustastametsästä]] ja virtaa noin 2 850 kilometriä ennen kuin laskee [[Mustaanmereen]] Romanian ja Ukrainan rajalla [[Tonavan suistossa]]. Joen pituus vaihtelee lähteittäin. Tonava kulkee neljän pääkaupungin läpi: Wien, Bratislava, Budapest ja Belgrad. Mikään toinen Euroopan joki ei kierrä niin montaa maata. Tuota matkaa minä kyllä lentäisin mieluummin kuin uisin.
+KYSYMYS: Kerro lisää: Tonavan suistossa
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Mikä on rotkon kallioon veistetty kasvokuva?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Se on [[Decebalus]]-kuningasta esittävä kalliopatsas Tonavan rannalla Romanian puolella. Daakialaisten viimeinen kuningas hallitsi aikanaan nykyisen Romanian alueella ja taisteli Rooman keisarin [[Trajanuksen]] joukkoja vastaan. Patsas veistettiin kallioon 1990- ja 2000-lukujen vaihteessa, ja sen korkeus on noin 40 metriä. Hankkeen rahoitti romanialainen liikemies. Patsaan tarkoista mitoista kerrotaan eri lähteissä hiukan eri lukuja. Kasvot katsovat virtaa Rautaportin rotkossa, ja ne näkyvät hyvin laivalta. Kylläpä kuningas on saanut hienon paikan.
+KYSYMYS: Kerro lisää: Decebalus
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+AIEMPI KYSYMYS: Mikä on rotkon kallioon veistetty kasvokuva?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Se on [[Decebalus]]-kuningasta esittävä kalliopatsas Tonavan rannalla Romanian puolella. Daakialaisten viimeinen kuningas hallitsi aikanaan nykyisen Romanian alueella ja taisteli Rooman keisarin [[Trajanuksen]] joukkoja vastaan. Patsas veistettiin kallioon 1990- ja 2000-lukujen vaihteessa, ja sen korkeus on noin 40 metriä. Hankkeen rahoitti romanialainen liikemies. Patsaan tarkoista mitoista kerrotaan eri lähteissä hiukan eri lukuja. Kasvot katsovat virtaa Rautaportin rotkossa, ja ne näkyvät hyvin laivalta. Kylläpä kuningas on saanut hienon paikan.
+KYSYMYS: Kerro lisää: Trajanuksen
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Miksi Augustus karkotti Ovidiuksen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tarkkaa syytä ei tiedetä. [[Ovidius]] itse kirjoitti, että karkotuksen syynä olivat "runo ja erehdys", mutta mitä erehdys tarkoitti, jää arvoitukseksi. Yleisesti arvellaan, että sillä oli yhteyttä keisarin sukuun liittyneeseen kohuun tai hänen rakkausrunoonsa, joka sopi huonosti [[Augustuksen]] moraalilakeihin, mutta varmaa selitystä ei ole. Ovidius lähetettiin Mustanmeren rannalle [[Tomisiin]], nykyiseen Constanțaan, ja hän kirjoitti siellä runokokoelmat [[Tristia]] ja [[Epistulae ex Ponto]]. Takaisin Roomaan hän ei enää päässyt. Onpas siitä aikaa, ja silti ihmiset yhä arvuuttelevat.
+KYSYMYS: Kerro lisää: Ovidius
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+AIEMPI KYSYMYS: Miksi Augustus karkotti Ovidiuksen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tarkkaa syytä ei tiedetä. [[Ovidius]] itse kirjoitti, että karkotuksen syynä olivat "runo ja erehdys", mutta mitä erehdys tarkoitti, jää arvoitukseksi. Yleisesti arvellaan, että sillä oli yhteyttä keisarin sukuun liittyneeseen kohuun tai hänen rakkausrunoonsa, joka sopi huonosti [[Augustuksen]] moraalilakeihin, mutta varmaa selitystä ei ole. Ovidius lähetettiin Mustanmeren rannalle [[Tomisiin]], nykyiseen Constanțaan, ja hän kirjoitti siellä runokokoelmat [[Tristia]] ja [[Epistulae ex Ponto]]. Takaisin Roomaan hän ei enää päässyt. Onpas siitä aikaa, ja silti ihmiset yhä arvuuttelevat.
+KYSYMYS: Kerro lisää: Augustuksen
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Miksi Augustus karkotti Ovidiuksen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tarkkaa syytä ei tiedetä. [[Ovidius]] itse kirjoitti, että karkotuksen syynä olivat "runo ja erehdys", mutta mitä erehdys tarkoitti, jää arvoitukseksi. Yleisesti arvellaan, että sillä oli yhteyttä keisarin sukuun liittyneeseen kohuun tai hänen rakkausrunoonsa, joka sopi huonosti [[Augustuksen]] moraalilakeihin, mutta varmaa selitystä ei ole. Ovidius lähetettiin Mustanmeren rannalle [[Tomisiin]], nykyiseen Constanțaan, ja hän kirjoitti siellä runokokoelmat [[Tristia]] ja [[Epistulae ex Ponto]]. Takaisin Roomaan hän ei enää päässyt. Onpas siitä aikaa, ja silti ihmiset yhä arvuuttelevat.
+KYSYMYS: Kerro lisää: Tomisiin
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Miksi Augustus karkotti Ovidiuksen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tarkkaa syytä ei tiedetä. [[Ovidius]] itse kirjoitti, että karkotuksen syynä olivat "runo ja erehdys", mutta mitä erehdys tarkoitti, jää arvoitukseksi. Yleisesti arvellaan, että sillä oli yhteyttä keisarin sukuun liittyneeseen kohuun tai hänen rakkausrunoonsa, joka sopi huonosti [[Augustuksen]] moraalilakeihin, mutta varmaa selitystä ei ole. Ovidius lähetettiin Mustanmeren rannalle [[Tomisiin]], nykyiseen Constanțaan, ja hän kirjoitti siellä runokokoelmat [[Tristia]] ja [[Epistulae ex Ponto]]. Takaisin Roomaan hän ei enää päässyt. Onpas siitä aikaa, ja silti ihmiset yhä arvuuttelevat.
+KYSYMYS: Kerro lisää: Tristia
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Miksi Augustus karkotti Ovidiuksen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tarkkaa syytä ei tiedetä. [[Ovidius]] itse kirjoitti, että karkotuksen syynä olivat "runo ja erehdys", mutta mitä erehdys tarkoitti, jää arvoitukseksi. Yleisesti arvellaan, että sillä oli yhteyttä keisarin sukuun liittyneeseen kohuun tai hänen rakkausrunoonsa, joka sopi huonosti [[Augustuksen]] moraalilakeihin, mutta varmaa selitystä ei ole. Ovidius lähetettiin Mustanmeren rannalle [[Tomisiin]], nykyiseen Constanțaan, ja hän kirjoitti siellä runokokoelmat [[Tristia]] ja [[Epistulae ex Ponto]]. Takaisin Roomaan hän ei enää päässyt. Onpas siitä aikaa, ja silti ihmiset yhä arvuuttelevat.
+KYSYMYS: Kerro lisää: Epistulae ex Ponto
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Millainen satama Constanța on nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä riittää kerrottavaa. Constanța on Romanian merkittävin satama ja yksi Mustanmeren tärkeimmistä. Siellä käsitellään suuria määriä viljaa, öljyä, kontteja ja muuta rahtia, ja satama toimii porttina Keski-Euroopan ja [[Tonavan]] suuntaan. Satamaan liittyy [[Tonava–Mustameri-kanava]], jonka kautta laivat pääsevät Tonavalle, ja lisäksi satamassa on matkustajaliikennettä ja risteilyvieraita. Tarkat rahtimäärät vaihtelevat vuosittain, joten niitä en ala luetella. Sataman lähellä on myös vanha kaupunki ja [[Constanțan kasino]]. Satamassa on kyllä enemmän valoa ja hälyä kuin kyyhky kaipaa.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Millainen satama Constanța on nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä riittää kerrottavaa. Constanța on Romanian merkittävin satama ja yksi Mustanmeren tärkeimmistä. Siellä käsitellään suuria määriä viljaa, öljyä, kontteja ja muuta rahtia, ja satama toimii porttina Keski-Euroopan ja [[Tonavan]] suuntaan. Satamaan liittyy [[Tonava–Mustameri-kanava]], jonka kautta laivat pääsevät Tonavalle, ja lisäksi satamassa on matkustajaliikennettä ja risteilyvieraita. Tarkat rahtimäärät vaihtelevat vuosittain, joten niitä en ala luetella. Sataman lähellä on myös vanha kaupunki ja [[Constanțan kasino]]. Satamassa on kyllä enemmän valoa ja hälyä kuin kyyhky kaipaa.
+KYSYMYS: Kerro lisää: Tonava–Mustameri-kanava
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Valtionteatteri] 1899 Teatteri seisoo keskiaikaisen raatihuoneen paikalla. Raatihuone oli jäänyt tyhjäksi jo 1500-luvulla, ja 1756 siihen avattiin kahvila, josta tuli kaupungin seuraelämän keskus. Ensimmäinen teatteritalo otettiin käyttöön 1788: klassistinen rakennus, jonka katsomoon mahtui 500 ihmistä. Isoisä näkee vuonna 1873 juuri tämän vanhan teatterin. Aluksi siellä esitettiin vain saksaksi, mutta vuodesta 1816 vuorotellen unkariksi ja saksaksi. Samassa talossa toimivat myös kahvila, tanssisali ja vuodesta 1828 kasino. Rakennus suljettiin 1894 turvallisuussyistä. Nykyinen uusbarokkinen teatteri rakennettiin Adolf Langin suunnitelmien mukaan, ja se avattiin juhlallisesti 28. syyskuuta 1899. Näyttämö on …
+AIEMPI KYSYMYS: Millainen satama Constanța on nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä riittää kerrottavaa. Constanța on Romanian merkittävin satama ja yksi Mustanmeren tärkeimmistä. Siellä käsitellään suuria määriä viljaa, öljyä, kontteja ja muuta rahtia, ja satama toimii porttina Keski-Euroopan ja [[Tonavan]] suuntaan. Satamaan liittyy [[Tonava–Mustameri-kanava]], jonka kautta laivat pääsevät Tonavalle, ja lisäksi satamassa on matkustajaliikennettä ja risteilyvieraita. Tarkat rahtimäärät vaihtelevat vuosittain, joten niitä en ala luetella. Sataman lähellä on myös vanha kaupunki ja [[Constanțan kasino]]. Satamassa on kyllä enemmän valoa ja hälyä kuin kyyhky kaipaa.
+KYSYMYS: Kerro lisää: Constanțan kasino
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Mikä on rantabulevardin vanha kasino?
+AIEMPI VASTAUS (Livia):
+Just niin, se rakennus on tuttu. Constanțan kasino on kaupungin tunnetuin rakennus [[Mustanmeren]] rannalla, ja se on rakennettu 1900-luvun alussa [[jugend]]-tyyliin, joka tunnetaan myös nimellä art nouveau. Rakennus palveli aikanaan merkittävänä seurahuoneena ja kasinona, ja nykyään se on kaupungin tunnettu maamerkki. Arkkitehdista ja rakennusvuodesta kerrotaan eri lähteissä hiukan eri tietoja, joten en ole aivan varma. Rakennus on ollut huonossa kunnossa ja sitä on yritetty entisöidä. Kun lentää sen ylitse, rakennus näyttää kyllä upealta, ainakin ylhäältä.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Sininen kirkko] 1913 — Pyhän Elisabetin kirkko rakennettiin 1908–1913 unkarilaisen Ödön Lechnerin suunnitelmien mukaan jugend-tyyliin. Julkisivu maalattiin ensin vaaleilla pastellisävyillä, mutta myöhemmin siitä tuli sininen: sinisiä ovat seinät, mosaiikit, majolikat ja lasitettu katto. Sylinterimäinen torni on 36,8 metriä korkea. Alun perin kirkolle suunniteltiin kupolia, mutta tilalle tuli tynnyriholvi. Kirkko oli aluksi viereisen lukion koulukappeli, ja sen pienoismalli edustaa Slovakiaa Mini-Europe-puistossa Brysselissä.
+- [Slovakia — maalehti / Rakennukset] Slovakian rakennukset kertovat monesta maailmasta: hirsitaloista vuoristokylässä, kaupunginportista kruunajaiskulkueiden reitillä ja jugend-kirkosta, jota kutsutaan siniseksi.
+AIEMPI KYSYMYS: Mikä on rantabulevardin vanha kasino?
+AIEMPI VASTAUS (Livia):
+Just niin, se rakennus on tuttu. Constanțan kasino on kaupungin tunnetuin rakennus [[Mustanmeren]] rannalla, ja se on rakennettu 1900-luvun alussa [[jugend]]-tyyliin, joka tunnetaan myös nimellä art nouveau. Rakennus palveli aikanaan merkittävänä seurahuoneena ja kasinona, ja nykyään se on kaupungin tunnettu maamerkki. Arkkitehdista ja rakennusvuodesta kerrotaan eri lähteissä hiukan eri tietoja, joten en ole aivan varma. Rakennus on ollut huonossa kunnossa ja sitä on yritetty entisöidä. Kun lentää sen ylitse, rakennus näyttää kyllä upealta, ainakin ylhäältä.
+KYSYMYS: Kerro lisää: jugend
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Mikä on Ovidiuksen tunnetuin teos?
+AIEMPI VASTAUS (Livia):
+Tuo on tuttu. [[Ovidiuksen]] tunnetuin teos on [[Metamorfoosit]], pitkä runoelma, jossa kerrotaan kreikkalaisten ja roomalaisten myyttien muodonmuutoksista: ihmisiä muuttuu kasveiksi, eläimiksi ja tähdiksi. Teos valmistui ennen hänen karkotustaan, ja sillä on ollut suuri vaikutus länsimaiseen kirjallisuuteen ja kuvataiteeseen. Ovidiuksen tunnettuja runoja ovat myös [[Rakkauden taito]] ja karkotuksen aikana kirjoitetut Tristia. Metamorfoosien tarkkaa valmistumisvuotta en tiedä, mutta se ajoittuu aikaan ennen vuotta 8. Hänen ansiostaan monet myytit on säilytetty tähän päivään. Itse en ole koskaan muuttunut miksikään, ellei kyyhkyä lasketa.
+KYSYMYS: Kerro lisää: Ovidiuksen
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Mikä on Ovidiuksen tunnetuin teos?
+AIEMPI VASTAUS (Livia):
+Tuo on tuttu. [[Ovidiuksen]] tunnetuin teos on [[Metamorfoosit]], pitkä runoelma, jossa kerrotaan kreikkalaisten ja roomalaisten myyttien muodonmuutoksista: ihmisiä muuttuu kasveiksi, eläimiksi ja tähdiksi. Teos valmistui ennen hänen karkotustaan, ja sillä on ollut suuri vaikutus länsimaiseen kirjallisuuteen ja kuvataiteeseen. Ovidiuksen tunnettuja runoja ovat myös [[Rakkauden taito]] ja karkotuksen aikana kirjoitetut Tristia. Metamorfoosien tarkkaa valmistumisvuotta en tiedä, mutta se ajoittuu aikaan ennen vuotta 8. Hänen ansiostaan monet myytit on säilytetty tähän päivään. Itse en ole koskaan muuttunut miksikään, ellei kyyhkyä lasketa.
+KYSYMYS: Kerro lisää: Metamorfoosit
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Passeio Público] 1779–1783 Kun siirtomaan hallinto siirtyi 1763 Salvadorista Rioon, varakuningas Luís de Vasconcelos halusi uuteen pääkaupunkiin julkisen puiston Lissabonin Passeio Públicon malliin. Hän tilasi sen 1779 kaupungin johtavalta kuvanveistäjältä Valentim da Fonseca e Silvalta eli Mestre Valentimilta, ja puisto valmistui 1783. Se rakennettiin täytemaalle, joka nousi Boqueirãon lammikon paikalle: lammikko oli saastunut ja levitti tauteja, ja sen hävittämistä pidettiin kaupungin suurena parannuksena. Valentimin puisto oli ranskalaiseen tapaan suora ja symmetrinen, muodoltaan epäsäännöllinen kuusikulmio, ja meren puolella oli terassi, jolta näkyi Guanabaran lahti. Sisäänkäynnin rokokootyylinen rautap…
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mikä on Ovidiuksen tunnetuin teos?
+AIEMPI VASTAUS (Livia):
+Tuo on tuttu. [[Ovidiuksen]] tunnetuin teos on [[Metamorfoosit]], pitkä runoelma, jossa kerrotaan kreikkalaisten ja roomalaisten myyttien muodonmuutoksista: ihmisiä muuttuu kasveiksi, eläimiksi ja tähdiksi. Teos valmistui ennen hänen karkotustaan, ja sillä on ollut suuri vaikutus länsimaiseen kirjallisuuteen ja kuvataiteeseen. Ovidiuksen tunnettuja runoja ovat myös [[Rakkauden taito]] ja karkotuksen aikana kirjoitetut Tristia. Metamorfoosien tarkkaa valmistumisvuotta en tiedä, mutta se ajoittuu aikaan ennen vuotta 8. Hänen ansiostaan monet myytit on säilytetty tähän päivään. Itse en ole koskaan muuttunut miksikään, ellei kyyhkyä lasketa.
+KYSYMYS: Kerro lisää: Rakkauden taito
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Millainen meri Mustameri on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Mustameri]] on Euroopan ja Vähän-Aasian välissä sijaitseva sisämeri, joka on yhteydessä Välimereen kapeiden [[Bosporinsalmen]] ja Dardanellien kautta. Sen vesi on murtovettä, ja suolapitoisuus on noin puolet valtamerten suolapitoisuudesta, koska siihen laskee suuria jokia, kuten [[Tonava]]. Syvällä on hapetonta vettä, jossa tavallinen merielämä ei pärjää. Rannoilla on useita maita, muun muassa Romania, Bulgaria, Ukraina ja Turkki. Tarkat syvyydet ja pinta-alat vaihtelevat lähteittäin. Nimi on mustempi kuin meri, ainakin kun aurinko paistaa.
+KYSYMYS: Kerro lisää: Mustameri
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+AIEMPI KYSYMYS: Millainen meri Mustameri on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Mustameri]] on Euroopan ja Vähän-Aasian välissä sijaitseva sisämeri, joka on yhteydessä Välimereen kapeiden [[Bosporinsalmen]] ja Dardanellien kautta. Sen vesi on murtovettä, ja suolapitoisuus on noin puolet valtamerten suolapitoisuudesta, koska siihen laskee suuria jokia, kuten [[Tonava]]. Syvällä on hapetonta vettä, jossa tavallinen merielämä ei pärjää. Rannoilla on useita maita, muun muassa Romania, Bulgaria, Ukraina ja Turkki. Tarkat syvyydet ja pinta-alat vaihtelevat lähteittäin. Nimi on mustempi kuin meri, ainakin kun aurinko paistaa.
+KYSYMYS: Kerro lisää: Bosporinsalmen
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Millainen meri Mustameri on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Mustameri]] on Euroopan ja Vähän-Aasian välissä sijaitseva sisämeri, joka on yhteydessä Välimereen kapeiden [[Bosporinsalmen]] ja Dardanellien kautta. Sen vesi on murtovettä, ja suolapitoisuus on noin puolet valtamerten suolapitoisuudesta, koska siihen laskee suuria jokia, kuten [[Tonava]]. Syvällä on hapetonta vettä, jossa tavallinen merielämä ei pärjää. Rannoilla on useita maita, muun muassa Romania, Bulgaria, Ukraina ja Turkki. Tarkat syvyydet ja pinta-alat vaihtelevat lähteittäin. Nimi on mustempi kuin meri, ainakin kun aurinko paistaa.
+KYSYMYS: Kerro lisää: Tonava
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Keitä daakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kertomista. [[Daakialaiset]] olivat antiikin aikainen kansa, joka asui nykyisen Romanian alueella ja sen lähimaissa. Antiikin kirjoittajat pitivät heitä [[traakialaisten]] sukulaisina, ja kansa tunnettiin hyvinä sotureina, kauppiaina ja rakentajina. Heidän valtakuntansa kukoisti kuningas [[Burebistan]] ja myöhemmin [[Decebaluksen]] aikana, kunnes Rooman keisari Trajanus valloitti Daakian 100-luvun alussa jaa. Daakialaisten kieltä ei ole säilynyt kirjoitettuna, joten tiedot heistä tulevat pääosin roomalaisista ja kreikkalaisista kirjoittajista sekä arkeologiasta. Nykyiset romanialaiset pitävät daakialaisia tärkeinä esi-isinään. Ennen Rooman sotia he kyllä rakensivat komeasti.
+KYSYMYS: Kerro lisää: Daakialaiset
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Bulgaria — maalehti / Menovinkit] Bulgariassa moni museo on skannattu kolmiulotteiseksi, joten kirkon holviin ja arkeologian saliin pääsee kotoa käsin. Verkossa on myös vanhoja valokuvia, traakialaisten kultaa ja suoria kameroita lintujen pesillä.
+- [Bulgaria — maalehti / Kalliot ja kruunut] Bulgarian historia näkyy kalliossa ja kummulla: tuhat vuotta vanha ratsastajakuva, tsaarien poltettu linna, traakialaisten kuningashauta mäen sisällä ja katedraali, joka nousi vasta vapauden jälkeen.
+AIEMPI KYSYMYS: Keitä daakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kertomista. [[Daakialaiset]] olivat antiikin aikainen kansa, joka asui nykyisen Romanian alueella ja sen lähimaissa. Antiikin kirjoittajat pitivät heitä [[traakialaisten]] sukulaisina, ja kansa tunnettiin hyvinä sotureina, kauppiaina ja rakentajina. Heidän valtakuntansa kukoisti kuningas [[Burebistan]] ja myöhemmin [[Decebaluksen]] aikana, kunnes Rooman keisari Trajanus valloitti Daakian 100-luvun alussa jaa. Daakialaisten kieltä ei ole säilynyt kirjoitettuna, joten tiedot heistä tulevat pääosin roomalaisista ja kreikkalaisista kirjoittajista sekä arkeologiasta. Nykyiset romanialaiset pitävät daakialaisia tärkeinä esi-isinään. Ennen Rooman sotia he kyllä rakensivat komeasti.
+KYSYMYS: Kerro lisää: traakialaisten
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+AIEMPI KYSYMYS: Keitä daakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kertomista. [[Daakialaiset]] olivat antiikin aikainen kansa, joka asui nykyisen Romanian alueella ja sen lähimaissa. Antiikin kirjoittajat pitivät heitä [[traakialaisten]] sukulaisina, ja kansa tunnettiin hyvinä sotureina, kauppiaina ja rakentajina. Heidän valtakuntansa kukoisti kuningas [[Burebistan]] ja myöhemmin [[Decebaluksen]] aikana, kunnes Rooman keisari Trajanus valloitti Daakian 100-luvun alussa jaa. Daakialaisten kieltä ei ole säilynyt kirjoitettuna, joten tiedot heistä tulevat pääosin roomalaisista ja kreikkalaisista kirjoittajista sekä arkeologiasta. Nykyiset romanialaiset pitävät daakialaisia tärkeinä esi-isinään. Ennen Rooman sotia he kyllä rakensivat komeasti.
+KYSYMYS: Kerro lisää: Burebistan
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Keitä daakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kertomista. [[Daakialaiset]] olivat antiikin aikainen kansa, joka asui nykyisen Romanian alueella ja sen lähimaissa. Antiikin kirjoittajat pitivät heitä [[traakialaisten]] sukulaisina, ja kansa tunnettiin hyvinä sotureina, kauppiaina ja rakentajina. Heidän valtakuntansa kukoisti kuningas [[Burebistan]] ja myöhemmin [[Decebaluksen]] aikana, kunnes Rooman keisari Trajanus valloitti Daakian 100-luvun alussa jaa. Daakialaisten kieltä ei ole säilynyt kirjoitettuna, joten tiedot heistä tulevat pääosin roomalaisista ja kreikkalaisista kirjoittajista sekä arkeologiasta. Nykyiset romanialaiset pitävät daakialaisia tärkeinä esi-isinään. Ennen Rooman sotia he kyllä rakensivat komeasti.
+KYSYMYS: Kerro lisää: Decebaluksen
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Mitä pyhäkön kalenterista tiedetään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimi "kalenteri" on tutkijoiden ja kertojien käyttämä tulkinta, ei todistettu tosiasia. [[Sarmizegetusa Regian]] pyhäkkö koostui puupylväistä, jotka oli asetettu D-kirjaimen muotoon, pyöreästä puukehästä ja kivireunuksesta. Joidenkin tutkijoiden mukaan rakennelman suunnissa voi olla yhteys auringon liikkeisiin, mutta asiasta ollaan eri mieltä eikä varmuutta ole. Pyhäkköä on verrattu [[Stonehengeen]], mutta rakenne ja ikä ovat kovin erilaisia. Pyhän alueen käyttötarkoituksesta ei ole säilynyt kirjallisia lähteitä. Tämä on kyllä kyyhkyllekin vaikea ajankulun arvoitus.
+KYSYMYS: Kerro lisää: Sarmizegetusa Regian
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Mitä pyhäkön kalenterista tiedetään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimi "kalenteri" on tutkijoiden ja kertojien käyttämä tulkinta, ei todistettu tosiasia. [[Sarmizegetusa Regian]] pyhäkkö koostui puupylväistä, jotka oli asetettu D-kirjaimen muotoon, pyöreästä puukehästä ja kivireunuksesta. Joidenkin tutkijoiden mukaan rakennelman suunnissa voi olla yhteys auringon liikkeisiin, mutta asiasta ollaan eri mieltä eikä varmuutta ole. Pyhäkköä on verrattu [[Stonehengeen]], mutta rakenne ja ikä ovat kovin erilaisia. Pyhän alueen käyttötarkoituksesta ei ole säilynyt kirjallisia lähteitä. Tämä on kyllä kyyhkyllekin vaikea ajankulun arvoitus.
+KYSYMYS: Kerro lisää: Stonehengeen
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Milloin Rooma valloitti Daakian?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rooman ja daakialaisten välillä käytiin kaksi sotaa: ensimmäinen noin vuosina 101–102 ja toinen noin vuosina 105–106 jaa. Keisari [[Trajanus]] johti sotaa, ja Daakian kuningas [[Decebalus]] kuoli sodan lopussa. Daakiasta tuli Rooman provinssi, ja siellä asui roomalaisia asukkaita jopa 150 vuotta. Roomalaiset vetäytyivät alueelta 200-luvun lopulla. Tämä on kaukaista menneisyyttä, yli tuhat yhdeksänsataa vuotta sitten, ja se pehmentää kuvaa. Sodat olivat silti raskas aika Daakian asukkaille. Onneksi aika on kulunut.
+KYSYMYS: Kerro lisää: Trajanus
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Milloin Rooma valloitti Daakian?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rooman ja daakialaisten välillä käytiin kaksi sotaa: ensimmäinen noin vuosina 101–102 ja toinen noin vuosina 105–106 jaa. Keisari [[Trajanus]] johti sotaa, ja Daakian kuningas [[Decebalus]] kuoli sodan lopussa. Daakiasta tuli Rooman provinssi, ja siellä asui roomalaisia asukkaita jopa 150 vuotta. Roomalaiset vetäytyivät alueelta 200-luvun lopulla. Tämä on kaukaista menneisyyttä, yli tuhat yhdeksänsataa vuotta sitten, ja se pehmentää kuvaa. Sodat olivat silti raskas aika Daakian asukkaille. Onneksi aika on kulunut.
+KYSYMYS: Kerro lisää: Decebalus
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Mikä on Trajanuksen sarake?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Trajanuksen sarake]] on Roomassa sijaitseva muistopilari, jonka keisari Trajanus rakennutti Daakian sotien muistoksi. Se valmistui 100-luvun alussa jaa., ja sen korkeus on noin 30 metriä jalustan kanssa hiukan enemmän. Pylvään ympäri kiertää spiraalina nouseva reliefikuvaus, jossa roomalaiset sotilaat marssivat, rakentavat ja taistelevat daakialaisia vastaan. Se on tärkeä lähde myös daakialaisten pukeutumisesta ja varusteista. Sarake on yhä paikallaan [[Rooman]] keskustassa. Ei yksikään kirjekyyhky ole kantanut yhtä pitkää kirjettä.
+KYSYMYS: Kerro lisää: Trajanuksen sarake
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Mikä on Trajanuksen sarake?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Trajanuksen sarake]] on Roomassa sijaitseva muistopilari, jonka keisari Trajanus rakennutti Daakian sotien muistoksi. Se valmistui 100-luvun alussa jaa., ja sen korkeus on noin 30 metriä jalustan kanssa hiukan enemmän. Pylvään ympäri kiertää spiraalina nouseva reliefikuvaus, jossa roomalaiset sotilaat marssivat, rakentavat ja taistelevat daakialaisia vastaan. Se on tärkeä lähde myös daakialaisten pukeutumisesta ja varusteista. Sarake on yhä paikallaan [[Rooman]] keskustassa. Ei yksikään kirjekyyhky ole kantanut yhtä pitkää kirjettä.
+KYSYMYS: Kerro lisää: Rooman
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+AIEMPI KYSYMYS: Mitä murus dacicus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, sen minä tiedän. [[Murus dacicus]] tarkoittaa "daakialaista muuria", ja se on daakialaisten linnoituksissa käytetty muuritekniikka. Muuri rakennettiin huolellisesti muotoillusta kivestä, ja kivien välissä käytettiin puupalkkeja. Tekniikka yhdisti paikallista rakennustapaa ja kreikkalaisia vaikutteita, ja sillä rakennettiin [[Orăștien vuorten]] linnoituksia. Tarkka rakenne ja puun osuus vaihtelevat lähteiden mukaan, joten en ala kuvata yksityiskohtia. Nimi on antiikin ajan jälkeen annettu, ei daakialaisten oma. Kivi pysyy, ja puu kyllä kuluu.
+KYSYMYS: Kerro lisää: Murus dacicus
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Vuorten eristäytynyt kansa] Solan kautta saapuneista uudisasukkaista suuri osa oli škotti-irlantilaisia siirtolaisia, jotka pakenivat uskonnollista sortoa ja taloudellista ahdinkoa ja asettuivat Appalakkien syrjäisiin laaksoihin. Vaikeakulkuinen maasto ja teiden puute eristivät monet kylät vuosikymmeniksi rannikkoseutujen elämästä, mikä pakotti perheet omavaraisuuteen: kotipuutarhat, metsästys ja kotikutoiset tarvikkeet olivat arjen perusta. Tyypillinen koti oli yksihuoneinen hirsimökki kivipiipuineen, samanlainen kuin Blue Ridge -vuorten historiallisilla tiloilla yhä pystyssä olevat rakennukset.
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa] Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.
+AIEMPI KYSYMYS: Mitä murus dacicus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, sen minä tiedän. [[Murus dacicus]] tarkoittaa "daakialaista muuria", ja se on daakialaisten linnoituksissa käytetty muuritekniikka. Muuri rakennettiin huolellisesti muotoillusta kivestä, ja kivien välissä käytettiin puupalkkeja. Tekniikka yhdisti paikallista rakennustapaa ja kreikkalaisia vaikutteita, ja sillä rakennettiin [[Orăștien vuorten]] linnoituksia. Tarkka rakenne ja puun osuus vaihtelevat lähteiden mukaan, joten en ala kuvata yksityiskohtia. Nimi on antiikin ajan jälkeen annettu, ei daakialaisten oma. Kivi pysyy, ja puu kyllä kuluu.
+KYSYMYS: Kerro lisää: Orăștien vuorten
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suolakaivos, josta tuli huvipuisto] 1992 — Turdan suolakaivoksessa on louhittu suolaa yli 2000 vuoden ajan: työ alkoi maan pinnalla jo antiikin aikana ja siirtyi maan alle roomalaisten valloitettua Daakian. Kaivostyöläiset louhivat suolaa käsin hakuilla ja kiiloilla ja saivat palkakseen leipää, olutta ja floriinia. Kaivos suljettiin vuonna 1932, mutta se toimi sittemmin muun muassa väestönsuojana ja jopa juuston varastona. Vuonna 1992 louhos avattiin yleisölle, ja vuosien 2008–2010 peruskorjaus muutti 120 metrin syvyydessä olevan Terezia-kaivoksen valoisaksi huvipuistoksi, jossa on tivolipyörä, minigolfia ja soutuvene maanalaisella järvellä.
+AIEMPI KYSYMYS: Kuinka syvällä maanalainen järvi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tätä lukua minä en ole käynyt mittaamassa. Järven omaa syvyyttä en pysty kertomaan varmasti, enkä halua arvata sitä. Varmaa on, että järvi sijaitsee [[Turdan]] vanhojen kaivoskuilujen pohjalla ja että [[suolakaivoksen]] syvimmät osat ovat lähteiden mukaan noin sadan metrin syvyydessä maanpinnasta. Maanalaiset [[suolajärvet]] ovat yleensä melko matalia, mutta tarkka luku kannattaa tarkistaa kaivoksen omista tiedoista. Kyl minä lennän, mut en sukella.
+KYSYMYS: Kerro lisää: Turdan
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Kuinka syvällä maanalainen järvi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tätä lukua minä en ole käynyt mittaamassa. Järven omaa syvyyttä en pysty kertomaan varmasti, enkä halua arvata sitä. Varmaa on, että järvi sijaitsee [[Turdan]] vanhojen kaivoskuilujen pohjalla ja että [[suolakaivoksen]] syvimmät osat ovat lähteiden mukaan noin sadan metrin syvyydessä maanpinnasta. Maanalaiset [[suolajärvet]] ovat yleensä melko matalia, mutta tarkka luku kannattaa tarkistaa kaivoksen omista tiedoista. Kyl minä lennän, mut en sukella.
+KYSYMYS: Kerro lisää: suolakaivoksen
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Kuinka syvällä maanalainen järvi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tätä lukua minä en ole käynyt mittaamassa. Järven omaa syvyyttä en pysty kertomaan varmasti, enkä halua arvata sitä. Varmaa on, että järvi sijaitsee [[Turdan]] vanhojen kaivoskuilujen pohjalla ja että [[suolakaivoksen]] syvimmät osat ovat lähteiden mukaan noin sadan metrin syvyydessä maanpinnasta. Maanalaiset [[suolajärvet]] ovat yleensä melko matalia, mutta tarkka luku kannattaa tarkistaa kaivoksen omista tiedoista. Kyl minä lennän, mut en sukella.
+KYSYMYS: Kerro lisää: suolajärvet
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Rákóczit ja kotiinpaluu Kassaan] Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina 1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.
+AIEMPI KYSYMYS: Millaista kaivoksessa on käydä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan kertoo. Vierailu vie syvälle [[Turdan]] suolakaivoksessa maan alle, ja ilma on kaivoksessa viileää ja tasaista vuodenajasta riippumatta. Vanhojen kaivoskuilujen pohjalla avautuu laaja luola, jossa on maanalainen järvi, jolla voi soutaa, sekä katosta riippuvia valaistuja rakennelmia. Kohde avattiin turisteille vuonna 1992, ja vuonna 2017 siellä kävi noin 618 000 vierasta, joten se on yksi [[Transilvanian]] suosituimmista käyntikohteista. Lämmin takki kannattaa ottaa mukaan, sillä kaivoksen lämpötila pysyy kesälläkin selvästi ulkoilmaa alhaisempana. Ylhäältä katsoen koko paikka on vain pieni aukko maassa.
+KYSYMYS: Kerro lisää: Transilvanian
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+AIEMPI KYSYMYS: Miten suola muodostuu maan alle?
+AIEMPI VASTAUS (Livia):
+Ai se. Siitä on ihan hyvä tarina. Suolakerrostumat syntyvät, kun matala meri tai merenlahti haihtuu ja sen veteen liuenneet suolat jäävät pohjalle. Kerrostumat peittyvät ajan mittaan savella ja hiekalla, ja ne säilyvät maan alla miljoonia vuosia. [[Transilvanian]] suolaesiintymät ovat peräisin [[mioseenikaudelta]], jolloin alueella oli laaja merialue, ja kerrostumat ovat monin paikoin painuneet ja ylöspäin työntyneet suolakumpuina. Siksi suolaa on voitu louhia paikoin hyvin lähellä pintaa. Pitkä historia, lyhyt kyyhky.
+KYSYMYS: Kerro lisää: mioseenikaudelta
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Mihin suolaa on kaivoksista käytetty?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys tuo. Suola on ollut pitkään yksi tärkeimmistä kauppatavaroista, koska sillä maustetaan ruokaa ja ennen kaikkea säilötään lihaa, kalaa ja juustoa. [[Transilvanian]] suolaa kuljetettiin lähteiden mukaan aikoinaan laajalle ympäristöön, usein jokia pitkin, ja [[suolakaivokset]] toivat alueelle vaurautta ja veroja hallitsijoille. Nykyään suolaa käytetään myös teollisuudessa, esimerkiksi kemianteollisuuden raaka-aineena ja talvisin teiden suolaamiseen. Vanhat kaivokset ovat monin paikoin muuttuneet matkailukohteiksi. Pullalla suola ei ole tekemistä, mutta pienellä määrällä se kuuluu taikinaan.
+KYSYMYS: Kerro lisää: suolakaivokset
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+AIEMPI KYSYMYS: Missä muualla Euroopassa on vierailtavia suolakaivoksia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suolakaivoksia on avattu yleisölle useissa Euroopan maissa. Tunnetuimpia ovat Puolan [[Wieliczkan]] suolakaivos [[Krakovan]] lähellä, jossa on maanalaisia kappeleita ja veistoksia suolasta, sekä Itävallan [[Hallstattin]] suolakaivos Alppien kainalossa. Myös Saksan Berchtesgadenissa on vierailtava suolakaivos. Kaikissa kohteissa vieraat laskeutuvat syvälle maan alle, ja monissa niistä kierros alkaa liukumäellä tai pienellä junalla. En ole varma, onko luettelo täydellinen. Lensin tän kaiken päässäni, ei kartan tarvetta.
+KYSYMYS: Kerro lisää: Wieliczkan
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Barbakaani] 1498 Krakovan vanhaan kaupunginmuuriin liittyvä pyöreä puolustuslinnake Barbakaani rakennettiin vuonna 1498. Puolalaiset pelkäsivät ottomaanien hyökkäystä, sillä kuningas Jan I Olbracht oli juuri kärsinyt raskaan sotilaallisen tappion. Niinpä kaupungin tärkeimmän portin eteen päätettiin pystyttää järeä kivilinnake vartioimaan kulkijoita. Barbakaani on lähes täydellisen pyöreä, ja sen sisäpiha on halkaisijaltaan noin 24 metriä. Muureissa on peräti 130 ampuma-aukkoa, joista puolustajat saattoivat ampua vihollista turvallisesti sisältä käsin. Rakennusta ympäröi leveä vallihauta - 26 metriä leveä ja 6 metriä syvä - ja seinät ovat alhaalta jopa 3 metriä paksut mutta ohenevat ylhäältä vain puolee…
+- [Krakova — kohdekartta / Kohdekartta: Mariankirkko] 1397 Mariankirkko on Krakovan tuomiokirkkoaukiolla seisova tiiligoottilainen kirkko. Sen perustukset ovat 1200-luvun alusta, mutta nykyinen mahtava runko valmistui vuoteen 1397 mennessä. Kirkolla on kaksi eripituista tornia - korkeampi torni sai kultaisen kruununsa vuonna 1666. Joka tunti, yötä päivää, korkeamman tornin huipulta kaikuu trumpetisti, joka soittaa vanhan hälytysmelodian ja katkaisee sen aina yhtäkkiä kesken. Tarinan mukaan tapa muistuttaa keskiaikaisesta soittajasta, jonka vihollinen ampui kesken varoituksen. Keskipäivän soitto lähetetään radiossa ympäri koko Puolaa. Kirkon sisällä on valtava puinen alttaritaulu, jonka kuvanveistäjä Veit Stoss veisti 1400-luvun lopulla - se on…
+AIEMPI KYSYMYS: Missä muualla Euroopassa on vierailtavia suolakaivoksia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suolakaivoksia on avattu yleisölle useissa Euroopan maissa. Tunnetuimpia ovat Puolan [[Wieliczkan]] suolakaivos [[Krakovan]] lähellä, jossa on maanalaisia kappeleita ja veistoksia suolasta, sekä Itävallan [[Hallstattin]] suolakaivos Alppien kainalossa. Myös Saksan Berchtesgadenissa on vierailtava suolakaivos. Kaikissa kohteissa vieraat laskeutuvat syvälle maan alle, ja monissa niistä kierros alkaa liukumäellä tai pienellä junalla. En ole varma, onko luettelo täydellinen. Lensin tän kaiken päässäni, ei kartan tarvetta.
+KYSYMYS: Kerro lisää: Krakovan
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+AIEMPI KYSYMYS: Missä muualla Euroopassa on vierailtavia suolakaivoksia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suolakaivoksia on avattu yleisölle useissa Euroopan maissa. Tunnetuimpia ovat Puolan [[Wieliczkan]] suolakaivos [[Krakovan]] lähellä, jossa on maanalaisia kappeleita ja veistoksia suolasta, sekä Itävallan [[Hallstattin]] suolakaivos Alppien kainalossa. Myös Saksan Berchtesgadenissa on vierailtava suolakaivos. Kaikissa kohteissa vieraat laskeutuvat syvälle maan alle, ja monissa niistä kierros alkaa liukumäellä tai pienellä junalla. En ole varma, onko luettelo täydellinen. Lensin tän kaiken päässäni, ei kartan tarvetta.
+KYSYMYS: Kerro lisää: Hallstattin
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+AIEMPI KYSYMYS: Mitkä ovat Romanian seitsemän ihmettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo lista ei ole minulla ihan päässä. Varmaa on, että [[Corvinin]] linna kuuluu Romanian seitsemään ihmeeseen, ja useimmissa luetteloissa mukana on myös [[Transfăgărășanin]] vuoristotie. Muiden kohteiden kohdalla en ole varma, koska ihmeluettelo perustuu yleisöäänestyksiin eikä sen sisältö ole sama kaikissa lähteissä. Kannattaa tarkistaa nykyinen luettelo luotettavasta matkailulähteestä. Linna on tästä kuitenkin helppo kohde valita, sillä sen tornit näkyvät kauas. Lintuna olen aina pitänyt torneista.
+KYSYMYS: Kerro lisää: Corvinin
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+AIEMPI KYSYMYS: Mitkä ovat Romanian seitsemän ihmettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo lista ei ole minulla ihan päässä. Varmaa on, että [[Corvinin]] linna kuuluu Romanian seitsemään ihmeeseen, ja useimmissa luetteloissa mukana on myös [[Transfăgărășanin]] vuoristotie. Muiden kohteiden kohdalla en ole varma, koska ihmeluettelo perustuu yleisöäänestyksiin eikä sen sisältö ole sama kaikissa lähteissä. Kannattaa tarkistaa nykyinen luettelo luotettavasta matkailulähteestä. Linna on tästä kuitenkin helppo kohde valita, sillä sen tornit näkyvät kauas. Lintuna olen aina pitänyt torneista.
+KYSYMYS: Kerro lisää: Transfăgărășanin
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+AIEMPI KYSYMYS: Kuka linnan rakennutti?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on pitkä juttu. Linna ei ole yhden miehen yhdessä vaiheessa rakentama, vaan se kasvoi vaiheittain. Sukuun paikka tuli vuonna 1409 erokorvauksena Unkarin kuninkaalta [[Sigismundilta]], ja vuonna 1446 Transilvanian vojvodi [[János Hunyadi]] alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi. Hunyadin kuoltua 1456 työ hyytyi, ja se pysähtyi kokonaan 1480. Nykyinen asu on lisäksi myöhemmän ennallistuksen tulosta eikä täysin keskiaikainen. Kolme vuosikymmentä rakentamista, ja minä jaksoin kertoa sen yhdellä hengityksellä.
+KYSYMYS: Kerro lisää: Sigismundilta
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Kuka linnan rakennutti?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on pitkä juttu. Linna ei ole yhden miehen yhdessä vaiheessa rakentama, vaan se kasvoi vaiheittain. Sukuun paikka tuli vuonna 1409 erokorvauksena Unkarin kuninkaalta [[Sigismundilta]], ja vuonna 1446 Transilvanian vojvodi [[János Hunyadi]] alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi. Hunyadin kuoltua 1456 työ hyytyi, ja se pysähtyi kokonaan 1480. Nykyinen asu on lisäksi myöhemmän ennallistuksen tulosta eikä täysin keskiaikainen. Kolme vuosikymmentä rakentamista, ja minä jaksoin kertoa sen yhdellä hengityksellä.
+KYSYMYS: Kerro lisää: János Hunyadi
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+AIEMPI KYSYMYS: Miksi linna on nimetty korpin mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Korppi on tässä suvun vaakunaeläin. Linnan Mantteli-siivessä on yhä maalaus tarusta, josta nimi [[Corvinus]] juontuu, ja nimi liittyy [[Hunyadin]] sukuun, jonka vaakunassa korppi esiintyy. Tarun yksityiskohdat vaihtelevat kertojasta toiseen, joten en esitä yhtä versiota varmana. Nimeä kantoi myös Hunyadin poika [[Matias Corvinus]], josta tuli Unkarin kuningas. Tuttu linnunsukulainen sieltä, vaikka korpit eivät kyllä kanna postia yhtä luotettavasti.
+KYSYMYS: Kerro lisää: Corvinus
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Linnoitus, joka pelastui mutta ei pelastanut] 1456–1459 — Heinäkuussa 1456 sulttaani Mehmed II piiritti Nándorfehérvárin linnoitusta, nykyistä Belgradia. Serbian despootti Đurađ Branković, 79-vuotias, saattoi vain katsoa vierestä: hänen oma 9 000 miehen armeijansa oli murskattu lähistöllä jo kolme viikkoa aiemmin, 18. kesäkuuta. Piirityksen mursivat lopulta János Hunyadin joukot ja talonpoikaisristiretkeläiset 22. heinäkuuta. Branković kuoli joulukuussa samana vuonna omassa Smederevon linnassaan. Voitto jäi lyhytaikaiseksi: kolme vuotta myöhemmin, 1459, Smederevo itse – Serbian viimeinen pääkaupunki – antautui sulttaanille, ja maa katosi kartalta vuosisadoiksi.
+- [Unkari — maalehti / Historia: Kellot, jotka jäivät soimaan] 1456 — Kesällä 1456 osmanien armeija piiritti Nándorfehérvárin linnoitusta, nykyistä Belgradia. Paavi oli jo aiemmin määrännyt, että kirkonkellojen tuli soida keskipäivällä, jotta koko kristikunta muistaisi rukoilla puolustajien puolesta. Heinäkuun 22. päivänä János Hunyadin joukot ja niiden mukaan lähteneet talonpojat saivat piirityksen murrettua. Kellojen soitto ei loppunut voittoon vaan jäi voimaan sen muistoksi, ja siksi monessa maassa kirkonkellot soivat yhä puolenpäivän aikaan.
+AIEMPI KYSYMYS: Miksi linna on nimetty korpin mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Korppi on tässä suvun vaakunaeläin. Linnan Mantteli-siivessä on yhä maalaus tarusta, josta nimi [[Corvinus]] juontuu, ja nimi liittyy [[Hunyadin]] sukuun, jonka vaakunassa korppi esiintyy. Tarun yksityiskohdat vaihtelevat kertojasta toiseen, joten en esitä yhtä versiota varmana. Nimeä kantoi myös Hunyadin poika [[Matias Corvinus]], josta tuli Unkarin kuningas. Tuttu linnunsukulainen sieltä, vaikka korpit eivät kyllä kanna postia yhtä luotettavasti.
+KYSYMYS: Kerro lisää: Hunyadin
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+AIEMPI KYSYMYS: Miksi linna on nimetty korpin mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Korppi on tässä suvun vaakunaeläin. Linnan Mantteli-siivessä on yhä maalaus tarusta, josta nimi [[Corvinus]] juontuu, ja nimi liittyy [[Hunyadin]] sukuun, jonka vaakunassa korppi esiintyy. Tarun yksityiskohdat vaihtelevat kertojasta toiseen, joten en esitä yhtä versiota varmana. Nimeä kantoi myös Hunyadin poika [[Matias Corvinus]], josta tuli Unkarin kuningas. Tuttu linnunsukulainen sieltä, vaikka korpit eivät kyllä kanna postia yhtä luotettavasti.
+KYSYMYS: Kerro lisää: Matias Corvinus
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Kuka oli János Hunyadi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. János Hunyadi oli unkarilainen sotapäällikkö ja aatelismies, joka toimi Transilvanian vojvodina ja nousi vuonna 1446 Unkarin valtakunnanhoitajaksi. Hän tunnetaan ennen kaikkea taisteluistaan [[Osmanien]] valtakuntaa vastaan, ja hänen johtamansa joukot torjuivat vuonna 1456 hyökkäyksen [[Belgradin]] luona. Hunyadi kuoli samana vuonna. Hänen poikansa [[Matias Corvinus]] nousi myöhemmin Unkarin kuninkaaksi. Meikäläisten muistiinpanojen mukaan mies oli kova kulkemaan, mutta kyyhkyn vauhtiin hän ei yltänyt.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Kuka oli János Hunyadi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. János Hunyadi oli unkarilainen sotapäällikkö ja aatelismies, joka toimi Transilvanian vojvodina ja nousi vuonna 1446 Unkarin valtakunnanhoitajaksi. Hän tunnetaan ennen kaikkea taisteluistaan [[Osmanien]] valtakuntaa vastaan, ja hänen johtamansa joukot torjuivat vuonna 1456 hyökkäyksen [[Belgradin]] luona. Hunyadi kuoli samana vuonna. Hänen poikansa [[Matias Corvinus]] nousi myöhemmin Unkarin kuninkaaksi. Meikäläisten muistiinpanojen mukaan mies oli kova kulkemaan, mutta kyyhkyn vauhtiin hän ei yltänyt.
+KYSYMYS: Kerro lisää: Belgradin
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Dracula syntyi alaviitteestä] Bram Stoker kiersi teatterikiertueilla maailmaa muttei koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli sijoitettu Styriaan ja kreivin nimi oli Count Wampyr. Nimen Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja Moldavian historiasta ja kopioi kirjasta alaviitteen, jonka mukaan Dracula tarkoittaa paholaista. Vlad Seivästäjää ei mainita muistiinpanoissa lainkaan.
+AIEMPI KYSYMYS: Miten Draculan tarina liittyy Transilvaniaan?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on hyvä kysymys. Bram Stokerin romaani [[Dracula]] ilmestyi vuonna 1897, ja sen kreivi asuu Transilvaniassa linnassa, joka on kirjailijan omaa keksintöä. Stoker ei käynyt alueella, vaan keräsi tietonsa kirjoista. Nimi tulee historiallisesta [[Vlad Seivästäjästä]], Valakian ruhtinaasta 1400-luvulta, mutta hän ei ollut transilvanialainen kreivi eikä vampyyri. Oppaiden mukaan Hunyadi piti Vladia vankinaan Corvinin linnassa, ja linnaa mainitaan toisinaan romaanin esikuvana. Siitä ei kuitenkaan ole varmaa näyttöä. Pimeään linnaan minä en mene, vaikka siellä olisi pullaa.
+KYSYMYS: Kerro lisää: Dracula
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+AIEMPI KYSYMYS: Miten Draculan tarina liittyy Transilvaniaan?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on hyvä kysymys. Bram Stokerin romaani [[Dracula]] ilmestyi vuonna 1897, ja sen kreivi asuu Transilvaniassa linnassa, joka on kirjailijan omaa keksintöä. Stoker ei käynyt alueella, vaan keräsi tietonsa kirjoista. Nimi tulee historiallisesta [[Vlad Seivästäjästä]], Valakian ruhtinaasta 1400-luvulta, mutta hän ei ollut transilvanialainen kreivi eikä vampyyri. Oppaiden mukaan Hunyadi piti Vladia vankinaan Corvinin linnassa, ja linnaa mainitaan toisinaan romaanin esikuvana. Siitä ei kuitenkaan ole varmaa näyttöä. Pimeään linnaan minä en mene, vaikka siellä olisi pullaa.
+KYSYMYS: Kerro lisää: Vlad Seivästäjästä
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Miten seinämaalaukset ovat kestäneet ulkona?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on se paras kohta. [[Voronețin]] ulkoseinien [[freskot]] ovat säilyneet poikkeuksellisen hyvin, vaikka ne ovat olleet sään armoilla jo yli viisisataa vuotta. Suojana on toiminut etenkin leveä, alas ulottuva katto, joka on pitänyt sadetta poissa seinistä. Freskojen taustan sininen väri on kestänyt aikaa muita värejä paremmin, ja kirkko kuuluu [[Pohjois-Moldovan]] maalattujen kirkkojen joukkoon, jotka ovat UNESCOn maailmanperintökohteita. Etelä- ja länsiseinät ovat säilyneet parhaiten, kun taas säälle alttiimmat pinnat ovat kärsineet enemmän. Ei paha kyyhkyltä, mutta taidekonservaattori en ole.
+KYSYMYS: Kerro lisää: Voronețin
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Coit Tower] 1849–1934 Telegraph Hill sai nimensä 1849, kun sen laelle rakennettiin kaksikerroksinen tähystysasema. Sieltä ilmoitettiin kaupunkilaisille optisella merkinantolaitteella, mitä laivoja oli tulossa satamaan; 1853 se korvattiin sähkölennättimellä, jonka myrsky tuhosi 1870. Isoisän matkan aikaan kukkulalla oli siis yhä lennättimen nimi mutta ei enää asemaa. Paikkaa on kuvattu koko lahden ja viiden ympäröivän piirikunnan parhaaksi näköalapaikaksi. Tornin maksoi Lillie Hitchcock Coit (1843–1929). Viisitoistavuotiaana hän näki Knickerbocker Engine Co. No. 5:n palokunnan jäävän vajaamiehiseksi hälytyksessä Telegraph Hillille, heitti koulukirjansa maahan ja auttoi ruiskun mäkeen huutaen muitakin si…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Miten seinämaalaukset ovat kestäneet ulkona?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on se paras kohta. [[Voronețin]] ulkoseinien [[freskot]] ovat säilyneet poikkeuksellisen hyvin, vaikka ne ovat olleet sään armoilla jo yli viisisataa vuotta. Suojana on toiminut etenkin leveä, alas ulottuva katto, joka on pitänyt sadetta poissa seinistä. Freskojen taustan sininen väri on kestänyt aikaa muita värejä paremmin, ja kirkko kuuluu [[Pohjois-Moldovan]] maalattujen kirkkojen joukkoon, jotka ovat UNESCOn maailmanperintökohteita. Etelä- ja länsiseinät ovat säilyneet parhaiten, kun taas säälle alttiimmat pinnat ovat kärsineet enemmän. Ei paha kyyhkyltä, mutta taidekonservaattori en ole.
+KYSYMYS: Kerro lisää: freskot
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+AIEMPI KYSYMYS: Miten seinämaalaukset ovat kestäneet ulkona?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on se paras kohta. [[Voronețin]] ulkoseinien [[freskot]] ovat säilyneet poikkeuksellisen hyvin, vaikka ne ovat olleet sään armoilla jo yli viisisataa vuotta. Suojana on toiminut etenkin leveä, alas ulottuva katto, joka on pitänyt sadetta poissa seinistä. Freskojen taustan sininen väri on kestänyt aikaa muita värejä paremmin, ja kirkko kuuluu [[Pohjois-Moldovan]] maalattujen kirkkojen joukkoon, jotka ovat UNESCOn maailmanperintökohteita. Etelä- ja länsiseinät ovat säilyneet parhaiten, kun taas säälle alttiimmat pinnat ovat kärsineet enemmän. Ei paha kyyhkyltä, mutta taidekonservaattori en ole.
+KYSYMYS: Kerro lisää: Pohjois-Moldovan
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto] Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan sisällä.
+AIEMPI KYSYMYS: Mikä Bukovina on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bukovina on historiallinen alue [[Karpaattien]] itäosassa, joka on nykyään jaettu kahtia: eteläinen osa kuuluu Romaniaan ja pohjoinen Ukrainaan. Romanian puolen keskus on [[Suceava]], ja pohjoisessa vastaava kaupunki on [[Tšernivtsi]]. Nimi tulee slaavilaisesta sanasta, joka tarkoittaa pyökkiä, eli se on suurin piirtein pyökkimaa. Alue oli pitkään osa [[Moldovan ruhtinaskuntaa]], ja se kuului myöhemmin [[Itävallan]] keisarikuntaan. Täällä oli aina monta kieltä ja monta uskontoa rinnakkain. Kartalta tämä näyttää yllättävän pieneltä, mutta kyllä siihen mahtuu tarinaa.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mikä Bukovina on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bukovina on historiallinen alue [[Karpaattien]] itäosassa, joka on nykyään jaettu kahtia: eteläinen osa kuuluu Romaniaan ja pohjoinen Ukrainaan. Romanian puolen keskus on [[Suceava]], ja pohjoisessa vastaava kaupunki on [[Tšernivtsi]]. Nimi tulee slaavilaisesta sanasta, joka tarkoittaa pyökkiä, eli se on suurin piirtein pyökkimaa. Alue oli pitkään osa [[Moldovan ruhtinaskuntaa]], ja se kuului myöhemmin [[Itävallan]] keisarikuntaan. Täällä oli aina monta kieltä ja monta uskontoa rinnakkain. Kartalta tämä näyttää yllättävän pieneltä, mutta kyllä siihen mahtuu tarinaa.
+KYSYMYS: Kerro lisää: Suceava
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mikä Bukovina on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bukovina on historiallinen alue [[Karpaattien]] itäosassa, joka on nykyään jaettu kahtia: eteläinen osa kuuluu Romaniaan ja pohjoinen Ukrainaan. Romanian puolen keskus on [[Suceava]], ja pohjoisessa vastaava kaupunki on [[Tšernivtsi]]. Nimi tulee slaavilaisesta sanasta, joka tarkoittaa pyökkiä, eli se on suurin piirtein pyökkimaa. Alue oli pitkään osa [[Moldovan ruhtinaskuntaa]], ja se kuului myöhemmin [[Itävallan]] keisarikuntaan. Täällä oli aina monta kieltä ja monta uskontoa rinnakkain. Kartalta tämä näyttää yllättävän pieneltä, mutta kyllä siihen mahtuu tarinaa.
+KYSYMYS: Kerro lisää: Tšernivtsi
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+AIEMPI KYSYMYS: Mikä Bukovina on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bukovina on historiallinen alue [[Karpaattien]] itäosassa, joka on nykyään jaettu kahtia: eteläinen osa kuuluu Romaniaan ja pohjoinen Ukrainaan. Romanian puolen keskus on [[Suceava]], ja pohjoisessa vastaava kaupunki on [[Tšernivtsi]]. Nimi tulee slaavilaisesta sanasta, joka tarkoittaa pyökkiä, eli se on suurin piirtein pyökkimaa. Alue oli pitkään osa [[Moldovan ruhtinaskuntaa]], ja se kuului myöhemmin [[Itävallan]] keisarikuntaan. Täällä oli aina monta kieltä ja monta uskontoa rinnakkain. Kartalta tämä näyttää yllättävän pieneltä, mutta kyllä siihen mahtuu tarinaa.
+KYSYMYS: Kerro lisää: Moldovan ruhtinaskuntaa
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mikä Bukovina on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bukovina on historiallinen alue [[Karpaattien]] itäosassa, joka on nykyään jaettu kahtia: eteläinen osa kuuluu Romaniaan ja pohjoinen Ukrainaan. Romanian puolen keskus on [[Suceava]], ja pohjoisessa vastaava kaupunki on [[Tšernivtsi]]. Nimi tulee slaavilaisesta sanasta, joka tarkoittaa pyökkiä, eli se on suurin piirtein pyökkimaa. Alue oli pitkään osa [[Moldovan ruhtinaskuntaa]], ja se kuului myöhemmin [[Itävallan]] keisarikuntaan. Täällä oli aina monta kieltä ja monta uskontoa rinnakkain. Kartalta tämä näyttää yllättävän pieneltä, mutta kyllä siihen mahtuu tarinaa.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mistä Voronețin sininen väri saatiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Hyvä kysymys tuo. Voronețin sininen on saatu [[azuriitista]], joka on kuparia sisältävä sininen mineraali. Sitä jauhettiin pigmentiksi ja sekoitettiin muihin aineisiin, ja tuloksena oli syvä sininen, joka on säilynyt freskoissa hämmästyttävän hyvin. Väri on tullut tunnetuksi koko alueella nimellä [[Voronețin sininen]]. Tarkkaa seosta ei ole kerrottu varmasti kaikissa lähteissä, joten en esitä yksityiskohtia, joista en ole varma. Minun siipieni sininen on harmaampaa.
+KYSYMYS: Kerro lisää: azuriitista
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mistä Voronețin sininen väri saatiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Hyvä kysymys tuo. Voronețin sininen on saatu [[azuriitista]], joka on kuparia sisältävä sininen mineraali. Sitä jauhettiin pigmentiksi ja sekoitettiin muihin aineisiin, ja tuloksena oli syvä sininen, joka on säilynyt freskoissa hämmästyttävän hyvin. Väri on tullut tunnetuksi koko alueella nimellä [[Voronețin sininen]]. Tarkkaa seosta ei ole kerrottu varmasti kaikissa lähteissä, joten en esitä yksityiskohtia, joista en ole varma. Minun siipieni sininen on harmaampaa.
+KYSYMYS: Kerro lisää: Voronețin sininen
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+AIEMPI KYSYMYS: Kuka oli Tapani Suuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tapani Suuri eli [[Tapani III]] hallitsi Moldovan ruhtinaskuntaa vuodesta 1457 vuoteen 1504, eli lähes puolen vuosisadan ajan. Hän tunnetaan ennen kaikkea sotamenestyksestään [[Osmanien]] valtakuntaa vastaan sekä lukuisten kirkkojen ja luostarien rakennuttamisesta. Vasluin taistelun voitto vuonna 1475 oli hänen tunnetuimpia saavutuksiaan, ja Voronețin kirkon rakennuttaminen vuonna 1488 liittyy juuri siihen. Romaniassa häntä pidetään yhtenä kansallisen historian keskeisistä hahmoista. Kunnioitettu mies, eikä pullia mainita lähteissä lainkaan.
+KYSYMYS: Kerro lisää: Tapani III
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Kuka oli Tapani Suuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tapani Suuri eli [[Tapani III]] hallitsi Moldovan ruhtinaskuntaa vuodesta 1457 vuoteen 1504, eli lähes puolen vuosisadan ajan. Hän tunnetaan ennen kaikkea sotamenestyksestään [[Osmanien]] valtakuntaa vastaan sekä lukuisten kirkkojen ja luostarien rakennuttamisesta. Vasluin taistelun voitto vuonna 1475 oli hänen tunnetuimpia saavutuksiaan, ja Voronețin kirkon rakennuttaminen vuonna 1488 liittyy juuri siihen. Romaniassa häntä pidetään yhtenä kansallisen historian keskeisistä hahmoista. Kunnioitettu mies, eikä pullia mainita lähteissä lainkaan.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mitä muita maalattuja luostareita Bukovinassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Voronețin lisäksi alueella on useita maalattuja kirkkoja ja luostareita, jotka kuuluvat samaan [[UNESCOn]] maailmanperintökohteeseen. Tunnetuimpia ovat [[Moldovița]], [[Sucevița]], [[Humor]] ja [[Arbore]], joista jokaisella on omat tunnuspiirteensä: esimerkiksi Arboren freskoissa vihreä on tärkeä, kun taas Moldovițassa ja Voronețissa vallitsee sininen. Kirkkojen seinillä on raamatullisia kuvia, pyhimyksiä ja historiallisia kohtauksia. En ole varma, onko luettelo täydellinen, mutta nämä nimet muistan. Neljä nimeä pää täynnä, ja silti jäi mielikuvitukselle tilaa.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mitä muita maalattuja luostareita Bukovinassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Voronețin lisäksi alueella on useita maalattuja kirkkoja ja luostareita, jotka kuuluvat samaan [[UNESCOn]] maailmanperintökohteeseen. Tunnetuimpia ovat [[Moldovița]], [[Sucevița]], [[Humor]] ja [[Arbore]], joista jokaisella on omat tunnuspiirteensä: esimerkiksi Arboren freskoissa vihreä on tärkeä, kun taas Moldovițassa ja Voronețissa vallitsee sininen. Kirkkojen seinillä on raamatullisia kuvia, pyhimyksiä ja historiallisia kohtauksia. En ole varma, onko luettelo täydellinen, mutta nämä nimet muistan. Neljä nimeä pää täynnä, ja silti jäi mielikuvitukselle tilaa.
+KYSYMYS: Kerro lisää: Moldovița
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mitä muita maalattuja luostareita Bukovinassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Voronețin lisäksi alueella on useita maalattuja kirkkoja ja luostareita, jotka kuuluvat samaan [[UNESCOn]] maailmanperintökohteeseen. Tunnetuimpia ovat [[Moldovița]], [[Sucevița]], [[Humor]] ja [[Arbore]], joista jokaisella on omat tunnuspiirteensä: esimerkiksi Arboren freskoissa vihreä on tärkeä, kun taas Moldovițassa ja Voronețissa vallitsee sininen. Kirkkojen seinillä on raamatullisia kuvia, pyhimyksiä ja historiallisia kohtauksia. En ole varma, onko luettelo täydellinen, mutta nämä nimet muistan. Neljä nimeä pää täynnä, ja silti jäi mielikuvitukselle tilaa.
+KYSYMYS: Kerro lisää: Sucevița
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+AIEMPI KYSYMYS: Mitä muita maalattuja luostareita Bukovinassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Voronețin lisäksi alueella on useita maalattuja kirkkoja ja luostareita, jotka kuuluvat samaan [[UNESCOn]] maailmanperintökohteeseen. Tunnetuimpia ovat [[Moldovița]], [[Sucevița]], [[Humor]] ja [[Arbore]], joista jokaisella on omat tunnuspiirteensä: esimerkiksi Arboren freskoissa vihreä on tärkeä, kun taas Moldovițassa ja Voronețissa vallitsee sininen. Kirkkojen seinillä on raamatullisia kuvia, pyhimyksiä ja historiallisia kohtauksia. En ole varma, onko luettelo täydellinen, mutta nämä nimet muistan. Neljä nimeä pää täynnä, ja silti jäi mielikuvitukselle tilaa.
+KYSYMYS: Kerro lisää: Humor
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+AIEMPI KYSYMYS: Mitä muita maalattuja luostareita Bukovinassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Voronețin lisäksi alueella on useita maalattuja kirkkoja ja luostareita, jotka kuuluvat samaan [[UNESCOn]] maailmanperintökohteeseen. Tunnetuimpia ovat [[Moldovița]], [[Sucevița]], [[Humor]] ja [[Arbore]], joista jokaisella on omat tunnuspiirteensä: esimerkiksi Arboren freskoissa vihreä on tärkeä, kun taas Moldovițassa ja Voronețissa vallitsee sininen. Kirkkojen seinillä on raamatullisia kuvia, pyhimyksiä ja historiallisia kohtauksia. En ole varma, onko luettelo täydellinen, mutta nämä nimet muistan. Neljä nimeä pää täynnä, ja silti jäi mielikuvitukselle tilaa.
+KYSYMYS: Kerro lisää: Arbore
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Appalakit: Joki joka on vanhempi kuin vuoret ympärillään] New River kiemurtelee syvässä kanjonissa Appalakkien poikki ja tunnetaan yhtenä maailman vanhimmista joista: sen uskotaan uurtaneen uomaansa jo kauan ennen kuin ympärillä kohoavat vuoret olivat edes olemassa, vaikka tarkka ikä on geologien kesken kiistanalainen. Poikkeuksellista joelle on myös suunta – se virtaa etelästä pohjoiseen, vastoin useimpien itärannikon jokien tavanomaista reittiä. Nykyään kanjonin yli kaartuu teräksinen New River Gorge -silta, jonka kaaren alla joki näkyy kapeana nauhana syvällä metsäisten rinteiden välissä.
+- [Appalakit — kaupunkilehti / Appalakit: Vuoret jotka olivat jo vanhoja ennen dinosauruksia] Appalakkien tarina alkoi jo lähes miljardi vuotta sitten mannerten yhteentörmäyksissä: viimeisin niistä, noin 270 miljoonaa vuotta sitten tapahtunut Alleghenyn vuorenpoiminta, syntyi kun Pohjois-Amerikka ja Afrika törmäsivät toisiinsa ja kohottivat kertaalleen Himalajan veroisia huippuja. Sen jälkeen 240 miljoonaa vuotta vesi, tuuli, jää ja painovoima ovat kuluttaneet piikit pyöreiksi selänteiksi. Puiden ilmaan päästämä isopreeni verhoaa rinteet vielä tänäkin päivänä siniseen usvaan, josta Blue Ridge -vuoret saivat aikoinaan nimensä.
+AIEMPI KYSYMYS: Mikä Transfăgărășan on?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on tuttu juttu. Transfăgărășan on vuoristotie, joka ylittää [[Făgărașin vuoret]] [[Romaniassa]] ja yhdistää Transilvanian ja Valakian alueet. Se rakennettiin 1970-luvun alussa [[Ceaușescun]] aikana, ja yleisen käsityksen mukaan sotilaalliset syyt olivat taustalla. Tie nousee korkeimmillaan noin kahden kilometrin korkeuteen, ja siinä on jyrkkiä mutkia sekä pitkä tunneli. Talvella tie on suljettu lumen vuoksi, ja se avataan yleensä kesällä. Tuulessa lentäminen siellä on aika haastavaa, siis jos tarkkoja ollaan.
+KYSYMYS: Kerro lisää: Făgărașin vuoret
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+- [Romania — maalehti / Ruoka: Puuro, joka tuli laivalla] 1700-luku — Mämäligä on maissijauhosta keitetty puuro, joka korvasi Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja Valakiasta vuodelta 1723. Tonavan laakso sopi maissille erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja käännetään lautaselle kuin kakku, ja perinteisesti kyljestä leikataan siivuja langalla. Sitä syödään juuston ja smetanan kanssa tai lisäkkeenä lihalle ja kaalikääryleille.
+AIEMPI KYSYMYS: Mikä Transfăgărășan on?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on tuttu juttu. Transfăgărășan on vuoristotie, joka ylittää [[Făgărașin vuoret]] [[Romaniassa]] ja yhdistää Transilvanian ja Valakian alueet. Se rakennettiin 1970-luvun alussa [[Ceaușescun]] aikana, ja yleisen käsityksen mukaan sotilaalliset syyt olivat taustalla. Tie nousee korkeimmillaan noin kahden kilometrin korkeuteen, ja siinä on jyrkkiä mutkia sekä pitkä tunneli. Talvella tie on suljettu lumen vuoksi, ja se avataan yleensä kesällä. Tuulessa lentäminen siellä on aika haastavaa, siis jos tarkkoja ollaan.
+KYSYMYS: Kerro lisää: Romaniassa
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Maailman painavin rakennus] Parlamenttipalatsin rakentaminen alkoi vuonna 1984 Nicolae Ceaușescun määräyksestä. Pääarkkitehti oli Anca Petrescu, ja hänen kanssaan piirsi noin 700 muuta arkkitehtia. Lattiapinta-alaa on 365 000 neliömetriä ja painoa noin 4,1 miljoonaa tonnia — enemmän kuin missään muussa rakennuksessa maailmassa. Tieltä purettiin kokonainen vanha kaupunginosa, ja kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa kokoontuu Romanian parlamentti, mutta noin 70 prosenttia huoneista on yhä tyhjillään.
+AIEMPI KYSYMYS: Mikä Transfăgărășan on?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on tuttu juttu. Transfăgărășan on vuoristotie, joka ylittää [[Făgărașin vuoret]] [[Romaniassa]] ja yhdistää Transilvanian ja Valakian alueet. Se rakennettiin 1970-luvun alussa [[Ceaușescun]] aikana, ja yleisen käsityksen mukaan sotilaalliset syyt olivat taustalla. Tie nousee korkeimmillaan noin kahden kilometrin korkeuteen, ja siinä on jyrkkiä mutkia sekä pitkä tunneli. Talvella tie on suljettu lumen vuoksi, ja se avataan yleensä kesällä. Tuulessa lentäminen siellä on aika haastavaa, siis jos tarkkoja ollaan.
+KYSYMYS: Kerro lisää: Ceaușescun

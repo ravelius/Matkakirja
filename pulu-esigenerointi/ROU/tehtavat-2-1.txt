@@ -1,0 +1,1059 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+AIEMPI KYSYMYS: Missä Vlad Seivästäjä sitten asui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vlad III syntyi noin 1430-luvun alussa [[Sighișoarassa]], ja ruhtinaana hän asui pääasiassa Valakian silloisessa ruhtinaskaupungissa [[Târgoviștessa]]. Lisäksi hän vahvisti 1450-luvulla [[Poenarin linnan]] toiseksi turvapaikakseen, ja sen rauniot kohoavat yhä jyrkän vuorenrinteen päällä; huipulle johtaa 1480 betoniporrasta. Nuoruudessaan hän oli myös panttivankina osmanien hovissa, joten vakituista kotia hänellä ei kovin pitkään ollut. Branin linnassa hänen ei tiedetä asuneen. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Sighișoarassa
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+AIEMPI KYSYMYS: Missä Vlad Seivästäjä sitten asui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vlad III syntyi noin 1430-luvun alussa [[Sighișoarassa]], ja ruhtinaana hän asui pääasiassa Valakian silloisessa ruhtinaskaupungissa [[Târgoviștessa]]. Lisäksi hän vahvisti 1450-luvulla [[Poenarin linnan]] toiseksi turvapaikakseen, ja sen rauniot kohoavat yhä jyrkän vuorenrinteen päällä; huipulle johtaa 1480 betoniporrasta. Nuoruudessaan hän oli myös panttivankina osmanien hovissa, joten vakituista kotia hänellä ei kovin pitkään ollut. Branin linnassa hänen ei tiedetä asuneen. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Târgoviștessa
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+AIEMPI KYSYMYS: Missä Vlad Seivästäjä sitten asui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vlad III syntyi noin 1430-luvun alussa [[Sighișoarassa]], ja ruhtinaana hän asui pääasiassa Valakian silloisessa ruhtinaskaupungissa [[Târgoviștessa]]. Lisäksi hän vahvisti 1450-luvulla [[Poenarin linnan]] toiseksi turvapaikakseen, ja sen rauniot kohoavat yhä jyrkän vuorenrinteen päällä; huipulle johtaa 1480 betoniporrasta. Nuoruudessaan hän oli myös panttivankina osmanien hovissa, joten vakituista kotia hänellä ei kovin pitkään ollut. Branin linnassa hänen ei tiedetä asuneen. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Poenarin linnan
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Spasskin luostari] arkkimandriitta Feofan 1714–1719 Kurašovin kadun luostari on Jakutskin vanhin kirkollinen laitos, ja sen varhaisin nimeltä tunnettu johtaja on arkkimandriitta Feofan, joka oli luostarin esimiehenä vuosina 1714–1719. Kaupungin venäläinen kirkollinen elämä on siis lähes yhtä vanhaa kuin linnoitus itse: hirsivarustus pystytettiin 1632, ja sata vuotta myöhemmin paikalla oli jo luostari arkkimandriittoineen. Luostarin rakennukset ovat puuta, ja se on Jakutskissa sääntö eikä poikkeus. Ikiroudan päällä hirsi on käyttökelpoinen materiaali: se on kevyt, joustaa maan liikkeiden mukana ja on korjattavissa hirsi kerrallaan. Kaupungin vanhin säilynyt rakennuskanta on juuri hirsitaloja, ja niiden joukoss…
+- [Vladivostok — kohdekartta / Kohdekartta: Funikulaari] avattu 1962 Vladivostokin joukkoliikenne alkoi raiteilta: ensimmäinen raitiolinja avattiin Svetlanskajalle kesäkuussa 1908, ja lokakuussa 1912 liikenteeseen tulivat Belgiassa rakennetut puukoriset vaunut. Kaupungin erikoisin raide on kuitenkin lyhin: Kotkanpesän rinnettä kiipeävä funikulaari, joka avattiin toukokuussa 1962 Hruštšovin ajan suuren rakennuskauden hankkeena. Rataa on 183 metriä, nousua 66 ja puoli, ja matka kestää puolitoista minuuttia. Lyhyys ei tee siitä turhaa. Kukkulakaupungissa suora nousu on kävelijälle raskain, ja funikulaari korvaa satojen portaiden pätkän; samalla se on kaupungin rakastetuimpia laitteita, kahden vastapainona toisiaan kohtaavan vaunun pieni teatteri. Yl…
+AIEMPI KYSYMYS: Kuka linnassa on oikeasti asunut?
+AIEMPI VASTAUS (Livia):
+Katotaas. Keskiajalla linnassa palveli lähinnä sotaväkeä ja linnanvartijoita, sillä se vartioi rajasolaa ja toimi myöhemmin tullipaikkana. Nykyisen asuinhistoriansa linna sai 1900-luvulla: [[Brașovin]] kaupunki lahjoitti sen 1920-luvun alussa Romanian kuningatar [[Marialle]], joka otti linnan käyttöönsä ja kunnostutti sen. Tietääkseni kommunistiset viranomaiset pakkolunastivat linnan 1940-luvun lopulla, ja myöhemmin se palautettiin kuningattaren perillisille.
+
+Kuningatar kunnosti linnan kotikseen, ja minä ymmärrän häntä: vuoristoilma kantaa siipiä paremmin kuin mikään muu. Mut nykyään sinne tullaan Draculan perässä, ja se on kyllä vähän pieni juoni.
+KYSYMYS: Kerro lisää: Brașovin
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Maria Severa lauloi ensimmäisenä fadon maineeseen] Fado on Lissabonin oma laulu, eikä se ole syntynyt juhlasalissa. Kokoonpano on yhä sama kuin alussa: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Ensimmäinen, joka nousi tällä laululla koko kaupungin puheenaiheeksi, oli Maria Severa Onofriana. Hän syntyi Madragoassa 26. heinäkuuta 1820 äitinsä kapakan lapsena ja lauloi Mourarian kujilla säestäen itseään. Hän kuoli tuberkuloosiin 26-vuotiaana 30. marraskuuta 1846, ja hänet haudattiin yhteishautaan ilman arkkua. Vuonna 1931 hänen tarinastaan tehtiin Portugalin ensimmäinen äänielokuva.
+AIEMPI KYSYMYS: Kuka linnassa on oikeasti asunut?
+AIEMPI VASTAUS (Livia):
+Katotaas. Keskiajalla linnassa palveli lähinnä sotaväkeä ja linnanvartijoita, sillä se vartioi rajasolaa ja toimi myöhemmin tullipaikkana. Nykyisen asuinhistoriansa linna sai 1900-luvulla: [[Brașovin]] kaupunki lahjoitti sen 1920-luvun alussa Romanian kuningatar [[Marialle]], joka otti linnan käyttöönsä ja kunnostutti sen. Tietääkseni kommunistiset viranomaiset pakkolunastivat linnan 1940-luvun lopulla, ja myöhemmin se palautettiin kuningattaren perillisille.
+
+Kuningatar kunnosti linnan kotikseen, ja minä ymmärrän häntä: vuoristoilma kantaa siipiä paremmin kuin mikään muu. Mut nykyään sinne tullaan Draculan perässä, ja se on kyllä vähän pieni juoni.
+KYSYMYS: Kerro lisää: Marialle
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+AIEMPI KYSYMYS: Mistä Transilvania on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nimi on tavallisimman selityksen mukaan peräisin keskiajan latinasta, ja se tarkoittaa suunnilleen metsän takana olevaa maata. Romaniaksi aluetta kutsutaan nimellä [[Ardeal]] ja unkariksi nimellä [[Erdély]], ja molemmat nimet kuuluvat alueen pitkään historiaan. Aluetta ympäröi [[Karpaattien]] vuorikaari, mikä sopii nimen kuvaan hyvin. Kyl nimistä riittää juttua.
+KYSYMYS: Kerro lisää: Ardeal
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+AIEMPI KYSYMYS: Mistä Transilvania on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nimi on tavallisimman selityksen mukaan peräisin keskiajan latinasta, ja se tarkoittaa suunnilleen metsän takana olevaa maata. Romaniaksi aluetta kutsutaan nimellä [[Ardeal]] ja unkariksi nimellä [[Erdély]], ja molemmat nimet kuuluvat alueen pitkään historiaan. Aluetta ympäröi [[Karpaattien]] vuorikaari, mikä sopii nimen kuvaan hyvin. Kyl nimistä riittää juttua.
+KYSYMYS: Kerro lisää: Erdély
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto] Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan sisällä.
+AIEMPI KYSYMYS: Mistä Transilvania on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nimi on tavallisimman selityksen mukaan peräisin keskiajan latinasta, ja se tarkoittaa suunnilleen metsän takana olevaa maata. Romaniaksi aluetta kutsutaan nimellä [[Ardeal]] ja unkariksi nimellä [[Erdély]], ja molemmat nimet kuuluvat alueen pitkään historiaan. Aluetta ympäröi [[Karpaattien]] vuorikaari, mikä sopii nimen kuvaan hyvin. Kyl nimistä riittää juttua.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+AIEMPI KYSYMYS: Keitä Kronstadtin saksalaiset olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kronstadtin eli Brașovin saksalaiset olivat [[transilvaniansaksalaisia]], joita kutsutaan myös siebenbürgensaksalaisiksi. [[Unkarin kuninkaat]] kutsuivat saksankielisiä uudisasukkaita Transilvaniaan 1100-luvulta alkaen puolustamaan rajaa sekä kehittämään kauppaa ja käsityötä, ja heillä oli kuninkailta saatuja erityisoikeuksia. Heidän kaupunkinsa olivat vauraita, ja Brașov oli yksi tärkeimmistä. Suuri osa saksalaisista muutti Saksaan erityisesti 1980-luvun lopulta ja vuoden 1989 jälkeen, joten yhteisö on nykyään pieni. Tuhat vuotta, ja minä mahdutin sen muutamaan virkkeeseen.
+KYSYMYS: Kerro lisää: transilvaniansaksalaisia
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kanton — kaupunkilehti / Historia: Panyu ja Nanyuen kuninkaat] Ennen kiinalaisia seudulla asui baiyue-heimoja, ja kaupungin virallinen syntymävuosi on 214 eaa., jolloin Qin-dynastian sotilaat perustivat Helmijoen itärannalle Panyun. Se oli Nanhain komentokunnan hallintopaikka ja tukikohta, josta etelään suuntautuneet retket lähtivät. Qin-valtakunnan hajottua paikallinen käskynhaltija perusti Nanyuen kuningaskunnan, ja Panyusta tuli sen pääkaupunki. Yksi sen hallitsijoista oli Zhao Mo, joka hallitsi vuosina 137–122 eaa. Hänen hautansa löytyi keskustasta vuonna 1983 koskemattomana, ja sen päälle avattiin vuonna 1988 museo. Han-dynastia liitti Nanyuen itseensä vuonna 111 eaa.
+AIEMPI KYSYMYS: Keitä Kronstadtin saksalaiset olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kronstadtin eli Brașovin saksalaiset olivat [[transilvaniansaksalaisia]], joita kutsutaan myös siebenbürgensaksalaisiksi. [[Unkarin kuninkaat]] kutsuivat saksankielisiä uudisasukkaita Transilvaniaan 1100-luvulta alkaen puolustamaan rajaa sekä kehittämään kauppaa ja käsityötä, ja heillä oli kuninkailta saatuja erityisoikeuksia. Heidän kaupunkinsa olivat vauraita, ja Brașov oli yksi tärkeimmistä. Suuri osa saksalaisista muutti Saksaan erityisesti 1980-luvun lopulta ja vuoden 1989 jälkeen, joten yhteisö on nykyään pieni. Tuhat vuotta, ja minä mahdutin sen muutamaan virkkeeseen.
+KYSYMYS: Kerro lisää: Unkarin kuninkaat
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Bagdad — kohdekartta / Kohdekartta: Mustansiriya-koulu] 1235 Porttihallissa seisoi vuonna 1235 valmistunut vesikello, jonka teki Ali ibn Thalab damaskolaisten kellojen malliin. Seinään oli kuvattu taivas ja siihen kaksi kultaista haukkaa, kummallakin oma kulhonsa. Tunnin täyttyessä haukan nokka aukeni ja pudotti pronssipallon kulhoon, ja yksi kaarten ovista vaihtui kultaisesta hopeiseksi. Kullatut planeetat kulkivat taivaankuvassa auringon mukana ja hehkuivat yöllä takaapäin valaistuina. Rukoushetket luettiin seinältä. Samojen muurien sisällä oli hammam, sairaala, apteekki ja keittiö. Lääketieteen koulua johti vanhempi lääkäri, jolla oli oltava kymmenen oppilasta, ja sairaala oli saman katon alla. Talossa asui myös kolmekymmentä orpoa, jotka sai…
+AIEMPI KYSYMYS: Missä Branin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, karttakysymys. Branin linna sijaitsee Romanian keskiosassa, Transilvanian ja Valakian rajaseudulla, vuoristosolassa noin 30 kilometrin päässä [[Brașovista]]. Solan kahta puolta reunustavat [[Bucegi-vuoristo]] ja [[Piatra Craiului]], ja linna kohoaa kalliolla solan yllä. Solaa pitkin kulki jo keskiajalla kauppareitti Transilvanian ja Valakian välillä. Ylhäältä se näyttää ihan kapeelta nauhalta.
+KYSYMYS: Kerro lisää: Brașovista
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Kivi, joka näyttää kasvoilta] 1936 — Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.
+AIEMPI KYSYMYS: Missä Branin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, karttakysymys. Branin linna sijaitsee Romanian keskiosassa, Transilvanian ja Valakian rajaseudulla, vuoristosolassa noin 30 kilometrin päässä [[Brașovista]]. Solan kahta puolta reunustavat [[Bucegi-vuoristo]] ja [[Piatra Craiului]], ja linna kohoaa kalliolla solan yllä. Solaa pitkin kulki jo keskiajalla kauppareitti Transilvanian ja Valakian välillä. Ylhäältä se näyttää ihan kapeelta nauhalta.
+KYSYMYS: Kerro lisää: Bucegi-vuoristo
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+AIEMPI KYSYMYS: Missä Branin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, karttakysymys. Branin linna sijaitsee Romanian keskiosassa, Transilvanian ja Valakian rajaseudulla, vuoristosolassa noin 30 kilometrin päässä [[Brașovista]]. Solan kahta puolta reunustavat [[Bucegi-vuoristo]] ja [[Piatra Craiului]], ja linna kohoaa kalliolla solan yllä. Solaa pitkin kulki jo keskiajalla kauppareitti Transilvanian ja Valakian välillä. Ylhäältä se näyttää ihan kapeelta nauhalta.
+KYSYMYS: Kerro lisää: Piatra Craiului
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+AIEMPI KYSYMYS: Miksi Vlad Dracul oli maanpaossa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vlad II Dracul kilpaili Valakian ruhtinaan istuimesta, eikä hän voinut hallita [[Valakian]] ruhtinaskuntaa niin kauan kuin kilpailijat pitivät valtaa. Unkarin kuningas [[Sigismund]] otti hänet suojelukseensa ja hyväksyi hänet noin vuonna 1431 [[lohikäärmeritarikunnan]] jäseneksi, mistä liikanimi Dracul juontuu. Sana tarkoittaa romaniaksi lohikäärmettä, mutta myös paholaista. Sighișoarassa hän asui ja löi kolikoitaan, kunnes pääsi noin vuonna 1436 Valakian ruhtinaaksi. Valtaistuinpelit ei ollu silloinkaan kevyttä lukemista.
+KYSYMYS: Kerro lisää: Valakian
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Vilna — kohdekartta / Kohdekartta: Salattu avioliitto] 1547–1551 Kuningas voi julistaa sotia ja säätää lakeja, mutta salaa solmittu avioliitto osoittautui vaikeimmaksi asiaksi puolustaa. Sigismund August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa yhä.
+AIEMPI KYSYMYS: Miksi Vlad Dracul oli maanpaossa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vlad II Dracul kilpaili Valakian ruhtinaan istuimesta, eikä hän voinut hallita [[Valakian]] ruhtinaskuntaa niin kauan kuin kilpailijat pitivät valtaa. Unkarin kuningas [[Sigismund]] otti hänet suojelukseensa ja hyväksyi hänet noin vuonna 1431 [[lohikäärmeritarikunnan]] jäseneksi, mistä liikanimi Dracul juontuu. Sana tarkoittaa romaniaksi lohikäärmettä, mutta myös paholaista. Sighișoarassa hän asui ja löi kolikoitaan, kunnes pääsi noin vuonna 1436 Valakian ruhtinaaksi. Valtaistuinpelit ei ollu silloinkaan kevyttä lukemista.
+KYSYMYS: Kerro lisää: Sigismund
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin lohikäärme] 1972 Vanhan tarinan mukaan Wawelin kukkulan luolassa asui hirmuinen lohikäärme, joka vaati viikoittain karjaa ruoakseen - tai söi muuten ihmisiä. Vanhin kirjoitettu versio tarinasta on 1200-luvulta, piispa Kadłubekin kronikasta, jossa kuningas Krakuksen pojat viekoittelevat pedon syömään rikillä täytettyä eläimennahkaa. Suosituimmassa, vuonna 1597 kirjoitetussa tarinassa sankarina on suutari nimeltä Skuba. Hän täyttää lampaannahan tulikivellä, lohikäärme syö sen ja janoaa niin kovasti, että se juo koko Vistula-joen kuiviin ja lopulta halkeaa. Lohikäärmeen luola on yhä avoinna vierailijoille linnan alla, ja sen suulla seisoo pronssinen lohikäärmepatsas vuodelta 1972. Kuvanveistäjä Bronisław …
+- [Puola — maalehti / Historia: Lohikäärme joka syttyy tuleen] nykyään — Wawelin kukkulan luolassa Krakovassa asui tarun mukaan lohikäärme, joka vaati kaupungilta uhrilampaita ja lopulta neitoja, kunnes köyhä suutarinoppipoika täytti lampaan rikillä ja piellä — lohikäärme söi sen, janosi hillittömästi ja lopulta räjähti juotuaan joesta niin paljon vettä. Tarina on niin rakastettu, että Wawelin kukkulan juurelle pystytettiin 1972 pronssinen lohikäärmepatsas, joka oikeasti henkäisee tulta muutaman minuutin välein kaasuputken ansiosta — lasten suosikkinähtävyys nykyaikaisen tekniikan ja vanhan tarun yhdistelmänä.
+AIEMPI KYSYMYS: Miksi Vlad Dracul oli maanpaossa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vlad II Dracul kilpaili Valakian ruhtinaan istuimesta, eikä hän voinut hallita [[Valakian]] ruhtinaskuntaa niin kauan kuin kilpailijat pitivät valtaa. Unkarin kuningas [[Sigismund]] otti hänet suojelukseensa ja hyväksyi hänet noin vuonna 1431 [[lohikäärmeritarikunnan]] jäseneksi, mistä liikanimi Dracul juontuu. Sana tarkoittaa romaniaksi lohikäärmettä, mutta myös paholaista. Sighișoarassa hän asui ja löi kolikoitaan, kunnes pääsi noin vuonna 1436 Valakian ruhtinaaksi. Valtaistuinpelit ei ollu silloinkaan kevyttä lukemista.
+KYSYMYS: Kerro lisää: lohikäärmeritarikunnan
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+AIEMPI KYSYMYS: Millä muilla nimillä kaupunki tunnetaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Sighișoaran saksankielinen nimi on [[Schäßburg]] ja unkarinkielinen [[Segesvár]], sillä kaupunki on ollut vuosisatoja usean kielen yhteinen koti. Saksalaiset uudisasukkaat, jotka rakensivat sen linnoitetun vanhankaupungin, käyttivät nimeä Schäßburg. Romanialainen nimi Sighișoara esiintyy ensimmäisen kerran, tiettävästi vuonna 1435, Vlad Draculin asiakirjassa. Kolme nimeä, ja minä vielä muistin ne kaikki.
+KYSYMYS: Kerro lisää: Schäßburg
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+AIEMPI KYSYMYS: Millä muilla nimillä kaupunki tunnetaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Sighișoaran saksankielinen nimi on [[Schäßburg]] ja unkarinkielinen [[Segesvár]], sillä kaupunki on ollut vuosisatoja usean kielen yhteinen koti. Saksalaiset uudisasukkaat, jotka rakensivat sen linnoitetun vanhankaupungin, käyttivät nimeä Schäßburg. Romanialainen nimi Sighișoara esiintyy ensimmäisen kerran, tiettävästi vuonna 1435, Vlad Draculin asiakirjassa. Kolme nimeä, ja minä vielä muistin ne kaikki.
+KYSYMYS: Kerro lisää: Segesvár
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Miksi Sighișoaran vanhakaupunki on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Unesco]] otti vanhankaupungin maailmanperintölistalle vuonna 1999, koska se on harvinaisen hyvin säilynyt keskiaikainen linnoituskaupunki, joka on edelleen asuttu. Kukkulalla kohoaa linnoitettu vanhakaupunki muureineen ja torneineen, ja keskiaikainen [[Kellotorni]] hallitsee maisemaa. Kohde kertoo Transilvaniaan asettuneiden saksalaisten rakennus- ja kaupunkiperinteestä.
+
+Vanhat kivikadut näyttävät ylhäältä kotoisilta, ja kyllä minä pidän kattoharjoista, joilla on asuttua elämää. Kellotornista näkee varmasti pitkälle.
+KYSYMYS: Kerro lisää: Unesco
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Miksi Sighișoaran vanhakaupunki on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Unesco]] otti vanhankaupungin maailmanperintölistalle vuonna 1999, koska se on harvinaisen hyvin säilynyt keskiaikainen linnoituskaupunki, joka on edelleen asuttu. Kukkulalla kohoaa linnoitettu vanhakaupunki muureineen ja torneineen, ja keskiaikainen [[Kellotorni]] hallitsee maisemaa. Kohde kertoo Transilvaniaan asettuneiden saksalaisten rakennus- ja kaupunkiperinteestä.
+
+Vanhat kivikadut näyttävät ylhäältä kotoisilta, ja kyllä minä pidän kattoharjoista, joilla on asuttua elämää. Kellotornista näkee varmasti pitkälle.
+KYSYMYS: Kerro lisää: Kellotorni
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Kellotorni, joka vartioi linnamäkeä] 1200-luku — Sighișoaran vanha kaupunki kohoaa kukkulalle Transilvaniassa, ja sen ylle nousee kellotorni, jonka rakentaminen alkoi 1200-luvun lopulla porttitorniksi. Nykyisin tornissa toimii kaupunginmuseo. Kivikaduilla seisoo talo, jossa kerrotaan asuneen Vlad-nimisen pojan, josta tuli myöhemmin tunnettu nimellä Vlad Seivästäjä — hän syntyi kaupungissa vuonna 1431. Muurin yhdeksän jäljellä olevaa tornia rakensivat ja puolustivat keskiajalla eri ammattikunnat, kukin oma tornistaan vastuussa. Unesco otti koko vanhan kaupungin maailmanperintöluetteloon vuonna 1999.
+AIEMPI KYSYMYS: Missä Sighișoara sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sighișoara sijaitsee Romanian keskiosassa, [[Transilvaniassa]], Karpaattien kaaren sisäpuolella. Kaupunki on [[Târnava Mare -joen]] varrella, ja sen vanha linnoitettu osa kohoaa kukkulalla joen yläpuolella. Tän löytäisin silmät kiinni.
+KYSYMYS: Kerro lisää: Transilvaniassa
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+AIEMPI KYSYMYS: Missä Sighișoara sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sighișoara sijaitsee Romanian keskiosassa, [[Transilvaniassa]], Karpaattien kaaren sisäpuolella. Kaupunki on [[Târnava Mare -joen]] varrella, ja sen vanha linnoitettu osa kohoaa kukkulalla joen yläpuolella. Tän löytäisin silmät kiinni.
+KYSYMYS: Kerro lisää: Târnava Mare -joen
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+AIEMPI KYSYMYS: Mikä oli Transilvanian asema Unkarin kuningaskunnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Transilvania kuului keskiajalla Unkarin kuningaskuntaan, ja kuningas nimitti alueelle [[vojvodan]], joka hallitsi sitä hänen puolestaan. Alueen etuoikeutettuja ryhmiä olivat unkarilaiset aateliset, saksalaiset uudisasukkaat ja [[széklerit]], kun taas romanialaisella väestöllä ei ollut samanlaista poliittista asemaa. Myöhemmin alue oli ottomaanien yliherruuden alainen ruhtinaskunta ja sen jälkeen [[Habsburgien]] hallinnassa, ja ensimmäisen maailmansodan jälkeen se liitettiin Romaniaan. Poliittista historiaa, ja silti minä jaksoin.
+KYSYMYS: Kerro lisää: vojvodan
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+AIEMPI KYSYMYS: Mikä oli Transilvanian asema Unkarin kuningaskunnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Transilvania kuului keskiajalla Unkarin kuningaskuntaan, ja kuningas nimitti alueelle [[vojvodan]], joka hallitsi sitä hänen puolestaan. Alueen etuoikeutettuja ryhmiä olivat unkarilaiset aateliset, saksalaiset uudisasukkaat ja [[széklerit]], kun taas romanialaisella väestöllä ei ollut samanlaista poliittista asemaa. Myöhemmin alue oli ottomaanien yliherruuden alainen ruhtinaskunta ja sen jälkeen [[Habsburgien]] hallinnassa, ja ensimmäisen maailmansodan jälkeen se liitettiin Romaniaan. Poliittista historiaa, ja silti minä jaksoin.
+KYSYMYS: Kerro lisää: széklerit
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä oli Transilvanian asema Unkarin kuningaskunnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Transilvania kuului keskiajalla Unkarin kuningaskuntaan, ja kuningas nimitti alueelle [[vojvodan]], joka hallitsi sitä hänen puolestaan. Alueen etuoikeutettuja ryhmiä olivat unkarilaiset aateliset, saksalaiset uudisasukkaat ja [[széklerit]], kun taas romanialaisella väestöllä ei ollut samanlaista poliittista asemaa. Myöhemmin alue oli ottomaanien yliherruuden alainen ruhtinaskunta ja sen jälkeen [[Habsburgien]] hallinnassa, ja ensimmäisen maailmansodan jälkeen se liitettiin Romaniaan. Poliittista historiaa, ja silti minä jaksoin.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Pele, tulivuorten jumalatar] Havaijilaisen tarinaperinteen mukaan tulivuoria hallitsee Pele, tulen ja salamoiden jumalatar, joka matkasi saarelta toiselle kaivaen joka paikkaan asuinkuoppansa, kunnes löysi lopulta pysyvän kotinsa Kilauean huippukalderan Halemaʻumaʻu-kraatterista. Perimätiedon mukaan Pelellä on äkkipikainen luonne, ja hänen suosionsa säilyttämiseksi kraatterin reunalle jätetään yhä nykyäänkin kukkia, ruokaa ja giniä uhrilahjoina. Kraatterin pohjalla kiehunut laavajärvi hehkuu pimeällä niin kirkkaana, että sen loiste heijastuu pilviin – juuri tuollaisen näyn 1800-luvun matkailijat kuvasivat nähneensä yöllä vaeltaessaan kraatterin reunalla.
+AIEMPI KYSYMYS: Mistä linnan oma sähkö tuotettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on näitä, joissa kyyhky tietää vähemmän kuin haluaisi. En ole varma yksityiskohdista, mutta käsitykseni mukaan [[Peleșin linnan]] sähkö tuotettiin linnan läheisyydessä sijainneessa omassa voimalaitoksessa, joka käytti hyväkseen vuoristopurojen vettä. Linnan rakennutti kuningas [[Carol I]], ja sähköistys oli aikanaan hyvin edistyksellinen ratkaisu. Tarkemman rakennelman kuvauksen varmistaminen kannattaa jättää historiallisille lähteille.
+KYSYMYS: Kerro lisää: Peleșin linnan
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Luostari, joka vaati uhrin] 1517 — Curtea de Argeșin luostarikirkko rakennettiin ruhtinas Neagoe Basarabin määräyksestä vuosina 1512–1517, ja sen kierteiset kupolit ja koristeellinen kivijulkisivu tekevät siitä yhden Romanian omaperäisimmistä rakennuksista. Kansanrunossa kerrotaan mestari Manolesta, jonka rakennelma sortui joka yö, kunnes hän näki unessa, että se pysyisi pystyssä vain, jos joku rakas muurattaisiin sen seinään. Tarina päättyy synkästi, ja se tunnetaan Romaniassa laajasti kansanperinteenä. Todellisuudessa kirkosta tuli 1880-luvulla kuningas Carol I:n aikana kuninkaallinen hautaluostari, jonne on haudattu useita Romanian hallitsijoita.
+AIEMPI KYSYMYS: Mistä linnan oma sähkö tuotettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on näitä, joissa kyyhky tietää vähemmän kuin haluaisi. En ole varma yksityiskohdista, mutta käsitykseni mukaan [[Peleșin linnan]] sähkö tuotettiin linnan läheisyydessä sijainneessa omassa voimalaitoksessa, joka käytti hyväkseen vuoristopurojen vettä. Linnan rakennutti kuningas [[Carol I]], ja sähköistys oli aikanaan hyvin edistyksellinen ratkaisu. Tarkemman rakennelman kuvauksen varmistaminen kannattaa jättää historiallisille lähteille.
+KYSYMYS: Kerro lisää: Carol I
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+AIEMPI KYSYMYS: Ketkä työmaalla noita kieliä puhuivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tarkkaa kielilistaa en ole varma, mutta työmaalle tuli käsityöläisiä ja työmiehiä eri puolilta Eurooppaa. Kirjailijanimellä [[Carmen Sylva]] tunnettu kuningatar [[Elisabeth]] kertoi, että työmaalla puhuttiin neljääntoista kieltä. Rakentajina oli romanialaisten lisäksi muun muassa saksalaisia ja muita Keski-Euroopan osaajia, mikä on ymmärrettävää, koska kuningas itse oli lähtöisin saksalaisesta [[Hohenzollernin]] suvusta. Neljätoista kieltä, ja minä väsyn jo kolmeen.
+KYSYMYS: Kerro lisää: Carmen Sylva
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+AIEMPI KYSYMYS: Ketkä työmaalla noita kieliä puhuivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tarkkaa kielilistaa en ole varma, mutta työmaalle tuli käsityöläisiä ja työmiehiä eri puolilta Eurooppaa. Kirjailijanimellä [[Carmen Sylva]] tunnettu kuningatar [[Elisabeth]] kertoi, että työmaalla puhuttiin neljääntoista kieltä. Rakentajina oli romanialaisten lisäksi muun muassa saksalaisia ja muita Keski-Euroopan osaajia, mikä on ymmärrettävää, koska kuningas itse oli lähtöisin saksalaisesta [[Hohenzollernin]] suvusta. Neljätoista kieltä, ja minä väsyn jo kolmeen.
+KYSYMYS: Kerro lisää: Elisabeth
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+AIEMPI KYSYMYS: Ketkä työmaalla noita kieliä puhuivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tarkkaa kielilistaa en ole varma, mutta työmaalle tuli käsityöläisiä ja työmiehiä eri puolilta Eurooppaa. Kirjailijanimellä [[Carmen Sylva]] tunnettu kuningatar [[Elisabeth]] kertoi, että työmaalla puhuttiin neljääntoista kieltä. Rakentajina oli romanialaisten lisäksi muun muassa saksalaisia ja muita Keski-Euroopan osaajia, mikä on ymmärrettävää, koska kuningas itse oli lähtöisin saksalaisesta [[Hohenzollernin]] suvusta. Neljätoista kieltä, ja minä väsyn jo kolmeen.
+KYSYMYS: Kerro lisää: Hohenzollernin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+AIEMPI KYSYMYS: Missä Peleșin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Peleșin linna sijaitsee Romaniassa, [[Sinaian]] vuoristokaupungin lähellä [[Prahovan laaksossa]], [[Bucegi-vuoriston]] juurella Karpaateilla. Sinaia on Bukarestin ja Brașovin välisen reitin varrella. Mukava reitti kyyhkyn lennettäväksi, ei valittamista.
+KYSYMYS: Kerro lisää: Sinaian
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+AIEMPI KYSYMYS: Missä Peleșin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Peleșin linna sijaitsee Romaniassa, [[Sinaian]] vuoristokaupungin lähellä [[Prahovan laaksossa]], [[Bucegi-vuoriston]] juurella Karpaateilla. Sinaia on Bukarestin ja Brașovin välisen reitin varrella. Mukava reitti kyyhkyn lennettäväksi, ei valittamista.
+KYSYMYS: Kerro lisää: Prahovan laaksossa
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Kivi, joka näyttää kasvoilta] 1936 — Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.
+AIEMPI KYSYMYS: Missä Peleșin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Peleșin linna sijaitsee Romaniassa, [[Sinaian]] vuoristokaupungin lähellä [[Prahovan laaksossa]], [[Bucegi-vuoriston]] juurella Karpaateilla. Sinaia on Bukarestin ja Brașovin välisen reitin varrella. Mukava reitti kyyhkyn lennettäväksi, ei valittamista.
+KYSYMYS: Kerro lisää: Bucegi-vuoriston
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+AIEMPI KYSYMYS: Kuka Carol I oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hänet minä tunnen. Carol I syntyi vuonna 1839 saksalaiseen [[Hohenzollern-Sigmaringenin]] ruhtinassukuun ja tuli Romanian ruhtinaaksi vuonna 1866. Hänen aikanaan Romania sai itsenäisyyden Ottomaanien valtakunnasta 1877–1878 käydyn sodan jälkeen, ja vuonna 1881 Romania julistettiin kuningaskunnaksi. Hän hallitsi kuolemaansa saakka vuoteen 1914 ja kuoli [[Peleșin linnassa]]. Siinä vasta kestävyyttä, minä väsyn jo yhdestä lennosta.
+KYSYMYS: Kerro lisää: Hohenzollern-Sigmaringenin
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Pele, tulivuorten jumalatar] Havaijilaisen tarinaperinteen mukaan tulivuoria hallitsee Pele, tulen ja salamoiden jumalatar, joka matkasi saarelta toiselle kaivaen joka paikkaan asuinkuoppansa, kunnes löysi lopulta pysyvän kotinsa Kilauean huippukalderan Halemaʻumaʻu-kraatterista. Perimätiedon mukaan Pelellä on äkkipikainen luonne, ja hänen suosionsa säilyttämiseksi kraatterin reunalle jätetään yhä nykyäänkin kukkia, ruokaa ja giniä uhrilahjoina. Kraatterin pohjalla kiehunut laavajärvi hehkuu pimeällä niin kirkkaana, että sen loiste heijastuu pilviin – juuri tuollaisen näyn 1800-luvun matkailijat kuvasivat nähneensä yöllä vaeltaessaan kraatterin reunalla.
+AIEMPI KYSYMYS: Kuka Carol I oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hänet minä tunnen. Carol I syntyi vuonna 1839 saksalaiseen [[Hohenzollern-Sigmaringenin]] ruhtinassukuun ja tuli Romanian ruhtinaaksi vuonna 1866. Hänen aikanaan Romania sai itsenäisyyden Ottomaanien valtakunnasta 1877–1878 käydyn sodan jälkeen, ja vuonna 1881 Romania julistettiin kuningaskunnaksi. Hän hallitsi kuolemaansa saakka vuoteen 1914 ja kuoli [[Peleșin linnassa]]. Siinä vasta kestävyyttä, minä väsyn jo yhdestä lennosta.
+KYSYMYS: Kerro lisää: Peleșin linnassa
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: Chhatrapati Shivaji Maharaj Terminus] rakennettu 1878–1888 Asema rakennettiin vanhan Bori Bunderin tilalle Suuren Intian niemimaan rautatien pääkonttoriksi, ja se nimettiin Victoria Terminukseksi kuningatar Victorian hallitsijajuhlan muistoksi. Suunnittelija oli brittiläinen insinööriarkkitehti Frederick William Stevens, joka sai tehtävän piirtäjä Axel Haigin akvarellin ansiosta ja jolle maksettiin työstä 1 614 000 rupiaa. Työ alkoi toukokuussa 1878 ja rakennus valmistui 20. toukokuuta 1888 — kymmenen vuotta, pisin rakennusaika millekään sen ajan talolle kaupungissa. Tyyli on goottilaista uusrenessanssia, johon on sekoitettu romaanisia ja intialaisia aiheita. Keskellä kohoaa korkea kupoli, jonka huipulla seisoo Edistystä esittä…
+- [Melbourne — kohdekartta / Kohdekartta: Pääposti] 1867 Melbournen ensimmäinen postitoimipaikka perustettiin 13. huhtikuuta 1837, ja pysyvä talo nousi nykyiselle tontille 1841. Uudesta pääpostista järjestettiin suunnittelukilpailu 1858, ja voittajat julkistettiin 7. toukokuuta: ulkoasun ensimmäinen palkinto meni toimistolle Crouch and Wilson ja sisätilojen Edward Rumseylle. Rakennustyö kesti 1860–1867, ja se keskeytettiin ennen kuin Elizabeth Streetin siiven pohjoispuolisko, keskiosan mansardi ja tornin kattoa oli tehty. Kaksikymmentä vuotta myöhemmin talo oli käynyt ahtaaksi. A. E. Johnson suunnitteli kolmannen kerroksen, ullakon ja korkeamman, koristeellisemman kellotornin, jonka hiekkakivi tuotiin tällä kertaa Grampians-vuorilta; työn va…
+AIEMPI KYSYMYS: Millaista tyyliä Peleșin linna edustaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tyylikysymys, hyvä. Peleșin linna edustaa saksalaisvaikutteista [[uusrenessanssia]], jossa on myös goottilaisen herätyksen ja [[Alppien]] rakennusperinteen aineksia: pystysuoraan kohoavia torneja, koristeellisia puurakenteita ja jyrkkiä kattoja. Sisätilat ovat vaihtelevia, sillä eri huoneet on sisustettu eri tyyleihin, mikäli muistan oikein esimerkiksi maurilaiseen, firenzeläiseen ja turkkilaiseen tapaan.
+
+Tornien ja pienten harjojen metsä on kyyhkylle ihan paratiisi, sillä niissä on aina paikka istahtaa. Kunhan vain kuningas ei satu katsomaan.
+KYSYMYS: Kerro lisää: uusrenessanssia
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Millaista tyyliä Peleșin linna edustaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tyylikysymys, hyvä. Peleșin linna edustaa saksalaisvaikutteista [[uusrenessanssia]], jossa on myös goottilaisen herätyksen ja [[Alppien]] rakennusperinteen aineksia: pystysuoraan kohoavia torneja, koristeellisia puurakenteita ja jyrkkiä kattoja. Sisätilat ovat vaihtelevia, sillä eri huoneet on sisustettu eri tyyleihin, mikäli muistan oikein esimerkiksi maurilaiseen, firenzeläiseen ja turkkilaiseen tapaan.
+
+Tornien ja pienten harjojen metsä on kyyhkylle ihan paratiisi, sillä niissä on aina paikka istahtaa. Kunhan vain kuningas ei satu katsomaan.
+KYSYMYS: Kerro lisää: Alppien
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+AIEMPI KYSYMYS: Mikä linna tien varrella on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Tien läheisyydessä kohoaa [[Poenarin linna]], joka sijaitsee jyrkän kalliorinteen päällä [[Argeș-joen]] laakson yläpuolella, ja sen huipulle nousee 1480 betoniporrasta. Linna oli rauniona, kunnes [[Vlad Seivästäjä]] vahvisti sen 1450-luvulla toiseksi turvapaikakseen. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan. Tuhatneljäsataa porrasta, minä kyllä lentäisin.
+KYSYMYS: Kerro lisää: Poenarin linna
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iguazú — kaupunkilehti / Iguazú: 275 putousta ja kurkku, joka nielee joen] Iguazú ei ole yksi putous vaan kenkähevosen muotoinen kokonaisuus, jossa laskee arvioiden mukaan noin 275 erillistä putousta ja putousryhmää lähes kolmen kilometrin matkalla. Suurin ja pelottavin niistä on Garganta del Diablo, Paholaisen kurkku: siihen syöksyy noin puolet koko joen vedestä yhtenä U-kirjaimen muotoisena putouksena, jonka pohjaa ei erota vaahdon ja sumun keskeltä. Putousten korkeus vaihtelee 60–82 metrin välillä, ja sadekaudella virtaama voi moninkertaistua kuivan kauden lukemiin verrattuna. Osa Argentiinan ja Brasilian välisestä rajasta kulkee juuri tätä kurkkua pitkin, joten sama jylisevä näky kuuluu molemmille maille.
+- [Romania — maalehti / Historia: Luostari, joka vaati uhrin] 1517 — Curtea de Argeșin luostarikirkko rakennettiin ruhtinas Neagoe Basarabin määräyksestä vuosina 1512–1517, ja sen kierteiset kupolit ja koristeellinen kivijulkisivu tekevät siitä yhden Romanian omaperäisimmistä rakennuksista. Kansanrunossa kerrotaan mestari Manolesta, jonka rakennelma sortui joka yö, kunnes hän näki unessa, että se pysyisi pystyssä vain, jos joku rakas muurattaisiin sen seinään. Tarina päättyy synkästi, ja se tunnetaan Romaniassa laajasti kansanperinteenä. Todellisuudessa kirkosta tuli 1880-luvulla kuningas Carol I:n aikana kuninkaallinen hautaluostari, jonne on haudattu useita Romanian hallitsijoita.
+AIEMPI KYSYMYS: Mikä linna tien varrella on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Tien läheisyydessä kohoaa [[Poenarin linna]], joka sijaitsee jyrkän kalliorinteen päällä [[Argeș-joen]] laakson yläpuolella, ja sen huipulle nousee 1480 betoniporrasta. Linna oli rauniona, kunnes [[Vlad Seivästäjä]] vahvisti sen 1450-luvulla toiseksi turvapaikakseen. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan. Tuhatneljäsataa porrasta, minä kyllä lentäisin.
+KYSYMYS: Kerro lisää: Argeș-joen
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+AIEMPI KYSYMYS: Mikä linna tien varrella on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Tien läheisyydessä kohoaa [[Poenarin linna]], joka sijaitsee jyrkän kalliorinteen päällä [[Argeș-joen]] laakson yläpuolella, ja sen huipulle nousee 1480 betoniporrasta. Linna oli rauniona, kunnes [[Vlad Seivästäjä]] vahvisti sen 1450-luvulla toiseksi turvapaikakseen. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan. Tuhatneljäsataa porrasta, minä kyllä lentäisin.
+KYSYMYS: Kerro lisää: Vlad Seivästäjä
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etiopia — maalehti / Luonto: Vuorikauris, joka jäi yhden vuoriston vangiksi] Walia-vuorikauris elää vain Simien-vuorten jyrkänteillä ja on eteläisin nykyisistä vuorikauriista. Uros painaa 80–125 kiloa, ja sen taaksepäin kaartuvat sarvet kasvavat yli metrin mittaisiksi. Turkki on suklaanruskea, vatsa ja jalkojen sisäpinnat valkoiset. Aikuisen ainoat luonnonviholliset ovat hyeena ja leopardi. Laji luokiteltiin 1990-luvun lopulla äärimmäisen uhanalaiseksi, ja vaikka kanta kasvaisi, jäljellä oleva vuoristo elättäisi vain noin kaksituhatta yksilöä — kotiseutua ei ole enempää.
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?
+AIEMPI VASTAUS (Livia):
+No niin, strategiaa. Reitti vedettiin [[Făgărașvuoriston]] poikki, koska se johtaa Transilvanian ja Valakian välisen vuorijakson yli. Tien tarkoitus oli sotilaallinen: [[Nicolae Ceaușescu]] halusi vuoden 1968 jälkeen reitin, jota mahdollinen vihollinen ei voisi sulkea jokilaaksossa, ja vuoristo antoi tielle suojaa. Făgărașvuoristo kuuluu Etelä-Karpaattien korkeimpiin osiin, ja sen alueella on Romanian korkein huippu, [[Moldoveanu]]. Ylhäältä se on vaan yksi mutkainen viiva.
+KYSYMYS: Kerro lisää: Făgărașvuoriston
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Parlamenttipalatsi] 1984–1997 Parlamenttipalatsi on yksi maailman valtavimmista rakennuksista. Sen rakennutti Romanian diktaattori Nicolae Ceaușescu, joka halusi näyttävän hallintorakennuksen. Rakennustyöt alkoivat vuonna 1984, ja niiden piti kestää vain kaksi vuotta, mutta todellisuudessa rakentaminen kesti 13 vuotta ja valmistui vasta vuonna 1997. Rakennusta varten purettiin kokonainen vanha kaupunginosa, ja noin 40 000 ihmistä joutui muuttamaan pois kodeistaan. Palatsissa on 1100 huonetta, ja se ulottuu 92 metriä maan alle, jonne rakennettiin jopa ydinpommisuoja 1,5 metriä paksuine betoniseinineen. Työmaalla saattoi olla samaan aikaan jopa 100 000 työntekijää kolmessa vuorossa. Palatsi on maailman raskain r…
+- [Bukarest — kaupunkilehti / Bukarest: Maailman painavin rakennus] Parlamenttipalatsin rakentaminen alkoi vuonna 1984 Nicolae Ceaușescun määräyksestä. Pääarkkitehti oli Anca Petrescu, ja hänen kanssaan piirsi noin 700 muuta arkkitehtia. Lattiapinta-alaa on 365 000 neliömetriä ja painoa noin 4,1 miljoonaa tonnia — enemmän kuin missään muussa rakennuksessa maailmassa. Tieltä purettiin kokonainen vanha kaupunginosa, ja kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa kokoontuu Romanian parlamentti, mutta noin 70 prosenttia huoneista on yhä tyhjillään.
+AIEMPI KYSYMYS: Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?
+AIEMPI VASTAUS (Livia):
+No niin, strategiaa. Reitti vedettiin [[Făgărașvuoriston]] poikki, koska se johtaa Transilvanian ja Valakian välisen vuorijakson yli. Tien tarkoitus oli sotilaallinen: [[Nicolae Ceaușescu]] halusi vuoden 1968 jälkeen reitin, jota mahdollinen vihollinen ei voisi sulkea jokilaaksossa, ja vuoristo antoi tielle suojaa. Făgărașvuoristo kuuluu Etelä-Karpaattien korkeimpiin osiin, ja sen alueella on Romanian korkein huippu, [[Moldoveanu]]. Ylhäältä se on vaan yksi mutkainen viiva.
+KYSYMYS: Kerro lisää: Nicolae Ceaușescu
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+AIEMPI KYSYMYS: Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?
+AIEMPI VASTAUS (Livia):
+No niin, strategiaa. Reitti vedettiin [[Făgărașvuoriston]] poikki, koska se johtaa Transilvanian ja Valakian välisen vuorijakson yli. Tien tarkoitus oli sotilaallinen: [[Nicolae Ceaușescu]] halusi vuoden 1968 jälkeen reitin, jota mahdollinen vihollinen ei voisi sulkea jokilaaksossa, ja vuoristo antoi tielle suojaa. Făgărașvuoristo kuuluu Etelä-Karpaattien korkeimpiin osiin, ja sen alueella on Romanian korkein huippu, [[Moldoveanu]]. Ylhäältä se on vaan yksi mutkainen viiva.
+KYSYMYS: Kerro lisää: Moldoveanu
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Kivi, joka näyttää kasvoilta] 1936 — Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.
+- [Romania — maalehti / Luonto: Vuoristo, josta tuli ensimmäinen] 1935 — Retezatin kansallispuisto Hunedoaran alueella oli Romanian ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli 2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita puisto perustettiin alun perin suojelemaan. Retezatista tuli myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi mallin kaikille Romanian myöhemmille suojelualueille.
+AIEMPI KYSYMYS: Mikä Bâlea-järvi on?
+AIEMPI VASTAUS (Livia):
+Mmm— jäätikköjärvi, joo. Bâlea on jäätikköperäinen vuorijärvi [[Făgărașvuoristossa]], noin 2 000 metrin korkeudessa, aivan Transfăgărășanin korkeimman osuuden tuntumassa. Se on syntynyt jääkauden [[jäätikön]] kuluttamaan altaaseen, ja sen ympäriltä lähtee vaellusreittejä korkeammille huipuille. Kylmää vettä ja kirkasta ilmaa, siinä kaikki mitä kyyhky tarvitsee.
+KYSYMYS: Kerro lisää: Făgărașvuoristossa
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Järvi, joka putosi maan alle] Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen uhanalaista korppikotkalajia.
+- [Alpit — kaupunkilehti / Luonto: Jää vetäytyy ylöspäin] Alppien jäätiköt ovat kutistuneet nopeasti: 1800-luvun puolivälin jälkeen niistä on sulanut yli puolet, ja pelkästään 2000-luvulla kutistuminen on kiihtynyt. Vuoristomajoja, jotka rakennettiin aikanaan jäätikön reunaan, seisoo nyt satoja metrejä paljaan kiven yllä. Sulaminen ei ole vain maisema-asia: jäätiköt varastoivat talven lumen ja päästävät sen jokiin kesällä, joten niiden kadotessa muuttuu myös se, milloin Euroopan suurissa joissa on vettä.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Mikä Bâlea-järvi on?
+AIEMPI VASTAUS (Livia):
+Mmm— jäätikköjärvi, joo. Bâlea on jäätikköperäinen vuorijärvi [[Făgărașvuoristossa]], noin 2 000 metrin korkeudessa, aivan Transfăgărășanin korkeimman osuuden tuntumassa. Se on syntynyt jääkauden [[jäätikön]] kuluttamaan altaaseen, ja sen ympäriltä lähtee vaellusreittejä korkeammille huipuille. Kylmää vettä ja kirkasta ilmaa, siinä kaikki mitä kyyhky tarvitsee.
+KYSYMYS: Kerro lisää: jäätikön
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+AIEMPI KYSYMYS: Mitä Neuvostoliitto teki Tšekkoslovakiassa 1968?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Elokuussa 1968 Neuvostoliiton johtamat [[Varsovan liiton]] joukot hyökkäsivät Tšekkoslovakiaan ja lopettivat maan uudistusliikkeen, jota kutsutaan [[Prahan keväksi]]. Se oli vakava ja pitkään muistettu käänne, ja maa pysyi sen jälkeen Neuvostoliiton vaikutuspiirissä vuoteen 1989 asti. Romania ei osallistunut hyökkäykseen, ja [[Nicolae Ceaușescu]] arvosteli sitä julkisesti. Tapahtumasta on yli viisikymmentä vuotta, ja Tšekkoslovakia jakautui rauhanomaisesti Tšekiksi ja Slovakiaksi vuonna 1993. Onneksi siit on jo pitkä aika.
+KYSYMYS: Kerro lisää: Varsovan liiton
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+AIEMPI KYSYMYS: Mitä Neuvostoliitto teki Tšekkoslovakiassa 1968?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Elokuussa 1968 Neuvostoliiton johtamat [[Varsovan liiton]] joukot hyökkäsivät Tšekkoslovakiaan ja lopettivat maan uudistusliikkeen, jota kutsutaan [[Prahan keväksi]]. Se oli vakava ja pitkään muistettu käänne, ja maa pysyi sen jälkeen Neuvostoliiton vaikutuspiirissä vuoteen 1989 asti. Romania ei osallistunut hyökkäykseen, ja [[Nicolae Ceaușescu]] arvosteli sitä julkisesti. Tapahtumasta on yli viisikymmentä vuotta, ja Tšekkoslovakia jakautui rauhanomaisesti Tšekiksi ja Slovakiaksi vuonna 1993. Onneksi siit on jo pitkä aika.
+KYSYMYS: Kerro lisää: Prahan keväksi
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä Vidrarun pato on?
+AIEMPI VASTAUS (Livia):
+Ai se pato. Vidrarun pato on [[Argeș-joen]] yläjuoksulla [[Făgărașvuoristossa]] sijaitseva [[kaaripato]], joka valmistui vuonna 1966. Se on noin 165 metriä korkea, ja sen muodostama tekojärvi sijaitsee Transfăgărășanin varrella. Padon yhteydessä toimii vesivoimala. Tuollainen patomuuri näyttää ylhäältä kuin kaareva hammas.
+KYSYMYS: Kerro lisää: kaaripato
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Lippu, joka voitti äänin 14–11] 1985 — Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna 1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama kuvio. Seura oli vanhempi, ja se antoi luvan.
+AIEMPI KYSYMYS: Milloin pelikaanit saapuvat suistoon?
+AIEMPI VASTAUS (Livia):
+Just niin, linnut. Pelikaanit saapuvat Tonavan suistoon keväällä, suunnilleen maalis- ja huhtikuun aikana, ja ne pesivät suistossa kesän ajan. Syksyllä ne lähtevät takaisin etelään talvehtimaan. Tarkka ajankohta vaihtelee vuosittain säiden mukaan. Suistossa pesii sekä [[valkopelikaaneja]] että [[kiharapelikaaneja]]. Pelikaanit ovat täsmällisempiä kuin minä, myönnän sen.
+KYSYMYS: Kerro lisää: valkopelikaaneja
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+AIEMPI KYSYMYS: Milloin pelikaanit saapuvat suistoon?
+AIEMPI VASTAUS (Livia):
+Just niin, linnut. Pelikaanit saapuvat Tonavan suistoon keväällä, suunnilleen maalis- ja huhtikuun aikana, ja ne pesivät suistossa kesän ajan. Syksyllä ne lähtevät takaisin etelään talvehtimaan. Tarkka ajankohta vaihtelee vuosittain säiden mukaan. Suistossa pesii sekä [[valkopelikaaneja]] että [[kiharapelikaaneja]]. Pelikaanit ovat täsmällisempiä kuin minä, myönnän sen.
+KYSYMYS: Kerro lisää: kiharapelikaaneja
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+AIEMPI KYSYMYS: Miten suistossa liikutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, liikennekysymys. Suistossa liikutaan pääasiassa veneillä, koska alueella on vain vähän teitä ja useimmat kylät ovat vesireittien varrella. [[Tulcea]] on perinteinen lähtökaupunki, josta lähtee vene- ja alusyhteyksiä suiston kylille, ja kylät kuten Sfântu Gheorghe saavutetaan yleensä vain vesitse. Tonava jakautuu suistossa kolmeen päähaaraan: Kilia, [[Sulina]] ja [[Sfântu Gheorghe]].
+
+Minä olisin tietysti lentänyt suoraan, mutta ymmärrän kyllä veneilyn viehätyksen: ruovikon yläpuolelta pelikaanit näkee kaikkein parhaiten.
+KYSYMYS: Kerro lisää: Tulcea
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin liittovaltionyliopisto] 1895 Rio Grande do Sulin korkeakoulutus alkoi vuonna 1895 perustetusta farmasian ja kemian koulusta. Vuotta myöhemmin sen rinnalle tuli insinöörikoulu, ja vuosisadan lopulla lääketieteellinen ja oikeustieteellinen — jälkimmäinen oli osavaltion ensimmäinen humanistinen korkeakoulu. Marraskuussa 1934 nämä koottiin Porto Alegren yliopistoksi. Vuonna 1947 nimi muuttui Rio Grande do Sulin yliopistoksi, ja siihen liitettiin Pelotasin oikeus- ja hammaslääketiede sekä Santa Marian farmasia — molemmat irtautuivat myöhemmin omiksi yliopistoikseen. Joulukuussa 1950 koko laitos siirtyi liittovaltiolle, ja siitä tuli UFRGS. Nykyään opiskelijoita on runsaat 31 000 perustutkinnossa ja 12 000 jatkotutkinno…
+AIEMPI KYSYMYS: Miten suistossa liikutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, liikennekysymys. Suistossa liikutaan pääasiassa veneillä, koska alueella on vain vähän teitä ja useimmat kylät ovat vesireittien varrella. [[Tulcea]] on perinteinen lähtökaupunki, josta lähtee vene- ja alusyhteyksiä suiston kylille, ja kylät kuten Sfântu Gheorghe saavutetaan yleensä vain vesitse. Tonava jakautuu suistossa kolmeen päähaaraan: Kilia, [[Sulina]] ja [[Sfântu Gheorghe]].
+
+Minä olisin tietysti lentänyt suoraan, mutta ymmärrän kyllä veneilyn viehätyksen: ruovikon yläpuolelta pelikaanit näkee kaikkein parhaiten.
+KYSYMYS: Kerro lisää: Sulina
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Yliopiston aukio] 1857 Yliopiston aukio syntyi vuonna 1857 samaan aikaan kun Bukarestin yliopisto perustettiin. Aukio sijaitsee keskellä kaupunkia metroaseman vieressä. Paikka on ollut tärkeä risteyskohta jo satoja vuosia, sillä jo 1400-luvulla siitä kulki kaupungin raja. Aukiolla seisoo neljä patsasta tärkeistä romanialaisista henkilöistä: hallitsija Mihai Rohkean patsas pystytettiin vuonna 1874, runoilija Ion Heliade Rădulescun vuonna 1879, opettaja Gheorghe Lazărin vuonna 1889 ja tiedemies Spiru Haretin vuonna 1932. Vieressä kohoaa myös Intercontinental-hotelli, yksi Bukarestin korkeimmista rakennuksista. Vuonna 1990 aukiolla järjestettiin rauhanomainen opiskelijamielenosoitus, joka muuttui väkivaltaiseks…
+AIEMPI KYSYMYS: Miten suistossa liikutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, liikennekysymys. Suistossa liikutaan pääasiassa veneillä, koska alueella on vain vähän teitä ja useimmat kylät ovat vesireittien varrella. [[Tulcea]] on perinteinen lähtökaupunki, josta lähtee vene- ja alusyhteyksiä suiston kylille, ja kylät kuten Sfântu Gheorghe saavutetaan yleensä vain vesitse. Tonava jakautuu suistossa kolmeen päähaaraan: Kilia, [[Sulina]] ja [[Sfântu Gheorghe]].
+
+Minä olisin tietysti lentänyt suoraan, mutta ymmärrän kyllä veneilyn viehätyksen: ruovikon yläpuolelta pelikaanit näkee kaikkein parhaiten.
+KYSYMYS: Kerro lisää: Sfântu Gheorghe
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+AIEMPI KYSYMYS: Missä Tonavan suisto sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tonavan suisto sijaitsee [[Mustanmeren]] rannikolla Romanian itäosassa, ja sen pohjoisin osa kuuluu Ukrainalle. Suiston lähtökaupunki on [[Tulcea]], josta Tonava haarautuu useaan kanavaan ennen kuin laskee mereen. Ylhäältä se näyttää kyl vihreältä viuhkalta.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Mitä eläimiä Tonavan suistossa elää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suistossa elää erittäin runsas eläinlajisto: kalojen joukossa on [[sampia]], joista monet ovat nykyään uhanalaisia, ja lintuja on kesäisin yli 320 lajia. Nisäkkäistä suistossa tavataan muun muassa [[saukkoja]] ja villikissoja, ja Letean metsässä kulkee villiintyneitä hevosia. Suiston ruovikot, kanavat ja metsät antavat elinpaikan monelle lajille.
+
+Lintuna olen tietysti puolueellinen, mutta suiston asukkaista minulle tärkeimmät ovat ne, joilla on siivet. Hevoset ja saukot saavat kuitenkin kunniamaininnan.
+KYSYMYS: Kerro lisää: sampia
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+AIEMPI KYSYMYS: Mitä eläimiä Tonavan suistossa elää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suistossa elää erittäin runsas eläinlajisto: kalojen joukossa on [[sampia]], joista monet ovat nykyään uhanalaisia, ja lintuja on kesäisin yli 320 lajia. Nisäkkäistä suistossa tavataan muun muassa [[saukkoja]] ja villikissoja, ja Letean metsässä kulkee villiintyneitä hevosia. Suiston ruovikot, kanavat ja metsät antavat elinpaikan monelle lajille.
+
+Lintuna olen tietysti puolueellinen, mutta suiston asukkaista minulle tärkeimmät ovat ne, joilla on siivet. Hevoset ja saukot saavat kuitenkin kunniamaininnan.
+KYSYMYS: Kerro lisää: saukkoja
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Miten suisto päätyi Romanialle Ottomaanien vallan jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alue siirtyi Romanialle 1870-luvun lopulla: Venäjän ja Ottomaanien valtakunnan välinen sota 1877–1878 johti [[Berliinin kongressissa]] vuonna 1878 tehtyihin ratkaisuihin, joissa Romanian itsenäisyys vahvistettiin ja maa sai [[Pohjois-Dobrudžan]], johon kuului osa suistosta. Vastineeksi Romania luovutti [[Etelä-Bessarabian]] Venäjälle. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Berliinin kongressissa
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+AIEMPI KYSYMYS: Miten suisto päätyi Romanialle Ottomaanien vallan jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alue siirtyi Romanialle 1870-luvun lopulla: Venäjän ja Ottomaanien valtakunnan välinen sota 1877–1878 johti [[Berliinin kongressissa]] vuonna 1878 tehtyihin ratkaisuihin, joissa Romanian itsenäisyys vahvistettiin ja maa sai [[Pohjois-Dobrudžan]], johon kuului osa suistosta. Vastineeksi Romania luovutti [[Etelä-Bessarabian]] Venäjälle. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Pohjois-Dobrudžan
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historian hetki: Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi] 27.3.1918 — "Kahdeksankymmentäkuusi puolesta." Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallis…
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Miten suisto päätyi Romanialle Ottomaanien vallan jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alue siirtyi Romanialle 1870-luvun lopulla: Venäjän ja Ottomaanien valtakunnan välinen sota 1877–1878 johti [[Berliinin kongressissa]] vuonna 1878 tehtyihin ratkaisuihin, joissa Romanian itsenäisyys vahvistettiin ja maa sai [[Pohjois-Dobrudžan]], johon kuului osa suistosta. Vastineeksi Romania luovutti [[Etelä-Bessarabian]] Venäjälle. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Etelä-Bessarabian
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+AIEMPI KYSYMYS: Kuka ristit veistää nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän jotakuinkin. Ensimmäisen ristin veistänyt [[Stan Ioan Pătraș]] työskenteli Săpânțassa kuolemaansa asti, ja hänen jälkeensä perinnettä jatkoi hänen oppilaansa [[Dumitru Pop-Tincu]]. Nykyään ristit veistävät ja maalaavat paikalliset mestarit samassa työpajassa, ja jokainen risti tehdään yhä käsin [[tammesta]]. Työ alkaa yleensä siitä, että vainajan omaiset kertovat hänen elämästään, minkä perusteella kuva ja runo suunnitellaan. En ole varma, ketkä työtä juuri nyt tekevät. Nimet kyl muistan, mut tän päivän tekijät on jääneet minulle hämärän peittoon.
+KYSYMYS: Kerro lisää: Stan Ioan Pătraș
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+AIEMPI KYSYMYS: Kuka ristit veistää nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän jotakuinkin. Ensimmäisen ristin veistänyt [[Stan Ioan Pătraș]] työskenteli Săpânțassa kuolemaansa asti, ja hänen jälkeensä perinnettä jatkoi hänen oppilaansa [[Dumitru Pop-Tincu]]. Nykyään ristit veistävät ja maalaavat paikalliset mestarit samassa työpajassa, ja jokainen risti tehdään yhä käsin [[tammesta]]. Työ alkaa yleensä siitä, että vainajan omaiset kertovat hänen elämästään, minkä perusteella kuva ja runo suunnitellaan. En ole varma, ketkä työtä juuri nyt tekevät. Nimet kyl muistan, mut tän päivän tekijät on jääneet minulle hämärän peittoon.
+KYSYMYS: Kerro lisää: Dumitru Pop-Tincu
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Ljubljana — kaupunkilehti / Luonto: Suosta kaivettiin esiin maailman vanhin pyörä] n. 3130 eaa. — Ljubljanan eteläpuolella leviävä suoalue, Ljubljansko barje, on turvekerrostensa ansiosta säilyttänyt esineitä poikkeuksellisen hyvin. Vuonna 2002 suon paalukyläkaivauksilta löytyi puinen pyörä akselinsa kanssa; radiohiiliajoitus asetti sen noin vuoteen 3130 eaa., mikä tekee siitä vanhimman tunnetun pyörä-akseli-yhdistelmän maailmassa. Pyörä on tehty tammesta ja akseli saarnista, ja se on nykyään esillä Ljubljanan kaupunginmuseossa.
+AIEMPI KYSYMYS: Kuka ristit veistää nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän jotakuinkin. Ensimmäisen ristin veistänyt [[Stan Ioan Pătraș]] työskenteli Săpânțassa kuolemaansa asti, ja hänen jälkeensä perinnettä jatkoi hänen oppilaansa [[Dumitru Pop-Tincu]]. Nykyään ristit veistävät ja maalaavat paikalliset mestarit samassa työpajassa, ja jokainen risti tehdään yhä käsin [[tammesta]]. Työ alkaa yleensä siitä, että vainajan omaiset kertovat hänen elämästään, minkä perusteella kuva ja runo suunnitellaan. En ole varma, ketkä työtä juuri nyt tekevät. Nimet kyl muistan, mut tän päivän tekijät on jääneet minulle hämärän peittoon.
+KYSYMYS: Kerro lisää: tammesta
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Millaisia runot ovat sanoiltaan?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Siihen on kiva vastata. Săpânțan ristien runot ovat lyhyitä, tavallisesti riimillisiä ja usein kirjoitettu vainajan omalla äänellä, ikään kuin hän puhuisi ohikulkijalle. Ne kertovat ammatista, luonteesta ja elämän käänteistä, ja sävy on monesti leikkisä ja lämmin eikä juhlallisen synkkä. Perinteen mukaan runot sepitti alun perin ristien veistäjä [[Stan Ioan Pătraș]] itse, ja ne on kirjoitettu paikallisella [[romanian kielellä]], [[Maramureșin]] alueen tapaan. En ole varma, kuinka suuri osa teksteistä on vanhoja ja kuinka suuri osa uudempia. Ei ole huono tapa tulla muistetuksi, jos minulta kysytään.
+KYSYMYS: Kerro lisää: romanian kielellä
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+AIEMPI KYSYMYS: Millaisia runot ovat sanoiltaan?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Siihen on kiva vastata. Săpânțan ristien runot ovat lyhyitä, tavallisesti riimillisiä ja usein kirjoitettu vainajan omalla äänellä, ikään kuin hän puhuisi ohikulkijalle. Ne kertovat ammatista, luonteesta ja elämän käänteistä, ja sävy on monesti leikkisä ja lämmin eikä juhlallisen synkkä. Perinteen mukaan runot sepitti alun perin ristien veistäjä [[Stan Ioan Pătraș]] itse, ja ne on kirjoitettu paikallisella [[romanian kielellä]], [[Maramureșin]] alueen tapaan. En ole varma, kuinka suuri osa teksteistä on vanhoja ja kuinka suuri osa uudempia. Ei ole huono tapa tulla muistetuksi, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Maramureșin
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+AIEMPI KYSYMYS: Mitä värejä ristien maalauksissa käytetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ristien tunnetuin väri on kirkas sininen, jota kutsutaan usein [[Săpânțan]] siniseksi, ja se on monen ristin tausta. Sinisen rinnalla käytetään punaista, keltaista, vihreää ja valkoista, ja värit ovat kirkkaita ja puhtaita. Kuvat ovat naiivin tyylisiä: ihmiset ja esineet piirtyvät selvinä, tasaisina väripintoina. Värien tarkoista merkityksistä kerrotaan monenlaista, mutta en ole varma, mikä selitys niistä pitää paikkansa. Maalaus tehdään [[tammiristin]] pintaan, ja teksti kirjoitetaan sen alle. Nyt kyllä mieleen tuli oma värimaailma: harmaata ja harmaata.
+KYSYMYS: Kerro lisää: Săpânțan
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+AIEMPI KYSYMYS: Mitä värejä ristien maalauksissa käytetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ristien tunnetuin väri on kirkas sininen, jota kutsutaan usein [[Săpânțan]] siniseksi, ja se on monen ristin tausta. Sinisen rinnalla käytetään punaista, keltaista, vihreää ja valkoista, ja värit ovat kirkkaita ja puhtaita. Kuvat ovat naiivin tyylisiä: ihmiset ja esineet piirtyvät selvinä, tasaisina väripintoina. Värien tarkoista merkityksistä kerrotaan monenlaista, mutta en ole varma, mikä selitys niistä pitää paikkansa. Maalaus tehdään [[tammiristin]] pintaan, ja teksti kirjoitetaan sen alle. Nyt kyllä mieleen tuli oma värimaailma: harmaata ja harmaata.
+KYSYMYS: Kerro lisää: tammiristin
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+AIEMPI KYSYMYS: Millä kielellä ristien runot on kirjoitettu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Runot on kirjoitettu pääosin [[romaniaksi]], ja kieli on usein paikallista maalaismurretta, joka kuulostaa elävältä arkipuheelta. Săpânța sijaitsee [[Maramureșin]] alueella lähellä [[Ukrainan]] rajaa, ja alueen puhetapa tuntuu teksteissä. Nykyään osa ristien teksteistä käännetään tai kirjoitetaan myös vieraskielisille vierailijoille, mutta en ole varma, kuinka yleistä se on. Ristin kuva ja runo tekevät yhdessä kertomuksen vainajasta. Aika hyvin kyyhky selvisi tästä kielikysymyksestä, vaikka minä kuuntelen yleensä vain kuhinaa.
+KYSYMYS: Kerro lisää: romaniaksi
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Millä kielellä ristien runot on kirjoitettu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Runot on kirjoitettu pääosin [[romaniaksi]], ja kieli on usein paikallista maalaismurretta, joka kuulostaa elävältä arkipuheelta. Săpânța sijaitsee [[Maramureșin]] alueella lähellä [[Ukrainan]] rajaa, ja alueen puhetapa tuntuu teksteissä. Nykyään osa ristien teksteistä käännetään tai kirjoitetaan myös vieraskielisille vierailijoille, mutta en ole varma, kuinka yleistä se on. Ristin kuva ja runo tekevät yhdessä kertomuksen vainajasta. Aika hyvin kyyhky selvisi tästä kielikysymyksestä, vaikka minä kuuntelen yleensä vain kuhinaa.
+KYSYMYS: Kerro lisää: Ukrainan
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+AIEMPI KYSYMYS: Mitä eläimiä Făgărașin vuorilla elää?
+AIEMPI VASTAUS (Livia):
+No niin, tästä tiedän jotain. Făgărașin vuoristossa elää useita Euroopan suurpetoja: [[ruskeakarhu]], [[susi]] ja [[ilves]] ovat kaikki alueen asukkaita, ja Romanian karhukanta on yksi Euroopan merkittävimmistä. Kallioilla liikkuu [[Karpaattien gemssi]] ja ylhäällä ilmassa kiertää kotka. Eläinten tarkkoja määriä en osaa sanoa, mutta karhut tunnetaan hyvin myös siitä, että ne käyvät joskus lähellä asutusta ja retkeilijöiden leirejä. Vuoristossa on syytä noudattaa ohjeita eikä jättää ruokaa luontoon. Yhtään karhua en ole itse kohdannut, ja olen siitä kyllä erittäin tyytyväinen.
+KYSYMYS: Kerro lisää: ruskeakarhu
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Falkland — kaupunkilehti / Pingviinit ja kadonnut susi] Falklandinsaarilla pesii viisi pingviinilajia ja maailman suurimpia albatrossiyhdyskuntia, mutta ainoa alkuperäinen maanisäkäs, kesy susi nimeltä varra, hävisi ihmisen käsissä sukupuuttoon isoisän matkan aikoihin.
+AIEMPI KYSYMYS: Mitä eläimiä Făgărașin vuorilla elää?
+AIEMPI VASTAUS (Livia):
+No niin, tästä tiedän jotain. Făgărașin vuoristossa elää useita Euroopan suurpetoja: [[ruskeakarhu]], [[susi]] ja [[ilves]] ovat kaikki alueen asukkaita, ja Romanian karhukanta on yksi Euroopan merkittävimmistä. Kallioilla liikkuu [[Karpaattien gemssi]] ja ylhäällä ilmassa kiertää kotka. Eläinten tarkkoja määriä en osaa sanoa, mutta karhut tunnetaan hyvin myös siitä, että ne käyvät joskus lähellä asutusta ja retkeilijöiden leirejä. Vuoristossa on syytä noudattaa ohjeita eikä jättää ruokaa luontoon. Yhtään karhua en ole itse kohdannut, ja olen siitä kyllä erittäin tyytyväinen.
+KYSYMYS: Kerro lisää: susi
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+AIEMPI KYSYMYS: Mitä eläimiä Făgărașin vuorilla elää?
+AIEMPI VASTAUS (Livia):
+No niin, tästä tiedän jotain. Făgărașin vuoristossa elää useita Euroopan suurpetoja: [[ruskeakarhu]], [[susi]] ja [[ilves]] ovat kaikki alueen asukkaita, ja Romanian karhukanta on yksi Euroopan merkittävimmistä. Kallioilla liikkuu [[Karpaattien gemssi]] ja ylhäällä ilmassa kiertää kotka. Eläinten tarkkoja määriä en osaa sanoa, mutta karhut tunnetaan hyvin myös siitä, että ne käyvät joskus lähellä asutusta ja retkeilijöiden leirejä. Vuoristossa on syytä noudattaa ohjeita eikä jättää ruokaa luontoon. Yhtään karhua en ole itse kohdannut, ja olen siitä kyllä erittäin tyytyväinen.
+KYSYMYS: Kerro lisää: ilves
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Mitä eläimiä Făgărașin vuorilla elää?
+AIEMPI VASTAUS (Livia):
+No niin, tästä tiedän jotain. Făgărașin vuoristossa elää useita Euroopan suurpetoja: [[ruskeakarhu]], [[susi]] ja [[ilves]] ovat kaikki alueen asukkaita, ja Romanian karhukanta on yksi Euroopan merkittävimmistä. Kallioilla liikkuu [[Karpaattien gemssi]] ja ylhäällä ilmassa kiertää kotka. Eläinten tarkkoja määriä en osaa sanoa, mutta karhut tunnetaan hyvin myös siitä, että ne käyvät joskus lähellä asutusta ja retkeilijöiden leirejä. Vuoristossa on syytä noudattaa ohjeita eikä jättää ruokaa luontoon. Yhtään karhua en ole itse kohdannut, ja olen siitä kyllä erittäin tyytyväinen.
+KYSYMYS: Kerro lisää: Karpaattien gemssi
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Miksi tähti nimettiin vuoren mukaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kysymys on mukava ja vastaus selvä. Vuonna 2019 Kansainvälinen tähtitieteellinen unioni järjesti nimeämiskilpailun, jossa eri maat saivat ehdottaa nimiä tähdille ja niiden planeetoille. Romania valitsi ehdotuksiinsa maansa vuoria, ja tähti [[XO-1]] sai nimekseen Moldoveanu; sen planeetan nimeksi tuli, kuten muistan, Negoiu, toinen Făgărașin korkea huippu. Tähti sijaitsee [[Pohjankruunun]] tähdistössä, ja tähän nimeämiseen osallistui monia romanialaisia. En ole aivan varma kaikista yksityiskohdista, mutta periaate oli tämä. Mukavaa, että vuori saa nyt katsoa takaisin taivaalle.
+KYSYMYS: Kerro lisää: XO-1
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Miksi tähti nimettiin vuoren mukaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kysymys on mukava ja vastaus selvä. Vuonna 2019 Kansainvälinen tähtitieteellinen unioni järjesti nimeämiskilpailun, jossa eri maat saivat ehdottaa nimiä tähdille ja niiden planeetoille. Romania valitsi ehdotuksiinsa maansa vuoria, ja tähti [[XO-1]] sai nimekseen Moldoveanu; sen planeetan nimeksi tuli, kuten muistan, Negoiu, toinen Făgărașin korkea huippu. Tähti sijaitsee [[Pohjankruunun]] tähdistössä, ja tähän nimeämiseen osallistui monia romanialaisia. En ole aivan varma kaikista yksityiskohdista, mutta periaate oli tämä. Mukavaa, että vuori saa nyt katsoa takaisin taivaalle.
+KYSYMYS: Kerro lisää: Pohjankruunun
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Mikä on koko Karpaattien korkein huippu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Koko Karpaattien korkein huippu on [[Gerlachovský štít]] Slovakian puolella [[Tatran]] vuoristossa, korkeutta on noin 2 650 metriä. Se on siis korkeampi kuin Romanian korkein huippu Moldoveanu, joka on Etelä-Karpaattien ja Romanian korkein mutta ei koko vuorijonon. [[Karpaatit]] kaartuvat suuren kaaren useiden maiden läpi, ja eri osilla on omat korkeimmat huippunsa. Tarkat korkeusluvut vaihtelevat lähteittäin, joten sanon ne noin-lukuina. Hienoa, että ennätys pysyy täällä Euroopassa ja pienen matkan päässä toisistaan.
+KYSYMYS: Kerro lisää: Gerlachovský štít
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Mikä on koko Karpaattien korkein huippu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Koko Karpaattien korkein huippu on [[Gerlachovský štít]] Slovakian puolella [[Tatran]] vuoristossa, korkeutta on noin 2 650 metriä. Se on siis korkeampi kuin Romanian korkein huippu Moldoveanu, joka on Etelä-Karpaattien ja Romanian korkein mutta ei koko vuorijonon. [[Karpaatit]] kaartuvat suuren kaaren useiden maiden läpi, ja eri osilla on omat korkeimmat huippunsa. Tarkat korkeusluvut vaihtelevat lähteittäin, joten sanon ne noin-lukuina. Hienoa, että ennätys pysyy täällä Euroopassa ja pienen matkan päässä toisistaan.
+KYSYMYS: Kerro lisää: Tatran
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Mikä on koko Karpaattien korkein huippu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Koko Karpaattien korkein huippu on [[Gerlachovský štít]] Slovakian puolella [[Tatran]] vuoristossa, korkeutta on noin 2 650 metriä. Se on siis korkeampi kuin Romanian korkein huippu Moldoveanu, joka on Etelä-Karpaattien ja Romanian korkein mutta ei koko vuorijonon. [[Karpaatit]] kaartuvat suuren kaaren useiden maiden läpi, ja eri osilla on omat korkeimmat huippunsa. Tarkat korkeusluvut vaihtelevat lähteittäin, joten sanon ne noin-lukuina. Hienoa, että ennätys pysyy täällä Euroopassa ja pienen matkan päässä toisistaan.
+KYSYMYS: Kerro lisää: Karpaatit
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Rákóczit ja kotiinpaluu Kassaan] Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina 1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.
+AIEMPI KYSYMYS: Mikä Transfăgărășan on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Transfăgărășan on Făgărașin vuoriston yli kulkeva tunnettu vuoristotie, joka yhdistää [[Transilvanian]] ja [[Valakian]] alueet toisiinsa. Se rakennettiin vuosikymmeniä sitten, kommunistisen ajan Romaniassa, ja sen kiemurat ja jyrkät mutkat ovat tehneet siitä suositun nähtävyyden sekä moottoripyöräilijöille että autoilijoille. Tie on avoinna vain osan vuodesta, koska korkealla lumi sulkee sen talveksi. Korkeimman kohdan korkeus on noin kaksi kilometriä, mutta en ole aivan varma tarkasta luvusta. Tiellä kulkiessa kyllä ymmärtää, miksi minä lennän mieluummin suoraan.
+KYSYMYS: Kerro lisää: Transilvanian
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+AIEMPI KYSYMYS: Mikä Transfăgărășan on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Transfăgărășan on Făgărașin vuoriston yli kulkeva tunnettu vuoristotie, joka yhdistää [[Transilvanian]] ja [[Valakian]] alueet toisiinsa. Se rakennettiin vuosikymmeniä sitten, kommunistisen ajan Romaniassa, ja sen kiemurat ja jyrkät mutkat ovat tehneet siitä suositun nähtävyyden sekä moottoripyöräilijöille että autoilijoille. Tie on avoinna vain osan vuodesta, koska korkealla lumi sulkee sen talveksi. Korkeimman kohdan korkeus on noin kaksi kilometriä, mutta en ole aivan varma tarkasta luvusta. Tiellä kulkiessa kyllä ymmärtää, miksi minä lennän mieluummin suoraan.
+KYSYMYS: Kerro lisää: Valakian
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+AIEMPI KYSYMYS: Miltä Pohjankruunun tähdistö näyttää taivaalla?
+AIEMPI VASTAUS (Livia):
+Mmm— tähdistöt ovat ylhäältä katsottuna tuttu juttu. [[Pohjankruunu]] on pieni, kaareva tähtijoukko, joka muistuttaa puoliympyrää tai hevosenkenkää. Sen kirkkain tähti on [[Alphecca]], jota kutsutaan myös nimellä Gemma. Tähdistö löytyy pohjoisen taivaan keväistä ja kesäistä osaa katsoessa, kauhan ja Härkämiehen lähistöltä. Kreikkalaisessa tarustossa kruunun kerrotaan olleen Ariadnen. Sen löytäminen onnistuu parhaiten pimeällä, kaukana kaupunkien valoista. Minä löydän sen yleensä vasta, kun joku näyttää.
+KYSYMYS: Kerro lisää: Pohjankruunu

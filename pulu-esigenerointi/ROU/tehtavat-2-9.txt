@@ -1,0 +1,280 @@
+### 641
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Miten renessanssin linna erosi keskiajan linnasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Keskiajan linna rakennettiin ennen kaikkea puolustukseen, ja siksi siinä oli paksut muurit, torneja ja usein korkea sijainti. Renessanssin aikana rakennettiin yhä enemmän mukavuuteen ja edustukseen: palatseissa oli suuremmat ikkunat, tasapainoiset julkisivut ja edustavat salit. Devassa [[Gabriel Bethlen]] laajensi linnaa 1600-luvun alussa ja rakennutti juurelle renessanssityylisen [[Magna Curia]] -palatsin. Tämä kertoo siitä, että ylhäällä oli linnoitus ja alhaalla asuinpalatsi. Tarkoista huonejärjestelyistä en ole varma. Kyl se alakerta kuulostaa mukavammalta kuin tuulinen kukkula.
+KYSYMYS: Kerro lisää: Magna Curia
+
+### 642
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Kuka oli Transilvanian ruhtinas Gabriel Bethlen?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Gabriel Bethlen]] oli Transilvanian ruhtinas, joka hallitsi noin vuosina 1613–1629, ja häntä pidetään yhtenä ruhtinaskunnan merkittävimmistä hallitsijoista. Hän oli kalvinisti ja tuki koulutusta sekä taloutta, ja hänen aikanaan Transilvania toimi vahvana toimijana [[kolmikymmenvuotisen sodan]] ajan Euroopassa. Devan linnaa hän laajensi 1600-luvun alussa. Tarkoista hallintovuosista ja hänen politiikkansa yksityiskohdista en ole täysin varma.
+
+Minä tunnen ruhtinaita lähinnä siitä, että he lähettivät minulle kirjeitä ja olivat aina kiireellisiä. Mutta Bethlen vaikuttaa ihan kunnolliselta kaverilta.
+KYSYMYS: Kerro lisää: kolmikymmenvuotisen sodan
+
+### 643
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä oli voivodan asema Transilvanian historiassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Voivoda oli Transilvanian keskiaikainen hallintovirkamies, joka hallitsi aluetta [[Unkarin kuningaskunnan]] puolesta ja nimitettiin yleensä kuninkaan toimesta. Devan linna oli 1400-luvulla Transilvanian voivodien hallussa, ja myöhemmin se siirtyi ruhtinaille. Voivodan vastuulle kuuluivat muun muassa sotilaalliset ja oikeudelliset tehtävät, mutta tarkasta vallanjaosta ajan kuluessa en ole varma. Tehtävä muuttui vuosisatojen kuluessa, ja [[ruhtinas]] otti lopulta paikan hallitsijana. Tää kaikki oli aika paljon virkaa yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 644
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä oli voivodan asema Transilvanian historiassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Voivoda oli Transilvanian keskiaikainen hallintovirkamies, joka hallitsi aluetta [[Unkarin kuningaskunnan]] puolesta ja nimitettiin yleensä kuninkaan toimesta. Devan linna oli 1400-luvulla Transilvanian voivodien hallussa, ja myöhemmin se siirtyi ruhtinaille. Voivodan vastuulle kuuluivat muun muassa sotilaalliset ja oikeudelliset tehtävät, mutta tarkasta vallanjaosta ajan kuluessa en ole varma. Tehtävä muuttui vuosisatojen kuluessa, ja [[ruhtinas]] otti lopulta paikan hallitsijana. Tää kaikki oli aika paljon virkaa yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: ruhtinas
+
+### 645
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+- [Bukarest — kohdekartta / Kohdekartta: Vanha ruhtinaanhovi] 1459 Vanha ruhtinaanhovi eli Curtea Veche oli aikoinaan Valakian ruhtinaiden linna Bukarestin keskustassa. Se rakennettiin vuonna 1459, ja seuraavien vuosisatojen aikana monet hallitsijat laajensivat ja kaunistivat sitä. Muun muassa ruhtinas Constantin Brâncoveanu lisäsi linnaan komean marmoriportaikon. Linna sijaitsi lähellä jokea, ja sen ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, joka teki paikasta koko kaupungin taloudellisen keskuksen. Vuonna 1775 ruhtinaat muuttivat uuteen palatsiin, ja vanha hovi jätettiin rappeutumaan, kunnes se lopulta myytiin huutokaupalla vuonna 1798. Nykyään paikalla on vain raunioita: vanhoja kivimuureja ja holvikaaria, joita arkeologit ovat kaivan…
+AIEMPI KYSYMYS: Miksi Vlad Seivästäjän vuoden 1459 asiakirja on Bukarestille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Vlad III Seivästäjä antoi syyskuussa 1459 asiakirjan, jossa hän mainitsee linnoituksensa Bukarestissa, ja se on kaupungin varhaisin tunnettu maininta. Juuri siksi vuotta 1459 pidetään [[Bukarestin]] perustamisvuotena, vaikka asutusta alueella on voinut olla jo aiemmin. Asiakirja liittyy hallitsijan residenssiin, [[Curtea Vechen]] ruhtinaanhoviin, jonka rakennutti [[Dâmbovița-joen]] rannalle sama ruhtinas. Perustamisvuosi on siis oikeastaan varhaisimman säilyneen maininnan vuosi, ei kaupungin tarkka syntyhetki. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Bukarestin
+
+### 646
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Vanha ruhtinaanhovi] 1459 Vanha ruhtinaanhovi eli Curtea Veche oli aikoinaan Valakian ruhtinaiden linna Bukarestin keskustassa. Se rakennettiin vuonna 1459, ja seuraavien vuosisatojen aikana monet hallitsijat laajensivat ja kaunistivat sitä. Muun muassa ruhtinas Constantin Brâncoveanu lisäsi linnaan komean marmoriportaikon. Linna sijaitsi lähellä jokea, ja sen ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, joka teki paikasta koko kaupungin taloudellisen keskuksen. Vuonna 1775 ruhtinaat muuttivat uuteen palatsiin, ja vanha hovi jätettiin rappeutumaan, kunnes se lopulta myytiin huutokaupalla vuonna 1798. Nykyään paikalla on vain raunioita: vanhoja kivimuureja ja holvikaaria, joita arkeologit ovat kaivan…
+AIEMPI KYSYMYS: Miksi Vlad Seivästäjän vuoden 1459 asiakirja on Bukarestille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Vlad III Seivästäjä antoi syyskuussa 1459 asiakirjan, jossa hän mainitsee linnoituksensa Bukarestissa, ja se on kaupungin varhaisin tunnettu maininta. Juuri siksi vuotta 1459 pidetään [[Bukarestin]] perustamisvuotena, vaikka asutusta alueella on voinut olla jo aiemmin. Asiakirja liittyy hallitsijan residenssiin, [[Curtea Vechen]] ruhtinaanhoviin, jonka rakennutti [[Dâmbovița-joen]] rannalle sama ruhtinas. Perustamisvuosi on siis oikeastaan varhaisimman säilyneen maininnan vuosi, ei kaupungin tarkka syntyhetki. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Curtea Vechen
+
+### 647
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+AIEMPI KYSYMYS: Miksi Vlad Seivästäjän vuoden 1459 asiakirja on Bukarestille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Vlad III Seivästäjä antoi syyskuussa 1459 asiakirjan, jossa hän mainitsee linnoituksensa Bukarestissa, ja se on kaupungin varhaisin tunnettu maininta. Juuri siksi vuotta 1459 pidetään [[Bukarestin]] perustamisvuotena, vaikka asutusta alueella on voinut olla jo aiemmin. Asiakirja liittyy hallitsijan residenssiin, [[Curtea Vechen]] ruhtinaanhoviin, jonka rakennutti [[Dâmbovița-joen]] rannalle sama ruhtinas. Perustamisvuosi on siis oikeastaan varhaisimman säilyneen maininnan vuosi, ei kaupungin tarkka syntyhetki. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Dâmbovița-joen
+
+### 648
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+AIEMPI KYSYMYS: Miksi vanha hovi lopulta hylättiin ja myytiin?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Vanha hovi menetti asemansa, kun [[Alexander Ypsilantis]] rakennutti uuden ruhtinaanhovin vuonna 1775. Vanha hovi huutokaupattiin vuonna 1798 ja rapistui vähitellen raunioiksi, ja kaivaukset alkoivat vasta vuonna 1953. Nykyään paikalla toimii avoin museo [[vanhassakaupungissa]], ja tarkemmista syistä hovin myyntiin en ole varma. Onpas siin ollu monta vaihetta.
+KYSYMYS: Kerro lisää: Alexander Ypsilantis
+
+### 649
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+AIEMPI KYSYMYS: Miksi vanha hovi lopulta hylättiin ja myytiin?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Vanha hovi menetti asemansa, kun [[Alexander Ypsilantis]] rakennutti uuden ruhtinaanhovin vuonna 1775. Vanha hovi huutokaupattiin vuonna 1798 ja rapistui vähitellen raunioiksi, ja kaivaukset alkoivat vasta vuonna 1953. Nykyään paikalla toimii avoin museo [[vanhassakaupungissa]], ja tarkemmista syistä hovin myyntiin en ole varma. Onpas siin ollu monta vaihetta.
+KYSYMYS: Kerro lisää: vanhassakaupungissa
+
+### 650
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto] Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan sisällä.
+AIEMPI KYSYMYS: Mitä Valakia oli ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valakia oli historiallinen ruhtinaskunta nykyisen Romanian eteläosassa, [[Karpaattien]] ja [[Tonavan]] välisellä alueella. Bukarest vakiintui sen pääkaupungiksi noin 1600-luvulla, mutta tarkasta vuodesta en ole varma. Valakia yhdistyi 1800-luvulla [[Moldovan]] ruhtinaskunnan kanssa, ja yhdistymisestä kasvoi nykyinen [[Romanian]] valtio. Tuli taas lennettyä pitkälti.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 651
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mitä Valakia oli ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valakia oli historiallinen ruhtinaskunta nykyisen Romanian eteläosassa, [[Karpaattien]] ja [[Tonavan]] välisellä alueella. Bukarest vakiintui sen pääkaupungiksi noin 1600-luvulla, mutta tarkasta vuodesta en ole varma. Valakia yhdistyi 1800-luvulla [[Moldovan]] ruhtinaskunnan kanssa, ja yhdistymisestä kasvoi nykyinen [[Romanian]] valtio. Tuli taas lennettyä pitkälti.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 652
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+AIEMPI KYSYMYS: Mitä Valakia oli ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valakia oli historiallinen ruhtinaskunta nykyisen Romanian eteläosassa, [[Karpaattien]] ja [[Tonavan]] välisellä alueella. Bukarest vakiintui sen pääkaupungiksi noin 1600-luvulla, mutta tarkasta vuodesta en ole varma. Valakia yhdistyi 1800-luvulla [[Moldovan]] ruhtinaskunnan kanssa, ja yhdistymisestä kasvoi nykyinen [[Romanian]] valtio. Tuli taas lennettyä pitkälti.
+KYSYMYS: Kerro lisää: Moldovan
+
+### 653
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Mitä Valakia oli ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valakia oli historiallinen ruhtinaskunta nykyisen Romanian eteläosassa, [[Karpaattien]] ja [[Tonavan]] välisellä alueella. Bukarest vakiintui sen pääkaupungiksi noin 1600-luvulla, mutta tarkasta vuodesta en ole varma. Valakia yhdistyi 1800-luvulla [[Moldovan]] ruhtinaskunnan kanssa, ja yhdistymisestä kasvoi nykyinen [[Romanian]] valtio. Tuli taas lennettyä pitkälti.
+KYSYMYS: Kerro lisää: Romanian
+
+### 654
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Kaupungilla on oma kieli] Kujilla ja toreilla puhutaan shanghainkieltä, joka kuuluu wu-kieliin eikä aukea mandariinia osaavalle. Puhujia on noin 14 miljoonaa, ja kieli muotoutui sataman mukana: kun kaupunki avattiin kaupalle 1850-luvulla, muuttajat toivat Suzhousta ja Ningbosta murteensa, jotka sulautuivat paikalliseen puheeseen. Yleiskielen opetus työnsi shanghain syrjään, ja kouluissa sen käyttöä hillittiin vuodesta 1992, mutta 2010-luvulla suunta kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi 2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi 2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.
+AIEMPI KYSYMYS: Mitä Curtea Veche tarkoittaa romaniaksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost tulee kotoisa olo. Curtea Veche tarkoittaa suomeksi Vanhaa hovia: curtea on hovi tai piha ja veche tarkoittaa vanhaa. Romania kuuluu [[romaanisiin kieliin]], joten sen sanasto periytyy pääosin [[latinaan]], ja monet sanat muistuttavat esimerkiksi italian tai ranskan vastineita. Nimi erottaa vanhan hovin Ypsilantisin 1775 rakennuttamasta uudesta hovista. Latina kuuluu suvun perintöön, joten tää tuntui hyvältä.
+KYSYMYS: Kerro lisää: romaanisiin kieliin
+
+### 655
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+- [Syyria — maalehti / Historia: Kolmekymmentä merkkiä, ei yhtään tavua] Ras Shamran kumpu Latakian pohjoispuolella paljastui vuonna 1928, ja seuraavan vuoden kaivauksissa sieltä nousi esiin Ugaritin kaupunki ja sen kirjoitus. Merkit painettiin saveen ruokokynällä samalla tavalla kuin nuolenpääkirjoituksessa, mutta niitä on vain 30, ja jokainen niistä vastaa yhtä äännettä, ei tavua eikä sanaa. Kirjoitus otettiin käyttöön noin 1400–1300 eaa. ja jäi pois käytöstä noin 1190 eaa. Ugaritista on löytynyt myös aakkostauluja, joihin merkit on kirjoitettu järjestyksessä. Taulut ovat vanhin suora todiste siitä, että kirjaimilla on vakiintunut järjestys — sama, joka jatkuu foinikialaisen kirjoituksen kautta kreikkaan ja latinaan.
+AIEMPI KYSYMYS: Mitä Curtea Veche tarkoittaa romaniaksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost tulee kotoisa olo. Curtea Veche tarkoittaa suomeksi Vanhaa hovia: curtea on hovi tai piha ja veche tarkoittaa vanhaa. Romania kuuluu [[romaanisiin kieliin]], joten sen sanasto periytyy pääosin [[latinaan]], ja monet sanat muistuttavat esimerkiksi italian tai ranskan vastineita. Nimi erottaa vanhan hovin Ypsilantisin 1775 rakennuttamasta uudesta hovista. Latina kuuluu suvun perintöön, joten tää tuntui hyvältä.
+KYSYMYS: Kerro lisää: latinaan
+
+### 656
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+AIEMPI KYSYMYS: Mistä Bukarestin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Mmm— Nimestä kerrotaan useita tarinoita. Perinteen mukaan kaupungin perusti paimen nimeltä [[Bucur]], ja yksi selitys yhdistää nimen [[romanian kielen]] sanaan bucurie, joka tarkoittaa iloa. Varmaa tietoa nimen alkuperästä ei kuitenkaan ole, ja varhaisin tunnettu maininta kaupungista on vuodelta 1459.
+
+Paimenia minä olen katsonut ylhäältä pitkään, ja kyllä lammaslauma näyttää katolta ihan rakennustyömaalta. Tarina on kaunis, kunhan sitä ei pidä oikeana lähdeaineistona.
+KYSYMYS: Kerro lisää: Bucur
+
+### 657
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Mistä Bukarestin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Mmm— Nimestä kerrotaan useita tarinoita. Perinteen mukaan kaupungin perusti paimen nimeltä [[Bucur]], ja yksi selitys yhdistää nimen [[romanian kielen]] sanaan bucurie, joka tarkoittaa iloa. Varmaa tietoa nimen alkuperästä ei kuitenkaan ole, ja varhaisin tunnettu maininta kaupungista on vuodelta 1459.
+
+Paimenia minä olen katsonut ylhäältä pitkään, ja kyllä lammaslauma näyttää katolta ihan rakennustyömaalta. Tarina on kaunis, kunhan sitä ei pidä oikeana lähdeaineistona.
+KYSYMYS: Kerro lisää: romanian kielen
