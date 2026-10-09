@@ -1,112 +1,190 @@
-### 66.3
-KYSYMYS: Mitä katavothres-nieluilla tarkoitetaan?
-Ai tota, tää sana menee kyl kielen solmuun. Katavothres-nielut ovat kalkkikivialueen luonnollisia aukkoja, joihin vesi valuu maan alle. Kefalonialla ne sijaitsevat [[Argostolin]] lähellä, ja niihin virtaava merivesi kulkee saaren alitse kohti [[Melissanin]] luolajärveä ja purkautuu noin kahden viikon kuluttua [[Samin]] seudulla. Virtauksen voimalla on pyöritetty jopa myllyä jo vuonna 1835. Kyllä tää kaikki mahtui kyyhkyn päähän.
+### 66.1
+KYSYMYS: Miten meri katoaa Kefalonian alle?
+Odotas vähän, pöllö on matkoilla ja minä hoidan homman. Tost minä osaan kertoo. Argostolin lähellä merivesi valuu [[katavothres-nieluihin]], jotka ovat kalkkikiveen avautuvia aukkoja. Sieltä vesi kulkee saaren alla [[Melissanin]] luolajärven kautta ja purkautuu noin kahden viikon kuluttua Samin seudulla. Virtaus on niin voimakas, että sillä pyöritettiin myllyä jo vuonna 1835. Minä kyl kuivin siivin kierrän koko saaren.
 JATKOT:
-Mistä kalkkikivialueille syntyy maanalaisia luolia?
-Miten tutkijat ovat selvittäneet veden kulkureitin saaren alla?
+Miten murtovesi syntyy?
+Miten luolajärvi syntyy kalkkikivialueelle?
+
+### 66.2
+KYSYMYS: Miksi Melissanin vesi on murtovettä?
+Ai se. Sepä sattui. Luolan katto sortui kalkkikiven heikkenemisen vuoksi ja paljasti [[pohjaveden]], joka muodostaa järven. Siihen sekoittuvat sisämaasta tuleva makea vesi ja saaren alle tunkeutunut [[merivesi]], ja tuloksena on murtovettä. Järveä kierretään pienellä veneellä, joten sekoittumisen tulosta voi katsoa aivan läheltä.
+
+Kyyhkynä minä juon makeaa vettä, ja suolainen kirvelee nokassa jo ajatuksena. Murtovesi on siitä väliltä, ja kai minä sen kestän.
+JATKOT:
+Mitä eroa on makealla vedellä ja murtovedellä?
+Miksi kalkkikivialueilla on paljon luolia?
+
+### 66.3
+KYSYMYS: Miten luolajärvi syntyy kalkkikivialueelle?
+Hyvä kysymys tuo. Annas ku mietin. [[Kalkkikivi]] liukenee hitaasti sadeveteen, joten kallioon syntyy vuosituhansien kuluessa onkaloita ja käytäviä. Kun onkaloihin kerääntyy [[pohjavettä]], muodostuu maanalainen järvi. Jos luolan katto sortuu, kuten Melissanissa, järvi paljastuu taivaan alle. Tätä ilmiötä kutsutaan karstiksi.
+
+Meni näköjään kunnolla geologian puolelle, ja minä kun olen vain kirjekyyhky.
+JATKOT:
+Mitä karstimaisema tarkoittaa?
+Missä muualla Euroopassa on luolajärviä?
 
 ### 66.4
-KYSYMYS: Miten Melissanin luolajärvi on syntynyt?
-Selvä juttu. Melissanin luolan katto sortui, kun [[kalkkikiven]] sortuminen avasi sen ja paljasti luolan sisällä olevan [[pohjaveden]]. Syntynyt järvi on murtovettä, sillä sisämaan makea vesi ja saaren alle tunkeutunut merivesi sekoittuvat siinä. Tarustossa luolaa pidettiin [[nymfien]] asuinpaikkana, ja järveä kierretään nykyään pienellä veneellä.
-
-Katto putosi alas ja taivas tuli sisään, eli luolalle tuli ikkuna ihan ilmaiseksi. Siivekkäänä minä pidän ikkunoista, mutta lentäisin silti mieluummin ulkona.
+KYSYMYS: Keitä nymfit olivat?
+Kato, tää on tuttu. Nymfit ovat [[kreikkalaisessa mytologiassa]] luonnon henkiolentoja, joita kuvataan yleensä nuorina naisina. Heidät yhdistettiin erityisesti paikkoihin, kuten [[lähteisiin]], puihin, vuoriin ja luoliin, ja jokaisella paikalla saattoi olla oma nymfinsä. Nymfit eivät olleet jumalia vaan jumalten ja ihmisten välimaastoon kuuluvia olentoja. Meikäläiset kyllä tietävät, että luolat ovat parhaita asuinpaikkoja.
 JATKOT:
-Miksi kalkkikivi sortuu ja liukenee helposti?
-Mitä nymfit olivat kreikkalaisessa tarustossa?
+Mitä muita luonnonhenkiä Kreikan tarustossa oli?
+Miksi luolia pidettiin pyhinä paikkoina?
 
 ### 66.5
-KYSYMYS: Miten virtaus pyöritti myllyä Kefalonialla?
-Hetkinen ny. Kefalonian Argostolin lähellä merivesi valuu maan alle nieluihin, ja virtaus on niin voimakas, että sillä pyöritettiin myllyä jo vuonna 1835. Vesi liikkuu saaren alitse ja purkautuu noin kahden viikon kuluttua [[Samin]] seudulla, joten liike on jatkuvaa. Virtaus tarjosi siis valmiin voiman, jota ei tarvinnut keinotekoisesti synnyttää. Ei paha kyyhkyltä, joka ei ole edes koskaan jauhanut mitään.
+KYSYMYS: Miksi Joonianmeren seudulla on paljon maanjäristyksiä?
+No niin, maanjäristykset, ne tuntuvat ylhäällä asti. Joonianmeren seutu kuuluu Euroopan järistysalttiimpiin alueisiin. Yleensä selitys on se, että Afrikan laatta työntyy [[mannerlaattojen]] rajalla Euraasian laatan alle, ja jännitteet purkautuvat järistyksinä. Alue sijaitsee lähellä tätä rajaa, mutta tarkempia yksityiskohtia en ole varma. Kefalonian ja muiden [[Joonianmeren]] saarten asukkaat ovat oppineet rakentamaan sen mukaisesti. Näin ainakin torilla kerrotaan.
 JATKOT:
-Miten vesimylly muuttaa virtauksen voimaa liikkeeksi?
-Missä muualla Euroopassa vettä on käytetty mekaanisena voimana?
+Mitä mannerlaatat ovat?
+Mitkä ovat Joonianmeren tunnetuimpia saaria?
+
+### 67.1
+KYSYMYS: Mitä Kopaisjärvelle tapahtui?
+Joo, tän minä tiedän. Kopaisjärvi sijaitsi Boiotiassa, ja noin 1300 eaa. [[mykeneläiset]] kuivattivat osan siitä padoilla ja kanavilla. Rakennelmaa pidetään yhtenä esihistoriallisen insinööritaidon hämmästyttävimmistä saavutuksista. Järjestelmä kuitenkin romahti, ja järvi palasi. Kuivatuksen keskipisteenä oli [[Glan]] linnoitus, joka kohoaa kalkkikivikummulla. Ja tän minä jaksoin muistaa ilman muistiinpanoja.
+JATKOT:
+Miksi muinaiset järjestelmät romahtavat?
+Miten Glan linnoitus on säilynyt?
+
+### 67.2
+KYSYMYS: Miksi Glan antiikin nimeä ei tunneta?
+Tuota niin. Se on hyvä arvoitus. Glan antiikin nimeä ei tunneta, eikä paikkaa ole pystytty yhdistämään yhteenkään [[Iliaan]] paikannimeen. Syytä siihen, miksi nimi on hävinnyt, en ole varma, eikä sitä kannata arvata. Tiedetään kuitenkin, että [[mykeneläinen]] linnoitus rakennettiin noin vuonna 1300 eaa. ja että sen lähes kolme kilometriä pitkät muurit ympäröivät lähes 20 hehtaarin alueen. Nimeä ei siis ole, mutta muuri on yhä paikallaan.
+JATKOT:
+Miten muinaisia paikannimiä tunnistetaan?
+Kuinka suuri Gla oli verrattuna Tirynsiin?
 
 ### 67.3
-KYSYMYS: Kuinka suuri Glan linnoitus oli?
-Hyvä kysymys tuo. Glan linnoitusta ympäröivät lähes kolmen kilometrin pituiset [[kyklooppimuurit]], jotka rajaavat lähes 20 hehtaarin alueen. Tämä on noin kymmenen kertaa enemmän kuin [[Ateenan]] tai [[Tirynsin]] mykeneläisten linnavuorten pinta-ala. Linnoitus rakennettiin noin vuonna 1300 eaa. Boiotiassa sijaitsevalle kalkkikivikummulle. Siinä riittää kyyhkylle kiertämistä.
+KYSYMYS: Mitä tarkoittaa kyklooppimuuri?
+Hetkinen ny. Nyt muistan: kyklooppimuuri on rakennustapa, jossa muuri kootaan valtavista, vain karkeasti muotoilluista kivenjärkäleistä ilman laastia. Nimi tulee siitä, että myöhemmät kreikkalaiset uskoivat vain jättiläismäisten [[kyklooppien]] jaksaneen nostaa niin suuria lohkareita. Tekniikka tunnetaan esimerkiksi [[Mykenen]] ja [[Tirynsin]] linnoista, ja Glan muuri on lähes kolme kilometriä pitkä.
+
+Minä en nosta edes pullaa, joten kyklooppeja minä kunnioitan. Ja muuri on paljon pitempi kuin lentomatka sen yli.
 JATKOT:
-Miksi mykeneläiset rakensivat näin suuren linnoituksen?
-Mitä tiedetään mykeneläisestä kulttuurista?
+Miten Tirynsin linna on säilynyt?
+Mitä kyklooppeja kreikkalaisessa taruston mukaan oli?
 
 ### 67.4
-KYSYMYS: Mitä kyklooppimuurit ovat?
-Kas vaan, tämä on minulle tuttua. Kyklooppimuurit ovat valtavista, karkeasti muotoilluista kivistä ladottuja muureja, joita mykeneläiset rakensivat linnoituksiinsa. Nimi viittaa [[kykloopeihin]]: myöhemmin antiikissa uskottiin, että vain jättiläiset olisivat jaksaneet nostaa tuollaisia kiviä. [[Glassa]] muurit ovat noin vuodelta 1300 eaa., ja ne ovat lähes kolme kilometriä pitkät.
-
-Minäkin uskoisin jättiläisiä, jos näkisin tuollaiset kivet. Isoin kuorma, jonka minä olen kantanut, oli yksi rullattu kirje.
+KYSYMYS: Keitä mykeneläiset olivat?
+Selvä juttu. Mykeneläiset olivat pronssikauden kreikkalaisia, jotka rakensivat vahvoja linnakeskuksia Kreikan mantereelle. Keskuksia olivat muun muassa [[Mykene]], Tirynsin linna ja Pylos. He käyttivät [[Linear B]] -kirjoitusta, jolla kreikkaa kirjoitettiin, ja heidän kulttuurinsa kukoisti suunnilleen 1600-luvulta eaa. 1100-luvulle eaa., mutta tarkat vuosiluvut vaihtelevat lähteittäin. Aikakauden loppu tunnetaan palatsikeskusten tuhosta. Siinä oli kyyhkylle pitkä aikajana.
 JATKOT:
-Miten muurit pysyvät pystyssä ilman laastia?
-Missä muualla on säilynyt mykeneläisiä muureja?
+Mikä on Linear B ja miten se tulkittiin?
+Mitä Mykenen leijonaportista tiedetään?
 
 ### 67.5
-KYSYMYS: Miten mykeneläiset kuivattivat osan Kopaisjärvestä?
-Odotas vähän. Mykeneläiset kuivattivat osan järvestä padoilla ja kanavilla, jotka ohjasivat vettä pois alueelta. Hanketta on pidetty yhtenä esihistoriallisen insinööritaidon hämmästyttävimmistä saavutuksista. Se ajoittuu samoihin aikoihin kuin [[Glan]] linnoituksen rakentaminen [[Boiotiassa]], mutta järjestelmä romahti ja järvi palasi. Onpas siinä ollut hurja vesityö.
+KYSYMYS: Miksi järviä kuivataan?
+Ai tota. Järviä kuivataan yleensä saadakseen viljelymaata tai rakennusmaata. Kuivatuksella voidaan myös torjua tulvia ja vähentää hyttysten lisääntymisaluetta, kuten malariaa levittäviä hyttysiä. Tunnettuja esimerkkejä ovat [[Alankomaiden]] polderit, joissa merta ja järviä on muutettu maaksi. Kuivatus muuttaa kuitenkin kosteikkojen luontoa, joten nykyään sitä arvioidaan tarkemmin kuin ennen.
+
+Minä pidän järvistä sillä tavalla, että niiden päällä on tilaa lentää. Peltoja ne eivät minun silmissäni ole.
 JATKOT:
-Miksi kuivatusjärjestelmä lopulta romahti?
-Miten kuivattu järvenpohja muuttuu viljelysmaaksi?
+Miten Alankomaiden polderit toimivat?
+Mitä haittoja kosteikkojen kuivattamisesta on?
+
+### 68.1
+KYSYMYS: Kenelle Kastan hauta rakennettiin?
+Mmm— Tuohon ei ole yhtä varmaa vastausta. Haudasta löytyi viiden ihmisen jäänteet, mutta se, kenelle hauta rakennettiin, on yhä kiistanalaista. Kaivausryhmän mukaan hauta tehtiin [[Aleksanteri Suuren]] ystävälle [[Hefaistionille]], kun taas toisten tutkijoiden mukaan se rakennettiin Aleksanterin äidille [[Olympiakselle]]. Asiaa ei ole ratkaistu. Toivottavasti se selviää joskus.
+JATKOT:
+Kuka Hefaistion oli?
+Mikä Amfipolis oli antiikissa?
+
+### 68.2
+KYSYMYS: Mitä haudan lattiamosaiikissa on?
+No jopas. Sepä sattui. Haudan lattiamosaiikissa on kuvattu, kuinka [[Hades]] ryöstää [[Persefoneen]]. Aihe on tunnettu kreikkalaisesta mytologiasta. Sisäänkäyntiä vartioivat sfinksit, ja kaksi [[karyatidia]] kannattelee seuraavan kammion oven palkkia. Sisähauta löytyi vasta vuonna 2012.
+
+Nuo sfinksit ovat minusta aika uhkaavia, ja kyyhkynä minä lentäisin niiden ohi mieluummin ylhäältä. Mosaiikki kuulostaa kyllä upealta.
+JATKOT:
+Mitä Persefonen myytti kertoo?
+Miten mosaiikkeja tehtiin antiikissa?
 
 ### 68.3
-KYSYMYS: Kuinka suuri Kastan hautakumpu on?
-Joo, tän minä tiedän. Kastan kumpu on suurin Kreikasta koskaan löydetty antiikin hautakumpu, ja se on paljon suurempi kuin [[Filippos II:n]] kumpu [[Verginassa]]. Kumpua kiertää muuri, jonka läpimitta on 158 metriä ja jonka kalkkikivi on verhottu [[Thasoksen]] marmorilla. Se sijaitsee muinaisen [[Amfipoliin]] lähellä ja on peräisin 300-luvun viimeiseltä neljännekseltä eaa. Isoja lukuja, mutta ne pysyivät kyllä mielessä.
+KYSYMYS: Kuka Hefaistion oli?
+Kas vaan. Hefaistion oli [[Aleksanteri Suuren]] läheinen ystävä ja sotapäällikkö. Hän kuului Aleksanterin lähimpään piiriin ja nousi korkeisiin tehtäviin tämän sotaretkillä. Hänen kuolemansa ajoitetaan yleensä vuoteen 324 eaa., mutta en ole varma tarkasta ajankohdasta. Kastan haudan yhteydessä häntä pidetään yhtenä mahdollisena vainajana, ja asia on kiistanalainen. Siinä kaikki, mitä muistan.
 JATKOT:
-Miksi hautakumpuja rakennettiin antiikin aikana?
-Mikä Amfipolis oli antiikin aikana?
+Mikä merkitys Aleksanterin ystävillä oli sotaretkillä?
+Mitä Aleksanterin äidistä Olympiaksesta tiedetään?
 
 ### 68.4
-KYSYMYS: Milloin Kastan haudan sisähauta löydettiin?
-Annas ku mietin. Sisähauta löytyi vasta vuonna 2012, vaikka itse kumpu on peräisin 300-luvun viimeiseltä neljännekseltä eaa. Sisäänkäyntiä vartioivat [[sfinksit]], ja seuraavan kammion oven palkkia kannattelevat kaksi [[karyatidia]]. Lattiamosaiikissa on kuvattu, miten Hades ryöstää Persefonen. Kyllä sitä sen verran odotettiin, että sopii ihmetellä.
+KYSYMYS: Mikä on karyatidi?
+Pöllö on poissa, joten minä vastaan. Nyt muistan: karyatidi on naishahmon muotoon veistetty pylväs, joka kannattelee rakennuksen osaa, kuten palkkia tai kattoa. Tunnetuimmat karyatidit ovat Ateenan [[Akropoliksella]], [[Erechtheionin]] temppelin kuistilla. Kastan haudassa kaksi karyatidia kannattelee seuraavan kammion oven palkkia. Siinä oli kyyhkylle pitkä sana.
 JATKOT:
-Millainen jumala Hades oli kreikkalaisessa mytologiassa?
-Miten arkeologit tutkivat suljettua hautakammiota?
+Miksi Erechtheion rakennettiin?
+Mitä muita rakennusosia kreikkalaisessa arkkitehtuurissa oli?
 
 ### 68.5
-KYSYMYS: Mitä karyatidit ovat?
-Nyt muistan:  karyatidit ovat naishahmon muotoisia tukipylväitä, jotka kannattelevat rakennuksen osaa, kuten palkkia tai kattoa. [[Kastan]] haudassa kaksi karyatidia kannattelee seuraavan kammion oven palkkia. Tunnetuimmat karyatidit ovat Ateenan Akropoliilla [[Erechtheionissa]]. Tällainen hahmo yhdistää koristeen ja rakenteen.
-
-Kaksi kivinaista pitelee palkkia tuhansia vuosia valittamatta. Sukuni kannattelee patsaiden päätä korkeintaan hetken, ja siitäkin saa vielä moitteita.
+KYSYMYS: Kuka oli Filippos II?
+Joo, tän minä tiedän. Filippos II oli Makedonian kuningas, joka hallitsi noin vuosina 359–336 eaa. ja oli [[Aleksanteri Suuren]] isä. Hän vahvisti [[Makedonian]] sotavoimia ja teki valtakunnasta Kreikan johtavan vallan. Hänet murhattiin vuonna 336 eaa., ja Aleksanteri nousi valtaan. Hänen hautakumpunsa sijaitsee Verginassa, ja Kastan kumpu on siitä paljon suurempi. Aihe on raskas, mutta aika on tehnyt asiasta kaukaisen.
 JATKOT:
-Miten karyatidit eroavat tavallisista pylväistä?
-Mikä Erechtheion on ja milloin se rakennettiin?
+Mitä Verginan haudasta on löydetty?
+Miten Makedonia nousi Kreikan johtavaksi vallaksi?
+
+### 69.1
+KYSYMYS: Mitä Gortynin laki sääti avioerosta?
+Ai se. Selvä juttu. Gortynin laki on [[Kreetalla]] hakattu siviililakien kokoelma, joka säätelee muun muassa avioeroa, perintöä ja adoptiota. Avioerosta laki säätää, että eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Muita avioeron yksityiskohtia en ole varma. Kivi on ainutlaatuinen lähde antiikin perheoikeuteen.
+JATKOT:
+Mitä laki sääti perinnöstä?
+Miten adoptio oli säädelty Gortynissa?
+
+### 69.2
+KYSYMYS: Miten lakia luetaan?
+Hetkinen, tätä minä kyllä ihmettelin. Gortynin lain tekstipalstat luetaan vuororiveittäin eri suuntiin: yksi rivi vasemmalta oikealle, seuraava oikealta vasemmalle ja niin edelleen. Kirjoitustapaa kutsutaan [[boustrofedoniksi]], mikä tarkoittaa kutakuinkin härän käännöstä pellolla. Säilyneet kaksitoista palstaa ovat yhteensä noin kymmenen metriä pitkiä ja sisältävät noin 600 riviä. Ne hakattiin alun perin pyöreän [[odeionin]] seinään.
+
+Minä lukisin tämän mieluummin sellaisenaan kuin yrittäisin kääntyä jokaisen rivin lopussa. Tuo on kyllä lentäjälle luonteva tapa.
+JATKOT:
+Miksi kirjoitusta kirjoitettiin kumpaankin suuntaan?
+Miksi kivet päätyivät odeionin perustuksiin?
 
 ### 69.3
-KYSYMYS: Miksi Gortynin laki on merkittävä?
-Tuota niin. Gortynin laki on yhtä poikkeusta lukuun ottamatta pisin säilynyt antiikin kreikkalainen kirjoitus, ja siinä on noin 600 riviä kahdellatoista tekstipalstalla. Se on [[Etelä-Kreetalla]] sijainneen kaupunkivaltion [[siviililakien]] kokoelma, joka säätelee muun muassa avioeroa, perintöä, adoptiota ja orjien asemaa. Lakikiviä on siksi tärkeä lähde antiikin arjen oikeuskäytännöstä. Taitaa olla ainoa lakikokoelma, jota kyyhky on ollut halukas lukemaan.
+KYSYMYS: Mikä on odeion?
+No niin. Odeion oli antiikin kaupungeissa pieni, usein katettu rakennus, jossa esitettiin musiikkia ja pidettiin kokouksia. Se muistuttaa teatteria mutta on pienempi ja sisätilaan sopivampi. Tunnettu esimerkki on Herodes Attikoksen odeion [[Ateenassa]]. Gortynissa roomalainen odeion rakennettiin myöhemmin, ja suurin osa lakikivistä käytettiin sen perustuksiin.
 JATKOT:
-Mitä muita lakikokoelmia antiikista tunnetaan?
-Miten orjien asema vaihteli antiikin Kreikassa?
+Mitä eroa odeionilla ja teatterilla on?
+Miksi roomalaiset käyttivät vanhoja kiviä uudelleen?
 
 ### 69.4
-KYSYMYS: Mitä lain kiville tapahtui myöhemmin?
-Ai se. Lakiteksti oli hakattu pyöreän julkisen rakennuksen seinään 400-luvun alkupuoliskolla eaa., mutta suurin osa kivistä käytettiin myöhemmin roomalaisen [[odeionin]] perustuksiin. Kivet siis säilyivät, koska ne päätyivät uuden rakennuksen rakenteisiin. Näin tekstiä on voitu lukea vielä nykyään. Siinä meni vanha laki uuden perustukseksi, kuten kyyhkyn pesässäkin.
+KYSYMYS: Miksi lakeja hakattiin kiveen?
+Annas ku mietin. Kiveen hakattu laki oli pysyvä ja julkinen: kaikki pystyivät lukemaan sen, eikä sitä voinut helposti muuttaa. Yleisesti ajatellaan, että kirjoitettu laki esti sen, että vallanpitäjät tulkitsivat sääntöjä mielensä mukaan. [[Ateenassa]] lakeja julkistettiin [[Drakonin]] ja [[Solonin]] nimiin liitetyissä uudistuksissa. Gortynin laki hakattiin 400-luvun alkupuoliskolla eaa. pyöreän julkisen rakennuksen seinään. Yksityiskohtia en ole varma, mutta tämä on yleinen selitys. Kivi kestää, kuten kyyhkysen muisti.
 JATKOT:
-Mikä odeion oli antiikin kaupungissa?
-Miten antiikin kirjoituksia ajoitetaan ja tulkitaan?
+Mitä Drakonin lait olivat?
+Miten Solon uudisti Ateenan lakeja?
 
 ### 69.5
-KYSYMYS: Mitä tarkoittaa vuororiveittäin luettava kirjoitus?
-Katotaas. Gortynin lain tekstin riviä luetaan vuorotellen eri suuntiin: yksi rivi kulkee vasemmalta oikealle ja seuraava oikealta vasemmalle. Tapaa kutsutaan nimellä [[boustrophedon]], joka viittaa härän kääntymiseen auraa vetäessä pellon päässä. Lukija seuraa riviä sen loppuun ja jatkaa heti seuraavaa vastakkaiseen suuntaan. Ei kuulosta helpolta, mutta kyyhky kääntyy sentään ilmassa nopeammin.
+KYSYMYS: Mitä orjuus tarkoitti antiikin Kreikassa?
+Tuota niin. Orjuus oli yleistä antiikin [[kaupunkivaltioissa]], ja orjat työskentelivät kotitalouksissa, pelloilla ja kaivoksissa. Orjan asema vaihteli suuresti kaupungista ja ajasta toiseen. Gortynin laki säätelee muun muassa orjien asemaa, joten se on tärkeä lähde asiaan. Orjuus oli kovaa ja ihmisoikeuksia riistävää, mutta se oli aikansa yleinen yhteiskuntajärjestys. Onneksi siitä on jo pitkä aika.
 JATKOT:
-Miksi kirjoitus on joskus kirjoitettu vuoron perään eri suuntiin?
-Miten antiikin kreikkalainen kirjaimisto kehittyi?
+Miten orjuus lopulta kiellettiin Euroopassa?
+Mitä muuta Gortynin laki kertoo yhteiskunnasta?
+
+### 70.1
+KYSYMYS: Kuka rakennutti Chlemoutsin linnan?
+Pöllö parantelee siipeään, joten minä vastaan. Kas vaan, tää on tuttu. Chlemoutsin linnan rakennutti vuosina 1220–1223 [[Akhaian ruhtinaskunnan]] ristiretkeläishallitsija [[Geoffroi I de Villehardouin]]. Rakennusrahat saatiin takavarikoimalla [[kirkon]] omaisuutta, kun papisto kieltäytyi antamasta lisävaroja maan puolustukseen. Linna sijaitsee Peloponnesoksen luoteiskulmassa Elisissä 226 metrin korkeudella. Hyvin muistettu.
+JATKOT:
+Mikä Akhaian ruhtinaskunta oli?
+Miksi kirkko kieltäytyi lisävaroista?
+
+### 70.2
+KYSYMYS: Miksi linnaa kutsuttiin Castel Torneseksi?
+Odotas vähän. Sepä sattui. Italialaisten käyttämä nimi Castel Tornese syntyi ilmeisesti sekaannuksesta läheisen [[Glarentzan]] [[rahapajan]] kanssa. Siellä lyötiin [[tornese-hopearahoja]], ja nimi siirtyi tavallaan linnaan. Linnan alkuperäinen nimi oli Clermont, ja nykyinen Chlemoutsi on siitä johdettu. Ruhtinaskunnan aikana linnaa ei kertaakaan piiritetty, vaan se toimi arvovankien vankilana.
+
+Rahapaja ja linna ovat aika eri asioita, ja silti nimi sekoittui. Minä pidän pullista, ja ne ovat selvästi helpompia erottaa.
+JATKOT:
+Miten tornese-rahoja lyötiin?
+Mikä oli Glarentza?
 
 ### 70.3
-KYSYMYS: Millainen on Chlemoutsin linnan rakenne?
-No niin, katsotaan ylhäältä. Chlemoutsin linnan ydin on sisäpihan ympärille rakennettu kuusikulmainen päälinna. Se sijaitsee pienellä ylätasangolla 226 metrin korkeudella [[Peloponnesoksen]] luoteiskulmassa [[Elisissä]], ja se on säilynyt suurelta osin 1200-luvun asussaan. Linnan rakennutti 1220–1223 Akhaian ruhtinaskunnan hallitsija. Näkymä on varmasti komea, vaikka en sitä käynyt kuvaamassa.
+KYSYMYS: Mikä oli Akhaian ruhtinaskunta?
+Selvä juttu. Akhaian ruhtinaskunta oli ristiretkeläisvaltio Peloponnesoksella. Se syntyi [[neljännen ristiretken]] jälkeen 1200-luvun alussa, ja sitä johtivat länsieurooppalaiset ritarit. Ruhtinaskunta oli yhteydessä [[Bysantin]] valtakuntaan, joka vei sen lopulta 1400-luvulla, mutta tarkat vuosiluvut en ole varma. Tunnettuja hallitsijoita olivat Villehardouinin suvun jäsenet. Siinä oli tiivistelmä, mutta ei kovin lyhyt.
 JATKOT:
-Mikä oli Akhaian ruhtinaskunta?
-Miten ristiretkeläisten linnoja rakennettiin?
+Mitä neljäs ristiretki oli?
+Mikä oli Bysantin valtakunta?
 
 ### 70.4
-KYSYMYS: Mihin Chlemoutsin linnaa käytettiin ruhtinaskunnan aikana?
-Mmm— tähän on helppo vastata. Ruhtinaskunnan aikana linnaa ei kertaakaan piiritetty, vaan se toimi arvovankien vankilana. Linnan rakennutti [[Geoffroi I de Villehardouin]], joka hallitsi [[Akhaian ruhtinaskunnan]] ristiretkeläisvaltaa. Linna oli siis valtion turvallisuuden ja vallan symboli. Vartijalle se on varmasti ollut tylsä työpaikka.
+KYSYMYS: Mitä arvovanki tarkoitti keskiajalla?
+Hmm, tuo on raskas aihe. Arvovanki oli korkea-arvoinen henkilö, esimerkiksi ylimys tai ruhtinaan sukulainen, jota pidettiin vankina poliittisista syistä tai [[lunnaiden]] vuoksi. Häntä kohdeltiin yleensä paremmin kuin tavallista vankia, koska hänen arvonsa oli vaihtokauppatavaraa. Chlemoutsin linna toimi ruhtinaskunnan aikana juuri arvovankien [[vankilana]]. Onneksi nykyään linna on vain matkailukohde.
 JATKOT:
-Miten arvovankeja kohdeltiin keskiajalla?
-Mikä ristiretkeläisvaltio Akhaia oikeastaan oli?
+Miten lunnaat maksettiin keskiajalla?
+Millaisia vankiloita keskiajan linnoissa oli?
 
 ### 70.5
-KYSYMYS: Miksi Geoffroi takavarikoi kirkon omaisuutta?
-Just niin, siitä oli kyse. Geoffroi I de Villehardouin takavarikoi kirkon omaisuutta, kun papisto kieltäytyi antamasta lisävaroja maan puolustukseen. Takavarikoiduilla varoilla hän rakennutti 1220–1223 [[Chlemoutsin]] linnan, joka kuului [[Akhaian ruhtinaskunnan]] puolustukseen. Riita koski siis kirkon ja maallisen vallan välistä rahoituksen jakoa.
+KYSYMYS: Miten keskiaikainen rahapaja toimi?
+Kato, tää on kiva aihe. Keskiajalla rahat lyötiin käsin: [[hopeasta]] valmistettu pieni aihio asetettiin kahden kaiverretun taltan väliin ja lyötiin vasaralla. Taltat antoivat rahalle sen kuvan ja tekstin. Rahanlyöntioikeus kuului yleensä hallitsijalle, joka sai lyönnistä tuloa. Glarentzan rahapajassa lyötiin [[tornese-hopearahoja]]. Yksityiskohdat vaihtelivat paikasta toiseen.
 
-Raha ja puolustus, siinä vanha tarina. Minä en ole koskaan saanut palkkaa, vain jyviä.
+Minä en ole koskaan saanut kolikkoa kuljetettavakseni, vaikka kirjeitä on riittänyt. Rahat jäivät siis serkuille, ja pullaan ne olisivat kelvanneet.
 JATKOT:
-Millainen asema kirkolla oli keskiajan Euroopassa?
-Miten keskiaikaisten linnojen rakentaminen rahoitettiin?
+Miten kolikoiden aitous tarkistettiin?
+Millaisia rahoja ristiretkeläisvaltioissa käytettiin?
