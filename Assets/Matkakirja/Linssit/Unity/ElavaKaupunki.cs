@@ -519,10 +519,20 @@ namespace Matkakirja.Natiivi
         static AudioClip lokkiKlippi, kyyhky1Klippi, kyyhky2Klippi, koneKlippi; static bool aanetLadattu;
         AudioSource lokkiLahde, kertaLahde; float seuraavaKyyhky = 20f, seuraavaKone = 150f;
 
+        // Äänirekisteri (Natiivi-UI 9.10., Ydin Aanimikseri): pallon Äänimaisema-ryhmään omina äänināan; klipin nimi = tunnus (äänivahti).
+        // Taso = Kerroin("maisema", tunnus), joka sisältää ryhmän tason nykyisessä kontekstissa (korvaa Asetukset.Taso(Voima.Tausta)).
+        public const string LokitId = "elava.lokit", KyyhkytId = "elava.kyyhkyt", LentokoneId = "elava.lentokone";
+        static readonly string[] AaniNimet = { "lokkiparvi", "kyyhkyt-1", "kyyhkyt-2", "lentokone" };
+        static readonly string[] KlippiNimet = { LokitId, KyyhkytId + "-1", KyyhkytId + "-2", LentokoneId };
+
         System.Collections.IEnumerator LataaAanet()
         {
             aanetLadattu = true;
-            string[] nimet = { "lokkiparvi", "kyyhkyt-1", "kyyhkyt-2", "lentokone" };
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            m.Rekisteroi("pallo", "maisema", LokitId, "Lokkiparvi", LokitId);
+            m.Rekisteroi("pallo", "maisema", KyyhkytId, "Kyyhkyjen siivet", KlippiNimet[1], KlippiNimet[2]);
+            m.Rekisteroi("pallo", "maisema", LentokoneId, "Kaukainen lentokone", LentokoneId);
+            var nimet = AaniNimet;
             var klipit = new AudioClip[nimet.Length];
             for (int i = 0; i < nimet.Length; i++)
                 using (var r = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniJuuri + nimet[i] + ".mp3", AudioType.MPEG))
@@ -530,6 +540,7 @@ namespace Matkakirja.Natiivi
                     r.timeout = 20;
                     yield return r.SendWebRequest();
                     if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klipit[i] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(r);
+                    if (klipit[i] != null) klipit[i].name = KlippiNimet[i];
                 }
             lokkiKlippi = klipit[0]; kyyhky1Klippi = klipit[1]; kyyhky2Klippi = klipit[2]; koneKlippi = klipit[3];
             Debug.Log($"MATKAKIRJA kaupunki: elävän kaupungin äänet {System.Array.FindAll(klipit, x => x != null).Length}/{nimet.Length}");
@@ -550,9 +561,10 @@ namespace Matkakirja.Natiivi
             if (lokkiLahde == null) { lokkiLahde = gameObject.AddComponent<AudioSource>(); lokkiLahde.loop = true; lokkiLahde.playOnAwake = false; lokkiLahde.spatialBlend = 0; lokkiLahde.volume = 0; }
             if (kertaLahde == null) { kertaLahde = gameObject.AddComponent<AudioSource>(); kertaLahde.playOnAwake = false; kertaLahde.spatialBlend = 0; }
             bool vaisto = OpasSovitin.OpasAaniSoi;
-            float tausta = (float)Matkakirja.Natiivi.Asetukset.Taso(Matkakirja.Natiivi.Voima.Tausta);   // TF 169: kaikki pallon äänet mikserin ryhmiin
+            var mk = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;   // TF 169: kaikki pallon äänet mikserin ryhmiin; 9.10. äänikohtaisesti
+            float lokkiK = mk.Kerroin("maisema", LokitId), kyyhkyK = mk.Kerroin("maisema", KyyhkytId), koneK = mk.Kerroin("maisema", LentokoneId);
             float lokkiOsuus = Mathf.Clamp01(1f - lokkiD / LokkiKuuluuM);
-            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) * tausta : 0f;
+            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) * lokkiK : 0f;
             if (lokkiTavoite > 0.001f && !lokkiLahde.isPlaying) { lokkiLahde.clip = lokkiKlippi; lokkiLahde.Play(); }
             lokkiLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(lokkiLahde.volume, lokkiTavoite, Time.unscaledDeltaTime);
             if (lokkiLahde.isPlaying && lokkiLahde.volume < 0.0005f && lokkiTavoite <= 0) lokkiLahde.Stop();
@@ -561,14 +573,14 @@ namespace Matkakirja.Natiivi
             {
                 seuraavaKyyhky = tu + UnityEngine.Random.Range(15f, 35f);
                 var klippi = kyyhky1Klippi != null && UnityEngine.Random.value < 0.3f ? kyyhky1Klippi : kyyhky2Klippi;
-                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto) * tausta);
+                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto) * kyyhkyK);
             }
             if (tu > seuraavaKone && !vaisto)
             {
                 // Lentokone näkyy ja kuuluu yhdessä (ElavaTaivas.AloitaKone); ääni vain Äänimaisema-kytkimellä.
                 seuraavaKone = tu + UnityEngine.Random.Range(240f, 420f);
                 taivas?.AloitaKone(Time.time, c.x, c.z);
-                if (paalla && koneKlippi != null && tausta > 0.001f) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false) * tausta);
+                if (paalla && koneKlippi != null && koneK > 0.001f) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false) * koneK);
             }
         }
 

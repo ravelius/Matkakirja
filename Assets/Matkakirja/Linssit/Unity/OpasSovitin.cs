@@ -269,6 +269,7 @@ namespace Matkakirja.Natiivi
             y.Peite(true);
             if (!kaupunkiOdottaa) o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
             else y.Peite(false);   // aloitusvalikko piirtää oman tumman pintansa; peite himmensi sen ja esti napautukset (simu 6.10. 17.2x, juna 151)
+            RekisteroiAanet();
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
@@ -722,7 +723,7 @@ namespace Matkakirja.Natiivi
         readonly PalloKuurot kuurot = new PalloKuurot(Environment.TickCount);
         /// <summary>Itsestään tulevan kuuron voima 0–1 (Linssiseppä 2:n KaupunkiKuuro.Voima: pilvet ja märät kadut).</summary>
         public static double KuuroVoima => Viimeisin?.kuurot.Voima ?? 0;
-        AudioClip jyrinaKlippi; bool jyrinaLadataan;
+        AudioClip jyrinaKlippi; bool jyrinaLadataan; AudioSource jyrinaLahde;
         IEnumerator SoitaJyrina()
         {
             if (jyrinaKlippi == null && !jyrinaLadataan)
@@ -731,13 +732,13 @@ namespace Matkakirja.Natiivi
                 using var r = UnityWebRequestMultimedia.GetAudioClip("https://media.matkakirja.app/aanet/elava-kaupunki-v1/ukkonen-kaukainen.mp3", AudioType.MPEG);
                 r.timeout = 20;
                 yield return r.SendWebRequest();
-                if (r.result == UnityWebRequest.Result.Success) jyrinaKlippi = DownloadHandlerAudioClip.GetContent(r);
+                if (r.result == UnityWebRequest.Result.Success) jyrinaKlippi = Nimea(DownloadHandlerAudioClip.GetContent(r), JyrinaId);
                 jyrinaLadataan = false;
             }
             if (jyrinaKlippi == null || !Asetukset.Paalla(Kytkin.Aanimaisema)) yield break;
-            if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
-            ukkosLahde.volume = UkkosenTavoite();
-            ukkosLahde.PlayOneShot(jyrinaKlippi, 0.8f);
+            if (jyrinaLahde == null) { jyrinaLahde = o.gameObject.AddComponent<AudioSource>(); jyrinaLahde.playOnAwake = false; jyrinaLahde.spatialBlend = 0; }
+            jyrinaLahde.volume = UkkosenTavoite(JyrinaId);
+            jyrinaLahde.PlayOneShot(jyrinaKlippi, 0.8f);
             o.Kirjaa("opas: ukkoskuuro alkaa (kaukainen jyrinä)");
         }
 
@@ -796,15 +797,33 @@ namespace Matkakirja.Natiivi
                 {
                     r.timeout = 15;
                     yield return r.SendWebRequest();
-                    if (r.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(r) is AudioClip c && ukkosKlipit != null) ukkosKlipit.Add(c);
+                    if (r.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(r) is AudioClip c && ukkosKlipit != null) ukkosKlipit.Add(Nimea(c, UkkonenId));
                 }
             o.Kirjaa($"opas: ukkosen kumahduksia {ukkosKlipit?.Count ?? 0}/{UkkonenOsoitteet.Length}");
         }
-        /// <summary>Kertojan ja siltalauseen taso mikserin Lukija-säätimestä (OpasAanitasot; ennen 8.10. aina 1,0).</summary>
-        static float KertojanTaso => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Asetukset.Taso(Voima.Lukija));
+        // ÄÄNIREKISTERI (Natiivi-UI 9.10., Ydin Aanimikseri): oppaan äänet pallon mikseriin omina äänināan; klipin nimi = tunnus (äänivahti).
+        // Taso = Kerroin(ryhmä, tunnus), joka sisältää ryhmän tason nykyisessä kontekstissa (korvaa Asetukset.Taso(Voima.Lukija/Saa/Tausta)).
+        public const string KertojaId = "opas.kertoja", SiltaId = "opas.siltalause", UkkonenId = "saa.ukkonen", JyrinaId = "saa.jyrina", KirkonkellotId = "kirkonkellot";
+        static bool aanetRekisteroity;
+        static void RekisteroiAanet()
+        {
+            if (aanetRekisteroity) return;
+            aanetRekisteroity = true;
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            m.Rekisteroi("pallo", "puhe", KertojaId, "Kertoja (kohteet)");
+            m.Rekisteroi("pallo", "puhe", SiltaId, "Siltalauseet ja esityksen puhe");
+            m.Rekisteroi("pallo", "saa", UkkonenId, "Ukkosen kumahdukset (sää ja kaukaiset salamat)");
+            m.Rekisteroi("pallo", "saa", JyrinaId, "Ukkoskuuron kaukainen jyrinä");
+            m.Rekisteroi("pallo", "maisema", KirkonkellotId, "Kirkonkellot kirkkokohteessa");
+        }
+        static AudioClip Nimea(AudioClip c, string id) { if (c != null) c.name = id; return c; }
+        static float Mikseri(string ryhma, string id) => Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin(ryhma, id);
+        /// <summary>Kertojan ja siltalauseen taso mikserin puhe-ryhmästä (OpasAanitasot; ennen 8.10. aina 1,0).</summary>
+        static float KertojanTaso => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Mikseri("puhe", KertojaId));
+        static float SiltaTaso => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Mikseri("puhe", SiltaId));
         /// <summary>Ukkonen: −3 dB (omistaja TF 166), mikserin Sää, väistö kertojan alla (PalloKaupungitTestit.Aanitasot: ilman väistöä
         /// kumahdus oli hetkellisesti kertojan tasolla).</summary>
-        float UkkosenTavoite() => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Ukkonen(PalloKori.TehosteKerroin, Asetukset.Taso(Voima.Saa), OpasAaniSoi);
+        float UkkosenTavoite(string id = UkkonenId) => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Ukkonen(PalloKori.TehosteKerroin, Mikseri("saa", id), OpasAaniSoi);
         /// <summary>Joka ruutu: mikserin muutokset kuuluvat heti, ukkosen väistö liukuu.</summary>
         void PaivitaAanitasot()
         {
@@ -815,8 +834,9 @@ namespace Matkakirja.Natiivi
                 palloAanet.Paivita(o, nakymaAuki ? NykyinenKaupunkiId : null, kork);
             }
             if (puhe != null) puhe.volume = KertojanTaso;
-            if (silta != null) silta.volume = KertojanTaso;
+            if (silta != null) silta.volume = SiltaTaso;
             if (ukkosLahde != null) ukkosLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(ukkosLahde.volume, UkkosenTavoite(), Time.unscaledDeltaTime);
+            if (jyrinaLahde != null) jyrinaLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(jyrinaLahde.volume, UkkosenTavoite(JyrinaId), Time.unscaledDeltaTime);
             if (kelloLahde != null && kelloLahde.isPlaying) kelloLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(kelloLahde.volume, KellojenTavoite(), Time.unscaledDeltaTime);
         }
 
@@ -838,7 +858,7 @@ namespace Matkakirja.Natiivi
             float t = Time.unscaledTime - kelloAlku;
             float haivytys = Mathf.Clamp01(t / KelloHaivytysS) * Mathf.Clamp01((KelloS - t) / KelloHaivytysS);
             float etaisyys = Mathf.Clamp(KelloVertailuM / Mathf.Max(1f, kelloEtaisyys), 0.25f, 1f);
-            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(Voima.Tausta) : 0f);
+            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? Mikseri("maisema", KirkonkellotId) : 0f);
         }
 
         IEnumerator SoitaKellot(OpasKohde k)
@@ -849,7 +869,7 @@ namespace Matkakirja.Natiivi
                 p.timeout = 20;
                 yield return p.SendWebRequest();
                 if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"opas: kirkonkellot ei latautunut ({p.responseCode})"); yield break; }
-                kelloKlippi = DownloadHandlerAudioClip.GetContent(p);
+                kelloKlippi = Nimea(DownloadHandlerAudioClip.GetContent(p), KirkonkellotId);
             }
             if (silmukka == null || silmukka.Nykyinen != k) yield break;
             if (kelloLahde == null) { kelloLahde = o.gameObject.AddComponent<AudioSource>(); kelloLahde.playOnAwake = false; kelloLahde.spatialBlend = 0; kelloLahde.loop = true; }
@@ -1129,7 +1149,7 @@ namespace Matkakirja.Natiivi
             yield return p.SendWebRequest();
             if (p.result != UnityWebRequest.Result.Success || silmukka == null) { o.Kirjaa($"opas: esitys {mika} ei latautunut ({p.responseCode})"); yield break; }
             var klippi = DownloadHandlerAudioClip.GetContent(p);
-            silta.clip = klippi; silta.volume = KertojanTaso; silta.Play();
+            silta.clip = Nimea(klippi, SiltaId); silta.volume = SiltaTaso; silta.Play();
             // Avauksen sana-ajat avauksen äänen rinnalla (.mp3 → .ajat.json, Pelikoodari #4152); puuttuessa varapolku.
             if (teksti != null) YksAloita("avaus", teksti, silta, klippi, url.EndsWith(".mp3") ? url.Substring(0, url.Length - 4) + ".ajat.json" : null, klippi.length);
             o.Kirjaa($"opas: esitys {mika} soi ({klippi.length:F1} s, lataus {Time.realtimeSinceStartup - t0:F1} s)");
@@ -1494,7 +1514,7 @@ namespace Matkakirja.Natiivi
             p.timeout = 10;
             yield return p.SendWebRequest();
             if (p.result != UnityWebRequest.Result.Success || silmukka == null || puhuu) yield break;
-            silta.clip = DownloadHandlerAudioClip.GetContent(p); silta.volume = KertojanTaso; silta.Play();
+            silta.clip = Nimea(DownloadHandlerAudioClip.GetContent(p), SiltaId); silta.volume = SiltaTaso; silta.Play();
         }
 
         /// <summary>Saapuessa: pysähdyksen omat kysymykset, muuten GET /opas/kysymykset (worker esihakee ne jo taustalla).</summary>
@@ -2096,7 +2116,7 @@ namespace Matkakirja.Natiivi
                     nimiKlipit[l.Url] = c;
                 }
                 if (silmukka == null || puhuu) yield break;   // kerronta ehti alkaa: nimi jää pois
-                silta.clip = c; silta.volume = KertojanTaso; silta.Play();
+                silta.clip = Nimea(c, SiltaId); silta.volume = SiltaTaso; silta.Play();
                 o.Kirjaa($"opas: nimi {l.Id} \"{l.Teksti}\"");
                 while (silta.isPlaying) yield return null;
             }
@@ -2140,7 +2160,7 @@ namespace Matkakirja.Natiivi
                 || ryhma == OpasSiltalauseet.EiSallittu;
             var l = siltalauseet.Valitse(ryhma, eiVaraa ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
             if (l == null) return false;
-            silta.clip = siltaKlipit[l.Url]; silta.volume = KertojanTaso; silta.Play();
+            silta.clip = Nimea(siltaKlipit[l.Url], SiltaId); silta.volume = SiltaTaso; silta.Play();
             o.Kirjaa($"opas: siltalause {l.Id} ({ryhma}) \"{l.Teksti}\"");
             return true;
         }
@@ -2281,7 +2301,7 @@ namespace Matkakirja.Natiivi
             var osio = historiaOsiot.Find(x => x.Tunnus == historiaKlippiTunnus);
             if (osio == null) return;
             historiaKuultu.Add(historiaKlippiTunnus);
-            silta.clip = historiaKlippi; silta.volume = KertojanTaso; silta.Play();
+            silta.clip = Nimea(historiaKlippi, SiltaId); silta.volume = SiltaTaso; silta.Play();
             historiaSoi = true; historiaSoiOli = true; historiaSoiTunnus = osio.Tunnus;
             YksAloita(osio.Tunnus, osio.Teksti, silta, historiaKlippi, PuluChat.Palvelin + "/opas/aani/" + osio.Sha + ".ajat.json", historiaKlippi.length);
             o.Kirjaa($"opas: historiaosio {osio.Tunnus} lennolle ({historiaKlippi.length:F1} s, lento {silmukka.LentoKestoS:F1} s)");
@@ -2847,7 +2867,7 @@ namespace Matkakirja.Natiivi
             aaniOdotus = null;
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
-                puhe.clip = klippi; puhe.volume = KertojanTaso; puhe.Play();
+                puhe.clip = Nimea(klippi, KertojaId); puhe.volume = KertojanTaso; puhe.Play();
                 TekstiPois();   // äänellinen kerronta: tekstitilan itse avaama chat kiinni
                 // PCM-virran klipin pituus ei ole kerronnan kesto: vastauksen kesto_s ensin (yksityiskohtakuvien varapolku).
                 if (!k.Kysymys) YksAloita(k.Id, k.Teksti, puhe, klippi, k.AaniAjat, k.KestoS > 0 && pcmVirrat.ContainsKey(avain) ? k.KestoS : klippi.length);
@@ -3038,6 +3058,7 @@ namespace Matkakirja.Natiivi
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = 1f;
             saaKerros?.Sulje(); saaKerros = null; KaupunkiKuva.Saa = default; KaupunkiKuva.Salama = 0;
             if (ukkosLahde != null) { UnityEngine.Object.Destroy(ukkosLahde); ukkosLahde = null; }
+            if (jyrinaLahde != null) { UnityEngine.Object.Destroy(jyrinaLahde); jyrinaLahde = null; }
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
             Sumenna(false);

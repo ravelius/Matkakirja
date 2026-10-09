@@ -231,6 +231,7 @@ namespace Matkakirja.Natiivi
             koysiKaanto.SetParent(juuri, false);
             aani = go.AddComponent<AudioSource>();
             aani.playOnAwake = false; aani.spatialBlend = 0f; aani.loop = false;
+            RekisteroiAanet();
             KytkeAanimaisema(true);
         }
 
@@ -243,11 +244,30 @@ namespace Matkakirja.Natiivi
             return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
         }
 
+        // ÄÄNIREKISTERI (Natiivi-UI 9.10., Ydin Aanimikseri): korin neljä ääntä pallon Tehosteet-ryhmään omina äänināan; klipit
+        // Resources-nimillä (molemmat sarjat). Taso = Kerroin("tehosteet", tunnus), joka sisältää ryhmän tason nykyisessä kontekstissa.
+        static string AaniId(string nimi) => nimi switch
+        {
+            "korin-narina" => "kori.narina", "koyden-kiristys" => "kori.koysi", "liekin-humahdus" => "kori.poltin", "kankaan-huokaus" => "kori.kangas",
+            _ => "kori." + nimi,
+        };
+        static bool aanetRekisteroity;
+        static void RekisteroiAanet()
+        {
+            if (aanetRekisteroity) return;
+            aanetRekisteroity = true;
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            foreach (var (n, nimi) in new[] { ("korin-narina", "Korin narina"), ("koyden-kiristys", "Köysien kiristys"), ("liekin-humahdus", "Polttimen liekki"), ("kankaan-huokaus", "Kankaan huokaus") })
+                m.Rekisteroi("pallo", "tehosteet", AaniId(n), nimi, "kirjasto-" + n, "eleven-" + n);
+        }
+
         void Soita(string nimi, float taso)
         {
+            RekisteroiAanet();
             var c = Leike(nimi);
             if (c == null || aani == null) return;
-            aani.PlayOneShot(c, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kori(Voimakkuus, taso, TehosteKerroin, Asetukset.Taso(Voima.Tehosteet), OpasSovitin.OpasAaniSoi));   // mikserin Tehosteet ja väistö kertojan alla (8.10.)
+            aani.PlayOneShot(c, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kori(Voimakkuus, taso, TehosteKerroin,
+                Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("tehosteet", AaniId(nimi)), OpasSovitin.OpasAaniSoi));   // mikserin Tehosteet ja väistö kertojan alla (8.10.)
             Debug.Log($"MATKAKIRJA kaupunki: kori ääni {nimi} ({AaniSarja}, {taso:F2})");
         }
 
