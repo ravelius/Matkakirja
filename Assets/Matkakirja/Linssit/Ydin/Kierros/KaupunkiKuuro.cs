@@ -11,6 +11,8 @@ namespace Matkakirja.Linssit.Kierros
         public const double KastuminenS = 90, KuivuminenS = 600, SadeRaja = 0.05;
         /// <summary>Kuuron voima 0–1 (LS1:n säätehosteet).</summary>
         public static double Voima;
+        /// <summary>Käsin pakotettu kuuro (asetus "kuuro", kuvaparit); Voima = max(LS1:n automaattinen kuuro, KasinVoima).</summary>
+        public static double KasinVoima;
         /// <summary>Katujen märkyys 0–1 (laskettu, Paivita).</summary>
         public static double Markyys { get; private set; }
 

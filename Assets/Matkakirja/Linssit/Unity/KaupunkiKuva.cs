@@ -220,7 +220,7 @@ namespace Matkakirja.Natiivi
                         case "hamaravalotus": KaupunkiIlmakeha.HamaraValotus = v; break;
                         case "pilvet": KaupunkiIlmakeha.PilvetPakotettu = v != 0; break;   // LS2: pallon pilvikerros (kohta 6a), oletus kehityskaupungeissa
                         case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
-                        case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot asettavat muuten)
+                        case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot automaattisesti)
                         case "markyys": Matkakirja.Linssit.Kierros.KaupunkiKuuro.AsetaMarkyys(v); break;
                         case "kaukoutu": KaupunkiIlmakeha.KaukoUtu = v; break;
                         case "aamusumu": KaupunkiIlmakeha.Aamusumu = v; break;
@@ -426,6 +426,8 @@ namespace Matkakirja.Natiivi
             {
                 var gr = kaupunki.Georef; float mt = gr != null ? gr.transform.lossyScale.x : 1f;
                 float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
+                // LS1:n automaattiset kuurot (kierros-170 PalloKuurot, OpasSovitin.KuuroVoima): heijastuksella, ettei haara riipu toisesta.
+                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = System.Math.Max(OpasKuuroVoima(), Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima);
                 Matkakirja.Linssit.Kierros.KaupunkiKuuro.Paivita(Time.deltaTime);
                 KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.45f, 0.95f, harmaus),
                     KaupunkiIlmakeha.TuuliMs * Time.time, mt);
@@ -478,6 +480,25 @@ namespace Matkakirja.Natiivi
             }
             RenderSettings.fogStartDistance = alku * mitta;
             RenderSettings.fogEndDistance = loppu * mitta;
+        }
+
+        static System.Reflection.MemberInfo kuuroJasen; static bool kuuroHaettu;
+        /// <summary>OpasSovitin.KuuroVoima (LS1, kierros-170), 0 jos ei vielä käännöksessä.</summary>
+        static double OpasKuuroVoima()
+        {
+            if (!kuuroHaettu)
+            {
+                kuuroHaettu = true;
+                var t = typeof(OpasSovitin);
+                kuuroJasen = (System.Reflection.MemberInfo)t.GetField("KuuroVoima", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)
+                    ?? t.GetProperty("KuuroVoima", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            }
+            try
+            {
+                object v = kuuroJasen is System.Reflection.FieldInfo f ? f.GetValue(null) : kuuroJasen is System.Reflection.PropertyInfo p ? p.GetValue(null) : null;
+                return v is double d ? d : v is float fl ? fl : 0;
+            }
+            catch (System.Exception) { return 0; }
         }
     }
 }
