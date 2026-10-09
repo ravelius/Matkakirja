@@ -40,9 +40,22 @@ namespace Matkakirja.Peli
             if (string.IsNullOrWhiteSpace(teksti) || string.IsNullOrWhiteSpace(kysymys)) return null;
             var v = new Vastaus { Kysymys = kysymys.Trim(), Teksti = teksti.Trim() };
             if (MiniJson.Kentta(o, "jatkot") is List<object> j)
-                v.Jatkot = j.OfType<string>().Select(x => x.Trim()).Where(x => x.Length > 0).Take(2).ToList();
+                v.Jatkot = j.OfType<string>().Select(x => PuraLinkit(x).Trim()).Where(x => x.Length > 0).Take(2).ToList();
             return v;
         }
+
+        static readonly Regex LinkkiKuvio = new Regex(@"\[\[([^\[\]\n]*)\]\]");
+
+        /// <summary>
+        /// Jatkokysymys on napautettava siru ja lähtee sellaisenaan liveen, joten käsitelinkit puretaan tekstiksi: [[aihe|muoto]] → muoto,
+        /// [[aihe]] → aihe (Pelikoodari 10.10.2026: FRA saint-cloud, ROU retezat ja ceahlau; Päätoimittaja).
+        /// </summary>
+        public static string PuraLinkit(string teksti) => LinkkiKuvio.Replace(teksti ?? "", m =>
+        {
+            string k = m.Groups[1].Value;
+            int p = k.LastIndexOf('|');
+            return (p < 0 ? k : k.Substring(p + 1)).Trim();
+        });
 
         /// <summary>Paketti JSONista; null, jos skeema tai rakenne ei kelpaa.</summary>
         public static PuluValmiit Lue(string json)
@@ -80,6 +93,9 @@ namespace Matkakirja.Peli
 
         /// <summary>Käsitteen avain lisaa-taulussa (pienet kirjaimet, välit siistitty).</summary>
         public static string Avain(string kasite) => Regex.Replace((kasite ?? "").Trim(), @"\s+", " ").ToLowerInvariant();
+
+        /// <summary>Käsitelinkin ja nostokortin korostuksen kysymys (sama muoto kuin valmiissa vastauksissa: KerroLisaa purkaa sen).</summary>
+        public static string KerroLisaaKysymys(string kasite) => KerroLisaaAlku + (kasite ?? "").Trim();
 
         /// <summary>"Kerro lisää: X" → X; muu kysymys → null.</summary>
         public static string KerroLisaa(string kysymys)

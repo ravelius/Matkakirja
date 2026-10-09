@@ -1352,7 +1352,7 @@ namespace Matkakirja.Natiivi
             kupla.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
             {
                 if (string.IsNullOrEmpty(e.linkID) || kysyy) return;
-                Kysy(PuluValmiit.KerroLisaaAlku + e.linkID, true);
+                Kysy(PuluValmiit.KerroLisaaKysymys(e.linkID), true);
             });
         }
 
