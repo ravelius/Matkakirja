@@ -3,6 +3,21 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 18.0x — JUNA 173 AUKI (omistaja 17.4x: kerätään kunnes omistaja sanoo julkaisun hetken)
+
+- **Runko** `natiiviseppa/juna-173` **806283a20**. Testit Linssit 1246, Peli 442, Kartta 453, unity 0, tarkista 0. Simukäännös 30dadb2e0 17.27 OK.
+  16.2x:n jälkeen: Siirtoseppä historia 4792cf9e4 (v46i, manifest 200); NUI f0f2e436f (⊇ 773d7e09e), d2e46ee50, 174cd9b73, fa777a580;
+  Pelikoodari 970355d5d; LS1 c3dee6f41 (⊇ eb983f45a, a4331c7d2). PT ohitti NUI d00e429f8 (tähtien iso v3 pysyy).
+- BUILD 173 -mergeä masteriin EI tehty (lukitus peruttu). Muutosloki kirjoitetaan uudelleen juuri ennen julkaisua (PT tarkistaa).
+  Edellinen PT:n kuittaama luonnos: "Pariisi alkaa nykyajan introlla, ja Pariisissa ja Tukholmassa kuuluvat kirkonkellot, suihkulähteet,
+  kahvilat ja satamavesi. Olavinlinnan historiassa kivilinna rakentuu vuosi vuodelta, ja linnassa on uudet äänet. Varustekuvat ovat
+  valokuvamaisia, ja ISS-kyydissä näkyy talvi." (lisättävä: kielisiirto ei näy pelaajalle).
+- Kuittaukset (lisäysversio): vesi index-v5 (ehdot LS2:lle; 3fefc21d3 odottaa testiä + PT), LS2 omat mallit v6g (+2,4 Mt GPU; vienti
+  omistajan hyväksynnällä), Karttaseppä kaukomaa/yo-v1 (RGBA8 → yöllä +30–60 Mt; peite vain yötilassa, LS2 mittaa).
+- Osoittimet: uusin-3.json → v6e (Julkaisija), uusin-2 v6b.
+- VIESTIT: Clauden istuntoviestit pysähtyivät 18.0x 10 viestin rajaan, ja tauko jatkuu omistajan seuraavaan viestiin tässä sessiossa.
+  PT lukee tilan täältä.
+
 ## TILA 9.10. 16.2x
 
 - **Juna 173 runko** `natiiviseppa/juna-173` 26ab381a2 (lähtee 10.10., PT: päivän TF-raja täynnä). Lisäksi 14.1x:n jälkeen: NUI c3270b673,
