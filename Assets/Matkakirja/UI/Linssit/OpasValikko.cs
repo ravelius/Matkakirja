@@ -2493,8 +2493,8 @@ namespace Matkakirja.Natiivi
                 var ao = isa.WorldToLocal(new Vector2(an.xMax, an.yMax));
                 float lev = isa.resolvedStyle.width;
                 valikko.style.top = ay.y + 8;
-                if (!float.IsNaN(lev) && (ay.x + ao.x) / 2f > lev / 2f) { valikko.style.left = StyleKeyword.Auto; valikko.style.right = Mathf.Max(0, lev - ao.x); }
-                else { valikko.style.left = ay.x; valikko.style.right = StyleKeyword.Auto; }
+                if (!float.IsNaN(lev) && (ay.x + ao.x) / 2f > lev / 2f) { valikko.style.left = StyleKeyword.Auto; valikko.style.right = Mathf.Max(0, lev - ao.x); RajaaLeveys(ao.x - TurvaVasen(lev)); }
+                else { valikko.style.left = ay.x; valikko.style.right = StyleKeyword.Auto; RajaaLeveys(lev - ay.x - TurvaOikea(lev)); }
                 SovitaKorkeus();
                 return;
             }
@@ -2504,8 +2504,18 @@ namespace Matkakirja.Natiivi
             float leveys = isa.resolvedStyle.width;
             valikko.style.top = yla.y + 8;
             valikko.style.right = float.IsNaN(leveys) ? 10 : Mathf.Max(0, leveys - yla.x);
+            if (!float.IsNaN(leveys)) RajaaLeveys(yla.x - TurvaVasen(leveys));
             SovitaKorkeus();
         }
+
+        // PANEELI RUUDUN SISÄÄN (pallon UI-katselmointi 9.10.2026, TF 172 iPhone pysty: Kysy oppaalta -lista leikkautui vasemmasta
+        // reunasta, koska ☰:n oikeaan reunaan kiinnitetty paneeli levisi pisimmän rivin mittaiseksi): leveys enintään napista
+        // turva-alueen reunaan (8 pt väli); rivit rivittyvät kuten ennenkin. Ei vaikuta, kun paneeli mahtuu.
+        void RajaaLeveys(float tila) => valikko.style.maxWidth = tila > 0 ? Mathf.Max(240f, tila - 8f) : StyleKeyword.Null;
+
+        /// <summary>Turva-alueen vasen ja oikea reuna paneelin isän pisteinä (Dynamic Island ja pyöristetyt kulmat).</summary>
+        static float TurvaVasen(float isanLeveys) => Screen.width > 0 ? Screen.safeArea.xMin * isanLeveys / Screen.width : 0f;
+        static float TurvaOikea(float isanLeveys) => Screen.width > 0 ? (Screen.width - Screen.safeArea.xMax) * isanLeveys / Screen.width : 0f;
 
         /// <summary>Valikko turva-alueen sisään; pitkät listat (maat, kaupungit) vierittyvät.</summary>
         void SovitaKorkeus()
