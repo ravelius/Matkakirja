@@ -129,6 +129,24 @@ namespace Matkakirja.Natiivi
                 if (l.enabled && l.type != LightType.Directional && Piiloon(l.transform)) { l.enabled = false; sammutetut.Add(l); }
         }
 
+        /// <summary>Historiassa kävelyosista näkyy vain ranta-1499 (LR 9.10.): muiden osien sisäpinnat ja vuoden 1499 tulkinnat (vesiportin
+        /// etuvarustus, puusilta) jäivät kuoren leikkauksista ilmaan. Joka ruutu (lykätyt osat latautuvat myöhemmin); palautus lopussa.</summary>
+        void PiilotaKavelyosat()
+        {
+            var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
+            foreach (var r in n.GetComponentsInChildren<Renderer>(false))
+            {
+                if (!r.enabled) continue;
+                for (var t = r.transform; t != null && t != n.transform; t = t.parent)
+                    if (t.name.StartsWith("Tila:kavely:", StringComparison.Ordinal))
+                    {
+                        if (t.name != "Tila:kavely:ranta-1499") { r.enabled = false; kavelyPiilossa.Add(r); }   // kieli: ei (tekninen)
+                        break;
+                    }
+            }
+        }
+        readonly HashSet<Renderer> kavelyPiilossa = new HashSet<Renderer>();
+
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
 
         IEnumerator Aja(Transform kamera, Action<string> kirjaa)
@@ -170,6 +188,8 @@ namespace Matkakirja.Natiivi
                         vm.Nayta(vuosi);
                         if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;
                     }
+                SeikkailuKavely.VainVuosileikkaukset = true;
+                PiilotaKavelyosat();
                 if (kasvu) SeikkailuKavely.AsetaHistoriaLeikkaukset(vl);
                 if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 var (i, _) = h.Kohta(t);
@@ -189,6 +209,9 @@ namespace Matkakirja.Natiivi
             Avainsana = null;
             LinnaNakyviin(true);
             vaiheet?.Tuhoa(); vaiheet = null;
+            SeikkailuKavely.VainVuosileikkaukset = false;
+            foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
+            kavelyPiilossa.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;
             DioraamaSovitin.KameraVapaa = kameraVapaa;
