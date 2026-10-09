@@ -65,7 +65,8 @@ ja linnan väki puhuu kasvotusten. Varustekuvat ovat valokuvamaisia, eikä peli 
 Lukitus: simukäännös (NYT) → juna/b13 → BUILD 173 -merge masteriin (kaava luovutuksessa 20261009).
 
 ## Junan 174 jono (PT kuitannut)
-- NUI natiivi-ui/kysy-viiva-174 36630eedd; asettelutesti-174 c1fa81741 (korvaa e8b853b97, joka on jo 173:ssa).
+- NUI natiivi-ui/kysy-viiva-174 36630eedd; natiivi-ui/chat-pin-174 d6bcb66f2 (Pulun chat pinnattuna yläreunaan);
+  asettelutesti-174 b44eac178 (korvaa c1fa81741 ja e8b853b97:n, joka on jo 173:ssa; testikytkimet PuluChat/Pinnaus/Nostokortti/PulunTauluNakyma).
 - Pelikoodari pelikoodari/silmukat-ristihaivytys 34f8fdd18 (⊇ 753609a55). Ristiriita Siirtosepän siirtoseppa/juna174-silmukat
   d0bbaadd9:n kanssa SeikkailuAanet.Silmukassa: pidä Siirtosepän Muunnelma-/pankkirivit ja lisää `l.loop = true` -rivin perään
   `SaumatonSilmukka.Kiinnita(l)` (Pelikoodarin ohje).
