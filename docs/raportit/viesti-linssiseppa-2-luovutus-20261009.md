@@ -5,6 +5,15 @@ Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Workt
 Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
 (`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
 
+## TILA 13.3x (iltapäivä)
+- omavalo-172 ja laivat-171 ovat junassa 172 (Natiivisepän juna-172 sisältää ne). Tarvearvio on PR #4283 (worktree wt/linssiseppa2-tarvearvio, poisto mergen jälkeen).
+- Omistajan kuvat: lokit/linssiseppa2-omistaja2-20261009/omistajalle/ (ND v5c + prefektuuri v1, KL v1.8; app 172c = 3d42614c) ovat PT:llä.
+- SEURAAVA: omat mallit v9 = v8 + ND v5c + KL v1.8 + prefektuuri v1, ILMAN vasamuseet (PT: Googlen Vasa parempi). Tehdään VASTA PT:n luvalla
+  (ND/KL-tarkistus kesken). Putki: sijainnit.json sisältää prefektuurin (varmuus sijainnit-ennen-prefektuuri.json); työkalu ajetaan proto-päächeckoutista
+  (korkeus-worktree poistettu): python3 -I tyokalut/omat_mallit_tileset.py <putki> <putki>/vientiN. Uusin vienti24 (vielä Vasan kanssa).
+- Skriptit: scratchpad d1e2a55c (kuvat-omistaja.sh, omistaja2.sh, merkitse.py). Kamera "opas kamera lat lon dist kallistus suuntima katse":
+  katse = korkeus ELLIPSOIDISTA (Pariisi maa ~75–180 m, Tukholma ~30–80 m); kaupunki kerrallaan tuoreella asennuksella (toinen kaupunki jäi aloitusvalikkoon).
+
 ## TILA 12.2x: omavalo-172 51799391e (juna-172 yhdistetty) + laivat-171 657676845 Natiivisepällä, PT kuittasi 172:een; 172b-kuvat peruttu (PT: ei still-sarjoja)
 
 ## OMISTAJAN LINJA: kaikki suunniteltu → yksi iso JUNA 172 (julkaistaan kun valmis)
