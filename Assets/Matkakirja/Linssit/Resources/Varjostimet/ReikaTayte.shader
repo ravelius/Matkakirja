@@ -35,7 +35,7 @@ Shader "Matkakirja/Linssit/ReikaTayte"
                 if (_IlmHamara.x > 0.001)
                 {
                     float3 dv = normalize(v.w - _WorldSpaceCameraPos);
-                    c = lerp(c, IlmSininenHetki(normalize(float3(dv.x, 0.02, dv.z))) / _IlmHamara.x, _IlmHamara.x);
+                    c = lerp(c, IlmSininenHetki(normalize(float3(dv.x, -0.2, dv.z))) / _IlmHamara.x, _IlmHamara.x);
                 }
                 return half4(MixFog((half3)c, v.sumu), 1);
             }
