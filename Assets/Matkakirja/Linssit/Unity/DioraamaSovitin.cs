@@ -393,9 +393,13 @@ namespace Matkakirja.Natiivi
             // Kehittäjävalikon "Olavinlinna – pelattava pala (kokeilu)" (Päätoimittaja 7.10. 16.0x): E1 heti, kun rakennus on ladattu.
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
-                PelattavaPalaPyydetty = false; pelattavaPala = true;
+                PelattavaPalaPyydetty = false;
                 // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
                 var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
+                // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, heijastuksella:
+                // puuttuva luokka = suoraan peliin). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
+                if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
+                alkuValittu = false; pelattavaPala = true;
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
                 SeikkailuVihjeet.Luo(nayttamo.transform, o.Kirjaa);
@@ -405,6 +409,7 @@ namespace Matkakirja.Natiivi
                 else o.StartCoroutine(VenePaalle(VeneKestoS));
                 o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
             }
+            palaOhi:
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
             // V2: vene etenee aina (myös kun pelaaja on jo laiturilla: vene jää kiinnitettynä); perillä pelaaja laiturille.
@@ -931,6 +936,39 @@ namespace Matkakirja.Natiivi
         public static bool PelattavaPalaPyydetty;
         /// <summary>Pelattava pala jatkuu tallennuksesta (Natiivi-UI:n Jatka; SeikkailuTallentaja.LueTiedosto kertoo, onko jatkettavaa).</summary>
         public static bool PelattavaPalaJatka;
+
+        bool alkuValittu;
+        /// <summary>Alun valinta auki (kertoja ei soi korttien aikana).</summary>
+        public static bool AlkuValintaAuki { get; private set; }
+        /// <summary>Automaattiajot (botti, todistusajo): "poikki kavely alkuvalinta 0" ohittaa valinnan suoraan peliin.</summary>
+        public static bool AlkuValintaPaalla = true;
+
+        /// <summary>Näyttää alun valinnan, jos Natiivi-UI:n OlavinlinnaAlku on mukana eikä valintaa ole tehty; true = valinta auki
+        /// (pala odottaa). Pelaa → pala alkaa; Historia → linnan historia, lopussa kortti "Pelaa".</summary>
+        bool AlunValinta()
+        {
+            var t = typeof(DioraamaSovitin).Assembly.GetType("Matkakirja.Natiivi.OlavinlinnaAlku");
+            const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+            var kysy = t?.GetMethod("Kysy", F); var loppui = t?.GetMethod("HistoriaLoppui", F);
+            if (!AlkuValintaPaalla || kysy == null || loppui == null || t.GetProperty("Nahty", F)?.GetValue(null) is true) return false;
+            Action pelaa = () => { AlkuValintaAuki = false; alkuValittu = true; PelattavaPalaPyydetty = true; };
+            Action historia = () => o.StartCoroutine(Historia(() => loppui.Invoke(null, new object[] { pelaa })));
+            AlkuValintaAuki = true;
+            kysy.Invoke(null, new object[] { pelaa, historia });
+            o.Kirjaa("seikkailu: alun valinta (Pelaa / Linnan historia)");
+            return true;
+        }
+
+        /// <summary>Linnan historia (SeikkailuHistoria): kävelydata ja leikkaukset käyttöön, jotta vuoden 1499 jälkeiset osat kasvavat;
+        /// lopuksi leikkaukset ennalleen ja valmis().</summary>
+        IEnumerator Historia(Action valmis)
+        {
+            yield return VarmistaKavelyData();
+            bool oli = SeikkailuKavely.LeikkauksetPaalla;
+            if (!oli) SeikkailuKavely.Leikkaukset(true);
+            SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null,
+                () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa);
+        }
 
         IEnumerator Botti(int alkuN)
         {
@@ -1831,6 +1869,7 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
                     return;
                 }
+                if (arvo == "alkuvalinta") { AlkuValintaPaalla = osat.Length <= 3 || osat[3] != "0"; o.Kirjaa($"poikki: alun valinta {(AlkuValintaPaalla ? "päällä" : "ohitetaan (suoraan peliin)")}"); return; }
                 if (arvo == "toiminto") { SeikkailuEsineet.ToimintoPyydetty = true; o.Kirjaa($"poikki: toiminto (lähin {SeikkailuEsineet.Aktiivinen?.Lahin ?? "-"}, kädessä {SeikkailuEsineet.Aktiivinen?.Kadessa ?? "-"})"); return; }
                 if (arvo == "fp") { SeikkailuPelaaja.Ensimmainen = osat.Length <= 3 || osat[3] != "0"; o.Kirjaa($"poikki: kävely {(SeikkailuPelaaja.Ensimmainen ? "ensimmäinen persoona" : "olan yli")} (seuraavasta aloituksesta)"); return; }
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
@@ -1845,7 +1884,7 @@ namespace Matkakirja.Natiivi
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
-                SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null, null, o.Kirjaa);
+                o.StartCoroutine(Historia(null));
                 return;
             }
             if (mita == "valot")
