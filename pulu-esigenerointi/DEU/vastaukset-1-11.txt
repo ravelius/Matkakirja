@@ -140,7 +140,7 @@ Miten Rammelsbergin hopea löydettiin?
 
 ### 55.1
 KYSYMYS: Kuka Kaspar Hauser oli?
-Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui [[Ansbachissa]] vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.
+Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui [[Ansbachissa]] joulukuusta 1831 kuolemaansa 1833 asti ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.
 JATKOT:
 Miksi Kaspar Hauserin tarina kiehtoo yhä?
 Mitä Ansbachissa voi nähdä?
@@ -154,7 +154,7 @@ Millainen Ansbachin palatsi on?
 
 ### 55.3
 KYSYMYS: Millainen on Ansbachin markkreivien palatsi?
-Katotaas. [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen [[barokkisen]] ilmeensä. Palatsin puutarhassa puukotettiin Kaspar Hauser, joka asui Ansbachissa vuosina 1830–1833. Sisätiloista en ole varma. Aika komea paikka kyyhkyn silmin.
+Katotaas. [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen [[barokkisen]] ilmeensä. Palatsin puutarhassa puukotettiin Kaspar Hauser, joka asui Ansbachissa joulukuusta 1831 kuolemaansa 1833 asti. Sisätiloista en ole varma. Aika komea paikka kyyhkyn silmin.
 JATKOT:
 Mikä barokki oli tyylisuuntana?
 Kuka rakennutti palatsin?

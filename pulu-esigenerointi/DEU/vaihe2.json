@@ -1209,11 +1209,10 @@
   "kohde": "kohde:pohjanmeri",
   "kasite": "Hansaliiton",
   "kysymys": "Kerro lisää: Hansaliiton",
-  "vastaus": "Hansaliitto oli pohjoissaksalaisten kauppakaupunkien ja kauppiaiden verkosto, joka hallitsi Pohjanmeren ja Itämeren kauppaa suurimmillaan 1300- ja 1400-luvuilla. Johtavana kaupunkina oli [[Lyypekki]], ja liittoon kuului kymmeniä kaupunkeja Pohjois-Saksasta Baltiaan. Kauppiaat ylläpitivät ulkomailla kauppa-asemia eli kontoreita; yksi niistä perustettiin Norjan Bergeniin [[Bryggenin]] rantaan noin vuonna 1350, ja siellä säilöttiin Pohjois-Norjasta tuotua kalaa sekä Euroopasta tuotua viljaa. Hansakaupungeissa kauppiastalot rakennettiin usein kapeiksi ja syviksi, ja esimerkiksi [[Riiassa]] vero määräytyi kadunpuoleisen julkisivun leveyden mukaan. Liiton merkitys väheni 1500- ja 1600-luvuilla, kun vahvat valtiot ja Alankomaiden kauppa nousivat sen tilalle.",
+  "vastaus": "Hansaliitto oli pohjoissaksalaisten kauppakaupunkien ja kauppiaiden verkosto, joka hallitsi Pohjanmeren ja Itämeren kauppaa suurimmillaan 1300- ja 1400-luvuilla. Johtavana kaupunkina oli [[Lyypekki]], ja liittoon kuului kymmeniä kaupunkeja Pohjois-Saksasta Baltiaan. Kauppiaat ylläpitivät ulkomailla kauppa-asemia eli kontoreita; yksi niistä perustettiin Norjan Bergeniin [[Bryggenin]] rantaan noin vuonna 1350, ja siellä säilöttiin Pohjois-Norjasta tuotua kalaa sekä Euroopasta tuotua viljaa. Hansakaupungeissa kauppiastalot rakennettiin usein kapeiksi ja syviksi. Liiton merkitys väheni 1500- ja 1600-luvuilla, kun vahvat valtiot ja Alankomaiden kauppa nousivat sen tilalle.",
   "linkit": [
    "Lyypekki",
-   "Bryggenin",
-   "Riiassa"
+   "Bryggenin"
   ],
   "jatkot": [
    "Miksi Hansaliitto menetti asemansa?",
@@ -2920,10 +2919,10 @@
   "kohde": "kohde:hampuri",
   "kasite": "Hansaliiton",
   "kysymys": "Kerro lisää: Hansaliiton",
-  "vastaus": "Hansaliitto oli keskiajan kauppakaupunkien ja kauppiaiden yhteenliittymä, joka hallitsi Pohjois-Euroopan kauppaa Itämerellä ja Pohjanmerellä. Sen kauppatavaroita olivat muun muassa suola, silli, vilja ja kankaat. Liitto piti vieraissa satamissa omia kauppakonttoreita, kuten Bergenin [[Bryggenin]] rannassa, jonne kontori perustettiin noin vuonna 1350. Bergenissä varastoihin säilöttiin Pohjois-Norjasta tuotua kalaa ja Euroopasta tuotua viljaa. Hansakauppiaat vaikuttivat myös kaupunkikuvaan: [[Riiassa]] verot maksettiin kadunpuoleisen julkisivun leveyden mukaan, joten kauppiastalot rakennettiin kapeiksi ja syviksi.",
+  "vastaus": "Hansaliitto oli keskiajan kauppakaupunkien ja kauppiaiden yhteenliittymä, joka hallitsi Pohjois-Euroopan kauppaa [[Itämerellä]] ja Pohjanmerellä. Sen kauppatavaroita olivat muun muassa suola, silli, vilja ja kankaat. Liitto piti vieraissa satamissa omia kauppakonttoreita, kuten Bergenin [[Bryggenin]] rannassa, jonne kontori perustettiin noin vuonna 1350. Bergenissä varastoihin säilöttiin Pohjois-Norjasta tuotua kalaa ja Euroopasta tuotua viljaa. Hansakauppiaat vaikuttivat myös kaupunkikuvaan, sillä kauppiastalot rakennettiin usein kapeiksi ja syviksi.",
   "linkit": [
-   "Bryggenin",
-   "Riiassa"
+   "Itämerellä",
+   "Bryggenin"
   ],
   "jatkot": [
    "Miten Hansaliitto päätti yhteisistä asioista?",
@@ -5947,15 +5946,14 @@
   "kohde": "kohde:hahmotelma-lueneburger-heide",
   "kasite": "Hansaliiton",
   "kysymys": "Kerro lisää: Hansaliiton",
-  "vastaus": "Hansaliitto oli keskiajalla pohjoiseurooppalaisten kauppakaupunkien ja kauppiaiden yhteenliittymä, jonka keskeinen kaupunki oli [[Lyypekki]]. Liiton kauppiaat pitivät yllä kontoreja kaukana kotikaupungeistaan: Bergenin [[Bryggenin]] rannassa Hansaliiton kontori perustettiin noin vuonna 1350, ja sen varastoissa säilöttiin Pohjois-Norjasta tuotua kalaa sekä Euroopasta tuotua viljaa. Kauppa muovasi myös kaupunkien ulkonäköä, sillä [[Riiassa]] vero maksettiin kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Bryggenin rakennukset tuhoutuivat vuoden 1702 palossa, mutta osa kivikellareista on peräisin jo 1400-luvulta.",
+  "vastaus": "Hansaliitto oli keskiajalla pohjoiseurooppalaisten kauppakaupunkien ja kauppiaiden yhteenliittymä, jonka keskeinen kaupunki oli [[Lyypekki]]. Liiton kauppiaat pitivät yllä kontoreja kaukana kotikaupungeistaan: Bergenin [[Bryggenin]] rannassa Hansaliiton kontori perustettiin noin vuonna 1350, ja sen varastoissa säilöttiin Pohjois-Norjasta tuotua kalaa sekä Euroopasta tuotua viljaa. Kauppa muovasi myös kaupunkien ulkonäköä, sillä kauppiastalot rakennettiin usein kapeiksi ja syviksi. Bryggenin rakennukset tuhoutuivat vuoden 1702 palossa, mutta osa kivikellareista on peräisin jo 1400-luvulta.",
   "linkit": [
    "Lyypekki",
-   "Bryggenin",
-   "Riiassa"
+   "Bryggenin"
   ],
   "jatkot": [
    "Miksi Lyypekki oli Hansaliiton keskeinen kaupunki?",
-   "Miksi Riian kauppiastalot rakennettiin kapeiksi?"
+   "Millaista kauppaa hansakaupungit kävivät?"
   ]
  },
  {
@@ -8556,11 +8554,10 @@
   "kohde": "kohde:hahmotelma-hameln",
   "kasite": "Hansaliiton",
   "kysymys": "Kerro lisää: Hansaliiton",
-  "vastaus": "Hansaliitto oli keskiajan kauppiaiden liitto, johon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin ja jota johdettiin Lyypekistä. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa. Norjan Bergenissä kontori perustettiin [[Bryggenin]] rantaan noin vuonna 1350, ja sen varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa ja Euroopasta tuotua viljaa. Kun kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon, ja se voitti kerran Tanskan sodassakin. Hameln oli 1400- ja 1500-luvuilla liiton vähäinen jäsen, ja moni Pohjois-Saksan kaupunki kutsuu itseään [[hansakaupungiksi]] vielä tänäänkin. Latvian [[Riiassa]] kauppiastalot rakennettiin kapeiksi ja syviksi, koska veroa maksettiin julkisivun leveyden mukaan.",
+  "vastaus": "Hansaliitto oli keskiajan kauppiaiden liitto, johon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin ja jota johdettiin Lyypekistä. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa. Norjan Bergenissä kontori perustettiin [[Bryggenin]] rantaan noin vuonna 1350, ja sen varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa ja Euroopasta tuotua viljaa. Kun kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon, ja se voitti kerran Tanskan sodassakin. Hameln oli 1400- ja 1500-luvuilla liiton vähäinen jäsen, ja moni Pohjois-Saksan kaupunki kutsuu itseään [[hansakaupungiksi]] vielä tänäänkin. Hansakaupungeissa kauppiastalot rakennettiin usein kapeiksi ja syviksi.",
   "linkit": [
    "Bryggenin",
-   "hansakaupungiksi",
-   "Riiassa"
+   "hansakaupungiksi"
   ],
   "jatkot": [
    "Miten Hansa julisti saarron?",
@@ -9972,7 +9969,7 @@
   "kohde": "kohde:hahmotelma-ansbach",
   "kasite": "Ansbachissa",
   "kysymys": "Kerro lisää: Ansbachissa",
-  "vastaus": "Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, noin 40 kilometrin päässä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina, ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331. Markkreivien barokkipalatsi [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja kaupunki tunnetaan myös nuoresta [[Kaspar Hauserista]], joka asui siellä 1830–1833. Lähteiden mukaan kaupungissa järjestetään joka toinen vuosi Bach-viikko, [[Bachwoche]], mutta tarkasta ajankohdasta en ole varma.",
+  "vastaus": "Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, noin 40 kilometrin päässä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina, ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331. Markkreivien barokkipalatsi [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja kaupunki tunnetaan myös nuoresta [[Kaspar Hauserista]], joka asui siellä joulukuusta 1831 kuolemaansa 1833 asti. Lähteiden mukaan kaupungissa järjestetään joka toinen vuosi Bach-viikko, [[Bachwoche]], mutta tarkasta ajankohdasta en ole varma.",
   "linkit": [
    "Markgrafenschloss",
    "Kaspar Hauserista",
@@ -10030,7 +10027,7 @@
   "kohde": "kohde:hahmotelma-ansbach",
   "kasite": "Markgrafenschloss",
   "kysymys": "Kerro lisää: Markgrafenschloss",
-  "vastaus": "Markgrafenschloss on Ansbachin markkreivien palatsi, joka rakennettiin vuosina 1704–1738 ja joka on säilyttänyt alkuperäisen barokkisen ilmeensä. Palatsin yhteydessä on puutarha, [[Hofgarten]], jossa lähteiden mukaan on myös [[Orangerie]], mutta en ole varma sen nykykäytöstä. Puutarhassa puukotettiin vuonna 1833 [[Kaspar Hauser]], joka oli asunut Ansbachissa vuodesta 1830. Palatsi kuvastaa Brandenburg-Ansbachin markkreivien valtaa ja vaurautta.",
+  "vastaus": "Markgrafenschloss on Ansbachin markkreivien palatsi, joka rakennettiin vuosina 1704–1738 ja joka on säilyttänyt alkuperäisen barokkisen ilmeensä. Palatsin yhteydessä on puutarha, [[Hofgarten]], jossa lähteiden mukaan on myös [[Orangerie]], mutta en ole varma sen nykykäytöstä. Puutarhassa puukotettiin vuonna 1833 [[Kaspar Hauser]], joka oli asunut Ansbachissa joulukuusta 1831. Palatsi kuvastaa Brandenburg-Ansbachin markkreivien valtaa ja vaurautta.",
   "linkit": [
    "Hofgarten",
    "Orangerie",
