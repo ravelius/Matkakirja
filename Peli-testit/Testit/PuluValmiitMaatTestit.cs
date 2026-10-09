@@ -1,7 +1,7 @@
 // Pulun valmiit vastaukset maittain (PT 10.10.2026): Kreikan, Saksan, Italian, Romanian, Espanjan ja Alankomaiden paketit sellaisinaan ämpäristä
 // (pulu/vastaukset/v1/<ISO3>.json = haarojen pulu-<maa>-pilvi-b paketit, tavu tavulta) natiivin lataajalla (Peli/PuluValmiit.cs).
 // Linkit tarkistetaan kuten PuluChat näyttää ne (Kasitelinkit: KasiteKuvio, aihe ennen |-merkkiä, enintään 12 per vastaus,
-// napautus kysyy "Kerro lisää: <aihe>" samassa kohdassa). Kohteet: Kultaiset/pulu-kohdat-v633.tsv = sisältöpaketin v633
+// napautus kysyy "Kerro lisää: <aihe>" samassa kohdassa). Kohteet: Kultaiset/pulu-kohdat.tsv = ajantasaisen sisältöpaketin (versio otsikossa)
 // karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maineen, koska nostokortti hakee paketin nosto.Iso-maan mukaan.
 // Uusi maa: python3 -I pulu-kultaiset.py (raportti) ja --kirjoita (kultaiset), sitten testirivi ja HakemistoKaikkiMaat. ./kaanna.sh PuluValmiitMaat
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace Matkakirja.Peli.Testit
         static string Lue(string tiedosto) => File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", tiedosto));
 
         static Dictionary<string, string> kohteet;
-        static Dictionary<string, string> Kohteet => kohteet ??= Lue("pulu-kohdat-v633.tsv").Split('\n')
+        static Dictionary<string, string> Kohteet => kohteet ??= Lue("pulu-kohdat.tsv").Split('\n')
             .Where(r => r.Length > 0 && r[0] != '#').Select(r => r.Split('\t')).ToDictionary(r => r[0], r => r[1].Trim());
 
         /// <summary>Käsitelinkkien aiheet niin kuin chat ne linkittää (linkID ilman lainausmerkkejä).</summary>
@@ -101,15 +101,18 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void ItalianPaketti() => Maa("ITA", 63, 315, 763);
         [Testi] static void RomanianPaketti() => Maa("ROU", 56, 280, 657);
         [Testi] static void EspanjanPaketti() => Maa("ESP", 56, 280, 599);
+        [Testi] static void ItavallanPaketti() => Maa("AUT", 53, 265, 586);
+        [Testi] static void IrlanninPaketti() => Maa("IRL", 52, 260, 639);
+        [Testi] static void RuotsinPaketti() => Maa("SWE", 51, 255, 628);
         [Testi] static void AlankomaidenPaketti() => Maa("NLD", 54, 270, 620);
 
-        // Ämpärin hakemisto: kaikki seitsemän maata, ja versio = paketin luontiaika minuutteina (UTC), joten laite hakee juuri tämän paketin.
+        // Ämpärin hakemisto: kaikki maat, ja versio = paketin luontiaika minuutteina (UTC), joten laite hakee juuri tämän paketin.
         [Testi] static void HakemistoKaikkiMaat()
         {
             var h = PuluValmiit.LueHakemisto(Lue("pulu-maat.json"));
             Oleta.Tosi(h != null, "hakemisto");
-            Oleta.Sama("DEU,ESP,FRA,GRC,ITA,NLD,ROU", string.Join(",", h.Keys.OrderBy(x => x, System.StringComparer.Ordinal)));
-            foreach (string maa in new[] { "GRC", "DEU", "ITA", "FRA", "ROU", "ESP", "NLD" })
+            Oleta.Sama("AUT,DEU,ESP,FRA,GRC,IRL,ITA,NLD,ROU,SWE", string.Join(",", h.Keys.OrderBy(x => x, System.StringComparer.Ordinal)));
+            foreach (string maa in new[] { "GRC", "DEU", "ITA", "FRA", "ROU", "ESP", "NLD", "AUT", "IRL", "SWE" })
             {
                 var juuri = (Dictionary<string, object>)MiniJson.Jasenna(Lue("pulu-" + maa.ToLowerInvariant() + ".json"));
                 string luotu = MiniJson.Teksti(juuri, "luotu");

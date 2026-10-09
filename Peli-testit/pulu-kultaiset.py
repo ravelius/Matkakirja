@@ -111,13 +111,13 @@ def main():
     if kirjoita:
         open(os.path.join(KULTAISET, 'pulu-maat.json'), 'wb').write(hakemisto_raaka)
         maat = set(hakemisto)
-        nimi = f'pulu-kohdat-v{versio}.tsv'
+        nimi = 'pulu-kohdat.tsv'   # versio otsikkorivillä (testi lukee aina saman nimen)
         with open(os.path.join(KULTAISET, nimi), 'w') as f:
             f.write(f'# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v{versio} '
                     f'({", ".join(sorted(maat))}), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)\n')
             for i, m in sorted((i, m) for i, m in kohteet.items() if m in maat):
                 f.write(f'{i}\t{m}\n')
-        print(f'\nKirjoitettu Kultaiset/: muuttuneet paketit, pulu-maat.json, {nimi} (vaihda testin Kohteet-tiedostonimi, jos versio vaihtui)')
+        print(f'\nKirjoitettu Kultaiset/: muuttuneet paketit, pulu-maat.json, {nimi} (sisältö v{versio})')
 
 
 if __name__ == '__main__':
