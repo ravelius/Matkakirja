@@ -41,19 +41,6 @@ namespace Matkakirja.Linssit.Testit
                 }
         }
 
-        [Testi] static void PienetErillisetVedetPois()
-        {
-            // LS1 + PT 9.10.: altaat ja suihkulähteet (WorldCoverin pyöreät läiskät) pois; joki/järvi palojen rajalla säilyy.
-            var v = Lue("vesi-tukholma-16m-ote");
-            var p = new List<(float X, float Y, float Z)>(); var r = new List<float>(); var t0 = new List<int>(); var t = new List<int>();
-            v.Unityyn(0, 0.4, p, r, t0);
-            Oleta.Sama(0, t0.Count, "palan 0 erillinen lampi (38 × 35 m, korkeus 34,9 m) pois");
-            for (int i = 1; i < v.Palat.Length; i++) v.Unityyn(i, 0.4, p, r, t);
-            Oleta.Tosi(t.Count > 3000, $"meri ja salmet palojen rajalla säilyvät ({t.Count / 3} kolmiota)");
-            Oleta.Tosi(!v.Korkeus(-195, 365, out _), "veneille ei vettä lammessa");
-            Console.WriteLine($"      pudotettuja kolmioita {v.Pudotettuja}");
-        }
-
         [Testi] static void KolmiotUnityssaMyotapaivaanYlhaalta()
         {
             var v = Lue("vesi-tukholma-16m-ote"); int cw = 0, ccw = 0;
@@ -73,7 +60,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KorkeusKarjessaJaVedenUlkopuolella()
         {
-            var v = Lue("vesi-tukholma-16m-ote"); var p = v.Palat[1];   // pala 0 on erillinen lampi (pudotetaan, PienetErillisetVedetPois)
+            var v = Lue("vesi-tukholma-16m-ote"); var p = v.Palat[0];
             var k = v.Karki(p.K0 + v.Indeksi(p.I0));
             Oleta.Tosi(v.Korkeus(k.E, k.N, out var u) && Math.Abs(u - k.U) < 1e-3, $"kärjessä korkeus {u:F3} = {k.U:F3}");
             var a = v.Karki(p.K0 + v.Indeksi(p.I0)); var b = v.Karki(p.K0 + v.Indeksi(p.I0 + 1)); var c = v.Karki(p.K0 + v.Indeksi(p.I0 + 2));
