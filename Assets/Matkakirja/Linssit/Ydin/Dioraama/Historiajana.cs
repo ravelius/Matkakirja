@@ -282,6 +282,16 @@ namespace Matkakirja.Linssit.Dioraama
             return l;
         }
 
+        /// <summary>Vuoden 1499 kalliorannan täyttö (LR:n kävelyosa ranta-1499) kuuluu vain vuoden 1499 näkymään: historiassa se näkyy,
+        /// kunnes ensimmäinen myöhempi rakenne (osista pienin Vuodesta, Olavinlinnalla Kellobastioni 1745) alkaa kasvaa (arvio 10
+        /// virhe 3: täytön terassi y ≈ −6 jäi ruskeaksi laataksi veteen bastionien ja nykylinnan viereen).</summary>
+        public static bool Ranta1499Nakyy(double vuosi, IReadOnlyList<HistoriaOsa> osat = null)
+        {
+            double eka = double.PositiveInfinity;
+            foreach (var o in osat ?? OlavinlinnanOsat) if (o.Vuodesta < eka) eka = o.Vuodesta;
+            return vuosi < eka;
+        }
+
         /// <summary>Leikkauksen historiaosa nimen etuliitteen mukaan (pisin osuma); null = ei historiaosa (näkyy aina).</summary>
         public static HistoriaOsa Osa(string leikkaus, IReadOnlyList<HistoriaOsa> osat = null)
         {
