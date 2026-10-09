@@ -76,6 +76,18 @@ namespace Matkakirja.Peli
             return palat.TryGetValue(Avain(teksti, malli, aani, nopeus, loppuTagi), out var url) ? url : null;
         }
 
+        /// <summary>
+        /// Valmis tiedosto ei latautunut (404 julkaisun aikana, katkos): osoite pois tämän istunnon manifestista, jolloin Url
+        /// palauttaa null ja kappale luetaan palavirtana (Puhe.Syntetisoi varareitti, juna 173). Palauttaa poistettujen määrän.
+        /// </summary>
+        public static int Petti(string url)
+        {
+            if (palat == null || string.IsNullOrEmpty(url)) return 0;
+            int n = 0;
+            foreach (var k in new List<string>(palat.Keys)) if (palat[k] == url) { palat.Remove(k); n++; }
+            return n;
+        }
+
         /// <summary>Testeille: tyhjennä ladattu manifesti.</summary>
         public static void Nollaa() { palat = null; mallit = null; }
     }
