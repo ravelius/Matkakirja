@@ -18,12 +18,11 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "tukholma-tori|stockholm market|20|200|by"
-          "tukholma-tori|stockholm square|20|200|by"
-          "tukholma-kahvila|stockholm cafe|20|200|by"
-          "tukholma-lapset|stockholm park|20|200|by"
-          "tukholma-metro|stockholm tunnelbana|20|200|by"
-          "tukholma-raitiovaunu|stockholm tram|20|200|by"
+          "lippu|flag flapping wind|10|120|by"
+          "lippu|flag flutter|10|120|by"
+          "poltin|hot air balloon burner|1|60|by"
+          "poltin|propane burner|1|60|by"
+          "raitiovaunu|tram pass by|3|60|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
