@@ -75,10 +75,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('lahde'); ap.add_argument('ulos')
     ap.add_argument('--tekija', default='Pyramidien 3D-malli: Matkakirja')
+    ap.add_argument('--lisaa', help='olemassa oleva mallit.json, jonka kohteet säilyvät (esim. Giza + Concorde samaan vientiin)')
     a = ap.parse_args()
     s = json.load(open(os.path.join(a.lahde, 'glb', 'sijainnit.json'), encoding='utf-8'))
     os.makedirs(a.ulos, exist_ok=True)
     indeksi = {'tekija': a.tekija, 'lahde': 'Linnanrakentaja, ' + os.path.basename(os.path.normpath(a.lahde)), 'kohteet': []}
+    if a.lisaa:
+        vanha = json.load(open(a.lisaa, encoding='utf-8'))
+        for k in vanha.get('kohteet', []):
+            if 'tekija' not in k and vanha.get('tekija'): k['tekija'] = vanha['tekija']   # kohdekohtainen krediitti säilyy
+            indeksi['kohteet'].append(k)
     for kid, k in s['kohteet'].items():
         glbt = [os.path.join(a.lahde, p) for p in k['glb']]
         puuttuu = [p for p in glbt if not os.path.exists(p)]
@@ -116,8 +122,9 @@ def main():
         # Tilesetin oma virhe suuri: malli piirretään aina, kun Googlen tiilet alueella näkyvät (leikkausreikä ei saa jäädä tyhjäksi).
         ts = {'asset': {'version': '1.1', 'generator': 'Matkakirja omat_mallit_tileset.py'}, 'geometricError': 10000.0, 'root': juuri}
         json.dump(ts, open(os.path.join(kansio, 'tileset.json'), 'w'), indent=1)
-        indeksi['kohteet'].append({'id': kid, 'lat': k['lat'], 'lon': k['lon'], 'korkeus': h,
-                                   'leikkaus': k['leikkaus'], 'tileset': f'{kid}/tileset.json'})
+        uusi = {'id': kid, 'lat': k['lat'], 'lon': k['lon'], 'korkeus': h, 'leikkaus': k['leikkaus'], 'tileset': f'{kid}/tileset.json'}
+        if k.get('tekija'): uusi['tekija'] = k['tekija']   # kohteen oma krediittirivi (Concorde: IGN + OSM)
+        indeksi['kohteet'] = [x for x in indeksi['kohteet'] if x['id'] != kid] + [uusi]
         print(f'{kid}: {len(tasot)} tasoa, kolmiot {[t[2] for t in tasot]}, virheet {[virhe(lo, hi, t[2]) for t in tasot[1:]]} m, h {h} m')
     json.dump(indeksi, open(os.path.join(a.ulos, 'mallit.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'mallit.json: {len(indeksi["kohteet"])} kohdetta → {a.ulos}')

@@ -8,7 +8,8 @@
 // nupin keskelle (150 ms) ja arvon nollaan. Kumpikin tappi kaappaa oman osoittimensa (kaksi peukaloa yhtä aikaa).
 // NOPEUSVIPU (omistaja 9.10.2026, juna 170: "vasemmalla keskellä myös pieni säädin vipu, millä voisi vaikuttaa maksiminopeuteen";
 // Päätoimittaja: mikserin liukusäädin pystyasennossa, .mk-saadin--pysty): vain vapaassa lennossa vasemmassa reunassa keskellä,
-// ylös = nopeampi (Ydin VapaaNopeusVipu: ×0,25 … ×2, oletus ×1), asento muistetaan. LS1 lukee NopeusKerroin-arvon OpasVapaaLennolle.
+// ylös = nopeampi (Ydin VapaaNopeusVipu: ×0,25 … ×3, oletus ×1), asento muistetaan. Kerroin LS1:n OpasSovitin.VapaaNopeus-arvoon
+// joka ruudulla vapaassa tilassa (464ac4b12, sama alue 0,25–3).
 using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -28,7 +29,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Nopeusvivun asento (VapaaNopeusVipu.Min … Max, ylös = nopeampi); muistetaan PlayerPrefsissä.</summary>
         public static float NopeusVipu { get; private set; } = LueVipu();
-        /// <summary>Vapaan lennon enimmäisnopeuden kerroin vivusta (0,25 … 2, oletus 1); LS1:n OpasVapaaLento.</summary>
+        /// <summary>Vapaan lennon enimmäisnopeuden kerroin vivusta (0,25 … 3, oletus 1) → OpasSovitin.VapaaNopeus (LS1).</summary>
         public static double NopeusKerroin => VapaaNopeusVipu.Kerroin(NopeusVipu);
         const string VipuAvain = "opas.vapaa.nopeusvipu";
         public const float VipuKorkeus = 120f, VipuLeveys = 26f;
@@ -49,8 +50,8 @@ namespace Matkakirja.Natiivi
         {
             vasen = new Tappi(isa, "mk-tappi mk-tappi--vasen", PystyIkoni, v => Vasen = v);
             oikea = new Tappi(isa, "mk-tappi mk-tappi--oikea", Ikonit.PaivitaVersio, v => Oikea = v);
-            vasen.Juuri.tooltip = "Lähemmäs ja kauemmas";
-            oikea.Juuri.tooltip = "Kierrä kohdetta ja nosta tai laske kameraa";
+            vasen.Juuri.tooltip = Kieli.T("opas.tapit.lahemmas-ja-kauemmas");
+            oikea.Juuri.tooltip = Kieli.T("opas.tapit.kierra-kohdetta-ja-nosta-tai");
             // Pystysäädin: Unityn pystysuunnassa pienin arvo on ylhäällä, inverted kääntää (ylös = nopeampi; `ui opasvalikko vipu`).
             vipu = new Slider(VapaaNopeusVipu.Min, VapaaNopeusVipu.Max, SliderDirection.Vertical) { pageSize = 0, inverted = true };
             vipu.AddToClassList("mk-saadin");
@@ -66,7 +67,7 @@ namespace Matkakirja.Natiivi
             isa.Add(vipu);
         }
 
-        static string VipuNimi() => "Lentonopeus " + VapaaNopeusVipu.Teksti(NopeusVipu);
+        static string VipuNimi() => Kieli.T("opas.tapit.lentonopeus", VapaaNopeusVipu.Teksti(NopeusVipu));
 
         bool vapaa;
 
@@ -77,7 +78,7 @@ namespace Matkakirja.Natiivi
             vapaa = paalla;
             vasen.Nuppi.Clear();
             Rakenne.Ikoni(paalla ? Ikonit.Viiva["kompassi"] : PystyIkoni, "mk-tappi__ikoni", vasen.Nuppi);
-            vasen.Juuri.tooltip = paalla ? "Liiku eteen, taakse ja sivuille" : "Lähemmäs ja kauemmas";
+            vasen.Juuri.tooltip = paalla ? Kieli.T("opas.tapit.liiku-eteen-taakse-ja-sivuille") : Kieli.T("opas.tapit.lahemmas-ja-kauemmas");
         }
 
         /// <summary>Näkyvyys, alareuna ja etäisyys sivureunasta joka ruudulla OpasValikolta (juna 156: iPadilla sisemmäs ja
@@ -95,6 +96,7 @@ namespace Matkakirja.Natiivi
             if (vasen.Juuri.style.left.value.value != sivu) { vasen.Juuri.style.left = sivu; oikea.Juuri.style.right = sivu; }
             // Nopeusvipu vain vapaassa lennossa, vasemman tapin sarakkeen keskellä.
             bool v = nayta && vapaa;
+            if (vapaa) OpasSovitin.VapaaNopeus = NopeusKerroin;
             if (v != vipuNakyy) { vipuNakyy = v; vipu.style.display = v ? DisplayStyle.Flex : DisplayStyle.None; }
             float vl = sivu + (Halkaisija - VipuLeveys) * 0.5f;
             if (vipu.style.left.value.value != vl) vipu.style.left = vl;

@@ -107,6 +107,35 @@ class Vesi:
         return None if paras is None else (paras[1], math.sqrt(paras[0]), paras[2])
 
 
+KATU_LUOKAT = {"trunk", "primary", "secondary", "tertiary", "trunk_link", "primary_link", "secondary_link"}
+KATU_SADE_M = 4000.0
+
+
+def ketjuta(viivat):
+    """Yhdistää samaan luokkaan kuuluvat OSM-pätkät, joiden päät kohtaavat (0,5 m), pitkiksi ketjuiksi (autot eivät käänny
+    jokaisen pätkän päässä). Ahne: aloita pätkästä, jatka päistä niin kauan kuin löytyy käyttämätön jatko."""
+    def avain(q): return (round(q[0] * 2), round(q[1] * 2))
+    paat = {}
+    for i, v in enumerate(viivat):
+        for q in (v["p"][0], v["p"][-1]): paat.setdefault(avain(q), []).append(i)
+    kaytetty = [False] * len(viivat); ulos = []
+    for i, v in enumerate(viivat):
+        if kaytetty[i]: continue
+        kaytetty[i] = True; p = list(v["p"]); yksi = v.get("yksisuunta", 0)
+        for suunta in (1, -1):
+            while True:
+                loppu = p[-1] if suunta == 1 else p[0]; jatko = None
+                for j in paat.get(avain(loppu), []):
+                    if kaytetty[j] or viivat[j]["t"].split("_")[0] != v["t"].split("_")[0] or viivat[j].get("yksisuunta", 0) != yksi: continue
+                    jatko = j; break
+                if jatko is None: break
+                kaytetty[jatko] = True; q = viivat[jatko]["p"]
+                if suunta == 1: p += (q if avain(q[0]) == avain(loppu) else q[::-1])[1:]
+                else: p = (q if avain(q[-1]) == avain(loppu) else q[::-1])[:-1] + p
+        ulos.append({"t": v["t"], "n": v.get("n"), "yksisuunta": yksi, "p": p})
+    return ulos
+
+
 class Maski:
     """Karttasepän vesimaski (8-bit PNG, 0 = maa): onko piste vedellä (3 × 3 naapurusto). Maan alla kulkevat kanavat (Pariisin
     Voûte Richard Lenoir) ja laiturien yhdysviivat jäävät pois."""
@@ -235,7 +264,20 @@ def main():
         parvet.append({"nimi": n, "laji": "kyyhky", "x": round(x, 1), "z": round(y, 1),
                        "lat": round(lat0 + y / 111132.0, 6), "lon": round(lon0 + x / (111320.0 * math.cos(math.radians(lat0))), 6),
                        "alue": round(min(80, math.sqrt(ala) * 0.4)), "maara": 12 if ala > 15000 else 8})
-    json.dump({"kohde": kohde, "origo": {"lat": vesi.origo[0], "lon": vesi.origo[1], "ellipsoidikorkeus_m": 0},
+    # Katuliikenne (B4): pääkadut ja raitiotiet ketjutettuina, tihennettyinä; korkeus ajonaikana omasta korkeusmallista.
+    def katu(viivat, sade, luokat=None):
+        valitut = [v for v in viivat if (luokat is None or v["t"] in luokat) and min(math.hypot(*q) for q in v["p"]) < sade]
+        tulos2 = []
+        for v in ketjuta(valitut):
+            pp = [m(x, y)[:2] for x, y in v["p"]]
+            for osa in leikkaa(tihenna(pp), sade + 500):
+                if pituus(osa) < 250: continue
+                tulos2.append({"t": v["t"], "n": v.get("n"), "yksisuunta": v.get("yksisuunta", 0), "p": [[round(x, 1), round(y, 1)] for x, y in osa[::2] + ([osa[-1]] if len(osa) % 2 == 0 else [])]})
+        return tulos2
+    kadut = katu(reitit["kerrokset"].get("kadut", []), KATU_SADE_M, KATU_LUOKAT)
+    raitiot = katu(reitit["kerrokset"].get("raitiotiet", []), 6000.0)
+    print(f"{kohde}: kadut {len(kadut)} ketjua {sum(pituus(k['p']) for k in kadut) / 1000:.0f} km, raitiotiet {len(raitiot)} ketjua {sum(pituus(k['p']) for k in raitiot) / 1000:.0f} km")
+    json.dump({"kohde": kohde, "kadut": kadut, "raitiotiet": raitiot, "origo": {"lat": vesi.origo[0], "lon": vesi.origo[1], "ellipsoidikorkeus_m": 0},
                "koordinaatit": "ENU metreinä origossa [x itä, z pohjoinen, y vesipinnan korkeus]; y omasta vesipinnasta, ei Googlen laatoista",
                "krediitti": "© OpenStreetMap contributors (ODbL); vesi: ESA WorldCover 2021 (CC BY 4.0)",
                "reitit": tulos, "parvet": parvet}, open(ulos, "w"), ensure_ascii=False, separators=(",", ":"))

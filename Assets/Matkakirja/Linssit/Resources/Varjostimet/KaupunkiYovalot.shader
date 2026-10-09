@@ -11,6 +11,9 @@
 // v3: valot vain tasaisille pinnoille (ei puiden latvoja eikä reunoja), valosaaste 0,07.
 // v4 (Päätoimittaja 22.3x: "pisteet näyttävät kohinalta"): katuvalot OSM-katujen maskista (_Tiet, KaupunkiTiet) nauhoina ja
 // lamppuina vain kaduilla; ei pisteitä katoille eikä Black Marblen mukaan; kohteen kultainen valonheitto (_KohdeP); utu 0,04.
+// v6 (Linssiseppä 9.10., kehityskaupungit): kierroksen muut maamerkit julkisivuvalolla (_Maamerkit, maasta ylöspäin hiipuva lämmin
+// valo) ja veden heijastukset vesimaskin (_Vedet) vedellä: rantavalot katsesuunnassa (Black Marble maalla 25–300 m edempänä) ja
+// valaistujen maamerkkien kultaiset juovat; aaltojen välke (venytetty kohina katsesuuntaan), fresnel loivassa kulmassa.
 // Taivas (syvyys kaukotasossa) ohitetaan. KaupunkiYovalot.cs kytkee passin FullScreenPassRendererFeaturena vain yöllä.
 Shader "Matkakirja/Linssit/KaupunkiYovalot"
 {
@@ -38,6 +41,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float4 _TieAlue;                // x = keskipisteen lat, y = lon, z = sivu (m), w = 1 jos kadut ladattu
             float4 _KohdeP;                 // kohteen maapiste paikallisessa ENU:ssa (m), w = 1 jos kohde
             float4 _KohdeParam;             // x = säde (m), y = voima
+            TEXTURE2D(_Vedet); SAMPLER(sampler_Vedet);
+            float4 _VesiAlue;               // x = keskipisteen lat, y = lon, z = sivu (m), w = heijastuksen voima (0 = ei maskia)
+            float4 _KameraP;                // kamera paikallisessa ENU:ssa (m)
+            float4 _Maamerkit[8];           // xyz = maapiste paikallisessa ENU:ssa, w = säde (m); w = 0 tyhjä
+            float4 _MaamerkkiParam;         // x = määrä, y = voima
 
             float3 Hash32(float2 p)
             {
@@ -62,6 +70,16 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 return 0.7 * v / (0.3 + 0.7 * v);   // loiva käyrä: 1 → 0,7; 0,1 → 0,19
             }
 
+            float Vesi(float3 paikka)
+            {
+                if (_VesiAlue.w <= 0.0) return 0.0;
+                float2 ll = Asteet(paikka);
+                float2 m = float2((ll.y - _VesiAlue.y) * MAA_R * cos(_VesiAlue.x / ASTE) / ASTE, (ll.x - _VesiAlue.x) * MAA_R / ASTE);
+                float2 vuv = m / _VesiAlue.z + 0.5;
+                if (any(vuv < 0.0) || any(vuv > 1.0)) return 0.0;
+                return SAMPLE_TEXTURE2D_LOD(_Vedet, sampler_Vedet, vuv, 0).r;
+            }
+
             float3 Paikka(float2 uv)
             {
                 float d = SampleSceneDepth(uv);
@@ -81,7 +99,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 #endif
                 float3 p = mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
                 float bm = BlackMarble(p);
-                if (bm <= 0.01 && _KohdeP.w < 0.5) return c;
+                if (bm <= 0.01 && _KohdeP.w < 0.5 && _MaamerkkiParam.x < 0.5) return c;
 
                 // Naapurit: lyhyempi ero kummaltakin akselilta (reunalla pitkä ero on toisen pinnan puolella).
                 float3 pr = Paikka(uv + float2(px.x, 0)), pl = Paikka(uv - float2(px.x, 0));
@@ -98,6 +116,12 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 tasainen = lerp(tasainen, 1.0, saturate((jalanjalki - 2.0) / 4.0));   // kaukana (pikseli > 2–6 m) mattoa ei karsita
 
                 float3 lisa = _ValoVari.rgb * bm * bm * _ValoParam.y;  // valosaaste
+                // KAUKAISET VALOT (v7, Päätoimittaja 9.10.: filmikuvissa horisonttiin katsottaessa kaupunki oli musta, B163:n alaspäin
+                // katsovassa kuvassa valot näkyivät): kun pikseli on pinnalla yli ~2–10 m, katulamput (nakyvyys), ikkunat (terava) ja
+                // katunauhan normaalit (vaaka, kohinainen syvyys) häviävät, ja jäljelle jäi vain himmeä valosaaste. Kaukana Black Marblen
+                // säteily piirretään valopisteiden keskiarvona (lamput + ikkunat yhteensä), joten kaupunki hehkuu horisonttiin asti.
+                float kauko = saturate((jalanjalki - 2.0) / 8.0);
+                lisa += _ValoVari.rgb * bm * kauko * _ValoParam.z * 0.35;
 
                 // Katuvalot OSM-katujen mukaan (v4): maski kaduista; vaakapinnoilla valonauha (katu valaistu) ja lamput nauhan keskellä.
                 float vaaka = saturate((n.y - 0.82) / 0.1) * tasainen;
@@ -154,7 +178,51 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float terava = saturate(2.0 - jalanjalki * 2.0 / 1.2);       // ikkuna (~1,2 m) yli puolen pikselin
                     float keski = bm * _IkkunaParam.y * 0.23;                     // kaukana: palavien osuus × ikkunan ala
                     float3 iv = lerp(float3(1.0, 0.72, 0.42), float3(1.0, 0.88, 0.70), h.y);
+                    // VALOMAINOKSET (v7, Päätoimittaja 9.10. iltavalot): harva palava ikkuna värillisenä neonina, joka välkkyy hitaasti.
+                    float neon = step(h.z, 0.035) * palaa;
+                    float3 nv = h.y < 0.33 ? float3(1.0, 0.2, 0.55) : (h.y < 0.66 ? float3(0.2, 0.85, 1.0) : float3(1.0, 0.35, 0.15));
+                    float valke = 0.75 + 0.25 * sin(_Time.y * (2.0 + 5.0 * h.x) + h.y * 40.0);
+                    iv = lerp(iv, nv * 1.8 * valke, neon);
                     lisa += iv * pysty * tasainen * _IkkunaParam.x * (0.6 + 0.4 * h.z) * lerp(keski, palaa * ikkuna, terava);
+                }
+                // v6 veden heijastukset: vaakapinta vesimaskissa; rantavalot ja maamerkit katsesuunnassa juovina.
+                float vesi = _VesiAlue.w > 0.0 ? Vesi(p) * saturate((n.y - 0.9) / 0.08) : 0.0;
+                if (vesi > 0.01)
+                {
+                    float3 kohti = p - _KameraP.xyz; float et = length(kohti);
+                    float2 v = normalize(kohti.xz + 1e-4), poikki = float2(-v.y, v.x);
+                    float cosv = saturate(-kohti.y / max(et, 1.0));
+                    float fresnel = 0.12 + 0.88 * pow(1.0 - cosv, 3.0);
+                    // Aaltojen välke: kohina venytettynä katsesuuntaan (juovat kohti kameraa), liikkuu ajassa.
+                    float2 q = float2(dot(p.xz, poikki) / 2.5, dot(p.xz, v) / 14.0 + _Time.y * 0.9);
+                    float3 hv = Hash32(floor(q));
+                    float valke = saturate(hv.x * 1.6 - 0.35) * (0.6 + 0.4 * sin(_Time.y * 2.3 + hv.y * 6.28));
+                    float ranta = 0.0;
+                    [unroll] for (int k = 0; k < 4; k++)
+                    {
+                        float s = 25.0 * exp2((float)k * 1.25);   // 25, 60, 141, 336 m
+                        float3 q3 = p + float3(v.x * s, 0.0, v.y * s);
+                        ranta = max(ranta, BlackMarble(q3) * (1.0 - Vesi(q3)) / (1.0 + s / 250.0));
+                    }
+                    float3 heij = _ValoVari.rgb * ranta * 0.9;
+                    float3 kulta = float3(1.0, 0.74, 0.36);
+                    int nm = (int)_MaamerkkiParam.x;
+                    for (int m = 0; m < 8; m++)
+                    {
+                        if (m >= nm) break;
+                        float4 mm = _Maamerkit[m];
+                        float2 dl = mm.xz - p.xz; float pitka = dot(dl, v);
+                        if (pitka <= 0.0) continue;
+                        float sivu = dot(dl, poikki), lev = mm.w * 0.6;
+                        heij += kulta * _MaamerkkiParam.y * 0.35 * exp(-sivu * sivu / (lev * lev)) / (1.0 + pitka / 700.0);
+                    }
+                    if (_KohdeP.w > 0.5)   // nykyinen kohde (Eiffel Seinellä) vahvimpana juovana
+                    {
+                        float2 dl = _KohdeP.xz - p.xz; float pitka = dot(dl, v);
+                        float sivu = dot(dl, poikki), lev = _KohdeParam.x * 0.6;
+                        if (pitka > 0.0) heij += kulta * _KohdeParam.y * 0.35 * exp(-sivu * sivu / (lev * lev)) / (1.0 + pitka / 700.0);
+                    }
+                    lisa += heij * vesi * fresnel * valke * _VesiAlue.w;
                 }
                 float3 tulos = c.rgb + lisa * _ValoParam.x;
                 // Kohteen valaistus (v4): lämmin valonheitto kohteen ympärille maasta ylöspäin (Eiffel kultaisena).
@@ -162,6 +230,18 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 {
                     float3 kulta = float3(1.0, 0.74, 0.36);
                     tulos = tulos * (1.0 + _KohdeParam.y * wKohde * _ValoParam.x * kulta) + kulta * 0.03 * wKohde * _ValoParam.x;
+                }
+                // v6 maamerkkien julkisivuvalo: lämmin valo maasta ylöspäin (heikkenee korkeuden mukana), ei vedelle.
+                int nmv = (int)_MaamerkkiParam.x;
+                for (int mi = 0; mi < 8; mi++)
+                {
+                    if (mi >= nmv) break;
+                    float4 mm = _Maamerkit[mi];
+                    float2 dk = p.xz - mm.xz; float yl = p.y - mm.y;
+                    float w = exp(-dot(dk, dk) / (mm.w * mm.w)) * saturate((yl + 4.0) / 4.0) * exp(-max(0.0, yl) / 45.0) * (1.0 - vesi);
+                    if (w <= 0.001) continue;
+                    float3 julkisivu = float3(1.0, 0.82, 0.55);
+                    tulos = tulos * (1.0 + _MaamerkkiParam.y * w * _ValoParam.x * julkisivu) + julkisivu * 0.02 * w * _ValoParam.x;
                 }
                 return half4((half3)tulos, c.a);
             }
