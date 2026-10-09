@@ -97,13 +97,13 @@ test('kuoren huippu-taso: 8k-atlas vain jos se on blender.json:ssa, muuten 4k (l
   assert.match(kanssa.ulkokuori.tekstuurit.normaali, /ulkokuori-4k-4x4\.astcm$/);
 });
 
-test('kuoren asu: ulkokuori/asu-1499.txt → ulkokuori.asu "1499", ilman merkkiä ei kenttää (PT 9.10.)', () => {
+test('kuoren asu: ulkokuori/asu.json → ulkokuori.asu "1499", ilman merkkiä ei kenttää (PT 9.10.)', () => {
   const ilman = kopio(RAKENNUS);
-  lisaaBlender(ilman, { ...B, tiedostot: B.tiedostot.filter((t) => t.polku !== 'ulkokuori/asu-1499.txt') });
+  lisaaBlender(ilman, { ...B, tiedostot: B.tiedostot.filter((t) => t.polku !== 'ulkokuori/asu.json') });
   assert.equal(ilman.ulkokuori.asu, undefined);
   const kanssa = kopio(RAKENNUS);
-  lisaaBlender(kanssa, { ...B, tiedostot: [...B.tiedostot.filter((t) => t.polku !== 'ulkokuori/asu-1499.txt'),
-    { polku: 'ulkokuori/asu-1499.txt', sha256: 'a'.repeat(64), tavuja: 5 }] });
+  lisaaBlender(kanssa, { ...B, tiedostot: [...B.tiedostot.filter((t) => t.polku !== 'ulkokuori/asu.json'),
+    { polku: 'ulkokuori/asu.json', sha256: 'a'.repeat(64), tavuja: 5 }] });
   assert.equal(kanssa.ulkokuori.asu, '1499');
 });
 

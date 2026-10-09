@@ -50,7 +50,7 @@ for f in ulkokuori-8k-4x4.astcm ulkokuori-hamara-8k-4x4.astcm ulkokuori-hamara-8
   if [ -f "$LAHDE/ulkokuori/$f" ]; then lisaa "ulkokuori/$f" "ulkokuori/$f"; fi
 done
 # Kuoren asu (PT 9.10.2026): vuoden 1499 kuoren merkki → rakenna.mjs ulkokuori.asu "1499".
-if [ -f "$LAHDE/ulkokuori/asu-1499.txt" ]; then lisaa "ulkokuori/asu-1499.txt" "ulkokuori/asu-1499.txt"; fi
+if [ -f "$LAHDE/ulkokuori/asu.json" ]; then lisaa "ulkokuori/asu.json" "ulkokuori/asu.json"; fi
 # Hybridi-PBR (laatusuunnitelma 30.9., menetelmä B): materiaalimaski + kirjaston 4 materiaalia (diff + nor_gl), maskin
 # kanavajärjestyksessä R graniittilohkomuuri, G paanukatto, B kivilaatta, A kallio. Mukaan, jos lähteissä on.
 KIRJASTO=${KIRJASTO:-/Users/Shared/Claude/proto-3d/_kirjasto/valmiit}

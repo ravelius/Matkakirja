@@ -367,8 +367,8 @@ export function lisaaBlender(rakennusJson, blender) {
     },
   };
   // Kuoren asu (PT 9.10.2026, Siirtoseppä proto 46ee501f9): vuoden 1499 kuori (v25) viedään merkkitiedoston
-  // ulkokuori/asu-1499.txt kanssa → ulkokuori.asu "1499" (historia näyttää ranta-1499:n aina). Ilman merkkiä nykyasu (v24).
-  if (on.has('ulkokuori/asu-1499.txt')) rakennusJson.ulkokuori.asu = '1499';
+  // ulkokuori/asu.json kanssa → ulkokuori.asu "1499" (historia näyttää ranta-1499:n aina). Ilman merkkiä nykyasu (v24).
+  if (on.has('ulkokuori/asu.json')) rakennusJson.ulkokuori.asu = '1499';
   // Päivätilan JPEG-vara ilman ASTC:tä (Siirtoseppä 4.10.; ennen glb:n upotettu JPEG, joka poistetaan, kun natiivi lukee
   // tämän): vain jos kaikki tasojen JPEG:t on viety blender.json:iin.
   if (Object.values(tasot).every((k) => on.has(`ulkokuori/ulkokuori-${k}.jpg`))) {

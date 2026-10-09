@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "0acd10e2a3111656",
-  "kansio": "dioraama/olavinlinna/blender/0acd10e2a3111656/",
+  "hash": "87d5fc55cbd371e6",
+  "kansio": "dioraama/olavinlinna/blender/87d5fc55cbd371e6/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2859,9 +2859,9 @@
       "tavuja": 718956
     },
     {
-      "polku": "ulkokuori/asu-1499.txt",
-      "sha256": "240705a7ee92c0eae4bb941a458b05ad3fb425f2cde74464b9e74e88331ef4fe",
-      "tavuja": 5
+      "polku": "ulkokuori/asu.json",
+      "sha256": "0f61909300a30faece7187972582582ac33fc6190328256e4e3d18983bf91b47",
+      "tavuja": 16
     },
     {
       "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
