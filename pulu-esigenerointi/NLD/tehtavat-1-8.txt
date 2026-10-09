@@ -1,0 +1,192 @@
+================ KOHTA 36 (kohde:hahmotelma-hindeloopen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Ankkuri torilla] Kapteeni Luis Alcázarin aukiolla lepää valtava, mustaksi maalattu laivan ankkuri korokkeella, jonka portaat kiertävät koko patsaan ympäri - muistomerkki kaupungin merenkulku- ja kalastusperinteelle. Puerto Montt on 1800-luvulta asti ollut Pohjois-Patagonian tärkein kauppasatama: sen kautta kulki puuta, villaa ja karjaa etelän harvaan asutuilta seuduilta, ja samaa reittiä siirtolaiset ja tavara kulkivat sisämaahan Llanquihuen järvelle asti. Aukion takana kohoava kukkula ja sen huipulla siintävä valkoinen risti kuuluvat Isla Tenglon maisemaan salmen toisella puolella. Ankkuri on suosittu tapaamispaikka ja yksi kaupungin tunnetuimmista veistoksista.
+
+### 36.1
+KYSYMYS: Mistä Hindeloopenin oma kieli syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+### 36.2
+KYSYMYS: Mitä ankkuri talon julkisivussa kertoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Ankkuri torilla] Kapteeni Luis Alcázarin aukiolla lepää valtava, mustaksi maalattu laivan ankkuri korokkeella, jonka portaat kiertävät koko patsaan ympäri - muistomerkki kaupungin merenkulku- ja kalastusperinteelle. Puerto Montt on 1800-luvulta asti ollut Pohjois-Patagonian tärkein kauppasatama: sen kautta kulki puuta, villaa ja karjaa etelän harvaan asutuilta seuduilta, ja samaa reittiä siirtolaiset ja tavara kulkivat sisämaahan Llanquihuen järvelle asti. Aukion takana kohoava kukkula ja sen huipulla siintävä valkoinen risti kuuluvat Isla Tenglon maisemaan salmen toisella puolella. Ankkuri on suosittu tapaamispaikka ja yksi kaupungin tunnetuimmista veistoksista.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-urk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 37.1
+KYSYMYS: Milloin Urk lakkasi olemasta saari?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 37.2
+KYSYMYS: Miksi Urkin murre on säilynyt niin omaleimaisena?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-thorn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+### 38.1
+KYSYMYS: Miksi Thornia kutsutaan valkoiseksi kaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+### 38.2
+KYSYMYS: Kuka Thornin luostarivaltiota johti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-nuenen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Orsayn taidemuseo] 1900 Orsayn museo oli ensin rautatieasema. Victor Laloux'n suunnittelema Gare d'Orsay valmistui vuonna 1900 maailmannäyttelyyn, ja sinne johtava rata kulki useita kilometrejä tunnelissa Seinen eteläpuolisten rantakatujen alla. Asema suljettiin jo 1939, ja rakennus seisoi vuosikymmeniä vailla käyttöä. Museoksi se avattiin joulukuussa 1986 italialaisen Gae Aulentin suunnitelmien mukaan, ja muut Pariisin museot — Louvre ja Pompidou-keskus muiden muassa — siirsivät sinne kokoelmiaan. Talossa on maailman merkittävin ranskalaisen impressionismin kokoelma: Manet, Monet, Cézanne, Degas, Renoir ja van Gogh. Postikorttimyynnin perusteella suosituin teos on Renoirin Bal du moulin de la Galette vuodelt…
+
+### 39.1
+KYSYMYS: Kuinka kauan Van Gogh asui Nuenenissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Orsayn taidemuseo] 1900 Orsayn museo oli ensin rautatieasema. Victor Laloux'n suunnittelema Gare d'Orsay valmistui vuonna 1900 maailmannäyttelyyn, ja sinne johtava rata kulki useita kilometrejä tunnelissa Seinen eteläpuolisten rantakatujen alla. Asema suljettiin jo 1939, ja rakennus seisoi vuosikymmeniä vailla käyttöä. Museoksi se avattiin joulukuussa 1986 italialaisen Gae Aulentin suunnitelmien mukaan, ja muut Pariisin museot — Louvre ja Pompidou-keskus muiden muassa — siirsivät sinne kokoelmiaan. Talossa on maailman merkittävin ranskalaisen impressionismin kokoelma: Manet, Monet, Cézanne, Degas, Renoir ja van Gogh. Postikorttimyynnin perusteella suosituin teos on Renoirin Bal du moulin de la Galette vuodelt…
+
+### 39.2
+KYSYMYS: Minkä maalauksen sarja huipentui Nuenenissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-orvelte) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+
+### 40.1
+KYSYMYS: Mikä Orvelten kylässä on erikoista liikenteessä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+
+### 40.2
+KYSYMYS: Mikä Bruntingerhof on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

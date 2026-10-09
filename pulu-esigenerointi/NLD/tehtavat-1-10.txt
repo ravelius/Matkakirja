@@ -1,0 +1,332 @@
+================ KOHTA 46 (nosto:tulppaanimania) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdestä sipulista maksettiin kanavatalon hinta, ja kaksi päivää myöhemmin siitä ei maksettu mitään
+Tietoruudun teksti: Tulppaani tuli Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista liekkikuviota — kukaan ei tiennyt miksi, ja sitä pidettiin lajikkeen ansiona. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina: ostaja ei ollut nähnyt kukkaa eikä saanut sipulia käteensä. Hollantilaiset sanoivat sitä tuulikaupaksi. Huipulla eräistä sipuleista maksettiin yli kymmenkertaisesti se, minkä taitava käsityöläinen ansaitsi vuodessa, ja kalleimmasta lajikkeesta Semper Augustuksesta jopa kymmenentuhatta guldenia. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia — samalla rahalla sai kanavatalon.
+
+Kaksi päivää ennen sitä huutokauppaa kauppa oli jo pysähtynyt. Aikalaissatiirin mukaan romahdus alkoi 3. helmikuuta Haarlemissa…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdestä kukkasipulista maksettiin talon hinta] 1637 — Tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Kukaan ei tiennyt, mistä raidat johtuivat: ne olivat virustaudin jälkiä, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina — ostaja ei ollut nähnyt kukkaa. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo pysähtynyt.
+- [Machu Picchu — kaupunkilehti / Machu Picchu: Kaupunki, jota isoisä ei koskaan nähnyt] Machu Picchu kohosi vuoristonharjanteelle 1400-luvun puolivälissä, todennäköisesti keisari Pachacutecin käskystä Urubamban laakson valloituksen jälkeen: kausiluonteinen maatila, ei pysyvä pääkaupunki. Espanjalaisten kukistaessa inkavallan 1500-luvulla kaupunki autioitui, tutkijoiden mukaan mahdollisesti tautien ja vallan romahduksen vuoksi. Kun isoisä kirjoitti matkapäiväkirjaansa 1873, Machu Picchu oli yhä täysin tuntematon ulkomaailmalle: vain muutama lähilaakson perhe tiesi raunioista. Hiram Bingham toi paikan maailman tietoisuuteen vasta 1911 – isoisä ei siis koskaan voinut käydä täällä, koska paikka ei vielä ollut kenenkään ulkopuolisen kartalla.
+
+### 46.1
+KYSYMYS: Mistä tulppaanin liekkikuviot johtuivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdestä sipulista maksettiin kanavatalon hinta, ja kaksi päivää myöhemmin siitä ei maksettu mitään
+Tietoruudun teksti: Tulppaani tuli Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista liekkikuviota — kukaan ei tiennyt miksi, ja sitä pidettiin lajikkeen ansiona. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina: ostaja ei ollut nähnyt kukkaa eikä saanut sipulia käteensä. Hollantilaiset sanoivat sitä tuulikaupaksi. Huipulla eräistä sipuleista maksettiin yli kymmenkertaisesti se, minkä taitava käsityöläinen ansaitsi vuodessa, ja kalleimmasta lajikkeesta Semper Augustuksesta jopa kymmenentuhatta guldenia. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia — samalla rahalla sai kanavatalon.
+
+Kaksi päivää ennen sitä huutokauppaa kauppa oli jo pysähtynyt. Aikalaissatiirin mukaan romahdus alkoi 3. helmikuuta Haarlemissa…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdestä kukkasipulista maksettiin talon hinta] 1637 — Tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Kukaan ei tiennyt, mistä raidat johtuivat: ne olivat virustaudin jälkiä, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina — ostaja ei ollut nähnyt kukkaa. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo pysähtynyt.
+
+### 46.2
+KYSYMYS: Miksi sipuleilla kaupattiin maan alla kasvavina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdestä sipulista maksettiin kanavatalon hinta, ja kaksi päivää myöhemmin siitä ei maksettu mitään
+Tietoruudun teksti: Tulppaani tuli Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista liekkikuviota — kukaan ei tiennyt miksi, ja sitä pidettiin lajikkeen ansiona. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina: ostaja ei ollut nähnyt kukkaa eikä saanut sipulia käteensä. Hollantilaiset sanoivat sitä tuulikaupaksi. Huipulla eräistä sipuleista maksettiin yli kymmenkertaisesti se, minkä taitava käsityöläinen ansaitsi vuodessa, ja kalleimmasta lajikkeesta Semper Augustuksesta jopa kymmenentuhatta guldenia. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia — samalla rahalla sai kanavatalon.
+
+Kaksi päivää ennen sitä huutokauppaa kauppa oli jo pysähtynyt. Aikalaissatiirin mukaan romahdus alkoi 3. helmikuuta Haarlemissa…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdestä kukkasipulista maksettiin talon hinta] 1637 — Tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Kukaan ei tiennyt, mistä raidat johtuivat: ne olivat virustaudin jälkiä, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina — ostaja ei ollut nähnyt kukkaa. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo pysähtynyt.
+
+### 46.3
+KYSYMYS: Mitä sopimuksille tehtiin romahduksen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdestä sipulista maksettiin kanavatalon hinta, ja kaksi päivää myöhemmin siitä ei maksettu mitään
+Tietoruudun teksti: Tulppaani tuli Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista liekkikuviota — kukaan ei tiennyt miksi, ja sitä pidettiin lajikkeen ansiona. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina: ostaja ei ollut nähnyt kukkaa eikä saanut sipulia käteensä. Hollantilaiset sanoivat sitä tuulikaupaksi. Huipulla eräistä sipuleista maksettiin yli kymmenkertaisesti se, minkä taitava käsityöläinen ansaitsi vuodessa, ja kalleimmasta lajikkeesta Semper Augustuksesta jopa kymmenentuhatta guldenia. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia — samalla rahalla sai kanavatalon.
+
+Kaksi päivää ennen sitä huutokauppaa kauppa oli jo pysähtynyt. Aikalaissatiirin mukaan romahdus alkoi 3. helmikuuta Haarlemissa…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Machu Picchu — kaupunkilehti / Machu Picchu: Kaupunki, jota isoisä ei koskaan nähnyt] Machu Picchu kohosi vuoristonharjanteelle 1400-luvun puolivälissä, todennäköisesti keisari Pachacutecin käskystä Urubamban laakson valloituksen jälkeen: kausiluonteinen maatila, ei pysyvä pääkaupunki. Espanjalaisten kukistaessa inkavallan 1500-luvulla kaupunki autioitui, tutkijoiden mukaan mahdollisesti tautien ja vallan romahduksen vuoksi. Kun isoisä kirjoitti matkapäiväkirjaansa 1873, Machu Picchu oli yhä täysin tuntematon ulkomaailmalle: vain muutama lähilaakson perhe tiesi raunioista. Hiram Bingham toi paikan maailman tietoisuuteen vasta 1911 – isoisä ei siis koskaan voinut käydä täällä, koska paikka ei vielä ollut kenenkään ulkopuolisen kartalla.
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (nosto:afsluitdijk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Meri suljettiin kuin ovi, ja siitä tuli järvi
+Tietoruudun teksti: Zuiderzee oli matala merenlahti, joka nousi tulvina rantakyliin niin kauan kuin kukaan muisti. Insinööri Cornelis Lely piirsi sen sulkemisesta suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa: molemmilta rannoilta ja kahdelta varta vasten kasatulta työsaarelta. Pohjaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä, ja rakennusaineena kokeiltiin ensimmäistä kertaa moreenisavea — se osoittautui sitkeämmäksi kuin hiekka tai savi, ja sitä sattui olemaan juuri siinä missä patoa tarvittiin.
+
+Viimeinen aukko, jota sanottiin Vlieteriksi, suljettiin vuonna 1932. Sen kohdalle pystytettiin muistomerkki, ja seuraavana vuonna padon yli avattiin maantie. Valmis pato on 32,5 kilometriä pitkä, ja siitä vettä pidättää kolmekymmentä; molemmissa päissä on sulut, joista laivat pääsevät läpi ja joista ylimääräinen vesi l…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 47.1
+KYSYMYS: Miksi Zuiderzee haluttiin sulkea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Meri suljettiin kuin ovi, ja siitä tuli järvi
+Tietoruudun teksti: Zuiderzee oli matala merenlahti, joka nousi tulvina rantakyliin niin kauan kuin kukaan muisti. Insinööri Cornelis Lely piirsi sen sulkemisesta suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa: molemmilta rannoilta ja kahdelta varta vasten kasatulta työsaarelta. Pohjaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä, ja rakennusaineena kokeiltiin ensimmäistä kertaa moreenisavea — se osoittautui sitkeämmäksi kuin hiekka tai savi, ja sitä sattui olemaan juuri siinä missä patoa tarvittiin.
+
+Viimeinen aukko, jota sanottiin Vlieteriksi, suljettiin vuonna 1932. Sen kohdalle pystytettiin muistomerkki, ja seuraavana vuonna padon yli avattiin maantie. Valmis pato on 32,5 kilometriä pitkä, ja siitä vettä pidättää kolmekymmentä; molemmissa päissä on sulut, joista laivat pääsevät läpi ja joista ylimääräinen vesi l…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 47.2
+KYSYMYS: Miten patoa rakennettiin keskelle merta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Meri suljettiin kuin ovi, ja siitä tuli järvi
+Tietoruudun teksti: Zuiderzee oli matala merenlahti, joka nousi tulvina rantakyliin niin kauan kuin kukaan muisti. Insinööri Cornelis Lely piirsi sen sulkemisesta suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa: molemmilta rannoilta ja kahdelta varta vasten kasatulta työsaarelta. Pohjaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä, ja rakennusaineena kokeiltiin ensimmäistä kertaa moreenisavea — se osoittautui sitkeämmäksi kuin hiekka tai savi, ja sitä sattui olemaan juuri siinä missä patoa tarvittiin.
+
+Viimeinen aukko, jota sanottiin Vlieteriksi, suljettiin vuonna 1932. Sen kohdalle pystytettiin muistomerkki, ja seuraavana vuonna padon yli avattiin maantie. Valmis pato on 32,5 kilometriä pitkä, ja siitä vettä pidättää kolmekymmentä; molemmissa päissä on sulut, joista laivat pääsevät läpi ja joista ylimääräinen vesi l…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 47.3
+KYSYMYS: Mitä suljetulle merelle tapahtui sen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Meri suljettiin kuin ovi, ja siitä tuli järvi
+Tietoruudun teksti: Zuiderzee oli matala merenlahti, joka nousi tulvina rantakyliin niin kauan kuin kukaan muisti. Insinööri Cornelis Lely piirsi sen sulkemisesta suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa: molemmilta rannoilta ja kahdelta varta vasten kasatulta työsaarelta. Pohjaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä, ja rakennusaineena kokeiltiin ensimmäistä kertaa moreenisavea — se osoittautui sitkeämmäksi kuin hiekka tai savi, ja sitä sattui olemaan juuri siinä missä patoa tarvittiin.
+
+Viimeinen aukko, jota sanottiin Vlieteriksi, suljettiin vuonna 1932. Sen kohdalle pystytettiin muistomerkki, ja seuraavana vuonna padon yli avattiin maantie. Valmis pato on 32,5 kilometriä pitkä, ja siitä vettä pidättää kolmekymmentä; molemmissa päissä on sulut, joista laivat pääsevät läpi ja joista ylimääräinen vesi l…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (nosto:leeuwenhoek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Salaisuus, jonka hän vei hautaan, luettiin neutroneilla kolmesataa vuotta myöhemmin
+Tietoruudun teksti: Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla — siitä kaikki alkoi. Hän ei ollut oppinut mies eikä kuulunut yliopistoon, mutta hän opetteli sulattamaan lasista pikkuruisia pallolinssejä ja puristamaan yhden niistä kahden metallilevyn väliin. Laite ei ollut putki vaan kämmenelle mahtuva levy, jota katsottiin silmä kiinni linssissä. Säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä olennoista, joita ui sadevedessä ja joita kukaan muu ei ollut nähnyt. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan omin silmin. Samanlaisia löytyi myös hänen omista hampaistaan.
+
+Kirjaa hän ei kirjoittanut yhtäkään; kaikki on sekavissa kirjeissä, joita Royal Society julkaisi vuosikymmenten ajan. Yhden asian hän jätti kertomatta: miten linssit tehtiin. Sen hän sanoi pitävänsä itsellään, ja ni…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 48.1
+KYSYMYS: Miten yhden linssin mikroskooppia käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Salaisuus, jonka hän vei hautaan, luettiin neutroneilla kolmesataa vuotta myöhemmin
+Tietoruudun teksti: Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla — siitä kaikki alkoi. Hän ei ollut oppinut mies eikä kuulunut yliopistoon, mutta hän opetteli sulattamaan lasista pikkuruisia pallolinssejä ja puristamaan yhden niistä kahden metallilevyn väliin. Laite ei ollut putki vaan kämmenelle mahtuva levy, jota katsottiin silmä kiinni linssissä. Säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä olennoista, joita ui sadevedessä ja joita kukaan muu ei ollut nähnyt. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan omin silmin. Samanlaisia löytyi myös hänen omista hampaistaan.
+
+Kirjaa hän ei kirjoittanut yhtäkään; kaikki on sekavissa kirjeissä, joita Royal Society julkaisi vuosikymmenten ajan. Yhden asian hän jätti kertomatta: miten linssit tehtiin. Sen hän sanoi pitävänsä itsellään, ja ni…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 48.2
+KYSYMYS: Miksi Lontoossa ei uskottu Leeuwenhoekia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Salaisuus, jonka hän vei hautaan, luettiin neutroneilla kolmesataa vuotta myöhemmin
+Tietoruudun teksti: Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla — siitä kaikki alkoi. Hän ei ollut oppinut mies eikä kuulunut yliopistoon, mutta hän opetteli sulattamaan lasista pikkuruisia pallolinssejä ja puristamaan yhden niistä kahden metallilevyn väliin. Laite ei ollut putki vaan kämmenelle mahtuva levy, jota katsottiin silmä kiinni linssissä. Säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä olennoista, joita ui sadevedessä ja joita kukaan muu ei ollut nähnyt. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan omin silmin. Samanlaisia löytyi myös hänen omista hampaistaan.
+
+Kirjaa hän ei kirjoittanut yhtäkään; kaikki on sekavissa kirjeissä, joita Royal Society julkaisi vuosikymmenten ajan. Yhden asian hän jätti kertomatta: miten linssit tehtiin. Sen hän sanoi pitävänsä itsellään, ja ni…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 48.3
+KYSYMYS: Mitä neutronikuvaus paljasti vuonna 2021?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Salaisuus, jonka hän vei hautaan, luettiin neutroneilla kolmesataa vuotta myöhemmin
+Tietoruudun teksti: Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla — siitä kaikki alkoi. Hän ei ollut oppinut mies eikä kuulunut yliopistoon, mutta hän opetteli sulattamaan lasista pikkuruisia pallolinssejä ja puristamaan yhden niistä kahden metallilevyn väliin. Laite ei ollut putki vaan kämmenelle mahtuva levy, jota katsottiin silmä kiinni linssissä. Säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä olennoista, joita ui sadevedessä ja joita kukaan muu ei ollut nähnyt. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan omin silmin. Samanlaisia löytyi myös hänen omista hampaistaan.
+
+Kirjaa hän ei kirjoittanut yhtäkään; kaikki on sekavissa kirjeissä, joita Royal Society julkaisi vuosikymmenten ajan. Yhden asian hän jätti kertomatta: miten linssit tehtiin. Sen hän sanoi pitävänsä itsellään, ja ni…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (nosto:kirja-arkku) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti
+Tietoruudun teksti: Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen Loevesteinin linnaan tasavallan uskontokiistojen takia. Yksi oikeus hänelle jäi: hän sai lukea. Kirjat tuotiin isossa arkussa, joka soudettiin joen yli ja kannettiin portista sisään, ja aluksi vartijat avasivat arkun joka kerta. Vuosien mittaan he kyllästyivät. Sen huomasi myös vanki, ja hän alkoi harjoitella: maata liikkumatta kaksi tuntia, juuri niin kauan kuin venematka kesti.
+
+Maaliskuun 22. päivänä 1621, markkinapäivänä, palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta. Kukaan ei avannut sitä. Toisella rannalla De Groot nousi arkusta, pukeutui muurariksi ja käveli tiehensä. Hän pakeni Ranskaan ja kirjoitti siellä pääteoksensa; toinen niistä, Mare Liberum, esitti ettei meri voi kuulua kenellekään, ja niiden takia häntä sanotaan yhä kansainvälisen oikeuden isäksi. Arkku on Rijksmuseumin kokoelmassa, ja se on yllättä…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Vanki kannettiin ulos kirja-arkussa] 1621 — Oikeusoppinut Hugo de Groot istui elinkautista Loevesteinin linnassa. Hän sai vankilassa lukea, ja kirjat tuotiin isossa arkussa, joka soudettiin joen yli. Aluksi arkku tarkastettiin, mutta ajan mittaan vartijat kyllästyivät siihen. De Groot harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti. Maaliskuun 22. päivänä 1621 palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta markkinapäivänä, eikä kukaan avannut sitä. Toisella rannalla De Groot pukeutui muurariksi ja käveli tiehensä.
+- [Kap Horn — kaupunkilehti / Kap Horn: Saaret jotka löytyvät vain tarkasta kartasta] Runsaat sata kilometriä lounaaseen Kap Hornista kohoavat merestä pienet ja karut Diego Ramírezin saaret, jotka espanjalainen Garcia de Nodalin retkikunta löysi helmikuussa 1619 ja nimesi matkan kosmografin mukaan. Saaret olivat pitkään maailman eteläisin tunnettu maa-alue, kunnes Etelä-Sandwichsaaret löydettiin 156 vuotta myöhemmin. Brittiläisen laivaston Beaglen mittaukset vuosilta 1830–1834 painettiin merikartaksi 1841, ja sitä korjattiin vielä vuonna 1871 – juuri sellaista karttaa isoisän aikalaiset merimiehet olisivat käyttäneet purjehtiessaan näiden vaarallisten saarten ohi.
+
+### 49.1
+KYSYMYS: Miksi Hugo de Groot oli vankina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti
+Tietoruudun teksti: Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen Loevesteinin linnaan tasavallan uskontokiistojen takia. Yksi oikeus hänelle jäi: hän sai lukea. Kirjat tuotiin isossa arkussa, joka soudettiin joen yli ja kannettiin portista sisään, ja aluksi vartijat avasivat arkun joka kerta. Vuosien mittaan he kyllästyivät. Sen huomasi myös vanki, ja hän alkoi harjoitella: maata liikkumatta kaksi tuntia, juuri niin kauan kuin venematka kesti.
+
+Maaliskuun 22. päivänä 1621, markkinapäivänä, palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta. Kukaan ei avannut sitä. Toisella rannalla De Groot nousi arkusta, pukeutui muurariksi ja käveli tiehensä. Hän pakeni Ranskaan ja kirjoitti siellä pääteoksensa; toinen niistä, Mare Liberum, esitti ettei meri voi kuulua kenellekään, ja niiden takia häntä sanotaan yhä kansainvälisen oikeuden isäksi. Arkku on Rijksmuseumin kokoelmassa, ja se on yllättä…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Vanki kannettiin ulos kirja-arkussa] 1621 — Oikeusoppinut Hugo de Groot istui elinkautista Loevesteinin linnassa. Hän sai vankilassa lukea, ja kirjat tuotiin isossa arkussa, joka soudettiin joen yli. Aluksi arkku tarkastettiin, mutta ajan mittaan vartijat kyllästyivät siihen. De Groot harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti. Maaliskuun 22. päivänä 1621 palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta markkinapäivänä, eikä kukaan avannut sitä. Toisella rannalla De Groot pukeutui muurariksi ja käveli tiehensä.
+
+### 49.2
+KYSYMYS: Miten arkku pääsi ulos linnasta tarkastamatta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti
+Tietoruudun teksti: Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen Loevesteinin linnaan tasavallan uskontokiistojen takia. Yksi oikeus hänelle jäi: hän sai lukea. Kirjat tuotiin isossa arkussa, joka soudettiin joen yli ja kannettiin portista sisään, ja aluksi vartijat avasivat arkun joka kerta. Vuosien mittaan he kyllästyivät. Sen huomasi myös vanki, ja hän alkoi harjoitella: maata liikkumatta kaksi tuntia, juuri niin kauan kuin venematka kesti.
+
+Maaliskuun 22. päivänä 1621, markkinapäivänä, palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta. Kukaan ei avannut sitä. Toisella rannalla De Groot nousi arkusta, pukeutui muurariksi ja käveli tiehensä. Hän pakeni Ranskaan ja kirjoitti siellä pääteoksensa; toinen niistä, Mare Liberum, esitti ettei meri voi kuulua kenellekään, ja niiden takia häntä sanotaan yhä kansainvälisen oikeuden isäksi. Arkku on Rijksmuseumin kokoelmassa, ja se on yllättä…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Horn — kaupunkilehti / Kap Horn: Saaret jotka löytyvät vain tarkasta kartasta] Runsaat sata kilometriä lounaaseen Kap Hornista kohoavat merestä pienet ja karut Diego Ramírezin saaret, jotka espanjalainen Garcia de Nodalin retkikunta löysi helmikuussa 1619 ja nimesi matkan kosmografin mukaan. Saaret olivat pitkään maailman eteläisin tunnettu maa-alue, kunnes Etelä-Sandwichsaaret löydettiin 156 vuotta myöhemmin. Brittiläisen laivaston Beaglen mittaukset vuosilta 1830–1834 painettiin merikartaksi 1841, ja sitä korjattiin vielä vuonna 1871 – juuri sellaista karttaa isoisän aikalaiset merimiehet olisivat käyttäneet purjehtiessaan näiden vaarallisten saarten ohi.
+
+### 49.3
+KYSYMYS: Mitä hän kirjoitti paettuaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti
+Tietoruudun teksti: Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen Loevesteinin linnaan tasavallan uskontokiistojen takia. Yksi oikeus hänelle jäi: hän sai lukea. Kirjat tuotiin isossa arkussa, joka soudettiin joen yli ja kannettiin portista sisään, ja aluksi vartijat avasivat arkun joka kerta. Vuosien mittaan he kyllästyivät. Sen huomasi myös vanki, ja hän alkoi harjoitella: maata liikkumatta kaksi tuntia, juuri niin kauan kuin venematka kesti.
+
+Maaliskuun 22. päivänä 1621, markkinapäivänä, palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta. Kukaan ei avannut sitä. Toisella rannalla De Groot nousi arkusta, pukeutui muurariksi ja käveli tiehensä. Hän pakeni Ranskaan ja kirjoitti siellä pääteoksensa; toinen niistä, Mare Liberum, esitti ettei meri voi kuulua kenellekään, ja niiden takia häntä sanotaan yhä kansainvälisen oikeuden isäksi. Arkku on Rijksmuseumin kokoelmassa, ja se on yllättä…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (nosto:amsterdamin-kapein-talo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Amsterdam: Verotettiin julkisivun leveydestä] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+
+### 50.1
+KYSYMYS: Miksi vero laskettiin juuri julkisivun leveydestä eikä pinta-alasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Amsterdam: Verotettiin julkisivun leveydestä] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+
+### 50.2
+KYSYMYS: Millaista on asua kahden metrin levyisessä talossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 50.3
+KYSYMYS: Käytetäänkö nostopuita yhä, vai ovatko ne pelkkää koristetta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

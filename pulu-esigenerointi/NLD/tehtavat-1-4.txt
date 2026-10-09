@@ -1,0 +1,192 @@
+================ KOHTA 16 (kohde:hahmotelma-paleis-voor-volksvlijt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paleis voor Volksvlijt (historia)
+Tietoruudun teksti: Lääkäri Samuel Sarphatin Vereeniging voor Volksvlijt -yhdistys rakennutti Lontoon Crystal Palacen innoittaman lasi-rautapalatsin Frederiksplein-torille; se valmistui 1864 näyttely- ja konserttihalliksi. Tulipalo tuhosi rakennuksen yöllä 17.–18.4.1929, ja säilyneet tiiliholvikäytävätkin purettiin myöhemmin.
+
+### 16.1
+KYSYMYS: Miltä Paleis voor Volksvlijt näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paleis voor Volksvlijt (historia)
+Tietoruudun teksti: Lääkäri Samuel Sarphatin Vereeniging voor Volksvlijt -yhdistys rakennutti Lontoon Crystal Palacen innoittaman lasi-rautapalatsin Frederiksplein-torille; se valmistui 1864 näyttely- ja konserttihalliksi. Tulipalo tuhosi rakennuksen yöllä 17.–18.4.1929, ja säilyneet tiiliholvikäytävätkin purettiin myöhemmin.
+
+### 16.2
+KYSYMYS: Miksi Paleis voor Volksvlijt katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paleis voor Volksvlijt (historia)
+Tietoruudun teksti: Lääkäri Samuel Sarphatin Vereeniging voor Volksvlijt -yhdistys rakennutti Lontoon Crystal Palacen innoittaman lasi-rautapalatsin Frederiksplein-torille; se valmistui 1864 näyttely- ja konserttihalliksi. Tulipalo tuhosi rakennuksen yöllä 17.–18.4.1929, ja säilyneet tiiliholvikäytävätkin purettiin myöhemmin.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-texel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Texel (luonto · saari)
+Tietoruudun teksti: Texel on saari ja kunta Pohjois-Hollannissa, ja se on Länsi-Friisin saarten suurin ja asutuin; saari sijaitsee Wattenmerellä Den Helderin pohjoispuolella. Nykyään siellä asuu noin 13 800 ihmistä. Saari sai kaupunkioikeudet vuonna 1415, ja sieltä lähti 5. kesäkuuta 1594 ensimmäinen hollantilainen retkikunta Koillisväylälle. Saaren ympäristön matalat vedet ovat aiheuttaneet lukuisia haaksirikkoja. Kun amerikkalainen upseeri John Paul Jones oli vuonna 1779 vallannut englantilaisen fregatin Serapis, hän purjehti sen kiireellisiin korjauksiin Texeliin.
+
+### 17.1
+KYSYMYS: Minkä retken laivat lähtivät Texelistä vuonna 1594?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Texel (luonto · saari)
+Tietoruudun teksti: Texel on saari ja kunta Pohjois-Hollannissa, ja se on Länsi-Friisin saarten suurin ja asutuin; saari sijaitsee Wattenmerellä Den Helderin pohjoispuolella. Nykyään siellä asuu noin 13 800 ihmistä. Saari sai kaupunkioikeudet vuonna 1415, ja sieltä lähti 5. kesäkuuta 1594 ensimmäinen hollantilainen retkikunta Koillisväylälle. Saaren ympäristön matalat vedet ovat aiheuttaneet lukuisia haaksirikkoja. Kun amerikkalainen upseeri John Paul Jones oli vuonna 1779 vallannut englantilaisen fregatin Serapis, hän purjehti sen kiireellisiin korjauksiin Texeliin.
+
+### 17.2
+KYSYMYS: Miksi John Paul Jones purjehti Texeliin vuonna 1779?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Texel (luonto · saari)
+Tietoruudun teksti: Texel on saari ja kunta Pohjois-Hollannissa, ja se on Länsi-Friisin saarten suurin ja asutuin; saari sijaitsee Wattenmerellä Den Helderin pohjoispuolella. Nykyään siellä asuu noin 13 800 ihmistä. Saari sai kaupunkioikeudet vuonna 1415, ja sieltä lähti 5. kesäkuuta 1594 ensimmäinen hollantilainen retkikunta Koillisväylälle. Saaren ympäristön matalat vedet ovat aiheuttaneet lukuisia haaksirikkoja. Kun amerikkalainen upseeri John Paul Jones oli vuonna 1779 vallannut englantilaisen fregatin Serapis, hän purjehti sen kiireellisiin korjauksiin Texeliin.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-vlieland) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlieland (luonto · saari)
+Tietoruudun teksti: Vlieland on saari Wattenmerellä Texelin ja Terschellingin välissä, ja se kuuluu Länsi-Friisin saariin. Saari irtosi mantereesta vuoden 1287 Pyhän Lucian tulvassa, ja se on nimetty Vlie-salmen mukaan. Saaren maisema on enimmäkseen hiekkadyynejä, ja siellä on vain yksi kylä, Oost-Vlieland; toinen kylä, West-Vlieland, hukkui mereen vuonna 1736. Mantereelta, Harlingenista, saarelle pääsee lautalla, mutta turistit eivät saa tuoda autojaan mukanaan, ja yleisin kulkuneuvo on polkupyörä. Saarelaiset eivät puhu friisiä: heidän oma Vlielandin murteensa oli sukua Texelin murteelle, ja sen viimeinen äidinkielinen puhuja kuoli vuonna 1993 107-vuotiaana.
+
+### 18.1
+KYSYMYS: Mitä tapahtui West-Vlielandin kylälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlieland (luonto · saari)
+Tietoruudun teksti: Vlieland on saari Wattenmerellä Texelin ja Terschellingin välissä, ja se kuuluu Länsi-Friisin saariin. Saari irtosi mantereesta vuoden 1287 Pyhän Lucian tulvassa, ja se on nimetty Vlie-salmen mukaan. Saaren maisema on enimmäkseen hiekkadyynejä, ja siellä on vain yksi kylä, Oost-Vlieland; toinen kylä, West-Vlieland, hukkui mereen vuonna 1736. Mantereelta, Harlingenista, saarelle pääsee lautalla, mutta turistit eivät saa tuoda autojaan mukanaan, ja yleisin kulkuneuvo on polkupyörä. Saarelaiset eivät puhu friisiä: heidän oma Vlielandin murteensa oli sukua Texelin murteelle, ja sen viimeinen äidinkielinen puhuja kuoli vuonna 1993 107-vuotiaana.
+
+### 18.2
+KYSYMYS: Millä tavalla vieraat pääsevät Vlielandille ja liikkuvat siellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlieland (luonto · saari)
+Tietoruudun teksti: Vlieland on saari Wattenmerellä Texelin ja Terschellingin välissä, ja se kuuluu Länsi-Friisin saariin. Saari irtosi mantereesta vuoden 1287 Pyhän Lucian tulvassa, ja se on nimetty Vlie-salmen mukaan. Saaren maisema on enimmäkseen hiekkadyynejä, ja siellä on vain yksi kylä, Oost-Vlieland; toinen kylä, West-Vlieland, hukkui mereen vuonna 1736. Mantereelta, Harlingenista, saarelle pääsee lautalla, mutta turistit eivät saa tuoda autojaan mukanaan, ja yleisin kulkuneuvo on polkupyörä. Saarelaiset eivät puhu friisiä: heidän oma Vlielandin murteensa oli sukua Texelin murteelle, ja sen viimeinen äidinkielinen puhuja kuoli vuonna 1993 107-vuotiaana.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-terschelling) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terschelling (luonto · saari)
+Tietoruudun teksti: Terschelling on Vlielandin ja Amelandin välissä sijaitseva Länsi-Friisin saari Pohjois-Alankomaissa. Puuta on saarella vähän, joten useimmat talot ja ladot on rakennettu haaksirikkoutuneilta laivoilta pelastetuista mastoista. Saarella kasvavat karpalot alkoivat vuonna 1840, kun rannalle ajautui tynnyri karpaloita, jotka merimiehet olivat ilmeisesti pakanneet keripukkia vastaan; saarelaiset alkoivat viljellä niitä. Vuonna 1666 englantilaiset polttivat West-Terschellingin maan tasalle, ja tapahtuma tunnetaan admiraali Robert Holmesin mukaan nimellä Holmesin rovio. Merenkulkija Willem Barentsz syntyi Terschellingillä noin vuonna 1550.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NFK — maalehti / Arki: Kylä jossa kaikilla on sama sukunimi] nykyään — Lähes puolet Norfolkinsaaren asukkaista polveutuu samoista yhdeksästä Bounty-kapinallisesta, joten saarella on käytössä vain kourallinen sukunimiä: Christian, Quintal, Adams, Young, McCoy, Evans, Buffett ja Nobbs. Puhelinluettelossa on noin 40 Quintalia, 37 Evansia ja 18 Adamsia, joten pelkkä sukunimi ei riitä erottamaan ketään. Siksi useimmat saarelaiset tunnetaan lempinimillä, jotka on painettu puhelinluetteloon oikeiden nimien rinnalle: "Dar Bizziebee" on Darlene Buffett, "Chinny" on Rob Adams ja "Moonie" jompikumpi kahdesta John Christianista. Saaren oma Bounty Folk -museo kokoaa yhteen tämän sukuhistorian esineitä ja tarinoita.
+- [Bermuda — kaupunkilehti / Bermuda: Setripuiset purjehtijat] Kun siirtomaayhtiön monopoli purkautui 1684, bermudalaiset kääntyivät maanviljelystä laivanrakennukseen ja alkoivat hyödyntää saarten omaa setripuuta. Kevyt mutta kestävä setri sopi nopeisiin, yksimastoisiin aluksiin, joita alettiin kutsua Bermudan sluupeiksi: parhaimmillaan ne kulkivat viiden solmun nopeutta ja olivat ylivoimaisia luovimaan vastatuuleen. Kolmenkymmenen tonnin aluksen pystyi rakentamaan vain muutamassa kuukaudessa, ja saarelaiset omistivat pian tuhansia tonneja laivastoa. Osa aluksista purjehti kaapparikirjeen turvin ryöstelemässä vihollismaiden kauppalaivoja, mikä toi saarille huomattavaa vaurautta 1700- ja 1800-luvuilla.
+
+### 19.1
+KYSYMYS: Mistä Terschellingin saarelle tuli karpalot?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terschelling (luonto · saari)
+Tietoruudun teksti: Terschelling on Vlielandin ja Amelandin välissä sijaitseva Länsi-Friisin saari Pohjois-Alankomaissa. Puuta on saarella vähän, joten useimmat talot ja ladot on rakennettu haaksirikkoutuneilta laivoilta pelastetuista mastoista. Saarella kasvavat karpalot alkoivat vuonna 1840, kun rannalle ajautui tynnyri karpaloita, jotka merimiehet olivat ilmeisesti pakanneet keripukkia vastaan; saarelaiset alkoivat viljellä niitä. Vuonna 1666 englantilaiset polttivat West-Terschellingin maan tasalle, ja tapahtuma tunnetaan admiraali Robert Holmesin mukaan nimellä Holmesin rovio. Merenkulkija Willem Barentsz syntyi Terschellingillä noin vuonna 1550.
+
+### 19.2
+KYSYMYS: Mistä saarelaiset saavat rakennustarvikkeita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terschelling (luonto · saari)
+Tietoruudun teksti: Terschelling on Vlielandin ja Amelandin välissä sijaitseva Länsi-Friisin saari Pohjois-Alankomaissa. Puuta on saarella vähän, joten useimmat talot ja ladot on rakennettu haaksirikkoutuneilta laivoilta pelastetuista mastoista. Saarella kasvavat karpalot alkoivat vuonna 1840, kun rannalle ajautui tynnyri karpaloita, jotka merimiehet olivat ilmeisesti pakanneet keripukkia vastaan; saarelaiset alkoivat viljellä niitä. Vuonna 1666 englantilaiset polttivat West-Terschellingin maan tasalle, ja tapahtuma tunnetaan admiraali Robert Holmesin mukaan nimellä Holmesin rovio. Merenkulkija Willem Barentsz syntyi Terschellingillä noin vuonna 1550.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NFK — maalehti / Arki: Kylä jossa kaikilla on sama sukunimi] nykyään — Lähes puolet Norfolkinsaaren asukkaista polveutuu samoista yhdeksästä Bounty-kapinallisesta, joten saarella on käytössä vain kourallinen sukunimiä: Christian, Quintal, Adams, Young, McCoy, Evans, Buffett ja Nobbs. Puhelinluettelossa on noin 40 Quintalia, 37 Evansia ja 18 Adamsia, joten pelkkä sukunimi ei riitä erottamaan ketään. Siksi useimmat saarelaiset tunnetaan lempinimillä, jotka on painettu puhelinluetteloon oikeiden nimien rinnalle: "Dar Bizziebee" on Darlene Buffett, "Chinny" on Rob Adams ja "Moonie" jompikumpi kahdesta John Christianista. Saaren oma Bounty Folk -museo kokoaa yhteen tämän sukuhistorian esineitä ja tarinoita.
+- [Bermuda — kaupunkilehti / Bermuda: Setripuiset purjehtijat] Kun siirtomaayhtiön monopoli purkautui 1684, bermudalaiset kääntyivät maanviljelystä laivanrakennukseen ja alkoivat hyödyntää saarten omaa setripuuta. Kevyt mutta kestävä setri sopi nopeisiin, yksimastoisiin aluksiin, joita alettiin kutsua Bermudan sluupeiksi: parhaimmillaan ne kulkivat viiden solmun nopeutta ja olivat ylivoimaisia luovimaan vastatuuleen. Kolmenkymmenen tonnin aluksen pystyi rakentamaan vain muutamassa kuukaudessa, ja saarelaiset omistivat pian tuhansia tonneja laivastoa. Osa aluksista purjehti kaapparikirjeen turvin ryöstelemässä vihollismaiden kauppalaivoja, mikä toi saarille huomattavaa vaurautta 1700- ja 1800-luvuilla.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-schiermonnikoog) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schiermonnikoog (luonto · saari)
+Tietoruudun teksti: Schiermonnikoog on Länsi-Friisin saari Pohjois-Alankomaissa Amelandin ja Rottumerplaatin välissä. Saari on noin 16 kilometriä pitkä ja neljä kilometriä leveä, ja siellä on Alankomaiden ensimmäinen kansallispuisto. Yksi kylä kantaa saaren nimeä, ja pysyviä asukkaita on noin 900, joten se on Alankomaiden harvimmin asuttu kunta; koska saari on pieni ja tasainen, vain noin 200 saarelaista on hankkinut luvan omaan autoon. Nimi tarkoittaa harmaiden munkkien saarta: saaren ensimmäiset tunnetut omistajat olivat mantereella sijainneen Klaarkampin luostarin sistersiläismunkit. Vuoroveden, tuulten ja myrskyjen takia saari siirtyy hitaasti etelään ja itään; vuonna 1250 se oli noin kaksi kilometriä nykyistä paikkaansa pohjoisempana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+
+### 20.1
+KYSYMYS: Mitä Schiermonnikoog-nimi tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schiermonnikoog (luonto · saari)
+Tietoruudun teksti: Schiermonnikoog on Länsi-Friisin saari Pohjois-Alankomaissa Amelandin ja Rottumerplaatin välissä. Saari on noin 16 kilometriä pitkä ja neljä kilometriä leveä, ja siellä on Alankomaiden ensimmäinen kansallispuisto. Yksi kylä kantaa saaren nimeä, ja pysyviä asukkaita on noin 900, joten se on Alankomaiden harvimmin asuttu kunta; koska saari on pieni ja tasainen, vain noin 200 saarelaista on hankkinut luvan omaan autoon. Nimi tarkoittaa harmaiden munkkien saarta: saaren ensimmäiset tunnetut omistajat olivat mantereella sijainneen Klaarkampin luostarin sistersiläismunkit. Vuoroveden, tuulten ja myrskyjen takia saari siirtyy hitaasti etelään ja itään; vuonna 1250 se oli noin kaksi kilometriä nykyistä paikkaansa pohjoisempana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+
+### 20.2
+KYSYMYS: Miksi saarella on vain vähän autoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schiermonnikoog (luonto · saari)
+Tietoruudun teksti: Schiermonnikoog on Länsi-Friisin saari Pohjois-Alankomaissa Amelandin ja Rottumerplaatin välissä. Saari on noin 16 kilometriä pitkä ja neljä kilometriä leveä, ja siellä on Alankomaiden ensimmäinen kansallispuisto. Yksi kylä kantaa saaren nimeä, ja pysyviä asukkaita on noin 900, joten se on Alankomaiden harvimmin asuttu kunta; koska saari on pieni ja tasainen, vain noin 200 saarelaista on hankkinut luvan omaan autoon. Nimi tarkoittaa harmaiden munkkien saarta: saaren ensimmäiset tunnetut omistajat olivat mantereella sijainneen Klaarkampin luostarin sistersiläismunkit. Vuoroveden, tuulten ja myrskyjen takia saari siirtyy hitaasti etelään ja itään; vuonna 1250 se oli noin kaksi kilometriä nykyistä paikkaansa pohjoisempana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

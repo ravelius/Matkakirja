@@ -1,0 +1,199 @@
+================ KOHTA 21 (kohde:hahmotelma-dwingelderveld) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi: Jäljet jotka näkyvät vain hetken] Gantheaume Pointin liuskekivessä säilyneet dinosaurusten jalanjäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, jolloin alue oli jokisuiston peittämä rantatasanko eikä lainkaan merta. Jäljet löydettiin uudelleen 1960-luvulla, mutta ne paljastuvat edelleen vain muutaman kerran vuodessa, kun vuorovesi vetäytyy poikkeuksellisen alas ja paljastaa noin 30 metrin päässä rannasta piilevän kivilaatan. Jälkien joukossa on tunnistettu useiden eri dinosauruslajien painaumia, mukaan lukien yksi harvoista tunnetuista sauropodin eli pitkäkaulaisen jättiläisen jäljistä koko maailmassa.
+- [Nicaragua — maalehti / Historia: Jäljet, jotka löytyivät vuosi isoisän matkan jälkeen] 1874 — Managuanjärven etelärannalta löytyi 1874 rakennustöissä jotain odottamatonta: ihmisen jalanjälkiä kivettyneessä tuhkassa ja mudassa. Enintään viisitoista ihmistä oli kulkenut siitä noin 2 120 vuotta sitten. Usein kerrotaan heidän paenneen purkausta, mutta askelten väli osoittaa kävelyä, ei juoksua. Amerikkalainen lääkäri Earl Flint toi löydön tiedemaailman tietoon 1884, ja Carnegie-instituutti kaivoi paikan esiin 1941–1942 ja rakensi sen ylle museon. Jälkiä on löydetty vielä neljän metrin syvyydestä.
+
+### 21.1
+KYSYMYS: Miksi Dwingelderveldillä pidetään yhä lampaita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+
+### 21.2
+KYSYMYS: Mistä ihmisen jäljet alueella kertovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi: Jäljet jotka näkyvät vain hetken] Gantheaume Pointin liuskekivessä säilyneet dinosaurusten jalanjäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, jolloin alue oli jokisuiston peittämä rantatasanko eikä lainkaan merta. Jäljet löydettiin uudelleen 1960-luvulla, mutta ne paljastuvat edelleen vain muutaman kerran vuodessa, kun vuorovesi vetäytyy poikkeuksellisen alas ja paljastaa noin 30 metrin päässä rannasta piilevän kivilaatan. Jälkien joukossa on tunnistettu useiden eri dinosauruslajien painaumia, mukaan lukien yksi harvoista tunnetuista sauropodin eli pitkäkaulaisen jättiläisen jäljistä koko maailmassa.
+- [Nicaragua — maalehti / Historia: Jäljet, jotka löytyivät vuosi isoisän matkan jälkeen] 1874 — Managuanjärven etelärannalta löytyi 1874 rakennustöissä jotain odottamatonta: ihmisen jalanjälkiä kivettyneessä tuhkassa ja mudassa. Enintään viisitoista ihmistä oli kulkenut siitä noin 2 120 vuotta sitten. Usein kerrotaan heidän paenneen purkausta, mutta askelten väli osoittaa kävelyä, ei juoksua. Amerikkalainen lääkäri Earl Flint toi löydön tiedemaailman tietoon 1884, ja Carnegie-instituutti kaivoi paikan esiin 1941–1942 ja rakensi sen ylle museon. Jälkiä on löydetty vielä neljän metrin syvyydestä.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-oostvaardersplassen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+- [Colombo — kohdekartta / Kohdekartta: Gangaramayan temppeli] 1800-luvun loppu Gangaramaya on Colombon tärkeimpiä buddhalaisia temppeleitä, ja se valmistui 1800-luvun lopulla Beira-järven rannalle. Perustajia olivat oppineet munkit Hikkaduwe Sri Sumangala ja Devundera Sri Jinaratana. Laivanvarustaja Don Bastian de Silva Jayasuriya Goonewardane etsi sopivaa tonttia ja osti kolmelta omistajalta soisen kaistaleen, jonka hän täytätti ja kunnosti omalla kustannuksellaan. Hän rakennutti alueelle suuren stupan, koristeellisen porttikaaren ja kuukiven, joiden esikuvat haettiin Anuradhapurasta, sekä kolmikerroksisen saarnasalin, muurit ja vallihaudan. Bodhipuun taimi tuotiin Anuradhapuran suuresta Sri Maha Bodhista, ja hän istutti sen omin käsin. Alueella on n…
+
+### 22.1
+KYSYMYS: Millä tavalla Oostvaardersplassen syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+
+### 22.2
+KYSYMYS: Miksi alueelle tuotiin suuria kasvinsyöjiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+- [Colombo — kohdekartta / Kohdekartta: Gangaramayan temppeli] 1800-luvun loppu Gangaramaya on Colombon tärkeimpiä buddhalaisia temppeleitä, ja se valmistui 1800-luvun lopulla Beira-järven rannalle. Perustajia olivat oppineet munkit Hikkaduwe Sri Sumangala ja Devundera Sri Jinaratana. Laivanvarustaja Don Bastian de Silva Jayasuriya Goonewardane etsi sopivaa tonttia ja osti kolmelta omistajalta soisen kaistaleen, jonka hän täytätti ja kunnosti omalla kustannuksellaan. Hän rakennutti alueelle suuren stupan, koristeellisen porttikaaren ja kuukiven, joiden esikuvat haettiin Anuradhapurasta, sekä kolmikerroksisen saarnasalin, muurit ja vallihaudan. Bodhipuun taimi tuotiin Anuradhapuran suuresta Sri Maha Bodhista, ja hän istutti sen omin käsin. Alueella on n…
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-biesbosch) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+### 23.1
+KYSYMYS: Mikä tulva loi Biesboschin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+### 23.2
+KYSYMYS: Millainen luonto Biesboschilla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-naarden) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+### 24.1
+KYSYMYS: Mitä Naardenille tapahtui vuonna 1572?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+### 24.2
+KYSYMYS: Minkä muotoinen Naardenin linnoitus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-dokkum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Port Moresby: Hallintopaikasta itsenäiseksi pääkaupungiksi] Vuoden 1905 Papua Act siirsi alueen Australian suoraan hallintoon 1906, ja Port Moresby sai kaupungin aseman vasta 1972 — ensimmäisenä ylipormestarinaan Oala Oala-Rarua. Syyskuussa 1975 Papua-Uusi-Guinea itsenäistyi, ja juhlallisuuksissa kuningatarta edusti prinssi Charles. Uudet hallinto- ja kulttuurirakennukset nousivat Waiganin alueelle vanhan keskustan ulkopuolelle: parlamenttitalon avasi 1984 sama prinssi, ja rakennus yhdistää perinteisen muotokielen nykyaikaiseen rakennustekniikkaan. Kaupunki on kasvanut nopeasti: vuoden 1980 laskennassa asukkaita oli 120 000, vuonna 2011 jo 364 145 ja vuonna 2024 kaikkiaan 756 754.
+
+### 25.1
+KYSYMYS: Kuka sai marttyyrikuoleman Dokkumissa vuonna 754?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Port Moresby: Hallintopaikasta itsenäiseksi pääkaupungiksi] Vuoden 1905 Papua Act siirsi alueen Australian suoraan hallintoon 1906, ja Port Moresby sai kaupungin aseman vasta 1972 — ensimmäisenä ylipormestarinaan Oala Oala-Rarua. Syyskuussa 1975 Papua-Uusi-Guinea itsenäistyi, ja juhlallisuuksissa kuningatarta edusti prinssi Charles. Uudet hallinto- ja kulttuurirakennukset nousivat Waiganin alueelle vanhan keskustan ulkopuolelle: parlamenttitalon avasi 1984 sama prinssi, ja rakennus yhdistää perinteisen muotokielen nykyaikaiseen rakennustekniikkaan. Kaupunki on kasvanut nopeasti: vuoden 1980 laskennassa asukkaita oli 120 000, vuonna 2011 jo 364 145 ja vuonna 2024 kaikkiaan 756 754.
+
+### 25.2
+KYSYMYS: Mitä Dokkumin linnoitusten muureja kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

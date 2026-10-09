@@ -1,0 +1,211 @@
+================ KOHTA 1 (kohde:vaalserberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Musiikki: Sabar sähköbassolla] 1970-luku — Mbalax on Senegalin, Gambian ja Mauritanian kaupunkien tanssimusiikkia. Se syntyi 1970-luvulla, kun senegalilaiset yhtyeet alkoivat soittaa sabar-rytmejä sähköbassolla, kitaralla ja koskettimilla ja laulaa wolofiksi ranskan sijaan. Sekaan sulautettiin soulia, jazzia, salsaa, kongolaista rumbaa ja rockia. Lajin pohjalla on sereerien uskonnollinen njuup-perinne. Tunnetuin mbalax-laulaja on Youssou N'Dour, joka aloitti esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla Dakarin suosituimmassa Star Bandissa. Tanssilattialla yleisö palkitsee laulajan kuin griotin.
+
+### 1.1
+KYSYMYS: Mikä Saba on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Musiikki: Sabar sähköbassolla] 1970-luku — Mbalax on Senegalin, Gambian ja Mauritanian kaupunkien tanssimusiikkia. Se syntyi 1970-luvulla, kun senegalilaiset yhtyeet alkoivat soittaa sabar-rytmejä sähköbassolla, kitaralla ja koskettimilla ja laulaa wolofiksi ranskan sijaan. Sekaan sulautettiin soulia, jazzia, salsaa, kongolaista rumbaa ja rockia. Lajin pohjalla on sereerien uskonnollinen njuup-perinne. Tunnetuin mbalax-laulaja on Youssou N'Dour, joka aloitti esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla Dakarin suosituimmassa Star Bandissa. Tanssilattialla yleisö palkitsee laulajan kuin griotin.
+
+### 1.2
+KYSYMYS: Mitä NAP tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:pohjanmeri~4) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kaupunkilehti / Kauppa ja suitsuke: Reitti mereltä Gazaan] Suitsukkeella on käyty kauppaa Arabian ja Somalian rannikoilla yli viisituhatta vuotta. Herodotos kirjoitti, että sitä kerätään Etelä-Arabiasta ja että puita vartioivat siivekkäät käärmeet, jotka sai karkotettua storaxin savulla. Reitti tunnetaan tarkasti: Dhofarin hartsi koottiin Moscha Limeniin eli Khor Roriin, vietiin laivalla Qanaan, sieltä maitse Shabwaan ja edelleen pohjoiseen Najraniin, Mekkaan, Medinaan, Petraan ja Gazaan. Osa kulki Persianlahden kautta Babyloniin ja Palmyraan. Al-Baleedin puistossa avattiin vuonna 2007 suitsukemuseo, jonka kaksi salia kertovat merenkulusta ja historiasta.
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+
+### 2.1
+KYSYMYS: Miten hollantilaiset ovat vallanneet maata mereltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kaupunkilehti / Kauppa ja suitsuke: Reitti mereltä Gazaan] Suitsukkeella on käyty kauppaa Arabian ja Somalian rannikoilla yli viisituhatta vuotta. Herodotos kirjoitti, että sitä kerätään Etelä-Arabiasta ja että puita vartioivat siivekkäät käärmeet, jotka sai karkotettua storaxin savulla. Reitti tunnetaan tarkasti: Dhofarin hartsi koottiin Moscha Limeniin eli Khor Roriin, vietiin laivalla Qanaan, sieltä maitse Shabwaan ja edelleen pohjoiseen Najraniin, Mekkaan, Medinaan, Petraan ja Gazaan. Osa kulki Persianlahden kautta Babyloniin ja Palmyraan. Al-Baleedin puistossa avattiin vuonna 2007 suitsukemuseo, jonka kaksi salia kertovat merenkulusta ja historiasta.
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+
+### 2.2
+KYSYMYS: Miksi Pohjanmeri on niin matala?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Meren pohja joka nousi ilmaan] Nullarbor ei ole aina ollut aavikkoa: kalkkikivi, jonka päällä nyt kävellään, kertyi meren pohjaan kerroksittain miljoonien vuosien aikana, kun matala meri peitti alueen. Mioseenikaudella, noin 14 miljoonaa vuotta sitten, merenpohja alkoi kohota, ja vesi vetäytyi paljastaen laakean, lähes täysin tasaisen kalkkikivilevyn. Nykyään tasanko kattaa noin 197 000 neliökilometriä – Maan suurin yhtenäinen kalkkikiviesiintymä, noin 1 100 kilometriä leveä Etelä- ja Länsi-Australian rajan molemmin puolin. Avaruudesta katsottuna tasanko erottuu ympäröivästä punaisesta aavikosta vaaleampana, lähes puuttomana kaistaleena rannikkoa myöten.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:maas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Izmir — kaupunkilehti / İzmir: Puisto sai alkunsa Moskovan-matkasta] Apulaispormestari Suat Yurtkoru esitti pormestari Behçet Uzille, että İzmir tarvitsee Moskovan Gorki-puiston kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen 14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi arkkitehtia laati suunnitelman. Perustus laskettiin 1. tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna 1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni 1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. Nykyään siellä pidetään İzmirin kansainväliset messut ja kirjamessut.
+
+### 3.1
+KYSYMYS: Mikä Rein–Maas–Schelde-suisto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+### 3.2
+KYSYMYS: Missä Maas saa alkunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Izmir — kaupunkilehti / İzmir: Puisto sai alkunsa Moskovan-matkasta] Apulaispormestari Suat Yurtkoru esitti pormestari Behçet Uzille, että İzmir tarvitsee Moskovan Gorki-puiston kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen 14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi arkkitehtia laati suunnitelman. Perustus laskettiin 1. tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna 1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni 1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. Nykyään siellä pidetään İzmirin kansainväliset messut ja kirjamessut.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:woudagemaal) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+
+### 4.1
+KYSYMYS: Mikä pumppaamo on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+### 4.2
+KYSYMYS: Miksi höyrykone on yhä käytössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:deltatyot) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Steelametsä] kokoelma vuodesta 1087 Steelametsä eli Beilinin museo on kivikirjoitusten museo vanhassa Kungfutsen temppelissä, ja sen kokoelma on karttunut vuodesta 1087. Alku olivat kaksi Tang-kaudella hakattua kivisarjaa, Kaicheng-kauden kivistä kaiverretut klassikot ja Shitai Xiaojing, joita säilytettiin Chang’anin Kungfutsen temppelissä ja keisarillisessa akatemiassa. Vuonna 1944 museosta oli tullut Shaanxin päämuseo, ja vuonna 1992 se sai nykyisen nimensä: kiviä on kuin puita metsässä, kaikkiaan noin kolmetuhatta seitsemässä salissa. Kokoelma on liikkunut kaupungin mukana. Kun kapinallisarmeija ryösti Chang’anin vuonna 904, kivet evakuoitiin sisäkaupunkiin, ja vuonna 962 ne palautettiin uudelleen ra…
+
+### 5.1
+KYSYMYS: Mikä vuoden 1953 Pohjanmeren tulva oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Steelametsä] kokoelma vuodesta 1087 Steelametsä eli Beilinin museo on kivikirjoitusten museo vanhassa Kungfutsen temppelissä, ja sen kokoelma on karttunut vuodesta 1087. Alku olivat kaksi Tang-kaudella hakattua kivisarjaa, Kaicheng-kauden kivistä kaiverretut klassikot ja Shitai Xiaojing, joita säilytettiin Chang’anin Kungfutsen temppelissä ja keisarillisessa akatemiassa. Vuonna 1944 museosta oli tullut Shaanxin päämuseo, ja vuonna 1992 se sai nykyisen nimensä: kiviä on kuin puita metsässä, kaikkiaan noin kolmetuhatta seitsemässä salissa. Kokoelma on liikkunut kaupungin mukana. Kun kapinallisarmeija ryösti Chang’anin vuonna 904, kivet evakuoitiin sisäkaupunkiin, ja vuonna 962 ne palautettiin uudelleen ra…
+
+### 5.2
+KYSYMYS: Miksi Oosterscheldea ei suljettu kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

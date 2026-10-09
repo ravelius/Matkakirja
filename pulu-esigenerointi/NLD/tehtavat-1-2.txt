@@ -1,0 +1,220 @@
+================ KOHTA 6 (kohde:vredespaleis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Habitat 67] 1967 Habitat 67 alkoi opinnäytetyönä. Moshe Safdie teki sen McGillin yliopiston arkkitehtiosaston lopputyönään; työ huomattiin, mutta se ei voittanut Pilkington-palkintoa, ja Safdie on pitänyt sitä varhaisena merkkinä siitä, kuinka kiistanalainen ajatus oli. Kun hänen entinen ohjaajansa Sandy van Ginkel pyysi häntä laatimaan vuoden 1967 maailmannäyttelyn yleissuunnitelmaa, Safdie ehdotti opinnäytettään yhdeksi paviljongiksi. Ottawassa suunnitelman hyväksyivät ministeri Mitchell Sharp ja pääministeri Lester B. Pearson. Alkuperäinen suunnitelma oli 1 200 asuntoa ja 45 miljoonaa dollaria. Rahoitusta löytyi vain murto-osaan: toteutunut osa maksoi noin 22,4 miljoonaa. Talo koostuu 354 samanlaise…
+- [Timbuktu — kohdekartta / Kohdekartta: Ahmed Baba -instituutti] 1973 Ahmed Baba -instituutti eli virallisemmin Ahmed Baba Institute of Higher Learning and Islamic Research perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. Nimi on 1600-luvulla eläneen timbuktulaisen oppineen Ahmad Baban. Instituutti on kaupungin ainoa julkinen kirjasto; muut kokoelmat ovat sukujen hallussa. Nykyisen rakennuksen suunnitteli eteläafrikkalainen arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 miljoonaa euroa, on 4 600 neliömetriä ja korvasi neljäkymmentä vuotta vanhan rapistuneen talon. Rakennuksessa on ilmastointi käsikirjoitusten säilytystä varten ja automaattinen sammutusjärjestelmä — molemmat ovat aavikon reunalla vaikeampia asioita kuin miltä kuulostaa. Kokoe…
+
+### 6.1
+KYSYMYS: Mikä pysyvä välitystuomioistuin on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+### 6.2
+KYSYMYS: Kuka maksoi rauhanpalatsin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Habitat 67] 1967 Habitat 67 alkoi opinnäytetyönä. Moshe Safdie teki sen McGillin yliopiston arkkitehtiosaston lopputyönään; työ huomattiin, mutta se ei voittanut Pilkington-palkintoa, ja Safdie on pitänyt sitä varhaisena merkkinä siitä, kuinka kiistanalainen ajatus oli. Kun hänen entinen ohjaajansa Sandy van Ginkel pyysi häntä laatimaan vuoden 1967 maailmannäyttelyn yleissuunnitelmaa, Safdie ehdotti opinnäytettään yhdeksi paviljongiksi. Ottawassa suunnitelman hyväksyivät ministeri Mitchell Sharp ja pääministeri Lester B. Pearson. Alkuperäinen suunnitelma oli 1 200 asuntoa ja 45 miljoonaa dollaria. Rahoitusta löytyi vain murto-osaan: toteutunut osa maksoi noin 22,4 miljoonaa. Talo koostuu 354 samanlaise…
+- [Timbuktu — kohdekartta / Kohdekartta: Ahmed Baba -instituutti] 1973 Ahmed Baba -instituutti eli virallisemmin Ahmed Baba Institute of Higher Learning and Islamic Research perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. Nimi on 1600-luvulla eläneen timbuktulaisen oppineen Ahmad Baban. Instituutti on kaupungin ainoa julkinen kirjasto; muut kokoelmat ovat sukujen hallussa. Nykyisen rakennuksen suunnitteli eteläafrikkalainen arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 miljoonaa euroa, on 4 600 neliömetriä ja korvasi neljäkymmentä vuotta vanhan rapistuneen talon. Rakennuksessa on ilmastointi käsikirjoitusten säilytystä varten ja automaattinen sammutusjärjestelmä — molemmat ovat aavikon reunalla vaikeampia asioita kuin miltä kuulostaa. Kokoe…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:domtoren) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+- [Manila — kohdekartta / Kohdekartta: Binondon kirkko] perustettu 1596, nykyinen rakennus 1852 Dominikaaniveljet perustivat Binondon kirkon vuonna 1596 palvelemaan kristinuskoon kääntyneitä kiinalaisia ja paikallisia filippiiniläisiä. Kirkko oli pystyssä jo ennen vuotta 1614, ja 1700-luvulla se siirrettiin nykyiselle paikalleen ja rakennettiin suuremmaksi. Vuonna 1778 katto jouduttiin vaihtamaan nipapalmuun, koska termiitit olivat syöneet puun. Nykyinen graniittikirkko valmistui 1852. Sen tunnusmerkki on kahdeksankulmainen kellotorni, joka muistuttaa pagodia ja kertoo seurakuntalaisten alkuperästä. Torni oli alun perin viisikerroksinen, ja ylimpänä oli näköaukko; se katto tuhoutui vuoden 1863 maanjäristyksessä. Kupolin rakentamista valvoi vuonn…
+
+### 7.1
+KYSYMYS: Miksi Domtoren seisoo yksin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+### 7.2
+KYSYMYS: Kuka vastusti tornin rakentamista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+- [Manila — kohdekartta / Kohdekartta: Binondon kirkko] perustettu 1596, nykyinen rakennus 1852 Dominikaaniveljet perustivat Binondon kirkon vuonna 1596 palvelemaan kristinuskoon kääntyneitä kiinalaisia ja paikallisia filippiiniläisiä. Kirkko oli pystyssä jo ennen vuotta 1614, ja 1700-luvulla se siirrettiin nykyiselle paikalleen ja rakennettiin suuremmaksi. Vuonna 1778 katto jouduttiin vaihtamaan nipapalmuun, koska termiitit olivat syöneet puun. Nykyinen graniittikirkko valmistui 1852. Sen tunnusmerkki on kahdeksankulmainen kellotorni, joka muistuttaa pagodia ja kertoo seurakuntalaisten alkuperästä. Torni oli alun perin viisikerroksinen, ja ylimpänä oli näköaukko; se katto tuhoutui vuoden 1863 maanjäristyksessä. Kupolin rakentamista valvoi vuonn…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:bourtange) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+
+### 8.1
+KYSYMYS: Mikä tähtilinnoitus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+
+### 8.2
+KYSYMYS: Miksi linnoitus rakennettiin juuri tähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:giethoorn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 9.1
+KYSYMYS: Miksi kylässä ei ollut katuja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 9.2
+KYSYMYS: Mistä kylän järvet syntyivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:krollermuller) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+- [Sepik — kaupunkilehti / Henkien talot: Ei kenen tahansa taloon] Haus tambaranin sisään pääsevät vain initioidut miehet: siellä säilytetään pyhiä veistoksia, esi-isien patsaita ja niin kutsuttuja tambu-esineitä, joiden näkeminen on naisilta ja initioimattomilta pojilta kiellettyä. Rakennus toimii samalla arkistona ja koulutuspaikkana – sinne kootaan klaanin historia veistoksina ja lauluina, jotka opetetaan seuraavalle sukupolvelle vasta initiaation jälkeen. Ulkopuolisille vierailijoillekin monet talot ovat edelleen vain osittain avoimia, ja kuvaaminen sisältä on usein kielletty tai rajoitettua. Rakennus on siis paljon enemmän kuin kylän kokoustila – se on koko yhteisön pyhäkkö ja muistiorganisaatio.
+
+### 10.1
+KYSYMYS: Kenen kokoelmasta museo syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+- [Sepik — kaupunkilehti / Henkien talot: Ei kenen tahansa taloon] Haus tambaranin sisään pääsevät vain initioidut miehet: siellä säilytetään pyhiä veistoksia, esi-isien patsaita ja niin kutsuttuja tambu-esineitä, joiden näkeminen on naisilta ja initioimattomilta pojilta kiellettyä. Rakennus toimii samalla arkistona ja koulutuspaikkana – sinne kootaan klaanin historia veistoksina ja lauluina, jotka opetetaan seuraavalle sukupolvelle vasta initiaation jälkeen. Ulkopuolisille vierailijoillekin monet talot ovat edelleen vain osittain avoimia, ja kuvaaminen sisältä on usein kielletty tai rajoitettua. Rakennus on siis paljon enemmän kuin kylän kokoustila – se on koko yhteisön pyhäkkö ja muistiorganisaatio.
+
+### 10.2
+KYSYMYS: Kuinka suuri veistospuutarha on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

@@ -1,0 +1,192 @@
+================ KOHTA 41 (kohde:hahmotelma-sneek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+### 41.1
+KYSYMYS: Mikä on Sneekin tunnusmerkki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+### 41.2
+KYSYMYS: Mikä vaateketju aloitti Sneekissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-kinderdijk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Kinde, hu hu ja survimet] Kinde on jousiharppu, jota griot-perinteessä soitetaan viisikielisenä. Hu hu:n kaikupohjina ovat kalebassit, ja kakaki on pitkä peltitorvi. Loput soittimista kertovat, kenen kylässä ollaan: fulanit soittavat yksilehdykkäisiä huiluja, sarat suosivat vihellyspillejä, balafoneja, harppuja ja kodjo-rumpuja, ja kanembut yhdistävät rummut huilumaisiin soittimiin. Baguirmilaiset tunnetaan rumpu- ja sitramusiikistaan sekä tanssista, jossa käydään näytöstaistelu suurin survimin. Yhtä tšadilaista soitinta ei siis ole, vaan niitä on toistakymmentä.
+
+### 42.1
+KYSYMYS: Mitä varten Kinderdijkin myllyt rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Kinde, hu hu ja survimet] Kinde on jousiharppu, jota griot-perinteessä soitetaan viisikielisenä. Hu hu:n kaikupohjina ovat kalebassit, ja kakaki on pitkä peltitorvi. Loput soittimista kertovat, kenen kylässä ollaan: fulanit soittavat yksilehdykkäisiä huiluja, sarat suosivat vihellyspillejä, balafoneja, harppuja ja kodjo-rumpuja, ja kanembut yhdistävät rummut huilumaisiin soittimiin. Baguirmilaiset tunnetaan rumpu- ja sitramusiikistaan sekä tanssista, jossa käydään näytöstaistelu suurin survimin. Yhtä tšadilaista soitinta ei siis ole, vaan niitä on toistakymmentä.
+
+### 42.2
+KYSYMYS: Milloin Kinderdijkin myllyt otettiin pois käytöstä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Kinde, hu hu ja survimet] Kinde on jousiharppu, jota griot-perinteessä soitetaan viisikielisenä. Hu hu:n kaikupohjina ovat kalebassit, ja kakaki on pitkä peltitorvi. Loput soittimista kertovat, kenen kylässä ollaan: fulanit soittavat yksilehdykkäisiä huiluja, sarat suosivat vihellyspillejä, balafoneja, harppuja ja kodjo-rumpuja, ja kanembut yhdistävät rummut huilumaisiin soittimiin. Baguirmilaiset tunnetaan rumpu- ja sitramusiikistaan sekä tanssista, jossa käydään näytöstaistelu suurin survimin. Yhtä tšadilaista soitinta ei siis ole, vaan niitä on toistakymmentä.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-cruquius) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cruquius (tekniikka)
+Tietoruudun teksti: De Cruquius on vanhassa höyrypumppuasemassa toimiva museo Cruquiuksessa Alankomaissa. Se on nimetty maanmittari Nicolaas Kruikin eli latinalaisittain Nicolaus Samuel Cruquiuksen (1678–1754) mukaan, joka oli yksi Haarlemmermeer-järven kuivatussuunnitelman kannattajista. Pumppu aloitti työnsä vuonna 1850, ja Haarlemin järvi saatiin kuivaksi kolmessa vuodessa, kuten vuosisata aiemmin oli ennustettu. Asemaa käytettiin ajoittain vuoteen 1933, jolloin siitä tehtiin museo. Cruquiuksen koneen uskotaan olevan suurin koskaan rakennettu höyrykone, ja sen rakensi Harvey & Co Cornwallin Haylessa; sisin korkeapainesylinteri on halkaisijaltaan 2,1 metriä.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 43.1
+KYSYMYS: Mikä oli Haarlemmermeer ennen kuivatusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cruquius (tekniikka)
+Tietoruudun teksti: De Cruquius on vanhassa höyrypumppuasemassa toimiva museo Cruquiuksessa Alankomaissa. Se on nimetty maanmittari Nicolaas Kruikin eli latinalaisittain Nicolaus Samuel Cruquiuksen (1678–1754) mukaan, joka oli yksi Haarlemmermeer-järven kuivatussuunnitelman kannattajista. Pumppu aloitti työnsä vuonna 1850, ja Haarlemin järvi saatiin kuivaksi kolmessa vuodessa, kuten vuosisata aiemmin oli ennustettu. Asemaa käytettiin ajoittain vuoteen 1933, jolloin siitä tehtiin museo. Cruquiuksen koneen uskotaan olevan suurin koskaan rakennettu höyrykone, ja sen rakensi Harvey & Co Cornwallin Haylessa; sisin korkeapainesylinteri on halkaisijaltaan 2,1 metriä.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 43.2
+KYSYMYS: Kenen mukaan Cruquius-pumppuasema on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cruquius (tekniikka)
+Tietoruudun teksti: De Cruquius on vanhassa höyrypumppuasemassa toimiva museo Cruquiuksessa Alankomaissa. Se on nimetty maanmittari Nicolaas Kruikin eli latinalaisittain Nicolaus Samuel Cruquiuksen (1678–1754) mukaan, joka oli yksi Haarlemmermeer-järven kuivatussuunnitelman kannattajista. Pumppu aloitti työnsä vuonna 1850, ja Haarlemin järvi saatiin kuivaksi kolmessa vuodessa, kuten vuosisata aiemmin oli ennustettu. Asemaa käytettiin ajoittain vuoteen 1933, jolloin siitä tehtiin museo. Cruquiuksen koneen uskotaan olevan suurin koskaan rakennettu höyrykone, ja sen rakensi Harvey & Co Cornwallin Haylessa; sisin korkeapainesylinteri on halkaisijaltaan 2,1 metriä.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-enkhuizen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Enkhuizen (kauppa)
+Tietoruudun teksti: Enkhuizen on historiallinen kaupunki Länsi-Friisissä Pohjois-Hollannissa, ja siitä kehittyi keskiajalla ja Alankomaiden kulta-aikana tärkeä kalastus- ja kauppasatama, yksi maan varakkaimmista ja vaikutusvaltaisimmista kaupungeista. Hoornin ja Amsterdamin tavoin se oli VOC:n satamakaupunkeja, joista käytiin Itä-Intian merikauppaa; kaupunki sai kaupunkioikeudet vuonna 1356. Valtansa huipulla Enkhuizen oli 1600-luvun puolivälissä, mutta satamien liettyminen syrjäytti sen Amsterdamin tieltä. Peperhuis on 1600-luvun varasto, jossa VOC säilytti mausteita, ja nykyään se kuuluu Zuiderzee-museoon. Kaupungin tunnusmerkkeihin kuuluu myös Drommedaris-torni.
+
+### 44.1
+KYSYMYS: Mitä Peperhuis-varastossa säilytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Enkhuizen (kauppa)
+Tietoruudun teksti: Enkhuizen on historiallinen kaupunki Länsi-Friisissä Pohjois-Hollannissa, ja siitä kehittyi keskiajalla ja Alankomaiden kulta-aikana tärkeä kalastus- ja kauppasatama, yksi maan varakkaimmista ja vaikutusvaltaisimmista kaupungeista. Hoornin ja Amsterdamin tavoin se oli VOC:n satamakaupunkeja, joista käytiin Itä-Intian merikauppaa; kaupunki sai kaupunkioikeudet vuonna 1356. Valtansa huipulla Enkhuizen oli 1600-luvun puolivälissä, mutta satamien liettyminen syrjäytti sen Amsterdamin tieltä. Peperhuis on 1600-luvun varasto, jossa VOC säilytti mausteita, ja nykyään se kuuluu Zuiderzee-museoon. Kaupungin tunnusmerkkeihin kuuluu myös Drommedaris-torni.
+
+### 44.2
+KYSYMYS: Miksi Enkhuizen menetti asemansa Amsterdamille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Enkhuizen (kauppa)
+Tietoruudun teksti: Enkhuizen on historiallinen kaupunki Länsi-Friisissä Pohjois-Hollannissa, ja siitä kehittyi keskiajalla ja Alankomaiden kulta-aikana tärkeä kalastus- ja kauppasatama, yksi maan varakkaimmista ja vaikutusvaltaisimmista kaupungeista. Hoornin ja Amsterdamin tavoin se oli VOC:n satamakaupunkeja, joista käytiin Itä-Intian merikauppaa; kaupunki sai kaupunkioikeudet vuonna 1356. Valtansa huipulla Enkhuizen oli 1600-luvun puolivälissä, mutta satamien liettyminen syrjäytti sen Amsterdamin tieltä. Peperhuis on 1600-luvun varasto, jossa VOC säilytti mausteita, ja nykyään se kuuluu Zuiderzee-museoon. Kaupungin tunnusmerkkeihin kuuluu myös Drommedaris-torni.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-franeker) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Franeker (tekniikka)
+Tietoruudun teksti: Franeker on yksi Friisinmaan yhdestätoista historiallisesta kaupungista. Villakampaaja ja tähtitieteen harrastaja Eise Eisinga (1744–1828) rakensi vuosina 1774–1781 omaan olohuoneeseensa planetaarion selittääkseen planeettojen yhtymän ja lieventääkseen paikallisia pelkoja siitä, mitä planeettojen asettuminen samaan linjaan aiheuttaisi. Se on maailman vanhin yhtäjaksoisesti toiminut planetaario, ja UNESCO nimesi sen maailmanperintökohteeksi vuonna 2023. Franekerissa on myös toiminut yliopisto, joka perustettiin 29. heinäkuuta 1585 ja oli Leidenin jälkeen Alankomaiden vanhin; sen opiskelijoihin kuuluivat muun muassa René Descartes ja Eisinga itse.
+
+### 45.1
+KYSYMYS: Mitä Eise Eisingan planetaario esittää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Franeker (tekniikka)
+Tietoruudun teksti: Franeker on yksi Friisinmaan yhdestätoista historiallisesta kaupungista. Villakampaaja ja tähtitieteen harrastaja Eise Eisinga (1744–1828) rakensi vuosina 1774–1781 omaan olohuoneeseensa planetaarion selittääkseen planeettojen yhtymän ja lieventääkseen paikallisia pelkoja siitä, mitä planeettojen asettuminen samaan linjaan aiheuttaisi. Se on maailman vanhin yhtäjaksoisesti toiminut planetaario, ja UNESCO nimesi sen maailmanperintökohteeksi vuonna 2023. Franekerissa on myös toiminut yliopisto, joka perustettiin 29. heinäkuuta 1585 ja oli Leidenin jälkeen Alankomaiden vanhin; sen opiskelijoihin kuuluivat muun muassa René Descartes ja Eisinga itse.
+
+### 45.2
+KYSYMYS: Miksi Eisinga rakensi planetaarion?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Franeker (tekniikka)
+Tietoruudun teksti: Franeker on yksi Friisinmaan yhdestätoista historiallisesta kaupungista. Villakampaaja ja tähtitieteen harrastaja Eise Eisinga (1744–1828) rakensi vuosina 1774–1781 omaan olohuoneeseensa planetaarion selittääkseen planeettojen yhtymän ja lieventääkseen paikallisia pelkoja siitä, mitä planeettojen asettuminen samaan linjaan aiheuttaisi. Se on maailman vanhin yhtäjaksoisesti toiminut planetaario, ja UNESCO nimesi sen maailmanperintökohteeksi vuonna 2023. Franekerissa on myös toiminut yliopisto, joka perustettiin 29. heinäkuuta 1585 ja oli Leidenin jälkeen Alankomaiden vanhin; sen opiskelijoihin kuuluivat muun muassa René Descartes ja Eisinga itse.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

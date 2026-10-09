@@ -1,0 +1,238 @@
+================ KOHTA 11 (kohde:nijmegen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 11.1
+KYSYMYS: Miksi Nijmegen on Alankomaiden vanhimpia kaupunkeja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+### 11.2
+KYSYMYS: Mistä kaupungin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:afsluitdijk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg: Pato tuli ensin, kaupunki vasta sen jälkeen] Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan muutaman virstan päästä Uktusin ruukista. Berg-kollegio ei hyväksynyt hanketta, työ pysähtyi ja Tatištšev menetti Uralin vuoritoimen johdon; rakentaminen jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Ensin padottiin joki, vasta sitten nousi ruukki. Kesäkuun 8. päivänä de Gennin lähetti keisarin puolisolle Katariinalle tarjottimen, joka oli taottu ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.
+- [Jemen — maalehti / Historia: Pato, joka kasteli keidasta tuhat vuotta] Maribin pato ei ollut yksi rakennus vaan tuhannen vuoden työ. Vanhin luotettavasti ajoitettu vaihe on 700-luvulta eaa.: noin 580 metriä pitkä maavalli, korkeutta vain nelisen metriä. Noin 500 eaa. valli nostettiin seitsemään metriin ja sen vedenpuoleinen rinne vuorattiin kivellä. Kummassakin päässä oli kivestä muurattu sulkurakennelma, josta vesi juoksutettiin kanaviin. Pato ei kerännyt taakseen pysyvää järveä vaan jakoi tulvan: sade tuli vuorille vain muutamana päivänä vuodessa, ja koko vesimäärä oli ohjattava pelloille niiden päivien aikana. Kasteltua maata oli noin 9 600 hehtaaria. Pato murtui ja korjattiin useasti — vuosina 449, 450, 542 ja 548 — ja vuoden 570 tienoilla sitä ei enää kor…
+
+### 12.1
+KYSYMYS: Mikä Zuiderzee oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 12.2
+KYSYMYS: Miksi pato rakennettiin vasta 1900-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg: Pato tuli ensin, kaupunki vasta sen jälkeen] Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan muutaman virstan päästä Uktusin ruukista. Berg-kollegio ei hyväksynyt hanketta, työ pysähtyi ja Tatištšev menetti Uralin vuoritoimen johdon; rakentaminen jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Ensin padottiin joki, vasta sitten nousi ruukki. Kesäkuun 8. päivänä de Gennin lähetti keisarin puolisolle Katariinalle tarjottimen, joka oli taottu ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.
+- [Jemen — maalehti / Historia: Pato, joka kasteli keidasta tuhat vuotta] Maribin pato ei ollut yksi rakennus vaan tuhannen vuoden työ. Vanhin luotettavasti ajoitettu vaihe on 700-luvulta eaa.: noin 580 metriä pitkä maavalli, korkeutta vain nelisen metriä. Noin 500 eaa. valli nostettiin seitsemään metriin ja sen vedenpuoleinen rinne vuorattiin kivellä. Kummassakin päässä oli kivestä muurattu sulkurakennelma, josta vesi juoksutettiin kanaviin. Pato ei kerännyt taakseen pysyvää järveä vaan jakoi tulvan: sade tuli vuorille vain muutamana päivänä vuodessa, ja koko vesimäärä oli ohjattava pelloille niiden päivien aikana. Kasteltua maata oli noin 9 600 hehtaaria. Pato murtui ja korjattiin useasti — vuosina 449, 450, 542 ja 548 — ja vuoden 570 tienoilla sitä ei enää kor…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:maastricht) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+
+### 13.1
+KYSYMYS: Mitä Trajectum ad Mosam tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+
+### 13.2
+KYSYMYS: Mikä Maastrichtin sopimus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-amsterdamin-vanha-raatihuone) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amsterdamin vanha raatihuone (historia)
+Tietoruudun teksti: Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. Tulipalo tuhosi sen 7. heinäkuuta 1652. Uusi raatihuone, nykyinen kuninkaanlinna, valmistui viereen vuonna 1665.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Raatihuone, joka on Pohjois-Euroopan vanhin] 1404 — Tallinnan raatihuone sai nykyisen muotonsa vuosina 1401–1404, mutta rakennuksesta on mainintoja jo 1300-luvulta. Se on Pohjois-Euroopan ainoa säilynyt goottilaistyylinen raatihuone ja seisoo yhä keskiajan Raatihuoneentorin laidalla. Torninhuippua koristaa Vanha Toomas, vartijaa esittävä tuuliviiri, josta on tullut koko kaupungin tunnus. Toisessa maailmansodassa pommitus tuhosi tornin maaliskuussa 1944, ja se rakennettiin uudelleen vasta 1952. Raatihuoneen kellarissa toimi keskiajalla viinikellari, ja rakennus oli vuosisatoja kaupunginhallinnon keskus.
+- [Wien — kohdekartta / Kohdekartta: Raatihuone] 1872–1883 Wienin komea raatihuone rakennettiin vuosina 1872–1883 arkkitehti Friedrich von Schmidtin suunnitelmien mukaan. Rakennuksesta tuli niin kallis — peräti 14 miljoonaa guldenia — että sekä kaupunki että keisarikunta maksoivat siitä yhdessä. Talo on valtava: siellä on 1575 huonetta ja 2035 ikkunaa. Torni kohoaa 98 metrin korkeuteen, ja sen huipulla seisoo rautainen ritarihahmo nimeltä Rathausmann, joka nostaa kokonaiskorkeuden yli sataan metriin. Rakennuksen juhlasali on Itävallan suurin historiallinen sali. Toisen maailmansodan pommitukset vaurioittivat raatihuonetta pahoin, mutta se korjattiin. Nykyään se on Wienin pormestarin työpaikka ja koko kaupungin sydän, jonka edustalla Ratha…
+
+### 14.1
+KYSYMYS: Miltä Amsterdamin vanha raatihuone näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amsterdamin vanha raatihuone (historia)
+Tietoruudun teksti: Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. Tulipalo tuhosi sen 7. heinäkuuta 1652. Uusi raatihuone, nykyinen kuninkaanlinna, valmistui viereen vuonna 1665.
+
+### 14.2
+KYSYMYS: Miksi Amsterdamin vanha raatihuone katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amsterdamin vanha raatihuone (historia)
+Tietoruudun teksti: Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. Tulipalo tuhosi sen 7. heinäkuuta 1652. Uusi raatihuone, nykyinen kuninkaanlinna, valmistui viereen vuonna 1665.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Raatihuone, joka on Pohjois-Euroopan vanhin] 1404 — Tallinnan raatihuone sai nykyisen muotonsa vuosina 1401–1404, mutta rakennuksesta on mainintoja jo 1300-luvulta. Se on Pohjois-Euroopan ainoa säilynyt goottilaistyylinen raatihuone ja seisoo yhä keskiajan Raatihuoneentorin laidalla. Torninhuippua koristaa Vanha Toomas, vartijaa esittävä tuuliviiri, josta on tullut koko kaupungin tunnus. Toisessa maailmansodassa pommitus tuhosi tornin maaliskuussa 1944, ja se rakennettiin uudelleen vasta 1952. Raatihuoneen kellarissa toimi keskiajalla viinikellari, ja rakennus oli vuosisatoja kaupunginhallinnon keskus.
+- [Wien — kohdekartta / Kohdekartta: Raatihuone] 1872–1883 Wienin komea raatihuone rakennettiin vuosina 1872–1883 arkkitehti Friedrich von Schmidtin suunnitelmien mukaan. Rakennuksesta tuli niin kallis — peräti 14 miljoonaa guldenia — että sekä kaupunki että keisarikunta maksoivat siitä yhdessä. Talo on valtava: siellä on 1575 huonetta ja 2035 ikkunaa. Torni kohoaa 98 metrin korkeuteen, ja sen huipulla seisoo rautainen ritarihahmo nimeltä Rathausmann, joka nostaa kokonaiskorkeuden yli sataan metriin. Rakennuksen juhlasali on Itävallan suurin historiallinen sali. Toisen maailmansodan pommitukset vaurioittivat raatihuonetta pahoin, mutta se korjattiin. Nykyään se on Wienin pormestarin työpaikka ja koko kaupungin sydän, jonka edustalla Ratha…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-utrechtin-domkirkon-keskilaiva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Utrechtin Domkirkon keskilaiva (historia)
+Tietoruudun teksti: Utrechtin Domkirkon keskilaiva jäi vuosisadoiksi keskeneräiseksi rahapulan vuoksi. Hirmumyrsky romahdutti sen 1. elokuuta 1674. Kuori ja torni jäivät erilleen, ja niiden välinen alue on nykyinen Domplein.
+
+### 15.1
+KYSYMYS: Miltä Utrechtin Domkirkon keskilaiva näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Utrechtin Domkirkon keskilaiva (historia)
+Tietoruudun teksti: Utrechtin Domkirkon keskilaiva jäi vuosisadoiksi keskeneräiseksi rahapulan vuoksi. Hirmumyrsky romahdutti sen 1. elokuuta 1674. Kuori ja torni jäivät erilleen, ja niiden välinen alue on nykyinen Domplein.
+
+### 15.2
+KYSYMYS: Miksi Utrechtin Domkirkon keskilaiva katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Utrechtin Domkirkon keskilaiva (historia)
+Tietoruudun teksti: Utrechtin Domkirkon keskilaiva jäi vuosisadoiksi keskeneräiseksi rahapulan vuoksi. Hirmumyrsky romahdutti sen 1. elokuuta 1674. Kuori ja torni jäivät erilleen, ja niiden välinen alue on nykyinen Domplein.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

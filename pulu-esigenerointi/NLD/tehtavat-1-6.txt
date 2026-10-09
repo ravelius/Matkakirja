@@ -1,0 +1,180 @@
+================ KOHTA 26 (kohde:hahmotelma-oudewater) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+
+### 26.1
+KYSYMYS: Mikä on Oudewaterin Heksenwaag?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+
+### 26.2
+KYSYMYS: Millä uskomuksella noidan painoa arvioitiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-kampen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+
+### 27.1
+KYSYMYS: Miksi Kampenin vauraus hiipui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+
+### 27.2
+KYSYMYS: Kuinka nopeasti Kampenin silta rakennettiin vuonna 1448?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-hoorn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Falkland — kaupunkilehti / Falklandinsaaret: Valaanpyytäjien pysähdyspaikka Kap Hornin kupeessa] Falklandinsaaret sijaitsevat Kap Hornin luoteispuolella, reitillä, jota valaanpyytäjät ja hylkeenpyytäjät kulkivat Tyynellemerelle ja takaisin 1800-luvulla. Saarten suojaisat lahdet tarjosivat purjelaivoille turvapaikan ennen raskasta Kap Hornin kiertämistä ja sen jälkeen, kun myrskyt olivat repineet purjeita ja katkoneet mastoja. Hallinnon keskus siirrettiin avoimelta Port Louisilta suojaisampaan Port Stanleyhin 1840-luvun puolivälissä, ja vuonna 1849 amiraali Edward Fanshawe maalasi satamakylästä akvarellin, joka näyttää vasta muutaman valkoisen mökin rannalla. Isoisän matkalla 1873 kylä oli jo kasvanut suuremmaksi.
+
+### 28.1
+KYSYMYS: Minkä mukaan Hornin niemi on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Falkland — kaupunkilehti / Falklandinsaaret: Valaanpyytäjien pysähdyspaikka Kap Hornin kupeessa] Falklandinsaaret sijaitsevat Kap Hornin luoteispuolella, reitillä, jota valaanpyytäjät ja hylkeenpyytäjät kulkivat Tyynellemerelle ja takaisin 1800-luvulla. Saarten suojaisat lahdet tarjosivat purjelaivoille turvapaikan ennen raskasta Kap Hornin kiertämistä ja sen jälkeen, kun myrskyt olivat repineet purjeita ja katkoneet mastoja. Hallinnon keskus siirrettiin avoimelta Port Louisilta suojaisampaan Port Stanleyhin 1840-luvun puolivälissä, ja vuonna 1849 amiraali Edward Fanshawe maalasi satamakylästä akvarellin, joka näyttää vasta muutaman valkoisen mökin rannalla. Isoisän matkalla 1873 kylä oli jo kasvanut suuremmaksi.
+
+### 28.2
+KYSYMYS: Mikä yhtiö piti Hornissa toimipaikkaansa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-het-loo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+### 29.1
+KYSYMYS: Kenelle Het Loon palatsi rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+### 29.2
+KYSYMYS: Mitä Royal Loo Hawking Club teki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-borger) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+
+### 30.1
+KYSYMYS: Kuinka pitkä Borgerin hunebed D27 on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+
+### 30.2
+KYSYMYS: Mitä vuoden 1984 löydöt paljastivat hunebedin iästä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

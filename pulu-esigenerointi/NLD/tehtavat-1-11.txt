@@ -1,0 +1,255 @@
+================ KOHTA 51 (nosto:amsterdamin-maitotytto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Maitotyttö] Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+
+### 51.1
+KYSYMYS: Miksi Vermeer peitti jo maalaamansa kannuhyllyn ja tulikorin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Maitotyttö] Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+
+### 51.2
+KYSYMYS: Mitä muuta röntgen- ja infrapunakuvaus on paljastanut vanhoista maalauksista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 51.3
+KYSYMYS: Miksi Vermeerin tuotannosta tunnetaan vain runsaat kolmekymmentä työtä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Maitotyttö] Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (nosto:amsterdamin-kissalaiva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Vanhakaupunki: Kissat kääntyivät katolla ympäri] Kissatalo valmistui vuonna 1909 aivan Suuren killan naapuriin. Talon huippuihin nostettiin kaksi mustaa kissaa, joiden selkä on köyryssä ja häntä pystyssä. Tarina kertoo, että talon omistaja ei päässyt naapurin kiltaan jäseneksi ja käänsi kissat takapuoli kiltataloa kohti. Kiista päätyi käsittelyyn, ja lopulta kaupunki määräsi kääntämään kissat toisin päin. Nyt ne katsovat kiltataloa kohti, ja moni pysähtyy kadulle katsomaan niitä ylös.
+- [Amsterdam — kohdekartta / Kohdekartta: Kissalaiva] Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+- [Egypti — maalehti / Kuvataide: Kissa mukana metsällä] Kirjuri Nebamunin hautakammion seinään maalattiin 3 400 vuotta sitten metsästysretki papyruskosteikossa: Nebamun seisoo veneessä heittokeppi kädessä, linnut pyrähtävät lentoon, ja perheen kissa on ehtinyt napata kolme lintua yhtä aikaa. Vaimo ja tytär ovat mukana juhlavaatteissa, koska kuva ei esitä arkea vaan ikuisuutta: tällaisena Nebamun halusi elää kuolemansa jälkeen — perhe ja kissa mukanaan.
+
+### 52.1
+KYSYMYS: Miksi Amsterdamin kanavissa on satoja asuntolaivoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Luonto: Metsä, joka juo pilvestä] Miljoonia vuosia — Madeiran saarella kasvaa laurimetsää, joka on jäänne metsästä, joka peitti Etelä-Eurooppaa miljoonia vuosia sitten. Manterella se hävisi ilmaston kylmetessä, mutta saarella se jäi henkiin. Metsä saa suuren osan vedestään sumusta: pilvi ajautuu vuorenrinnettä ylös, ja lehdet keräävät siitä pisaroita, jotka tippuvat maahan. Vettä johdetaan kapeissa kivikourujen kaltaisissa kanavissa eli levadoissa kylille ja pelloille. Kanavia on tuhansia kilometrejä.
+
+### 52.2
+KYSYMYS: Kuka hoitaa Kissalaivan kissat nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Vanhakaupunki: Kissat kääntyivät katolla ympäri] Kissatalo valmistui vuonna 1909 aivan Suuren killan naapuriin. Talon huippuihin nostettiin kaksi mustaa kissaa, joiden selkä on köyryssä ja häntä pystyssä. Tarina kertoo, että talon omistaja ei päässyt naapurin kiltaan jäseneksi ja käänsi kissat takapuoli kiltataloa kohti. Kiista päätyi käsittelyyn, ja lopulta kaupunki määräsi kääntämään kissat toisin päin. Nyt ne katsovat kiltataloa kohti, ja moni pysähtyy kadulle katsomaan niitä ylös.
+- [Amsterdam — kohdekartta / Kohdekartta: Kissalaiva] Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+- [Egypti — maalehti / Kuvataide: Kissa mukana metsällä] Kirjuri Nebamunin hautakammion seinään maalattiin 3 400 vuotta sitten metsästysretki papyruskosteikossa: Nebamun seisoo veneessä heittokeppi kädessä, linnut pyrähtävät lentoon, ja perheen kissa on ehtinyt napata kolme lintua yhtä aikaa. Vaimo ja tytär ovat mukana juhlavaatteissa, koska kuva ei esitä arkea vaan ikuisuutta: tällaisena Nebamun halusi elää kuolemansa jälkeen — perhe ja kissa mukanaan.
+
+### 52.3
+KYSYMYS: Mitä kulkukissoille tehtiin ennen vuotta 1966?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (nosto:amsterdamin-puupaalut) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Herengracht 537] Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+
+### 53.1
+KYSYMYS: Miten puupaalu lyödään pehmeän suon läpi kovaan pohjahiekkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Herengracht 537] Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+
+### 53.2
+KYSYMYS: Mitä tehdään talolle, jonka paalut ovat päässeet lahoamaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+
+### 53.3
+KYSYMYS: Miksi kaupungin pohjavesi pääsee laskemaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+- [Nigeria — maalehti / Historia: Laskettiinko sinun leskiäitisi?] 1929 — Marraskuussa 1929 tuhannet igbonaiset kävelivät Olokon kylään protestoimaan siirtomaahallinnon nimittämiä warrant chief -päälliköitä vastaan. Kipinä syttyi, kun laskija käski Nwanyeruwa-nimistä naista laskemaan vuohensa, lampaansa ja väkensä. Nainen ymmärsi sen veroluetteloksi ja vastasi: "Laskettiinko sinun leskiäitisi?" Igboperinteessä naiset eivät maksaneet veroa. Protestin muoto oli vanha tapa nimeltä miehen päällä istuminen: joukko naisia asettui päällikön talon eteen laulamaan, kunnes tämä erosi. Kuuden kansan naiset osallistuivat, ja 1930 koko warrant chief -järjestelmä purettiin ja naisia nimitettiin paikallisiin tuomioistuimiin.
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (nosto:amsterdamin-yovartio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Yövartio] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+- [Alankomaat — maalehti / Ruoka ja tavat: Vohveli asetetaan kupin päälle] 1800-luku — Stroopwafel syntyi Goudassa 1800-luvulla. Se on kaksi ohutta ruudukkovohvelia, joiden väliin on levitetty siirappia, ruskeaa sokeria ja kanelia. Perinteinen tapa on asettaa vohveli kuuman kupin päälle: höyry pehmentää sen ja sulattaa täytteen sopivaksi. Goudassa oli vuonna 1960 seitsemäntoista stroopwafeltehdasta, nykyään neljä. Toreilla vohvelit paistetaan yhä paikan päällä, ja reunoista leikatut palat myydään erikseen pussissa. Vohvelin läpimitta on tavallisesti kymmenen senttiä, mutta niitä tehdään viidestä kahteenkymmeneenviiteen senttiin.
+- [Espanja — maalehti / Kuvataide: Taulu, jossa katsoja on mallina] Diego Velázquez maalasi 1656 taulun, jossa hän seisoo itse vasemmalla valtavan kankaan takana ja katsoo ulos kuvasta. Keskellä on viisivuotias infanta Margarita hovinaisineen. Mutta ketä maalari oikeastaan maalaa? Takaseinän peilistä näkyvät kuningas ja kuningatar — he seisovat siinä, missä katsoja seisoo. Taulu kääntää katseen ympäri: se katsoo sinua takaisin ja panee sinut mallin paikalle. Pradossa se on oma huoneensa, ja sen edessä seisotaan joka päivä jonossa.
+
+### 54.1
+KYSYMYS: Mihin taulusta leikatut palaset joutuivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Ruoka ja tavat: Vohveli asetetaan kupin päälle] 1800-luku — Stroopwafel syntyi Goudassa 1800-luvulla. Se on kaksi ohutta ruudukkovohvelia, joiden väliin on levitetty siirappia, ruskeaa sokeria ja kanelia. Perinteinen tapa on asettaa vohveli kuuman kupin päälle: höyry pehmentää sen ja sulattaa täytteen sopivaksi. Goudassa oli vuonna 1960 seitsemäntoista stroopwafeltehdasta, nykyään neljä. Toreilla vohvelit paistetaan yhä paikan päällä, ja reunoista leikatut palat myydään erikseen pussissa. Vohvelin läpimitta on tavallisesti kymmenen senttiä, mutta niitä tehdään viidestä kahteenkymmeneenviiteen senttiin.
+
+### 54.2
+KYSYMYS: Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Yövartio] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+
+### 54.3
+KYSYMYS: Mistä tiedetään, mitä taulusta puuttuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Taulu, jossa katsoja on mallina] Diego Velázquez maalasi 1656 taulun, jossa hän seisoo itse vasemmalla valtavan kankaan takana ja katsoo ulos kuvasta. Keskellä on viisivuotias infanta Margarita hovinaisineen. Mutta ketä maalari oikeastaan maalaa? Takaseinän peilistä näkyvät kuningas ja kuningatar — he seisovat siinä, missä katsoja seisoo. Taulu kääntää katseen ympäri: se katsoo sinua takaisin ja panee sinut mallin paikalle. Pradossa se on oma huoneensa, ja sen edessä seisotaan joka päivä jonossa.
+- [Bogotá — kohdekartta / Kohdekartta: Andesin yliopisto] 1948 Yliopiston perusti 1948 joukko kolumbialaisia älymystön edustajia Mario Laserna Pinzónin johdolla, ja se oli maan ensimmäinen yliopisto, joka perustettiin tunnustuksettomana: riippumattomaksi sekä puolueista että kirkosta. Perustamisen taustalla oli maan teollistuminen ja koulutetun työvoiman puute — opetusministeri Germán Arciniegas kertoi kongressille 1946, että maasta puuttuu insinöörejä, arkkitehteja, lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, perustajat pitivät sitä parhaana perusteluna yliopiston perustamiselle. Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä opiskelijalla. Malli otettiin yhdysvaltalaisesta …
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
