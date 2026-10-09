@@ -36,6 +36,22 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      - Kattosaumat kulkevat lappeen suuntaan (`_uv_lappeet`). pelti_kl:n arkkisävy on 0,025, ja katoilla on patinalaikut.
      - LS2 tekee v6h:n ja kuvaparin. Vertailukuva: `esikatselu/kl_v3c_vertailu.jpg`. `KL_SYVYYS` tuottaa syvyyskuvat esikatseluista
        Karttasepän tekoälypintakokeeseen (`_tyo/karttaseppa/tekoalypinnat-koe/`).
+   - **Tekoälypinnat (PT 9.10. ilta; omistaja hyväksyi kokeen)** tehdään Karttasepän ComfyUI/SDXL-työnkululla
+     (`/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat/pinta.py`, LUEMINUT samassa kansiossa).
+     - Omat työkalut kansiossa `kaupunkipinnat-v1/lahde/`:
+       - `tekoaly_syotteet.py <codex-ohje/näkymä>` tekee syvyys16-, reunat-, normaali-, maski-, pohja- ja kamera.json-kuvat kansioon
+         `<näkymä>/tekoaly/`.
+       - `tekoaly_takaisin.py <näkymä> <tulos> <tunniste> [--vertaa kuva nimi]` palauttaa tuloksen RGBA:na täyteen kehykseen ja mittaa
+         reunat.
+       - Sen jälkeen ajetaan `kohdista.py` ja `projisoi.py -- nd <ulos> --lahde tekoaly`.
+     - Ensimmäinen kierros on PT:llä (`_valmiit/tekoalypinnat-koe-20261009/`).
+       - ND etelä: tekoäly osuu malliin paremmin kuin Codex (jäännös 0,19 vs 0,28 m), mutta 1 Mpx on vain 8 px/m.
+       - Olavinlinna s1: v2:ssa ei ole tileä eikä viitekuvaa; kieltolistalla ovat putket ja varjot.
+     - Seuraavaksi palageneraatio (noin 25 px/m) ja ND:n katot omasta näkymästään.
+     - ND:n Codex-pilotti hylättiin, eikä ND:tä kohdisteta ennen PT:n päätöstä. Olavinlinnan seinä 1:n Codex-pilotti tulee
+       Sisältökirjurilta, ja se kohdistetaan.
+   - **Vouti v4** on peilissä `52825516ed687fd3` (blender af2f13bfbff521a7, v45b 5b1c57031), uusina nimillä `hahmot/vouti-1500-mh*`.
+     Siirtoseppä kytkee sen junaan 173.
    - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
    - **Riddarholmen v2** on valmis ja odottaa PT:tä ja omistajaa. Vertailukuva:
      `riddarholmen-v1/esikatselu/riddarholmen_v2_vertailu_valokuva.jpg`. v1 on tallessa kansiossa `glb-v1/`.
