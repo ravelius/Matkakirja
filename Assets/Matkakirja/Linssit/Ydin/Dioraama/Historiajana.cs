@@ -124,6 +124,17 @@ namespace Matkakirja.Linssit.Dioraama
             return (y + puoli * k, puoli * (1 - k));
         }
 
+        /// <summary>Datan vuodet (LR v45y: leikkausobjektien vuodesta / historia_vuosi / vuoteen) historiaosiksi; rakennusaika
+        /// DatanRakennusVuotta. Tyhjä lista = datassa ei vuosia (käytetään OlavinlinnanOsat-taulukkoa).</summary>
+        public const double DatanRakennusVuotta = 6;
+        public static List<HistoriaOsa> OsatDatasta(IEnumerable<(string Nimi, double? Vuodesta, double? Vuoteen)> leikkaukset)
+        {
+            var l = new List<HistoriaOsa>();
+            foreach (var (n, a, b) in leikkaukset)
+                if (!string.IsNullOrEmpty(n) && a is double v) l.Add(new HistoriaOsa(n, v, DatanRakennusVuotta, b ?? double.PositiveInfinity));
+            return l;
+        }
+
         /// <summary>Leikkauksen historiaosa nimen etuliitteen mukaan (pisin osuma); null = ei historiaosa (näkyy aina).</summary>
         public static HistoriaOsa Osa(string leikkaus, IReadOnlyList<HistoriaOsa> osat = null)
         {

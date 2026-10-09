@@ -30,8 +30,10 @@ namespace Matkakirja.Linssit.Seikkailu
     public readonly struct KavelyLeikkaus
     {
         public readonly string Nimi; public readonly double X, Y, Z, KokoX, KokoY, KokoZ, KiertoY;
-        public KavelyLeikkaus(string nimi, double x, double y, double z, double kx, double ky, double kz, double kierto)
-        { Nimi = nimi; X = x; Y = y; Z = z; KokoX = kx; KokoY = ky; KokoZ = kz; KiertoY = kierto; }
+        /// <summary>Historia (LR v45y): rakennusvuosi (vuodesta tai, kun vuosi ei ole tiedossa, historia_vuosi) ja purkuvuosi; null = ei tietoa.</summary>
+        public readonly double? HistoriaVuodesta, HistoriaVuoteen;
+        public KavelyLeikkaus(string nimi, double x, double y, double z, double kx, double ky, double kz, double kierto, double? vuodesta = null, double? vuoteen = null)
+        { Nimi = nimi; X = x; Y = y; Z = z; KokoX = kx; KokoY = ky; KokoZ = kz; KiertoY = kierto; HistoriaVuodesta = vuodesta; HistoriaVuoteen = vuoteen; }
         /// <summary>Onko piste (glTF-koordinaatit) särmiön sisällä.</summary>
         public bool Sisalla(double px, double py, double pz)
         {
@@ -140,7 +142,8 @@ namespace Matkakirja.Linssit.Seikkailu
                     {
                         var lo = MiniJson.ObjektiTaiNull(l); if (lo == null) continue;
                         var k = Vektori(MiniJson.Kentta(lo, "keskipiste")); var s = Vektori(MiniJson.Kentta(lo, "koko"));
-                        osa.Leikkaukset.Add(new KavelyLeikkaus(MiniJson.Teksti(lo, "nimi"), k[0], k[1], k[2], s[0], s[1], s[2], MiniJson.Luku(lo, "kierto_y") ?? 0));
+                        osa.Leikkaukset.Add(new KavelyLeikkaus(MiniJson.Teksti(lo, "nimi"), k[0], k[1], k[2], s[0], s[1], s[2], MiniJson.Luku(lo, "kierto_y") ?? 0,
+                            MiniJson.Luku(lo, "vuodesta") ?? MiniJson.Luku(lo, "historia_vuosi"), MiniJson.Luku(lo, "vuoteen")));
                     }
                     d.Osat[osa.Id] = osa;
                 }

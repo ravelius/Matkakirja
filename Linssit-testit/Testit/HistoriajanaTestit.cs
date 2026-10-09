@@ -104,6 +104,23 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.0, Historiajana.Kasvu(1743, Historiajana.Osa("b1499-kellobastioni")));
         }
 
+        [Testi] static void DatanVuodetLeikkauksista()
+        {
+            const string osat = "{\"versio\": 1, \"osat\": {\"vesiportti\": {\"rajat\": {\"min\": [0, 0, 0], \"max\": [10, 3, 10]}, \"leikkaukset\": [" +
+                "{\"nimi\": \"b1499-vesiportin-bastioni-l\", \"keskipiste\": [1, 2, 3], \"koko\": [2, 4, 2], \"vuodesta\": 1749}," +
+                "{\"nimi\": \"b1499-kellobastioni\", \"keskipiste\": [1, 2, 3], \"koko\": [2, 4, 2], \"vuodesta\": null, \"historia_vuosi\": 1745}," +
+                "{\"nimi\": \"pk-katto\", \"keskipiste\": [1, 2, 3], \"koko\": [2, 4, 2]}]}}}";
+            var d = KavelyData.Lue(osat, "[]");
+            var l = new List<(string, double?, double?)>();
+            foreach (var k in d.Osat["vesiportti"].Leikkaukset) l.Add((k.Nimi, k.HistoriaVuodesta, k.HistoriaVuoteen));
+            var h = Historiajana.OsatDatasta(l);
+            Oleta.Sama(2, h.Count);
+            Oleta.Sama(1749.0, Historiajana.Osa("b1499-vesiportin-bastioni-l", h).Vuodesta);
+            Oleta.Sama(1745.0, Historiajana.Osa("b1499-kellobastioni", h).Vuodesta);
+            Oleta.Tosi(Historiajana.Osa("pk-katto", h) == null, "ilman vuotta ei historiaosa");
+            Oleta.Sama(1.0, Historiajana.Kasvu(1749 + Historiajana.DatanRakennusVuotta, Historiajana.Osa("b1499-vesiportin-bastioni-l", h)));
+        }
+
         [Testi] static void K2KasvattaaKaikkiOsat()
         {
             var k2 = Historiajana.K2Lyhyt;

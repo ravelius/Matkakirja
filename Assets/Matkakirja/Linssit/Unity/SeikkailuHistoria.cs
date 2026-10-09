@@ -61,7 +61,7 @@ namespace Matkakirja.Natiivi
                 if (suunta.sqrMagnitude > 1e-6f) kamera.rotation = Quaternion.LookRotation(suunta, Vector3.up);
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
-                if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, Historiajana.Osa(n)));
+                if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 var (i, _) = h.Kohta(t);
                 if (i != vaihe) { vaihe = i; kirjaa?.Invoke($"seikkailu: historia vaihe {i} ({h.Vaiheet[i].VuosiTeksti}) {t:F1} s"); }
                 Avainsana = h.Avainsana(t);

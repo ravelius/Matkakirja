@@ -435,7 +435,7 @@ namespace Matkakirja.Natiivi
             for (float alku = Time.unscaledTime, t = 0; t < k2.Kesto; t = Time.unscaledTime - alku)
             {
                 double vuosi = k2.Vuosi(t);
-                SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, Historiajana.Osa(n)));
+                SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 yield return null;
             }
             SeikkailuKavely.AsetaKasvu(null);
