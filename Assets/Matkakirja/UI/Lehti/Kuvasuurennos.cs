@@ -346,9 +346,14 @@ namespace Matkakirja.Natiivi
                 nauha.style.display = DisplayStyle.None; // näkyviin, kun kuvan kulma tiedetään
                 nauha.SendToBack();
             }
-            NostoSisalto.HaeKuva(k.Lahde, t =>
+            // Iso versio (kuvat-2048/, terävyys 9.10.2026), jos kuva on luettelossa; ei latautunut → tavallinen kuten ennen.
+            string iso = KuvatIso.Lahde(k.Lahde);
+            System.Action<Texture2D> nayta = null;
+            nayta = t =>
             {
-                if (t == null || v != versio) return;
+                if (v != versio) return;
+                if (t == null && iso != k.Lahde) { iso = k.Lahde; NostoSisalto.HaeKuva(k.Lahde, nayta); return; }
+                if (t == null) return;
                 ladattu = t;
                 kuva.style.backgroundImage = new StyleBackground(t);
                 KaynnistaLahentyminen(k.Lahde);
@@ -356,7 +361,8 @@ namespace Matkakirja.Natiivi
                 if (nauha == null) return;
                 nauha.style.display = DisplayStyle.Flex;
                 Nostokortti.SovitaNauha(kuva, nauha, t);
-            });
+            };
+            NostoSisalto.HaeKuva(iso, nayta);
             teksti.text = k.Selite ?? k.Lyhyt ?? "";
             // Löydös 150: kokoruudussa ei kuvatekstiä eikä lähderiviä (inline-tyyli voittaisi USS:n, siksi täällä).
             teksti.style.display = teksti.text.Length > 0 && !kokoruutu ? DisplayStyle.Flex : DisplayStyle.None;
