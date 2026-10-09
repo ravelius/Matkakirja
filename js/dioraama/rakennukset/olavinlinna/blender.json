@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "96ee9b5f3af740dd",
-  "kansio": "dioraama/olavinlinna/blender/96ee9b5f3af740dd/",
+  "hash": "95aa0371cf569c04",
+  "kansio": "dioraama/olavinlinna/blender/95aa0371cf569c04/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -3432,6 +3432,26 @@
       "polku": "valot/muurinharja.jpg",
       "sha256": "8b90b52cfe8c7444d032a0b03342c5258632a095958e24e787999a03b81edf6f",
       "tavuja": 678470
+    },
+    {
+      "polku": "valot/tunnelma-2k-4x4.astcm",
+      "sha256": "683763c65da04168ee1f68972956528eb3cad1b09a97b21dc3cb23930c127573",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "valot/tunnelma-2k.jpg",
+      "sha256": "f51a44b2b83f1073d01ab0b3756807a49d95eecef8f45e9c332005f640dec9a0",
+      "tavuja": 421243
+    },
+    {
+      "polku": "valot/tunnelma-4x4.astcm",
+      "sha256": "cfa369ae1ae90daf8cb053cb5c5091c2bc83313e1c795b17d8de733e12aba884",
+      "tavuja": 9961552
+    },
+    {
+      "polku": "valot/tunnelma.jpg",
+      "sha256": "4481c06ee157842a00319dcc020889528c1302968d778c14bcdf366af85b0f76",
+      "tavuja": 1113317
     },
     {
       "polku": "valot/voudin-sali-2k-4x4.astcm",
