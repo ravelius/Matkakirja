@@ -120,6 +120,7 @@ namespace Matkakirja.Editori
                     EditorUtility.UnloadUnusedAssetsImmediate();
                     GC.Collect();
                     Environment.SetEnvironmentVariable(UiRuutu.TestiMuuttuja, Koot[kokoNro].Arvo);
+                    if (kokoNro == 0) Kirjaa("-- leikkausrajaus " + (ShouldClip != null ? "käytössä" : "EI käytössä (ShouldClip puuttuu)"));
                     Kirjaa($"== {Koot[kokoNro].Nimi} ({Koot[kokoNro].Arvo})");
                     EditorApplication.EnterPlaymode();
                     Siirry(Vaihe.OdotaPelia);
