@@ -6,7 +6,7 @@
 //
 // Tuettu: glTF 2.0 binääri, yksi solmu jolla on mesh (ei hierarkiaa), kolmiot (mode 4), POSITION/NORMAL float
 // VEC3, TEXCOORD_0 float VEC2 (rakennuskoneen oma tasoprojektio — EI käännetä, ks. kohta 3), COLOR_0
-// UNSIGNED_BYTE normalized VEC4, indeksit ubyte/ushort/uint, skin + animaatiot (alla), morph-kohteet (POSITION, 6.10.). Muu (sparse, ulkoiset puskurit) →
+// UNSIGNED_BYTE normalized VEC4, indeksit ubyte/ushort/uint, skin + animaatiot (alla), morph-kohteet (POSITION, 6.10.), sparse float (9.10.). Muu (ulkoiset puskurit) →
 // GlbVirhe, ei arvausta.
 //
 // unityyn = true: (x, y, z) → (x, y, −z) paikoille ja normaaleille, kolmion kiertosuunta käännetään
@@ -461,6 +461,7 @@ namespace Matkakirja.Linssit.Dioraama
             /// <summary>Float-accessor (tai rotaatiolle normalisoitu kokonaisluku, glTF sallii sen) litteäksi taulukoksi.</summary>
             float[] FloatAccessor(int i, int komponenttejaOdotettu, bool normalisoituSallittu = false)
             {
+                if (SparseFloat(i, komponenttejaOdotettu) is float[] sp) return sp;
                 var (alku, askel, maara, komponentit, tyyppi, normalisoitu) = Accessor(i);
                 if (komponentit != komponenttejaOdotettu) throw new DioraamaGlbVirhe("accessor " + i + " komponentit " + komponentit);
                 var t = new float[maara * komponentit];
@@ -538,10 +539,53 @@ namespace Matkakirja.Linssit.Dioraama
                 return (binAlku + alku, askel, maara, komponentit, tyyppi, MiniJson.Totuus(a, "normalized"));
             }
 
+            /// <summary>Sparse float-accessor (glTF 2.0 accessor.sparse; LR:n MetaHuman-vienti 9.10.: ARKit-muotoavaimet): pohja bufferViewistä
+            /// tai nollina, päälle harvat indeksit (UNSIGNED_BYTE/SHORT/INT) ja arvot (float). null = ei sparse.</summary>
+            float[] SparseFloat(int i, int komponenttejaOdotettu)
+            {
+                var a = Alkio("accessors", i);
+                var sp = MiniJson.ObjektiTaiNull(MiniJson.Kentta(a, "sparse"));
+                if (sp == null) return null;
+                if ((int)(MiniJson.Luku(a, "componentType") ?? 0) != 5126) throw new DioraamaGlbVirhe("sparse vain float");
+                int maara = (int)(MiniJson.Luku(a, "count") ?? 0), k = komponenttejaOdotettu;
+                var t = new float[maara * k];
+                if (MiniJson.Luku(a, "bufferView") is double bvi)
+                {
+                    var (bAlku, bAskel) = Nakyma((int)bvi, (int)(MiniJson.Luku(a, "byteOffset") ?? 0), k * 4);
+                    if ((long)bAlku + (long)bAskel * Math.Max(0, maara - 1) + k * 4 > binAlku + binPituus) throw new DioraamaGlbVirhe("sparse-pohja yli puskurin");
+                    for (int q = 0; q < maara; q++) for (int c = 0; c < k; c++) t[q * k + c] = BitConverter.ToSingle(b, bAlku + q * bAskel + c * 4);
+                }
+                int n = (int)(MiniJson.Luku(sp, "count") ?? 0);
+                var ind = MiniJson.ObjektiTaiNull(MiniJson.Kentta(sp, "indices")); var arv = MiniJson.ObjektiTaiNull(MiniJson.Kentta(sp, "values"));
+                if (ind == null || arv == null) throw new DioraamaGlbVirhe("sparse ilman indices/values");
+                int it = (int)(MiniJson.Luku(ind, "componentType") ?? 0), ik = it == 5121 ? 1 : it == 5123 ? 2 : it == 5125 ? 4 : throw new DioraamaGlbVirhe("sparse-indeksit " + it);
+                var (iAlku, _) = Nakyma((int)(MiniJson.Luku(ind, "bufferView") ?? -1), (int)(MiniJson.Luku(ind, "byteOffset") ?? 0), ik);
+                var (vAlku, _) = Nakyma((int)(MiniJson.Luku(arv, "bufferView") ?? -1), (int)(MiniJson.Luku(arv, "byteOffset") ?? 0), k * 4);
+                if ((long)iAlku + (long)n * ik > binAlku + binPituus || (long)vAlku + (long)n * k * 4 > binAlku + binPituus) throw new DioraamaGlbVirhe("sparse yli puskurin");
+                for (int s = 0; s < n; s++)
+                {
+                    int o = iAlku + s * ik;
+                    long x = ik == 1 ? b[o] : ik == 2 ? b[o] | b[o + 1] << 8 : U32(b, o);
+                    if (x < 0 || x >= maara) throw new DioraamaGlbVirhe("sparse-indeksi yli");
+                    for (int c = 0; c < k; c++) t[x * k + c] = BitConverter.ToSingle(b, vAlku + (s * k + c) * 4);
+                }
+                return t;
+            }
+
+            /// <summary>bufferViewin absoluuttinen alku (+ siirto) ja askel (byteStride tai tiivis).</summary>
+            (int alku, int askel) Nakyma(int bvi, int siirto, int tiivis)
+            {
+                var bv = Alkio("bufferViews", bvi);
+                if ((int)(MiniJson.Luku(bv, "buffer") ?? 0) != 0 || binAlku < 0) throw new DioraamaGlbVirhe("vain upotettu BIN-puskuri");
+                int askel = (int)(MiniJson.Luku(bv, "byteStride") ?? 0);
+                return (binAlku + (int)(MiniJson.Luku(bv, "byteOffset") ?? 0) + siirto, askel == 0 ? tiivis : askel);
+            }
+
             float[] FloatVec(Dictionary<string, object> attr, string nimi, int komponenttejaOdotettu)
             {
                 var i = MiniJson.Luku(attr, nimi);
                 if (!i.HasValue) return null;
+                if (SparseFloat((int)i.Value, komponenttejaOdotettu) is float[] sp) return sp;
                 var (alku, askel, maara, komponentit, tyyppi, _) = Accessor((int)i.Value);
                 if (tyyppi != 5126 || komponentit != komponenttejaOdotettu) throw new DioraamaGlbVirhe(nimi + " ei ole float VEC" + komponenttejaOdotettu);
                 var t = new float[maara * komponentit];

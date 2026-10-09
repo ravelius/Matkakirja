@@ -15,6 +15,8 @@ namespace Matkakirja.Natiivi
         public static string Url = "https://media.matkakirja.app/seikkailu/olavinlinna/musiikki-v1/loppu.mp3",
             SilmukkaUrl = "https://media.matkakirja.app/seikkailu/olavinlinna/musiikki-v1/loppu-silmukka.mp3";
         public const float VaistoKerroin = 0.35f, SisaanS = 2f, UlosS = 3f;
+        /// <summary>Mikserin tunnus (musiikki-ryhmä, konteksti linna).</summary>
+        public const string Id = "loppumusiikki";
 
         static SeikkailuLoppumusiikki ajossa;
         public static bool Soi => ajossa != null && ajossa.lahde != null && ajossa.lahde.isPlaying;
@@ -49,8 +51,10 @@ namespace Matkakirja.Natiivi
                 if (q.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: loppumusiikki ei ämpärissä ({q.responseCode})"); lopeta = true; yield break; }
                 var k = DownloadHandlerAudioClip.GetContent(q);
                 if (k == null) { lopeta = true; yield break; }
+                k.name = silmukka ? "Musiikki:loppu-silmukka" : "Musiikki:loppu";
+                SeikkailuAanet.Rekisteroi("musiikki", Id, k.name);
                 if (lahde == null) lahde = gameObject.AddComponent<AudioSource>();
-                lahde.clip = k; lahde.loop = silmukka; lahde.spatialBlend = 0f; lahde.playOnAwake = false; lahde.volume = taso * Asetukset.Taso(Voima.Musiikki);
+                lahde.clip = k; lahde.loop = silmukka; lahde.spatialBlend = 0f; lahde.playOnAwake = false; lahde.volume = taso * SeikkailuAanet.Taso("musiikki", Id);
                 lahde.Play();
                 kirjaa?.Invoke($"seikkailu: loppumusiikki alkaa ({k.length:F0} s)");
             }
@@ -58,7 +62,7 @@ namespace Matkakirja.Natiivi
             {
                 float tavoite = lopeta ? 0f : PuheSoi() ? VaistoKerroin : 1f;
                 taso = Mathf.MoveTowards(taso, tavoite, Time.unscaledDeltaTime / (lopeta ? UlosS : tavoite > taso ? SisaanS : 0.6f));
-                lahde.volume = taso * Asetukset.Taso(Voima.Musiikki);
+                lahde.volume = taso * SeikkailuAanet.Taso("musiikki", Id);
                 if (lopeta && taso <= 0f) break;
                 if (silmukka && !(SeikkailuTietokerros.Aktiivinen != null && SeikkailuTietokerros.Aktiivinen.LoppuAuki)) lopeta = true;   // tekstit suljettu
                 yield return null;

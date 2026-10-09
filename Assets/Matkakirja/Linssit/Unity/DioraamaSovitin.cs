@@ -1017,6 +1017,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Kiinnijaatiin += Laske;
             float alku = Time.unscaledTime;
             o.Kirjaa($"botti: {pisteet.Count} pistettä (reitti:pelaaja-{alkuN}…)");
+            string aaniVahti = null; int aaniVikoja = 0;
             foreach (var kv in pisteet)
             {
                 p = SeikkailuPelaaja.Aktiivinen; if (p == null) break;
@@ -1027,6 +1028,9 @@ namespace Matkakirja.Natiivi
                 float etaisyys = p != null ? Vector3.Distance(p.transform.position, kohde) : -1;
                 bool okP = etaisyys >= 0 && etaisyys < 1.0f;
                 o.Kirjaa($"botti: pelaaja-{kv.Key} {(okP ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}");
+                // Äänivahti (Natiivi-UI 9.10., ui aanet vahti): rekisteröimättömät soivat klipit jokaisessa pisteessä, uusi tulos lokiin.
+                string av = MikseriPalvelin.Vahti();
+                if (av != aaniVahti) { aaniVahti = av; if (av.StartsWith("äänivahti VIKA", StringComparison.Ordinal)) { aaniVikoja++; o.Kirjaa($"botti: pelaaja-{kv.Key} {av}"); } }
                 // LS2 BUILD 169: yksi jumi (pelaaja-8, osittainen reitti) pysäytti loput 86 pistettä 0,0 s:n virheiksi. Nyt virheestä
                 // sijainti, osa ja reitin tila lokiin, ja pelaaja siirretään kohteeseen, jotta loput huoneet saavat aikansa.
                 if (!okP && p != null)
@@ -1041,7 +1045,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Kiinnijaatiin -= Laske;
             var tv = typeof(DioraamaSovitin).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit")?.GetMethod("Tekstivahti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             string teksti = tv != null ? tv.Invoke(null, null) as string : "ei Tekstivahtia";
-            o.Kirjaa($"botti: valmis {Time.unscaledTime - alku:F0} s, kiinnijäämisiä {kiinni}, tekstivahti {teksti}");
+            o.Kirjaa($"botti: valmis {Time.unscaledTime - alku:F0} s, kiinnijäämisiä {kiinni}, tekstivahti {teksti}, äänivahti {(aaniVikoja == 0 ? "OK" : aaniVikoja + " VIKA-havaintoa")} ({MikseriPalvelin.Vahti()})");
         }
 
         /// <summary>V6 jatko: pelaaja viimeisimpään tarkistuspisteeseen ilman saapumista, armoaika 4 s, vartijat ja kappeli kuten laiturilta.</summary>
@@ -1144,7 +1148,7 @@ namespace Matkakirja.Natiivi
                 using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ko.Tiedosto), AudioType.MPEG);
                 ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
                 yield return q.SendWebRequest();
-                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.KolahdusKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.KolahdusKlippi = Nimetty(UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q), "tehosteet", SeikkailuEsineet.Kolahdus, "Tehoste:pikari-1");
             }
             // E3: koputuksen ontto ääni (väliaikaisesti ovi-puu matalammalla sävelellä, kunnes oma koputusääni on pankissa).
             if (SeikkailuEsineet.OnttoKlippi == null && rakennus?.Aanet != null && rakennus.Aanet.TryGetValue("ovi-puu", out var ov) && !string.IsNullOrEmpty(ov.Tiedosto))
@@ -1152,8 +1156,16 @@ namespace Matkakirja.Natiivi
                 using var q2 = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ov.Tiedosto), AudioType.MPEG);
                 ((UnityEngine.Networking.DownloadHandlerAudioClip)q2.downloadHandler).streamAudio = false;
                 yield return q2.SendWebRequest();
-                if (q2.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.OnttoKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q2);
+                if (q2.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.OnttoKlippi = Nimetty(UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q2), "tehosteet", SeikkailuEsineet.Koputus, "Tehoste:ovi-puu");
             }
+        }
+
+        /// <summary>Ladattu varaklippi nimetään ja rekisteröidään mikseriin (äänirekisteri, konteksti linna).</summary>
+        static AudioClip Nimetty(AudioClip k, string ryhma, string id, string nimi)
+        {
+            if (k == null) return null;
+            k.name = nimi; SeikkailuAanet.Rekisteroi(ryhma, id, nimi);
+            return k;
         }
 
         void LisaaPelaajahahmo(SeikkailuPelaaja sp)
@@ -1261,7 +1273,7 @@ namespace Matkakirja.Natiivi
                 using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ka.Tiedosto), AudioType.MPEG);
                 ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
                 yield return q.SendWebRequest();
-                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = Nimetty(UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q), "repliikit", SeikkailuKappeli.Keskustelu, "Repliikki:kappeli-keskustelu");
             }
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
@@ -1286,7 +1298,8 @@ namespace Matkakirja.Natiivi
                     using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(kv.Value.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
                     ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
                     yield return q.SendWebRequest();
-                    if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlipit[kv.Key] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                    if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlipit[kv.Key] = Nimetty(UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q), "tehosteet", SeikkailuVartijat.PelaajanAskeleet, "Askel:" + kv.Key);
+                    if (kv.Key == "askel-kivi") { SeikkailuAanet.Rekisteroi("tehosteet", SeikkailuVartijat.VartijanAskeleet, "Askel:askel-kivi"); SeikkailuAanet.Rekisteroi("tehosteet", SeikkailuKappeli.VoudinAskeleet, "Askel:askel-kivi"); }
                     if (kv.Key == "askel-kivi") SeikkailuVartijat.AskelKlippi = SeikkailuVartijat.AskelKlipit.TryGetValue(kv.Key, out var kk) ? kk : null;
                     o.Kirjaa($"seikkailu: askeleet {kv.Key} {(SeikkailuVartijat.AskelKlipit.ContainsKey(kv.Key) ? "ladattu" : "ei latautunut")} ({kv.Value.Tiedosto})");
                 }

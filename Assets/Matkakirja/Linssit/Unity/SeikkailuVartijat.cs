@@ -48,6 +48,8 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
+        /// <summary>Askelten mikseritunnukset (tehosteet; DioraamaSovitin rekisteröi askel-klipit ladatessaan).</summary>
+        public const string VartijanAskeleet = "vartijan-askeleet", PelaajanAskeleet = "omat-askeleet";
         /// <summary>Rakennuksen askeläänitteet tunnuksella (askel-kivi, askel-puu; DioraamaSovitin lataa). Pelaajan omat askeleet.</summary>
         public static readonly Dictionary<string, AudioClip> AskelKlipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
         AudioSource omatAskeleet;
@@ -186,7 +188,7 @@ namespace Matkakirja.Natiivi
                     Uppoutunut = seisoo && eka.Tunnus.StartsWith("harja", StringComparison.Ordinal),   // huone 8: katsovat järvelle
                     Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
-                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
+                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet);
                 // Kannettu valo (pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu): oikea pistevalo ilman varjoja,
                 // joten valo kasvaa kierreportaan kaarevalla seinällä ennen kuin kantaja tulee näkyviin; liekki käden kohdalle, hehku laatutasolla.
                 var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
@@ -400,7 +402,7 @@ namespace Matkakirja.Natiivi
                 {
                     SeikkailuKuulija.Aseta(aa, ag.transform.position + Vector3.up * 0.1f);
                     if (aa.clip == null && AskelKlippi != null) aa.clip = AskelKlippi;
-                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); aa.volume = 0.9f * Asetukset.Taso(Voima.Tehosteet); if (!aa.isPlaying) aa.Play(); }
+                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); aa.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet); if (!aa.isPlaying) aa.Play(); }
                     else if (aa.isPlaying) aa.Stop();
                 }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
@@ -489,7 +491,7 @@ namespace Matkakirja.Natiivi
             bool liikkuu = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa && klippi != null;
             if (!liikkuu) { if (omatAskeleet.isPlaying) omatAskeleet.Stop(); return; }
             if (omatAskeleet.clip != klippi) { omatAskeleet.clip = klippi; omatAskeleet.Play(); }
-            omatAskeleet.volume = voima * Asetukset.Taso(Voima.Tehosteet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
+            omatAskeleet.volume = voima * SeikkailuAanet.Taso("tehosteet", PelaajanAskeleet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
 

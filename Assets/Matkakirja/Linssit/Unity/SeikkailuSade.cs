@@ -1,5 +1,5 @@
 // SADE (omistajan palaute 8.10. (2), Siirtoseppä): Pelikoodarin aanet-saa-v1-silmukat (−23 LUFS, sauma valmiina, loop ilman
-// ristihäivytystä) kaksiulotteisina taustoina ☰-mikserin "Sää"-voimalla (Asetukset.Taso(Voima.Saa)). Tila pelaajan kävelyosasta
+// ristihäivytystä) kaksiulotteisina taustoina ☰-mikserin sää- tai maisemaryhmässä (äänirekisteri, SeikkailuAanet.MikserinTaso). Tila pelaajan kävelyosasta
 // (pienin osa, jonka rajoihin pelaaja osuu) ja sen märkyydestä (LR v45f): ulkona (märkyys ≥ 0,5) sade kivelle ja tippuminen
 // räystäiltä, veden äärellä (≥ 0,8 tai veneessä) sade veteen, puupinnan lähellä (pinta-merkki puu*, 6 m) sade puulle, veneessä
 // sade pressulle; sisällä sade kuuluu vaimeana ja vesi tippuu muurista. Kaukainen ukkonen aina hiljaa. Liukuva siirtymä 1,5 s.
@@ -15,7 +15,7 @@ namespace Matkakirja.Natiivi
         public static SeikkailuSade Aktiivinen { get; private set; }
         /// <summary>Korkean tuulen raja (m, Unity y): muurin harja ja tornin yläosa ulkona (piha ~0, harja ~10–12).</summary>
         public const float KorkeallaY = 8.5f;
-        static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
+        internal static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
             "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)
             "yolinnut", "koira",
@@ -90,10 +90,9 @@ namespace Matkakirja.Natiivi
                 bool korkealla = p != null && markyys >= 0.5 && p.transform.position.y > KorkeallaY;
                 Tavoitteet(markyys, veneessa, puulla, tavoite, korkealla, ulkopuolella);
             }
-            float saaTaso = Asetukset.Taso(Voima.Saa), taustaTaso = Asetukset.Taso(Voima.Tausta);
             foreach (var t in Tunnukset)
             {
-                float taso = AaniLuokka.OnkoSaa(t) ? saaTaso : taustaTaso;
+                float taso = SeikkailuAanet.MikserinTaso(t);   // äänirekisteri: sää- tai maisemaryhmä × äänen kerroin
                 tavoite.TryGetValue(t, out var v);
                 if (!lahteet.TryGetValue(t, out var l) || l == null)
                 {

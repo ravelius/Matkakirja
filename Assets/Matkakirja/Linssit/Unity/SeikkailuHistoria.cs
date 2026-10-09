@@ -18,6 +18,8 @@ namespace Matkakirja.Natiivi
 {
     public sealed class SeikkailuHistoria : MonoBehaviour
     {
+        /// <summary>Mikseritunnus historian kertojalle (puhe-ryhmä, konteksti linna).</summary>
+        public const string KertojaId = "historia-kertoja";
         static SeikkailuHistoria ajossa;
         public static bool Kaynnissa => ajossa != null;
         /// <summary>Avainsana nyt (DioraamaTaulu näyttää; null = ei).</summary>
@@ -69,14 +71,18 @@ namespace Matkakirja.Natiivi
             using var q = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
             ((DownloadHandlerAudioClip)q.downloadHandler).compressed = true;
             yield return q.SendWebRequest();
-            if (q.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(q) is AudioClip k && k.length > 0.2f) kertojaKlipit[i] = k;
+            if (q.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(q) is AudioClip k && k.length > 0.2f)
+            {
+                k.name = "Kertoja:historia-" + i; kertojaKlipit[i] = k;
+                SeikkailuAanet.Rekisteroi("puhe", KertojaId, k.name);
+            }
         }
 
         void SoitaKertoja(int i, Action<string> kirjaa)
         {
             if (!kertojaKlipit.TryGetValue(i, out var k)) return;
             if (kertoja == null) { kertoja = gameObject.AddComponent<AudioSource>(); kertoja.spatialBlend = 0f; kertoja.playOnAwake = false; }
-            kertoja.Stop(); kertoja.clip = k; kertoja.volume = DioraamaAanet.PuheTaso * Asetukset.Taso(Voima.Lukija); kertoja.PlayDelayed((float)Historiajana.KertojaViiveS);
+            kertoja.Stop(); kertoja.clip = k; kertoja.volume = DioraamaAanet.PuheTaso * SeikkailuAanet.Taso("puhe", KertojaId); kertoja.PlayDelayed((float)Historiajana.KertojaViiveS);
             kirjaa?.Invoke($"seikkailu: historia kertoja {i} ({k.length:F1} s)");
         }
         readonly List<Renderer> piilotetut = new List<Renderer>(); readonly List<Light> sammutetut = new List<Light>();
