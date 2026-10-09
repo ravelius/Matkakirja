@@ -50,6 +50,13 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(tartu != null && tartu.Kasi == "l" && tartu.Esine == "rukouskirja", "vasen käsi samaan kirjaan");
         }
 
+        /// <summary>Vuoden 1499 kuori (LR v46m, kuori v25): ulkokuori.asu "1499", joten ranta-1499 pysyy näkyvissä koko historian ajan.</summary>
+        [Testi] static void PalanKuoriOnVuoden1499Asu()
+        {
+            string json = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "olavinlinna-" + Matkakirja.Linssit.Seikkailu.PelattavaPala.Versio + "-rakennus.json"));
+            Oleta.Sama("1499", DioraamaData.Lue(json).Ulkokuori.Asu);
+        }
+
         static void SamaV3(V3 odotettu, V3 saatu, string mita) => LahellaV3(odotettu, saatu, mita, 1e-9);
 
         // ═══════════════════════════════════════════════════════════════════

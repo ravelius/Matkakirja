@@ -78,9 +78,9 @@
   },
   "ranta-1499": {
    "kolmiot": {
-    "nakyva": 14794,
-    "-tormays": 14774,
-    "-kavely": 11084
+    "nakyva": 9375,
+    "-tormays": 8461,
+    "-kavely": 5054
    },
    "merkit": [
     "leikkaus:vain-1499-b"
@@ -239,12 +239,12 @@
    "rajat": {
     "min": [
      -98.48,
-     -7.73,
+     -7.5,
      -58.0
     ],
     "max": [
      98.0,
-     0.19,
+     -0.61,
      66.0
     ]
    },
@@ -254,7 +254,7 @@
    ],
    "portaalit": [],
    "kamera_rajat": {
-    "katto_y": -0.06
+    "katto_y": -0.86
    },
    "tiedostot": {
     "nakyva": "ranta-1499.glb",
@@ -262,12 +262,12 @@
     "kavely": "ranta-1499-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 14794,
+    "kolmiot_nakyva": 9375,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
    "pinta": "kivi",
-   "markyys": 0.8,
+   "markyys": 0.15,
    "valoatlas": {
     "tiedosto": "blender/kavely/valot/ranta-1499.jpg",
     "puoli": "blender/kavely/valot/ranta-1499-512.jpg",
