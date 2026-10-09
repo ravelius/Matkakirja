@@ -8,7 +8,12 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-yo.md`** (UUSIN: SEURAAVA TYÖ ND:n muotokorjaus – diagnoosi ja järjestys luovutuksessa; tekoälypinnat ja Karttasepän jono, vouti v4b, KL v3c, Riddarholmen v2c). Sitä edeltävä: **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-ilta.md`** ( Codex-pinnat, KL v3b, Riddarholmen v2b, vouti v3, v46i).
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-yo.md`** – lue myös loppuosan LISÄYKSET 20.5x–22.3x, joissa on uusin tila:
+   - ND v10 on viety (muotokorjaus tehty, 244 k / 89 k / 5 k), ja uudet ohjauskuvat ovat valmiit.
+   - Karttaseppä generoi v3:a. Kun se on valmis, aja `tekoaly_koko.zsh nd v3`.
+   - Kappalaisen rukouskirja on v46l (peili 83b6185bc898d1e7, haara v45d).
+   - ranta-1499 v2 -muoto odottaa v25-vientiä.
+   Luovutuksen alkuosa: ND:n muotokorjaus, diagnoosi ja järjestys; tekoälypinnat ja Karttasepän jono, vouti v4b, KL v3c, Riddarholmen v2c). Sitä edeltävä: **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-ilta.md`** ( Codex-pinnat, KL v3b, Riddarholmen v2b, vouti v3, v46i).
    Sitä edeltävä luovutus: **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009.md`** (UUSIN 9.10.: ND v8 / KL v2b omistajan hyväksyttävinä,
    LS2:n hiontalista, historian ranta-1499-täyttö v46g / arvio 6, PBR-pinnat ja kaukokuvan sävyerot). Päivän tarkka loki
    (hashit, SHA:t) on tiedoston `…-20261005b.md` lopussa.
