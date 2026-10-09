@@ -22,10 +22,10 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class HistoriaVaihe
     {
         public readonly double Vuosi, KestoS, Korkeus, EtaisyysKerroin;
-        /// <summary>Avainsanan tekstiavain (olavinlinna.historia.&lt;Avain&gt;.vuosi / .sanat, Tekstit-taulu); null = ei avainsanaa.</summary>
+        /// <summary>Avainsanan tekstiavain (olavinlinna.historia.&lt;Avain&gt;.vuosi / .sanat, Kielitaulu); null = ei avainsanaa.</summary>
         public readonly string Avain;
-        public string VuosiTeksti => Avain != null ? Tekstit.T("olavinlinna.historia." + Avain + ".vuosi") : null;
-        public string Sanat => Avain != null ? Tekstit.T("olavinlinna.historia." + Avain + ".sanat") : null;
+        public string VuosiTeksti => Avain != null ? Kielitaulu.Hae("olavinlinna.historia." + Avain + ".vuosi") : null;
+        public string Sanat => Avain != null ? Kielitaulu.Hae("olavinlinna.historia." + Avain + ".sanat") : null;
         public HistoriaVaihe(double vuosi, double kestoS, double korkeus, double etaisyysKerroin, string avain = null)
         { Vuosi = vuosi; KestoS = kestoS; Korkeus = korkeus; EtaisyysKerroin = etaisyysKerroin; Avain = avain; }
     }

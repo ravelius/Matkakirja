@@ -96,7 +96,7 @@ namespace Matkakirja.Natiivi
             koysiKiinni = true;
             p.KasiEle("poiminta");
             SeikkailuAanet.SoitaTaiVara("koysi-kiinnitys", "lyhty-narina", sakara.Value, 0.6f, 0.8f);
-            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: köysi sakarassa");   // tekninen
+            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: köysi sakarassa");   // kieli: ei (tekninen)
             AloitaSeinakiipeily(p);
         }
 
@@ -743,7 +743,7 @@ namespace Matkakirja.Natiivi
                     }
                     foreach (int ix in o.Kolmiot ?? Array.Empty<int>()) kol.Add(ix + a);
                 }
-            var m = new Mesh { name = "Esine" };   // tekninen
+            var m = new Mesh { name = "Esine" };   // kieli: ei (tekninen)
             m.SetVertices(p); m.SetNormals(nr); m.SetUVs(0, uv); m.SetTriangles(kol, 0); m.RecalculateBounds();
             if (uv.Count == p.Count && p.Count > 0) m.RecalculateTangents();   // normaalikartta (LR v45o)
             return m;
@@ -796,13 +796,13 @@ namespace Matkakirja.Natiivi
                 ?? (kadessa == null && SeikkailuKomero.Aktiivinen?.Verbi(p) != null ? "komero" : null)
                 ?? (kadessa == null && SeikkailuPako.Aktiivinen?.Verbi(p) != null ? "pako" : null);
             Toiminto = kadessa != null
-                ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.avaa")
-                    : kadessa.Id == Koysikieppi && SakaraLahella(p) ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.kiinnita")
-                    : kadessa.Id == Tarjotin && SeikkailuVartijat.TarjotinVastaanottaja(p.transform.position) ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.anna")
-                    : kadessa.Laji == Laji.Heitettava ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.heita") : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.aseta") : Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.laske"))
-                : lahin != null ? (lahin.Laji == Laji.Irrotettava ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.irrota") : lahin.Laji == Laji.Kaadettava ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.kaada") : lahin.Laji == Laji.Puettava ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.pue") : lahin.Id == Nyytti ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.avaa") : Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.poimi"))
+                ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? Kieli.T("olavinlinna.verbi.avaa")
+                    : kadessa.Id == Koysikieppi && SakaraLahella(p) ? Kieli.T("olavinlinna.verbi.kiinnita")
+                    : kadessa.Id == Tarjotin && SeikkailuVartijat.TarjotinVastaanottaja(p.transform.position) ? Kieli.T("olavinlinna.verbi.anna")
+                    : kadessa.Laji == Laji.Heitettava ? Kieli.T("olavinlinna.verbi.heita") : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? Kieli.T("olavinlinna.verbi.aseta") : Kieli.T("olavinlinna.verbi.laske"))
+                : lahin != null ? (lahin.Laji == Laji.Irrotettava ? Kieli.T("olavinlinna.verbi.irrota") : lahin.Laji == Laji.Kaadettava ? Kieli.T("olavinlinna.verbi.kaada") : lahin.Laji == Laji.Puettava ? Kieli.T("olavinlinna.verbi.pue") : lahin.Id == Nyytti ? Kieli.T("olavinlinna.verbi.avaa") : Kieli.T("olavinlinna.verbi.poimi"))
                 : Lahin == "kynttila" ? kynttilat.ToimintoVerbi(p)
-                : Lahin == "koputa" ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.koputa") : Lahin == "tikkaat" ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.kiipea") : Lahin == "ovi" ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.avaa") : Lahin == "sakara" ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.kiipea") : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : Lahin == "pako" ? SeikkailuPako.Aktiivinen.Verbi(p) : null;
+                : Lahin == "koputa" ? Kieli.T("olavinlinna.verbi.koputa") : Lahin == "tikkaat" ? Kieli.T("olavinlinna.verbi.kiipea") : Lahin == "ovi" ? Kieli.T("olavinlinna.verbi.avaa") : Lahin == "sakara" ? Kieli.T("olavinlinna.verbi.kiipea") : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : Lahin == "pako" ? SeikkailuPako.Aktiivinen.Verbi(p) : null;
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;

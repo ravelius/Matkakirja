@@ -36,9 +36,9 @@ namespace Matkakirja.Linssit.Seikkailu
                 var k = new Tietokortti
                 {
                     // Tekstit avaimella (PT 9.10., käännettävyys): <alue>.tietokortti.<id>.otsikko/lyhyt/teksti, datan teksti varalla.
-                    Id = id, Otsikko = Tekstit.TaiData(Avain(alue, id, "otsikko"), MiniJson.Teksti(o, "otsikko")),
-                    Lyhyt = Tekstit.TaiData(Avain(alue, id, "lyhyt"), MiniJson.Teksti(o, "lyhyt") ?? MiniJson.Teksti(o, "otsikko")),
-                    Teksti = Tekstit.TaiData(Avain(alue, id, "teksti"), MiniJson.Teksti(o, "teksti")), Varmuus = MiniJson.Teksti(o, "varmuus"),
+                    Id = id, Otsikko = Kielitaulu.TaiData(Avain(alue, id, "otsikko"), MiniJson.Teksti(o, "otsikko")),
+                    Lyhyt = Kielitaulu.TaiData(Avain(alue, id, "lyhyt"), MiniJson.Teksti(o, "lyhyt") ?? MiniJson.Teksti(o, "otsikko")),
+                    Teksti = Kielitaulu.TaiData(Avain(alue, id, "teksti"), MiniJson.Teksti(o, "teksti")), Varmuus = MiniJson.Teksti(o, "varmuus"),
                 };
                 var nro = MiniJson.Kentta(o, "numero");
                 k.Numero = nro is double dn ? (int)dn : nro is string sn && int.TryParse(sn, out var ni) ? ni : t.Kortit.Count + 1;

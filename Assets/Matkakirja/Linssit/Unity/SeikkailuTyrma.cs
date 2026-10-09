@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", ovi + Vector3.up, 0.8f);   // ovi jää raolleen
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
-            if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // tekninen
+            if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
             if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s)"); }
             var maali = ydin.Muunnelma == 3 && ryomiOn ? ryomi : ulos;

@@ -1,16 +1,18 @@
-// PELIN TEKSTIT AVAIMILLA (PT 9.10.2026, käännettävyys englanniksi): Peli/Tekstit.cs, taulu Linssit/Resources/Tekstit/olavinlinna.fi.json
-// (tyokalut/tekstit_olavinlinna.py). Testit: (1) Tekstit-luokan säännöt, (2) jokainen koodin Tekstit.T("…")-avain on fi-taulussa,
-// (3) Olavinlinnan pelin koodissa ei ole kovakoodattua suomenkielistä näkyvää merkkijonoa (lokit ja "// tekninen" -rivit ohitetaan),
-// (4) taulu kattaa datan tekstit (repliikit, kertoja, tietokortit).
+// OLAVINLINNAN PELITEKSTIT AVAIMILLA (PT 9.10.2026, käännettävyys englanniksi): Natiivi-UI:n Kielitaulu-muoto, lisätaulu
+// Linssit/Resources/Tekstit/olavinlinna.fi.json (litteä; tyokalut/tekstit_olavinlinna.py), jonka Kieli yhdistää UI:n ui.fi.json:iin.
+// Testit: (1) Ytimen pääsy (Kielitaulu.Hae, TaiData, alueiden yhdistäminen), (2) jokainen pelin Kieli.T- / Kielitaulu.Hae-avain on taulussa,
+// (3) pelin koodissa ei ole kovakoodattua suomenkielistä näkyvää merkkijonoa (lokit ja "// kieli: ei" -rivit ohitetaan; sama sääntö
+// tyokalut/kielivahti.py:ssä), (4) taulu kattaa datan tekstit (repliikit, kertoja, tietokortit).
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using Matkakirja.Peli;
+using Matkakirja.Linssit;
 
 namespace Matkakirja.Linssit.Testit
 {
-    public static class TekstitTestit
+    public static class OlavinlinnaTekstitTestit
     {
         static string Juuri => Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", ".."));
         static string TauluPolku => Path.Combine(Juuri, "Assets/Matkakirja/Linssit/Resources/Tekstit/olavinlinna.fi.json");
@@ -25,22 +27,24 @@ namespace Matkakirja.Linssit.Testit
             yield return Path.Combine(Juuri, "Assets/Matkakirja/Linssit/Ydin/Dioraama/Historiajana.cs");
         }
 
-        [Testi] static void TekstitSaannot()
+        [Testi] static void YtimenPaasyJaLisataulu()
         {
-            Tekstit.Lisaa("xx", "{\"a.b\": \"Avaa\", \"a.c\": \"{0} / {1}\"}");
-            Tekstit.Lisaa("yy", "{\"a.b\": \"Open\"}");
-            string ennen = Tekstit.Kieli;
+            var (p0, v0) = (Kielitaulu.Perus, Kielitaulu.Valittu);
             try
             {
-                Tekstit.Kieli = "xx";
-                Oleta.Sama("Avaa", Tekstit.T("a.b"));
-                Oleta.Sama("1 / 2", Tekstit.T("a.c", 1, 2));
-                Oleta.Sama("[a.puuttuu]", Tekstit.T("a.puuttuu"));
-                Oleta.Sama("data", Tekstit.TaiData("a.puuttuu", "data"));
-                Tekstit.Kieli = "yy";
-                Oleta.Sama("Open", Tekstit.T("a.b"));
+                var fi = Kielitaulu.Lue("{\"a.b\": \"Avaa\", \"a.c\": \"{0} / {1}\"}");
+                fi.Lisaa("{\"olavinlinna.x\": \"Lisä\"}");
+                Kielitaulu.Perus = fi; Kielitaulu.Valittu = null;
+                Oleta.Sama("Avaa", Kielitaulu.Hae("a.b"));
+                Oleta.Sama("Lisä", Kielitaulu.Hae("olavinlinna.x"));
+                Oleta.Sama("1 / 2", Kielitaulu.Hae("a.c", 1, 2));
+                Oleta.Sama("a.puuttuu", Kielitaulu.Hae("a.puuttuu"));
+                Oleta.Sama("data", Kielitaulu.TaiData("a.puuttuu", "data"));
+                Kielitaulu.Valittu = Kielitaulu.Lue("{\"a.b\": \"Open\"}");
+                Oleta.Sama("Open", Kielitaulu.Hae("a.b"));
+                Oleta.Sama("Lisä", Kielitaulu.Hae("olavinlinna.x"));   // puuttuva käännös → suomi
             }
-            finally { Tekstit.Kieli = ennen; }
+            finally { Kielitaulu.Perus = p0; Kielitaulu.Valittu = v0; }
             Oleta.Sama("olavinlinna.kertoja.jarvelta", Matkakirja.Linssit.Dioraama.DioraamaData.TekstiAvain("Olavinlinna", "kertoja", "järvelta"[0] == 'j' ? "jarvelta" : ""));
             Oleta.Sama("olavinlinna.tietokortti.kyronsalmi-ja-1", Matkakirja.Linssit.Dioraama.DioraamaData.TekstiAvain("olavinlinna", "tietokortti", "Kyronsalmi ja 1"));
         }
@@ -50,7 +54,7 @@ namespace Matkakirja.Linssit.Testit
             var t = Taulu();
             var kaytetyt = new SortedSet<string>(StringComparer.Ordinal);
             foreach (var f in PelinKoodi())
-                foreach (Match m in Regex.Matches(File.ReadAllText(f), "Tekstit\\.T\\(\"([a-z0-9.\\-]+)\""))
+                foreach (Match m in Regex.Matches(File.ReadAllText(f), "(?:Kieli\\.T|Kielitaulu\\.Hae)\\(\"([a-z0-9.\\-]+)\""))
                     if (!m.Groups[1].Value.EndsWith(".", StringComparison.Ordinal)) kaytetyt.Add(m.Groups[1].Value);
             // Historiajanan vaiheiden avaimet ("olavinlinna.historia." + Avain + ".vuosi/.sanat").
             foreach (var v in Matkakirja.Linssit.Dioraama.Historiajana.Olavinlinna.Vaiheet) { kaytetyt.Add("olavinlinna.historia." + v.Avain + ".vuosi"); kaytetyt.Add("olavinlinna.historia." + v.Avain + ".sanat"); }
@@ -84,7 +88,7 @@ namespace Matkakirja.Linssit.Testit
                 for (int i = 0; i < rivit.Length; i++)
                 {
                     string r = rivit[i], s = r.TrimStart();
-                    if (s.StartsWith("//") || s.StartsWith("*") || r.Contains("// tekninen")) continue;
+                    if (s.StartsWith("//") || s.StartsWith("*") || r.Contains("kieli: ei")) continue;
                     string koodi = IlmanKommenttia(r);
                     var loki = Lokit.Match(koodi); if (loki.Success && !Nimet.IsMatch(koodi.Substring(loki.Index))) koodi = koodi.Substring(0, loki.Index);
                     koodi = Nimet.Replace(koodi, "");
@@ -97,7 +101,7 @@ namespace Matkakirja.Linssit.Testit
                 }
             }
             if (loydot.Count > 0) Console.WriteLine("      kovakoodattu:\n        " + string.Join("\n        ", loydot));
-            Oleta.Tosi(loydot.Count == 0, $"kovakoodattuja suomenkielisiä merkkijonoja {loydot.Count} (avain Tekstit-tauluun tai \"// tekninen\", jos ei näy pelaajalle)");
+            Oleta.Tosi(loydot.Count == 0, $"kovakoodattuja suomenkielisiä merkkijonoja {loydot.Count} (avain Tekstit/olavinlinna.fi.json:iin ja Kieli.T, tai \"// kieli: ei (syy)\", jos ei näy pelaajalle)");
         }
 
         [Testi] static void TauluKattaaDatanTekstit()
@@ -110,9 +114,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Ryhma("verbi") >= 20 && Ryhma("loyto") >= 4 && Ryhma("historia") >= 18, "koodin tekstit");
             foreach (var kv in t) Oleta.Tosi(kv.Value is string s && s.Length > 0, $"tyhjä teksti: {kv.Key}");
             // Tietokortti avaimella taulusta (sama kuin data nyt; myöhemmin käännös).
-            Tekstit.Lisaa("fi", File.ReadAllText(TauluPolku));
-            var tk = Matkakirja.Linssit.Seikkailu.Tietokerros.Lue("{\"kortit\": [{\"id\": \"kyronsalmi\", \"otsikko\": \"data\"}]}");
-            Oleta.Sama(t["olavinlinna.tietokortti.kyronsalmi.otsikko"] as string, tk.Kortit[0].Otsikko);
+            var (p0, v0) = (Kielitaulu.Perus, Kielitaulu.Valittu);
+            try
+            {
+                Kielitaulu.Perus = Kielitaulu.Lue(File.ReadAllText(TauluPolku)); Kielitaulu.Valittu = null;
+                var tk = Matkakirja.Linssit.Seikkailu.Tietokerros.Lue("{\"kortit\": [{\"id\": \"kyronsalmi\", \"otsikko\": \"data\"}]}");
+                Oleta.Sama(t["olavinlinna.tietokortti.kyronsalmi.otsikko"] as string, tk.Kortit[0].Otsikko);
+                Oleta.Sama(t["olavinlinna.historia.1499.sanat"] as string, Matkakirja.Linssit.Dioraama.Historiajana.Olavinlinna.Vaiheet[4].Sanat);
+            }
+            finally { Kielitaulu.Perus = p0; Kielitaulu.Valittu = v0; }
         }
     }
 }

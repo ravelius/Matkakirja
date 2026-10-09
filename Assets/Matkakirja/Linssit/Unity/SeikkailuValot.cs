@@ -91,7 +91,7 @@ namespace Matkakirja.Natiivi
             Hae();
             if (!Liekit || viitteet == null || viitteet.KynttilanLiekki == null || isa == null) return null;
             var go = UnityEngine.Object.Instantiate(viitteet.KynttilanLiekki, isa, false);
-            go.name = "Kynttilän liekki (VFX)";   // tekninen
+            go.name = "Kynttilän liekki (VFX)";   // kieli: ei (tekninen)
             var s = isa.lossyScale;
             go.transform.localScale = new Vector3(s.x != 0 ? 1f / s.x : 1f, s.y != 0 ? 1f / s.y : 1f, s.z != 0 ? 1f / s.z : 1f);
             foreach (var t in go.GetComponentsInChildren<Transform>(true)) t.gameObject.layer = kerros;

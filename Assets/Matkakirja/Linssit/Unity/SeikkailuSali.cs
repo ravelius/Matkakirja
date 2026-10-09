@@ -40,7 +40,7 @@ namespace Matkakirja.Natiivi
             if (id != "keittokulho" || !ydin.KulhoLaskettu(Vector3.Distance(paikka, kulhoPaikka))) return;
             kirjaa?.Invoke("seikkailu: kulho voudin pöydällä → vouti syö, kiista aitan hoitajan kanssa alkaa");
             SeikkailuAanet.SoitaTaiVara("kulho-poyta", "kivi-lasku", paikka, 0.6f, 1.3f);
-            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: kulho pöydällä");   // tekninen
+            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: kulho pöydällä");   // kieli: ei (tekninen)
         }
 
         void KiistaAani()

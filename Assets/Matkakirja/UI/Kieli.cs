@@ -27,12 +27,18 @@ namespace Matkakirja.Natiivi
             return (nyt ?? perus).T(avain, perus, arvot);
         }
 
+        /// <summary>Lataus ennen ensimmäistä kohtausta, jotta Ytimen pelitekstit (Kielitaulu.Hae: historian avainsanat, kertoja,
+        /// tietokortit) ovat valmiina jo ennen ensimmäistä Kieli.T-kutsua (Siirtoseppä 9.10.).</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        static void Alusta() { if (!ladattu) Lataa(); }
+
         static void Lataa()
         {
             ladattu = true;
             perus = Taulu(Perus);
             if (perus == null) Debug.LogWarning("MATKAKIRJA kieli: Resources/Tekstit/*.fi.json puuttuu tai on rikki");
             nyt = Valittu == Perus ? null : Taulu(Valittu);
+            Kielitaulu.Perus = perus; Kielitaulu.Valittu = nyt;   // Ytimen pelitekstit (Historiajana, kertoja, tietokortit; Siirtoseppä)
         }
 
         /// <summary>Kaikki Resources/Tekstit/*.<kieli>.json yhdeksi tauluksi; null, jos yhtään ei ole.</summary>

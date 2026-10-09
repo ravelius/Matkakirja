@@ -13,6 +13,16 @@ namespace Matkakirja.Linssit
     {
         readonly Dictionary<string, string> tekstit = new Dictionary<string, string>(StringComparer.Ordinal);
 
+        /// <summary>Ytimen pääsy (Siirtoseppä 9.10.: pelitekstit Historiajanassa, kertojassa, tietokorteissa): Natiivi.Kieli asettaa
+        /// ladatessaan (yksi lataaja); testit asettavat suoraan. Perus = suomi (kaikki alueet), Valittu = pyydetty kieli tai null.</summary>
+        public static Kielitaulu Perus, Valittu;
+
+        /// <summary>Teksti avaimelle Ytimessä: valittu → suomi → avain (sama haku kuin Natiivi.Kieli.T).</summary>
+        public static string Hae(string avain, params object[] arvot) => Perus == null ? avain ?? "" : (Valittu ?? Perus).T(avain, Perus, arvot);
+
+        /// <summary>Datan teksti (kertoja, tietokortti): avaimen teksti, jos taulussa, muuten datan oma suomenkielinen teksti.</summary>
+        public static string TaiData(string avain, string data) => avain != null && (Valittu?.On(avain) == true || Perus?.On(avain) == true) ? Hae(avain) : data;
+
         public int Maara => tekstit.Count;
         public IEnumerable<string> Avaimet => tekstit.Keys;
         public bool On(string avain) => avain != null && tekstit.ContainsKey(avain);

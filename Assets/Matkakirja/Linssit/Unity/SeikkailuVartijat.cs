@@ -581,7 +581,7 @@ namespace Matkakirja.Natiivi
                 // Anteeksianto (pelattavuusmalli 4.2): 2. kiinnijäänti samassa huoneessa → näkö −15 % ja epäilyraja 0,4; 3. → Pulun taso 2 heti.
                 kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
                 if (kiinniOsassa >= 2) foreach (var x in vartijat) x.Aivot.Helpotettu = true;
-                if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");   // tekninen
+                if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");   // kieli: ei (tekninen)
                 kirjaa?.Invoke($"seikkailu: kiinnijäänti {kiinniOsassa}. kerran osassa {osa}{(kiinniOsassa >= 2 ? " (helpotus)" : "")}");
             }
             if (p != null) p.Siirra(tarkistus);
