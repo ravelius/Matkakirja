@@ -240,6 +240,8 @@ namespace Matkakirja.Linssit.Kierros
         public double LentoKestoS { get; private set; }
         /// <summary>Lennon kaaren vähimmäiskorkeus (rho; OpasKuvaus.NopeusRho), 0 = oletus.</summary>
         double lentoRho;
+        /// <summary>Seuraavan lennon esilatauksen nousu (NopeusRho) välimuistissa.</summary>
+        string esiRhoAvain; double esiRho;
         /// <summary>Alkaneen lennon mittari (OpasKuvaus.Mittari): suurin kiihtyvyys m/s² ja suurin laskunopeus m/s; siirrossa (0, 0).</summary>
         public (double kiihtyvyys, double lasku) LentoMittari { get; private set; }
         /// <summary>Lähtevä pyyntö: toive (tai null) — sovitin lähettää workerille. Palauttaa pyynnön järjestysnumeron.</summary>
@@ -1592,7 +1594,7 @@ namespace Matkakirja.Linssit.Kierros
         public int ReittiEsilataus(Func<OpasKohde, double> maaKorkeus, Kuvakulma[] ulos)
         {
             if (ulos == null || VapaaTila || Siirtymassa || Tauolla) return 0;
-            Kuvakulma a, b; double t0, rho = 0;   // seuraavan lennon nousua (NopeusRho) ei vielä tiedetä: esilataus matalalta
+            Kuvakulma a, b; double t0, rho = 0;
             if (Vaihe == OpasVaihe.Lentaa)
             {
                 // Myös siirtymälento (kierroksen aloitus yleiskuvasta arviokehykseen, video4 5–12 s karkeana).
@@ -1606,6 +1608,19 @@ namespace Matkakirja.Linssit.Kierros
                 if (matka >= SiirtoRajaM || SamaPaikka()) return 0;   // siirto ei lennä; "kerro lisää" jää paikalleen
                 b = KehysAsento(KehysKohteelle(Seuraava, maaKorkeus), 0);
                 t0 = 0;
+                // Seuraavan lennon nousu kaaressa (OpasKuvaus.NopeusRho) samalla kestolla kuin AloitaLento laskee (kuva-arkki 2, p32:
+                // Sacré-Cœurin nopean lennon alussa sumea laatta, koska esilataus kulki matalaa rataa ja lento nousi). Välimuisti:
+                // kohde, lähtöpaikka (~10 m) ja kehyksen etäisyys, joten laskenta ei toistu joka kehys.
+                if (PalloLento)
+                {
+                    string avain = $"{Seuraava.Nimi}|{a.Lat:F4}|{a.Lon:F4}|{b.EtaisyysM:F0}";
+                    if (avain != esiRhoAvain)
+                    {
+                        double kesto = LennonKesto(matka) * (!(PalloLento && KierrosKaynnissa) || nopeatKohteet.Contains(Seuraava.Nimi ?? "") ? 1 : PalloRauhallinenKerroin);
+                        esiRhoAvain = avain; esiRho = OpasKuvaus.NopeusRho(a, b, kesto);
+                    }
+                    rho = esiRho;
+                }
             }
             else return 0;
             int n = 0;
