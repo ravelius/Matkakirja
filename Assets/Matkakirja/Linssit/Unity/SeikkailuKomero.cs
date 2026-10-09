@@ -124,9 +124,9 @@ namespace Matkakirja.Natiivi
         public string Verbi(SeikkailuPelaaja p)
         {
             if (p == null || ydin == null) return null;
-            if (LahinTiili(p) >= 0) return "Raavi";
+            if (LahinTiili(p) >= 0) return Kieli.T("olavinlinna.verbi.raavi");
             int k = LahinKilpi(p);
-            return k == 0 || k == 1 ? "Käännä" : k == 2 ? "Avaa" : null;
+            return k == 0 || k == 1 ? Kieli.T("olavinlinna.verbi.kaanna") : k == 2 ? Kieli.T("olavinlinna.verbi.avaa") : null;
         }
 
         public bool Toimi(SeikkailuPelaaja p)
@@ -177,17 +177,17 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Auki(SeikkailuPelaaja p, Vector3 a)
         {
-            SeikkailuAanet.Soita("luukku-narahdus", a + Vector3.up * 0.4f, 0.8f);
+            SeikkailuAanet.SoitaTaiVara("arkku-kansi", "luukku-narahdus", a + Vector3.up * 0.4f, 0.8f);   // sonniss-aanet-v3
             kirjaa?.Invoke("seikkailu: arkku auki (kilvet 45° toisiaan kohti)");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: arkku auki");
             yield return new WaitForSeconds(0.8f);
-            SeikkailuAanet.Soita("hopea-kilahdus", a + Vector3.up * 0.4f, 0.8f);
+            SeikkailuAanet.SoitaJokin(SeikkailuAanet.Kolikot, "hopea-kilahdus", a + Vector3.up * 0.4f, 0.8f);   // kolikot ja hopea arkussa
             SeikkailuAanet.Soita("loyto-kantele", p.transform.position + Vector3.up * 1.6f, 0.8f);
             var t = typeof(SeikkailuKomero).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); ArkkuAuki?.Invoke(); yield break; }
             // Teksti on paikkamerkki (M-osan käsikirjoitus ja Sisältökirjurin tarkistus puuttuvat).
-            try { m.Invoke(null, new object[] { "Kellotornin arkku", "Arkun pohjalla kuunvalossa hopea välkkyy.", null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: arkun löytö kuitattu"); ArkkuAuki?.Invoke(); }) }); }
+            try { m.Invoke(null, new object[] { Kieli.T("olavinlinna.loyto.arkku.otsikko"), Kieli.T("olavinlinna.loyto.arkku.teksti"), null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: arkun löytö kuitattu"); ArkkuAuki?.Invoke(); }) }); }
             catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); ArkkuAuki?.Invoke(); }
         }
 

@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (t == null) return;
                     kertyma += Mathf.Abs((float)asteet);
-                    if (narahti) { SeikkailuAanet.Soita("luukku-narahdus", t.ovi + Vector3.up, 0.8f); SeikkailuVartijat.Aani(t.ovi, 4); }
+                    if (narahti) { SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", t.ovi + Vector3.up, 0.8f); SeikkailuVartijat.Aani(t.ovi, 4); }   // tammiovi
                     if (kertyma >= 60f) { kertyma = 0f; t.AvaaOvi(pl); }
                 },
                 Loppui = () => kertyma = 0f,
@@ -84,12 +84,13 @@ namespace Matkakirja.Natiivi
                 ydin.VesipoikaAvasi = false;
                 if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, ovi, 0.6f);
                 SeikkailuAanet.Soita("kivi-kolahdus", ovi + Vector3.up * 0.3f, 0.7f, 0.7f);   // sanko kolahtaa
-                SeikkailuAanet.Soita("luukku-narahdus", ovi + Vector3.up, 0.8f);            // ovi jää raolleen
+                SeikkailuAanet.SoitaTaiVara("salpa-2", null, ovi + Vector3.up, 0.6f);         // salpa auki (sonniss-aanet-v3)
+                SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", ovi + Vector3.up, 0.8f);   // ovi jää raolleen
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
-            if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }
+            if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
-            if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.Soita("avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s)"); }
+            if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s)"); }
             var maali = ydin.Muunnelma == 3 && ryomiOn ? ryomi : ulos;
             if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < UlosM && ydin.Ulos()) StartCoroutine(Ulos());
         }
@@ -101,7 +102,7 @@ namespace Matkakirja.Natiivi
         {
             if (!OviLahella(p) || !ydin.AvaaOvi()) return;
             p.KasiEle("luukku");
-            SeikkailuAanet.Soita("avain-lukko", ovi + Vector3.up, 0.8f);
+            SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f);
             if (avainId != null) SeikkailuEsineet.Aktiivinen?.Piilota(avainId);
             kirjaa?.Invoke("seikkailu: tyrmä: ovi auki");
         }

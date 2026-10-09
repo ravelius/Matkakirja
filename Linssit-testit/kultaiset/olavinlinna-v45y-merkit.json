@@ -1501,8 +1501,9 @@
   ],
   "tyyppi": "tulkinta",
   "kompassi": 1.2,
-  "huom": "ote (telinereikä tai reuna, TULKINTA)",
-  "osa": "muurikaytava"
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
  },
  {
   "nimi": "ote:kellotorni-10",
@@ -1518,8 +1519,9 @@
   ],
   "tyyppi": "tulkinta",
   "kompassi": 355.8,
-  "huom": "ote (telinereikä tai reuna, TULKINTA)",
-  "osa": "muurikaytava"
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
  },
  {
   "nimi": "ote:kellotorni-11",
@@ -1550,9 +1552,9 @@
    0.0,
    -0.966
   ],
-  "tyyppi": "tulkinta",
+  "tyyppi": "lepo",
   "kompassi": 345.0,
-  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "huom": "lepokohta puolivälissä: leveä ulkoneva reunakivi, molemmat jalat (PT 9.10., TULKINTA)",
   "osa": "muurikaytava"
  },
  {
@@ -1603,8 +1605,9 @@
   ],
   "tyyppi": "tulkinta",
   "kompassi": 328.8,
-  "huom": "ote (telinereikä tai reuna, TULKINTA)",
-  "osa": "muurikaytava"
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
  },
  {
   "nimi": "ote:kellotorni-16",
@@ -1620,8 +1623,9 @@
   ],
   "tyyppi": "tulkinta",
   "kompassi": 323.3,
-  "huom": "ote (telinereikä tai reuna, TULKINTA)",
-  "osa": "muurikaytava"
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
  },
  {
   "nimi": "ote:kellotorni-17",
@@ -1637,8 +1641,9 @@
   ],
   "tyyppi": "tulkinta",
   "kompassi": 317.9,
-  "huom": "ote (telinereikä tai reuna, TULKINTA)",
-  "osa": "muurikaytava"
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
  },
  {
   "nimi": "ote:kellotorni-18",
@@ -2441,6 +2446,18 @@
    6.552
   ],
   "odotus_s": 3,
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "lakaisu:apulainen-tupa",
+  "paikka": [
+   -11.396,
+   3.4,
+   7.265
+  ],
+  "henkilo": "apulainen-1500",
+  "aani": "luuta",
+  "huom": "9.10. Siirtoseppä: luuta-äänen paikka; apulainen lakaisee oven edustaa partio-2:n kohdalla",
   "osa": "palatsi"
  },
  {

@@ -18,7 +18,8 @@ namespace Matkakirja.Natiivi
         static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
             "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)
-            "yolinnut", "koira" };   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
+            "yolinnut", "koira",
+            "kesayo-sirkat", "satama-vesi" };   // sonniss-aanet-v3 (PT 9.10.): kesäyön sirkat ulkona, vesi loiskii kallioon rannalla ja veneessä   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
         readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
         readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
         float tarkistusT;
@@ -55,6 +56,8 @@ namespace Matkakirja.Natiivi
             // Yön elämä ulkona (huuhkaja, kaukainen koira rannalta) sateen alla hiljaa; sisällä tuskin kuuluvissa.
             ulos["yolinnut"] = ulkona ? (korkealla ? 0.4f : 0.3f) : 0.06f;
             ulos["koira"] = veneessa ? 0.25f : ulkona ? 0.18f : 0f;
+            ulos["kesayo-sirkat"] = ulkona && !korkealla ? 0.22f : 0f;
+            ulos["satama-vesi"] = veneessa ? 0.4f : vesi ? 0.35f : ulkopuolella ? 0.15f : 0f;
         }
 
         /// <summary>Kävelyosa muurin ulkopuolella (ranta, vesiportti, laituri, ulkoalue; LR:n osat v45x).</summary>

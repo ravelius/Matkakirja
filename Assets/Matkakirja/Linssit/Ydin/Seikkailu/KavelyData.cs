@@ -30,8 +30,10 @@ namespace Matkakirja.Linssit.Seikkailu
     public readonly struct KavelyLeikkaus
     {
         public readonly string Nimi; public readonly double X, Y, Z, KokoX, KokoY, KokoZ, KiertoY;
-        public KavelyLeikkaus(string nimi, double x, double y, double z, double kx, double ky, double kz, double kierto)
-        { Nimi = nimi; X = x; Y = y; Z = z; KokoX = kx; KokoY = ky; KokoZ = kz; KiertoY = kierto; }
+        /// <summary>Historia (LR v45y): rakennusvuosi (vuodesta tai, kun vuosi ei ole tiedossa, historia_vuosi) ja purkuvuosi; null = ei tietoa.</summary>
+        public readonly double? HistoriaVuodesta, HistoriaVuoteen;
+        public KavelyLeikkaus(string nimi, double x, double y, double z, double kx, double ky, double kz, double kierto, double? vuodesta = null, double? vuoteen = null)
+        { Nimi = nimi; X = x; Y = y; Z = z; KokoX = kx; KokoY = ky; KokoZ = kz; KiertoY = kierto; HistoriaVuodesta = vuodesta; HistoriaVuoteen = vuoteen; }
         /// <summary>Onko piste (glTF-koordinaatit) särmiön sisällä.</summary>
         public bool Sisalla(double px, double py, double pz)
         {
@@ -48,6 +50,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public string Henkilo, Profiili;
         /// <summary>lakaisu (LR v45y): tehosteen tunnus (esim. "luuta"), soi kun henkilö seisoo merkillä; null jos puuttuu.</summary>
         public string Aani;
+        /// <summary>ote: kapea (LR v45y): hitaampi ja tarkempi ote (Kiipeily).</summary>
+        public bool Kapea;
         /// <summary>partio: kantaa lyhtyä tai soihtua (v44m; pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu).</summary>
         public bool Lyhty, Soihtu;
         /// <summary>leikkaus:vain-1499(-b) (v44r/v44x): aina leikattavien kuorileikkausten nimet (vuoden 1499 näkymä kävelyssä); null jos puuttuu.</summary>
@@ -140,7 +144,8 @@ namespace Matkakirja.Linssit.Seikkailu
                     {
                         var lo = MiniJson.ObjektiTaiNull(l); if (lo == null) continue;
                         var k = Vektori(MiniJson.Kentta(lo, "keskipiste")); var s = Vektori(MiniJson.Kentta(lo, "koko"));
-                        osa.Leikkaukset.Add(new KavelyLeikkaus(MiniJson.Teksti(lo, "nimi"), k[0], k[1], k[2], s[0], s[1], s[2], MiniJson.Luku(lo, "kierto_y") ?? 0));
+                        osa.Leikkaukset.Add(new KavelyLeikkaus(MiniJson.Teksti(lo, "nimi"), k[0], k[1], k[2], s[0], s[1], s[2], MiniJson.Luku(lo, "kierto_y") ?? 0,
+                            MiniJson.Luku(lo, "vuodesta") ?? MiniJson.Luku(lo, "historia_vuosi"), MiniJson.Luku(lo, "vuoteen")));
                     }
                     d.Osat[osa.Id] = osa;
                 }
@@ -170,7 +175,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Yla = MiniJson.Kentta(o, "yla") is object ya ? Vektori(ya) : null,
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
                 Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
-                Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"), Aani = MiniJson.Teksti(o, "aani"),
+                Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"), Aani = MiniJson.Teksti(o, "aani"), Kapea = MiniJson.Kentta(o, "kapea") is bool kpb && kpb,
                 Puettava = MiniJson.Kentta(o, "puettava") is bool pub && pub, Lukko = MiniJson.Kentta(o, "lukko") is bool lub && lub, Avain = MiniJson.Teksti(o, "avain"),
                 AaniNopeaM = MiniJson.Luku(o, "aani_nopea_m") ?? 0, Raapaisut = MiniJson.Luku(o, "raapaisut") ?? 0, KestoS = MiniJson.Luku(o, "kesto_s") ?? 0,
                 KaantoAste = MiniJson.Luku(o, "kaanto_aste") ?? 0, KaantyyS = MiniJson.Luku(o, "kaantyy_s") ?? 0, SallittuAste = MiniJson.Luku(o, "sallittu_aste") ?? 0,

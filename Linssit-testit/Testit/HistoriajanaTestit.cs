@@ -104,6 +104,58 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.0, Historiajana.Kasvu(1743, Historiajana.Osa("b1499-kellobastioni")));
         }
 
+        [Testi] static void DatanVuodetLeikkauksista()
+        {
+            const string osat = "{\"versio\": 1, \"osat\": {\"vesiportti\": {\"rajat\": {\"min\": [0, 0, 0], \"max\": [10, 3, 10]}, \"leikkaukset\": [" +
+                "{\"nimi\": \"b1499-vesiportin-bastioni-l\", \"keskipiste\": [1, 2, 3], \"koko\": [2, 4, 2], \"vuodesta\": 1749}," +
+                "{\"nimi\": \"b1499-kellobastioni\", \"keskipiste\": [1, 2, 3], \"koko\": [2, 4, 2], \"vuodesta\": null, \"historia_vuosi\": 1745}," +
+                "{\"nimi\": \"pk-katto\", \"keskipiste\": [1, 2, 3], \"koko\": [2, 4, 2]}]}}}";
+            var d = KavelyData.Lue(osat, "[]");
+            var l = new List<(string, double?, double?)>();
+            foreach (var k in d.Osat["vesiportti"].Leikkaukset) l.Add((k.Nimi, k.HistoriaVuodesta, k.HistoriaVuoteen));
+            var h = Historiajana.OsatDatasta(l);
+            Oleta.Sama(2, h.Count);
+            Oleta.Sama(1749.0, Historiajana.Osa("b1499-vesiportin-bastioni-l", h).Vuodesta);
+            Oleta.Sama(1745.0, Historiajana.Osa("b1499-kellobastioni", h).Vuodesta);
+            Oleta.Tosi(Historiajana.Osa("pk-katto", h) == null, "ilman vuotta ei historiaosa");
+            Oleta.Sama(1.0, Historiajana.Kasvu(1749 + Historiajana.DatanRakennusVuotta, Historiajana.Osa("b1499-vesiportin-bastioni-l", h)));
+        }
+
+        [Testi] static void PaketinLeikkauksillaOnVuodet()
+        {
+            // LR v45y: 12 leikkausobjektia vuodella (vuodesta tai historia_vuosi); jokainen vain-1499-leikkaus saa vuoden datasta.
+            var d = Data();
+            var l = new List<(string, double?, double?)>();
+            foreach (var o in d.Osat.Values) foreach (var k in o.Leikkaukset) l.Add((k.Nimi, k.HistoriaVuodesta, k.HistoriaVuoteen));
+            var h = Historiajana.OsatDatasta(l);
+            Oleta.Tosi(h.Count >= 12, $"vuosia {h.Count}");
+            foreach (var m in d.Lajia("leikkaus"))
+                if (m.Tunnus.StartsWith("vain-1499", StringComparison.Ordinal) && m.Leikkaukset != null)
+                    foreach (var n in m.Leikkaukset) { var o = Historiajana.Osa(n, h); Oleta.Tosi(o != null && o.Vuodesta > 1499, $"{n}: vuosi datasta"); }
+        }
+
+        [Testi] static void VaihemallitJaPalonLeikkaukset()
+        {
+            // LR v45y: blender/vaiheet/vaiheet.json ja palon-jaljet-leikkaukset.json (muoto kuten paketissa).
+            var v = Historiajana.LueVaihemallit("[{\"id\": \"tyhja-saari\", \"glb\": \"vaiheet/tyhja-saari.glb\", \"vuodesta\": null, \"vuoteen\": 1475}," +
+                "{\"id\": \"puuvarustus\", \"glb\": \"vaiheet/puuvarustus.glb\", \"vuodesta\": 1475, \"vuoteen\": 1477}," +
+                "{\"id\": \"palon-jaljet\", \"glb\": \"vaiheet/palon-jaljet.glb\", \"vuodesta\": 1868, \"vuoteen\": 1872, \"leikkaukset\": \"vaiheet/palon-jaljet-leikkaukset.json\"}]");
+            Oleta.Sama(3, v.Count);
+            Oleta.Tosi(v[0].Nakyy(-7500) && !v[0].Nakyy(1475), "tyhjä saari vuoteen 1475");
+            Oleta.Tosi(!v[1].Nakyy(1474) && v[1].Nakyy(1476) && !v[1].Nakyy(1477), "puuvarustus 1475–1477");
+            Oleta.Tosi(v[2].Nakyy(1870) && !v[2].Nakyy(1872) && v[2].Leikkaukset != null, "palon jäljet 1868–1872");
+            Oleta.Tosi(!Historiajana.LinnaNakyy(1476) && Historiajana.LinnaNakyy(1477), "kivilinna 1477");
+            var l = Historiajana.LueLeikkaukset("[{\"nimi\": \"palo-katto-1\", \"keskipiste\": [-19.777, 20.287, 2.685], \"koko\": [44.353, 18.562, 32.517], \"kierto_y\": 2.6924, \"vuodesta\": 1868, \"vuoteen\": 1872, \"piilottaa\": true}]");
+            Oleta.Tosi(l.Count == 1 && l[0].HistoriaVuodesta == 1868 && l[0].HistoriaVuoteen == 1872 && Math.Abs(l[0].KokoX - 44.353) < 1e-9, "palon leikkaus");
+            // Koko historiassa jokainen vaihemalli näkyy vähintään 2 s (palo 1868–1872 vaiheessa 1847–1872 15 s:ssa: ~2,4 s).
+            var h = Historiajana.Olavinlinna;
+            foreach (var m in v)
+            {
+                double n = 0; for (double t = 0; t < h.Kesto; t += 0.05) if (m.Nakyy(h.Vuosi(t))) n += 0.05;
+                Oleta.Tosi(n >= 2, $"{m.Id} näkyy {n:F1} s");
+            }
+        }
+
         [Testi] static void K2KasvattaaKaikkiOsat()
         {
             var k2 = Historiajana.K2Lyhyt;

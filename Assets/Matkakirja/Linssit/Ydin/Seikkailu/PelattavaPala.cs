@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "6ae3c7f5544feab3";
-        public const string Versio = "v45x";   // v45v + Kellotornin otteet 24 (0,7 m, kaari, krampit 18–24), puuskat 3, kamera:K3, kivikehykset keittiö/Linnantupa/Voudin sali (LR 9.10.)
+        public const string Hash = "731d4ca7142127b8";
+        public const string Versio = "v45y";   // v45x + #4 (sokkelit, kynnykset, Linnantuvan konsolit; kolme salia 8k), Kellotornin lepo-ote 12 ja kapeat otteet, lakaisu:apulainen-tupa, vuodet 12 leikkaukseen, vaihemallit (LR 9.10.)
     }
 }

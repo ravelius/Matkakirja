@@ -7,7 +7,9 @@
 // näkyy nykyinen kuori ja ympäristö.
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Matkakirja.Linssit.Dioraama;
+using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,14 +27,41 @@ namespace Matkakirja.Natiivi
         Action valmis;
         bool lopeta;
 
-        public static void Aloita(Transform kamera, Action valmis = null, Action<string> kirjaa = null)
+        /// <param name="vaiheJuuri">Paketin blender-kansio (LR v45y: blender/vaiheet/vaiheet.json); null = ei vaihemalleja.</param>
+        public static void Aloita(Transform kamera, Action valmis = null, Action<string> kirjaa = null, string vaiheJuuri = null, Func<string, string> url = null)
         {
             if (kamera == null) { valmis?.Invoke(); return; }
             Lopeta();
             var go = new GameObject("SeikkailuHistoria");
             ajossa = go.AddComponent<SeikkailuHistoria>();
             ajossa.valmis = valmis;
+            var nayttamo = FindAnyObjectByType<DioraamaNayttamo>();
+            if (vaiheJuuri != null && nayttamo != null)
+                ajossa.StartCoroutine(SeikkailuVaiheet.Lataa(vaiheJuuri, url ?? (s => s), nayttamo.transform, kirjaa, v => { if (ajossa != null && !ajossa.lopeta) ajossa.vaiheet = v; else v.Tuhoa(); }));
             ajossa.StartCoroutine(ajossa.Aja(kamera, kirjaa));
+        }
+
+        SeikkailuVaiheet vaiheet;
+        readonly List<Renderer> piilotetut = new List<Renderer>(); readonly List<Light> sammutetut = new List<Light>();
+        bool linnaPiilossa;
+
+        /// <summary>Linna piiloon ennen kivilinnaa (tyhjä saari, puuvarustus): kaikki näyttämön renderöijät ja pistevalot paitsi ympäristö
+        /// (maasto, vesi, taivas, puut), kuoren vesi ja vaihemallit; palautus täsmälleen samoihin.</summary>
+        void LinnaNakyviin(bool nakyy)
+        {
+            if (nakyy == !linnaPiilossa) return;
+            linnaPiilossa = !nakyy;
+            if (nakyy)
+            {
+                foreach (var r in piilotetut) if (r != null) r.enabled = true;
+                foreach (var l in sammutetut) if (l != null) l.enabled = true;
+                piilotetut.Clear(); sammutetut.Clear();
+                return;
+            }
+            var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
+            bool Jaa(Transform t) { for (; t != null && t != n.transform; t = t.parent) if (t.name.StartsWith("Ymparisto", StringComparison.Ordinal) || t.name.StartsWith("Vaihe:", StringComparison.Ordinal) || t.name == "Ulkokuori:vesi") return true; return false; }   // kieli: ei (tekninen)
+            foreach (var r in n.GetComponentsInChildren<Renderer>(false)) if (r.enabled && !Jaa(r.transform)) { r.enabled = false; piilotetut.Add(r); }
+            foreach (var l in n.GetComponentsInChildren<Light>(false)) if (l.enabled && l.type != LightType.Directional && !Jaa(l.transform)) { l.enabled = false; sammutetut.Add(l); }
         }
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
@@ -61,7 +90,17 @@ namespace Matkakirja.Natiivi
                 if (suunta.sqrMagnitude > 1e-6f) kamera.rotation = Quaternion.LookRotation(suunta, Vector3.up);
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
-                if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, Historiajana.Osa(n)));
+                LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
+                List<KavelyLeikkaus> vl = null;
+                if (vaiheet != null)
+                    foreach (var vm in vaiheet.Vaiheet)
+                    {
+                        bool nakyy = vm.Malli.Nakyy(vuosi);
+                        if (vm.Go != null && vm.Go.activeSelf != nakyy) { vm.Go.SetActive(nakyy); kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})"); }
+                        if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;
+                    }
+                if (kasvu) SeikkailuKavely.AsetaHistoriaLeikkaukset(vl);
+                if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 var (i, _) = h.Kohta(t);
                 if (i != vaihe) { vaihe = i; kirjaa?.Invoke($"seikkailu: historia vaihe {i} ({h.Vaiheet[i].VuosiTeksti}) {t:F1} s"); }
                 Avainsana = h.Avainsana(t);
@@ -72,7 +111,9 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             Avainsana = null;
-            if (kasvu) SeikkailuKavely.AsetaKasvu(null);
+            LinnaNakyviin(true);
+            vaiheet?.Tuhoa(); vaiheet = null;
+            if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;
             DioraamaSovitin.KameraVapaa = kameraVapaa;
             kirjaa?.Invoke($"seikkailu: historia päättyi ({Time.unscaledTime - alku:F1} s)");

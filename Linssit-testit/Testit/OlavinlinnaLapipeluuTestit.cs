@@ -131,12 +131,14 @@ namespace Matkakirja.Linssit.Testit
         static (double X, double Y, double Z) P(string nimi) { var m = Merkki(nimi); return (m.X, m.Y, m.Z); }
 
         /// <summary>Kurinalainen kiipeily (OlavinlinnaMOsaTestit.Kiipea): pysähtyy varoituksiin, lyhty yllä puolivälissä kerran.</summary>
-        static (double Aika, bool Putosi, bool Havaittu) Kiipea(int otteita, IEnumerable<int> puuskat)
+        static (double Aika, bool Putosi, bool Havaittu) Kiipea(int otteita, IEnumerable<int> puuskat, IEnumerable<int> kapeat = null, IEnumerable<int> levot = null)
         {
-            var k = new Kiipeily(otteita, puuskat); bool lyhty = false, putosi = false, havaittu = false; double t = 0;
-            for (; t < 120 && !k.Perilla; t += Dt)
+            var k = new Kiipeily(otteita, puuskat, kapeat, levot); bool lyhty = false, putosi = false, havaittu = false; double t = 0;
+            for (; t < 180 && !k.Perilla; t += Dt)
             {
-                int s = k.PuuskaVaroittaa || k.Puuska || k.LyhtyVaroittaa || k.LyhtyValaisee || k.Himmenee ? 0 : 1;
+                // Kapealla tarkka ote (pysähdys), lepo-otteella lepo voiman palautumiseen asti (LR v45y, PT 9.10.).
+                bool lepo = k.Siirtyy == 0 && k.Lepo(k.Ote) && k.Voima < 0.95;
+                int s = k.PuuskaVaroittaa || k.Puuska || k.LyhtyVaroittaa || k.LyhtyValaisee || k.Himmenee || k.KapeaOdottaa || lepo ? 0 : 1;
                 k.Paivita(Dt, s);
                 if (!lyhty && k.Ote >= otteita / 2 && k.Siirtyy == 0) { lyhty = true; k.LyhtyYlla(); }
                 putosi |= k.Putosi; havaittu |= k.Havaittu;
@@ -190,9 +192,10 @@ namespace Matkakirja.Linssit.Testit
             a.OdotaS(2 * KasitteleS, true);   // köysikieppi + kiinnitys sakaraan
             var otteet = new List<(double X, double Y, double Z)>();
             for (int i = 1; ; i++) { KavelyMerkki m = Huonesimulaatio.Data.Merkit.FirstOrDefault(x => x.Nimi == "ote:kellotorni-" + i); if (m == null) break; otteet.Add((m.X, m.Y, m.Z)); }
-            var puuskat = new List<int>();
+            var puuskat = new List<int>(); var kapeat = new List<int>(); var levot = new List<int>();
             foreach (var m in Huonesimulaatio.Data.Lajia("tuuli")) for (int i = 0; i < otteet.Count; i++) if (Huonesimulaatio.Etaisyys3(m.X, m.Y, m.Z, otteet[i].X, otteet[i].Y, otteet[i].Z) < 0.5) puuskat.Add(i);
-            var (kiipeily, putosi, havaittu) = Kiipea(otteet.Count, puuskat);
+            for (int i = 0; i < otteet.Count; i++) { var om = Merkki("ote:kellotorni-" + (i + 1)); if (om.Kapea) kapeat.Add(i); if (om.Tyyppi == "lepo") levot.Add(i); }
+            var (kiipeily, putosi, havaittu) = Kiipea(otteet.Count, puuskat, kapeat, levot);
             if (kiipeily < 0 || putosi || havaittu) { a.Jumi = $"huone 8: kiipeily ({otteet.Count} otetta) ei mennyt läpi (putosi {putosi}, havaittu {havaittu})"; return a; }
             a.Lisa += kiipeily; a.Valmis(8);
             // Huone 9: komero (tiilet hitaasti, kilvet 3 × 15°), arkku auki.
