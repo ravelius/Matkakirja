@@ -23,6 +23,19 @@ namespace Matkakirja.Linssit.Aanet
             ("elava-kaupunki-v1/lokkiparvi.mp3", "lokkiparvi-02.mp3"),
         };
 
+        /// <summary>Kaupunkikohtaiset lähikerrokset kaupunkisilmukoista (Pelikoodari 9.10., PT: paikka ennen lajia), polku aanet/-juuren alla.
+        /// Ohittavat v1:n yleisen silmukan, mutta eivät v2:n kaupungin omaa (Pariisin metro = pariisi-metro-02 korvaajana).</summary>
+        public static readonly (string Kaupunki, string Kerros, string Polku)[] Kaupungin =
+        {
+            ("tukholma", KaupunkiAanimaisema.Metro, "kaupunkisilmukat-v2/tukholma-metro-02.mp3"),   // T-banan halli kaukaisena, 60 s
+        };
+
+        public static string KaupunginPolku(string kaupunki, string kerros)
+        {
+            foreach (var (k, ke, p) in Kaupungin) if (k == kaupunki && ke == kerros) return p;
+            return null;
+        }
+
         /// <summary>Osoite, josta ääni ladataan: korvattu polku kaupunkisilmukat-v1:stä, muuten sama. Juuri = ".../aanet/".</summary>
         public static string Osoite(string url, string juuri)
         {

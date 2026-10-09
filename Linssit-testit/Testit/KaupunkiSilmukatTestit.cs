@@ -16,6 +16,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(KaupunkiSilmukat.Osoite(J + "elava-kaupunki-v1/lokkiparvi.mp3", J) == J + "kaupunkisilmukat-v1/lokkiparvi-02.mp3", "lokkiparvi");
         }
 
+        [Testi] static void TukholmanOmaMetro()
+        {
+            // Pelikoodari 9.10.: Tukholmaan oma metrokerros (kaupunkisilmukat-v2), muualla yleinen metro-02; Pariisin v2-metro ennallaan.
+            var m = KaupunkiMaisema.Lue(System.IO.File.ReadAllText("kultaiset/kaupunkimaisema-v1.json"), J + "kaupunkimaisema-v1/",
+                System.IO.File.ReadAllText("kultaiset/kaupunkimaisema-v2.json"), J + "kaupunkimaisema-v2/", J);
+            Oleta.Sama(J + "kaupunkisilmukat-v2/tukholma-metro-02.mp3", m.Url("tukholma", KaupunkiAanimaisema.Metro), "Tukholman metro");
+            Oleta.Sama(J + "kaupunkisilmukat-v1/pariisi-metro-02.mp3", KaupunkiSilmukat.Osoite(m.Url("pariisi", KaupunkiAanimaisema.Metro), J), "Pariisin metro");
+            Oleta.Sama(J + "kaupunkisilmukat-v1/raitiovaunu-03.mp3", KaupunkiSilmukat.Osoite(m.Url("tukholma", KaupunkiAanimaisema.Raitiovaunu), J), "Tukholman raitiovaunu yleinen");
+        }
+
         [Testi] static void MuutPysyvat()
         {
             foreach (var u in new[] { J + "kaupunkimaisema-v2/pariisi/kahvila.mp3", J + "elava-kaupunki-v1/kyyhkyt-1.mp3", J + "kaupunkimaisema-v1/laituri-01.mp3",
