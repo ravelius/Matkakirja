@@ -44,7 +44,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(2, p.Vastaa("kohde:bastilji", "Kerro lisää: Ludvig XVI").Jatkot.Count);
         }
 
-        // Pilviajon Ranskan paketti (haara pulu-ranska-pilvi 096e3b46e, Sonnet effort low): 59 kohtaa × 5 + linkkitaso 660.
+        // Ranskan paketti (pulu-ranska-pilvi caea0c2cd: pilviajo Sonnet effort low + Sisältökirjurin pistokoekorjaukset): 59 × 5 + linkit 654.
         [Testi] static void RanskanKokoPaketti()
         {
             string json = File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", "pulu-fra.json"));
@@ -54,7 +54,7 @@ namespace Matkakirja.Peli.Testit
             System.Console.WriteLine($"      jäsennys {json.Length / 1024} kt: {ms} ms (Mac)");
             Oleta.Tosi(p != null, "paketti");
             Oleta.Sama(59, p.Kohdat.Count);
-            Oleta.Sama(955, p.Vastauksia);
+            Oleta.Sama(949, p.Vastauksia);   // 295 + 654 (Sisältökirjurin korjaus caea0c2cd)
             Oleta.Tosi(p.Kohdat.Values.All(k => k.Kysymykset.Count == 5), "5 kysymystä per kohta");
             // Jokainen kysymysvastauksen [[käsite]] avaa valmiin Kerro lisää -vastauksen (linkkitaso kattava).
             var kuvio = new System.Text.RegularExpressions.Regex(@"\[\[([^\[\]\n]{1,60})\]\]");
