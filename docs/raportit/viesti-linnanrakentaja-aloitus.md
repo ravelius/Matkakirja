@@ -25,11 +25,11 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      linkkeihin (31a21110b, haara v45b).
    - **Olavinlinnan kuoren viiden seinän Codex-ohjeet** ovat kansiossa `_valmiit/olavinlinna-codex-ohje/`. Työkalut ovat
      `kuori_ohje.py` ja `kuori_merkinnat.py`. Sisältökirjuri tilaa ne ND-pilotin jälkeen.
-   - **MetaHuman-vouti v3** (`linna-hahmot/metahuman-v1`) on Siirtosepällä koeajossa, eikä sitä ole vielä paketissa. Muutokset:
-     - Huppu on nostettu ja venytetty niskaan.
-     - Morph-painot ovat 0.
-     - Ilmeiden kartoitus on korjattu: indeksi, iho normaalin mukaan ja hampaat jäykkinä. jawOpen ei enää näytä piikkejä.
-     - Tarkistusarkki: `esikatselu/vouti_mh_v3_arkki.jpg`.
+   - **MetaHuman-vouti v4** (`linna-hahmot/metahuman-v1`, `mh_vouti.py`) on valmis 9.10. ilta, eikä sitä ole paketissa. v3 hylättiin
+     arvio 10:ssä (huppu peitti kasvot sivulta, olkasuoja irtosi), ja se on tallessa kansiossa `glb-v3/`. Muutokset:
+     - Huppu: kallistus 4° taakse, kapeampi kasvojen kohdalta, etureuna silmän ulkonurkan taakse. Kasvot ja ilme näkyvät pelin kulmasta.
+     - Olkasuojan yläosa seuraa 60 % solisluuta (oli kokonaan olkavarressa).
+     - Tarkistusarkki (v3/v4 pelin kulmasta + ilmeet): `esikatselu/vouti_mh_v4_arkki.jpg`. ASTC-kuvat ovat samat kuin v3:ssa.
    - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
    - **Riddarholmen v2** on valmis ja odottaa PT:tä ja omistajaa. Vertailukuva:
      `riddarholmen-v1/esikatselu/riddarholmen_v2_vertailu_valokuva.jpg`. v1 on tallessa kansiossa `glb-v1/`.
@@ -37,8 +37,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      - Tiili on vaaleampi.
      - Katon aukot on suljettu.
      - Spiiran tummuus odottaa PT:n päätöstä.
-   - **Vouti v3:n lähikuva:** PT antoi luvan yhteen simulaattoriajoon. Siirtosepän seuraaja ottaa kuvan arvio 10:n jälkeen,
-     ja sen jälkeen vouti v3 viedään kansioon v44/hahmot.
+   - **Vouti v4:n lähikuva** otetaan vain PT:n luvalla (simulaattorivuoro Julkaisijalta). Hyväksynnän jälkeen v4 viedään kansioon
+     v44/hahmot: kopioi glb ja astc/, aja vie-blender.sh ja tee dispatch.
 
 ## Säännöt, jotka opittiin
 
