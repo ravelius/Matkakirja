@@ -649,14 +649,34 @@ namespace Matkakirja.Natiivi
             if (polku == null) return false;
             introKaupunki = kaupunki; introUrl = AaniOsoite.Url(polku);
             introKatkoS = katkoS; introHaivytysS = haivytysS; introHidasS = hidasS;
-            introT0 = -1f; introKatkottu = introHidasAlkoi = false;
+            introT0 = -1f; introKatkottu = introHidasAlkoi = introOhita = false;
             return true;
         }
+
+        /// <summary>
+        /// Intron ohitus (napautus hyppää kohtaukseen 7 eli siirtymään vanhaan): musiikki tekee heti saman kuin katkoS:ssä, eli
+        /// nopean häivytys alkaa nyt ja hidas alkaa (hidasS − katkoS) myöhemmin. Toimii missä tahansa intron kohdassa, myös ennen
+        /// kuin nopea on alkanut soida (KaupunkiIntroAlkoi ei silloin enää laukea). false = intro ei ole käynnissä.
+        /// </summary>
+        public bool KaupunkiIntroOhita()
+        {
+            if (introKaupunki == null) return false;
+            introOhita = true;
+            return true;
+        }
+        bool introOhita;
 
         void PaivitaIntro(float nyt, Action<Action> tee)
         {
             if (introKaupunki == null) return;
             var l = nykyiset[(int)Kanava.Pohja];
+            if (introOhita)
+            {
+                introOhita = false;
+                // Siirretään intron kello niin, että katko on tässä ruudussa; jo tehty katko ei toistu, hidas tulee ajallaan.
+                if (!introKatkottu) introT0 = nyt - introKatkoS;
+                Debug.Log($"MATKAKIRJA aani: kaupunki-intro {introKaupunki} ohitettu");
+            }
             if (introT0 < 0f)
             {
                 if (l == null || !l.Kaynnistetty || l.A == null || l.Url != introUrl) return;
