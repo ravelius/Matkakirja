@@ -515,7 +515,19 @@ namespace Matkakirja.Editori
                 }), () => UiNakymat.Hae().Nahtavyydet.SuljeKokonaan(), 3.0),
             ("päävalikko", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.Avaa(); }, () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 1.0),
             ("asetukset", () => UiNakymat.Hae().Aanentasot.Avaa(), () => UiNakymat.Hae().Aanentasot.Sulje(), 1.0),
+            // Karttapelin loput isot näkymät (PT 10.10.2026), avaus kuten UiKomennot-testikomennot, sulku SuljeKaikki.
+            ("matkalaukku", () => { var u = UiNakymat.Hae(); u.Valikko.Sulje(); u.Aanentasot.Sulje(); u.Matkalaukku.Testaa(new Func<LaukkuNaytto>(Matkalaukku.Esimerkki)); }, SuljeKaikki, 1.5),
+            ("tietoja", () => UiNakymat.Hae().Tietoja.Avaa(), SuljeKaikki, 1.5),
+            ("visakysymys", () => UiNakymat.Hae().Esimerkkikysymys(""), SuljeKaikki, 1.5),
+            ("matkavalinta", () => UiNakymat.Hae().Esimerkkimatka(), SuljeKaikki, 1.5),
+            ("loppukortti", () => UiNakymat.Hae().Huipennus.NaytaLoppu("Rahat loppuivat kaupungissa Marseille, matkan 12. päivänä. Laukussa 0 löytöä ja 0 unohdettua aarretta.", null, () => { }, () => { }), SuljeKaikki, 1.5),
+            ("wiki", () => UiNakymat.Hae().Wiki.Avaa("Venetsia"), SuljeKaikki, 3.0),
+            ("palaute", () => UiNakymat.Hae().Palaute.Avaa(), SuljeKaikki, 1.5),
+            ("sähke", () => UiNakymat.Hae().Sahke.Testaa("liuska"), SuljeKaikki, 1.5),
+            ("mylly", () => MyllyNakyma.Hae().Avaa(), SuljeKaikki, 1.5),
         };
+
+        static void SuljeKaikki() => UiNakymat.Hae().SuljeKaikki();
 
         /// <summary>Näkymän paneeli, jonka sisällä kaikkien sen nappien pitää olla (myös ruudun ulkopuolelle valuneiden).</summary>
         static VisualElement NakymanPaneeli(string nimi) => nimi == "asetukset" ? UiNakymat.Hae().Aanentasot.TestiPaneeli : null;
