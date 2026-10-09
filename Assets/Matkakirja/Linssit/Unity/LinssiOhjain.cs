@@ -2185,11 +2185,28 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "katse") { if (osat[2] != "tila") KoriKatseVeto.Kaytossa = osat[2] == "1"; Kirjaa("opas: " + OpasSovitin.KoriKatseTila); }
                     // Kuvapari (Natiiviseppä 9.10., juna 170): elokuvamainen jälkikäsittely ja päivä/yö kesken näkymän.
                     else if (osat.Length > 2 && osat[1] == "filmi") { KaupunkiFilmi.Nakyy = osat[2] != "pois"; Kirjaa($"opas: filmi {(KaupunkiFilmi.Nakyy ? "päällä" : "pois")}"); }
+                    else if (osat.Length > 3 && osat[1] == "mikseri" && float.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var mt))
+                    {
+                        // TF 169 (omistaja: "tulen ääni ei ole säädettävissä"): mikserin ryhmät testiin tallentamatta; kaikki = muut kuin Lukija.
+                        var ryhmat = osat[2] == "kaikki" ? new[] { Voima.Tehosteet, Voima.Tausta, Voima.Saa, Voima.Musiikki, Voima.Pulu, Voima.Repliikit }
+                            : System.Enum.TryParse<Voima>(osat[2], true, out var yk) ? new[] { yk } : new Voima[0];
+                        foreach (var r in ryhmat) Asetukset.AsetaTaso(r, mt, false);
+                        Kirjaa($"opas: mikseri {osat[2]} {mt:F2} ({ryhmat.Length} ryhmää)");
+                    }
+                    else if (osat[1] == "aanet")
+                    {
+                        // Soivat lähteet (voimakkuus > 0,001): mikserin 0 % -testi; kertoja (Lukija) saa soida.
+                        var soivat = new List<string>();
+                        foreach (var a in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+                            if (a.isPlaying && a.volume > 0.001f && !a.mute) soivat.Add($"{a.gameObject.name}/{(a.clip != null ? a.clip.name : "-")} {a.volume:F3}");
+                        Kirjaa($"opas: äänet soi {soivat.Count}: {string.Join("; ", soivat)}");
+                    }
                     else if (osat.Length > 2 && osat[1] == "vuorokausi") { KaupunkiKuva.Valinta = osat[2]; Kirjaa($"opas: vuorokausi {KaupunkiKuva.Valinta}"); }
                     else if (osat.Length > 2 && osat[1] == "yovalotvaihe" && int.TryParse(osat[2], out var yv)) { KaupunkiPassi.Tapahtuma = (UnityEngine.Rendering.Universal.RenderPassEvent)yv; Kirjaa($"opas: yövalojen passi tapahtumassa {KaupunkiPassi.Tapahtuma}"); }
                     else if (osat.Length > 2 && osat[1] == "yovalotmsaa") { KaupunkiYovalot.MsaaPois = osat[2] == "0"; Kirjaa($"opas: yövalot MSAA {(KaupunkiYovalot.MsaaPois.Value ? "pois" : "päällä")}"); }
                     else if (osat.Length > 3 && osat[1] == "passi") { if (osat[3] == "0") KaupunkiPassi.Estetyt.Add(osat[2]); else KaupunkiPassi.Estetyt.Remove(osat[2]); Kirjaa($"opas: passi {osat[2]} {(osat[3] == "0" ? "estetty" : "sallittu")}"); }
                     else if (osat.Length > 2 && osat[1] == "ssao") { Kirjaa("opas: " + KaupunkiPassi.Ssao(osat[2] == "tila" ? (bool?)null : osat[2] == "1")); }
+                    else if (osat.Length > 3 && osat[1] == "salama" && osat[2] == "pito") { OpasSovitin.SalamaPito = osat[3] == "1"; Kirjaa($"opas: salaman pito {(OpasSovitin.SalamaPito ? "päällä" : "pois")}"); }
                     else if (osat.Length > 2 && osat[1] == "salama" && float.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var sp)) { OpasSovitin.SalamaPakkoS = sp; Kirjaa($"opas: salamat pakotettu {sp:F0} s"); }
                     else if (osat.Length > 2 && osat[1] == "kuuro" && float.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var kv)) { Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima = kv; Kirjaa($"opas: kuuro käsin {kv:F2}"); }
                     else if (osat.Length > 2 && osat[1] == "tunti" && float.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var tn)) { KaupunkiKuva.Tunti = tn; Kirjaa($"opas: tunti {(tn >= 0 ? tn.ToString("F1") : "valinnan mukaan")}"); }

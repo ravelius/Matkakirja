@@ -762,6 +762,8 @@ namespace Matkakirja.Natiivi
         readonly KaukoSalamat salamat = new KaukoSalamat(Environment.TickCount ^ 0x5a1a);
         /// <summary>Diagnoosi (opas salama N): ukkonen päällä N sekuntia sään ja kuurojen ohi.</summary>
         public static float SalamaPakkoS;
+        /// <summary>Diagnoosi (opas salama pito 1|0): pultti katsesuuntaan 6 km:iin täydellä kirkkaudella kuvaa varten.</summary>
+        public static bool SalamaPito;
         void KaukaisetSalamat(float dt)
         {
             if (SalamaPakkoS > 0) SalamaPakkoS -= Time.unscaledDeltaTime;
@@ -770,7 +772,9 @@ namespace Matkakirja.Natiivi
             var g = kaupunki.Georef; var kam = kaupunki.Kamera;
             float mt = g != null ? Mathf.Max(1e-6f, g.transform.lossyScale.x) : 1f;
             float kork = g != null && kam != null ? Mathf.Max(0f, (kam.transform.position.y - g.transform.position.y) / mt) : 300f;
-            KaupunkiSalamat.Paivita(nakymaAuki ? salamat.Nykyinen : null, kam, kork, mt);
+            KaukoSalamat.Isku? nakyva = salamat.Nykyinen;
+            if (SalamaPito && kam != null) nakyva = new KaukoSalamat.Isku { Suunta = kam.transform.eulerAngles.y, EtaisyysM = 6000, Aika = 0.001, Siemen = 4242, Haara = true };
+            KaupunkiSalamat.Paivita(nakymaAuki ? nakyva : null, kam, kork, mt);
             if (salamat.Nykyinen is KaukoSalamat.Isku i)
             {
                 double lahella = 1 - (i.EtaisyysM - KaukoSalamat.EtMinM) / (KaukoSalamat.EtMaxM - KaukoSalamat.EtMinM);
@@ -834,7 +838,7 @@ namespace Matkakirja.Natiivi
             float t = Time.unscaledTime - kelloAlku;
             float haivytys = Mathf.Clamp01(t / KelloHaivytysS) * Mathf.Clamp01((KelloS - t) / KelloHaivytysS);
             float etaisyys = Mathf.Clamp(KelloVertailuM / Mathf.Max(1f, kelloEtaisyys), 0.25f, 1f);
-            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? 1f : 0f);
+            return (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KelloPerus * etaisyys * haivytys, OpasAaniSoi) * (Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(Voima.Tausta) : 0f);
         }
 
         IEnumerator SoitaKellot(OpasKohde k)

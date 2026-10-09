@@ -159,7 +159,7 @@ namespace Matkakirja.Natiivi
         IReadOnlyDictionary<string, double> painot;
         double karttaLat = double.NaN, karttaLon = double.NaN;
         int edellinenTunti = -1;
-        Suhina suhina;
+        Suhina suhina; AudioSource suhinaLahde;
         AudioClip kello;
         (double KorkeusM, double NopeusMs, double Lat, double Lon)? viimeK;
         const double SiirtymaNopeusMs = 250, LentoKorkeusM = 1500;
@@ -179,7 +179,7 @@ namespace Matkakirja.Natiivi
         void Awake()
         {
             var sg = new GameObject("suhina"); sg.transform.SetParent(transform, false);
-            var sl = sg.AddComponent<AudioSource>(); sl.playOnAwake = false; sl.spatialBlend = 0; sl.loop = true;
+            var sl = sg.AddComponent<AudioSource>(); suhinaLahde = sl; sl.playOnAwake = false; sl.spatialBlend = 0; sl.loop = true;
             sl.clip = AudioClip.Create("suhina", 1, 1, AudioSettings.outputSampleRate, false); sl.Play();
             suhina = sg.AddComponent<Suhina>();
             onSilmukka = k => !string.IsNullOrEmpty(KerroksenUrl(k));
@@ -242,7 +242,8 @@ namespace Matkakirja.Natiivi
                 if (t <= 0.001f) { if (hiljaaAlkaen[i] <= 0) hiljaaAlkaen[i] = Time.unscaledTime; else if (Time.unscaledTime - hiljaaAlkaen[i] > VapautusS) Vapauta(i); }
                 else hiljaaAlkaen[i] = 0;
             }
-            suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais);
+            suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais) * saa;   // TF 169: nopeuden suhina tuulen kanssa Sää-ryhmään
+            if (suhinaLahde != null) suhinaLahde.volume = suhina.Taso > 0.0005f ? 1f : 0f;   // opas aanet näkee hiljaisen suhinan hiljaisena
             Kerta(tunti, korkeus, tausta, paalla && k.HasValue && !eiPaikkaa);
             for (int ki = kellot.Count - 1; ki >= 0; ki--)
             {
@@ -253,7 +254,7 @@ namespace Matkakirja.Natiivi
                 // Lyönnistä soitetaan vain ensimmäinen isku: LyontiS, sitten häivytys HaivytysS ja lähde pois.
                 float f = Mathf.Clamp01(1f - (kl.time - LyontiS) / LyontiHaivytysS);
                 if (f <= 0f || !kl.isPlaying) { Destroy(kl); kellot.RemoveAt(ki); continue; }
-                kl.volume = kellot[ki].Perus * (float)mikseri.Kokonais * f;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
+                kl.volume = kellot[ki].Perus * (float)mikseri.Kokonais * f * tausta;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
             }
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
@@ -321,7 +322,7 @@ namespace Matkakirja.Natiivi
             yield return new WaitForSecondsRealtime((float)viive);
             if (kello == null) yield break;
             var l = gameObject.AddComponent<AudioSource>(); l.spatialBlend = 0; l.clip = kello; l.loop = false;
-            l.volume = perus * (float)mikseri.Kokonais; l.Play();
+            l.volume = perus * (float)mikseri.Kokonais * Asetukset.Taso(Voima.Tausta); l.Play();
             kellot.Add((l, perus));
             Destroy(l, Mathf.Min(kello.length, LyontiS + LyontiHaivytysS) + 0.5f);   // varmistus: yksi isku
         }

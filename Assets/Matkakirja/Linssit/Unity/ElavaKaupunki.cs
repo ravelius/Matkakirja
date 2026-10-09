@@ -550,8 +550,9 @@ namespace Matkakirja.Natiivi
             if (lokkiLahde == null) { lokkiLahde = gameObject.AddComponent<AudioSource>(); lokkiLahde.loop = true; lokkiLahde.playOnAwake = false; lokkiLahde.spatialBlend = 0; lokkiLahde.volume = 0; }
             if (kertaLahde == null) { kertaLahde = gameObject.AddComponent<AudioSource>(); kertaLahde.playOnAwake = false; kertaLahde.spatialBlend = 0; }
             bool vaisto = OpasSovitin.OpasAaniSoi;
+            float tausta = (float)Matkakirja.Natiivi.Asetukset.Taso(Matkakirja.Natiivi.Voima.Tausta);   // TF 169: kaikki pallon äänet mikserin ryhmiin
             float lokkiOsuus = Mathf.Clamp01(1f - lokkiD / LokkiKuuluuM);
-            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) : 0f;
+            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) * tausta : 0f;
             if (lokkiTavoite > 0.001f && !lokkiLahde.isPlaying) { lokkiLahde.clip = lokkiKlippi; lokkiLahde.Play(); }
             lokkiLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(lokkiLahde.volume, lokkiTavoite, Time.unscaledDeltaTime);
             if (lokkiLahde.isPlaying && lokkiLahde.volume < 0.0005f && lokkiTavoite <= 0) lokkiLahde.Stop();
@@ -560,14 +561,14 @@ namespace Matkakirja.Natiivi
             {
                 seuraavaKyyhky = tu + UnityEngine.Random.Range(15f, 35f);
                 var klippi = kyyhky1Klippi != null && UnityEngine.Random.value < 0.3f ? kyyhky1Klippi : kyyhky2Klippi;
-                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto));
+                kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto) * tausta);
             }
             if (tu > seuraavaKone && !vaisto)
             {
                 // Lentokone näkyy ja kuuluu yhdessä (ElavaTaivas.AloitaKone); ääni vain Äänimaisema-kytkimellä.
                 seuraavaKone = tu + UnityEngine.Random.Range(240f, 420f);
                 taivas?.AloitaKone(Time.time, c.x, c.z);
-                if (paalla && koneKlippi != null) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false));
+                if (paalla && koneKlippi != null && tausta > 0.001f) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false) * tausta);
             }
         }
 
