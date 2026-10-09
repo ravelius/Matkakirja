@@ -619,6 +619,11 @@ namespace Matkakirja.Natiivi
         Material aluskerrosMat;
         static readonly int IdVari = Shader.PropertyToID("_Vari");
         public const float AluskerrosSse = 24f, AluskerrosSyvyysM = 15f;
+        /// <summary>KAUKOMAA (PT 9.10.: Tukholma korkealta → Googlen laattojen ulkopuolella maa puuttuu, taivas näkyy ja omat vedet leijuvat;
+        /// vapaan lennon katto 12 km). Testiasetukset: "sumukarsinta 0|1" (Cesiumin enableFogCulling Googlen tilesetille, null = oletus)
+        /// ja "aluskerros 1" (aluskerros päälle ilman reikiä).</summary>
+        public static bool? SumuKarsinta;
+        public static bool AluskerrosPakotettu;
         public bool AluskerrosPaalla => aluskerros != null;
         void LokiRivi(string viesti, string pino, LogType tyyppi) => reiat.Kirjaa(viesti);
 
@@ -626,7 +631,9 @@ namespace Matkakirja.Natiivi
         public void TarkistaReiat()
         {
             if (aluskerrosMat != null && kamera != null) aluskerrosMat.SetColor(IdVari, RenderSettings.fog ? RenderSettings.fogColor : kamera.backgroundColor);
-            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !reiat.AluskerrosTarvitaan) return;
+            if (maasto != null && SumuKarsinta.HasValue && maasto.enableFogCulling != SumuKarsinta.Value)
+            { maasto.enableFogCulling = SumuKarsinta.Value; kirjaa($"kaupunki: sumukarsinta {(SumuKarsinta.Value ? "päällä" : "pois")} (kaukomaan testi)"); }
+            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !(reiat.AluskerrosTarvitaan || AluskerrosPakotettu)) return;
             var sh = Resources.Load<Shader>("Varjostimet/ReikaTayte");
             if (sh == null) { kirjaa("kaupunki: reikätäytteen varjostin puuttuu"); return; }
             aluskerrosMat = new Material(sh) { name = "ReikaTayte" };
