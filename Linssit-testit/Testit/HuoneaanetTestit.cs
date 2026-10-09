@@ -19,6 +19,8 @@ namespace Matkakirja.Linssit.Testit
             foreach (var t in DioraamaData.Lue(Lue("rakennus.json")).Tilat) tilat.Add(t.Id);
             Oleta.Sama("keittio-g102", d.AaniTila("keittio-G102", tilat));
             Oleta.Sama("kappeli", d.AaniTila("kappeli-kavely", tilat));
+            Oleta.Sama("kierreportaat", d.AaniTila("kirkkotorni-portaat", tilat));   // v46o: osan tila-kenttä (LR)
+            Oleta.Sama("keskushalli", d.AaniTila("palatsi", tilat));
             Oleta.Sama((string)null, d.AaniTila("pikkupiha", tilat));
             Oleta.Sama((string)null, d.AaniTila(null, tilat));
         }
