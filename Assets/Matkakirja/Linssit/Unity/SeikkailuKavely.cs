@@ -127,6 +127,11 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kutsutaan pelaajan liikkuessa (SeikkailuPelaaja, 0,5 s välein): valinta päivittyy, kun osa vaihtuu.</summary>
+        /// <summary>Historia (SeikkailuHistoria, LR 9.10. arvio 3): vain vuosileikkaukset (vain-1499-listat, vuodesta/historia_vuosi/vuoteen) ja
+        /// vaiheen leikkaukset; osien vuodettomat sisätilaleikkaukset (porttikaytava-T102: kuoren katto ja lattia) pois, muuten kävelyosan
+        /// pimeät sisäpinnat näkyivät ylhäältä mustina aukkoina.</summary>
+        public static bool VainVuosileikkaukset;
+
         public static void PaivitaLeikkaukset(Vector3? pelaaja, bool pakota = false)
         {
             var c = new Vector4[LeikkauksiaMax]; var k = new Vector4[LeikkauksiaMax]; int n = 0;
@@ -145,6 +150,7 @@ namespace Matkakirja.Natiivi
                     foreach (var l in o.Leikkaukset)
                     {
                         bool ainaL = l.Nimi != null && aina.Contains(l.Nimi);
+                        if (VainVuosileikkaukset && !ainaL && l.HistoriaVuodesta == null && l.HistoriaVuoteen == null) continue;
                         double g = ainaL && kasvu != null ? kasvu(l.Nimi) : 0;
                         if (ainaL && (kasvu != null ? g >= 0.999 : !Vain1499)) continue;   // drone nykyiseen linnaan: bastionit näkyvät
                         double arvo = ainaL ? -1e6 : o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
