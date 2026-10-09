@@ -299,9 +299,9 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
 
-test('esittely_polut: Pariisi v1c (Concorden kysymys kesällä 2024), äänet ennallaan', async () => {
+test('esittely_polut: Pariisi v1d (v1c:n Concorden kysymys + katse_suunta 295 Concordelle ja Champs-Élysées\'lle), äänet ennallaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1c/pariisi.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1d/pariisi.json');
 });
 
 test('lisakuvat_polut: Tukholman Kuninkaanlinnan lisäkuvat (Sisältökirjuri 9.10.), vain esittelykaupungeille', async () => {
