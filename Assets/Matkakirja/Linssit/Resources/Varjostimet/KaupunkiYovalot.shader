@@ -263,9 +263,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         float2 ll = Asteet(p);
                         float2 m = float2((ll.y - _TieAlue.y) * MAA_R * cos(_TieAlue.x / ASTE) / ASTE, (ll.x - _TieAlue.x) * MAA_R / ASTE);
                         float2 tuv = m / _TieAlue.z + 0.5;
-                        if (all(tuv > 0.0) && all(tuv < 1.0)) katu = saturate((SAMPLE_TEXTURE2D_LOD(_Tiet, sampler_Tiet, tuv, 1).r - 0.05) / 0.15);
+                        // v12b (simu 01.09: rantojen ja jalkakäytävien lamput jäivät maskin ulkopuolelle): katon karsinta vain puoliksi.
+                        if (all(tuv > 0.0) && all(tuv < 1.0)) katu = 0.5 + 0.5 * saturate((SAMPLE_TEXTURE2D_LOD(_Tiet, sampler_Tiet, tuv, 1).r - 0.05) / 0.15);
                     }
-                    if (nakyvyysL > 0.0) lisa += OsmLamput(vuvL, sadeL) * nakyvyysL * katu * _ValoParam.z * vaaka;
+                    // v12b: säde × 1,3 (OSM-lamppuja ~28 m välein, solukossa 18 m; simu 01.09: himmeämpi kuin ennen)
+                    if (nakyvyysL > 0.0) lisa += OsmLamput(vuvL, sadeL * 1.3) * nakyvyysL * katu * _ValoParam.z * vaaka;
                     float alue = SAMPLE_TEXTURE2D_GRAD(_Vedet, sampler_Vedet, vuvL, dx.xz / _VesiAlue.z, dy.xz / _VesiAlue.z).a;
                     lisa += float3(0.9, 0.93, 1.0) * alue * 0.1 * _LamppuParam.y * vaaka;
                 }
@@ -321,7 +323,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         // v12: OSM-lamppujen tiheys (LOD 2 ≈ 32 m; sillat mukana) maskin alueella, muuten Black Marble rannalta.
                         float2 vq = VesiUv(q3);
                         float rl = osmL && all(vq > 0.0) && all(vq < 1.0)
-                            ? saturate(SAMPLE_TEXTURE2D_LOD(_Vedet, sampler_Vedet, vq, 2).g * 3.0) * 0.7
+                            ? saturate(SAMPLE_TEXTURE2D_LOD(_Vedet, sampler_Vedet, vq, 2).g * 8.0) * 0.7   // v12b: × 3 → × 8 (rantaketju 28 m ≈ 0,06 LOD 2:ssa; Black Marble ~0,5)
                             : BlackMarble(q3) * (1.0 - Vesi(q3));
                         ranta = max(ranta, rl / (1.0 + s / 250.0));
                     }
