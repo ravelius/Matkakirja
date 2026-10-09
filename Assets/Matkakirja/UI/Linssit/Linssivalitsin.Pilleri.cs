@@ -82,6 +82,10 @@ namespace Matkakirja.Natiivi
             esiIkoni.AddToClassList("mk-linssivalitsin__esiikoni");
             esiIkoni.pickingMode = PickingMode.Ignore;
             esiKuva.Add(esiIkoni);
+            // Havainnekuvan merkintä kuvan alle (Raamattu KUVAT; linssikatalogin Codex-kuvat), lähderivin pohjalla.
+            esiMerkki = Rakenne.Teksti(Kieli.T("ui.opas.lahde.havainnekuva"), "mk-linssivalikko__lahde", esiSisus);
+            Kirjasimet.Aseta(esiMerkki, Kirjasin.Moderni);
+            esiMerkki.style.display = DisplayStyle.None;
             esiOtsikko = Rakenne.Teksti("", "mk-linssivalitsin__esiotsikko", esiSisus);
             Kirjasimet.Aseta(esiOtsikko, Kirjasin.LukuLihava);
             esiTeksti = Rakenne.Teksti("", "mk-linssivalitsin__esiteksti", esiSisus);
@@ -237,6 +241,7 @@ namespace Matkakirja.Natiivi
                 Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; VaraaEsikatselu(); });
         }
 
+        Label esiMerkki;
         string taytetty;
 
         /// <summary>
@@ -251,6 +256,7 @@ namespace Matkakirja.Natiivi
             esiTeksti.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
             esikatselu.style.visibility = StyleKeyword.Null;
             esiKuva.style.backgroundImage = StyleKeyword.Null;
+            esiMerkki.style.display = DisplayStyle.None;
             void Kuvake(bool nakyy)
             {
                 bool on = nakyy && !string.IsNullOrEmpty(ikoni);
@@ -264,7 +270,11 @@ namespace Matkakirja.Natiivi
             Kuvat.Hae(kuvaUrl, tex =>
             {
                 if (taytetty != id) return;
-                if (tex != null) esiKuva.style.backgroundImage = new StyleBackground(tex);
+                if (tex != null)
+                {
+                    esiKuva.style.backgroundImage = new StyleBackground(tex);
+                    if (OnKatalogiKuva(kuvaUrl)) esiMerkki.style.display = DisplayStyle.Flex;
+                }
                 else Kuvake(true);
             });
         }
