@@ -143,7 +143,13 @@ VIIM=0          # rivi, josta seuraava oleta etsii (edellisen askeleen alku)
 kuva() {
   local tunnus=$1; shift
   xcrun simctl io $UDID screenshot $L/kuvat/$tunnus.raaka.png >/dev/null 2>&1
-  printf '%s\t%s\n' $tunnus "$*" >> $L/kuvat.tsv
+  # Kuvan suunta (PT 10.10.: linnan arkit 90° kierrossa): simctl tallentaa aina laitteen pystykehyksen; vaaka-UI:n (linna) kuva
+  # käännetään raportissa oikein päin. Paneelin mitat ui-puusta, suunta (LandscapeLeft/Right) konsolin viimeisestä asentorivistä.
+  rm -f "$D/ui-puu.json"; kirjoita ui-komento.txt "ui puu"; sleep 1.5
+  local pw=$(python3 -c 'import json,sys; d=json.load(open(sys.argv[1]))["paneeli"]; print("vaaka" if (d["w"] or 0) > (d["h"] or 0) else "pysty")' "$D/ui-puu.json" 2>/dev/null)
+  local asento=$(grep -o "asento toteutui Landscape[A-Za-z]*" $LOKI 2>/dev/null | tail -1 | awk '{print $3}')
+  [[ $pw == vaaka ]] && asento=${asento:-LandscapeLeft} || asento=Portrait
+  printf '%s\t%s\t%s\n' $tunnus "$*" $asento >> $L/kuvat.tsv
 }
 napautus_kirjaus() { printf '%s\t%s\n' "$1" "$2" >> $L/polku.tsv; }
 while IFS= read -r rivi || [[ -n $rivi ]]; do
