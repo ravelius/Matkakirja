@@ -7018,5 +7018,306 @@
    "Miksi merenkulkijat kunnioittavat Neitsyt Mariaa?",
    "Milloin Notre-Dame de la Garde rakennettiin?"
   ]
+ },
+ {
+  "kohde": "nosto:pariisin-patonki",
+  "kasite": "raati",
+  "kysymys": "Kerro lisää: raati",
+  "vastaus": "Patonkikilpailun raadissa istuu kolmenlaisia arvostelijoita: leipäalan [[ammattilaisia]], [[toimittajia]] ja kuusi arvottua tavallista [[pariisilaista]]. Leivät numeroidaan ennen maistamista, joten kukaan raadin jäsen ei tiedä, kenen leipää hän arvioi. Näin tulos perustuu pelkästään leivän makuun ja laatuun. Voittajan palkintona on rahapalkinto sekä velvollisuus toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.",
+  "linkit": [
+   "ammattilaisia",
+   "toimittajia",
+   "pariisilaista"
+  ],
+  "jatkot": [
+   "Miksi raatiin arvotaan tavallisia pariisilaisia?",
+   "Mitä voittaja toimittaa presidentinpalatsille?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-patonki",
+  "kasite": "brioche",
+  "kysymys": "Kerro lisää: brioche",
+  "vastaus": "Brioche on ranskalainen hiivaleivonnainen, jonka taikinaan kuuluu runsaasti voita ja kananmunia. Se on siis varsin erilainen kuin [[patongin]] taikina, jossa saa olla vain vehnäjauhoa, vettä, suolaa ja hiivaa. Tästä syystä brioche on pehmeää ja rikasta, kun taas patonki on rapeakuorinen ja kevyt. Pelin aineisto ei kerro briochesta sen tarkemmin, joten yksityiskohdat jäävät yleistiedon varaan. Brioche kuuluu ranskalaisten [[voita]] sisältävien leivonnaisten joukkoon.",
+  "linkit": [
+   "patongin",
+   "voita"
+  ],
+  "jatkot": [
+   "Miksi patongin taikinaa ei saa pakastaa?",
+   "Mitä eroa on patongilla ja briochella?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "Louis Leplée",
+  "kysymys": "Kerro lisää: Louis Leplée",
+  "vastaus": "[[Louis Leplée]] oli yökerhon omistaja, joka kuuli nuoren laulajan kadulla vuonna 1935. Hän antoi laulajalle lempinimen [[la Môme Piaf]]. Sana piaf on pariisilaista puhekieltä ja tarkoittaa [[varpusta]]. Lempinimi sopi hyvin pienikokoiselle laulajalle, joka oli 142 senttiä pitkä. Pelin aineisto ei kerro Leplée'stä tämän enempää.",
+  "linkit": [
+   "Louis Leplée",
+   "la Môme Piaf",
+   "varpusta"
+  ],
+  "jatkot": [
+   "Mitä la Môme Piaf tarkoittaa suomeksi?",
+   "Missä Édith Piaf lauloi nuorena?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "Édith Piaf",
+  "kysymys": "Kerro lisää: Édith Piaf",
+  "vastaus": "[[Édith Piaf]] syntyi [[Bellevillessä]] joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf. Hänen tunnetuin laulunsa, [[La Vie en rose]], ilmestyi vuonna 1946, ja sen sanat hän kirjoitti itse.",
+  "linkit": [
+   "Édith Piaf",
+   "Bellevillessä",
+   "Pigallen",
+   "La Vie en rose"
+  ],
+  "jatkot": [
+   "Milloin La Vie en rose ilmestyi?",
+   "Kuka antoi Piafille lempinimen?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "La Vie en rose",
+  "kysymys": "Kerro lisää: La Vie en rose",
+  "vastaus": "[[La Vie en rose]] on [[Édith Piafin]] tunnetuin laulu. Se ilmestyi vuonna 1946, ja sen sanat Piaf kirjoitti itse. Laulu syntyi siis samalta ihmiseltä, joka oli aiemmin laulanut kolikoista Pigallen kaduilla. Pelin aineisto ei kerro laulun säveltäjästä eikä sen syntyvaiheista tarkemmin.",
+  "linkit": [
+   "La Vie en rose",
+   "Édith Piafin"
+  ],
+  "jatkot": [
+   "Millainen laulajan ura oli ennen vuotta 1946?",
+   "Miksi Piafia kutsuttiin varpuseksi?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "Django Reinhardtin",
+  "kysymys": "Kerro lisää: Django Reinhardtin",
+  "vastaus": "[[Django Reinhardt]] kasvoi [[romaniperheen]] asuntovaunussa Pariisin porttien luona ja soitti [[banjoa]] pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Palossa hänen vasemman kätensä nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormella.",
+  "linkit": [
+   "Django Reinhardt",
+   "romaniperheen",
+   "banjoa"
+  ],
+  "jatkot": [
+   "Mitä vasemmalle kädelle tapahtui tulipalossa?",
+   "Millä soittimella Django soitti lapsena?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "kitaran",
+  "kysymys": "Kerro lisää: kitaran",
+  "vastaus": "Nykyisen klassisen kitaran muotoili almerialainen puuseppä [[Antonio de Torres]]. Ennen 1850-lukua kitara oli pieni ja hiljainen salonkisoitin. Torres suurensi [[kaikukopan]], ohensi kannen ja kehitti sen alle viuhkamaisen rimatuen, joka jakaa värähtelyn koko kannelle. Ääni voimistui niin, että kitara kelpasi konserttisaliin. Kongolainen [[Franco Luambo Makiadi]] puolestaan opetteli kitaraa salaa levyjen pakkaajana, ja hänen kitaransa oli nimeltään [[Libaku ya nguma]], boakäärmeen pää.",
+  "linkit": [
+   "Antonio de Torres",
+   "kaikukopan",
+   "Franco Luambo Makiadi",
+   "Libaku ya nguma"
+  ],
+  "jatkot": [
+   "Miten Torres todisti äänen tulevan kannesta?",
+   "Kuka oli Franco Luambo Makiadi?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "banjoa",
+  "kysymys": "Kerro lisää: banjoa",
+  "vastaus": "Banjo on kielisoitin, jonka runko muistuttaa kalvolla päällystettyä pyöreää kehää. Pelin aineiston mukaan [[Django Reinhardt]] soitti banjoa pihoissa ja tanssipaikoissa jo lapsena, kasvettuaan romaniperheen [[asuntovaunussa]] Pariisin porttien luona. Tulipalon ja käden vamman jälkeen hän siirtyi [[kitaraan]], jonka veli toi sairaalaan. Aineisto ei kerro banjosta muuta.",
+  "linkit": [
+   "Django Reinhardt",
+   "asuntovaunussa",
+   "kitaraan"
+  ],
+  "jatkot": [
+   "Miksi Django vaihtoi banjosta kitaraan?",
+   "Miten banjo eroaa kitarasta?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "Bellevillessä",
+  "kysymys": "Kerro lisää: Bellevillessä",
+  "vastaus": "Belleville on kaupunginosa Pariisin itäosassa. Pelin aineiston mukaan [[Édith Piaf]] syntyi siellä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka [[syntymätodistuksessa]] lukee sairaala. Teininä hän lauloi kolikoista [[Pigallen]] kaduilla sisarpuolensa kanssa. Aineisto ei kerro Bellevillestä muuta.",
+  "linkit": [
+   "Édith Piaf",
+   "syntymätodistuksessa",
+   "Pigallen"
+  ],
+  "jatkot": [
+   "Missä Pigalle sijaitsee Pariisissa?",
+   "Mitä Piafin syntymätodistuksessa lukee?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisi-soi",
+  "kasite": "Pigallen",
+  "kysymys": "Kerro lisää: Pigallen",
+  "vastaus": "Pigalle on Pariisin pohjoisosan kaupunginosa Montmartren tuntumassa. Pelin aineiston mukaan [[Édith Piaf]] lauloi siellä teininä kolikoista kaduilla ja pihoissa [[sisarpuolensa]] kanssa. Vuonna 1935 yökerhon omistaja [[Louis Leplée]] kuuli hänet kadulta ja antoi hänelle lempinimen la Môme Piaf. Aineisto ei kerro Pigallesta tämän enempää.",
+  "linkit": [
+   "Édith Piaf",
+   "sisarpuolensa",
+   "Louis Leplée"
+  ],
+  "jatkot": [
+   "Mistä Piaf sai lempinimensä?",
+   "Missä Belleville sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Jeanne de la Motte",
+  "kysymys": "Kerro lisää: Jeanne de la Motte",
+  "vastaus": "[[Jeanne de la Motte]] oli huijari, joka sai [[kardinaali de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan luovutti nauhan huijarin lähetille tammikuussa 1785. Kivet pilkottiin ja myytiin Lontoossa ja Pariisissa.",
+  "linkit": [
+   "Jeanne de la Motte",
+   "kardinaali de Rohanin",
+   "Marie Antoinette"
+  ],
+  "jatkot": [
+   "Kuka esitti kuningatarta puistossa?",
+   "Mitä nauhan kiville tapahtui?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "de Rohanin",
+  "kysymys": "Kerro lisää: de Rohanin",
+  "vastaus": "[[Kardinaali de Rohan]] uskoi huijari Jeanne de la Motten väärennettyjen kirjeiden ja yöllisen tapaamisen perusteella, että kuningatar halusi kaulanauhan salaa. Hän osti nauhan tammikuussa 1785 kahdella miljoonalla [[livrellä]] ja luovutti sen huijarin lähetille. Kun ensimmäinen maksuerä erääntyi elokuussa, hänet pidätettiin [[Versailles'ssa]]. Oikeus vapautti hänet vuonna 1786, mutta [[Marie Antoinetten]] maine ei toipunut.",
+  "linkit": [
+   "Kardinaali de Rohan",
+   "livrellä",
+   "Versailles'ssa",
+   "Marie Antoinetten"
+  ],
+  "jatkot": [
+   "Paljonko kaulanauha maksoi?",
+   "Miksi kardinaali vapautettiin vuonna 1786?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Marie Antoinette",
+  "kysymys": "Kerro lisää: Marie Antoinette",
+  "vastaus": "[[Marie Antoinette]] oli Ranskan kuningatar, joka ei huolinut kaulanauhaa, kun kuningas Ludvig XV oli kuollut ennen kauppaa. Huijauksesta huolimatta hänen maineensa ei toipunut. Vallankumouksen aikana hänet mestattiin [[Concorden aukiolla]] Pariisissa, jonne oli pystytetty [[giljotiini]]. Samalla aukiolla mestattiin myös kuningas [[Ludvig XVI]]. Tapahtumista on kulunut yli kaksi vuosisataa, ja aukio on nykyään komea suihkulähteiden ja patsaiden reunustama kaupunkitila.",
+  "linkit": [
+   "Marie Antoinette",
+   "Concorden aukiolla",
+   "giljotiini",
+   "Ludvig XVI"
+  ],
+  "jatkot": [
+   "Milloin Concorden aukio rakennettiin?",
+   "Mikä Luxorin obeliski on?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Versailles'n",
+  "kysymys": "Kerro lisää: Versailles'n",
+  "vastaus": "Versailles on Pariisin länsipuolella sijaitseva kaupunki, joka tunnetaan kuninkaan hovin asuinpaikkana. Pelin aineiston mukaan sen puistossa pidettiin yöllinen tapaaminen, jossa [[palkattu nuori nainen]] esitti kuningatarta kardinaalille. Myöhemmin [[kardinaali de Rohan]] pidätettiin Versailles'ssa, kun kaulanauhan ensimmäinen maksuerä oli erääntynyt. Huijauksen taustalla oli [[Jeanne de la Motte]]. Aineisto ei kerro Versailles'sta muuta.",
+  "linkit": [
+   "palkattu nuori nainen",
+   "kardinaali de Rohan",
+   "Jeanne de la Motte"
+  ],
+  "jatkot": [
+   "Miksi kardinaali pidätettiin?",
+   "Kuka huijauksen takana oli?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "kuningattaren",
+  "kysymys": "Kerro lisää: kuningattaren",
+  "vastaus": "Aineiston mukaan kaulanauhan oli koonnut kaksi hovin jalokivikauppiasta, [[Boehmer ja Bassenge]], kuningas [[Ludvig XV:lle]]. Kuningas kuoli kuitenkin ennen kauppaa, eikä [[Marie Antoinette]] huolinut nauhaa. Siksi nauha jäi kauppiaille, ja huijari Jeanne de la Motte pääsi käyttämään tilannetta hyväkseen. Kun maksuerä erääntyi, kauppiaat kääntyivät kuningattaren puoleen. Hänen maineensa kärsi, vaikka hän ei ollut kauppaan osallinen.",
+  "linkit": [
+   "Boehmer ja Bassenge",
+   "Ludvig XV:lle",
+   "Marie Antoinette"
+  ],
+  "jatkot": [
+   "Kuka kaulanauhan oli tarkoitettu alun perin?",
+   "Mitä kauppiaat tekivät maksun erääntyessä?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "kardinaali",
+  "kysymys": "Kerro lisää: kardinaali",
+  "vastaus": "[[Rohan]] oli kardinaali, joka uskoi huijari [[Jeanne de la Motten]] väärennettyihin kirjeisiin ja osti kaulanauhan tammikuussa 1785. Kun ensimmäinen maksuerä erääntyi elokuussa, hänet pidätettiin [[Versailles'ssa]]. Oikeus vapautti hänet vuonna 1786. Aineisto ei kerro, mitä hänelle tapahtui sen jälkeen.",
+  "linkit": [
+   "Rohan",
+   "Jeanne de la Motten",
+   "Versailles'ssa"
+  ],
+  "jatkot": [
+   "Miksi hän uskoi kirjeisiin?",
+   "Mitä hän maksoi kaulanauhasta?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Denis Vrain-Lucas",
+  "kysymys": "Kerro lisää: Denis Vrain-Lucas",
+  "vastaus": "[[Denis Vrain-Lucas]] myi 1860-luvulla matemaatikko [[Michel Chasles'lle]] noin 27 000 käsin kirjoitettua kirjettä. Aineiston mukaan yksi niistä oli kirje, jonka [[Kleopatra]] oli kirjoittanut Julius Caesarille ranskaksi vesileimatulle paperille. Kansallisylpeys sokaisi ostajan, sillä kirjeet väittivät todistavan, että painovoima keksittiin Ranskassa. Tiedeakatemia ei suhtautunut asiaan yhtä ilahtuneesti. Kauppa kesti vuosina 1861–1870.",
+  "linkit": [
+   "Denis Vrain-Lucas",
+   "Michel Chasles'lle",
+   "Kleopatra"
+  ],
+  "jatkot": [
+   "Mitä kirjeet väittivät painovoimasta?",
+   "Miten Tiedeakatemia suhtautui kirjeisiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Michel Chasles'lle",
+  "kysymys": "Kerro lisää: Michel Chasles'lle",
+  "vastaus": "[[Michel Chasles]] oli kuuluisa ranskalainen matemaatikko, joka osti [[Denis Vrain-Lucasilta]] kirjeitä 1860-luvulla. Aineiston mukaan hän osti ilomielin ensin Kleopatran kirjeen ja sen perään noin 27 000 muuta. Kansallisylpeys teki ostajasta sokean, sillä kirjeet näyttivät todistavan, että [[painovoima]] keksittiin Ranskassa. Aineisto ei kerro hänen myöhemmistä vaiheistaan.",
+  "linkit": [
+   "Michel Chasles",
+   "Denis Vrain-Lucasilta",
+   "painovoima"
+  ],
+  "jatkot": [
+   "Mitä Kleopatran kirje sisälsi?",
+   "Kuka Denis Vrain-Lucas oli?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Kardinaali de Rohan",
+  "kysymys": "Kerro lisää: Kardinaali de Rohan",
+  "vastaus": "[[Kardinaali de Rohan]] uskoi, että [[Marie Antoinette]] halusi kaulanauhan salaa, koska huijari [[Jeanne de la Motte]] oli esittänyt hänelle väärennettyjä kirjeitä ja järjestänyt yöllisen tapaamisen. Hän osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille. Elokuussa maksuerän erääntyessä hänet pidätettiin Versailles'ssa. Oikeus vapautti hänet vuonna 1786.",
+  "linkit": [
+   "Kardinaali de Rohan",
+   "Marie Antoinette",
+   "Jeanne de la Motte"
+  ],
+  "jatkot": [
+   "Kuka esitti kuningatarta yöllisessä tapaamisessa?",
+   "Mitä oikeus päätti Rohanista?"
+  ]
+ },
+ {
+  "kohde": "nosto:pariisin-vuosisadat",
+  "kasite": "Chasles",
+  "kysymys": "Kerro lisää: Chasles",
+  "vastaus": "Michel Chasles oli ranskalainen matemaatikko, joka tunnettiin [[geometriasta]]. Pelin aineiston mukaan hän osti 1860-luvulla [[Denis Vrain-Lucasilta]] noin 27 000 käsin kirjoitettua kirjettä. Aineiston loppu on katkennut, joten kirjeiden sisällöstä ja kaupan vaiheista ei voi sanoa enempää.",
+  "linkit": [
+   "geometriasta",
+   "Denis Vrain-Lucasilta"
+  ],
+  "jatkot": [
+   "Mitä geometria tutkii?",
+   "Kuka Denis Vrain-Lucas oli?"
+  ]
  }
 ]
