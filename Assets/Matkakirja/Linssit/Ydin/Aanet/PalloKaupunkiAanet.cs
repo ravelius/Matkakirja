@@ -9,6 +9,8 @@
 //   tori-ulko                    silmukka (60 s, stereo), 2D-tausta torin tai ulkotorin lähellä
 //   vaki-kauppahalli / vaki-sisatila-kauppakeskus   silmukat (60 s, stereo), 2D-tausta katetun hallin vieressä −12 dB
 //   vene-ohi-01…03               kerta (9 s, huippu ~4,5 s), 3D pienessä veneessä (Ydin Ohiajot vesi)
+//   satama-vesi                  silmukka (30 s, mono, ylipäästö 100 Hz, kivikkorannan liplatus), 3D lähimmissä laitureissa; EI manifestissa:
+//                                Pelikoodarin sonniss-aanet-v4 (Erilliset, liitetään Luessa manifestin riveihin)
 //   vaki-sisatila-sorina         EI käytössä (ei sopivaa paikkaa pallosta; ei ladata eikä rekisteröidä)
 // Mikseri (Aanimikseri, konteksti pallo): ryhmä manifestin ryhma-kentän mukaan (maisema; maitovaahdotin tehosteet); klipin nimi = tunnus.
 // Puhdas C#: KaupunkiAanetTestit.
@@ -23,14 +25,19 @@ namespace Matkakirja.Linssit.Aanet
         public const string Juuri = "https://media.matkakirja.app/aanet/pallo-kaupunki-v1/";
         public const string ManifestiOsoite = Juuri + "manifest.json";
 
-        public sealed class Aani { public string Tunnus, Polku, Ryhma; public bool Silmukka; public double KestoS; public string Osoite => Juuri + Polku; }
+        public sealed class Aani { public string Tunnus, Polku, Ryhma; public bool Silmukka; public double KestoS; public string Osoite => Polku.StartsWith("https://") ? Polku : Juuri + Polku; }
         public readonly Dictionary<string, Aani> Aanet = new Dictionary<string, Aani>(StringComparer.Ordinal);
 
         // ---- tunnukset ----
         public static readonly string[] Kirkonkello = Sarja("kirkonkello", 5), VeneOhi = Sarja("vene-ohi", 3);
         public const string SuihkuIso = "suihkulahde-iso", SuihkuPieni = "suihkulahde-pieni", KahvilaBaari = "kahvila-baari",
             KahvilaRauhallinen = "kahvila-rauhallinen", Maitovaahdotin = "kahvila-maitovaahdotin", ToriUlko = "tori-ulko",
-            Kauppahalli = "vaki-kauppahalli", Kauppakeskus = "vaki-sisatila-kauppakeskus", SisatilaSorina = "vaki-sisatila-sorina";
+            Kauppahalli = "vaki-kauppahalli", Kauppakeskus = "vaki-sisatila-kauppakeskus", SisatilaSorina = "vaki-sisatila-sorina", SatamaVesi = "satama-vesi";
+        /// <summary>Manifestin ulkopuoliset äänet (Pelikoodari 9.10.): liitetään Luessa, ellei manifestissa ole samaa tunnusta.</summary>
+        public static readonly Aani[] Erilliset =
+        {
+            new Aani { Tunnus = SatamaVesi, Polku = "https://media.matkakirja.app/aanet/sonniss-aanet-v4/satama-vesi.mp3", Silmukka = true, KestoS = 30, Ryhma = "maisema" },
+        };
 
         static string[] Sarja(string alku, int n) { var a = new string[n]; for (int i = 0; i < n; i++) a[i] = $"{alku}-{i + 1:00}"; return a; }
 
@@ -46,6 +53,7 @@ namespace Matkakirja.Linssit.Aanet
             ("elava.kauppahalli", "maisema", "Kauppahalli", new[] { Kauppahalli }),
             ("elava.kauppakeskus", "maisema", "Kauppakeskus", new[] { Kauppakeskus }),
             ("elava.vene-ohi", "maisema", "Vene ohi", VeneOhi),
+            ("elava.satama-vesi", "maisema", "Satama: veden liplatus", new[] { SatamaVesi }),
         };
 
         /// <summary>Kaikki käytössä olevat tunnukset (esilataus; muut manifestin rivit, kuten vaki-sisatila-sorina, ohitetaan).</summary>
@@ -68,11 +76,12 @@ namespace Matkakirja.Linssit.Aanet
                     Silmukka = MiniJson.Kentta(d, "silmukka") is bool b && b, Ryhma = MiniJson.Teksti(d, "ryhma") };
                 if (!string.IsNullOrEmpty(a.Tunnus) && !string.IsNullOrEmpty(a.Polku)) m.Aanet[a.Tunnus] = a;
             }
+            foreach (var a in Erilliset) if (!m.Aanet.ContainsKey(a.Tunnus)) m.Aanet[a.Tunnus] = a;
             return m;
         }
 
         // ---- tasot (kertoimet maiseman Tasoon nähden; −23 LUFS -äänet) ----
-        public const double KirkkoTaso = 0.8, SuihkuTaso = 0.5, KahvilaTaso = 0.35, MaitoTaso = 0.4, ToriTaso = 0.45, VeneTaso = 0.8;
+        public const double SatamaTaso = 0.5, KirkkoTaso = 0.8, SuihkuTaso = 0.5, KahvilaTaso = 0.35, MaitoTaso = 0.4, ToriTaso = 0.45, VeneTaso = 0.8;
         /// <summary>Halli ulkoa kuultuna −12 dB (PT 9.10.).</summary>
         public static readonly double HalliTaso = 0.5 * Math.Pow(10, -12 / 20.0);
         /// <summary>Tori-ulko −6 dB, kun IHMISET soittaa sorinaa (ei päällekkäin liian kovaa).</summary>

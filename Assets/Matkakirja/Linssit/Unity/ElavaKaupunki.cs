@@ -17,7 +17,7 @@
 // (Ydin Ohiajot), muiden pallojen poltin (Ydin PoltinAanet), ihmiset, pyörän kellot ja laivan torvet OSM-paikoissa (Ydin IhmisAanet)
 // 3D-lähdepoolista (ElavaAaniPooli, 6 lähdettä) ja lipun lepatus lähimmässä lipussa (ElavaSilmukka, 3D). Puuttuva manifesti = ennallaan.
 // KAUPUNKIÄÄNET v1 (juna 173; Pelikoodarin aanet/pallo-kaupunki-v1, Ydin KaupunkiAanet + PalloKaupunkiAanet): kirkonkellot ja
-// maitovaahdotin 3D-poolista (nyt 8 lähdettä) OSM-pisteissä, suihkulähteet 3D-silmukoina, kahvila-, tori- ja hallitaustat 2D-stereona,
+// maitovaahdotin 3D-poolista (nyt 8 lähdettä) OSM-pisteissä, suihkulähteet ja satamat (laiturit, satama-vesi) 3D-silmukoina, kahvila-, tori- ja hallitaustat 2D-stereona,
 // vene-ohi pienissä veneissä (Ydin Ohiajot vesi). Paikallinen kello kuten KaupunkiKuva (opas tunti pakottaa). Diagnoosi
 // `opas kaupunkiaanet tila`, kuuntelu `opas kaupunkiaanet kello|maito`.
 using System.Collections.Generic;
@@ -671,8 +671,8 @@ namespace Matkakirja.Natiivi
 
         // ---- KAUPUNKIÄÄNET v1 (juna 173; Ydin KaupunkiAanet, PalloKaupunkiAanet) ----
         KaupunkiAanet kaupunkiAanet; Ohiajot veneOhi; int veneKahva, sorinaKahva;
-        readonly Dictionary<int, ElavaSilmukka> suihkuSilmukat = new Dictionary<int, ElavaSilmukka>();
-        readonly Dictionary<int, float> suihkuMaa = new Dictionary<int, float>();
+        readonly Dictionary<int, ElavaSilmukka> suihkuSilmukat = new Dictionary<int, ElavaSilmukka>(), satamaSilmukat = new Dictionary<int, ElavaSilmukka>();
+        readonly Dictionary<int, float> suihkuMaa = new Dictionary<int, float>(), satamaMaa = new Dictionary<int, float>();
         readonly Dictionary<string, Stack<ElavaSilmukka>> vapaatSuihkut = new Dictionary<string, Stack<ElavaSilmukka>>();
         readonly List<int> suihkuPois = new List<int>(); readonly HashSet<int> suihkuNyt = new HashSet<int>();
         ElavaSilmukka[] taustaSilmukat;
@@ -710,28 +710,10 @@ namespace Matkakirja.Natiivi
                     pooli.Soita(k.Tunnus, (float)k.Taso, 1f, new Vector3((float)k.X, (float)(m + k.Y), (float)k.Z), null, vaisto);
                     if (k.Tunnus != PalloKaupunkiAanet.Maitovaahdotin) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {k.Tunnus}{(k.Tasatunti ? " (tasatunti)" : "")} {k.EtaisyysM:F0} m, taso {k.Taso:F2}");
                 }
-            // Suihkulähteet: 3D-silmukka pisteessä; Ydin häivyttää valinnan vaihtuessa, poistuva soi nollaan ennen kierrätystä.
-            suihkuNyt.Clear();
-            foreach (var s in kaupunkiAanet.Suihkut)
-            {
-                suihkuNyt.Add(s.Piste);
-                if (!suihkuSilmukat.TryGetValue(s.Piste, out var sl))
-                {
-                    if (!vapaatSuihkut.TryGetValue(s.Tunnus, out var pino)) vapaatSuihkut[s.Tunnus] = pino = new Stack<ElavaSilmukka>();
-                    suihkuSilmukat[s.Piste] = sl = pino.Count > 0 ? pino.Pop() : new ElavaSilmukka(transform, s.Tunnus, true);
-                }
-                if (!suihkuMaa.TryGetValue(s.Piste, out float sm)) { double m = Maa(s.X, s.Z); sm = (float)(double.IsNaN(m) ? maaKamera : m); if (!double.IsNaN(m)) suihkuMaa[s.Piste] = sm; }
-                float st = paalla ? (float)OpasAanitasot.Maisema(s.Taso, vaisto) * ElavaAaniPankki.Kerroin(s.Tunnus) : 0f;
-                sl.Paivita(st, udt, KaupunkiLiukuS, new Vector3((float)s.X, sm + 1f, (float)s.Z));
-            }
-            suihkuPois.Clear();
-            foreach (var kvp in suihkuSilmukat)
-            {
-                if (suihkuNyt.Contains(kvp.Key)) continue;
-                kvp.Value.Paivita(0f, udt, KaupunkiLiukuS);
-                if (kvp.Value.Taso < 0.0005f) suihkuPois.Add(kvp.Key);
-            }
-            foreach (int p in suihkuPois) { var sl = suihkuSilmukat[p]; sl.Hiljaa(); vapaatSuihkut[sl.Tunnus].Push(sl); suihkuSilmukat.Remove(p); }
+            // Suihkulähteet ja satamat: 3D-silmukka pisteessä; Ydin häivyttää valinnan vaihtuessa, poistuva soi nollaan ennen kierrätystä.
+            float nosto = kaupunki != null && kaupunki.Vesi?.Juuri != null ? KaupunkiVesi.NostoM : VesiNostoM;
+            PisteSilmukat(kaupunkiAanet.Suihkut, suihkuSilmukat, suihkuMaa, maaKamera, 1f, paalla, vaisto, udt);
+            PisteSilmukat(kaupunkiAanet.Satamat, satamaSilmukat, satamaMaa, maaKamera, nosto + 0.5f, paalla, vaisto, udt);
             // Taustat 2D-stereona (kahvila, tori, halli).
             if (taustaSilmukat == null)
             {
@@ -746,6 +728,37 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        void PisteSilmukat(List<KaupunkiAanet.Suihku> pisteet, Dictionary<int, ElavaSilmukka> silmukat, Dictionary<int, float> maat, double maaKamera, float nosto, bool paalla, bool vaisto, float udt)
+        {
+            suihkuNyt.Clear();
+            foreach (var s in pisteet)
+            {
+                suihkuNyt.Add(s.Piste);
+                if (!silmukat.TryGetValue(s.Piste, out var sl))
+                {
+                    if (!vapaatSuihkut.TryGetValue(s.Tunnus, out var pino)) vapaatSuihkut[s.Tunnus] = pino = new Stack<ElavaSilmukka>();
+                    silmukat[s.Piste] = sl = pino.Count > 0 ? pino.Pop() : new ElavaSilmukka(transform, s.Tunnus, true);
+                }
+                // Korkeus: laiturilla paketin vesipinta (+ oman veden nosto), suihkulähteellä oma maa (välimuistissa), muuten kameran maa.
+                if (!maat.TryGetValue(s.Piste, out float sm))
+                {
+                    double m = !double.IsNaN(s.Y) ? s.Y : Maa(s.X, s.Z);
+                    sm = (float)(double.IsNaN(m) ? maaKamera : m);
+                    if (!double.IsNaN(m)) maat[s.Piste] = sm;
+                }
+                float st = paalla ? (float)OpasAanitasot.Maisema(s.Taso, vaisto) * ElavaAaniPankki.Kerroin(s.Tunnus) : 0f;
+                sl.Paivita(st, udt, KaupunkiLiukuS, new Vector3((float)s.X, sm + nosto, (float)s.Z));
+            }
+            suihkuPois.Clear();
+            foreach (var kvp in silmukat)
+            {
+                if (suihkuNyt.Contains(kvp.Key)) continue;
+                kvp.Value.Paivita(0f, udt, KaupunkiLiukuS);
+                if (kvp.Value.Taso < 0.0005f) suihkuPois.Add(kvp.Key);
+            }
+            foreach (int p in suihkuPois) { var sl = silmukat[p]; sl.Hiljaa(); vapaatSuihkut[sl.Tunnus].Push(sl); silmukat.Remove(p); }
+        }
+
         /// <summary>Diagnoosi (`opas kaupunkiaanet tila`): Ytimen tila, manifestit ja soivat kaupunkisilmukat.</summary>
         public static string KaupunkiAanetTila()
         {
@@ -754,6 +767,7 @@ namespace Matkakirja.Natiivi
             var soi = new List<string>();
             if (n?.taustaSilmukat != null) foreach (var t in n.taustaSilmukat) if (t.Taso > 0.001f) soi.Add($"{t.Tunnus} {t.Taso:F3}");
             if (n != null) foreach (var s in n.suihkuSilmukat.Values) if (s.Taso > 0.001f) soi.Add($"{s.Tunnus} {s.Taso:F3}");
+            if (n != null) foreach (var s in n.satamaSilmukat.Values) if (s.Taso > 0.001f) soi.Add($"{s.Tunnus} {s.Taso:F3}");
             return $"{ydin}; soi [{string.Join(", ", soi)}]; vene-ohi {(n?.veneOhi != null ? $"{n.veneet.FindAll(v => v.Pieni).Count} pientä venettä" : "-")}; {ElavaAaniPankki.Tila()}";
         }
 

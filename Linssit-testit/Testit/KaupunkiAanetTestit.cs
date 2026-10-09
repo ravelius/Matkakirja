@@ -18,12 +18,15 @@ namespace Matkakirja.Linssit.Testit
             var m = PalloKaupunkiAanet.Lue("{\"versio\":1,\"aanet\":[{\"tunnus\":\"kirkonkello-01\",\"aani\":\"kirkonkello-01.mp3\",\"silmukka\":false,\"kesto_s\":8.0,\"LUFS\":-23.0,\"ryhma\":\"maisema\"}," +
                 "{\"tunnus\":\"kahvila-maitovaahdotin\",\"aani\":\"kahvila-maitovaahdotin.mp3\",\"silmukka\":false,\"kesto_s\":6.22,\"ryhma\":\"tehosteet\"}," +
                 "{\"tunnus\":\"tori-ulko\",\"aani\":\"tori-ulko.mp3\",\"silmukka\":true,\"kesto_s\":60},{\"tunnus\":\"\",\"aani\":\"x.mp3\"}]}");
-            Oleta.Sama(3, m.Aanet.Count, "tyhjä tunnus ohitetaan");
+            Oleta.Sama(4, m.Aanet.Count, "tyhjä tunnus ohitetaan, satama-vesi liitetään");
+            Oleta.Sama("https://media.matkakirja.app/aanet/sonniss-aanet-v4/satama-vesi.mp3", m.Aanet[PalloKaupunkiAanet.SatamaVesi].Osoite, "erillinen ääni omasta juuresta");
+            Oleta.Tosi(m.Aanet[PalloKaupunkiAanet.SatamaVesi].Silmukka, "satama-vesi silmukka");
+            Oleta.Sama("x.mp3", PalloKaupunkiAanet.Lue("{\"aanet\":[{\"tunnus\":\"satama-vesi\",\"aani\":\"x.mp3\"}]}").Aanet[PalloKaupunkiAanet.SatamaVesi].Polku, "manifestin rivi voittaa");
             Oleta.Tosi(m.Aanet["tori-ulko"].Silmukka && !m.Aanet["kirkonkello-01"].Silmukka, "silmukka-kenttä");
             Oleta.Sama(PalloKaupunkiAanet.Juuri + "tori-ulko.mp3", m.Aanet["tori-ulko"].Osoite);
             Oleta.Sama("tehosteet", m.Aanet["kahvila-maitovaahdotin"].Ryhma);
             var kaikki = new HashSet<string>(PalloKaupunkiAanet.Tunnukset());
-            Oleta.Sama(16, kaikki.Count, "17 ääntä, vaki-sisatila-sorina ei käytössä");
+            Oleta.Sama(17, kaikki.Count, "manifestin 17 ääntä − vaki-sisatila-sorina + satama-vesi");
             Oleta.Tosi(!kaikki.Contains(PalloKaupunkiAanet.SisatilaSorina), "sisätilan sorina ei ladata");
             foreach (var t in kaikki)
             {
@@ -40,7 +43,7 @@ namespace Matkakirja.Linssit.Testit
             foreach (var a in PalloKaupunkiAanet.Mikseri) mk.Rekisteroi("pallo", a.Ryhma, a.Id, a.Nimi, a.Klipit);
             Oleta.Tosi(mk.Rekisteroity("kirkonkello-05") && mk.Rekisteroity("vene-ohi-03") && mk.Rekisteroity("elava.tori-ulko"), "klipit ja tunnukset äänivahdille");
             Oleta.Sama(1, mk.AanetRyhmassa("pallo", "tehosteet").Count);
-            Oleta.Sama(8, mk.AanetRyhmassa("pallo", "maisema").Count);
+            Oleta.Sama(9, mk.AanetRyhmassa("pallo", "maisema").Count);
             Oleta.Tosi(Math.Abs(PalloKaupunkiAanet.HalliTaso / 0.5 - 0.2512) < 1e-3 && Math.Abs(PalloKaupunkiAanet.ToriSorinaKerroin - 0.5012) < 1e-3, "−12 dB ja −6 dB");
         }
 
@@ -134,6 +137,48 @@ namespace Matkakirja.Linssit.Testit
             var k = Tyhja(3); k.Suihkulahteet.Add((0, 0)); k.Indeksoi();
             for (double t = 0; t < 5; t += Dt) k.Paivita(t, Dt, 300, 0, 20, 12, false);
             Oleta.Sama(0, k.Suihkut.Count, "yli 120 m: ei suihkua");
+        }
+
+        static string Satamat => "{\"reitit\":[{\"tyyppi\":\"lautta\",\"kiertava\":false,\"p\":[[0,40,2.5],[900,40,2.5]]}," +
+            "{\"tyyppi\":\"lautta\",\"kiertava\":false,\"p\":[[10,45,2.5],[60,-30,2.5],[120,-30,2.5]]},{\"tyyppi\":\"vene\",\"kiertava\":true,\"p\":[[-50,0,2],[0,90,2]]}," +
+            "{\"tyyppi\":\"lautta\",\"kiertava\":false,\"p\":[[200,0,2.5],[2000,0,2.5]]}]}";
+
+        static string AjaSatamat(int siemen, double korkeus = 30)
+        {
+            var a = KaupunkiAanet.Lue(Satamat, siemen);
+            var ed = new Dictionary<int, double>(); var s = new System.Text.StringBuilder(); var nahdyt = new HashSet<int>();
+            for (double t = 0; t < 120; t += Dt)
+            {
+                double kx = -100 + t * 3;   // 3 m/s laitureiden ohi
+                a.Paivita(t, Dt, kx, 0, korkeus, 12, false);
+                var nyt = new Dictionary<int, double>(); int taysia = 0;
+                foreach (var x in a.Satamat)
+                {
+                    nyt[x.Piste] = x.Taso; nahdyt.Add(x.Piste); if (x.Osuus >= 1) taysia++;
+                    Oleta.Sama(PalloKaupunkiAanet.SatamaVesi, x.Tunnus);
+                    Oleta.Sama(a.Laiturit[x.Piste].Y, x.Y, "vesipinta paketista");
+                    double e = ed.TryGetValue(x.Piste, out var v) ? v : 0;
+                    Oleta.Tosi(Math.Abs(x.Taso - e) <= PalloKaupunkiAanet.SatamaTaso * Dt / KaupunkiAanet.SuihkuHaivytysS + 0.01, $"ei hyppyä ({e:F3} → {x.Taso:F3})");
+                    s.Append($"{t:F1}:{x.Piste}:{x.Taso:F4};");
+                }
+                foreach (var kv in ed) if (!nyt.ContainsKey(kv.Key)) Oleta.Tosi(kv.Value <= PalloKaupunkiAanet.SatamaTaso * Dt / KaupunkiAanet.SuihkuHaivytysS + 0.01, "loppuu hiljaa");
+                Oleta.Tosi(taysia <= KaupunkiAanet.SuihkujaEnintaan && a.Satamat.Count <= 2 * KaupunkiAanet.SuihkujaEnintaan, "enintään 2 kerrallaan");
+                ed = nyt;
+            }
+            if (korkeus <= KaupunkiAanet.KorkeusRajaM) Oleta.Tosi(nahdyt.Count >= 3, $"laiturit vuorollaan ({nahdyt.Count})");
+            return s.ToString();
+        }
+
+        [Testi] static void SatamaVesiLaitureissaJaHaivytys()
+        {
+            var a = KaupunkiAanet.Lue(Satamat, 1);
+            Oleta.Sama(5, a.Laiturit.Count, "edestakaisten reittien päät, lähekkäiset yhdistetty (< 40 m), kiertävä ohi");
+            string s1 = AjaSatamat(4), s2 = AjaSatamat(4);
+            Oleta.Tosi(s1.Length > 100 && s1 == s2, "deterministinen");
+            Oleta.Sama("", AjaSatamat(4, KaupunkiAanet.KorkeusRajaM + 10), "kamera yli 150 m: ei satamaa");
+            var k = KaupunkiAanet.Lue(Satamat, 1);
+            for (double t = 0; t < 5; t += Dt) k.Paivita(t, Dt, 500, 500, 20, 12, false);
+            Oleta.Sama(0, k.Satamat.Count, "yli 120 m laiturista: ei");
         }
 
         static KaupunkiAanet Kahvilat(int baareja, int kahviloita)
@@ -287,6 +332,7 @@ namespace Matkakirja.Linssit.Testit
                 var a = KaupunkiAanet.Lue(teksti, 1);
                 Oleta.Tosi(a.Kirkot.Count >= 150 && a.Suihkulahteet.Count >= 100 && a.Kahvilat.Count >= 800 && a.Hallit.Count >= 40 && a.Torit.Count >= 40,
                     $"{id}: kirkot {a.Kirkot.Count}, suihkut {a.Suihkulahteet.Count}, kahvilat {a.Kahvilat.Count}, hallit {a.Hallit.Count}, torit {a.Torit.Count}");
+                Oleta.Tosi(a.Laiturit.Count >= 10, $"{id}: laitureita {a.Laiturit.Count}");
                 int baareja = 0; foreach (var k in a.Kahvilat) if (k.Baari) baareja++;
                 Oleta.Tosi(baareja > 0 && baareja < a.Kahvilat.Count, $"{id}: baareja {baareja}");
                 Oleta.Tosi(teksti.EndsWith("]}") && teksti.IndexOf(",\"kirkot\":", StringComparison.Ordinal) > 0, "uudet kentät lopussa");

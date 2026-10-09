@@ -7,6 +7,9 @@
 //    LyontienJalkeenS:n päästä, ettei päällekkäin). Ei samaa näytettä peräkkäin; taso täysi KirkkoTaysiM, hiljaa KirkkoHiljaM (3D).
 //  SUIHKULÄHTEET: enintään SuihkujaEnintaan lähintä alle SuihkuM:n soivat silmukkana pisteessä (iso/pieni pisteen siemenestä);
 //    valinnan vaihtuessa häivytys SuihkuHaivytysS lineaarisesti sisään ja ulos (ei hyppyä).
+//  SATAMAT (Pelikoodari 9.10., sonniss-aanet-v4/satama-vesi, kivikkorannan liplatus): vesiliikenteen edestakaisten reittien päät
+//    = laiturit (kuten IhmisAanet, lähekkäiset < LaituriYhdistysM yhdistetty, Y = vesipinta); kamera alle KorkeusRajaM ja laituri alle
+//    SatamaM → mono-3D-silmukka, enintään SuihkujaEnintaan kerrallaan, häivytys SuihkuHaivytysS kuten suihkulähteillä.
 //  KAHVILAT: kamera alle KorkeusRajaM ja kahviloita ≥ KahvilaVahintaan alle KahvilaSadeM:n → tausta kahvila-baari (baareja enemmistö
 //    tai kello ≥ BaariTunti tai < 4) tai kahvila-rauhallinen; taso tiheydestä ja korkeudesta. Maitovaahdotin lähimmästä cafésta
 //    alle MaitoM (3D), väli MaitoValiMinS–MaitoValiMaxS.
@@ -27,6 +30,7 @@ namespace Matkakirja.Linssit.Elava
         public const double KorkeusRajaM = IhmisAanet.KorkeusRajaM;
         public const double KirkkoLahinM = 400, KirkkoTaysiM = 80, KirkkoHiljaM = 450, KelloValiMinS = 180, KelloValiMaxS = 360, KelloKorkeusM = 25;
         public const double SuihkuM = 120, SuihkuTaysiM = 15, SuihkuHiljaM = 170, SuihkuHaivytysS = 1.0;
+        public const double SatamaM = 120, SatamaTaysiM = 20, SatamaHiljaM = 170;
         public const int SuihkujaEnintaan = 2, KahvilaVahintaan = 3;
         public const double KahvilaSadeM = 150, KahvilaTaysiKorkeusM = 20, BaariTunti = 18, MaitoM = 100, MaitoTaysiM = 15, MaitoValiMinS = 120, MaitoValiMaxS = 240;
         public const double ToriM = 120, ToriAlaM2 = 2000, ToriTaysiM = 40, ToriHiljaM = 160;
@@ -39,7 +43,8 @@ namespace Matkakirja.Linssit.Elava
         const int Baari = 0, Rauhallinen = 1, Tori = 2, Halli = 3, Keskus = 4;
 
         public sealed class Kerta { public string Tunnus; public double X, Y, Z, Taso, EtaisyysM; public bool Tasatunti; }
-        public sealed class Suihku { public int Piste; public string Tunnus; public double X, Z, Osuus, Taso; }
+        /// <summary>Silmukkapiste (suihkulähde tai laituri): Y = vesipinta paketista (laituri) tai NaN (maa haetaan soittaessa).</summary>
+        public sealed class Suihku { public int Piste; public string Tunnus; public double X, Y = double.NaN, Z, Osuus, Taso; }
 
         public readonly List<(double X, double Z)> Kirkot = new List<(double, double)>(), Suihkulahteet = new List<(double, double)>(), Torit = new List<(double, double)>();
         public readonly List<(double X, double Z, bool Baari)> Kahvilat = new List<(double, double, bool)>();
@@ -49,24 +54,27 @@ namespace Matkakirja.Linssit.Elava
         public readonly List<Kerta> Kerrat = new List<Kerta>();
         /// <summary>Soivat suihkulähteet (Osuus > 0, myös häipyvät).</summary>
         public readonly List<Suihku> Suihkut = new List<Suihku>();
+        /// <summary>Soivat satamat (laiturit, Osuus > 0, myös häipyvät).</summary>
+        public readonly List<Suihku> Satamat = new List<Suihku>();
+        public readonly List<(double X, double Z, double Y)> Laiturit = new List<(double, double, double)>();
         public readonly double[] Tausta = new double[TaustaTunnukset.Length];
         // Diagnoosi (opas kaupunkiaanet tila).
         public double LahinKirkkoM = double.NaN, LahinToriM = double.NaN, LahinHalliM = double.NaN, KorkeusM = double.NaN;
         public int KahviloitaLahella, BaarejaLahella;
 
         readonly Random rnd; readonly int siemen;
-        Ruudukko kirkkoR, suihkuR, kahvilaR, toriR, halliR;
+        Ruudukko kirkkoR, suihkuR, kahvilaR, toriR, halliR, laituriR;
         double seuraavaKello = double.NaN, tasaKello = double.NaN, seuraavaMaito = double.NaN, nytS;
         int edTunti = -1; string edKello;
         readonly List<int> hae = new List<int>(), pois = new List<int>();
         readonly List<(int I, double D)> valitut = new List<(int, double)>();
-        readonly Dictionary<int, Suihku> suihkut = new Dictionary<int, Suihku>();
+        readonly Dictionary<int, Suihku> suihkut = new Dictionary<int, Suihku>(), satamat = new Dictionary<int, Suihku>();
         readonly double[] tavoite = new double[TaustaTunnukset.Length];
 
         public KaupunkiAanet(int siemen) { this.siemen = siemen; rnd = new Random(siemen); }
 
         /// <summary>Pisteet elävän kaupungin paketista: "kirkot" [{x, z}], "suihkulahteet" [{x, z}], "kahvilat" [{x, z, l}],
-        /// "hallit" [{x, z, k, t}] ja "aukiot" [{x, z, ala, tori}]. Puuttuvat kentät ohitetaan.</summary>
+        /// "hallit" [{x, z, k, t}], "aukiot" [{x, z, ala, tori}] ja vesiliikenteen "reitit" (laiturit). Puuttuvat kentät ohitetaan.</summary>
         public static KaupunkiAanet Lue(string json, int siemen)
         {
             var e = new KaupunkiAanet(siemen);
@@ -88,6 +96,19 @@ namespace Matkakirja.Linssit.Elava
             }
             foreach (var d in Oliot("aukiot"))
                 if ((MiniJson.Luku(d, "tori") ?? 0) != 0 || (MiniJson.Luku(d, "ala") ?? 0) > ToriAlaM2) e.Torit.Add((X(d), Z(d)));
+            // Laiturit: edestakaisten vesireittien päät [x, z, vesi], lähekkäiset yhdistetty (sama sääntö kuin IhmisAanet).
+            foreach (var d in Oliot("reitit"))
+            {
+                if (MiniJson.Kentta(d, "kiertava") is bool kiertava && kiertava) continue;
+                var p = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "p"));
+                if (p.Count < 2) continue;
+                foreach (var q in new[] { MiniJson.TaulukkoTaiTyhja(p[0]), MiniJson.TaulukkoTaiTyhja(p[p.Count - 1]) })
+                {
+                    if (q.Count < 2) continue;
+                    double x = Convert.ToDouble(q[0]), z = Convert.ToDouble(q[1]), y = q.Count > 2 ? Convert.ToDouble(q[2]) : double.NaN;
+                    if (!e.Laiturit.Exists(l => (l.X - x) * (l.X - x) + (l.Z - z) * (l.Z - z) < IhmisAanet.LaituriYhdistysM * IhmisAanet.LaituriYhdistysM)) e.Laiturit.Add((x, z, y));
+                }
+            }
             e.Indeksoi();
             return e;
         }
@@ -100,6 +121,7 @@ namespace Matkakirja.Linssit.Elava
             kahvilaR = new Ruudukko(); for (int i = 0; i < Kahvilat.Count; i++) kahvilaR.Lisaa(i, Kahvilat[i].X, Kahvilat[i].Z);
             toriR = new Ruudukko(); for (int i = 0; i < Torit.Count; i++) toriR.Lisaa(i, Torit[i].X, Torit[i].Z);
             halliR = new Ruudukko(); for (int i = 0; i < Hallit.Count; i++) halliR.Lisaa(i, Hallit[i].X, Hallit[i].Z);
+            laituriR = new Ruudukko(); for (int i = 0; i < Laiturit.Count; i++) laituriR.Lisaa(i, Laiturit[i].X, Laiturit[i].Z);
         }
 
         /// <summary>Suihkulähteen ääni pisteen siemenestä (iso tai pieni, sama joka kerta).</summary>
@@ -148,35 +170,9 @@ namespace Matkakirja.Linssit.Elava
                 }
             }
 
-            // ---- suihkulähteet: enintään kaksi lähintä, lineaarinen häivytys ----
-            valitut.Clear();
-            if (tiedossa)
-            {
-                hae.Clear(); suihkuR?.Hae(kx, kz, SuihkuM, hae);
-                foreach (int i in hae)
-                {
-                    double dx = Suihkulahteet[i].X - kx, dz = Suihkulahteet[i].Z - kz, d = Math.Sqrt(dx * dx + dz * dz);
-                    if (d < SuihkuM) valitut.Add((i, d));
-                }
-                valitut.Sort((a, b) => a.D != b.D ? a.D.CompareTo(b.D) : a.I.CompareTo(b.I));
-                if (valitut.Count > SuihkujaEnintaan) valitut.RemoveRange(SuihkujaEnintaan, valitut.Count - SuihkujaEnintaan);
-            }
-            foreach (var (i, _) in valitut)
-                if (!suihkut.ContainsKey(i)) suihkut[i] = new Suihku { Piste = i, Tunnus = SuihkuTunnus(i), X = Suihkulahteet[i].X, Z = Suihkulahteet[i].Z };
-            Suihkut.Clear();
-            pois.Clear();
-            foreach (var s in suihkut.Values)
-            {
-                bool valittu = false; foreach (var v in valitut) valittu |= v.I == s.Piste;
-                double askel = Math.Max(0, dt) / SuihkuHaivytysS;
-                s.Osuus = valittu ? Math.Min(1, s.Osuus + askel) : Math.Max(0, s.Osuus - askel);
-                if (s.Osuus <= 0 && !valittu) { pois.Add(s.Piste); continue; }
-                double dx = s.X - kx, dz = s.Z - kz, d3 = Math.Sqrt(dx * dx + dz * dz + k2);
-                s.Taso = PalloKaupunkiAanet.SuihkuTaso * s.Osuus * (tiedossa ? PalloElavaAanet.Etaisyystaso(d3, SuihkuTaysiM, SuihkuHiljaM) : 0);
-                Suihkut.Add(s);
-            }
-            foreach (int i in pois) suihkut.Remove(i);
-            Suihkut.Sort((a, b) => a.Piste.CompareTo(b.Piste));
+            // ---- suihkulähteet ja satamat: enintään kaksi lähintä, lineaarinen häivytys ----
+            PisteSilmukat(i => Suihkulahteet[i], suihkuR, suihkut, Suihkut, tiedossa, SuihkuM, SuihkuTaysiM, SuihkuHiljaM, PalloKaupunkiAanet.SuihkuTaso, SuihkuTunnus, i => double.NaN, kx, kz, k2, dt);
+            PisteSilmukat(i => (Laiturit[i].X, Laiturit[i].Z), laituriR, satamat, Satamat, matala, SatamaM, SatamaTaysiM, SatamaHiljaM, PalloKaupunkiAanet.SatamaTaso, i => PalloKaupunkiAanet.SatamaVesi, i => Laiturit[i].Y, kx, kz, k2, dt);
 
             // ---- kahvilat: tausta tiheydestä, maitovaahdotin lähimmästä cafésta ----
             KahviloitaLahella = BaarejaLahella = 0;
@@ -229,6 +225,40 @@ namespace Matkakirja.Linssit.Elava
             for (int i = 0; i < Tausta.Length; i++) Tausta[i] = PalloElavaAanet.Liuku(Tausta[i], tavoite[i], dt, TaustaLiukuS);
         }
 
+        /// <summary>Enintään SuihkujaEnintaan lähintä pistettä alle sade-m:n soivat silmukkana; valinnan vaihtuessa lineaarinen
+        /// häivytys SuihkuHaivytysS sisään ja ulos. Tila (Osuus) säilyy pisteittäin; ulos = soivat ja häipyvät pisteen järjestyksessä.</summary>
+        void PisteSilmukat(Func<int, (double X, double Z)> xz, Ruudukko r, Dictionary<int, Suihku> tila, List<Suihku> ulos, bool ehto, double sade, double taysiM, double hiljaM,
+            double perus, Func<int, string> tunnus, Func<int, double> y, double kx, double kz, double k2, double dt)
+        {
+            valitut.Clear();
+            if (ehto)
+            {
+                hae.Clear(); r?.Hae(kx, kz, sade, hae);
+                foreach (int i in hae)
+                {
+                    var (px, pz) = xz(i); double dx = px - kx, dz = pz - kz, d = Math.Sqrt(dx * dx + dz * dz);
+                    if (d < sade) valitut.Add((i, d));
+                }
+                valitut.Sort((a, b) => a.D != b.D ? a.D.CompareTo(b.D) : a.I.CompareTo(b.I));
+                if (valitut.Count > SuihkujaEnintaan) valitut.RemoveRange(SuihkujaEnintaan, valitut.Count - SuihkujaEnintaan);
+            }
+            foreach (var (i, _) in valitut)
+                if (!tila.ContainsKey(i)) { var (px, pz) = xz(i); tila[i] = new Suihku { Piste = i, Tunnus = tunnus(i), X = px, Y = y(i), Z = pz }; }
+            ulos.Clear(); pois.Clear();
+            foreach (var s in tila.Values)
+            {
+                bool valittu = false; foreach (var v in valitut) valittu |= v.I == s.Piste;
+                double askel = Math.Max(0, dt) / SuihkuHaivytysS;
+                s.Osuus = valittu ? Math.Min(1, s.Osuus + askel) : Math.Max(0, s.Osuus - askel);
+                if (s.Osuus <= 0 && !valittu) { pois.Add(s.Piste); continue; }
+                double dx = s.X - kx, dz = s.Z - kz, d3 = Math.Sqrt(dx * dx + dz * dz + k2);
+                s.Taso = perus * s.Osuus * (!double.IsNaN(KorkeusM) ? PalloElavaAanet.Etaisyystaso(d3, taysiM, hiljaM) : 0);
+                ulos.Add(s);
+            }
+            foreach (int i in pois) tila.Remove(i);
+            ulos.Sort((a, b) => a.Piste.CompareTo(b.Piste));
+        }
+
         static bool Ilta(double tunti) => !double.IsNaN(tunti) && (tunti >= BaariTunti || tunti < 4);
 
         int Lahin(Ruudukko r, int n, Func<int, (double X, double Z)> p, double kx, double kz, double sade, out double dMin)
@@ -250,11 +280,11 @@ namespace Matkakirja.Linssit.Elava
             string M(double d) => double.IsNaN(d) ? "-" : $"{d:F0} m";
             var t = new List<string>();
             for (int i = 0; i < Tausta.Length; i++) if (Tausta[i] > 0.001) t.Add($"{TaustaTunnukset[i]} {Tausta[i]:F2}");
-            var s = new List<string>(); foreach (var x in Suihkut) s.Add($"{x.Tunnus}#{x.Piste} {x.Taso:F2}");
-            return $"kaupunkiäänet: pisteet kirkot {Kirkot.Count}, suihkulähteet {Suihkulahteet.Count}, kahvilat {Kahvilat.Count}, torit {Torit.Count}, hallit {Hallit.Count}; " +
+            var s = new List<string>(); foreach (var x in Suihkut) s.Add($"{x.Tunnus}#{x.Piste} {x.Taso:F2}"); foreach (var x in Satamat) s.Add($"{x.Tunnus}#{x.Piste} {x.Taso:F2}");
+            return $"kaupunkiäänet: pisteet kirkot {Kirkot.Count}, suihkulähteet {Suihkulahteet.Count}, kahvilat {Kahvilat.Count}, torit {Torit.Count}, hallit {Hallit.Count}, laiturit {Laiturit.Count}; " +
                 $"korkeus {M(KorkeusM)}, lähin kirkko {M(LahinKirkkoM)} (seuraava kello {Math.Max(0, seuraavaKello - nytS):F0} s{(double.IsNaN(tasaKello) ? "" : $", tasatunti {Math.Max(0, tasaKello - nytS):F0} s")}), " +
                 $"kahviloita {KahviloitaLahella} ({BaarejaLahella} baaria, maito {Math.Max(0, seuraavaMaito - nytS):F0} s), tori {M(LahinToriM)}, halli {M(LahinHalliM)}; " +
-                $"suihkut [{string.Join(", ", s)}], taustat [{string.Join(", ", t)}]";
+                $"suihkut ja satamat [{string.Join(", ", s)}], taustat [{string.Join(", ", t)}]";
         }
 
         /// <summary>Kevyt hakuruudukko (200 m:n solut): pisteet säteen sisältä ilman koko listan läpikäyntiä joka kehys.</summary>
