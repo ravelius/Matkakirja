@@ -83,15 +83,15 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: intro {kaupunkiId} alkaa: odotetaan musiikkia (enintään {KaupunkiIntro.MusiikkiOdotusS:F0} s)");
             NytRivi.Valmistele(kk.Lat, kk.Lon, kaupunkiId);
             // MUISTIVARA (juna 173, iPad Pro 13: jetsam intron alussa, vapaa 0,44 Gt, kaupungin laatat 98 %): kuvat haetaan yksi
-            // kerrallaan (ei viittä purkua yhtä aikaa), ja vähällä muistilla Eiffel-otos jää 3D-avausnäkymäksi (ei toisen kaupunginosan
-            // laattoja esilataukseen eikä kameraan).
+            // kerrallaan (ei viittä purkua yhtä aikaa), ja vähällä muistilla Eiffel-otoksen laattoja ei esiladata intron alusta asti
+            // reittikameralla (PT 9.10.: laatat latautuvat vasta otoksen alkaessa).
             long vapaa = CesiumKaupunki.VapaaMuisti();
             introEiffel = vapaa <= 0 || vapaa / 1e9 >= IntroEiffelRajaGt;
             o.StartCoroutine(HaeIntroKuvat(versio));
             // Eiffel-otoksen laatat valmiiksi reittikameralla (PaivitaKamera → IntroReitti) otoksen loppuun asti.
             double eMaa = OmaMaaKehalla(KaupunkiIntro.EiffelLat, KaupunkiIntro.EiffelLon);
             introEsilataus = introEiffel ? KaupunkiIntro.EiffelKulma(0.5, eMaa) : (Kuvakulma?)null;
-            if (!introEiffel) o.Kirjaa($"opas: intro {kaupunkiId}: vapaa muisti {vapaa / 1e9:F2} Gt < {IntroEiffelRajaGt:F1} → Eiffel-otos 3D-avausnäkymänä");
+            if (!introEiffel) o.Kirjaa($"opas: intro {kaupunkiId}: vapaa muisti {vapaa / 1e9:F2} Gt < {IntroEiffelRajaGt:F1} → Eiffel-otoksen esilataus pois (laatat otoksen alussa)");
             // Avausnäkymän kierto koko intro + avaus (muuten 16 s:n kierto pysähtyisi ja avauksen ääni hyppäisi kulmaa taaksepäin).
             silmukka?.AsetaAvausKesto(KaupunkiIntro.AvausS + KaupunkiIntro.AvausArvioS + AvausLisaS);
             introKerros ??= new IntroKerros();
@@ -165,7 +165,7 @@ namespace Matkakirja.Natiivi
                 if (introKoriEnnen != null && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
                 var tila = KaupunkiIntro.Tila(t, n => introKuvat[n] != null, c5Nyt);
                 if (!KaupunkiIntro.EiffelEsilataus(t)) introEsilataus = null;
-                introKamera = tila.Laji == IntroLaji.Eiffel && introEiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
+                introKamera = tila.Laji == IntroLaji.Eiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
                 introKerros.Aseta(tila, tila.Kuva > 0 ? introKuvat[tila.Kuva] : null);
                 if (tila.Otos != otos)
                 {
@@ -184,7 +184,7 @@ namespace Matkakirja.Natiivi
             IntroLoppuu(versio, true, "valmis");
         }
 
-        /// <summary>Eiffel-otos vain, kun vapaata muistia on vähintään tämän verran intron alussa (Gt; iPad-kaatuminen juna 173).</summary>
+        /// <summary>Eiffel-otoksen esilataus vain, kun vapaata muistia on vähintään tämän verran intron alussa (Gt; iPad-kaatuminen juna 173).</summary>
         public const double IntroEiffelRajaGt = 0.8;
         bool introEiffel = true;
 
