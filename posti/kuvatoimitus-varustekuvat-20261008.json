@@ -1,0 +1,1124 @@
+{
+  "task": "olavinlinna-varustekuvat-20261008",
+  "taskNumber": 45,
+  "source": {
+    "sourcePath": "posti/sisaltokirjuri-codex-varustekuvat-ja-katalogikuvat-20261008.md",
+    "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+    "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea"
+  },
+  "sourceReadInFull": true,
+  "generationCalls": 10,
+  "generationLimit": 10,
+  "imageCount": 10,
+  "requestedImages": 10,
+  "partialDelivery": false,
+  "style": "watercolor",
+  "sourceImagePixelsUsed": false,
+  "metadataLabel": "Kuvitus. Tekoälyllä tuotettu.",
+  "assets": [
+    {
+      "id": "ihmisen-matka-2",
+      "file": "varuste-ihmisen-matka-2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/ihmisen-matka-2/varuste-ihmisen-matka-2.jpg",
+      "sha256": "b83df3027eb073ac59141c50986ab6edb89acf9978e26618b65c84d14b320a18",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-1b38-7703-8425-a381d6f8ffe8/exec-b37a73b5-988b-41c1-82c2-d23488cb7a20.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/ihmisen-matka-2/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square equipment illustration for a travel-history game, readable at 512 by 512 pixels and in a centered circular UI crop.\nStyle/medium: original hand-painted ink-and-watercolor illustration on warm pale-yellow antique parchment. Delicate fine brown ink outlines, softly feathered pigment edges, faded transparent watercolor washes, warm ochre and earthy browns with restrained blue and green. A small isometric miniature world sits on the paper; the paper texture is matte, subtle and continuous to every outer edge. Handcrafted painted detail, quiet soft atmosphere. It must look painted with ink and watercolor, not photographic and not like a 3D render.\nComposition/framing: square image. Main subject entirely within the central 75 percent of the canvas, small world centered, outer corners and edges only warm parchment and faint washes. All important parts survive an inscribed circular crop. No explicit circular border and no framing ornament.\nPrimary request: a small illustrated Earth globe / curved world map in gentle dusk, with a visible warm shaft of light descending from above onto the globe and illuminating a stylized dotted travel route across continents. The globe is centered, slightly seen from above like a small isometric world, with Africa, Europe and western Asia visible. The dotted route journeys from East Africa through the Middle East toward Europe and Asia; simple separated brown-gold dashes. Let a delicate translucent blue dusk wash surround the globe and fade into the pale-yellow parchment, and let the pale amber beam clearly land on the route without swallowing the illustration. Fine warm ink coastlines and soft blue-green pigment land and ocean. No other objects or symbols.\nConstraints: create a wholly new composition; no source-image pixels. No text, letters, numerals, logos, watermarks, decorative borders, people, faces, violence, arrows or labels. A dotted route is required and is the only route annotation. Opaque paper background. Generate exactly one image.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ihmisen-matka.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-topografia.jpg"
+      ],
+      "kuvateksti": "Lämmin valokeila valaisee ihmisen matkaa kuvaavan reitin maapallolla. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu.",
+        "supplementaryExifEncodingCorrection": "Lossless same-length Latin-1 byte correction for EXIF ImageDescription; XMP UTF-8 Description/Source remain exact; decoded JPEG pixels unchanged"
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "workerStatus": "pass",
+        "originalAndNativeViewed": true,
+        "preview480Viewed": true,
+        "circle512Viewed": true,
+        "style": "soft brown ink and watercolor on warm old yellow parchment",
+        "sourceConstraintsVerified": true,
+        "circleCropSafe": true,
+        "noReadableTextNumbersLogosFaces": true,
+        "visualNotes": [
+          "Warm pale-yellow parchment, fine painted coastline outlines and translucent blue dusk washes.",
+          "Globe, descending amber light beam and dotted route across Africa, Europe and Asia remain clear at 480 and in the circular crop.",
+          "No letters, numbers, logos, people or faces seen."
+        ],
+        "technicalChecks": {
+          "jpeg": true,
+          "exact512": true,
+          "opaqueRGB": true,
+          "quality90Quantization": true,
+          "sRGBProfile": true,
+          "DescriptionXMP": true,
+          "SourceXMP": true,
+          "supplementaryEXIFImageDescription": true,
+          "metadataCorrectionPixelsUnchanged": true,
+          "nativeByteExact": true,
+          "captionEndsKuvitus": true
+        },
+        "reviewedAt": "2026-10-09T06:17:47.164435+00:00"
+      },
+      "originalSha256": "3a486fbd79a23d60aaa356b5a0c03768239897d2480fad61a90d62db33b28a26",
+      "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/ihmisen-matka-2/qa-native.png",
+      "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/ihmisen-matka-2/qa-preview-480.png",
+      "qaCirclePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/ihmisen-matka-2/qa-circle-512.png",
+      "styleReferenceSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+      "excludedStyleReference": "varuste-ajattelijat.jpg: grayscale 3D bust with a face, excluded from style target",
+      "method": "One new builtin image_gen call; no reference-image pixels passed; technical Lanczos downscale only",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-ihmisen-matka-2.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "b83df3027eb073ac59141c50986ab6edb89acf9978e26618b65c84d14b320a18",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/first5-worker-qa-sheet.jpg",
+        "visualNotes": "Watercolor and fine ink on warm parchment match approved series; circles preserve main subjects; watch blank ticks and journal non-letter strokes; recognizable constellations; four seasons and inclined axis.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-ihmisen-matka-2.jpg",
+      "bytes": 103410,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "isoisa-1873",
+      "file": "varuste-isoisa-1873.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/isoisa-1873/varuste-isoisa-1873.jpg",
+      "sha256": "fd513a7ad5de433c5d96411afca33979f30f9d1ac1e73e5cbda7176c0b4636c7",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-1b38-7703-8425-a381d6f8ffe8/exec-0c5de62a-48f6-4f98-8881-922c6b6dab65.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/isoisa-1873/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square equipment illustration for a travel-history game, readable at 512 by 512 pixels and in a centered circular UI crop.\nStyle/medium: original hand-painted ink-and-watercolor illustration on warm pale-yellow antique parchment. Delicate fine brown ink outlines, softly feathered pigment edges, faded transparent watercolor washes, warm ochre and earthy browns with restrained blue and green. A small isometric miniature world sits on the paper; the paper texture is matte, subtle and continuous to every outer edge. Handcrafted painted detail, quiet soft atmosphere. It must look painted with ink and watercolor, not photographic and not like a 3D render.\nComposition/framing: square image. Main subject entirely within the central 75 percent of the canvas, small world centered, outer corners and edges only warm parchment and faint washes. All important parts survive an inscribed circular crop. No explicit circular border and no framing ornament.\nPrimary request: a grandfather's nineteenth-century travel equipment vignette: one aged brass pocket watch with a loose short chain beside and slightly overlapping an open leather-bound travel journal, both arranged as one compact miniature world, viewed from a gentle elevated isometric angle. Brass has painted ochre patina; the dark russet leather and cream pages have fine brown ink detail. On one journal page a tiny original brown-ink sketch of a steamship and a coastline; beside it only short disconnected abstract ink strokes suggesting diary rows, never connected into letters. The watch face has two hands and ONLY twelve simple blank radial tick marks; no digits, no Roman numerals, no year and no writing anywhere. Chain loops remain inside the center crop. Soft transparent shadows, warm parchment fading outward.\nConstraints: the nineteenth-century period is conveyed solely through object design. Absolutely no 1873 digits, no clock dial numbers, no letters, no glyph-like handwriting, no headings, no logos, no watermark, no people or faces. Never invent illegible lettering. Original new artwork, opaque paper background. Generate exactly one image.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ihmisen-matka.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-topografia.jpg"
+      ],
+      "kuvateksti": "Vanha messinkinen taskukello ja avoin matkapäiväkirja höyrylaivan piirroksineen. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu.",
+        "supplementaryExifEncodingCorrection": "Lossless same-length Latin-1 byte correction for EXIF ImageDescription; XMP UTF-8 Description/Source remain exact; decoded JPEG pixels unchanged"
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "workerStatus": "pass",
+        "originalAndNativeViewed": true,
+        "preview480Viewed": true,
+        "circle512Viewed": true,
+        "style": "soft brown ink and watercolor on warm old yellow parchment",
+        "sourceConstraintsVerified": true,
+        "circleCropSafe": true,
+        "noReadableTextNumbersLogosFaces": true,
+        "visualNotes": [
+          "One brass pocket watch and an open leather travel journal. Watch uses simple blank tick marks and hands, with no dial numbers or year digits.",
+          "Journal has a steamship/coast sketch and disconnected abstract short strokes; no words or readable letter strings.",
+          "Whole watch, chain and journal remain in circular crop; painted leaf/shell details are incidental and do not alter the brief."
+        ],
+        "technicalChecks": {
+          "jpeg": true,
+          "exact512": true,
+          "opaqueRGB": true,
+          "quality90Quantization": true,
+          "sRGBProfile": true,
+          "DescriptionXMP": true,
+          "SourceXMP": true,
+          "supplementaryEXIFImageDescription": true,
+          "metadataCorrectionPixelsUnchanged": true,
+          "nativeByteExact": true,
+          "captionEndsKuvitus": true
+        },
+        "reviewedAt": "2026-10-09T06:17:47.181777+00:00"
+      },
+      "originalSha256": "7861f5ade555dab899dc727c8ccf697638f1fd01cbe4cb8ac5da37899bf884ac",
+      "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/isoisa-1873/qa-native.png",
+      "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/isoisa-1873/qa-preview-480.png",
+      "qaCirclePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/isoisa-1873/qa-circle-512.png",
+      "styleReferenceSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+      "excludedStyleReference": "varuste-ajattelijat.jpg: grayscale 3D bust with a face, excluded from style target",
+      "method": "One new builtin image_gen call; no reference-image pixels passed; technical Lanczos downscale only",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-isoisa-1873.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "fd513a7ad5de433c5d96411afca33979f30f9d1ac1e73e5cbda7176c0b4636c7",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/first5-worker-qa-sheet.jpg",
+        "visualNotes": "Watercolor and fine ink on warm parchment match approved series; circles preserve main subjects; watch blank ticks and journal non-letter strokes; recognizable constellations; four seasons and inclined axis.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-isoisa-1873.jpg",
+      "bytes": 115907,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "tahdet",
+      "file": "varuste-tahdet.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tahdet/varuste-tahdet.jpg",
+      "sha256": "c785196dd8b89186ab217bfc4a40c888f7c13de19d073b5d6b87ef5dd84bc602",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-1b38-7703-8425-a381d6f8ffe8/exec-a0142692-9108-455a-b872-4087275d6e9d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tahdet/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square equipment illustration for a travel-history game, readable at 512 by 512 pixels and in a centered circular UI crop.\nStyle/medium: original hand-painted ink-and-watercolor illustration on warm pale-yellow antique parchment. Delicate fine brown ink outlines, softly feathered pigment edges, faded transparent watercolor washes, warm ochre and earthy browns with restrained blue and green. A small isometric miniature world sits on the paper; the paper texture is matte, subtle and continuous to every outer edge. Handcrafted painted detail, quiet soft atmosphere. It must look painted with ink and watercolor, not photographic and not like a 3D render.\nComposition/framing: square image. Main subject entirely within the central 75 percent of the canvas, small world centered, outer corners and edges only warm parchment and faint washes. All important parts survive an inscribed circular crop. No explicit circular border and no framing ornament.\nPrimary request: a miniature starry night sky vignette on parchment in softly faded indigo-blue watercolor, with recognizable constellations drawn as small cream-gold star points connected by very thin brown ink lines. Include a seven-star Big Dipper ladle and a modest Orion hourglass with exactly three aligned belt stars, arranged clearly with open breathing room. Smaller isolated stars lightly scatter around them. A small antique brass telescope on a simple wooden tripod stands below at lower center on a tiny earthy horizon island; no observer. The dusk-blue sky area has irregular feathered watercolor edges that fade into warm old paper, never a hard dark rectangle. Quiet subtle glow, fine ink, subdued color. The sky and the telescope all fit comfortably inside the central circular UI-safe area.\nConstraints: no constellation names, letters, numerals, labels, map grid, logos, watermark, image borders, people, faces or violence. Very thin constellation connecting lines are required. Original new watercolor artwork, not photography or digital 3D, opaque parchment background. Generate exactly one image.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ihmisen-matka.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-topografia.jpg"
+      ],
+      "kuvateksti": "Tähdistöt ja pieni kaukoputki pehmeässä sinisessä yötaivaassa. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu.",
+        "supplementaryExifEncodingCorrection": "Lossless same-length Latin-1 byte correction for EXIF ImageDescription; XMP UTF-8 Description/Source remain exact; decoded JPEG pixels unchanged"
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "workerStatus": "pass",
+        "originalAndNativeViewed": true,
+        "preview480Viewed": true,
+        "circle512Viewed": true,
+        "style": "soft brown ink and watercolor on warm old yellow parchment",
+        "sourceConstraintsVerified": true,
+        "circleCropSafe": true,
+        "noReadableTextNumbersLogosFaces": true,
+        "visualNotes": [
+          "Seven-star ladle form and Orion-like hourglass with three belt points are visible, connected by thin ink-colored lines.",
+          "Small unoccupied telescope below, night blue watercolor fades into warm parchment.",
+          "No names, labels, letters or numbers; both constellations and telescope survive the circular crop."
+        ],
+        "technicalChecks": {
+          "jpeg": true,
+          "exact512": true,
+          "opaqueRGB": true,
+          "quality90Quantization": true,
+          "sRGBProfile": true,
+          "DescriptionXMP": true,
+          "SourceXMP": true,
+          "supplementaryEXIFImageDescription": true,
+          "metadataCorrectionPixelsUnchanged": true,
+          "nativeByteExact": true,
+          "captionEndsKuvitus": true
+        },
+        "reviewedAt": "2026-10-09T06:17:47.198291+00:00"
+      },
+      "originalSha256": "320c1269a03056185be2e86e0f7dc55fa4ffdb400d50d36eb7f7f446cd3c50ea",
+      "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tahdet/qa-native.png",
+      "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tahdet/qa-preview-480.png",
+      "qaCirclePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tahdet/qa-circle-512.png",
+      "styleReferenceSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+      "excludedStyleReference": "varuste-ajattelijat.jpg: grayscale 3D bust with a face, excluded from style target",
+      "method": "One new builtin image_gen call; no reference-image pixels passed; technical Lanczos downscale only",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-tahdet.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "c785196dd8b89186ab217bfc4a40c888f7c13de19d073b5d6b87ef5dd84bc602",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/first5-worker-qa-sheet.jpg",
+        "visualNotes": "Watercolor and fine ink on warm parchment match approved series; circles preserve main subjects; watch blank ticks and journal non-letter strokes; recognizable constellations; four seasons and inclined axis.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-tahdet.jpg",
+      "bytes": 107875,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "yokartta",
+      "file": "varuste-yokartta.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/yokartta/varuste-yokartta.jpg",
+      "sha256": "df2c9ccdacebeefedef468ec6e6d390f7e66f5523ee0b042deaa32e6d015ddc0",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-1b38-7703-8425-a381d6f8ffe8/exec-c1b51364-7000-41db-9a9b-d5308f5ae013.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/yokartta/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square equipment illustration for a travel-history game, readable at 512 by 512 pixels and in a centered circular UI crop.\nStyle/medium: original hand-painted ink-and-watercolor illustration on warm pale-yellow antique parchment. Delicate fine brown ink outlines, softly feathered pigment edges, faded transparent watercolor washes, warm ochre and earthy browns with restrained blue and green. A small isometric miniature world sits on the paper; the paper texture is matte, subtle and continuous to every outer edge. Handcrafted painted detail, quiet soft atmosphere. It must look painted with ink and watercolor, not photographic and not like a 3D render.\nComposition/framing: square image. Main subject entirely within the central 75 percent of the canvas, small world centered, outer corners and edges only warm parchment and faint washes. All important parts survive an inscribed circular crop. No explicit circular border and no framing ornament.\nPrimary request: a small round Earth globe at night as a miniature watercolor world centered on warm parchment. Africa, Europe and western Asia appear as recognizable softly inked continents. Globe ocean and land use faded deep-blue and indigo pigments, with a thin gentle blue atmospheric rim. Many tiny warm yellow ochre-gold dots form clusters of city lights on the dark continents, especially in Europe and along the Nile and Mediterranean; isolated lights stay delicate and understated. Soft luminous city dots contrast with translucent night blue. The orb is viewed slightly from above in isometric small-world style; no pedestal or extra objects. A little blue wash under the globe softly merges with the golden paper. Outer edges remain paper, no black space background.\nConstraints: no text, names, letters, numerals, borders, political boundaries, roads, grid lines, routes, logos, watermark, people or faces. Original ink-and-watercolor illustration, no photography, no 3D render, opaque paper. Generate exactly one image.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ihmisen-matka.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-topografia.jpg"
+      ],
+      "kuvateksti": "Yömaapallo ja lämpimät kaupunkien valopisteet. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu.",
+        "supplementaryExifEncodingCorrection": "Lossless same-length Latin-1 byte correction for EXIF ImageDescription; XMP UTF-8 Description/Source remain exact; decoded JPEG pixels unchanged"
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "workerStatus": "pass",
+        "originalAndNativeViewed": true,
+        "preview480Viewed": true,
+        "circle512Viewed": true,
+        "style": "soft brown ink and watercolor on warm old yellow parchment",
+        "sourceConstraintsVerified": true,
+        "circleCropSafe": true,
+        "noReadableTextNumbersLogosFaces": true,
+        "visualNotes": [
+          "Earth at night uses indigo watercolor, recognizable Africa/Europe/western Asia and warm ochre city dots.",
+          "Europe, Mediterranean and Nile lighting patterns are clear at 480.",
+          "No political borders, labels, letters or numbers; whole globe survives circular crop."
+        ],
+        "technicalChecks": {
+          "jpeg": true,
+          "exact512": true,
+          "opaqueRGB": true,
+          "quality90Quantization": true,
+          "sRGBProfile": true,
+          "DescriptionXMP": true,
+          "SourceXMP": true,
+          "supplementaryEXIFImageDescription": true,
+          "metadataCorrectionPixelsUnchanged": true,
+          "nativeByteExact": true,
+          "captionEndsKuvitus": true
+        },
+        "reviewedAt": "2026-10-09T06:17:47.215064+00:00"
+      },
+      "originalSha256": "08cd0112dba3579556804c3f78e60a0a72c22df7f9a9e143ed65acf833764976",
+      "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/yokartta/qa-native.png",
+      "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/yokartta/qa-preview-480.png",
+      "qaCirclePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/yokartta/qa-circle-512.png",
+      "styleReferenceSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+      "excludedStyleReference": "varuste-ajattelijat.jpg: grayscale 3D bust with a face, excluded from style target",
+      "method": "One new builtin image_gen call; no reference-image pixels passed; technical Lanczos downscale only",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-yokartta.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "df2c9ccdacebeefedef468ec6e6d390f7e66f5523ee0b042deaa32e6d015ddc0",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/first5-worker-qa-sheet.jpg",
+        "visualNotes": "Watercolor and fine ink on warm parchment match approved series; circles preserve main subjects; watch blank ticks and journal non-letter strokes; recognizable constellations; four seasons and inclined axis.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-yokartta.jpg",
+      "bytes": 113411,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "maapallon-vuosi",
+      "file": "varuste-maapallon-vuosi.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/maapallon-vuosi/varuste-maapallon-vuosi.jpg",
+      "sha256": "bca42a6ed20533c363c3b850c6974d250bf3a17573c7276f21c5b86abbf5de5d",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f48-1b38-7703-8425-a381d6f8ffe8/exec-146c19dd-274e-43a1-a5a9-68a7d3ce4a11.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/maapallon-vuosi/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square equipment illustration for a travel-history game, readable at 512 by 512 pixels and in a centered circular UI crop.\nStyle/medium: original hand-painted ink-and-watercolor illustration on warm pale-yellow antique parchment. Delicate fine brown ink outlines, softly feathered pigment edges, faded transparent watercolor washes, warm ochre and earthy browns with restrained blue and green. A small isometric miniature world sits on the paper; the paper texture is matte, subtle and continuous to every outer edge. Handcrafted painted detail, quiet soft atmosphere. It must look painted with ink and watercolor, not photographic and not like a 3D render.\nComposition/framing: square image. Main subject entirely within the central 75 percent of the canvas, small world centered, outer corners and edges only warm parchment and faint washes. All important parts survive an inscribed circular crop. No explicit circular border and no framing ornament.\nPrimary request: a small watercolor Earth globe in the center, surrounded on a gently drawn elliptical orbital path by EXACTLY FOUR separate small miniature seasonal islands, evenly spaced around it. Spring at upper left is fresh green shoots and a tiny blossoming tree; summer at upper right is golden sunny grass and a leafy green tree; autumn at lower right is a tree with rust-orange leaves and a few fallen leaves; winter at lower left is white snow and a bare frosted tree. Four discrete little phases must be clearly distinct; no fifth vignette. A central globe shows blue oceans and softly inked continents with a visible inclined north-south axis: one delicate brown ink axis line leaning about 23 degrees to the right of vertical, extending just slightly beyond each pole, without arrowheads. The globe is dominant, each season vignette smaller, everything within central 80 percent and safe for the centered circular UI crop. Orbital line has a fine soft brown-ink curve and no arrows. Transparent pigment edges, warm yellow old paper visible around and between the subjects.\nConstraints: no text, season names, letters, numerals, calendar, sun face, people, faces, logos, watermarks or frame. Exactly four seasonal phases around one globe, no duplicate phase. Original painted illustration, not photorealistic and not 3D rendered, opaque parchment. Generate exactly one image.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ihmisen-matka.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-topografia.jpg"
+      ],
+      "kuvateksti": "Kallistunut maapallo ja neljä erillistä vuodenaikaa sen ympärillä. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu.",
+        "supplementaryExifEncodingCorrection": "Lossless same-length Latin-1 byte correction for EXIF ImageDescription; XMP UTF-8 Description/Source remain exact; decoded JPEG pixels unchanged"
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "workerStatus": "pass",
+        "originalAndNativeViewed": true,
+        "preview480Viewed": true,
+        "circle512Viewed": true,
+        "style": "soft brown ink and watercolor on warm old yellow parchment",
+        "sourceConstraintsVerified": true,
+        "circleCropSafe": true,
+        "noReadableTextNumbersLogosFaces": true,
+        "visualNotes": [
+          "Exactly four separate seasonal miniature islands: spring green/blossom, summer gold/leafy, autumn rust leaves, winter snow/bare tree.",
+          "One central globe with visibly inclined ink axis and one thin elliptical orbital path.",
+          "All four phases, globe and axis remain in circular crop; no letters, numbers, labels or faces."
+        ],
+        "technicalChecks": {
+          "jpeg": true,
+          "exact512": true,
+          "opaqueRGB": true,
+          "quality90Quantization": true,
+          "sRGBProfile": true,
+          "DescriptionXMP": true,
+          "SourceXMP": true,
+          "supplementaryEXIFImageDescription": true,
+          "metadataCorrectionPixelsUnchanged": true,
+          "nativeByteExact": true,
+          "captionEndsKuvitus": true
+        },
+        "reviewedAt": "2026-10-09T06:17:47.238431+00:00"
+      },
+      "originalSha256": "2731de6f00f3e5f50eb5199b34f0077239b4eb462b9d5e3252c2ee0ef8d96347",
+      "qaNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/maapallon-vuosi/qa-native.png",
+      "qa480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/maapallon-vuosi/qa-preview-480.png",
+      "qaCirclePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/maapallon-vuosi/qa-circle-512.png",
+      "styleReferenceSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+      "excludedStyleReference": "varuste-ajattelijat.jpg: grayscale 3D bust with a face, excluded from style target",
+      "method": "One new builtin image_gen call; no reference-image pixels passed; technical Lanczos downscale only",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-maapallon-vuosi.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "bca42a6ed20533c363c3b850c6974d250bf3a17573c7276f21c5b86abbf5de5d",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/first5-worker-qa-sheet.jpg",
+        "visualNotes": "Watercolor and fine ink on warm parchment match approved series; circles preserve main subjects; watch blank ticks and journal non-letter strokes; recognizable constellations; four seasons and inclined axis.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-maapallon-vuosi.jpg",
+      "bytes": 100927,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lontoo",
+      "file": "varuste-lontoo.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lontoo/varuste-lontoo.jpg",
+      "sha256": "55539a80e849113369fa7d21b899ac06d152873cce75049f702f93561754f0f8",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-5d74-7252-8e58-12c1d119e74b/exec-d4ca2f4e-5fd2-4cba-9e7d-21274643d35b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lontoo/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square game equipment illustration, to be shown as a circular UI thumbnail.\nPrimary request: Tower Bridge and the Thames in London, a small isometric miniature world centered on old warm yellow parchment. Draw the recognizable paired stone Gothic bridge towers and their blue steel upper walkways; the two bascule leaves slightly raised above the Thames. A few period brick riverside houses and a tiny unmarked steamship make the little scene complete.\nStyle/medium: softly hand-painted ink and watercolor, fine muted brown pen lines, thin transparent warm earth pigments, restrained ochre and rusty roof accents, muted blue-green river, gently blurred pigment edges, faded watercolor washes, subtle fibrous parchment texture. The scene feels like a charming illustrated travel journal miniature, with delicate architecture rather than a photograph or 3D render.\nComposition: square canvas; entire compact scene centered, viewed from above at an isometric angle. Keep bridge, steamship and houses inside the central 72 percent of the image. Fade the river and land naturally into pale paper; the outer corners and edges contain only parchment or very faint watercolor. It must survive a circular crop.\nLighting: gentle even daylight, quiet warm atmosphere.\nConstraints: one original new watercolor illustration. No people, faces, letters, readable text, numbers, logos, signs, national symbols, watermark, frame, hard border, photorealism or 3D rendering. No visible image title.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg"
+      ],
+      "kuvateksti": "Tower Bridge ja Thames pienoismaailmana. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewPassed": true,
+        "rootIndependentReviewPending": true,
+        "reviewedNative": true,
+        "reviewed480": true,
+        "reviewedCircleCrop": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lontoo/qa-preview-native.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lontoo/qa-preview-480.png",
+        "circleCropPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lontoo/qa-circle-512.png",
+        "style": "Soft ink-watercolor on warm yellow parchment, delicate brown lines, muted earth pigments and faded edges; miniature centered composition. No photograph or 3D render.",
+        "visual": {
+          "subject": "Tower Bridge: two paired stone towers, blue upper walkways and raised bascules; Thames, period riverside houses and one unmarked steamship visible.",
+          "geometry": "Recognizable bascule bridge; principal bridge and steamship fully retained in circular crop. Peripheral wash and far riverbank fade into parchment.",
+          "circleCrop": "Bridge, steamship and principal riverside houses remain visible. Only faint peripheral water wash meets the circle edge.",
+          "details": "No people, readable text, logos or watermark observed."
+        },
+        "technical": {
+          "exact512Square": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "xmpDescriptionExact": true,
+          "xmpSourceExact": true,
+          "unicodeUserCommentExact": true,
+          "nativeByteExact": true,
+          "nativePreviewByteExact": true,
+          "sha256MatchesRecord": true
+        },
+        "workerReviewedAt": "2026-10-09T06:23:32.127714+00:00"
+      },
+      "referenceUse": "Viewed for textual style description only; no pixels passed to image_gen. Grayscale ajattelijat bust visible in sheet explicitly excluded from style and content target.",
+      "originalSha256": "8734827661a058166f351a73c8e8f0f49306364ae09f6706bcb18999924302f2",
+      "state": "worker-reviewed-ready-for-root-review",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-lontoo.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "55539a80e849113369fa7d21b899ac06d152873cce75049f702f93561754f0f8",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/qa/root-last5.jpg",
+        "visualNotes": "Warm parchment ink/watercolor matches accepted series and main subject remains circle-safe. London raised bascules, Olav3towers/3empty cutaway rooms; Morris3squares/4connectors/24points; tavli24triangles4groups6 and2dice; unmarked empty-cockpit biplane. No readable text/numbers/faces.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-lontoo.jpg",
+      "bytes": 115846,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "poikkileikkaus",
+      "file": "varuste-poikkileikkaus.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/poikkileikkaus/varuste-poikkileikkaus.jpg",
+      "sha256": "f5e691b4d1206a28c41af35aaadd26a8fc8f9736c675c107ccb86b1681acda58",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-5d74-7252-8e58-12c1d119e74b/exec-896592bd-e4f0-4345-ba62-57ea16126753.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/poikkileikkaus/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square game equipment watercolor illustration, for a circular UI thumbnail.\nPrimary request: an isometric cutaway miniature of Olavinlinna in its late fifteenth-century form, around 1499, on a small rocky island surrounded by lake water. Exactly three round medieval stone towers, thick stone curtain walls joining them into the main castle, and a lower outer bailey beside the main castle. Each of the three towers has a simple conical brown timber roof. No additional towers or decorative turrets.\nCutaway: a clean slice through the front wall of the main castle exposes three small unoccupied interior rooms inside the very thick masonry: an upper chapel with a stone vaulted ceiling and a plain empty stone recess, an adjoining modest hall with timber roof beams and tall narrow windows, and a low dim dungeon with a small barred window. All three rooms are empty and quiet, without people or religious symbols. The thick wall cross-section is clearly visible. The rooms stay small in proportion to the fortress.\nStyle/medium: delicate muted brown ink drawing with soft watercolor on old warm yellow parchment, warm gray and ochre masonry, restrained brown roofs, muted blue-green lake. Fine hand-drawn architectural lines, translucent earthy washes, soft irregular pigment edges and fibrous paper. A tiny illustrated travel-journal world; no photographic or 3D-rendered appearance.\nComposition: square image; three-quarter isometric view from slightly above. Compact complete castle island centered within the central 72 percent of the canvas. All three towers, lower bailey and island fit fully inside a centered circle. Lake wash fades gently into parchment around the island. Outer edges and corners are only pale warm paper and very faint wash.\nConstraints: original newly painted illustration. Exactly three towers, main castle and low outer bailey, late 1400s medieval form. No humans, faces, statues, flags, emblems, religious crosses, letters, numerals, signage, logos, watermark, frame or border.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg"
+      ],
+      "kuvateksti": "Olavinlinnan muurit ja tyhjät sisätilat vuoden 1499 pienoismallissa. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewPassed": true,
+        "rootIndependentReviewPending": true,
+        "reviewedNative": true,
+        "reviewed480": true,
+        "reviewedCircleCrop": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/poikkileikkaus/qa-preview-native.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/poikkileikkaus/qa-preview-480.png",
+        "circleCropPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/poikkileikkaus/qa-circle-512.png",
+        "style": "Soft ink-watercolor on warm yellow parchment, delicate brown lines, muted earth pigments and faded edges; miniature centered composition. No photograph or 3D render.",
+        "visual": {
+          "subject": "Three round stone towers joined by thick walls; lower outer bailey, rocky island and surrounding lake. Three empty rooms appear in vertical cutaway.",
+          "geometry": "Exactly three towers counted. Upper empty vaulted chapel recess, middle timber-beamed hall, lower small barred dungeon; thick wall section visible. Low bailey sits forward/right of main castle.",
+          "circleCrop": "All three towers, interior cutaway, low bailey, rocky island and bridge remain inside circle.",
+          "details": "No people, flags, statues, faces, readable labels or modern signs observed. Historical illustration based on supplied 1499 brief, not a measured architectural reconstruction."
+        },
+        "technical": {
+          "exact512Square": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "xmpDescriptionExact": true,
+          "xmpSourceExact": true,
+          "unicodeUserCommentExact": true,
+          "nativeByteExact": true,
+          "nativePreviewByteExact": true,
+          "sha256MatchesRecord": true
+        },
+        "workerReviewedAt": "2026-10-09T06:23:32.169834+00:00"
+      },
+      "referenceUse": "Viewed for textual style description only; no pixels passed to image_gen. Grayscale ajattelijat bust visible in sheet explicitly excluded from style and content target.",
+      "originalSha256": "4ebef09ddd11bb9404aa3d1aba74614a281aa9fed49f6aecdc64737003354784",
+      "state": "worker-reviewed-ready-for-root-review",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-poikkileikkaus.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "f5e691b4d1206a28c41af35aaadd26a8fc8f9736c675c107ccb86b1681acda58",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/qa/root-last5.jpg",
+        "visualNotes": "Warm parchment ink/watercolor matches accepted series and main subject remains circle-safe. London raised bascules, Olav3towers/3empty cutaway rooms; Morris3squares/4connectors/24points; tavli24triangles4groups6 and2dice; unmarked empty-cockpit biplane. No readable text/numbers/faces.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-poikkileikkaus.jpg",
+      "bytes": 119705,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "mylly",
+      "file": "varuste-mylly.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/mylly/varuste-mylly.jpg",
+      "sha256": "fb0e980d66572ac51eaebccb09cdb9d071bb5a41a2fe9902c3e00b9db5435d64",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-5d74-7252-8e58-12c1d119e74b/exec-d925c7ab-8528-4718-9953-33db5e506c40.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/mylly/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square game equipment watercolor illustration, for a circular UI thumbnail.\nPrimary request: a traditional wooden Nine Men's Morris board with round wooden playing discs in two colors, as a compact miniature world on warm yellow parchment.\nBoard geometry is essential: one square wooden board. On its top surface, draw exactly THREE nested concentric SQUARE outlines in fine dark brown ink. On EACH square there are exactly eight dark round junction dots: four corners plus four side midpoints, making exactly 24 legal junction dots in total. Draw exactly FOUR straight short midpoint connectors between the squares, one at the middle of each side. Each connector joins outer square midpoint through middle square midpoint to INNER square midpoint and STOPS there. The interior center of the smallest square is empty wood. There is NO line across this empty center, NO central cross, NO diagonal line, NO diagonal connector, NO extra ring and NO extra dot.\nPieces: beside the board on the parchment, put three small ivory wood round discs and three small dark walnut wood round discs in two neat little groups. Do not obscure the board geometry or any dot.\nStyle/medium: delicate fine brown ink, soft transparent hand-painted watercolor on old warm yellow fibrous parchment. Muted honey wood, ochre and walnut, pale cream pieces. Fine hand-drawn lines, faded washes and soft irregular pigment edges. Warm illustrated travel-journal feeling, no photograph and no 3D render.\nComposition: square canvas. The whole board is small and centered, seen from an elevated slight isometric angle so that its complete top and all 24 dots remain clearly visible. The board and both piece groups fit inside the central 70 percent of the canvas and a centered circular crop. All outer edges and corners are only pale parchment and very faint watercolor shadows. No table environment.\nConstraints: original new watercolor illustration. Exactly three nested square outlines, four side midpoint connectors, 24 junction dots, empty center, six playing discs in two colors. No humans, faces, letters, numerals, text, symbols, labels, logos, watermark, border or frame.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg"
+      ],
+      "kuvateksti": "Puinen myllylauta ja kaksiväriset nappulat. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewPassed": true,
+        "rootIndependentReviewPending": true,
+        "reviewedNative": true,
+        "reviewed480": true,
+        "reviewedCircleCrop": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/mylly/qa-preview-native.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/mylly/qa-preview-480.png",
+        "circleCropPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/mylly/qa-circle-512.png",
+        "style": "Soft ink-watercolor on warm yellow parchment, delicate brown lines, muted earth pigments and faded edges; miniature centered composition. No photograph or 3D render.",
+        "visual": {
+          "subject": "Square wooden Nine Mens Morris board, three nested square line rings, three ivory and three walnut discs beside board.",
+          "geometry": "Exactly 24 junction dots: eight per ring. Four midpoint connectors join the three rings and stop at the inner square. No diagonal, additional connector, or central cross; center remains empty.",
+          "circleCrop": "Whole board and six side discs retained. All 24 points remain legible at 480 preview.",
+          "details": "No humans, text, numbers, logos, watermark or frame observed. Outer wooden board rim is part of subject, not an image border.",
+          "counts": {
+            "nestedSquares": 3,
+            "midpointConnectors": 4,
+            "junctionDots": 24,
+            "ivoryDiscs": 3,
+            "walnutDiscs": 3,
+            "diagonals": 0,
+            "centerLines": 0
+          }
+        },
+        "technical": {
+          "exact512Square": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "xmpDescriptionExact": true,
+          "xmpSourceExact": true,
+          "unicodeUserCommentExact": true,
+          "nativeByteExact": true,
+          "nativePreviewByteExact": true,
+          "sha256MatchesRecord": true
+        },
+        "workerReviewedAt": "2026-10-09T06:23:32.187985+00:00"
+      },
+      "referenceUse": "Viewed for textual style description only; no pixels passed to image_gen. Grayscale ajattelijat bust visible in sheet explicitly excluded from style and content target.",
+      "originalSha256": "1895bf0f960b7aa7c4a00dc89981bee2bcfa3590185855e5c361dcae74d95609",
+      "state": "worker-reviewed-ready-for-root-review",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-mylly.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "fb0e980d66572ac51eaebccb09cdb9d071bb5a41a2fe9902c3e00b9db5435d64",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/qa/root-last5.jpg",
+        "visualNotes": "Warm parchment ink/watercolor matches accepted series and main subject remains circle-safe. London raised bascules, Olav3towers/3empty cutaway rooms; Morris3squares/4connectors/24points; tavli24triangles4groups6 and2dice; unmarked empty-cockpit biplane. No readable text/numbers/faces.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-mylly.jpg",
+      "bytes": 95247,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "tavli",
+      "file": "varuste-tavli.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tavli/varuste-tavli.jpg",
+      "sha256": "5e2c68ffbeb2b8a6f5a89c1d1ba71e6536f3d859ae8548d81c6279657a09644d",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-5d74-7252-8e58-12c1d119e74b/exec-f5b275b5-c36f-429c-a8d8-41149993a7ac.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tavli/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: illustration-story\nAsset type: square game equipment watercolor illustration, for a circular UI thumbnail.\nPrimary request: one open wooden tavli / backgammon board with round playing discs in two colors and exactly two dice, a compact miniature on warm yellow parchment.\nBoard topology is essential: the opened board lies flat, its left and right panels joined by a narrow central bar. Draw EXACTLY 24 long triangular playing points arranged as FOUR clearly separated groups of SIX triangles. Left panel: six points along the far edge and six opposite along the near edge. Right panel: six points along the far edge and six opposite along the near edge. Thus each panel has twelve triangles and the complete board has twenty-four. In each group of six, the triangles alternate faded dark walnut and warm light ochre. They point toward the empty middle playing area. No additional triangle, ornamental triangular pattern or extra point anywhere.\nPieces and dice: two small separate groups of round ivory and dark walnut wooden discs sit beside the board without hiding any triangle. Exactly TWO ivory cube dice sit in the empty middle area, separated from each other. Their faces show only small round dark pips, never Arabic numerals or writing. Do not depict any third die or any other cube.\nStyle/medium: fine delicate brown ink drawing with soft transparent watercolor, muted honey wood and walnut, cream discs, old warm yellow fibrous parchment, faded earth-color washes and soft irregular pigment edges. A quietly charming illustrated travel-journal miniature. No photographic or 3D-rendered look.\nComposition: square canvas. Elevated slight isometric view, almost overhead, so all four groups of six triangles can be counted. The complete open board, pieces and both dice are centered and fully visible within the central 70 percent, with broad warm paper margin. All essential objects fit a centered circular crop. Outer edges and corners contain only parchment and faint wash.\nConstraints: original new watercolor illustration. One board, exactly 24 triangular playing points in four groups of six, round discs in two colors, exactly two pip dice. No people, faces, letters, numbers, text, logos, symbols, signs, watermark, border or frame.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg"
+      ],
+      "kuvateksti": "Avattu tavlilauta, kaksiväriset nappulat ja kaksi noppaa. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewPassed": true,
+        "rootIndependentReviewPending": true,
+        "reviewedNative": true,
+        "reviewed480": true,
+        "reviewedCircleCrop": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tavli/qa-preview-native.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tavli/qa-preview-480.png",
+        "circleCropPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/tavli/qa-circle-512.png",
+        "style": "Soft ink-watercolor on warm yellow parchment, delicate brown lines, muted earth pigments and faded edges; miniature centered composition. No photograph or 3D render.",
+        "visual": {
+          "subject": "Open wood tavli board with round discs in ivory and walnut; exactly two ivory cube dice with round pips.",
+          "geometry": "24 triangles counted in four groups of six: left far 6, left near 6, right far 6, right near 6. Exactly two dice, no third cube. Playing discs appear in two groups beside board.",
+          "circleCrop": "Complete board, two dice and both disc groups preserved. Side disc groups lie near the circle edge but are not clipped.",
+          "details": "No people, letters, digit-shaped die numerals, signage, logos or watermark observed. Pip dots are the permitted dice notation.",
+          "counts": {
+            "triangles": 24,
+            "triangleGroups": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "dice": 2
+          }
+        },
+        "technical": {
+          "exact512Square": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "xmpDescriptionExact": true,
+          "xmpSourceExact": true,
+          "unicodeUserCommentExact": true,
+          "nativeByteExact": true,
+          "nativePreviewByteExact": true,
+          "sha256MatchesRecord": true
+        },
+        "workerReviewedAt": "2026-10-09T06:23:32.205331+00:00"
+      },
+      "referenceUse": "Viewed for textual style description only; no pixels passed to image_gen. Grayscale ajattelijat bust visible in sheet explicitly excluded from style and content target.",
+      "originalSha256": "c3003bf117edb6d5ec11e7d5b36545d893732dfe29587a16c0c9d21aba28ac49",
+      "state": "worker-reviewed-ready-for-root-review",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-tavli.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "5e2c68ffbeb2b8a6f5a89c1d1ba71e6536f3d859ae8548d81c6279657a09644d",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/qa/root-last5.jpg",
+        "visualNotes": "Warm parchment ink/watercolor matches accepted series and main subject remains circle-safe. London raised bascules, Olav3towers/3empty cutaway rooms; Morris3squares/4connectors/24points; tavli24triangles4groups6 and2dice; unmarked empty-cockpit biplane. No readable text/numbers/faces.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-tavli.jpg",
+      "bytes": 96647,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lentopeli",
+      "file": "varuste-lentopeli.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lentopeli/varuste-lentopeli.jpg",
+      "sha256": "a52b74f1dd5efa54a5295d4dc1e6e8d57f8bdd8732dc16d480a4b96fdd14afbd",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f4e-5d74-7252-8e58-12c1d119e74b/exec-ccfa1faf-8dc4-4176-a7a4-196099023cf7.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lentopeli/original-generation.png",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: square game equipment illustration, for a circular UI thumbnail.\nPrimary request: a single graceful unmarked 1910–1920 biplane flying above soft clouds, a tiny airy isometric world floating at the center of warm yellow parchment. Early aviation wooden frame, cream fabric-covered double wings, fine bracing struts and wires, slim ochre fuselage, small fixed wheels and wooden propeller. The open cockpit is empty and too dark to show any person.\nStyle/medium: delicate brown ink and soft transparent watercolor on old warm yellow fibrous parchment, faded washes, muted warm ochre, walnut brown and dusty blue-gray clouds. Fine hand-drawn lines, subtle irregular pigment edges. Match the feeling of a small illustrated travel-journal world: light, warm and quiet, not a photo or 3D render.\nComposition: square canvas, three-quarter isometric aerial view. Entire biplane including wing tips, tail and propeller stays inside the central 70 percent. A soft cloud island beneath it fades into paper. Leave broad paper margin all around; outer edges are bare parchment and faint pale washes. All important parts must fit in a centered circular crop.\nConstraints: original new watercolor illustration, one biplane only. No pilot, people or faces. No national markings, insignia, emblems, crosses, roundels, lettering, digits, logos or signs on any surface. No text, numbers, watermark, border, photographic or 3D appearance.",
+      "sourceCommit": "cd76d3a1a597aacb959f8c4dd95beb4366378187",
+      "sourceBlob": "5b2ebbe4408a5dfd7630051b3e049d46b3c4f8ea",
+      "sourceReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/style-reference-sheet.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg"
+      ],
+      "kuvateksti": "Vanha kaksitaso pehmeiden pilvien yllä. Kuvitus.",
+      "merkinta": "Kuvitus. Tekoälyllä tuotettu.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "resizeTo": [
+          512,
+          512
+        ],
+        "method": "technical center crop and Lanczos resize; no painted additions",
+        "jpegQuality": 90,
+        "colorSpace": "sRGB",
+        "Description": "Kuvitus. Tekoälyllä tuotettu.",
+        "Source": "Kuvitus. Tekoälyllä tuotettu."
+      },
+      "QA": {
+        "workerVisualReviewPending": false,
+        "workerVisualReviewPassed": true,
+        "rootIndependentReviewPending": true,
+        "reviewedNative": true,
+        "reviewed480": true,
+        "reviewedCircleCrop": true,
+        "nativePreviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lentopeli/qa-preview-native.png",
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lentopeli/qa-preview-480.png",
+        "circleCropPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/production/lentopeli/qa-circle-512.png",
+        "style": "Soft ink-watercolor on warm yellow parchment, delicate brown lines, muted earth pigments and faded edges; miniature centered composition. No photograph or 3D render.",
+        "visual": {
+          "subject": "One early wood/fabric biplane, double wings, bracing struts/wires, wooden propeller and fixed wheels above a soft cloud wash.",
+          "geometry": "One biplane; wing tips, tail, propeller and wheels remain within circular crop. Cockpit visibly empty/dark.",
+          "circleCrop": "All aircraft components retained, broad parchment margin remains.",
+          "details": "No pilot, human figures, national marks, roundels, letters, digits or logos observed."
+        },
+        "technical": {
+          "exact512Square": true,
+          "opaqueRGB": true,
+          "embeddedSRGB": true,
+          "xmpDescriptionExact": true,
+          "xmpSourceExact": true,
+          "unicodeUserCommentExact": true,
+          "nativeByteExact": true,
+          "nativePreviewByteExact": true,
+          "sha256MatchesRecord": true
+        },
+        "workerReviewedAt": "2026-10-09T06:23:32.147996+00:00"
+      },
+      "referenceUse": "Viewed for textual style description only; no pixels passed to image_gen. Grayscale ajattelijat bust visible in sheet explicitly excluded from style and content target.",
+      "originalSha256": "7b7db0cd024016f47a2fac38a61cb9bac9ed02429ef3528e2996415fb743a698",
+      "state": "worker-reviewed-ready-for-root-review",
+      "r2Key": "julisteet/varustekuvat/20261008/varuste-lentopeli.jpg",
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "a52b74f1dd5efa54a5295d4dc1e6e8d57f8bdd8732dc16d480a4b96fdd14afbd",
+        "technicalChecksPassed": true,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/qa/root-last5.jpg",
+        "visualNotes": "Warm parchment ink/watercolor matches accepted series and main subject remains circle-safe. London raised bascules, Olav3towers/3empty cutaway rooms; Morris3squares/4connectors/24points; tavli24triangles4groups6 and2dice; unmarked empty-cockpit biplane. No readable text/numbers/faces.",
+        "metadataDescriptionAndSourceExactViaXMP": true
+      },
+      "deliveryBatch": "A",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/varuste-lentopeli.jpg",
+      "bytes": 88926,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-10.jpg",
+    "r2Key": "julisteet/varustekuvat/20261008/toimitetut-10.jpg",
+    "url": "https://media.matkakirja.app/julisteet/varustekuvat/20261008/toimitetut-10.jpg",
+    "sha256": "a0d72a98bd8141bd3e76d8652ff57a0c6730f8e2aa8e6ea24ab1f3b398e34b13",
+    "bytes": 500467,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "productionComplete": true,
+  "allR2ReadbacksByteExact": true,
+  "omittedItems": [],
+  "pendingItems": [],
+  "deliveryStatus": "R2-byte-exact-verified-prepared-for-normal-mailbox-push",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T06:25:53.811455+00:00",
+  "styleHumanApproved": true,
+  "humanStyleAnswer": "Human reply: Akvarelli nykyisen sarjan mukaan",
+  "referenceFiles": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ajattelijat.jpg",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-ihmisen-matka.jpg",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-opas.jpg",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-poikkileikkaus.jpg",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-radio.jpg",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-varustekuvat-20261008/references/varuste-topografia.jpg"
+  ],
+  "styleReferencesViewed": true,
+  "excludedReference": "varuste-ajattelijat is a grayscale 3D bust with a face; excluded from style/content target. Use watercolor opas/radio and compliant current series.",
+  "continuationSource": {
+    "path": "posti/sisaltokirjuri-codex-jatka-tilaukset-20261009.md",
+    "commit": "243c4e6f8077bef0362c32cc0defa862ef0cc816",
+    "blob": "20a2327c904b82923949bf1a7ec7194f4606a748",
+    "readInFull": true,
+    "disposition": "Watercolor style confirmed; #44/#46 receipt observed; no replacement generation permission; prior orders unchanged"
+  }
+}
