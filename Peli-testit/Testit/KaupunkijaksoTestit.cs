@@ -84,6 +84,23 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "takaisin Pariisiin: nopea alusta: " + Pohja(s));
         }
 
+        [Testi] static void IntronKatkoJaHidasIlmanTaukoa()
+        {
+            var s = Uusi();
+            Oleta.Tosi(s.JaksonNopea("pariisi")?.Contains("musa-kaupunki-pariisi-nopea-lyria") == true, "intro tunnistaa nopean");
+            Oleta.Sama(null, s.JaksonNopea("lontoo"), "Lontoolla ei jaksoa");
+            s.Paikka("pariisi", "kaupunki");
+            s.JaksonIntroKatko(2000);
+            Oleta.Sama(null, Pohja(s), "31,0 s: nopea häivytetään pois");
+            Oleta.Sama("pariisi:tauko", s.Jakso);
+            Oleta.Sama(0, s.JaksonTaukoNro, "ei jakson 3 s:n taukoajastinta");
+            s.JaksonIntroHidas();
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi") && !Soi(s, "musa-kaupunki-pariisi-nopea"), "32,0 s: hidas: " + Pohja(s));
+            Oleta.Sama("pariisi:hidas", s.Jakso);
+            s.JaksonIntroKatko(2000);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi"), "katko hitaan aikana ei tee mitään");
+        }
+
         [Testi] static void MuutKaupungitJaWebTilaEnnallaan()
         {
             var s = Uusi();
