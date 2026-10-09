@@ -101,5 +101,13 @@ namespace Matkakirja.Linssit.Aanet
         public static double Liuku(double nyt, double tavoite, double dt, double aikaS) => nyt + (tavoite - nyt) * Math.Min(1, Math.Max(0, dt) / Math.Max(1e-3, aikaS));
 
         static double Raja(double x) => double.IsNaN(x) ? 0 : Math.Max(0, Math.Min(1, x));
+    
+        /// <summary>Ohiajon huippu sekunteina äänen alusta (Pelikoodari 9.10., 100 ms RMS-maksimi); tuntematon → 2,5 s.</summary>
+        public static double Huippu(string tunnus) => tunnus switch
+        {
+            "auto-ohi-01" => 2.6, "auto-ohi-02" => 2.4, "auto-ohi-03" => 2.5, "auto-ohi-04" => 2.5,
+            "bussi-ohi-01" => 3.0, "bussi-ohi-02" => 3.6, "raitiovaunu-ohi-01" => 1.2, "raitiovaunu-ohi-02" => 3.6,
+            _ => 2.5,
+        };
     }
 }

@@ -31,12 +31,13 @@ namespace Matkakirja.Linssit.Elava
     public sealed class Ohiajot
     {
         public enum Laji { Auto, Bussi, Raitiovaunu }
-        public const double KuuluuM = 250, TaysiM = 60, ValiMinS = 4, ValiMaxS = 8, BussiOsuus = 0.15, EnnakkoS = 2.0, UusintaS = 30;
+        public const double KuuluuM = 250, TaysiM = 60, ValiMinS = 4, ValiMaxS = 8, BussiOsuus = 0.15, EnnakkoS = 3.8, UusintaS = 30;   // ennakko ≥ suurin huippu (PalloElavaAanet.Huippu)
         public sealed class Ohiajo { public int Avain; public Laji Laji; public string Tunnus; public double Taso, LahinM, AikaS; }
 
         readonly Random rnd;
         readonly Dictionary<int, double> soitettu = new Dictionary<int, double>();
         double seuraava = double.NegativeInfinity, nyt;
+        int varattuAvain = -1; Laji varattuLaji; string varattuTunnus;
         string edellinen;
         int pAvain = -1; bool pRaitio; double pLahin, pAika;
 
@@ -71,9 +72,16 @@ namespace Matkakirja.Linssit.Elava
         public Ohiajo Valitse(bool soi)
         {
             if (pAvain < 0 || soi || nyt < seuraava) return null;
-            var laji = pRaitio ? Laji.Raitiovaunu : rnd.NextDouble() < BussiOsuus ? Laji.Bussi : Laji.Auto;
-            var sarja = laji == Laji.Raitiovaunu ? PalloElavaAanet.RaitioOhi : laji == Laji.Bussi ? PalloElavaAanet.BussiOhi : PalloElavaAanet.AutoOhi;
-            string tunnus = ElavaValinta.Vaihtoehto(sarja, rnd, edellinen);
+            // Ääni valitaan kerran ajoneuvolle; ohiajo alkaa, kun lähimpään kohtaan on äänen huipun verran (Pelikoodari 9.10.: huiput
+            // 1,2–3,6 s alusta), jolloin huippu osuu ohitukseen.
+            if (varattuAvain != pAvain)
+            {
+                varattuLaji = pRaitio ? Laji.Raitiovaunu : rnd.NextDouble() < BussiOsuus ? Laji.Bussi : Laji.Auto;
+                var sarja0 = varattuLaji == Laji.Raitiovaunu ? PalloElavaAanet.RaitioOhi : varattuLaji == Laji.Bussi ? PalloElavaAanet.BussiOhi : PalloElavaAanet.AutoOhi;
+                varattuTunnus = ElavaValinta.Vaihtoehto(sarja0, rnd, edellinen); varattuAvain = pAvain;
+            }
+            if (pAika > PalloElavaAanet.Huippu(varattuTunnus) + 0.05) return null;
+            var laji = varattuLaji; string tunnus = varattuTunnus; varattuAvain = -1;
             edellinen = tunnus;
             seuraava = nyt + ValiMinS + (ValiMaxS - ValiMinS) * rnd.NextDouble();
             if (soitettu.Count > 64) { var vanhat = new List<int>(); foreach (var kv in soitettu) if (nyt - kv.Value >= UusintaS) vanhat.Add(kv.Key); foreach (var k in vanhat) soitettu.Remove(k); }
