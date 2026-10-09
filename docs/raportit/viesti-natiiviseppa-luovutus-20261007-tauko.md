@@ -10,7 +10,7 @@ ajo-id:llä (mac-tf-odottaja.sh 4. arg = ajo-id, korjattu 9.10.: peruttu yöajo 
 juna/b13 → e1386897 10.36. Taukokaatumisen syy: CesiumKaupunki.Muistivahti asetti SSE:n → Cesium RecreateTileset (Cesium3DTileset.cs:255);
 korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauolla). Hätätoisto: scratchpad hata-ajo.sh <app> <tunniste>.
 **JUNA 172 = YKSI ISO JUNA (omistaja 10.3x: 172–175 yhdessä, ei välijunia/TF:iä ennen PT:n ilmoitusta)** — runko natiiviseppa/juna-172
-(wt/proto-natiiviseppa-j172) **8437cd80c** BUILD 171:n päällä; 453/420/1197, unity 0, tarkista 0. TARKISTUSLISTA:
+(wt/proto-natiiviseppa-j172) **8825e8671** BUILD 171:n päällä; 453/420/1197, unity 0, tarkista 0. TARKISTUSLISTA:
   [x] 172 NUI cd4553c8d (⊇ Siirtoseppä 18227438d + pysty + krediitit + ef56acf4e)
   [x] 173 Siirtoseppä f5346bac4 (⊇ 5d8e362f7 ⊇ bed0c2d97, v45z, äänet; ⊇ 174:n Siirtoseppä-osa)
   [x] 173–175 NUI 1fce56a22 (⊇ 2bb472819 ⊇ 500126589 mikseri ⊇ c00f125a9 ⊇ 9ca6e2795 ⊇ 54182ab06 ⊇ 17ee84663 ⊇ becff9f1b); konfliktit
@@ -41,7 +41,7 @@ korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauol
   MUUTOSLOKI 172 (PT 9.10. 267 mrk / 276 t; lopullinen lukituksessa, + Pariisin musiikkijakso jos ehtii): "Olavinlinna: linnan historia elokuvana
       nykypäivään, uusia esineitä, aukeavat ovet ja äänet. Pallo: sadekuurot, märät kadut, salamat, iltaikkunat, Pariisin jokilaivat, tarkemmat Notre-Dame
       ja Kuninkaanlinna. Uudet varustekuvat. iPhone pystyssä. Nimi on nyt Matkakirja."
-  OMA STP (#4220 kohta 7): natiiviseppa/stp-172 9781342ed (wt/proto-natiiviseppa-stp, 8437cd80c:n päällä) — odottaa PT:n kuittausta; ajallinen oletuksena pois.
+  [x] OMA STP (#4220 kohta 7) natiiviseppa/stp-172 9781342ed — PT kuittasi; ajallinen oletuksena pois, käyttöönotto pallokierroksen kuva-arkista.
   [ ] simukäännös + PT:n muutosloki + lukitus — OMISTAJA 12.0x: VASTA OMISTAJAN LUVALLA (PT välittää); ei käännöstä ennen sitä
 
 ## TILA 9.10. 09.5x
