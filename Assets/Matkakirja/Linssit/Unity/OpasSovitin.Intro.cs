@@ -82,20 +82,16 @@ namespace Matkakirja.Natiivi
             }
             o.Kirjaa($"opas: intro {kaupunkiId} alkaa: odotetaan musiikkia (enintään {KaupunkiIntro.MusiikkiOdotusS:F0} s)");
             NytRivi.Valmistele(kk.Lat, kk.Lon, kaupunkiId);
-            for (int i = 1; i <= KaupunkiIntro.Kuvia; i++)
-            {
-                int n = i;
-                Kuvat.Hae(KaupunkiIntro.KuvaUrl(n), t =>
-                {
-                    if (versio != introVersio || !introKaynnissa) return;
-                    if (t == null) { o.Kirjaa($"opas: intro kuva c{n} ei latautunut (otos 3D-avausnäkymänä)"); return; }
-                    introKuvat[n] = t; Kuvat.Kiinnita(t);
-                    o.Kirjaa($"opas: intro kuva c{n} valmis ({t.width}×{t.height})");
-                });
-            }
+            // MUISTIVARA (juna 173, iPad Pro 13: jetsam intron alussa, vapaa 0,44 Gt, kaupungin laatat 98 %): kuvat haetaan yksi
+            // kerrallaan (ei viittä purkua yhtä aikaa), ja vähällä muistilla Eiffel-otos jää 3D-avausnäkymäksi (ei toisen kaupunginosan
+            // laattoja esilataukseen eikä kameraan).
+            long vapaa = CesiumKaupunki.VapaaMuisti();
+            introEiffel = vapaa <= 0 || vapaa / 1e9 >= IntroEiffelRajaGt;
+            o.StartCoroutine(HaeIntroKuvat(versio));
             // Eiffel-otoksen laatat valmiiksi reittikameralla (PaivitaKamera → IntroReitti) otoksen loppuun asti.
             double eMaa = OmaMaaKehalla(KaupunkiIntro.EiffelLat, KaupunkiIntro.EiffelLon);
-            introEsilataus = KaupunkiIntro.EiffelKulma(0.5, eMaa);
+            introEsilataus = introEiffel ? KaupunkiIntro.EiffelKulma(0.5, eMaa) : (Kuvakulma?)null;
+            if (!introEiffel) o.Kirjaa($"opas: intro {kaupunkiId}: vapaa muisti {vapaa / 1e9:F2} Gt < {IntroEiffelRajaGt:F1} → Eiffel-otos 3D-avausnäkymänä");
             // Avausnäkymän kierto koko intro + avaus (muuten 16 s:n kierto pysähtyisi ja avauksen ääni hyppäisi kulmaa taaksepäin).
             silmukka?.AsetaAvausKesto(KaupunkiIntro.AvausS + KaupunkiIntro.AvausArvioS + AvausLisaS);
             introKerros ??= new IntroKerros();
@@ -169,7 +165,7 @@ namespace Matkakirja.Natiivi
                 if (introKoriEnnen != null && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
                 var tila = KaupunkiIntro.Tila(t, n => introKuvat[n] != null, c5Nyt);
                 if (!KaupunkiIntro.EiffelEsilataus(t)) introEsilataus = null;
-                introKamera = tila.Laji == IntroLaji.Eiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
+                introKamera = tila.Laji == IntroLaji.Eiffel && introEiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
                 introKerros.Aseta(tila, tila.Kuva > 0 ? introKuvat[tila.Kuva] : null);
                 if (tila.Otos != otos)
                 {
@@ -186,6 +182,29 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             IntroLoppuu(versio, true, "valmis");
+        }
+
+        /// <summary>Eiffel-otos vain, kun vapaata muistia on vähintään tämän verran intron alussa (Gt; iPad-kaatuminen juna 173).</summary>
+        public const double IntroEiffelRajaGt = 0.8;
+        bool introEiffel = true;
+
+        /// <summary>Introkuvat yksi kerrallaan (seuraava vasta edellisen purun jälkeen).</summary>
+        IEnumerator HaeIntroKuvat(int versio)
+        {
+            for (int n = 1; n <= KaupunkiIntro.Kuvia; n++)
+            {
+                bool valmis = false; int k = n;
+                Kuvat.Hae(KaupunkiIntro.KuvaUrl(k), t =>
+                {
+                    valmis = true;
+                    if (versio != introVersio || !introKaynnissa) return;
+                    if (t == null) { o.Kirjaa($"opas: intro kuva c{k} ei latautunut (otos 3D-avausnäkymänä)"); return; }
+                    introKuvat[k] = t; Kuvat.Kiinnita(t);
+                    o.Kirjaa($"opas: intro kuva c{k} valmis ({t.width}×{t.height})");
+                });
+                while (!valmis && versio == introVersio && introKaynnissa) yield return null;
+                if (versio != introVersio || !introKaynnissa) yield break;
+            }
         }
 
         /// <summary>Pallon korin tila ennen introa (null = ei piilotettu).</summary>
