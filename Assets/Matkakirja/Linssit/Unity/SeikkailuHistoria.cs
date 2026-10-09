@@ -150,11 +150,12 @@ namespace Matkakirja.Natiivi
         }
         readonly HashSet<Renderer> kavelyPiilossa = new HashSet<Renderer>();
 
-        /// <summary>Renderöijä, jonka varjostin tottelee kävelyleikkauksia (kuori ja leivotut kävelyosat): se voi rakentua leikkausrajan alta.</summary>
+        /// <summary>Rakentuva renderöijä: vain linnan kuori (DioraamaKuori tottelee kävelyleikkauksia). Arvio 4: leivotut huoneet
+        /// (DioraamaLeivottu) näkyivät rakentumisen aikana ilman kuorta mustina laatikkoina ja tornien sisus hehkui.</summary>
         static bool Leikattava(Renderer r)
         {
-            var m = r.sharedMaterial; var sh = m != null ? m.shader : null; if (sh == null) return false;
-            return sh.name.EndsWith("DioraamaKuori", StringComparison.Ordinal) || sh.name.EndsWith("DioraamaLeivottu", StringComparison.Ordinal);
+            var m = r.sharedMaterial; var sh = m != null ? m.shader : null;
+            return sh != null && sh.name.EndsWith("DioraamaKuori", StringComparison.Ordinal);
         }
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
@@ -187,8 +188,8 @@ namespace Matkakirja.Natiivi
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
                 if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
-                // Kivilinna rakentuu (arvio 3): kuori ja kävelyosat (leikattavat varjostimet) nousevat vedestä leikkausrajan alta, muu linna
-                // (esineet, hahmot, liekit, valot) pysyy piilossa, kunnes linna on valmis.
+                // Kivilinna rakentuu (arvio 3): kuori nousee vedestä leikkausrajan alta, muu linna (huoneet,
+                // esineet, hahmot, liekit, valot) pysyy piilossa, kunnes linna on valmis.
                 bool linnaNakyy = h.LinnaNakyyT(t), rakentuu = linnaNakyy && h.Rakennus(t) < 1;
                 if (rakentuu) { if (!linnaPiilossa) LinnaNakyviin(false); PiilotaLinna(true); }
                 else { LinnaNakyviin(linnaNakyy); if (linnaPiilossa) PiilotaLinna(); }   // joka ruutu: huonelataus ja kynttilät (arvio 3)
