@@ -3,7 +3,16 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 07.4x (UUSIN)
+## TILA 9.10. 09.5x (UUSIN)
+**BUILD 170 = 4a140064ea882557c2189235c9bd9cee571e5023** (proto master; runko d213127c1 = fde044a39 + LS2 811d26cf8; simukäännös b508936fb 0 varjostinvirhettä;
+app lokit/natiiviseppa-app-170-d213127c1; Tukholma yö+päivä lokit/yopaiva170-arkki-tukholma-b508936f.png OK). SHA + muutosloki (scratchpad muutosloki170.txt)
+Julkaisijalla → TF. ODOTTAA: iOS TF -ajon alkuaika → Mac TF -odottaja (`perl … mac-tf-odottaja.sh 4a140064 170 <ISO>`), juna/b13 e9802f2d → d213127c + juna.log.
+**JUNA 171 runko natiiviseppa/juna-171** (wt/proto-natiiviseppa-j171) add8b853d = BUILD 170 + NUI 7ba57cafe (⊇ 837d8102a ⊇ 9bd44cca6, äänilähteet 75)
++ Pelikoodari 7ccdcdf16 + LS2 b4a393994 (ympäristövalo); 453/419/1147, unity 0, tarkista 0. PUUTTUU: LS1:n kaupunkimaisema-v2 171-kärki (15fcb7464 on
+jo BUILD 170:n esi-isä ja 51c1392d0 poisti sen → LS1 tekee revertin 4a140064e:n päälle, pyydetty). Osoitin uusin-2.json → v6 Julkaisijalta 171:n mukana.
+JUNA 172 / 173 / 174 kärjet: ks. alempana (18227438d + ef56acf4e; NUI 17ee84663 + Siirtoseppä 5d8e362f7; NUI 54182ab06).
+
+## TILA 9.10. 07.4x
 **JUNA 170 runko b6e2c2dc7** (wt/proto-natiiviseppa-j170): ... + LS1 yövalot 51c1392d0 (LinssiOhjain-konflikti: molempien komennot, vuorokausi kerran) = 93ae0750e
 (käännös 0ae254189, yökuvat lokit/yo170-arkki-{pariisi,tukholma}-0ae25418.png: valot näkyvät, MUTTA taivas musta, vesi kultaraidat, Tukholman sahalaita)
 + LS2 c5d5fe101 = a3e1aa556 (käännös b4022c6f8 07.41) + LS2 caf9a0506 (revert c5d5 + index-v4; PT KUITTASI, EHTO: index-v4 ämpärissä 200 ennen TF:ää) = b6e2c2dc7 + LS1 v10 7db9f0222 (PT kuittasi 08.0x) = 7397de0a4 + LS2 ea60457f9 (sininen hetki, PT kuittasi) = 7c747d531 + LS1 v11 4526065d1 (PT kuittasi) = **fde044a39** (käännös 5c492f8f5 09.09, yökuvat lokit/yo170-arkki-*-5c492f8f.png: Pariisi hyvä;
