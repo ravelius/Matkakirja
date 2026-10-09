@@ -34,6 +34,10 @@ done
 REPO=${0:A:h:h:h}
 ULOS_JSON="$REPO/js/dioraama/rakennukset/$RAKENNUS/blender.json"
 [ -d "$LAHDE" ] || { echo "Lähdekansio puuttuu: $LAHDE" >&2; exit 1; }
+# Rikkinäiset symlinkit (9.10.2026: v46h pudotti tunnelmavalot hiljaa, kun linkit osoittivat poistettuun v19-kansioon;
+# valot/-silmukka ohittaa puuttuvan .jpg:n ehdollisena). Pysäytetään ennen listan kokoamista.
+RIKKI=("$LAHDE"/{ulkokuori,ymparisto,ymparisto/maasto,ymparisto/mallit,kavely,kavely/valot,hahmot,materiaalit,vaiheet,tilat,valot}/*(N-@))
+(( ${#RIKKI} )) && { printf 'RIKKINÄINEN LINKKI: %s\n' "${RIKKI[@]}" >&2; exit 1; }
 
 # 1. Tiedostolista: "paketin-polku lähdetiedosto" (vain natiivin viittaamat; ei senaatti-alkup, ei ulkokuori-4k.jpg).
 typeset -a LISTA
