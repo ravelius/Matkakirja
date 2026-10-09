@@ -171,14 +171,18 @@ namespace Matkakirja.Linssit.Kierros
         /// ylhäältä katsottuna), ja eteneminen q (0…1) pienentää vaakaetäisyyttä SpiraaliLahesty-osuudella ja korkeutta
         /// SpiraaliLasku-osuudella (vähintään SpiraaliMinKorkeusM katsepisteen yläpuolella); katse pysyy kohteessa.
         /// </summary>
-        public static Kuvakulma Spiraali(Kuvakulma k, double fi, double q)
+        public static Kuvakulma Spiraali(Kuvakulma k, double fi, double q, double maaM = double.NaN)
         {
             const double A = Math.PI / 180;
             var e = KameraPaikka(k, k.Lat, k.Lon);
             double c = Math.Cos(fi * A), si = Math.Sin(fi * A), sk = 1 - SpiraaliLahesty * q;
             double se = (e.e * c - e.n * si) * sk, sn = (e.e * si + e.n * c) * sk;
-            double pysty0 = e.u - k.KatseKorkeusM, pysty = Math.Max(Math.Min(pysty0, SpiraaliMinKorkeusM), pysty0 * (1 - SpiraaliLasku * q));
             double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn);
+            // Lasku ei saa osua ohjauksen rajoihin (OpasOhjaus.Rajoita: kallistus ≤ KallistusMax, katto ≥ maa + KattoYlaM), koska ne
+            // vetäisivät silmää vaakasuunnassa kohteeseen päin (PalloKierrosTestit: Concorde → Madeleine 19 m taaksepäin).
+            double pysty0 = e.u - k.KatseKorkeusM, ala = Math.Max(SpiraaliMinKorkeusM, vaaka / Math.Tan((OpasOhjaus.KallistusMax - 1) * A));
+            if (!double.IsNaN(maaM)) ala = Math.Max(ala, maaM + OpasOhjaus.KattoYlaM + 5 - k.KatseKorkeusM);
+            double pysty = Math.Max(Math.Min(pysty0, ala), pysty0 * (1 - SpiraaliLasku * q));
             if (vaaka < 1) return k;
             double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
             return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
