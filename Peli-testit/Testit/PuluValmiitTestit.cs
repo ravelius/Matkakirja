@@ -44,6 +44,33 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(2, p.Vastaa("kohde:bastilji", "Kerro lisää: Ludvig XVI").Jatkot.Count);
         }
 
+        // Pilviajon Ranskan paketti (haara pulu-ranska-pilvi 096e3b46e, Sonnet effort low): 59 kohtaa × 5 + linkkitaso 660.
+        [Testi] static void RanskanKokoPaketti()
+        {
+            string json = File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", "pulu-fra.json"));
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            var p = PuluValmiit.Lue(json);
+            long ms = kello.ElapsedMilliseconds;
+            System.Console.WriteLine($"      jäsennys {json.Length / 1024} kt: {ms} ms (Mac)");
+            Oleta.Tosi(p != null, "paketti");
+            Oleta.Sama(59, p.Kohdat.Count);
+            Oleta.Sama(955, p.Vastauksia);
+            Oleta.Tosi(p.Kohdat.Values.All(k => k.Kysymykset.Count == 5), "5 kysymystä per kohta");
+            // Jokainen kysymysvastauksen [[käsite]] avaa valmiin Kerro lisää -vastauksen (linkkitaso kattava).
+            var kuvio = new System.Text.RegularExpressions.Regex(@"\[\[([^\[\]\n]{1,60})\]\]");
+            int linkkeja = 0;
+            foreach (var (id, k) in p.Kohdat.Select(x => (x.Key, x.Value)))
+                foreach (var v in k.Kysymykset)
+                    foreach (System.Text.RegularExpressions.Match m in kuvio.Matches(v.Teksti))
+                    {
+                        string kasite = m.Groups[1].Value.Split('|')[0].Trim();
+                        linkkeja++;
+                        Oleta.Tosi(p.Vastaa(id, PuluValmiit.KerroLisaaAlku + kasite) != null, id + " / " + kasite);
+                    }
+            Oleta.Tosi(linkkeja > 700, "linkkejä " + linkkeja);
+            Oleta.Tosi(p.Kohdat.Values.SelectMany(k => k.Kysymykset.Concat(k.Lisaa.Values)).All(v => v.Jatkot.Count == 2 && v.Jatkot.All(j => j.Length <= 70)), "jatkot");
+        }
+
         [Testi] static void HakemistoJaRikkinaiset()
         {
             var h = PuluValmiit.LueHakemisto(@"{""maat"":{""fra"":""1"",""ITA"":2}}");
