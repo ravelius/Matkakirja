@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "479d1c874a6e6a93",
-  "kansio": "dioraama/olavinlinna/blender/479d1c874a6e6a93/",
+  "hash": "96ee9b5f3af740dd",
+  "kansio": "dioraama/olavinlinna/blender/96ee9b5f3af740dd/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2330,23 +2330,23 @@
     },
     {
       "polku": "kavely/valot/ranta-1499-4x4.astcm",
-      "sha256": "deb531c2ff633b0531ae5b07a2e8383003733da63b7bc691eb840814b7abcb7b",
+      "sha256": "ce3367ba26ddb253f8063cf8f3a8f23e9c8e87473bce3b115494e13448755cae",
       "tavuja": 1398144
     },
     {
       "polku": "kavely/valot/ranta-1499-512-4x4.astcm",
-      "sha256": "dd56f6de6a275438c5f4e33323f1dc177de8da2b80a001daac424718f18ad5c7",
+      "sha256": "b4102151fc3f7dc7da05d58771624c707deb8c61b5d7f07125db572847ff7b15",
       "tavuja": 349568
     },
     {
       "polku": "kavely/valot/ranta-1499-512.jpg",
-      "sha256": "a2cd999e442967f028fd74da2f6e2e8565a660b85d8caed0c7e3b59b93b7b496",
-      "tavuja": 115865
+      "sha256": "dec718bd732eee3919a62a31cc9af458282b45dbac8a829d92ee53da22e21c0a",
+      "tavuja": 45217
     },
     {
       "polku": "kavely/valot/ranta-1499.jpg",
-      "sha256": "18db83cebafbf9bcad7a40e52ed96f476acd1f32d0a33f22e24b83facce1b559",
-      "tavuja": 422761
+      "sha256": "19f8e86b8a0640e36db3bc55b71135faf9e695e726eabeb7b9e46b4e3cdcbb03",
+      "tavuja": 131496
     },
     {
       "polku": "kavely/valot/tyrma-E101-4x4.astcm",
@@ -3432,26 +3432,6 @@
       "polku": "valot/muurinharja.jpg",
       "sha256": "8b90b52cfe8c7444d032a0b03342c5258632a095958e24e787999a03b81edf6f",
       "tavuja": 678470
-    },
-    {
-      "polku": "valot/tunnelma-2k-4x4.astcm",
-      "sha256": "683763c65da04168ee1f68972956528eb3cad1b09a97b21dc3cb23930c127573",
-      "tavuja": 5592448
-    },
-    {
-      "polku": "valot/tunnelma-2k.jpg",
-      "sha256": "f51a44b2b83f1073d01ab0b3756807a49d95eecef8f45e9c332005f640dec9a0",
-      "tavuja": 421243
-    },
-    {
-      "polku": "valot/tunnelma-4x4.astcm",
-      "sha256": "cfa369ae1ae90daf8cb053cb5c5091c2bc83313e1c795b17d8de733e12aba884",
-      "tavuja": 9961552
-    },
-    {
-      "polku": "valot/tunnelma.jpg",
-      "sha256": "4481c06ee157842a00319dcc020889528c1302968d778c14bcdf366af85b0f76",
-      "tavuja": 1113317
     },
     {
       "polku": "valot/voudin-sali-2k-4x4.astcm",
