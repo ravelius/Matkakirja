@@ -145,10 +145,14 @@ namespace Matkakirja.Linssit
         Cesium3DTileset googleViimeisin;
 
         /// <summary>Avaa lähellä olevat mallit (vanhat pois). vanhempi = Cesium-kaupungin juuri georeferenssin alla.</summary>
+        /// <summary>Diagnostiikka (Natiiviseppä 9.10., juna 173 jetsam-mittaus): asetus "omatmallit 0" = kaupunki ilman omia malleja.</summary>
+        public static bool Kaytossa = true;
+
         public void Avaa(Transform vanhempi, Cesium3DTileset googleTileset, double lat, double lon, int kerros)
         {
             Sulje();
             vanhempi0 = vanhempi; kerros0 = kerros; googleViimeisin = googleTileset; viimeLat = lat; viimeLon = lon;
+            if (!Kaytossa) { kirjaa?.Invoke("omat mallit: pois (asetus omatmallit 0)"); return; }
             var (json, juuriUrl, lahde) = Lue();
             if (json == null)
             {

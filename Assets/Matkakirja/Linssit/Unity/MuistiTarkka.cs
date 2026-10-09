@@ -245,6 +245,38 @@ namespace Matkakirja.Natiivi
             var (m, tx) = Arvioi(go);
             laatat.Add(new Laatta { Go = go, Ryhma = ryhma, Mesh = m, Tex = tx });
             r.Elossa++; r.Luotu++; r.Mesh += m; r.Tex += tx;
+            if (ryhma == "O" || (ryhma == "G" && gKuvattu++ < 5)) Kirjoita($"L {Ms} muistitarkka: laatta {ryhma} {go.name}: {Erittely(go)}, arvio mesh {Mt(m)} Mt, tekstuurit {Mt(tx)} Mt");
+        }
+
+        int gKuvattu;
+        /// <summary>Laatan renderöijät, tekstuuriviitteet ja yksilölliset tekstuurit mitoittain (onko sama kuva monena tekstuurina).</summary>
+        static string Erittely(GameObject go)
+        {
+            try
+            {
+                int rend = 0, viitteet = 0; var yks = new Dictionary<int, Texture>(); var muut = new HashSet<int>();
+                foreach (var mr in go.GetComponentsInChildren<MeshRenderer>(true))
+                {
+                    rend++;
+                    foreach (var mat in mr.sharedMaterials)
+                    {
+                        if (mat == null) continue;
+                        mat.GetTexturePropertyNameIDs(idt);
+                        foreach (var id in idt)
+                        {
+                            var t = mat.GetTexture(id); if (t == null) continue;
+                            if ((t.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave) { muut.Add(t.GetInstanceID()); continue; }
+                            viitteet++; yks[t.GetInstanceID()] = t;
+                        }
+                    }
+                }
+                var mitat = new Dictionary<string, int>();
+                foreach (var t in yks.Values) { string k = $"{t.width}×{t.height} {t.graphicsFormat} mip{t.mipmapCount}"; mitat[k] = mitat.TryGetValue(k, out var c) ? c + 1 : 1; }
+                var sb = new StringBuilder($"renderöijiä {rend}, tekstuuriviitteitä {viitteet}, yksilöllisiä {yks.Count} (muita jaettuja {muut.Count}):");
+                foreach (var kv in mitat) sb.Append($" {kv.Key} ×{kv.Value};");
+                return sb.ToString();
+            }
+            catch (Exception e) { return "erittely epäonnistui: " + e.Message; }
         }
 
         static readonly List<int> idt = new List<int>();
