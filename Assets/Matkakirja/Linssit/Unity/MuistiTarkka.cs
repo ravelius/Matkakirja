@@ -115,12 +115,12 @@ namespace Matkakirja.Natiivi
 
         // ---- PÄÄSÄIE: Unityn laskurit, tekstuurit ja Cesium-laatat ----
         ProfilerRecorder rUsed, rRes, rGc, rGcRes, rAudio, rVideo, rAppRes, rSys;
-        long seuraava, seuraavaHaku, viimeT = -1, edellinenTekstuuriT = -100000, avausT = -1;
+        long seuraava, seuraavaHaku, seuraavaOv, viimeT = -1, edellinenTekstuuriT = -100000, avausT = -1;
         float edellinenKehys, maxDt;
         int kehyksia;
 
-        sealed class Laatta { public GameObject Go; public string Ryhma; public long Mesh, Tex; }
-        sealed class Ryhma { public int Elossa, Luotu, Tuhottu; public long Mesh, Tex; }
+        sealed class Laatta { public GameObject Go; public string Ryhma; public long Mesh, Tex, Ov; }
+        sealed class Ryhma { public int Elossa, Luotu, Tuhottu; public long Mesh, Tex, Ov; }
         readonly List<Laatta> laatat = new List<Laatta>();
         readonly Dictionary<string, Ryhma> ryhmat = new Dictionary<string, Ryhma>();
         readonly HashSet<int> seuratut = new HashSet<int>();
@@ -155,6 +155,12 @@ namespace Matkakirja.Natiivi
             if (t >= seuraavaHaku) { seuraavaHaku = t + 500; HaeTilesetit(); }
             if (tekstuuriPyynto == 1 && t - edellinenTekstuuriT >= 2000) { tekstuuriPyynto = 0; edellinenTekstuuriT = t; Kirjoita($"T {t} nousu {Tekstuurit(12)}"); }
             if (avausT > 0 && t - avausT >= 3000) { avausT = -1; Kirjoita($"T {t} avaus+3s {Tekstuurit(12)}"); }
+            if (t >= seuraavaOv)
+            {
+                seuraavaOv = t + 2000;
+                foreach (var rr in ryhmat.Values) rr.Ov = 0;
+                foreach (var l in laatat) if (l.Go != null && ryhmat.TryGetValue(l.Ryhma, out var rr)) rr.Ov += Overlay(l.Go);
+            }
             if (t < seuraava) return;
             seuraava = t + valiMs;
             float nyt = Time.realtimeSinceStartup;
@@ -176,7 +182,7 @@ namespace Matkakirja.Natiivi
             foreach (var kv in ryhmat)
             {
                 var r = kv.Value;
-                sb.Append($" | {kv.Key} {r.Elossa} +{r.Luotu}-{r.Tuhottu} m {Mt(r.Mesh)} t {Mt(r.Tex)}");
+                sb.Append($" | {kv.Key} {r.Elossa} +{r.Luotu}-{r.Tuhottu} m {Mt(r.Mesh)} t {Mt(r.Tex)}{(r.Ov > 0 ? $" ov {Mt(r.Ov)}" : "")}");
                 r.Luotu = 0; r.Tuhottu = 0;
             }
             Kirjoita(sb.ToString());
@@ -249,6 +255,31 @@ namespace Matkakirja.Natiivi
         }
 
         int gKuvattu;
+        static readonly List<string> nimet = new List<string>();
+        /// <summary>Rasterikerrosten (esim. omien mallien leikkausmaski "_overlayTexture_Clipping") tekstuurit laatan materiaaleissa.</summary>
+        static long Overlay(GameObject go)
+        {
+            long b = 0;
+            try
+            {
+                tassa.Clear();
+                foreach (var mr in go.GetComponentsInChildren<MeshRenderer>(true))
+                    foreach (var mat in mr.sharedMaterials)
+                    {
+                        if (mat == null) continue;
+                        mat.GetTexturePropertyNames(nimet);
+                        foreach (var n in nimet)
+                        {
+                            if (n.IndexOf("overlay", StringComparison.OrdinalIgnoreCase) < 0) continue;
+                            var t = mat.GetTexture(n);
+                            if (t == null || !tassa.Add(t.GetInstanceID())) continue;
+                            b += Koko(t);
+                        }
+                    }
+            }
+            catch (Exception) { }
+            return b;
+        }
         /// <summary>Laatan renderöijät, tekstuuriviitteet ja yksilölliset tekstuurit mitoittain (onko sama kuva monena tekstuurina).</summary>
         static string Erittely(GameObject go)
         {

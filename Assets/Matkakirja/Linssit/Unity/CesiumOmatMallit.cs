@@ -67,7 +67,10 @@ namespace Matkakirja.Linssit
 
         /// <summary>Googlen leikkaus: juurisyy (koko tileset katosi, materialKey "0") korjattu 72cc68be; päällä Gizan valmistuessa
         /// (omistaja 7.10. 08.4x), kun ennen/jälkeen-kuva on todennettu. Testi pois: Documents/omat-mallit/leikkaus-pois.</summary>
-        static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+        static bool Leikkaa => LeikkausSallittu && !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+        /// <summary>Diagnostiikka (juna 173 jetsam-mittaus 10.10.): asetus "leikkaus 0" = ei Googlen leikkausmaskia (rasterikerros SSE 0,5 /
+        /// 4096 px) omien mallien kohdalla.</summary>
+        public static bool LeikkausSallittu = true;
 
         /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
         /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä

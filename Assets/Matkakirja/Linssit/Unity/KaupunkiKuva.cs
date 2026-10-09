@@ -299,7 +299,8 @@ namespace Matkakirja.Natiivi
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
                         case "ymparistovalo": Ymparistovalo = v != 0; break;
-                        case "omatmallit": CesiumOmatMallit.Kaytossa = v != 0; break;   // diagnostiikka (juna 173 jetsam): kaupunki ilman omia malleja
+                        case "omatmallit": CesiumOmatMallit.Kaytossa = v != 0; break;
+                        case "leikkaus": CesiumOmatMallit.LeikkausSallittu = v != 0; break;   // diagnostiikka (juna 173 jetsam): ei leikkausmaskia   // diagnostiikka (juna 173 jetsam): kaupunki ilman omia malleja
                         case "omavalo": CesiumOmatMallit.OmaValo = v != 0; break;   // LS2 9.10.: omien mallien valo (seuraava avaus)
                         case "omavalotus": CesiumOmatMallit.Valotus = v; break;
                         case "omavarjot": OmatVarjot.Paalla = v != 0; break;   // LS2 9.10.: omien mallien aurinkovarjot
