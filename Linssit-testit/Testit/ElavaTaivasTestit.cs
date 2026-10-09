@@ -1,6 +1,7 @@
 // Elävä taivas (Päätoimittaja 9.10., juna 170): lintuparvi päivällä harvoin ja kameran ohi, lentokone ohittaa kaukaa, majakka kiertää.
 using System;
 using Matkakirja.Linssit.Elava;
+using Matkakirja.Linssit.Kierros;
 
 namespace Matkakirja.Linssit.Testit
 {
@@ -24,13 +25,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi((a1.x - a0.x) * ux + (a1.z - a0.z) * uz < -3 && (a2.x - a0.x) * ux + (a2.z - a0.z) * uz < -3, "V: johtaja kärjessä");
         }
 
-        [Testi] static void LentokoneKaukanaJaMajakkaKiertaa()
+        [Testi] static void LentokoneKaukanaJaValonheittimetHarvoin()
         {
             var e = new ElavaTaivas(3); e.AloitaKone(10, 0, 0); double lahin = double.MaxValue;
             for (double t = 10; t < 10 + ElavaTaivas.KoneKestoS; t += 1) { var p = e.KonePaikka(t); lahin = Math.Min(lahin, Math.Sqrt(p.x * p.x + p.z * p.z)); Oleta.Tosi(Math.Abs(p.y - ElavaTaivas.KoneKorkeusM) < 1e-9, "korkeus vakio"); }
             Oleta.Tosi(lahin >= ElavaTaivas.KoneOhitusMinM - 10 && lahin <= ElavaTaivas.KoneOhitusMaxM + 10, $"ohitus {lahin:F0} m");
             e.Paivita(10 + ElavaTaivas.KoneKestoS + 1, 0, 300, 0, true); Oleta.Tosi(e.Lentokone == null, "kone poistuu ylityksen jälkeen");
-            Oleta.Tosi(Math.Abs(ElavaTaivas.MajakkaKulma(ElavaTaivas.MajakkaKierrosS / 4) - 90) < 1e-9, "majakka 90° neljänneskierroksessa");
+            // Valonheittimet: vain yöllä, harvoin, kaupungin laidalta, hitaasti.
+            var y = new ElavaTaivas(9); int heittimia = 0; ElavaTaivas.Heitin edH = null; double maxKaanto = 0;
+            for (double t = 0; t < 1800; t += 0.5)
+            {
+                y.Paivita(t, 0, 300, 0, false, true);
+                var h = y.Valonheitin; if (h == null) continue;
+                if (h != edH) { heittimia++; edH = h; double d = Math.Sqrt(h.X * h.X + h.Z * h.Z); Oleta.Tosi(d >= ElavaTaivas.HeitinMinM - 1 && d <= ElavaTaivas.HeitinMaxM + 1, $"laidalla {d:F0} m"); }
+                double ds = Math.Abs(KierrosLento.Kiedo(y.Keila(0, t + 0.5).suunta - y.Keila(0, t).suunta)) / 0.5; maxKaanto = Math.Max(maxKaanto, ds);
+                var k = y.Keila(h.Maara - 1, t); Oleta.Tosi(k.nousu >= 54 && k.nousu <= 76, "keila taivaalle");
+            }
+            Oleta.Tosi(heittimia >= 3 && heittimia <= 8, $"30 min yötä: {heittimia} valonheitintä (harvoin)");
+            Oleta.Tosi(maxKaanto < 6, $"hidas pyyhkäisy ({maxKaanto:F1} °/s)");
+            var p2 = new ElavaTaivas(9); for (double t = 0; t < 1800; t += 0.5) { p2.Paivita(t, 0, 300, 0, true, false); Oleta.Tosi(p2.Valonheitin == null, "päivällä ei valonheittimiä"); }
         }
     }
 }

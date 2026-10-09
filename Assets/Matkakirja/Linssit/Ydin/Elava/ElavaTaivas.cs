@@ -1,6 +1,7 @@
 // ELÄVÄ TAIVAS (Linssiseppä 9.10.2026; Päätoimittaja juna 170: "elävä taivas (linnut, lentokone, harvoin toinen pallo) + iltavalot"):
 // päivällä V-muodostelmassa lentävä lintuparvi ylittää näkymän harvakseltaan (Parvivali), kaukainen lentokone tiivistysvanoineen
-// ylittää taivaan, kun sen ääni soi (Kone), ja Pariisissa yöllä Eiffel-tornin majakan kaksi keilaa kiertää (MajakkaKulma). Koordinaatit
+// ylittää taivaan, kun sen ääni soi (Kone), ja yöllä harvoin 1–2 valonheittimen keilaa pyyhkii taivasta hitaasti kaupungin laidalta
+// (Heitin; Päätoimittaja: ei mistään tunnistettavasta maamerkistä — Eiffelin valaistus on SETE:n suojaama, sitä ei jäljitellä). Koordinaatit
 // elävän kaupungin paketin origossa (x itä, z pohjoinen, y korkeus, m). Satunnaisuus annetulla siemenellä (testit). Puhdas C#.
 using System;
 
@@ -11,23 +12,36 @@ namespace Matkakirja.Linssit.Elava
         public const int ParviLintuja = 9;
         public const double ParviNopeus = 13, ParviKestoS = 75, ParviMinValiS = 70, ParviMaxValiS = 160, ParviLahinM = 350, ParviKaukaisinM = 800;
         public const double KoneKorkeusM = 9500, KoneNopeus = 230, KoneOhitusMinM = 5000, KoneOhitusMaxM = 9000, KoneKestoS = 170;
-        public const double MajakkaKierrosS = 24, MajakkaPituusM = 4500;
+        public const double HeitinMinValiS = 240, HeitinMaxValiS = 480, HeitinKestoS = 80, HeitinSyttyyS = 6, HeitinMinM = 2500, HeitinMaxM = 4000, HeitinPituusM = 3500;
 
         public sealed class Lintuparvi { public double X0, Z0, Y, Suunta, Alku; }
         public sealed class Kone { public double X0, Z0, Suunta, Alku; }
+        public sealed class Heitin { public double X, Z, Suunta, Alku; public int Maara; }
 
         public Lintuparvi Parvi { get; private set; }
         public Kone Lentokone { get; private set; }
-        double seuraavaParvi;
+        public Heitin Valonheitin { get; private set; }
+        double seuraavaParvi, seuraavaHeitin;
         readonly Random r;
 
-        public ElavaTaivas(int siemen) { r = new Random(siemen); seuraavaParvi = 30 + 30 * r.NextDouble(); }
+        public ElavaTaivas(int siemen) { r = new Random(siemen); seuraavaParvi = 30 + 30 * r.NextDouble(); seuraavaHeitin = 60 + 60 * r.NextDouble(); }
 
-        /// <summary>Joka ruutu: aika t (s), kamera (x, y, z); paiva = linnut sallittu (ei yöllä). Parvi syntyy ja vanhenee.</summary>
-        public void Paivita(double t, double kx, double ky, double kz, bool paiva)
+        /// <summary>Joka ruutu: aika t (s), kamera (x, y, z); paiva = linnut sallittu (ei yöllä), yo = valonheittimet sallittu.</summary>
+        public void Paivita(double t, double kx, double ky, double kz, bool paiva, bool yo = false)
         {
             if (Parvi != null && t - Parvi.Alku > ParviKestoS) Parvi = null;
             if (Lentokone != null && t - Lentokone.Alku > KoneKestoS) Lentokone = null;
+            if (Valonheitin != null && (t - Valonheitin.Alku > HeitinKestoS || !yo)) Valonheitin = null;
+            if (Valonheitin == null && t >= seuraavaHeitin)
+            {
+                seuraavaHeitin = t + HeitinMinValiS + (HeitinMaxValiS - HeitinMinValiS) * r.NextDouble();
+                if (yo)
+                {
+                    // Kaupungin laidalla HeitinMinM…MaxM kamerasta satunnaiseen suuntaan; keilat pyyhkivät kameraa kohti olevalla puolella.
+                    double su = 2 * Math.PI * r.NextDouble(), d = HeitinMinM + (HeitinMaxM - HeitinMinM) * r.NextDouble();
+                    Valonheitin = new Heitin { X = kx + Math.Sin(su) * d, Z = kz + Math.Cos(su) * d, Suunta = (su * 180 / Math.PI + 180) % 360, Alku = t, Maara = r.NextDouble() < 0.5 ? 1 : 2 };
+                }
+            }
             if (Parvi == null && t >= seuraavaParvi)
             {
                 seuraavaParvi = t + ParviMinValiS + (ParviMaxValiS - ParviMinValiS) * r.NextDouble();
@@ -65,7 +79,19 @@ namespace Matkakirja.Linssit.Elava
             return (k.X0 + Math.Sin(a) * KoneNopeus * s, KoneKorkeusM, k.Z0 + Math.Cos(a) * KoneNopeus * s);
         }
 
-        /// <summary>Majakan ensimmäisen keilan suunta (° pohjoisesta) hetkellä t; toinen vastakkainen.</summary>
-        public static double MajakkaKulma(double t) => (t * 360.0 / MajakkaKierrosS) % 360.0;
+        /// <summary>Keilan i suunta (° pohjoisesta) ja nousukulma (° vaakatasosta) hetkellä t: hidas pyyhkäisy ±35° ja 55–75°.</summary>
+        public (double suunta, double nousu) Keila(int i, double t)
+        {
+            var h = Valonheitin; double s = t - h.Alku, v = i * Math.PI * 0.8;
+            return ((h.Suunta + 35 * Math.Sin(2 * Math.PI * s / 46 + v) + 360) % 360, 65 + 10 * Math.Sin(2 * Math.PI * s / 31 + 1.7 * v));
+        }
+
+        /// <summary>Keilojen voima 0…1: syttyy ja sammuu HeitinSyttyyS:ssä.</summary>
+        public double HeitinVoima(double t)
+        {
+            if (Valonheitin == null) return 0;
+            double s = t - Valonheitin.Alku;
+            return Math.Max(0, Math.Min(1, Math.Min(s, HeitinKestoS - s) / HeitinSyttyyS));
+        }
     }
 }

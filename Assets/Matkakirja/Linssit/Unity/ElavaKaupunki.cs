@@ -329,11 +329,11 @@ namespace Matkakirja.Natiivi
             PaivitaTaivas(c);
         }
 
-        // ---- ELÄVÄ TAIVAS JA VALONHEITIN (Päätoimittaja 9.10., juna 170; Ydin ElavaTaivas): lintuparvi V:nä päivällä, lentokone ja
-        // tiivistysvana äänen tahdissa (yöllä navigointivalot), Pariisissa yöllä Eiffelin majakan kaksi keilaa. ----
-        ElavaTaivas taivas; Transform parviJuuri, koneT, keilaT; Transform[] lintuT, lintuV, lintuO; Renderer vanaR; Transform[] koneValot;
-        public static readonly (double Lat, double Lon, double Korkeus) Eiffel = (48.858296, 2.294479, 324);
-        double eiffelMaa = double.NaN;
+        // ---- ELÄVÄ TAIVAS JA VALONHEITTIMET (Päätoimittaja 9.10., juna 170; Ydin ElavaTaivas): lintuparvi V:nä päivällä, lentokone ja
+        // tiivistysvana äänen tahdissa (yöllä navigointivalot), yöllä harvoin 1–2 hidasta keilaa kaupungin laidalta (ei maamerkistä:
+        // Eiffelin valaistus on SETE:n suojaama, Päätoimittaja kumosi majakan). ----
+        ElavaTaivas taivas; Transform parviJuuri, koneT, keilaT; Transform[] lintuT, lintuV, lintuO, keilat; Renderer vanaR; Transform[] koneValot;
+        ElavaTaivas.Heitin heitinEd; double heitinMaa = double.NaN;
 
         static Mesh Nauha(string nimi, float pituus, float leveys, Color alku, Color loppu)
         {
@@ -396,13 +396,11 @@ namespace Matkakirja.Natiivi
                     koneValot[i] = Olio("navigointivalo", koneT, Keila("Navigointivalo", 0.01f, 45f, 45f, vv[i].Item1), valoMat).transform;
                     koneValot[i].localPosition = vv[i].Item2;
                 }
-                if (paketti == "pariisi")
-                {
-                    keilaT = new GameObject("Eiffelin majakka") { layer = kerros }.transform; keilaT.SetParent(transform, false);
-                    var km = Keila("Majakan keila", (float)ElavaTaivas.MajakkaPituusM, 4f, 160f, new Color(1f, 0.93f, 0.78f, 0.28f));
-                    for (int i = 0; i < 2; i++) Olio("keila", keilaT, km, valoMat).transform.localRotation = Quaternion.Euler(-2f, 180f * i, 0f);
-                    keilaT.gameObject.SetActive(false);
-                }
+                keilaT = new GameObject("valonheittimet") { layer = kerros }.transform; keilaT.SetParent(transform, false);
+                var km = Keila("Valonheittimen keila", (float)ElavaTaivas.HeitinPituusM, 3f, 140f, new Color(0.92f, 0.95f, 1f, 0.22f));
+                keilat = new Transform[2];
+                for (int i = 0; i < 2; i++) keilat[i] = Olio("keila", keilaT, km, valoMat).transform;
+                keilaT.gameObject.SetActive(false);
             }
             koneT.gameObject.SetActive(false);
         }
@@ -411,7 +409,7 @@ namespace Matkakirja.Natiivi
         {
             if (taivas == null) return;
             float t = Time.time, yo = KaupunkiYovalot.Osuus;
-            taivas.Paivita(t, c.x, c.y, c.z, yo < 0.3f);
+            taivas.Paivita(t, c.x, c.y, c.z, yo < 0.3f, yo > 0.6f);
             bool parvi = taivas.Parvi != null;
             if (parviJuuri.gameObject.activeSelf != parvi) parviJuuri.gameObject.SetActive(parvi);
             if (parvi)
@@ -440,16 +438,23 @@ namespace Matkakirja.Natiivi
             }
             if (keilaT != null)
             {
-                bool palaa = yo > 0.3f;
+                var h = taivas.Valonheitin;
+                bool palaa = h != null;
                 if (keilaT.gameObject.activeSelf != palaa) keilaT.gameObject.SetActive(palaa);
                 if (palaa)
                 {
-                    double cl = System.Math.Cos(lat0 * System.Math.PI / 180);
-                    double x = (Eiffel.Lon - lon0) * 111320.0 * cl, z = (Eiffel.Lat - lat0) * 111132.0;
-                    if (double.IsNaN(eiffelMaa)) eiffelMaa = Maa(x, z);
-                    double maa = double.IsNaN(eiffelMaa) ? 35 : eiffelMaa;
-                    keilaT.localPosition = new Vector3((float)x, (float)(maa + Eiffel.Korkeus - 8), (float)z);
-                    keilaT.localRotation = Quaternion.Euler(0, (float)ElavaTaivas.MajakkaKulma(t), 0);
+                    if (h != heitinEd) { heitinEd = h; heitinMaa = Maa(h.X, h.Z); }
+                    keilaT.localPosition = new Vector3((float)h.X, (float)(double.IsNaN(heitinMaa) ? maaM : heitinMaa) + 2f, (float)h.Z);
+                    float voima = (float)taivas.HeitinVoima(t);
+                    for (int i = 0; i < keilat.Length; i++)
+                    {
+                        bool k = i < h.Maara && voima > 0.001f;
+                        if (keilat[i].gameObject.activeSelf != k) keilat[i].gameObject.SetActive(k);
+                        if (!k) continue;
+                        var (suunta, nousu) = taivas.Keila(i, t);
+                        keilat[i].localRotation = Quaternion.Euler(-(float)nousu, (float)suunta, 0);
+                        keilat[i].localScale = new Vector3(1f, 1f, voima);   // syttyy ja sammuu pituutena
+                    }
                 }
             }
         }
