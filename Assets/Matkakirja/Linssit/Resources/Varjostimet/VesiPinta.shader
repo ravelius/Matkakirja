@@ -97,10 +97,14 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 // rannan lähellä tiheimmin; solut 3 m poikki × 18 m pitkin katsesuuntaa, hidas värinä.
                 if (_IlmMaailma.z > 0.01)
                 {
+                    // Juovan pituus katseen loivuuden mukaan: ylhäältä katsottuna lyhyet pisteet, matalalta pitkät juovat (simu 9.10.:
+                    // pystyraidat ylhäältä). Solut satunnaisesti siirrettyinä, harvemmin, pehmeä poikkiprofiili.
                     float2 kd = normalize(kohti.xz + 1e-4), kp = float2(-kd.y, kd.x);
-                    float2 q = float2(dot(pm.xz, kp) / 3.0, dot(pm.xz, kd) / 18.0 + t * 0.15);
-                    float2 qi = floor(q); float h = frac(sin(dot(qi, float2(41.3, 289.1))) * 43758.5453);
-                    float juova = step(0.86, h) * (1.0 - abs(frac(q.x) - 0.5) * 2.0) * (0.6 + 0.4 * sin(t * 2.0 + h * 40.0));
+                    float pituus = lerp(3.0, 22.0, saturate(1.0 - abs(d.y) * 1.4));
+                    float2 q = float2(dot(pm.xz, kp) / 3.0, dot(pm.xz, kd) / pituus);
+                    float2 qi = floor(q); float h = frac(sin(dot(qi, float2(41.3, 289.1))) * 43758.5453), h2 = frac(h * 91.7);
+                    float2 f = frac(q) - 0.5 - (float2(h, h2) - 0.5) * 0.5;
+                    float juova = step(0.93, h) * exp(-f.x * f.x * 18.0) * exp(-f.y * f.y * 6.0) * (0.5 + 0.5 * sin(t * 2.0 + h * 40.0)) * (0.5 + h2);
                     float lahella = exp(-v.ranta / 45.0) * 0.8 + 0.2;
                     c += float3(1.0, 0.72, 0.42) * juova * lahella * _IlmMaailma.z * 0.55 * (1.0 - saturate(et * m / 3500.0));
                 }
@@ -143,11 +147,18 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float a01 = frac(sin(dot(i + float2(0, 1), float2(127.1, 311.7))) * 43758.5453), a11 = frac(sin(dot(i + float2(1, 1), float2(127.1, 311.7))) * 43758.5453);
                 float n = lerp(lerp(a00, a10, f.x), lerp(a01, a11, f.x), f.y);
                 float et = length(v.w - _WorldSpaceCameraPos) * m;
-                float alfa = _IlmSaa.z * 0.6 * (0.5 + 0.5 * n) * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
+                // Laikukas (simu 9.10.: tasainen kerros näytti sameelta vedeltä): kaksi oktaavia, peitto vain tiheimmissä kohdissa.
+                float2 pm2 = v.w.xz * m * 0.03 - _IlmTuuli.xy * 0.01; float2 i2 = floor(pm2), f2 = frac(pm2); f2 = f2 * f2 * (3.0 - 2.0 * f2);
+                float b00 = frac(sin(dot(i2, float2(127.1, 311.7))) * 43758.5453), b10 = frac(sin(dot(i2 + float2(1, 0), float2(127.1, 311.7))) * 43758.5453);
+                float b01 = frac(sin(dot(i2 + float2(0, 1), float2(127.1, 311.7))) * 43758.5453), b11 = frac(sin(dot(i2 + float2(1, 1), float2(127.1, 311.7))) * 43758.5453);
+                float n2 = lerp(lerp(b00, b10, f2.x), lerp(b01, b11, f2.x), f2.y);
+                float laikku = smoothstep(0.45, 0.85, n * 0.65 + n2 * 0.35);
+                float alfa = _IlmSaa.z * 0.75 * laikku * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
                 // Sumun väri (simu 9.10.: liian tumma tummalla vedellä): sumu sirottaa matalaa aurinkoa, joten valo tulee auringon
                 // puoleiselta taivaanrannalta ja suoraan auringosta (lämmin), vähän lakitaivaalta; sävytettynä kuten taivas.
                 float3 sh = normalize(float3(_IlmAurinko.x, 0.06, _IlmAurinko.z));
                 float3 c = IlmSavytys((IlmTaivas(sh) * 1.4 + IlmTaivas(float3(0, 1, 0)) * 0.6 + IlmLapaisy(_IlmParam.x, max(0.02, _IlmAurinko.y)) * 0.5) * _IlmParam.y);
+                c = lerp(c, float3(0.86, 0.87, 0.9) * saturate(0.4 + _IlmAurinko.y * 3.0), 0.45);   // sumu vaaleaa (ei ruskeaa)
                 return half4(MixFog((half3)c, v.sumu), alfa);
             }
             ENDHLSL
