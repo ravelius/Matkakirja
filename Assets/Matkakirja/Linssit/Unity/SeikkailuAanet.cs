@@ -141,6 +141,8 @@ namespace Matkakirja.Natiivi
             ["viitta"] = new[] { "kangas-05", "kangas-06", "kangas-08" }, ["varusteet"] = Sarja("varuste", 1, 6), ["hanska"] = Sarja("varuste", 13, 14),
             ["koysi-otto"] = Sarja("koysi", 7, 8), ["koysi-lasku"] = Sarja("koysi", 9, 10), ["koysi-kiinnitys"] = Sarja("koysi", 1, 6),
             ["uinti"] = new[] { "vesi-03", "vesi-04", "vesi-08" }, ["sukellus"] = Sarja("vesi", 5, 7),
+            // koira (aanet-lapi-v1) oli 25 s:n Freesound-esikuuntelu, jossa toisto kuuluu (Pelikoodari 9.10.) → Soundlyn kaukainen koira.
+            ["koira"] = Sarja("yo", 1, 2),
         };
         static string[] Sarja(string pohja, int a, int b) { var t = new string[b - a + 1]; for (int i = a; i <= b; i++) t[i - a] = $"{pohja}-{i:00}"; return t; }
 

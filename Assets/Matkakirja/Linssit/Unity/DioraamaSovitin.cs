@@ -628,7 +628,7 @@ namespace Matkakirja.Natiivi
         /// <summary>LAATUKORVAAJAT (Pelikoodari 9.10., aanet/laatu-korvaajat-v1, PT:n laatutarkistus): rakennus.json:n äänitiedosto →
         /// korjattu ääni median juuresta (keittiön ambienssissa oli englanninkielistä puhetta; uusi: tulisijan rätinä ja sanaton sorina).</summary>
         static string LaatuKorvaaja(string polku) =>
-            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/laatu-korvaajat-v1/keittio-ambienssi-02.mp3" : polku;
+            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/silmukat-korjaukset-v1/keittio-ambienssi-03.mp3" : polku;   // -03: alle 600 kt → PCM-sauma
 
         string AaniUrlSuora(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null

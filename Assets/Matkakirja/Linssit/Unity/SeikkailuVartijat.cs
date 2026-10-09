@@ -515,6 +515,8 @@ namespace Matkakirja.Natiivi
             bool liikkuu = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa && klippi != null;
             if (!liikkuu) { if (omatAskeleet.isPlaying) omatAskeleet.Stop(); return; }
             if (omatAskeleet.clip != klippi) { omatAskeleet.clip = klippi; omatAskeleet.Play(); }
+            // askel-porras-1 on −35,2 LUFS, muut askelsilmukat ≈ −32,5 (Pelikoodari 9.10.) → +2,5 dB.
+            if (klippi != null && klippi.name.Contains("askel-porras-1")) voima *= 1.33f;
             omatAskeleet.volume = voima * SeikkailuAanet.Taso("tehosteet", PelaajanAskeleet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
