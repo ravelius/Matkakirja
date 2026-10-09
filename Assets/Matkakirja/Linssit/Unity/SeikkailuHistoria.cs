@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
             kertoja.Stop(); kertoja.clip = k; kertoja.volume = DioraamaAanet.PuheTaso * SeikkailuAanet.Taso("puhe", KertojaId); kertoja.PlayDelayed((float)Historiajana.KertojaViiveS);
             kirjaa?.Invoke($"seikkailu: historia kertoja {i} ({k.length:F1} s)");
         }
-        readonly List<Renderer> piilotetut = new List<Renderer>(); readonly List<Light> sammutetut = new List<Light>();
+        readonly HashSet<Renderer> piilotetut = new HashSet<Renderer>(); readonly HashSet<Light> sammutetut = new HashSet<Light>();
         bool linnaPiilossa;
 
         /// <summary>Linna piiloon ennen kivilinnaa (tyhjä saari, puuvarustus): kaikki näyttämön renderöijät ja pistevalot paitsi ympäristö
@@ -104,15 +104,29 @@ namespace Matkakirja.Natiivi
             PiilotaLinna();
         }
 
-        /// <summary>Linnan renderöijät ja valot piiloon (ympäristö, vaihemallit ja vesi jäävät). Ajetaan myös 0,5 s välein linnan ollessa
-        /// piilossa: myöhemmin latautuvat kävelyosat, esineet ja liekit (lykätyt osat) jäivät näkyviin valopisteinä tyhjän saaren
-        /// ylle (arvio 2 9.10., t = 0–37).</summary>
+        /// <summary>Linnan renderöijät ja valot piiloon (ympäristö, vaihemallit ja vesi jäävät): kaikki dioraaman kerroksen renderöijät
+        /// koko näkymässä (myös seikkailun juuret näyttämön ulkopuolella). Ajetaan joka ruutu linnan ollessa piilossa (Update jälkeen):
+        /// lykätyt kävelyosat, SeikkailuEsineiden huonelataus ja kynttilät kytkivät renderöijiä takaisin, ja ne näkyivät valopisteinä
+        /// tyhjän saaren yllä (arvio 2 ja 3 9.10., t = 0–37).</summary>
         void PiilotaLinna()
         {
             var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
-            bool Jaa(Transform t) { for (; t != null && t != n.transform; t = t.parent) if (t.name.StartsWith("Ymparisto", StringComparison.Ordinal) || t.name.StartsWith("Vaihe:", StringComparison.Ordinal) || t.name == "Ulkokuori:vesi") return true; return false; }   // kieli: ei (tekninen)
-            foreach (var r in n.GetComponentsInChildren<Renderer>(false)) if (r.enabled && !Jaa(r.transform)) { r.enabled = false; piilotetut.Add(r); }
-            foreach (var l in n.GetComponentsInChildren<Light>(false)) if (l.enabled && l.type != LightType.Directional && !Jaa(l.transform)) { l.enabled = false; sammutetut.Add(l); }
+            // Piiloon: näyttämön lapset paitsi ympäristö, vaihemallit ja vesi; näyttämön ulkopuolelta vain seikkailun juuret ("Seikkailu …").
+            bool Piiloon(Transform t)
+            {
+                bool seikkailu = false;
+                for (; t != null; t = t.parent)
+                {
+                    if (t == n.transform) return true;
+                    if (t.name.StartsWith("Ymparisto", StringComparison.Ordinal) || t.name.StartsWith("Vaihe:", StringComparison.Ordinal) || t.name == "Ulkokuori:vesi") return false;   // kieli: ei (tekninen)
+                    if (t.name.StartsWith("Seikkailu", StringComparison.Ordinal) && t.name != "SeikkailuHistoria") seikkailu = true;   // kieli: ei (tekninen)
+                }
+                return seikkailu;
+            }
+            foreach (var r in FindObjectsByType<Renderer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                if (r.enabled && Piiloon(r.transform)) { r.enabled = false; piilotetut.Add(r); }
+            foreach (var l in FindObjectsByType<Light>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                if (l.enabled && l.type != LightType.Directional && Piiloon(l.transform)) { l.enabled = false; sammutetut.Add(l); }
         }
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
@@ -131,7 +145,7 @@ namespace Matkakirja.Natiivi
             // Vaihemallit valmiiksi ennen alkua (tyhjä saari näkyy heti, linna ei katoa tyhjään veteen); enintään 10 s.
             for (float odotus = 0; vaiheetKesken && odotus < 10f && !lopeta; odotus += Time.unscaledDeltaTime) yield return null;
             float alku = Time.unscaledTime;
-            int vaihe = -1; double seurLoki = 0; double seurPiilotus = 0;
+            int vaihe = -1; double seurLoki = 0;
             HistoriaVaihe nakyva = null;
             while (!lopeta)
             {
@@ -146,7 +160,7 @@ namespace Matkakirja.Natiivi
                 double vuosi = h.Vuosi(t);
                 if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
                 LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
-                if (linnaPiilossa && t >= seurPiilotus) { seurPiilotus = t + 0.5; PiilotaLinna(); }   // myöhään latautuneet osat ja liekit
+                if (linnaPiilossa) PiilotaLinna();   // joka ruutu: huonelataus ja kynttilät kytkevät renderöijiä takaisin (arvio 3)
                 List<KavelyLeikkaus> vl = null;
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)

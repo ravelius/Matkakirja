@@ -1092,7 +1092,7 @@
   },
   "muurikaytava": {
    "kolmiot": {
-    "nakyva": 794,
+    "nakyva": 800,
     "-tormays": 524,
     "-kavely": 198
    },
@@ -1134,8 +1134,23 @@
     "ote:kellotorni-8",
     "ote:kellotorni-9",
     "ote:kellotorni-10",
+    "ote:kellotorni-11",
+    "ote:kellotorni-12",
+    "ote:kellotorni-13",
+    "ote:kellotorni-14",
+    "ote:kellotorni-15",
+    "ote:kellotorni-16",
+    "ote:kellotorni-17",
+    "ote:kellotorni-18",
+    "ote:kellotorni-19",
+    "ote:kellotorni-20",
+    "ote:kellotorni-21",
+    "ote:kellotorni-22",
+    "ote:kellotorni-23",
+    "ote:kellotorni-24",
     "tuuli:puuska-1",
     "tuuli:puuska-2",
+    "tuuli:puuska-3",
     "komero:kellotorni",
     "tiili:komero-1",
     "tiili:komero-2",
@@ -1225,12 +1240,12 @@
      "nimi": "pako-kellobastioni-1",
      "keskipiste": [
       -54.907,
-      4.0,
+      0.25,
       -5.181
      ],
      "koko": [
       4.0,
-      8.0,
+      15.5,
       5.5
      ],
      "kierto_y": -4.7997,
@@ -1242,12 +1257,12 @@
      "nimi": "pako-kellobastioni-2",
      "keskipiste": [
       -60.635,
-      4.0,
+      0.25,
       -5.682
      ],
      "koko": [
       6.0,
-      8.0,
+      15.5,
       6.0
      ],
      "kierto_y": -4.7997,
@@ -1259,12 +1274,12 @@
      "nimi": "pako-kellobastioni-3",
      "keskipiste": [
       -68.854,
-      4.0,
+      0.25,
       -6.401
      ],
      "koko": [
       9.6,
-      8.0,
+      15.5,
       10.5
      ],
      "kierto_y": -4.7997,
@@ -1276,7 +1291,7 @@
    "varmuus": "V kerrokset, A porras",
    "rajat": {
     "min": [
-     -74.2,
+     -74.5,
      -7.76,
      -16.27
     ],
@@ -1321,7 +1336,7 @@
     "kavely": "muurikaytava-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 794,
+    "kolmiot_nakyva": 800,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
