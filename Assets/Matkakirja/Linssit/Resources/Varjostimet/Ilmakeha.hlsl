@@ -158,7 +158,9 @@ float3 IlmSininenHetki(float3 d)
     float2 dv = normalize(d.xz + 1e-5), av = normalize(_IlmAurinko.xz + 1e-5);
     float puoli = pow(saturate(dot(dv, av) * 0.5 + 0.5), 3.0);
     c += rusko * puoli * pow(1.0 - h, 6.0) * (1.0 - alla);
-    c = lerp(c, ranta * 0.6, alla);
+    // Horisontin alapuoli = loppuillan "maa" (PT 9.10.: Tukholmassa laattojen takana violetti tyhjä taso): tumma siniharmaa, jota
+    // kohti myös kaukaiset laatat ja reikätäyte liukuvat (sama suunta y = −0,2), joten laattojen reuna ei erotu.
+    c = lerp(c, float3(0.10, 0.09, 0.14), alla);
     return c * _IlmHamara.x * _IlmHamara.y;
 }
 

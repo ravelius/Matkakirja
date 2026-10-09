@@ -50,7 +50,7 @@ namespace Matkakirja.Natiivi
         SavuJaLiput savuData; ElavaSavuLiput savuLiput; int taso; double varaTuuliAst;
 
         VesiLiikenne liikenne;
-        sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe, Pituus; }
+        sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe, Pituus, VanaVoima, VanaNopeus; }
         readonly List<VeneOlio> veneet = new List<VeneOlio>();
         sealed class ParviOlio { public Parvi P; public VesiLiikenne.ParviPaikka Paikka; public GameObject Juuri; public Transform[] Lokit, Vasen, Oikea; public double Pinta = double.NaN; public float Haettu = -9f; }
         readonly List<ParviOlio> parvet = new List<ParviOlio>();
@@ -349,7 +349,10 @@ namespace Matkakirja.Natiivi
                 // LS2: vana omalla vesipinnalla (KaupunkiVesi.Vana); oma vanaverkko vain, kun omaa vettä ei ole.
                 bool omaVesi = KaupunkiVesi.Nakyvissa;
                 if (v.T.childCount > 0) { var vana = v.T.GetChild(0).gameObject; bool nk = liikkuu > 0 && !omaVesi; if (vana.activeSelf != nk) vana.SetActive(nk); }
-                if (omaVesi && liikkuu > 0) { var f = v.T.forward; KaupunkiVesi.Vana(veneet.IndexOf(v), v.T.position, new Vector2(f.x, f.z).normalized, (float)k.Nopeus, v.Pituus); }
+                // Omistaja TF 169: vana näkyy koko ajan eikä katkea suihkuina → tauolla häipyy 4 s:ssa, lähtiessä kasvaa 2 s:ssa.
+                v.VanaVoima = Mathf.MoveTowards(v.VanaVoima, liikkuu, Time.deltaTime / (liikkuu > 0 ? 2f : 4f));
+                if (liikkuu > 0) v.VanaNopeus = (float)k.Nopeus;
+                if (omaVesi && v.VanaVoima > 0.01f) { var f = v.T.forward; KaupunkiVesi.Vana(veneet.IndexOf(v), v.T.position, new Vector2(f.x, f.z).normalized, v.VanaNopeus * v.VanaVoima, v.Pituus); }
             }
             foreach (var p in parvet)
             {
