@@ -21,12 +21,12 @@ namespace Matkakirja.Natiivi
         public const string Juuri = KaupunkiAanimaisemaSoitin.Juuri + "pallo-aanimaisema-v1/";
         public static readonly string[] Juuret = { Juuri, KaupunkiAanimaisemaSoitin.Juuri + "pariisi-seine-v1/" };
         public const float OmaSilmukkaTaso = 0.45f;
-        /// <summary>Pallon tuuli (Pelikoodari 9.10. 16.0x, Soundly, aanet/pallo-tuuli-soundly-v1; korvaa Sonnissin tuuli-korkean 20 s:n
+        /// <summary>Pallon tuuli (Pelikoodari 9.10. 16.0x, Soundly, aanet/pallo-tuuli-soundly-v3 = v1 + ylipäästö 280 Hz 24 dB/okt, PT 9.10. junaan 174: 100–200 Hz −8 dB, ei peitä Williamin äänen pohjaa; korvaa Sonnissin tuuli-korkean 20 s:n
         /// silmukan): puhdas tasainen tuuli ilman lehtiä ja mikrofonijyrinää, kaksi 50 s:n jaksoa samasta äänitteestä (−23 LUFS kuten ennen,
         /// joten tasot ennallaan). Soitin vuorottelee ne ristihäivytyksellä (SilmukanPari: 01 → 02 → 01), joten toistojakso on 100 s.
         /// Korvaa kaupungin äänimaiseman tuulikerroksen kaikissa kaupungeissa (taso korkeuden mukaan ja ☰ Sää ennallaan).</summary>
-        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v1/tuuli-puhdas-01.mp3",
-            TuuliPariUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v1/tuuli-puhdas-02.mp3";
+        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v3/tuuli-puhdas-01.mp3",
+            TuuliPariUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v3/tuuli-puhdas-02.mp3";
         readonly Dictionary<string, AudioSource> omat = new Dictionary<string, AudioSource>();
         static PalloAanimaisema manifesti; static bool haettu;
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>();
