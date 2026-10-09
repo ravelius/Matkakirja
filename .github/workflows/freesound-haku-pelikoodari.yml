@@ -18,18 +18,12 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "r016-tupa|tavern ambience crowd laughter|20|300|by"
-          "r016-tupa|medieval inn crowd|20|300|by"
-          "r016-tupa|pub walla laughter|20|300|by"
-          "r016-tupa|great hall feast crowd|20|300|by"
-          "r080-kaksitaso|tiger moth|3|300|by"
-          "r080-kaksitaso|biplane engine|3|300|by"
-          "r080-kaksitaso|vintage propeller plane flyby|3|300|by"
-          "r080-kaksitaso|radial engine start idle|3|300|by"
-          "r075-hoyrylaiva|steamship engine|5|300|by"
-          "r075-hoyrylaiva|paddle steamer|5|300|by"
-          "r075-hoyrylaiva|steam engine room|5|300|by"
-          "r075-hoyrylaiva|steamboat whistle departure|3|120|by"
+          "r016-tupa|tavern|20|300|by"
+          "r016-tupa|medieval tavern|10|300|by"
+          "r016-tupa|pub crowd|20|300|by"
+          "r016-tupa|crowd laughter indoor|20|300|by"
+          "r016-tupa|inn ambience|20|300|by"
+          "r016-tupa|walla laughing|10|300|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
