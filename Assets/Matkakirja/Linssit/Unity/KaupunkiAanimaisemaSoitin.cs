@@ -125,6 +125,19 @@ namespace Matkakirja.Natiivi
             m.Rekisteroi("pallo", "maisema", RaitiovaunuOhiId, "Raitiovaunu ohi (Pariisi)");
         }
         static float Kerroin(string ryhma, string id) => Aanimikseri.Yhteinen.Kerroin(ryhma, id);
+
+        // YÖN KAUPUNKIHUMINA (Linssiseppä 9.10., PT junaan 172; Pelikoodarin pallo-elava-v2 yo-humina, ElavaAaniPankki): oma silmukka
+        // kehityskaupungeissa yön osuuden mukaan (KaupunkiYovalot.Osuus: sininen hetki → yö, PalloElavaAanet.YoHuminaTaso), matalalla
+        // tasolla; kokonais sisältää maiseman Tason (0,55) ja väistön, kerroin mikseristä Kerroin("maisema", kaupunki.yo-humina).
+        ElavaSilmukka yoHumina;
+        void YonHumina(float kokonais, bool soi)
+        {
+            if (!soi && yoHumina == null) return;
+            ElavaAaniPankki.Kaynnista();
+            yoHumina ??= new ElavaSilmukka(transform, PalloElavaAanet.YoHumina, false);
+            float t = soi ? kokonais * (float)PalloElavaAanet.YoHuminaTaso(KaupunkiYovalot.Osuus) * ElavaAaniPankki.Kerroin(PalloElavaAanet.YoHumina) : 0f;
+            yoHumina.Paivita(t, Time.unscaledDeltaTime, (float)PalloElavaAanet.SilmukkaHaivytysS);
+        }
         static AudioClip Nimea(AudioClip c, string id) { if (c != null) c.name = id; return c; }
         readonly AudioSource[] lahteet = new AudioSource[KaupunkiAanimaisema.Kerrokset.Length];
         readonly float[] hiljaaAlkaen = new float[KaupunkiAanimaisema.Kerrokset.Length];
@@ -281,6 +294,7 @@ namespace Matkakirja.Natiivi
             suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais) * Kerroin("saa", SuhinaId);   // TF 169: nopeuden suhina tuulen kanssa Sää-ryhmään
             if (suhinaLahde != null) suhinaLahde.volume = suhina.Taso > 0.0005f ? 1f : 0f;   // opas aanet näkee hiljaisen suhinan hiljaisena
             float kelloK = Kerroin("maisema", KelloId);
+            YonHumina(kokonais, paalla && k.HasValue && lahi);
             Kerta(tunti, korkeus, paalla && k.HasValue && !eiPaikkaa);
             for (int ki = kellot.Count - 1; ki >= 0; ki--)
             {

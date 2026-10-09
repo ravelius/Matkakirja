@@ -13,9 +13,13 @@
 // (© OpenStreetMap contributors, ODbL) Lähteet-näkymään. Kytkin: asetukset.json "elava.Paalla" (oletus 1), komento `opas elava 0|1`.
 // SAVU JA LIPUT (B8, juna 171; ElavaSavuLiput + Ydin SavuJaLiput): savu lähimmistä savuavista piipuista ja liput lähimmistä tangoista
 // (10 / 30 / 80 muistin mukaan), tuuli LIVE-säästä tai muiden pallojen varatuulesta; kytkimet `opas savu|liput 0|1`, tila Tila().
+// ELÄVÄT ÄÄNET v2 (juna 172; Pelikoodarin aanet/pallo-elava-v2, ElavaAaniPankki): ohiajot lähimmistä autoista ja raitiovaunuista
+// (Ydin Ohiajot), muiden pallojen poltin (Ydin PoltinAanet), ihmiset, pyörän kellot ja laivan torvet OSM-paikoissa (Ydin IhmisAanet)
+// 3D-lähdepoolista (ElavaAaniPooli, 6 lähdettä) ja lipun lepatus lähimmässä lipussa (ElavaSilmukka, 3D). Puuttuva manifesti = ennallaan.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
+using Matkakirja.Linssit.Aanet;
 using Matkakirja.Linssit.Elava;
 using Matkakirja.Linssit.Kierros;
 using Unity.Mathematics;
@@ -106,6 +110,12 @@ namespace Matkakirja.Natiivi
             e2.maaM = (float)gr.height;
             int siemen = Mathf.Abs((int)(lat * 1000) * 31 + (int)(lon * 1000));
             e2.pallot = new MuutPallot(new[] { 2, 4, 6 }[taso], PallotSadeM, siemen % 360, 3.0, siemen);
+            e2.ohiajot = new Ohiajot(siemen); e2.poltinAanet = new PoltinAanet(siemen + 1);
+            if (kj != null)
+            {
+                try { e2.ihmiset = IhmisAanet.Lue(kj, siemen + 2); }
+                catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: ihmisäänten paikat virheelliset ({e.Message})"); }
+            }
             e2.taso = taso; e2.varaTuuliAst = siemen % 360;   // savu ja liput samaan suuntaan kuin muut pallot, kun LIVE-säätä ei ole
             if (kj != null && (kj.Contains("\"piiput\"") || kj.Contains("\"liput\"")))
             {
@@ -330,6 +340,7 @@ namespace Matkakirja.Natiivi
                     palloT[j].localRotation = Quaternion.Euler(0.8f * Mathf.Sin(t * 0.5f + j), (float)pallot.Kierto[j], 0.8f * Mathf.Sin(t * 0.4f + 2 * j));
                 }
             }
+            PaivitaElavatAanet(c, dt);
             if (liikenne == null) return;
             liikenne.Liike.Paivita(dt);
             // Linssiseppä 2:n oma vesipinta (sama origo kuin paketilla) nostaa veden NostoM:llä; muuten Googlen vesi.
@@ -581,6 +592,76 @@ namespace Matkakirja.Natiivi
                 seuraavaKone = tu + UnityEngine.Random.Range(240f, 420f);
                 taivas?.AloitaKone(Time.time, c.x, c.z);
                 if (paalla && koneKlippi != null && koneK > 0.001f) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false) * koneK);
+            }
+        }
+
+        // ---- ELÄVÄT ÄÄNET v2 (Linssiseppä 9.10., PT junaan 172; Ydin PalloElavaAanet, Ohiajot, PoltinAanet, IhmisAanet): kerta-äänet
+        // 3D-poolista äänen paikkaan (ajoneuvo, pallo, OSM-paikka) ja lipun lepatus silmukkana lähimmässä lipussa. Kaikki Äänimaisema-
+        // kytkimellä, kertojan alla väistäen ja mikserin Kerroin(ryhmä, tunnus):lla (ElavaAaniPooli / ElavaAaniPankki.Kerroin). ----
+        Ohiajot ohiajot; PoltinAanet poltinAanet; IhmisAanet ihmiset; ElavaAaniPooli pooli; ElavaSilmukka lippuSilmukka;
+        int ohiKahva; Vector3 edKamera; bool edKameraOn; double kameraKorkeus = double.NaN; float korkeusHaettu = -9f;
+        public const int RaitioAvain = 100000;
+
+        void PaivitaElavatAanet(Vector3 c, float dt)
+        {
+            ElavaAaniPankki.Kaynnista();
+            bool paalla = Matkakirja.Natiivi.Asetukset.Paalla(Matkakirja.Natiivi.Kytkin.Aanimaisema) && OpasSovitin.Auki, vaisto = OpasSovitin.OpasAaniSoi;
+            pooli ??= new ElavaAaniPooli(transform);
+            pooli.Paivita(paalla, vaisto);
+            // Kameran nopeus paketin ENU:ssa (suhteellinen liike ohiajoille); hyppy (siirtymä, origo) ei ole nopeutta.
+            Vector3 kv = edKameraOn && dt > 1e-4f ? (c - edKamera) / dt : Vector3.zero;
+            if (kv.sqrMagnitude > 150f * 150f) kv = Vector3.zero;
+            edKamera = c; edKameraOn = true;
+            double nyt = Time.timeAsDouble;
+            if (katu != null && ohiajot != null)
+            {
+                ohiajot.Aloita(nyt);
+                OhiEhdokkaat(katu.Autot, autoT, false, c, kv, 0);
+                OhiEhdokkaat(katu.Raitiot, raitioT, true, c, kv, RaitioAvain);
+                var o = ohiajot.Valitse(pooli.Soi(ohiKahva));
+                if (o != null && paalla)
+                {
+                    var tt = o.Avain >= RaitioAvain ? raitioT[o.Avain - RaitioAvain] : autoT[o.Avain];
+                    ohiKahva = pooli.Soita(o.Tunnus, (float)o.Taso, 1f, tt.localPosition, tt, vaisto);
+                }
+            }
+            if (pallot != null && poltinAanet != null)
+            {
+                var p = poltinAanet.Paivita(nyt, pallot, c.x, c.y, c.z, maaM, PalloLahinM);
+                if (p != null && paalla) pooli.Soita(p.Tunnus, (float)p.Taso, 1f, palloT[p.Pallo].localPosition, palloT[p.Pallo], vaisto);
+            }
+            if (ihmiset != null)
+            {
+                // Kameran korkeus omasta maasta (puolen sekunnin välein; NaN, kunnes korkeusmalli on muistissa → ei ihmisääniä).
+                if (Time.unscaledTime - korkeusHaettu > 0.5f) { korkeusHaettu = Time.unscaledTime; double m = Maa(c.x, c.z); kameraKorkeus = double.IsNaN(m) ? double.NaN : c.y - m; }
+                var t = ihmiset.Paivita(nyt, c.x, c.z, kameraKorkeus);
+                if (t != null && paalla)
+                {
+                    double m = Maa(t.X, t.Z);
+                    if (!double.IsNaN(m)) pooli.Soita(t.Tunnus, (float)t.Taso, (float)t.Savel, new Vector3((float)t.X, (float)m + 1.5f, (float)t.Z), null, vaisto);
+                }
+            }
+            lippuSilmukka ??= new ElavaSilmukka(transform, PalloElavaAanet.LippuLepatus, true);
+            float lt = 0f; Vector3 lp = default;
+            if (paalla && savuLiput != null)
+            {
+                float d = savuLiput.LahinLippu(c, out lp);
+                lt = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(PalloElavaAanet.LipunTaso(d, savuLiput.Tuuli.Ms), vaisto) * ElavaAaniPankki.Kerroin(PalloElavaAanet.LippuLepatus);
+            }
+            lippuSilmukka.Paivita(lt, Time.unscaledDeltaTime, (float)PalloElavaAanet.SilmukkaHaivytysS, lt > 0f ? lp : (Vector3?)null);
+        }
+
+        void OhiEhdokkaat(ReittiLiike l, List<Transform> tt, bool raitio, Vector3 c, Vector3 kv, int avain)
+        {
+            const float Raja = (float)Ohiajot.KuuluuM + 40f;
+            for (int i = 0; i < tt.Count && i < l.Kulkijat.Count; i++)
+            {
+                if (!tt[i].gameObject.activeSelf) continue;
+                Vector3 r = tt[i].localPosition - c;
+                if (r.x * r.x + r.z * r.z > Raja * Raja) continue;
+                var k = l.Kulkijat[i];
+                float h = (float)k.Suuntima * Mathf.Deg2Rad, n = k.Tauko > 0 ? 0f : (float)k.Nopeus;
+                ohiajot.Ehdokas(avain + i, raitio, r.x, r.y, r.z, n * Mathf.Sin(h) - kv.x, -kv.y, n * Mathf.Cos(h) - kv.z);
             }
         }
 
