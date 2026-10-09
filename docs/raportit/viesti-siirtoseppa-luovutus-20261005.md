@@ -35,6 +35,14 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 9.10. 06.5x — JUNA 173 kärki 5d8e362f7 (PT kuittasi EHDOLLA), Natiiviseppä tietää
+
+- Juna 173: v45z 35b6b52e5705792c (restaurointi + krediitit), historian jako 1872–1878 / 1961–1976 / nykylinna, solmuvuodet kalenterivuosina,
+  puuttuvien äänten esikytkentä (repliikit-lapi-v1 16, aanet-lapi-v2 5, kertoja 9 = workerin /opas/aani/<sha>.mp3; shat 9/9 = Pelikoodarin lista).
+- PT:N EHTO ennen 173:n lukitusta: äänipaketit 200 ämpärissä (2 manifestia + 9 kertojaa). Tarkistus: HEAD media.matkakirja.app/seikkailu/olavinlinna/
+  {repliikit-lapi-v1,aanet-lapi-v2}/manifest.json?t=<aika> ja GET Range 0-0 workerin /opas/aani/<sha>.mp3 (HEAD = 405). 06.5x: 0/11.
+  Jos puuttuu → rivi PT:lle ennen lukitusta (PT päättää, otetaanko bed0c2d97 ilman esikytkentää; CDN tallentaa 404:n "?v=1"-osoitteelle).
+
 ## TILA 9.10. 06.1x — JUNA 172 kärki 18227438d (PT kuittasi), JUNA 173 valmistelu 0a4c4c34c (siirtoseppa/juna173, wt kello)
 
 - Juna 172 lisäksi: askel-puu (8299456a9), lokalisointi NUI:n muotoon (48f43330f: yksi lataaja Natiivi.Kieli, Resources/Tekstit/*.fi.json,
