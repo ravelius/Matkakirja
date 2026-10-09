@@ -243,6 +243,8 @@ namespace Matkakirja.Editori
                     break;
                 }
                 case Vaihe.Taulu:
+                    // Taulu elää astronautin linssin ajan (PulunTauluNakyma.LinssiVaihtui): linssi "auki" taululle testin ajaksi.
+                    UiNakymat.Hae().Linssit.Astronautti.Taulu.LinssiVaihtui(true);
                     UiNakymat.Hae().Linssit.Astronautti.Taulu.Testaa("auki", "");
                     Siirry(Vaihe.OdotaTaulu);
                     break;
@@ -253,6 +255,7 @@ namespace Matkakirja.Editori
                     if (!taulu.Auki) Virhe("ISS-taulu: ei aukea (" + taulu.Tila() + ")");
                     else TarkistaPaneeli(taulu.TestiPaneeli, LinssiUi.Ylakerros, "ISS-taulu");
                     taulu.Testaa("kiinni", "");
+                    taulu.LinssiVaihtui(false);
                     Siirry(Vaihe.Linna);
                     break;
                 }
