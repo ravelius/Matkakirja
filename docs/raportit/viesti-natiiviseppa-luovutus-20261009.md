@@ -3,6 +3,15 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 19.0x — runko 69756d35a
+
+- + LS1 64f94e591 (Vasa, korvaa c3dee6f41:n) + Siirtoseppä historia ae435c1b7 (⊇ 4792cf9e4; 1c51f8aeb katse kasvoilla + v46j
+  52825516ed687fd3, manifest 200). Kuittauksen ae435c1b7:lle ilmoitti Siirtoseppä, ja commitissa lukee "PT kuittasi". PT:n oma
+  rivi puuttuu, joten jos kuittausta ei ole, palautetaan runkoon 887b42e92.
+- Testit: Linssit 1248, Peli 442, Kartta 453, unity 0, tarkista 0, .metat ok.
+- ODOTTAA PT:tä: NUI yo-otsikko ebcb70046 (1 USS-rivi). Siirtosepältä mahdollisesti voudin 3/4-otoksen kamerakorjaus.
+- Data: uusin-3 → v6h ~19.05 (Julkaisija; omistaja hyväksyi KL + Riddarholmen).
+
 ## TILA 9.10. 18.5x — runko e0fc13d4a
 
 - + LS2 vesi-v5 f7d6156d2 (index-v5 200) ja varjot-173 9acc8d4a7 (oletus pois; PT: oletus päälle vasta iPad Pro 13 -mittauksen
