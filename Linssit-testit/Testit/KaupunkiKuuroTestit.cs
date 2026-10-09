@@ -110,6 +110,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Contains("_metallicRoughnessFactor.x * mr.b") && v.Contains("_metallicRoughnessFactor.y * mr.g"), "metalli B, karheus G (glTF)");
             Oleta.Tosi(v.Contains("Kartoitettu(n0, v.w, v.uvNM.xy") && v.Contains("ddx(w)"), "kotangenttikehys derivaatoista");
             Oleta.Tosi(v.Contains("\"white\" {}") && v.Contains("_metallicRoughnessFactor (\"Metalli, karheus\", Vector) = (0, 1, 0, 0)"), "oletus: ei metallia, karhea (vanhat mallit ennallaan)");
+            // PT 9.10.: ND kauempaa harmaa → valo kaupungin auringosta (_IlmAurinko), ei kameraa seuraavasta kartan päävalosta.
+            Oleta.Tosi(v.Contains("valo.direction = kaupunki ? normalize(_IlmAurinko.xyz) : valo.direction;"), "kaupungin aurinko");
         }
 
         [Testi] static void SadepilvetJaSalama()
