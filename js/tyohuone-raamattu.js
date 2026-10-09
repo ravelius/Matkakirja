@@ -2053,8 +2053,10 @@ export const RAAMATTU = {
           + '#SATELLIITTILINSSIN AINEISTO: ASTRONAUTTIEN MAA-KUVAT, '
           + '#SATELLIITTILINSSIN HAVAINTO: KUVA KOKO RUUTUUN, TIETO INFO-NAPIN '
           + 'TAAKSE.',
-        'ÄÄNET JA MUSIIKKI (3.–14.9.2026): musiikkimoottori on Google Lyria 3.5, '
-          + 'ElevenLabs Music jää vain vertailuun (5.9.); pelin jokaiselle '
+        'ÄÄNET JA MUSIIKKI (3.–14.9.2026, tarkennus 9.10.2026): musiikkimoottori on Google Lyria 3.5; '
+          + 'ElevenLabs Musicia ei käytetä musiikkiin lainkaan (omistaja 9.10.2026), ja vaihtoehdoiksi '
+          + 'voidaan etsiä oikeita, ihmisen säveltämiä vapaita kappaleita (CC0/CC BY, ei NC/ND) — '
+          + 'Olavinlinnan loppumusiikki The Bard\'s Tale (RandomMind, CC0) pysyy; pelin jokaiselle '
           + 'kohtaukselle oma Lyria-raita (saapumiset kaupungeittain, linssit, lehti, '
           + 'laukku, kohtaaminen, välinäytös, loppu), luennat lyhyitä (5.9.). '
           + 'Taustamusiikin perustaso selvästi kertojan ja pulun alle; hammasrattaan '
