@@ -120,7 +120,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 float3 pu = Paikka(uv + float2(0, px.y)), pd = Paikka(uv - float2(0, px.y));
                 float3 dx = length(pr - p) < length(p - pl) ? pr - p : p - pl;
                 float3 dy = length(pu - p) < length(p - pd) ? pu - p : p - pd;
-                float3 n = normalize(cross(dy, dx));
+                float3 nr = cross(dy, dx);   // rappeutunut (naapurit samassa pisteessä) → ylös, ei NaN:ia (9.10. simu: yö mustana)
+                float3 n = dot(nr, nr) > 1e-12 ? nr * rsqrt(dot(nr, nr)) : float3(0.0, 1.0, 0.0);
                 if (n.y < 0.0) n = -n;                                   // ylöspäin (kamera on yleensä yläpuolella)
                 float jalanjalki = max(length(dx), length(dy));          // pikselin koko pinnalla (m)
                 // Tasaisuus (v3, simu 22.2x: puiden latvoihin syttyi ikkunoita, nurmelle katuvaloja): seinä ja katu ovat tasaisia
@@ -258,6 +259,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float3 julkisivu = float3(1.0, 0.82, 0.55);
                     tulos = tulos * (1.0 + _MaamerkkiParam.y * w * _ValoParam.x * julkisivu) + julkisivu * 0.02 * w * _ValoParam.x;
                 }
+                if (any(isnan(tulos)) || any(isinf(tulos))) tulos = c.rgb;   // varmistus: virheellinen pikseli ei musta ruutua
                 return half4((half3)tulos, c.a);
             }
             ENDHLSL
