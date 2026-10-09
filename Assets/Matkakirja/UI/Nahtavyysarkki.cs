@@ -149,8 +149,13 @@ namespace Matkakirja.Natiivi
             bool puhelin = w < 700f;
             float leveys = opas && w >= 760f ? Mathf.Min(w * 0.84f, 840f)
                 : puhelin ? Mathf.Min(w * 0.9f, 640f) : Mathf.Min(w * 0.92f, 860f);
+            // Sivujen turva-alue (asettelutesti 9.10.2026 23.40, iPhone vaaka): arkki turva-alueen levyiseksi enintään ja keskelle
+            // sitä; iPadilla ja pystyssä reunat ovat 0, joten muutosta ei ole.
+            leveys = Mathf.Min(leveys, w - r.x - r.z);
             arkki.style.width = leveys;
             arkkiLeveys = leveys;
+            peite.style.paddingLeft = r.x;
+            peite.style.paddingRight = r.z;
             peite.style.paddingTop = r.y + 22f;
             peite.style.paddingBottom = r.w + (puhelin ? 10f : 22f);
             peite.style.justifyContent = puhelin ? Justify.FlexEnd : Justify.Center;
