@@ -9,12 +9,12 @@
   },
   "sourceReadInFull": true,
   "backingReportReadInFull": true,
-  "generationCalls": 20,
+  "generationCalls": 22,
   "generationLimit": 22,
   "requestedUniqueSurfaces": 22,
   "requestedFinalPNGs": 23,
-  "imageCount": 17,
-  "partialDelivery": true,
+  "imageCount": 21,
+  "partialDelivery": false,
   "sourceImagePixelsUsed": false,
   "assets": [
     {
@@ -1079,6 +1079,137 @@
       "published": false,
       "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/ovi-tammi-heloin.png",
       "bytes": 3807003,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "helat-decal",
+      "number": "9",
+      "file": "helat-decal.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/helat-decal/helat-decal.png",
+      "sha256": "436f69c7e0a5971000986dfa56ff9c2b464eae86346c66d8d2f7856fcb88c01a",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f45-adfb-70b2-af17-d7629facf9a1/exec-7710f503-0bb4-4e6e-bf9b-f9b76d66e328.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/helat-decal/original-generation.png",
+      "originalSha256": "836a88cbce26f5ac24653a860edca7254fdff481fd13e8c321ddbdaea443b079",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "nativeGeneratedMode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene. Asset type: square transparent RGBA texture atlas for a historical game, isolated original hardware decals, NOT an assembled door.\nCreate a new original photorealistic straight-on flat surface photograph of late-15th-century worn black wrought-iron hardware. Actual fully transparent background, all isolated silhouettes with clean antialiased alpha and generous transparent gaps. Exactly TWO separate long flat medieval strap hinges, ONE separate small rectangular lock escutcheon with a simple keyhole, and ONE horizontal row of EIGHT separate square-headed hand-forged iron nail heads. Nothing else. Arrange the two horizontal hinges in two distinct upper rows, the one lock plate below them, and the nail-head row along the bottom. Hinges are dark irregular hand-forged straps with restrained tapered ends, worn black iron, shallow peening marks, slight rusty brown patina, flat to camera, no perspective. Each hinge is a complete separate single piece. Lock plate is a complete single flat plate. Nails are frontal heads only, no nail shanks. Surface detail remains realistic and softly worn.\nUniform neutral diffuse lighting across every component, no cast shadows, no directional highlights, no vignette, no rendered checkerboard or solid background. Orthographic front view. Square canvas. No wood, no wall, no frame, no third hinge, no second lock plate, no tools, no text, no letters, no numbers, no logo, no watermark, no human, no face. The whole atlas must be generated directly with true transparent alpha, not a photograph on black/white.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 9",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Olavinlinnan ovien ja arkkujen kuluneita takorautaheloja vuoden 1499 asun havainnollistamiseen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaStatistics": {
+        "extrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 733917,
+        "opaquePixels": 2450,
+        "partialAlphaPixels": 312209,
+        "nativeAlphaExtrema": [
+          0,
+          255
+        ],
+        "nativePartialAlphaPixels": 470868,
+        "generatedAlphaPreserved": true,
+        "handExtracted": false,
+        "maskPainted": false,
+        "chromaKeyed": false
+      },
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null,
+          "generatedAlphaPreserved": true
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "mode": "RGBA"
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "alphaLightDarkViewed": true,
+        "alphaLightDarkPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/helat-decal/qa-alpha-light-dark.png",
+        "tile2x2Viewed": null,
+        "tile2x2Path": null,
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "modeVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-visual-and-file-QA-complete-root-review-pending",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "originalByteExactVerified": true,
+        "findings": [
+          "Two distinct hinges, one keyhole plate, one row of eight separate nail heads.",
+          "True generated alpha retained; clean light/dark composites, no hand-painted extraction."
+        ],
+        "seamGeometryAccepted": null
+      },
+      "outputProduced": true,
+      "productionComplete": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "436f69c7e0a5971000986dfa56ff9c2b464eae86346c66d8d2f7856fcb88c01a",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/tiilaus-lasitetut-laatat.jpg",
+          "production/helat-decal/qa-alpha-light-dark.png",
+          "production/tyrma-raapustukset/qa-alpha-light-dark.png"
+        ],
+        "visualNotes": "Correct atlas parts and generated transparency; faceless generic painted saint in frontal cabinet, slight door angle/contact shade disclosed. Chalk scratch decal soft alpha edges. Checker4x4 even period repeats. Historical green/yellow glaze remains editorial interpretation."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/helat-decal.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/helat-decal.png",
+      "bytes": 783866,
       "http": 200,
       "mime": "image/png",
       "cors": "https://matkakirja.app",
@@ -2199,6 +2330,390 @@
       "byteExactReadback": true
     },
     {
+      "id": "alttarikaappi",
+      "number": "14",
+      "file": "alttarikaappi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/alttarikaappi/alttarikaappi.png",
+      "sha256": "83c540eb84a66cf2c28ff5cdc85ef7397280c93e6a79831a16b1aeffc7e4d03a",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f45-adfb-70b2-af17-d7629facf9a1/exec-932c11a0-c0ec-473c-9929-1fba2fead1b7.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/alttarikaappi/original-generation.png",
+      "originalSha256": "9e7e7347a38cf0e2613742b7b5998efd47a8d6ec469d9b318d23ec11632e92f4",
+      "nativeGeneratedSize": [
+        887,
+        1774
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        1024,
+        2048
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene. Asset type: tall opaque RGB frontal surface photograph for a medieval chapel altar cabinet texture, requested aspect ratio 1:2.\nNew original photorealistic evenly lit flat frontal photograph of ONE small complete wooden medieval altar cabinet, open, seen exactly straight-on without perspective. The entire rectangular cabinet including its wooden outer border and two open side panels fits tightly inside a tall 1:2 frame. Cabinet is shallow, restrained late-15th-century northern German workmanship, naturally worn brown timber with visible wood grain, modest simple wood framing. Its central panel contains a NEW original medieval tempera painting on BRIGHT warm gold leaf ground: a single elongated simplified FACELESS saint figure wearing a long subdued red robe and reddish mantle, flat medieval painted drapery. The head is a smooth flat featureless oval under a simple painted halo; absolutely NO eyes, nose, mouth, ears, skin portrait, realistic face, expression or identifiable person. The painted figure is visibly pigment on a wood panel, never a real person, statue or sculpture. The gold remains visibly gold leaf with natural wear and fine age cracks. No inscription or letters. Open side panels are plain aged timber without extra figures. The painted subject is generic invented historical iconography and is not a copy of any actual museum artwork or named artist.\nPhotographic real material texture, muted red and worn brown wood, fine paint craquelure. Uniform diffuse neutral illumination, no shadows from doors, no dramatic shadows, no spotlights, no cinematic effect, no HDR, no vignette. Flat perpendicular camera, parallel straight edges, cabinet surface fills the tall image; tiny neutral unobtrusive opaque background only if needed beyond its complete outline. No chapel room, no altar table, no candles, no surrounding objects, no modern material, no text, no logo, no watermark. Keep complete cabinet, do not crop its top or bottom.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 14",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Pienen puisen alttarikaapin uusi kasvoton pyhimysmaalaus kultapohjalla, 1400-luvun pohjoissaksalaisen kuvakielen tulkinta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "alphaStatistics": null,
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            887,
+            1774
+          ],
+          "to": [
+            1024,
+            2048
+          ],
+          "crop": null,
+          "generatedAlphaPreserved": false
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "mode": "RGB"
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "alphaLightDarkViewed": null,
+        "alphaLightDarkPath": null,
+        "tile2x2Viewed": null,
+        "tile2x2Path": null,
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "modeVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-visual-and-file-QA-complete-root-review-pending",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "originalByteExactVerified": true,
+        "findings": [
+          "Whole open cabinet fits the frame; original gold-ground elongated red-robed painted saint has a blank featureless oval face.",
+          "Mild cabinet depth, open-wing angle and pedestal contact shadow remain from generation; no corrective repaint or regeneration."
+        ],
+        "seamGeometryAccepted": null
+      },
+      "outputProduced": true,
+      "productionComplete": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "83c540eb84a66cf2c28ff5cdc85ef7397280c93e6a79831a16b1aeffc7e4d03a",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/tiilaus-lasitetut-laatat.jpg",
+          "production/helat-decal/qa-alpha-light-dark.png",
+          "production/tyrma-raapustukset/qa-alpha-light-dark.png"
+        ],
+        "visualNotes": "Correct atlas parts and generated transparency; faceless generic painted saint in frontal cabinet, slight door angle/contact shade disclosed. Chalk scratch decal soft alpha edges. Checker4x4 even period repeats. Historical green/yellow glaze remains editorial interpretation."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/alttarikaappi.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/alttarikaappi.png",
+      "bytes": 3342762,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "tyrma-raapustukset",
+      "number": "15",
+      "file": "tyrma-raapustukset.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tyrma-raapustukset/tyrma-raapustukset.png",
+      "sha256": "d079ccb6a646fdef0ba2879a8b1423b7c10adc6056effbe6f7144958e274cfe5",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f45-adfb-70b2-af17-d7629facf9a1/exec-f16ac35c-58aa-4bd0-8a7d-15c87afefc26.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tyrma-raapustukset/original-generation.png",
+      "originalSha256": "920d1f7afac5f5a91cfb9dbb4617cfc72942869fe8de3b1ab58bd6ecacc34648",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "nativeGeneratedMode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene. Asset type: square RGBA original plaster graffiti DECAL with true soft transparent outer edges for a late-15th-century prison wall.\nCreate a new photorealistic perpendicular close-up surface photograph of ONE small irregular patch of old pale gray-beige lime plaster, carrying shallow scratched prisoner tally marks. Real lime-plaster grain, minor worn pits and age abrasions. The middle of the patch is opaque plaster, and its uneven outer margin softly disintegrates into TRUE transparency: fine fading plaster crumbs and gradual physically natural alpha at its irregular unpainted edge. Generous fully transparent outer border all around, no square opaque backdrop, no hard cutout halo, no painted border, no canvas behind. Directly generate the actual transparent alpha; this decal patch floats on genuine transparency.\nIn the opaque center are several clear tally bundles: FOUR close vertical knife scratches crossed by ONE diagonal stroke per bundle (five-stroke tally marks), with a few small simple scratched crosses and an abstract scratched triangle/diamond. These are incised rough line marks in the plaster, not ink, paint or text. No characters from any alphabet, no words, no digits, no Roman numerals. Tally bundles must be asymmetrical, naturally spaced, lightly worn and slightly uneven rather than typographic symbols. Nothing beyond plaster and shallow scratched marks.\nFlat front-facing camera, original authentic material surface, very even diffuse lighting with no directional cast shadow, no vignette or strong highlights. No cell room, no perspective, no stone wall outside decal, no bars, no people, no face, no logo, no watermark, no decorative frame. Square RGBA texture photograph with genuine soft transparent outer edge.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 15",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Tyrmän kalkkirappauslaastarin kaiverrettuja päivälaskuviivoja, ristejä ja geometrisia raapustuksia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaStatistics": {
+        "extrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 398697,
+        "opaquePixels": 12,
+        "partialAlphaPixels": 649867,
+        "nativeAlphaExtrema": [
+          0,
+          255
+        ],
+        "nativePartialAlphaPixels": 974512,
+        "generatedAlphaPreserved": true,
+        "handExtracted": false,
+        "maskPainted": false,
+        "chromaKeyed": false
+      },
+      "seamAxes": [],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null,
+          "generatedAlphaPreserved": true
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "mode": "RGBA"
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "alphaLightDarkViewed": true,
+        "alphaLightDarkPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/tyrma-raapustukset/qa-alpha-light-dark.png",
+        "tile2x2Viewed": null,
+        "tile2x2Path": null,
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "modeVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-visual-and-file-QA-complete-root-review-pending",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "originalByteExactVerified": true,
+        "findings": [
+          "Four tally bundles with four vertical cuts plus diagonal fifth cut, crosses and abstract diamond. No letters.",
+          "Irregular unpainted plaster margin softly fades into generated transparency; light/dark composite checked."
+        ],
+        "seamGeometryAccepted": null
+      },
+      "outputProduced": true,
+      "productionComplete": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "d079ccb6a646fdef0ba2879a8b1423b7c10adc6056effbe6f7144958e274cfe5",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/tiilaus-lasitetut-laatat.jpg",
+          "production/helat-decal/qa-alpha-light-dark.png",
+          "production/tyrma-raapustukset/qa-alpha-light-dark.png"
+        ],
+        "visualNotes": "Correct atlas parts and generated transparency; faceless generic painted saint in frontal cabinet, slight door angle/contact shade disclosed. Chalk scratch decal soft alpha edges. Checker4x4 even period repeats. Historical green/yellow glaze remains editorial interpretation."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tyrma-raapustukset.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tyrma-raapustukset.png",
+      "bytes": 1780197,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "lasitetut-laatat",
+      "number": "17",
+      "file": "lasitetut-laatat.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/lasitetut-laatat/lasitetut-laatat.png",
+      "sha256": "31ad636be9d21c2e88426a3b36e8862251a34e2e16a878b91b1b124027b4b4ef",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11f45-adfb-70b2-af17-d7629facf9a1/exec-d51f2e9a-9c7e-414a-a434-ff263466f9e7.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/lasitetut-laatat/original-generation.png",
+      "originalSha256": "3b16e7bccb5ed423d9defa2deff6085f43713be2599f0b1ebfb1e3f888fd5411",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "nativeGeneratedMode": "RGB",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene. Asset type: square opaque seamless XY repeating material surface photograph of medieval glazed fired-clay floor tiles; historical interpretation candidate for editorial review, not a reconstruction claim.\nCreate a NEW original photorealistic perfectly perpendicular flat photograph of a FOUR by FOUR checkerboard of exactly SIXTEEN complete square glazed terracotta tiles: four rows and four columns, alternating muted moss green and muted ochre yellow. Upper-left tile green, alternate at every horizontal and vertical neighbor. All 16 full tile faces visible, equal tile size, parallel straight grout lines, no diagonal perspective, no cropped extra tiles at any edge. Narrow DARK charcoal brown grout between every tile; outer image edges run through the middle of an identical grout width, so this even 4x4 checkerboard is a complete repeatable period and stitches seamlessly in both X and Y. Opposite borders match precisely, including grout. No perimeter frame or border.\nAuthentic handmade late-15th-century glazed fired clay: slightly uneven square edges, naturally worn softened corners, flaked matte glaze revealing restrained reddish earthenware in tiny worn places, fine glaze crazing, slight individual color variation. Muted historically plausible green/yellow glaze, realistic tactile details; opaque full-canvas surface, no arrangement of loose objects. Uniform neutral diffuse light across the entire tile, minimal matte diffuse sheen, no glossy spotlight, no directional shadow, no vignette, no light gradient. Photograph-like material realism; tile surface is planar. No church interior, no wall, no furniture, no objects, no human or face, no modern ceramic printed pattern, no text, no letters, no symbols, no logo, no watermark. Square opaque RGB texture.",
+      "viitteet": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/01-tilaus.md",
+          "basis": "entire source read, assigned row 17",
+          "usedAs": "text-only specification"
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/sources/02-linnanrakentajan-raportti.md",
+          "basis": "entire backing report read",
+          "usedAs": "text-only material and intended-use specification"
+        }
+      ],
+      "kuvateksti": "Vihreän ja keltaisen lasitetun savilaatan kulunut ruutukuvio kappelin lattian historialliseksi tulkintanäytteeksi päätoimittajan arvioon. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "mode": "RGB",
+      "alpha": false,
+      "alphaStatistics": null,
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "sourceCommit": "444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd",
+      "sourceBlob": "36d10e4b2ca81c4f40fe853e56f033a92484e8f8",
+      "sourceReadInFull": true,
+      "backingReportReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalProcessing": [
+        {
+          "method": "full-frame-Lanczos-resize",
+          "from": [
+            1254,
+            1254
+          ],
+          "to": [
+            1024,
+            1024
+          ],
+          "crop": null,
+          "generatedAlphaPreserved": false
+        },
+        {
+          "method": "sRGB-profile-and-required-PNG-text-metadata",
+          "mode": "RGB"
+        },
+        {
+          "method": "half-frame-cyclic-offset-and-original-paired-seam-cover-blend-restored-offset",
+          "axes": [
+            "x",
+            "y"
+          ],
+          "edgeBandPixelsEachSide": 8,
+          "totalCenterBlendBandPixels": 16,
+          "falloff": "cosine",
+          "donor": "mean of symmetrically paired samples from the same original generated surface",
+          "creativeContentAdded": false,
+          "opposingEdgeRMSBefore": {
+            "x": 14.161986,
+            "y": 16.707775
+          },
+          "opposingEdgeRMSAfter": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "QA": {
+        "nativeOriginalViewed": true,
+        "finalNativeViewed": true,
+        "preview480Viewed": true,
+        "alphaLightDarkViewed": null,
+        "alphaLightDarkPath": null,
+        "tile2x2Viewed": true,
+        "tile2x2Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/qa/tiilaus-lasitetut-laatat.jpg",
+        "dimensionsVerified": true,
+        "sRGBProfileEmbedded": true,
+        "modeVerified": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "status": "worker-visual-and-file-QA-complete-root-review-pending",
+        "independentRootQA": false,
+        "editorialAcceptance": false,
+        "gameIntegrated": false,
+        "published": false,
+        "originalByteExactVerified": true,
+        "findings": [
+          "Complete 4x4 checkerboard period, green/yellow alternate at all neighboring cells.",
+          "2x2 visual check retains consistent checkerboard and grout; narrow 8px seam blends only.",
+          "Historical plausibility is pending principal editor review; interpretation sample only."
+        ],
+        "seamGeometryAccepted": true
+      },
+      "historicalInterpretation": "Editorial review required; source backing report qualifies tile floor if sources support it. New checkerboard interpretation sample only; not a reconstruction claim.",
+      "outputProduced": true,
+      "productionComplete": true,
+      "visualReview": {
+        "approvedForDelivery": true,
+        "sha256": "31ad636be9d21c2e88426a3b36e8862251a34e2e16a878b91b1b124027b4b4ef",
+        "technicalChecksPassed": true,
+        "viewedProofs": [
+          "qa/root-latest5.jpg",
+          "qa/tiilaus-lasitetut-laatat.jpg",
+          "production/helat-decal/qa-alpha-light-dark.png",
+          "production/tyrma-raapustukset/qa-alpha-light-dark.png"
+        ],
+        "visualNotes": "Correct atlas parts and generated transparency; faceless generic painted saint in frontal cabinet, slight door angle/contact shade disclosed. Chalk scratch decal soft alpha edges. Checker4x4 even period repeats. Historical green/yellow glaze remains editorial interpretation."
+      },
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/lasitetut-laatat.png",
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/lasitetut-laatat.png",
+      "bytes": 2139140,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
       "id": "lippu-sture",
       "number": "18",
       "file": "lippu-sture.png",
@@ -2548,11 +3063,11 @@
     }
   ],
   "comparison": {
-    "file": "toimitetut-osa-17.jpg",
-    "r2Key": "julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-17.jpg",
-    "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-17.jpg",
-    "sha256": "e44aa2d26a01cfffc7ce0eade347bf1e440a37b805b6adeae6356a8e8422da15",
-    "bytes": 416331,
+    "file": "toimitetut-22.jpg",
+    "r2Key": "julisteet/olavinlinna-pinnat/20261008/toimitetut-22.jpg",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-22.jpg",
+    "sha256": "5bd88011e475889272a04d6afa42e25f58fff8ba0f4e8f3c2013339ef703ddf8",
+    "bytes": 481927,
     "http": 200,
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",
@@ -2608,6 +3123,18 @@
       "byteExactReadback": true
     },
     {
+      "id": "lasitetut-laatat",
+      "file": "tiilaus-lasitetut-laatat.jpg",
+      "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-lasitetut-laatat.jpg",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tiilaus-lasitetut-laatat.jpg",
+      "sha256": "dd68b04e1660e22c65ff1c4971eba4529bb99b6be6dec982c354c068ca9a594a",
+      "bytes": 2583682,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
       "id": "kangas-saakki",
       "file": "tiilaus-kangas-saakki.jpg",
       "r2Key": "julisteet/olavinlinna-pinnat/20261008/tiilaus-kangas-saakki.jpg",
@@ -2626,20 +3153,14 @@
     "generatedAlphaPreserved": true,
     "resolutionOwner": "root, technical interpretation within explicit22calls and23-file delivery; editorialreviewpending"
   },
-  "productionComplete": false,
+  "productionComplete": true,
   "allR2ReadbacksByteExact": true,
   "deliveryStatus": "R2-byte-exact-verified-mailbox-push-pending",
   "editorAcceptance": false,
   "fableReceipt": false,
   "gameIntegrated": false,
   "published": false,
-  "pendingItems": [
-    "helat-decal",
-    "alttarikaappi",
-    "tyrma-raapustukset",
-    "takka-noki",
-    "lasitetut-laatat"
-  ],
+  "pendingItems": [],
   "omittedItems": [
     {
       "number": "1",
@@ -2661,7 +3182,28 @@
       "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/holvi-lehvasto",
       "state": "omitted",
       "omissionReason": "Generated alpha leaves low-opacity background film. Permitted seam blending introduces visible ghost/cut paint marks in repeat; cannot deliver as a natural seamless paint-only decal under one-call cap. Original and technical proofs preserved; no retry."
+    },
+    {
+      "number": "16",
+      "id": "takka-noki",
+      "brief": "**Takan sisäseinä**: kivi ja nokikerros, **kuumuuden halkeilema** harmaa/musta kivipinta, sauma- ja halkeamakuvio.",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "filename": "takka-noki.png",
+      "seamAxes": [
+        "x",
+        "y"
+      ],
+      "alpha": false,
+      "pairedFiles": false,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-pinnat-20261008/production/takka-noki",
+      "state": "omitted",
+      "omissionReason": "2x2 repeat shows discontinuous masonry courses at joins despite equal edge pixels after permitted technical blending. Cannot deliver as naturally seamless masonry under the one-call cap. Original and tile proof preserved; no retry."
     }
   ],
-  "updatedAt": "2026-10-09T06:11:16.292951+00:00"
+  "updatedAt": "2026-10-09T06:20:34.993196+00:00"
 }

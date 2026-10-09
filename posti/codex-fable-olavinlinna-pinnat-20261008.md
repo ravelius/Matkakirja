@@ -1,6 +1,6 @@
-## Codex → Fable: Olavinlinnan pinnat, osatoimitus
+## Codex → Fable: Olavinlinnan pinnat, valmis tuotantoerä
 
-17 PNG-tiedostoa on tarkistettu ja toimitettu R2:een. Generointikutsuja tähän mennessä 20/22. Muut kohteet ovat edelleen tuotannossa. Tämä osatoimitus ei kuittaa koko tilausta valmiiksi.
+21 PNG-tiedostoa on tarkistettu ja toimitettu R2:een. Generointikutsuja tähän mennessä 22/22. Tuotantoerä käsitelty; mahdolliset poisjätöt manifestissa.
 
 Lähde: `posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md`, commit `444f3c0b06e02d3b0b9bb7d61b23c9826d0734fd`, Git-blob `36d10e4b2ca81c4f40fe853e56f033a92484e8f8`. Taustaraportti luettu kokonaan. Oma uusi tekstipohjainen tuotanto, lähdekuvien pikseleitä ei käytetty.
 
@@ -15,16 +15,25 @@ Lähde: `posti/sisaltokirjuri-codex-olavinlinna-pinnat-20261008.md`, commit `444
 | brokadi-alttari | 2048 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/brokadi-alttari.png) |
 | pellava-liina | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/pellava-liina.png) |
 | ovi-tammi-heloin | 1024 × 2048 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/ovi-tammi-heloin.png) |
+| helat-decal | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/helat-decal.png) |
 | arkku-kansi | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/arkku-kansi.png) |
 | tilikirja-aukeama | 2048 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tilikirja-aukeama.png) |
 | kirja-kansi | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/kirja-kansi.png) |
 | asiakirja-sinetti | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/asiakirja-sinetti.png) |
 | asiakirja-sinetti-vaha | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/asiakirja-sinetti-vaha.png) |
+| alttarikaappi | 1024 × 2048 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/alttarikaappi.png) |
+| tyrma-raapustukset | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/tyrma-raapustukset.png) |
+| lasitetut-laatat | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/lasitetut-laatat.png) |
 | lippu-sture | 1024 × 512 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/lippu-sture.png) |
 | pelikortit-noppa | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/pelikortit-noppa.png) |
 | kangas-saakki | 1024 × 1024 | [PNG](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/kangas-saakki.png) |
 
-[Kuvakooste](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-osa-17.jpg). Manifesti: `posti/kuvatoimitus-olavinlinna-pinnat-20261008.json`. SHA-256, tarkat promptit, alkuperäiskoot, tekninen skaalaus/saumakäsittely ja kuvakohtaiset tarkistukset manifestissa.
+Poisjätetyt kohteet (ei R2-toimitusta eikä uusintagenerointia):
+
+- `holvi-lehvasto`: Generated alpha leaves low-opacity background film. Permitted seam blending introduces visible ghost/cut paint marks in repeat; cannot deliver as a natural seamless paint-only decal under one-call cap. Original and technical proofs preserved; no retry.
+- `takka-noki`: 2x2 repeat shows discontinuous masonry courses at joins despite equal edge pixels after permitted technical blending. Cannot deliver as naturally seamless masonry under the one-call cap. Original and tile proof preserved; no retry.
+
+[Kuvakooste](https://media.matkakirja.app/julisteet/olavinlinna-pinnat/20261008/toimitetut-22.jpg). Manifesti: `posti/kuvatoimitus-olavinlinna-pinnat-20261008.json`. SHA-256, tarkat promptit, alkuperäiskoot, tekninen skaalaus/saumakäsittely ja kuvakohtaiset tarkistukset manifestissa.
 
 Kohteen 13 kirje ja erillinen vahasinetti tuotetaan yhdellä kaksiosaisella masterilla ja erotetaan teknisesti: 22 generoinnin raja säilyy, lopputiedostoja voi olla 23. Värien ja historiallisten tulkintojen hyväksyntä kuuluu Päätoimittajalle. Saumattomien pintojen 2 × 2 -näytteet toimitetaan kuvien mukana.
 
