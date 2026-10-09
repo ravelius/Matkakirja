@@ -216,6 +216,8 @@ namespace Matkakirja.Editori
                     Siirry(Vaihe.AvaaTietokerros);
                     break;
                 case Vaihe.AvaaTietokerros:
+                    // NaytaTietokerros kulkee UiKerros.PaaSaikeessa-jonon kautta: avaus vasta, kun tarjous on perillä.
+                    if (!SeikkailuTapit.TietokerrosTarjolla && Kulunut < 10) return;
                     if (kehyksia < 5) return;
                     SeikkailuTapit.AvaaTietokerrosValikosta();
                     Siirry(Vaihe.OdotaTietokerros);
