@@ -12056,3 +12056,27 @@ OLAVINLINNA 1499 (PT, Raamatun OLAVINLINNA OIKEANA VUODEN 1499 LINNANA -linjan s
 ÄÄNET (PT 21.0x): Soundly 1b–1d viety (Olavinlinna 206, UI/linssit 121, pallo + lento 14) ilman ostoja; Freesoundin esikuuntelu-mp3:t eivät mene peliin (PCM-master, pakkaus kerran) → 39 originaalia odottaa omistajan Freesound-OAuthia; Olavinlinnan 1499-taustaääniin ei tunnistettavia sanoja millään kielellä (Whisper sanataso p > 0,5 + AST-puheportti = hylkäys).
 MUUT KUITTAUKSET junaan 173: LS2 utu-173 add6d023e + välimuisti 27761a321 + 717424516 (temporaryCachePath), LS1 pehmeä jarrutus e0f2d4b37 (7. asteen S-käyrä pitkille lennoille), NUI kysy-vaaka-173-2 940e44961 (iPhone vaaka: Puhu/Kirjoita OHJAUSNAPPI-kuvakkeina; löytyi NUI:n uudesta UITK-asettelutestistä 0cbe4b5ea), Siirtoseppä 046c9c613/7cfbe6710/5a1cfa7c2. Junaan 174: LS1 katse_kaari b812d51b0 (+ #4311 tuotannossa), NUI:n asettelutestin laajennukset.
 ROOLIEN NOLLAUKSET 19.41–21.43: Natiivi-UI, Linnanrakentaja, Linssiseppä 2, Julkaisija, Pelikoodari (kaikki luovutuksineen).
+
+## PILVISESSIOT SOVELLUKSESTA TÄMÄN TILIN KREDIITILLÄ (omistaja 9.10.2026 klo 22.1x) (10.10.2026 klo 00.53)
+
+Omistaja: "Ne Pilvi sessiot pyörivät toisen tilin krediteillä. Sinun pitää tehdä uudet sessiot tälle tilille." Päätoimittaja loi 22.2x ja 23.3x–00.5x tämän tilin pilvisessiot Claude-sovelluksesta (Uusi → Paikallinen-valitsin → Pilvi → Default → repo ravelius/Matkakirja → /model claude-sonnet-5-5 → kehote leikepöydältä → Return; asetukset periytyvät seuraaviin uusiin). Linja: kun komentorivi on eri tilillä kuin sovellus, pilvisessio luodaan sovelluksesta, jotta se käyttää sovelluksen tilin krediittiä. Sovelluksesta luodut pilvisessiot näkyvät ListAgentsissa (cloud), mutta PT:n viestit niille EIVÄT mene perille (eri lupatila, viesti jää odottamaan hyväksyntää): DEU-korjaukset jäivät tekemättä. Siksi pilvisessiolle annetaan kaikki ohjeet kehotteessa, ja pistokokeiden korjaukset tekee Sisältökirjuri paikallisesti worktreessä ennen vientiä.
+
+## UNITY 6.7 -KOKEEN JATKO (Natiiviseppä 9.10.2026 klo 22.2x) (10.10.2026 klo 00.53)
+
+Jatkoraportti 205bd6133 (docs/raportit/unity67-tuonti-20261009.md): 6.7 toimii simulaattorissa (kartta, Pariisi, Tukholma, Olavinlinna, ISS ABAB ilman virheitä), kehysaika sama, GPU Olavinlinnassa −25 %, Unityn muisti ±1 %. Suositus ennallaan: vaihto vasta 6.7 LTS:n ja Cesiumin 6.7-tuen jälkeen, iPad-ABAB ensin (junan 173 laitetöiden jälkeen). Kerrottu omistajalle 22.3x.
+
+## VASTAUS OMISTAJAN KYSYMYKSEEN VUORON LOPUSSA (omistaja 9.10.2026 klo 23.3x) (10.10.2026 klo 00.53)
+
+Omistaja: "En siis saanut aiemmin mitään vastausta sinulta niin siksi kysyin." PT:n vastaus jäi työkalukutsujen väliin, eikä se näkynyt puhelimessa. Linja: vastaus omistajan kysymykseen kirjoitetaan vuoron VIIMEISEKSI tekstiksi; rooliviestit ja kirjaukset ennen sitä.
+
+## JUNAN 173 JA TF 172:N IPAD-JETSAMIN JUURISYY: NOTRE-DAMEN PUUT (Natiiviseppä 10.10.2026 klo 00.3x) (10.10.2026 klo 00.53)
+
+Mitattu iPad Pro 13:lla 100 ms luokittain (raportti selvittaja-3d-luovutus 7f7fb4cc0/50f5ccd39 docs/raportit/muistimittaus-juna173-20261010.md): Notre-Damen oman mallin lod0/lod1-glb:ssä 4 puumeshiä × 22–23 solmua (90 puukorttia) → Cesium loi 103 tekstuuria 12 kuvasta, ND lod1 yksin 557 Mt GPU-muistia; lod0-valinta kierroksen alussa +0,65–0,89 Gt sekunnissa → jetsam. Sama data jo TF 172:ssa (v6b, uusin-2) = datan regressio. Kaksi aiempaa arvauskorjausta (budjettikerroin, intron esto, MSAA/SSAO) ei auttanut. Korjaus: LS2 yhdisti puut (solmut 101 → 15, tekstuurit ~103 → ~16, renderi sama; paketit v6b2/v6h2/v6hk2/v6k2, 2cc5880df) + automaattinen tarkistus (teksturoitu mesh useassa solmussa tai tekstuuriarvio > 2 × kuvat + 8 = virhe); Natiiviseppä junaan 173 omien mallien GPU-budjetti pienellä muistilla + PieniKarkeinLisa 1,6; osoitinvaihto korjaa myös TF 172:n laiteajon jälkeen. OPETUKSET: 1) muistiongelmassa MITATAAN ENNEN KORJAUSTA luokittain laitteella; 2) omien mallien vienneissä toistuvat osat (puut, rekvisiitta) yhtenä meshinä per tyyppi jaetulla materiaalilla.
+
+## SIMULAATTORIN MUISTIVAHTI (Julkaisija ja PT 10.10.2026 klo 00.3x–00.4x) (10.10.2026 klo 00.53)
+
+Klo 00.13–00.17 Macin swap kasvoi noin 40 Gt (levy 103 → 67 Gi): LS1:n Pariisin simu (simussa ei jetsam-rajaa). Pysyvä ehto: Julkaisija käynnistää jokaisella SIMULAATTORI NYT -vuorolla julkaisija-tyokalut/simu-muistivahti.zsh <UDID>, raja appi + oma SimMetalHost 12 Gt kevyille ja 16 Gt yhdelle raskaalle simulle (Olavinlinnan yleiskuva-arkki ~16 Gt normaalisti), kill omalla pid:llä; kerrallaan enintään yksi raskas simu (Pariisi, Tukholma, Olavinlinna), memory_pressure-vapaa ≥ 20 % ennen käynnistystä.
+
+## PULUN ESIGENEROINTI: KUUSI MAATA VALMIINA (PT 10.10.2026 klo 00.5x) (10.10.2026 klo 00.53)
+
+GRC 45058fb12, DEU 2873cd5df ja ITA 6e41be749 valmiit, korjattu ja pistokoe 10/10 kukin (Sisältökirjuri; mm. Kaspar Hauser joulukuusta 1831, Riian julkisivuvero pois, Hameln Weser-renessanssi, Sporadit toukokuussa 1992, Dodekanesos 1947/1948, Monte Cassino noin 577, Olympieion noin 108 × 41 m) → Julkaisija vie ämpäriin; natiivilataajan testi 0 vikaa (Pelikoodari b9a1537a9). ROU, ESP ja NLD valmistuivat 00.38–00.46 → korjaus ja pistokoe. AUT, IRL ja SWE käynnistetty 00.5x. Pilvikehotteisiin lisättiin virheet 5 (matkaoppaiden väitteet ilman lähdettä) ja 6 (tarkka päivämäärä vain yhtenevistä lähteistä).
