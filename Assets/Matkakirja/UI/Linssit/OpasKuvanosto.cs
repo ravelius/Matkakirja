@@ -48,7 +48,7 @@ namespace Matkakirja.Natiivi
             float s = Tyylikirja.Kesto.Avaus / 1000f;
             kortti.style.transitionProperty = new List<StylePropertyName> { "opacity", "left", "top", "width" };
             kortti.style.transitionDuration = new List<TimeValue> { new TimeValue(s), new TimeValue(s), new TimeValue(s), new TimeValue(s) };
-            kortti.tooltip = Kieli.T("opas.kuva.kuva");
+            kortti.tooltip = Kieli.T("ui.opas.kuva.kuva");
             kehys = Rakenne.El("mk-nosto__kuvakehys mk-nosto__kuvakehys--nyky", kortti, PickingMode.Ignore);
             kehys.style.transitionProperty = new List<StylePropertyName> { "height" };
             kehys.style.transitionDuration = new List<TimeValue> { new TimeValue(s) };
