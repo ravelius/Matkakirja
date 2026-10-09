@@ -769,3 +769,16 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 21.37: v44s kehityshaaraan 7d8408f9 (historia-valot), arkku kiinteä. M-osan (huoneet 6–10) logiikka seuraavaksi: naamio (esiliina/myssy), avainrengas + lukitut ovet, ote-kiipeily ulkoseinällä + tuulenpuuskat, köysi sakaraan/krampiin, arkun kilpilukko, köysilasku + pako, K1–K5 kaukokuvat (Pulun malli puuttuu).
 - 22.22: KIIRE (TF 162, omistaja: kaupungin kello kumisee lakkaamatta): syy kello-01.mp3 = 34 s:n äänite ~12 iskusta, soitettiin kokonaan joka lyönnillä (7 × 3 kirkkoa = 21 päällekkäistä). Korjaus 0bfc86e0 siirtoseppa/kello-yksi-lyonti (master 30fbc374 päällä, worktree wt/proto-siirtoseppa-kello): yksi isku 2,0 s + häivytys 0,35 s. Cherry-pick junahaaroihin: historia-valot-juna @ b91278bf, vara historia-fp-juna-2 @ 8b071c07. PT:lle ilmoitettu.
 - 22.22: KUITATTU: 0bfc86e0 korjausjunaan tänä iltana; b91278bf (historia-valot-juna) ja vara 8b071c07 (historia-fp-juna-2) junaan 163.
+
+## TILA 9.10. 13.2x — juna 172 valmis (juna174 2ad8e8f6a, PT kuittasi)
+
+- Worktree wt/proto-siirtoseppa-kello, haara **siirtoseppa/juna174 @ 2ad8e8f6a** = junan 172 Siirtosepän osuus (peili/proto/siirtoseppa/juna174).
+  Masterin (BUILD 170) kanssa 4 konfliktia (DioraamaAanet, LinnaValikko, OpasValikko, aanilahteet.json), junan puoli voittaa: ratkaisu
+  koehaarassa **siirtoseppa/koe-174b @ d1177cdb8** (EI junaan; käännöksiin).
+- Sisältö: historia-elokuva (kohtauslista, liikesäännöt, kertoja 9 riviä, arviot 1–3: docs/raportit/olavinlinna-historia-elokuva/),
+  loppumusiikki (esikytkentä), NUI:n mikserirekisteri kaikille linnan äänille (9950cb17e), PelattavaPala **v46d 410c7bc5bb1c4e07**
+  (Codex-rekvisiitta 15, tammiovien lehdet saranasta 90°/1,5 s, seinäesineillä ei törmäystä), DioraamaValaistu _AlfaRaja (noki),
+  vaihemallit valaistuina, historian linnan piilotus joka ruutu.
+- AUKI: lounaispuolen mustat aukot t = 40–70 (arvio 3, kuva arvio-3-55.jpg) LR:n kanssa → korjaus erikseen, arvio 4 saman poikkeuksen
+  nojalla (simu vain liikkuvien kohtausten kuva-arkkiin; Julkaisijan vuoro). Saaren sävy tumma (LR). MetaHuman v2 latautuu (76 solmua,
+  65 luuta), ei uusia simuajoja (rajaus). 16 lähteetöntä ääntä = ElevenLabs oma tuotanto CC0 (c911053ee), ei merkintää Lähteisiin.
