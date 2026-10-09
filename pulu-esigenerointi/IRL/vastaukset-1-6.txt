@@ -1,3 +1,19 @@
+### 26.1
+KYSYMYS: Mitä nimi Burren tarkoittaa?
+Annas ku mietin. Joo, tän minä tiedän. Burren tarkoittaa irlanniksi kivistä aluetta, ja nimi kuvaa maisemaa osuvasti: [[Clarein]] kreivikunnan länsirannikolla levittäytyy noin 530 neliökilometrin laajuinen [[karstimaisema]], jossa paljas kalkkikivi näkyy kaikkialla. Alueeseen kuuluvat muun muassa [[Mullaghmoren]] kukkula ja Ailladien kalliot sekä [[Poulnabronen dolmen]]. Kivinen paikka, mut kyl sielläkin kyyhky laskeutuu.
+JATKOT:
+Mitä karstimaisema tarkoittaa?
+Missä päin Irlantia Clarein kreivikunta on?
+
+### 26.2
+KYSYMYS: Millaista kasvillisuutta Burrenissa kasvaa rinnakkain?
+Kato, kasvit. Burrenissa kasvavat rinnakkain [[arktis-alppiset]] kasvit ja [[Välimeren]] alueen kasvit, mikä on epätavallista, koska ne kuuluvat luonnostaan hyvin erilaisiin ilmastoihin. Yli 70 prosenttia Irlannin kukkalajeista löytyy tältä alueelta, vaikka se on kooltaan pieni. Alueella on myös [[Burrenin kansallispuisto]], joka on Irlannin kahdeksasta kansallispuistosta pienin.
+
+Pohjoisen ja etelän kukat samalla kalliolla, ja silti ne tulevat toimeen keskenään. Siinä on esimerkkiä monelle kyyhkyparvelle.
+JATKOT:
+Miksi eri ilmastojen kasvit viihtyvät samassa paikassa?
+Mitkä ovat Irlannin muut kansallispuistot?
+
 ### 26.3
 KYSYMYS: Minkä ikäinen Poulnabronen dolmen on?
 Hetkinen ny. Tost minä osaan kertoo. Poulnabronen dolmen on [[kivikautinen]] hautamuistomerkki, jossa kookas kalkkikivilaatta lepää pystyyn nostettujen kivien varassa, ja sen on arvioitu olevan noin 5000 vuoden ikäinen. Burrenin avoimessa kalkkikivimaisemassa se erottuu kaukaa, ja samalla alueella on myös [[Caherconnellin kivilinnoitus]]. Rakenteen alta on löytynyt useiden ihmisten jäännöksiä, mutta en ole varma tarkasta lukumäärästä. Aika kestävä pöytä, mut ei se minun kokoon sovi.
@@ -21,6 +37,20 @@ JATKOT:
 Mitkä kasvit kukkivat Burrenissa keväällä?
 Mitä arktis-alppinen kasvillisuus tarkoittaa?
 
+### 27.1
+KYSYMYS: Mikä on Irlannin läntisin mantereen piste?
+Ai tota. Irlannin läntisin mantereen piste on [[Dunmore Head]], joka päättää [[Dinglen niemimaan]] Kerryn kreivikunnassa. Niemimaan irlanninkielinen nimi on Corca Dhuibhne. Sen edustalla ovat [[Blasketinsaaret]], jotka ovat olleet asumattomia 1950-luvulta lähtien. Tästä ei kyl pidemmälle mantereella pääse.
+JATKOT:
+Millaisia ovat Blasketinsaaret?
+Miksi Dinglen niemimaalla puhutaan irlantia?
+
+### 27.2
+KYSYMYS: Mikä vuori on Dinglen niemimaan korkein?
+Selvä juttu. Dinglen niemimaan korkein vuori on [[Mount Brandon]], joka kohoaa 951 metriin. Niemimaalla kulkee myös [[Conor Pass]], Irlannin korkein vuoriylikulku. Niemimaan länsipää kuuluu irlanninkieliseen [[gaeltacht]]-alueeseen. Aika korkea kiipeiltäväksi, mut lentäen se käy.
+JATKOT:
+Mitä Mount Brandonilla on ylhäällä?
+Millaista Dinglen niemimaan länsipää on?
+
 ### 27.3
 KYSYMYS: Mikä on gaeltacht?
 Mmm— hyvä kysymys tuo. Gaeltacht on Irlannissa alue, jolla [[irlantia]] puhutaan yhä yhteisön arkikielenä, ja valtio on tunnustanut tällaiset alueet virallisesti. Niitä on pääasiassa maan länsi- ja luoteisrannikolla, muun muassa [[Galwayn]] ja [[Donegalin]] kreivikunnissa sekä Kerryssä. Dinglen niemimaan länsipää kuuluu niihin, vaikka irlannin osuus koko maan väestöstä on pieni. Ei oo helppoo opetella uutta kieltä, ku jo kyyhkyn kuhina riittää.
@@ -41,6 +71,22 @@ Katotaas. Joo, tän minä tiedän. Conor Pass on Irlannin korkein vuoriylikulku,
 JATKOT:
 Mitä Mount Brandonilta näkee?
 Mikä on Irlannin korkein vuori?
+
+### 28.1
+KYSYMYS: Mikä on Irlannin tasavallan suurin järvi?
+Sepä sattui: tämä on hyvä kysymys. Irlannin tasavallan suurin järvi on [[Lough Corrib]], jonka pinta-ala on 176 neliökilometriä. Koko Irlannin saarella se on toiseksi suurin [[Lough Neaghin]] jälkeen. Järvi sijaitsee Länsi-Irlannissa, ja [[Corrib-joki]] yhdistää sen mereen Galwayssa. Kartoituksissa järvestä on löytynyt muun muassa pronssi- ja rautakautisia puuveneitä, joten se on merkittävä meriarkeologinen kohde. Järvi, jolla on oma joki mereen asti, kyl kelpaa.
+JATKOT:
+Mitä Lough Neagh on?
+Mitä järvestä on löydetty kartoituksissa?
+
+### 28.2
+KYSYMYS: Mikä joki yhdistää järven mereen?
+Mmm— joo. Järven ja meren yhdistää [[Corrib-joki]], jota kutsutaan myös Galway-joeksi ja joka laskee mereen [[Galwayssa]]. Veneiden pääsyä järveltä mereen on helpottanut kanava [[Friar's Cut]], jonka lähteiden mukaan kaivettiin 1100-luvulla ja joka oli saaren ensimmäinen kanava.
+
+Yksi joki ja kaksi nimeä. Minulla on sentään vain yksi, joskin kaksiosainen ja latinaa.
+JATKOT:
+Millainen kaupunki Galway on?
+Mikä on Friar's Cut -kanava?
 
 ### 28.3
 KYSYMYS: Mitä viikingit tekivät Irlannissa?
@@ -65,6 +111,20 @@ JATKOT:
 Mitä Elisabet I:n aikana Irlannissa tapahtui?
 Millaisia aluksia Irlannin rannikolla käytettiin 1500-luvulla?
 
+### 29.1
+KYSYMYS: Mikä on Irlannin saarista suurin?
+Kas vaan. Irlannin saarista suurin on [[Achill]], joka sijaitsee [[Mayon]] kreivikunnan edustalla länsirannikolla ja jonka pinta-ala on noin 148 neliökilometriä. Saarella on asuttu ainakin neoliittisesta kivikaudesta lähtien, ja länsipäässä kohoavat [[Croaghaunin kalliot]], jotka ovat Euroopan kolmanneksi korkeimmat merikalliot. Iso saari, mut kyyhky lentää sen päästä päähän ennen aamupalaa.
+JATKOT:
+Millaiset ovat Croaghaunin kalliot?
+Mikä on Aution kylä Achillilla?
+
+### 29.2
+KYSYMYS: Minä vuonna silta yhdisti Achillin mantereeseen?
+Odotas vähän. Achill on ollut siltayhteydessä mantereeseen vuodesta 1887. Silta, [[Michael Davittin silta]], kulkee [[Achill Soundin]] ja Polrannyn kylien välillä, mutta sillan nykyinen rakenne voi olla uudempi kuin itse yhteys, enkä ole siitä varma. Siltoja kyyhky ei tarvitse, mut kiitos silti.
+JATKOT:
+Millaisia kyliä Achillilla on?
+Miten Suuri nälänhätä vaikutti Achilliin?
+
 ### 29.3
 KYSYMYS: Mikä on Aution kylä Achillilla?
 Ai tota. Hyvä että kysyit. Autio kylä sijaitsee [[Slievemore-vuoren]] juurella, ja siellä on 80–100 raunioitunutta yhden huoneen kivitaloa. Joidenkin lähteiden mukaan osa taloista liittyi kesälaidunnukseen, jossa karjaa siirrettiin kesäksi vuorille, mutta en ole varma, kuinka suuri osa. Saaren historiaan kuuluu myös [[Suuri nälänhätä]], joka iski Achilliin erityisen kovasti. Kivitalo ilman kattoa on kyl hyvä paikka istua.
@@ -85,6 +145,20 @@ Tähän pitää vastata rauhassa. Suuri nälänhätä alkoi Irlannissa vuonna 18
 JATKOT:
 Kuinka moni muutti pois nälänhädän aikana?
 Mikä on perunarutto?
+
+### 30.1
+KYSYMYS: Kuinka korkea Powerscourtin vesiputous on?
+No niin, tässä on luku. Powerscourtin vesiputous on 121 metriä korkea, ja se on Irlannin toiseksi korkein vesiputous. Se sijaitsee [[Wicklowin]] kreivikunnassa Enniskerryn lähellä [[Dargle-joessa]], ja sen yllä kohoavat [[Djouce]] ja Maulin. Putous virtaa koko vuoden hevosenhännän muotoisena viuhkana. Minä kyl mieluummin laskeudun kuin putoan.
+JATKOT:
+Mikä on Irlannin korkein vesiputous?
+Millaisia ovat Wicklowin vuoret?
+
+### 30.2
+KYSYMYS: Minkä joen vesiputous se on?
+Just niin, tän minä tiedän. Powerscourtin vesiputous on [[Dargle-joen]] putous. Joki saa alkunsa [[Tonduff-vuoren]] etelärinteeltä ja virtaa [[Glensoulanin riippulaakson]] läpi jyrkkään kuoppaan, jossa putous on. Paikka on Wicklowin kreivikunnassa Enniskerryn lähellä. Nimiä riittää, mut joki on onneksi vain yksi.
+JATKOT:
+Mikä on riippulaakso?
+Missä Wicklowin kreivikunta sijaitsee?
 
 ### 30.3
 KYSYMYS: Mikä on riippulaakso?
