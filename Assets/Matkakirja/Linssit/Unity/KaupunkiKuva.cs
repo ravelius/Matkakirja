@@ -163,11 +163,31 @@ namespace Matkakirja.Natiivi
             var kamera = kameraNyt;
             if (kamera == null) return;
             bool taa = KaupunkiKooste.Kaytossa;
-            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) urp.msaaSampleCount = taa ? 1 : Mathf.Max(1, Msaa);
+            // Skaalain (#4220 kohta 7, juna 172): ajallisena STP renderScalella 0,8–0,9 + terävöitys (KaupunkiSkaalain, Ydin); muuten ennallaan.
+            var sk = Matkakirja.Linssit.Kierros.KaupunkiSkaalain.Valitse(taa, Matkakirja.Peli.Asetus.Kokonais("kaupunki.Skaalain", 1),
+                Matkakirja.Peli.Asetus.Luku("kaupunki.RenderScale", Matkakirja.Linssit.Kierros.KaupunkiSkaalain.StpOletus), Terava);
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp)
+            {
+                urp.msaaSampleCount = taa ? 1 : Mathf.Max(1, Msaa);
+                if (skaalaTallessa < 0f) { skaalaTallessa = urp.renderScale; suodinTallessa = urp.upscalingFilter; }
+                urp.renderScale = sk.Stp ? sk.RenderScale : skaalaTallessa;
+                urp.upscalingFilter = sk.Stp ? UpscalingFilterSelection.STP : suodinTallessa;
+            }
             if (taa) { var d = kamera.GetUniversalAdditionalCameraData(); if (d != null) d.renderPostProcessing = true; }
             Laatutaso.KaytaAjallista(kamera, taa);
             kamera.allowMSAA = !taa;
-            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Msaa}x")}");
+            KaupunkiTerava.Aseta(sk.Terava);
+            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(sk.Stp ? $"STP (renderScale {sk.RenderScale:F2}, terävöitys {sk.Terava:F2}, MSAA 1, overlayt koosteessa)" : taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Msaa}x")}");
+        }
+
+        // Skaalaimen alkuperäiset URP-arvot (palautetaan sulkiessa; −1 = ei tallessa).
+        static float skaalaTallessa = -1f;
+        static UpscalingFilterSelection suodinTallessa;
+        static void PalautaSkaalain()
+        {
+            if (skaalaTallessa < 0f) return;
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) { urp.renderScale = skaalaTallessa; urp.upscalingFilter = suodinTallessa; }
+            skaalaTallessa = -1f;
         }
 
         static void Suljettu(CesiumKaupunki k)
@@ -176,6 +196,7 @@ namespace Matkakirja.Natiivi
             tallennettu = false;
             Laatutaso.Muuttui -= AsetaReunat;
             if (kameraNyt != null) Laatutaso.KaytaAjallista(kameraNyt, false);
+            PalautaSkaalain();
             kameraNyt = null;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
