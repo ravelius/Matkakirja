@@ -394,11 +394,17 @@ namespace Matkakirja.Natiivi
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
                 PelattavaPalaPyydetty = false;
+                // Latausodotuksen aikana (nimiruutu) pala ei käynnisty, vaikka valinta on tehty (Siirtoseppä 9.10., junan 174
+                // äänitarkistus): nayttamo.Odota(true) piilottaa joka ruutu näyttämön uudet lapset, jolloin "Seikkailu äänet"
+                // -objektin manifestilataukset katkesivat hiljaa (ei tehosteita eikä Soundly-pankkia) ja veneyö alkoi nimiruudun takana.
+                if (SaapumisOdotus && (alkuValittu || PelattavaPalaJatka)) { PelattavaPalaPyydetty = true; goto palaOhi; }
                 // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
                 var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
                 // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut:
                 // puuttuva rajapinta kaataa käännöksen). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
+                // Valinta näkyy jo latauksen aikana; peli alkaa vasta, kun linna on ladattu.
                 if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
+                if (SaapumisOdotus) { alkuValittu = true; PelattavaPalaPyydetty = true; goto palaOhi; }
                 alkuValittu = false; pelattavaPala = true;
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
