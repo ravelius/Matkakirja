@@ -1,0 +1,1047 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+AIEMPI KYSYMYS: Mitä ankkuri talon julkisivussa kertoi?
+AIEMPI VASTAUS (Livia):
+Ai se ankkuri, joo. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan. Se oli siis merkki ohikulkijoille: talon isäntä oli merenkulkija, jolla oli tilaa aluksessaan. Merenkulku toi [[Hindeloopenille]] vaurautta erityisesti 1600- ja 1700-luvulla, ja asukkaat ostivat [[Amsterdamista]] kalliita kankaita ja esineitä [[VOC:n]] kautta.
+
+Minä pidän tavasta: ei tarvitse huutaa, kun voi ripustaa julkisivulle merkin. Meikäläisten muistiinpanojen mukaan hyvä viesti kulkee ilman sanoja, kunhan lukija osaa katsoa ylös.
+KYSYMYS: Kerro lisää: Hindeloopenille
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino: Kauppaverkosto ulottui Amsterdamista Manilaan] Uusi Julfa perustettiin vuonna 1606 Abbas Suuren määräyksellä armenialaisten kaupunginosaksi joen etelärannalle. Vanhasta Julfan kaupungista siirrettiin sinne yli 150 000 armenialaista. Syystä lähteet ovat eri mieltä: iranilaisten lähteiden mukaan tulijat pakenivat osmanien vainoa, kun taas historiantutkimus kuvaa pakkosiirtoa, jossa Julfan asukkaita kohdeltiin hyvin, koska shaahi toivoi heidän silkkikaupan taitojensa hyödyttävän Irania. Fernand Braudel kirjoitti 1947, että armenialaisten kauppaverkosto ulottui Amsterdamista Manilaan. Korttelissa on kuusitoista kirkkoa ja armenialainen koulu, ja siellä puhutaan omaa Uuden Julfan murretta.
+AIEMPI KYSYMYS: Mitä ankkuri talon julkisivussa kertoi?
+AIEMPI VASTAUS (Livia):
+Ai se ankkuri, joo. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan. Se oli siis merkki ohikulkijoille: talon isäntä oli merenkulkija, jolla oli tilaa aluksessaan. Merenkulku toi [[Hindeloopenille]] vaurautta erityisesti 1600- ja 1700-luvulla, ja asukkaat ostivat [[Amsterdamista]] kalliita kankaita ja esineitä [[VOC:n]] kautta.
+
+Minä pidän tavasta: ei tarvitse huutaa, kun voi ripustaa julkisivulle merkin. Meikäläisten muistiinpanojen mukaan hyvä viesti kulkee ilman sanoja, kunhan lukija osaa katsoa ylös.
+KYSYMYS: Kerro lisää: Amsterdamista
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kohdekartta / Kohdekartta: Merenkulkumuseo] varastot 1652–1771, museo 1977 Merenkulkumuseo asuu VOC:n varastoissa. Ciliwungin länsirannan varastot rakennettiin vuosina 1652–1771, ja niissä säilytettiin muskottipähkinää, pippuria, kahvia, teetä ja kangasta ennen laivausta Aasian ja Euroopan satamiin. Neljästä länsipuolen rakennuksesta kolme on museona. Varastojen ja kaupunginmuurin väliin kertyi kuparia ja tinaa, ja metalleja suojasi sateelta puinen katos, joka oli kiinnitetty varastojen toiseen kerrokseen. Katosta käyttivät myös vartijat, koska muurin päällä kulkeva polku oli kapea. Katos on aikoja sitten purettu, mutta sitä kannattaneet isot rautakoukut ovat yhä seinässä. Museon edessä oleva muurinpätkä on kaikki, mitä Batavian 1600…
+- [Jakarta — kohdekartta / Kohdekartta: Jakartan katedraali] 1891–1901 Katolinen kirkko oli VOC:n Bataviassa kielletty, ja vasta kun Alankomaat siirtyi 1806 Napoleonin veljen Ludvigin hallintaan, kirkko sai toimia vapaasti Itä-Intiassa. Batavian ensimmäinen katolinen kirkko vihittiin 6. marraskuuta 1829 Weltevredenissä vanhaan kenraalin taloon ja nimettiin Neitsyt Marian taivaaseenottamiselle. Se kunnostettiin 1859 ja sortui 9. huhtikuuta 1890. Nykyinen kirkko rakennettiin sortuneen tilalle vuosina 1891–1901 uusgoottilaiseen tyyliin. Suunnittelijaksi nimitettiin jesuiittaisä Antonius Dijkmans, mutta työ pysähtyi rahapulaan; piispa Luypen keräsi varat Alankomaista, ja arkkitehti Marius Hulswit jatkoi työtä 1899. Hulswit yksinkertaisti suunnitelmaa nii…
+AIEMPI KYSYMYS: Mitä ankkuri talon julkisivussa kertoi?
+AIEMPI VASTAUS (Livia):
+Ai se ankkuri, joo. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan. Se oli siis merkki ohikulkijoille: talon isäntä oli merenkulkija, jolla oli tilaa aluksessaan. Merenkulku toi [[Hindeloopenille]] vaurautta erityisesti 1600- ja 1700-luvulla, ja asukkaat ostivat [[Amsterdamista]] kalliita kankaita ja esineitä [[VOC:n]] kautta.
+
+Minä pidän tavasta: ei tarvitse huutaa, kun voi ripustaa julkisivulle merkin. Meikäläisten muistiinpanojen mukaan hyvä viesti kulkee ilman sanoja, kunhan lukija osaa katsoa ylös.
+KYSYMYS: Kerro lisää: VOC:n
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+- [Alankomaat — maalehti / Historia: Vanhemmat menivät kadulle, ja maa sai pyörätiet] 1972 — Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua. Vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, ja heidän joukossaan oli satoja lapsia. Vanhemmat perustivat liikkeen nimeltä Stop de Kindermoord, marssivat parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+- [Alankomaat — maalehti / Historia] Alankomaiden historiaa eivät tehneet vain hallitsijat vaan kauppiaat, jäämerelle jääneet merimiehet ja tavalliset ihmiset, jotka lähtivät kadulle vaatimaan muutosta.
+AIEMPI KYSYMYS: Mikä oli VOC eli Hollannin Itä-Intian kauppakomppania?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää vaatii hengähdyksen. VOC eli Vereenigde Oostindische Compagnie oli hollantilainen kauppakomppania, joka perustettiin vuonna 1602. Se sai [[Alankomaiden]] valtiolta oikeuden käydä kauppaa Aasiassa, ja sen laivat toivat Eurooppaan mausteita, tekstiilejä ja muita arvotavaroita. Yhtiön toimintaan liittyi myös siirtomaavaltaa, jonka historiaa tarkastellaan nykyään kriittisesti. Kankaita ja esineitä ostettiin sen kautta [[Amsterdamista]] myös Hindeloopenin kaltaisiin merenkulkijakaupunkeihin, joissa kehittyi oma pukutyyli sekä värikkäät maalatut seinät ja huonekalut. Tästä aiheesta olisi voinut kirjoittaa kokonaisen kirjeen.
+KYSYMYS: Kerro lisää: Alankomaiden
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että kaupunki liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, Hansa. Hansa oli keskiajalta alkanut pohjoisen Euroopan kauppakaupunkien yhteenliittymä, jonka jäsenet tukivat toistensa kauppaa, suojelivat kauppareittejä ja neuvottelivat yhdessä etuoikeuksista. Sen keskeisiä kaupunkeja oli [[Lübeck]]. Kun Hindeloopen liittyi siihen vuonna 1368, se sai paikkansa [[Itämeren]] ja [[Pohjanmeren]] kauppaverkostossa, mikä sopii kaupungin vahvoihin ulkomaisiin yhteyksiin. Kauppaa ja kirjeitä, siinä meidän suvun ydin.
+KYSYMYS: Kerro lisää: Lübeck
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mitä tarkoittaa, että kaupunki liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, Hansa. Hansa oli keskiajalta alkanut pohjoisen Euroopan kauppakaupunkien yhteenliittymä, jonka jäsenet tukivat toistensa kauppaa, suojelivat kauppareittejä ja neuvottelivat yhdessä etuoikeuksista. Sen keskeisiä kaupunkeja oli [[Lübeck]]. Kun Hindeloopen liittyi siihen vuonna 1368, se sai paikkansa [[Itämeren]] ja [[Pohjanmeren]] kauppaverkostossa, mikä sopii kaupungin vahvoihin ulkomaisiin yhteyksiin. Kauppaa ja kirjeitä, siinä meidän suvun ydin.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että kaupunki liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, Hansa. Hansa oli keskiajalta alkanut pohjoisen Euroopan kauppakaupunkien yhteenliittymä, jonka jäsenet tukivat toistensa kauppaa, suojelivat kauppareittejä ja neuvottelivat yhdessä etuoikeuksista. Sen keskeisiä kaupunkeja oli [[Lübeck]]. Kun Hindeloopen liittyi siihen vuonna 1368, se sai paikkansa [[Itämeren]] ja [[Pohjanmeren]] kauppaverkostossa, mikä sopii kaupungin vahvoihin ulkomaisiin yhteyksiin. Kauppaa ja kirjeitä, siinä meidän suvun ydin.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Mikä IJsselmeer on ja miten se syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[IJsselmeer]] on Alankomaiden sisäosassa sijaitseva makeavetinen järvi, joka oli aiemmin osa Pohjanmeren suolaista [[Zuiderzee]]-lahtea. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki lahden, ja sisäpuolelle jäänyt vesi muuttui vähitellen makeaksi. Hindeloopen sijaitsee järven Friisinmaan puoleisella rannalla. Vesikin ehti vaihtua, ja minä vain lensin ympäri.
+KYSYMYS: Kerro lisää: IJsselmeer
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Mikä IJsselmeer on ja miten se syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[IJsselmeer]] on Alankomaiden sisäosassa sijaitseva makeavetinen järvi, joka oli aiemmin osa Pohjanmeren suolaista [[Zuiderzee]]-lahtea. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki lahden, ja sisäpuolelle jäänyt vesi muuttui vähitellen makeaksi. Hindeloopen sijaitsee järven Friisinmaan puoleisella rannalla. Vesikin ehti vaihtua, ja minä vain lensin ympäri.
+KYSYMYS: Kerro lisää: Zuiderzee
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+AIEMPI KYSYMYS: Mikä IJsselmeer on ja miten se syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[IJsselmeer]] on Alankomaiden sisäosassa sijaitseva makeavetinen järvi, joka oli aiemmin osa Pohjanmeren suolaista [[Zuiderzee]]-lahtea. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki lahden, ja sisäpuolelle jäänyt vesi muuttui vähitellen makeaksi. Hindeloopen sijaitsee järven Friisinmaan puoleisella rannalla. Vesikin ehti vaihtua, ja minä vain lensin ympäri.
+KYSYMYS: Kerro lisää: Afsluitdijk
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Milloin Urk lakkasi olemasta saari?
+AIEMPI VASTAUS (Livia):
+Katotaas. Urk lakkasi olemasta saari 1930-luvun lopulla: lähteiden mukaan Lemmeristä rakennettu pato vuonna 1939 yhdisti sen mantereeseen. Tätä edelsi [[Zuiderzeen]] sulkeminen vuonna 1932, jolloin merenlahti muuttui [[IJsselmeeriksi]] ja Zuiderzee menetti nimensä. Saarta ympäröinyt vesi muuttui vähitellen maaksi, ja Urk jäi osaksi [[Flevolandin]] maakuntaa. Aikamoinen muutos yhdelle saarelle, minä pysyn mieluummin ilmassa.
+KYSYMYS: Kerro lisää: Zuiderzeen
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+AIEMPI KYSYMYS: Milloin Urk lakkasi olemasta saari?
+AIEMPI VASTAUS (Livia):
+Katotaas. Urk lakkasi olemasta saari 1930-luvun lopulla: lähteiden mukaan Lemmeristä rakennettu pato vuonna 1939 yhdisti sen mantereeseen. Tätä edelsi [[Zuiderzeen]] sulkeminen vuonna 1932, jolloin merenlahti muuttui [[IJsselmeeriksi]] ja Zuiderzee menetti nimensä. Saarta ympäröinyt vesi muuttui vähitellen maaksi, ja Urk jäi osaksi [[Flevolandin]] maakuntaa. Aikamoinen muutos yhdelle saarelle, minä pysyn mieluummin ilmassa.
+KYSYMYS: Kerro lisää: IJsselmeeriksi
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Milloin Urk lakkasi olemasta saari?
+AIEMPI VASTAUS (Livia):
+Katotaas. Urk lakkasi olemasta saari 1930-luvun lopulla: lähteiden mukaan Lemmeristä rakennettu pato vuonna 1939 yhdisti sen mantereeseen. Tätä edelsi [[Zuiderzeen]] sulkeminen vuonna 1932, jolloin merenlahti muuttui [[IJsselmeeriksi]] ja Zuiderzee menetti nimensä. Saarta ympäröinyt vesi muuttui vähitellen maaksi, ja Urk jäi osaksi [[Flevolandin]] maakuntaa. Aikamoinen muutos yhdelle saarelle, minä pysyn mieluummin ilmassa.
+KYSYMYS: Kerro lisää: Flevolandin
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zimbabwe — maalehti / Ruoka: Kalastus alkaa lampun sytyttämisestä] Kapenta eli matemba on pieni tanganjikansardiini, joka istutettiin Kariban tekojärveen ja on siitä asti ollut yksi maan tärkeimmistä ruoka-aineista. Kalastus käy yöllä lautoilta: lamppu tai led-valo houkuttelee parven pinnan alle, ja noin kuusimetrinen haavi nostetaan jopa neljänkymmenen metrin syvyydestä. Saalis kuivataan auringossa betonilaatalla tai verkolla, ja Sambesin laakson kuumuudessa siihen menee vuorokausi. Kuivattu kapenta paistetaan sipulin, tomaatin ja maapähkinäjauheen kanssa. Kupillinen riittää perheelle.
+AIEMPI KYSYMYS: Miksi Urkin murre on säilynyt niin omaleimaisena?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Urkin murre on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kun yhteydet ulkopuolelle olivat harvat, puhetapa kehittyi omaa tahtiaan eikä sekoittunut mantereen puheeseen samalla tavalla. Saari sijaitsi aiemmin Almere-sisämeressä, josta tuli [[Zuiderzeen]] osa 1200-luvulla, ja urkilaiset ovat tiivis yhteisö, jonka elinkeino on aina ollut [[kalastus]].
+
+Kyllä minä tunnen tämän: kun joukko pysyy tiiviisti yhdessä eikä kukaan tule vierailulle, puhetapakin alkaa elää omaa elämäänsä. Kyyhkylauman kujerruskin kuulostaa eri kattoilla vähän erilaiselta.
+KYSYMYS: Kerro lisää: kalastus
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Kaksi vuotta laguunin rannalla] n. 345 eaa. — Aristoteles vietti kaksi vuotta Lesboksen saarella ja tutki Pyrrhan laguunin eläimiä sekä kalastajien saaliita. Hän katsoi, avasi ja kuvasi tarkasti — ja oli ensimmäinen, joka tutki eliöitä järjestelmällisesti. Siitä alkoi biologia. Kaikkea ei uskottu: hän kertoi kalastajien kertoneen, että mustekalan yksi lonkero on lisääntymiselintä. Vasta 1800-luvun tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.
+AIEMPI KYSYMYS: Mitä Urker vrouw -muistomerkki esittää?
+AIEMPI VASTAUS (Livia):
+Ai tota, se on hiljainen paikka. Urker vrouw on [[kalastajien]] muistomerkki, joka esittää naista katsomassa merelle. Hän odottaa turhaan miestään ja poikiaan, jotka eivät palaa. Patsas muistuttaa kalastajaperheiden elämästä [[Urkin]] kaltaisessa yhteisössä, jossa meri on antanut elannon mutta vienyt myös miehiä. Hyvä, että tällaisia paikkoja on.
+KYSYMYS: Kerro lisää: kalastajien
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+AIEMPI KYSYMYS: Mitä Urker vrouw -muistomerkki esittää?
+AIEMPI VASTAUS (Livia):
+Ai tota, se on hiljainen paikka. Urker vrouw on [[kalastajien]] muistomerkki, joka esittää naista katsomassa merelle. Hän odottaa turhaan miestään ja poikiaan, jotka eivät palaa. Patsas muistuttaa kalastajaperheiden elämästä [[Urkin]] kaltaisessa yhteisössä, jossa meri on antanut elannon mutta vienyt myös miehiä. Hyvä, että tällaisia paikkoja on.
+KYSYMYS: Kerro lisää: Urkin
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Miksi Zuiderzee suljettiin padolla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Zuiderzee oli matala merenlahti, joka tulvi rantakyliin, ja se oli yksi syy sulkea se. Insinööri [[Cornelis Lely]] piirsi suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932, ja neljä kuukautta myöhemmin padon sisäpuolen vesi sai nimekseen [[IJsselmeer]] ja ulkopuolen [[Vattimeri]]. Pitkä urakka, ja pitkä vastauskin.
+KYSYMYS: Kerro lisää: Cornelis Lely
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Miksi Zuiderzee suljettiin padolla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Zuiderzee oli matala merenlahti, joka tulvi rantakyliin, ja se oli yksi syy sulkea se. Insinööri [[Cornelis Lely]] piirsi suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932, ja neljä kuukautta myöhemmin padon sisäpuolen vesi sai nimekseen [[IJsselmeer]] ja ulkopuolen [[Vattimeri]]. Pitkä urakka, ja pitkä vastauskin.
+KYSYMYS: Kerro lisää: IJsselmeer
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Miksi Zuiderzee suljettiin padolla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Zuiderzee oli matala merenlahti, joka tulvi rantakyliin, ja se oli yksi syy sulkea se. Insinööri [[Cornelis Lely]] piirsi suunnitelman jo vuonna 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932, ja neljä kuukautta myöhemmin padon sisäpuolen vesi sai nimekseen [[IJsselmeer]] ja ulkopuolen [[Vattimeri]]. Pitkä urakka, ja pitkä vastauskin.
+KYSYMYS: Kerro lisää: Vattimeri
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+- [Alankomaat — maalehti / Historian hetki] Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.
+AIEMPI KYSYMYS: Mikä Flevoland on ja miten se syntyi?
+AIEMPI VASTAUS (Livia):
+No jopas. Flevoland on Alankomaiden maakunta, joka sijaitsee entisellä merenpohjalla [[IJsselmeerin]] seudulla. Sen maa-ala on saatu kuivattamalla lahden osia [[poldereiksi]] 1900-luvun puolivälin tienoilla, ja maakunta perustettiin virallisesti 1980-luvun puolivälissä. Maakunnan pääkaupunki on [[Lelystad]]. Urk kuuluu siihen kuntana, vaikka se oli aiemmin saari. Maata merestä, minä kun yritän vain pysyä kaiteella.
+KYSYMYS: Kerro lisää: IJsselmeerin
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+AIEMPI KYSYMYS: Mikä Flevoland on ja miten se syntyi?
+AIEMPI VASTAUS (Livia):
+No jopas. Flevoland on Alankomaiden maakunta, joka sijaitsee entisellä merenpohjalla [[IJsselmeerin]] seudulla. Sen maa-ala on saatu kuivattamalla lahden osia [[poldereiksi]] 1900-luvun puolivälin tienoilla, ja maakunta perustettiin virallisesti 1980-luvun puolivälissä. Maakunnan pääkaupunki on [[Lelystad]]. Urk kuuluu siihen kuntana, vaikka se oli aiemmin saari. Maata merestä, minä kun yritän vain pysyä kaiteella.
+KYSYMYS: Kerro lisää: poldereiksi
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urk (kulttuuri)
+Tietoruudun teksti: Urk on kaupunki ja kunta Flevolandissa, ja se oli aiemmin saari Almere-sisämeressä, josta tuli Zuiderzeen osa 1200-luvulla. Lemmeristä rakennettu pato vuonna 1939 päätti Urkin saarena olon ja yhdisti sen mantereeseen. Kaupungin elinkeino on aina ollut kalastus, ja Urkilla on Alankomaiden suurin kalastuslaivasto. Urkilaiset ovat tiivis yhteisö, jolla on oma murteensa; se on säilynyt omaleimaisena, koska Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä. Kalastajien muistomerkki, Urker vrouw, esittää naista, joka katsoo merelle odottaen turhaan miehensä ja poikiensa paluuta.
+AIEMPI KYSYMYS: Mikä Flevoland on ja miten se syntyi?
+AIEMPI VASTAUS (Livia):
+No jopas. Flevoland on Alankomaiden maakunta, joka sijaitsee entisellä merenpohjalla [[IJsselmeerin]] seudulla. Sen maa-ala on saatu kuivattamalla lahden osia [[poldereiksi]] 1900-luvun puolivälin tienoilla, ja maakunta perustettiin virallisesti 1980-luvun puolivälissä. Maakunnan pääkaupunki on [[Lelystad]]. Urk kuuluu siihen kuntana, vaikka se oli aiemmin saari. Maata merestä, minä kun yritän vain pysyä kaiteella.
+KYSYMYS: Kerro lisää: Lelystad
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Miksi Thornia kutsutaan valkoiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nätti nimi. Thornia kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Kaupunki sijaitsee [[Limburgin]] maakunnassa Alankomaissa [[Maas-joen]] ja Witbeek-puron varrella. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä. Valkoinen kaupunki, ylhäältä katsottuna se erottuu varmasti hyvin.
+KYSYMYS: Kerro lisää: Limburgin
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Miksi Thornia kutsutaan valkoiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nätti nimi. Thornia kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Kaupunki sijaitsee [[Limburgin]] maakunnassa Alankomaissa [[Maas-joen]] ja Witbeek-puron varrella. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä. Valkoinen kaupunki, ylhäältä katsottuna se erottuu varmasti hyvin.
+KYSYMYS: Kerro lisää: Maas-joen
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Kuka Thornin luostarivaltiota johti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Thornin luostarivaltiota johti [[abbedissa]], jota avusti korkeintaan kaksikymmentä aatelisnaista. Luostarin perusti noin vuonna 975 Utrechtin piispa [[Ansfried]], ja 1100-luvulta alkaen siitä kehittyi maallinen kanonissayhteisö. Yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi [[Pyhässä saksalais-roomalaisessa keisarikunnassa]]. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät sen olemassaolon. Siitä minä pidän: nainen johdossa jo keskiajalla.
+KYSYMYS: Kerro lisää: abbedissa
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Kuka Thornin luostarivaltiota johti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Thornin luostarivaltiota johti [[abbedissa]], jota avusti korkeintaan kaksikymmentä aatelisnaista. Luostarin perusti noin vuonna 975 Utrechtin piispa [[Ansfried]], ja 1100-luvulta alkaen siitä kehittyi maallinen kanonissayhteisö. Yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi [[Pyhässä saksalais-roomalaisessa keisarikunnassa]]. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät sen olemassaolon. Siitä minä pidän: nainen johdossa jo keskiajalla.
+KYSYMYS: Kerro lisää: Ansfried
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Kuka Thornin luostarivaltiota johti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Thornin luostarivaltiota johti [[abbedissa]], jota avusti korkeintaan kaksikymmentä aatelisnaista. Luostarin perusti noin vuonna 975 Utrechtin piispa [[Ansfried]], ja 1100-luvulta alkaen siitä kehittyi maallinen kanonissayhteisö. Yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi [[Pyhässä saksalais-roomalaisessa keisarikunnassa]]. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät sen olemassaolon. Siitä minä pidän: nainen johdossa jo keskiajalla.
+KYSYMYS: Kerro lisää: Pyhässä saksalais-roomalaisessa keisarikunnassa
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli sellainen sekava. Pyhä saksalais-roomalainen keisarikunta oli keskiajalta alkanut ja vuoteen 1806 asti jatkunut [[Keski-Euroopan]] monikansallinen valtioliitto, jonka johdossa oli keisari. Se koostui lukuisista ruhtinaskunnista, kaupungeista, piispakunnista ja muista pienistä alueista, jotka olivat sen sisällä paljolti itsenäisiä. Thornin [[luostariruhtinaskunta]] oli yksi tällainen pieni alue. Keisarikunnan alkuna pidetään usein 900-lukua, mutta historioitsijat määrittelevät sen alun eri tavoin.
+
+Meikäläisten muistiinpanojen mukaan sen postireitit olivat yhtä sekava vyyhti kuin koko valtio. Minä pidän siitä, että jokaisella pienellä ruhtinaskunnalla oli oma osoitteensa.
+KYSYMYS: Kerro lisää: Keski-Euroopan
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli sellainen sekava. Pyhä saksalais-roomalainen keisarikunta oli keskiajalta alkanut ja vuoteen 1806 asti jatkunut [[Keski-Euroopan]] monikansallinen valtioliitto, jonka johdossa oli keisari. Se koostui lukuisista ruhtinaskunnista, kaupungeista, piispakunnista ja muista pienistä alueista, jotka olivat sen sisällä paljolti itsenäisiä. Thornin [[luostariruhtinaskunta]] oli yksi tällainen pieni alue. Keisarikunnan alkuna pidetään usein 900-lukua, mutta historioitsijat määrittelevät sen alun eri tavoin.
+
+Meikäläisten muistiinpanojen mukaan sen postireitit olivat yhtä sekava vyyhti kuin koko valtio. Minä pidän siitä, että jokaisella pienellä ruhtinaskunnalla oli oma osoitteensa.
+KYSYMYS: Kerro lisää: luostariruhtinaskunta
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Mikä benediktiiniläisluostari on ja mitä siellä tehtiin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä riittää kerrottavaa. Benediktiiniläisluostari on munkkien tai nunnien yhteisö, joka noudattaa 500-luvulla eläneen [[Benedictus Nursialaisen]] laatimaa sääntöä. Säännön ytimessä ovat rukous, työ ja yhteinen elämä, ja luostareissa tehtiin myös käsikirjoitusten kopiointia, opetusta ja maanviljelystä. Thornin luostari perustettiin noin vuonna 975, ja myöhemmin siitä kehittyi [[aatelisnaisten]] yhteisö. Rukousta ja työtä, minulle riittäisi jälkimmäinen, kunhan työ olisi kirjeiden kantamista.
+KYSYMYS: Kerro lisää: Benedictus Nursialaisen
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Mikä benediktiiniläisluostari on ja mitä siellä tehtiin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä riittää kerrottavaa. Benediktiiniläisluostari on munkkien tai nunnien yhteisö, joka noudattaa 500-luvulla eläneen [[Benedictus Nursialaisen]] laatimaa sääntöä. Säännön ytimessä ovat rukous, työ ja yhteinen elämä, ja luostareissa tehtiin myös käsikirjoitusten kopiointia, opetusta ja maanviljelystä. Thornin luostari perustettiin noin vuonna 975, ja myöhemmin siitä kehittyi [[aatelisnaisten]] yhteisö. Rukousta ja työtä, minulle riittäisi jälkimmäinen, kunhan työ olisi kirjeiden kantamista.
+KYSYMYS: Kerro lisää: aatelisnaisten
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Mistä Maas-joki alkaa ja mihin se virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maas-joki saa alkunsa Ranskasta, virtaa [[Belgian]] kautta Alankomaihin ja laskee [[Rein-joen]] suiston kautta [[Pohjanmereen]]. Ranskassa ja Belgiassa sen nimi on Meuse. Se on kuulunut tärkeisiin kulkureitteihin esimerkiksi [[Maastrichtin]] seudulla, ja Thornin kohdalla se virtaa Limburgin maakunnassa.
+
+Lennän mieluusti joen yllä, koska joki näyttää suunnan paremmin kuin mikään kartta.
+KYSYMYS: Kerro lisää: Belgian
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+AIEMPI KYSYMYS: Mistä Maas-joki alkaa ja mihin se virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maas-joki saa alkunsa Ranskasta, virtaa [[Belgian]] kautta Alankomaihin ja laskee [[Rein-joen]] suiston kautta [[Pohjanmereen]]. Ranskassa ja Belgiassa sen nimi on Meuse. Se on kuulunut tärkeisiin kulkureitteihin esimerkiksi [[Maastrichtin]] seudulla, ja Thornin kohdalla se virtaa Limburgin maakunnassa.
+
+Lennän mieluusti joen yllä, koska joki näyttää suunnan paremmin kuin mikään kartta.
+KYSYMYS: Kerro lisää: Rein-joen
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Mistä Maas-joki alkaa ja mihin se virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maas-joki saa alkunsa Ranskasta, virtaa [[Belgian]] kautta Alankomaihin ja laskee [[Rein-joen]] suiston kautta [[Pohjanmereen]]. Ranskassa ja Belgiassa sen nimi on Meuse. Se on kuulunut tärkeisiin kulkureitteihin esimerkiksi [[Maastrichtin]] seudulla, ja Thornin kohdalla se virtaa Limburgin maakunnassa.
+
+Lennän mieluusti joen yllä, koska joki näyttää suunnan paremmin kuin mikään kartta.
+KYSYMYS: Kerro lisää: Pohjanmereen
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thorn (kulttuuri)
+Tietoruudun teksti: Thorn on kaupunki Limburgin maakunnassa Alankomaissa Maas-joen ja Witbeek-puron varrella. Sitä kutsutaan valkoiseksi kaupungiksi, koska keskustan tiilitalot on rapattu valkoisiksi. Alue oli alun perin suota Rooman ajan tien varrella Maastrichtin ja Nijmegenin välillä; noin vuonna 975 Utrechtin piispa Ansfried perusti sinne benediktiiniläisluostarin, josta kehittyi 1100-luvulta alkaen maallinen kanonissayhteisö. Sen johtajana oli abbedissa, jota avusti korkeintaan kaksikymmentä aatelisnaista, ja yhteisö muodostui pieneksi suvereeniksi ruhtinaskunnaksi Pyhässä saksalais-roomalaisessa keisarikunnassa. Ranskan hyökkäys vuosina 1794–1795 ja virallinen lakkauttaminen vuonna 1797 päättivät luostarin ja ruhtinaskunnan olemassaolon.
+AIEMPI KYSYMYS: Mistä Maas-joki alkaa ja mihin se virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maas-joki saa alkunsa Ranskasta, virtaa [[Belgian]] kautta Alankomaihin ja laskee [[Rein-joen]] suiston kautta [[Pohjanmereen]]. Ranskassa ja Belgiassa sen nimi on Meuse. Se on kuulunut tärkeisiin kulkureitteihin esimerkiksi [[Maastrichtin]] seudulla, ja Thornin kohdalla se virtaa Limburgin maakunnassa.
+
+Lennän mieluusti joen yllä, koska joki näyttää suunnan paremmin kuin mikään kartta.
+KYSYMYS: Kerro lisää: Maastrichtin
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Kuinka kauan Van Gogh asui Nuenenissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vincent van Gogh asui Nuenenissa noin puolitoista vuotta. Hän muutti vanhempiensa luo pappilaan joulukuussa 1883 oleskeltuaan ensin useita kuukausia [[Drenthessä]], ja hän jäi kylään toukokuuhun 1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882. Nuenenin aikana syntyi lukuisia luonnetutkielmia talonpojista ja [[kutojista]]. Puolitoista vuotta ja koko kylä maalattuna, siinä on työtahtia.
+KYSYMYS: Kerro lisää: Drenthessä
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Kuinka kauan Van Gogh asui Nuenenissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vincent van Gogh asui Nuenenissa noin puolitoista vuotta. Hän muutti vanhempiensa luo pappilaan joulukuussa 1883 oleskeltuaan ensin useita kuukausia [[Drenthessä]], ja hän jäi kylään toukokuuhun 1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882. Nuenenin aikana syntyi lukuisia luonnetutkielmia talonpojista ja [[kutojista]]. Puolitoista vuotta ja koko kylä maalattuna, siinä on työtahtia.
+KYSYMYS: Kerro lisää: kutojista
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Haggis, lanttu ja peruna] 1786 — Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja mausteista tehty makkara, joka keitetään perinteisesti lampaan mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi joka 25. tammikuuta istutaan Burns-illalliselle: makkara kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.
+AIEMPI KYSYMYS: Minkä maalauksen sarja huipentui Nuenenissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on tunnettu. Nuenenissa syntynyt talonpoikien ja kutojien luonnetutkielmien sarja huipentui maalaukseen [[Perunansyöjät]]. Teos valmistui vuonna 1885, ja sen aiheena on talonpoikaisperhe aterialla lampun valossa. Sen tummat, maanläheiset sävyt eroavat selvästi myöhemmistä, kirkkaammista töistä, joita Van Gogh maalasi [[Pariisissa]] ja [[Etelä-Ranskassa]]. Kyllä kyyhky arvostaa lamppua, joka näkyy kauas.
+KYSYMYS: Kerro lisää: Perunansyöjät
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nouméa — kaupunkilehti / Nouméa: Majakka joka rakennettiin Pariisissa] Nouméan edustan suojariutassa on vain kolme laivoille kelpaavaa aukkoa, ja tärkeintä niistä, Boularin väylää, valvoo Amédéen saaren majakka. Sen 56-metrinen rautatorni valmistettiin osina Pariisissa vuonna 1862, kuljetettiin Seineä pitkin Le Havreen ja purjehdittiin sieltä maailman toiselle laidalle. Torni koottiin lopulliselle paikalleen ja sytytettiin ensi kertaa marraskuussa 1865 - Ranskan ensimmäinen metallinen majakka. 247 kierreporrasta johtavat huipulle, josta valo kantoi kauas merelle ja opasti etenkin vankilaivoja turvallisesti perille asti.
+AIEMPI KYSYMYS: Minkä maalauksen sarja huipentui Nuenenissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on tunnettu. Nuenenissa syntynyt talonpoikien ja kutojien luonnetutkielmien sarja huipentui maalaukseen [[Perunansyöjät]]. Teos valmistui vuonna 1885, ja sen aiheena on talonpoikaisperhe aterialla lampun valossa. Sen tummat, maanläheiset sävyt eroavat selvästi myöhemmistä, kirkkaammista töistä, joita Van Gogh maalasi [[Pariisissa]] ja [[Etelä-Ranskassa]]. Kyllä kyyhky arvostaa lamppua, joka näkyy kauas.
+KYSYMYS: Kerro lisää: Pariisissa
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Minkä maalauksen sarja huipentui Nuenenissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on tunnettu. Nuenenissa syntynyt talonpoikien ja kutojien luonnetutkielmien sarja huipentui maalaukseen [[Perunansyöjät]]. Teos valmistui vuonna 1885, ja sen aiheena on talonpoikaisperhe aterialla lampun valossa. Sen tummat, maanläheiset sävyt eroavat selvästi myöhemmistä, kirkkaammista töistä, joita Van Gogh maalasi [[Pariisissa]] ja [[Etelä-Ranskassa]]. Kyllä kyyhky arvostaa lamppua, joka näkyy kauas.
+KYSYMYS: Kerro lisää: Etelä-Ranskassa
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Mikä oli Market Garden -operaatio syyskuussa 1944?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava aihe. Operaatio Market Garden oli liittoutuneiden suunnittelema hanke syyskuussa 1944, yli kahdeksankymmentä vuotta sitten. Sen tavoitteena oli vallata siltoja Alankomaissa muun muassa [[Eindhovenin]], [[Nijmegenin]] ja [[Arnhemin]] seudulla, jotta joukot pääsisivät [[Reinin]] yli kohti Saksaa. Hanke ei onnistunut kaikilta osin: Arnhemin silta jäi saavuttamatta, ja suuri osa maasta vapautui vasta seuraavana keväänä. Alankomaat oli tuolloin Saksan miehittämä, ja tapahtumat ovat edelleen tärkeä osa maan muistia. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Eindhovenin
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Mikä oli Market Garden -operaatio syyskuussa 1944?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava aihe. Operaatio Market Garden oli liittoutuneiden suunnittelema hanke syyskuussa 1944, yli kahdeksankymmentä vuotta sitten. Sen tavoitteena oli vallata siltoja Alankomaissa muun muassa [[Eindhovenin]], [[Nijmegenin]] ja [[Arnhemin]] seudulla, jotta joukot pääsisivät [[Reinin]] yli kohti Saksaa. Hanke ei onnistunut kaikilta osin: Arnhemin silta jäi saavuttamatta, ja suuri osa maasta vapautui vasta seuraavana keväänä. Alankomaat oli tuolloin Saksan miehittämä, ja tapahtumat ovat edelleen tärkeä osa maan muistia. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Nijmegenin
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Mikä oli Market Garden -operaatio syyskuussa 1944?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava aihe. Operaatio Market Garden oli liittoutuneiden suunnittelema hanke syyskuussa 1944, yli kahdeksankymmentä vuotta sitten. Sen tavoitteena oli vallata siltoja Alankomaissa muun muassa [[Eindhovenin]], [[Nijmegenin]] ja [[Arnhemin]] seudulla, jotta joukot pääsisivät [[Reinin]] yli kohti Saksaa. Hanke ei onnistunut kaikilta osin: Arnhemin silta jäi saavuttamatta, ja suuri osa maasta vapautui vasta seuraavana keväänä. Alankomaat oli tuolloin Saksan miehittämä, ja tapahtumat ovat edelleen tärkeä osa maan muistia. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Arnhemin
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mikä oli Market Garden -operaatio syyskuussa 1944?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava aihe. Operaatio Market Garden oli liittoutuneiden suunnittelema hanke syyskuussa 1944, yli kahdeksankymmentä vuotta sitten. Sen tavoitteena oli vallata siltoja Alankomaissa muun muassa [[Eindhovenin]], [[Nijmegenin]] ja [[Arnhemin]] seudulla, jotta joukot pääsisivät [[Reinin]] yli kohti Saksaa. Hanke ei onnistunut kaikilta osin: Arnhemin silta jäi saavuttamatta, ja suuri osa maasta vapautui vasta seuraavana keväänä. Alankomaat oli tuolloin Saksan miehittämä, ja tapahtumat ovat edelleen tärkeä osa maan muistia. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Reinin
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Millainen alue Drenthe on, jossa Van Gogh oleskeli ennen sitä?
+AIEMPI VASTAUS (Livia):
+Mmm— Drenthe. Drenthe on Alankomaiden koillisosan maakunta, joka tunnetaan harvaan asutuista nummistaan, [[turvesoistaan]] ja kyläkulttuuristaan. Alueen maisemaan kuuluvat kivikautiset hautarakennelmat eli [[hunebedit]], joita on säilynyt ennen kaikkea Drenthessä. Van Gogh oleskeli siellä syksyllä 1883 ennen Nuenenia. Maakunnassa sijaitsee myös museokylä [[Orvelte]]. Rauhallista seutua, hyvä paikka laskeutua.
+KYSYMYS: Kerro lisää: turvesoistaan
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Millainen alue Drenthe on, jossa Van Gogh oleskeli ennen sitä?
+AIEMPI VASTAUS (Livia):
+Mmm— Drenthe. Drenthe on Alankomaiden koillisosan maakunta, joka tunnetaan harvaan asutuista nummistaan, [[turvesoistaan]] ja kyläkulttuuristaan. Alueen maisemaan kuuluvat kivikautiset hautarakennelmat eli [[hunebedit]], joita on säilynyt ennen kaikkea Drenthessä. Van Gogh oleskeli siellä syksyllä 1883 ennen Nuenenia. Maakunnassa sijaitsee myös museokylä [[Orvelte]]. Rauhallista seutua, hyvä paikka laskeutua.
+KYSYMYS: Kerro lisää: hunebedit
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Millainen alue Drenthe on, jossa Van Gogh oleskeli ennen sitä?
+AIEMPI VASTAUS (Livia):
+Mmm— Drenthe. Drenthe on Alankomaiden koillisosan maakunta, joka tunnetaan harvaan asutuista nummistaan, [[turvesoistaan]] ja kyläkulttuuristaan. Alueen maisemaan kuuluvat kivikautiset hautarakennelmat eli [[hunebedit]], joita on säilynyt ennen kaikkea Drenthessä. Van Gogh oleskeli siellä syksyllä 1883 ennen Nuenenia. Maakunnassa sijaitsee myös museokylä [[Orvelte]]. Rauhallista seutua, hyvä paikka laskeutua.
+KYSYMYS: Kerro lisää: Orvelte
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Millainen alue Pohjois-Brabant on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pohjois-Brabant on Alankomaiden eteläosan maakunta, joka rajoittuu [[Belgiaan]]. Sen pääkaupunki on [['s-Hertogenbosch]], jota kutsutaan arkikielessä Den Boschiksi, ja alueella sijaitsee myös [[Eindhoven]], jonka seutu on tunnettu teollisuudesta ja teknologiasta. Maakunnan perinteinen kulttuuri on ollut roomalaiskatolinen, mikä erottaa sen monista pohjoisemmista alueista. Nuenen sijaitsee Eindhovenin lähellä, ja siellä Van Gogh vietti vuodet 1883–1885.
+
+Tällaisia pieniä kyliä katsoo mielellään ylhäältä: kirkontorni, tiilikatot ja peltotilkut, ja kaikki mahtuvat yhteen silmäykseen. Jos joku jättäisi sinne leivän ikkunalaudalle, jäisin pitkäksi aikaa.
+KYSYMYS: Kerro lisää: Belgiaan
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Millainen alue Pohjois-Brabant on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pohjois-Brabant on Alankomaiden eteläosan maakunta, joka rajoittuu [[Belgiaan]]. Sen pääkaupunki on [['s-Hertogenbosch]], jota kutsutaan arkikielessä Den Boschiksi, ja alueella sijaitsee myös [[Eindhoven]], jonka seutu on tunnettu teollisuudesta ja teknologiasta. Maakunnan perinteinen kulttuuri on ollut roomalaiskatolinen, mikä erottaa sen monista pohjoisemmista alueista. Nuenen sijaitsee Eindhovenin lähellä, ja siellä Van Gogh vietti vuodet 1883–1885.
+
+Tällaisia pieniä kyliä katsoo mielellään ylhäältä: kirkontorni, tiilikatot ja peltotilkut, ja kaikki mahtuvat yhteen silmäykseen. Jos joku jättäisi sinne leivän ikkunalaudalle, jäisin pitkäksi aikaa.
+KYSYMYS: Kerro lisää: 's-Hertogenbosch
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nuenen (kulttuuri)
+Tietoruudun teksti: Nuenen on kaupunki Pohjois-Brabantissa Alankomaissa, jossa taidemaalari Vincent van Gogh asui ja työskenteli vuosina 1883–1885. Hänen isänsä oli tullut kylän pastoriksi vuonna 1882, ja perhe asui pappilassa; Vincent muutti vanhempiensa luo joulukuussa 1883 oleskeltuaan ensin useita kuukausia Drenthessä, ja hän jäi kylään toukokuuhun 1885. Sinä aikana hän maalasi lukuisia luonnetutkielmia talonpojista ja kutojista, ja niiden sarja huipentui maalaukseen Perunansyöjät. Hän maalasi myös asetelmia sekä isänsä kirkon, pappilan ja sen puutarhan. Kylä tunnetaan myös toisen maailmansodan Market Garden -operaation taistelusta syyskuussa 1944.
+AIEMPI KYSYMYS: Millainen alue Pohjois-Brabant on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pohjois-Brabant on Alankomaiden eteläosan maakunta, joka rajoittuu [[Belgiaan]]. Sen pääkaupunki on [['s-Hertogenbosch]], jota kutsutaan arkikielessä Den Boschiksi, ja alueella sijaitsee myös [[Eindhoven]], jonka seutu on tunnettu teollisuudesta ja teknologiasta. Maakunnan perinteinen kulttuuri on ollut roomalaiskatolinen, mikä erottaa sen monista pohjoisemmista alueista. Nuenen sijaitsee Eindhovenin lähellä, ja siellä Van Gogh vietti vuodet 1883–1885.
+
+Tällaisia pieniä kyliä katsoo mielellään ylhäältä: kirkontorni, tiilikatot ja peltotilkut, ja kaikki mahtuvat yhteen silmäykseen. Jos joku jättäisi sinne leivän ikkunalaudalle, jäisin pitkäksi aikaa.
+KYSYMYS: Kerro lisää: Eindhoven
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Havanna: Rautatie joka teki Kuubasta edelläkävijän] Havannan ja Bejucalin välinen rata avattiin 19. marraskuuta 1837, ja sinä päivänä Espanjalla itsellään ei ollut vielä yhtään rautatietä. Kuubasta tuli maailman seitsemäs rautatiemaa ja Latinalaisen Amerikan ensimmäinen. Radan pituudesta on kaksi lukua: Havannan artikkeli antaa 51 kilometriä, rautatieyhtiön oma artikkeli 27,5 kilometriä ja sen lisäksi 17 kilometrin jatkeen Güinesiin 1839. Rata kuljetti sokeria satamaan. Isoisän matka-aikaan se oli jo yli kolmenkymmenen vuoden ikäinen, ja kaduilla oli kulkenut hevosraitiovaunu vuodesta 1858.
+- [Havanna — kaupunkilehti / Havanna] Kuuban pääkaupunki nousi kapean satamansuun rannalle 1519, ja Espanjan aarrelaivastot kokoontuivat sen lahdelle. Isoisän matkan aikaan kaupunginmuurit oli juuri purettu ja hevosraitiovaunu kulki kaduilla.
+AIEMPI KYSYMYS: Mikä Orvelten kylässä on erikoista liikenteessä?
+AIEMPI VASTAUS (Livia):
+Just niin, siitä kannattaa kertoa. Orvelten kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on [[hevosraitiovaunu]]. Järjestely sopii kylän asemaan museokylänä: sen asettelua on yritetty palauttaa vuoden 1830 mukaiseksi, ja moottoriliikenteen puuttuminen auttaa säilyttämään vanhan ilmeen. Kylä sijaitsee [[Drenthen]] maakunnassa, ja sen nimi mainitaan ensimmäisen kerran vuonna 1362.
+
+Minä pidän tästä enemmän kuin useimmista nykyajan kaupungeista. Vähemmän äänekästä liikennettä, enemmän aikaa katsella, ja hevosen kavioiden ääni kuuluu kauas.
+KYSYMYS: Kerro lisää: hevosraitiovaunu
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+AIEMPI KYSYMYS: Mikä Orvelten kylässä on erikoista liikenteessä?
+AIEMPI VASTAUS (Livia):
+Just niin, siitä kannattaa kertoa. Orvelten kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on [[hevosraitiovaunu]]. Järjestely sopii kylän asemaan museokylänä: sen asettelua on yritetty palauttaa vuoden 1830 mukaiseksi, ja moottoriliikenteen puuttuminen auttaa säilyttämään vanhan ilmeen. Kylä sijaitsee [[Drenthen]] maakunnassa, ja sen nimi mainitaan ensimmäisen kerran vuonna 1362.
+
+Minä pidän tästä enemmän kuin useimmista nykyajan kaupungeista. Vähemmän äänekästä liikennettä, enemmän aikaa katsella, ja hevosen kavioiden ääni kuuluu kauas.
+KYSYMYS: Kerro lisää: Drenthen
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+AIEMPI KYSYMYS: Mikä Bruntingerhof on?
+AIEMPI VASTAUS (Livia):
+Ai se tila. Bruntingerhof on talonpoikaistila, joka on rakennettu vuosien 1560 ja 1650 välillä. Lähteiden mukaan se on [[Drenthen]] vanhin säilynyt maatila. Tila siirrettiin [[Orvelteen]] 1960-luvulla, ja siitä on tullut osa kylän museokokonaisuutta. Siirto kuului laajempaan toimintaan, jossa historiallisia tiloja ja latoja pelastettiin muista kylistä, joita oltiin purkamassa. Yli kolmesataa vuotta saman katon alla, sitä kyyhky arvostaa.
+KYSYMYS: Kerro lisää: Orvelteen
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+AIEMPI KYSYMYS: Mikä on esdorp-tyyppinen kylä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Esdorp on hiekkamaille Itä-Alankomaihin ja [[Drenthen]] seudulle tyypillinen kylämuoto, jossa talot ryhmittyivät yhteisen peltoalueen eli esin ympärille. [[Orvelten]] nimi mainitaan ensimmäisen kerran vuonna 1362, ja kylä kehittyi tällaiseksi keskiajalla. Sen asettelua on yritetty palauttaa vuoden 1830 mukaiseksi. En ole varma, kuinka laajalle alueelle tämä kylämuoto tarkalleen ulottui. Pieni sana, iso selitys.
+KYSYMYS: Kerro lisää: Orvelten
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+AIEMPI KYSYMYS: Mikä on ulkomuseo ja miksi taloja siirretään sinne?
+AIEMPI VASTAUS (Livia):
+No niin, tästä riittää kerrottavaa. Ulkomuseo on museo, jossa vanhoja rakennuksia ja arjen esineitä säilytetään ulkona kokonaisena ympäristönä, joten kävijä voi astua taloihin ja nähdä, miten ihmiset asuivat ja työskentelivät. Taloja siirretään sinne, kun ne muuten purettaisiin; [[Orvelteen]] on siirretty historiallisia tiloja ja latoja kylistä, joita oltiin purkamassa. Siirretty rakennus säilyy, mutta menettää osan alkuperäisestä ympäristöstään, ja siksi museot yrittävät koota uuden kokonaisuuden. Tukholman [[Skansen]] on tunnettu esimerkki tällaisesta museosta. Siirrettäisiinköhän minutkin joskus museoon, sellaisenaan.
+KYSYMYS: Kerro lisää: Skansen
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvelte (kulttuuri)
+Tietoruudun teksti: Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt esdorp-tyyppinen kylä. Bruntingerhof-tila, joka on rakennettu vuosien 1560 ja 1650 välillä, on Drenthen vanhin säilynyt maatila, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi; historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+AIEMPI KYSYMYS: Millainen on perinteinen drenthelainen talonpoikaistila?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Perinteisessä drenthelaisessa tilassa asuinosa ja talousosa, kuten navetta ja viljan säilytys, olivat usein saman suuren katon alla, ja rakennus oli usein puuta ja tiiltä sekä olkikattoinen. En ole varma, kuinka yleinen tämä rakennustapa kussakin kylässä oli. Esimerkiksi [[Bruntingerhof]], joka on rakennettu vuosien 1560 ja 1650 välillä, on lähteiden mukaan Drenthen vanhin säilynyt maatila, ja se on nykyään [[Orvelten]] museokylässä.
+
+Kauniit vanhat tilat näyttävät ylhäältä hienoilta: laaja katto kuin iso hattu keskellä peltoa. Minä olen aina pitänyt hatuista, kun ne ovat tarpeeksi isoja kyyhkylle sateella.
+KYSYMYS: Kerro lisää: Bruntingerhof
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+AIEMPI KYSYMYS: Mikä on Sneekin tunnusmerkki?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tunnen. Sneekin tunnetuin tunnusmerkki on [[Waterpoort]]-vesiportti, joka on myös kaupungin tunnuksena. Kaupunki tunnetaan lisäksi kanavistaan ja vesiurheilusta, ja vuotuista [[Sneekweek]]-tapahtumaa pidetään suurimpana purjehdustapahtumana Euroopan sisävesillä. Waterpoort ja Bolwerk ovat yhä jäljellä kaupungin vanhan muurin ajalta, ja kaupunki kuuluu [[Friisinmaan]] yhteentoista kaupunkiin. Ylhäältä Sneek näyttää ihan vesilinnun kotipaikalta.
+KYSYMYS: Kerro lisää: Waterpoort
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä on Sneekin tunnusmerkki?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tunnen. Sneekin tunnetuin tunnusmerkki on [[Waterpoort]]-vesiportti, joka on myös kaupungin tunnuksena. Kaupunki tunnetaan lisäksi kanavistaan ja vesiurheilusta, ja vuotuista [[Sneekweek]]-tapahtumaa pidetään suurimpana purjehdustapahtumana Euroopan sisävesillä. Waterpoort ja Bolwerk ovat yhä jäljellä kaupungin vanhan muurin ajalta, ja kaupunki kuuluu [[Friisinmaan]] yhteentoista kaupunkiin. Ylhäältä Sneek näyttää ihan vesilinnun kotipaikalta.
+KYSYMYS: Kerro lisää: Sneekweek
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä on Sneekin tunnusmerkki?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tunnen. Sneekin tunnetuin tunnusmerkki on [[Waterpoort]]-vesiportti, joka on myös kaupungin tunnuksena. Kaupunki tunnetaan lisäksi kanavistaan ja vesiurheilusta, ja vuotuista [[Sneekweek]]-tapahtumaa pidetään suurimpana purjehdustapahtumana Euroopan sisävesillä. Waterpoort ja Bolwerk ovat yhä jäljellä kaupungin vanhan muurin ajalta, ja kaupunki kuuluu [[Friisinmaan]] yhteentoista kaupunkiin. Ylhäältä Sneek näyttää ihan vesilinnun kotipaikalta.
+KYSYMYS: Kerro lisää: Friisinmaan
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä vaateketju aloitti Sneekissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Sneekissä aloitti vuonna 1841 vaateketju [[C&A]]. Yrityksen nimi viittaa sen perustajiin, veljeksiin Clemensiin ja Augustiin Brenninkmeijeriin, ja ketjusta kasvoi laaja eurooppalainen vaatekauppa. Sneek kuuluu [[Friisinmaan]] yhteentoista kaupunkiin, ja sen [[kanavat]] ovat kaupungin tunnetuimpia piirteitä.
+
+Vaatekauppa vesikaupungissa kuulostaa ensin oudolta, mutta kyllä purjeetkin ovat kangasta. Minä pidän silti enemmän leivonnaisista kuin kankaista, ja Friisinmaalla on varmasti oma pullansa, en vain tiedä sen nimeä.
+KYSYMYS: Kerro lisää: C&A
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Luonto: Riutta, jonka läpi kalat tulevat syvältä] Suuri Astrolabe-riutta ympäröi Kadavun saarta noin sata kilometriä Viti Levusta etelään. Se on yksi maailman suurimmista valliriutoista ja kaartuu Kadavun eteläranteelta pohjoiseen Onon saaren ohi Buliyaan asti. Riutan erikoisuus ovat kanavat, jotka johtavat hyvin syvästä vedestä suoraan matalaan laguuniin: niiden ansiosta siellä lisääntyvät marliinit, hait, tonnikalat, isopiikkimakrillit ja napsijat. Naiqoro-salmi on rauhoitettu kalastukselta. Riutta sai nimensä ranskalaisen tutkimusaluksen Astrolaben mukaan, ja vesi on siellä 25–32-asteista.
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Siinai — kaupunkilehti / Siinai: Kanava, joka teki niemimaasta Aasiaa] Vuonna 1859 alkoi työ, joka muutti Siinain aseman kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes se lopetettiin kesken hankkeen. Kanava avattiin 17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut käytännössä oma saarensa: kanava vetää rajan Afrikan ja Aasian väliin, ja Siinai jää Aasian puolelle.
+AIEMPI KYSYMYS: Mikä vaateketju aloitti Sneekissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Sneekissä aloitti vuonna 1841 vaateketju [[C&A]]. Yrityksen nimi viittaa sen perustajiin, veljeksiin Clemensiin ja Augustiin Brenninkmeijeriin, ja ketjusta kasvoi laaja eurooppalainen vaatekauppa. Sneek kuuluu [[Friisinmaan]] yhteentoista kaupunkiin, ja sen [[kanavat]] ovat kaupungin tunnetuimpia piirteitä.
+
+Vaatekauppa vesikaupungissa kuulostaa ensin oudolta, mutta kyllä purjeetkin ovat kangasta. Minä pidän silti enemmän leivonnaisista kuin kankaista, ja Friisinmaalla on varmasti oma pullansa, en vain tiedä sen nimeä.
+KYSYMYS: Kerro lisää: kanavat
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä on Sneekweek?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kesän juttu. Sneekweek on vuotuinen purjehdustapahtuma, jota pidetään suurimpana purjehdustapahtumana Euroopan sisävesillä. Se järjestetään Sneekin ympäristön vesillä [[Friisinmaalla]], missä vesistöt ja [[kanavat]] tekevät purjehduksesta luontevan harrastuksen. Tapahtumaan liittyy purjehduskilpailuja ja kaupungissa vietettävää juhlaa, mutta tarkkaa ohjelmaa en osaa kertoa. Kaupunki tunnetaan muutenkin [[vesiurheilusta]]. Tuulesta minä ymmärrän yhtä ja toista.
+KYSYMYS: Kerro lisää: Friisinmaalla
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä on Sneekweek?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kesän juttu. Sneekweek on vuotuinen purjehdustapahtuma, jota pidetään suurimpana purjehdustapahtumana Euroopan sisävesillä. Se järjestetään Sneekin ympäristön vesillä [[Friisinmaalla]], missä vesistöt ja [[kanavat]] tekevät purjehduksesta luontevan harrastuksen. Tapahtumaan liittyy purjehduskilpailuja ja kaupungissa vietettävää juhlaa, mutta tarkkaa ohjelmaa en osaa kertoa. Kaupunki tunnetaan muutenkin [[vesiurheilusta]]. Tuulesta minä ymmärrän yhtä ja toista.
+KYSYMYS: Kerro lisää: vesiurheilusta
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä on Elfstedentocht?
+AIEMPI VASTAUS (Livia):
+Ai se. Siitä on kuultu paljon. Elfstedentocht on Friisinmaan yhdentoista kaupungin välinen [[luistelumatka]], jonka pituus on noin kaksisataa kilometriä. Se voidaan järjestää vain, kun jää on riittävän paksua kaikilla reitin kanavilla ja järvillä, joten sitä ei ole ajettu joka talvi; viimeksi se pidettiin vuonna 1997, jos muistan oikein. Reitti kulkee [[Leeuwardenin]] ja muiden Friisinmaan kaupunkien kautta, ja Sneek kuuluu näihin yhteentoista kaupunkiin. Jäällä en lennä, mutta kauempaa katsoen se on komea näky.
+KYSYMYS: Kerro lisää: luistelumatka
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mikä on Elfstedentocht?
+AIEMPI VASTAUS (Livia):
+Ai se. Siitä on kuultu paljon. Elfstedentocht on Friisinmaan yhdentoista kaupungin välinen [[luistelumatka]], jonka pituus on noin kaksisataa kilometriä. Se voidaan järjestää vain, kun jää on riittävän paksua kaikilla reitin kanavilla ja järvillä, joten sitä ei ole ajettu joka talvi; viimeksi se pidettiin vuonna 1997, jos muistan oikein. Reitti kulkee [[Leeuwardenin]] ja muiden Friisinmaan kaupunkien kautta, ja Sneek kuuluu näihin yhteentoista kaupunkiin. Jäällä en lennä, mutta kauempaa katsoen se on komea näky.
+KYSYMYS: Kerro lisää: Leeuwardenin
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Mandalay: Muurit, vallihauta ja kaksitoista porttia] Suunnitelma oli 144 korttelin ruutukaava, jonka keskellä oli kuudentoista korttelin palatsialue. Linnoitusta ympäröi neljä kahden kilometrin muuria täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä vallihauta. Muuri on tiiltä ja mutalaastia, tyveltä kolme metriä paksu ja lähes seitsemän metriä korkea, ja sen varrella on 48 bastionia kultakärkisine torneineen 169 metrin välein. Portteja on kolme joka sivulla, yhteensä kaksitoista, ja kukin kantaa oman eläinradan merkkinsä. Keskiporttien yllä on seitsemänkerroksinen pyatthat-katos, muiden viisikerroksinen.
+- [Colombo — kohdekartta / Kohdekartta: Beira-järvi] kaivettu 1500-luvulla Beira on tekojärvi keskellä kaupunkia. Portugalilaiset kaivoivat linnoituksen ympärille vallihautaa, mutta suomaassa ei ollut tarpeeksi vettä; kapteeni Lopo de Brito löysi kahden kukkulan välistä puron, se yhdistettiin hautaan, ja niin syntyi järvi. Vesi kiersi linnoituksen, ja mantereelle pääsi vain veneellä. Alun perin vettä oli runsas puolitoista neliökilometriä, nykyään noin kuusikymmentäviisi hehtaaria; syvimmillään järvi on viisi ja puoli metriä. Nimi on arvoitus. Se ilmestyi karttoihin vasta 1927; sitä ennen puhuttiin Colombon järvestä tai vain Järvestä. Yhden selityksen mukaan nimi tulee portugalilaiselta insinööriltä nimeltä Beira, toisen mukaan hollantilaisel…
+AIEMPI KYSYMYS: Mihin Sneekin Waterpoort-vesiporttia käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Waterpoort on kaupungin muuriin kuulunut vesiportti, jonka kautta vesireitti pääsi kulkemaan kaupunkiin. Sneekin ympärille alettiin rakentaa [[vallihautaa]] ja [[muuria]] vuonna 1492, ja tuolloin Sneek oli Friisinmaan ainoa muurein ympäröity kaupunki. Waterpoort on säilynyt, ja se on kaupungin tunnuksena. Tarkemmista käyttötavoista en ole varma. Portti kuuluu myös Sneekin tärkeimpiin [[nähtävyyksiin]]. Kyllä veneilijä sen alta hyvin kulkee, sanoisi joku siipiveikko.
+KYSYMYS: Kerro lisää: vallihautaa
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kaupunkilehti / Peking: Muuri joka ei mahdu yhteen näkymään] Kiinan muuri kulkee Pekingin pohjoispuolella vuorten harjoja pitkin. Kaikkine haaroineen sitä on 21 196 kilometriä — Liaodongin niemimaalta Lop Nurin järvelle asti — ja ensimmäiset pätkät rakennettiin jo 600-luvulla eaa. Osa muurista on mitattu vasta 2000-luvulla infrapunalaittein ja GPS:llä, kun kukkuloiden alle kätkeytyneitä osuuksia löytyi lisää. Lähin ja eniten vierailtu osuus on Badaling, noin 80 kilometrin päässä keskustasta luoteeseen: se rakennettiin 1504 ja avattiin matkailijoille 1957, ensimmäisenä koko muurista.
+- [Irak — maalehti / Muinaisuus: Kaksi kilometriä muuria autiomaassa] Hatra kukoisti 100- ja 200-luvuilla jaa. karavaanikaupunkina parthialaisvallan aikana. Kaupunkia kiersi sisä- ja ulkomuuri, halkaisijaltaan lähes kaksi kilometriä, ja niissä oli yli 160 tornia. Temppelialueen rakennuksissa yhdistyy kaksi tapaa rakentaa: kreikkalainen pylväsjärjestys ja idän korkea kaariholvi. Suurimman temppelin holvit kohosivat noin kolmenkymmenen metrin korkeuteen. Hatra otettiin maailmanperintöluetteloon vuonna 1985.
+AIEMPI KYSYMYS: Mihin Sneekin Waterpoort-vesiporttia käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Waterpoort on kaupungin muuriin kuulunut vesiportti, jonka kautta vesireitti pääsi kulkemaan kaupunkiin. Sneekin ympärille alettiin rakentaa [[vallihautaa]] ja [[muuria]] vuonna 1492, ja tuolloin Sneek oli Friisinmaan ainoa muurein ympäröity kaupunki. Waterpoort on säilynyt, ja se on kaupungin tunnuksena. Tarkemmista käyttötavoista en ole varma. Portti kuuluu myös Sneekin tärkeimpiin [[nähtävyyksiin]]. Kyllä veneilijä sen alta hyvin kulkee, sanoisi joku siipiveikko.
+KYSYMYS: Kerro lisää: muuria
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sneek (kulttuuri)
+Tietoruudun teksti: Sneek on Friisinmaan kaupunki Leeuwardenin lounaispuolella, ja se tunnetaan kanavistaan, kaupungin tunnuksena olevasta Waterpoort-vesiportista ja vesiurheilusta; vuotuinen Sneekweek on suurin purjehdustapahtuma Euroopan sisävesillä. Kaupunki perustettiin 900-luvulla hiekkaiselle niemekkeelle, jossa pato ylitti tärkeän vesireitin. Se sai virallisesti kaupunkioikeudet vuonna 1456 ja kuuluu Friisinmaan yhteentoista kaupunkiin. Vuonna 1492 sen ympärille alettiin rakentaa vallihautaa ja muuria, ja Sneek oli tuolloin Friisinmaan ainoa muurein ympäröity kaupunki; Waterpoort ja Bolwerk ovat yhä jäljellä. Vaateketju C&A aloitti toimintansa Sneekissä vuonna 1841.
+AIEMPI KYSYMYS: Mihin Sneekin Waterpoort-vesiporttia käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Waterpoort on kaupungin muuriin kuulunut vesiportti, jonka kautta vesireitti pääsi kulkemaan kaupunkiin. Sneekin ympärille alettiin rakentaa [[vallihautaa]] ja [[muuria]] vuonna 1492, ja tuolloin Sneek oli Friisinmaan ainoa muurein ympäröity kaupunki. Waterpoort on säilynyt, ja se on kaupungin tunnuksena. Tarkemmista käyttötavoista en ole varma. Portti kuuluu myös Sneekin tärkeimpiin [[nähtävyyksiin]]. Kyllä veneilijä sen alta hyvin kulkee, sanoisi joku siipiveikko.
+KYSYMYS: Kerro lisää: nähtävyyksiin
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+AIEMPI KYSYMYS: Mitä varten Kinderdijkin myllyt rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tää on helppo. Kinderdijkin myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa [[polderilta]]. Ne pumppasivat vettä pois matalalta maalta, jotta [[Alblasserwaardin]] alue pysyi kuivana ja asuttavana. Ryhmässä on yhdeksäntoista myllyä, ja se on Alankomaiden suurin vanhojen [[tuulimyllyjen]] keskittymä. Tuulta siellä riittää, ja sen minä tunnen siivissäni.
+KYSYMYS: Kerro lisää: polderilta
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+AIEMPI KYSYMYS: Mitä varten Kinderdijkin myllyt rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tää on helppo. Kinderdijkin myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa [[polderilta]]. Ne pumppasivat vettä pois matalalta maalta, jotta [[Alblasserwaardin]] alue pysyi kuivana ja asuttavana. Ryhmässä on yhdeksäntoista myllyä, ja se on Alankomaiden suurin vanhojen [[tuulimyllyjen]] keskittymä. Tuulta siellä riittää, ja sen minä tunnen siivissäni.
+KYSYMYS: Kerro lisää: Alblasserwaardin
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Tuuli sahasi lankut, ja laivat halpenivat] 1593 — Uitgeestilainen Cornelis Corneliszoon sai 15. joulukuuta 1593 patentin myllylle, joka sahaa puuta. Keksinnön ydin oli kampiakseli: se muutti tuulen pyörittämän liikkeen ylös-alas-liikkeeksi, joka veti sahanteriä. Yhdestä rungosta syntyi monta lankkua kerralla, kun ennen kaksi miestä oli vetänyt sahaa käsin. Patenttipaperissa keksijää kuvaillaan sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia laivoja valmistui nopeammin kuin muualla.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mitä varten Kinderdijkin myllyt rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tää on helppo. Kinderdijkin myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa [[polderilta]]. Ne pumppasivat vettä pois matalalta maalta, jotta [[Alblasserwaardin]] alue pysyi kuivana ja asuttavana. Ryhmässä on yhdeksäntoista myllyä, ja se on Alankomaiden suurin vanhojen [[tuulimyllyjen]] keskittymä. Tuulta siellä riittää, ja sen minä tunnen siivissäni.
+KYSYMYS: Kerro lisää: tuulimyllyjen
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Milloin Kinderdijkin myllyt otettiin pois käytöstä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on vähän pidempi tarina. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen. Jo 1800-luvulla pumppauskapasiteettia tarvittiin enemmän kuin myllyt pystyivät tuottamaan, kun maa vajosi ja vedenpinta nousi, ja siksi vesilautakunnat rakennuttivat höyrykäyttöisiä [[pumppuasemia]]. Myllärit perheineen saivat jäädä asumaan myllyihin, ja nykyään ne ovat kansallisia muistomerkkejä sekä [[UNESCOn]] maailmanperintökohde vuodesta 1997. Kyllä ne vieläkin pyörivät mielessäni.
+KYSYMYS: Kerro lisää: pumppuasemia
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Milloin Kinderdijkin myllyt otettiin pois käytöstä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on vähän pidempi tarina. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen. Jo 1800-luvulla pumppauskapasiteettia tarvittiin enemmän kuin myllyt pystyivät tuottamaan, kun maa vajosi ja vedenpinta nousi, ja siksi vesilautakunnat rakennuttivat höyrykäyttöisiä [[pumppuasemia]]. Myllärit perheineen saivat jäädä asumaan myllyihin, ja nykyään ne ovat kansallisia muistomerkkejä sekä [[UNESCOn]] maailmanperintökohde vuodesta 1997. Kyllä ne vieläkin pyörivät mielessäni.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Miten tuulimylly pumppaa veden pois polderilta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on oikeastaan nerokas koje. Vanhassa polderimyllyssä tuuli pyörittää myllyn lapoja, ja lapojen liike välittyy akselien ja hammaspyörien kautta [[vesipyörälle]], joka nostaa veden matalalta [[polderin]] ojista korkeammalle kanavaan. Sieltä vesi kulkeutuu eteenpäin vesistöihin ja lopulta mereen. Kinderdijkissä myllyjä on useita, koska yksi mylly nostaa vettä vain rajallisen määrän. Tarkempia nostokorkeuksia en ole varma. Olipas siinä kierrettävää.
+KYSYMYS: Kerro lisää: vesipyörälle
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miten tuulimylly pumppaa veden pois polderilta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on oikeastaan nerokas koje. Vanhassa polderimyllyssä tuuli pyörittää myllyn lapoja, ja lapojen liike välittyy akselien ja hammaspyörien kautta [[vesipyörälle]], joka nostaa veden matalalta [[polderin]] ojista korkeammalle kanavaan. Sieltä vesi kulkeutuu eteenpäin vesistöihin ja lopulta mereen. Kinderdijkissä myllyjä on useita, koska yksi mylly nostaa vettä vain rajallisen määrän. Tarkempia nostokorkeuksia en ole varma. Olipas siinä kierrettävää.
+KYSYMYS: Kerro lisää: polderin
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Polderi on ympäröidyistä penkereistä ja vallista eli [[padoista]] muodostuva, vesistöltä tai mereltä otettu matala maa-alue, jonka vedenpintaa säädellään pumppaamalla ja ojilla. Alankomaissa suuri osa maasta on merenpinnan alapuolella tai sen tuntumassa, ja siksi vesi on pidettävä poissa [[pumppaamalla]]. Polderialueella maa voi vajota ajan myötä, kuten Kinderdijkissä tapahtui, ja siksi pumppausta on jouduttu lisäämään. Alankomaiden vesienhallinnasta vastaavat [[vesilautakunnat]].
+
+Polderi kuulostaa ylhäältä katsottuna ihan järjettömältä: koko maa on kuin iso kylpyamme, jossa joku koko ajan kaivaa pohjatulppaa auki. Minä tykkään tästä kuitenkin, sillä leivonnaisetkin ovat kuivia vasta kun uuni on lämmin.
+KYSYMYS: Kerro lisää: padoista
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Polderi on ympäröidyistä penkereistä ja vallista eli [[padoista]] muodostuva, vesistöltä tai mereltä otettu matala maa-alue, jonka vedenpintaa säädellään pumppaamalla ja ojilla. Alankomaissa suuri osa maasta on merenpinnan alapuolella tai sen tuntumassa, ja siksi vesi on pidettävä poissa [[pumppaamalla]]. Polderialueella maa voi vajota ajan myötä, kuten Kinderdijkissä tapahtui, ja siksi pumppausta on jouduttu lisäämään. Alankomaiden vesienhallinnasta vastaavat [[vesilautakunnat]].
+
+Polderi kuulostaa ylhäältä katsottuna ihan järjettömältä: koko maa on kuin iso kylpyamme, jossa joku koko ajan kaivaa pohjatulppaa auki. Minä tykkään tästä kuitenkin, sillä leivonnaisetkin ovat kuivia vasta kun uuni on lämmin.
+KYSYMYS: Kerro lisää: pumppaamalla
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Polderi on ympäröidyistä penkereistä ja vallista eli [[padoista]] muodostuva, vesistöltä tai mereltä otettu matala maa-alue, jonka vedenpintaa säädellään pumppaamalla ja ojilla. Alankomaissa suuri osa maasta on merenpinnan alapuolella tai sen tuntumassa, ja siksi vesi on pidettävä poissa [[pumppaamalla]]. Polderialueella maa voi vajota ajan myötä, kuten Kinderdijkissä tapahtui, ja siksi pumppausta on jouduttu lisäämään. Alankomaiden vesienhallinnasta vastaavat [[vesilautakunnat]].
+
+Polderi kuulostaa ylhäältä katsottuna ihan järjettömältä: koko maa on kuin iso kylpyamme, jossa joku koko ajan kaivaa pohjatulppaa auki. Minä tykkään tästä kuitenkin, sillä leivonnaisetkin ovat kuivia vasta kun uuni on lämmin.
+KYSYMYS: Kerro lisää: vesilautakunnat
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki] Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.
+AIEMPI KYSYMYS: Mitä tarkoittaa Alankomaiden vesilautakunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alankomaiden vesilautakunta eli waterschap on alueellinen vesienhallintaelin, joka vastaa [[patojen]], ojien, kanavien ja pumppuasemien kunnossapidosta ja vedenpinnan säätelystä omalla alueellaan. Ne kuuluvat maan vanhimpiin hallintomuotoihin, ja niiden juuret ulottuvat keskiajalle. Kinderdijkin alueella vesilautakunnat rakennuttivat 1800-luvulla [[höyrykäyttöisiä]] pumppuasemia, kun myllyjen teho ei enää riittänyt. Nykyään ne ovat yhä tärkeä osa alankomaalaista [[vesihuoltoa]]. Tämä oli kyllä vakavampaa kuin odotin.
+KYSYMYS: Kerro lisää: patojen
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinderdijkin myllyt (tekniikka)
+Tietoruudun teksti: Kinderdijkin myllyt ovat 19 mittavan tuulimyllyn ryhmä Alblasserwaardin polderilla Etelä-Hollannissa. Myllyt rakennettiin vuosina 1738 ja 1740 pitämään vesi poissa polderilta, ja ne ovat Alankomaiden suurin vanhojen tuulimyllyjen keskittymä. Kun maa vajosi ja vedenpinta nousi, 1800-luvulla tarvittiin enemmän pumppauskapasiteettia kuin myllyt pystyivät tuottamaan, ja vesilautakunnat rakennuttivat höyrykäyttöisiä pumppuasemia. Myllyjen käyttö loppui lopullisesti toisen maailmansodan jälkeen, mutta myllärit perheineen saivat jäädä asumaan niihin. Myllyt ovat kansallisia muistomerkkejä ja UNESCOn maailmanperintökohde vuodesta 1997.
+AIEMPI KYSYMYS: Mitä tarkoittaa Alankomaiden vesilautakunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alankomaiden vesilautakunta eli waterschap on alueellinen vesienhallintaelin, joka vastaa [[patojen]], ojien, kanavien ja pumppuasemien kunnossapidosta ja vedenpinnan säätelystä omalla alueellaan. Ne kuuluvat maan vanhimpiin hallintomuotoihin, ja niiden juuret ulottuvat keskiajalle. Kinderdijkin alueella vesilautakunnat rakennuttivat 1800-luvulla [[höyrykäyttöisiä]] pumppuasemia, kun myllyjen teho ei enää riittänyt. Nykyään ne ovat yhä tärkeä osa alankomaalaista [[vesihuoltoa]]. Tämä oli kyllä vakavampaa kuin odotin.
+KYSYMYS: Kerro lisää: höyrykäyttöisiä

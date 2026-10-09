@@ -1,0 +1,1015 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti
+Tietoruudun teksti: Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen Loevesteinin linnaan tasavallan uskontokiistojen takia. Yksi oikeus hänelle jäi: hän sai lukea. Kirjat tuotiin isossa arkussa, joka soudettiin joen yli ja kannettiin portista sisään, ja aluksi vartijat avasivat arkun joka kerta. Vuosien mittaan he kyllästyivät. Sen huomasi myös vanki, ja hän alkoi harjoitella: maata liikkumatta kaksi tuntia, juuri niin kauan kuin venematka kesti.
+
+Maaliskuun 22. päivänä 1621, markkinapäivänä, palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta. Kukaan ei avannut sitä. Toisella rannalla De Groot nousi arkusta, pukeutui muurariksi ja käveli tiehensä. Hän pakeni Ranskaan ja kirjoitti siellä pääteoksensa; toinen niistä, Mare Liberum, esitti ettei meri voi kuulua kenellekään, ja niiden takia häntä sanotaan yhä kansainvälisen oikeuden isäksi. Arkku on Rijksmuseumin kokoelmassa, ja se on yllättä…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kello luettiin naapurikaupungin tornista] 1608 — Middelburgilainen silmälasintekijä Hans Lipperhey haki syyskuussa 1608 patenttia laitteelle, jolla voi nähdä kauas: putkelle, jonka päissä on kupera ja kovera linssi. Lokakuun alussa hän esitteli sen Haagissa sotapäälliköille, ja tornista luettiin naapurikaupungin Delftin kirkonkellon viisarit. Patenttia hän ei saanut, sillä kaksi muutakin ilmoittautui keksijäksi. Sen sijaan hän sai tilauksen kolmesta kaukoputkesta ja niistä 900 guldenia. Vuotta myöhemmin Galileo Galilei kuuli asiasta, rakensi paremman putken ja käänsi sen taivaalle.
+AIEMPI KYSYMYS: Missä Hugo de Groot on haudattu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. De Groot on haudattu [[Delftin]] [[Nieuwe Kerk]] -kirkkoon. Hän kuoli Rostockissa Pohjois-Saksassa elokuussa 1645 palatessaan Ruotsista, ja hänen ruumiinsa tuotiin Delftiin. Delftissä sijaitsee myös monia muita Alankomaiden historian henkilöitä muistavia hautoja. Kotiin hän pääsi lopulta, vaikka matka oli pitkä.
+KYSYMYS: Kerro lisää: Delftin
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — juuri niin kauan kuin venematka kesti
+Tietoruudun teksti: Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen Loevesteinin linnaan tasavallan uskontokiistojen takia. Yksi oikeus hänelle jäi: hän sai lukea. Kirjat tuotiin isossa arkussa, joka soudettiin joen yli ja kannettiin portista sisään, ja aluksi vartijat avasivat arkun joka kerta. Vuosien mittaan he kyllästyivät. Sen huomasi myös vanki, ja hän alkoi harjoitella: maata liikkumatta kaksi tuntia, juuri niin kauan kuin venematka kesti.
+
+Maaliskuun 22. päivänä 1621, markkinapäivänä, palvelustyttö Elsje van Houweningen saatteli arkun ulos linnasta. Kukaan ei avannut sitä. Toisella rannalla De Groot nousi arkusta, pukeutui muurariksi ja käveli tiehensä. Hän pakeni Ranskaan ja kirjoitti siellä pääteoksensa; toinen niistä, Mare Liberum, esitti ettei meri voi kuulua kenellekään, ja niiden takia häntä sanotaan yhä kansainvälisen oikeuden isäksi. Arkku on Rijksmuseumin kokoelmassa, ja se on yllättä…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Timanttihiomo] Isoisäsi käveli hiomoiden ohi kaupungin parhaana timanttivuotena eikä tiennyt sitä. Amsterdam oli tuolloin maailman tärkein timanttikeskus, ja ala oli päätynyt sinne kiertotietä: 1500-luvulla Portugalista tulleet sefardijuutalaiset toivat mukanaan kauppasuhteet, ja hionta oli yksi niistä harvoista ammateista, joihin ei tarvinnut kuulua kiltaan — kiltoihin heitä ei olisi otettu. Työ tehtiin aluksi kotona. Noin 1820 alkaen hiomapyöriä pyörittivät hevoset, noin 1850 alkaen höyry, ja pienet verstaat väistyivät tehtaiden tieltä. Ala oli silti pitkään pieni: tuhat työntekijää vuonna 1848, tuhat neljäsataa vuonna 1860. Sitten Etelä-Afrikan Kimberleystä alkoi vuonna 1870 nousta raakaa timanttia ene…
+- [Alankomaat — maalehti / Arki ja tavat: Silli syödään pyrstöstä] Keväisin — Hollandse Nieuwe on kevään ensimmäinen suolasilli, ja sen saa myydä vasta kun kalan rasvapitoisuus on noussut noin 16 prosenttiin. Perkauksessa haima jätetään paikalleen: sen entsyymit kypsyttävät lihan muutamassa päivässä. Nimi on suojattu: kalan pitää olla vähintään kolmivuotias, ja pyytää sen saa vain touko–elokuussa. Kojulla silli kastetaan sipuliin ja lasketaan suuhun pyrstöstä pidellen.
+AIEMPI KYSYMYS: Missä Hugo de Groot on haudattu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. De Groot on haudattu [[Delftin]] [[Nieuwe Kerk]] -kirkkoon. Hän kuoli Rostockissa Pohjois-Saksassa elokuussa 1645 palatessaan Ruotsista, ja hänen ruumiinsa tuotiin Delftiin. Delftissä sijaitsee myös monia muita Alankomaiden historian henkilöitä muistavia hautoja. Kotiin hän pääsi lopulta, vaikka matka oli pitkä.
+KYSYMYS: Kerro lisää: Nieuwe Kerk
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Miksi vero laskettiin juuri julkisivun leveydestä eikä pinta-alasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän on syytä vastata varovasti. En ole varma, että vero todella oli sidottu julkisivun leveyteen: väite toistuu matkaoppaissa, mutta sen perusteita on vaikea tarkistaa. Varmempaa on, että kanavan varren tontit olivat [[Amsterdamissa]] kalliita ja jokainen halusi vesirintaman, joten tontit jaettiin kapeiksi ja syviksi, ja siksi [[kanavatalot]] ovat ahtaita ja korkeita. Leveyttä oli myös helppo mitata kadun puolelta, mikä voi selittää, miksi se sopi veroperusteeksi, jos sellaista käytettiin, mutta tätä en pysty vahvistamaan. Matkaoppaat toistavat toisiaan, mut kyyhky tarkistaa.
+KYSYMYS: Kerro lisää: Amsterdamissa
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Siinai — kaupunkilehti / Siinai: Kanava, joka teki niemimaasta Aasiaa] Vuonna 1859 alkoi työ, joka muutti Siinain aseman kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes se lopetettiin kesken hankkeen. Kanava avattiin 17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut käytännössä oma saarensa: kanava vetää rajan Afrikan ja Aasian väliin, ja Siinai jää Aasian puolelle.
+- [Egypti — maalehti / Historia: Kanava, jota maailma vahtii] 1869 — Suezin kanava avattiin 1869, ja se lyhensi merimatkan Euroopasta Aasiaan tuhansilla kilometreillä — laivojen ei enää tarvinnut kiertää koko Afrikkaa. Nykyään kanavan kautta kulkee yli kymmenesosa maailmankaupasta. Keväällä 2021 koko maailma sai muistutuksen kapeikon merkityksestä, kun 400-metrinen konttilaiva Ever Given juuttui poikittain kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja kaivinkone kaivoi keulaa irti hiekasta koko maailman seuratessa.
+AIEMPI KYSYMYS: Miksi vero laskettiin juuri julkisivun leveydestä eikä pinta-alasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän on syytä vastata varovasti. En ole varma, että vero todella oli sidottu julkisivun leveyteen: väite toistuu matkaoppaissa, mutta sen perusteita on vaikea tarkistaa. Varmempaa on, että kanavan varren tontit olivat [[Amsterdamissa]] kalliita ja jokainen halusi vesirintaman, joten tontit jaettiin kapeiksi ja syviksi, ja siksi [[kanavatalot]] ovat ahtaita ja korkeita. Leveyttä oli myös helppo mitata kadun puolelta, mikä voi selittää, miksi se sopi veroperusteeksi, jos sellaista käytettiin, mutta tätä en pysty vahvistamaan. Matkaoppaat toistavat toisiaan, mut kyyhky tarkistaa.
+KYSYMYS: Kerro lisää: kanavatalot
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Amsterdam: Verotettiin julkisivun leveydestä] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+- [Amsterdam — kohdekartta / Kohdekartta: Kapein talo] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+AIEMPI KYSYMYS: Millaista on asua kahden metrin levyisessä talossa?
+AIEMPI VASTAUS (Livia):
+Kato, ihan hyvä kysymys. Kapeat kanavatalot ovat ahtaita, huoneet ovat pieniä ja pinottu päällekkäin, ja portaat ovat jyrkät kuin tikkaat. Yksi kaupungin kapeimmista taloista, [[Oude Hoogstraat 22]], on 2,02 metriä leveä ja kuusi metriä syvä, eikä sohvaa saa kuljetettua portaita pitkin ylös. Huonekalut vedetään sen sijaan päätykolmion alta työntyvän [[hijsbalk]]-nostopuun koukulla ikkunasta sisään. Millaista arki siellä todella on, en osaa sanoa, sillä en tiedä, kuka talossa tällä hetkellä asuu tai miten se on käytössä. Oma pesäni on pieni sekin, joten ymmärrän kyl.
+KYSYMYS: Kerro lisää: Oude Hoogstraat 22
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Amsterdam: Verotettiin julkisivun leveydestä] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+- [Amsterdam — kohdekartta / Kohdekartta: Kapein talo] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+AIEMPI KYSYMYS: Millaista on asua kahden metrin levyisessä talossa?
+AIEMPI VASTAUS (Livia):
+Kato, ihan hyvä kysymys. Kapeat kanavatalot ovat ahtaita, huoneet ovat pieniä ja pinottu päällekkäin, ja portaat ovat jyrkät kuin tikkaat. Yksi kaupungin kapeimmista taloista, [[Oude Hoogstraat 22]], on 2,02 metriä leveä ja kuusi metriä syvä, eikä sohvaa saa kuljetettua portaita pitkin ylös. Huonekalut vedetään sen sijaan päätykolmion alta työntyvän [[hijsbalk]]-nostopuun koukulla ikkunasta sisään. Millaista arki siellä todella on, en osaa sanoa, sillä en tiedä, kuka talossa tällä hetkellä asuu tai miten se on käytössä. Oma pesäni on pieni sekin, joten ymmärrän kyl.
+KYSYMYS: Kerro lisää: hijsbalk
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+- [Amsterdam — kohdekartta / Kohdekartta: Keskusrautatieasema] 1889 Amsterdamin komea keskusrautatieasema valmistui vuonna 1889, mutta se ei seiso tavallisella maalla. Rakentajat loivat sille kolme keinotekoista saarta keskelle IJ-lahtea ja löivät pohjaan lähes 8 700 puupaalua, jotta koko asema pysyisi pystyssä pehmeässä maaperässä. Aseman suunnitteli arkkitehti Pierre Cuypers, sama mies joka rakensi kuuluisan Rijksmuseumin. Siksi asema muistuttaakin enemmän satulinnaa kuin junapysäkkiä: siinä on kaksi tornia ja kivikoristeita. Nykyään asemalla vilisee joka päivä lähes 200 000 matkustajaa, ja sen pisin laituri on lähes 700 metriä — toiseksi pisin koko Alankomaissa. "Mahdollisimman ruma hyökkäys kaupunkimme kauneutta vastaan." — Amsterdamilaisten aikala…
+AIEMPI KYSYMYS: Käytetäänkö nostopuita yhä, vai ovatko ne pelkkää koristetta?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on hyvä kysyä. Niitä käytetään yhä. [[Hijsbalk]]-nostopuut ovat edelleen tavallisia Amsterdamin vanhoissa kanavataloissa, ja kapeiden portaiden vuoksi suuria huonekaluja ja muuttolaatikoita nostetaan usein yhä ikkunasta sisään köydellä ja koukulla. Nykyään käytetään usein myös erillistä nostinta, eikä kaikkia puita käytetä, mutta käytännön hyöty on säilynyt, koska [[Amsterdamin]] vanhat portaat eivät ole muuttuneet leveämmiksi. Siinä on muuten hyvä istuinpaikka kyyhkyllekin.
+KYSYMYS: Kerro lisää: Amsterdamin
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä erilaisia päätykolmioita Amsterdamin taloissa on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Amsterdamin kanavatalojen julkisivua kruunaa usein päätykolmio, ja sen muoto kertoo ajasta ja tyylistä. Tunnetuimpia ovat porrasmainen [[trapgevel]] eli porraspääty, joka on yleinen 1500- ja 1600-luvun alun taloissa, sekä kaulapääty eli [[halsgevel]] ja kellomainen [[klokgevel]], jotka yleistyivät myöhemmin 1600-luvulla ja 1700-luvulla. Myös nokkapäätyjä esiintyy. Tarkkoja ajoituksia en ole varma, sillä tyylit sekoittuivat ja julkisivuja muutettiin myöhemmin. Katolta ne ovat kyl parasta istuma-aluetta, porraspäädyt etenkin.
+KYSYMYS: Kerro lisää: trapgevel
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä erilaisia päätykolmioita Amsterdamin taloissa on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Amsterdamin kanavatalojen julkisivua kruunaa usein päätykolmio, ja sen muoto kertoo ajasta ja tyylistä. Tunnetuimpia ovat porrasmainen [[trapgevel]] eli porraspääty, joka on yleinen 1500- ja 1600-luvun alun taloissa, sekä kaulapääty eli [[halsgevel]] ja kellomainen [[klokgevel]], jotka yleistyivät myöhemmin 1600-luvulla ja 1700-luvulla. Myös nokkapäätyjä esiintyy. Tarkkoja ajoituksia en ole varma, sillä tyylit sekoittuivat ja julkisivuja muutettiin myöhemmin. Katolta ne ovat kyl parasta istuma-aluetta, porraspäädyt etenkin.
+KYSYMYS: Kerro lisää: halsgevel
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä erilaisia päätykolmioita Amsterdamin taloissa on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Amsterdamin kanavatalojen julkisivua kruunaa usein päätykolmio, ja sen muoto kertoo ajasta ja tyylistä. Tunnetuimpia ovat porrasmainen [[trapgevel]] eli porraspääty, joka on yleinen 1500- ja 1600-luvun alun taloissa, sekä kaulapääty eli [[halsgevel]] ja kellomainen [[klokgevel]], jotka yleistyivät myöhemmin 1600-luvulla ja 1700-luvulla. Myös nokkapäätyjä esiintyy. Tarkkoja ajoituksia en ole varma, sillä tyylit sekoittuivat ja julkisivuja muutettiin myöhemmin. Katolta ne ovat kyl parasta istuma-aluetta, porraspäädyt etenkin.
+KYSYMYS: Kerro lisää: klokgevel
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Siinai — kaupunkilehti / Siinai: Kanava, joka teki niemimaasta Aasiaa] Vuonna 1859 alkoi työ, joka muutti Siinain aseman kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes se lopetettiin kesken hankkeen. Kanava avattiin 17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut käytännössä oma saarensa: kanava vetää rajan Afrikan ja Aasian väliin, ja Siinai jää Aasian puolelle.
+- [Egypti — maalehti / Historia: Kanava, jota maailma vahtii] 1869 — Suezin kanava avattiin 1869, ja se lyhensi merimatkan Euroopasta Aasiaan tuhansilla kilometreillä — laivojen ei enää tarvinnut kiertää koko Afrikkaa. Nykyään kanavan kautta kulkee yli kymmenesosa maailmankaupasta. Keväällä 2021 koko maailma sai muistutuksen kapeikon merkityksestä, kun 400-metrinen konttilaiva Ever Given juuttui poikittain kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja kaivinkone kaivoi keulaa irti hiekasta koko maailman seuratessa.
+AIEMPI KYSYMYS: Miksi kanavatalot kallistuvat eteenpäin?
+AIEMPI VASTAUS (Livia):
+Ai se. Etukallistus on yleensä tarkoituksellinen. [[Kanavatalojen]] julkisivut rakennettiin hieman eteenpäin kallistuviksi, jotta [[nostopuun]] avulla ylös vedettävät huonekalut eivät osuisi seinään vaan roikkuisivat vapaasti ja pääsisivät ikkunasta sisään. Lisäksi vanhat talot lepäävät [[puupaalujen]] varassa pehmeällä maalla, ja ajan mittaan monet ovat painuneet ja kallistuneet myös tahattomasti, joten osa kallistumisesta johtuu perustuksista. Näin ne ovat saaneet tutun, hieman huojuvan ilmeensä. Huojuvat kyl, mut seisovat.
+KYSYMYS: Kerro lisää: Kanavatalojen
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Amsterdam: Verotettiin julkisivun leveydestä] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+- [Amsterdam — kohdekartta / Kohdekartta: Kapein talo] 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+AIEMPI KYSYMYS: Miksi kanavatalot kallistuvat eteenpäin?
+AIEMPI VASTAUS (Livia):
+Ai se. Etukallistus on yleensä tarkoituksellinen. [[Kanavatalojen]] julkisivut rakennettiin hieman eteenpäin kallistuviksi, jotta [[nostopuun]] avulla ylös vedettävät huonekalut eivät osuisi seinään vaan roikkuisivat vapaasti ja pääsisivät ikkunasta sisään. Lisäksi vanhat talot lepäävät [[puupaalujen]] varassa pehmeällä maalla, ja ajan mittaan monet ovat painuneet ja kallistuneet myös tahattomasti, joten osa kallistumisesta johtuu perustuksista. Näin ne ovat saaneet tutun, hieman huojuvan ilmeensä. Huojuvat kyl, mut seisovat.
+KYSYMYS: Kerro lisää: nostopuun
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Verotettiin julkisivun leveydestä
+Tietoruudun teksti: 1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta sisään.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Herengracht 537] Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+- [Amsterdam — kaupunkilehti / Vesi] Koko kaupunki seisoo puupaalujen varassa mudassa — ja monet talot kallistuvat kadulle, koska laki vaati sitä.
+AIEMPI KYSYMYS: Miksi kanavatalot kallistuvat eteenpäin?
+AIEMPI VASTAUS (Livia):
+Ai se. Etukallistus on yleensä tarkoituksellinen. [[Kanavatalojen]] julkisivut rakennettiin hieman eteenpäin kallistuviksi, jotta [[nostopuun]] avulla ylös vedettävät huonekalut eivät osuisi seinään vaan roikkuisivat vapaasti ja pääsisivät ikkunasta sisään. Lisäksi vanhat talot lepäävät [[puupaalujen]] varassa pehmeällä maalla, ja ajan mittaan monet ovat painuneet ja kallistuneet myös tahattomasti, joten osa kallistumisesta johtuu perustuksista. Näin ne ovat saaneet tutun, hieman huojuvan ilmeensä. Huojuvat kyl, mut seisovat.
+KYSYMYS: Kerro lisää: puupaalujen
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Ruoka: Maito, jota kypsytetään noessa] Kalenjinien mursik on hapanmaitoa, joka kypsytetään sotet-kalebassissa. Astia harjataan puhtaaksi käpypalmun oksasta tehdyllä sosiot-harjalla ja sivellään sisältä puuhiilellä, joka hehkutetaan itet-pensaan oksista. Hiili tiivistää huokoisen kuoren ilmatiiviiksi, estää pilaantumisen, antaa maidolle sinertävän sävyn ja mausteisen maun. Maito jätetään hapantumaan kolmesta viiteen vuorokautta ja säilyy kuukauden. Mursikia juodaan häiden myötäjäisneuvottelujen päätteeksi, ja kansainvälisistä kisoista palaava juoksija saa kulauksen jo lentokentällä.
+- [Kazakstan — maalehti / Ruoka: Maito, joka hapatettiin satulassa] Kumis on hapatettua tamman maitoa. Siinä on enemmän sokeria kuin lehmänmaidossa, joten käyminen tuottaa alkoholia 0,7–2,5 prosenttia. Lypsy vaatii taitoa: lypsäjä on toinen polvi maassa ja ämpäri toisen polven päällä, ja varsa pidetään koko ajan tamman kyljessä, koska muuten maito ei tule. Kausi kestää kesäkuun puolivälistä lokakuun alkuun, ja tamma antaa 1 000–1 200 litraa, josta puolet jää varsalle. Hapatusastia jätettiin jurtan katolle ja käänneltiin — tai sidottiin satulaan, jolloin päivän ratsastus hoiti sekoittamisen.
+- [Somalia — maalehti / Ruoka: Teehen maito vasta lopuksi] Aamun juoma on shaah tai qahwa, tee tai kahvi. Shaah keitetään mustasta teestä ja maustetaan inkiväärillä, kardemummalla ja kanelilla — mutta mustapippuria siihen ei panna, toisin kuin moneen muuhun maustettuun teehen. Maito lisätään vasta keittämisen jälkeen, ei sen aikana, ja silloin juoma on shaah cadeeys. Illalla ennen nukkumaanmenoa juodaan lasi kardemummalla maustettua maitoa. Lounaan janojuomia ovat balbeelmo eli greippi, raqey eli tamarindi ja isbarmuunto eli limonadi.
+AIEMPI KYSYMYS: Miksi Vermeer peitti jo maalaamansa kannuhyllyn ja tulikorin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vermeer ei jättänyt asiasta kirjallista selitystä, joten varmaa syytä ei tiedetä. Yleisin tulkinta on, että hän yksinkertaisti [[Maitotytön]] sommittelua kesken työn: kun hylly ja tulikori jäivät pois, seinästä tuli tyhjä ja rauhallinen, ja katse kohdistuu maitosuihkuun ja palvelijattaren käsiin. Muutokset maalaamisen aikana olivat taiteilijoille tavallisia, ja tällaiset ensimmäiset suunnitelmat tulevat esiin vasta [[röntgenkuvauksessa]] ja infrapunavalossa. Kyl se tyhjä seinä vaan toimii.
+KYSYMYS: Kerro lisää: Maitotytön
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva] Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta 1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa vihkisormus — ja lääketiede sai uuden silmän.
+AIEMPI KYSYMYS: Miksi Vermeer peitti jo maalaamansa kannuhyllyn ja tulikorin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vermeer ei jättänyt asiasta kirjallista selitystä, joten varmaa syytä ei tiedetä. Yleisin tulkinta on, että hän yksinkertaisti [[Maitotytön]] sommittelua kesken työn: kun hylly ja tulikori jäivät pois, seinästä tuli tyhjä ja rauhallinen, ja katse kohdistuu maitosuihkuun ja palvelijattaren käsiin. Muutokset maalaamisen aikana olivat taiteilijoille tavallisia, ja tällaiset ensimmäiset suunnitelmat tulevat esiin vasta [[röntgenkuvauksessa]] ja infrapunavalossa. Kyl se tyhjä seinä vaan toimii.
+KYSYMYS: Kerro lisää: röntgenkuvauksessa
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Taideinstituutti] 1879 Alkusysäys tuli 1866, kun 35 taiteilijaa perusti Dearborn Streetin ateljeehen Chicago Academy of Designin eurooppalaisten taideakatemioiden malliin. Koulu piti olla ilmainen ja sillä oma galleria; opetus alkoi 1868, ja 1870 akatemia sai oman viisikerroksisen kivitalon. Vuoden 1871 suurpalo tuhosi sen ja jätti akatemian velkoihin. Vuoteen 1878 mennessä velkaa oli 10 000 dollaria, ja 1879 osa jäsenistä perusti uuden yhdistyksen, joka osti konkurssiin menneen edeltäjänsä omaisuuden huutokaupasta. Nykyinen nimi otettiin käyttöön 1882. Nykyinen talo Michigan Avenuen varrella rakennettiin vuoden 1893 maailmannäyttelyä varten, ja museo muutti siihen näyttelyn jälkeen. Sisäänkäyntiä vartioi ka…
+- [Iso-Britannia — maalehti / Kuvataide: Guernica maksoi parin saappaita] 1938 — Whitechapelin galleria avattiin vuonna 1901, jotta itäisen Lontoon työläiset pääsisivät näkemään taidetta. Vuonna 1938 siellä oli esillä Picasson Guernica, joka kiersi Britanniaa keräämässä apua Espanjan sisällissodan uhreille — Lontoon jälkeen se nähtiin Leedsissä, Liverpoolissa ja Manchesterissa. Pääsymaksuksi kelpasi pari kunnollisia saappaita, jotka lähetettiin Espanjan sisällissodan tasavaltalaisille. Kahdessa viikossa maalauksen eteen kertyi satoja saapaspareja ja galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, ja sisään pääsee ilmaiseksi.
+AIEMPI KYSYMYS: Mitä muuta röntgen- ja infrapunakuvaus on paljastanut vanhoista maalauksista?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä riittää kerrottavaa. Röntgen- ja infrapunakuvauksella on löydetty useista tunnetuista teoksista aiempia versioita, jotka taiteilija on peittänyt uudella maalilla. Lähteiden mukaan [[Picasson]] Vanhan kitaristin alta on paljastunut muita hahmoja, ja [[Vincent van Goghin]] ruohotilkkua esittävän taulun alta on löytynyt naisen muotokuva, koska köyhä taiteilija maalasi usein vanhan työn päälle. Kuvaukset paljastavat myös alapiirrokset, myöhemmät korjaukset ja joskus väärennökset, sillä nykyaikainen pigmentti ei sovi vanhaan maalaukseen. En ole varma kaikista yksityiskohdista, mutta periaate on varma. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Picasson
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä muuta röntgen- ja infrapunakuvaus on paljastanut vanhoista maalauksista?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä riittää kerrottavaa. Röntgen- ja infrapunakuvauksella on löydetty useista tunnetuista teoksista aiempia versioita, jotka taiteilija on peittänyt uudella maalilla. Lähteiden mukaan [[Picasson]] Vanhan kitaristin alta on paljastunut muita hahmoja, ja [[Vincent van Goghin]] ruohotilkkua esittävän taulun alta on löytynyt naisen muotokuva, koska köyhä taiteilija maalasi usein vanhan työn päälle. Kuvaukset paljastavat myös alapiirrokset, myöhemmät korjaukset ja joskus väärennökset, sillä nykyaikainen pigmentti ei sovi vanhaan maalaukseen. En ole varma kaikista yksityiskohdista, mutta periaate on varma. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Vincent van Goghin
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+AIEMPI KYSYMYS: Miksi Vermeerin tuotannosta tunnetaan vain runsaat kolmekymmentä työtä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vermeer eli noin vuosina 1632–1675 [[Delftissä]], ja hän maalasi hitaasti ja huolellisesti, joten töitä valmistui vain vähän. Hänellä oli suuri perhe, ja hän toimi myös taidekauppiaana, joten maalaaminen ei ollut hänen ainoa tulonlähteensä. Osa hänen töistään on voinut kadota vuosisatojen aikana, eikä kaikkia ole voitu varmasti liittää häneen. Hän kuoli suhteellisen nuorena, ja perhe jäi velkaan [[Ranskan hyökkäyksen]] jälkeisten huonojen aikojen vuoksi. Luku on siis lähteiden mukaan varovainen arvio, ei tarkka lasku. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Delftissä
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Oikeuspalatsi] 1985 Oikeuspalatseja on ollut kolme. Ensimmäinen oli Pablo de la Cruzin piirtämä uusklassinen talo, joka toimi 1920-luvulta alkaen Calle 11:n ja Carrera 6:n kulmassa; se tuhoutui tulipalossa 9. huhtikuuta 1948 mellakoissa, jotka tunnetaan nimellä Bogotazo. Toisen suunnitteli Roberto Londoño 1960-luvulla, ja se nousi Plaza de Bolívarin pohjoislaidalle vastapäätä kongressin taloa, korttelin päähän presidentinlinnasta. Tuo toinen talo tuhoutui 6. marraskuuta 1985. M-19-liikkeen sissiosasto valtasi rakennuksen ja otti panttivangeiksi noin 350 ihmistä, joukossa korkeimman oikeuden tuomareita, virkamiehiä ja vierailijoita; ryhmä aikoi järjestää oikeudenkäynnin presidentti Belisario Betancuria vas…
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+AIEMPI KYSYMYS: Miksi Vermeerin tuotannosta tunnetaan vain runsaat kolmekymmentä työtä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vermeer eli noin vuosina 1632–1675 [[Delftissä]], ja hän maalasi hitaasti ja huolellisesti, joten töitä valmistui vain vähän. Hänellä oli suuri perhe, ja hän toimi myös taidekauppiaana, joten maalaaminen ei ollut hänen ainoa tulonlähteensä. Osa hänen töistään on voinut kadota vuosisatojen aikana, eikä kaikkia ole voitu varmasti liittää häneen. Hän kuoli suhteellisen nuorena, ja perhe jäi velkaan [[Ranskan hyökkäyksen]] jälkeisten huonojen aikojen vuoksi. Luku on siis lähteiden mukaan varovainen arvio, ei tarkka lasku. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Ranskan hyökkäyksen
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Keskusrautatieasema] 1889 Amsterdamin komea keskusrautatieasema valmistui vuonna 1889, mutta se ei seiso tavallisella maalla. Rakentajat loivat sille kolme keinotekoista saarta keskelle IJ-lahtea ja löivät pohjaan lähes 8 700 puupaalua, jotta koko asema pysyisi pystyssä pehmeässä maaperässä. Aseman suunnitteli arkkitehti Pierre Cuypers, sama mies joka rakensi kuuluisan Rijksmuseumin. Siksi asema muistuttaakin enemmän satulinnaa kuin junapysäkkiä: siinä on kaksi tornia ja kivikoristeita. Nykyään asemalla vilisee joka päivä lähes 200 000 matkustajaa, ja sen pisin laituri on lähes 700 metriä — toiseksi pisin koko Alankomaissa. "Mahdollisimman ruma hyökkäys kaupunkimme kauneutta vastaan." — Amsterdamilaisten aikala…
+- [Amsterdam — kohdekartta / Kohdekartta: Rijksmuseum] 1885 Alankomaiden valtakunnanmuseo perustettiin jo vuonna 1798, mutta se muutti nykyiseen komeaan rakennukseensa vasta vuonna 1885. Talon suunnitteli arkkitehti Pierre Cuypers, sama mies joka rakensi Amsterdamin keskusrautatieaseman — siksi ne muistuttavatkin hieman toisiaan. Museossa on lähes miljoona esinettä, joista noin 8 000 on esillä kerralla. Niiden joukossa on Rembrandtin jättimäinen maalaus Yövartio ja Vermeerin kuuluisa Maitotyttö. Vuonna 2013 koko museo avattiin uudelleen kymmenen vuotta kestäneen jättiremontin jälkeen. Museo houkuttelee nykyään vuosittain miljoonia kävijöitä.
+AIEMPI KYSYMYS: Missä museossa Maitotyttö on nykyään esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maitotyttö kuuluu Amsterdamissa sijaitsevan [[Rijksmuseumin]] kokoelmiin, ja se on esillä museon näyttelyssä, jossa on muitakin Vermeerin töitä. Museo on yksi Alankomaiden tunnetuimmista, ja siellä on myös [[Rembrandtin]] teoksia. Teokset voivat liikkua näyttelyiden ja kunnostusten vuoksi, joten kannattaa tarkistaa museon omilta sivuilta, missä salissa maalaus on juuri nyt. Pieni taulu vaatii lähietäisyyden, sillä sen mitat ovat vain 45,5 ja 41 senttiä. Minä katsoin sitä kerran ikkunasta, mutta museon sisälle kyyhky ei pääse.
+KYSYMYS: Kerro lisää: Rijksmuseumin
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Rembrandtin talo] 1911 Taidemaalari Rembrandt osti tämän talon Jodenbreestraatilta vuonna 1639 peräti 13 000 guldenilla. Talo itse oli rakennettu jo vuonna 1606, mutta Rembrandt asui ja työskenteli siinä 19 vuoden ajan, maalasi mestariteoksiaan yläkerrassa ja piti taidekauppaa alakerrassa. Onni ei kestänyt: Rembrandt joutui rahavaikeuksiin, ja talo myytiin huutokaupalla vuonna 1658 tappiolla. Vuosisatojen kuluessa talo rapistui, kunnes kaupunki osti ja kunnosti sen 1900-luvun alussa. Museo avattiin vuonna 1911. Vuonna 1997 talon vanhasta käymäläkuopasta löytyi yllättäen kaksi savista ruukkua, joita Rembrandt oli aikoinaan käyttänyt maalauskankaidensa valmisteluun.
+AIEMPI KYSYMYS: Missä museossa Maitotyttö on nykyään esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maitotyttö kuuluu Amsterdamissa sijaitsevan [[Rijksmuseumin]] kokoelmiin, ja se on esillä museon näyttelyssä, jossa on muitakin Vermeerin töitä. Museo on yksi Alankomaiden tunnetuimmista, ja siellä on myös [[Rembrandtin]] teoksia. Teokset voivat liikkua näyttelyiden ja kunnostusten vuoksi, joten kannattaa tarkistaa museon omilta sivuilta, missä salissa maalaus on juuri nyt. Pieni taulu vaatii lähietäisyyden, sillä sen mitat ovat vain 45,5 ja 41 senttiä. Minä katsoin sitä kerran ikkunasta, mutta museon sisälle kyyhky ei pääse.
+KYSYMYS: Kerro lisää: Rembrandtin
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mistä Vermeer sai maalaukseensa käyttämät värit?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vermeer tunnetaan kalliin [[ultramariinin]] käytöstä, ja sitä valmistettiin [[lapis lazuli]] -kivestä, joka tuotiin kaukaa Aasiasta. Muut värit ostettiin pigmenttikauppiailta tai valmistettiin itse jauhamalla mineraaleja, maa-aineksia ja kasviaineita pellavaöljyyn. Kallis sininen oli ylellisyys, jonka taiteilija saattoi käyttää vain harkiten. Delftissä toimi myös tunnettu keramiikkateollisuus, mutta en ole varma, miten se liittyi hänen väriensä hankintaan. Pigmentit ja siveltimet säilytettiin yleensä taiteilijan työhuoneessa.
+
+Sininen oli aikanaan niin kallis, että ihan oikeasti ihmettelen, miten kukaan sille antoi rahaa. Minä olisin käyttänyt rahat pullaan.
+KYSYMYS: Kerro lisää: ultramariinin
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vermeer peitti omat esineensä maalilla
+Tietoruudun teksti: Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Sininen, joka maksoi enemmän kuin kulta] Sar-e Sangin kaivoksia Kokchan laaksossa Badakhshanissa on louhittu yli kuudentuhannen vuoden ajan, ja pitkään ne olivat koko tunnetun maailman ainoa lapis lazulin lähde. Kivi on lazuriittia, valkoista kalsiittia ja kullankeltaista pyriittiä; Plinius vanhempi kuvasi sen läpinäkymättömäksi ja kullanhippusin ripotelluksi. Sitä on Urin kuningashaudoissa ja Tutankhamonin naamiossa, ja Kleopatra jauhoi siitä silmämeikkinsä. Keskiajan lopulla Eurooppa alkoi tuoda kiveä jauhettavaksi ultramariiniksi, ja Masaccio, Tizian ja Vermeer säästivät sen yleensä kuvan tärkeimmän hahmon vaatteisiin.
+AIEMPI KYSYMYS: Mistä Vermeer sai maalaukseensa käyttämät värit?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vermeer tunnetaan kalliin [[ultramariinin]] käytöstä, ja sitä valmistettiin [[lapis lazuli]] -kivestä, joka tuotiin kaukaa Aasiasta. Muut värit ostettiin pigmenttikauppiailta tai valmistettiin itse jauhamalla mineraaleja, maa-aineksia ja kasviaineita pellavaöljyyn. Kallis sininen oli ylellisyys, jonka taiteilija saattoi käyttää vain harkiten. Delftissä toimi myös tunnettu keramiikkateollisuus, mutta en ole varma, miten se liittyi hänen väriensä hankintaan. Pigmentit ja siveltimet säilytettiin yleensä taiteilijan työhuoneessa.
+
+Sininen oli aikanaan niin kallis, että ihan oikeasti ihmettelen, miten kukaan sille antoi rahaa. Minä olisin käyttänyt rahat pullaan.
+KYSYMYS: Kerro lisää: lapis lazuli
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Miksi Amsterdamin kanavissa on satoja asuntolaivoja?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys tuo. Amsterdamin kanavilla on lähteiden mukaan noin kaksi ja puoli tuhatta asuntolaivaa, ja niitä alkoi yleistyä erityisesti sodanjälkeisen [[asuntopulan]] aikana. Kodeiksi muutettiin usein vanhoja [[rahtilaivoja]], jotka eivät enää kelvanneet liikenteeseen. Kaupunki säätelee nykyään laituripaikkoja ja lupia, joten uusia laivoja ei voi tuoda kanavaan miten tahansa. Tarkka lukumäärä vaihtelee vuosittain, joten pidän lukua suuntaa-antavana. Vedessä asuminen on ihan hyvä idea, jos ei pelkää nuoskaa.
+KYSYMYS: Kerro lisää: asuntopulan
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Miksi Amsterdamin kanavissa on satoja asuntolaivoja?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys tuo. Amsterdamin kanavilla on lähteiden mukaan noin kaksi ja puoli tuhatta asuntolaivaa, ja niitä alkoi yleistyä erityisesti sodanjälkeisen [[asuntopulan]] aikana. Kodeiksi muutettiin usein vanhoja [[rahtilaivoja]], jotka eivät enää kelvanneet liikenteeseen. Kaupunki säätelee nykyään laituripaikkoja ja lupia, joten uusia laivoja ei voi tuoda kanavaan miten tahansa. Tarkka lukumäärä vaihtelee vuosittain, joten pidän lukua suuntaa-antavana. Vedessä asuminen on ihan hyvä idea, jos ei pelkää nuoskaa.
+KYSYMYS: Kerro lisää: rahtilaivoja
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Kissalaiva] Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+AIEMPI KYSYMYS: Kuka hoitaa Kissalaivan kissat nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Poezenboot toimii nykyisin kissojen turvapaikkana, jota pyörittää säätiö, ja hoitotyö perustuu pitkälti vapaaehtoisiin ja lahjoituksiin. Kissoille etsitään uusia koteja, ja laivan perustaja [[Henriëtte van Weelde]] aloitti työn vuonna 1966. En ole varma, keitä tarkalleen hoitajina nyt toimii tai miten työvuorot jaetaan, mutta laivaa pidetään yllä kävijöiden tuen avulla. Vieraat voivat tulla katsomaan kissoja [[Singelin]] varrella. Nuo kissat saavat kyl parempaa palvelua kuin minä.
+KYSYMYS: Kerro lisää: Henriëtte van Weelde
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Kissalaiva] Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+AIEMPI KYSYMYS: Kuka hoitaa Kissalaivan kissat nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Poezenboot toimii nykyisin kissojen turvapaikkana, jota pyörittää säätiö, ja hoitotyö perustuu pitkälti vapaaehtoisiin ja lahjoituksiin. Kissoille etsitään uusia koteja, ja laivan perustaja [[Henriëtte van Weelde]] aloitti työn vuonna 1966. En ole varma, keitä tarkalleen hoitajina nyt toimii tai miten työvuorot jaetaan, mutta laivaa pidetään yllä kävijöiden tuen avulla. Vieraat voivat tulla katsomaan kissoja [[Singelin]] varrella. Nuo kissat saavat kyl parempaa palvelua kuin minä.
+KYSYMYS: Kerro lisää: Singelin
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kaupunkilehti / Singapore: Vapaasatama, jossa ei peritty tullia] Raffles määräsi sataman vapaasatamaksi, ja se ratkaisi kilpailun: Batavian ja Manilan satamissa perittiin tulleja, täällä ei. Kiinalaiset kauppiaat asettuivat joen alajuoksulle ja englantilaiset yläjuoksulle, ja kaupungissa risteytyi kolme kauppaverkostoa: kiinalainen, kaakkoisaasialainen saariverkosto ja eurooppalais-intialainen. 1830-luvulla Singapore oli jo ohittanut Batavian kiinalaisen junkkikaupan keskuksena, ja 1840-luvulta se oli höyrylaivojen hiiliasema. Suezin kanavan avaaminen 1869 laski rahdin hintaa Eurooppaan rajusti: vuonna 1880 satamasta kulki jo yli puolitoista miljoonaa tonnia tavaraa vuodessa, neljä viidesosaa siitä höyrylaivoilla.
+- [Marseille — kaupunkilehti / Historia: Rutto, joka tappoi joka toisen kaupunkilaisen] Rutto saapui Marseilleen toukokuussa 1720 kauppalaiva Grand-Saint-Antoinen mukana Levantista, ja sairaus levisi nopeasti kaupunkiin, jonka viranomaiset olivat aluksi kieltäytyneet asettamasta laivaa karanteeniin kauppaetujen takia. Tauti tappoi lopulta noin puolet kaupungin sadastatuhannesta asukkaasta kahden vuoden aikana. Taiteilija Michel Serre eli itse epidemian keskellä ja maalasi katukohtauksia, joissa ruumiita kasataan kärryihin kadulle — hänen teoksensa ovat harvinaisia silminnäkijäkuvia siitä, miltä ruttoepidemia näytti todellisuudessa. Katastrofi johti tiukempiin karanteenisäännöksiin koko Ranskan satamissa.
+AIEMPI KYSYMYS: Mitä kulkukissoille tehtiin ennen vuotta 1966?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Amsterdamin tilanteesta minulla ei ole tarkkaa tietoa, joten vastaan yleisesti. Kaupunkien kulkukissat jäivät tavallisesti pärjäämään omillaan roskapaikoilla ja [[satamissa]], ja osa niistä sai ruokaa ihmisiltä. Eläinsuojelun järjestöt ja turvakodit olivat vähäisempiä kuin nykyään, ja joskus kulkukissoja pyydystettiin ja lopetettiin. [[Henriëtte van Weelden]] työ oli siis tavallista aloitteellisempaa, ja [[eläinsuojelun]] järjestöjä oli vähän. En ole varma, miten hänen oma ympäristönsä suhtautui hänen kissoihinsa. Hyvä että joku ajatteli kissojakin.
+KYSYMYS: Kerro lisää: satamissa
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Kissalaiva] Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+AIEMPI KYSYMYS: Mitä kulkukissoille tehtiin ennen vuotta 1966?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Amsterdamin tilanteesta minulla ei ole tarkkaa tietoa, joten vastaan yleisesti. Kaupunkien kulkukissat jäivät tavallisesti pärjäämään omillaan roskapaikoilla ja [[satamissa]], ja osa niistä sai ruokaa ihmisiltä. Eläinsuojelun järjestöt ja turvakodit olivat vähäisempiä kuin nykyään, ja joskus kulkukissoja pyydystettiin ja lopetettiin. [[Henriëtte van Weelden]] työ oli siis tavallista aloitteellisempaa, ja [[eläinsuojelun]] järjestöjä oli vähän. En ole varma, miten hänen oma ympäristönsä suhtautui hänen kissoihinsa. Hyvä että joku ajatteli kissojakin.
+KYSYMYS: Kerro lisää: Henriëtte van Weelden
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Luonto: Eläin, jota pidettiin huijauksena] 1799 — Kun kuvernööri John Hunter lähetti 1798 Britanniaan vesinokkaeläimen nahan ja piirroksen, tiedemiesten ensimmäinen arvaus oli huijaus. George Shaw kirjoitti ensimmäisen kuvauksen 1799 ja myönsi suoraan epäilevänsä eläimen aitoutta, ja Robert Knox arveli sen olevan kiinalaisten merimiesten ompelema. Eläin on kuitenkin todellinen ja yksi vain viidestä munivasta nisäkäslajista maailmassa; muut neljä ovat nokkasiilejä. Koiraan takajalan kannuksesta ruiskuaa myrkkyä, ja saaliinsa eläin löytää veden alla sähköaistilla silmät, korvat ja sieraimet suljettuina.
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+AIEMPI KYSYMYS: Mitä kulkukissoille tehtiin ennen vuotta 1966?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Amsterdamin tilanteesta minulla ei ole tarkkaa tietoa, joten vastaan yleisesti. Kaupunkien kulkukissat jäivät tavallisesti pärjäämään omillaan roskapaikoilla ja [[satamissa]], ja osa niistä sai ruokaa ihmisiltä. Eläinsuojelun järjestöt ja turvakodit olivat vähäisempiä kuin nykyään, ja joskus kulkukissoja pyydystettiin ja lopetettiin. [[Henriëtte van Weelden]] työ oli siis tavallista aloitteellisempaa, ja [[eläinsuojelun]] järjestöjä oli vähän. En ole varma, miten hänen oma ympäristönsä suhtautui hänen kissoihinsa. Hyvä että joku ajatteli kissojakin.
+KYSYMYS: Kerro lisää: eläinsuojelun
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Kissalaiva] Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+AIEMPI KYSYMYS: Mitkä ovat Amsterdamin neljä pääkanavaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Amsterdamin vanhan keskustan kanavavyöhykkeen pääkanavat ovat [[Singel]], [[Herengracht]], [[Keizersgracht]] ja [[Prinsengracht]]. Ne kaartuvat puolikaaren muotoisesti keskustan ympärille, ja niiden varrella on 1600-luvulta periytyviä kauppiastaloja. Singel oli alun perin kaupungin ympärillä kulkenut vallihauta, ja kanavavyöhyke on merkitty [[Unescon]] maailmanperintökohteeksi vuonna 2010. Kanavat ovat siis sekä liikenneväylä että kaupunkikuvan perusta. Siinäpä riittää katseltavaa katolta.
+KYSYMYS: Kerro lisää: Singel
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Vesi: Kolme kanaalia, yksi suunnitelma] Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja Prinsengracht, kaivettiin vanhan kaupungin ympärille kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+AIEMPI KYSYMYS: Mitkä ovat Amsterdamin neljä pääkanavaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Amsterdamin vanhan keskustan kanavavyöhykkeen pääkanavat ovat [[Singel]], [[Herengracht]], [[Keizersgracht]] ja [[Prinsengracht]]. Ne kaartuvat puolikaaren muotoisesti keskustan ympärille, ja niiden varrella on 1600-luvulta periytyviä kauppiastaloja. Singel oli alun perin kaupungin ympärillä kulkenut vallihauta, ja kanavavyöhyke on merkitty [[Unescon]] maailmanperintökohteeksi vuonna 2010. Kanavat ovat siis sekä liikenneväylä että kaupunkikuvan perusta. Siinäpä riittää katseltavaa katolta.
+KYSYMYS: Kerro lisää: Herengracht
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Vesi: Kolme kanaalia, yksi suunnitelma] Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja Prinsengracht, kaivettiin vanhan kaupungin ympärille kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+AIEMPI KYSYMYS: Mitkä ovat Amsterdamin neljä pääkanavaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Amsterdamin vanhan keskustan kanavavyöhykkeen pääkanavat ovat [[Singel]], [[Herengracht]], [[Keizersgracht]] ja [[Prinsengracht]]. Ne kaartuvat puolikaaren muotoisesti keskustan ympärille, ja niiden varrella on 1600-luvulta periytyviä kauppiastaloja. Singel oli alun perin kaupungin ympärillä kulkenut vallihauta, ja kanavavyöhyke on merkitty [[Unescon]] maailmanperintökohteeksi vuonna 2010. Kanavat ovat siis sekä liikenneväylä että kaupunkikuvan perusta. Siinäpä riittää katseltavaa katolta.
+KYSYMYS: Kerro lisää: Keizersgracht
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Vesi: Kolme kanaalia, yksi suunnitelma] Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja Prinsengracht, kaivettiin vanhan kaupungin ympärille kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+AIEMPI KYSYMYS: Mitkä ovat Amsterdamin neljä pääkanavaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Amsterdamin vanhan keskustan kanavavyöhykkeen pääkanavat ovat [[Singel]], [[Herengracht]], [[Keizersgracht]] ja [[Prinsengracht]]. Ne kaartuvat puolikaaren muotoisesti keskustan ympärille, ja niiden varrella on 1600-luvulta periytyviä kauppiastaloja. Singel oli alun perin kaupungin ympärillä kulkenut vallihauta, ja kanavavyöhyke on merkitty [[Unescon]] maailmanperintökohteeksi vuonna 2010. Kanavat ovat siis sekä liikenneväylä että kaupunkikuvan perusta. Siinäpä riittää katseltavaa katolta.
+KYSYMYS: Kerro lisää: Prinsengracht
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitkä ovat Amsterdamin neljä pääkanavaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Amsterdamin vanhan keskustan kanavavyöhykkeen pääkanavat ovat [[Singel]], [[Herengracht]], [[Keizersgracht]] ja [[Prinsengracht]]. Ne kaartuvat puolikaaren muotoisesti keskustan ympärille, ja niiden varrella on 1600-luvulta periytyviä kauppiastaloja. Singel oli alun perin kaupungin ympärillä kulkenut vallihauta, ja kanavavyöhyke on merkitty [[Unescon]] maailmanperintökohteeksi vuonna 2010. Kanavat ovat siis sekä liikenneväylä että kaupunkikuvan perusta. Siinäpä riittää katseltavaa katolta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Miksi kissoja on pidetty laivoilla jo satoja vuosia?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Laivakissan]] tehtävä oli pitää [[rotat]] ja hiiret poissa lastista ja ruokavarastoista, sillä jyrsijät pilasivat viljaa ja saattoivat levittää tauteja. Kissa oli myös seuraa pitkillä merimatkoilla, ja monet merimiehet pitivät sitä onnen tuojana. Käytäntö oli yleinen eri puolilla Eurooppaa, ja sen alkuperä ulottuu satojen vuosien taakse. Tarkkaa ensimmäistä ajankohtaa en tiedä. Hyvin hoidettu laivakissa piti aluksen kunnossa paremmin kuin moni miehistön jäsen, ainakin omasta mielestään.
+
+Minä olen sukuni puolesta viestinviejä enkä jyrsijänpyytäjä, mutta kyllä minäkin ymmärrän työn arvon. Eri asia on, että kissa ja kyyhky eivät ole koskaan olleet ystäviä.
+KYSYMYS: Kerro lisää: Laivakissan
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kanavalla asuu laivallinen kissoja
+Tietoruudun teksti: Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+AIEMPI KYSYMYS: Miksi kissoja on pidetty laivoilla jo satoja vuosia?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Laivakissan]] tehtävä oli pitää [[rotat]] ja hiiret poissa lastista ja ruokavarastoista, sillä jyrsijät pilasivat viljaa ja saattoivat levittää tauteja. Kissa oli myös seuraa pitkillä merimatkoilla, ja monet merimiehet pitivät sitä onnen tuojana. Käytäntö oli yleinen eri puolilla Eurooppaa, ja sen alkuperä ulottuu satojen vuosien taakse. Tarkkaa ensimmäistä ajankohtaa en tiedä. Hyvin hoidettu laivakissa piti aluksen kunnossa paremmin kuin moni miehistön jäsen, ainakin omasta mielestään.
+
+Minä olen sukuni puolesta viestinviejä enkä jyrsijänpyytäjä, mutta kyllä minäkin ymmärrän työn arvon. Eri asia on, että kissa ja kyyhky eivät ole koskaan olleet ystäviä.
+KYSYMYS: Kerro lisää: rotat
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Herengracht 537] Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+AIEMPI KYSYMYS: Miten puupaalu lyödään pehmeän suon läpi kovaan pohjahiekkaan?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hauska asia. Paalu lyödään maahan iskemällä sitä painavalla jyskyttimellä: raskas paino nostetaan ylös ja pudotetaan paalun päähän, kunnes paalu on vajonnut pehmeän kerroksen läpi ja pysähtyy kovaan [[pohjahiekkaan]]. Aikaisemmin painoa nostettiin lihasvoimalla tai hevosvoimalla, myöhemmin höyry- ja dieselkoneilla. Amsterdamin pehmeän kerroksen paksuus on useita metrejä, ja kymmenen metrin pituisetkin paalut olivat tavallisia, mutta en ole varma tarkasta pituudesta eri aikoina. [[Dam-aukion palatsin]] 13 659 paalua lyötiin siis yksitellen. Siinä kyyhky väsyisi jo kuuntelemaan.
+KYSYMYS: Kerro lisää: pohjahiekkaan
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1648–1655 Dam-aukion laidalla kohoava komea rakennus ei ollut alun perin palatsi lainkaan, vaan Amsterdamin raatihuone. Se rakennettiin vuosina 1648–1655 vanhan raatihuoneen paikalle, joka oli palanut poroksi vuonna 1652. Rakennus on niin painava, että sen alle piti lyödä lähes 13 700 puupaalua. Katolla seisoo kuuden metrin korkuinen Atlas-patsas, joka kannattelee koko maapalloa harteillaan. Raatihuoneesta tuli kuninkaallinen palatsi vasta 1800-luvun alussa. Nykyään siellä otetaan vastaan valtiovieraita, mutta perustus on yhä sama vanha puupaalumetsä maan alla.
+- [Amsterdam — kohdekartta / Kohdekartta: Herengracht 537] Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+AIEMPI KYSYMYS: Miten puupaalu lyödään pehmeän suon läpi kovaan pohjahiekkaan?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hauska asia. Paalu lyödään maahan iskemällä sitä painavalla jyskyttimellä: raskas paino nostetaan ylös ja pudotetaan paalun päähän, kunnes paalu on vajonnut pehmeän kerroksen läpi ja pysähtyy kovaan [[pohjahiekkaan]]. Aikaisemmin painoa nostettiin lihasvoimalla tai hevosvoimalla, myöhemmin höyry- ja dieselkoneilla. Amsterdamin pehmeän kerroksen paksuus on useita metrejä, ja kymmenen metrin pituisetkin paalut olivat tavallisia, mutta en ole varma tarkasta pituudesta eri aikoina. [[Dam-aukion palatsin]] 13 659 paalua lyötiin siis yksitellen. Siinä kyyhky väsyisi jo kuuntelemaan.
+KYSYMYS: Kerro lisää: Dam-aukion palatsin
+
+### 600
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Amsterdam — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1648–1655 Dam-aukion laidalla kohoava komea rakennus ei ollut alun perin palatsi lainkaan, vaan Amsterdamin raatihuone. Se rakennettiin vuosina 1648–1655 vanhan raatihuoneen paikalle, joka oli palanut poroksi vuonna 1652. Rakennus on niin painava, että sen alle piti lyödä lähes 13 700 puupaalua. Katolla seisoo kuuden metrin korkuinen Atlas-patsas, joka kannattelee koko maapalloa harteillaan. Raatihuoneesta tuli kuninkaallinen palatsi vasta 1800-luvun alussa. Nykyään siellä otetaan vastaan valtiovieraita, mutta perustus on yhä sama vanha puupaalumetsä maan alla.
+AIEMPI KYSYMYS: Mitä tehdään talolle, jonka paalut ovat päässeet lahoamaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Talon [[perustus]] korjataan siten, että lahonneen paalun yläosa poistetaan ja tilalle rakennetaan uusi kantava rakenne, usein [[betonipaaluja]] tai teräspaaluja talon alle tuomalla. Työ tehdään seinä kerrallaan, jotta koko rakennus ei vajoa, ja se on kallista ja hidasta. Amsterdamissa kaupunki ja asukkaat kantavat vastuuta [[perustusten]] kunnossapidosta, mutta en ole varma, miten kustannukset tarkalleen jaetaan. Vanhoissa taloissa kallistuma voi näkyä ikkunoiden ja ovien vinoutena. Paalut ovat siis talon piilotettu osa, jota kukaan ei kiitä.
+KYSYMYS: Kerro lisää: perustus
+
+### 601
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä tehdään talolle, jonka paalut ovat päässeet lahoamaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Talon [[perustus]] korjataan siten, että lahonneen paalun yläosa poistetaan ja tilalle rakennetaan uusi kantava rakenne, usein [[betonipaaluja]] tai teräspaaluja talon alle tuomalla. Työ tehdään seinä kerrallaan, jotta koko rakennus ei vajoa, ja se on kallista ja hidasta. Amsterdamissa kaupunki ja asukkaat kantavat vastuuta [[perustusten]] kunnossapidosta, mutta en ole varma, miten kustannukset tarkalleen jaetaan. Vanhoissa taloissa kallistuma voi näkyä ikkunoiden ja ovien vinoutena. Paalut ovat siis talon piilotettu osa, jota kukaan ei kiitä.
+KYSYMYS: Kerro lisää: betonipaaluja
+
+### 602
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä tehdään talolle, jonka paalut ovat päässeet lahoamaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Talon [[perustus]] korjataan siten, että lahonneen paalun yläosa poistetaan ja tilalle rakennetaan uusi kantava rakenne, usein [[betonipaaluja]] tai teräspaaluja talon alle tuomalla. Työ tehdään seinä kerrallaan, jotta koko rakennus ei vajoa, ja se on kallista ja hidasta. Amsterdamissa kaupunki ja asukkaat kantavat vastuuta [[perustusten]] kunnossapidosta, mutta en ole varma, miten kustannukset tarkalleen jaetaan. Vanhoissa taloissa kallistuma voi näkyä ikkunoiden ja ovien vinoutena. Paalut ovat siis talon piilotettu osa, jota kukaan ei kiitä.
+KYSYMYS: Kerro lisää: perustusten
+
+### 603
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Miksi kaupungin pohjavesi pääsee laskemaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pohjavesi voi laskea monesta syystä: pitkät [[kuivat kaudet]] vähentävät veden määrää, ja rakennustyömaiden kuivatus voi pumpata vettä pois. Myös vuotavat [[viemärit]] voivat johtaa vettä pois maasta, ja sama voi tapahtua huonosti suunnitelluissa salaojissa. Kaupunki seuraa vedenpintaa ja pyrkii pitämään sen vakaana, mutta se ei ole helppoa, koska kaupungin alla vesi liikkuu hitaasti. Syiden painoarvoa en tiedä tarkasti. Kyl vesi on tässä kaupungissa tärkeämpää kuin tori.
+KYSYMYS: Kerro lisää: kuivat kaudet
+
+### 604
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Hobrechtin putket] Ne perustukset, joita kaduilla lyötiin, olivat osaksi viemäriä: Berliinillä ei sellaista vielä ollut. James Hobrecht oli laatinut kaupungin laajenemissuunnitelman jo 1862, mutta hänet oli erotettu ennen kuin se valmistui, ja hän lähti Stettiniin rakentamaan vesijohtoa ja viemäriä. Vuonna 1869 hän palasi tehtävänään koko Berliinin viemäröinti. Kaksi liittolaista teki sen mahdolliseksi: hänen veljensä Arthur Hobrecht, josta tuli kaupungin ylipormestari 1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti jätevedet kaupungin laidalle sadetuskentille. Pääputkien rakentaminen alkoi 1873 ja viimeinen valmistui 1909. Samalta…
+- [Montevideo — kaupunkilehti / Historia: Orjuuden loppu ja kaasuvalot] Molemmat sotivat osapuolet lakkauttivat orjuuden sodan aikana vahvistaakseen omia joukkojaan, ja muutos jäi pysyväksi. Sodan päätyttyä 1851 Montevideon hallitus solmi Brasilian kanssa viisi sopimusta, jotka takasivat maiden pysyvän liiton. Kasvun kausi alkoi saman tien: ensimmäiset kaasukatuvalot syttyivät 1853, ensimmäiset julkiset viemärit rakennettiin 1854–1861, ja Teatro Solís valmistui 1856, viisitoista vuotta rakennustöiden alkamisen jälkeen. Vasta nyt myös muurien ulkopuolelle kaavailtu Ciudad Nueva pääsi kunnolla kasvamaan.
+AIEMPI KYSYMYS: Miksi kaupungin pohjavesi pääsee laskemaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pohjavesi voi laskea monesta syystä: pitkät [[kuivat kaudet]] vähentävät veden määrää, ja rakennustyömaiden kuivatus voi pumpata vettä pois. Myös vuotavat [[viemärit]] voivat johtaa vettä pois maasta, ja sama voi tapahtua huonosti suunnitelluissa salaojissa. Kaupunki seuraa vedenpintaa ja pyrkii pitämään sen vakaana, mutta se ei ole helppoa, koska kaupungin alla vesi liikkuu hitaasti. Syiden painoarvoa en tiedä tarkasti. Kyl vesi on tässä kaupungissa tärkeämpää kuin tori.
+KYSYMYS: Kerro lisää: viemärit
+
+### 605
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norfolk — kaupunkilehti / Selviytyjät: Norfolkinmänty — ei mänty eikä mastopuu] Norfolkinmänty ei ole tieteellisesti mänty lainkaan, vaan araukaria-suvun havupuu, joka kasvaa luonnostaan vain Norfolkilla ja sen naapurisaarella Phillip Islandilla. Kapteeni Cook piti puiden suoria, jopa yli 60 metriä kohoavia runkoja täydellisinä laivaston mastoiksi, mutta kun ensimmäiset siirtokuntalaiset kokeilivat puuta 1788, se osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin. Puu jäi silti saaren tunnusmerkiksi: se komeilee yhä Norfolkin lipussa, ja sen luontainen levinneisyys on niin suppea, että laji on nykyisin luokiteltu silmälläpidettäväksi.
+AIEMPI KYSYMYS: Minkä puulajin paaluja Amsterdamin talojen alla on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Paalut on tehty yleensä havupuusta, ja usein mainitaan [[mänty]] ja [[kuusi]], joita tuotiin Amsterdamiin muun muassa Saksasta ja Skandinaviasta. Joissain rakennuksissa on myös tammea, mutta en ole varma, kuinka yleistä se oli. Puu soveltuu tarkoitukseen, koska vedenalaisena se ei pääse hapen kanssa tekemisiin eikä lahoa nopeasti. Tarkka jakauma vaihtelee rakennuksesta ja ajasta toiseen. Metsät ovat sitten ihan ymmärrettävästi lähtöisin sieltä, mistä minäkin voisin tunnistaa kuusen.
+KYSYMYS: Kerro lisää: mänty
+
+### 606
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Minkä puulajin paaluja Amsterdamin talojen alla on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Paalut on tehty yleensä havupuusta, ja usein mainitaan [[mänty]] ja [[kuusi]], joita tuotiin Amsterdamiin muun muassa Saksasta ja Skandinaviasta. Joissain rakennuksissa on myös tammea, mutta en ole varma, kuinka yleistä se oli. Puu soveltuu tarkoitukseen, koska vedenalaisena se ei pääse hapen kanssa tekemisiin eikä lahoa nopeasti. Tarkka jakauma vaihtelee rakennuksesta ja ajasta toiseen. Metsät ovat sitten ihan ymmärrettävästi lähtöisin sieltä, mistä minäkin voisin tunnistaa kuusen.
+KYSYMYS: Kerro lisää: kuusi
+
+### 607
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Mekka: Laakso kerää sateen kaduille] Mekka on rakennettu kapeaan laaksoon, jota kutsutaan Mekan kuopaksi. Kaupunki lepää 277 metrin korkeudessa alastomien vuorten välissä, seitsemänkymmentä kilometriä Jeddasta sisämaahan. Laakson muoto on suoja ja riesa yhtä aikaa: sama kouru, joka piti kaupungin koossa, ohjaa rankkasateen vedet suoraan kaduille. Ongelma on vanha. Jo kalifien Umarin (634–644) ja Uthmanin (644–656) aikana kaupunkiin kutsuttiin kristittyjä insinöörejä rakentamaan patoja ja penkereitä matalille kortteleille, jotta Kaaban ympärys pysyisi kuivana. Tutkija al-Kurdin mukaan tulvia oli vuoteen 1965 mennessä tullut kahdeksankymmentäyhdeksän, pahin niistä vuonna 1942.
+- [New Orleans — kaupunkilehti / New Orleans: Puolet kaupungista meren tasolla tai sen alla] Kaupunki syntyi joen luonnollisille penkereille, ja vasta A. Baldwin Woodin suunnittelemat pumput tekivät ympäröivistä soista ja marskimaista rakennuskelpoisia. Nykyään puolet New Orleansista on merenpinnan tasolla tai sen alapuolella: korkeimmillaan noin kuusi metriä sen yläpuolella joen penkereellä Uptownissa, alimmillaan runsaat kaksi metriä sen alapuolella kaupungin itäosissa. Joen vuotuinen tulvakorkeus yltää noin neljään metriin merenpinnan yläpuolelle, ja penkereitä on korotettu seitsemään metriin. Maa myös painuu, koska pengerrykset estävät tulvia tuomasta uutta lietettä vanhan tilalle.
+AIEMPI KYSYMYS: Miksi suuri osa Alankomaista on merenpinnan alapuolella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alankomaat sijaitsee Rein-, Maas- ja Scheldejokien suistoalueella, jossa maa on luonnostaan matalaa. Merta vastaan on rakennettu [[penkereitä]] ja [[polderien]] kuivatusjärjestelmiä, ja kuivatettu turve on painunut ajan myötä. Noin neljännes maasta on lähteiden mukaan merenpinnan alapuolella, mutta tarkka osuus riippuu laskentatavasta. Vettä pumpataan ja ohjataan vesilautakuntien avulla, jotka ovat vanhoja paikallisia hallintoelimiä. Hollantilaiset ovat siis rakentaneet maansa osaksi itse. Aikamoinen urakka, minä en osaa tuota edes lentää.
+KYSYMYS: Kerro lisää: penkereitä
+
+### 608
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Koko kaupunki seisoo puutukkien päällä
+Tietoruudun teksti: Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+AIEMPI KYSYMYS: Miksi suuri osa Alankomaista on merenpinnan alapuolella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alankomaat sijaitsee Rein-, Maas- ja Scheldejokien suistoalueella, jossa maa on luonnostaan matalaa. Merta vastaan on rakennettu [[penkereitä]] ja [[polderien]] kuivatusjärjestelmiä, ja kuivatettu turve on painunut ajan myötä. Noin neljännes maasta on lähteiden mukaan merenpinnan alapuolella, mutta tarkka osuus riippuu laskentatavasta. Vettä pumpataan ja ohjataan vesilautakuntien avulla, jotka ovat vanhoja paikallisia hallintoelimiä. Hollantilaiset ovat siis rakentaneet maansa osaksi itse. Aikamoinen urakka, minä en osaa tuota edes lentää.
+KYSYMYS: Kerro lisää: polderien
+
+### 609
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Rembrandtin talo] 1911 Taidemaalari Rembrandt osti tämän talon Jodenbreestraatilta vuonna 1639 peräti 13 000 guldenilla. Talo itse oli rakennettu jo vuonna 1606, mutta Rembrandt asui ja työskenteli siinä 19 vuoden ajan, maalasi mestariteoksiaan yläkerrassa ja piti taidekauppaa alakerrassa. Onni ei kestänyt: Rembrandt joutui rahavaikeuksiin, ja talo myytiin huutokaupalla vuonna 1658 tappiolla. Vuosisatojen kuluessa talo rapistui, kunnes kaupunki osti ja kunnosti sen 1900-luvun alussa. Museo avattiin vuonna 1911. Vuonna 1997 talon vanhasta käymäläkuopasta löytyi yllättäen kaksi savista ruukkua, joita Rembrandt oli aikoinaan käyttänyt maalauskankaidensa valmisteluun.
+AIEMPI KYSYMYS: Mihin taulusta leikatut palaset joutuivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Rembrandtin]] taulun palasia ei ole löydetty, joten niiden kohtalo on tuntematon. Ne ovat voineet joutua hukkaan, hävitä tai tuhoutua jo 1700-luvulla, eikä niistä ole säilynyt luotettavaa tietoa. Menetetyt osat tunnetaan lähinnä sen perusteella, että ryhmäkuvasta on tehty 1600-luvulla [[kopio]], jonka avulla alkuperäistä sommittelua voidaan arvioida. Kopion tarkka tekijä ja täsmällinen ikä eivät ole minulla muistissa varmasti. Nyt kun tätä kirjoitin, harmitti jotenkin.
+KYSYMYS: Kerro lisää: Rembrandtin
+
+### 610
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Mihin taulusta leikatut palaset joutuivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Rembrandtin]] taulun palasia ei ole löydetty, joten niiden kohtalo on tuntematon. Ne ovat voineet joutua hukkaan, hävitä tai tuhoutua jo 1700-luvulla, eikä niistä ole säilynyt luotettavaa tietoa. Menetetyt osat tunnetaan lähinnä sen perusteella, että ryhmäkuvasta on tehty 1600-luvulla [[kopio]], jonka avulla alkuperäistä sommittelua voidaan arvioida. Kopion tarkka tekijä ja täsmällinen ikä eivät ole minulla muistissa varmasti. Nyt kun tätä kirjoitin, harmitti jotenkin.
+KYSYMYS: Kerro lisää: kopio
+
+### 611
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kaupunkilehti / Alkuperäiskansat: Lähetysasema ja pakkotyö] Alueen ensimmäinen espanjalainen lähetysasema Mission San Gabriel perustettiin 1771 ja siirrettiin tulvavaurion jälkeen nykyiselle paikalleen runsaat neljätoista kilometriä keskustasta itäkoilliseen; lähteet antavat siirrolle kaksi eri vuotta, 1774 ja 1776. Siirtomaaviranomaiset rakennuttivat aseman ja sen maatalouden alkuperäiskansojen pakkotyöllä, ja historioitsijat arvioivat lähes 6 000 tongvan olevan haudattuna aseman maille. 1800-luvun alussa San Gabriel oli koko Alta Californian rikkain lähetysasema.
+AIEMPI KYSYMYS: Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?
+AIEMPI VASTAUS (Livia):
+No niin. Lähteet eivät anna [[siirrolle]] yhtä selvää syytä, mutta kyse oli todennäköisesti siitä, että [[kaartin]] entinen kokoontumispaikka oli menettämässä merkitystään ja kaupunki halusi säilyttää teoksen arvokkaassa tilassa. [[Kaupungintalo]] oli aikansa suurin julkinen rakennus Amsterdamissa, ja se toimi myös esittelytilana. Sinne siirtäminen merkitsi, ettei taulu enää ollut vain kaartin oma muisto. Tarkkaa päätöstä tai päätöksentekijää en tiedä. Suuri taulu oli siis päässyt arvostettuun seuraan, vaikka seinä ei olisi sitä kestänyt.
+KYSYMYS: Kerro lisää: siirrolle
+
+### 612
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Yövartio] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+AIEMPI KYSYMYS: Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?
+AIEMPI VASTAUS (Livia):
+No niin. Lähteet eivät anna [[siirrolle]] yhtä selvää syytä, mutta kyse oli todennäköisesti siitä, että [[kaartin]] entinen kokoontumispaikka oli menettämässä merkitystään ja kaupunki halusi säilyttää teoksen arvokkaassa tilassa. [[Kaupungintalo]] oli aikansa suurin julkinen rakennus Amsterdamissa, ja se toimi myös esittelytilana. Sinne siirtäminen merkitsi, ettei taulu enää ollut vain kaartin oma muisto. Tarkkaa päätöstä tai päätöksentekijää en tiedä. Suuri taulu oli siis päässyt arvostettuun seuraan, vaikka seinä ei olisi sitä kestänyt.
+KYSYMYS: Kerro lisää: kaartin
+
+### 613
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?
+AIEMPI VASTAUS (Livia):
+No niin. Lähteet eivät anna [[siirrolle]] yhtä selvää syytä, mutta kyse oli todennäköisesti siitä, että [[kaartin]] entinen kokoontumispaikka oli menettämässä merkitystään ja kaupunki halusi säilyttää teoksen arvokkaassa tilassa. [[Kaupungintalo]] oli aikansa suurin julkinen rakennus Amsterdamissa, ja se toimi myös esittelytilana. Sinne siirtäminen merkitsi, ettei taulu enää ollut vain kaartin oma muisto. Tarkkaa päätöstä tai päätöksentekijää en tiedä. Suuri taulu oli siis päässyt arvostettuun seuraan, vaikka seinä ei olisi sitä kestänyt.
+KYSYMYS: Kerro lisää: Kaupungintalo
+
+### 614
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mistä tiedetään, mitä taulusta puuttuu?
+AIEMPI VASTAUS (Livia):
+Ai se. Puuttuvia osia on päätelty vertaamalla taulua [[kopioon]], joka tehtiin ennen leikkausta ja jossa sommittelu näkyy kokonaisempana. Lisäksi nykyisten reunojen kuva-aiheet katkeavat selvästi kesken, esimerkiksi askelman ja holvikaaren kohdalla. Tutkijat ovat arvioineet muutokset myös [[röntgenkuvauksen]] ja arkistotietojen perusteella. Tarkkaa menetetyn osan sisältöä ei voida tietää kaikilta osin. Hyvä, että joku muisti piirtää ennen veistä.
+KYSYMYS: Kerro lisää: kopioon
+
+### 615
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva] Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta 1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa vihkisormus — ja lääketiede sai uuden silmän.
+AIEMPI KYSYMYS: Mistä tiedetään, mitä taulusta puuttuu?
+AIEMPI VASTAUS (Livia):
+Ai se. Puuttuvia osia on päätelty vertaamalla taulua [[kopioon]], joka tehtiin ennen leikkausta ja jossa sommittelu näkyy kokonaisempana. Lisäksi nykyisten reunojen kuva-aiheet katkeavat selvästi kesken, esimerkiksi askelman ja holvikaaren kohdalla. Tutkijat ovat arvioineet muutokset myös [[röntgenkuvauksen]] ja arkistotietojen perusteella. Tarkkaa menetetyn osan sisältöä ei voida tietää kaikilta osin. Hyvä, että joku muisti piirtää ennen veistä.
+KYSYMYS: Kerro lisää: röntgenkuvauksen
+
+### 616
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Kuka oli Rembrandt van Rijn ja mistä hän oli kotoisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Rembrandt van Rijn syntyi vuonna 1606 [[Leidenissä]], ja hän muutti myöhemmin Amsterdamiin, jossa hänestä tuli yksi kaupungin tunnetuimpia taidemaalareita. Hän maalasi muotokuvia, historiallisia aiheita ja omakuvia, ja hänen valon ja varjon käsittelynsä on tunnettu. Hän kuoli Amsterdamissa vuonna 1669. Hänen elämänsä loppupuolella talous heikkeni, ja hän menetti talonsa. [[Yövartio]] kuuluu hänen tunnetuimpiin töihinsä. Ja nyt on menny hetki, kun minä tätä kerroin.
+KYSYMYS: Kerro lisää: Leidenissä
+
+### 617
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Yövartio] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+AIEMPI KYSYMYS: Kuka oli Rembrandt van Rijn ja mistä hän oli kotoisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Rembrandt van Rijn syntyi vuonna 1606 [[Leidenissä]], ja hän muutti myöhemmin Amsterdamiin, jossa hänestä tuli yksi kaupungin tunnetuimpia taidemaalareita. Hän maalasi muotokuvia, historiallisia aiheita ja omakuvia, ja hänen valon ja varjon käsittelynsä on tunnettu. Hän kuoli Amsterdamissa vuonna 1669. Hänen elämänsä loppupuolella talous heikkeni, ja hän menetti talonsa. [[Yövartio]] kuuluu hänen tunnetuimpiin töihinsä. Ja nyt on menny hetki, kun minä tätä kerroin.
+KYSYMYS: Kerro lisää: Yövartio
+
+### 618
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kaupunkilehti / Persepolis: Jokainen ryhmä omissa vaatteissaan] Pylvässalin portaiden kylkeen on veistetty kulkue, jossa valtakunnan eri kansat tuovat lahjoja kuninkaalle. Reliefit eivät ole samanlaista massaa: jokainen ryhmä on veistetty omassa asussaan, omine päähineineen ja omine tuomisineen — maljoja, kankaita, astioita ja eläimiä. Ryhmät on erotettu toisistaan tyylitellyllä sypressillä, joka toistuu koko kulkueen matkan samanlaisena. Kivi on paikoin kulunut sileäksi kosketuksesta, mutta partojen kiharat ja kankaan poimut erottuvat yhä terävinä.
+AIEMPI KYSYMYS: Mitä ryhmämuotokuva on ja miksi niitä tilattiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Ryhmämuotokuva]] esittää useita henkilöitä samassa kuvassa, ja Alankomaissa 1600-luvulla niitä tilasivat esimerkiksi [[kaartit]], [[killat]] ja hyväntekeväisyyslaitosten johtajat. Kuvaan mukaan tulleet henkilöt maksoivat usein osuutensa, ja asema tai maksettu summa saattoi vaikuttaa siihen, miten näkyvästi he kuvassa esiintyivät. Kuvaa käytettiin yhteisön ylpeyden ja yhteenkuuluvuuden osoittamiseen, ja sitä ripustettiin kokoontumistilaan. Tarkat maksutavat vaihtelivat, eikä niistä ole minulla kaikkia yksityiskohtia. Tällaisessa ryhmäkuvassa kyyhkyllä ei olisi ollut mitään sijaa.
+KYSYMYS: Kerro lisää: Ryhmämuotokuva
+
+### 619
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä ryhmämuotokuva on ja miksi niitä tilattiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Ryhmämuotokuva]] esittää useita henkilöitä samassa kuvassa, ja Alankomaissa 1600-luvulla niitä tilasivat esimerkiksi [[kaartit]], [[killat]] ja hyväntekeväisyyslaitosten johtajat. Kuvaan mukaan tulleet henkilöt maksoivat usein osuutensa, ja asema tai maksettu summa saattoi vaikuttaa siihen, miten näkyvästi he kuvassa esiintyivät. Kuvaa käytettiin yhteisön ylpeyden ja yhteenkuuluvuuden osoittamiseen, ja sitä ripustettiin kokoontumistilaan. Tarkat maksutavat vaihtelivat, eikä niistä ole minulla kaikkia yksityiskohtia. Tällaisessa ryhmäkuvassa kyyhkyllä ei olisi ollut mitään sijaa.
+KYSYMYS: Kerro lisää: kaartit
+
+### 620
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yövartiosta sahattiin palat pois
+Tietoruudun teksti: Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+- [Fès — kohdekartta / Kohdekartta: Moulay Idris II:n zawiya] 1437 ja 1700-luku Tämä on yksi Marokon pyhimmistä pyhäköistä. Se on zawiya eli pyhäkkö ja uskonnollinen keskus, ja siinä on Idris II:n hauta. Idris II hallitsi nykyisen Marokon aluetta vuosina 807–828, ja häntä pidetään perinteisesti Fèsin perustajana ja suojeluspyhimyksenä. Paikalla oli alun perin 900-luvun moskeija, joka rappeutui myöhempinä vuosisatoina. Pyhäkön merkitys elpyi 1300- ja 1400-luvuilla, kun profeetan jälkeläisten uskonnollinen asema kasvoi — ja perinteisten kertomusten mukaan ratkaisevasti vuonna 1437: rakennusta oltiin kunnostamassa, kun paikalta löytyi haudattu ruumis, jonka ajan lakioppineet tunnistivat Idris II:ksi. Nykyisen perusmuotonsa, myös minareetin ja pyramidikat…
+AIEMPI KYSYMYS: Mitä ryhmämuotokuva on ja miksi niitä tilattiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Ryhmämuotokuva]] esittää useita henkilöitä samassa kuvassa, ja Alankomaissa 1600-luvulla niitä tilasivat esimerkiksi [[kaartit]], [[killat]] ja hyväntekeväisyyslaitosten johtajat. Kuvaan mukaan tulleet henkilöt maksoivat usein osuutensa, ja asema tai maksettu summa saattoi vaikuttaa siihen, miten näkyvästi he kuvassa esiintyivät. Kuvaa käytettiin yhteisön ylpeyden ja yhteenkuuluvuuden osoittamiseen, ja sitä ripustettiin kokoontumistilaan. Tarkat maksutavat vaihtelivat, eikä niistä ole minulla kaikkia yksityiskohtia. Tällaisessa ryhmäkuvassa kyyhkyllä ei olisi ollut mitään sijaa.
+KYSYMYS: Kerro lisää: killat

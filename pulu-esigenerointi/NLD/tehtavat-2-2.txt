@@ -1,0 +1,1156 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+AIEMPI KYSYMYS: Mitkä valtiot lähettivät edustajansa Haagin kokoukseen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tää on pitkä lista. [[Haagiin]] saapui 26 valtion lähetystöt. Mukana olivat eurooppalaiset valtiot sekä osmanien valtakunta, Yhdysvallat, Meksiko, Kiina, Japani, Siam ja Persia. Kokouksen oli ehdottanut Venäjän tsaari [[Nikolai II]], ja taustalla oli 1800-luvun lopun [[varustelukilpa]]. Lueteltuna se kuulostaa melkein lentoreitiltä.
+KYSYMYS: Kerro lisää: varustelukilpa
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Missä päin Alankomaita Haag sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on helppo. Haag sijaitsee Alankomaiden länsiosassa [[Pohjanmeren]] rannikolla, [[Etelä-Hollannin]] maakunnassa. Se on hallituksen ja parlamentin kotipaikka, mutta maan pääkaupunki on [[Amsterdam]]. Ylhäältä se näyttää aika vihreältä ja märältä.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Hyväntoivonlinnoitus] 1666 Hyväntoivonlinnoitus on Etelä-Afrikan vanhin säilynyt rakennus. Hollantilainen Itä-Intian kauppakomppania rakensi sen vuosina 1666–1679 korvaamaan Jan van Riebeeckin savesta ja puusta tehdyn linnakkeen. Ensimmäinen kivi laskettiin 2. tammikuuta 1666. Viisikulmaisen linnoituksen bastionit nimettiin 26. huhtikuuta 1679 Oranian Vilhelm III:n arvonimien mukaan: Leerdam, Buuren, Katzenellenbogen, Nassau ja Oranje. Linnoitus rakennettiin osittain orjatyöllä. Yhtiö ei orjuuttanut paikallisia, koska se pelkäsi kapinaa eikä tiennyt, kuinka suuria seudun kansat olivat; sen sijaan Kapiin tuotiin jopa kuusikymmentätuhatta orjuutettua ihmistä Madagaskarilta, Mosambikista, Hollannin Itä-Intiasta ja …
+- [Oslo — kohdekartta / Kohdekartta: Akershus] Kun isoisäsi katsoi Christianian satamassa norjalaisten laivojen lippuja, niiden kannossa eli lipputangon puoleisessa yläkulmassa oli pieni kirjava merkki, jossa Norjan ja Ruotsin värit olivat sekaisin. Nykyinen lippu oli suunniteltu jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta — samat värit olivat Ranskan, Hollannin, Amerikan ja Englannin lipuissa. Kuningas kieltäytyi allekirjoittamasta lippulakia, mutta hyväksyi mallin siviilikäyttöön kuninkaallisella päätöksellä heinäkuussa 1821. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä …
+AIEMPI KYSYMYS: Missä päin Alankomaita Haag sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on helppo. Haag sijaitsee Alankomaiden länsiosassa [[Pohjanmeren]] rannikolla, [[Etelä-Hollannin]] maakunnassa. Se on hallituksen ja parlamentin kotipaikka, mutta maan pääkaupunki on [[Amsterdam]]. Ylhäältä se näyttää aika vihreältä ja märältä.
+KYSYMYS: Kerro lisää: Etelä-Hollannin
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Missä päin Alankomaita Haag sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on helppo. Haag sijaitsee Alankomaiden länsiosassa [[Pohjanmeren]] rannikolla, [[Etelä-Hollannin]] maakunnassa. Se on hallituksen ja parlamentin kotipaikka, mutta maan pääkaupunki on [[Amsterdam]]. Ylhäältä se näyttää aika vihreältä ja märältä.
+KYSYMYS: Kerro lisää: Amsterdam
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+- [Halifax — kohdekartta / Kohdekartta: Pyhän Paavalin kirkko] 1750 Pyhän Paavalin seurakunta perustettiin 1749, samana vuonna kuin kaupunki, ja kirkon rakentaminen alkoi seuraavana vuonna. Pastori William Tutty vihki sen käyttöön 2. syyskuuta 1750. Se on Kanadan vanhin säilynyt protestanttinen kirkko ja koko Halifaxin vanhin rakennus. Pohjakaava ei ole omaperäinen eikä sen ollut tarkoituskaan olla: se seuraa James Gibbsin suunnitteleman Marybone Chapelin kaavaa Westminsteristä. Gibbs oli sama arkkitehti, joka piirsi St Martin-in-the-Fieldsin Trafalgar Squarelle. Torni on myöhempi lisäys, ja kirkon alla on krypta. Kirkko seisoo Grand Paraden eteläpäässä; aukion pohjoispäässä on kaupungintalo. Vuosisatojen mittaan kirkossa on siunattu monta seudun tunne…
+AIEMPI KYSYMYS: Miksi Domtoren seisoo yksin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Torni rakennettiin vuosina 1321–1382 osaksi [[Pyhän Martinuksen katedraalin]] kokonaisuutta, mutta katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen [[keskilaiva]] romahti vuonna 1674, torni jäi seisomaan erilleen. Piirustukset oli tehnyt [[John of Hainaut]]. Minä pidän yksinäisistä torneista, niissä on tilaa.
+KYSYMYS: Kerro lisää: Pyhän Martinuksen katedraalin
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi Domtoren seisoo yksin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Torni rakennettiin vuosina 1321–1382 osaksi [[Pyhän Martinuksen katedraalin]] kokonaisuutta, mutta katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen [[keskilaiva]] romahti vuonna 1674, torni jäi seisomaan erilleen. Piirustukset oli tehnyt [[John of Hainaut]]. Minä pidän yksinäisistä torneista, niissä on tilaa.
+KYSYMYS: Kerro lisää: keskilaiva
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Miksi Domtoren seisoo yksin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Torni rakennettiin vuosina 1321–1382 osaksi [[Pyhän Martinuksen katedraalin]] kokonaisuutta, mutta katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen [[keskilaiva]] romahti vuonna 1674, torni jäi seisomaan erilleen. Piirustukset oli tehnyt [[John of Hainaut]]. Minä pidän yksinäisistä torneista, niissä on tilaa.
+KYSYMYS: Kerro lisää: John of Hainaut
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Keskusrautatieasema] 1889 Amsterdamin komea keskusrautatieasema valmistui vuonna 1889, mutta se ei seiso tavallisella maalla. Rakentajat loivat sille kolme keinotekoista saarta keskelle IJ-lahtea ja löivät pohjaan lähes 8 700 puupaalua, jotta koko asema pysyisi pystyssä pehmeässä maaperässä. Aseman suunnitteli arkkitehti Pierre Cuypers, sama mies joka rakensi kuuluisan Rijksmuseumin. Siksi asema muistuttaakin enemmän satulinnaa kuin junapysäkkiä: siinä on kaksi tornia ja kivikoristeita. Nykyään asemalla vilisee joka päivä lähes 200 000 matkustajaa, ja sen pisin laituri on lähes 700 metriä — toiseksi pisin koko Alankomaissa. "Mahdollisimman ruma hyökkäys kaupunkimme kauneutta vastaan." — Amsterdamilaisten aikala…
+AIEMPI KYSYMYS: Kuka vastusti tornin rakentamista?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tornin rakentamista vastusti saarnaaja [[Geert Groote]], joka paheksui hanketta turhamaisena: hänen mielestään torni oli liian korkea, liian kallis eikä edes kaunis. Groote tunnetaan [[Devotio modernan]] perustajana, ja hänen arvostelunsa kohdistui [[Utrechtin]] suureen kirkkohankkeeseen. Kriitikoita on aina, ja torni seisoo silti.
+KYSYMYS: Kerro lisää: Geert Groote
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Kuka vastusti tornin rakentamista?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tornin rakentamista vastusti saarnaaja [[Geert Groote]], joka paheksui hanketta turhamaisena: hänen mielestään torni oli liian korkea, liian kallis eikä edes kaunis. Groote tunnetaan [[Devotio modernan]] perustajana, ja hänen arvostelunsa kohdistui [[Utrechtin]] suureen kirkkohankkeeseen. Kriitikoita on aina, ja torni seisoo silti.
+KYSYMYS: Kerro lisää: Devotio modernan
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Kuka vastusti tornin rakentamista?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tornin rakentamista vastusti saarnaaja [[Geert Groote]], joka paheksui hanketta turhamaisena: hänen mielestään torni oli liian korkea, liian kallis eikä edes kaunis. Groote tunnetaan [[Devotio modernan]] perustajana, ja hänen arvostelunsa kohdistui [[Utrechtin]] suureen kirkkohankkeeseen. Kriitikoita on aina, ja torni seisoo silti.
+KYSYMYS: Kerro lisää: Utrechtin
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Kuka soittaa Domtorenin kelloja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tornin kelloja soittaa yhä käsin [[Utrechtin kellonsoittajien kilta]]. Tornissa on neljäntoista soittokellon sarja, ja [[soittokellojen]] yhteispaino on 32 tonnia. Minä kuulen ne varmaan aina ensimmäisenä, lintu kun olen.
+KYSYMYS: Kerro lisää: Utrechtin kellonsoittajien kilta
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Kuka soittaa Domtorenin kelloja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tornin kelloja soittaa yhä käsin [[Utrechtin kellonsoittajien kilta]]. Tornissa on neljäntoista soittokellon sarja, ja [[soittokellojen]] yhteispaino on 32 tonnia. Minä kuulen ne varmaan aina ensimmäisenä, lintu kun olen.
+KYSYMYS: Kerro lisää: soittokellojen
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Miten Utrecht sai alkunsa tornin paikalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä kohdassa. Utrecht sai alkunsa lähes kaksituhatta vuotta sitten, ja kaupungin ydin on juuri tornin paikalla. [[Roomalaisten]] rakentama linnoitus sijaitsi Rooman valtakunnan rajalla [[Reinin]] varrella, ja paikan nimi oli [[Traiectum]]. Linnoituksen ympärille kasvoi vähitellen kaupunki. Suku on vanhaa roomalaista, joten minulla on tähän tunnesidekin.
+KYSYMYS: Kerro lisää: Roomalaisten
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Miten Utrecht sai alkunsa tornin paikalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä kohdassa. Utrecht sai alkunsa lähes kaksituhatta vuotta sitten, ja kaupungin ydin on juuri tornin paikalla. [[Roomalaisten]] rakentama linnoitus sijaitsi Rooman valtakunnan rajalla [[Reinin]] varrella, ja paikan nimi oli [[Traiectum]]. Linnoituksen ympärille kasvoi vähitellen kaupunki. Suku on vanhaa roomalaista, joten minulla on tähän tunnesidekin.
+KYSYMYS: Kerro lisää: Reinin
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+AIEMPI KYSYMYS: Miten Utrecht sai alkunsa tornin paikalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä kohdassa. Utrecht sai alkunsa lähes kaksituhatta vuotta sitten, ja kaupungin ydin on juuri tornin paikalla. [[Roomalaisten]] rakentama linnoitus sijaitsi Rooman valtakunnan rajalla [[Reinin]] varrella, ja paikan nimi oli [[Traiectum]]. Linnoituksen ympärille kasvoi vähitellen kaupunki. Suku on vanhaa roomalaista, joten minulla on tähän tunnesidekin.
+KYSYMYS: Kerro lisää: Traiectum
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Piispan harhaan ajautunut laiva] Tomás de Berlanga oli matkalla Panamasta Peruun sovittelemaan riitaa, kun tuulet tyyntyivät ja virtaukset kuljettivat hänen laivansa harhaan reitiltä. Miehistö ajautui tuntemattomaan saaristoon, jossa ei ollut makeaa vettä: kaksi merimiestä ja kymmenen hevosta kuoli janoon ennen kuin retkikunta pääsi jatkamaan matkaa. Berlanga kirjoitti Espanjan kuninkaalle kuvauksen karusta paikasta, jonka kivikkoisilla rannoilla vaelsi jättiläiskilpikonnia ja oudon näköisiä liskoja. Raportti oli ensimmäinen kirjallinen maininta saaristosta — mutta yli kolme vuosisataa kului ennen kuin kukaan tutki sitä tieteellisesti.
+- [Sitka — kaupunkilehti / Sitka: Piispantalo hirsistä] Suomalaiset työmiehet pystyttivät Sitkaan vuosina 1841–1843 kaksikerroksisen hirsirakennuksen Venäjän-Amerikan-yhtiön palveluksessa: siitä tuli Alaskan ensimmäisen piispan, Innokenti Veniaminovin, koti ja hallintokeskus. Rakennuksessa asui myöhemmin myös pappeja, ja se toimi välillä jopa majatalona, kunnes Sitkan hiippakunta siirrettiin San Franciscoon 1872. Piispantalo on yksi harvoista Venäjän-Amerikan ajalta säilyneistä rakennuksista koko Alaskassa, ja se rauhoitettiin kansallismuistomerkiksi 1962. Nykyisin se on osa Sitkan kansallista historiallista puistoa ja avoinna yleisölle opastetuilla kierroksilla museona.
+AIEMPI KYSYMYS: Mikä ero on katedraalilla ja tavallisella kirkolla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän on selkeä vastaus. Katedraali on [[piispan]] kirkko eli [[hiippakunnan]] pääkirkko, jossa on piispan istuin. Sana tulee latinan sanasta cathedra, joka tarkoittaa istuinta. Tavallinen kirkko on seurakunnan kirkko ilman piispan istuinta. Utrechtin [[Domin kirkko]] oli keskiajalla tällainen piispan kirkko. Minä istun mieluummin kaiteella kuin penkissä.
+KYSYMYS: Kerro lisää: piispan
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kohdekartta / Kohdekartta: St. John’sin kirkko] 1787 Kirkko oli kauppakomppanian ensimmäisiä julkisia rakennuksia sen jälkeen, kun Kalkutasta oli tullut hallinnon keskus. Peruskiven laski kenraalikuvernööri Warren Hastings 6. huhtikuuta 1784, ja rakentaminen kustannettiin julkisella arpajaisella, joka tuotti kolmekymmentätuhatta rupiaa. Tontin lahjoitti maharadža Nabo Kishen Bahadur. Rakennus valmistui 1787, ja se on kaupungin kolmanneksi vanhin kirkko. Esikuvana oli Lontoon St Martin-in-the-Fields. Kansanomainen nimi on Pathure Girja, kivikirkko. Kivi oli 1700-luvun lopun Kalkutassa harvinaista tavaraa, ja se haettiin keskiaikaisen Gaurin raunioista ja tuotiin jokea alas. Samasta paikasta on lattian harvinainen siniharmaa marmori. Kirkk…
+- [Iqaluit — kohdekartta / Kohdekartta: Pyhän Juudaksen katedraali] 2012 Virallisesti se on Pyhien Simonin ja Juudaksen katedraali, mutta kaupungissa sitä sanotaan iglukatedraaliksi: valkoinen rakennus on iglun muotoinen. Se on arktisen hiippakunnan piispanistuin, ja hiippakunta kattaa Luoteisterritoriot, Nunavutin ja Pohjois-Quebecin Nunavikin — pinta-alaltaan maailman suurin anglikaaninen hiippakunta. Jumalanpalvelukset pidetään englanniksi ja inuktitutiksi. Ensimmäisen katedraalin suunnitteli Ronald Thom 1970, ja paikalliset vapaaehtoiset rakensivat sen 1972. Koristeet olivat inuiittikäsityötä: seinävaatteita, punottuja kolehtikoreja, kahdesta sarvivalaan syöksyhampaasta tehty risti ja vuolukivinen kastemalja, jonka kuningatar Elisabet II vihki käyttöön …
+AIEMPI KYSYMYS: Mikä ero on katedraalilla ja tavallisella kirkolla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän on selkeä vastaus. Katedraali on [[piispan]] kirkko eli [[hiippakunnan]] pääkirkko, jossa on piispan istuin. Sana tulee latinan sanasta cathedra, joka tarkoittaa istuinta. Tavallinen kirkko on seurakunnan kirkko ilman piispan istuinta. Utrechtin [[Domin kirkko]] oli keskiajalla tällainen piispan kirkko. Minä istun mieluummin kaiteella kuin penkissä.
+KYSYMYS: Kerro lisää: hiippakunnan
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domtoren (kulttuuri)
+Tietoruudun teksti: Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa yhä käsin Utrechtin kellonsoittajien kilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Guatemala — kohdekartta / Kohdekartta: Santo Domingon kirkko] 1808 Kirkko tunnetaan nykyään nimellä Nuestra Señora del Rosarion basilika. Tyyli on klassista barokkia ja niin sanottua seismistä uusklassismia — matalaa, paksua ja järistyksiä kestäväksi suunniteltua. Dominikaanien vanha kirkko ja luostari sortuivat vanhassa pääkaupungissa 1773, ja veljet siirtyivät uuteen kaupunkiin 1776 mukanaan Ruusukon Neitsyen kuva ja osa kulkueveistoksista. Rakentaminen alkoi samana vuonna arkkitehti Pedro Garci-Aguirren johdolla, ja kirkko vihittiin 8. marraskuuta 1808 osana Ferdinand VII:n kruunajaisjuhlia. Perustuksiin käytettiin Las Vacasin louhosten kiveä, vanhasta kaupungista pelastettua rakennusainetta sekä sokeriruokosiirappia ja lehmänmaitoa veljeskunnan om…
+AIEMPI KYSYMYS: Mikä ero on katedraalilla ja tavallisella kirkolla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän on selkeä vastaus. Katedraali on [[piispan]] kirkko eli [[hiippakunnan]] pääkirkko, jossa on piispan istuin. Sana tulee latinan sanasta cathedra, joka tarkoittaa istuinta. Tavallinen kirkko on seurakunnan kirkko ilman piispan istuinta. Utrechtin [[Domin kirkko]] oli keskiajalla tällainen piispan kirkko. Minä istun mieluummin kaiteella kuin penkissä.
+KYSYMYS: Kerro lisää: Domin kirkko
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+AIEMPI KYSYMYS: Mikä tähtilinnoitus on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tähtilinnoitus on linnoitustyyppi, jonka muurit on rakennettu tähden muotoon niin, että niissä on ulkonevia kulmikkaita [[bastioneja]]. Muodon avulla [[tykkien]] tuli saatiin ulottumaan muurin edustalle ilman sokeita kulmia, ja siksi tyyppi yleistyi Euroopassa tykkien aikakaudella. [[Bourtangen]] linnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa vuosina 1967–1992. Ylhäältä ne näyttävät kyl ihan koristeilta.
+KYSYMYS: Kerro lisää: bastioneja
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Fort Canningin kukkula] linnoitus 1861, purettu 1907 Kaupungin keskellä kohoava 48 metrin kukkula tunnettiin malaijiksi nimellä Bukit Larangan, Kielletty kukkula. Perimätiedon mukaan siellä lepäsivät muinaisen Singapuran kuninkaat, ja paikkaa pidettiin aavemaisena. Rinteen länsipuolella pulppusi lähde, jota kutsuttiin kielletyksi lähteeksi; 1800-luvun alussa siitä otettiin juomavesi jokaiseen satamaan poikkeavaan laivaan, kunnes kysyntä ylitti sen tuoton ja lähde kuivui kaivojen myötä. Kun sopimus oli allekirjoitettu 6. helmikuuta 1819, majuri William Farquhar nousi kukkulalle, veti sinne ensimmäisen tykin ja nosti lipun. Raffles rakennutti laelle asuinrakennuksen, jonka piirsi George Drumgoole Coleman: puinen bun…
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+AIEMPI KYSYMYS: Mikä tähtilinnoitus on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tähtilinnoitus on linnoitustyyppi, jonka muurit on rakennettu tähden muotoon niin, että niissä on ulkonevia kulmikkaita [[bastioneja]]. Muodon avulla [[tykkien]] tuli saatiin ulottumaan muurin edustalle ilman sokeita kulmia, ja siksi tyyppi yleistyi Euroopassa tykkien aikakaudella. [[Bourtangen]] linnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa vuosina 1967–1992. Ylhäältä ne näyttävät kyl ihan koristeilta.
+KYSYMYS: Kerro lisää: tykkien
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+AIEMPI KYSYMYS: Mikä tähtilinnoitus on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tähtilinnoitus on linnoitustyyppi, jonka muurit on rakennettu tähden muotoon niin, että niissä on ulkonevia kulmikkaita [[bastioneja]]. Muodon avulla [[tykkien]] tuli saatiin ulottumaan muurin edustalle ilman sokeita kulmia, ja siksi tyyppi yleistyi Euroopassa tykkien aikakaudella. [[Bourtangen]] linnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa vuosina 1967–1992. Ylhäältä ne näyttävät kyl ihan koristeilta.
+KYSYMYS: Kerro lisää: Bourtangen
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+- [Alankomaat — maalehti / Historia: Vanhemmat menivät kadulle, ja maa sai pyörätiet] 1972 — Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua. Vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, ja heidän joukossaan oli satoja lapsia. Vanhemmat perustivat liikkeen nimeltä Stop de Kindermoord, marssivat parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+- [Alankomaat — maalehti / Historia] Alankomaiden historiaa eivät tehneet vain hallitsijat vaan kauppiaat, jäämerelle jääneet merimiehet ja tavalliset ihmiset, jotka lähtivät kadulle vaatimaan muutosta.
+AIEMPI KYSYMYS: Miksi linnoitus rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitus rakennettiin vuonna 1593 [[Alankomaiden kapinan]] aikana, koska haluttiin hallita Saksan ja espanjalaisten pitämän [[Groningenin]] välistä päätietä. Tie kulki hiekkaharjannetta pitkin suon halki, ja juuri harjanne antoi paikalle nimen, sillä hollannin tange tarkoittaa hiekkaharjua. Ylhäältä se tie olisi kyllä näkynyt hyvin.
+KYSYMYS: Kerro lisää: Alankomaiden kapinan
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+AIEMPI KYSYMYS: Miksi linnoitus rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitus rakennettiin vuonna 1593 [[Alankomaiden kapinan]] aikana, koska haluttiin hallita Saksan ja espanjalaisten pitämän [[Groningenin]] välistä päätietä. Tie kulki hiekkaharjannetta pitkin suon halki, ja juuri harjanne antoi paikalle nimen, sillä hollannin tange tarkoittaa hiekkaharjua. Ylhäältä se tie olisi kyllä näkynyt hyvin.
+KYSYMYS: Kerro lisää: Groningenin
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Manila — kohdekartta / Kohdekartta: San Agustinin kirkko] valmistui 1607 Kivikirkon suunnitteli Juan Macías, ja kivi hakattiin Meycauayanin, Binangonanin ja San Mateon adobelouhoksista. Työ eteni hitaasti, koska rahaa, rakennusaineita ja kivenveistäjiä oli niukasti. Luostari saatiin käyttöön 1604 ja kirkko julistettiin valmiiksi 19. tammikuuta 1607 nimellä Manilan Pyhän Paavalin kirkko. Macías itse ei nähnyt sitä valmiina. Sisätilan maalasi kaksi italialaista, jotka tekivät holveihin ja seiniin kohokuvia jäljittelevän silmänlumemaalauksen. Saarnastuoli on barokkia, ja sen aiheena on paikallinen ananas. Kuoripenkit on veistetty molave-puusta ja upotukset ovat 1600-luvun norsunluuta, kuoriaulassa on 1500-luvun krusifiksi, ja katosta riippuu kuusitoi…
+AIEMPI KYSYMYS: Mitä Bourtangessa voi nykyään nähdä?
+AIEMPI VASTAUS (Livia):
+No jopas, yllättävän hyvin säilynyt paikka. Bourtangen kylässä asuu noin 430 ihmistä, ja sen keskellä on tähtilinnoitus, joka on nykyään [[ulkoilmamuseo]]. Linnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa vuosina 1967–1992, joten vierailija näkee [[tähtilinnoituksen]] sellaisena kuin se oli ennen kuin siitä luovuttiin vuonna 1851.
+
+Kylä on pieni, mutta muurit ovat silti pystyssä. Minä pidän siitä, että vanhaa on jaksettu hoitaa.
+KYSYMYS: Kerro lisää: ulkoilmamuseo
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+AIEMPI KYSYMYS: Mitä Bourtangessa voi nykyään nähdä?
+AIEMPI VASTAUS (Livia):
+No jopas, yllättävän hyvin säilynyt paikka. Bourtangen kylässä asuu noin 430 ihmistä, ja sen keskellä on tähtilinnoitus, joka on nykyään [[ulkoilmamuseo]]. Linnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa vuosina 1967–1992, joten vierailija näkee [[tähtilinnoituksen]] sellaisena kuin se oli ennen kuin siitä luovuttiin vuonna 1851.
+
+Kylä on pieni, mutta muurit ovat silti pystyssä. Minä pidän siitä, että vanhaa on jaksettu hoitaa.
+KYSYMYS: Kerro lisää: tähtilinnoituksen
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Missä Bourtange sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämä löytyy helposti. Bourtange on noin 430 asukkaan kylä [[Groningenin]] maakunnan itälaidalla Alankomaissa, aivan lähellä [[Saksan]] rajaa. Näkyy ylhäältä hyvin, pieni tähti keskellä vihreää.
+KYSYMYS: Kerro lisää: Saksan
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+AIEMPI KYSYMYS: Miksi suo auttoi linnoituksen puolustusta?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä saa hyvän kuvan. Tie kulki [[Bourtangen suon]] halki hiekkaharjannetta pitkin, joten märässä ja upottavassa maastossa liikkuminen oli mahdollista lähinnä sitä reittiä. Siksi linnoitus harjanteen kohdalla hallitsi koko kulkua, ja paikan nimikin tulee sanasta tange, joka tarkoittaa [[hiekkaharjua]]. Märkä jalka on kyyhkyllekin huono juttu.
+KYSYMYS: Kerro lisää: Bourtangen suon
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourtange (historia)
+Tietoruudun teksti: Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina 1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja nykyään se on ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Hiekka joka on täynnä pieneliöitä] nykyään — Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+AIEMPI KYSYMYS: Miksi suo auttoi linnoituksen puolustusta?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä saa hyvän kuvan. Tie kulki [[Bourtangen suon]] halki hiekkaharjannetta pitkin, joten märässä ja upottavassa maastossa liikkuminen oli mahdollista lähinnä sitä reittiä. Siksi linnoitus harjanteen kohdalla hallitsi koko kulkua, ja paikan nimikin tulee sanasta tange, joka tarkoittaa [[hiekkaharjua]]. Märkä jalka on kyyhkyllekin huono juttu.
+KYSYMYS: Kerro lisää: hiekkaharjua
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Muinaisuus: Puoli miljoonaa hehtaaria kaivettuja kanavia] 200 eaa. – 1000 jaa. — San Jorgen, Caucan, Magdalenan ja Nechín muodostama sisämaan suisto tulvi joka vuosi huhtikuusta marraskuuhun. Zenút alkoivat 200-luvulla eaa. kaivaa kanavia, jotka ohjasivat tulvaveden ja tekivät alueesta viljelykelpoisen; laajimmillaan verkosto kattoi puoli miljoonaa hehtaaria. Noin vuonna 950 San Jorgen altaassa asui 160 ihmistä neliökilometrillä. Väki väheni 1100-luvun jälkeen tuntemattomasta syystä ja siirtyi ylemmäs. Zenúille maailma oli suuri punos, ja sama kuvio toistuu heidän kultatöissään.
+AIEMPI KYSYMYS: Miksi kylässä ei ollut katuja?
+AIEMPI VASTAUS (Livia):
+Just niin, outoahan se on. Giethoornin vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse [[kanavia]] pitkin; myöhemmin kylään vedettiin pyörätie. Kylä sijaitsee [[Overijsselin]] maakunnassa märällä turvemaalla, jossa vesireitit olivat todennäköisesti luontevampi ratkaisu kuin tiet, mutta tarkasta syystä en ole varma. Minä en ole koskaan tarvinnut katua.
+KYSYMYS: Kerro lisää: kanavia
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+AIEMPI KYSYMYS: Miksi kylässä ei ollut katuja?
+AIEMPI VASTAUS (Livia):
+Just niin, outoahan se on. Giethoornin vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse [[kanavia]] pitkin; myöhemmin kylään vedettiin pyörätie. Kylä sijaitsee [[Overijsselin]] maakunnassa märällä turvemaalla, jossa vesireitit olivat todennäköisesti luontevampi ratkaisu kuin tiet, mutta tarkasta syystä en ole varma. Minä en ole koskaan tarvinnut katua.
+KYSYMYS: Kerro lisää: Overijsselin
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Mistä kylän järvet syntyivät?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Giethoornin järvet eivät ole [[jääkauden]] jättämiä vaan ihmisen tekemiä. Ne syntyivät [[turpeennostosta]], kun suosta kaivettiin turvetta ja kaivetut kuopat täyttyivät vähitellen vedellä. Eipä ole kaivaminen minun laji.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+AIEMPI KYSYMYS: Mistä kylän järvet syntyivät?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Giethoornin järvet eivät ole [[jääkauden]] jättämiä vaan ihmisen tekemiä. Ne syntyivät [[turpeennostosta]], kun suosta kaivettiin turvetta ja kaivetut kuopat täyttyivät vähitellen vedellä. Eipä ole kaivaminen minun laji.
+KYSYMYS: Kerro lisää: turpeennostosta
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+AIEMPI KYSYMYS: Mikä elokuva kuvattiin Giethoornissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, elokuvia. Giethoornissa kuvattiin vuonna 1958 ohjaaja [[Bert Haanstran]] komedia [[Fanfare]]. Elokuva teki kylästä laajemmin tunnetun. Elokuva-ala ei ole kyyhkyn vahvin alue.
+KYSYMYS: Kerro lisää: Bert Haanstran
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+AIEMPI KYSYMYS: Mikä elokuva kuvattiin Giethoornissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, elokuvia. Giethoornissa kuvattiin vuonna 1958 ohjaaja [[Bert Haanstran]] komedia [[Fanfare]]. Elokuva teki kylästä laajemmin tunnetun. Elokuva-ala ei ole kyyhkyn vahvin alue.
+KYSYMYS: Kerro lisää: Fanfare
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Vanhemmat menivät kadulle, ja maa sai pyörätiet] 1972 — Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua. Vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, ja heidän joukossaan oli satoja lapsia. Vanhemmat perustivat liikkeen nimeltä Stop de Kindermoord, marssivat parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+AIEMPI KYSYMYS: Miten Giethoornissa liikutaan nykyään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tämä on sellainen kylä. Vanhassa kyläosassa liikkuminen on perinteisesti tapahtunut vesitse [[kanavia]] pitkin, ja myöhemmin kylään vedettiin [[pyörätie]]. Siltoja on 176, joten kanavien yli pääsee monessa kohdassa. Minä kyllä lentäisin silta-aukkojen läpi.
+KYSYMYS: Kerro lisää: pyörätie
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Luonto: Turvetta kaivaessa löytyi kokonainen kivikausi] 1875 — Kaksi vuotta isoisän matkan jälkeen, vuonna 1875, suomologi Karel Dežman löysi Ljubljanan suolta ensimmäiset merkit paalukylistä turvetta kaivaessaan. Myöhemmät kaivaukset paljastivat, että ihmiset olivat asuttaneet suon reunoja jo noin 4600–2000 eaa.: he rakensivat mökkinsä puupaalujen varaan veden ja kosteuden yläpuolelle. Ljubljanan suon paalukylät kuuluvat nykyään Unescon Alppien ympäristön esihistoriallisten paalukylien maailmanperintökohteeseen yhdessä satojen muiden löytöpaikkojen kanssa kuudessa maassa.
+AIEMPI KYSYMYS: Mitä turve on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tämä on oikeasti kiehtova asia. [[Turve]] on suossa vuosisatojen kuluessa kuolleista kasveista, esimerkiksi [[rahkasammalesta]], muodostunut maa-aines. Sitä on nostettu ja käytetty muun muassa polttoaineena, ja Giethoornin järvet ovat syntyneet turpeennoston jäljiltä. Väriltään se muistuttaa tummaa pullaa, mutta on valitettavasti syömäkelvotonta.
+KYSYMYS: Kerro lisää: Turve
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giethoorn (kulttuuri)
+Tietoruudun teksti: Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä komediansa Fanfare.
+AIEMPI KYSYMYS: Mitä turve on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tämä on oikeasti kiehtova asia. [[Turve]] on suossa vuosisatojen kuluessa kuolleista kasveista, esimerkiksi [[rahkasammalesta]], muodostunut maa-aines. Sitä on nostettu ja käytetty muun muassa polttoaineena, ja Giethoornin järvet ovat syntyneet turpeennoston jäljiltä. Väriltään se muistuttaa tummaa pullaa, mutta on valitettavasti syömäkelvotonta.
+KYSYMYS: Kerro lisää: rahkasammalesta
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Kenen kokoelmasta museo syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Museo syntyi taiteenkerääjä [[Helene Kröller-Müllerin]] kokoelmasta. Hän oli neuvonantajansa [[H. P. Bremmerin]] opastuksella ensimmäisiä [[Vincent van Goghin]] arvon tunnistajia, ja vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle. Museo avattiin yleisölle 1938. Minä keräisin pullanmuruja, mutta kukaan ei lahjoita niitä valtiolle.
+KYSYMYS: Kerro lisää: Helene Kröller-Müllerin
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Kenen kokoelmasta museo syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Museo syntyi taiteenkerääjä [[Helene Kröller-Müllerin]] kokoelmasta. Hän oli neuvonantajansa [[H. P. Bremmerin]] opastuksella ensimmäisiä [[Vincent van Goghin]] arvon tunnistajia, ja vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle. Museo avattiin yleisölle 1938. Minä keräisin pullanmuruja, mutta kukaan ei lahjoita niitä valtiolle.
+KYSYMYS: Kerro lisää: H. P. Bremmerin
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Kenen kokoelmasta museo syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Museo syntyi taiteenkerääjä [[Helene Kröller-Müllerin]] kokoelmasta. Hän oli neuvonantajansa [[H. P. Bremmerin]] opastuksella ensimmäisiä [[Vincent van Goghin]] arvon tunnistajia, ja vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle. Museo avattiin yleisölle 1938. Minä keräisin pullanmuruja, mutta kukaan ei lahjoita niitä valtiolle.
+KYSYMYS: Kerro lisää: Vincent van Goghin
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Kuinka suuri veistospuutarha on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Veistospuutarha lisättiin museon yhteyteen vuonna 1961, ja sen pinta-ala on yli kolmekymmentä hehtaaria eli yli kolmesataatuhatta neliömetriä. Se sijaitsee [[Hoge Veluwen kansallispuiston]] metsässä ja on yksi [[Euroopan]] suurimmista veistospuutarhoista. Pitkä kävely, mutta ylhäältä se menee nopeammin.
+KYSYMYS: Kerro lisää: Hoge Veluwen kansallispuiston
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuinka suuri veistospuutarha on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Veistospuutarha lisättiin museon yhteyteen vuonna 1961, ja sen pinta-ala on yli kolmekymmentä hehtaaria eli yli kolmesataatuhatta neliömetriä. Se sijaitsee [[Hoge Veluwen kansallispuiston]] metsässä ja on yksi [[Euroopan]] suurimmista veistospuutarhoista. Pitkä kävely, mutta ylhäältä se menee nopeammin.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Missä Kröller-Müllerin museo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se, helppo. Kröller-Müllerin museo sijaitsee [[Otterlossa]] Hoge Veluwen kansallispuiston sisällä [[Gelderlandin]] maakunnassa Alankomaissa. Metsän keskellä, ylhäältä näkyy lähinnä vihreää.
+KYSYMYS: Kerro lisää: Otterlossa
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Missä Kröller-Müllerin museo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se, helppo. Kröller-Müllerin museo sijaitsee [[Otterlossa]] Hoge Veluwen kansallispuiston sisällä [[Gelderlandin]] maakunnassa Alankomaissa. Metsän keskellä, ylhäältä näkyy lähinnä vihreää.
+KYSYMYS: Kerro lisää: Gelderlandin
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Mitä muita taiteilijoita museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, lista on pitkä. Museossa on maailman toiseksi suurin [[Vincent van Goghin]] maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen. Lisäksi esillä on töitä muun muassa [[Mondrianilta]], Seurat’lta, [[Gauguinilta]] ja [[Picassolta]]. Pitkä lista, mutta museo kyllä ansaitsee sen.
+KYSYMYS: Kerro lisää: Mondrianilta
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Mitä muita taiteilijoita museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, lista on pitkä. Museossa on maailman toiseksi suurin [[Vincent van Goghin]] maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen. Lisäksi esillä on töitä muun muassa [[Mondrianilta]], Seurat’lta, [[Gauguinilta]] ja [[Picassolta]]. Pitkä lista, mutta museo kyllä ansaitsee sen.
+KYSYMYS: Kerro lisää: Gauguinilta
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Museo Botero] 2000 Museo syntyi yhdestä lahjoituksesta. Fernando Botero oli kerännyt taidetta 1960-luvun lopulta alkaen, ensin esikolumbiaanista ja siirtomaa-ajan taidetta, myöhemmin nykytaidetta, ja kokoelma oli hajallaan hänen kodeissaan New Yorkissa, Pariisissa, Monte Carlossa ja Pietrasantassa. Hän harkitsi ensin lahjoittavansa sen Medellínin Antioquian museolle, mutta päätöksenteko siellä oli hidasta, ja niin hän otti vastaan Bogotán pormestarin Enrique Peñalosan ehdotuksen. Vuonna 2000 Botero lahjoitti 208 teosta keskuspankille: 123 omaansa ja 85 muiden taiteilijoiden työtä. Kokoelmaa varten pankki osti La Candelariasta siirtomaa-ajan talon, jonka Botero itse sovitti museoksi. Ovet avautuivat 1. ma…
+AIEMPI KYSYMYS: Mitä muita taiteilijoita museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, lista on pitkä. Museossa on maailman toiseksi suurin [[Vincent van Goghin]] maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen. Lisäksi esillä on töitä muun muassa [[Mondrianilta]], Seurat’lta, [[Gauguinilta]] ja [[Picassolta]]. Pitkä lista, mutta museo kyllä ansaitsee sen.
+KYSYMYS: Kerro lisää: Picassolta
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Baburizzan palatsi] 1916 Palatsin rakennuttivat 1916 Zanellit, yksi kaupungin merkittävimmistä suvuista, ja piirustukset tekivät italialaiset arkkitehdit. Vuonna 1925 talon osti kroatialaissyntyinen Pascual Baburizza, salpietarikaivoksiin sijoittanut liikemies, joka kokosi Chilessä suuren omaisuuden ja käytti siitä huomattavan osan hyväntekeväisyyteen. Vuonna 1971 kaupunki osti palatsin museoksi ja kuvataidekouluksi, ja 1976 se julistettiin historialliseksi monumentiksi. Kokoelma on karttunut suureksi osaksi Baburizzan omista testamenttilahjoituksista; sen tärkeimpiä nimiä ovat Mauricio Rugendas, Alfredo Valenzuela Puelma, Alfredo Helsby ja Carlos Hermosilla Álvarez. Museo suljettiin korjaustöiden ajaksi 1997 …
+- [Iquitos — kohdekartta / Kohdekartta: Hotel Palace] 1908—1912 Malecón Tarapacán ensimmäisessä korttelissa on kolmikerroksinen art nouveau -talo kulmatorneineen, jonka tyylissä on katalonialaisen modernismin ja Gaudín koulukunnan vaikutteita. Sen rakennutti Otoniel Vela, ja työtä johtivat perulainen rakennusinsinööri Samuel Young Mass ja espanjalainen arkkitehti José Altamira y Motta vuosina 1908—1912. Kaikki rakennusosat kuljetettiin Atlantin yli: kaakelit tuotiin Málagasta, ja parvekkeiden takoraudat on taivutettu kasviaiheiksi. Rakennusta jouduttiin muuttamaan matkan varrella, jotta se sopisi tropiikin ilmastoon. Sitä pidetään Perun ensimmäisenä luksushotellina — kaksitoista vuotta vanhempana kuin Liman Gran Hotel Bolívar — ja Iquitosin ar…
+AIEMPI KYSYMYS: Kuka Henry van de Velde oli?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä että kysyt. Henry van de Velde suunnitteli Kröller-Müllerin museon, joka avattiin yleisölle 1938. Hän oli belgialainen arkkitehti ja muotoilija, joka vaikutti [[art nouveau]] -tyylin kehitykseen ja johti [[Weimarin]] taideteollisuuskoulua, jota pidetään [[Bauhausin]] edeltäjänä. Minä pidän suunnittelijoista, jotka ajattelevat myös ylhäältä katsojaa.
+KYSYMYS: Kerro lisää: art nouveau
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+AIEMPI KYSYMYS: Kuka Henry van de Velde oli?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä että kysyt. Henry van de Velde suunnitteli Kröller-Müllerin museon, joka avattiin yleisölle 1938. Hän oli belgialainen arkkitehti ja muotoilija, joka vaikutti [[art nouveau]] -tyylin kehitykseen ja johti [[Weimarin]] taideteollisuuskoulua, jota pidetään [[Bauhausin]] edeltäjänä. Minä pidän suunnittelijoista, jotka ajattelevat myös ylhäältä katsojaa.
+KYSYMYS: Kerro lisää: Weimarin
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kröller-Müllerin museo (kulttuuri)
+Tietoruudun teksti: Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh -museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Torres Garcían museo] 1949 Museon perusti Manolita Piña Torres, taidemaalari Joaquín Torres Garcían leski, miehensä kuoltua 1949. Hän perusti myös García Torres -säätiön, joka pitää järjestyksessä maalaukset, piirustukset, alkuperäiset kirjoitukset, arkistot, esineet ja taiteilijan suunnittelemat huonekalut sekä häntä koskevat valokuvat, lehdet ja julkaisut. Museo on Ciudad Viejassa, ja sen seinillä on epätavallisia muotokuvia historian henkilöistä sekä kubistisia maalauksia. Taiteilija itse syntyi Montevideossa 28. heinäkuuta 1874 ja vietti lapsuutensa isänsä sekatavarakaupassa vanhalla Vaunutorilla, jonne tuotiin Eurooppaan vietävät raaka-aineet. Perhe muutti 1891 Espanjaan, ja Torres García asui aikuisikänsä …
+AIEMPI KYSYMYS: Kuka Henry van de Velde oli?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä että kysyt. Henry van de Velde suunnitteli Kröller-Müllerin museon, joka avattiin yleisölle 1938. Hän oli belgialainen arkkitehti ja muotoilija, joka vaikutti [[art nouveau]] -tyylin kehitykseen ja johti [[Weimarin]] taideteollisuuskoulua, jota pidetään [[Bauhausin]] edeltäjänä. Minä pidän suunnittelijoista, jotka ajattelevat myös ylhäältä katsojaa.
+KYSYMYS: Kerro lisää: Bauhausin
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+AIEMPI KYSYMYS: Miksi Nijmegen on Alankomaiden vanhimpia kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Kato, tän kaupungin kukkulat tunnistaa jo ylhäältä. Roomalaiset rakensivat Waalin rannalle sotilasleirin jo ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin [[Waalin]] ja [[Reinin]] laaksoon. Vuonna 98 Nijmegen oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari [[Traianus]] antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum. Myöhemmin [[Kaarle Suuri]] piti kaupungissa palatsiaan vuonna 777, ja vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Aika monta vuosisataa mahtu yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Waalin
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Miksi Nijmegen on Alankomaiden vanhimpia kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Kato, tän kaupungin kukkulat tunnistaa jo ylhäältä. Roomalaiset rakensivat Waalin rannalle sotilasleirin jo ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin [[Waalin]] ja [[Reinin]] laaksoon. Vuonna 98 Nijmegen oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari [[Traianus]] antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum. Myöhemmin [[Kaarle Suuri]] piti kaupungissa palatsiaan vuonna 777, ja vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Aika monta vuosisataa mahtu yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Reinin
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+AIEMPI KYSYMYS: Miksi Nijmegen on Alankomaiden vanhimpia kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Kato, tän kaupungin kukkulat tunnistaa jo ylhäältä. Roomalaiset rakensivat Waalin rannalle sotilasleirin jo ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin [[Waalin]] ja [[Reinin]] laaksoon. Vuonna 98 Nijmegen oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari [[Traianus]] antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum. Myöhemmin [[Kaarle Suuri]] piti kaupungissa palatsiaan vuonna 777, ja vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Aika monta vuosisataa mahtu yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Traianus
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi Nijmegen on Alankomaiden vanhimpia kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Kato, tän kaupungin kukkulat tunnistaa jo ylhäältä. Roomalaiset rakensivat Waalin rannalle sotilasleirin jo ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin [[Waalin]] ja [[Reinin]] laaksoon. Vuonna 98 Nijmegen oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari [[Traianus]] antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum. Myöhemmin [[Kaarle Suuri]] piti kaupungissa palatsiaan vuonna 777, ja vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Aika monta vuosisataa mahtu yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Kaarle Suuri
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kaupunkilehti / Jakarta: Kaupunki, jolla on neljä nimeä] Sundan valtakunnan tärkein satama tunnettiin nimellä Kalapa eli Sunda Kalapa, ja portugalilaiset kirjasivat sen Calapaksi. Portugali sopi 1522 Sundan kuninkaan kanssa vapaasta pippurikaupasta, mutta 22. kesäkuuta 1527 Demakin sulttaanikunnan joukot Fatahillahin johdolla valtasivat sataman ja nimesivät sen Jayakartaksi, sanskritin "voitollinen teko". Reilut yhdeksänkymmentä vuotta myöhemmin, toukokuussa 1619, hollantilaisen Itä-Intian kauppakomppanian VOC:n joukot Jan Pieterszoon Coenin johdolla valtasivat kaupungin ja hävittivät sen. Raunioille nousi Batavia, nimetty batavien mukaan, joita hollantilaiset pitivät esi-isinään. Neljäs nimi tuli 1942.
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, nimessä on oikeasti vanhaa kerrostumaa. Nimi on peräisin roomalaisajalta: keisari [[Traianus]] antoi paikalle vuonna 104 nimen Ulpia Noviomagus Batavorum, jossa Ulpia viittaa keisarin omaan sukunimeen ja Batavorum [[batavien]] heimoon. Noviomagus on kelttiläistä alkuperää oleva nimi, jonka usein tulkitaan tarkoittavan uutta markkinapaikkaa tai uutta kenttää, mutta tulkinnat vaihtelevat. Ajan kuluessa Noviomagus lyheni ja kului, kunnes jäljellä oli nykyinen nimi Nijmegen. Aika hyvin pysyny nimi hengissä, kun miettii.
+KYSYMYS: Kerro lisää: batavien
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Keitä batavit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Batavit olivat germaaninen kansa, joka asettui Reinin suiston seudulle noin ajanlaskun taitteessa, ja Nijmegenin seutu kuului heidän alueeseensa. He olivat roomalaisten liittolaisia ja tunnettuja erityisesti ratsumiehistään. Vuosina 69–70 batavit nousivat kapinaan [[Gaius Julius Civilisin]] johdolla, mutta Rooma kukisti kapinan. Hollantilaiset ovat sittemmin pitäneet batavien kansaa esivanhempinaan, ja nimi elää esimerkiksi 1790-luvun [[Batavian tasavallassa]].
+
+Hauska, miten kaksituhatta vuotta vanha heimo elää yhä hollantilaisten puheessa. Minun sukuni on vanhempaa, mutta ei sitä kukaan muista.
+KYSYMYS: Kerro lisää: Gaius Julius Civilisin
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Historian hetki: Padova 1610 — neljä valopistettä Jupiterin vieressä] tammikuu 1610 — Tammikuun 7. päivän iltana 1610 Galileo Galilei suuntaa itse rakentamansa, noin kaksikymmentä kertaa suurentavan kaukoputken Jupiteriin ja näkee planeetan vieressä kolme pientä valopistettä suorassa rivissä. Hän pitää niitä tähtinä. Seuraavana iltana ne ovat vaihtaneet paikkaa, ja 13. tammikuuta niitä on neljä. Ilta illan jälkeen hän piirtää pisteiden asemat muistiin, apulainen kirjaa ja kynttilä hyytyy tammikuun kylmässä, kunnes selitys ei enää voi olla muu: pisteet kiertävät Jupiteria. Se on ensimmäinen kerta, kun jonkin nähdään kiertävän muuta kuin Maata — ja Ptolemaioksen maailma, jossa kaikki kiertää Maata, saa ensimmäisen näkyvän kolhunsa. Galilei on 45-vuotias matemat…
+- [Kongo — maalehti / Ruoka: Kansallisruoka, joka on palmun voita] Moambe on öljypalmun hedelmien hedelmälihasta puristettua palmuvoita, ja poulet à la moambe tarkoittaa kanaa, joka on haudutettu siinä. Ruokaan tulee pinaattia ja tulista pilipiliä, ja seuraksi riisiä, bataattia, kovaksi keitettyjä kananmunia tai maniokkitahnaa; kana voidaan vaihtaa ankkaan tai kalaan. Sama ruoka on kansallisruoka neljässä maassa: Kongon demokraattisessa tasavallassa, Kongon tasavallassa, Gabonissa nimellä poulet nyembwe ja Angolassa nimellä moamba de galinha. Kikongoksi kana on nsusu, ja joen toisella puolella maapähkinäversio kulkee nimellä muamba nsusu.
+AIEMPI KYSYMYS: Keitä batavit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Batavit olivat germaaninen kansa, joka asettui Reinin suiston seudulle noin ajanlaskun taitteessa, ja Nijmegenin seutu kuului heidän alueeseensa. He olivat roomalaisten liittolaisia ja tunnettuja erityisesti ratsumiehistään. Vuosina 69–70 batavit nousivat kapinaan [[Gaius Julius Civilisin]] johdolla, mutta Rooma kukisti kapinan. Hollantilaiset ovat sittemmin pitäneet batavien kansaa esivanhempinaan, ja nimi elää esimerkiksi 1790-luvun [[Batavian tasavallassa]].
+
+Hauska, miten kaksituhatta vuotta vanha heimo elää yhä hollantilaisten puheessa. Minun sukuni on vanhempaa, mutta ei sitä kukaan muista.
+KYSYMYS: Kerro lisää: Batavian tasavallassa
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Historia: Merikaupunki, joka valitsi itselleen hallitsijan] 1516 — Algerin regenssi syntyi vuonna 1516, kun Aruj Barbarossa otti kaupungin haltuunsa. Valtio oli muodollisesti Osmanien valtakunnan maakunta, mutta 1600-luvun puolivälistä lähtien käytännössä itsenäinen. Hallintomuoto vaihtui matkan varrella kolmesti: sulttaanikunnasta pashalikiksi 1519 ja siitä sotilastasavallaksi, jossa upseerien kokous valitsi johtajakseen deyn. Kaupunki eli merenkulusta ja kaappauksista, ja Välimeren valtioilla oli sen kanssa sopimuksia ja riitoja kolmen vuosisadan ajan. Viimeinen hallitsija oli Hussein Dey, joka lähti maanpakoon 10. heinäkuuta 1830.
+AIEMPI KYSYMYS: Mitä Kaarle Suuren palatsin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, Pöllö on matkoilla, joten tän hoidan minä. Kaarle Suuren palatsi sijaitsi Valkhof-kukkulalla Waalin rannalla, ja paikka on yhä kaupungin keskustassa. Lähteiden mukaan keisari [[Fredrik Barbarossa]] rakennutti kukkulalle uuden palatsin 1100-luvulla, ja se purettiin ranskalaisjoukkojen aikaan 1700-luvun lopulla. Nykyään [[Valkhof]] on puistoalue, jossa on jäljellä keskiaikaisten kappelien rakenteita, ja kukkulalla on myös taidemuseo. Kukkulalta näkee vieläkin kauas, sen tiedän omasta kokemuksesta.
+KYSYMYS: Kerro lisää: Fredrik Barbarossa
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+AIEMPI KYSYMYS: Mitä Kaarle Suuren palatsin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, Pöllö on matkoilla, joten tän hoidan minä. Kaarle Suuren palatsi sijaitsi Valkhof-kukkulalla Waalin rannalla, ja paikka on yhä kaupungin keskustassa. Lähteiden mukaan keisari [[Fredrik Barbarossa]] rakennutti kukkulalle uuden palatsin 1100-luvulla, ja se purettiin ranskalaisjoukkojen aikaan 1700-luvun lopulla. Nykyään [[Valkhof]] on puistoalue, jossa on jäljellä keskiaikaisten kappelien rakenteita, ja kukkulalla on myös taidemuseo. Kukkulalta näkee vieläkin kauas, sen tiedän omasta kokemuksesta.
+KYSYMYS: Kerro lisää: Valkhof
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli?
+AIEMPI VASTAUS (Livia):
+Ai tota, kauppiaiden liitto, kyllä sen tunnen. Hansaliitto oli keskiajan Pohjois-Euroopan kauppakaupunkien ja kauppiaiden yhteenliittymä, jonka johtava kaupunki oli [[Lyypekki]]. Se turvasi jäsentensä kauppaa [[Itämerellä]] ja [[Pohjanmerellä]] ja hankki kauppiaille etuoikeuksia sekä kauppakonttoreita ulkomaille. Liiton vaikutusvalta oli suurimmillaan 1300- ja 1400-luvuilla, ja se hiipui 1500- ja 1600-luvuilla. Nijmegen kuului keskiajalla liittoon.
+
+Kaupunkien liitto, jossa kaikki kantavat tavaraa ja viestejä, kuulostaa kyllä tutulta ammatilta.
+KYSYMYS: Kerro lisää: Lyypekki
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Historia: Laiva jonka kapteenin nimi jäi kartalle] HMS Basilisk laskettiin vesille Woolwichissa elokuussa 1848, ja se oli ensimmäisen luokan siipiratassluuppi: kaksisylinterinen höyrykone pyöritti laivan kylkien rattaita, ja purjeet olivat parkin takila. Laiva palveli Krimin sodan aikana Itämerellä 1854–1855 ja siirtyi sitten Pohjois-Amerikan, Kiinan ja Japanin asemille. Maaliskuussa 1871 se komennettiin Australian asemalle kapteeni John Moresbyn johtoon, ja siitä alkoivat Uuden-Guinean rannikon merenmittaukset. Myöhemmin Basiliskia käytettiin pakkotyövoiman kuljetuksia vastaan Tyynellämerellä. Laiva palasi Englantiin 1874 ja purettiin romuksi Chathamissa 1882.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli?
+AIEMPI VASTAUS (Livia):
+Ai tota, kauppiaiden liitto, kyllä sen tunnen. Hansaliitto oli keskiajan Pohjois-Euroopan kauppakaupunkien ja kauppiaiden yhteenliittymä, jonka johtava kaupunki oli [[Lyypekki]]. Se turvasi jäsentensä kauppaa [[Itämerellä]] ja [[Pohjanmerellä]] ja hankki kauppiaille etuoikeuksia sekä kauppakonttoreita ulkomaille. Liiton vaikutusvalta oli suurimmillaan 1300- ja 1400-luvuilla, ja se hiipui 1500- ja 1600-luvuilla. Nijmegen kuului keskiajalla liittoon.
+
+Kaupunkien liitto, jossa kaikki kantavat tavaraa ja viestejä, kuulostaa kyllä tutulta ammatilta.
+KYSYMYS: Kerro lisää: Itämerellä
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nijmegen (historia)
+Tietoruudun teksti: Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli?
+AIEMPI VASTAUS (Livia):
+Ai tota, kauppiaiden liitto, kyllä sen tunnen. Hansaliitto oli keskiajan Pohjois-Euroopan kauppakaupunkien ja kauppiaiden yhteenliittymä, jonka johtava kaupunki oli [[Lyypekki]]. Se turvasi jäsentensä kauppaa [[Itämerellä]] ja [[Pohjanmerellä]] ja hankki kauppiaille etuoikeuksia sekä kauppakonttoreita ulkomaille. Liiton vaikutusvalta oli suurimmillaan 1300- ja 1400-luvuilla, ja se hiipui 1500- ja 1600-luvuilla. Nijmegen kuului keskiajalla liittoon.
+
+Kaupunkien liitto, jossa kaikki kantavat tavaraa ja viestejä, kuulostaa kyllä tutulta ammatilta.
+KYSYMYS: Kerro lisää: Pohjanmerellä
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Mikä Zuiderzee oli?
+AIEMPI VASTAUS (Livia):
+Ai se, vanha tuttu nimi. Zuiderzee oli Pohjanmereen yhteydessä ollut matala, suolainen merenlahti Alankomaiden sydämessä, ja se tulvi toistuvasti rantakyliin. Insinööri [[Cornelis Lely]] laati suunnitelman sen sulkemisesta jo vuonna 1891, ja viimeinen aukko tukittiin 28. toukokuuta 1932. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolella oleva vesi on nykyisin [[IJsselmeer]] ja ulkopuolella oleva [[Vattimeri]]. Suolainen vesi muuttui vähitellen makeaksi. Meri josta tuli järvi, sehän on ihan hurja temppu.
+KYSYMYS: Kerro lisää: Cornelis Lely
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Mikä Zuiderzee oli?
+AIEMPI VASTAUS (Livia):
+Ai se, vanha tuttu nimi. Zuiderzee oli Pohjanmereen yhteydessä ollut matala, suolainen merenlahti Alankomaiden sydämessä, ja se tulvi toistuvasti rantakyliin. Insinööri [[Cornelis Lely]] laati suunnitelman sen sulkemisesta jo vuonna 1891, ja viimeinen aukko tukittiin 28. toukokuuta 1932. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolella oleva vesi on nykyisin [[IJsselmeer]] ja ulkopuolella oleva [[Vattimeri]]. Suolainen vesi muuttui vähitellen makeaksi. Meri josta tuli järvi, sehän on ihan hurja temppu.
+KYSYMYS: Kerro lisää: IJsselmeer
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Mikä Zuiderzee oli?
+AIEMPI VASTAUS (Livia):
+Ai se, vanha tuttu nimi. Zuiderzee oli Pohjanmereen yhteydessä ollut matala, suolainen merenlahti Alankomaiden sydämessä, ja se tulvi toistuvasti rantakyliin. Insinööri [[Cornelis Lely]] laati suunnitelman sen sulkemisesta jo vuonna 1891, ja viimeinen aukko tukittiin 28. toukokuuta 1932. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolella oleva vesi on nykyisin [[IJsselmeer]] ja ulkopuolella oleva [[Vattimeri]]. Suolainen vesi muuttui vähitellen makeaksi. Meri josta tuli järvi, sehän on ihan hurja temppu.
+KYSYMYS: Kerro lisää: Vattimeri
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+AIEMPI KYSYMYS: Miksi pato rakennettiin vasta 1900-luvulla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ajatus Zuiderzeen sulkemisesta ei ollut uusi, sillä insinööri [[Cornelis Lely]] laati ensimmäisen suunnitelman jo vuonna 1891. Hanke sai kuitenkin poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen, jolloin pato alettiin nähdä sekä suojana että keinona saada lisää viljelysmaata. Lisäksi hanke oli valtava: rakentaminen kesti vuodesta 1927 vuoteen 1932, ja työssä oli kymmenentuhatta ihmistä sekä muun muassa 27 suurta [[ruoppaajaa]] ja 13 kelluvaa nosturia. Minä ylittäisin sen puolessa tunnissa, mut pato on silti parempi.
+KYSYMYS: Kerro lisää: ruoppaajaa
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Tuuli sahasi lankut, ja laivat halpenivat] 1593 — Uitgeestilainen Cornelis Corneliszoon sai 15. joulukuuta 1593 patentin myllylle, joka sahaa puuta. Keksinnön ydin oli kampiakseli: se muutti tuulen pyörittämän liikkeen ylös-alas-liikkeeksi, joka veti sahanteriä. Yhdestä rungosta syntyi monta lankkua kerralla, kun ennen kaksi miestä oli vetänyt sahaa käsin. Patenttipaperissa keksijää kuvaillaan sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia laivoja valmistui nopeammin kuin muualla.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Polderi on padoin ja ojin tulvilta suojattu maa-alue, jonka vedenpinta pidetään keinotekoisesti ympäröivää vettä alempana. Maa on usein kuivattu merestä tai järvestä, ja ylimääräinen vesi pumpataan pois: ennen sitä tekivät [[tuulimyllyt]], nykyään sähkökäyttöiset pumppuasemat. Zuiderzeen alueella ensimmäinen suuri polderi, [[Wieringermeer]], kuivattiin noin vuonna 1930, ja nykyinen [[Flevoland]] on kokonaan entistä Zuiderzeen pohjaa. Ylhäältä ne näyttävät ihan viivottimella piirretyiltä ruuduilta.
+KYSYMYS: Kerro lisää: tuulimyllyt
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Polderi on padoin ja ojin tulvilta suojattu maa-alue, jonka vedenpinta pidetään keinotekoisesti ympäröivää vettä alempana. Maa on usein kuivattu merestä tai järvestä, ja ylimääräinen vesi pumpataan pois: ennen sitä tekivät [[tuulimyllyt]], nykyään sähkökäyttöiset pumppuasemat. Zuiderzeen alueella ensimmäinen suuri polderi, [[Wieringermeer]], kuivattiin noin vuonna 1930, ja nykyinen [[Flevoland]] on kokonaan entistä Zuiderzeen pohjaa. Ylhäältä ne näyttävät ihan viivottimella piirretyiltä ruuduilta.
+KYSYMYS: Kerro lisää: Wieringermeer
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Polderi on padoin ja ojin tulvilta suojattu maa-alue, jonka vedenpinta pidetään keinotekoisesti ympäröivää vettä alempana. Maa on usein kuivattu merestä tai järvestä, ja ylimääräinen vesi pumpataan pois: ennen sitä tekivät [[tuulimyllyt]], nykyään sähkökäyttöiset pumppuasemat. Zuiderzeen alueella ensimmäinen suuri polderi, [[Wieringermeer]], kuivattiin noin vuonna 1930, ja nykyinen [[Flevoland]] on kokonaan entistä Zuiderzeen pohjaa. Ylhäältä ne näyttävät ihan viivottimella piirretyiltä ruuduilta.
+KYSYMYS: Kerro lisää: Flevoland
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+AIEMPI KYSYMYS: Mitä vuoden 1953 tulva tarkoitti Alankomaille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ja se on vakava juttu. Vuoden 1953 alussa voimakas myrsky ja korkea vedenpinta Pohjanmerellä rikkoivat patoja erityisesti [[Zeelandin]] ja Etelä-Hollannin alueilla. Lähteiden mukaan Alankomaissa menehtyi yli 1 800 ihmistä, ja tuhansia joutui jättämään kotinsa. Katastrofin jälkeen maa käynnisti laajan [[Deltatyöt]]-suojelusohjelman, jonka suurimmat rakennelmat valmistuivat 1980-luvulle mennessä, ja Afsluitdijkinkin harjaa korotettiin. Onneks siitä on yli seitsemänkymmentä vuotta aikaa.
+KYSYMYS: Kerro lisää: Zeelandin
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+AIEMPI KYSYMYS: Mitä vuoden 1953 tulva tarkoitti Alankomaille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ja se on vakava juttu. Vuoden 1953 alussa voimakas myrsky ja korkea vedenpinta Pohjanmerellä rikkoivat patoja erityisesti [[Zeelandin]] ja Etelä-Hollannin alueilla. Lähteiden mukaan Alankomaissa menehtyi yli 1 800 ihmistä, ja tuhansia joutui jättämään kotinsa. Katastrofin jälkeen maa käynnisti laajan [[Deltatyöt]]-suojelusohjelman, jonka suurimmat rakennelmat valmistuivat 1980-luvulle mennessä, ja Afsluitdijkinkin harjaa korotettiin. Onneks siitä on yli seitsemänkymmentä vuotta aikaa.
+KYSYMYS: Kerro lisää: Deltatyöt
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+AIEMPI KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kivan erikoinen juttu. Frieslandissa puhutaan hollannin lisäksi [[friisiä]], joka on maakunnassa virallisesti tunnustettu toinen kieli ja jonka omalla nimellä maakunta on Fryslân. Friisi on germaaninen kieli, ja se on [[englannin]] läheisimpiä sukukieliä. Sitä käytetään koulussa, hallinnossa ja arjessa, vaikka valtaosa ihmisistä puhuu myös [[hollantia]].
+
+Jos englannin ja friisin sanat näyttävät samalta, olen valmis uskomaan sukulaisuuden. Meilläkin on kaukaisia serkkuja kaikkialla.
+KYSYMYS: Kerro lisää: friisiä
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kivan erikoinen juttu. Frieslandissa puhutaan hollannin lisäksi [[friisiä]], joka on maakunnassa virallisesti tunnustettu toinen kieli ja jonka omalla nimellä maakunta on Fryslân. Friisi on germaaninen kieli, ja se on [[englannin]] läheisimpiä sukukieliä. Sitä käytetään koulussa, hallinnossa ja arjessa, vaikka valtaosa ihmisistä puhuu myös [[hollantia]].
+
+Jos englannin ja friisin sanat näyttävät samalta, olen valmis uskomaan sukulaisuuden. Meilläkin on kaukaisia serkkuja kaikkialla.
+KYSYMYS: Kerro lisää: englannin
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Afsluitdijk (tekniikka)
+Tietoruudun teksti: Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 tulvan jälkeen.
+
+Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. Sama rakennelma suojaa maata myrskytulvilta.
+
+Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 hinaajaa.
+
+Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato vihittiin käyttöön 25. syyskuuta 1933. Harjall…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Bali: Nuori Hollanti] Neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – oli lähtenyt Amsterdamista huhtikuussa 1595 etsimään suoraa merireittiä mausteiden lähteille. Matka oli täynnä onnettomuuksia, mutta helmikuussa 1597 laivueen komentaja Cornelis de Houtman saapui Balille ja tapasi saaren kuninkaan. Houtman ihastui näkemäänsä niin, että hän kutsui saarta leikillään "Nuoreksi Hollanniksi". Elokuussa 1597 laivue jatkoi matkaa mukanaan pippuria, muskottia ja maceta, mutta ensikosketus oli tehty: se avasi tien hollantilaiselle mausteikaupalle ja lopulta koko Itä-Intian siirtomaavallalle.
+AIEMPI KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kivan erikoinen juttu. Frieslandissa puhutaan hollannin lisäksi [[friisiä]], joka on maakunnassa virallisesti tunnustettu toinen kieli ja jonka omalla nimellä maakunta on Fryslân. Friisi on germaaninen kieli, ja se on [[englannin]] läheisimpiä sukukieliä. Sitä käytetään koulussa, hallinnossa ja arjessa, vaikka valtaosa ihmisistä puhuu myös [[hollantia]].
+
+Jos englannin ja friisin sanat näyttävät samalta, olen valmis uskomaan sukulaisuuden. Meilläkin on kaukaisia serkkuja kaikkialla.
+KYSYMYS: Kerro lisää: hollantia
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+AIEMPI KYSYMYS: Mitä Trajectum ad Mosam tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on latinaa. Trajectum tarkoittaa joen ylityspaikkaa ja ad Mosam sanoja "Maasin luona", joten nimi tarkoittaa Maasin ylityspaikkaa eli kahlaamoa. Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa., ja sama nimi on kulunut nykyiseksi nimeksi Maastricht. Joki, jonka äärellä kaupunki syntyi, on [[Maas]], ja siinä kohdassa siihen laskee [[Jeker]]. Jokaisen kaupungin nimen takana on joku joka halus toiselle rannalle.
+KYSYMYS: Kerro lisää: Maas
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+AIEMPI KYSYMYS: Mitä Trajectum ad Mosam tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on latinaa. Trajectum tarkoittaa joen ylityspaikkaa ja ad Mosam sanoja "Maasin luona", joten nimi tarkoittaa Maasin ylityspaikkaa eli kahlaamoa. Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa., ja sama nimi on kulunut nykyiseksi nimeksi Maastricht. Joki, jonka äärellä kaupunki syntyi, on [[Maas]], ja siinä kohdassa siihen laskee [[Jeker]]. Jokaisen kaupungin nimen takana on joku joka halus toiselle rannalle.
+KYSYMYS: Kerro lisää: Jeker
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+- [Liettua — maalehti / Ruoka: Makkara joka kypsyy kuukausia savussa] 1500-luvulta — Skilandis on liettualainen kylmäsavustettu makkara, joka täytetään karkeaksi jauhetulla sianlihalla, suolalla, pippurilla ja valkosipulilla ja jonka kuorena käytetään perinteisesti sian mahalaukkua tai virtsarakkoa. Se kypsyy savussa ja kuivuu useita kuukausia, jolloin siitä tulee tiivis ja voimakkaan makuinen. Reseptejä tunnetaan jo 1500-luvulta, ja erityisesti Suvalkijan alue on tunnettu skilandiksestaan. Euroopan unioni myönsi liettualaiselle skilandikselle suojatun maantieteellisen merkinnän 2009 ja erillisen aidon perinteisen tuotteen aseman 2016.
+AIEMPI KYSYMYS: Mikä Maastrichtin sopimus oli?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän tarvitaan vähän taustaa. Maastrichtin sopimus, virallisesti Euroopan unionista tehty sopimus, allekirjoitettiin kaupungissa helmikuussa 1992 ja se tuli voimaan marraskuussa 1993. Sopimuksella perustettiin [[Euroopan unioni]], ja sen mukaan jäsenmaat sitoutuivat valmistelemaan [[talous- ja rahaliittoa]] sekä yhteistä rahaa, [[euroa]]. Lisäksi sopimus lisäsi yhteistyötä ulko- ja turvallisuuspolitiikassa sekä oikeus- ja sisäasioissa. Aika iso paperi pienelle joenmutkan kaupungille.
+KYSYMYS: Kerro lisää: Euroopan unioni
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+AIEMPI KYSYMYS: Mikä Maastrichtin sopimus oli?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän tarvitaan vähän taustaa. Maastrichtin sopimus, virallisesti Euroopan unionista tehty sopimus, allekirjoitettiin kaupungissa helmikuussa 1992 ja se tuli voimaan marraskuussa 1993. Sopimuksella perustettiin [[Euroopan unioni]], ja sen mukaan jäsenmaat sitoutuivat valmistelemaan [[talous- ja rahaliittoa]] sekä yhteistä rahaa, [[euroa]]. Lisäksi sopimus lisäsi yhteistyötä ulko- ja turvallisuuspolitiikassa sekä oikeus- ja sisäasioissa. Aika iso paperi pienelle joenmutkan kaupungille.
+KYSYMYS: Kerro lisää: talous- ja rahaliittoa
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Linnanmäki] 1950 Kuusi lastensuojelujärjestöä vuokrasi vuonna 1950 Alppiharjun kallioisen mäen — aluksi vain kolmeksi vuodeksi — ja perusti sinne huvipuiston kerätäkseen rahaa työhönsä. Mäki oli saanut nimensä kahdesta vesitornista eli vesilinnasta, ja Vesilinnanmäestä lyheni Linnanmäki. Tornit seisovat paikallaan yhä: vanhemmassa on varasto, uudemman sisään on rakennettu vuoristorata Linnunrata. Puiston tunnetuimman laitteen piti olla väliaikainen. Puinen Vuoristorata rakennettiin talvella 1950 puiston omin voimin tanskalaisen Valdemar Lebechin piirustusten mukaan, ja se avattiin 13. heinäkuuta 1951 osaksi siksi, että se houkuttelisi väkeä Helsingin olympialaisiin 1952. Käyttöiäksi arvioitiin viisitoi…
+- [Timbuktu — kohdekartta / Kohdekartta: Ahmed Baba -instituutti] 1973 Ahmed Baba -instituutti eli virallisemmin Ahmed Baba Institute of Higher Learning and Islamic Research perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. Nimi on 1600-luvulla eläneen timbuktulaisen oppineen Ahmad Baban. Instituutti on kaupungin ainoa julkinen kirjasto; muut kokoelmat ovat sukujen hallussa. Nykyisen rakennuksen suunnitteli eteläafrikkalainen arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 miljoonaa euroa, on 4 600 neliömetriä ja korvasi neljäkymmentä vuotta vanhan rapistuneen talon. Rakennuksessa on ilmastointi käsikirjoitusten säilytystä varten ja automaattinen sammutusjärjestelmä — molemmat ovat aavikon reunalla vaikeampia asioita kuin miltä kuulostaa. Kokoe…
+AIEMPI KYSYMYS: Mikä Maastrichtin sopimus oli?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän tarvitaan vähän taustaa. Maastrichtin sopimus, virallisesti Euroopan unionista tehty sopimus, allekirjoitettiin kaupungissa helmikuussa 1992 ja se tuli voimaan marraskuussa 1993. Sopimuksella perustettiin [[Euroopan unioni]], ja sen mukaan jäsenmaat sitoutuivat valmistelemaan [[talous- ja rahaliittoa]] sekä yhteistä rahaa, [[euroa]]. Lisäksi sopimus lisäsi yhteistyötä ulko- ja turvallisuuspolitiikassa sekä oikeus- ja sisäasioissa. Aika iso paperi pienelle joenmutkan kaupungille.
+KYSYMYS: Kerro lisää: euroa
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maastricht (kaupungit)
+Tietoruudun teksti: Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).
+
+Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on kulunut myös kaupungin nykyinen nimi.
+
+Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se koki useita piirityksiä.
+
+Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, enemmän kuin missään m…
+AIEMPI KYSYMYS: Kuka oli pyhä Servatius?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tää on kaupungin vanhimpia tarinoita. Servatius oli 300-luvun piispa, joka tunnetaan Tongerenin piispana. Perimätiedon mukaan hän kuoli Maastrichtissa vuonna 384, ja noin vuonna 570 hänen hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista kristillisistä keskuksista, ja hautapaikan ympärille nousi nykyinen [[Sint-Servaasbasiliek]]. Servatius on pysynyt kaupungin tärkeimpänä pyhimyksenä, ja hänen kunniakseen on järjestetty [[pyhiinvaelluksia]].
+
+Limburgissa leivotaan muuten vlaai-piirakkaa, ja jos pyhiinvaeltajia kerran kunnioitetaan, heille kuuluu kyllä jotain makeaa.
+KYSYMYS: Kerro lisää: Sint-Servaasbasiliek

@@ -1,0 +1,1036 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+AIEMPI KYSYMYS: Kuinka suuri Dwingelderveldin kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kansallispuisto]] kattaa noin 37 neliökilometriä, ja se perustettiin vuonna 1991. Sitä pidetään Länsi-Euroopan suurimpana märkänä [[nummialueena]], ja se sijaitsee [[Drenthen]] maakunnassa Alankomaiden koillisosassa. Siivin sen ylittää kyllä aika äkkiä.
+KYSYMYS: Kerro lisää: nummialueena
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+AIEMPI KYSYMYS: Kuinka suuri Dwingelderveldin kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kansallispuisto]] kattaa noin 37 neliökilometriä, ja se perustettiin vuonna 1991. Sitä pidetään Länsi-Euroopan suurimpana märkänä [[nummialueena]], ja se sijaitsee [[Drenthen]] maakunnassa Alankomaiden koillisosassa. Siivin sen ylittää kyllä aika äkkiä.
+KYSYMYS: Kerro lisää: Drenthen
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+AIEMPI KYSYMYS: Mikä on nummi ja miten sellainen syntyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä minulla on suvun muistiinpanoja. Nummi on avoin, vähäravinteinen luontotyyppi, jossa kasvaa pääasiassa [[kanervaa]] ja muita varpuja. Länsi-Euroopassa nummet ovat yleensä syntyneet ihmisen vaikutuksesta: kun metsää raivattiin ja maata laidunnettiin vuosisatojen ajan, maaperä köyhtyi eikä metsä päässyt palaamaan. Nummi pysyy avoimena vain jatkuvan [[laiduntamisen]] tai muun hoidon avulla, ja Dwingelderveldillä sitä hoitavat yhä lampaat ja lehmät. Melkein luontoa, siis, mut ihmisen avustuksella.
+KYSYMYS: Kerro lisää: kanervaa
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Qatar — maalehti / Luonto: Puut kasvavat painanteissa] Qatarissa sataa vähän, ja sade tulee lyhyinä ryöppyinä talvella. Vesi ei imeydy kovaan maahan vaan valuu pintaa pitkin matalaan painanteeseen, jota sanotaan rawdaksi. Painanteen pohjalla maa on hienojakoista ja pitää kosteuden pitkään, joten juuri siellä kasvavat maan harvat puut ja pensaat: akasiat, sidra-puut ja ruoho, joka viheriöi sateen jälkeen muutamaksi viikoksi. Rawdat ovat aina olleet laiduntamisen ja asutuksen paikkoja, ja niitä on myös vartioitu torneista.
+AIEMPI KYSYMYS: Mikä on nummi ja miten sellainen syntyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä minulla on suvun muistiinpanoja. Nummi on avoin, vähäravinteinen luontotyyppi, jossa kasvaa pääasiassa [[kanervaa]] ja muita varpuja. Länsi-Euroopassa nummet ovat yleensä syntyneet ihmisen vaikutuksesta: kun metsää raivattiin ja maata laidunnettiin vuosisatojen ajan, maaperä köyhtyi eikä metsä päässyt palaamaan. Nummi pysyy avoimena vain jatkuvan [[laiduntamisen]] tai muun hoidon avulla, ja Dwingelderveldillä sitä hoitavat yhä lampaat ja lehmät. Melkein luontoa, siis, mut ihmisen avustuksella.
+KYSYMYS: Kerro lisää: laiduntamisen
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+AIEMPI KYSYMYS: Mistä Drenthen maakunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai se. Drenthe on maakunta Alankomaiden koillisosassa, ja sen pääkaupunki on [[Assen]]. Maakunta on tunnettu etenkin [[hunebedeistä]], suurista kivistä rakennetuista kivikautisista hautarakennelmista, joista suurin osa Alankomaiden hunebedeistä sijaitsee juuri Drenthessä; ne ovat arviolta noin viisituhatta vuotta vanhoja. Lisäksi maakunnassa on laajoja nummia ja soita, kuten Dwingelderveldin kansallispuisto. Kivet kestävät, sen minä myönnän.
+KYSYMYS: Kerro lisää: Assen
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dwingelderveld (kulttuuri)
+Tietoruudun teksti: Dwingelderveld on Drenthen maakunnassa sijaitseva kansallispuisto, joka perustettiin vuonna 1991 ja joka kattaa noin 37 neliökilometriä. Se on Länsi-Euroopan suurin märkä nummialue. Alueella näkyvät yhä kelttiläisten peltojen ja hautakumpujen jäljet, mutta ihminen ei ole koskaan käyttänyt sitä kovin intensiivisesti; 1930-luvulla suunniteltiin raivauksia, mutta luonnonsuojelujärjestöt ostivat osan alueesta talteen. Nummen pitämiseksi avoimena alueella laiduntavat yhä lampaat ja lehmät, ja puistossa on lammastarha sekä yksi Alankomaiden suurimmista katajikoista.
+AIEMPI KYSYMYS: Mistä Drenthen maakunta on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai se. Drenthe on maakunta Alankomaiden koillisosassa, ja sen pääkaupunki on [[Assen]]. Maakunta on tunnettu etenkin [[hunebedeistä]], suurista kivistä rakennetuista kivikautisista hautarakennelmista, joista suurin osa Alankomaiden hunebedeistä sijaitsee juuri Drenthessä; ne ovat arviolta noin viisituhatta vuotta vanhoja. Lisäksi maakunnassa on laajoja nummia ja soita, kuten Dwingelderveldin kansallispuisto. Kivet kestävät, sen minä myönnän.
+KYSYMYS: Kerro lisää: hunebedeistä
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Millä tavalla Oostvaardersplassen syntyi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Oostvaardersplassen syntyi ihmisen tekemälle maalle: [[Flevolandin]] maakunta pumpattiin kuiviin entisen [[Zuiderzeen]] pohjalta vuosina 1950–1968. Maa kuivattiin alun perin teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja yhden polderin nurkkaan jäi rakentamatta kosteikko. Hylätylle alueelle asettuivat ensimmäisinä [[merihanhet]], ja myöhemmin alueesta tehtiin luonnonsuojelualue ja [[rewilding]]-kokeilu. Aika hyvä lopputulos siitä, ettei rakentaminen ehtinyt perille.
+KYSYMYS: Kerro lisää: Flevolandin
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Millä tavalla Oostvaardersplassen syntyi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Oostvaardersplassen syntyi ihmisen tekemälle maalle: [[Flevolandin]] maakunta pumpattiin kuiviin entisen [[Zuiderzeen]] pohjalta vuosina 1950–1968. Maa kuivattiin alun perin teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja yhden polderin nurkkaan jäi rakentamatta kosteikko. Hylätylle alueelle asettuivat ensimmäisinä [[merihanhet]], ja myöhemmin alueesta tehtiin luonnonsuojelualue ja [[rewilding]]-kokeilu. Aika hyvä lopputulos siitä, ettei rakentaminen ehtinyt perille.
+KYSYMYS: Kerro lisää: Zuiderzeen
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Millä tavalla Oostvaardersplassen syntyi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Oostvaardersplassen syntyi ihmisen tekemälle maalle: [[Flevolandin]] maakunta pumpattiin kuiviin entisen [[Zuiderzeen]] pohjalta vuosina 1950–1968. Maa kuivattiin alun perin teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja yhden polderin nurkkaan jäi rakentamatta kosteikko. Hylätylle alueelle asettuivat ensimmäisinä [[merihanhet]], ja myöhemmin alueesta tehtiin luonnonsuojelualue ja [[rewilding]]-kokeilu. Aika hyvä lopputulos siitä, ettei rakentaminen ehtinyt perille.
+KYSYMYS: Kerro lisää: merihanhet
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Millä tavalla Oostvaardersplassen syntyi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Oostvaardersplassen syntyi ihmisen tekemälle maalle: [[Flevolandin]] maakunta pumpattiin kuiviin entisen [[Zuiderzeen]] pohjalta vuosina 1950–1968. Maa kuivattiin alun perin teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja yhden polderin nurkkaan jäi rakentamatta kosteikko. Hylätylle alueelle asettuivat ensimmäisinä [[merihanhet]], ja myöhemmin alueesta tehtiin luonnonsuojelualue ja [[rewilding]]-kokeilu. Aika hyvä lopputulos siitä, ettei rakentaminen ehtinyt perille.
+KYSYMYS: Kerro lisää: rewilding
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miksi alueelle tuotiin suuria kasvinsyöjiä?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on kyse pajuista. Alueelle tuotiin suuria kasvinsyöjiä, kuten [[konik-hevosia]], [[saksanhirviä]] ja [[heck-nautoja]], pajujen tihentymisen estämiseksi. Laiduntavat eläimet pitävät maiseman avoimena, ja ne elävät ulkona ympäri vuoden. Ratkaisu kuuluu [[rewilding]]-kokeiluun, jossa luontoa yritetään palauttaa villiksi. Nautoja päästettiin alueelle vuonna 1983, hevosia seuraavana vuonna ja hirviä vuonna 1992. Ihan kunnon ruohonleikkurijoukko, minun silmiini.
+KYSYMYS: Kerro lisää: konik-hevosia
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Miksi alueelle tuotiin suuria kasvinsyöjiä?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on kyse pajuista. Alueelle tuotiin suuria kasvinsyöjiä, kuten [[konik-hevosia]], [[saksanhirviä]] ja [[heck-nautoja]], pajujen tihentymisen estämiseksi. Laiduntavat eläimet pitävät maiseman avoimena, ja ne elävät ulkona ympäri vuoden. Ratkaisu kuuluu [[rewilding]]-kokeiluun, jossa luontoa yritetään palauttaa villiksi. Nautoja päästettiin alueelle vuonna 1983, hevosia seuraavana vuonna ja hirviä vuonna 1992. Ihan kunnon ruohonleikkurijoukko, minun silmiini.
+KYSYMYS: Kerro lisää: saksanhirviä
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miksi alueelle tuotiin suuria kasvinsyöjiä?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on kyse pajuista. Alueelle tuotiin suuria kasvinsyöjiä, kuten [[konik-hevosia]], [[saksanhirviä]] ja [[heck-nautoja]], pajujen tihentymisen estämiseksi. Laiduntavat eläimet pitävät maiseman avoimena, ja ne elävät ulkona ympäri vuoden. Ratkaisu kuuluu [[rewilding]]-kokeiluun, jossa luontoa yritetään palauttaa villiksi. Nautoja päästettiin alueelle vuonna 1983, hevosia seuraavana vuonna ja hirviä vuonna 1992. Ihan kunnon ruohonleikkurijoukko, minun silmiini.
+KYSYMYS: Kerro lisää: heck-nautoja
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Jelnjan suo, laaja suokompleksi] vuodesta 1968 — Jelnjan suo Vitebskin alueella on Valko-Venäjän laajin suokompleksi: sen pinta-ala on 253,01 neliökilometriä, ja sen arvioidaan olevan yli 9 000 vuotta vanha. Maisemansuojelualue Jelnja perustettiin 1968, ja se nimettiin Ramsar-kosteikoksi 21. lokakuuta 2002. Suolla kasvaa yli 405 kasvilajia, joista 13 on uhanalaisia, ja siellä elää noin 150 lintulajia. Noin 50 kurkiparia pesii alueella, ja suon ympärillä on moreeni- ja järvimaisemaa lukuisine järvineen. Suo on pysähdyspaikka pohjoisesta muuttaville linnuille, jotka talvehtivat muun muassa Israelissa ja Pohjois-Afrikassa.
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Sadankuudenkymmenen linnun suo] Owabin luonnonsuojelualue on Ghanan ainoa sisämaan Ramsar-kohde; se merkittiin kansainvälisesti arvokkaaksi kosteikoksi 22. helmikuuta 1988. Alueella elää noin 161 lintulajia, sekä kotoperäisiä että muuttajia, ja se sopii sekä retkeilyyn että lintujen tarkkailuun. Kaupunkiin verrattuna se on hiljainen paikka: Kumasin omat puistot ovat suureksi osaksi huonossa kunnossa, ja vuoden 2014 tutkimuksen mukaan kolmasosa asukkaista ei käy puistoissa lainkaan ja lähes yhtä moni pitää niitä tarpeettomina. Lintusuolla kävijä on siis harvinaisemmassa seurassa kuin luulisi.
+AIEMPI KYSYMYS: Millaisia lintuja Oostvaardersplassenilla pesii?
+AIEMPI VASTAUS (Livia):
+Mmm— lintuja. Tää on kyl minun alaani. Hylätylle alueelle asettuivat ensimmäisinä [[merihanhet]], ja alue julistettiin vuoteen 1989 mennessä [[Ramsar-kosteikoksi]], mikä kertoo sen merkityksestä vesilinnuille. Vuonna 2006 alueella alkoi pesiä [[merikotka]], paikassa, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+
+Merikotka on kookas kaveri, ja minä katson sellaisia mieluummin kaukaa. Ne syövät kai lähinnä kalaa ja vesilintuja, joten luultavasti olen turvassa, mutta pysyn silti varmuuden vuoksi kaupungissa.
+KYSYMYS: Kerro lisää: Ramsar-kosteikoksi
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Millaisia lintuja Oostvaardersplassenilla pesii?
+AIEMPI VASTAUS (Livia):
+Mmm— lintuja. Tää on kyl minun alaani. Hylätylle alueelle asettuivat ensimmäisinä [[merihanhet]], ja alue julistettiin vuoteen 1989 mennessä [[Ramsar-kosteikoksi]], mikä kertoo sen merkityksestä vesilinnuille. Vuonna 2006 alueella alkoi pesiä [[merikotka]], paikassa, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+
+Merikotka on kookas kaveri, ja minä katson sellaisia mieluummin kaukaa. Ne syövät kai lähinnä kalaa ja vesilintuja, joten luultavasti olen turvassa, mutta pysyn silti varmuuden vuoksi kaupungissa.
+KYSYMYS: Kerro lisää: merikotka
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Historia: Neljäsataa univormua ja uudet aakkoset] 1817–1830 — Lokakuussa 1817 kuningas Radama I allekirjoitti Britannian kanssa sopimuksen, joka tunnusti hänet Madagaskarin kuninkaaksi ja lopetti orjaviennin. Korvaus kulki sopimuksessa nimellä The Equivalent: vuosittain tuhat dollaria kultana ja tuhat hopeana, ruutia, piikiviä ja musketteja — sekä neljäsataa Britannian armeijan ylijäämäunivormua. Kolme vuotta myöhemmin Radama tapasi Toamasinassa walesilaiset lähetyssaarnaajat David Jonesin ja David Griffithsin, joilla oli siellä kolmen oppilaan koulu. Vuodessa kouluja oli 23 ja oppilaita 2 300, joista kolmasosa tyttöjä. Kuningas määräsi malagassin kirjoitettavaksi 21 latinalaisella kirjaimella.
+- [Denver — kaupunkilehti / Denver: Maa, joka oli sopimuksella toisten] Seudulla asuivat apassit, utet, tšeijennit, comanchet ja arapahot. Arapahot kutsuvat itseään nimellä Hinono’eino, "meidän ihmisemme", ja tšeijennit nimellä Tsétsėhéstȧhese. Vuoden 1851 Fort Laramien sopimuksessa Yhdysvallat määritteli heidän alueekseen maat North Platte -joelta Arkansas-joelle — juuri sen, missä Denver on. Vuoden 1858 kultaryntäys toi siirtolaistulvan näiden maiden yli, ja Fort Wisen sopimuksessa 1861 luovutettiin yli yhdeksänkymmentä prosenttia niistä. Osa tšeijenneistä kiisti sopimuksen: sen oli allekirjoittanut pieni vähemmistö päälliköistä. Erimielisyys johti vuosien 1864–65 Coloradon sotaan ja Sand Creekin verilöylyyn.
+AIEMPI KYSYMYS: Mikä on Ramsar-kosteikko?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ramsar-kosteikko on kosteikko, jonka suojelusta on sovittu kansainvälisessä [[Ramsarin sopimuksessa]], joka solmittiin vuonna 1971 Iranin Ramsarin kaupungissa. Sopimuksen tarkoituksena on suojella [[kosteikkojen]] luontoa ja kestävää käyttöä, erityisesti [[vesilintujen]] elinympäristönä. Oostvaardersplassen julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Kosteikoilla on onneksi puolestapuhujia.
+KYSYMYS: Kerro lisää: Ramsarin sopimuksessa
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko] Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+AIEMPI KYSYMYS: Mikä on Ramsar-kosteikko?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ramsar-kosteikko on kosteikko, jonka suojelusta on sovittu kansainvälisessä [[Ramsarin sopimuksessa]], joka solmittiin vuonna 1971 Iranin Ramsarin kaupungissa. Sopimuksen tarkoituksena on suojella [[kosteikkojen]] luontoa ja kestävää käyttöä, erityisesti [[vesilintujen]] elinympäristönä. Oostvaardersplassen julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Kosteikoilla on onneksi puolestapuhujia.
+KYSYMYS: Kerro lisää: kosteikkojen
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Mikä on Ramsar-kosteikko?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ramsar-kosteikko on kosteikko, jonka suojelusta on sovittu kansainvälisessä [[Ramsarin sopimuksessa]], joka solmittiin vuonna 1971 Iranin Ramsarin kaupungissa. Sopimuksen tarkoituksena on suojella [[kosteikkojen]] luontoa ja kestävää käyttöä, erityisesti [[vesilintujen]] elinympäristönä. Oostvaardersplassen julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Kosteikoilla on onneksi puolestapuhujia.
+KYSYMYS: Kerro lisää: vesilintujen
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kalgoorlie — kaupunkilehti / Kalgoorlie: Piikkipiru piiloutuu punaiseen hiekkaan] Kalgoorlien ympäröivillä hiekka-aavikoilla elää piikkipiru, kourallisen kokoinen liskolaji, jonka koko keho on peitetty terävillä piikeillä petoja vastaan. Se syö pelkkiä muurahaisia — jopa tuhansia päivässä — ja nappaa niitä kielellään pesän suulta tuntikausia liikkumatta. Piikit eivät ole ainoa temppu: liskon nahassa kulkevat mikroskooppiset urat keräävät kastetta ja sadetta koko rungon pinnalta ja johtavat veden suoraan suuhun, joten piikkipiru voi juoda melkein mistä tahansa kohdasta ihoaan.
+AIEMPI KYSYMYS: Miksi alueen eläinten kohtelusta on käyty kiivasta keskustelua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alueen suuret kasvinsyöjät elävät ulkona ympäri vuoden ilman luontaisia suuria [[petoja]], ja eläinmäärät ovat kasvaneet niin suuriksi, että talvella osa eläimistä on kuollut nälkään. Se on herättänyt voimakasta keskustelua. Toisten mukaan luonnonmukaisuuden ydin on, että luonto saa hoitaa asiansa itse ja eläinten kuolema kuuluu siihen; toisten mukaan ihmisellä on vastuu eläinten hyvinvoinnista ja tarvittaessa [[lisäruokinnasta]] tai eläinmäärän säätelystä. Hoitolinjauksia on vuosien varrella muutettu, enkä ole varma nykyisistä käytännöistä, joten tietoni voi olla vanhentunutta. Aiheesta riittää keskusteltavaa vielä pitkään.
+KYSYMYS: Kerro lisää: petoja
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostvaardersplassen (luonto · järvi)
+Tietoruudun teksti: Oostvaardersplassen on Flevolandin luonnonsuojelualue, jonka pinta-ala on noin 56 neliökilometriä ja joka on rewilding-kokeilu eli yritys palauttaa luonto villiksi. Alue on vuonna 1968 syntyneellä polderilla: maa kuivattiin merestä teollisuuskäyttöön, mutta se osoittautui viljelyyn sopimattomaksi, ja hylätylle alueelle asettuivat ensimmäisinä merihanhet. Biologi Frans Vera johti aluetta tutkinutta työtä 1970-luvun lopusta, ja alue julistettiin Ramsar-kosteikoksi vuoteen 1989 mennessä. Pajujen tihentymisen estämiseksi alueelle tuotiin suuria kasvinsyöjiä, kuten konik-hevosia, saksanhirviä ja heck-nautoja, jotka elävät ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Miksi alueen eläinten kohtelusta on käyty kiivasta keskustelua?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Alueen suuret kasvinsyöjät elävät ulkona ympäri vuoden ilman luontaisia suuria [[petoja]], ja eläinmäärät ovat kasvaneet niin suuriksi, että talvella osa eläimistä on kuollut nälkään. Se on herättänyt voimakasta keskustelua. Toisten mukaan luonnonmukaisuuden ydin on, että luonto saa hoitaa asiansa itse ja eläinten kuolema kuuluu siihen; toisten mukaan ihmisellä on vastuu eläinten hyvinvoinnista ja tarvittaessa [[lisäruokinnasta]] tai eläinmäärän säätelystä. Hoitolinjauksia on vuosien varrella muutettu, enkä ole varma nykyisistä käytännöistä, joten tietoni voi olla vanhentunutta. Aiheesta riittää keskusteltavaa vielä pitkään.
+KYSYMYS: Kerro lisää: lisäruokinnasta
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Košice — kaupunkilehti / Rakennukset: Kirkko, johon mahtuu yli viisituhatta ihmistä] Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.
+AIEMPI KYSYMYS: Mikä tulva loi Biesboschin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on vanha ja vakava tarina. Biesboschin synnyn taustalla on [[Pyhän Elisabetin tulva]] vuonna 1421. Tulva upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin ollut [[Suuri Hollannin Waard]] -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää, vaikka tarkkaa lukua on vaikea varmistaa. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä, vaan kesti vuosikymmeniä, ennen kuin koko alue oli veden alla. Tapahtumasta on yli kuusisataa vuotta, ja nykyään alue tunnetaan [[kansallispuistona]]. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Pyhän Elisabetin tulva
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+AIEMPI KYSYMYS: Mikä tulva loi Biesboschin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on vanha ja vakava tarina. Biesboschin synnyn taustalla on [[Pyhän Elisabetin tulva]] vuonna 1421. Tulva upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin ollut [[Suuri Hollannin Waard]] -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää, vaikka tarkkaa lukua on vaikea varmistaa. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä, vaan kesti vuosikymmeniä, ennen kuin koko alue oli veden alla. Tapahtumasta on yli kuusisataa vuotta, ja nykyään alue tunnetaan [[kansallispuistona]]. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Suuri Hollannin Waard
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Mikä tulva loi Biesboschin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on vanha ja vakava tarina. Biesboschin synnyn taustalla on [[Pyhän Elisabetin tulva]] vuonna 1421. Tulva upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin ollut [[Suuri Hollannin Waard]] -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää, vaikka tarkkaa lukua on vaikea varmistaa. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä, vaan kesti vuosikymmeniä, ennen kuin koko alue oli veden alla. Tapahtumasta on yli kuusisataa vuotta, ja nykyään alue tunnetaan [[kansallispuistona]]. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: kansallispuistona
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+AIEMPI KYSYMYS: Millainen luonto Biesboschilla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Biesbosch on yksi Luoteis-Euroopan viimeisiä laajoja makean veden [[vuorovesikosteikkoja]]: jokien ja pienempien salmien verkosto saarineen. Kasvillisuus on enimmäkseen [[pajumetsää]], ja alue on tärkeä vesilintujen ja [[muuttavien hanhien]] alue. Nimi tarkoittaa saroista koostuvaa metsää.
+
+Ylhäältä sellainen salmien verkko näyttää varmaan lehden suonilta. Jos joskus eksyn sinne, aion lentää korkealla.
+KYSYMYS: Kerro lisää: vuorovesikosteikkoja
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+AIEMPI KYSYMYS: Millainen luonto Biesboschilla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Biesbosch on yksi Luoteis-Euroopan viimeisiä laajoja makean veden [[vuorovesikosteikkoja]]: jokien ja pienempien salmien verkosto saarineen. Kasvillisuus on enimmäkseen [[pajumetsää]], ja alue on tärkeä vesilintujen ja [[muuttavien hanhien]] alue. Nimi tarkoittaa saroista koostuvaa metsää.
+
+Ylhäältä sellainen salmien verkko näyttää varmaan lehden suonilta. Jos joskus eksyn sinne, aion lentää korkealla.
+KYSYMYS: Kerro lisää: pajumetsää
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+AIEMPI KYSYMYS: Millainen luonto Biesboschilla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Biesbosch on yksi Luoteis-Euroopan viimeisiä laajoja makean veden [[vuorovesikosteikkoja]]: jokien ja pienempien salmien verkosto saarineen. Kasvillisuus on enimmäkseen [[pajumetsää]], ja alue on tärkeä vesilintujen ja [[muuttavien hanhien]] alue. Nimi tarkoittaa saroista koostuvaa metsää.
+
+Ylhäältä sellainen salmien verkko näyttää varmaan lehden suonilta. Jos joskus eksyn sinne, aion lentää korkealla.
+KYSYMYS: Kerro lisää: muuttavien hanhien
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+AIEMPI KYSYMYS: Mikä on polderi ja miten sellainen syntyy?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Polderi]] on penkereillä tai padoilla ympäröity maa-alue, jonka vedenpintaa säädellään ihmisen toimesta. Alankomaissa polderit on usein saatu kuivattamalla merenlahtia, järviä tai soita, ja vettä on pumpattu pois ensin [[tuulimyllyillä]] ja myöhemmin höyry- ja sähköpumpuilla. Huomattava osa Alankomaista on merenpinnan tasolla tai sen alapuolella. Biesboschin alue oli ennen vuoden 1421 tulvaa polderimaata. Märillä jaloilla minä en kyllä viihdy.
+KYSYMYS: Kerro lisää: Polderi
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Tuuli sahasi lankut, ja laivat halpenivat] 1593 — Uitgeestilainen Cornelis Corneliszoon sai 15. joulukuuta 1593 patentin myllylle, joka sahaa puuta. Keksinnön ydin oli kampiakseli: se muutti tuulen pyörittämän liikkeen ylös-alas-liikkeeksi, joka veti sahanteriä. Yhdestä rungosta syntyi monta lankkua kerralla, kun ennen kaksi miestä oli vetänyt sahaa käsin. Patenttipaperissa keksijää kuvaillaan sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia laivoja valmistui nopeammin kuin muualla.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mikä on polderi ja miten sellainen syntyy?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Polderi]] on penkereillä tai padoilla ympäröity maa-alue, jonka vedenpintaa säädellään ihmisen toimesta. Alankomaissa polderit on usein saatu kuivattamalla merenlahtia, järviä tai soita, ja vettä on pumpattu pois ensin [[tuulimyllyillä]] ja myöhemmin höyry- ja sähköpumpuilla. Huomattava osa Alankomaista on merenpinnan tasolla tai sen alapuolella. Biesboschin alue oli ennen vuoden 1421 tulvaa polderimaata. Märillä jaloilla minä en kyllä viihdy.
+KYSYMYS: Kerro lisää: tuulimyllyillä
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+AIEMPI KYSYMYS: Miksi pajut kasvavat hyvin tulvivassa maastossa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: pajuista tiedän vähän. Monet [[pajulajit]] ovat sopeutuneet kosteisiin ja ajoittain tulviviin kasvupaikkoihin, ja ne sietävät märkää maata paremmin kuin useimmat muut puut ja pensaat. Lisäksi pajut kasvavat nopeasti ja uusiutuvat helposti esimerkiksi taittuneista oksista ja kannoista, minkä vuoksi pajukko leviää jokivarsilla ja kosteikoilla vauhdikkaasti. Pajun oksista on perinteisesti myös punottu [[pajukoreja]]. Pajukori olisi muuten ihan hyvä pesä, jos joku kysyy.
+KYSYMYS: Kerro lisää: pajulajit
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+AIEMPI KYSYMYS: Miksi pajut kasvavat hyvin tulvivassa maastossa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: pajuista tiedän vähän. Monet [[pajulajit]] ovat sopeutuneet kosteisiin ja ajoittain tulviviin kasvupaikkoihin, ja ne sietävät märkää maata paremmin kuin useimmat muut puut ja pensaat. Lisäksi pajut kasvavat nopeasti ja uusiutuvat helposti esimerkiksi taittuneista oksista ja kannoista, minkä vuoksi pajukko leviää jokivarsilla ja kosteikoilla vauhdikkaasti. Pajun oksista on perinteisesti myös punottu [[pajukoreja]]. Pajukori olisi muuten ihan hyvä pesä, jos joku kysyy.
+KYSYMYS: Kerro lisää: pajukoreja
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+AIEMPI KYSYMYS: Miksi hanhet pysähtyvät kosteikoille muuttomatkallaan?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on hyvä aloittaa. Muuttavat hanhet tarvitsevat matkallaan [[levähdyspaikkoja]], joissa on ravintoa ja turvallinen yöpymispaikka. [[Kosteikoilla]] on laidunta ja ravintoa, ja matalat vesialueet ja saaret suojaavat lintuja maapedoilta. Biesbosch on juuri tällainen alue, ja se on tärkeä muuttaville hanhille. Hanhien reitti on pitkä, ja minä arvostan jokaista, joka muistaa levätä.
+KYSYMYS: Kerro lisää: levähdyspaikkoja
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biesbosch (luonto · järvi)
+Tietoruudun teksti: Biesbosch on yksi Alankomaiden suurimmista kansallispuistoista ja Luoteis-Euroopan viimeisiä laajoja makean veden vuorovesikosteikkoja. Nimi tarkoittaa saroista koostuvaa metsää, ja alue on jokien ja pienempien salmien verkosto saarineen; kasvillisuus on enimmäkseen pajumetsää, ja se on tärkeä vesilintujen ja muuttavien hanhien alue. Biesbosch syntyi, kun Pyhän Elisabetin tulva vuonna 1421 upotti noin 300 neliökilometriä polderimaata, joka oli aiemmin Suuri Hollannin Waard -niminen viljelyalue kylineen. Perinteen mukaan tulvassa katosi 72 kylää. Tulva ei kuitenkaan muuttanut aluetta yhdessä yössä; kesti vuosikymmeniä, ennen kuin koko alue oli veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ilha do Bananal — kaupunkilehti / Ilha do Bananal: Jättiläissaukot naapurikosteikossa] Naapurissa sijaitsevan Cantãon suojelualueen kosteikoilla, aivan Ilha do Bananalin rajalla, tutkijat ovat seuranneet samaa jättiläissaukkolaumaa (Pteronura brasiliensis) vuodesta 2010 lähtien. Jättiläissaukko on Etelä-Amerikan suurin saukkolaji: aikuinen voi kasvaa yli 1,7-metriseksi ja painaa yli 30 kiloa, ja perhe metsästää yhdessä kalaparvia joen mutkissa. Samoilla vesillä elää myös jaguaari, tunnetusti kissaeläimistä vesiharrastunein: se ui mielellään yli jokien ja saalistaa jopa kaimaaneja rannan tuntumassa.
+- [Chicago — kaupunkilehti / Alkuperäiskansat: Neljä kansaa ennen kaupunkia] 1700-luvun puolivälissä aluetta asutti Potawatomi-kansa, joka oli tullut seudulle Miami-, Sauk- ja Meskwaki-kansojen jälkeen. Potawatomi kuului yhdessä Odawan ja Ojibwen kanssa liittoumaan, jota kutsutaan Kolmen tulen neuvostoksi; nämä kolme kansaa allekirjoittivat yhdessä useita sopimuksia Yhdysvaltain kanssa, muun muassa kaksi Chicagon nimeä kantavaa sopimusta vuosina 1821 ja 1833. Kaupungin nimi tulee Miami–Illinois-kielen sanasta šikaakwa, villisipulista, jota kasvoi juuri näillä kosteikoilla.
+AIEMPI KYSYMYS: Miksi hanhet pysähtyvät kosteikoille muuttomatkallaan?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on hyvä aloittaa. Muuttavat hanhet tarvitsevat matkallaan [[levähdyspaikkoja]], joissa on ravintoa ja turvallinen yöpymispaikka. [[Kosteikoilla]] on laidunta ja ravintoa, ja matalat vesialueet ja saaret suojaavat lintuja maapedoilta. Biesbosch on juuri tällainen alue, ja se on tärkeä muuttaville hanhille. Hanhien reitti on pitkä, ja minä arvostan jokaista, joka muistaa levätä.
+KYSYMYS: Kerro lisää: Kosteikoilla
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+AIEMPI KYSYMYS: Mitä Naardenille tapahtui vuonna 1572?
+AIEMPI VASTAUS (Livia):
+Ai tuo. Se on vakava juttu. Vuonna 1572 espanjalaiset sotilaat ryöstivät ja polttivat Naardenin rangaistusretkellä hollantilaisia kapinallisia vastaan. [[Naardenin verilöylyssä]] selvisi hengissä vain noin 60 ihmistä, ja tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Tapahtuma kuuluu [[kahdeksankymmenvuotisen sodan]] alkuvaiheeseen, yli 450 vuotta sitten. Kaupunki kehittyi myöhemmin linnoitetuksi varuskuntakaupungiksi, ja sen [[tähtilinnoituksen]] muurit ja vallihauta ovat yhä nähtävissä. Siitä on sentään jo hyvin pitkä aika.
+KYSYMYS: Kerro lisää: Naardenin verilöylyssä
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Mitä Naardenille tapahtui vuonna 1572?
+AIEMPI VASTAUS (Livia):
+Ai tuo. Se on vakava juttu. Vuonna 1572 espanjalaiset sotilaat ryöstivät ja polttivat Naardenin rangaistusretkellä hollantilaisia kapinallisia vastaan. [[Naardenin verilöylyssä]] selvisi hengissä vain noin 60 ihmistä, ja tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Tapahtuma kuuluu [[kahdeksankymmenvuotisen sodan]] alkuvaiheeseen, yli 450 vuotta sitten. Kaupunki kehittyi myöhemmin linnoitetuksi varuskuntakaupungiksi, ja sen [[tähtilinnoituksen]] muurit ja vallihauta ovat yhä nähtävissä. Siitä on sentään jo hyvin pitkä aika.
+KYSYMYS: Kerro lisää: kahdeksankymmenvuotisen sodan
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+AIEMPI KYSYMYS: Mitä Naardenille tapahtui vuonna 1572?
+AIEMPI VASTAUS (Livia):
+Ai tuo. Se on vakava juttu. Vuonna 1572 espanjalaiset sotilaat ryöstivät ja polttivat Naardenin rangaistusretkellä hollantilaisia kapinallisia vastaan. [[Naardenin verilöylyssä]] selvisi hengissä vain noin 60 ihmistä, ja tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Tapahtuma kuuluu [[kahdeksankymmenvuotisen sodan]] alkuvaiheeseen, yli 450 vuotta sitten. Kaupunki kehittyi myöhemmin linnoitetuksi varuskuntakaupungiksi, ja sen [[tähtilinnoituksen]] muurit ja vallihauta ovat yhä nähtävissä. Siitä on sentään jo hyvin pitkä aika.
+KYSYMYS: Kerro lisää: tähtilinnoituksen
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+AIEMPI KYSYMYS: Minkä muotoinen Naardenin linnoitus on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon osaan vastata ylhäältäpäin. Naardenin linnoitus on [[tähtilinnoitus]]: muurit ja vallihauta muodostavat tähtimäisen, kulmikkaan kuvion. Ulkonevat [[bastionit]] mahdollistivat sen, että puolustajat pystyivät ampumaan muurien edustalle kaikkiin suuntiin, eikä hyökkääjille jäänyt suojaisia kohtia. Linnoitusta on kunnostettu monta kertaa, erityisesti [[ranskalaisaikana]] 1795–1814. Ylhäältä katsottuna kuvio on kuulemma aika komea.
+KYSYMYS: Kerro lisää: tähtilinnoitus
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kaupunkilehti / Rakennukset: Ainoa bastioni, joka jäi kaupunginmuureista] Pyövelin bastioni on puolipyöreä puolustusrakennus, jossa on kahdeksan tykkikammiota. Se pystytettiin noin vuonna 1500, ja nimensä se sai keskiaikaisen pyövelin talon läheisyydestä. Kaupungin muurit purettiin vähitellen 1800-luvun alusta vuoteen 1856, ja bastioni on muurinpätkien ohella ainoa osa linnoituksista, joka jäi pystyyn. Vuosina 1920–1930 se sovitettiin Itä-Slovakian museon käyttöön, ja pihalla on Ferenc II Rákóczin maanpakotalon jäljennös.
+AIEMPI KYSYMYS: Minkä muotoinen Naardenin linnoitus on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon osaan vastata ylhäältäpäin. Naardenin linnoitus on [[tähtilinnoitus]]: muurit ja vallihauta muodostavat tähtimäisen, kulmikkaan kuvion. Ulkonevat [[bastionit]] mahdollistivat sen, että puolustajat pystyivät ampumaan muurien edustalle kaikkiin suuntiin, eikä hyökkääjille jäänyt suojaisia kohtia. Linnoitusta on kunnostettu monta kertaa, erityisesti [[ranskalaisaikana]] 1795–1814. Ylhäältä katsottuna kuvio on kuulemma aika komea.
+KYSYMYS: Kerro lisää: bastionit
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Kaupunki jonka Ranska perusti] São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.
+AIEMPI KYSYMYS: Minkä muotoinen Naardenin linnoitus on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon osaan vastata ylhäältäpäin. Naardenin linnoitus on [[tähtilinnoitus]]: muurit ja vallihauta muodostavat tähtimäisen, kulmikkaan kuvion. Ulkonevat [[bastionit]] mahdollistivat sen, että puolustajat pystyivät ampumaan muurien edustalle kaikkiin suuntiin, eikä hyökkääjille jäänyt suojaisia kohtia. Linnoitusta on kunnostettu monta kertaa, erityisesti [[ranskalaisaikana]] 1795–1814. Ylhäältä katsottuna kuvio on kuulemma aika komea.
+KYSYMYS: Kerro lisää: ranskalaisaikana
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+AIEMPI KYSYMYS: Kuka oli Naardenissa haudattu Johann Amos Comenius?
+AIEMPI VASTAUS (Livia):
+Joo, hänet minä tunnen. Johann Amos Comenius (1592–1670) oli [[Määristä]], nykyisen Tšekin alueelta, kotoisin oleva kasvattaja, teologi ja kirjailija, jota kutsutaan usein kansojen opettajaksi. Hän kirjoitti oppikirjan [[Orbis Pictus]] (1658), jossa lapsille opetettiin sanoja ja asioita kuvien avulla. Uskonnollisten kiistojen ja sotien vuoksi hän eli suuren osan elämästään maanpaossa, kuoli Amsterdamissa vuonna 1670 ja haudattiin Naardeniin, jossa hänen [[mausoleumiinsa]] voi tutustua. Kuvakirja on kyllä minunkin makuuni.
+KYSYMYS: Kerro lisää: Määristä
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+AIEMPI KYSYMYS: Kuka oli Naardenissa haudattu Johann Amos Comenius?
+AIEMPI VASTAUS (Livia):
+Joo, hänet minä tunnen. Johann Amos Comenius (1592–1670) oli [[Määristä]], nykyisen Tšekin alueelta, kotoisin oleva kasvattaja, teologi ja kirjailija, jota kutsutaan usein kansojen opettajaksi. Hän kirjoitti oppikirjan [[Orbis Pictus]] (1658), jossa lapsille opetettiin sanoja ja asioita kuvien avulla. Uskonnollisten kiistojen ja sotien vuoksi hän eli suuren osan elämästään maanpaossa, kuoli Amsterdamissa vuonna 1670 ja haudattiin Naardeniin, jossa hänen [[mausoleumiinsa]] voi tutustua. Kuvakirja on kyllä minunkin makuuni.
+KYSYMYS: Kerro lisää: Orbis Pictus
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+AIEMPI KYSYMYS: Kuka oli Naardenissa haudattu Johann Amos Comenius?
+AIEMPI VASTAUS (Livia):
+Joo, hänet minä tunnen. Johann Amos Comenius (1592–1670) oli [[Määristä]], nykyisen Tšekin alueelta, kotoisin oleva kasvattaja, teologi ja kirjailija, jota kutsutaan usein kansojen opettajaksi. Hän kirjoitti oppikirjan [[Orbis Pictus]] (1658), jossa lapsille opetettiin sanoja ja asioita kuvien avulla. Uskonnollisten kiistojen ja sotien vuoksi hän eli suuren osan elämästään maanpaossa, kuoli Amsterdamissa vuonna 1670 ja haudattiin Naardeniin, jossa hänen [[mausoleumiinsa]] voi tutustua. Kuvakirja on kyllä minunkin makuuni.
+KYSYMYS: Kerro lisää: mausoleumiinsa
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä oli kahdeksankymmenvuotinen sota?
+AIEMPI VASTAUS (Livia):
+No niin. Kahdeksankymmenvuotinen sota eli Alankomaiden itsenäisyyssota alkoi vuonna 1568, ja siinä Alankomaiden maakunnat kapinoivat Espanjan [[Habsburgien]] hallintoa vastaan. Kapinan taustalla olivat muun muassa verotus, vallan keskittäminen ja uskonnolliset ristiriidat, ja yksi johtohahmoista oli [[Vilhelm Vaitelias]]. Sota päättyi vuonna 1648 [[Münsterin rauhaan]], jossa Espanja tunnusti pohjoisten maakuntien itsenäisyyden. Naardenin tuho vuonna 1572 kuului sodan alkuvaiheisiin.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+AIEMPI KYSYMYS: Mikä oli kahdeksankymmenvuotinen sota?
+AIEMPI VASTAUS (Livia):
+No niin. Kahdeksankymmenvuotinen sota eli Alankomaiden itsenäisyyssota alkoi vuonna 1568, ja siinä Alankomaiden maakunnat kapinoivat Espanjan [[Habsburgien]] hallintoa vastaan. Kapinan taustalla olivat muun muassa verotus, vallan keskittäminen ja uskonnolliset ristiriidat, ja yksi johtohahmoista oli [[Vilhelm Vaitelias]]. Sota päättyi vuonna 1648 [[Münsterin rauhaan]], jossa Espanja tunnusti pohjoisten maakuntien itsenäisyyden. Naardenin tuho vuonna 1572 kuului sodan alkuvaiheisiin.
+KYSYMYS: Kerro lisää: Vilhelm Vaitelias
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+AIEMPI KYSYMYS: Mikä oli kahdeksankymmenvuotinen sota?
+AIEMPI VASTAUS (Livia):
+No niin. Kahdeksankymmenvuotinen sota eli Alankomaiden itsenäisyyssota alkoi vuonna 1568, ja siinä Alankomaiden maakunnat kapinoivat Espanjan [[Habsburgien]] hallintoa vastaan. Kapinan taustalla olivat muun muassa verotus, vallan keskittäminen ja uskonnolliset ristiriidat, ja yksi johtohahmoista oli [[Vilhelm Vaitelias]]. Sota päättyi vuonna 1648 [[Münsterin rauhaan]], jossa Espanja tunnusti pohjoisten maakuntien itsenäisyyden. Naardenin tuho vuonna 1572 kuului sodan alkuvaiheisiin.
+KYSYMYS: Kerro lisää: Münsterin rauhaan
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+AIEMPI KYSYMYS: Mitä Naardenissa voi nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+Odotas, katotaas. Naardenissa voi kävellä linnoituksen muureilla ja vallihaudan äärellä, sillä kaupungin [[tähtilinnoitus]] on säilynyt hyvin. Kaupunki sai kaupunkioikeudet vuonna 1300. Siellä on myös tšekkiläisen kasvattajan Johann Amos Comeniuksen [[mausoleumi]], johon voi tutustua, ja minun tietojeni mukaan kaupungissa on myös [[linnoitusmuseo]]. Muurin päällä istuisin mielelläni, ja varmaan siellä joku jo istuukin.
+KYSYMYS: Kerro lisää: mausoleumi
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naarden (historia)
+Tietoruudun teksti: Naarden on kaupunki Gooin alueella Pohjois-Hollannissa; se sai kaupunkioikeudet vuonna 1300 ja kehittyi linnoitetuksi varuskuntakaupungiksi, jossa oli tekstiiliteollisuutta. Vuonna 1572 espanjalaissotilaat ryöstivät ja polttivat kaupungin rangaistusretkellä hollantilaisia kapinallisia vastaan; Naardenin verilöylyssä selvisi hengissä vain noin 60 ihmistä. Tuho yllytti kapinalliset jatkamaan itsenäisyyssotaa Espanjaa vastaan. Naarden on esimerkki tähtilinnoituksesta, jossa on muurit ja vallihauta, ja niitä on kunnostettu monta kertaa, erityisesti ranskalaisaikana 1795–1814. Kaupunkiin on haudattu myös tšekkiläinen kasvattaja Johann Amos Comenius, jonka mausoleumiin voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+AIEMPI KYSYMYS: Mitä Naardenissa voi nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+Odotas, katotaas. Naardenissa voi kävellä linnoituksen muureilla ja vallihaudan äärellä, sillä kaupungin [[tähtilinnoitus]] on säilynyt hyvin. Kaupunki sai kaupunkioikeudet vuonna 1300. Siellä on myös tšekkiläisen kasvattajan Johann Amos Comeniuksen [[mausoleumi]], johon voi tutustua, ja minun tietojeni mukaan kaupungissa on myös [[linnoitusmuseo]]. Muurin päällä istuisin mielelläni, ja varmaan siellä joku jo istuukin.
+KYSYMYS: Kerro lisää: linnoitusmuseo
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Musiikki: Toukotanko, jota lähetyssaarnaaja paheksui 1874] 1874 — Palo de Mayo on Karibian rannikon afronicaragualainen juhla ja tanssi, joka on nimetty nauhoin koristellun toukotangon mukaan. Se juhlii sadetta ja uutta kasvua, ja perinne alkoi Bluefieldsissä; brittiuudisasukkaat toivat nauhatanssin sinne todennäköisesti 1830-luvun alussa. Isoisän matkan jälkeisenä vuonna 1874 moravialainen lähetyssaarnaaja J. E. Lundberg kirjoitti sen jo muuttuneen: juhlaa vietettiin öisin kuutamossa ja meluisasti. Soittimina olivat puunrungosta koverretut rummut, pyykkilautabasso ja aasin leukaluu.
+- [Tanganjika — kaupunkilehti / Tanganjika: Kadonnut lähetyssaarnaaja] Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone oli etsinyt Niilin lähdettä Keski-Afrikassa vuodesta 1866 lähtien, eikä hänestä ollut kuulunut mitään vuosiin. Lääkkeet olivat loppuneet, ja hän saapui lokakuussa 1871 Ujijiin nääntyneenä ja sairaana punatautiin. Euroopassa häntä pidettiin jo lähes kuolleena. Yhdysvaltalainen sanomalehti New York Herald oli kuitenkin lähettänyt toimittaja Henry Morton Stanleyn etsimään kadonnutta miestä — retkikunta, joka lähestyi Ujijiä juuri samoihin aikoihin.
+AIEMPI KYSYMYS: Kuka sai marttyyrikuoleman Dokkumissa vuonna 754?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Marttyyrikuoleman sai anglosaksinen [[lähetyssaarnaaja]] [[Bonifatius]] vuonna 754, ja tapahtuma on Dokkumin historian tunnetuin. Bonifatius toimi 700-luvulla kristinuskon levittäjänä ja kirkon uudistajana Germaniassa, ja hänet surmattiin lähetysmatkalla [[Friisinmaalla]]. Katolilaiset rakensivat vuonna 1923 kaupungin ulkopuolelle [[Bonifatiuksen puiston]], jonka kaivon uskottiin virheellisesti nousseen pyhimyksen kuolinpaikalta. Tapahtumasta on yli tuhat kaksisataa vuotta. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: lähetyssaarnaaja
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Kuka sai marttyyrikuoleman Dokkumissa vuonna 754?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Marttyyrikuoleman sai anglosaksinen [[lähetyssaarnaaja]] [[Bonifatius]] vuonna 754, ja tapahtuma on Dokkumin historian tunnetuin. Bonifatius toimi 700-luvulla kristinuskon levittäjänä ja kirkon uudistajana Germaniassa, ja hänet surmattiin lähetysmatkalla [[Friisinmaalla]]. Katolilaiset rakensivat vuonna 1923 kaupungin ulkopuolelle [[Bonifatiuksen puiston]], jonka kaivon uskottiin virheellisesti nousseen pyhimyksen kuolinpaikalta. Tapahtumasta on yli tuhat kaksisataa vuotta. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Bonifatius
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Kuka sai marttyyrikuoleman Dokkumissa vuonna 754?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Marttyyrikuoleman sai anglosaksinen [[lähetyssaarnaaja]] [[Bonifatius]] vuonna 754, ja tapahtuma on Dokkumin historian tunnetuin. Bonifatius toimi 700-luvulla kristinuskon levittäjänä ja kirkon uudistajana Germaniassa, ja hänet surmattiin lähetysmatkalla [[Friisinmaalla]]. Katolilaiset rakensivat vuonna 1923 kaupungin ulkopuolelle [[Bonifatiuksen puiston]], jonka kaivon uskottiin virheellisesti nousseen pyhimyksen kuolinpaikalta. Tapahtumasta on yli tuhat kaksisataa vuotta. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Friisinmaalla
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Kuka sai marttyyrikuoleman Dokkumissa vuonna 754?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Marttyyrikuoleman sai anglosaksinen [[lähetyssaarnaaja]] [[Bonifatius]] vuonna 754, ja tapahtuma on Dokkumin historian tunnetuin. Bonifatius toimi 700-luvulla kristinuskon levittäjänä ja kirkon uudistajana Germaniassa, ja hänet surmattiin lähetysmatkalla [[Friisinmaalla]]. Katolilaiset rakensivat vuonna 1923 kaupungin ulkopuolelle [[Bonifatiuksen puiston]], jonka kaivon uskottiin virheellisesti nousseen pyhimyksen kuolinpaikalta. Tapahtumasta on yli tuhat kaksisataa vuotta. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Bonifatiuksen puiston
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Mitä Dokkumin linnoitusten muureja kutsutaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dokkumin hyvin säilyneitä puolustusvalleja kutsutaan nimellä [[bolwerken]]. Sana on hollantia ja vastaa suunnilleen [[bastionia]] eli linnoituksen ulkonevaa puolustusrakennetta. Dokkum on linnoitettu kaupunki [[Friisinmaalla]], ja se liittyi vuonna 1572 hollantilaiseen kapinaan, minkä jälkeen espanjalaiset ryöstivät sen. Sana kuulostaa melkein pullalta, mut valitettavasti kyse on muurista.
+KYSYMYS: Kerro lisää: bolwerken
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Jänissaari 1703 — kuusi bastionia suohon] 27.5.1703 — Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, mihin kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi viikkoa aiemmin venäläiset valtasivat ylempänä Nevalla ruotsalaisten Nyenskansin linnoituksen. Suuri Pohjan sota on käynnissä, ja Ruotsin laivasto voi ilmestyä Suomenlahdelle milloin tahansa; siksi linnake pitää saada saarelle jokisuuhun ennen talvea, ensin maasta ja puusta. Kivi tulee myöhemmin, Domenico Trezzinin piirustuksin vuodesta 1706. Sotilaille ja pakkotyöhön käsketyille talonpojille paikka on suo, jossa on hyttysiä ja…
+- [Jakarta — kaupunkilehti / Historia: Kaksi bastionia kahdestakymmenestäkolmesta] Batavian muurissa oli 1600- ja 1700-luvulla kaksikymmentäkolme bastionia, ja niistä on jäljellä kaksi: Zeeburg ja Culemborg. Muurinpätkä seisoo yhä merenkulkumuseon edessä. Museona ovat VOC:n varastot, jotka rakennettiin Ciliwungin länsirannalle vuosina 1652–1771 ja joissa säilytettiin muskottia, pippuria, kahvia, teetä ja kangasta ennen laivausta. Culemborgin bastionin raunioille rakennettiin 1839 satamavartiotorni Menara Syahbandar, joka viestitti laivoille Batavian redillä. Torni menetti osan tehtävästään, kun uusi Tanjung Priokin satama avattiin 1886.
+AIEMPI KYSYMYS: Mitä Dokkumin linnoitusten muureja kutsutaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dokkumin hyvin säilyneitä puolustusvalleja kutsutaan nimellä [[bolwerken]]. Sana on hollantia ja vastaa suunnilleen [[bastionia]] eli linnoituksen ulkonevaa puolustusrakennetta. Dokkum on linnoitettu kaupunki [[Friisinmaalla]], ja se liittyi vuonna 1572 hollantilaiseen kapinaan, minkä jälkeen espanjalaiset ryöstivät sen. Sana kuulostaa melkein pullalta, mut valitettavasti kyse on muurista.
+KYSYMYS: Kerro lisää: bastionia
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Mikä oli Friisinmaan amiraliteetti ja mitä se teki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Alankomaiden tasavallassa laivastoa hoitivat alueelliset [[amiraliteetit]], jotka vastasivat muun muassa laivojen varustamisesta ja kauppalaivaston suojelusta sekä keräsivät tulleja. Friisinmaan amiraliteetti perustettiin Dokkumiin vuonna 1597, mutta se siirrettiin [[Harlingeniin]] vuonna 1645. Siirron syystä en ole varma, mutta Harlingen on satamakaupunki. Kyyhkynä pysyn kyllä mieluummin kuivalla maalla.
+KYSYMYS: Kerro lisää: amiraliteetit
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Mikä oli Friisinmaan amiraliteetti ja mitä se teki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Alankomaiden tasavallassa laivastoa hoitivat alueelliset [[amiraliteetit]], jotka vastasivat muun muassa laivojen varustamisesta ja kauppalaivaston suojelusta sekä keräsivät tulleja. Friisinmaan amiraliteetti perustettiin Dokkumiin vuonna 1597, mutta se siirrettiin [[Harlingeniin]] vuonna 1645. Siirron syystä en ole varma, mutta Harlingen on satamakaupunki. Kyyhkynä pysyn kyllä mieluummin kuivalla maalla.
+KYSYMYS: Kerro lisää: Harlingeniin
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Miksi Bonifatiusta kutsutaan Saksan apostoliksi?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Bonifatius toimi 700-luvulla lähetystyössä ja kirkon järjestäjänä [[Germaniassa]], nykyisen Saksan alueella, ja hänellä oli suuri rooli kristinuskon vakiinnuttamisessa siellä. Hän perusti ja uudisti kirkollisia rakenteita, ja hänen työtään liitetään myös [[Fuldan]] luostariin; hänet on haudattu Fuldaan, vaikka hän kuoli Dokkumissa vuonna 754. Perimätiedon mukaan hän kaatoi [[Donarin tammen]], pakanallisen palvonnan symbolin, osoittaakseen uuden uskon voiman. Aika tiukka työrupeama, siivetönkin väsyisi.
+KYSYMYS: Kerro lisää: Germaniassa
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Miksi Bonifatiusta kutsutaan Saksan apostoliksi?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Bonifatius toimi 700-luvulla lähetystyössä ja kirkon järjestäjänä [[Germaniassa]], nykyisen Saksan alueella, ja hänellä oli suuri rooli kristinuskon vakiinnuttamisessa siellä. Hän perusti ja uudisti kirkollisia rakenteita, ja hänen työtään liitetään myös [[Fuldan]] luostariin; hänet on haudattu Fuldaan, vaikka hän kuoli Dokkumissa vuonna 754. Perimätiedon mukaan hän kaatoi [[Donarin tammen]], pakanallisen palvonnan symbolin, osoittaakseen uuden uskon voiman. Aika tiukka työrupeama, siivetönkin väsyisi.
+KYSYMYS: Kerro lisää: Fuldan
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+AIEMPI KYSYMYS: Miksi Bonifatiusta kutsutaan Saksan apostoliksi?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Bonifatius toimi 700-luvulla lähetystyössä ja kirkon järjestäjänä [[Germaniassa]], nykyisen Saksan alueella, ja hänellä oli suuri rooli kristinuskon vakiinnuttamisessa siellä. Hän perusti ja uudisti kirkollisia rakenteita, ja hänen työtään liitetään myös [[Fuldan]] luostariin; hänet on haudattu Fuldaan, vaikka hän kuoli Dokkumissa vuonna 754. Perimätiedon mukaan hän kaatoi [[Donarin tammen]], pakanallisen palvonnan symbolin, osoittaakseen uuden uskon voiman. Aika tiukka työrupeama, siivetönkin väsyisi.
+KYSYMYS: Kerro lisää: Donarin tammen
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+- [Murzuk — kaupunkilehti / Orjakaravaanien risteysasema: Karavaanipihat ja torit] Murzukin keskustassa oli pylväskäytävin reunustettuja pihoja ja majataloja, joissa saapuvat karavaanit pysähtyivät lastaamaan ja purkamaan kuormaa. Pihoissa käytiin kauppaa suolalla, taateleilla, kankailla ja kullalla, mutta samoissa tiloissa tarkastettiin ja myytiin myös orjiksi siepattuja ihmisiä osana muuta karavaanin lastia. Kaupungin kauppiaat elivät vauraasti näiden pihojen ympärillä samalla, kun karavaanien mukana kulkeneet vangit odottivat jatkoa matkalle kohti rannikon markkinoita. Murzukin asema kauppa- ja orjareitin risteyksessä teki siitä yhden Fezzanin vauraimmista kaupungeista.
+- [Murzuk — kaupunkilehti / Orjakaravaanien risteysasema] Murzuk oli 1800-luvulla keskisen Saharan vilkkaimman orjakauppareitin tärkein risteysasema, jonka kautta tuhannet Sudanista ja Bornusta siepatut ihmiset kuljetettiin karavaaneissa kohti Välimeren rannikon markkinoita.
+AIEMPI KYSYMYS: Mitä kaupunkioikeudet antoivat keskiajan kaupungille?
+AIEMPI VASTAUS (Livia):
+Kas, tuo on kiva. Kaupunkioikeudet antoivat keskiajan kaupungille erityisaseman: oikeuden pitää [[markkinoita]] ja käydä kauppaa, [[itsehallintoa]] ja usein myös oman tuomioistuimen sekä oikeuden rakentaa puolustusmuurit. Kaupungin asukkaat olivat tavallisesti vapaampia kuin maaseudun väki, ja siitä syntyi saksalainen sananparsi, jonka mukaan kaupungin ilma tekee vapaaksi. Dokkum sai kaupunkioikeudet vuonna 1298.
+
+Kaupunkioikeuksia en ole koskaan tarvinnut, sillä kyyhkyn taivas on kaikille yhteinen. Mut torin muruihin minulla on kyllä oma, kirjoittamaton oikeuteni.
+KYSYMYS: Kerro lisää: markkinoita
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dokkum (historia)
+Tietoruudun teksti: Dokkum on linnoitettu kaupunki Friisinmaalla Pohjois-Alankomaissa, ja sen hyvin säilyneitä puolustusvalleja kutsutaan nimellä bolwerken. Kaupungin historian tunnetuin tapahtuma on anglosaksisen lähetyssaarnaajan Bonifatiuksen marttyyrikuolema vuonna 754. Dokkum sai kaupunkioikeudet vuonna 1298, ja vuonna 1572 espanjalaiset ryöstivät sen, kun kaupunki oli liittynyt hollantilaiseen kapinaan. Friisinmaan amiraliteetti perustettiin Dokkumiin 1597, mutta se siirrettiin Harlingeniin vuonna 1645. Katolilaiset rakensivat kaupungin ulkopuolelle 1923 Bonifatiuksen puiston, jonka keskellä on kaivo, jonka he uskoivat (virheellisesti) nousseen pyhimyksen kuoleman paikalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä kaupunkioikeudet antoivat keskiajan kaupungille?
+AIEMPI VASTAUS (Livia):
+Kas, tuo on kiva. Kaupunkioikeudet antoivat keskiajan kaupungille erityisaseman: oikeuden pitää [[markkinoita]] ja käydä kauppaa, [[itsehallintoa]] ja usein myös oman tuomioistuimen sekä oikeuden rakentaa puolustusmuurit. Kaupungin asukkaat olivat tavallisesti vapaampia kuin maaseudun väki, ja siitä syntyi saksalainen sananparsi, jonka mukaan kaupungin ilma tekee vapaaksi. Dokkum sai kaupunkioikeudet vuonna 1298.
+
+Kaupunkioikeuksia en ole koskaan tarvinnut, sillä kyyhkyn taivas on kaikille yhteinen. Mut torin muruihin minulla on kyllä oma, kirjoittamaton oikeuteni.
+KYSYMYS: Kerro lisää: itsehallintoa
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Mikä on Oudewaterin Heksenwaag?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä tiedän jotain. Heksenwaag on Oudewaterin noitavaaka eli punnitusrakennus, joka tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikana. Syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Punnittavaksi matkusti ihmisiä kaikkialta [[Euroopasta]], ja he saivat virallisen todistuksen siitä, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Vaaka sijaitsee [[Oudewaterin]] kaupungissa Utrechtin maakunnassa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Euroopasta
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Mikä on Oudewaterin Heksenwaag?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä tiedän jotain. Heksenwaag on Oudewaterin noitavaaka eli punnitusrakennus, joka tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikana. Syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Punnittavaksi matkusti ihmisiä kaikkialta [[Euroopasta]], ja he saivat virallisen todistuksen siitä, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Vaaka sijaitsee [[Oudewaterin]] kaupungissa Utrechtin maakunnassa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Oudewaterin
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Millä uskomuksella noidan painoa arvioitiin?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vanha ja outo ajatus. Noitien punnitsemisen taustalla oli uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Punnitus perustui siis ajatukseen, että keveys paljastaisi epäillyn, ja Oudewaterin [[Heksenwaagissa]] punnitus tehtiin reilusti, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Tavallisen painoinen ihminen sai [[todistuksen]] siitä, ettei häntä katsottu noidaksi. Tästä ajattelusta on onneksi jo pitkä matka tähän päivään.
+KYSYMYS: Kerro lisää: Heksenwaagissa
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Millä uskomuksella noidan painoa arvioitiin?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vanha ja outo ajatus. Noitien punnitsemisen taustalla oli uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Punnitus perustui siis ajatukseen, että keveys paljastaisi epäillyn, ja Oudewaterin [[Heksenwaagissa]] punnitus tehtiin reilusti, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Tavallisen painoinen ihminen sai [[todistuksen]] siitä, ettei häntä katsottu noidaksi. Tästä ajattelusta on onneksi jo pitkä matka tähän päivään.
+KYSYMYS: Kerro lisää: todistuksen
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Milloin Oudewater sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Oudewater sai [[kaupunkioikeudet]] vuonna 1265, ja se sijaitsee Utrechtin maakunnassa Alankomaissa. Kaupungin nimi tunnetaan erityisesti Heksenwaagista, mutta kaupunkioikeuksien myöntämisen aikaan noitavaaka ei vielä ollut tunnettu, sillä se nousi esiin vasta 1500-luvun noitaoikeudenkäyntien aikana. Oudewater oli myös [[Utrechtin]] maakunnan kaupunki, jossa köyden valmistus kukoisti 1500- ja 1600-luvulla. Ja tämänkin minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: kaupunkioikeudet
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Milloin Oudewater sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Oudewater sai [[kaupunkioikeudet]] vuonna 1265, ja se sijaitsee Utrechtin maakunnassa Alankomaissa. Kaupungin nimi tunnetaan erityisesti Heksenwaagista, mutta kaupunkioikeuksien myöntämisen aikaan noitavaaka ei vielä ollut tunnettu, sillä se nousi esiin vasta 1500-luvun noitaoikeudenkäyntien aikana. Oudewater oli myös [[Utrechtin]] maakunnan kaupunki, jossa köyden valmistus kukoisti 1500- ja 1600-luvulla. Ja tämänkin minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Utrechtin
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — kohdekartta / Kohdekartta: Star Ferryn laituri] lauttayhtiö 1888, nykyinen laituri 2006 Star Ferryn päälinja kulkee Centralin ja Tsim Sha Tsuin välillä, ja Centralin laituri on kartan piste. Yhtiö perustettiin 1888 nimellä Kowloon Ferry Company ja sai nykyisen nimensä 1898. Kymmenessä vuodessa perustajan laivasto kasvoi neljään alukseen — Morning Star, Evening Star, Rising Star ja Guiding Star — joista kuhunkin mahtui sata matkustajaa ja jotka tekivät keskimäärin sataneljäkymmentäseitsemän ylitystä päivässä. Laituri on vaihtanut paikkaa monta kertaa, koska satamaa on täytetty. Salisbury Roadin päähän valmistui 1906 mahtava laituri, jossa oli erilliset osastot ensimmäiselle ja toiselle luokalle, mutta taifuuni tuhosi sen saman vuoden syys…
+- [Iso-Britannia — maalehti / Haaksirikko: Southampton 1912 — metri törmäyksestä] 10.4.1912 — Seitsemänvuotias Eva Hart nousee laivaan vanhempiensa kanssa, mutta hänen äitinsä Esther pelkää alusta niin paljon, ettei aio nukkua öisin koko matkan aikana. Matkustajat alkoivat saapua puoli kymmeneltä, kun Lontoon Waterloosta tullut laivajuna pysähtyi laiturille aivan Titanicin kylkeen; Southamptonista nousee kyytiin 920 matkustajaa, heistä 179 ensimmäiseen luokkaan, 247 toiseen ja 494 kolmanteen. Neitsytmatka alkaa keskipäivällä aikataulun mukaan — ja melkein päättyy heti, kun Titanicin syrjäyttämä vesi katkaisee kiinnitettynä makaavan New Yorkin köydet ja pienempi laiva kääntyy perä edellä sitä kohti. Kapteeni Smith käskee koneet täydelle taakse, hinaaja Vulcan saa köyden k…
+AIEMPI KYSYMYS: Mitä Oudewaterissa valmistettiin 1500- ja 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Oudewater oli 1500- ja 1600-luvulla tärkeä [[köyden]] valmistuskeskus. Köydet olivat aikansa kaupankäynnille ja laivaliikenteelle välttämätön tavara, ja kaupungissa toimii yhä [[köysimuseo]], joka muistuttaa tästä perinteestä. Oudewater on siis tunnettu kahdesta asiasta: noitavaa'asta ja köyden valmistuksesta. Tuli tästä vähän lyhyt vastaus, mutta kyyhkyn päähän mahtuu vain tämä.
+KYSYMYS: Kerro lisää: köyden
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Mitä Oudewaterissa valmistettiin 1500- ja 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Oudewater oli 1500- ja 1600-luvulla tärkeä [[köyden]] valmistuskeskus. Köydet olivat aikansa kaupankäynnille ja laivaliikenteelle välttämätön tavara, ja kaupungissa toimii yhä [[köysimuseo]], joka muistuttaa tästä perinteestä. Oudewater on siis tunnettu kahdesta asiasta: noitavaa'asta ja köyden valmistuksesta. Tuli tästä vähän lyhyt vastaus, mutta kyyhkyn päähän mahtuu vain tämä.
+KYSYMYS: Kerro lisää: köysimuseo
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudewater (historia)
+Tietoruudun teksti: Oudewater on kaupunki Utrechtin maakunnassa; se sai kaupunkioikeudet vuonna 1265. Kaupunki on kuuluisa Heksenwaagista eli noitavaa'asta: punnitusrakennus tuli tunnetuksi 1500-luvun noitaoikeudenkäyntien aikaan, koska syytetyille tarjottiin siellä reilu mahdollisuus todistaa syyttömyytensä, toisin kuin monin paikoin, joissa vaa'at oli vääristetty. Ihmisiä matkusti punnittavaksi kaikkialta Euroopasta, ja he saivat virallisen todistuksen, ettei heitä katsottu noidiksi. Taustalla oli vanha uskomus, että noidalla ei ole sielua ja hän painaa siksi selvästi tavallista ihmistä vähemmän. Oudewater oli 1500- ja 1600-luvulla myös tärkeä köyden valmistuskeskus, ja siellä on yhä köysimuseo.
+AIEMPI KYSYMYS: Millaisen todistuksen punnitus Oudewaterissa antoi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämän minä olen nähnyt paperilla. Punnituksen jälkeen ihminen sai virallisen todistuksen siitä, ettei häntä katsottu noidaksi. Todistus oli tärkeä, koska syytetty saattoi esittää sen omassa kotipaikassaan oikeudessa vastaan, kun häntä syytettiin noituudesta. Oudewaterin [[Heksenwaag]] veti puoleensa ihmisiä kaikkialta [[Euroopasta]], sillä siellä punnitus tehtiin reilusti. Tarkasta todistusten sanamuodosta en ole varma. Raskas aihe, mutta onneksi tämä kohta päättyi hyvin punnitulle.
+KYSYMYS: Kerro lisää: Heksenwaag
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+- [Alankomaat — maalehti / Historian hetki] Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.
+AIEMPI KYSYMYS: Miksi Kampenin vauraus hiipui?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä tiedän. Kampenin vauraus alkoi hiipua vuodesta 1430, kun [[IJssel]]-joki alkoi liettyä. Kaupunki oli kehittynyt yhdeksi Pohjois-Alankomaiden suurimmista kaupungeista kauppareitin varrella Zuiderzeen ja Reinin välillä, joten joen liettyminen heikensi sen asemaa kauppakaupunkina. Entinen [[hansakaupunki]] on silti säilyttänyt vanhan kaupunkinsa ja muurin jäänteitä. Kyllä siinä vähän haikeus tulee, kun joki vie vaurauden mukanaan.
+KYSYMYS: Kerro lisää: IJssel
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+AIEMPI KYSYMYS: Miksi Kampenin vauraus hiipui?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä tiedän. Kampenin vauraus alkoi hiipua vuodesta 1430, kun [[IJssel]]-joki alkoi liettyä. Kaupunki oli kehittynyt yhdeksi Pohjois-Alankomaiden suurimmista kaupungeista kauppareitin varrella Zuiderzeen ja Reinin välillä, joten joen liettyminen heikensi sen asemaa kauppakaupunkina. Entinen [[hansakaupunki]] on silti säilyttänyt vanhan kaupunkinsa ja muurin jäänteitä. Kyllä siinä vähän haikeus tulee, kun joki vie vaurauden mukanaan.
+KYSYMYS: Kerro lisää: hansakaupunki
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: E-valtio] Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai äänestää vaaleissa internetissä. Äänestäjä tunnistautuu sirullisella henkilökortilla, joka on pakollinen jokaiselle virolaiselle viidestätoista ikävuodesta alkaen. Vuoden 2023 parlamenttivaaleissa yli puolet äänistä annettiin verkossa. Sama kortti ei ole vain äänestyskortti: sillä haetaan resepti apteekista, allekirjoitetaan sopimus ja perustetaan yritys. Ja sitten on vielä yksi kerros. Joulukuun ensimmäisenä päivänä 2014 alkoi e-residenttiohjelma, joka antaa saman sirukortin myös ulkomaalaiselle, joka ei asu maassa lainkaan — hän voi allekirjoittaa asiakirjoja ja perustaa yrityksen käymättä koskaan paikalla. Se on sama vanha hansa-aj…
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Kuinka nopeasti Kampenin silta rakennettiin vuonna 1448?
+AIEMPI VASTAUS (Livia):
+Kas vaan, nopeaa työtä. Vuonna 1448 [[Hansa]] hyväksyi [[IJssel]]-joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Silta ylitti joen, jonka varrella Kampen sijaitsi, ja se palveli kaupunkia kauppareitin solmukohdassa. Viiden kuukauden rakennusaika on lyhyt aika näin suurelle hankkeelle. Minä en olisi kyllä jaksanut odottaa edes sitä.
+KYSYMYS: Kerro lisää: Hansa
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+AIEMPI KYSYMYS: Milloin Kampen liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kampen liittyi virallisesti [[Hansaan]] vuonna 1441, vaikka kaupunki oli saanut kaupunkioikeudet jo vuonna 1236. Hansa oli kauppakaupunkien liitto, ja Kampenin sijainti [[Zuiderzeen]] ja Reinin välisellä kauppareitillä teki siitä tärkeän jäsenen. Kaupungista kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Hansan päivistä on kyllä nyt pitkä aika, mutta muuri seisoo yhä.
+KYSYMYS: Kerro lisää: Hansaan
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Milloin Kampen liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kampen liittyi virallisesti [[Hansaan]] vuonna 1441, vaikka kaupunki oli saanut kaupunkioikeudet jo vuonna 1236. Hansa oli kauppakaupunkien liitto, ja Kampenin sijainti [[Zuiderzeen]] ja Reinin välisellä kauppareitillä teki siitä tärkeän jäsenen. Kaupungista kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Hansan päivistä on kyllä nyt pitkä aika, mutta muuri seisoo yhä.
+KYSYMYS: Kerro lisää: Zuiderzeen
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+AIEMPI KYSYMYS: Mikä on Koornmarktpoort?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kaupunginportti. Koornmarktpoort on 1300-luvulta peräisin oleva kaupunginportti Kampenin vanhassa kaupungissa. Se on yksi kolmesta jäljellä olevasta [[kaupunginportista]], jotka kuuluvat [[Kampenin]] vanhan kaupungin muurin jäänteisiin. Portit muistuttavat ajasta, jolloin kaupunki oli vauras hansakaupunki. Minä lensin siitä yli, mutta varmaan sen alta pääsee kävellen paremmin.
+KYSYMYS: Kerro lisää: kaupunginportista
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+AIEMPI KYSYMYS: Mikä on Koornmarktpoort?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kaupunginportti. Koornmarktpoort on 1300-luvulta peräisin oleva kaupunginportti Kampenin vanhassa kaupungissa. Se on yksi kolmesta jäljellä olevasta [[kaupunginportista]], jotka kuuluvat [[Kampenin]] vanhan kaupungin muurin jäänteisiin. Portit muistuttavat ajasta, jolloin kaupunki oli vauras hansakaupunki. Minä lensin siitä yli, mutta varmaan sen alta pääsee kävellen paremmin.
+KYSYMYS: Kerro lisää: Kampenin
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kampen (historia)
+Tietoruudun teksti: Kampen on entinen hansakaupunki Overijsselin maakunnassa IJssel-joen alajuoksulla. Kaupunki sai kaupunkioikeudet vuonna 1236 ja liittyi virallisesti Hansaan vuonna 1441; kauppareitin varrella Zuiderzeen ja Reinin välillä siitä kehittyi yksi Pohjois-Alankomaiden suurimmista kaupungeista 1300–1500-luvulla. Vuonna 1448 Hansa hyväksyi joen ylittävän sillan rakentamisen, ja hanke valmistui vain viidessä kuukaudessa. Kampenin vauraus alkoi kuitenkin hiipua vuodesta 1430, kun IJssel alkoi liettyä. Vanhassa kaupungissa on yhä muurin jäänteitä, joihin kuuluu kolme kaupunginporttia; yksi niistä on 1300-luvulta peräisin oleva Koornmarktpoort.
+AIEMPI KYSYMYS: Missä Kampen sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas, sijainti selviää kyllä. Kampen sijaitsee [[Overijsselin]] maakunnassa Alankomaissa, [[IJssel]]-joen alajuoksulla. Kaupunki on entinen hansakaupunki, ja sen asema oli tärkeä kauppareitillä Zuiderzeen ja Reinin välillä. Vanhassa kaupungissa on yhä muurin jäänteitä ja kolme kaupunginporttia. Ylhäältä katsottuna joki näyttää kyllä jotenkin paljon vähemmän dramaattiselta kuin historiassa.
+KYSYMYS: Kerro lisää: Overijsselin
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Horn — kaupunkilehti / Kap Horn: Nimi joka syntyi Hoornin kaupungista] Tammikuussa 1616 hollantilaiset Willem Schouten ja Jacob Le Maire purjehtivat Tulimaan itäpuolitse ja löysivät uuden salmen Magellaninsalmen eteläpuolelta. Retkikunnan rahoitti Le Maire vanhempi, entinen Itä-Intian kauppakomppanian johtaja, joka riitaantui yhtiön kanssa ja halusi avata sille uuden reitin ohi sen Magellaninsalmeen perustuvan kauppamonopolin. Uuden niemen miehet ristivät Kaap Hooniksi Schoutenin kotikaupungin Hoornin mukaan. Voitto jäi kuitenkin lyhytaikaiseksi: kauppakomppania ei tunnustanut uutta reittiä omakseen, vaan takavarikoi laivan ja pidätti Schoutenin palattua Jaavalle.
+AIEMPI KYSYMYS: Minkä mukaan Hornin niemi on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hornin niemi on nimetty [[Hoornin]] kaupungin mukaan. Vuonna 1616 hornilainen merenkulkija [[Willem Schouten]] kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan. Hoorn on [[Länsi-Friisin]] perinteinen pääkaupunki Pohjois-Hollannin maakunnassa. Niemi on siis kaukana kotoa, mutta nimi muistuttaa lähtösatamasta, ja sen minä ymmärrän.
+KYSYMYS: Kerro lisää: Hoornin
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Horn — kaupunkilehti / Kap Horn: Nimi joka syntyi Hoornin kaupungista] Tammikuussa 1616 hollantilaiset Willem Schouten ja Jacob Le Maire purjehtivat Tulimaan itäpuolitse ja löysivät uuden salmen Magellaninsalmen eteläpuolelta. Retkikunnan rahoitti Le Maire vanhempi, entinen Itä-Intian kauppakomppanian johtaja, joka riitaantui yhtiön kanssa ja halusi avata sille uuden reitin ohi sen Magellaninsalmeen perustuvan kauppamonopolin. Uuden niemen miehet ristivät Kaap Hooniksi Schoutenin kotikaupungin Hoornin mukaan. Voitto jäi kuitenkin lyhytaikaiseksi: kauppakomppania ei tunnustanut uutta reittiä omakseen, vaan takavarikoi laivan ja pidätti Schoutenin palattua Jaavalle.
+AIEMPI KYSYMYS: Minkä mukaan Hornin niemi on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hornin niemi on nimetty [[Hoornin]] kaupungin mukaan. Vuonna 1616 hornilainen merenkulkija [[Willem Schouten]] kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan. Hoorn on [[Länsi-Friisin]] perinteinen pääkaupunki Pohjois-Hollannin maakunnassa. Niemi on siis kaukana kotoa, mutta nimi muistuttaa lähtösatamasta, ja sen minä ymmärrän.
+KYSYMYS: Kerro lisää: Willem Schouten
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+AIEMPI KYSYMYS: Minkä mukaan Hornin niemi on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hornin niemi on nimetty [[Hoornin]] kaupungin mukaan. Vuonna 1616 hornilainen merenkulkija [[Willem Schouten]] kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan. Hoorn on [[Länsi-Friisin]] perinteinen pääkaupunki Pohjois-Hollannin maakunnassa. Niemi on siis kaukana kotoa, mutta nimi muistuttaa lähtösatamasta, ja sen minä ymmärrän.
+KYSYMYS: Kerro lisää: Länsi-Friisin
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kaupunkilehti / Historia: Kolme kylää ja kiistelty perustaja] Ennen kaupunkia joen rannalla oli kolme kylää: kalastajien Kalikata, kutojien Sutanuti ja kauppiaiden Gobindapur. Ne kuuluivat Sabarna Roy Choudhuryn suvun zamindari-tiluksiin. Englannin Itä-Intian kauppakomppania vakiinnutti kauppansa alueella 1690, ja kaupungin perustajaksi on perinteisesti mainittu komppanian kauppias Job Charnock — Kalkutan korkein oikeus kuitenkin totesi vuonna 2003 julkisen vetoomuksen johdosta, ettei kaupungilla ole yhtä perustajaa. Kylien tilukset myytiin komppanialle 1698. Nimi juontuu Kalikatasta, ja sen taustalla arvellaan olevan jumalatar Kalille pyhitetty kenttä.
+- [Mosambik — kaupunkilehti / Orjakauppa ja unohdettu pääkaupunki: Dhow'lla yli Intian valtameren] Tällaiset dhow-purjeveneet kuljettivat vuosisatojen ajan sekä kauppatavaraa että orjia Mosambikin saaren ja Intian valtameren rannikon välillä. Saaresta tuli 1500-luvulta lähtien yksi Itä-Afrikan vilkkaimmista orjakaupan solmukohdista: ihmisiä vietiin niin arabikauppiaiden reittejä kuin portugalilaisilla laivoilla Brasiliaan asti. Joulukuussa 1794 orjalaiva São José Paquete de Africa lastasi saarelta 512 orjaksi otettua ihmistä – laiva haaksirikkoutui jo Etelä-Afrikan rannikolla. Portugali kielsi orjakaupan lailla 1836, mutta orjuus itsessään lakkautettiin sen Afrikan-siirtomaissa vasta 1878, viisi vuotta isoisän vierailun jälkeen.
+AIEMPI KYSYMYS: Mikä yhtiö piti Hornissa toimipaikkaansa?
+AIEMPI VASTAUS (Livia):
+Ai tota, selvä juttu. Hornissa toimi yksi Hollannin [[Itä-Intian kauppakomppanian]] eli [[VOC:n]] kuudesta kamarista. Kaupunki kukoisti Alankomaiden kulta-aikana vauraana satamakaupunkina, ja sen kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Hoorn on Länsi-Friisin perinteinen pääkaupunki Pohjois-Hollannissa. Kyllä siinä mausteen tuoksu olisi kelvannut ylhäältäkin.
+KYSYMYS: Kerro lisää: Itä-Intian kauppakomppanian

@@ -1,0 +1,1041 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kohdekartta / Kohdekartta: Merenkulkumuseo] varastot 1652–1771, museo 1977 Merenkulkumuseo asuu VOC:n varastoissa. Ciliwungin länsirannan varastot rakennettiin vuosina 1652–1771, ja niissä säilytettiin muskottipähkinää, pippuria, kahvia, teetä ja kangasta ennen laivausta Aasian ja Euroopan satamiin. Neljästä länsipuolen rakennuksesta kolme on museona. Varastojen ja kaupunginmuurin väliin kertyi kuparia ja tinaa, ja metalleja suojasi sateelta puinen katos, joka oli kiinnitetty varastojen toiseen kerrokseen. Katosta käyttivät myös vartijat, koska muurin päällä kulkeva polku oli kapea. Katos on aikoja sitten purettu, mutta sitä kannattaneet isot rautakoukut ovat yhä seinässä. Museon edessä oleva muurinpätkä on kaikki, mitä Batavian 1600…
+- [Jakarta — kohdekartta / Kohdekartta: Jakartan katedraali] 1891–1901 Katolinen kirkko oli VOC:n Bataviassa kielletty, ja vasta kun Alankomaat siirtyi 1806 Napoleonin veljen Ludvigin hallintaan, kirkko sai toimia vapaasti Itä-Intiassa. Batavian ensimmäinen katolinen kirkko vihittiin 6. marraskuuta 1829 Weltevredenissä vanhaan kenraalin taloon ja nimettiin Neitsyt Marian taivaaseenottamiselle. Se kunnostettiin 1859 ja sortui 9. huhtikuuta 1890. Nykyinen kirkko rakennettiin sortuneen tilalle vuosina 1891–1901 uusgoottilaiseen tyyliin. Suunnittelijaksi nimitettiin jesuiittaisä Antonius Dijkmans, mutta työ pysähtyi rahapulaan; piispa Luypen keräsi varat Alankomaista, ja arkkitehti Marius Hulswit jatkoi työtä 1899. Hulswit yksinkertaisti suunnitelmaa nii…
+AIEMPI KYSYMYS: Mikä yhtiö piti Hornissa toimipaikkaansa?
+AIEMPI VASTAUS (Livia):
+Ai tota, selvä juttu. Hornissa toimi yksi Hollannin [[Itä-Intian kauppakomppanian]] eli [[VOC:n]] kuudesta kamarista. Kaupunki kukoisti Alankomaiden kulta-aikana vauraana satamakaupunkina, ja sen kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Hoorn on Länsi-Friisin perinteinen pääkaupunki Pohjois-Hollannissa. Kyllä siinä mausteen tuoksu olisi kelvannut ylhäältäkin.
+KYSYMYS: Kerro lisää: VOC:n
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kaupunkilehti / Historia: Kirkon paikalla nukketeatteri] Aukion länsipuolella olevan nukketeatterimuseon paikalla seisoi kirkko. Vanha hollantilainen kirkko rakennettiin 1640, kunnostettiin 1732 Uudeksi hollantilaiseksi kirkoksi ja tuhoutui maanjäristyksessä 1808. Kirkon pihamaalle haudattiin VOC:n kenraalikuvernööri Jan Pieterszoon Coen, ja hänen muistolaattansa on yhä museon sisällä. Nykyinen rakennus nousi 1912 kauppahuone Geo Wehry & Co:n varastoksi, ja siitä tuli Vanhan Batavian museo 1939. Wayang-museoksi se vihittiin 13. elokuuta 1975. Kokoelmassa on sekä jaavalaista nahkanukke- että sundalaista puunukketeatteria.
+AIEMPI KYSYMYS: Kuka perusti Bataavian?
+AIEMPI VASTAUS (Livia):
+Mmm— Batavia, sepä sattui. Hollannin Itä-Intian pääkaupungin perusti vuonna 1619 [[Jan Pieterszoon Coen]]. Hän aikoi nimetä kaupungin Uudeksi Horniksi, mutta siitä tuli Batavia. Nimeksi olisi siis tullut kunnianosoitus Coenin hornilaiselle taustalle ja kaupunkiin, jossa hän oli ollut Hollannin [[Itä-Intian kauppakomppanian]] palveluksessa. Muistin tämän ilman muistiinpanoja, ja se riittää tälle päivälle.
+KYSYMYS: Kerro lisää: Jan Pieterszoon Coen
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Neljäkymmentä kiloa pippuria banaaniviljelmältä] 1958– — Penjan laakso on vanhaa tulivuoren maata, ja siihen istutti pippurin Antoine Decré, jolla oli seudulla banaaniviljelmä. Ensimmäinen vientierä lähti maaliskuussa 1958: yksi neljänkymmenen kilon säkki valkopippuria. Nykyään poivre de Penja on suojattu maantieteellinen merkintä seitsemässätoista Afrikan OAPI-maassa ja lisäksi Euroopan unionissa — harvinaista afrikkalaiselle maataloustuotteelle. Michelin-kokit löysivät sen, ja toukokuussa 2016 kilosta maksettiin jopa 321 euroa. Samasta köynnöksestä saadaan vihreä, musta, valkoinen ja punainen pippuri; ero syntyy vain poimintahetkestä ja käsittelystä.
+- [Senegal — maalehti / Ruoka: Kahvi, jossa on pippuria] 1902 — Café Touba on kahvia, johon on paahdettu mukaan djar-maustetta eli guineanpippuria, joskus myös neilikkaa. Pavut ja mausteet jauhetaan yhdessä, ja juoma suodatetaan kuten tavallinen kahvi; seoksessa on noin kahdeksankymmentä prosenttia kahvia ja kaksikymmentä prosenttia maustetta. Nimi tulee Touban kaupungista, ja juoman toi Senegaliin muridien veljeskunnan perustaja Cheikh Amadou Bamba palatessaan maanpaosta Gabonista 1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja 2000-luvulla se on levinnyt kadunkulmiin uskonnosta riippumatta.
+AIEMPI KYSYMYS: Mitä mausteita Hornin kauppalaivat toivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: mausteet. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten [[pippuria]], [[muskottipähkinää]] ja neilikkaa. Hoorn oli Alankomaiden kulta-aikana vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian kuudesta kamarista, joten mausteet kuuluivat kaupungin vaurauden perustaan. Tarkempia määriä en tiedä. Pullaan niitä tosin ei ole koskaan liikaa laitettu.
+KYSYMYS: Kerro lisää: pippuria
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kohdekartta / Kohdekartta: Merenkulkumuseo] varastot 1652–1771, museo 1977 Merenkulkumuseo asuu VOC:n varastoissa. Ciliwungin länsirannan varastot rakennettiin vuosina 1652–1771, ja niissä säilytettiin muskottipähkinää, pippuria, kahvia, teetä ja kangasta ennen laivausta Aasian ja Euroopan satamiin. Neljästä länsipuolen rakennuksesta kolme on museona. Varastojen ja kaupunginmuurin väliin kertyi kuparia ja tinaa, ja metalleja suojasi sateelta puinen katos, joka oli kiinnitetty varastojen toiseen kerrokseen. Katosta käyttivät myös vartijat, koska muurin päällä kulkeva polku oli kapea. Katos on aikoja sitten purettu, mutta sitä kannattaneet isot rautakoukut ovat yhä seinässä. Museon edessä oleva muurinpätkä on kaikki, mitä Batavian 1600…
+AIEMPI KYSYMYS: Mitä mausteita Hornin kauppalaivat toivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: mausteet. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten [[pippuria]], [[muskottipähkinää]] ja neilikkaa. Hoorn oli Alankomaiden kulta-aikana vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian kuudesta kamarista, joten mausteet kuuluivat kaupungin vaurauden perustaan. Tarkempia määriä en tiedä. Pullaan niitä tosin ei ole koskaan liikaa laitettu.
+KYSYMYS: Kerro lisää: muskottipähkinää
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+AIEMPI KYSYMYS: Kuka oli Willem Schouten?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys tuo. Willem Schouten oli hornilainen merenkulkija, joka kiersi vuonna 1616 Etelä-Amerikan eteläisimmän kärjen. Hän nimesi kärjen kotikaupunkinsa mukaan, ja siksi Hornin niemi on saanut nimensä [[Hoornista]]. Hoorn oli Alankomaiden [[kulta-aikana]] vauras satamakaupunki, ja sen asema Hollannin Itä-Intian kauppakomppanian kamarin kotikaupunkina näkyi merenkulun osaamisessa. Muuta Schoutenin elämästä en ole varma. Tällaisen miehen taakse kyyhkyn on helppo asettua.
+KYSYMYS: Kerro lisää: Hoornista
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoorn (historia)
+Tietoruudun teksti: Hoorn on kaupunki Luoteis-Alankomaissa Pohjois-Hollannin maakunnassa, ja se on Länsi-Friisin perinteinen pääkaupunki. Kaupunki sai kaupunkioikeudet vuonna 1357 ja kukoisti Alankomaiden kulta-aikana, kun siitä kehittyi vauras satamakaupunki ja yksi Hollannin Itä-Intian kauppakomppanian (VOC) kuudesta kamarista. Hornin kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Vuonna 1619 Jan Pieterszoon Coen perusti Hollannin Itä-Intian pääkaupungin, jonka hän aikoi nimetä Uudeksi Horniksi mutta josta tuli Batavia. Vuonna 1616 hornilainen merenkulkija Willem Schouten kiersi Etelä-Amerikan eteläisimmän kärjen ja nimesi sen kotikaupunkinsa mukaan: Hornin niemi on saanut nimensä Hoornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Historia: Kultainen sulttaani ja retki Nigerille] 1590–1591 — Taistelun voittajaksi jäi Ahmad al-Mansur, jota kutsuttiin nimellä al-Dhahabī, kultainen. Lunnasrahoilla hän rakensi Marrakechiin El Badin palatsin, jonka työ alkoi jo joulukuussa 1578 ja kesti viisitoista vuotta. Kultaa hän halusi lisää, ja se oli Saharan takana: 16. lokakuuta 1590 lähti aavikon yli neljäntuhannen miehen armeija, jota johti espanjalaissyntyinen Judar Pasha. Tondibin taistelussa songhailaisia oli nelinkymmentätuhatta, mutta heillä ei ollut ruutiaseita. Marokkolaiset ryöstivät Timbuktun, Djennén ja pääkaupunki Gaon — ja huomasivat, ettei Saharan takaista valtakuntaa voi hallita. Kaupungit menetettiin pian vuoden 1620 jälkeen.
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Kuka oli Willem Schouten?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys tuo. Willem Schouten oli hornilainen merenkulkija, joka kiersi vuonna 1616 Etelä-Amerikan eteläisimmän kärjen. Hän nimesi kärjen kotikaupunkinsa mukaan, ja siksi Hornin niemi on saanut nimensä [[Hoornista]]. Hoorn oli Alankomaiden [[kulta-aikana]] vauras satamakaupunki, ja sen asema Hollannin Itä-Intian kauppakomppanian kamarin kotikaupunkina näkyi merenkulun osaamisessa. Muuta Schoutenin elämästä en ole varma. Tällaisen miehen taakse kyyhkyn on helppo asettua.
+KYSYMYS: Kerro lisää: kulta-aikana
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [New York — kohdekartta / Kohdekartta: Trinity Church] 1839–1846 Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui 1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, jossa George Washington kävi jumalanpalveluksessa virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, kun talven 1838–1839 lumet olivat heikentäneet sen rakenteita. Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin helatorstaina 1. toukokuuta 1846. Torni ristiineen y…
+AIEMPI KYSYMYS: Kenelle Het Loon palatsi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Het Loon palatsi valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle [[Vilhelm III:lle]] ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä [[Englantia]], Irlantia ja Skotlantia. Symmetrisen hollantilaisbarokkisen rakennuksen rakennutti Oranian-Nassaun suku Apeldoornissa. Vuodesta 1984 palatsi on ollut valtion museo. Kyllä siinä olisi ollut kaiteella hyvä istua.
+KYSYMYS: Kerro lisää: Vilhelm III:lle
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Andesin yliopisto] 1948 Yliopiston perusti 1948 joukko kolumbialaisia älymystön edustajia Mario Laserna Pinzónin johdolla, ja se oli maan ensimmäinen yliopisto, joka perustettiin tunnustuksettomana: riippumattomaksi sekä puolueista että kirkosta. Perustamisen taustalla oli maan teollistuminen ja koulutetun työvoiman puute — opetusministeri Germán Arciniegas kertoi kongressille 1946, että maasta puuttuu insinöörejä, arkkitehteja, lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, perustajat pitivät sitä parhaana perusteluna yliopiston perustamiselle. Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä opiskelijalla. Malli otettiin yhdysvaltalaisesta …
+- [Sansibar — kohdekartta / Kohdekartta: Sansibarin valtionyliopisto] 1999 Sansibarin edustajainhuone perusti valtionyliopiston lailla 1999, ja toiminta alkoi 2002. Yliopisto on julkinen, ja sen pääkampus on Tunguussa saaren keskiosassa; Kivikaupungin laidalla on sen kaupunkikampus. Yliopistossa on swahilin ja vieraiden kielten koulu, täydennyskoulutuksen koulu, kasvatustieteiden koulu sekä luonnon- ja yhteiskuntatieteiden koulu. Kieli-instituutti on opettanut vuosia swahilia, arabiaa, englantia, espanjaa, portugalia, ranskaa ja saksaa, ja se opettaa swahilia ulkomaisille opiskelijoille eri puolilta maailmaa. Kasvatustieteiden puoli kouluttaa opettajia, joita saarilla tarvitaan. Sansibarin osuus swahilin kielessä on suurempi kuin saarten koko antaisi olettaa.…
+AIEMPI KYSYMYS: Kenelle Het Loon palatsi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Het Loon palatsi valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle [[Vilhelm III:lle]] ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä [[Englantia]], Irlantia ja Skotlantia. Symmetrisen hollantilaisbarokkisen rakennuksen rakennutti Oranian-Nassaun suku Apeldoornissa. Vuodesta 1984 palatsi on ollut valtion museo. Kyllä siinä olisi ollut kaiteella hyvä istua.
+KYSYMYS: Kerro lisää: Englantia
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [San Ambrosio — kaupunkilehti / Linnut maailman reunalla: Oma haukka kalliojyrkänteillä] San Ambrosiolla elää amerikantuulihaukan (Falco sparverius) oma alalajinsa, jota ei tavata missään muualla maailmassa. Tutkijat ovat kuvanneet sen erilliseksi Desventuradas-saarten omaksi muodoksi, kun taas kauempana etelässä Juan Fernándezin saarilla elää jälleen oma, tästä erillinen pienen haukan alalajinsa. Kummankin saariryhmän pitkä eristyneisyys on siis synnyttänyt oman linnun aivan itsenäisesti. San Ambrosion haukka pesii saaren jyrkillä kallioseinämillä ja saalistaa lähinnä hyönteisiä ja pieniä lintuja, sillä muuta maaselkärankaisravintoa saarelta ei juuri löydy.
+AIEMPI KYSYMYS: Mitä Royal Loo Hawking Club teki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Royal Loo Hawking Club oli [[haukkametsästykseen]] keskittynyt seura. Kuningas [[Vilhelm I]] salli 1800-luvun alussa haukkametsästyksen elvyttämisen Het Loon palatsin alueella, ja hänen pojanpoikansa liittyivät seuraan. Haukkametsästys on lajina vanha, ja sitä harjoitettiin palatsin alueella aatelisen vapaa-ajan harrastuksena. Haukkoja minä en kyllä ole koskaan kovin lämpimästi ajatellut.
+KYSYMYS: Kerro lisää: haukkametsästykseen
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [New York — kohdekartta / Kohdekartta: Trinity Church] 1839–1846 Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui 1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, jossa George Washington kävi jumalanpalveluksessa virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, kun talven 1838–1839 lumet olivat heikentäneet sen rakenteita. Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin helatorstaina 1. toukokuuta 1846. Torni ristiineen y…
+AIEMPI KYSYMYS: Mitä Royal Loo Hawking Club teki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Royal Loo Hawking Club oli [[haukkametsästykseen]] keskittynyt seura. Kuningas [[Vilhelm I]] salli 1800-luvun alussa haukkametsästyksen elvyttämisen Het Loon palatsin alueella, ja hänen pojanpoikansa liittyivät seuraan. Haukkametsästys on lajina vanha, ja sitä harjoitettiin palatsin alueella aatelisen vapaa-ajan harrastuksena. Haukkoja minä en kyllä ole koskaan kovin lämpimästi ajatellut.
+KYSYMYS: Kerro lisää: Vilhelm I
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Empire State Building] 1930–1931 Tontilla seisoi Waldorf–Astoria. Astorin suku oli omistanut paikan 1820-luvulta, ja William Waldorf Astor avasi siihen 1893 Waldorf-hotellin; neljä vuotta myöhemmin serkku John Jacob Astor IV rakensi viereen 16-kerroksisen Astorian. Yhdessä niissä oli 1 300 vuodetta, mikä teki talosta aikansa maailman suurimman hotellin. Kun seurapiirielämä siirtyi pohjoisemmas, suku myi tontin 1928 ja hotelli suljettiin 3. toukokuuta 1929. Uuden omistajayhtiön Empire State Inc:n takana olivat muun muassa John J. Raskob ja du Pontin suku, ja johtoon tuli entinen New Yorkin kuvernööri Alfred E. Smith. Tavoite oli maailman korkein rakennus, ja koska Chrysler Building nousi samaan aikaan, piirustukse…
+- [Chicago — kohdekartta / Kohdekartta: Marquette Building] 1895 Talo on nimetty jesuiittapappi Jacques Marquetten mukaan, joka tutki Chicagon seutua 1674 ja vietti talven 1674–1675 alueella. Rakennuksen piirsivät William Holabird ja Martin Roche, ja se valmistui 1895 kuusitoistakerroksisena. Julkisivu oli alun perin punertavaa terrakottaa, joka mustui vuosikymmenien Loop-noesta ennen kunnostusta. 1930-luvulla talo oli yli kolmenkymmenen rautatieyhtiön keskustakonttori. Sisäänkäynnin ja aulan koristelu on kokonaan omistettu Marquetten retkelle. Pääoven yllä on kuvanveistäjä Hermon Atkins MacNeilin neljä pronssista reliefiä, jotka kertovat matkan vaiheita Suurten järvien seudulla ja päättyvät hautajaisiin. Pyöröoven paneeleihin on veistetty pantterin…
+AIEMPI KYSYMYS: Ketkä suunnittelivat Het Loon palatsin ja puutarhan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, nimiä tulee. Rakennuksen suunnittelivat [[Jacob Roman]] ja Johan van Swieten, ja puutarhan suunnitteli [[Claude Desgots]]. Palatsi valmistui vuosina 1684–1686 Vilhelm III:lle ja hänen puolisolleen Maria II:lle. Palatsi edustaa symmetristä hollantilaisbarokkia, ja [[Het Loon]] puutarha kuului samaan kokonaisuuteen. Pitkä nimiluettelo, mutta kyyhkyn muisti kesti.
+KYSYMYS: Kerro lisää: Jacob Roman
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+AIEMPI KYSYMYS: Ketkä suunnittelivat Het Loon palatsin ja puutarhan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, nimiä tulee. Rakennuksen suunnittelivat [[Jacob Roman]] ja Johan van Swieten, ja puutarhan suunnitteli [[Claude Desgots]]. Palatsi valmistui vuosina 1684–1686 Vilhelm III:lle ja hänen puolisolleen Maria II:lle. Palatsi edustaa symmetristä hollantilaisbarokkia, ja [[Het Loon]] puutarha kuului samaan kokonaisuuteen. Pitkä nimiluettelo, mutta kyyhkyn muisti kesti.
+KYSYMYS: Kerro lisää: Claude Desgots
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+AIEMPI KYSYMYS: Ketkä suunnittelivat Het Loon palatsin ja puutarhan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, nimiä tulee. Rakennuksen suunnittelivat [[Jacob Roman]] ja Johan van Swieten, ja puutarhan suunnitteli [[Claude Desgots]]. Palatsi valmistui vuosina 1684–1686 Vilhelm III:lle ja hänen puolisolleen Maria II:lle. Palatsi edustaa symmetristä hollantilaisbarokkia, ja [[Het Loon]] puutarha kuului samaan kokonaisuuteen. Pitkä nimiluettelo, mutta kyyhkyn muisti kesti.
+KYSYMYS: Kerro lisää: Het Loon
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Milloin Het Loon palatsista tuli museo?
+AIEMPI VASTAUS (Livia):
+Tuota niin, vastaus on lyhyt. Vuodesta 1984 Het Loon palatsi on ollut valtion [[museo]]. Palatsi rakennettiin alun perin [[Oranian-Nassaun]] suvun käyttöön, ja se sijaitsee Apeldoornissa. Museona rakennus on avoinna vierailijoille. Sisällä liikkuu varmasti hiljaisemmin kuin ulkona.
+KYSYMYS: Kerro lisää: museo
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Hyväntoivonlinnoitus] 1666 Hyväntoivonlinnoitus on Etelä-Afrikan vanhin säilynyt rakennus. Hollantilainen Itä-Intian kauppakomppania rakensi sen vuosina 1666–1679 korvaamaan Jan van Riebeeckin savesta ja puusta tehdyn linnakkeen. Ensimmäinen kivi laskettiin 2. tammikuuta 1666. Viisikulmaisen linnoituksen bastionit nimettiin 26. huhtikuuta 1679 Oranian Vilhelm III:n arvonimien mukaan: Leerdam, Buuren, Katzenellenbogen, Nassau ja Oranje. Linnoitus rakennettiin osittain orjatyöllä. Yhtiö ei orjuuttanut paikallisia, koska se pelkäsi kapinaa eikä tiennyt, kuinka suuria seudun kansat olivat; sen sijaan Kapiin tuotiin jopa kuusikymmentätuhatta orjuutettua ihmistä Madagaskarilta, Mosambikista, Hollannin Itä-Intiasta ja …
+AIEMPI KYSYMYS: Milloin Het Loon palatsista tuli museo?
+AIEMPI VASTAUS (Livia):
+Tuota niin, vastaus on lyhyt. Vuodesta 1984 Het Loon palatsi on ollut valtion [[museo]]. Palatsi rakennettiin alun perin [[Oranian-Nassaun]] suvun käyttöön, ja se sijaitsee Apeldoornissa. Museona rakennus on avoinna vierailijoille. Sisällä liikkuu varmasti hiljaisemmin kuin ulkona.
+KYSYMYS: Kerro lisää: Oranian-Nassaun
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Het Loon palatsi (historia)
+Tietoruudun teksti: Het Loon palatsi on Apeldoornissa sijaitseva Oranian-Nassaun suvun rakennuttama barokkipalatsi. Symmetrinen hollantilaisbarokkinen rakennus valmistui vuosina 1684–1686 Alankomaiden käskynhaltijalle Vilhelm III:lle ja hänen puolisolleen Maria II:lle, jotka hallitsivat yhdessä Englantia, Irlantia ja Skotlantia; rakennuksen suunnittelivat Jacob Roman ja Johan van Swieten ja puutarhan Claude Desgots. Kuningas Vilhelm I piti paikasta kovasti ja salli 1800-luvun alussa haukkametsästyksen elvyttämisen palatsin alueella, ja hänen pojanpoikansa liittyivät Royal Loo Hawking Clubiin. Vilhelm III vietti palatsissa mielellään aikaansa maalaisherrana ja kuoli siellä marraskuussa 1890. Vuodesta 1984 palatsi on ollut valtion museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Bali: Nuori Hollanti] Neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – oli lähtenyt Amsterdamista huhtikuussa 1595 etsimään suoraa merireittiä mausteiden lähteille. Matka oli täynnä onnettomuuksia, mutta helmikuussa 1597 laivueen komentaja Cornelis de Houtman saapui Balille ja tapasi saaren kuninkaan. Houtman ihastui näkemäänsä niin, että hän kutsui saarta leikillään "Nuoreksi Hollanniksi". Elokuussa 1597 laivue jatkoi matkaa mukanaan pippuria, muskottia ja maceta, mutta ensikosketus oli tehty: se avasi tien hollantilaiselle mausteikaupalle ja lopulta koko Itä-Intian siirtomaavallalle.
+AIEMPI KYSYMYS: Millaista tyyliä Het Loo edustaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, rakennus on helppo tunnistaa. Het Loo edustaa symmetristä [[hollantilaisbarokkia]]. Palatsi valmistui vuosina 1684–1686, ja sen rakennutti [[Oranian-Nassaun]] suku. Barokkiin kuuluu usein järjestys ja kauniit mittasuhteet, ja se näkyy myös tässä symmetrisessä rakennuksessa. Puutarhan suunnitteli Claude Desgots. Ylhäältä katsottuna symmetria on kyllä erityisen kaunista.
+KYSYMYS: Kerro lisää: hollantilaisbarokkia
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Kuinka pitkä Borgerin hunebed D27 on?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on tarkka luku. Borgerin hunebed D27 on 22,5 metriä pitkä. Se on Alankomaiden suurin [[hunebed]] eli kivinen [[jättiläishauta]], ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Haudalla on oma museonsa Borgerin kylässä Drenthessä. Mittaa en lähtenyt tarkistamaan siivenkärjellä.
+KYSYMYS: Kerro lisää: hunebed
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Kuinka pitkä Borgerin hunebed D27 on?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on tarkka luku. Borgerin hunebed D27 on 22,5 metriä pitkä. Se on Alankomaiden suurin [[hunebed]] eli kivinen [[jättiläishauta]], ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Haudalla on oma museonsa Borgerin kylässä Drenthessä. Mittaa en lähtenyt tarkistamaan siivenkärjellä.
+KYSYMYS: Kerro lisää: jättiläishauta
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Mitä vuoden 1984 löydöt paljastivat hunebedin iästä?
+AIEMPI VASTAUS (Livia):
+Ai tota, yllätys se oli. Vuonna 1984 paikallinen nuori löysi saviastian palasia ja luita, jotka ajoittuivat yllättäen [[pronssikaudelle]], paljon odotettua myöhemmäksi. Löytö osoitti, että [[Borgerin]] hunebediä oli käytetty vielä pronssikaudella. Kivinen jättiläishauta oli siis pitkäikäinen paikka. Ihan ikuisuudelta se kuulostaa, ja siltä se onkin tuntunut.
+KYSYMYS: Kerro lisää: pronssikaudelle
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Mitä vuoden 1984 löydöt paljastivat hunebedin iästä?
+AIEMPI VASTAUS (Livia):
+Ai tota, yllätys se oli. Vuonna 1984 paikallinen nuori löysi saviastian palasia ja luita, jotka ajoittuivat yllättäen [[pronssikaudelle]], paljon odotettua myöhemmäksi. Löytö osoitti, että [[Borgerin]] hunebediä oli käytetty vielä pronssikaudella. Kivinen jättiläishauta oli siis pitkäikäinen paikka. Ihan ikuisuudelta se kuulostaa, ja siltä se onkin tuntunut.
+KYSYMYS: Kerro lisää: Borgerin
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Mitä Titia Brongersma löysi hunebedistä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tässä on surullinen käänne. Vuonna 1865 [[Titia Brongersma]] teki hautaan [[amatöörikaivauksen]] ja löysi saviastioita ja luita. Yksikään löytö ei kuitenkaan ole säilynyt. Myöhemmin, vuonna 1984, haudasta löydettiin lisää saviastian palasia ja luita, jotka ajoittuivat pronssikaudelle. Tarkempia tietoja kaivauksesta en tiedä, ja se harmittaa jo hieman.
+KYSYMYS: Kerro lisää: Titia Brongersma
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Mitä Titia Brongersma löysi hunebedistä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tässä on surullinen käänne. Vuonna 1865 [[Titia Brongersma]] teki hautaan [[amatöörikaivauksen]] ja löysi saviastioita ja luita. Yksikään löytö ei kuitenkaan ole säilynyt. Myöhemmin, vuonna 1984, haudasta löydettiin lisää saviastian palasia ja luita, jotka ajoittuivat pronssikaudelle. Tarkempia tietoja kaivauksesta en tiedä, ja se harmittaa jo hieman.
+KYSYMYS: Kerro lisää: amatöörikaivauksen
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Missä Borger sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas, kartalta tämä löytyy. Borger on kylä [[Drenthen]] maakunnassa Alankomaissa, noin 18 kilometriä [[Assenista]] itään. Kylässä on Alankomaiden suurin hunebed, D27, jolla on oma museonsa. Drenthe on maakunta Alankomaiden koillisosassa. Ylhäältä katsottuna Borger on pieni, mutta kivet tekevät siitä tunnetun.
+KYSYMYS: Kerro lisää: Drenthen
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Missä Borger sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas, kartalta tämä löytyy. Borger on kylä [[Drenthen]] maakunnassa Alankomaissa, noin 18 kilometriä [[Assenista]] itään. Kylässä on Alankomaiden suurin hunebed, D27, jolla on oma museonsa. Drenthe on maakunta Alankomaiden koillisosassa. Ylhäältä katsottuna Borger on pieni, mutta kivet tekevät siitä tunnetun.
+KYSYMYS: Kerro lisää: Assenista
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borger (historia)
+Tietoruudun teksti: Borger on kylä Drenthen maakunnassa Alankomaissa, noin 18 kilometriä Assenista itään. Kylässä on Alankomaiden suurin hunebed eli kivinen jättiläishauta, D27, jolla on oma museonsa. Hunebed on 22,5 metriä pitkä, ja siinä on yhdeksän kansikiveä, 26 sivukiveä ja kaksi lukkokiveä. Vuonna 1865 Titia Brongersma teki hautaan amatöörikaivauksen ja löysi saviastioita ja luita, mutta yksikään löytö ei ole säilynyt. Vuonna 1984 paikallinen nuori löysi lisää saviastian palasia ja luita, jotka ajoittuivat yllättäen pronssikaudelle, paljon odotettua myöhemmäksi.
+AIEMPI KYSYMYS: Mistä kivistä Borgerin hunebed on rakennettu?
+AIEMPI VASTAUS (Livia):
+Hmm, kivet ovat tässä pääosassa. [[Hunebed]] D27:ssä on yhdeksän [[kansikiveä]], 26 sivukiveä ja kaksi lukkokiveä. Rakennelma on 22,5 metriä pitkä, ja se on Alankomaiden suurin [[jättiläishauta]]. Kivien alkuperästä en ole varma, enkä halua arvata. Kyllä nuo kivet jaksavat seistä paremmin kuin minä jaksan lentää.
+KYSYMYS: Kerro lisää: kansikiveä
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Miksi rautatie ohitti Elburgin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä muistan, koska se on vähän hassu juttu. Elburgin kaupunki kieltäytyi vuonna 1863 käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta. Niinpä [[Utrechtin]], [[Amersfoortin]] ja [[Zwollen]] välinen rata ohitti kaupungin, ja Elburg jäi ilman asemaa. Vuosiluvut minä muistan, kunhan joku on ne kirjoittanut ylös.
+KYSYMYS: Kerro lisää: Utrechtin
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Miksi rautatie ohitti Elburgin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä muistan, koska se on vähän hassu juttu. Elburgin kaupunki kieltäytyi vuonna 1863 käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta. Niinpä [[Utrechtin]], [[Amersfoortin]] ja [[Zwollen]] välinen rata ohitti kaupungin, ja Elburg jäi ilman asemaa. Vuosiluvut minä muistan, kunhan joku on ne kirjoittanut ylös.
+KYSYMYS: Kerro lisää: Amersfoortin
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Miksi rautatie ohitti Elburgin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä muistan, koska se on vähän hassu juttu. Elburgin kaupunki kieltäytyi vuonna 1863 käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta. Niinpä [[Utrechtin]], [[Amersfoortin]] ja [[Zwollen]] välinen rata ohitti kaupungin, ja Elburg jäi ilman asemaa. Vuosiluvut minä muistan, kunhan joku on ne kirjoittanut ylös.
+KYSYMYS: Kerro lisää: Zwollen
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Historia] Tyhjästä pellosta tuli kahdessa vuodessa muurein, vallihaudoin ja kultakärkisin tornein varustettu kuninkaankaupunki. Kaksikymmentäkuusi vuotta myöhemmin kuningaskunta oli mennyttä.
+AIEMPI KYSYMYS: Mikä Elburgissa on erikoista kaupunkisuunnittelun kannalta?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kiva kysymys. Elburg rakennettiin vuosina 1392–1396 uudelleen nopeasti [[vallihaudoin]], kaupunginmuurein ja [[ruudukkokaavaisin]] katuverkoin, jolloin kadut risteävät suorakulmaisesti. Se erottaa kaupungin monista keskiaikaisista kaupungeista, joiden kadut ovat usein kasvaneet mutkitellen vanhan asutuksen mukaan. Rakennustapa osoittaa, että kaupunki oli keskiajalla varakas. Ylhäältä se näyttää melkein piirretyltä.
+KYSYMYS: Kerro lisää: vallihaudoin
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Mikä Elburgissa on erikoista kaupunkisuunnittelun kannalta?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kiva kysymys. Elburg rakennettiin vuosina 1392–1396 uudelleen nopeasti [[vallihaudoin]], kaupunginmuurein ja [[ruudukkokaavaisin]] katuverkoin, jolloin kadut risteävät suorakulmaisesti. Se erottaa kaupungin monista keskiaikaisista kaupungeista, joiden kadut ovat usein kasvaneet mutkitellen vanhan asutuksen mukaan. Rakennustapa osoittaa, että kaupunki oli keskiajalla varakas. Ylhäältä se näyttää melkein piirretyltä.
+KYSYMYS: Kerro lisää: ruudukkokaavaisin
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Milloin Elburg liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on helppo. Elburg, joka sijaitsee [[Gelderlandin]] maakunnassa, liittyi Hansaan vuonna 1367. Hansa oli Pohjois-Euroopan [[kauppakaupunkien]] liitto, ja jäsenyys edisti kaupungin kauppaa. Vanhin säilynyt kirjallinen maininta Elburgista on jo vuodelta 796. Hansa-vuoden muistan, vaikka en ole mikään arkistokyyhky.
+KYSYMYS: Kerro lisää: Gelderlandin
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Milloin Elburg liittyi Hansaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on helppo. Elburg, joka sijaitsee [[Gelderlandin]] maakunnassa, liittyi Hansaan vuonna 1367. Hansa oli Pohjois-Euroopan [[kauppakaupunkien]] liitto, ja jäsenyys edisti kaupungin kauppaa. Vanhin säilynyt kirjallinen maininta Elburgista on jo vuodelta 796. Hansa-vuoden muistan, vaikka en ole mikään arkistokyyhky.
+KYSYMYS: Kerro lisää: kauppakaupunkien
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — maalehti / Luonto: Vaaleanpunainen delfiini, jonka väri on verta] 1637– — Seikkailija Peter Mundy kirjasi vuonna 1637 Hongkongin luota Helmijoen läheltä valkoisen delfiinin — ensimmäinen englanniksi tehty kuvaus lajista. Aikuinen on harmaa, valkoinen tai vaaleanpunainen, mutta väri ei tule väriaineesta: se tulee ihon alta verisuonista, jotka ovat kehittyneet ylisuuriksi lämmönsäätelyä varten. Poikaset syntyvät tummanharmaina ja vaalenevat vasta vuosien mittaan. Aikuinen on 2–3,5 metriä pitkä, painaa 150–230 kiloa ja voi elää neljäkymmentä vuotta; ikä lasketaan hampaista. Suistoon delfiinit hakeutuvat murtoveden takia.
+AIEMPI KYSYMYS: Mitä Zuiderzeen sulkeminen vuonna 1932 muutti?
+AIEMPI VASTAUS (Livia):
+No niin, tästä sain kuulla jo katolla. Zuiderzeen sulkeminen vuonna 1932 muutti [[murtoveden]] makeaksi. Elburg oli elänyt [[kalastuksella]] ja [[maanviljelyllä]], ja kaupunki menetti kalastuksensa tämän muutoksen jälkeen. Muutos vaikutti siis suoraan kaupungin elinkeinoon. Kalastajat jäivät rannalle kämmenet tyhjinä.
+KYSYMYS: Kerro lisää: murtoveden
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kohdekartta / Kohdekartta: Ragged Ass Road] 1970 Old Townissa on noin sadanviidenkymmenen metrin mittainen päällystämätön asuinkatu, jota on kutsuttu yhdeksi Kanadan kuuluisimmista. Nimi tarkoittaa suunnilleen "riekaleiskatu" ja on peräisin sanonnasta, jolla kuvataan täysin rahatonta ihmistä. Sitä ennen katu tunnettiin nimellä Privy Road eli huussitie, koska sen varrella oli paljon ulkohuusseja. Nimi syntyi vitsinä vuoden 1970 lopulla. Kadun yhdeksästä tontista kuusi omisti Lou Rocher, joka elätti itsensä polttopuulla, kalastuksella ja ennen kaikkea malminetsinnällä. Huonon etsintäkauden jälkeen hän totesi ystävineen olevansa täysin rahaton — ja he pystyttivät kyltin samana yönä. Poikansa mukaan Rocher katsoi voivansa nimetä kadun, k…
+AIEMPI KYSYMYS: Mitä Zuiderzeen sulkeminen vuonna 1932 muutti?
+AIEMPI VASTAUS (Livia):
+No niin, tästä sain kuulla jo katolla. Zuiderzeen sulkeminen vuonna 1932 muutti [[murtoveden]] makeaksi. Elburg oli elänyt [[kalastuksella]] ja [[maanviljelyllä]], ja kaupunki menetti kalastuksensa tämän muutoksen jälkeen. Muutos vaikutti siis suoraan kaupungin elinkeinoon. Kalastajat jäivät rannalle kämmenet tyhjinä.
+KYSYMYS: Kerro lisää: kalastuksella
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+AIEMPI KYSYMYS: Mitä Zuiderzeen sulkeminen vuonna 1932 muutti?
+AIEMPI VASTAUS (Livia):
+No niin, tästä sain kuulla jo katolla. Zuiderzeen sulkeminen vuonna 1932 muutti [[murtoveden]] makeaksi. Elburg oli elänyt [[kalastuksella]] ja [[maanviljelyllä]], ja kaupunki menetti kalastuksensa tämän muutoksen jälkeen. Muutos vaikutti siis suoraan kaupungin elinkeinoon. Kalastajat jäivät rannalle kämmenet tyhjinä.
+KYSYMYS: Kerro lisää: maanviljelyllä
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä oli Hansa?
+AIEMPI VASTAUS (Livia):
+Mmm— vanha liitto, hyvä kysymys. Hansa oli keskiajan ja uuden ajan alun Pohjois-Euroopan kauppakaupunkien ja kauppiaiden liitto, joka edisti jäsentensä kauppaa [[Pohjanmeren]] ja [[Itämeren]] alueella. Sen jäseniä olivat monet saksalaiset kaupungit, ja mukana oli myös hollantilaisia kaupunkeja, kuten Elburg, joka liittyi siihen vuonna 1367. Kauppa kulkee, kuten kirjeetkin.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elburg (historia)
+Tietoruudun teksti: Elburg on kaupunki Gelderlandin maakunnassa Alankomaissa. Vanhin säilynyt kirjallinen maininta on vuodelta 796, ja kaupunki liittyi Hansaan vuonna 1367. Vuosina 1392–1396 Elburg rakennettiin uudelleen nopeasti vallihaudoin, kaupunginmuurein ja ruudukkokaavaisin katuverkoin, mikä osoittaa sen olleen keskiajalla varakas. Vuonna 1863 kaupunki kieltäytyi käyttämästä varojaan rautatieaseman rakentamiseen, koska maanomistajat pyysivät kohtuuttomia hintoja radan alta, ja Utrechtin, Amersfoortin ja Zwollen välinen rata ohitti sen. Kalastuksella ja maanviljelyllä elänyt kaupunki menetti kalastuksensa, kun Zuiderzeen sulkeminen vuonna 1932 muutti murtoveden makeaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mikä oli Hansa?
+AIEMPI VASTAUS (Livia):
+Mmm— vanha liitto, hyvä kysymys. Hansa oli keskiajan ja uuden ajan alun Pohjois-Euroopan kauppakaupunkien ja kauppiaiden liitto, joka edisti jäsentensä kauppaa [[Pohjanmeren]] ja [[Itämeren]] alueella. Sen jäseniä olivat monet saksalaiset kaupungit, ja mukana oli myös hollantilaisia kaupunkeja, kuten Elburg, joka liittyi siihen vuonna 1367. Kauppa kulkee, kuten kirjeetkin.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+AIEMPI KYSYMYS: Mitä Keukenhof-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keukenhof-nimi tarkoittaa keittiöpuutarhaa. Alue oli 1400-luvulla [[Teylingenin]] linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär [[Jacoba van Beieren]]. Nykyinen kukkapuisto perustettiin vasta vuonna 1949. Ei huono ura kaalimaalle.
+KYSYMYS: Kerro lisää: Teylingenin
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+AIEMPI KYSYMYS: Mitä Keukenhof-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keukenhof-nimi tarkoittaa keittiöpuutarhaa. Alue oli 1400-luvulla [[Teylingenin]] linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär [[Jacoba van Beieren]]. Nykyinen kukkapuisto perustettiin vasta vuonna 1949. Ei huono ura kaalimaalle.
+KYSYMYS: Kerro lisää: Jacoba van Beieren
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kaupunkilehti / Addis Abeba: Finfinne ja uusi kukka] Ennen kaupunkia laakson pohjalla oli Finfinne, kuumien lähteiden paikka. Keisarinna Taytu Betul rakennutti ensin itselleen talon Filwuhan kivennäisvesilähteiden luo, joissa Shewan hovi kävi kylvyissä, ja suostutteli Menelik II:n siirtämään hovin kylmältä ja tuuliselta Entoton vuorelta alas tasangolle. Asutus alkoi 1886, ja Taytu antoi paikalle nimen Addis Abeba, uusi kukka. Seuraavana vuonna suuria maapalstoja jaettiin aatelisille ja kirkoille; paikallisilta oromoheimoilta maat takavarikoitiin ja monet joutuivat siirtymään. Menelik rakensi palatsinsa 1887, ja pääkaupunki kaupungista tuli 1889.
+- [Fidži — maalehti / Luonto: Kukka, jota kasvaa vain yhdellä saarella] Tagimoucia on köynnös, joka kasvaa vain Taveunin saaren ylängön sademetsässä yli kuudensadan metrin korkeudessa ja kukkii loka–joulukuussa. Kukat riippuvat jopa kolmenkymmenen sentin pituisina terttuina, ja niissä on karmiininpunaista ja valkoista. Kasvi on Fidžin kansalliskukka, ja se on kuvattuna maan 50 dollarin setelissä. Nimeen liittyy tarina tytöstä, jota isä kielsi menemästä naimisiin rakastamansa pojan kanssa; kyyneleistä syntyi kukka. Sanonta tagi me uci ’ea tarkoittaa itkeä ollakseen hänen kaltaisensa, ja siitä tehtiin myöhemmin kansanlaulu Tagimoucia ga.
+AIEMPI KYSYMYS: Kuka rakensi Keukenhofin nykyiseksi kukkapuistoksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nykyinen kukkapuisto perustettiin vuonna 1949 [[kukkasipulinviljelijöiden]] konsortion voimin, ja se aukesi yleisölle vuonna 1950. Aluetta oli ennen sitä muokannut maisema-arkkitehti [[Jan David Zocher]] yhdessä poikansa Louis Paul Zocherin kanssa, jotka suunnittelivat puiston uudelleen englantilaiseen tyyliin vuonna 1857. Viljelijät siis, eivät kuninkaat.
+KYSYMYS: Kerro lisää: kukkasipulinviljelijöiden
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+AIEMPI KYSYMYS: Kuka rakensi Keukenhofin nykyiseksi kukkapuistoksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nykyinen kukkapuisto perustettiin vuonna 1949 [[kukkasipulinviljelijöiden]] konsortion voimin, ja se aukesi yleisölle vuonna 1950. Aluetta oli ennen sitä muokannut maisema-arkkitehti [[Jan David Zocher]] yhdessä poikansa Louis Paul Zocherin kanssa, jotka suunnittelivat puiston uudelleen englantilaiseen tyyliin vuonna 1857. Viljelijät siis, eivät kuninkaat.
+KYSYMYS: Kerro lisää: Jan David Zocher
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+AIEMPI KYSYMYS: Kuka oli Jacoba van Beieren?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hänestä minä olen kuullut. Jacoba van Beieren oli 1400-luvun alun kreivitär, joka hallitsi Hollannin aluetta ja joutui pitkään kiistaan vallasta serkkunsa, [[Burgundin]] herttuan, kanssa. Hän asui [[Teylingenin]] linnassa, jonka keittiötarhasta Keukenhof sai nimensä. Tarkkoja vuosilukuja en kuitenkaan muista varmasti. Kuninkaalliset tulevat ja menevät, kyyhky pysyy.
+KYSYMYS: Kerro lisää: Burgundin
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Ruoka: Sipulia enemmän kuin lihaa] Yassa ei ole yksittäinen ruoka vaan valmistustapa: liha tai kala marinoidaan ja haudutetaan. Tunnetuin muoto on yassa ganaar eli kanayassa, jossa neljästä kuuteen isoa sipulia kuoritaan yhtä kanaa kohti. Marinadiin tulee sitruunan tai limetin mehua, sinappia, valkosipulia, chiliä ja mustapippuria, ja kana saa maustua tunteja tai yön yli. Sen jälkeen liha ruskistetaan ja sipulit haudutetaan kastikkeeksi, joka tarjotaan riisin kanssa. Ruoka on kotoisin Casamancesta Senegalin eteläosasta ja levinnyt sieltä koko Länsi-Afrikkaan.
+AIEMPI KYSYMYS: Milloin Keukenhofiin kannattaa mennä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sinä suunnittelet jo matkaa. Puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin, joten käynti on ajoitettava tälle jaksolle. Vuosittain istutetaan noin seitsemän miljoonaa [[sipulia]], ja [[tulppaanien]] kukinnan huippu osuu yleensä huhtikuulle, mutta tarkasta viikosta en ole varma, sillä se vaihtelee säiden mukaan. Minä tulisin kyllä aikaisin aamulla, ennen väkijoukkoa.
+KYSYMYS: Kerro lisää: sipulia
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdestä kukkasipulista maksettiin talon hinta] 1637 — Tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Kukaan ei tiennyt, mistä raidat johtuivat: ne olivat virustaudin jälkiä, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina — ostaja ei ollut nähnyt kukkaa. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo pysähtynyt.
+AIEMPI KYSYMYS: Milloin Keukenhofiin kannattaa mennä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sinä suunnittelet jo matkaa. Puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin, joten käynti on ajoitettava tälle jaksolle. Vuosittain istutetaan noin seitsemän miljoonaa [[sipulia]], ja [[tulppaanien]] kukinnan huippu osuu yleensä huhtikuulle, mutta tarkasta viikosta en ole varma, sillä se vaihtelee säiden mukaan. Minä tulisin kyllä aikaisin aamulla, ennen väkijoukkoa.
+KYSYMYS: Kerro lisää: tulppaanien
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Kaupunki jonka Ranska perusti] São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.
+AIEMPI KYSYMYS: Mikä on englantilainen maisemapuisto?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on hyvä sana tuttavuus. Englantilainen maisemapuisto on puutarhatyyli, jossa pyritään luonnollisen näköiseen maisemaan: polut kaartelevat, nurmikentät ja lammet aaltoilevat vapaasti, eikä tilaa jaeta tiukkoihin geometrisiin kuvioihin kuten [[ranskalaisessa muotopuutarhassa]]. Tyyli syntyi [[Britanniassa]] 1700-luvulla ja levisi sieltä muualle Euroopaan. [[Keukenhofin]] puiston suunnittelivat tähän tyyliin vuonna 1857 maisema-arkkitehdit Zocher ja hänen poikansa. Ylhäältä ne mutkittelevat polut näyttävät kyl aika hyviltä.
+KYSYMYS: Kerro lisää: ranskalaisessa muotopuutarhassa
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Enemmän kasveja kuin koko Britanniassa] Pöytävuorella ja Kapin niemimaan vuorijonossa kasvaa arviolta 2 285 kasvilajia, ja niistä 1 500 mahtuu 57 neliökilometrin alalle Pöytävuorella ja sen takaisella tasangolla — vähintään yhtä monta lajia kuin koko Yhdistyneessä kuningaskunnassa. Noin neljä viidestä on fynbosia, afrikaansiksi hienoa pensaikkoa. Fynbos on sopeutunut tuleen: säännölliset kulot ovat hallinneet sitä ainakin kaksitoistatuhatta vuotta, ja kymmenen tai viidentoista vuoden väli suosii suuria proteoja. Vasco da Gama nimesi rannikon 1495 savujen maaksi näkemiensä tulien takia.
+AIEMPI KYSYMYS: Mikä on englantilainen maisemapuisto?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on hyvä sana tuttavuus. Englantilainen maisemapuisto on puutarhatyyli, jossa pyritään luonnollisen näköiseen maisemaan: polut kaartelevat, nurmikentät ja lammet aaltoilevat vapaasti, eikä tilaa jaeta tiukkoihin geometrisiin kuvioihin kuten [[ranskalaisessa muotopuutarhassa]]. Tyyli syntyi [[Britanniassa]] 1700-luvulla ja levisi sieltä muualle Euroopaan. [[Keukenhofin]] puiston suunnittelivat tähän tyyliin vuonna 1857 maisema-arkkitehdit Zocher ja hänen poikansa. Ylhäältä ne mutkittelevat polut näyttävät kyl aika hyviltä.
+KYSYMYS: Kerro lisää: Britanniassa
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keukenhof (kulttuuri)
+Tietoruudun teksti: Keukenhof on Lissen kunnassa Etelä-Hollannissa sijaitseva puisto, joka on yksi maailman suurimmista kukkapuutarhoista. Nimi tarkoittaa keittiöpuutarhaa: alue oli 1400-luvulla Teylingenin linnan metsästysmaita ja linnan keittiötarha, ja sen tunnetuin asukas oli kreivitär Jacoba van Beieren. Vuonna 1641 alueelle rakennettiin kartano, josta on tullut Keukenhofin linna, ja vuonna 1857 maisema-arkkitehdit Jan David Zocher ja hänen poikansa Louis Paul Zocher suunnittelivat puiston uudelleen englantilaiseen tyyliin. Nykyinen kukkapuisto perustettiin vuonna 1949 kukkasipulinviljelijöiden konsortion voimin, ja se aukesi yleisölle 1950. Vuosittain istutetaan noin seitsemän miljoonaa sipulia, ja puisto on yleisölle auki vain kahdeksan viikon ajan maaliskuun puolivälistä toukokuun puoliväliin.
+AIEMPI KYSYMYS: Mikä on englantilainen maisemapuisto?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on hyvä sana tuttavuus. Englantilainen maisemapuisto on puutarhatyyli, jossa pyritään luonnollisen näköiseen maisemaan: polut kaartelevat, nurmikentät ja lammet aaltoilevat vapaasti, eikä tilaa jaeta tiukkoihin geometrisiin kuvioihin kuten [[ranskalaisessa muotopuutarhassa]]. Tyyli syntyi [[Britanniassa]] 1700-luvulla ja levisi sieltä muualle Euroopaan. [[Keukenhofin]] puiston suunnittelivat tähän tyyliin vuonna 1857 maisema-arkkitehdit Zocher ja hänen poikansa. Ylhäältä ne mutkittelevat polut näyttävät kyl aika hyviltä.
+KYSYMYS: Kerro lisää: Keukenhofin
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Ruoka ja tavat: Vohveli asetetaan kupin päälle] 1800-luku — Stroopwafel syntyi Goudassa 1800-luvulla. Se on kaksi ohutta ruudukkovohvelia, joiden väliin on levitetty siirappia, ruskeaa sokeria ja kanelia. Perinteinen tapa on asettaa vohveli kuuman kupin päälle: höyry pehmentää sen ja sulattaa täytteen sopivaksi. Goudassa oli vuonna 1960 seitsemäntoista stroopwafeltehdasta, nykyään neljä. Toreilla vohvelit paistetaan yhä paikan päällä, ja reunoista leikatut palat myydään erikseen pussissa. Vohvelin läpimitta on tavallisesti kymmenen senttiä, mutta niitä tehdään viidestä kahteenkymmeneenviiteen senttiin.
+AIEMPI KYSYMYS: Missä Goudan juusto valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tähän on helppo vastata. Goudan juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä. Juusto on saanut nimensä siitä, että sitä kaupataan [[Goudassa]], jossa [[kaupunginvaltuusto]] valvoo laatua tiukasti. Juustokauppaa käydään yhä perinteisellä torilla joka torstai. Nimi tulee siis kauppapaikasta, ei navetasta.
+KYSYMYS: Kerro lisää: Goudassa
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+AIEMPI KYSYMYS: Missä Goudan juusto valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tähän on helppo vastata. Goudan juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä. Juusto on saanut nimensä siitä, että sitä kaupataan [[Goudassa]], jossa [[kaupunginvaltuusto]] valvoo laatua tiukasti. Juustokauppaa käydään yhä perinteisellä torilla joka torstai. Nimi tulee siis kauppapaikasta, ei navetasta.
+KYSYMYS: Kerro lisää: kaupunginvaltuusto
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Ruoka ja tavat: Juustot kannetaan paareilla ja kaupat lyödään kädestä] 1593 — Alkmaarin juustomarkkinat ovat toimineet vaakatalon edessä yli neljäsataa vuotta, ja kantajien kilta perustettiin 17. kesäkuuta 1593. Kantajat kulkevat neljässä ryhmässä, jotka erottaa toisistaan olkihatun nauhan väri: keltainen, punainen, sininen ja vihreä. Kaksi miestä kantaa puisia paareja, joilla on noin kahdeksan juustoa eli yhteensä noin 160 kiloa. Hinnasta ei kirjoiteta paperia vaan neuvotellaan lyömällä kämmeniä yhteen. Markkinat alkavat kellonsoitosta kymmeneltä ja päättyvät yhdeltä.
+- [Mongolia — maalehti / Ruoka: Valkoinen ruoka talven varalle] Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä tulee ateria.
+- [Izmir — kaupunkilehti / Arki: Sämpylä sai nimensä muodostaan] Kumru on turkiksi kyyhkynen, ja voileipä on saanut nimensä muodostaan. Alkuperäinen kumru oli renkaan muotoinen ja kokonaan seesaminsiementen peitossa. Nykyinen versio syntyi İzmirissä 1900-luvun puolivälissä ja levisi nopeasti muualle. Väliin pannaan juustoa, tomaattia ja sucukia eli tulista makkaraa, ja osa myyjistä lisää suolakurkkua, tulista paprikaa, majoneesia ja ketsuppia. Leipä on pehmeää, ja osa leipomoista ja ravintoloista nostattaa taikinan kikhernejuurella. Kumrua myydään katuruokana.
+AIEMPI KYSYMYS: Mitä Goudan Waagissa punnittiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän on selvä vastaus. Goudan Waagissa eli punnitusrakennuksessa, joka valmistui vuonna 1667, punnittiin tavaroita, erityisesti [[juustoa]], verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä [[torilla]] joka torstai. Hyvin punnittu vastaus, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: juustoa
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Ankkuri torilla] Kapteeni Luis Alcázarin aukiolla lepää valtava, mustaksi maalattu laivan ankkuri korokkeella, jonka portaat kiertävät koko patsaan ympäri - muistomerkki kaupungin merenkulku- ja kalastusperinteelle. Puerto Montt on 1800-luvulta asti ollut Pohjois-Patagonian tärkein kauppasatama: sen kautta kulki puuta, villaa ja karjaa etelän harvaan asutuilta seuduilta, ja samaa reittiä siirtolaiset ja tavara kulkivat sisämaahan Llanquihuen järvelle asti. Aukion takana kohoava kukkula ja sen huipulla siintävä valkoinen risti kuuluvat Isla Tenglon maisemaan salmen toisella puolella. Ankkuri on suosittu tapaamispaikka ja yksi kaupungin tunnetuimmista veistoksista.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+AIEMPI KYSYMYS: Mitä Goudan Waagissa punnittiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän on selvä vastaus. Goudan Waagissa eli punnitusrakennuksessa, joka valmistui vuonna 1667, punnittiin tavaroita, erityisesti [[juustoa]], verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä [[torilla]] joka torstai. Hyvin punnittu vastaus, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: torilla
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Ruoka ja tavat: Vohveli asetetaan kupin päälle] 1800-luku — Stroopwafel syntyi Goudassa 1800-luvulla. Se on kaksi ohutta ruudukkovohvelia, joiden väliin on levitetty siirappia, ruskeaa sokeria ja kanelia. Perinteinen tapa on asettaa vohveli kuuman kupin päälle: höyry pehmentää sen ja sulattaa täytteen sopivaksi. Goudassa oli vuonna 1960 seitsemäntoista stroopwafeltehdasta, nykyään neljä. Toreilla vohvelit paistetaan yhä paikan päällä, ja reunoista leikatut palat myydään erikseen pussissa. Vohvelin läpimitta on tavallisesti kymmenen senttiä, mutta niitä tehdään viidestä kahteenkymmeneenviiteen senttiin.
+AIEMPI KYSYMYS: Mikä on stroopwafel?
+AIEMPI VASTAUS (Livia):
+Mmm— stroopwafel, minun heikkouteni. Stroopwafel on ohuista [[vohvelilevyistä]] valmistettu leivonnainen, jonka välissä on makeaa, siirappimaista täytettä. Se on yksi Goudan tunnetuista erikoisuuksista [[juuston]] ohella. Ohjeet ja alkuperätarinat vaihtelevat, enkä ole varma, missä kaupungissa se on ensimmäisenä tehty. Pulla se ei ole, mutta minä annan sen anteeksi.
+KYSYMYS: Kerro lisää: vohvelilevyistä
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Höyrytetty juusto ruusukkeena] 1800-luku — Parenica on slovakialainen juusto, joka valmistetaan höyryttämällä. Juusto tehdään kaistaleina, jotka kierretään kotilomaisiksi spiraaleiksi, ja tyypillinen kierre painaa noin sata grammaa. Nimi tulee slovakin sanasta höyryttää. Höyry tummentaa kermankeltaisen juuston väriä, ja usein se vielä savustetaan. 1800-luvulla parenicaa tehtiin vain pastöroimattomasta lampaanmaidosta, nykyään usein lehmänmaidosta tai maitoseoksista. Slovenská parenica on suojattu nimi EU:ssa.
+- [Puola — maalehti / Ruoka: Juusto jonka muoto on suojattu lailla] nykyään — Oscypek on savustettu lampaanmaitojuusto, jota valmistetaan vain Tatra-vuorten alueella Etelä-Puolassa, perinteisesti bacaksi kutsutun mestaripaimenen käsin. Juuston muoto — kapeneva sukkulan malli koristeellisine kuvioineen — on niin tunnusomainen, että se on suojattu Euroopan unionin alkuperänimityksellä: vain tietyllä alueella tehty juusto saa käyttää nimeä oscypek. Sitä syödään usein paistettuna ja tarjoillaan puolukkahillon kanssa.
+AIEMPI KYSYMYS: Mikä on stroopwafel?
+AIEMPI VASTAUS (Livia):
+Mmm— stroopwafel, minun heikkouteni. Stroopwafel on ohuista [[vohvelilevyistä]] valmistettu leivonnainen, jonka välissä on makeaa, siirappimaista täytettä. Se on yksi Goudan tunnetuista erikoisuuksista [[juuston]] ohella. Ohjeet ja alkuperätarinat vaihtelevat, enkä ole varma, missä kaupungissa se on ensimmäisenä tehty. Pulla se ei ole, mutta minä annan sen anteeksi.
+KYSYMYS: Kerro lisää: juuston
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Ruoka ja tavat: Vohveli asetetaan kupin päälle] 1800-luku — Stroopwafel syntyi Goudassa 1800-luvulla. Se on kaksi ohutta ruudukkovohvelia, joiden väliin on levitetty siirappia, ruskeaa sokeria ja kanelia. Perinteinen tapa on asettaa vohveli kuuman kupin päälle: höyry pehmentää sen ja sulattaa täytteen sopivaksi. Goudassa oli vuonna 1960 seitsemäntoista stroopwafeltehdasta, nykyään neljä. Toreilla vohvelit paistetaan yhä paikan päällä, ja reunoista leikatut palat myydään erikseen pussissa. Vohvelin läpimitta on tavallisesti kymmenen senttiä, mutta niitä tehdään viidestä kahteenkymmeneenviiteen senttiin.
+AIEMPI KYSYMYS: Miksi Gouda tunnetaan tupakkapiipuistaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Gouda on tunnettu savisista tupakkapiipuista, joita kaupungissa on valmistettu pitkään, ja ne ovat edelleen osa kaupungin tunnettuja symboleja [[stroopwafelien]] ja juuston rinnalla. Tarkkaa vuotta, jolloin valmistus alkoi, en ole varma, mutta 1600-luku mainitaan usein. [[Savipiippuja]] on tehty monessa Euroopan kaupungissa, mutta Goudassa niistä tuli tavaramerkki. Piippuun minä en koske, pullaan kyllä.
+KYSYMYS: Kerro lisää: stroopwafelien
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+- [Iso-Britannia — maalehti / Luonto: Joki, joka laskee joka päivä] Kahdesti päivässä — Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon museolle.
+AIEMPI KYSYMYS: Miksi Gouda tunnetaan tupakkapiipuistaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Gouda on tunnettu savisista tupakkapiipuista, joita kaupungissa on valmistettu pitkään, ja ne ovat edelleen osa kaupungin tunnettuja symboleja [[stroopwafelien]] ja juuston rinnalla. Tarkkaa vuotta, jolloin valmistus alkoi, en ole varma, mutta 1600-luku mainitaan usein. [[Savipiippuja]] on tehty monessa Euroopan kaupungissa, mutta Goudassa niistä tuli tavaramerkki. Piippuun minä en koske, pullaan kyllä.
+KYSYMYS: Kerro lisää: Savipiippuja
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gouda (ruoka)
+Tietoruudun teksti: Gouda on noin 75 000 asukkaan kaupunki Etelä-Hollannissa Rotterdamin ja Utrechtin välissä. Kaupunki tunnetaan Goudan juustosta, stroopwafeleista, kanaaleistaan, tupakkapiipuistaan ja 1400-luvun kaupungintalostaan. Juustoa ei valmisteta itse kaupungissa vaan sen ympäristössä; se on saanut nimensä siitä, että sitä kaupataan Goudassa, jossa kaupunginvaltuusto valvoo laatua tiukasti. Goudan Waag eli punnitusrakennus valmistui vuonna 1667, ja siellä punnittiin tavaroita, erityisesti juustoa, verojen määräämiseksi. Juustokauppaa käydään yhä perinteisellä torilla joka torstai.
+AIEMPI KYSYMYS: Milloin Goudan juustotori pidetään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Goudan juustokauppaa käydään yhä perinteisellä [[torilla]] joka torstai. Tavarat punnittiin ennen [[Waagissa]], eli vuonna 1667 valmistuneessa punnitusrakennuksessa, verojen määräämiseksi. Tarkemmat sesonkiajat ja kellonajat kannattaa tarkistaa paikalliselta taholta, koska en ole niistä varma. Torstai on siis juustopäivä, merkitse kalenteriin.
+KYSYMYS: Kerro lisää: Waagissa
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Mistä Edamin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Edamin nimi tulee padosta. Kaupunki syntyi E- eli IJe-joen padon ääreen [[Zuiderzeen]] läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai [[kaupunkioikeudet]] vuonna 1357, ja kaupunki tunnetaan [[Edam-juuston]] kotipaikkana. Pato, siis, ei juusto — minä odotin juustoa.
+KYSYMYS: Kerro lisää: Zuiderzeen
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Mistä Edamin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Edamin nimi tulee padosta. Kaupunki syntyi E- eli IJe-joen padon ääreen [[Zuiderzeen]] läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai [[kaupunkioikeudet]] vuonna 1357, ja kaupunki tunnetaan [[Edam-juuston]] kotipaikkana. Pato, siis, ei juusto — minä odotin juustoa.
+KYSYMYS: Kerro lisää: kaupunkioikeudet
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kaupunkilehti / Jukatanin oma keittiö: Punainen tahna ja hollantilainen juusto] Alueen tunnusmauste on achiote eli annatto. Kova siemen jauhetaan muiden mausteiden kanssa punertavaksi tahnaksi, recado rojoksi; mukaan tulee kanelia, maustepippurin marjoja, neilikkaa, meksikonoreganoa, juustokuminaa, merisuolaa, mietoa mustapippuria, omenaviinietikkaa ja valkosipulia. Muita alueen ruokia ovat salbutes, pehmeät tortillat salaatin, tomaatin, kalkkunan ja avokadon kanssa, sekä panuchos, joissa paistettu tortilla on täytetty mustilla pavuilla. Omintakeisin on queso relleno: koverrettu edamjuustopallo täytetään jauhetulla sianlihalla ja tarjotaan tomaattikastikkeessa.
+AIEMPI KYSYMYS: Mistä Edamin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Edamin nimi tulee padosta. Kaupunki syntyi E- eli IJe-joen padon ääreen [[Zuiderzeen]] läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai [[kaupunkioikeudet]] vuonna 1357, ja kaupunki tunnetaan [[Edam-juuston]] kotipaikkana. Pato, siis, ei juusto — minä odotin juustoa.
+KYSYMYS: Kerro lisää: Edam-juuston
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi Edamin satama mataloitui?
+AIEMPI VASTAUS (Livia):
+Katotaas. Keisari [[Kaarle V]] määräsi vuonna 1544 Edamin sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja [[laivanrakennus]] taantui. Aiemmin, 1500-luvulla, kaupungissa oli jopa 33 telakkaa. Minä olisin pitänyt portit auki.
+KYSYMYS: Kerro lisää: Kaarle V
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Tuuli sahasi lankut, ja laivat halpenivat] 1593 — Uitgeestilainen Cornelis Corneliszoon sai 15. joulukuuta 1593 patentin myllylle, joka sahaa puuta. Keksinnön ydin oli kampiakseli: se muutti tuulen pyörittämän liikkeen ylös-alas-liikkeeksi, joka veti sahanteriä. Yhdestä rungosta syntyi monta lankkua kerralla, kun ennen kaksi miestä oli vetänyt sahaa käsin. Patenttipaperissa keksijää kuvaillaan sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia laivoja valmistui nopeammin kuin muualla.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miksi Edamin satama mataloitui?
+AIEMPI VASTAUS (Livia):
+Katotaas. Keisari [[Kaarle V]] määräsi vuonna 1544 Edamin sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja [[laivanrakennus]] taantui. Aiemmin, 1500-luvulla, kaupungissa oli jopa 33 telakkaa. Minä olisin pitänyt portit auki.
+KYSYMYS: Kerro lisää: laivanrakennus
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+AIEMPI KYSYMYS: Milloin Edam sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: asia on selvä. Edam sai kaupunkioikeudet vuonna 1357. Kaupunki oli syntynyt jo aiemmin [[IJe-joen]] padon ääreen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Myöhemmin, vuonna 1526, keisari [[Kaarle V]] antoi kaupungille oikeuden [[viikkotoriin]]. Muistini piti tällä kertaa.
+KYSYMYS: Kerro lisää: IJe-joen
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kaupunkilehti / Historia: Modernismin viikko ja ensimmäinen pilvenpiirtäjä] Modernismin viikko järjestettiin Theatro Municipalissa 10.–17. helmikuuta 1922, ja se kokosi yhteen runoilijat Mário ja Oswald de Andraden, taidemaalarit Anita Malfattin ja Tarsila do Amaralin sekä kuvanveistäjä Victor Brecheretin. Järjestäjät halusivat kärjistää nuorten modernistien ja akateemisen taide-establishmentin pitkän kiistan, ja viikkoa pidetään brasilialaisen modernismin lähtölaukauksena. Samaan aikaan kahviraha nousi pystyyn: kaupungin ensimmäinen pilvenpiirtäjä Martinelli valmistui 1929. Miljoonan asukkaan raja oli ylitetty jo edellisenä vuonna 1928 — kolme sukupolvea aiemmin kaupungissa oli asunut 31 000 ihmistä.
+AIEMPI KYSYMYS: Milloin Edam sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: asia on selvä. Edam sai kaupunkioikeudet vuonna 1357. Kaupunki oli syntynyt jo aiemmin [[IJe-joen]] padon ääreen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Myöhemmin, vuonna 1526, keisari [[Kaarle V]] antoi kaupungille oikeuden [[viikkotoriin]]. Muistini piti tällä kertaa.
+KYSYMYS: Kerro lisää: viikkotoriin
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+AIEMPI KYSYMYS: Miksi Edam-juusto on pyöreä ja punainen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä kysymys tuoksuu hyvältä. Edam-juusto tunnetaan pyöreästä muodostaan ja yleensä [[vahakuoresta]], joka on usein punainen. Vahapinnoite suojaa juustoa kuljetuksessa ja säilytyksessä. Juustokauppa oli 1500-luvulla Edamin tärkein elinkeino, ja kaupungille annettiin vuonna 1526 oikeus [[viikkotoriin]]. Muodon ja värin tarkkoja historiallisia syitä en ole varma. Vahan minä jättäisin kyllä väliin.
+KYSYMYS: Kerro lisää: vahakuoresta
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edam (ruoka)
+Tietoruudun teksti: Edam on noin 7 400 asukkaan kaupunki Pohjois-Hollannissa, ja yhdessä Volendamin kanssa se muodostaa Edam-Volendamin kunnan. Kaupunki tunnetaan Edam-juuston kotipaikkana, ja sen nimi tulee padosta: kaupunki syntyi E- eli IJe-joen padon ääreen Zuiderzeen läheisyyteen, ja noin vuonna 1230 tehdyllä padolla voitiin periä tulleja tavarasiirroista. Edam sai kaupunkioikeudet vuonna 1357, ja 1500-luvulla siellä oli jopa 33 telakkaa. Juustokauppa oli 1500-luvulla kaupungin tärkein elinkeino, ja keisari Kaarle V antoi Edamille oikeuden viikkotoriin vuonna 1526; vuonna 1544 hän määräsi sataman suljettavaksi sulkuportein, minkä jälkeen satama liettyi ja laivanrakennus taantui.
+AIEMPI KYSYMYS: Mikä Volendam on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, naapurikunta. Volendam on Pohjois-Hollannin kylä, joka muodostaa yhdessä Edamin kanssa [[Edam-Volendamin]] kunnan. Edam on noin 7 400 asukkaan kaupunki, joka tunnetaan [[Edam-juuston]] kotipaikkana. Volendam tunnetaan perinteisesti kalastajakylänä ja matkailukohteena, mutta tarkempia vuosilukuja en ole varma. Kunta kahdella nimellä, aika käytännöllistä.
+KYSYMYS: Kerro lisää: Edam-Volendamin
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Espanjalaiset portaat] 1723–1725 Portaat rakennettiin vuosina 1723–1725 yhdistämään alakaupunki ja yläkaupunki loivin, kaartuvin askelmin. Askelmia on 135, ja ne kohoavat 29 metriä ylös jyrkkää rinnettä. Rahat portaisiin jätti testamentissaan ranskalainen diplomaatti Étienne Gueffier jo vuonna 1660, mutta hanke jumiutui vuosikymmeniksi, ennen kuin arkkitehti Francesco de Sanctis vihdoin pääsi piirtämään ne. Portaiden alla on 1620-luvulta peräisin oleva suihkulähde, jonka lempinimi on 'ruma vene' — se on muotoiltu puoliksi upoksissa olevaksi laivaksi. Ylhäällä portaat päättyvät Trinità dei Monti -kirkon eteen, jonka kaksoistornit näkyvät kauas yli kaupungin katujen. Portaiden juurella asui myös englantilainen runo…
+- [Grand Canyon — kaupunkilehti / Grand Canyon: Espanjalaiset eksyvät reunalle] Syyskuussa 1540 Francisco Vázquez de Coronado lähetti upseerinsa García López de Cárdenasin etsimään suurta jokea, josta Hopi-oppaat olivat kertoneet. Parikymmentä päivää pohjoiseen kuljettuaan joukko saapui kanjonin eteläreunalle nykyisen Desert View’n tienoilla – ensimmäisinä eurooppalaisina koskaan. Kolme sotilasta yritti usean päivän ajan löytää reittiä alas jokeen, mutta janoisina ja uupuneina he pääsivät vain murto-osan matkasta ennen kuin joukko kääntyi takaisin. Retkikunta piti kanjonia lähinnä esteenä, ei ihmeenä, ja palasi pettyneenä Cíbolaan. Seuraavat eurooppalaiset saapuivat samalle reunalle vasta yli 200 vuotta myöhemmin.
+AIEMPI KYSYMYS: Miksi Leidenin yliopisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on iso juttu. [[Espanjalaiset]] piirittivät Leidenia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille. [[Oranian Vilhelm I]] perusti yliopiston vuonna 1575 palkkioksi kaupungin sankarillisesta puolustuksesta. Perinteen mukaan kaupunkilaiset saivat valita yliopiston ja [[verovapauden]] väliltä. Minä olisin kyllä valinnut yliopiston.
+KYSYMYS: Kerro lisää: Espanjalaiset
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Hyväntoivonlinnoitus] 1666 Hyväntoivonlinnoitus on Etelä-Afrikan vanhin säilynyt rakennus. Hollantilainen Itä-Intian kauppakomppania rakensi sen vuosina 1666–1679 korvaamaan Jan van Riebeeckin savesta ja puusta tehdyn linnakkeen. Ensimmäinen kivi laskettiin 2. tammikuuta 1666. Viisikulmaisen linnoituksen bastionit nimettiin 26. huhtikuuta 1679 Oranian Vilhelm III:n arvonimien mukaan: Leerdam, Buuren, Katzenellenbogen, Nassau ja Oranje. Linnoitus rakennettiin osittain orjatyöllä. Yhtiö ei orjuuttanut paikallisia, koska se pelkäsi kapinaa eikä tiennyt, kuinka suuria seudun kansat olivat; sen sijaan Kapiin tuotiin jopa kuusikymmentätuhatta orjuutettua ihmistä Madagaskarilta, Mosambikista, Hollannin Itä-Intiasta ja …
+- [Belgia — maalehti / Historia: Ihmiskäsin tehty kukkula leijonalle] 1826 — Vuonna 1820 Alankomaiden kuningas Vilhelm I määräsi rakennettavaksi Waterloon lähelle valtavan tekokukkulan. Se merkitsi paikkaa, jossa hänen poikansa, Oranian prinssi, oli haavoittunut 18. kesäkuuta 1815. Rakennustyöt kestivät vuodesta 1823 lokakuuhun 1826, jolloin leijonapatsas nostettiin huipulle 28. lokakuuta illalla. Portaat huipulle rakennettiin vasta 1860-luvulla, ja nykyään niitä on 226. Ylhäältä avautuu maisema pellolle, jolla Napoleonin kohtalo ratkesi.
+AIEMPI KYSYMYS: Miksi Leidenin yliopisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on iso juttu. [[Espanjalaiset]] piirittivät Leidenia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille. [[Oranian Vilhelm I]] perusti yliopiston vuonna 1575 palkkioksi kaupungin sankarillisesta puolustuksesta. Perinteen mukaan kaupunkilaiset saivat valita yliopiston ja [[verovapauden]] väliltä. Minä olisin kyllä valinnut yliopiston.
+KYSYMYS: Kerro lisää: Oranian Vilhelm I
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+AIEMPI KYSYMYS: Miksi Leidenin yliopisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on iso juttu. [[Espanjalaiset]] piirittivät Leidenia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille. [[Oranian Vilhelm I]] perusti yliopiston vuonna 1575 palkkioksi kaupungin sankarillisesta puolustuksesta. Perinteen mukaan kaupunkilaiset saivat valita yliopiston ja [[verovapauden]] väliltä. Minä olisin kyllä valinnut yliopiston.
+KYSYMYS: Kerro lisää: verovapauden
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+AIEMPI KYSYMYS: Mikä on Leidenin pullo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leidenin pullo on varhainen sähkövaraaja: lasipullo tai -purkki, jonka sisä- ja ulkopinta on päällystetty johtavalla metallilla ja johon voi varastoida sähkövarausta. Sen keksi [[Pieter van Musschenbroek]] Leidenissä vuonna 1746, ja se oli nykyisten [[kondensaattoreiden]] esiaste. Vastaava keksintö tehtiin lähes samoihin aikoihin myös muualla, mutta yksityiskohdista en ole varma. Salamoita pullossa — minä pysyn kyllä kaukana.
+KYSYMYS: Kerro lisää: Pieter van Musschenbroek
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+AIEMPI KYSYMYS: Mikä on Leidenin pullo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leidenin pullo on varhainen sähkövaraaja: lasipullo tai -purkki, jonka sisä- ja ulkopinta on päällystetty johtavalla metallilla ja johon voi varastoida sähkövarausta. Sen keksi [[Pieter van Musschenbroek]] Leidenissä vuonna 1746, ja se oli nykyisten [[kondensaattoreiden]] esiaste. Vastaava keksintö tehtiin lähes samoihin aikoihin myös muualla, mutta yksityiskohdista en ole varma. Salamoita pullossa — minä pysyn kyllä kaukana.
+KYSYMYS: Kerro lisää: kondensaattoreiden
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+AIEMPI KYSYMYS: Mikä on Snellin laki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Snellin laki kuvaa, miten valo taittuu kulkiessaan väliaineesta toiseen, esimerkiksi ilmasta veteen: tulokulman ja taitekulman välillä on yhteys, joka riippuu aineiden [[taitekertoimista]]. Laki on nimetty hollantilaisen matemaatikon [[Willebrord Snellin]] mukaan, joka kuvasi sen 1600-luvun alussa; tarkasta vuodesta en ole varma. Löytö kuuluu [[Leidenin]] monien löytöjen joukkoon. Ylhäältä lätäkkö näyttää kyllä aina vähän vinolta.
+KYSYMYS: Kerro lisää: taitekertoimista
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Star-teatteri] 1929 Star oli Darwinin ensimmäinen varta vasten rakennettu elokuvateatteri, ja sen rakensi 1920-luvulla darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali oli osittain ulkoilmateatteri: katto ulottui vain takarivien ja parven yli, ja Snell oli käynyt opiskelemassa kattorakennetta Englannissa. Näyttämö oli pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden tieltä, ja lattia valettiin betonista rullaluistelua ja tansseja varten. Paikkoja oli 860. Talo avattiin 14. syyskuuta 1929 elokuvalla The Cat and the Canary. Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja työväki ja aboriginaalit istuivat alakerrassa; aboriginaalit tarvitsivat lisäksi suojeluviranomaisen luvan rikko…
+AIEMPI KYSYMYS: Mikä on Snellin laki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Snellin laki kuvaa, miten valo taittuu kulkiessaan väliaineesta toiseen, esimerkiksi ilmasta veteen: tulokulman ja taitekulman välillä on yhteys, joka riippuu aineiden [[taitekertoimista]]. Laki on nimetty hollantilaisen matemaatikon [[Willebrord Snellin]] mukaan, joka kuvasi sen 1600-luvun alussa; tarkasta vuodesta en ole varma. Löytö kuuluu [[Leidenin]] monien löytöjen joukkoon. Ylhäältä lätäkkö näyttää kyllä aina vähän vinolta.
+KYSYMYS: Kerro lisää: Willebrord Snellin
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+AIEMPI KYSYMYS: Mikä on Snellin laki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Snellin laki kuvaa, miten valo taittuu kulkiessaan väliaineesta toiseen, esimerkiksi ilmasta veteen: tulokulman ja taitekulman välillä on yhteys, joka riippuu aineiden [[taitekertoimista]]. Laki on nimetty hollantilaisen matemaatikon [[Willebrord Snellin]] mukaan, joka kuvasi sen 1600-luvun alussa; tarkasta vuodesta en ole varma. Löytö kuuluu [[Leidenin]] monien löytöjen joukkoon. Ylhäältä lätäkkö näyttää kyllä aina vähän vinolta.
+KYSYMYS: Kerro lisää: Leidenin
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Silli syödään pyrstöstä] Keväisin — Hollandse Nieuwe on kevään ensimmäinen suolasilli, ja sen saa myydä vasta kun kalan rasvapitoisuus on noussut noin 16 prosenttiin. Perkauksessa haima jätetään paikalleen: sen entsyymit kypsyttävät lihan muutamassa päivässä. Nimi on suojattu: kalan pitää olla vähintään kolmivuotias, ja pyytää sen saa vain touko–elokuussa. Kojulla silli kastetaan sipuliin ja lasketaan suuhun pyrstöstä pidellen.
+AIEMPI KYSYMYS: Mitä Leidenin vapautumispäivänä syödään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Leidenin piirityksen päättymistä juhlitaan joka vuosi 3. lokakuuta, ja päivään kuuluu perinteisesti kulkueita ja yhteistä ruokaa. Yleisesti mainitaan [[sillin]] ja valkoleivän syöminen sekä [[hutspot]]-muhennos, mutta en ole varma kaikista yksityiskohdista ja tavat voivat vaihdella. Valkoleipä kuulostaa pullan lähisukulaiselta, ja sehän riittää minulle.
+KYSYMYS: Kerro lisää: sillin
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+AIEMPI KYSYMYS: Mitä Leidenin vapautumispäivänä syödään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Leidenin piirityksen päättymistä juhlitaan joka vuosi 3. lokakuuta, ja päivään kuuluu perinteisesti kulkueita ja yhteistä ruokaa. Yleisesti mainitaan [[sillin]] ja valkoleivän syöminen sekä [[hutspot]]-muhennos, mutta en ole varma kaikista yksityiskohdista ja tavat voivat vaihdella. Valkoleipä kuulostaa pullan lähisukulaiselta, ja sehän riittää minulle.
+KYSYMYS: Kerro lisää: hutspot
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia: USS Mainen tuho ja Espanjan vallan loppu] Yhdysvaltain taistelulaiva USS Maine upposi Havannan satamassa 1898, ja siitä tuli Espanjan ja Yhdysvaltain välisen sodan välitön syy. Kuubassa sota oli huipennus jo kolme vuotta käynnissä olleelle itsenäisyyssodalle. Espanja luopui Kuuban ylivallasta 12. elokuuta 1898, ja sen neljä vuosisataa kestänyt läsnäolo Amerikan mantereella päättyi. Kuuban tasavalta syntyi kuitenkin vasta 1902, ja silloin Havannasta tuli sen pääkaupunki: kaupunki isännöi maan ensimmäisen presidentin Tomás Estrada Palman virkaanastujaisia.
+- [Espanja — maalehti / Luonto: Espanjan korkein vuori on Afrikan edustalla] Espanjan korkein kohta ei ole Pyreneillä vaan Teneriffalla: Teide nousee 3 715 metriin, ja merenpohjasta mitattuna se on yli seitsemän kilometriä korkea eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon Marsia, että Euroopan avaruusjärjestö on koekäyttänyt siellä mönkijöitään. Vuori purkautui viimeksi 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, sata kilometriä Marokon rannikolta.
+AIEMPI KYSYMYS: Kuka oli Oranian Vilhelm I?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oranian Vilhelm I oli 1500-luvun aatelismies, joka johti hollantilaisten kapinaa [[Espanjan]] vallan alla. Leidenin piirityksen aikaan vuonna 1574 hän oli kapinallisten johtohahmoja, ja hän perusti kaupungin [[yliopiston]] vuonna 1575 palkkioksi kaupungin sankarillisesta puolustuksesta. Hänen sukunsa, Oranian suku, vaikutti Alankomaiden historiaan myöhemminkin. Sukuhaaraa minä kyllä arvostan, omani on vanha roomalainen.
+KYSYMYS: Kerro lisää: Espanjan
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leiden (kulttuuri)
+Tietoruudun teksti: Leiden on Etelä-Hollannin kaupunki, jossa on ollut yliopisto vuodesta 1575; Leidenin yliopisto on Alankomaiden vanhin, ja kaupungin tunnuslause on Löytöjen kaupunki. Espanjalaiset piirittivät kaupunkia touko–lokakuussa 1574, ja piiritys päättyi, kun padot avattiin ja laivat pääsivät tuomaan ruokaa kaupunkilaisille; piirityksen päättymistä juhlitaan yhä joka vuosi 3. lokakuuta. Oranian Vilhelm I perusti yliopiston palkkioksi kaupungin sankarillisesta puolustuksesta, ja perinteen mukaan kaupunkilaiset saivat valita yliopiston ja verovapauden väliltä. Leidenissä on tehty monia löytöjä, kuten Snellin laki ja Pieter van Musschenbroekin vuonna 1746 keksimä Leidenin pullo, ja maalari Rembrandt syntyi ja kouluttautui kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Yliopiston aukio] 1857 Yliopiston aukio syntyi vuonna 1857 samaan aikaan kun Bukarestin yliopisto perustettiin. Aukio sijaitsee keskellä kaupunkia metroaseman vieressä. Paikka on ollut tärkeä risteyskohta jo satoja vuosia, sillä jo 1400-luvulla siitä kulki kaupungin raja. Aukiolla seisoo neljä patsasta tärkeistä romanialaisista henkilöistä: hallitsija Mihai Rohkean patsas pystytettiin vuonna 1874, runoilija Ion Heliade Rădulescun vuonna 1879, opettaja Gheorghe Lazărin vuonna 1889 ja tiedemies Spiru Haretin vuonna 1932. Vieressä kohoaa myös Intercontinental-hotelli, yksi Bukarestin korkeimmista rakennuksista. Vuonna 1990 aukiolla järjestettiin rauhanomainen opiskelijamielenosoitus, joka muuttui väkivaltaiseks…
+- [Iso-Britannia — maalehti / Tiede: Rutto sulki yliopiston ja avasi maailman] Kun rutto sulki Cambridgen yliopiston 1665, 23-vuotias Isaac Newton palasi kotitilalleen Woolsthorpeen. Siellä vietetyn puolentoista vuoden aikana hän kehitti differentiaalilaskennan, selvitti valon jakautumisen väreiksi prisman avulla ja muotoili painovoiman lain. Hän itse kertoi myöhemmin, että ajatus lähti puutarhan omenapuusta: miksi omena putoaa aina suoraan alas? Newton oli myös rahapajan johtaja ja jahtasi väärentäjiä katujen kapakoissa — hän lähetti heistä useita hirsipuuhun.
+- [Vilna — kaupunkilehti / Oppi: Tähtitorni yliopiston pihan laidalla] Yliopiston tähtitorni perustettiin vuonna 1753. Sen sai aikaan matematiikan opettaja Tomas Žebrauskas, ja rahat lahjoitti liettualainen aatelisnainen Elžbieta Oginskienė-Puzynina. Tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu latinankielisiä lauseita ja eläinradan merkkejä. Nykyään kaupungin valot ovat niin kirkkaita, ettei taivasta voi enää tarkkailla keskustasta, mutta tutkimustyö jatkuu yhä.
+AIEMPI KYSYMYS: Kuka oli Oranian Vilhelm I?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oranian Vilhelm I oli 1500-luvun aatelismies, joka johti hollantilaisten kapinaa [[Espanjan]] vallan alla. Leidenin piirityksen aikaan vuonna 1574 hän oli kapinallisten johtohahmoja, ja hän perusti kaupungin [[yliopiston]] vuonna 1575 palkkioksi kaupungin sankarillisesta puolustuksesta. Hänen sukunsa, Oranian suku, vaikutti Alankomaiden historiaan myöhemminkin. Sukuhaaraa minä kyllä arvostan, omani on vanha roomalainen.
+KYSYMYS: Kerro lisää: yliopiston
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mistä Hindeloopenin oma kieli syntyi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hindeloopenin oma kieli syntyi kaupungin erikoisesta asemasta: asukkailla oli vahvat ulkomaiset yhteydet merenkulun ja kaupan kautta, mutta kontakteja sisämaahan oli vain vähän. Tuloksena oli omaleimainen sekoitus [[länsifriisiä]], englantia, tanskaa ja norjaa. Kaupunki oli myös [[Hansan]] jäsen, ja sen asukkaat suuntautuivat selvästi merelle eivätkä mantereen sisäosiin [[Friisinmaalla]]. Ei paha kyyhkyltä, joka ei osaa norjaakaan.
+KYSYMYS: Kerro lisää: länsifriisiä
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Historia: Etuoikeus, joka kesti neljäsataa vuotta] Hansakauppiaat asuivat omassa kaupunginosassaan, jossa käytettiin keskisaksaa, ja heillä oli yksinoikeus käydä kauppaa niiden pohjoisnorjalaisten kalastajien kanssa, jotka purjehtivat Bergeniin joka kesä. Kauppamonopoli Pohjois-Norjaan säilyi vuoteen 1789 asti. Suhteet muihin tulokkaisiin eivät aina olleet rauhalliset: 9. marraskuuta 1523 saksalaiset asukkaat kävivät useiden Bergeniin asettuneiden skotlantilaiskauppiaiden talouksien kimppuun. Noin vuodesta 1600 hansan ote alkoi hellittää norjalaisten kauppiaiden hyväksi, ja kontori suljettiin 1750-luvulla.
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+- [Krakova — kaupunkilehti / Krakova: Kauppahalli keskellä toria] Sukiennice eli kangashalli on seissyt torin keskellä keskiajalta asti, ja sen holvikäytävässä myydään yhä tavaraa. Krakova oli Hansan ja idän karavaanireittien risteyskohta: halliin tuotiin mausteita, silkkiä ja nahkaa, ja täältä lähti kangasta, lyijyä ja suolaa. Yläkerta on nykyään taidemuseo, jossa on Puolan 1800-luvun maalauksia.
+AIEMPI KYSYMYS: Mistä Hindeloopenin oma kieli syntyi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hindeloopenin oma kieli syntyi kaupungin erikoisesta asemasta: asukkailla oli vahvat ulkomaiset yhteydet merenkulun ja kaupan kautta, mutta kontakteja sisämaahan oli vain vähän. Tuloksena oli omaleimainen sekoitus [[länsifriisiä]], englantia, tanskaa ja norjaa. Kaupunki oli myös [[Hansan]] jäsen, ja sen asukkaat suuntautuivat selvästi merelle eivätkä mantereen sisäosiin [[Friisinmaalla]]. Ei paha kyyhkyltä, joka ei osaa norjaakaan.
+KYSYMYS: Kerro lisää: Hansan
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hindeloopen (kulttuuri)
+Tietoruudun teksti: Hindeloopen on vanha kaupunki Pohjois-Alankomaissa Friisinmaalla IJsselmeerin rannalla, ja se tunnetaan Hindeloopenin taiteesta ja kansallispuvusta. Kaupunki sai kaupunkioikeudet vuonna 1225 ja liittyi Hansaan vuonna 1368. Vahvat ulkomaiset yhteydet ja harvat kontaktit sisämaahan johtivat oman Hindeloopenin kielen syntymiseen, joka oli sekoitus länsifriisiä, englantia, tanskaa ja norjaa. Merenkulku toi kaupunkiin vaurautta erityisesti 1600- ja 1700-luvulla, jolloin asukkaat ostivat Amsterdamista kalliita kankaita ja esineitä VOC:n kautta, ja kaupunki kehitti oman pukunsa sekä värikkäät maalatut seinät ja huonekalut. Kapteenin talon julkisivussa roikkuva ankkuri kertoi, että kapteeni saattoi vielä ottaa rahtia vastaan.
+AIEMPI KYSYMYS: Mistä Hindeloopenin oma kieli syntyi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hindeloopenin oma kieli syntyi kaupungin erikoisesta asemasta: asukkailla oli vahvat ulkomaiset yhteydet merenkulun ja kaupan kautta, mutta kontakteja sisämaahan oli vain vähän. Tuloksena oli omaleimainen sekoitus [[länsifriisiä]], englantia, tanskaa ja norjaa. Kaupunki oli myös [[Hansan]] jäsen, ja sen asukkaat suuntautuivat selvästi merelle eivätkä mantereen sisäosiin [[Friisinmaalla]]. Ei paha kyyhkyltä, joka ei osaa norjaakaan.
+KYSYMYS: Kerro lisää: Friisinmaalla

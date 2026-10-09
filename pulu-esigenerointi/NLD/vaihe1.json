@@ -2015,10 +2015,10 @@
   "kohde": "kohde:hahmotelma-hoorn",
   "kysymys": "Mikä yhtiö piti Hornissa toimipaikkaansa?",
   "uusi": false,
-  "vastaus": "Ai tota, selvä juttu. Hornissa toimi yksi Hollannin [[Itä-Intian kauppakomppanian]] eli [[VOC:n]] kuudesta kamarista. Kaupunki kukoisti Alankomaiden kulta-aikana vauraana satamakaupunkina, ja sen kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Hoorn on Länsi-Friisin perinteinen pääkaupunki Pohjois-Hollannissa. Kyllä siinä mausteen tuoksu olisi kelvannut ylhäältäkin.",
+  "vastaus": "Ai tota, selvä juttu. Hornissa toimi yksi Hollannin Itä-Intian kauppakomppanian eli [[VOC:n]] kuudesta kamarista. Kaupunki kukoisti Alankomaiden kulta-aikana vauraana satamakaupunkina, ja sen kauppalaivat toivat Itä-Intiasta mausteita, kuten pippuria, muskottipähkinää ja neilikkaa. Hoorn on [[Länsi-Friisin]] perinteinen pääkaupunki Pohjois-Hollannissa. Kyllä siinä mausteen tuoksu olisi kelvannut ylhäältäkin.",
   "linkit": [
-   "Itä-Intian kauppakomppanian",
-   "VOC:n"
+   "VOC:n",
+   "Länsi-Friisin"
   ],
   "jatkot": [
    "Miten VOC oli järjestetty kamareihin?",
@@ -2029,10 +2029,10 @@
   "kohde": "kohde:hahmotelma-hoorn",
   "kysymys": "Kuka perusti Bataavian?",
   "uusi": true,
-  "vastaus": "Mmm— Batavia, sepä sattui. Hollannin Itä-Intian pääkaupungin perusti vuonna 1619 [[Jan Pieterszoon Coen]]. Hän aikoi nimetä kaupungin Uudeksi Horniksi, mutta siitä tuli Batavia. Nimeksi olisi siis tullut kunnianosoitus Coenin hornilaiselle taustalle ja kaupunkiin, jossa hän oli ollut Hollannin [[Itä-Intian kauppakomppanian]] palveluksessa. Muistin tämän ilman muistiinpanoja, ja se riittää tälle päivälle.",
+  "vastaus": "Mmm— Batavia, sepä sattui. Hollannin Itä-Intian pääkaupungin perusti vuonna 1619 [[Jan Pieterszoon Coen]]. Hän aikoi nimetä kaupungin [[Hoornin]] mukaan Uudeksi Horniksi, mutta siitä tuli Batavia. Nimeksi olisi siis tullut kunnianosoitus Coenin hornilaiselle taustalle ja kaupunkiin, jossa hän oli ollut Hollannin Itä-Intian kauppakomppanian palveluksessa. Muistin tämän ilman muistiinpanoja, ja se riittää tälle päivälle.",
   "linkit": [
    "Jan Pieterszoon Coen",
-   "Itä-Intian kauppakomppanian"
+   "Hoornin"
   ],
   "jatkot": [
    "Mikä kaupunki Bataviasta myöhemmin tuli?",
@@ -2810,9 +2810,8 @@
   "kohde": "kohde:hahmotelma-nuenen",
   "kysymys": "Minkä maalauksen sarja huipentui Nuenenissa?",
   "uusi": false,
-  "vastaus": "Kas vaan, tämä on tunnettu. Nuenenissa syntynyt talonpoikien ja kutojien luonnetutkielmien sarja huipentui maalaukseen [[Perunansyöjät]]. Teos valmistui vuonna 1885, ja sen aiheena on talonpoikaisperhe aterialla lampun valossa. Sen tummat, maanläheiset sävyt eroavat selvästi myöhemmistä, kirkkaammista töistä, joita Van Gogh maalasi [[Pariisissa]] ja [[Etelä-Ranskassa]]. Kyllä kyyhky arvostaa lamppua, joka näkyy kauas.",
+  "vastaus": "Kas vaan, tämä on tunnettu. Nuenenissa syntynyt talonpoikien ja kutojien luonnetutkielmien sarja huipentui maalaukseen Perunansyöjät. Teos valmistui vuonna 1885, ja sen aiheena on talonpoikaisperhe aterialla lampun valossa. Sen tummat, maanläheiset sävyt eroavat selvästi myöhemmistä, kirkkaammista töistä, joita Van Gogh maalasi [[Pariisissa]] ja [[Etelä-Ranskassa]]. Kyllä kyyhky arvostaa lamppua, joka näkyy kauas.",
   "linkit": [
-   "Perunansyöjät",
    "Pariisissa",
    "Etelä-Ranskassa"
   ],
@@ -3176,10 +3175,10 @@
   "kohde": "kohde:hahmotelma-enkhuizen",
   "kysymys": "Miksi Enkhuizen menetti asemansa Amsterdamille?",
   "uusi": false,
-  "vastaus": "Tuota niin, tää on vähän surullinen asia. Enkhuizenin valta oli suurimmillaan 1600-luvun puolivälissä, mutta satamien liettyminen syrjäytti kaupungin ja jätti Amsterdamin vahvempaan asemaan. Liettyminen tarkoittaa, että lieju ja hiekka kerääntyvät satamaan ja matalat vedet vaikeuttavat suurten alusten pääsyä. Amsterdam oli, kuten Enkhuizenkin, [[VOC]]:n satamakaupunki, ja se otti [[Itä-Intian merikaupan]] keskuksen asemaan. Syitä oli luultavasti muitakin, mutta tarkemmin en niitä osaa luetella. Satama muuttuu ajan myötä, mutta kyllä kyyhky sitä silti löytää.",
+  "vastaus": "Tuota niin, tää on vähän surullinen asia. Enkhuizenin valta oli suurimmillaan 1600-luvun puolivälissä, mutta satamien liettyminen syrjäytti kaupungin ja jätti Amsterdamin vahvempaan asemaan. Liettyminen tarkoittaa, että lieju ja hiekka kerääntyvät satamaan ja matalat vedet vaikeuttavat suurten alusten pääsyä. Amsterdam oli, kuten Enkhuizenkin, [[VOC]]:n satamakaupunki, ja se otti Itä-Intian merikaupan keskuksen asemaan [[Pohjanmeren]] rannikolla. Syitä oli luultavasti muitakin, mutta tarkemmin en niitä osaa luetella. Satama muuttuu ajan myötä, mutta kyllä kyyhky sitä silti löytää.",
   "linkit": [
    "VOC",
-   "Itä-Intian merikaupan"
+   "Pohjanmeren"
   ],
   "jatkot": [
    "Mikä oli VOC:n tärkein satama?",

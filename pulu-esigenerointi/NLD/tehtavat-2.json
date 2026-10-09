@@ -1,0 +1,3722 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Alankomaiden",
+  "kysymys": "Kerro lisää: Alankomaiden"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Vaalserberg",
+  "kysymys": "Kerro lisää: Vaalserberg"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Amsterdamin",
+  "kysymys": "Kerro lisää: Amsterdamin"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Vaalserbergin",
+  "kysymys": "Kerro lisää: Vaalserbergin"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Alankomaat",
+  "kysymys": "Kerro lisää: Alankomaat"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Belgia",
+  "kysymys": "Kerro lisää: Belgia"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Saksa",
+  "kysymys": "Kerro lisää: Saksa"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Aachen",
+  "kysymys": "Kerro lisää: Aachen"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "patojen",
+  "kysymys": "Kerro lisää: patojen"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "polderien",
+  "kysymys": "Kerro lisää: polderien"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "vesilautakunnat",
+  "kysymys": "Kerro lisää: vesilautakunnat"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Rotterdamin",
+  "kysymys": "Kerro lisää: Rotterdamin"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:vaalserberg",
+  "kasite": "Goudan",
+  "kysymys": "Kerro lisää: Goudan"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "tuulimyllyillä",
+  "kysymys": "Kerro lisää: tuulimyllyillä"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Haarlemmermeerin",
+  "kysymys": "Kerro lisää: Haarlemmermeerin"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Afsluitdijkillä",
+  "kysymys": "Kerro lisää: Afsluitdijkillä"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Flevoland",
+  "kysymys": "Kerro lisää: Flevoland"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "mannerjalustalla",
+  "kysymys": "Kerro lisää: mannerjalustalla"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Norjanrinteessä",
+  "kysymys": "Kerro lisää: Norjanrinteessä"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Britannia",
+  "kysymys": "Kerro lisää: Britannia"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Dogger Bankin",
+  "kysymys": "Kerro lisää: Dogger Bankin"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Groningenin",
+  "kysymys": "Kerro lisää: Groningenin"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "Ekofisk",
+  "kysymys": "Kerro lisää: Ekofisk"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "maailmanperintökohteeksi",
+  "kysymys": "Kerro lisää: maailmanperintökohteeksi"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "muuttolinnuille",
+  "kysymys": "Kerro lisää: muuttolinnuille"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:pohjanmeri~4",
+  "kasite": "hylkeitä",
+  "kysymys": "Kerro lisää: hylkeitä"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:maas",
+  "kasite": "Zeelandin",
+  "kysymys": "Kerro lisää: Zeelandin"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:maas",
+  "kasite": "Rotterdamin",
+  "kysymys": "Kerro lisää: Rotterdamin"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:maas",
+  "kasite": "Antwerpenin",
+  "kysymys": "Kerro lisää: Antwerpenin"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:maas",
+  "kasite": "Deltatöillä",
+  "kysymys": "Kerro lisää: Deltatöillä"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:maas",
+  "kasite": "Langresin ylängöllä",
+  "kysymys": "Kerro lisää: Langresin ylängöllä"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:maas",
+  "kasite": "Haute-Marnen",
+  "kysymys": "Kerro lisää: Haute-Marnen"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:maas",
+  "kasite": "Ardennien",
+  "kysymys": "Kerro lisää: Ardennien"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:maas",
+  "kasite": "Namur",
+  "kysymys": "Kerro lisää: Namur"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:maas",
+  "kasite": "Liège",
+  "kysymys": "Kerro lisää: Liège"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:maas",
+  "kasite": "Maastricht",
+  "kysymys": "Kerro lisää: Maastricht"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:maas",
+  "kasite": "Venlo",
+  "kysymys": "Kerro lisää: Venlo"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:maas",
+  "kasite": "ensimmäisessä maailmansodassa",
+  "kysymys": "Kerro lisää: ensimmäisessä maailmansodassa"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:maas",
+  "kasite": "Douaumontin",
+  "kysymys": "Kerro lisää: Douaumontin"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:maas",
+  "kasite": "Euroopan unionissa",
+  "kysymys": "Kerro lisää: Euroopan unionissa"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:maas",
+  "kasite": "Ardenneilta",
+  "kysymys": "Kerro lisää: Ardenneilta"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:maas",
+  "kasite": "Reinillä",
+  "kysymys": "Kerro lisää: Reinillä"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:maas",
+  "kasite": "Limburgissa",
+  "kysymys": "Kerro lisää: Limburgissa"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:maas",
+  "kasite": "Maaswerken",
+  "kysymys": "Kerro lisää: Maaswerken"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Woudagemaal",
+  "kysymys": "Kerro lisää: Woudagemaal"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Frieslandin",
+  "kysymys": "Kerro lisää: Frieslandin"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "IJsselmereen",
+  "kysymys": "Kerro lisää: IJsselmereen"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "höyrykonetta",
+  "kysymys": "Kerro lisää: höyrykonetta"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Thomas Newcomen",
+  "kysymys": "Kerro lisää: Thomas Newcomen"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "James Watt",
+  "kysymys": "Kerro lisää: James Watt"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Leeuwardenin",
+  "kysymys": "Kerro lisää: Leeuwardenin"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Dokkumin",
+  "kysymys": "Kerro lisää: Dokkumin"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "länsifriisiä",
+  "kysymys": "Kerro lisää: länsifriisiä"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "englannin",
+  "kysymys": "Kerro lisää: englannin"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:woudagemaal",
+  "kasite": "Saksassa",
+  "kysymys": "Kerro lisää: Saksassa"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Zeelandissa",
+  "kysymys": "Kerro lisää: Zeelandissa"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Etelä-Hollannissa",
+  "kysymys": "Kerro lisää: Etelä-Hollannissa"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Deltatöiden",
+  "kysymys": "Kerro lisää: Deltatöiden"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:deltatyot",
+  "kasite": "myrskypuomi",
+  "kysymys": "Kerro lisää: myrskypuomi"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:deltatyot",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Deltatöitä",
+  "kysymys": "Kerro lisää: Deltatöitä"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Rotterdamin",
+  "kysymys": "Kerro lisää: Rotterdamin"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:deltatyot",
+  "kasite": "NAP",
+  "kysymys": "Kerro lisää: NAP"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:deltatyot",
+  "kasite": "IJsselmeren",
+  "kysymys": "Kerro lisää: IJsselmeren"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Zuiderzee-töiden",
+  "kysymys": "Kerro lisää: Zuiderzee-töiden"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Cornelis Lelyä",
+  "kysymys": "Kerro lisää: Cornelis Lelyä"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Beemster",
+  "kysymys": "Kerro lisää: Beemster"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:deltatyot",
+  "kasite": "Flevoland",
+  "kysymys": "Kerro lisää: Flevoland"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:deltatyot",
+  "kasite": "tuulimyllyillä",
+  "kysymys": "Kerro lisää: tuulimyllyillä"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Haagin sopimuksella",
+  "kysymys": "Kerro lisää: Haagin sopimuksella"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Nikolai II",
+  "kysymys": "Kerro lisää: Nikolai II"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Vredespaleis",
+  "kysymys": "Kerro lisää: Vredespaleis"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Andrew Carnegieltä",
+  "kysymys": "Kerro lisää: Andrew Carnegieltä"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Andrew Dickson White",
+  "kysymys": "Kerro lisää: Andrew Dickson White"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Yhdistyneiden kansakuntien",
+  "kysymys": "Kerro lisää: Yhdistyneiden kansakuntien"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Rauhanpalatsissa",
+  "kysymys": "Kerro lisää: Rauhanpalatsissa"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Haagiin",
+  "kysymys": "Kerro lisää: Haagiin"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "varustelukilpa",
+  "kysymys": "Kerro lisää: varustelukilpa"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Etelä-Hollannin",
+  "kysymys": "Kerro lisää: Etelä-Hollannin"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:vredespaleis",
+  "kasite": "Amsterdam",
+  "kysymys": "Kerro lisää: Amsterdam"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:domtoren",
+  "kasite": "Pyhän Martinuksen katedraalin",
+  "kysymys": "Kerro lisää: Pyhän Martinuksen katedraalin"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:domtoren",
+  "kasite": "keskilaiva",
+  "kysymys": "Kerro lisää: keskilaiva"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:domtoren",
+  "kasite": "John of Hainaut",
+  "kysymys": "Kerro lisää: John of Hainaut"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:domtoren",
+  "kasite": "Geert Groote",
+  "kysymys": "Kerro lisää: Geert Groote"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:domtoren",
+  "kasite": "Devotio modernan",
+  "kysymys": "Kerro lisää: Devotio modernan"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:domtoren",
+  "kasite": "Utrechtin",
+  "kysymys": "Kerro lisää: Utrechtin"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:domtoren",
+  "kasite": "Utrechtin kellonsoittajien kilta",
+  "kysymys": "Kerro lisää: Utrechtin kellonsoittajien kilta"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:domtoren",
+  "kasite": "soittokellojen",
+  "kysymys": "Kerro lisää: soittokellojen"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:domtoren",
+  "kasite": "Roomalaisten",
+  "kysymys": "Kerro lisää: Roomalaisten"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:domtoren",
+  "kasite": "Reinin",
+  "kysymys": "Kerro lisää: Reinin"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:domtoren",
+  "kasite": "Traiectum",
+  "kysymys": "Kerro lisää: Traiectum"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:domtoren",
+  "kasite": "piispan",
+  "kysymys": "Kerro lisää: piispan"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:domtoren",
+  "kasite": "hiippakunnan",
+  "kysymys": "Kerro lisää: hiippakunnan"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:domtoren",
+  "kasite": "Domin kirkko",
+  "kysymys": "Kerro lisää: Domin kirkko"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:bourtange",
+  "kasite": "bastioneja",
+  "kysymys": "Kerro lisää: bastioneja"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:bourtange",
+  "kasite": "tykkien",
+  "kysymys": "Kerro lisää: tykkien"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:bourtange",
+  "kasite": "Bourtangen",
+  "kysymys": "Kerro lisää: Bourtangen"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:bourtange",
+  "kasite": "Alankomaiden kapinan",
+  "kysymys": "Kerro lisää: Alankomaiden kapinan"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:bourtange",
+  "kasite": "Groningenin",
+  "kysymys": "Kerro lisää: Groningenin"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:bourtange",
+  "kasite": "ulkoilmamuseo",
+  "kysymys": "Kerro lisää: ulkoilmamuseo"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:bourtange",
+  "kasite": "tähtilinnoituksen",
+  "kysymys": "Kerro lisää: tähtilinnoituksen"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:bourtange",
+  "kasite": "Saksan",
+  "kysymys": "Kerro lisää: Saksan"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:bourtange",
+  "kasite": "Bourtangen suon",
+  "kysymys": "Kerro lisää: Bourtangen suon"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:bourtange",
+  "kasite": "hiekkaharjua",
+  "kysymys": "Kerro lisää: hiekkaharjua"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:giethoorn",
+  "kasite": "kanavia",
+  "kysymys": "Kerro lisää: kanavia"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:giethoorn",
+  "kasite": "Overijsselin",
+  "kysymys": "Kerro lisää: Overijsselin"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:giethoorn",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:giethoorn",
+  "kasite": "turpeennostosta",
+  "kysymys": "Kerro lisää: turpeennostosta"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:giethoorn",
+  "kasite": "Bert Haanstran",
+  "kysymys": "Kerro lisää: Bert Haanstran"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:giethoorn",
+  "kasite": "Fanfare",
+  "kysymys": "Kerro lisää: Fanfare"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:giethoorn",
+  "kasite": "pyörätie",
+  "kysymys": "Kerro lisää: pyörätie"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:giethoorn",
+  "kasite": "Turve",
+  "kysymys": "Kerro lisää: Turve"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:giethoorn",
+  "kasite": "rahkasammalesta",
+  "kysymys": "Kerro lisää: rahkasammalesta"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Helene Kröller-Müllerin",
+  "kysymys": "Kerro lisää: Helene Kröller-Müllerin"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:krollermuller",
+  "kasite": "H. P. Bremmerin",
+  "kysymys": "Kerro lisää: H. P. Bremmerin"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Vincent van Goghin",
+  "kysymys": "Kerro lisää: Vincent van Goghin"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Hoge Veluwen kansallispuiston",
+  "kysymys": "Kerro lisää: Hoge Veluwen kansallispuiston"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Otterlossa",
+  "kysymys": "Kerro lisää: Otterlossa"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Gelderlandin",
+  "kysymys": "Kerro lisää: Gelderlandin"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Mondrianilta",
+  "kysymys": "Kerro lisää: Mondrianilta"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Gauguinilta",
+  "kysymys": "Kerro lisää: Gauguinilta"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Picassolta",
+  "kysymys": "Kerro lisää: Picassolta"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:krollermuller",
+  "kasite": "art nouveau",
+  "kysymys": "Kerro lisää: art nouveau"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Weimarin",
+  "kysymys": "Kerro lisää: Weimarin"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:krollermuller",
+  "kasite": "Bauhausin",
+  "kysymys": "Kerro lisää: Bauhausin"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Waalin",
+  "kysymys": "Kerro lisää: Waalin"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Reinin",
+  "kysymys": "Kerro lisää: Reinin"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Traianus",
+  "kysymys": "Kerro lisää: Traianus"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Kaarle Suuri",
+  "kysymys": "Kerro lisää: Kaarle Suuri"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:nijmegen",
+  "kasite": "batavien",
+  "kysymys": "Kerro lisää: batavien"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Gaius Julius Civilisin",
+  "kysymys": "Kerro lisää: Gaius Julius Civilisin"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Batavian tasavallassa",
+  "kysymys": "Kerro lisää: Batavian tasavallassa"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Fredrik Barbarossa",
+  "kysymys": "Kerro lisää: Fredrik Barbarossa"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Valkhof",
+  "kysymys": "Kerro lisää: Valkhof"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Lyypekki",
+  "kysymys": "Kerro lisää: Lyypekki"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Itämerellä",
+  "kysymys": "Kerro lisää: Itämerellä"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:nijmegen",
+  "kasite": "Pohjanmerellä",
+  "kysymys": "Kerro lisää: Pohjanmerellä"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "Cornelis Lely",
+  "kysymys": "Kerro lisää: Cornelis Lely"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "IJsselmeer",
+  "kysymys": "Kerro lisää: IJsselmeer"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "Vattimeri",
+  "kysymys": "Kerro lisää: Vattimeri"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "ruoppaajaa",
+  "kysymys": "Kerro lisää: ruoppaajaa"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "tuulimyllyt",
+  "kysymys": "Kerro lisää: tuulimyllyt"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "Wieringermeer",
+  "kysymys": "Kerro lisää: Wieringermeer"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "Flevoland",
+  "kysymys": "Kerro lisää: Flevoland"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "Zeelandin",
+  "kysymys": "Kerro lisää: Zeelandin"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "Deltatyöt",
+  "kysymys": "Kerro lisää: Deltatyöt"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "friisiä",
+  "kysymys": "Kerro lisää: friisiä"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "englannin",
+  "kysymys": "Kerro lisää: englannin"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:afsluitdijk",
+  "kasite": "hollantia",
+  "kysymys": "Kerro lisää: hollantia"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:maastricht",
+  "kasite": "Maas",
+  "kysymys": "Kerro lisää: Maas"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:maastricht",
+  "kasite": "Jeker",
+  "kysymys": "Kerro lisää: Jeker"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:maastricht",
+  "kasite": "Euroopan unioni",
+  "kysymys": "Kerro lisää: Euroopan unioni"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:maastricht",
+  "kasite": "talous- ja rahaliittoa",
+  "kysymys": "Kerro lisää: talous- ja rahaliittoa"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:maastricht",
+  "kasite": "euroa",
+  "kysymys": "Kerro lisää: euroa"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:maastricht",
+  "kasite": "Sint-Servaasbasiliek",
+  "kysymys": "Kerro lisää: Sint-Servaasbasiliek"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:maastricht",
+  "kasite": "pyhiinvaelluksia",
+  "kysymys": "Kerro lisää: pyhiinvaelluksia"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:maastricht",
+  "kasite": "Limburgin",
+  "kysymys": "Kerro lisää: Limburgin"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:maastricht",
+  "kasite": "Aachen",
+  "kysymys": "Kerro lisää: Aachen"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:maastricht",
+  "kasite": "Belgian",
+  "kysymys": "Kerro lisää: Belgian"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:maastricht",
+  "kasite": "Rein-joen",
+  "kysymys": "Kerro lisää: Rein-joen"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:maastricht",
+  "kasite": "Pohjanmereen",
+  "kysymys": "Kerro lisää: Pohjanmereen"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "Damin",
+  "kysymys": "Kerro lisää: Damin"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "kultaisella ajalla",
+  "kysymys": "Kerro lisää: kultaisella ajalla"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "kuninkaanlinna",
+  "kysymys": "Kerro lisää: kuninkaanlinna"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "Jacob van Campen",
+  "kysymys": "Kerro lisää: Jacob van Campen"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "Artus Quellinus",
+  "kysymys": "Kerro lisää: Artus Quellinus"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "Louis Bonaparte",
+  "kysymys": "Kerro lisää: Louis Bonaparte"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "Amstel-joen",
+  "kysymys": "Kerro lisää: Amstel-joen"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "Nieuwe Kerk",
+  "kysymys": "Kerro lisää: Nieuwe Kerk"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "kansallinen muistomerkki",
+  "kysymys": "Kerro lisää: kansallinen muistomerkki"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "puupaaluille",
+  "kysymys": "Kerro lisää: puupaaluille"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "kasite": "pohjaveden",
+  "kysymys": "Kerro lisää: pohjaveden"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "goottilaista",
+  "kysymys": "Kerro lisää: goottilaista"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "Domplein",
+  "kysymys": "Kerro lisää: Domplein"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "Domtoren",
+  "kysymys": "Kerro lisää: Domtoren"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "Tourin Martti",
+  "kysymys": "Kerro lisää: Tourin Martti"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "Martinpäivää",
+  "kysymys": "Kerro lisää: Martinpäivää"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "kahdeksankymmenvuotisen sodan",
+  "kysymys": "Kerro lisää: kahdeksankymmenvuotisen sodan"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "kasite": "Alankomaiden tasavallalle",
+  "kysymys": "Kerro lisää: Alankomaiden tasavallalle"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Lontoon Crystal Palacen",
+  "kysymys": "Kerro lisää: Lontoon Crystal Palacen"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Samuel Sarphatin",
+  "kysymys": "Kerro lisää: Samuel Sarphatin"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Frederiksplein",
+  "kysymys": "Kerro lisää: Frederiksplein"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "tulipalossa",
+  "kysymys": "Kerro lisää: tulipalossa"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "tiiliholvikäytävät",
+  "kysymys": "Kerro lisää: tiiliholvikäytävät"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Paleis voor Volksvlijt",
+  "kysymys": "Kerro lisää: Paleis voor Volksvlijt"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Sarphatipark",
+  "kysymys": "Kerro lisää: Sarphatipark"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "maailmannäyttelyä",
+  "kysymys": "Kerro lisää: maailmannäyttelyä"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Joseph Paxton",
+  "kysymys": "Kerro lisää: Joseph Paxton"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Lontoon",
+  "kysymys": "Kerro lisää: Lontoon"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-paleis-voor-volksvlijt",
+  "kasite": "Pariisissa",
+  "kysymys": "Kerro lisää: Pariisissa"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Koillisväylälle",
+  "kysymys": "Kerro lisää: Koillisväylälle"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Willem Barentsz",
+  "kysymys": "Kerro lisää: Willem Barentsz"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Serapis",
+  "kysymys": "Kerro lisää: Serapis"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Flamborough Headin",
+  "kysymys": "Kerro lisää: Flamborough Headin"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "mutatasangoiksi",
+  "kysymys": "Kerro lisää: mutatasangoiksi"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Unescon maailmanperintökohteeksi",
+  "kysymys": "Kerro lisää: Unescon maailmanperintökohteeksi"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Novaja Zemljalla",
+  "kysymys": "Kerro lisää: Novaja Zemljalla"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "hylkeet",
+  "kysymys": "Kerro lisää: hylkeet"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-texel",
+  "kasite": "Ecomare",
+  "kysymys": "Kerro lisää: Ecomare"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "Oost-Vlieland",
+  "kysymys": "Kerro lisää: Oost-Vlieland"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "Pyhän Lucian tulvassa",
+  "kysymys": "Kerro lisää: Pyhän Lucian tulvassa"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "lautalla",
+  "kysymys": "Kerro lisää: lautalla"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "polkupyörällä",
+  "kysymys": "Kerro lisää: polkupyörällä"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "Vlielandin",
+  "kysymys": "Kerro lisää: Vlielandin"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "Länsifriisi",
+  "kysymys": "Kerro lisää: Länsifriisi"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "Friisinmaan",
+  "kysymys": "Kerro lisää: Friisinmaan"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "pyöräteiden",
+  "kysymys": "Kerro lisää: pyöräteiden"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-vlieland",
+  "kasite": "liikennepolitiikalla",
+  "kysymys": "Kerro lisää: liikennepolitiikalla"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "karpaloita",
+  "kysymys": "Kerro lisää: karpaloita"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "keripukkia",
+  "kysymys": "Kerro lisää: keripukkia"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "mastoista",
+  "kysymys": "Kerro lisää: mastoista"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "haaksirikkoja",
+  "kysymys": "Kerro lisää: haaksirikkoja"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "Robert Holmesin",
+  "kysymys": "Kerro lisää: Robert Holmesin"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "West-Terschelling",
+  "kysymys": "Kerro lisää: West-Terschelling"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "Koillisväylän",
+  "kysymys": "Kerro lisää: Koillisväylän"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "Barentsinmeri",
+  "kysymys": "Kerro lisää: Barentsinmeri"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "C-vitamiinia",
+  "kysymys": "Kerro lisää: C-vitamiinia"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-terschelling",
+  "kasite": "keripukin",
+  "kysymys": "Kerro lisää: keripukin"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "sistersiläismunkkeihin",
+  "kysymys": "Kerro lisää: sistersiläismunkkeihin"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "kansallispuisto",
+  "kysymys": "Kerro lisää: kansallispuisto"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "Schiermonnikoog",
+  "kysymys": "Kerro lisää: Schiermonnikoog"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "Alankomaiden harvimmin asuttu kunta",
+  "kysymys": "Kerro lisää: Alankomaiden harvimmin asuttu kunta"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "wadlopeniksi",
+  "kysymys": "Kerro lisää: wadlopeniksi"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "Benedictuksen",
+  "kysymys": "Kerro lisää: Benedictuksen"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "Schiermonnikoogin",
+  "kysymys": "Kerro lisää: Schiermonnikoogin"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-schiermonnikoog",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "nummi",
+  "kysymys": "Kerro lisää: nummi"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "katajikoista",
+  "kysymys": "Kerro lisää: katajikoista"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "kansallispuiston",
+  "kysymys": "Kerro lisää: kansallispuiston"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "kelttiläisten",
+  "kysymys": "Kerro lisää: kelttiläisten"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "hautakumpujen",
+  "kysymys": "Kerro lisää: hautakumpujen"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "luonnonsuojelujärjestöt",
+  "kysymys": "Kerro lisää: luonnonsuojelujärjestöt"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "Kansallispuisto",
+  "kysymys": "Kerro lisää: Kansallispuisto"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "nummialueena",
+  "kysymys": "Kerro lisää: nummialueena"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "Drenthen",
+  "kysymys": "Kerro lisää: Drenthen"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "kanervaa",
+  "kysymys": "Kerro lisää: kanervaa"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "laiduntamisen",
+  "kysymys": "Kerro lisää: laiduntamisen"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "Assen",
+  "kysymys": "Kerro lisää: Assen"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-dwingelderveld",
+  "kasite": "hunebedeistä",
+  "kysymys": "Kerro lisää: hunebedeistä"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "Flevolandin",
+  "kysymys": "Kerro lisää: Flevolandin"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "merihanhet",
+  "kysymys": "Kerro lisää: merihanhet"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "rewilding",
+  "kysymys": "Kerro lisää: rewilding"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "konik-hevosia",
+  "kysymys": "Kerro lisää: konik-hevosia"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "saksanhirviä",
+  "kysymys": "Kerro lisää: saksanhirviä"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "heck-nautoja",
+  "kysymys": "Kerro lisää: heck-nautoja"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "Ramsar-kosteikoksi",
+  "kysymys": "Kerro lisää: Ramsar-kosteikoksi"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "merikotka",
+  "kysymys": "Kerro lisää: merikotka"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "Ramsarin sopimuksessa",
+  "kysymys": "Kerro lisää: Ramsarin sopimuksessa"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "kosteikkojen",
+  "kysymys": "Kerro lisää: kosteikkojen"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "vesilintujen",
+  "kysymys": "Kerro lisää: vesilintujen"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "petoja",
+  "kysymys": "Kerro lisää: petoja"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-oostvaardersplassen",
+  "kasite": "lisäruokinnasta",
+  "kysymys": "Kerro lisää: lisäruokinnasta"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "Pyhän Elisabetin tulva",
+  "kysymys": "Kerro lisää: Pyhän Elisabetin tulva"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "Suuri Hollannin Waard",
+  "kysymys": "Kerro lisää: Suuri Hollannin Waard"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "kansallispuistona",
+  "kysymys": "Kerro lisää: kansallispuistona"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "vuorovesikosteikkoja",
+  "kysymys": "Kerro lisää: vuorovesikosteikkoja"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "pajumetsää",
+  "kysymys": "Kerro lisää: pajumetsää"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "muuttavien hanhien",
+  "kysymys": "Kerro lisää: muuttavien hanhien"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "Polderi",
+  "kysymys": "Kerro lisää: Polderi"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "tuulimyllyillä",
+  "kysymys": "Kerro lisää: tuulimyllyillä"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "pajulajit",
+  "kysymys": "Kerro lisää: pajulajit"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "pajukoreja",
+  "kysymys": "Kerro lisää: pajukoreja"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "levähdyspaikkoja",
+  "kysymys": "Kerro lisää: levähdyspaikkoja"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-biesbosch",
+  "kasite": "Kosteikoilla",
+  "kysymys": "Kerro lisää: Kosteikoilla"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "Naardenin verilöylyssä",
+  "kysymys": "Kerro lisää: Naardenin verilöylyssä"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "kahdeksankymmenvuotisen sodan",
+  "kysymys": "Kerro lisää: kahdeksankymmenvuotisen sodan"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "tähtilinnoituksen",
+  "kysymys": "Kerro lisää: tähtilinnoituksen"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "tähtilinnoitus",
+  "kysymys": "Kerro lisää: tähtilinnoitus"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "bastionit",
+  "kysymys": "Kerro lisää: bastionit"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "ranskalaisaikana",
+  "kysymys": "Kerro lisää: ranskalaisaikana"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "Määristä",
+  "kysymys": "Kerro lisää: Määristä"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "Orbis Pictus",
+  "kysymys": "Kerro lisää: Orbis Pictus"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "mausoleumiinsa",
+  "kysymys": "Kerro lisää: mausoleumiinsa"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "Vilhelm Vaitelias",
+  "kysymys": "Kerro lisää: Vilhelm Vaitelias"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "Münsterin rauhaan",
+  "kysymys": "Kerro lisää: Münsterin rauhaan"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "mausoleumi",
+  "kysymys": "Kerro lisää: mausoleumi"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-naarden",
+  "kasite": "linnoitusmuseo",
+  "kysymys": "Kerro lisää: linnoitusmuseo"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "lähetyssaarnaaja",
+  "kysymys": "Kerro lisää: lähetyssaarnaaja"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Bonifatius",
+  "kysymys": "Kerro lisää: Bonifatius"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Friisinmaalla",
+  "kysymys": "Kerro lisää: Friisinmaalla"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Bonifatiuksen puiston",
+  "kysymys": "Kerro lisää: Bonifatiuksen puiston"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "bolwerken",
+  "kysymys": "Kerro lisää: bolwerken"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "bastionia",
+  "kysymys": "Kerro lisää: bastionia"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "amiraliteetit",
+  "kysymys": "Kerro lisää: amiraliteetit"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Harlingeniin",
+  "kysymys": "Kerro lisää: Harlingeniin"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Germaniassa",
+  "kysymys": "Kerro lisää: Germaniassa"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Fuldan",
+  "kysymys": "Kerro lisää: Fuldan"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "Donarin tammen",
+  "kysymys": "Kerro lisää: Donarin tammen"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "markkinoita",
+  "kysymys": "Kerro lisää: markkinoita"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-dokkum",
+  "kasite": "itsehallintoa",
+  "kysymys": "Kerro lisää: itsehallintoa"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "Euroopasta",
+  "kysymys": "Kerro lisää: Euroopasta"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "Oudewaterin",
+  "kysymys": "Kerro lisää: Oudewaterin"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "Heksenwaagissa",
+  "kysymys": "Kerro lisää: Heksenwaagissa"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "todistuksen",
+  "kysymys": "Kerro lisää: todistuksen"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "kaupunkioikeudet",
+  "kysymys": "Kerro lisää: kaupunkioikeudet"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "Utrechtin",
+  "kysymys": "Kerro lisää: Utrechtin"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "köyden",
+  "kysymys": "Kerro lisää: köyden"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "köysimuseo",
+  "kysymys": "Kerro lisää: köysimuseo"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-oudewater",
+  "kasite": "Heksenwaag",
+  "kysymys": "Kerro lisää: Heksenwaag"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "IJssel",
+  "kysymys": "Kerro lisää: IJssel"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "hansakaupunki",
+  "kysymys": "Kerro lisää: hansakaupunki"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "Hansa",
+  "kysymys": "Kerro lisää: Hansa"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "Hansaan",
+  "kysymys": "Kerro lisää: Hansaan"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "kaupunginportista",
+  "kysymys": "Kerro lisää: kaupunginportista"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "Kampenin",
+  "kysymys": "Kerro lisää: Kampenin"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-kampen",
+  "kasite": "Overijsselin",
+  "kysymys": "Kerro lisää: Overijsselin"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "Hoornin",
+  "kysymys": "Kerro lisää: Hoornin"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "Willem Schouten",
+  "kysymys": "Kerro lisää: Willem Schouten"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "Länsi-Friisin",
+  "kysymys": "Kerro lisää: Länsi-Friisin"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "Itä-Intian kauppakomppanian",
+  "kysymys": "Kerro lisää: Itä-Intian kauppakomppanian"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "VOC:n",
+  "kysymys": "Kerro lisää: VOC:n"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "Jan Pieterszoon Coen",
+  "kysymys": "Kerro lisää: Jan Pieterszoon Coen"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "pippuria",
+  "kysymys": "Kerro lisää: pippuria"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "muskottipähkinää",
+  "kysymys": "Kerro lisää: muskottipähkinää"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "Hoornista",
+  "kysymys": "Kerro lisää: Hoornista"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-hoorn",
+  "kasite": "kulta-aikana",
+  "kysymys": "Kerro lisää: kulta-aikana"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Vilhelm III:lle",
+  "kysymys": "Kerro lisää: Vilhelm III:lle"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Englantia",
+  "kysymys": "Kerro lisää: Englantia"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "haukkametsästykseen",
+  "kysymys": "Kerro lisää: haukkametsästykseen"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Vilhelm I",
+  "kysymys": "Kerro lisää: Vilhelm I"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Jacob Roman",
+  "kysymys": "Kerro lisää: Jacob Roman"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Claude Desgots",
+  "kysymys": "Kerro lisää: Claude Desgots"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Het Loon",
+  "kysymys": "Kerro lisää: Het Loon"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "museo",
+  "kysymys": "Kerro lisää: museo"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "Oranian-Nassaun",
+  "kysymys": "Kerro lisää: Oranian-Nassaun"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-het-loo",
+  "kasite": "hollantilaisbarokkia",
+  "kysymys": "Kerro lisää: hollantilaisbarokkia"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "hunebed",
+  "kysymys": "Kerro lisää: hunebed"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "jättiläishauta",
+  "kysymys": "Kerro lisää: jättiläishauta"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "pronssikaudelle",
+  "kysymys": "Kerro lisää: pronssikaudelle"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "Borgerin",
+  "kysymys": "Kerro lisää: Borgerin"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "Titia Brongersma",
+  "kysymys": "Kerro lisää: Titia Brongersma"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "amatöörikaivauksen",
+  "kysymys": "Kerro lisää: amatöörikaivauksen"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "Drenthen",
+  "kysymys": "Kerro lisää: Drenthen"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "Assenista",
+  "kysymys": "Kerro lisää: Assenista"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-borger",
+  "kasite": "kansikiveä",
+  "kysymys": "Kerro lisää: kansikiveä"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "Utrechtin",
+  "kysymys": "Kerro lisää: Utrechtin"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "Amersfoortin",
+  "kysymys": "Kerro lisää: Amersfoortin"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "Zwollen",
+  "kysymys": "Kerro lisää: Zwollen"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "vallihaudoin",
+  "kysymys": "Kerro lisää: vallihaudoin"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "ruudukkokaavaisin",
+  "kysymys": "Kerro lisää: ruudukkokaavaisin"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "Gelderlandin",
+  "kysymys": "Kerro lisää: Gelderlandin"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "kauppakaupunkien",
+  "kysymys": "Kerro lisää: kauppakaupunkien"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "murtoveden",
+  "kysymys": "Kerro lisää: murtoveden"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "kalastuksella",
+  "kysymys": "Kerro lisää: kalastuksella"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "maanviljelyllä",
+  "kysymys": "Kerro lisää: maanviljelyllä"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-elburg",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "Teylingenin",
+  "kysymys": "Kerro lisää: Teylingenin"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "Jacoba van Beieren",
+  "kysymys": "Kerro lisää: Jacoba van Beieren"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "kukkasipulinviljelijöiden",
+  "kysymys": "Kerro lisää: kukkasipulinviljelijöiden"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "Jan David Zocher",
+  "kysymys": "Kerro lisää: Jan David Zocher"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "Burgundin",
+  "kysymys": "Kerro lisää: Burgundin"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "sipulia",
+  "kysymys": "Kerro lisää: sipulia"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "tulppaanien",
+  "kysymys": "Kerro lisää: tulppaanien"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "ranskalaisessa muotopuutarhassa",
+  "kysymys": "Kerro lisää: ranskalaisessa muotopuutarhassa"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "Britanniassa",
+  "kysymys": "Kerro lisää: Britanniassa"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-keukenhof",
+  "kasite": "Keukenhofin",
+  "kysymys": "Kerro lisää: Keukenhofin"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "Goudassa",
+  "kysymys": "Kerro lisää: Goudassa"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "kaupunginvaltuusto",
+  "kysymys": "Kerro lisää: kaupunginvaltuusto"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "juustoa",
+  "kysymys": "Kerro lisää: juustoa"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "torilla",
+  "kysymys": "Kerro lisää: torilla"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "vohvelilevyistä",
+  "kysymys": "Kerro lisää: vohvelilevyistä"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "juuston",
+  "kysymys": "Kerro lisää: juuston"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "stroopwafelien",
+  "kysymys": "Kerro lisää: stroopwafelien"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "Savipiippuja",
+  "kysymys": "Kerro lisää: Savipiippuja"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-gouda",
+  "kasite": "Waagissa",
+  "kysymys": "Kerro lisää: Waagissa"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "kaupunkioikeudet",
+  "kysymys": "Kerro lisää: kaupunkioikeudet"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "Edam-juuston",
+  "kysymys": "Kerro lisää: Edam-juuston"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "Kaarle V",
+  "kysymys": "Kerro lisää: Kaarle V"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "laivanrakennus",
+  "kysymys": "Kerro lisää: laivanrakennus"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "IJe-joen",
+  "kysymys": "Kerro lisää: IJe-joen"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "viikkotoriin",
+  "kysymys": "Kerro lisää: viikkotoriin"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "vahakuoresta",
+  "kysymys": "Kerro lisää: vahakuoresta"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-edam",
+  "kasite": "Edam-Volendamin",
+  "kysymys": "Kerro lisää: Edam-Volendamin"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "Espanjalaiset",
+  "kysymys": "Kerro lisää: Espanjalaiset"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "Oranian Vilhelm I",
+  "kysymys": "Kerro lisää: Oranian Vilhelm I"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "verovapauden",
+  "kysymys": "Kerro lisää: verovapauden"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "Pieter van Musschenbroek",
+  "kysymys": "Kerro lisää: Pieter van Musschenbroek"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "kondensaattoreiden",
+  "kysymys": "Kerro lisää: kondensaattoreiden"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "taitekertoimista",
+  "kysymys": "Kerro lisää: taitekertoimista"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "Willebrord Snellin",
+  "kysymys": "Kerro lisää: Willebrord Snellin"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "Leidenin",
+  "kysymys": "Kerro lisää: Leidenin"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "sillin",
+  "kysymys": "Kerro lisää: sillin"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "hutspot",
+  "kysymys": "Kerro lisää: hutspot"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "Espanjan",
+  "kysymys": "Kerro lisää: Espanjan"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-leiden",
+  "kasite": "yliopiston",
+  "kysymys": "Kerro lisää: yliopiston"
+ },
+ {
+  "n": 398,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "länsifriisiä",
+  "kysymys": "Kerro lisää: länsifriisiä"
+ },
+ {
+  "n": 399,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Hansan",
+  "kysymys": "Kerro lisää: Hansan"
+ },
+ {
+  "n": 400,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Friisinmaalla",
+  "kysymys": "Kerro lisää: Friisinmaalla"
+ },
+ {
+  "n": 401,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Hindeloopenille",
+  "kysymys": "Kerro lisää: Hindeloopenille"
+ },
+ {
+  "n": 402,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Amsterdamista",
+  "kysymys": "Kerro lisää: Amsterdamista"
+ },
+ {
+  "n": 403,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "VOC:n",
+  "kysymys": "Kerro lisää: VOC:n"
+ },
+ {
+  "n": 404,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Alankomaiden",
+  "kysymys": "Kerro lisää: Alankomaiden"
+ },
+ {
+  "n": 405,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Lübeck",
+  "kysymys": "Kerro lisää: Lübeck"
+ },
+ {
+  "n": 406,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 407,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 408,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "IJsselmeer",
+  "kysymys": "Kerro lisää: IJsselmeer"
+ },
+ {
+  "n": 409,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Zuiderzee",
+  "kysymys": "Kerro lisää: Zuiderzee"
+ },
+ {
+  "n": 410,
+  "kohta": "kohde:hahmotelma-hindeloopen",
+  "kasite": "Afsluitdijk",
+  "kysymys": "Kerro lisää: Afsluitdijk"
+ },
+ {
+  "n": 411,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 412,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "IJsselmeeriksi",
+  "kysymys": "Kerro lisää: IJsselmeeriksi"
+ },
+ {
+  "n": 413,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "Flevolandin",
+  "kysymys": "Kerro lisää: Flevolandin"
+ },
+ {
+  "n": 414,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "kalastus",
+  "kysymys": "Kerro lisää: kalastus"
+ },
+ {
+  "n": 415,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "kalastajien",
+  "kysymys": "Kerro lisää: kalastajien"
+ },
+ {
+  "n": 416,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "Urkin",
+  "kysymys": "Kerro lisää: Urkin"
+ },
+ {
+  "n": 417,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "Cornelis Lely",
+  "kysymys": "Kerro lisää: Cornelis Lely"
+ },
+ {
+  "n": 418,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "IJsselmeer",
+  "kysymys": "Kerro lisää: IJsselmeer"
+ },
+ {
+  "n": 419,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "Vattimeri",
+  "kysymys": "Kerro lisää: Vattimeri"
+ },
+ {
+  "n": 420,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "IJsselmeerin",
+  "kysymys": "Kerro lisää: IJsselmeerin"
+ },
+ {
+  "n": 421,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "poldereiksi",
+  "kysymys": "Kerro lisää: poldereiksi"
+ },
+ {
+  "n": 422,
+  "kohta": "kohde:hahmotelma-urk",
+  "kasite": "Lelystad",
+  "kysymys": "Kerro lisää: Lelystad"
+ },
+ {
+  "n": 423,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Limburgin",
+  "kysymys": "Kerro lisää: Limburgin"
+ },
+ {
+  "n": 424,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Maas-joen",
+  "kysymys": "Kerro lisää: Maas-joen"
+ },
+ {
+  "n": 425,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "abbedissa",
+  "kysymys": "Kerro lisää: abbedissa"
+ },
+ {
+  "n": 426,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Ansfried",
+  "kysymys": "Kerro lisää: Ansfried"
+ },
+ {
+  "n": 427,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Pyhässä saksalais-roomalaisessa keisarikunnassa",
+  "kysymys": "Kerro lisää: Pyhässä saksalais-roomalaisessa keisarikunnassa"
+ },
+ {
+  "n": 428,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Keski-Euroopan",
+  "kysymys": "Kerro lisää: Keski-Euroopan"
+ },
+ {
+  "n": 429,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "luostariruhtinaskunta",
+  "kysymys": "Kerro lisää: luostariruhtinaskunta"
+ },
+ {
+  "n": 430,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Benedictus Nursialaisen",
+  "kysymys": "Kerro lisää: Benedictus Nursialaisen"
+ },
+ {
+  "n": 431,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "aatelisnaisten",
+  "kysymys": "Kerro lisää: aatelisnaisten"
+ },
+ {
+  "n": 432,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Belgian",
+  "kysymys": "Kerro lisää: Belgian"
+ },
+ {
+  "n": 433,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Rein-joen",
+  "kysymys": "Kerro lisää: Rein-joen"
+ },
+ {
+  "n": 434,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Pohjanmereen",
+  "kysymys": "Kerro lisää: Pohjanmereen"
+ },
+ {
+  "n": 435,
+  "kohta": "kohde:hahmotelma-thorn",
+  "kasite": "Maastrichtin",
+  "kysymys": "Kerro lisää: Maastrichtin"
+ },
+ {
+  "n": 436,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Drenthessä",
+  "kysymys": "Kerro lisää: Drenthessä"
+ },
+ {
+  "n": 437,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "kutojista",
+  "kysymys": "Kerro lisää: kutojista"
+ },
+ {
+  "n": 438,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Perunansyöjät",
+  "kysymys": "Kerro lisää: Perunansyöjät"
+ },
+ {
+  "n": 439,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Pariisissa",
+  "kysymys": "Kerro lisää: Pariisissa"
+ },
+ {
+  "n": 440,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Etelä-Ranskassa",
+  "kysymys": "Kerro lisää: Etelä-Ranskassa"
+ },
+ {
+  "n": 441,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Eindhovenin",
+  "kysymys": "Kerro lisää: Eindhovenin"
+ },
+ {
+  "n": 442,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Nijmegenin",
+  "kysymys": "Kerro lisää: Nijmegenin"
+ },
+ {
+  "n": 443,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Arnhemin",
+  "kysymys": "Kerro lisää: Arnhemin"
+ },
+ {
+  "n": 444,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Reinin",
+  "kysymys": "Kerro lisää: Reinin"
+ },
+ {
+  "n": 445,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "turvesoistaan",
+  "kysymys": "Kerro lisää: turvesoistaan"
+ },
+ {
+  "n": 446,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "hunebedit",
+  "kysymys": "Kerro lisää: hunebedit"
+ },
+ {
+  "n": 447,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Orvelte",
+  "kysymys": "Kerro lisää: Orvelte"
+ },
+ {
+  "n": 448,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Belgiaan",
+  "kysymys": "Kerro lisää: Belgiaan"
+ },
+ {
+  "n": 449,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "'s-Hertogenbosch",
+  "kysymys": "Kerro lisää: 's-Hertogenbosch"
+ },
+ {
+  "n": 450,
+  "kohta": "kohde:hahmotelma-nuenen",
+  "kasite": "Eindhoven",
+  "kysymys": "Kerro lisää: Eindhoven"
+ },
+ {
+  "n": 451,
+  "kohta": "kohde:hahmotelma-orvelte",
+  "kasite": "hevosraitiovaunu",
+  "kysymys": "Kerro lisää: hevosraitiovaunu"
+ },
+ {
+  "n": 452,
+  "kohta": "kohde:hahmotelma-orvelte",
+  "kasite": "Drenthen",
+  "kysymys": "Kerro lisää: Drenthen"
+ },
+ {
+  "n": 453,
+  "kohta": "kohde:hahmotelma-orvelte",
+  "kasite": "Orvelteen",
+  "kysymys": "Kerro lisää: Orvelteen"
+ },
+ {
+  "n": 454,
+  "kohta": "kohde:hahmotelma-orvelte",
+  "kasite": "Orvelten",
+  "kysymys": "Kerro lisää: Orvelten"
+ },
+ {
+  "n": 455,
+  "kohta": "kohde:hahmotelma-orvelte",
+  "kasite": "Skansen",
+  "kysymys": "Kerro lisää: Skansen"
+ },
+ {
+  "n": 456,
+  "kohta": "kohde:hahmotelma-orvelte",
+  "kasite": "Bruntingerhof",
+  "kysymys": "Kerro lisää: Bruntingerhof"
+ },
+ {
+  "n": 457,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "Waterpoort",
+  "kysymys": "Kerro lisää: Waterpoort"
+ },
+ {
+  "n": 458,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "Sneekweek",
+  "kysymys": "Kerro lisää: Sneekweek"
+ },
+ {
+  "n": 459,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "Friisinmaan",
+  "kysymys": "Kerro lisää: Friisinmaan"
+ },
+ {
+  "n": 460,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "C&A",
+  "kysymys": "Kerro lisää: C&A"
+ },
+ {
+  "n": 461,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "kanavat",
+  "kysymys": "Kerro lisää: kanavat"
+ },
+ {
+  "n": 462,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "Friisinmaalla",
+  "kysymys": "Kerro lisää: Friisinmaalla"
+ },
+ {
+  "n": 463,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "vesiurheilusta",
+  "kysymys": "Kerro lisää: vesiurheilusta"
+ },
+ {
+  "n": 464,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "luistelumatka",
+  "kysymys": "Kerro lisää: luistelumatka"
+ },
+ {
+  "n": 465,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "Leeuwardenin",
+  "kysymys": "Kerro lisää: Leeuwardenin"
+ },
+ {
+  "n": 466,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "vallihautaa",
+  "kysymys": "Kerro lisää: vallihautaa"
+ },
+ {
+  "n": 467,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "muuria",
+  "kysymys": "Kerro lisää: muuria"
+ },
+ {
+  "n": 468,
+  "kohta": "kohde:hahmotelma-sneek",
+  "kasite": "nähtävyyksiin",
+  "kysymys": "Kerro lisää: nähtävyyksiin"
+ },
+ {
+  "n": 469,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "polderilta",
+  "kysymys": "Kerro lisää: polderilta"
+ },
+ {
+  "n": 470,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "Alblasserwaardin",
+  "kysymys": "Kerro lisää: Alblasserwaardin"
+ },
+ {
+  "n": 471,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "tuulimyllyjen",
+  "kysymys": "Kerro lisää: tuulimyllyjen"
+ },
+ {
+  "n": 472,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "pumppuasemia",
+  "kysymys": "Kerro lisää: pumppuasemia"
+ },
+ {
+  "n": 473,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 474,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "vesipyörälle",
+  "kysymys": "Kerro lisää: vesipyörälle"
+ },
+ {
+  "n": 475,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "polderin",
+  "kysymys": "Kerro lisää: polderin"
+ },
+ {
+  "n": 476,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "padoista",
+  "kysymys": "Kerro lisää: padoista"
+ },
+ {
+  "n": 477,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "pumppaamalla",
+  "kysymys": "Kerro lisää: pumppaamalla"
+ },
+ {
+  "n": 478,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "vesilautakunnat",
+  "kysymys": "Kerro lisää: vesilautakunnat"
+ },
+ {
+  "n": 479,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "patojen",
+  "kysymys": "Kerro lisää: patojen"
+ },
+ {
+  "n": 480,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "höyrykäyttöisiä",
+  "kysymys": "Kerro lisää: höyrykäyttöisiä"
+ },
+ {
+  "n": 481,
+  "kohta": "kohde:hahmotelma-kinderdijk",
+  "kasite": "vesihuoltoa",
+  "kysymys": "Kerro lisää: vesihuoltoa"
+ },
+ {
+  "n": 482,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "höyrypumppu",
+  "kysymys": "Kerro lisää: höyrypumppu"
+ },
+ {
+  "n": 483,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "Nicolaas Kruik",
+  "kysymys": "Kerro lisää: Nicolaas Kruik"
+ },
+ {
+  "n": 484,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "Nicolaas Kruikin",
+  "kysymys": "Kerro lisää: Nicolaas Kruikin"
+ },
+ {
+  "n": 485,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "Haarlemmermeerin",
+  "kysymys": "Kerro lisää: Haarlemmermeerin"
+ },
+ {
+  "n": 486,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "höyrykone",
+  "kysymys": "Kerro lisää: höyrykone"
+ },
+ {
+  "n": 487,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "Schipholin",
+  "kysymys": "Kerro lisää: Schipholin"
+ },
+ {
+  "n": 488,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "Hoofddorp",
+  "kysymys": "Kerro lisää: Hoofddorp"
+ },
+ {
+  "n": 489,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "kanavavyöhyke",
+  "kysymys": "Kerro lisää: kanavavyöhyke"
+ },
+ {
+  "n": 490,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 491,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "vesienhallinnassa",
+  "kysymys": "Kerro lisää: vesienhallinnassa"
+ },
+ {
+  "n": 492,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "höyrykattilassa",
+  "kysymys": "Kerro lisää: höyrykattilassa"
+ },
+ {
+  "n": 493,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "mäntää",
+  "kysymys": "Kerro lisää: mäntää"
+ },
+ {
+  "n": 494,
+  "kohta": "kohde:hahmotelma-cruquius",
+  "kasite": "Harvey & Co",
+  "kysymys": "Kerro lisää: Harvey & Co"
+ },
+ {
+  "n": 495,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "VOC",
+  "kysymys": "Kerro lisää: VOC"
+ },
+ {
+  "n": 496,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "mausteiden",
+  "kysymys": "Kerro lisää: mausteiden"
+ },
+ {
+  "n": 497,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "Zuiderzee-museoon",
+  "kysymys": "Kerro lisää: Zuiderzee-museoon"
+ },
+ {
+  "n": 498,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "Itä-Intian merikaupan",
+  "kysymys": "Kerro lisää: Itä-Intian merikaupan"
+ },
+ {
+  "n": 499,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "Amsterdam",
+  "kysymys": "Kerro lisää: Amsterdam"
+ },
+ {
+  "n": 500,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "Hoorn",
+  "kysymys": "Kerro lisää: Hoorn"
+ },
+ {
+  "n": 501,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "mausteita",
+  "kysymys": "Kerro lisää: mausteita"
+ },
+ {
+  "n": 502,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "Enkhuizenin",
+  "kysymys": "Kerro lisää: Enkhuizenin"
+ },
+ {
+  "n": 503,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "nähtävyys",
+  "kysymys": "Kerro lisää: nähtävyys"
+ },
+ {
+  "n": 504,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 505,
+  "kohta": "kohde:hahmotelma-enkhuizen",
+  "kasite": "IJsselmeer",
+  "kysymys": "Kerro lisää: IJsselmeer"
+ },
+ {
+  "n": 506,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "planetaario",
+  "kysymys": "Kerro lisää: planetaario"
+ },
+ {
+  "n": 507,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "UNESCO",
+  "kysymys": "Kerro lisää: UNESCO"
+ },
+ {
+  "n": 508,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "yhtymän",
+  "kysymys": "Kerro lisää: yhtymän"
+ },
+ {
+  "n": 509,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 510,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "heilurikello",
+  "kysymys": "Kerro lisää: heilurikello"
+ },
+ {
+  "n": 511,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "kuun vaiheet",
+  "kysymys": "Kerro lisää: kuun vaiheet"
+ },
+ {
+  "n": 512,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "filosofian",
+  "kysymys": "Kerro lisää: filosofian"
+ },
+ {
+  "n": 513,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "yliopiston",
+  "kysymys": "Kerro lisää: yliopiston"
+ },
+ {
+  "n": 514,
+  "kohta": "kohde:hahmotelma-franeker",
+  "kasite": "planeettaa",
+  "kysymys": "Kerro lisää: planeettaa"
+ },
+ {
+  "n": 515,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "virustaudista",
+  "kysymys": "Kerro lisää: virustaudista"
+ },
+ {
+  "n": 516,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "kirvojen",
+  "kysymys": "Kerro lisää: kirvojen"
+ },
+ {
+  "n": 517,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "tuulikaupaksi",
+  "kysymys": "Kerro lisää: tuulikaupaksi"
+ },
+ {
+  "n": 518,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "kapakoissa",
+  "kysymys": "Kerro lisää: kapakoissa"
+ },
+ {
+  "n": 519,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "Haarlemissa",
+  "kysymys": "Kerro lisää: Haarlemissa"
+ },
+ {
+  "n": 520,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "tulppaanikuplan",
+  "kysymys": "Kerro lisää: tulppaanikuplan"
+ },
+ {
+  "n": 521,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "Bollenstreek",
+  "kysymys": "Kerro lisää: Bollenstreek"
+ },
+ {
+  "n": 522,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "Lisse",
+  "kysymys": "Kerro lisää: Lisse"
+ },
+ {
+  "n": 523,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "Keukenhofin",
+  "kysymys": "Kerro lisää: Keukenhofin"
+ },
+ {
+  "n": 524,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "talouskuplista",
+  "kysymys": "Kerro lisää: talouskuplista"
+ },
+ {
+  "n": 525,
+  "kohta": "nosto:tulppaanimania",
+  "kasite": "Alankomaiden kultaisen ajan",
+  "kysymys": "Kerro lisää: Alankomaiden kultaisen ajan"
+ },
+ {
+  "n": 526,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "myrskytulva",
+  "kysymys": "Kerro lisää: myrskytulva"
+ },
+ {
+  "n": 527,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "polderiksi",
+  "kysymys": "Kerro lisää: polderiksi"
+ },
+ {
+  "n": 528,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Cornelis Lely",
+  "kysymys": "Kerro lisää: Cornelis Lely"
+ },
+ {
+  "n": 529,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "työsaarelta",
+  "kysymys": "Kerro lisää: työsaarelta"
+ },
+ {
+  "n": 530,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "moreenisavea",
+  "kysymys": "Kerro lisää: moreenisavea"
+ },
+ {
+  "n": 531,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Vlieter",
+  "kysymys": "Kerro lisää: Vlieter"
+ },
+ {
+  "n": 532,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "IJsselmeer",
+  "kysymys": "Kerro lisää: IJsselmeer"
+ },
+ {
+  "n": 533,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Vattimeri",
+  "kysymys": "Kerro lisää: Vattimeri"
+ },
+ {
+  "n": 534,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Flevoland",
+  "kysymys": "Kerro lisää: Flevoland"
+ },
+ {
+  "n": 535,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "A7",
+  "kysymys": "Kerro lisää: A7"
+ },
+ {
+  "n": 536,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Pohjois-Hollannin",
+  "kysymys": "Kerro lisää: Pohjois-Hollannin"
+ },
+ {
+  "n": 537,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Friisinmaan",
+  "kysymys": "Kerro lisää: Friisinmaan"
+ },
+ {
+  "n": 538,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 539,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Flevolandin",
+  "kysymys": "Kerro lisää: Flevolandin"
+ },
+ {
+  "n": 540,
+  "kohta": "nosto:afsluitdijk",
+  "kasite": "Lelystad",
+  "kysymys": "Kerro lisää: Lelystad"
+ },
+ {
+  "n": 541,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "pallolinssi",
+  "kysymys": "Kerro lisää: pallolinssi"
+ },
+ {
+  "n": 542,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "Delftissä",
+  "kysymys": "Kerro lisää: Delftissä"
+ },
+ {
+  "n": 543,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "Royal Society",
+  "kysymys": "Kerro lisää: Royal Society"
+ },
+ {
+  "n": 544,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "Robert Hooke",
+  "kysymys": "Kerro lisää: Robert Hooke"
+ },
+ {
+  "n": 545,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "mikroskooppeja",
+  "kysymys": "Kerro lisää: mikroskooppeja"
+ },
+ {
+  "n": 546,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "Leeuwenhoekin",
+  "kysymys": "Kerro lisää: Leeuwenhoekin"
+ },
+ {
+  "n": 547,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "Johannes Vermeer",
+  "kysymys": "Kerro lisää: Johannes Vermeer"
+ },
+ {
+  "n": 548,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "Royal Societyn",
+  "kysymys": "Kerro lisää: Royal Societyn"
+ },
+ {
+  "n": 549,
+  "kohta": "nosto:leeuwenhoek",
+  "kasite": "bakteereja",
+  "kysymys": "Kerro lisää: bakteereja"
+ },
+ {
+  "n": 550,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Maurits Oranialaisen",
+  "kysymys": "Kerro lisää: Maurits Oranialaisen"
+ },
+ {
+  "n": 551,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Johan van Oldenbarneveltin",
+  "kysymys": "Kerro lisää: Johan van Oldenbarneveltin"
+ },
+ {
+  "n": 552,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Loevesteinin",
+  "kysymys": "Kerro lisää: Loevesteinin"
+ },
+ {
+  "n": 553,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Maria van Reigersberch",
+  "kysymys": "Kerro lisää: Maria van Reigersberch"
+ },
+ {
+  "n": 554,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Elsje van Houwening",
+  "kysymys": "Kerro lisää: Elsje van Houwening"
+ },
+ {
+  "n": 555,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "De iure belli ac pacis",
+  "kysymys": "Kerro lisää: De iure belli ac pacis"
+ },
+ {
+  "n": 556,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "kansainvälisen oikeuden",
+  "kysymys": "Kerro lisää: kansainvälisen oikeuden"
+ },
+ {
+  "n": 557,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Mare Liberum",
+  "kysymys": "Kerro lisää: Mare Liberum"
+ },
+ {
+  "n": 558,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Maasin",
+  "kysymys": "Kerro lisää: Maasin"
+ },
+ {
+  "n": 559,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Waalin",
+  "kysymys": "Kerro lisää: Waalin"
+ },
+ {
+  "n": 560,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Gelderlandin",
+  "kysymys": "Kerro lisää: Gelderlandin"
+ },
+ {
+  "n": 561,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Delftin",
+  "kysymys": "Kerro lisää: Delftin"
+ },
+ {
+  "n": 562,
+  "kohta": "nosto:kirja-arkku",
+  "kasite": "Nieuwe Kerk",
+  "kysymys": "Kerro lisää: Nieuwe Kerk"
+ },
+ {
+  "n": 563,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "Amsterdamissa",
+  "kysymys": "Kerro lisää: Amsterdamissa"
+ },
+ {
+  "n": 564,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "kanavatalot",
+  "kysymys": "Kerro lisää: kanavatalot"
+ },
+ {
+  "n": 565,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "Oude Hoogstraat 22",
+  "kysymys": "Kerro lisää: Oude Hoogstraat 22"
+ },
+ {
+  "n": 566,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "hijsbalk",
+  "kysymys": "Kerro lisää: hijsbalk"
+ },
+ {
+  "n": 567,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "Amsterdamin",
+  "kysymys": "Kerro lisää: Amsterdamin"
+ },
+ {
+  "n": 568,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "trapgevel",
+  "kysymys": "Kerro lisää: trapgevel"
+ },
+ {
+  "n": 569,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "halsgevel",
+  "kysymys": "Kerro lisää: halsgevel"
+ },
+ {
+  "n": 570,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "klokgevel",
+  "kysymys": "Kerro lisää: klokgevel"
+ },
+ {
+  "n": 571,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "Kanavatalojen",
+  "kysymys": "Kerro lisää: Kanavatalojen"
+ },
+ {
+  "n": 572,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "nostopuun",
+  "kysymys": "Kerro lisää: nostopuun"
+ },
+ {
+  "n": 573,
+  "kohta": "nosto:amsterdamin-kapein-talo",
+  "kasite": "puupaalujen",
+  "kysymys": "Kerro lisää: puupaalujen"
+ },
+ {
+  "n": 574,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Maitotytön",
+  "kysymys": "Kerro lisää: Maitotytön"
+ },
+ {
+  "n": 575,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "röntgenkuvauksessa",
+  "kysymys": "Kerro lisää: röntgenkuvauksessa"
+ },
+ {
+  "n": 576,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Picasson",
+  "kysymys": "Kerro lisää: Picasson"
+ },
+ {
+  "n": 577,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Vincent van Goghin",
+  "kysymys": "Kerro lisää: Vincent van Goghin"
+ },
+ {
+  "n": 578,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Delftissä",
+  "kysymys": "Kerro lisää: Delftissä"
+ },
+ {
+  "n": 579,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Ranskan hyökkäyksen",
+  "kysymys": "Kerro lisää: Ranskan hyökkäyksen"
+ },
+ {
+  "n": 580,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Rijksmuseumin",
+  "kysymys": "Kerro lisää: Rijksmuseumin"
+ },
+ {
+  "n": 581,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "Rembrandtin",
+  "kysymys": "Kerro lisää: Rembrandtin"
+ },
+ {
+  "n": 582,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "ultramariinin",
+  "kysymys": "Kerro lisää: ultramariinin"
+ },
+ {
+  "n": 583,
+  "kohta": "nosto:amsterdamin-maitotytto",
+  "kasite": "lapis lazuli",
+  "kysymys": "Kerro lisää: lapis lazuli"
+ },
+ {
+  "n": 584,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "asuntopulan",
+  "kysymys": "Kerro lisää: asuntopulan"
+ },
+ {
+  "n": 585,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "rahtilaivoja",
+  "kysymys": "Kerro lisää: rahtilaivoja"
+ },
+ {
+  "n": 586,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Henriëtte van Weelde",
+  "kysymys": "Kerro lisää: Henriëtte van Weelde"
+ },
+ {
+  "n": 587,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Singelin",
+  "kysymys": "Kerro lisää: Singelin"
+ },
+ {
+  "n": 588,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "satamissa",
+  "kysymys": "Kerro lisää: satamissa"
+ },
+ {
+  "n": 589,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Henriëtte van Weelden",
+  "kysymys": "Kerro lisää: Henriëtte van Weelden"
+ },
+ {
+  "n": 590,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "eläinsuojelun",
+  "kysymys": "Kerro lisää: eläinsuojelun"
+ },
+ {
+  "n": 591,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Singel",
+  "kysymys": "Kerro lisää: Singel"
+ },
+ {
+  "n": 592,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Herengracht",
+  "kysymys": "Kerro lisää: Herengracht"
+ },
+ {
+  "n": 593,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Keizersgracht",
+  "kysymys": "Kerro lisää: Keizersgracht"
+ },
+ {
+  "n": 594,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Prinsengracht",
+  "kysymys": "Kerro lisää: Prinsengracht"
+ },
+ {
+  "n": 595,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 596,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "Laivakissan",
+  "kysymys": "Kerro lisää: Laivakissan"
+ },
+ {
+  "n": 597,
+  "kohta": "nosto:amsterdamin-kissalaiva",
+  "kasite": "rotat",
+  "kysymys": "Kerro lisää: rotat"
+ },
+ {
+  "n": 598,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "pohjahiekkaan",
+  "kysymys": "Kerro lisää: pohjahiekkaan"
+ },
+ {
+  "n": 599,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "Dam-aukion palatsin",
+  "kysymys": "Kerro lisää: Dam-aukion palatsin"
+ },
+ {
+  "n": 600,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "perustus",
+  "kysymys": "Kerro lisää: perustus"
+ },
+ {
+  "n": 601,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "betonipaaluja",
+  "kysymys": "Kerro lisää: betonipaaluja"
+ },
+ {
+  "n": 602,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "perustusten",
+  "kysymys": "Kerro lisää: perustusten"
+ },
+ {
+  "n": 603,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "kuivat kaudet",
+  "kysymys": "Kerro lisää: kuivat kaudet"
+ },
+ {
+  "n": 604,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "viemärit",
+  "kysymys": "Kerro lisää: viemärit"
+ },
+ {
+  "n": 605,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "mänty",
+  "kysymys": "Kerro lisää: mänty"
+ },
+ {
+  "n": 606,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "kuusi",
+  "kysymys": "Kerro lisää: kuusi"
+ },
+ {
+  "n": 607,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "penkereitä",
+  "kysymys": "Kerro lisää: penkereitä"
+ },
+ {
+  "n": 608,
+  "kohta": "nosto:amsterdamin-puupaalut",
+  "kasite": "polderien",
+  "kysymys": "Kerro lisää: polderien"
+ },
+ {
+  "n": 609,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "Rembrandtin",
+  "kysymys": "Kerro lisää: Rembrandtin"
+ },
+ {
+  "n": 610,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "kopio",
+  "kysymys": "Kerro lisää: kopio"
+ },
+ {
+  "n": 611,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "siirrolle",
+  "kysymys": "Kerro lisää: siirrolle"
+ },
+ {
+  "n": 612,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "kaartin",
+  "kysymys": "Kerro lisää: kaartin"
+ },
+ {
+  "n": 613,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "Kaupungintalo",
+  "kysymys": "Kerro lisää: Kaupungintalo"
+ },
+ {
+  "n": 614,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "kopioon",
+  "kysymys": "Kerro lisää: kopioon"
+ },
+ {
+  "n": 615,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "röntgenkuvauksen",
+  "kysymys": "Kerro lisää: röntgenkuvauksen"
+ },
+ {
+  "n": 616,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "Leidenissä",
+  "kysymys": "Kerro lisää: Leidenissä"
+ },
+ {
+  "n": 617,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "Yövartio",
+  "kysymys": "Kerro lisää: Yövartio"
+ },
+ {
+  "n": 618,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "Ryhmämuotokuva",
+  "kysymys": "Kerro lisää: Ryhmämuotokuva"
+ },
+ {
+  "n": 619,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "kaartit",
+  "kysymys": "Kerro lisää: kaartit"
+ },
+ {
+  "n": 620,
+  "kohta": "nosto:amsterdamin-yovartio",
+  "kasite": "killat",
+  "kysymys": "Kerro lisää: killat"
+ }
+]

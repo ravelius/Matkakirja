@@ -1,0 +1,1044 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+- [Alankomaat — maalehti / Historia: Vanhemmat menivät kadulle, ja maa sai pyörätiet] 1972 — Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua. Vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, ja heidän joukossaan oli satoja lapsia. Vanhemmat perustivat liikkeen nimeltä Stop de Kindermoord, marssivat parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+- [Alankomaat — maalehti / Historia] Alankomaiden historiaa eivät tehneet vain hallitsijat vaan kauppiaat, jäämerelle jääneet merimiehet ja tavalliset ihmiset, jotka lähtivät kadulle vaatimaan muutosta.
+AIEMPI KYSYMYS: Mikä Saba on?
+AIEMPI VASTAUS (Livia):
+Ai Saba, joo. Saba on Karibianmerellä sijaitseva pieni tulivuorisaari, jolla on noin kaksituhatta asukasta ja jonka korkein kohta Mount Scenery kohoaa 887 metrin korkeuteen. Saari kuuluu Alankomaiden kuningaskuntaan: se liitettiin vuonna 2010 osaksi [[Alankomaiden]] valtiota erityiskuntana, joten sillä on Hollannin kunnan kaltainen asema, vaikka se sijaitsee Atlantin toisella puolella. Virallinen kieli on hollanti, ja arjessa puhutaan paljon myös englantia. Saaren tulivuori on samalla syy siihen, että [[Vaalserberg]] on enää maan Euroopan-puoleisen osan korkein kohta eikä koko kuningaskunnan. Minulle riittää ihan hyvin tämä kaiteen korkeus.
+KYSYMYS: Kerro lisää: Alankomaiden
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+AIEMPI KYSYMYS: Mikä Saba on?
+AIEMPI VASTAUS (Livia):
+Ai Saba, joo. Saba on Karibianmerellä sijaitseva pieni tulivuorisaari, jolla on noin kaksituhatta asukasta ja jonka korkein kohta Mount Scenery kohoaa 887 metrin korkeuteen. Saari kuuluu Alankomaiden kuningaskuntaan: se liitettiin vuonna 2010 osaksi [[Alankomaiden]] valtiota erityiskuntana, joten sillä on Hollannin kunnan kaltainen asema, vaikka se sijaitsee Atlantin toisella puolella. Virallinen kieli on hollanti, ja arjessa puhutaan paljon myös englantia. Saaren tulivuori on samalla syy siihen, että [[Vaalserberg]] on enää maan Euroopan-puoleisen osan korkein kohta eikä koko kuningaskunnan. Minulle riittää ihan hyvin tämä kaiteen korkeus.
+KYSYMYS: Kerro lisää: Vaalserberg
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+AIEMPI KYSYMYS: Mitä NAP tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. NAP on lyhenne sanoista Normaal Amsterdams Peil eli Amsterdamin normaalitaso, ja se on Alankomaissa käytetty korkeuden vertailutaso. Taso perustuu [[Amsterdamin]] vedenkorkeuteen, ja sen alkuperä johdetaan 1600-luvun lopun mittauksista; nykyisin se on lähellä keskimääräistä merenpintaa Pohjanmeren rannikolla. Sen mukaan ilmoitetaan sekä [[Alankomaiden]] korkeudet että merenpinnan alapuolella olevat alueet, ja esimerkiksi [[Vaalserbergin]] huippu, 322,4 metriä, mitataan juuri tästä tasosta. Pieni lyhenne, mut iso homma.
+KYSYMYS: Kerro lisää: Amsterdamin
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+AIEMPI KYSYMYS: Mitä NAP tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. NAP on lyhenne sanoista Normaal Amsterdams Peil eli Amsterdamin normaalitaso, ja se on Alankomaissa käytetty korkeuden vertailutaso. Taso perustuu [[Amsterdamin]] vedenkorkeuteen, ja sen alkuperä johdetaan 1600-luvun lopun mittauksista; nykyisin se on lähellä keskimääräistä merenpintaa Pohjanmeren rannikolla. Sen mukaan ilmoitetaan sekä [[Alankomaiden]] korkeudet että merenpinnan alapuolella olevat alueet, ja esimerkiksi [[Vaalserbergin]] huippu, 322,4 metriä, mitataan juuri tästä tasosta. Pieni lyhenne, mut iso homma.
+KYSYMYS: Kerro lisää: Vaalserbergin
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Menovinkit] Alankomaat on skannannut itsensä verkkoon: maalaukset pikselintarkkoina, salainen takahuoneisto kolmiulotteisena, sanomalehdet vuodesta 1618 ja museo, jossa tyrannosaurus odottaa ilman pääsylippua.
+AIEMPI KYSYMYS: Missä Alankomaat, Belgia ja Saksa kohtaavat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kolmen maan rajapiste, hollanniksi Drielandenpunt, sijaitsee Vaalserbergin huipun tuntumassa Limburgin kaakkoiskulmassa. Siinä kohtaavat [[Alankomaat]], [[Belgia]] ja [[Saksa]], ja lähin kaupunki Alankomaiden puolella on Vaals, kun taas saksalainen [[Aachen]] on aivan lähellä. Paikalla on näkötorni, ja kävijä voi yhdellä kävelyllä ylittää useita rajoja. Kolme maata yhdellä reissulla, eikä passia tarvii.
+KYSYMYS: Kerro lisää: Alankomaat
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+AIEMPI KYSYMYS: Missä Alankomaat, Belgia ja Saksa kohtaavat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kolmen maan rajapiste, hollanniksi Drielandenpunt, sijaitsee Vaalserbergin huipun tuntumassa Limburgin kaakkoiskulmassa. Siinä kohtaavat [[Alankomaat]], [[Belgia]] ja [[Saksa]], ja lähin kaupunki Alankomaiden puolella on Vaals, kun taas saksalainen [[Aachen]] on aivan lähellä. Paikalla on näkötorni, ja kävijä voi yhdellä kävelyllä ylittää useita rajoja. Kolme maata yhdellä reissulla, eikä passia tarvii.
+KYSYMYS: Kerro lisää: Belgia
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Missä Alankomaat, Belgia ja Saksa kohtaavat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kolmen maan rajapiste, hollanniksi Drielandenpunt, sijaitsee Vaalserbergin huipun tuntumassa Limburgin kaakkoiskulmassa. Siinä kohtaavat [[Alankomaat]], [[Belgia]] ja [[Saksa]], ja lähin kaupunki Alankomaiden puolella on Vaals, kun taas saksalainen [[Aachen]] on aivan lähellä. Paikalla on näkötorni, ja kävijä voi yhdellä kävelyllä ylittää useita rajoja. Kolme maata yhdellä reissulla, eikä passia tarvii.
+KYSYMYS: Kerro lisää: Saksa
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+AIEMPI KYSYMYS: Missä Alankomaat, Belgia ja Saksa kohtaavat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kolmen maan rajapiste, hollanniksi Drielandenpunt, sijaitsee Vaalserbergin huipun tuntumassa Limburgin kaakkoiskulmassa. Siinä kohtaavat [[Alankomaat]], [[Belgia]] ja [[Saksa]], ja lähin kaupunki Alankomaiden puolella on Vaals, kun taas saksalainen [[Aachen]] on aivan lähellä. Paikalla on näkötorni, ja kävijä voi yhdellä kävelyllä ylittää useita rajoja. Kolme maata yhdellä reissulla, eikä passia tarvii.
+KYSYMYS: Kerro lisää: Aachen
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki] Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.
+AIEMPI KYSYMYS: Kuinka suuri osa Alankomaista on merenpinnan alapuolella?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Noin neljännes Alankomaiden maa-alasta on merenpinnan alapuolella, ja yli puolet maasta olisi tulvaherkkää ilman suojarakenteita. Maata suojaavat [[patojen]] ja dyynien lisäksi [[polderien]] pumppaamot sekä [[vesilautakunnat]], joiden vanhimmat edeltäjät perustettiin keskiajalla, ja niiden tehtävä on pitää vedenpinta hallinnassa. Rakenteet on suunniteltu niin, että väestön tiheimmät alueet pysyvät kuivina myös myrskyjen aikana.
+
+Ylhäältä katsoen kanavien vedenpinta on monin paikoin korkeammalla kuin viereiset pellot, ja silti kukaan ei näytä huolestuvan. Sellaiseen luottamukseen tarvitaan kyllä paljon pumppuja.
+KYSYMYS: Kerro lisää: patojen
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdeksäntoista myllyä pumppasi maan kuivaksi] 1740 — Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista tuulimyllyä, jotka pumppasivat ylimääräisen veden Alblasserwaardin suoalueelta jokeen — ilman niitä koko polderi olisi veden alla. Unesco liitti myllyrivistön maailmanperintöluetteloon 1997. Toukokuun kansallisena myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta riittää. Kylän nimeen liittyy legenda: vuoden 1421 suurtulvassa kehto ajelehti padolle, ja kissa piti sen tasapainossa niin, ettei se kaatunut — sisällä nukkui vahingoittumaton vauva.
+AIEMPI KYSYMYS: Kuinka suuri osa Alankomaista on merenpinnan alapuolella?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Noin neljännes Alankomaiden maa-alasta on merenpinnan alapuolella, ja yli puolet maasta olisi tulvaherkkää ilman suojarakenteita. Maata suojaavat [[patojen]] ja dyynien lisäksi [[polderien]] pumppaamot sekä [[vesilautakunnat]], joiden vanhimmat edeltäjät perustettiin keskiajalla, ja niiden tehtävä on pitää vedenpinta hallinnassa. Rakenteet on suunniteltu niin, että väestön tiheimmät alueet pysyvät kuivina myös myrskyjen aikana.
+
+Ylhäältä katsoen kanavien vedenpinta on monin paikoin korkeammalla kuin viereiset pellot, ja silti kukaan ei näytä huolestuvan. Sellaiseen luottamukseen tarvitaan kyllä paljon pumppuja.
+KYSYMYS: Kerro lisää: polderien
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+AIEMPI KYSYMYS: Kuinka suuri osa Alankomaista on merenpinnan alapuolella?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Noin neljännes Alankomaiden maa-alasta on merenpinnan alapuolella, ja yli puolet maasta olisi tulvaherkkää ilman suojarakenteita. Maata suojaavat [[patojen]] ja dyynien lisäksi [[polderien]] pumppaamot sekä [[vesilautakunnat]], joiden vanhimmat edeltäjät perustettiin keskiajalla, ja niiden tehtävä on pitää vedenpinta hallinnassa. Rakenteet on suunniteltu niin, että väestön tiheimmät alueet pysyvät kuivina myös myrskyjen aikana.
+
+Ylhäältä katsoen kanavien vedenpinta on monin paikoin korkeammalla kuin viereiset pellot, ja silti kukaan ei näytä huolestuvan. Sellaiseen luottamukseen tarvitaan kyllä paljon pumppuja.
+KYSYMYS: Kerro lisää: vesilautakunnat
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Portin sulkemisesta päättää kone] 1997 — Rotterdamin satamaan johtavaa väylää ei voitu padota, koska laivojen on päästävä sisään. Siksi molemmille rannoille rakennettiin ovi: kaarevat teräsleuat, joiden ristikkovarsi on 210 metriä pitkä ja 22 metriä korkea. Kun myrsky uhkaa nostaa veden Rotterdamissa yli kolmen metrin, ovet kääntyvät ulos vedelle, täyttyvät vedellä ja vajoavat pohjaan. Päätöksen tekee tietokone, ei ihminen. Portti otettiin käyttöön 1997 ja koekäytetään joka syksy; oikeassa myrskyssä se suljettiin ensimmäisen kerran marraskuussa 2007.
+AIEMPI KYSYMYS: Mikä on Alankomaiden alin kohta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Alankomaiden alimpana kohtana mainitaan yleensä Zuidplaspolder, joka sijaitsee [[Rotterdamin]] ja [[Goudan]] välissä noin seitsemän metriä merenpinnan alapuolella. Alue oli ennen järvi, ja se kuivatettiin pumppaamalla 1800-luvulla, minkä jälkeen siitä tuli viljelysmaata ja nykyään osin myös asuin- ja liikennealuetta. Lähteet antavat tarkan luvun hieman eri tavoin, joten kyse on noin seitsemästä metristä. Pöllö on taas matkoilla, mut tän minä muistin yksinkin.
+KYSYMYS: Kerro lisää: Rotterdamin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaalserberg (luonto · vuori)
+Tietoruudun teksti: Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.
+AIEMPI KYSYMYS: Mikä on Alankomaiden alin kohta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Alankomaiden alimpana kohtana mainitaan yleensä Zuidplaspolder, joka sijaitsee [[Rotterdamin]] ja [[Goudan]] välissä noin seitsemän metriä merenpinnan alapuolella. Alue oli ennen järvi, ja se kuivatettiin pumppaamalla 1800-luvulla, minkä jälkeen siitä tuli viljelysmaata ja nykyään osin myös asuin- ja liikennealuetta. Lähteet antavat tarkan luvun hieman eri tavoin, joten kyse on noin seitsemästä metristä. Pöllö on taas matkoilla, mut tän minä muistin yksinkin.
+KYSYMYS: Kerro lisää: Goudan
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Tuuli sahasi lankut, ja laivat halpenivat] 1593 — Uitgeestilainen Cornelis Corneliszoon sai 15. joulukuuta 1593 patentin myllylle, joka sahaa puuta. Keksinnön ydin oli kampiakseli: se muutti tuulen pyörittämän liikkeen ylös-alas-liikkeeksi, joka veti sahanteriä. Yhdestä rungosta syntyi monta lankkua kerralla, kun ennen kaksi miestä oli vetänyt sahaa käsin. Patenttipaperissa keksijää kuvaillaan sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia laivoja valmistui nopeammin kuin muualla.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miten hollantilaiset ovat vallanneet maata mereltä?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Hollantilaiset ovat saaneet maata mereltä rakentamalla ensin asuinkumpuja, sitten penkereitä ja lopulta patoja, joiden suojaan on muodostettu polderia eli kuivatettua maata. Keskiajalta lähtien vettä pumpattiin pois [[tuulimyllyillä]], ja 1800-luvulla höyrykoneet mahdollistivat jopa [[Haarlemmermeerin]] kaltaisten suurten järvien kuivatuksen. 1900-luvulla Zuiderzee-töissä merenlahti eristettiin [[Afsluitdijkillä]], jolloin siitä tuli makea IJsselmeer, ja sen reunoille nousi uusia polderialueita, kuten [[Flevoland]]. Pitkä tarina, mut hyvä.
+KYSYMYS: Kerro lisää: tuulimyllyillä
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+AIEMPI KYSYMYS: Miten hollantilaiset ovat vallanneet maata mereltä?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Hollantilaiset ovat saaneet maata mereltä rakentamalla ensin asuinkumpuja, sitten penkereitä ja lopulta patoja, joiden suojaan on muodostettu polderia eli kuivatettua maata. Keskiajalta lähtien vettä pumpattiin pois [[tuulimyllyillä]], ja 1800-luvulla höyrykoneet mahdollistivat jopa [[Haarlemmermeerin]] kaltaisten suurten järvien kuivatuksen. 1900-luvulla Zuiderzee-töissä merenlahti eristettiin [[Afsluitdijkillä]], jolloin siitä tuli makea IJsselmeer, ja sen reunoille nousi uusia polderialueita, kuten [[Flevoland]]. Pitkä tarina, mut hyvä.
+KYSYMYS: Kerro lisää: Haarlemmermeerin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+AIEMPI KYSYMYS: Miten hollantilaiset ovat vallanneet maata mereltä?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Hollantilaiset ovat saaneet maata mereltä rakentamalla ensin asuinkumpuja, sitten penkereitä ja lopulta patoja, joiden suojaan on muodostettu polderia eli kuivatettua maata. Keskiajalta lähtien vettä pumpattiin pois [[tuulimyllyillä]], ja 1800-luvulla höyrykoneet mahdollistivat jopa [[Haarlemmermeerin]] kaltaisten suurten järvien kuivatuksen. 1900-luvulla Zuiderzee-töissä merenlahti eristettiin [[Afsluitdijkillä]], jolloin siitä tuli makea IJsselmeer, ja sen reunoille nousi uusia polderialueita, kuten [[Flevoland]]. Pitkä tarina, mut hyvä.
+KYSYMYS: Kerro lisää: Afsluitdijkillä
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miten hollantilaiset ovat vallanneet maata mereltä?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Hollantilaiset ovat saaneet maata mereltä rakentamalla ensin asuinkumpuja, sitten penkereitä ja lopulta patoja, joiden suojaan on muodostettu polderia eli kuivatettua maata. Keskiajalta lähtien vettä pumpattiin pois [[tuulimyllyillä]], ja 1800-luvulla höyrykoneet mahdollistivat jopa [[Haarlemmermeerin]] kaltaisten suurten järvien kuivatuksen. 1900-luvulla Zuiderzee-töissä merenlahti eristettiin [[Afsluitdijkillä]], jolloin siitä tuli makea IJsselmeer, ja sen reunoille nousi uusia polderialueita, kuten [[Flevoland]]. Pitkä tarina, mut hyvä.
+KYSYMYS: Kerro lisää: Flevoland
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+AIEMPI KYSYMYS: Miksi Pohjanmeri on niin matala?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Pohjanmeri on matala, koska se sijaitsee Euroopan [[mannerjalustalla]] eli mantereen reunan vedenalaisella osalla, joka ei ole syvää valtamerenpohjaa. Viimeisen [[jääkauden]] aikana merenpinta oli noin sata kaksikymmentä metriä nykyistä alempana, ja suuri osa nykyisestä merenpohjasta oli kuivaa maata. Kun jäätiköt suli, vesi nousi ja täytti alueen suhteellisen matalaksi altaaksi, jonka keskisyvyys on noin satakunta metriä ja etelässä paikoin vain muutamia kymmeniä metrejä. Syvempää vettä on lähinnä pohjoisessa ja Norjan rannikon edustalla [[Norjanrinteessä]]. Matalakin meri on kyyhkylle ihan liian märkä.
+KYSYMYS: Kerro lisää: mannerjalustalla
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miksi Pohjanmeri on niin matala?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Pohjanmeri on matala, koska se sijaitsee Euroopan [[mannerjalustalla]] eli mantereen reunan vedenalaisella osalla, joka ei ole syvää valtamerenpohjaa. Viimeisen [[jääkauden]] aikana merenpinta oli noin sata kaksikymmentä metriä nykyistä alempana, ja suuri osa nykyisestä merenpohjasta oli kuivaa maata. Kun jäätiköt suli, vesi nousi ja täytti alueen suhteellisen matalaksi altaaksi, jonka keskisyvyys on noin satakunta metriä ja etelässä paikoin vain muutamia kymmeniä metrejä. Syvempää vettä on lähinnä pohjoisessa ja Norjan rannikon edustalla [[Norjanrinteessä]]. Matalakin meri on kyyhkylle ihan liian märkä.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Miksi Pohjanmeri on niin matala?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Pohjanmeri on matala, koska se sijaitsee Euroopan [[mannerjalustalla]] eli mantereen reunan vedenalaisella osalla, joka ei ole syvää valtamerenpohjaa. Viimeisen [[jääkauden]] aikana merenpinta oli noin sata kaksikymmentä metriä nykyistä alempana, ja suuri osa nykyisestä merenpohjasta oli kuivaa maata. Kun jäätiköt suli, vesi nousi ja täytti alueen suhteellisen matalaksi altaaksi, jonka keskisyvyys on noin satakunta metriä ja etelässä paikoin vain muutamia kymmeniä metrejä. Syvempää vettä on lähinnä pohjoisessa ja Norjan rannikon edustalla [[Norjanrinteessä]]. Matalakin meri on kyyhkylle ihan liian märkä.
+KYSYMYS: Kerro lisää: Norjanrinteessä
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+- [Filippiinit — maalehti / Historia: Kaikkien karttojen äiti] 1734 — Jesuiitta Pedro Murillo Velarde laati vuonna 1734 kartan, jota kutsutaan kaikkien Filippiinien karttojen äidiksi. Kaiverruksen teki tagalogilainen Nicolás de la Cruz Bagay, joka merkitsi nimensä viereen sanat "Indio Tagalo". Reunoilla on kaksitoista kuvaa: kaupunkien ja saarten karttoja sekä saarilla asuvia väkiä sangleyeistä aetoihin. Kuparilaatat vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää vedoksia ennen kuin metalli sulatettiin merikarttojen tarpeisiin. Alkuperäispainoksia tunnetaan alle viisikymmentä.
+AIEMPI KYSYMYS: Mikä Doggerland oli?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kiinnostava. Doggerland oli jääkauden jälkeen Britannian ja Manner-Euroopan välillä sijainnut maa-alue, joka on nykyisin suurimmaksi osaksi Pohjanmeren alla. Siellä oli jokilaaksoja, soita ja metsää, ja tutkijoiden mukaan alueella eli mesoliittisia metsästäjä-keräilijöitä; merenpohjasta on löydetty muun muassa työkaluja ja luita. Alue hukkui vähitellen merenpinnan noustessa, ja viimeisten maa-alueiden arvioidaan jääneen veden alle useita tuhansia vuosia sitten, jolloin [[Britannia]] erkani mantereesta saareksi. Nimi tulee [[Dogger Bankin]] matalikosta Pohjanmeren keskiosasta. Olisinpa nähnyt sen ylhäältä, ennen kuin vesi tuli.
+KYSYMYS: Kerro lisää: Britannia
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+AIEMPI KYSYMYS: Mikä Doggerland oli?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kiinnostava. Doggerland oli jääkauden jälkeen Britannian ja Manner-Euroopan välillä sijainnut maa-alue, joka on nykyisin suurimmaksi osaksi Pohjanmeren alla. Siellä oli jokilaaksoja, soita ja metsää, ja tutkijoiden mukaan alueella eli mesoliittisia metsästäjä-keräilijöitä; merenpohjasta on löydetty muun muassa työkaluja ja luita. Alue hukkui vähitellen merenpinnan noustessa, ja viimeisten maa-alueiden arvioidaan jääneen veden alle useita tuhansia vuosia sitten, jolloin [[Britannia]] erkani mantereesta saareksi. Nimi tulee [[Dogger Bankin]] matalikosta Pohjanmeren keskiosasta. Olisinpa nähnyt sen ylhäältä, ennen kuin vesi tuli.
+KYSYMYS: Kerro lisää: Dogger Bankin
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+AIEMPI KYSYMYS: Miksi Pohjanmerellä on paljon öljy- ja kaasuporauslauttoja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pohjanmerellä on paljon öljy- ja kaasulauttoja, koska merenpohjan alta löydettiin 1960-luvulla suuria hiilivetyvaroja. Alankomaiden [[Groningenin]] kaasukenttä löytyi maalta vuonna 1959, ja se kannusti etsimään vastaavia kerrostumia merenpohjasta; 1960-luvun puolivälissä kaasua löytyi Britannian vesiltä, ja Norjan [[Ekofisk]]-öljykenttä löydettiin vuoden 1969 lopulla. Sen jälkeen alueelle on rakennettu lukuisia kenttiä, ja Pohjanmeren rannikkovaltiot ovat jakaneet merenpohjan keskenään rajaviivoilla, jotta kullakin on oma osuutensa luonnonvaroista. Alueen tuotanto on kuitenkin vähentynyt vuosikymmenten myötä.
+
+Ylhäältä katsottuna lautat näyttävät pieniltä kaupungeilta keskellä merta, ja joskus minä laskeudun niiden kaiteelle lepäämään. Lokit tosin pitävät paikkaa omanaan.
+KYSYMYS: Kerro lisää: Groningenin
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+AIEMPI KYSYMYS: Miksi Pohjanmerellä on paljon öljy- ja kaasuporauslauttoja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pohjanmerellä on paljon öljy- ja kaasulauttoja, koska merenpohjan alta löydettiin 1960-luvulla suuria hiilivetyvaroja. Alankomaiden [[Groningenin]] kaasukenttä löytyi maalta vuonna 1959, ja se kannusti etsimään vastaavia kerrostumia merenpohjasta; 1960-luvun puolivälissä kaasua löytyi Britannian vesiltä, ja Norjan [[Ekofisk]]-öljykenttä löydettiin vuoden 1969 lopulla. Sen jälkeen alueelle on rakennettu lukuisia kenttiä, ja Pohjanmeren rannikkovaltiot ovat jakaneet merenpohjan keskenään rajaviivoilla, jotta kullakin on oma osuutensa luonnonvaroista. Alueen tuotanto on kuitenkin vähentynyt vuosikymmenten myötä.
+
+Ylhäältä katsottuna lautat näyttävät pieniltä kaupungeilta keskellä merta, ja joskus minä laskeudun niiden kaiteelle lepäämään. Lokit tosin pitävät paikkaa omanaan.
+KYSYMYS: Kerro lisää: Ekofisk
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Mikä Wattimeri on?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on kiva. Wattimeri on Pohjanmeren etelä- ja itärannikolla sijaitseva laaja vuorovesialue, jossa [[vuorovesi]] paljastaa kahdesti vuorokaudessa suuria mutaisia ja hiekkaisia tasankoja. Se ulottuu Alankomaista Saksan kautta Tanskaan, ja sen suojelu on kansainvälistä: Alankomaiden ja Saksan osat merkittiin Unescon [[maailmanperintökohteeksi]] vuonna 2009 ja Tanskan osa lisättiin vuonna 2014. Alue on tärkeä lepo- ja ruokailupaikka miljoonille [[muuttolinnuille]], ja siellä elää myös [[hylkeitä]]. Rannalla kulkijat tekevät oppaiden kanssa myös vuorovesikävelyjä mutapohjalla.
+
+Siellä on valtavasti siivekkäitä kollegoja, ja tunnustan, että tunnen vähän kateutta: heillä on koko ruokapöytä auki kahdesti päivässä.
+KYSYMYS: Kerro lisää: vuorovesi
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Wattimeri on?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on kiva. Wattimeri on Pohjanmeren etelä- ja itärannikolla sijaitseva laaja vuorovesialue, jossa [[vuorovesi]] paljastaa kahdesti vuorokaudessa suuria mutaisia ja hiekkaisia tasankoja. Se ulottuu Alankomaista Saksan kautta Tanskaan, ja sen suojelu on kansainvälistä: Alankomaiden ja Saksan osat merkittiin Unescon [[maailmanperintökohteeksi]] vuonna 2009 ja Tanskan osa lisättiin vuonna 2014. Alue on tärkeä lepo- ja ruokailupaikka miljoonille [[muuttolinnuille]], ja siellä elää myös [[hylkeitä]]. Rannalla kulkijat tekevät oppaiden kanssa myös vuorovesikävelyjä mutapohjalla.
+
+Siellä on valtavasti siivekkäitä kollegoja, ja tunnustan, että tunnen vähän kateutta: heillä on koko ruokapöytä auki kahdesti päivässä.
+KYSYMYS: Kerro lisää: maailmanperintökohteeksi
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Mikä Wattimeri on?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on kiva. Wattimeri on Pohjanmeren etelä- ja itärannikolla sijaitseva laaja vuorovesialue, jossa [[vuorovesi]] paljastaa kahdesti vuorokaudessa suuria mutaisia ja hiekkaisia tasankoja. Se ulottuu Alankomaista Saksan kautta Tanskaan, ja sen suojelu on kansainvälistä: Alankomaiden ja Saksan osat merkittiin Unescon [[maailmanperintökohteeksi]] vuonna 2009 ja Tanskan osa lisättiin vuonna 2014. Alue on tärkeä lepo- ja ruokailupaikka miljoonille [[muuttolinnuille]], ja siellä elää myös [[hylkeitä]]. Rannalla kulkijat tekevät oppaiden kanssa myös vuorovesikävelyjä mutapohjalla.
+
+Siellä on valtavasti siivekkäitä kollegoja, ja tunnustan, että tunnen vähän kateutta: heillä on koko ruokapöytä auki kahdesti päivässä.
+KYSYMYS: Kerro lisää: muuttolinnuille
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Jääkarhujen pääkaupunki] Lokakuun puolivälistä marraskuun puoliväliin Churchillin rannikolle kerääntyy keskimäärin noin 600 jääkarhua odottamaan Hudsoninlahden jäätymistä. Karhut ovat viettäneet kesän maalla paastoten, sillä kesäisin lahdella ei ole jäätä, jolla metsästää hylkeitä. Juuri Churchillin kohdalla jää muodostuu myöhemmin kuin monin muin paikoin arktisella alueella, joten karhut viipyvät täällä pidempään ja kokoontuvat tiheämmin kuin lähes missään muualla maailmassa. Ilmiö on tehnyt pikkukaupungista "jääkarhujen pääkaupungin", ja matkailijat saapuvat joka syksy erikoisrakenteisilla tundrabusseilla katsomaan karhuja turvallisen välimatkan päästä.
+- [Churchill — kaupunkilehti / Jääkarhujen pääkaupunki: Karhut odottavat rannalla] Odotusaika on karhuille raskasta paastoa: ne eivät voi metsästää hylkeitä ennen kuin jää kantaa, joten energiaa on säästettävä. Monet karhut makaavat suurimman osan päivästä paikoillaan pensaikkojen tai kivien suojassa, liikkuen vain vähän ja hidastaen aineenvaihduntaansa lähes horrosta muistuttavalla tavalla. Emo saattaa levätä samalla alueella viikkoja poikastensa kanssa, sillä turha liikkuminen kuluttaisi rasvavarastoja, joiden varassa koko perhe on elänyt jo useita kuukausia. Kun ensimmäinen kunnollinen jää vihdoin muodostuu, karhut lähtevät liikkeelle lähes saman tien ja suuntaavat hylkeenpyyntiin.
+AIEMPI KYSYMYS: Mikä Wattimeri on?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on kiva. Wattimeri on Pohjanmeren etelä- ja itärannikolla sijaitseva laaja vuorovesialue, jossa [[vuorovesi]] paljastaa kahdesti vuorokaudessa suuria mutaisia ja hiekkaisia tasankoja. Se ulottuu Alankomaista Saksan kautta Tanskaan, ja sen suojelu on kansainvälistä: Alankomaiden ja Saksan osat merkittiin Unescon [[maailmanperintökohteeksi]] vuonna 2009 ja Tanskan osa lisättiin vuonna 2014. Alue on tärkeä lepo- ja ruokailupaikka miljoonille [[muuttolinnuille]], ja siellä elää myös [[hylkeitä]]. Rannalla kulkijat tekevät oppaiden kanssa myös vuorovesikävelyjä mutapohjalla.
+
+Siellä on valtavasti siivekkäitä kollegoja, ja tunnustan, että tunnen vähän kateutta: heillä on koko ruokapöytä auki kahdesti päivässä.
+KYSYMYS: Kerro lisää: hylkeitä
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mikä Rein–Maas–Schelde-suisto on?
+AIEMPI VASTAUS (Livia):
+Joo, selvä. Rein–Maas–Schelde-suisto on Alankomaiden lounaisosassa ja osin Belgiassa sijaitseva laaja jokisuisto, jossa kolmen joen vedet yhtyvät ja jakautuvat moniksi haaroiksi saarien välillä ennen kuin ne laskevat Pohjanmereen. Suiston saaret ja salmet kuuluvat osin [[Zeelandin]] ja Etelä-Hollannin maakuntiin, ja alue on tiheään asuttua ja taloudellisesti merkittävää: [[Rotterdamin]] ja [[Antwerpenin]] satamat ovat suiston väyliä pitkin yhteydessä mereen. Suistoa on suojattu myrskytulvilta [[Deltatöillä]], jotka ovat muuttaneet sen rannikkoa. Sotkuinen vesistö, mutta ylhäältä se näyttää ihan järkevältä.
+KYSYMYS: Kerro lisää: Zeelandin
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Portin sulkemisesta päättää kone] 1997 — Rotterdamin satamaan johtavaa väylää ei voitu padota, koska laivojen on päästävä sisään. Siksi molemmille rannoille rakennettiin ovi: kaarevat teräsleuat, joiden ristikkovarsi on 210 metriä pitkä ja 22 metriä korkea. Kun myrsky uhkaa nostaa veden Rotterdamissa yli kolmen metrin, ovet kääntyvät ulos vedelle, täyttyvät vedellä ja vajoavat pohjaan. Päätöksen tekee tietokone, ei ihminen. Portti otettiin käyttöön 1997 ja koekäytetään joka syksy; oikeassa myrskyssä se suljettiin ensimmäisen kerran marraskuussa 2007.
+AIEMPI KYSYMYS: Mikä Rein–Maas–Schelde-suisto on?
+AIEMPI VASTAUS (Livia):
+Joo, selvä. Rein–Maas–Schelde-suisto on Alankomaiden lounaisosassa ja osin Belgiassa sijaitseva laaja jokisuisto, jossa kolmen joen vedet yhtyvät ja jakautuvat moniksi haaroiksi saarien välillä ennen kuin ne laskevat Pohjanmereen. Suiston saaret ja salmet kuuluvat osin [[Zeelandin]] ja Etelä-Hollannin maakuntiin, ja alue on tiheään asuttua ja taloudellisesti merkittävää: [[Rotterdamin]] ja [[Antwerpenin]] satamat ovat suiston väyliä pitkin yhteydessä mereen. Suistoa on suojattu myrskytulvilta [[Deltatöillä]], jotka ovat muuttaneet sen rannikkoa. Sotkuinen vesistö, mutta ylhäältä se näyttää ihan järkevältä.
+KYSYMYS: Kerro lisää: Rotterdamin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Rakennukset: Asema, joka korvasi puisen alkuperäisen] 1905 — Antwerpenin ensimmäinen asema oli puinen, ja sen rata Brysselistä Mechelenin kautta avattiin 3. kesäkuuta 1836. Nykyisen kivisen asemarakennuksen suunnitteli arkkitehti Louis Delacenserie, ja se rakennettiin vuosina 1895-1905. Vuoteen 2007 asti asema oli päätepysäkki, ja 23. maaliskuuta 2007 sen alle avattiin läpikulkutunneli. Odotussalin yllä kohoaa suuri kupoli. Antwerpen-Centraal on yksi Belgian neljästä suurnopeusjunien asemasta.
+AIEMPI KYSYMYS: Mikä Rein–Maas–Schelde-suisto on?
+AIEMPI VASTAUS (Livia):
+Joo, selvä. Rein–Maas–Schelde-suisto on Alankomaiden lounaisosassa ja osin Belgiassa sijaitseva laaja jokisuisto, jossa kolmen joen vedet yhtyvät ja jakautuvat moniksi haaroiksi saarien välillä ennen kuin ne laskevat Pohjanmereen. Suiston saaret ja salmet kuuluvat osin [[Zeelandin]] ja Etelä-Hollannin maakuntiin, ja alue on tiheään asuttua ja taloudellisesti merkittävää: [[Rotterdamin]] ja [[Antwerpenin]] satamat ovat suiston väyliä pitkin yhteydessä mereen. Suistoa on suojattu myrskytulvilta [[Deltatöillä]], jotka ovat muuttaneet sen rannikkoa. Sotkuinen vesistö, mutta ylhäältä se näyttää ihan järkevältä.
+KYSYMYS: Kerro lisää: Antwerpenin
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mikä Rein–Maas–Schelde-suisto on?
+AIEMPI VASTAUS (Livia):
+Joo, selvä. Rein–Maas–Schelde-suisto on Alankomaiden lounaisosassa ja osin Belgiassa sijaitseva laaja jokisuisto, jossa kolmen joen vedet yhtyvät ja jakautuvat moniksi haaroiksi saarien välillä ennen kuin ne laskevat Pohjanmereen. Suiston saaret ja salmet kuuluvat osin [[Zeelandin]] ja Etelä-Hollannin maakuntiin, ja alue on tiheään asuttua ja taloudellisesti merkittävää: [[Rotterdamin]] ja [[Antwerpenin]] satamat ovat suiston väyliä pitkin yhteydessä mereen. Suistoa on suojattu myrskytulvilta [[Deltatöillä]], jotka ovat muuttaneet sen rannikkoa. Sotkuinen vesistö, mutta ylhäältä se näyttää ihan järkevältä.
+KYSYMYS: Kerro lisää: Deltatöillä
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Missä Maas saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, annas ku mietin. Maas saa alkunsa Ranskan koillisosassa, [[Langresin ylängöllä]] [[Haute-Marnen]] departementissa, josta se virtaa pohjoiseen [[Ardennien]] läpi Belgiaan ja edelleen Alankomaihin. Lähde sijaitsee maaseudulla ja on vaatimaton, ja joen vesi kertyy pääasiassa sateista, minkä vuoksi sen virtaama vaihtelee voimakkaasti vuodenajan mukaan. En ole aivan varma lähteen tarkasta paikasta, mutta joen alkuseutu on tässä ylängössä. Pitkä joki, mut onneksi minä lennän suoraan.
+KYSYMYS: Kerro lisää: Langresin ylängöllä
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Missä Maas saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, annas ku mietin. Maas saa alkunsa Ranskan koillisosassa, [[Langresin ylängöllä]] [[Haute-Marnen]] departementissa, josta se virtaa pohjoiseen [[Ardennien]] läpi Belgiaan ja edelleen Alankomaihin. Lähde sijaitsee maaseudulla ja on vaatimaton, ja joen vesi kertyy pääasiassa sateista, minkä vuoksi sen virtaama vaihtelee voimakkaasti vuodenajan mukaan. En ole aivan varma lähteen tarkasta paikasta, mutta joen alkuseutu on tässä ylängössä. Pitkä joki, mut onneksi minä lennän suoraan.
+KYSYMYS: Kerro lisää: Haute-Marnen
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+AIEMPI KYSYMYS: Missä Maas saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, annas ku mietin. Maas saa alkunsa Ranskan koillisosassa, [[Langresin ylängöllä]] [[Haute-Marnen]] departementissa, josta se virtaa pohjoiseen [[Ardennien]] läpi Belgiaan ja edelleen Alankomaihin. Lähde sijaitsee maaseudulla ja on vaatimaton, ja joen vesi kertyy pääasiassa sateista, minkä vuoksi sen virtaama vaihtelee voimakkaasti vuodenajan mukaan. En ole aivan varma lähteen tarkasta paikasta, mutta joen alkuseutu on tässä ylängössä. Pitkä joki, mut onneksi minä lennän suoraan.
+KYSYMYS: Kerro lisää: Ardennien
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ranskan puolella Maasin varrella ovat muun muassa Verdun, Sedan ja Charleville-Mézières, Belgiassa [[Namur]] ja [[Liège]] sekä Alankomaissa [[Maastricht]], Roermond ja [[Venlo]]. Lähempänä merta joki yhtyy Reinin haaroihin ja jatkaa suistoalueelle. Joki on ollut kaupankäynnin ja kuljetusten reitti vuosisatojen ajan, ja monet näistä kaupungeista ovat syntyneet juuri jokivarteen.
+
+Maastrichtin nimi tarkoittaa Maasin ylityspaikkaa, ja siinä kuuluu koko kaupungin tarina: joku keksi, että joki kannattaa ylittää juuri tästä. Me siivekkäät olemme aina pitäneet sitä turhana vaivana.
+KYSYMYS: Kerro lisää: Namur
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ranskan puolella Maasin varrella ovat muun muassa Verdun, Sedan ja Charleville-Mézières, Belgiassa [[Namur]] ja [[Liège]] sekä Alankomaissa [[Maastricht]], Roermond ja [[Venlo]]. Lähempänä merta joki yhtyy Reinin haaroihin ja jatkaa suistoalueelle. Joki on ollut kaupankäynnin ja kuljetusten reitti vuosisatojen ajan, ja monet näistä kaupungeista ovat syntyneet juuri jokivarteen.
+
+Maastrichtin nimi tarkoittaa Maasin ylityspaikkaa, ja siinä kuuluu koko kaupungin tarina: joku keksi, että joki kannattaa ylittää juuri tästä. Me siivekkäät olemme aina pitäneet sitä turhana vaivana.
+KYSYMYS: Kerro lisää: Liège
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ranskan puolella Maasin varrella ovat muun muassa Verdun, Sedan ja Charleville-Mézières, Belgiassa [[Namur]] ja [[Liège]] sekä Alankomaissa [[Maastricht]], Roermond ja [[Venlo]]. Lähempänä merta joki yhtyy Reinin haaroihin ja jatkaa suistoalueelle. Joki on ollut kaupankäynnin ja kuljetusten reitti vuosisatojen ajan, ja monet näistä kaupungeista ovat syntyneet juuri jokivarteen.
+
+Maastrichtin nimi tarkoittaa Maasin ylityspaikkaa, ja siinä kuuluu koko kaupungin tarina: joku keksi, että joki kannattaa ylittää juuri tästä. Me siivekkäät olemme aina pitäneet sitä turhana vaivana.
+KYSYMYS: Kerro lisää: Maastricht
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ranskan puolella Maasin varrella ovat muun muassa Verdun, Sedan ja Charleville-Mézières, Belgiassa [[Namur]] ja [[Liège]] sekä Alankomaissa [[Maastricht]], Roermond ja [[Venlo]]. Lähempänä merta joki yhtyy Reinin haaroihin ja jatkaa suistoalueelle. Joki on ollut kaupankäynnin ja kuljetusten reitti vuosisatojen ajan, ja monet näistä kaupungeista ovat syntyneet juuri jokivarteen.
+
+Maastrichtin nimi tarkoittaa Maasin ylityspaikkaa, ja siinä kuuluu koko kaupungin tarina: joku keksi, että joki kannattaa ylittää juuri tästä. Me siivekkäät olemme aina pitäneet sitä turhana vaivana.
+KYSYMYS: Kerro lisää: Venlo
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Anglikaaninen katedraali] 1858 Seurakunta alkoi 1837 kotikirkkona, jossa jumalanpalveluksia pitivät ohi kulkevat anglikaanipapit. Chilen laki rajoitti vuoteen 1865 asti kaikkia muita uskontoja kuin katolista, mutta 1857 anglikaanit saivat luvan rakentaa kirkon Cerro Concepciónille. Varainkeruuta johti Britannian konsuli William Rouse. Lupa tuli ehdoilla, jotka näkyvät talossa yhä. Kirkkoon ei saanut tulla tornia eikä huippua, joka olisi paljastanut sen kirkoksi, eivätkä ovet saaneet olla suurempia kuin lähikatolisten kirkkojen ovet — siksi seurakunta kulki sisään sivuovesta. Suunnittelija oli englantilainen arkkitehti ja insinööri William Henry Lloyd, joka oli Chilessä rakentamassa Santiagon ja Valparaíson välistä r…
+- [Hobart — kohdekartta / Kohdekartta: Sotamuistomerkki] 1925 Tasmanian tärkein sotamuistomerkki seisoo Queens Domainin kumpareella, josta näkyy sekä kaupunki että Derwent. Paikalla oli vuosina 1838–1923 Queens Battery -patteri, ja sijainti valittiin nimenomaan sen näkyvyyden ja oman sotilashistorian takia. Muistomerkki on art déco -tulkinta egyptiläisestä obeliskista: sinikivinen porrastettu jalusta, harmaasta graniitista tehty kapeneva vartalo ja pyramidin muotoinen huippu. Huipun alla on joka sivulla punaisesta läpikuultamattomasta lasista tehty risti, jota valaistaan takaa lakkaamatta. Suunnittelukilpailu pidettiin 1923, ja sen voitti hobartilainen toimisto Hutchinson and Walker. Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta korkeutta nost…
+AIEMPI KYSYMYS: Mikä oli Verdunin taistelu Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Joo, raskas juttu tuo. Verdunin taistelu käytiin [[ensimmäisessä maailmansodassa]] helmikuusta joulukuuhun 1916 Maasin varrella Koillis-Ranskassa Ranskan ja Saksan armeijoiden välillä. Se oli yksi sodan pisimmistä ja kuluttavimmista taisteluista, ja kaatuneita, haavoittuneita ja kadonneita oli yhteensä arvioiden mukaan noin seitsemänsataatuhatta; lukuja arvioidaan eri tavoin. Ranskalaiset pitivät kaupungin, ja alue jäi vahvasti sodassa kärsineiden kansakuntien muistiin: [[Douaumontin]] muistomerkki ja hautausmaat muistuttavat tapahtumasta yhä. Siitä on yli sata vuotta, ja nykyisin Ranska ja Saksa ovat läheisiä liittolaisia, jotka tekevät yhteistyötä [[Euroopan unionissa]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ensimmäisessä maailmansodassa
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Mikä oli Verdunin taistelu Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Joo, raskas juttu tuo. Verdunin taistelu käytiin [[ensimmäisessä maailmansodassa]] helmikuusta joulukuuhun 1916 Maasin varrella Koillis-Ranskassa Ranskan ja Saksan armeijoiden välillä. Se oli yksi sodan pisimmistä ja kuluttavimmista taisteluista, ja kaatuneita, haavoittuneita ja kadonneita oli yhteensä arvioiden mukaan noin seitsemänsataatuhatta; lukuja arvioidaan eri tavoin. Ranskalaiset pitivät kaupungin, ja alue jäi vahvasti sodassa kärsineiden kansakuntien muistiin: [[Douaumontin]] muistomerkki ja hautausmaat muistuttavat tapahtumasta yhä. Siitä on yli sata vuotta, ja nykyisin Ranska ja Saksa ovat läheisiä liittolaisia, jotka tekevät yhteistyötä [[Euroopan unionissa]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Douaumontin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Neljäkymmentä kiloa pippuria banaaniviljelmältä] 1958– — Penjan laakso on vanhaa tulivuoren maata, ja siihen istutti pippurin Antoine Decré, jolla oli seudulla banaaniviljelmä. Ensimmäinen vientierä lähti maaliskuussa 1958: yksi neljänkymmenen kilon säkki valkopippuria. Nykyään poivre de Penja on suojattu maantieteellinen merkintä seitsemässätoista Afrikan OAPI-maassa ja lisäksi Euroopan unionissa — harvinaista afrikkalaiselle maataloustuotteelle. Michelin-kokit löysivät sen, ja toukokuussa 2016 kilosta maksettiin jopa 321 euroa. Samasta köynnöksestä saadaan vihreä, musta, valkoinen ja punainen pippuri; ero syntyy vain poimintahetkestä ja käsittelystä.
+AIEMPI KYSYMYS: Mikä oli Verdunin taistelu Maasin varrella?
+AIEMPI VASTAUS (Livia):
+Joo, raskas juttu tuo. Verdunin taistelu käytiin [[ensimmäisessä maailmansodassa]] helmikuusta joulukuuhun 1916 Maasin varrella Koillis-Ranskassa Ranskan ja Saksan armeijoiden välillä. Se oli yksi sodan pisimmistä ja kuluttavimmista taisteluista, ja kaatuneita, haavoittuneita ja kadonneita oli yhteensä arvioiden mukaan noin seitsemänsataatuhatta; lukuja arvioidaan eri tavoin. Ranskalaiset pitivät kaupungin, ja alue jäi vahvasti sodassa kärsineiden kansakuntien muistiin: [[Douaumontin]] muistomerkki ja hautausmaat muistuttavat tapahtumasta yhä. Siitä on yli sata vuotta, ja nykyisin Ranska ja Saksa ovat läheisiä liittolaisia, jotka tekevät yhteistyötä [[Euroopan unionissa]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Euroopan unionissa
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Miksi Maas tulvii Limburgissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maas on ennen kaikkea sadevesijoki: sen vesi tulee pääosin sateista [[Ardenneilta]] ja Lorrainen alueelta eikä lumen tai jäätiköiden sulamisvedestä kuten esimerkiksi [[Reinillä]], jota ruokkivat Alppien sulamisvedet. Siksi virtaama voi vaihdella nopeasti kuivista kausista tulviin, ja rankat sateet ovat nostaneet jokea [[Limburgissa]] monta kertaa, muun muassa joulukuussa 1993, tammikuussa 1995 ja heinäkuussa 2021. Alankomaissa tulvia on torjuttu muun muassa penkereitä korottamalla ja jokitilaa laajentamalla [[Maaswerken]]-ohjelmassa. Märkä aihe, mut pysyin katolla.
+KYSYMYS: Kerro lisää: Ardenneilta
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Miksi Maas tulvii Limburgissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maas on ennen kaikkea sadevesijoki: sen vesi tulee pääosin sateista [[Ardenneilta]] ja Lorrainen alueelta eikä lumen tai jäätiköiden sulamisvedestä kuten esimerkiksi [[Reinillä]], jota ruokkivat Alppien sulamisvedet. Siksi virtaama voi vaihdella nopeasti kuivista kausista tulviin, ja rankat sateet ovat nostaneet jokea [[Limburgissa]] monta kertaa, muun muassa joulukuussa 1993, tammikuussa 1995 ja heinäkuussa 2021. Alankomaissa tulvia on torjuttu muun muassa penkereitä korottamalla ja jokitilaa laajentamalla [[Maaswerken]]-ohjelmassa. Märkä aihe, mut pysyin katolla.
+KYSYMYS: Kerro lisää: Reinillä
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Miksi Maas tulvii Limburgissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maas on ennen kaikkea sadevesijoki: sen vesi tulee pääosin sateista [[Ardenneilta]] ja Lorrainen alueelta eikä lumen tai jäätiköiden sulamisvedestä kuten esimerkiksi [[Reinillä]], jota ruokkivat Alppien sulamisvedet. Siksi virtaama voi vaihdella nopeasti kuivista kausista tulviin, ja rankat sateet ovat nostaneet jokea [[Limburgissa]] monta kertaa, muun muassa joulukuussa 1993, tammikuussa 1995 ja heinäkuussa 2021. Alankomaissa tulvia on torjuttu muun muassa penkereitä korottamalla ja jokitilaa laajentamalla [[Maaswerken]]-ohjelmassa. Märkä aihe, mut pysyin katolla.
+KYSYMYS: Kerro lisää: Limburgissa
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maas (luonto · joki)
+Tietoruudun teksti: Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.
+AIEMPI KYSYMYS: Miksi Maas tulvii Limburgissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maas on ennen kaikkea sadevesijoki: sen vesi tulee pääosin sateista [[Ardenneilta]] ja Lorrainen alueelta eikä lumen tai jäätiköiden sulamisvedestä kuten esimerkiksi [[Reinillä]], jota ruokkivat Alppien sulamisvedet. Siksi virtaama voi vaihdella nopeasti kuivista kausista tulviin, ja rankat sateet ovat nostaneet jokea [[Limburgissa]] monta kertaa, muun muassa joulukuussa 1993, tammikuussa 1995 ja heinäkuussa 2021. Alankomaissa tulvia on torjuttu muun muassa penkereitä korottamalla ja jokitilaa laajentamalla [[Maaswerken]]-ohjelmassa. Märkä aihe, mut pysyin katolla.
+KYSYMYS: Kerro lisää: Maaswerken
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Mikä pumppaamo on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pumppaamo on laitos, joka siirtää vettä paikasta toiseen pumpuilla, yleensä alemmalta tasolta ylemmälle. Matalilla mailla, kuten Alankomaissa, sen tehtävä on nostaa ylimääräinen sadevesi ja ojien vesi pois vesistöihin tai mereen, jotta maa pysyy kuivana. [[Woudagemaal]] toimii juuri näin: se pumppaa [[Frieslandin]] ylimääräisen veden [[IJsselmereen]], ja sen teho on 4 000 kuutiometriä minuutissa. Yksinkertainen idea, vaikka kone on valtava.
+KYSYMYS: Kerro lisää: Woudagemaal
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Mikä pumppaamo on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pumppaamo on laitos, joka siirtää vettä paikasta toiseen pumpuilla, yleensä alemmalta tasolta ylemmälle. Matalilla mailla, kuten Alankomaissa, sen tehtävä on nostaa ylimääräinen sadevesi ja ojien vesi pois vesistöihin tai mereen, jotta maa pysyy kuivana. [[Woudagemaal]] toimii juuri näin: se pumppaa [[Frieslandin]] ylimääräisen veden [[IJsselmereen]], ja sen teho on 4 000 kuutiometriä minuutissa. Yksinkertainen idea, vaikka kone on valtava.
+KYSYMYS: Kerro lisää: Frieslandin
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Mikä pumppaamo on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pumppaamo on laitos, joka siirtää vettä paikasta toiseen pumpuilla, yleensä alemmalta tasolta ylemmälle. Matalilla mailla, kuten Alankomaissa, sen tehtävä on nostaa ylimääräinen sadevesi ja ojien vesi pois vesistöihin tai mereen, jotta maa pysyy kuivana. [[Woudagemaal]] toimii juuri näin: se pumppaa [[Frieslandin]] ylimääräisen veden [[IJsselmereen]], ja sen teho on 4 000 kuutiometriä minuutissa. Yksinkertainen idea, vaikka kone on valtava.
+KYSYMYS: Kerro lisää: IJsselmereen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Miksi höyrykone on yhä käytössä?
+AIEMPI VASTAUS (Livia):
+Ai niin, tuo. Woudagemaalin höyrykoneet ovat yhä käytössä, koska laitos on säilytetty toimivana teknisenä muistomerkkinä ja koska se toimii edelleen luotettavasti: se on ollut [[Unescon]] maailmanperintökohde vuodesta 1998. Asemaa käytetään nykyään vain noin kerran vuodessa, kun [[Frieslandin]] vedenpinta nousee poikkeuksellisen korkealle, eikä koneita siksi ole ollut tarvetta korvata nykyaikaisilla; päivittäisestä vedenpumppauksesta huolehtivat muut pumppaamot. Hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle, ja rakennuksen neljä [[höyrykonetta]] on pidetty kunnossa. Vanha kone jaksaa, vaikka minun siipeni väsyvät jo tästä selostuksesta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+AIEMPI KYSYMYS: Miksi höyrykone on yhä käytössä?
+AIEMPI VASTAUS (Livia):
+Ai niin, tuo. Woudagemaalin höyrykoneet ovat yhä käytössä, koska laitos on säilytetty toimivana teknisenä muistomerkkinä ja koska se toimii edelleen luotettavasti: se on ollut [[Unescon]] maailmanperintökohde vuodesta 1998. Asemaa käytetään nykyään vain noin kerran vuodessa, kun [[Frieslandin]] vedenpinta nousee poikkeuksellisen korkealle, eikä koneita siksi ole ollut tarvetta korvata nykyaikaisilla; päivittäisestä vedenpumppauksesta huolehtivat muut pumppaamot. Hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle, ja rakennuksen neljä [[höyrykonetta]] on pidetty kunnossa. Vanha kone jaksaa, vaikka minun siipeni väsyvät jo tästä selostuksesta.
+KYSYMYS: Kerro lisää: höyrykonetta
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Miten höyrykone toimii?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on hyvä kysymys. Höyrykoneessa kattilan vesi kuumennetaan polttamalla hiiltä, öljyä tai muuta polttoainetta, jolloin siitä muodostuu korkeassa paineessa olevaa höyryä. Höyry päästetään sylinteriin, jossa se työntää mäntää, ja mäntä liikuttaa kampiakselin kautta esimerkiksi vauhtipyörää tai pumppua; kun mäntä on työntynyt päähän, venttiilit ohjaavat höyryn toiselle puolelle ja liike toistuu. Käytetty höyry poistuu tai jäähdytetään lauhduttimessa takaisin vedeksi. Käytännöllisen koneen rakensi [[Thomas Newcomen]] 1700-luvun alussa, ja [[James Watt]] paransi sitä lauhduttimella 1700-luvun jälkipuoliskolla. Ensimmäinen tunnettu höyryllä pyörinyt laite oli antiikin Heron Aleksandrialaisen kuvaama pallo, mutta sillä ei tehty työtä.
+
+Heronin pallo on salaa lempparini: se pyörii ja näyttää vaikuttavalta, vaikka sillä ei tehdä mitään hyödyllistä. Minä tunnen siitä tietynlaista sukulaisuutta.
+KYSYMYS: Kerro lisää: Thomas Newcomen
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Townsville: Satama, jonka tulva vaati] 1864—1866 — Burdekin-joki nousi joka sadekausi yli äyräiden, ja silloin sisämaan karjatilat jäivät ilman yhteyttä etelän satamiin. Siksi joen pohjoispuolelle oli pakko saada oma satama. Woodstock Stationin John Melton Black, sydneyläisen liikemiehen Robert Townsin työntekijä, lähetti Andrew Ballin ja Mark Watt Reidin etsimään paikkaa, ja leiri pystytettiin 1864 Ross Creekin rantaan Melton Hillin alle. Towns kävi paikalla 1866 kolme päivää — ensimmäisen ja ainoan kerran — ja lupasi rahoituksen, jolloin kaupunki nimettiin hänen mukaansa. Kunta julistettiin helmikuussa 1866, ja Blackista tuli sen ensimmäinen pormestari.
+AIEMPI KYSYMYS: Miten höyrykone toimii?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on hyvä kysymys. Höyrykoneessa kattilan vesi kuumennetaan polttamalla hiiltä, öljyä tai muuta polttoainetta, jolloin siitä muodostuu korkeassa paineessa olevaa höyryä. Höyry päästetään sylinteriin, jossa se työntää mäntää, ja mäntä liikuttaa kampiakselin kautta esimerkiksi vauhtipyörää tai pumppua; kun mäntä on työntynyt päähän, venttiilit ohjaavat höyryn toiselle puolelle ja liike toistuu. Käytetty höyry poistuu tai jäähdytetään lauhduttimessa takaisin vedeksi. Käytännöllisen koneen rakensi [[Thomas Newcomen]] 1700-luvun alussa, ja [[James Watt]] paransi sitä lauhduttimella 1700-luvun jälkipuoliskolla. Ensimmäinen tunnettu höyryllä pyörinyt laite oli antiikin Heron Aleksandrialaisen kuvaama pallo, mutta sillä ei tehty työtä.
+
+Heronin pallo on salaa lempparini: se pyörii ja näyttää vaikuttavalta, vaikka sillä ei tehdä mitään hyödyllistä. Minä tunnen siitä tietynlaista sukulaisuutta.
+KYSYMYS: Kerro lisää: James Watt
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Mikä on Elfstedentocht?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on hieno. Elfstedentocht on Frieslandin yksitoista kaupunkia yhdistävä noin kahdensadan kilometrin luistelukilpailu, joka ajetaan luonnonjäällä kanavilla, joilla ja järvillä. Se voidaan järjestää vain, kun jää on riittävän paksu koko reitillä, minkä vuoksi tapahtuma on jäänyt monina talvina pitämättä; ensimmäinen kilpailu ajettiin vuonna 1909, ja viimeksi se on ajettu tammikuussa 1997. Reitti kulkee [[Leeuwardenin]], [[Dokkumin]] ja muiden Frieslandin kaupunkien kautta, ja tapahtuma on [[Frieslandin]] kansallinen ylpeydenaihe. Minä pysyn mieluummin lämpimällä kaiteella.
+KYSYMYS: Kerro lisää: Leeuwardenin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Mikä on Elfstedentocht?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on hieno. Elfstedentocht on Frieslandin yksitoista kaupunkia yhdistävä noin kahdensadan kilometrin luistelukilpailu, joka ajetaan luonnonjäällä kanavilla, joilla ja järvillä. Se voidaan järjestää vain, kun jää on riittävän paksu koko reitillä, minkä vuoksi tapahtuma on jäänyt monina talvina pitämättä; ensimmäinen kilpailu ajettiin vuonna 1909, ja viimeksi se on ajettu tammikuussa 1997. Reitti kulkee [[Leeuwardenin]], [[Dokkumin]] ja muiden Frieslandin kaupunkien kautta, ja tapahtuma on [[Frieslandin]] kansallinen ylpeydenaihe. Minä pysyn mieluummin lämpimällä kaiteella.
+KYSYMYS: Kerro lisää: Dokkumin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Joo, kysytäänpä sekin. Frieslandissa puhutaan hollannin ohella [[länsifriisiä]], jota kutsutaan paikallisesti nimellä frysk ja joka on maakunnassa virallinen kieli. Se on germaaninen kieli, ja sitä pidetään yhtenä [[englannin]] lähimmistä sukukielistä; sitä puhuu äidinkielenään arviolta noin puoli miljoonaa ihmistä. Muita friisiläiskieliä puhutaan Pohjois-Saksan rannikolla ja saarilla [[Saksassa]], mutta ne ovat hyvin pieniä kieliyhteisöjä. Hyvä kysymys oli, ja kieli vielä parempi.
+KYSYMYS: Kerro lisää: länsifriisiä
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Joo, kysytäänpä sekin. Frieslandissa puhutaan hollannin ohella [[länsifriisiä]], jota kutsutaan paikallisesti nimellä frysk ja joka on maakunnassa virallinen kieli. Se on germaaninen kieli, ja sitä pidetään yhtenä [[englannin]] lähimmistä sukukielistä; sitä puhuu äidinkielenään arviolta noin puoli miljoonaa ihmistä. Muita friisiläiskieliä puhutaan Pohjois-Saksan rannikolla ja saarilla [[Saksassa]], mutta ne ovat hyvin pieniä kieliyhteisöjä. Hyvä kysymys oli, ja kieli vielä parempi.
+KYSYMYS: Kerro lisää: englannin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Woudagemaal (tekniikka)
+Tietoruudun teksti: Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut maailmanperintökohde vuodesta 1998.
+AIEMPI KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Joo, kysytäänpä sekin. Frieslandissa puhutaan hollannin ohella [[länsifriisiä]], jota kutsutaan paikallisesti nimellä frysk ja joka on maakunnassa virallinen kieli. Se on germaaninen kieli, ja sitä pidetään yhtenä [[englannin]] lähimmistä sukukielistä; sitä puhuu äidinkielenään arviolta noin puoli miljoonaa ihmistä. Muita friisiläiskieliä puhutaan Pohjois-Saksan rannikolla ja saarilla [[Saksassa]], mutta ne ovat hyvin pieniä kieliyhteisöjä. Hyvä kysymys oli, ja kieli vielä parempi.
+KYSYMYS: Kerro lisää: Saksassa
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Mikä vuoden 1953 Pohjanmeren tulva oli?
+AIEMPI VASTAUS (Livia):
+Joo, tämä on vakava aihe. Vuoden 1953 Pohjanmeren tulva oli myrskytulva, joka iski tammikuun lopun ja helmikuun alun yönä Alankomaiden, Belgian ja Ison-Britannian rannikoille. Voimakas luoteismyrsky ajoi vettä Pohjanmeren eteläosaan samaan aikaan kuin vuorovesi oli korkealla, ja padot murtuivat muun muassa [[Zeelandissa]] ja [[Etelä-Hollannissa]]. Alankomaissa kuoli noin 1 800 ihmistä, ja Britanniassa ja Belgiassa kuoli lisäksi satoja; laajoja alueita jäi veden alle. Ennustus- ja varoitusjärjestelmät olivat tuolloin nykyistä vaatimattomammat, ja onnettomuus johti [[Deltatöiden]] käynnistämiseen. Hyvä, että siitä on opittu.
+KYSYMYS: Kerro lisää: Zeelandissa
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Mikä vuoden 1953 Pohjanmeren tulva oli?
+AIEMPI VASTAUS (Livia):
+Joo, tämä on vakava aihe. Vuoden 1953 Pohjanmeren tulva oli myrskytulva, joka iski tammikuun lopun ja helmikuun alun yönä Alankomaiden, Belgian ja Ison-Britannian rannikoille. Voimakas luoteismyrsky ajoi vettä Pohjanmeren eteläosaan samaan aikaan kuin vuorovesi oli korkealla, ja padot murtuivat muun muassa [[Zeelandissa]] ja [[Etelä-Hollannissa]]. Alankomaissa kuoli noin 1 800 ihmistä, ja Britanniassa ja Belgiassa kuoli lisäksi satoja; laajoja alueita jäi veden alle. Ennustus- ja varoitusjärjestelmät olivat tuolloin nykyistä vaatimattomammat, ja onnettomuus johti [[Deltatöiden]] käynnistämiseen. Hyvä, että siitä on opittu.
+KYSYMYS: Kerro lisää: Etelä-Hollannissa
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Mikä vuoden 1953 Pohjanmeren tulva oli?
+AIEMPI VASTAUS (Livia):
+Joo, tämä on vakava aihe. Vuoden 1953 Pohjanmeren tulva oli myrskytulva, joka iski tammikuun lopun ja helmikuun alun yönä Alankomaiden, Belgian ja Ison-Britannian rannikoille. Voimakas luoteismyrsky ajoi vettä Pohjanmeren eteläosaan samaan aikaan kuin vuorovesi oli korkealla, ja padot murtuivat muun muassa [[Zeelandissa]] ja [[Etelä-Hollannissa]]. Alankomaissa kuoli noin 1 800 ihmistä, ja Britanniassa ja Belgiassa kuoli lisäksi satoja; laajoja alueita jäi veden alle. Ennustus- ja varoitusjärjestelmät olivat tuolloin nykyistä vaatimattomammat, ja onnettomuus johti [[Deltatöiden]] käynnistämiseen. Hyvä, että siitä on opittu.
+KYSYMYS: Kerro lisää: Deltatöiden
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [PRI — maalehti / Luonto: Neljä viikkoa raivonnut myrsky] 1899 — Elokuun 8. päivänä 1899, vain vuosi sen jälkeen kun Puerto Rico oli siirtynyt Yhdysvalloille, hirmumyrsky San Ciriaco pyyhkäisi saaren yli kuudesta yhdeksään tuntiin ja jätti jälkeensä yli 3 000 kuollutta. Myrsky oli koko Atlantin historian pisimpään elänyt, lähes neljä viikkoa, ja se saavutti nelosluokan voiman. Sen mukanaan tuoma runsas sadekertymä tuhosi kahvi- ja sokeriviljelmät juuri ennen satokautta, ja arviolta neljäsosa saaren väestöstä jäi ilman ruokaa tai kattoa pään päälle. Aikalaislehdet julkaisivat piirroskuvia sortuneista taloista ja raunioituneesta keskustorista dokumentoidakseen tuhon laajuutta.
+- [Belgia — maalehti / Luonto: Myrsky avasi Bruggelle tien merelle] 1134 — Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.
+AIEMPI KYSYMYS: Miksi Oosterscheldea ei suljettu kokonaan?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Oosterschelden täydellinen sulkeminen olisi tuhonnut suolaisen veden eliöstön sekä ostereiden ja muun kalastuksen, minkä vuoksi ympäristöliike ja kalastajat vastustivat suunnitelmaa. Alankomaiden parlamentti muutti päätöstään 1970-luvun puolivälissä, ja suulle rakennettiin padon sijaan liikuteltavilla porteilla varustettu [[myrskypuomi]], joka pysyy auki lähes aina ja suljetaan vain, kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle. Näin [[vuorovesi]] ja suolaisen veden luonto säilyivät; puomi valmistui vuonna 1986 osana [[Deltatöitä]], ja ostereiden pyynti jatkuu alueella. Ostereita ei kyyhkyn nokkaan mahdu, mutta hyvä että ne säilyivät.
+KYSYMYS: Kerro lisää: myrskypuomi
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Miksi Oosterscheldea ei suljettu kokonaan?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Oosterschelden täydellinen sulkeminen olisi tuhonnut suolaisen veden eliöstön sekä ostereiden ja muun kalastuksen, minkä vuoksi ympäristöliike ja kalastajat vastustivat suunnitelmaa. Alankomaiden parlamentti muutti päätöstään 1970-luvun puolivälissä, ja suulle rakennettiin padon sijaan liikuteltavilla porteilla varustettu [[myrskypuomi]], joka pysyy auki lähes aina ja suljetaan vain, kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle. Näin [[vuorovesi]] ja suolaisen veden luonto säilyivät; puomi valmistui vuonna 1986 osana [[Deltatöitä]], ja ostereiden pyynti jatkuu alueella. Ostereita ei kyyhkyn nokkaan mahdu, mutta hyvä että ne säilyivät.
+KYSYMYS: Kerro lisää: vuorovesi
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Miksi Oosterscheldea ei suljettu kokonaan?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Oosterschelden täydellinen sulkeminen olisi tuhonnut suolaisen veden eliöstön sekä ostereiden ja muun kalastuksen, minkä vuoksi ympäristöliike ja kalastajat vastustivat suunnitelmaa. Alankomaiden parlamentti muutti päätöstään 1970-luvun puolivälissä, ja suulle rakennettiin padon sijaan liikuteltavilla porteilla varustettu [[myrskypuomi]], joka pysyy auki lähes aina ja suljetaan vain, kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle. Näin [[vuorovesi]] ja suolaisen veden luonto säilyivät; puomi valmistui vuonna 1986 osana [[Deltatöitä]], ja ostereiden pyynti jatkuu alueella. Ostereita ei kyyhkyn nokkaan mahdu, mutta hyvä että ne säilyivät.
+KYSYMYS: Kerro lisää: Deltatöitä
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Portin sulkemisesta päättää kone] 1997 — Rotterdamin satamaan johtavaa väylää ei voitu padota, koska laivojen on päästävä sisään. Siksi molemmille rannoille rakennettiin ovi: kaarevat teräsleuat, joiden ristikkovarsi on 210 metriä pitkä ja 22 metriä korkea. Kun myrsky uhkaa nostaa veden Rotterdamissa yli kolmen metrin, ovet kääntyvät ulos vedelle, täyttyvät vedellä ja vajoavat pohjaan. Päätöksen tekee tietokone, ei ihminen. Portti otettiin käyttöön 1997 ja koekäytetään joka syksy; oikeassa myrskyssä se suljettiin ensimmäisen kerran marraskuussa 2007.
+AIEMPI KYSYMYS: Mikä on Maeslantkering?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tunnettu. Maeslantkering on Nieuwe Waterweg -väylän myrskytulvaportti Hoek van Hollandin lähellä, ja se suojaa [[Rotterdamin]] ja sen satama-alueen tulvilta. Siinä on kaksi suurta kaareutuvaa ovea, jotka lepäävät tavallisesti kuivatelakoissa kummallakin rannalla ja kääntyvät laivaväylän eteen, kun vedenpinnan ennustetaan nousevan Rotterdamissa noin kolme metriä [[NAP]]-tason yläpuolelle. Rakennelma valmistui vuonna 1997, ja se kuuluu [[Deltatöiden]] viimeisiin suuriin hankkeisiin. Väylä on silti auki laivoille lähes aina. Kookas veijari, kyl se näkyy kauas.
+KYSYMYS: Kerro lisää: Rotterdamin
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mikä on Maeslantkering?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tunnettu. Maeslantkering on Nieuwe Waterweg -väylän myrskytulvaportti Hoek van Hollandin lähellä, ja se suojaa [[Rotterdamin]] ja sen satama-alueen tulvilta. Siinä on kaksi suurta kaareutuvaa ovea, jotka lepäävät tavallisesti kuivatelakoissa kummallakin rannalla ja kääntyvät laivaväylän eteen, kun vedenpinnan ennustetaan nousevan Rotterdamissa noin kolme metriä [[NAP]]-tason yläpuolelle. Rakennelma valmistui vuonna 1997, ja se kuuluu [[Deltatöiden]] viimeisiin suuriin hankkeisiin. Väylä on silti auki laivoille lähes aina. Kookas veijari, kyl se näkyy kauas.
+KYSYMYS: Kerro lisää: NAP
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Mikä on Afsluitdijk?
+AIEMPI VASTAUS (Livia):
+Ai se. Afsluitdijk on noin 32 kilometriä pitkä pato Pohjois-Alankomaissa, joka valmistui vuonna 1932 ja erottaa entisen Zuiderzeen, nykyisen makeavetisen [[IJsselmeren]], Wattimerestä ja Pohjanmerestä. Pato oli osa [[Zuiderzee-töiden]] hanketta, jonka tarkoituksena oli suojata maata tulvilta ja saada uutta maata; suunnitelman pääarkkitehtina pidetään insinööri [[Cornelis Lelyä]]. Padon päällä kulkee moottoritie, ja sen vieressä on laivaliikennettä varten sulut. Ylhäältä pato näyttää viivalta, jolla joku on piirtänyt meren ja järven väliin rajan, ja viiva on yllättävän suora. Sen päällä on hyvä lentää, joskin tuuli on aina vastaan.
+KYSYMYS: Kerro lisää: IJsselmeren
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+AIEMPI KYSYMYS: Mikä on Afsluitdijk?
+AIEMPI VASTAUS (Livia):
+Ai se. Afsluitdijk on noin 32 kilometriä pitkä pato Pohjois-Alankomaissa, joka valmistui vuonna 1932 ja erottaa entisen Zuiderzeen, nykyisen makeavetisen [[IJsselmeren]], Wattimerestä ja Pohjanmerestä. Pato oli osa [[Zuiderzee-töiden]] hanketta, jonka tarkoituksena oli suojata maata tulvilta ja saada uutta maata; suunnitelman pääarkkitehtina pidetään insinööri [[Cornelis Lelyä]]. Padon päällä kulkee moottoritie, ja sen vieressä on laivaliikennettä varten sulut. Ylhäältä pato näyttää viivalta, jolla joku on piirtänyt meren ja järven väliin rajan, ja viiva on yllättävän suora. Sen päällä on hyvä lentää, joskin tuuli on aina vastaan.
+KYSYMYS: Kerro lisää: Zuiderzee-töiden
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Mikä on Afsluitdijk?
+AIEMPI VASTAUS (Livia):
+Ai se. Afsluitdijk on noin 32 kilometriä pitkä pato Pohjois-Alankomaissa, joka valmistui vuonna 1932 ja erottaa entisen Zuiderzeen, nykyisen makeavetisen [[IJsselmeren]], Wattimerestä ja Pohjanmerestä. Pato oli osa [[Zuiderzee-töiden]] hanketta, jonka tarkoituksena oli suojata maata tulvilta ja saada uutta maata; suunnitelman pääarkkitehtina pidetään insinööri [[Cornelis Lelyä]]. Padon päällä kulkee moottoritie, ja sen vieressä on laivaliikennettä varten sulut. Ylhäältä pato näyttää viivalta, jolla joku on piirtänyt meren ja järven väliin rajan, ja viiva on yllättävän suora. Sen päällä on hyvä lentää, joskin tuuli on aina vastaan.
+KYSYMYS: Kerro lisää: Cornelis Lelyä
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Ai se. Polderi on padoin ympäröity ja kuivatettu alue, jonka vedenpinta pidetään pumppaamalla tai muulla vedenhallinnalla alempana kuin ympäröivän vesistön. Alankomaissa polderit ovat syntyneet järvien, merenlahtien ja soiden kuivatuksesta; [[Beemster]] kuivattiin vuonna 1612 ja on nykyään Unescon maailmanperintökohde. Uusimmat polderit nousivat Zuiderzeen entiselle pohjalle, ja [[Flevoland]] on nuorin maakunta, joka perustettiin vuonna 1986. Aikaisemmin vettä pumpattiin pois [[tuulimyllyillä]], ja nykyisin työn tekevät sähkö- ja dieselpumput. Märkää maata, jota on kuivattu kuin pyykkiä.
+KYSYMYS: Kerro lisää: Beemster
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Ai se. Polderi on padoin ympäröity ja kuivatettu alue, jonka vedenpinta pidetään pumppaamalla tai muulla vedenhallinnalla alempana kuin ympäröivän vesistön. Alankomaissa polderit ovat syntyneet järvien, merenlahtien ja soiden kuivatuksesta; [[Beemster]] kuivattiin vuonna 1612 ja on nykyään Unescon maailmanperintökohde. Uusimmat polderit nousivat Zuiderzeen entiselle pohjalle, ja [[Flevoland]] on nuorin maakunta, joka perustettiin vuonna 1986. Aikaisemmin vettä pumpattiin pois [[tuulimyllyillä]], ja nykyisin työn tekevät sähkö- ja dieselpumput. Märkää maata, jota on kuivattu kuin pyykkiä.
+KYSYMYS: Kerro lisää: Flevoland
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deltatyöt (tekniikka)
+Tietoruudun teksti: Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina suisto on au…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Tuuli sahasi lankut, ja laivat halpenivat] 1593 — Uitgeestilainen Cornelis Corneliszoon sai 15. joulukuuta 1593 patentin myllylle, joka sahaa puuta. Keksinnön ydin oli kampiakseli: se muutti tuulen pyörittämän liikkeen ylös-alas-liikkeeksi, joka veti sahanteriä. Yhdestä rungosta syntyi monta lankkua kerralla, kun ennen kaksi miestä oli vetänyt sahaa käsin. Patenttipaperissa keksijää kuvaillaan sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia laivoja valmistui nopeammin kuin muualla.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mikä on polderi?
+AIEMPI VASTAUS (Livia):
+Ai se. Polderi on padoin ympäröity ja kuivatettu alue, jonka vedenpinta pidetään pumppaamalla tai muulla vedenhallinnalla alempana kuin ympäröivän vesistön. Alankomaissa polderit ovat syntyneet järvien, merenlahtien ja soiden kuivatuksesta; [[Beemster]] kuivattiin vuonna 1612 ja on nykyään Unescon maailmanperintökohde. Uusimmat polderit nousivat Zuiderzeen entiselle pohjalle, ja [[Flevoland]] on nuorin maakunta, joka perustettiin vuonna 1986. Aikaisemmin vettä pumpattiin pois [[tuulimyllyillä]], ja nykyisin työn tekevät sähkö- ja dieselpumput. Märkää maata, jota on kuivattu kuin pyykkiä.
+KYSYMYS: Kerro lisää: tuulimyllyillä
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+AIEMPI KYSYMYS: Mikä pysyvä välitystuomioistuin on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä olen kuullut Haagin katoilta. Pysyvä välitystuomioistuin on vuoden 1899 [[Haagin sopimuksella]] perustettu toimielin, jonka tehtävä oli ratkaista valtioiden riidat rauhanomaisesti ja siten lopettaa sodat. Kokouksen ehdotti Venäjän tsaari [[Nikolai II]], ja Haagiin saapui 26 valtion lähetystöt. Tuomioistuimelle rakennettiin oma talo, [[Vredespaleis]], joka avattiin 28. elokuuta 1913. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Haagin sopimuksella
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Afrasiyabin rauniokumpu] n. 500 eaa. – 1220 Afrasiyab on vanha Samarkand. Kumpua asutettiin noin vuodesta 500 eaa. mongolivalloitukseen 1220 asti, ja vanhimmat kerrokset ovat ensimmäisen vuosituhannen puolivälistä ennen ajanlaskun alkua. Aluetta on 220 hehtaaria ja arkeologisten kerrostumien paksuus on 8–12 metriä. Kaupunki oli tasakylkisen kolmion muotoinen, leveimmillään puolitoista kilometriä, ja sitä ympäröivät korkeat savimuurit torneineen. Vesi tuotiin kanavia, saviputkia ja kaivoja pitkin, ja eteläisen muurin lähellä oli allas, johon mahtui miljoona gallonaa eli noin neljätuhatta kuutiometriä vettä. Nimi ei ole alun perin sadun kuningas Afrasiabin. Tutkijoiden mukaan se on väännös persian sanasta Parsiab, so…
+- [Ulan Bator — kohdekartta / Kohdekartta: Bogd Khanin talvipalatsi] 1893–1903 Talvipalatsi oli osa laajempaa Vihreän palatsin kokonaisuutta, joka oli kahdeksannen Jebtsundamba Khutuktun eli Bogd Khanin asuinpaikka. Hallitsijalla oli neljä pääasuntoa, ja kaikki olivat Keski- ja Tuul-joen välisellä alueella: kesäpalatsi, Valkoinen palatsi, Pandelinin palatsi ja tämä. Osaa niistä käytettiin myös uskonnollisiin menoihin. Kolme muuta on kadonnut, ja talvipalatsi on ainoa jäljellä oleva. Alueella on kaikkiaan parikymmentä rakennusta. Portin nimi on Rauhan ja onnen portti, ja pihalla on jäähdytyspaviljonki sekä kuusi temppeliä, joissa on buddhalaista taidetta, kirjoituksia ja thangka-maalauksia; kahden temppelin nimet ovat Naidan ja Makhranz. Itse talvipalatsi on …
+AIEMPI KYSYMYS: Mikä pysyvä välitystuomioistuin on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä olen kuullut Haagin katoilta. Pysyvä välitystuomioistuin on vuoden 1899 [[Haagin sopimuksella]] perustettu toimielin, jonka tehtävä oli ratkaista valtioiden riidat rauhanomaisesti ja siten lopettaa sodat. Kokouksen ehdotti Venäjän tsaari [[Nikolai II]], ja Haagiin saapui 26 valtion lähetystöt. Tuomioistuimelle rakennettiin oma talo, [[Vredespaleis]], joka avattiin 28. elokuuta 1913. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Nikolai II
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+AIEMPI KYSYMYS: Mikä pysyvä välitystuomioistuin on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä olen kuullut Haagin katoilta. Pysyvä välitystuomioistuin on vuoden 1899 [[Haagin sopimuksella]] perustettu toimielin, jonka tehtävä oli ratkaista valtioiden riidat rauhanomaisesti ja siten lopettaa sodat. Kokouksen ehdotti Venäjän tsaari [[Nikolai II]], ja Haagiin saapui 26 valtion lähetystöt. Tuomioistuimelle rakennettiin oma talo, [[Vredespaleis]], joka avattiin 28. elokuuta 1913. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Vredespaleis
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [San Francisco — kohdekartta / Kohdekartta: Palace Hotel] 1875–1909 Hotellin rakennutti pankkiiri William Chapman Ralston, ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. lokakuuta 1875, siinä oli 755 huonetta ja se oli Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen Grand Court, jonne vaunut ajoivat sisään ja jota ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. Hisseinä oli punapuupaneloituja hydraulisia "nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä ollut — se avattiin kaksi vuotta myöhemmi…
+AIEMPI KYSYMYS: Kuka maksoi rauhanpalatsin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Rauhanpalatsin rakennusrahat, 1,5 miljoonaa dollaria, saatiin skotlantilaissyntyiseltä teräsmagnaatilta [[Andrew Carnegieltä]]. Rahat hankki hankkeelle yhdysvaltalainen diplomaatti [[Andrew Dickson White]]. Kukaan ei vaan ikinä rahoita pullakahvilaa.
+KYSYMYS: Kerro lisää: Andrew Carnegieltä
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+AIEMPI KYSYMYS: Kuka maksoi rauhanpalatsin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä osaan kertoo. Rauhanpalatsin rakennusrahat, 1,5 miljoonaa dollaria, saatiin skotlantilaissyntyiseltä teräsmagnaatilta [[Andrew Carnegieltä]]. Rahat hankki hankkeelle yhdysvaltalainen diplomaatti [[Andrew Dickson White]]. Kukaan ei vaan ikinä rahoita pullakahvilaa.
+KYSYMYS: Kerro lisää: Andrew Dickson White
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Palace Hotel] 1875–1909 Hotellin rakennutti pankkiiri William Chapman Ralston, ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. lokakuuta 1875, siinä oli 755 huonetta ja se oli Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen Grand Court, jonne vaunut ajoivat sisään ja jota ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. Hisseinä oli punapuupaneloituja hydraulisia "nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä ollut — se avattiin kaksi vuotta myöhemmi…
+AIEMPI KYSYMYS: Mitä kansainvälinen tuomioistuin ratkaisee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on hyvä kysymys. Kansainvälinen tuomioistuin on [[Yhdistyneiden kansakuntien]] tärkein oikeuselin, ja se on toiminut [[Rauhanpalatsissa]] vuodesta 1946. Se ratkaisee valtioiden välisiä riitoja ja antaa lausuntoja kansainvälisen oikeuden kysymyksistä; yksittäisiä ihmisiä se ei tuomitse.
+
+Kaksi tuomioistuinta saman katon alla, ja kummallakin on oma tehtävänsä. Minä pidän siitä, että riidat yritetään ratkaista paperilla eikä siivenlyönneillä.
+KYSYMYS: Kerro lisää: Yhdistyneiden kansakuntien
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+AIEMPI KYSYMYS: Mitä kansainvälinen tuomioistuin ratkaisee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on hyvä kysymys. Kansainvälinen tuomioistuin on [[Yhdistyneiden kansakuntien]] tärkein oikeuselin, ja se on toiminut [[Rauhanpalatsissa]] vuodesta 1946. Se ratkaisee valtioiden välisiä riitoja ja antaa lausuntoja kansainvälisen oikeuden kysymyksistä; yksittäisiä ihmisiä se ei tuomitse.
+
+Kaksi tuomioistuinta saman katon alla, ja kummallakin on oma tehtävänsä. Minä pidän siitä, että riidat yritetään ratkaista paperilla eikä siivenlyönneillä.
+KYSYMYS: Kerro lisää: Rauhanpalatsissa
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vredespaleis (historia)
+Tietoruudun teksti: Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin 28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.
+AIEMPI KYSYMYS: Mitkä valtiot lähettivät edustajansa Haagin kokoukseen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tää on pitkä lista. [[Haagiin]] saapui 26 valtion lähetystöt. Mukana olivat eurooppalaiset valtiot sekä osmanien valtakunta, Yhdysvallat, Meksiko, Kiina, Japani, Siam ja Persia. Kokouksen oli ehdottanut Venäjän tsaari [[Nikolai II]], ja taustalla oli 1800-luvun lopun [[varustelukilpa]]. Lueteltuna se kuulostaa melkein lentoreitiltä.
+KYSYMYS: Kerro lisää: Haagiin
