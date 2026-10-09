@@ -6,7 +6,7 @@ Edellinen luovutus: viesti-natiivi-ui-luovutus-20261009-ilta2.md.
 
 ## Tila: ei keskeneräistä, kaikki kuitattu ja Natiivisepällä
 
-UITK-ASETTELUTESTI valmis ja junassa 174: natiivi-ui/asettelutesti-174 kärki **d77e2906b** (PT kuittasi, Natiivisepällä).
+UITK-ASETTELUTESTI valmis ja junassa 174: natiivi-ui/asettelutesti-174 kärki **5cb8ed79b** (d77e2906b kuitattu + työkalu kaanna-editori.sh; Natiivisepällä).
 Ajo: `tyokalut/ui-asettelutesti.sh <haara>[+<haara>…]` vain Julkaisijan NYT-vuorolla (lukko, nice 10, aikaraja 6 min, ~3,5–4,5 min).
 Ilmoita Julkaisijalle heti "lukko vapaa". Testi: Editor/AsetteluTesti.cs, 4 kokoa (iPhone 17 Pro ja iPad Pro 11", pysty + vaaka),
 domain reload päällä, tila SessionStatessa. Kattaa: pallo (Kysy, napit, nyt-rivi, kierrosnäkymä: metro, tapit), mikseri, chat
@@ -29,9 +29,8 @@ peli-kortti-174+nosto-kerro-174+asettelutesti-174 (kaikki natiivi-ui/-etuliittee
 
 ## Työkalut ja ympäristö
 
-- Editor-koodi ei käänny tarkista.sh:ssa: scratchpadin kaanna-editori.sh (csc Assembly-CSharp-editori.dll:ää vasten, ilman
-  UnityEditor.dll:ää ja SteamAudio*:a) — aja ensin tarkista.sh SAMASSA haarassa (dll on viimeisimmän ajon). Uusi sessio: kirjoita
-  skripti uudelleen (malli: unity-tarkistus.sh rivit 22–90).
+- Editor-koodi ei käänny tarkista.sh:ssa: `tyokalut/kaanna-editori.sh` (asettelutesti-174 5cb8ed79b; csc Assembly-CSharp-editori.dll:ää
+  vasten) — aja ensin tarkista.sh SAMASSA haarassa (dll on viimeisimmän ajon).
 - tarkista.sh kaatui 9.10. 20.57 Libraryn SteamAudioUnity.dll:ään; korjaus 8e01e2457 junassa 173. Kunnes masterissa:
   MATKAKIRJA_KIRJASTOT=<kopio ScriptAssemblies ilman SteamAudio*>.
 - v633-sisältö paikallisesti: ~/Library/Application Support/Matkakirja/Matkakirja 3D/sisalto (hakemisto.json → tiedostot/<sha256>).
