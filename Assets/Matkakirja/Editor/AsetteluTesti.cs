@@ -208,7 +208,9 @@ namespace Matkakirja.Editori
             var turva = TurvaAlue(juuri);
             foreach (var teksti in new[] { Kieli.T("ui.opas.kysy-oppaalta-2"), "Puhu oppaalle", "Kirjoita oppaalle" })
             {
-                var e = Etsi(juuri, teksti);
+                // iPhone vaaka (9.10.2026): Puhu ja Kirjoita OHJAUSNAPPI-kuvakkeina otsikkorivillä, VoiceOver-nimi tooltipissä.
+                var e = Etsi(juuri, teksti) ?? opas.TestiValikko?.Query<VisualElement>(className: "mk-ohjausnappi")
+                    .Where(n => n.tooltip == teksti && n.resolvedStyle.display != DisplayStyle.None).First();
                 if (e == null) { Virhe($"Kysy: \"{teksti}\" puuttuu"); continue; }
                 Kokonaan(e, turva, "Kysy: " + teksti);
                 IlmanVieritysta(e, "Kysy: " + teksti);
