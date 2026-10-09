@@ -81,6 +81,9 @@ namespace Matkakirja.Peli
         /// <summary>Käsitteen avain lisaa-taulussa (pienet kirjaimet, välit siistitty).</summary>
         public static string Avain(string kasite) => Regex.Replace((kasite ?? "").Trim(), @"\s+", " ").ToLowerInvariant();
 
+        /// <summary>Käsitelinkin ja nostokortin korostuksen kysymys (sama muoto kuin valmiissa vastauksissa: KerroLisaa purkaa sen).</summary>
+        public static string KerroLisaaKysymys(string kasite) => KerroLisaaAlku + (kasite ?? "").Trim();
+
         /// <summary>"Kerro lisää: X" → X; muu kysymys → null.</summary>
         public static string KerroLisaa(string kysymys)
         {
