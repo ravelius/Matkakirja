@@ -191,7 +191,10 @@ namespace Matkakirja.Natiivi
                     // TIETOA (Päätoimittaja 8.10.: tietokerros ilman Pulua, ettei iPad-pelaaja menetä sitä): seikkailun tietokerroksen
                     // kortisto, kun se on tarjolla (SeikkailuTietokerros, nousun jälkeen); sama KORTTI-kortisto kuin Pulun napautuksesta.
                     if (SeikkailuTapit.TietokerrosTarjolla) Komento("Tietoa", SeikkailuTapit.AvaaTietokerrosValikosta);
-                    // Seikkailussa vain pelin rivit (Päätoimittaja 8.10.2026): Vihje, Tietoa, Äänet, Lähteet, Sulje.
+                    // LINNAN HISTORIA (Päätoimittaja 9.10.2026, juna 171; Siirtoseppä a8a454732): alun valinnan historia myös valikosta,
+                    // kun Olavinlinna on ladattu (DioraamaSovitin.HistoriaKaytettavissa); pelin aikana peli pysähtyy ja jatkuu lopussa.
+                    if (DioraamaSovitin.HistoriaKaytettavissa) Komento("Linnan historia", () => DioraamaSovitin.AloitaHistoria(null));
+                    // Seikkailussa vain pelin rivit (Päätoimittaja 8.10.2026): Vihje, Tietoa, Linnan historia, Äänet, Lähteet, Sulje.
                     if (!SeikkailuTapit.SeikkailuKaynnissa)
                     {
                         Alanakyma("Huoneet", Nakyma.Huoneet);
