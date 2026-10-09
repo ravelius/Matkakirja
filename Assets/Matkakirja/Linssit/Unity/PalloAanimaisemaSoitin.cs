@@ -135,7 +135,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(string osoite)
         {
             string polku = osoite;
-            using var r = UnityWebRequestMultimedia.GetAudioClip(osoite, AudioType.MPEG);
+            using var r = UnityWebRequestMultimedia.GetAudioClip(Matkakirja.Linssit.Aanet.KaupunkiSilmukat.Osoite(osoite, KaupunkiAanimaisemaSoitin.Juuri), AudioType.MPEG);   // kujerrus → kaupunkisilmukat-v1
             // Pakattuna muistiin (juna 174, muisti): kaupunkisilmukat-v1:n 90 s kyyhkyt purettuna ~16 Mt, pakattuna ~2 Mt
             // (vanha 30 s purettuna ~5 Mt). SaumatonSilmukka jatkaa pakatun silmukan hakuttomasti tagin mukaan.
             ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;

@@ -460,6 +460,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Silmukka välimuistiin (ensimmäinen kerta) ja file://-suoratoistona soittoon (ei koko PCM:ää muistiin).</summary>
         static IEnumerator Lataa(string url, Action<AudioClip> valmis)
         {
+            url = Matkakirja.Linssit.Aanet.KaupunkiSilmukat.Osoite(url, Juuri);   // lyhyet silmukat → kaupunkisilmukat-v1 (juna 174)
             string tiedosto = Path.Combine(Application.temporaryCachePath, "aanimaisema", Hash(url) + Path.GetExtension(new Uri(url).AbsolutePath));
             if (!File.Exists(tiedosto))
             {
