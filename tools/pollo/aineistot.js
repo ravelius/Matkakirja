@@ -82,7 +82,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v3/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v5/tukholma-yksityiskohdat.json',   // v5 9.10.: + Kuninkaanlinnan aarrekammio ja Erik XIV:n kruunu
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     // erät 5–6 (8.10.)
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
@@ -99,6 +99,11 @@ export const OPAS_AINEISTOT = Object.freeze({
     luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json',
+  },
+  // Klikattavat lisäkuvat ilman ankkuria (Sisältökirjuri 9.10.; NUI näyttää lisäkuvina):
+  // [{ kohde_id, nimi, kuvat: [{ kuvateksti, url, lisenssi, tekija, media_url, paketti_leveys, paketti_korkeus, jarjestys }] }].
+  lisakuvat_polut: {
+    tukholma: 'esittely/tukholma-lisakuvat-v2/tukholma-lisakuvat.json',
   },
   // Historia- ja arkiosiot lentojen ajaksi (omistaja 9.10.: vähemmän taukoja ja pelkkiä siirtymiä; kehityskaupungit):
   // { kaupunki, versio, osiot: [{ tunnus, otsikko, teksti, sha, kesto_s, lahteet }] }, ääni R2 opas/<sha>.mp3|pcm|ajat.json.
