@@ -236,7 +236,11 @@ namespace Matkakirja.Natiivi
             rakennus = rak;
             SeuraaMuutaPuhetta();
             bool aanimaisemaPaalla = Paalla && Asetukset.Paalla(Kytkin.Aanimaisema);
-            bool kertojaPaalla = Paalla && Asetukset.Paalla(Kytkin.Kertoja) && !Pelissa;
+            bool pelissa = Pelissa;
+            // Kuva-arkki 9.10. (virhe 2): ennen historiaa tai peliä alkanut linnan kertojan rivi katkeaa, kun historia tai peli alkaa.
+            if (pelissa && !olinPelissa && viimeJakso >= 0) { LopetaErillinen(); Debug.Log("MATKAKIRJA linssit: poikki: linnan kertoja katkaistu (historia tai peli alkoi)"); }
+            olinPelissa = pelissa;
+            bool kertojaPaalla = Paalla && Asetukset.Paalla(Kytkin.Kertoja) && !pelissa;
 
             // KUOLLUT SILMUKKAKAHVA -korjaus (löydös, katselmointi 29.9.2026): ensin kerätään KAIKKIEN tila+ääni-
             // parien tavoitetasot (ILMAN duckausta -- duckaus ei saa vaikuttaa siihen, pidetäänkö kahva ylipäätään
@@ -479,7 +483,7 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
-        int viimeJakso = -1;
+        int viimeJakso = -1; bool olinPelissa;
 
         /// <summary>Pelattava pala käynnissä (vene, kävely, yö): linnan esittelyn kertoja ei soi eikä katkaise pelin repliikkejä
         /// (LS2:n botti BUILD 169: kierros alkoi veneessä, "puhevuoro linnalle (muut puheet katkaistu)" kesken pelin; samasta
@@ -681,6 +685,8 @@ namespace Matkakirja.Natiivi
         bool katkaiseeMuita;
 
         /// <summary>Soiko linnan puhe (repliikki, kertoja, Pulun kertomus, kuunnelma).</summary>
+        /// <summary>Linnan puhelähde soi (loppumusiikin väistö, SeikkailuLoppumusiikki).</summary>
+        public static bool PuheSoiNyt => aktiivinen != null && aktiivinen.PuheSoi;
         public bool PuheSoi => (puheKuiva != null && puheKuiva.isPlaying) || (puheKaiku != null && puheKaiku.isPlaying)
                                || Time.unscaledTime < puheLoppuu || puheTauolla;
 

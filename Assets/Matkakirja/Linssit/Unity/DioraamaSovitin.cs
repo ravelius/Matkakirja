@@ -410,6 +410,7 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
             }
             palaOhi:
+            if (historiaPyydetty && rakennus != null && nayttamo != null && !SaapumisOdotus) { historiaPyydetty = false; o.StartCoroutine(Historia(null)); }
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
             // V2: vene etenee aina (myös kun pelaaja on jo laiturilla: vene jää kiinnitettynä); perillä pelaaja laiturille.
@@ -937,7 +938,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattava pala jatkuu tallennuksesta (Natiivi-UI:n Jatka; SeikkailuTallentaja.LueTiedosto kertoo, onko jatkettavaa).</summary>
         public static bool PelattavaPalaJatka;
 
-        bool alkuValittu;
+        /// <summary>Hahmojen repliikit (repliikit-v4) ja puuttuvat repliikit lisämanifestina (repliikit-lapi-v1: muurin partio, kellon vartija,
+        /// tyrmä; Pelikoodarin aja-generointi.sh omistajan luvalla, PT 9.10.). Puuttuva lisämanifest = hiljaa.</summary>
+        void RepliikitPaalle()
+        {
+            var ennen = SeikkailuRepliikit.Aktiivinen;
+            var r = SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
+            if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v1/manifest.json");
+        }
+
+        bool alkuValittu, historiaPyydetty;
         /// <summary>Alun valinta auki (kertoja ei soi korttien aikana).</summary>
         public static bool AlkuValintaAuki { get; private set; }
         /// <summary>Automaattiajot (botti, todistusajo): "poikki kavely alkuvalinta 0" ohittaa valinnan suoraan peliin.</summary>
@@ -960,7 +970,8 @@ namespace Matkakirja.Natiivi
         public static bool HistoriaKaynnissa => SeikkailuHistoria.Kaynnissa;
         /// <summary>Linnan historia käytettävissä: Olavinlinna ladattu, ei historiaa eikä alun valintaa auki (☰ › Linnan historia).</summary>
         public static bool HistoriaKaytettavissa => aktiivinenSovitin != null && aktiivinenSovitin.rakennus != null && aktiivinenSovitin.nayttamo != null
-            && RakennusId == Oletusrakennus && !SeikkailuHistoria.Kaynnissa && !AlkuValintaAuki && !SaapumisOdotus;
+            && RakennusId == Oletusrakennus && !SeikkailuHistoria.Kaynnissa && !AlkuValintaAuki && !SaapumisOdotus
+            && DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash;   // vaihemallit ja vuodet vain pelattavan palan paketissa
 
         /// <summary>
         /// ☰ › Linnan historia (Natiivi-UI). Pelin aikana peli pysähtyy (aika 0, pelaajan ja vartijoiden ohjaus pois), historia soi,
@@ -1088,7 +1099,7 @@ namespace Matkakirja.Natiivi
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
             AanetPaalle();
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
+            RepliikitPaalle();
             SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
@@ -1211,7 +1222,7 @@ namespace Matkakirja.Natiivi
         void AanetPaalle()
         {
             if (nayttamo == null) return;
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
+            RepliikitPaalle();
             var ennen = SeikkailuAanet.Aktiivinen;
             var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v3/manifest.json", o.Kirjaa);
             if (a != ennen || SeikkailuSade.Aktiivinen == null)
@@ -1229,6 +1240,7 @@ namespace Matkakirja.Natiivi
                     "puuovi-narina-2-a", "puuovi-narina-2-b", "portti-narahdus", "portin-salpa", "raskas-ovi-avain-a", "raskas-ovi-avain-b", "arkku-kansi",
                     "kolikot-1", "kolikot-2", "kesayo-sirkat", "satama-vesi", "askel-puu");
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v2/manifest.json");   // generoidut (PT 9.10.): sytytys, hanska, kauha, nauris, tarjotin; puuttuva = hiljaa
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }
@@ -1261,7 +1273,7 @@ namespace Matkakirja.Natiivi
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
+            RepliikitPaalle();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
@@ -1765,11 +1777,25 @@ namespace Matkakirja.Natiivi
         /// yksi glb per HENKILÖ (ei per tila) -- DioraamaGlb.Lue(unityyn:true) peilaa Unityyn samassa kutsussa
         /// kuin rakennus3D:n LataaTila. Virhe (verkko/jäsennys) EI kaada linssiä: 3D-hahmo jää puuttumaan (ks.
         /// DioraamaHahmot3D.cs:n Esiintyma-kommentti "kortti on varalla" -poikkeamasta).</summary>
+        /// <summary>Paikallinen hahmokoe (kehityskomento "poikki hahmokorvaus <glb-nimi> <paikallinen.glb>|pois", LR:n MetaHuman-koe 9.10.):
+        /// paketin glb (tiedostonimen mukaan, esim. vouti-1500-faceit.glb) luetaan paikallisesta tiedostosta ja ASTC-kuvat sen kansion
+        /// astc/<nimi>-<i>-6x6.astcm:stä. Ei junan sisältöä: ei pysyvää tilaa eikä osoittimen vaihtoa.</summary>
+        static readonly Dictionary<string, string> hahmoKorvaus = new Dictionary<string, string>(StringComparer.Ordinal);
+        static string Korvaus(string glbPolku) { int i = glbPolku.LastIndexOf('/'); return hahmoKorvaus.TryGetValue(i >= 0 ? glbPolku.Substring(i + 1) : glbPolku, out var p) ? p : null; }
+        static IEnumerator HaeSuoraan(string url, Action<byte[]> valmis)
+        {
+            using var q = UnityEngine.Networking.UnityWebRequest.Get(url);
+            yield return q.SendWebRequest();
+            valmis(q.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? q.downloadHandler.data : null);
+        }
+
         IEnumerator LataaHahmoGlb(string glbPolku)
         {
             int kerta = avauskerta;
             byte[] tavut = null;
-            yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
+            string korvaus = Korvaus(glbPolku);
+            if (korvaus != null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} → paikallinen koe {korvaus}"); yield return HaeSuoraan("file://" + korvaus, t => tavut = t); }
+            else yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
             if (tavut == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} ei latautunut (hahmo puuttuu)"); yield break; }
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); }
@@ -1783,9 +1809,17 @@ namespace Matkakirja.Natiivi
                 for (int ki = 0; ki < malli.Kuvat.Count; ki++)
                 {
                     string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
-                    if (DioraamaLevyvalimuisti.Manifestissa(url) != true) continue;
                     byte[] a = null;
-                    yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
+                    if (korvaus != null)
+                    {
+                        string kansio = System.IO.Path.GetDirectoryName(korvaus), nimi = System.IO.Path.GetFileNameWithoutExtension(korvaus);
+                        yield return HaeSuoraan("file://" + kansio + "/astc/" + nimi + "-" + ki + "-6x6.astcm", t => a = t);
+                    }
+                    else
+                    {
+                        if (DioraamaLevyvalimuisti.Manifestissa(url) != true) continue;
+                        yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
+                    }
                     string syy = "ei latautunut";
                     var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat, 0, normaaliKuvat.Contains(ki)) : null;
                     if (k == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} kuva {ki} ASTC ei käytössä ({syy}), glb:n kuva"); continue; }
@@ -1917,6 +1951,15 @@ namespace Matkakirja.Natiivi
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
+                // Kuva-arkki 9.10. (virhe 1): tuotantopaketissa ei ole vaihemalleja eikä vuosia → pelattavan palan paketti ensin.
+                if (DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+                {
+                    if (peiliPaalla) AsetaPeili("pois");
+                    DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash;
+                    if (rakennus != null) LataaUudelleen();
+                    historiaPyydetty = true; o.Kirjaa("poikki: historia: pelattavan palan paketti ladataan ensin");
+                    return;
+                }
                 o.StartCoroutine(Historia(null));
                 return;
             }
@@ -2224,6 +2267,14 @@ namespace Matkakirja.Natiivi
                 // uusi peli-/Sovitin-instanssi nollaa sen oletukseen, pois).
                 linssi.Leijunta = arvo == "1";
                 o.Kirjaa("poikki: drift " + (arvo == "1" ? "päällä" : "pois"));
+                return;
+            }
+            if (mita == "hahmokorvaus")
+            {
+                // "poikki hahmokorvaus vouti-1500-faceit.glb /polku/vouti-1500-mh.glb" | "poikki hahmokorvaus pois"; sitten "poikki lataa".
+                if (arvo == null || arvo == "pois") hahmoKorvaus.Clear();
+                else if (osat.Length > 3) hahmoKorvaus[arvo] = osat[3];
+                o.Kirjaa("poikki: hahmokorvaus " + (hahmoKorvaus.Count == 0 ? "pois" : string.Join(", ", hahmoKorvaus)));
                 return;
             }
             if (mita == "hahmot")

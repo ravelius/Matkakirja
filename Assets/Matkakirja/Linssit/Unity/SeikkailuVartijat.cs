@@ -367,6 +367,18 @@ namespace Matkakirja.Natiivi
                 float v2 = new Vector2(ag.velocity.x, ag.velocity.z).magnitude;
                 v.Kavelee = v2 > 0.15f;
                 if (tyot == null && SeikkailuKavely.Data != null) { tyot = new List<KavelyMerkki>(); foreach (var m in SeikkailuKavely.Data.Lajia("lakaisu")) if (m.Aani != null) tyot.Add(m); }
+                // Kokin työ (aanet-lapi-v2 "kauha"): seisova kokki hämmentää pataa, kuuluu lähellä; muurin partio puhuu itsekseen rauhassa.
+                if (!v.Kavelee && p != null && Time.unscaledTime > v.TyoAsti && (vp - p.transform.position).sqrMagnitude < 12f * 12f)
+                {
+                    if (v.Aivot.Profiili == VartijaProfiili.Kokki && v.Aivot.Tila == VartijanTila.Partio && SeikkailuAanet.Klippi("kauha") != null)
+                    { SeikkailuAanet.Soita("kauha", vp + Vector3.up * 0.9f, 0.6f); v.TyoAsti = Time.unscaledTime + 9f; }
+                    else if (v.Aivot.Profiili == VartijaProfiili.Vartija && v.Osa == "muurikaytava" && v.Aivot.Tila == VartijanTila.Partio)
+                    {
+                        var rr = SeikkailuRepliikit.Aktiivinen; string rauha = ++v.RepliikkiLaskuri % 2 == 0 ? "muuri-vartija-rauha-2" : "muuri-vartija-rauha-1";
+                        if (rr != null && rr.Valmis && rr.On(rauha) && Time.unscaledTime >= v.RepliikkiAsti) { rr.Soita(rauha, v.Agentti.transform); v.RepliikkiAsti = Time.unscaledTime + 6f; }
+                        v.TyoAsti = Time.unscaledTime + 25f;
+                    }
+                }
                 if (!v.Kavelee && tyot != null && tyot.Count > 0 && Time.unscaledTime > v.TyoAsti)
                     foreach (var m in tyot)
                     {
@@ -435,6 +447,16 @@ namespace Matkakirja.Natiivi
                 t = (v.Nimi == "piha" || v.Nimi == "kirkkotorni-portaat") && r.On("vartija-paluu-3") ? "vartija-paluu-3" : n % 2 == 0 ? "vartija-paluu-2" : "vartija-paluu-1";   // pihan vartija
             else if (nyt == VartijanTila.Kiinni) t = "vartija-kiinni-1";
             if (t == null) return;
+            // Muurikäytävän partion omat repliikit (repliikit-lapi-v1, Sisältökirjuri 9.10.), jotta muurilla ei toistu pihan vartija-*;
+            // puuttuessa yleinen repliikki kuten ennen.
+            if (pr == VartijaProfiili.Vartija && v.Osa == "muurikaytava")
+            {
+                string m = nyt == VartijanTila.Epaily ? (n % 2 == 0 ? "muuri-vartija-epaily-2" : "muuri-vartija-epaily-1")
+                    : nyt == VartijanTila.Etsinta ? "muuri-vartija-etsinta-1" : nyt == VartijanTila.Etsii ? "muuri-vartija-etsinta-2"
+                    : nyt == VartijanTila.Halytys ? (n % 2 == 0 ? "muuri-vartija-halytys-2" : "muuri-vartija-halytys-1")
+                    : nyt == VartijanTila.Kiinni ? "muuri-vartija-kiinni-1" : palasi ? (n % 2 == 0 ? "muuri-vartija-paluu-2" : "muuri-vartija-paluu-1") : null;
+                if (m != null && r.On(m)) t = m;
+            }
             double kesto = r.Soita(t, v.Agentti.transform);
             v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, kesto + 0.5);
         }

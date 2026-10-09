@@ -15,7 +15,26 @@ namespace Matkakirja.Natiivi
 {
     public sealed class SeikkailuVaiheet
     {
-        public sealed class Vaihe { public HistoriaVaihemalli Malli; public GameObject Go; public List<KavelyLeikkaus> Leikkaukset; }
+        public sealed class Vaihe
+        {
+            public HistoriaVaihemalli Malli; public GameObject Go; public List<KavelyLeikkaus> Leikkaukset;
+            /// <summary>Solmuryhmät omilla vuosillaan (glb-solmujen extras vuodesta/vuoteen; LR:n restaurointitelineet, juna 173).</summary>
+            public readonly List<(GameObject Go, double? Vuodesta, double? Vuoteen)> Ryhmat = new List<(GameObject, double?, double?)>();
+            /// <summary>Näkyvyys vuonna: vaihe ja sen ryhmät.</summary>
+            /// <summary>Vaihe näkyy omina vuosinaan tai kun jokin sen ryhmistä näkyy (ryhmien vuodet kalenterivuosina, RyhmaVuonna).</summary>
+            public bool Nakyy(double vuosi)
+            {
+                if (Malli.Nakyy(vuosi)) return true;
+                foreach (var (_, a, b) in Ryhmat) if (HistoriaVaihemalli.RyhmaVuonna(vuosi, a, b)) return true;
+                return false;
+            }
+            public void Nayta(double vuosi)
+            {
+                bool nakyy = Nakyy(vuosi);
+                if (Go != null && Go.activeSelf != nakyy) Go.SetActive(nakyy);
+                if (nakyy) foreach (var (g, a, b) in Ryhmat) { bool n = HistoriaVaihemalli.RyhmaVuonna(vuosi, a, b); if (g != null && g.activeSelf != n) g.SetActive(n); }
+            }
+        }
 
         public readonly List<Vaihe> Vaiheet = new List<Vaihe>();
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
@@ -42,7 +61,8 @@ namespace Matkakirja.Natiivi
                 var tehtava = Task.Run(() => { try { malli = DioraamaGlb.Lue(g, true); } catch (Exception e) { virhe = e.Message; } });
                 while (!tehtava.IsCompleted) yield return null;
                 if (malli == null) { kirjaa?.Invoke($"seikkailu: vaihe {m.Id}: {virhe}"); continue; }
-                var v = new Vaihe { Malli = m, Go = s.Rakenna(malli, m.Id, isa) };
+                var v = new Vaihe { Malli = m };
+                v.Go = s.Rakenna(malli, m.Id, isa, v);
                 v.Go.SetActive(false);
                 if (!string.IsNullOrEmpty(m.Leikkaukset))
                 {
@@ -56,10 +76,29 @@ namespace Matkakirja.Natiivi
             valmis(s);
         }
 
-        GameObject Rakenna(GlbMalli malli, string id, Transform isa)
+        static double? Luku(Dictionary<string, object> e, string k) => e != null && e.TryGetValue(k, out var x) && x is double d ? d : (double?)null;
+
+        GameObject Rakenna(GlbMalli malli, string id, Transform isa, Vaihe vaihe)
         {
             var juuri = new GameObject("Vaihe:" + id) { layer = DioraamaNayttamo.Kerros };
             juuri.transform.SetParent(isa, false);
+            // Solmujen perityt vuodet → ryhmä per vuosiväli (ilman vuosia suoraan juureen).
+            var vanh = new int[malli.Solmut.Count]; var omat = new (double?, double?)[malli.Solmut.Count];
+            for (int i = 0; i < vanh.Length; i++) { vanh[i] = malli.Solmut[i].Vanhempi == i ? -1 : malli.Solmut[i].Vanhempi; omat[i] = (Luku(malli.Solmut[i].Extras, "vuodesta"), Luku(malli.Solmut[i].Extras, "vuoteen")); }
+            var vuodet = HistoriaVaihemalli.SolmujenVuodet(vanh, omat);
+            var ryhmat = new Dictionary<string, Transform>(StringComparer.Ordinal);
+            Transform Ryhma(int si)
+            {
+                var (a, b) = vuodet[si];
+                if (a == null && b == null) return juuri.transform;
+                string k = a + "|" + b;
+                if (!ryhmat.TryGetValue(k, out var tr))
+                {
+                    var g = new GameObject($"Vaihe:{id}:{a}-{b}") { layer = DioraamaNayttamo.Kerros };
+                    g.transform.SetParent(juuri.transform, false); ryhmat[k] = tr = g.transform; vaihe.Ryhmat.Add((g, a, b));
+                }
+                return tr;
+            }
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
             var materiaalit = new Dictionary<string, Material>(StringComparer.Ordinal);
             var kuvat = new Dictionary<int, Texture2D>();
@@ -107,7 +146,7 @@ namespace Matkakirja.Natiivi
                         materiaalit[avain] = ma;
                     }
                     var go = new GameObject("Osa:" + (o.Pinta ?? "")) { layer = DioraamaNayttamo.Kerros };
-                    go.transform.SetParent(juuri.transform, false);
+                    go.transform.SetParent(Ryhma(si), false);
                     go.AddComponent<MeshFilter>().sharedMesh = me;
                     var r = go.AddComponent<MeshRenderer>(); r.sharedMaterial = ma; r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
                 }

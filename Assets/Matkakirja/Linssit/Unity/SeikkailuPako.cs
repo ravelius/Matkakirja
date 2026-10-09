@@ -62,7 +62,8 @@ namespace Matkakirja.Natiivi
             ydin.ArkkuAuki(); ydin.KelloSoi = false;
             SeikkailuAanet.SoitaTaiVara("kello-halytys", "kello", krampi + Vector3.up * 6f, 1f);   // hälytyskello Kellotornissa (TULKINTA; ääni aanet-fp:hen tarvittaessa)
             SeikkailuVartijat.Valpastu();
-            SeikkailuRepliikit.SoitaTaiVara("vartija-kello-1", "vartija-valpas-1", krampi + Vector3.up * 3f);   // "Kello soimaan!"
+            SeikkailuRepliikit.SoitaTaiVara(SeikkailuRepliikit.Aktiivinen?.On("kello-vartija-halytys-1") == true ? "kello-vartija-halytys-1" : "vartija-kello-1",
+                "vartija-valpas-1", krampi + Vector3.up * 3f);   // kellon vartija (repliikit-lapi-v1), muuten "Kello soimaan!"   // "Kello soimaan!"
             kirjaa?.Invoke("seikkailu: hälytyskello soi, vartijat valppaina");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: kello");
         }

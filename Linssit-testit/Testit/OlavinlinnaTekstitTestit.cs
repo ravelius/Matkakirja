@@ -57,7 +57,7 @@ namespace Matkakirja.Linssit.Testit
                 foreach (Match m in Regex.Matches(File.ReadAllText(f), "(?:Kieli\\.T|Kielitaulu\\.Hae)\\(\"([a-z0-9.\\-]+)\""))
                     if (!m.Groups[1].Value.EndsWith(".", StringComparison.Ordinal)) kaytetyt.Add(m.Groups[1].Value);
             // Historiajanan vaiheiden avaimet ("olavinlinna.historia." + Avain + ".vuosi/.sanat").
-            foreach (var v in Matkakirja.Linssit.Dioraama.Historiajana.Olavinlinna.Vaiheet) { kaytetyt.Add("olavinlinna.historia." + v.Avain + ".vuosi"); kaytetyt.Add("olavinlinna.historia." + v.Avain + ".sanat"); }
+            foreach (var v in Matkakirja.Linssit.Dioraama.Historiajana.Olavinlinna.Vaiheet) if (v.Avain != null) { kaytetyt.Add("olavinlinna.historia." + v.Avain + ".vuosi"); kaytetyt.Add("olavinlinna.historia." + v.Avain + ".sanat"); }
             Oleta.Tosi(kaytetyt.Count >= 40, $"avaimia koodissa {kaytetyt.Count}");
             foreach (var a in kaytetyt) Oleta.Tosi(t.ContainsKey(a), $"avain puuttuu taulusta: {a}");
         }

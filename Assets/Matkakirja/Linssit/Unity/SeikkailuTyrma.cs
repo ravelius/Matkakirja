@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 10;
             SeikkailuNakyvyys.Himmennys = 0f;
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
+            SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-vienti-1", null, t.ovi + Vector3.up * 1.6f);   // vartija sulkee oven (repliikit-lapi-v1)
+            SeikkailuEsineet.Kolahti += t.Kolina;
             kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "avaimet ilmaraosta" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
             return true;
         }
@@ -85,12 +87,16 @@ namespace Matkakirja.Natiivi
                 if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, ovi, 0.6f);
                 SeikkailuAanet.Soita("kivi-kolahdus", ovi + Vector3.up * 0.3f, 0.7f, 0.7f);   // sanko kolahtaa
                 SeikkailuAanet.SoitaTaiVara("salpa-2", null, ovi + Vector3.up, 0.6f);         // salpa auki (sonniss-aanet-v3)
+                SeikkailuRepliikit.SoitaTaiVara("tyrma-vesipoika-1", null, ovi + Vector3.up * 1.4f);   // "Vettä sinulle. Ovi taisi jäädä auki."
                 SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", ovi + Vector3.up, 0.8f);   // ovi jää raolleen
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
             if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s)"); }
+            // Muunnelma 2: torkkuva vartija oven takana mutisee kerran, kun pelaaja tulee ovelle (repliikit-lapi-v1).
+            if (ydin.Muunnelma == 2 && !rotatKuultu && Vector3.Distance(p.transform.position, ovi) < 2.5f)
+            { rotatKuultu = true; SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-rotat-1", null, ovi + Vector3.up * 1.6f); }
             var maali = ydin.Muunnelma == 3 && ryomiOn ? ryomi : ulos;
             if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < UlosM && ydin.Ulos()) StartCoroutine(Ulos());
         }
@@ -131,13 +137,22 @@ namespace Matkakirja.Natiivi
             return ydin.Muunnelma == 3 && ryomiOn ? ryomi : ydin.Vaihe == TyrmanVaihe.OviAuki ? ulos : ovi;
         }
 
-        void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); }
+        void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) { kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); Kolina(ovi); } }
+
+        /// <summary>Kova ääni tyrmässä (muunnelmat 2–3): käytävän vartija vain mutisee (malli 4.1), enintään 12 s:n välein.</summary>
+        float kolinaAsti; bool rotatKuultu;
+        void Kolina(Vector3 _)
+        {
+            if (ydin.Muunnelma < 2 || Time.unscaledTime < kolinaAsti) return;
+            kolinaAsti = Time.unscaledTime + 12f;
+            SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-kolina-1", null, ovi + Vector3.up * 1.6f);
+        }
         void Yritys() => ydin.Yritys();
 
         void OnDestroy()
         {
             if (Aktiivinen == this) Aktiivinen = null;
-            SeikkailuEsineet.Irrotettiin -= KiviIrti; SeikkailuEsineet.Raapaistiin -= Yritys;
+            SeikkailuEsineet.Irrotettiin -= KiviIrti; SeikkailuEsineet.Raapaistiin -= Yritys; SeikkailuEsineet.Kolahti -= Kolina;
             SeikkailuKasittely.Poista("tyrma-ovi");
         }
     }

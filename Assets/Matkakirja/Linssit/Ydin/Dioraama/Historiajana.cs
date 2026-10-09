@@ -28,6 +28,18 @@ namespace Matkakirja.Linssit.Dioraama
         public string Sanat => Avain != null ? Kielitaulu.Hae("olavinlinna.historia." + Avain + ".sanat") : null;
         public HistoriaVaihe(double vuosi, double kestoS, double korkeus, double etaisyysKerroin, string avain = null)
         { Vuosi = vuosi; KestoS = kestoS; Korkeus = korkeus; EtaisyysKerroin = etaisyysKerroin; Avain = avain; }
+
+        // ELOKUVA (omistaja 9.10., Raamattu LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA; kohtauslista docs/raportit/olavinlinna-historia-elokuva/):
+        /// <summary>Kameran avainasento kohtauksen LOPUSSA (kompassiatsimuutti, korkeus, etäisyys = Korkeus/EtaisyysKerroin) ja kohteen
+        /// siirto linnan keskeltä (glTF x, z metreinä). Kamera kulkee avainasentojen läpi jatkuvaa käyrää (Historiajana.Kamera).</summary>
+        public double Atsimuutti, KohdeX, KohdeZ;
+        /// <summary>Avainsana näkyviin tästä hetkestä kohtauksen alusta (s): kun kertoja sanoo vuoden (sana-ajat, juna 174).</summary>
+        public double AvainsanaAlku = Historiajana.AvainsanaAlkuS;
+        /// <summary>Vuoden ankkurit kohtauksen sisällä (s, vuosi): vuosi etenee niiden kautta lineaarisesti, jotta näky osuu kertojan sanaan
+        /// (esim. palot 1868, kun kertoja sanoo "Palot").</summary>
+        public (double S, double Vuosi)[] Ankkurit;
+        /// <summary>Kertojan rivi alkaa kohtauksen alusta tämän viiveen jälkeen (Historiajana.KertojaViiveS).</summary>
+        public bool Kertoja = true;
     }
 
     public sealed class HistoriaOsa
@@ -44,7 +56,28 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string Id, Glb, Leikkaukset;
         public double? Vuodesta, Vuoteen;
-        public bool Nakyy(double vuosi) => (Vuodesta == null || vuosi >= Vuodesta) && (Vuoteen == null || vuosi < Vuoteen);
+        public bool Nakyy(double vuosi) => Valilla(vuosi, Vuodesta, Vuoteen);
+        /// <summary>Vuosi välillä [vuodesta, vuoteen); null = avoin pää (myös glb-solmujen extras, LR:n restaurointitelineet).</summary>
+        public static bool Valilla(double vuosi, double? vuodesta, double? vuoteen) => (vuodesta == null || vuosi >= vuodesta) && (vuoteen == null || vuosi < vuoteen);
+
+        /// <summary>Glb-solmuryhmän vuodet ovat kalenterivuosia päät mukaan lukien (LR v45z: teline-kurtiini-1963 = 1963–1963,
+        /// teline-eerikintorni-1962 = 1962–1963): näkyy välillä [vuodesta, vuoteen + 1).</summary>
+        public static bool RyhmaVuonna(double vuosi, double? vuodesta, double? vuoteen) => Valilla(vuosi, vuodesta, vuoteen + 1);
+
+        /// <summary>Solmujen perityt vuodet: oma extras "vuodesta"/"vuoteen" tai lähimmän esivanhemman (LR: teline-kellotorni 1961–1964
+        /// lapsineen). vanhempi[i] = −1 juurelle; puuttuva = (null, null).</summary>
+        public static (double? Vuodesta, double? Vuoteen)[] SolmujenVuodet(IReadOnlyList<int> vanhempi, IReadOnlyList<(double? Vuodesta, double? Vuoteen)> omat)
+        {
+            var v = new (double?, double?)[vanhempi.Count];
+            for (int i = 0; i < v.Length; i++)
+            {
+                (double? a, double? b) = (null, null);
+                for (int j = i, n = 0; j >= 0 && n < 64; j = vanhempi[j], n++)
+                    if (omat[j].Vuodesta != null || omat[j].Vuoteen != null) { (a, b) = omat[j]; break; }
+                v[i] = (a, b);
+            }
+            return v;
+        }
     }
 
     public sealed class Historiajana
@@ -87,9 +120,10 @@ namespace Matkakirja.Linssit.Dioraama
         public const bool Lukittu = true;   // Sisältökirjuri 9.10., PT-hyväksytty
         /// <summary>Avainsana näkyy vaiheen alusta AvainsanaAlkuS:sta AvainsanaS:n ajan (4 s kuten esittelyssä, PT 9.10.).</summary>
         public const double AvainsanaAlkuS = 0.8, AvainsanaS = 4.0;
-        /// <summary>Drone kiertää linnaa koko historian ajan (astetta); vaihteen korkeus ja etäisyys siirtyvät vaiheen alun
-        /// SiirtymaOsuus-osuudella.</summary>
-        public const double KiertoAsteet = 300, SiirtymaOsuus = 0.4, Fov = 50;
+        /// <summary>Kertojan rivi alkaa kohtauksen alusta (s): kamera ehtii liikkeelle ensin, ei tyhjää taukoa.</summary>
+        public const double KertojaViiveS = 0.8, Fov = 50;
+        /// <summary>Kameran alkuasento (ensimmäinen avainasento ajassa 0).</summary>
+        public double AlkuAtsimuutti = 130, AlkuKorkeus = 38, AlkuEtaisyysKerroin = 3.4;
 
         public readonly IReadOnlyList<HistoriaVaihe> Vaiheet;
         public readonly double LoppuVuosi, Kesto;
@@ -118,12 +152,20 @@ namespace Matkakirja.Linssit.Dioraama
 
         public double VaiheenAlku(int i) => alut[i];
 
-        /// <summary>Vuosi hetkellä t: vaiheen vuodesta seuraavan vaiheen vuoteen (viimeinen: LoppuVuosi) lineaarisesti.</summary>
+        /// <summary>Vuosi hetkellä t: vaiheen vuodesta seuraavan vaiheen vuoteen (viimeinen: LoppuVuosi) lineaarisesti ankkureiden kautta.</summary>
         public double Vuosi(double t)
         {
             var (i, u) = Kohta(t);
-            double a = Vaiheet[i].Vuosi, b = i + 1 < Vaiheet.Count ? Vaiheet[i + 1].Vuosi : LoppuVuosi;
-            return a + (b - a) * u;
+            var v = Vaiheet[i];
+            double a = v.Vuosi, b = i + 1 < Vaiheet.Count ? Vaiheet[i + 1].Vuosi : LoppuVuosi, s = u * v.KestoS;
+            double s0 = 0, y0 = a;
+            if (v.Ankkurit != null)
+                foreach (var (sa, ya) in v.Ankkurit)
+                {
+                    if (s <= sa) return y0 + (ya - y0) * (sa > s0 ? (s - s0) / (sa - s0) : 1);
+                    s0 = sa; y0 = ya;
+                }
+            return y0 + (b - y0) * (v.KestoS > s0 ? (s - s0) / (v.KestoS - s0) : 1);
         }
 
         /// <summary>Avainsana hetkellä t (vain historiassa): vaiheen vuosiluku ja sanat vaiheen alussa; muuten null.</summary>
@@ -133,23 +175,50 @@ namespace Matkakirja.Linssit.Dioraama
             var (i, _) = Kohta(t);
             double s = t - alut[i];
             var v = Vaiheet[i];
-            return v.Avain != null && s >= AvainsanaAlkuS && s < AvainsanaAlkuS + AvainsanaS ? v : null;
+            return v.Avain != null && s >= v.AvainsanaAlku && s < v.AvainsanaAlku + AvainsanaS ? v : null;
         }
 
         /// <summary>
-        /// Drone-kameran asento hetkellä t: kohde linnan keskipiste, atsimuutti kiertää tasaisesti KiertoAsteet koko historian ajan,
-        /// korkeus ja etäisyys (linnan säde × kerroin) siirtyvät edellisestä vaiheesta smootherstepillä vaiheen alussa.
+        /// Drone-kameran asento hetkellä t (LIIKESÄÄNNÖT, juna 174): avainasennot ajassa 0 (Alku*) ja jokaisen kohtauksen lopussa;
+        /// välit monotonisella kuutiollisella Hermite-käyrällä kanavittain (atsimuutti, korkeus, etäisyys, kohteen siirto): nopeus on
+        /// jatkuva kohtausten rajoilla (ei pysähdyksiä eikä nykäyksiä), ei ylitystä avainasentojen yli, alku ja loppu pysähtyvät
+        /// pehmeästi (tangentti 0). alkuAtsimuutti siirtää koko käyrää (oletus 0).
         /// </summary>
-        public Asento Kamera(double t, V3 keski, double sade, double alkuAtsimuutti)
+        public Asento Kamera(double t, V3 keski, double sade, double alkuAtsimuutti = 0)
         {
-            var (i, u) = Kohta(t);
-            var v = Vaiheet[i];
-            var e = i > 0 ? Vaiheet[i - 1] : v;
-            double s = Kameraliike.Smootherstep(u / SiirtymaOsuus);
-            double korkeus = e.Korkeus + (v.Korkeus - e.Korkeus) * s;
-            double kerroin = e.EtaisyysKerroin + (v.EtaisyysKerroin - e.EtaisyysKerroin) * s;
-            double a = alkuAtsimuutti + KiertoAsteet * Rajaa01(t / Kesto);
-            return new Asento(keski, a, korkeus, sade * kerroin, Fov, 0);
+            int n = Vaiheet.Count + 1;
+            if (ajat == null)
+            {
+                ajat = new double[n]; kanavat = new double[5][];
+                for (int c = 0; c < 5; c++) kanavat[c] = new double[n];
+                ajat[0] = 0; Aseta(0, AlkuAtsimuutti, AlkuKorkeus, AlkuEtaisyysKerroin, 0, 0);
+                for (int i = 0; i < Vaiheet.Count; i++) { var v = Vaiheet[i]; ajat[i + 1] = alut[i] + v.KestoS; Aseta(i + 1, v.Atsimuutti, v.Korkeus, v.EtaisyysKerroin, v.KohdeX, v.KohdeZ); }
+            }
+            double a = Kayra(0, t), k = Kayra(1, t), e = Kayra(2, t), kx = Kayra(3, t), kz = Kayra(4, t);
+            return new Asento(new V3(keski.X + kx, keski.Y, keski.Z + kz), a + alkuAtsimuutti, k, sade * e, Fov, 0);
+        }
+
+        double[] ajat; double[][] kanavat;
+        void Aseta(int i, params double[] x) { for (int c = 0; c < 5; c++) kanavat[c][i] = x[c]; }
+
+        /// <summary>Monotoninen kuutiollinen Hermite (Fritsch–Carlson) epätasaisin ajoin; päätetangentit 0.</summary>
+        double Kayra(int c, double t)
+        {
+            var y = kanavat[c]; int n = ajat.Length;
+            if (t <= 0) return y[0];
+            if (t >= ajat[n - 1]) return y[n - 1];
+            int i = 0; while (i < n - 2 && t > ajat[i + 1]) i++;
+            double Kulma(int j) => (y[j + 1] - y[j]) / (ajat[j + 1] - ajat[j]);
+            double Tangentti(int j)
+            {
+                if (j == 0 || j == n - 1) return 0;
+                double d0 = Kulma(j - 1), d1 = Kulma(j);
+                if (d0 * d1 <= 0) return 0;
+                double h0 = ajat[j] - ajat[j - 1], h1 = ajat[j + 1] - ajat[j];
+                return 3 * (h0 + h1) / ((2 * h1 + h0) / d0 + (h1 + 2 * h0) / d1);   // painotettu harmoninen keskiarvo
+            }
+            double h = ajat[i + 1] - ajat[i], u = (t - ajat[i]) / h, u2 = u * u, u3 = u2 * u;
+            return (2 * u3 - 3 * u2 + 1) * y[i] + (u3 - 2 * u2 + u) * h * Tangentti(i) + (-2 * u3 + 3 * u2) * y[i + 1] + (u3 - u2) * h * Tangentti(i + 1);
         }
 
         /// <summary>Osan näkyvyys vuonna v: 0 ennen rakentamista, kasvaa (smootherstep) rakennusajan, 1 valmiina; purettaessa
@@ -212,16 +281,23 @@ namespace Matkakirja.Linssit.Dioraama
         /// 9.10.; epävarmat vuodet (Kyrönsalmen synty, kivikauden ensiasutus, Kellobastioni) ilman lukua.</summary>
         public static readonly Historiajana Olavinlinna = new Historiajana(new[]
         {
-            new HistoriaVaihe(-7500, 20, 35, 3.2, "jaakausi"),
-            new HistoriaVaihe(-3900, 15, 28, 2.6, "kivikausi"),
-            new HistoriaVaihe(1475, 25, 22, 2.0, "1475"),
-            new HistoriaVaihe(1477, 20, 18, 1.7, "1477"),
-            new HistoriaVaihe(1499, 15, 14, 1.5, "1499"),
-            new HistoriaVaihe(1550, 25, 24, 1.9, "1500"),
-            new HistoriaVaihe(1743, 15, 30, 2.2, "1743"),
-            new HistoriaVaihe(1847, 15, 26, 2.0, "1847"),
-            new HistoriaVaihe(1872, 20, 20, 1.8, "1872"),
-        }, 2026);
+            // KOHTAUSLISTA (docs/raportit/olavinlinna-historia-elokuva/kohtauslista.md): kesto = kertoja (KertojaViiveS + rivi) + hengähdys;
+            // avainsana kun kertoja sanoo vuoden (sana-ajat opas/<sha>.ajat.json); kamera = kohtauksen loppuasento.
+            new HistoriaVaihe(-7500, 9.5, 34, 3.0, "jaakausi") { Atsimuutti = 140, AvainsanaAlku = 1.1 },
+            new HistoriaVaihe(-3900, 10, 30, 2.6, "kivikausi") { Atsimuutti = 155, AvainsanaAlku = 2.7 },
+            new HistoriaVaihe(1475, 17.5, 24, 2.0, "1475") { Atsimuutti = 170, AvainsanaAlku = 1.2 },
+            new HistoriaVaihe(1477, 12.5, 20, 1.75, "1477") { Atsimuutti = 185, AvainsanaAlku = 1.5 },
+            new HistoriaVaihe(1499, 11.5, 16, 1.55, "1499") { Atsimuutti = 200, AvainsanaAlku = 1.2 },
+            new HistoriaVaihe(1550, 12.5, 22, 1.85, "1500") { Atsimuutti = 212, AvainsanaAlku = 1.0 },
+            // Bastionit kasvavat, kun kertoja sanoo "1750-luvulla … bastionit" (7,0–10,5 s); kohde lounaaseen bastionien puolelle.
+            new HistoriaVaihe(1743, 13.5, 28, 2.1, "1743") { Atsimuutti = 228, AvainsanaAlku = 3.35, KohdeX = -10, KohdeZ = 8, Ankkurit = new[] { (7.0, 1749.0), (10.5, 1756.0) } },
+            // Palot 1868, kun kertoja sanoo "Palot" (7,7 s): palon jäljet ja katot pois kohtauksen loppuun.
+            new HistoriaVaihe(1847, 18.5, 30, 2.0, "1847") { Atsimuutti = 246, AvainsanaAlku = 2.7, Ankkurit = new[] { (7.7, 1868.0) } },
+            // Kertojan rivi 9 alkaa tästä ja jatkuu restaurointiin; kohtaus vaihtuu sanaan "suuri restaurointi" (0,8 + 4,5 s).
+            new HistoriaVaihe(1872, 5.3, 27, 1.9, "1872") { Atsimuutti = 252, AvainsanaAlku = 2.1 },
+            new HistoriaVaihe(1961, 17, 20, 1.65, "1961") { Atsimuutti = 272, AvainsanaAlku = 1.3, Kertoja = false },
+            new HistoriaVaihe(1976, 8, 15, 1.7) { Atsimuutti = 282, Kertoja = false },   // nykylinna (ponttonisilta), Kellotornin kaaren suunta
+        }, 1985);
 
         /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
         public static readonly Historiajana K2Lyhyt = new Historiajana(new[]

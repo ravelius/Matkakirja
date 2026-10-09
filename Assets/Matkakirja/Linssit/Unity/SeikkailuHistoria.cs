@@ -12,6 +12,7 @@ using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Networking;
 
 namespace Matkakirja.Natiivi
 {
@@ -22,7 +23,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Avainsana nyt (DioraamaTaulu näyttää; null = ei).</summary>
         public static HistoriaVaihe Avainsana { get; private set; }
         /// <summary>Drone-kaaren alkuatsimuutti (kompassi) ja linnan keskipiste/säde Unityssa (SeikkailuNousun luvut).</summary>
-        public static float AlkuAtsimuutti = 200f;
+        public static float AlkuAtsimuutti = 0f;   // siirtää koko kamerakäyrää (kohtauslistan atsimuutit ovat kompassisuuntia)
 
         Action valmis;
         bool lopeta;
@@ -36,12 +37,48 @@ namespace Matkakirja.Natiivi
             ajossa = go.AddComponent<SeikkailuHistoria>();
             ajossa.valmis = valmis;
             var nayttamo = FindAnyObjectByType<DioraamaNayttamo>();
-            if (vaiheJuuri != null && nayttamo != null)
-                ajossa.StartCoroutine(SeikkailuVaiheet.Lataa(vaiheJuuri, url ?? (s => s), nayttamo.transform, kirjaa, v => { if (ajossa != null && !ajossa.lopeta) ajossa.vaiheet = v; else v.Tuhoa(); }));
+            ajossa.vaiheetKesken = vaiheJuuri != null && nayttamo != null;
+            if (ajossa.vaiheetKesken)
+                ajossa.StartCoroutine(SeikkailuVaiheet.Lataa(vaiheJuuri, url ?? (s => s), nayttamo.transform, kirjaa, v => { if (ajossa != null && !ajossa.lopeta) { ajossa.vaiheet = v; ajossa.vaiheetKesken = false; } else v.Tuhoa(); }));
             ajossa.StartCoroutine(ajossa.Aja(kamera, kirjaa));
         }
 
         SeikkailuVaiheet vaiheet;
+        bool vaiheetKesken;
+
+        // KERTOJA (PT 9.10.: 9 riviä Pelikoodarin aja-generointi.sh:lla omistajan luvalla): ääni workerin kautta {Palvelin}/opas/aani/<sha>.mp3,
+        // sha taulusta olavinlinna.historia.<avain>.kertoja.aani (tyokalut/historia_kertoja_sha.mjs, sama kuin generoinnissa). Jakso
+        // hakee oman rivinsä etukäteen ja soittaa sen alussa; puuttuva ääni (404) = hiljaa, ei paikkamerkkiä.
+        readonly Dictionary<int, AudioClip> kertojaKlipit = new Dictionary<int, AudioClip>();
+        readonly HashSet<int> kertojaHaettu = new HashSet<int>();
+        AudioSource kertoja;
+        /// <summary>Historian kertoja puhuu (loppumusiikin väistö).</summary>
+        public static bool KertojaSoi => ajossa != null && ajossa.kertoja != null && ajossa.kertoja.isPlaying;
+
+        static string KertojaUrl(HistoriaVaihe v)
+        {
+            if (v?.Avain == null) return null;
+            string sha = Kieli.T("olavinlinna.historia." + v.Avain + ".kertoja.aani");   // puuttuva → avain itse (≠ 32 merkkiä)
+            return sha.Length == 32 ? PuluChat.Palvelin + "/opas/aani/" + sha + ".mp3" : null;
+        }
+
+        IEnumerator HaeKertoja(int i, HistoriaVaihe v)
+        {
+            if (!kertojaHaettu.Add(i)) yield break;
+            string url = KertojaUrl(v); if (url == null) yield break;
+            using var q = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
+            ((DownloadHandlerAudioClip)q.downloadHandler).compressed = true;
+            yield return q.SendWebRequest();
+            if (q.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(q) is AudioClip k && k.length > 0.2f) kertojaKlipit[i] = k;
+        }
+
+        void SoitaKertoja(int i, Action<string> kirjaa)
+        {
+            if (!kertojaKlipit.TryGetValue(i, out var k)) return;
+            if (kertoja == null) { kertoja = gameObject.AddComponent<AudioSource>(); kertoja.spatialBlend = 0f; kertoja.playOnAwake = false; }
+            kertoja.Stop(); kertoja.clip = k; kertoja.volume = DioraamaAanet.PuheTaso * Asetukset.Taso(Voima.Lukija); kertoja.PlayDelayed((float)Historiajana.KertojaViiveS);
+            kirjaa?.Invoke($"seikkailu: historia kertoja {i} ({k.length:F1} s)");
+        }
         readonly List<Renderer> piilotetut = new List<Renderer>(); readonly List<Light> sammutetut = new List<Light>();
         bool linnaPiilossa;
 
@@ -76,8 +113,11 @@ namespace Matkakirja.Natiivi
             bool kasvu = SeikkailuKavely.LeikkauksetPaalla;
             var keski = new Matkakirja.Linssit.Dioraama.V3(SeikkailuNousu.LinnaKeskiUnity.x, SeikkailuNousu.LinnaKeskiUnity.y, -SeikkailuNousu.LinnaKeskiUnity.z);
             kirjaa?.Invoke($"seikkailu: historia alkaa ({h.Kesto:F0} s, {h.Vaiheet.Count} vaihetta, kasvu {(kasvu ? "leikkauksin" : "ei kävelydataa")}{(Historiajana.Lukittu ? "" : ", vuodet alustavia")})");
+            yield return HaeKertoja(0, h.Vaiheet[0]);   // ensimmäinen rivi ennen alkua (puuttuva → heti eteenpäin)
+            // Vaihemallit valmiiksi ennen alkua (tyhjä saari näkyy heti, linna ei katoa tyhjään veteen); enintään 10 s.
+            for (float odotus = 0; vaiheetKesken && odotus < 10f && !lopeta; odotus += Time.unscaledDeltaTime) yield return null;
             float alku = Time.unscaledTime;
-            int vaihe = -1;
+            int vaihe = -1; double seurLoki = 0;
             HistoriaVaihe nakyva = null;
             while (!lopeta)
             {
@@ -90,19 +130,26 @@ namespace Matkakirja.Natiivi
                 if (suunta.sqrMagnitude > 1e-6f) kamera.rotation = Quaternion.LookRotation(suunta, Vector3.up);
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
+                if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
                 LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
                 List<KavelyLeikkaus> vl = null;
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
                     {
-                        bool nakyy = vm.Malli.Nakyy(vuosi);
-                        if (vm.Go != null && vm.Go.activeSelf != nakyy) { vm.Go.SetActive(nakyy); kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})"); }
+                        bool nakyy = vm.Nakyy(vuosi);
+                        if (vm.Go != null && vm.Go.activeSelf != nakyy) kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})");
+                        vm.Nayta(vuosi);
                         if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;
                     }
                 if (kasvu) SeikkailuKavely.AsetaHistoriaLeikkaukset(vl);
                 if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 var (i, _) = h.Kohta(t);
-                if (i != vaihe) { vaihe = i; kirjaa?.Invoke($"seikkailu: historia vaihe {i} ({h.Vaiheet[i].VuosiTeksti}) {t:F1} s"); }
+                if (i != vaihe)
+                {
+                    vaihe = i; kirjaa?.Invoke($"seikkailu: historia vaihe {i} ({h.Vaiheet[i].VuosiTeksti}) {t:F1} s");
+                    if (h.Vaiheet[i].Kertoja) SoitaKertoja(i, kirjaa);   // rivi 9 jatkuu restaurointiin (1961-kohtauksella ei omaa riviä)
+                    if (i + 1 < h.Vaiheet.Count) StartCoroutine(HaeKertoja(i + 1, h.Vaiheet[i + 1]));
+                }
                 Avainsana = h.Avainsana(t);
                 if (Avainsana != nakyva) { nakyva = Avainsana; if (nakyva != null) Debug.Log($"MATKAKIRJA linssit: historia avainsana {nakyva.VuosiTeksti} {nakyva.Sanat} ({t:F1} s)"); }
                 // Vain Esc ja Natiivi-UI:n ⏭ Ohita (Lopeta) päättävät historian; napautus ei (PT 9.10.: vahinkonapautus ei katkaise).
