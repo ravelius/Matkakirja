@@ -1,0 +1,200 @@
+================ KOHTA 41 (kohde:hahmotelma-vimmerby) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Historia: Vapaa kohtu, ehdollinen lapsuus] 1871 — Syyskuun 28. päivänä 1871, puolitoista vuotta ennen isoisän matkaa, Brasilian yleiskokous hyväksyi Rio Brancon lain: tästä eteenpäin orjuutetuille äideille syntyvät lapset olivat vapaita. Laissa oli aukko, joka söi lupauksen. Vapaana syntynyt lapsi oli silti velvollinen palvelemaan äitinsä omistajaa 21 vuoden ikään asti, eikä laki vapauttanut yhtäkään jo elävää orjaa: yli miljoona ihmistä jäi orjuuteen. Kokonaan orjuus kiellettiin vasta Kultalailla 13. toukokuuta 1888.
+
+### 41.1
+KYSYMYS: Miten yhden kirjailijan lapsuus on tehnyt pienestä Vimmerbystä matkailukohteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Historia: Vapaa kohtu, ehdollinen lapsuus] 1871 — Syyskuun 28. päivänä 1871, puolitoista vuotta ennen isoisän matkaa, Brasilian yleiskokous hyväksyi Rio Brancon lain: tästä eteenpäin orjuutetuille äideille syntyvät lapset olivat vapaita. Laissa oli aukko, joka söi lupauksen. Vapaana syntynyt lapsi oli silti velvollinen palvelemaan äitinsä omistajaa 21 vuoden ikään asti, eikä laki vapauttanut yhtäkään jo elävää orjaa: yli miljoona ihmistä jäi orjuuteen. Kokonaan orjuus kiellettiin vasta Kultalailla 13. toukokuuta 1888.
+
+### 41.2
+KYSYMYS: Miksi kaupungin pääkatu Storgatan kertoo yhä keskiajasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-kalix) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+
+### 42.1
+KYSYMYS: Miksi Kalixin muikunmäti maistuu erilaiselta kuin muualta saatu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+
+### 42.2
+KYSYMYS: Mitä Kalixissa tapahtui vuonna 1809, ja miksi se oli Suomelle niin tärkeää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-leksand) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Jääkiekkomuseo] 1993 Museo perustettiin 1943, mutta ei Torontoon vaan Kingstoniin. Sen takana oli James T. Sutherland, Kanadan amatöörijääkiekkoliiton entinen puheenjohtaja, joka piti Kingstonia jääkiekon syntysijana. Yhdeksän ensimmäistä kunniajäsentä nimettiin 30. huhtikuuta 1945, vaikka museolla ei vielä ollut yhtään rakennusta. Sutherland kuoli 1955, eikä rahoja Kingstonin taloon ollut vuoteen 1958 mennessä saatu kokoon. NHL:n puheenjohtaja Clarence Campbell kyllästyi odottamaan ja veti liigan tuen pois. Väliaikainen näyttely avattiin Toronton Exhibition Placessa elokuussa 1958, ja sen näki saman vuoden messuilla 350 000 kävijää. Menestys ratkaisi asian: NHL maksoi pysyvän talon, jonka Kanadan pääminis…
+
+### 43.1
+KYSYMYS: Miksi Siljan-järven avovesi voi aiheuttaa keväällä yllättäviä lumipyryjä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+
+### 43.2
+KYSYMYS: Miksi ruotsalaisessa pikkukaupungissa toimii amerikkalaisen baseball-liigan tukema akatemia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Jääkiekkomuseo] 1993 Museo perustettiin 1943, mutta ei Torontoon vaan Kingstoniin. Sen takana oli James T. Sutherland, Kanadan amatöörijääkiekkoliiton entinen puheenjohtaja, joka piti Kingstonia jääkiekon syntysijana. Yhdeksän ensimmäistä kunniajäsentä nimettiin 30. huhtikuuta 1945, vaikka museolla ei vielä ollut yhtään rakennusta. Sutherland kuoli 1955, eikä rahoja Kingstonin taloon ollut vuoteen 1958 mennessä saatu kokoon. NHL:n puheenjohtaja Clarence Campbell kyllästyi odottamaan ja veti liigan tuen pois. Väliaikainen näyttely avattiin Toronton Exhibition Placessa elokuussa 1958, ja sen näki saman vuoden messuilla 350 000 kävijää. Menestys ratkaisi asian: NHL maksoi pysyvän talon, jonka Kanadan pääminis…
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-granna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Tycho Brahe] Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. Viimeisenä vuotenaan hän sai apula…
+
+### 44.1
+KYSYMYS: Miksi polkagris-karkki on tehnyt pienestä Grännasta tunnetun?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+### 44.2
+KYSYMYS: Mitä Brahehusin linnalle tapahtui, ja mikä siitä on jäljellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Tycho Brahe] Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. Viimeisenä vuotenaan hän sai apula…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-halsingegardar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Juhannustanssi ei lopu yöhön] Anders Zorn syntyi taalainmaalaiseen kylään ja tuli maailmankuuluksi muotokuvamaalarina, joka maalasi Yhdysvaltain presidenttejä. Tunnetuin teos on silti kotoinen: Midsommardans vuodelta 1897 kuvaa juhannusyön tanssia Moran kylässä. Valo on erikoinen, koska sitä ei ole — pohjoisessa aurinko ei juhannuksena laske, ja ihmiset tanssivat hämärässä joka on melkein päivä. Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin mikään kello. Zorn maalasi teoksen omassa kotikylässään ja käytti mallina naapureitaan, ei ammattimalleja.
+- [Ruotsi — maalehti / Tiede: Asteikko, joka oli aluksi väärin päin] Uppsalalainen tähtitieteilijä Anders Celsius esitti 1742 lämpömittarin asteikon, jossa on sata astetta veden jäätymisen ja kiehumisen välillä. Hänen omassa asteikossaan luvut olivat kuitenkin toisin päin kuin nyt: nolla tarkoitti kiehumista ja sata jäätymistä. Asteikko käännettiin pian hänen kuolemansa jälkeen — kääntäjäksi on esitetty muun muassa Linnéä, joka tarvitsi kasvihuoneeseensa mittarin, jossa lämpimämpi on suurempi luku. Asteikko sai Celsiuksen nimen vasta vuonna 1948 — sitä ennen sitä kutsuttiin usein sadanjaon asteikoksi.
+
+### 45.1
+KYSYMYS: Miten Taalainmaan kiertävät maalarit ja kallis tuontitapetti muuttivat talonpoikaisten huoneiden seinät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+
+### 45.2
+KYSYMYS: Mitä Erik-Anders-tilalle tapahtui, kun Erik Anderssonin perheen onni kääntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Juhannustanssi ei lopu yöhön] Anders Zorn syntyi taalainmaalaiseen kylään ja tuli maailmankuuluksi muotokuvamaalarina, joka maalasi Yhdysvaltain presidenttejä. Tunnetuin teos on silti kotoinen: Midsommardans vuodelta 1897 kuvaa juhannusyön tanssia Moran kylässä. Valo on erikoinen, koska sitä ei ole — pohjoisessa aurinko ei juhannuksena laske, ja ihmiset tanssivat hämärässä joka on melkein päivä. Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin mikään kello. Zorn maalasi teoksen omassa kotikylässään ja käytti mallina naapureitaan, ei ammattimalleja.
+- [Ruotsi — maalehti / Tiede: Asteikko, joka oli aluksi väärin päin] Uppsalalainen tähtitieteilijä Anders Celsius esitti 1742 lämpömittarin asteikon, jossa on sata astetta veden jäätymisen ja kiehumisen välillä. Hänen omassa asteikossaan luvut olivat kuitenkin toisin päin kuin nyt: nolla tarkoitti kiehumista ja sata jäätymistä. Asteikko käännettiin pian hänen kuolemansa jälkeen — kääntäjäksi on esitetty muun muassa Linnéä, joka tarvitsi kasvihuoneeseensa mittarin, jossa lämpimämpi on suurempi luku. Asteikko sai Celsiuksen nimen vasta vuonna 1948 — sitä ennen sitä kutsuttiin usein sadanjaon asteikoksi.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

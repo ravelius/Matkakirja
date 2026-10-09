@@ -1,0 +1,242 @@
+================ KOHTA 11 (kohde:kiruna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiruna (tekniikka)
+Tietoruudun teksti: Kiruna on Ruotsin pohjoisin kaupunki Lapin maakunnassa. Se rakennettiin 1890-luvulla Kirunan kaivosta varten ja perustettiin vuonna 1900.
+
+Rautamalmi Kiirunavaarassa ja Luossavaarassa oli paikallisten saamelaisten tiedossa vuosisatoja aiemmin. Vuonna 1696 Kengiksen ruukin kirjanpitäjä Samuel Mört kirjoitti huhuista, ja vuonna 1736 Mangi-niminen saamelainen ilmoitti löydöstä Ruotsin viranomaisille Jukkasjärven kirkolla.
+
+Kaivostoimintaa ei silti aloitettu: paikka oli syrjäinen ja ilmasto ankara. 1800-luvulla malmia louhittiin vähän kerrallaan — kesällä irrotettiin ja talvella kuljetettiin porien ja hevosten vetämillä reillä. Kustannukset olivat korkeat ja fosforipitoisen malmin laatu huono, kunnes Sidney Gilchrist Thomasin ja Percy Gilchristin vuonna 1878 keksimä menetelmä erotti fosforin malmista.
+
+Rautatie ratkaisi kuljetuksen: rata Luulajasta Narvikiin sai luvan 1884, ja väliaikainen …
+
+### 11.1
+KYSYMYS: Miksi malmi jäi pitkään louhimatta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiruna (tekniikka)
+Tietoruudun teksti: Kiruna on Ruotsin pohjoisin kaupunki Lapin maakunnassa. Se rakennettiin 1890-luvulla Kirunan kaivosta varten ja perustettiin vuonna 1900.
+
+Rautamalmi Kiirunavaarassa ja Luossavaarassa oli paikallisten saamelaisten tiedossa vuosisatoja aiemmin. Vuonna 1696 Kengiksen ruukin kirjanpitäjä Samuel Mört kirjoitti huhuista, ja vuonna 1736 Mangi-niminen saamelainen ilmoitti löydöstä Ruotsin viranomaisille Jukkasjärven kirkolla.
+
+Kaivostoimintaa ei silti aloitettu: paikka oli syrjäinen ja ilmasto ankara. 1800-luvulla malmia louhittiin vähän kerrallaan — kesällä irrotettiin ja talvella kuljetettiin porien ja hevosten vetämillä reillä. Kustannukset olivat korkeat ja fosforipitoisen malmin laatu huono, kunnes Sidney Gilchrist Thomasin ja Percy Gilchristin vuonna 1878 keksimä menetelmä erotti fosforin malmista.
+
+Rautatie ratkaisi kuljetuksen: rata Luulajasta Narvikiin sai luvan 1884, ja väliaikainen …
+
+### 11.2
+KYSYMYS: Mikä Esrange on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiruna (tekniikka)
+Tietoruudun teksti: Kiruna on Ruotsin pohjoisin kaupunki Lapin maakunnassa. Se rakennettiin 1890-luvulla Kirunan kaivosta varten ja perustettiin vuonna 1900.
+
+Rautamalmi Kiirunavaarassa ja Luossavaarassa oli paikallisten saamelaisten tiedossa vuosisatoja aiemmin. Vuonna 1696 Kengiksen ruukin kirjanpitäjä Samuel Mört kirjoitti huhuista, ja vuonna 1736 Mangi-niminen saamelainen ilmoitti löydöstä Ruotsin viranomaisille Jukkasjärven kirkolla.
+
+Kaivostoimintaa ei silti aloitettu: paikka oli syrjäinen ja ilmasto ankara. 1800-luvulla malmia louhittiin vähän kerrallaan — kesällä irrotettiin ja talvella kuljetettiin porien ja hevosten vetämillä reillä. Kustannukset olivat korkeat ja fosforipitoisen malmin laatu huono, kunnes Sidney Gilchrist Thomasin ja Percy Gilchristin vuonna 1878 keksimä menetelmä erotti fosforin malmista.
+
+Rautatie ratkaisi kuljetuksen: rata Luulajasta Narvikiin sai luvan 1884, ja väliaikainen …
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:ales-stenar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ales stenar (historia)
+Tietoruudun teksti: Ales stenar on megaliittinen muistomerkki Skoonessa Etelä-Ruotsissa. Se on kivilaiva: soikea muodostelma, jonka päädyissä olevat kivet ovat muita selvästi suurempia. Laiva on 67 metriä pitkä, ja siihen kuuluu 59 suurta lohkaretta, joista raskaimmat painavat viisi tonnia.
+
+Radiohiiliajoitus on antanut paikalta seitsemän tulosta. Yksi viittaa noin 5 500 vuoden ikään, kuusi noin 1 400 vuoteen. Jälkimmäistä pidetään todennäköisimpänä rakennusajankohtana, mikä sijoittaa muistomerkin pohjoismaisen rautakauden loppuun. Poikkeava näyte on nokisista kivistä, joiden uskotaan olevan vanhemman tulisijan jäänteitä.
+
+Tarkoituksesta kiistellään. Yleensä muodostelmaa pidetään hautamonumenttina tai kulttipaikkana, mutta on esitetty myös, että se olisi aurinkokalenteri, joka on suunnattu kesäpäivänseisauksen auringonlaskuun.
+
+Vuoden 1989 ensimmäisissä arkeologisissa kaivauksissa laivan sisältä löytyi kor…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Mount Isa: Kalkatungujen nimi elää kivien välissä] Ennen brittiläisiä uudisasukkaita seutua olivat asuttaneet kalkatungut eli kalkadoonit tuhansien vuosien ajan. Kansa tunsi kivikkoiset kukkulat ja niiden vedenlähteet paremmin kuin kukaan myöhemmin tullut, ja se puolusti maataan pitkään: syyskuussa 1884 lähistöllä käytiin ase-etu menettäneen kansan viimeinen suuri taistelu, jota kutsutaan nimellä Battle Mountain. Kalkatungujen nimi elää yhä seudun kalliopaljastumilla pesivässä pikkulinnussa: tummaruohomaluri (Amytornis ballarae) tavataan vain kapealla vyöhykkeellä Mount Isan ympäristössä eikä juuri muualla maailmassa.
+- [Chile — maalehti / Ruoka: Ruoka, joka kypsyy kuopassa kuumien kivien päällä] Curanto tulee mapudungunin sanasta kurantu, kivinen. Chiloéssa kaivetaan noin puolen metrin kuoppa, pohjalle ladotaan nuotiossa hehkutetut kivet ja niiden päälle kerroksittain simpukoita, lihaa, perunaa sekä milcao- ja chapalele-perunaleipiä. Jokainen kerros peitetään suurilla nalca-lehdillä, päälle tulevat märät säkit ja turve — jättimäinen painekattila, jossa ateria kypsyy tunnissa. Simpukoista välttämättömiä ovat almeja, cholga ja picoroco. Vanhimmat jäänteet Chiloésta ovat yli 11 000 vuoden takaa.
+
+### 12.1
+KYSYMYS: Mikä kivilaiva on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ales stenar (historia)
+Tietoruudun teksti: Ales stenar on megaliittinen muistomerkki Skoonessa Etelä-Ruotsissa. Se on kivilaiva: soikea muodostelma, jonka päädyissä olevat kivet ovat muita selvästi suurempia. Laiva on 67 metriä pitkä, ja siihen kuuluu 59 suurta lohkaretta, joista raskaimmat painavat viisi tonnia.
+
+Radiohiiliajoitus on antanut paikalta seitsemän tulosta. Yksi viittaa noin 5 500 vuoden ikään, kuusi noin 1 400 vuoteen. Jälkimmäistä pidetään todennäköisimpänä rakennusajankohtana, mikä sijoittaa muistomerkin pohjoismaisen rautakauden loppuun. Poikkeava näyte on nokisista kivistä, joiden uskotaan olevan vanhemman tulisijan jäänteitä.
+
+Tarkoituksesta kiistellään. Yleensä muodostelmaa pidetään hautamonumenttina tai kulttipaikkana, mutta on esitetty myös, että se olisi aurinkokalenteri, joka on suunnattu kesäpäivänseisauksen auringonlaskuun.
+
+Vuoden 1989 ensimmäisissä arkeologisissa kaivauksissa laivan sisältä löytyi kor…
+
+### 12.2
+KYSYMYS: Miksi kivien ikä on kiistanalainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ales stenar (historia)
+Tietoruudun teksti: Ales stenar on megaliittinen muistomerkki Skoonessa Etelä-Ruotsissa. Se on kivilaiva: soikea muodostelma, jonka päädyissä olevat kivet ovat muita selvästi suurempia. Laiva on 67 metriä pitkä, ja siihen kuuluu 59 suurta lohkaretta, joista raskaimmat painavat viisi tonnia.
+
+Radiohiiliajoitus on antanut paikalta seitsemän tulosta. Yksi viittaa noin 5 500 vuoden ikään, kuusi noin 1 400 vuoteen. Jälkimmäistä pidetään todennäköisimpänä rakennusajankohtana, mikä sijoittaa muistomerkin pohjoismaisen rautakauden loppuun. Poikkeava näyte on nokisista kivistä, joiden uskotaan olevan vanhemman tulisijan jäänteitä.
+
+Tarkoituksesta kiistellään. Yleensä muodostelmaa pidetään hautamonumenttina tai kulttipaikkana, mutta on esitetty myös, että se olisi aurinkokalenteri, joka on suunnattu kesäpäivänseisauksen auringonlaskuun.
+
+Vuoden 1989 ensimmäisissä arkeologisissa kaivauksissa laivan sisältä löytyi kor…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Mount Isa: Kalkatungujen nimi elää kivien välissä] Ennen brittiläisiä uudisasukkaita seutua olivat asuttaneet kalkatungut eli kalkadoonit tuhansien vuosien ajan. Kansa tunsi kivikkoiset kukkulat ja niiden vedenlähteet paremmin kuin kukaan myöhemmin tullut, ja se puolusti maataan pitkään: syyskuussa 1884 lähistöllä käytiin ase-etu menettäneen kansan viimeinen suuri taistelu, jota kutsutaan nimellä Battle Mountain. Kalkatungujen nimi elää yhä seudun kalliopaljastumilla pesivässä pikkulinnussa: tummaruohomaluri (Amytornis ballarae) tavataan vain kapealla vyöhykkeellä Mount Isan ympäristössä eikä juuri muualla maailmassa.
+- [Chile — maalehti / Ruoka: Ruoka, joka kypsyy kuopassa kuumien kivien päällä] Curanto tulee mapudungunin sanasta kurantu, kivinen. Chiloéssa kaivetaan noin puolen metrin kuoppa, pohjalle ladotaan nuotiossa hehkutetut kivet ja niiden päälle kerroksittain simpukoita, lihaa, perunaa sekä milcao- ja chapalele-perunaleipiä. Jokainen kerros peitetään suurilla nalca-lehdillä, päälle tulevat märät säkit ja turve — jättimäinen painekattila, jossa ateria kypsyy tunnissa. Simpukoista välttämättömiä ovat almeja, cholga ja picoroco. Vanhimmat jäänteet Chiloésta ovat yli 11 000 vuoden takaa.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:vanern) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Iziko Etelä-Afrikan museo] 1825 Iziko Etelä-Afrikan museo perustettiin 1825, ja se on maan ensimmäinen museo. Perustaja oli Kapin siirtomaan kuvernööri lordi Charles Somerset, joka hoiti virkaa vuosina 1814–1826. Nykyisellä paikallaan Company's Gardenin eteläpäässä museo on ollut vuodesta 1897. Sana Iziko on xhosaa ja tarkoittaa tulisijaa; nimi otettiin käyttöön syyskuussa 2012, kun museo liitettiin Iziko-museoiden joukkoon. Museo alkoi yleismuseona, jossa oli sekä luonnonhistoriaa että esineistöä lähialueilta ja kauempaa. Vähitellen kokoelmat järjestettiin samaan tapaan kuin Euroopan ja Amerikan museoissa 1800-luvun lopulla ja 1900-luvun alussa. Nykyään museossa on yli puolitoista miljoonaa tieteellistä näytettä: fo…
+
+### 13.1
+KYSYMYS: Miksi järvessä elää merieläimiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Iziko Etelä-Afrikan museo] 1825 Iziko Etelä-Afrikan museo perustettiin 1825, ja se on maan ensimmäinen museo. Perustaja oli Kapin siirtomaan kuvernööri lordi Charles Somerset, joka hoiti virkaa vuosina 1814–1826. Nykyisellä paikallaan Company's Gardenin eteläpäässä museo on ollut vuodesta 1897. Sana Iziko on xhosaa ja tarkoittaa tulisijaa; nimi otettiin käyttöön syyskuussa 2012, kun museo liitettiin Iziko-museoiden joukkoon. Museo alkoi yleismuseona, jossa oli sekä luonnonhistoriaa että esineistöä lähialueilta ja kauempaa. Vähitellen kokoelmat järjestettiin samaan tapaan kuin Euroopan ja Amerikan museoissa 1800-luvun lopulla ja 1900-luvun alussa. Nykyään museossa on yli puolitoista miljoonaa tieteellistä näytettä: fo…
+
+### 13.2
+KYSYMYS: Mihin Vänernin vedet laskevat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:kalmarinlinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Havanna: Uuden maailman avain] Havanna ohitti Santiagon jo 1500-luvun puolivälissä satamansa ansiosta ja nousi saaren pääkaupungiksi 1552. Kuningas Filip II myönsi sille kaupungin arvonimen 20. joulukuuta 1592, ja myöhemmin kruunu nimesi sen virallisesti "Uuden maailman avaimeksi ja Länsi-Intian muuriksi". Nimitys ei ollut liioittelua: kaikkialta Uudesta maailmasta tulleet laivat toivat lastinsa ensin Havannaan, josta laivasto vei sen Espanjaan. Lahdella odottaneet tuhannet alukset tarvitsivat ruokaa ja vettä, ja se ruokki kaupungin maataloutta ja käsityötä.
+
+### 14.1
+KYSYMYS: Mikä Kalmarin unioni oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+### 14.2
+KYSYMYS: Miksi linnaa sanottiin valtakunnan avaimeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Havanna: Uuden maailman avain] Havanna ohitti Santiagon jo 1500-luvun puolivälissä satamansa ansiosta ja nousi saaren pääkaupungiksi 1552. Kuningas Filip II myönsi sille kaupungin arvonimen 20. joulukuuta 1592, ja myöhemmin kruunu nimesi sen virallisesti "Uuden maailman avaimeksi ja Länsi-Intian muuriksi". Nimitys ei ollut liioittelua: kaikkialta Uudesta maailmasta tulleet laivat toivat lastinsa ensin Havannaan, josta laivasto vei sen Espanjaan. Lahdella odottaneet tuhannet alukset tarvitsivat ruokaa ja vettä, ja se ruokki kaupungin maataloutta ja käsityötä.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:karlskrona) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Taivaalla paloi kuusi aurinkoa] 1535 — Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, ja pappi Olaus Petri teetti siitä maalauksen. Samalla syntyi vanhin tunnettu värikuva Tukholmasta: kaupunki muureineen, kirkontorneineen ja ympäröivine hirsiaitoineen. Alkuperäinen taulu on kadonnut — Storkyrkanissa riippuu vuoden 1636 kopio.
+- [Japani — maalehti / Historia: Maailman vanhin puurakennus] 607 — Prinssi Shōtoku perusti Hōryū-jin vuonna 607 Ikarugan kylään. Vuonna 670 salama sytytti rakennukset, ja temppeli pystytettiin pian uudelleen. Sen päähallia Kondōa pidetään maailman vanhimpana puurakennuksena. Viereisen viisikerroksisen pagodin keskuspylväs tutkittiin vuonna 2001 vuosilustoista: puu oli kaadettu jo vuonna 594. Tammikuussa 1949 purkukorjauksen aikana syttynyt tulipalo tuhosi Kondōn vanhat seinämaalaukset, ja siitä päivästä tehtiin Japanissa kulttuuriomaisuuden paloturvallisuuden päivä. Hōryū-ji oli vuonna 1993 Japanin ensimmäinen maailmanperintökohde.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Puurakennus, joka veistettiin kiveen] Lalibelan kirkoissa on aksumilainen tunnusmerkki: kivestä tehty jäljitelmä puurakenteista. Biete Amanuelissa se on niin selvä, että Stuart Munro-Hay vertaa sitä Tigrayn ja Eritrean vanhoihin kirkkoihin, joissa puu on yhä paikallaan. Kehystetyt ovet ja ikkunat toistuvat aiheena, koska ne jäljittelevät Aksumin steelojen muotoa: Biete Gabriel-Rufaelin kaarikäytävä, Biete Maryamin ovi ja Biete Amanuelin ikkunat ovat kaikki samaa perhettä. David Phillipson muistuttaa, ettei aksumilainen tyyli todista aksumilaista ikää — se todistaa katkeamattoman perinteen.
+
+### 15.1
+KYSYMYS: Miksi laivasto muutti pois Tukholmasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Taivaalla paloi kuusi aurinkoa] 1535 — Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, ja pappi Olaus Petri teetti siitä maalauksen. Samalla syntyi vanhin tunnettu värikuva Tukholmasta: kaupunki muureineen, kirkontorneineen ja ympäröivine hirsiaitoineen. Alkuperäinen taulu on kadonnut — Storkyrkanissa riippuu vuoden 1636 kopio.
+
+### 15.2
+KYSYMYS: Mikä on maan pisin puurakennus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Historia: Maailman vanhin puurakennus] 607 — Prinssi Shōtoku perusti Hōryū-jin vuonna 607 Ikarugan kylään. Vuonna 670 salama sytytti rakennukset, ja temppeli pystytettiin pian uudelleen. Sen päähallia Kondōa pidetään maailman vanhimpana puurakennuksena. Viereisen viisikerroksisen pagodin keskuspylväs tutkittiin vuonna 2001 vuosilustoista: puu oli kaadettu jo vuonna 594. Tammikuussa 1949 purkukorjauksen aikana syttynyt tulipalo tuhosi Kondōn vanhat seinämaalaukset, ja siitä päivästä tehtiin Japanissa kulttuuriomaisuuden paloturvallisuuden päivä. Hōryū-ji oli vuonna 1993 Japanin ensimmäinen maailmanperintökohde.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Puurakennus, joka veistettiin kiveen] Lalibelan kirkoissa on aksumilainen tunnusmerkki: kivestä tehty jäljitelmä puurakenteista. Biete Amanuelissa se on niin selvä, että Stuart Munro-Hay vertaa sitä Tigrayn ja Eritrean vanhoihin kirkkoihin, joissa puu on yhä paikallaan. Kehystetyt ovet ja ikkunat toistuvat aiheena, koska ne jäljittelevät Aksumin steelojen muotoa: Biete Gabriel-Rufaelin kaarikäytävä, Biete Maryamin ovi ja Biete Amanuelin ikkunat ovat kaikki samaa perhettä. David Phillipson muistuttaa, ettei aksumilainen tyyli todista aksumilaista ikää — se todistaa katkeamattoman perinteen.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

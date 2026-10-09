@@ -1,0 +1,194 @@
+================ KOHTA 36 (kohde:hahmotelma-marstrand) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marstrand (historia)
+Tietoruudun teksti: Marstrand on pieni merenrantakylä Kungälvin kunnassa Länsi-Götanmaalla, ja se on saanut nimensä saaresta, jolla se sijaitsee. Asukkaita oli vuonna 2010 vain noin 1 300, mutta historiallisista syistä paikkaa kutsutaan usein kaupungiksi: kaupunkioikeudet sillä on ollut vuodesta 1200. Kustaa III julisti Marstrandin vapaasatamaksi vuosiksi 1775–1794, ja hänen myöntämänsä uskonnonvapaus mahdollisti juutalaisyhteisön synnyn; yksi Pohjoismaiden ensimmäisistä synagogista perustettiin Fredriksborgin linnakkeeseen 1780. Maisemaa hallitsee 1600-luvun Carlstenin linnoitus. Vapaasataman ja silakkakalastuksen hiipumisen jälkeen Marstrand vakiintui 1800-luvulla merikylpypaikaksi.
+
+### 36.1
+KYSYMYS: Mitä vapaasatama tarkoitti, ja miksi Marstrandiin ehti sen aikana syntyä juutalaisyhteisö?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marstrand (historia)
+Tietoruudun teksti: Marstrand on pieni merenrantakylä Kungälvin kunnassa Länsi-Götanmaalla, ja se on saanut nimensä saaresta, jolla se sijaitsee. Asukkaita oli vuonna 2010 vain noin 1 300, mutta historiallisista syistä paikkaa kutsutaan usein kaupungiksi: kaupunkioikeudet sillä on ollut vuodesta 1200. Kustaa III julisti Marstrandin vapaasatamaksi vuosiksi 1775–1794, ja hänen myöntämänsä uskonnonvapaus mahdollisti juutalaisyhteisön synnyn; yksi Pohjoismaiden ensimmäisistä synagogista perustettiin Fredriksborgin linnakkeeseen 1780. Maisemaa hallitsee 1600-luvun Carlstenin linnoitus. Vapaasataman ja silakkakalastuksen hiipumisen jälkeen Marstrand vakiintui 1800-luvulla merikylpypaikaksi.
+
+### 36.2
+KYSYMYS: Miksi Carlstenin linnoitus on nimetty juuri kuningas Kaarle X Kustaan mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marstrand (historia)
+Tietoruudun teksti: Marstrand on pieni merenrantakylä Kungälvin kunnassa Länsi-Götanmaalla, ja se on saanut nimensä saaresta, jolla se sijaitsee. Asukkaita oli vuonna 2010 vain noin 1 300, mutta historiallisista syistä paikkaa kutsutaan usein kaupungiksi: kaupunkioikeudet sillä on ollut vuodesta 1200. Kustaa III julisti Marstrandin vapaasatamaksi vuosiksi 1775–1794, ja hänen myöntämänsä uskonnonvapaus mahdollisti juutalaisyhteisön synnyn; yksi Pohjoismaiden ensimmäisistä synagogista perustettiin Fredriksborgin linnakkeeseen 1780. Maisemaa hallitsee 1600-luvun Carlstenin linnoitus. Vapaasataman ja silakkakalastuksen hiipumisen jälkeen Marstrand vakiintui 1800-luvulla merikylpypaikaksi.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-kivik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kivik (historia)
+Tietoruudun teksti: Kivik on noin 960 asukkaan taajama Simrishamnin kunnassa Skånen Österlenin alueella Etelä-Ruotsissa. Paikka tunnetaan vuosittaisista heinäkuun markkinoistaan sekä runsaasta silakan, omenoiden ja omenasiiderin tuotannostaan. Kylän tunnetuin nähtävyys on Kuninkaanhauta (Kungagraven), pronssikautinen pyöreä hautapaikka. Sen halkaisija on 75 metriä, mikä tekee siitä Ruotsin suurimman laatuaan. Kylän eteläpuolella on Stenshuvudin kansallispuisto.
+
+### 37.1
+KYSYMYS: Miksi pronssikauden ihmiset rakensivat halkaisijaltaan 75 metrin kivihautapaikan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kivik (historia)
+Tietoruudun teksti: Kivik on noin 960 asukkaan taajama Simrishamnin kunnassa Skånen Österlenin alueella Etelä-Ruotsissa. Paikka tunnetaan vuosittaisista heinäkuun markkinoistaan sekä runsaasta silakan, omenoiden ja omenasiiderin tuotannostaan. Kylän tunnetuin nähtävyys on Kuninkaanhauta (Kungagraven), pronssikautinen pyöreä hautapaikka. Sen halkaisija on 75 metriä, mikä tekee siitä Ruotsin suurimman laatuaan. Kylän eteläpuolella on Stenshuvudin kansallispuisto.
+
+### 37.2
+KYSYMYS: Miksi juuri silakka, omenat ja siideri ovat Kiviksen tunnusmerkkejä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kivik (historia)
+Tietoruudun teksti: Kivik on noin 960 asukkaan taajama Simrishamnin kunnassa Skånen Österlenin alueella Etelä-Ruotsissa. Paikka tunnetaan vuosittaisista heinäkuun markkinoistaan sekä runsaasta silakan, omenoiden ja omenasiiderin tuotannostaan. Kylän tunnetuin nähtävyys on Kuninkaanhauta (Kungagraven), pronssikautinen pyöreä hautapaikka. Sen halkaisija on 75 metriä, mikä tekee siitä Ruotsin suurimman laatuaan. Kylän eteläpuolella on Stenshuvudin kansallispuisto.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-varberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varbergin linnoitus (historia)
+Tietoruudun teksti: Varbergin linnoitus on entinen linnake Hallandin läänissä Länsi-Ruotsissa, ja nykyään siinä toimii museo. Kreivi Jacob Nielsen rakennutti sen vuosina 1287–1300 suojaksi Tanskan kuningas Erik VI:ta vastaan norjalaisten avustuksella, ja vuonna 1305 linnoitus siirtyi Norjalle. Sitä piiritettiin useita kertoja 1500-luvulla, ja Tanskan Christian IV vahvisti sitä myöhemmin; Brömsebron rauhan jälkeen 1645 se tuli Ruotsille. Linnoitus oli sotilaskäytössä vuoteen 1830 ja vankilana 1600-luvun lopulta vuoteen 1931. Museon kokoelmiin kuuluvat Bocksten-miehen 1300-luvun vaatteet, ainoa kokonainen yhden ihmisen käyttämä 1300-luvun asu, sekä luoti, jonka uskotaan surmanneen Kaarle XII:n.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Vanhat vaatteet ja niiden nimi] 1857 — Ropa vieja tarkoittaa vanhoja vaatteita — joko siksi, että ruoka tehtiin edellisten aterioiden tähteistä, tai siksi että riekaleiksi haudutettu naudanliha näyttää repaleiselta. Juuret ovat Iberian sefardijuutalaisten hitaasti haudutetussa sapatinruoassa, joka levisi Pohjois-Afrikkaan ja Kanariansaarille. Kanarialaiset siirtolaiset toivat sen Amerikkaan, ja ensimmäinen maininta Kuubasta on vuodelta 1857 — kuusitoista vuotta ennen isoisän matkaa. Nykyään se on yksi maan kansallisruoista.
+- [Sri Lanka — maalehti / Luonto: Ylänkö, jolla on halla ja helle samana päivänä] Horton Plains on runsaan kahden kilometrin korkeudessa oleva vuoristoniitty, jonka reunoja kiertää matala, sammalinen pilvimetsä. Vuoden keskilämpötila on kolmetoista astetta, mutta vuorokauden sisällä mittari käy viidessä ja kahdessakymmenessäseitsemässä, ja helmikuun aamuina maassa on tavallisesti halla. Sadetta tulee yli kaksi metriä vuodessa, ja sumu voi peittää ylängön koko päiväksi. Tasangon eteläreuna katkeaa kesken: World's End on 870 metriä pudottava pystysuora jyrkänne, jonka alta maisema aukeaa laaksoihin ja kyliin.
+
+### 38.1
+KYSYMYS: Miksi Halland kuului 1300-luvulla osittain Norjalle, ja miten se päätyi lopulta Ruotsille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varbergin linnoitus (historia)
+Tietoruudun teksti: Varbergin linnoitus on entinen linnake Hallandin läänissä Länsi-Ruotsissa, ja nykyään siinä toimii museo. Kreivi Jacob Nielsen rakennutti sen vuosina 1287–1300 suojaksi Tanskan kuningas Erik VI:ta vastaan norjalaisten avustuksella, ja vuonna 1305 linnoitus siirtyi Norjalle. Sitä piiritettiin useita kertoja 1500-luvulla, ja Tanskan Christian IV vahvisti sitä myöhemmin; Brömsebron rauhan jälkeen 1645 se tuli Ruotsille. Linnoitus oli sotilaskäytössä vuoteen 1830 ja vankilana 1600-luvun lopulta vuoteen 1931. Museon kokoelmiin kuuluvat Bocksten-miehen 1300-luvun vaatteet, ainoa kokonainen yhden ihmisen käyttämä 1300-luvun asu, sekä luoti, jonka uskotaan surmanneen Kaarle XII:n.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Luonto: Ylänkö, jolla on halla ja helle samana päivänä] Horton Plains on runsaan kahden kilometrin korkeudessa oleva vuoristoniitty, jonka reunoja kiertää matala, sammalinen pilvimetsä. Vuoden keskilämpötila on kolmetoista astetta, mutta vuorokauden sisällä mittari käy viidessä ja kahdessakymmenessäseitsemässä, ja helmikuun aamuina maassa on tavallisesti halla. Sadetta tulee yli kaksi metriä vuodessa, ja sumu voi peittää ylängön koko päiväksi. Tasangon eteläreuna katkeaa kesken: World's End on 870 metriä pudottava pystysuora jyrkänne, jonka alta maisema aukeaa laaksoihin ja kyliin.
+
+### 38.2
+KYSYMYS: Miksi 1300-luvun vaatteet ovat museolle niin harvinainen aarre?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varbergin linnoitus (historia)
+Tietoruudun teksti: Varbergin linnoitus on entinen linnake Hallandin läänissä Länsi-Ruotsissa, ja nykyään siinä toimii museo. Kreivi Jacob Nielsen rakennutti sen vuosina 1287–1300 suojaksi Tanskan kuningas Erik VI:ta vastaan norjalaisten avustuksella, ja vuonna 1305 linnoitus siirtyi Norjalle. Sitä piiritettiin useita kertoja 1500-luvulla, ja Tanskan Christian IV vahvisti sitä myöhemmin; Brömsebron rauhan jälkeen 1645 se tuli Ruotsille. Linnoitus oli sotilaskäytössä vuoteen 1830 ja vankilana 1600-luvun lopulta vuoteen 1931. Museon kokoelmiin kuuluvat Bocksten-miehen 1300-luvun vaatteet, ainoa kokonainen yhden ihmisen käyttämä 1300-luvun asu, sekä luoti, jonka uskotaan surmanneen Kaarle XII:n.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Vanhat vaatteet ja niiden nimi] 1857 — Ropa vieja tarkoittaa vanhoja vaatteita — joko siksi, että ruoka tehtiin edellisten aterioiden tähteistä, tai siksi että riekaleiksi haudutettu naudanliha näyttää repaleiselta. Juuret ovat Iberian sefardijuutalaisten hitaasti haudutetussa sapatinruoassa, joka levisi Pohjois-Afrikkaan ja Kanariansaarille. Kanarialaiset siirtolaiset toivat sen Amerikkaan, ja ensimmäinen maininta Kuubasta on vuodelta 1857 — kuusitoista vuotta ennen isoisän matkaa. Nykyään se on yksi maan kansallisruoista.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-rattvik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Ruoka: Taskussa on kokonainen kananmuna] Brik on uppopaistettu taikinatasku, ja sen kuori on malsouka eli warka. Levyt tehdään läiskimällä tahmeaa taikinaa kuumalle tarttumattomalle pinnalle limittäisinä ympyröinä ja kypsentämällä ne hetken. Tunnetuimmassa versiossa kolmiotaskun sisään laitetaan kokonainen raaka kananmuna, hienonnettua sipulia, tonnikalaa, harissaa ja persiljaa — ja koko syömisen taito on siinä, ettei keltuainen valu käsille. Muita täytteitä ovat jauheliha, kana, kapris, juusto ja anjovis. Algeriassa ja Libyassa sama ruoka tunnetaan nimellä bourek.
+- [Argentiina — maalehti / Ruoka: Kokonainen eläin tulen äärellä] Asado ei ole vain ruokalaji vaan tapahtuma. Lihaa — nautaa, sikaa, kanaa, makkaraa — kypsennetään avotulella tai parrilla-ritilän päällä tuntikausia, ja kokilla on oma nimensä, asador. Lihaa ei marinoida: ainoa mauste on suola. Hiilet tehdään kotimaisista puulajeista kuten quebrachosta, koska havupuun pihka toisi makuun sivumaun. Vanhin muoto on asado al palo, jossa kokonainen eläin paahtuu puuseipäässä avotulen äärellä — juuri niin kuin gauchot tekivät pampan leirissä ja niin kuin Patagoniassa tehdään yhä.
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+
+### 39.1
+KYSYMYS: Miksi kirkon ympärille rakennettiin kokonainen rivi kirkkotalleja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Ruoka: Taskussa on kokonainen kananmuna] Brik on uppopaistettu taikinatasku, ja sen kuori on malsouka eli warka. Levyt tehdään läiskimällä tahmeaa taikinaa kuumalle tarttumattomalle pinnalle limittäisinä ympyröinä ja kypsentämällä ne hetken. Tunnetuimmassa versiossa kolmiotaskun sisään laitetaan kokonainen raaka kananmuna, hienonnettua sipulia, tonnikalaa, harissaa ja persiljaa — ja koko syömisen taito on siinä, ettei keltuainen valu käsille. Muita täytteitä ovat jauheliha, kana, kapris, juusto ja anjovis. Algeriassa ja Libyassa sama ruoka tunnetaan nimellä bourek.
+- [Argentiina — maalehti / Ruoka: Kokonainen eläin tulen äärellä] Asado ei ole vain ruokalaji vaan tapahtuma. Lihaa — nautaa, sikaa, kanaa, makkaraa — kypsennetään avotulella tai parrilla-ritilän päällä tuntikausia, ja kokilla on oma nimensä, asador. Lihaa ei marinoida: ainoa mauste on suola. Hiilet tehdään kotimaisista puulajeista kuten quebrachosta, koska havupuun pihka toisi makuun sivumaun. Vanhin muoto on asado al palo, jossa kokonainen eläin paahtuu puuseipäässä avotulen äärellä — juuri niin kuin gauchot tekivät pampan leirissä ja niin kuin Patagoniassa tehdään yhä.
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+
+### 39.2
+KYSYMYS: Miksi Dalhalla-ooppera pidetään entisessä kalkkikivilouhoksessa eikä tavallisessa oopperatalossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-jokkmokk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+
+### 40.1
+KYSYMYS: Miksi Jokkmokkin markkinat pidetään keskellä talvea, vaikka pakkanen voi olla −40 astetta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+
+### 40.2
+KYSYMYS: Miksi Jokkmokk on saamelaisille niin tärkeä paikka?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

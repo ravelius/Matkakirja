@@ -1,0 +1,188 @@
+================ KOHTA 26 (kohde:hahmotelma-oland) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Öland (luonto · saari)
+Tietoruudun teksti: Öland on Ruotsin toiseksi suurin saari ja perinteisistä maakunnista pienin. Se on Itämerellä Smålannin rannikon edustalla, 137 kilometriä pitkä mutta enimmillään vain 16 kilometriä leveä. Saaren tunnusmaisema on Stora Alvaret, kalkkikivitasanko, joka on monien harvinaisten ja uhanalaisten lajien elinympäristö ja kuuluu UNESCOn maailmanperintöön; Linné tutki sen eliöstöä jo vuonna 1741. Saarella on yhdeksäntoista rautakautista linnavarustusta, joista Eketorp on kaivettu kokonaan ja tuottanut yli 24 000 esinettä. Mantereeseen Öland yhdistettiin vasta vuonna 1972 valmistuneella kuuden kilometrin sillalla.
+
+### 26.1
+KYSYMYS: Miksi Stora Alvaretin kalkkikivitasanko on niin arvokas luontokohde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Öland (luonto · saari)
+Tietoruudun teksti: Öland on Ruotsin toiseksi suurin saari ja perinteisistä maakunnista pienin. Se on Itämerellä Smålannin rannikon edustalla, 137 kilometriä pitkä mutta enimmillään vain 16 kilometriä leveä. Saaren tunnusmaisema on Stora Alvaret, kalkkikivitasanko, joka on monien harvinaisten ja uhanalaisten lajien elinympäristö ja kuuluu UNESCOn maailmanperintöön; Linné tutki sen eliöstöä jo vuonna 1741. Saarella on yhdeksäntoista rautakautista linnavarustusta, joista Eketorp on kaivettu kokonaan ja tuottanut yli 24 000 esinettä. Mantereeseen Öland yhdistettiin vasta vuonna 1972 valmistuneella kuuden kilometrin sillalla.
+
+### 26.2
+KYSYMYS: Mitä Eketorpin linnoituksen kaivauksissa on löytynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Öland (luonto · saari)
+Tietoruudun teksti: Öland on Ruotsin toiseksi suurin saari ja perinteisistä maakunnista pienin. Se on Itämerellä Smålannin rannikon edustalla, 137 kilometriä pitkä mutta enimmillään vain 16 kilometriä leveä. Saaren tunnusmaisema on Stora Alvaret, kalkkikivitasanko, joka on monien harvinaisten ja uhanalaisten lajien elinympäristö ja kuuluu UNESCOn maailmanperintöön; Linné tutki sen eliöstöä jo vuonna 1741. Saarella on yhdeksäntoista rautakautista linnavarustusta, joista Eketorp on kaivettu kokonaan ja tuottanut yli 24 000 esinettä. Mantereeseen Öland yhdistettiin vasta vuonna 1972 valmistuneella kuuden kilometrin sillalla.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-faro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fårö (luonto · saari)
+Tietoruudun teksti: Fårö on Itämeren saari Gotlannin pohjoispuolella, ja Gotlannista sen erottaa kapea salmi, jonka yli kulkee kaksi autolauttaa. Saari on noin 111 neliökilometrin kokoinen, ja siellä puhutaan omaa murretta, fårömålia. Fårön ja Gotlannin erikoisuus ovat raukit, jääkauden aikana eroosion muovaamat kivipylväät, joita ei ole muualla. Digerhuvudin rannikolla on Ruotsin suurin raukkialue: satoja pylväitä 3,5 kilometrin matkalla. Nimen arvellaan tarkoittavan matkustajan saarta, vaikka manner-Ruotsissa sen voi luulla tulevan sanasta får eli lammas. Majakka valmistui vuosina 1846–1847, ja ohjaaja Ingmar Bergman asui saarella ja kuvasi siellä useita elokuviaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Maailman suurin viikinkihopea] 1999 — Gotlannin Spillingsissä eräs maanviljelijä oli kyntänyt vuosikymmeniä pellon yli, jonka alla makasi suurin tunnettu viikinkiaikainen hopeakätkö. Kun arkeologit tutkivat paikan 1999 metallinilmaisimella, maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.
+
+### 27.1
+KYSYMYS: Miksi Fårön ja Gotlannin rannoilla on outoja kivipylväitä, raukeja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fårö (luonto · saari)
+Tietoruudun teksti: Fårö on Itämeren saari Gotlannin pohjoispuolella, ja Gotlannista sen erottaa kapea salmi, jonka yli kulkee kaksi autolauttaa. Saari on noin 111 neliökilometrin kokoinen, ja siellä puhutaan omaa murretta, fårömålia. Fårön ja Gotlannin erikoisuus ovat raukit, jääkauden aikana eroosion muovaamat kivipylväät, joita ei ole muualla. Digerhuvudin rannikolla on Ruotsin suurin raukkialue: satoja pylväitä 3,5 kilometrin matkalla. Nimen arvellaan tarkoittavan matkustajan saarta, vaikka manner-Ruotsissa sen voi luulla tulevan sanasta får eli lammas. Majakka valmistui vuosina 1846–1847, ja ohjaaja Ingmar Bergman asui saarella ja kuvasi siellä useita elokuviaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Maailman suurin viikinkihopea] 1999 — Gotlannin Spillingsissä eräs maanviljelijä oli kyntänyt vuosikymmeniä pellon yli, jonka alla makasi suurin tunnettu viikinkiaikainen hopeakätkö. Kun arkeologit tutkivat paikan 1999 metallinilmaisimella, maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.
+
+### 27.2
+KYSYMYS: Mitä Fårön nimi todennäköisesti tarkoittaa, vaikka sitä voi luulla lampaisiin liittyväksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fårö (luonto · saari)
+Tietoruudun teksti: Fårö on Itämeren saari Gotlannin pohjoispuolella, ja Gotlannista sen erottaa kapea salmi, jonka yli kulkee kaksi autolauttaa. Saari on noin 111 neliökilometrin kokoinen, ja siellä puhutaan omaa murretta, fårömålia. Fårön ja Gotlannin erikoisuus ovat raukit, jääkauden aikana eroosion muovaamat kivipylväät, joita ei ole muualla. Digerhuvudin rannikolla on Ruotsin suurin raukkialue: satoja pylväitä 3,5 kilometrin matkalla. Nimen arvellaan tarkoittavan matkustajan saarta, vaikka manner-Ruotsissa sen voi luulla tulevan sanasta får eli lammas. Majakka valmistui vuosina 1846–1847, ja ohjaaja Ingmar Bergman asui saarella ja kuvasi siellä useita elokuviaan.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-hoga-kusten) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Höga kusten (luonto · vuori)
+Tietoruudun teksti: Höga kusten eli Korkea rannikko on Pohjanlahden rannikkoa Ruotsin Ångermanlandissa Härnösandin, Kramforsin ja Örnsköldsvikin kuntien seudulla. Alue tunnetaan maankohoamisen tutkimuksesta: kun mannerjää suli täältä noin 9 600 vuotta sitten, jään painon alla painunut maa alkoi nousta. Maa on kohonnut lähes 300 metriä, mikä on korkein tunnettu maankohoaminen maailmassa, ja nousu jatkuu yhä noin kahdeksan millimetrin vuosivauhdilla. Entisten rantaviivojen jäänteet näkyvät rannikolla, ja kohoaminen selittää alueen poikkeuksellisen korkeat kalliot. UNESCO otti alueen maailmanperintöluetteloon vuonna 2000, ja vuonna 2006 se yhdistettiin Suomen Kvarkenin saariston kanssa yhdeksi kohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+- [Panama — maalehti / Musiikki: Karibian rannikon oma perinne] Panaman pohjoisrannikon mustien yhteisöjen musiikkia kutsutaan nimellä congo, ja se on kotonaan Costa Arriban seudulla Colónin maakunnassa, muun muassa Portobelossa. Rannikon musiikkiin ovat vaikuttaneet sekä 1500–1800-luvuilla Länsi-Afrikasta orjuutettuina tuodut ihmiset että 1840-luvulta 1914 asti rautatie- ja kanavatöihin muuttaneet karibialaiset — jamaikalaiset, trinidadilaiset, barbadoslaiset, martiniquelaiset ja saintlucialaiset. Siksi Panamassa soi myös calypso ja reggae.
+
+### 28.1
+KYSYMYS: Miksi maa nousee Höga kustenilla yhä vieläkin, tuhansia vuosia jääkauden jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Höga kusten (luonto · vuori)
+Tietoruudun teksti: Höga kusten eli Korkea rannikko on Pohjanlahden rannikkoa Ruotsin Ångermanlandissa Härnösandin, Kramforsin ja Örnsköldsvikin kuntien seudulla. Alue tunnetaan maankohoamisen tutkimuksesta: kun mannerjää suli täältä noin 9 600 vuotta sitten, jään painon alla painunut maa alkoi nousta. Maa on kohonnut lähes 300 metriä, mikä on korkein tunnettu maankohoaminen maailmassa, ja nousu jatkuu yhä noin kahdeksan millimetrin vuosivauhdilla. Entisten rantaviivojen jäänteet näkyvät rannikolla, ja kohoaminen selittää alueen poikkeuksellisen korkeat kalliot. UNESCO otti alueen maailmanperintöluetteloon vuonna 2000, ja vuonna 2006 se yhdistettiin Suomen Kvarkenin saariston kanssa yhdeksi kohteeksi.
+
+### 28.2
+KYSYMYS: Mistä rannikon poikkeuksellisen korkeat kalliot ovat peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Höga kusten (luonto · vuori)
+Tietoruudun teksti: Höga kusten eli Korkea rannikko on Pohjanlahden rannikkoa Ruotsin Ångermanlandissa Härnösandin, Kramforsin ja Örnsköldsvikin kuntien seudulla. Alue tunnetaan maankohoamisen tutkimuksesta: kun mannerjää suli täältä noin 9 600 vuotta sitten, jään painon alla painunut maa alkoi nousta. Maa on kohonnut lähes 300 metriä, mikä on korkein tunnettu maankohoaminen maailmassa, ja nousu jatkuu yhä noin kahdeksan millimetrin vuosivauhdilla. Entisten rantaviivojen jäänteet näkyvät rannikolla, ja kohoaminen selittää alueen poikkeuksellisen korkeat kalliot. UNESCO otti alueen maailmanperintöluetteloon vuonna 2000, ja vuonna 2006 se yhdistettiin Suomen Kvarkenin saariston kanssa yhdeksi kohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+- [Panama — maalehti / Musiikki: Karibian rannikon oma perinne] Panaman pohjoisrannikon mustien yhteisöjen musiikkia kutsutaan nimellä congo, ja se on kotonaan Costa Arriban seudulla Colónin maakunnassa, muun muassa Portobelossa. Rannikon musiikkiin ovat vaikuttaneet sekä 1500–1800-luvuilla Länsi-Afrikasta orjuutettuina tuodut ihmiset että 1840-luvulta 1914 asti rautatie- ja kanavatöihin muuttaneet karibialaiset — jamaikalaiset, trinidadilaiset, barbadoslaiset, martiniquelaiset ja saintlucialaiset. Siksi Panamassa soi myös calypso ja reggae.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-kosterhavet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kosterhavetin kansallispuisto (meri)
+Tietoruudun teksti: Kosterhavetin kansallispuisto on Ruotsin ensimmäinen merellinen kansallispuisto, ja se vihittiin käyttöön syyskuussa 2009. Se sijaitsee Skagerrakin merialueella Bohuslänissä ja käsittää Kosterinsaarten ympärillä olevan meren ja rannat, mutta ei itse saaria. Alueelta on löydetty yli 6 000 merieliölajia, ja noin 200 niistä ei tavata missään muualla Ruotsissa. Atlantilta tulevat virtaukset tuovat mukanaan esimerkiksi sienieläinten, korallien ja käsijalkaisten toukkia. Kylmässä ja suolaisessa Kosterfjordissa on syvimmillään 247 metriä vettä, ja puistossa elää Ruotsin suurin hyljeyhmä.
+
+### 29.1
+KYSYMYS: Miksi Kosterhavetin vesistä löytyy lajeja, joita ei tapaa muualla Ruotsissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kosterhavetin kansallispuisto (meri)
+Tietoruudun teksti: Kosterhavetin kansallispuisto on Ruotsin ensimmäinen merellinen kansallispuisto, ja se vihittiin käyttöön syyskuussa 2009. Se sijaitsee Skagerrakin merialueella Bohuslänissä ja käsittää Kosterinsaarten ympärillä olevan meren ja rannat, mutta ei itse saaria. Alueelta on löydetty yli 6 000 merieliölajia, ja noin 200 niistä ei tavata missään muualla Ruotsissa. Atlantilta tulevat virtaukset tuovat mukanaan esimerkiksi sienieläinten, korallien ja käsijalkaisten toukkia. Kylmässä ja suolaisessa Kosterfjordissa on syvimmillään 247 metriä vettä, ja puistossa elää Ruotsin suurin hyljeyhmä.
+
+### 29.2
+KYSYMYS: Mitä eroa on merellisellä kansallispuistolla ja tavallisella maakansallispuistolla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kosterhavetin kansallispuisto (meri)
+Tietoruudun teksti: Kosterhavetin kansallispuisto on Ruotsin ensimmäinen merellinen kansallispuisto, ja se vihittiin käyttöön syyskuussa 2009. Se sijaitsee Skagerrakin merialueella Bohuslänissä ja käsittää Kosterinsaarten ympärillä olevan meren ja rannat, mutta ei itse saaria. Alueelta on löydetty yli 6 000 merieliölajia, ja noin 200 niistä ei tavata missään muualla Ruotsissa. Atlantilta tulevat virtaukset tuovat mukanaan esimerkiksi sienieläinten, korallien ja käsijalkaisten toukkia. Kylmässä ja suolaisessa Kosterfjordissa on syvimmillään 247 metriä vettä, ja puistossa elää Ruotsin suurin hyljeyhmä.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-kullaberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kullaberg (luonto · vuori)
+Tietoruudun teksti: Kullaberg on Kattegatiin työntyvä niemi ja luonnonsuojelualue Skånessa Möllen kaupungin lähellä. Jyrkät kalliot nousevat suoraan merestä, ja korkein kohta, Håkull, yltää 188 metriin. Alueella on asuttu jo kivikaudella, ja kivikehiä, hautakumpuja ja muinaisten kylien jäänteitä on yhä nähtävissä. Eri ilmansuuntiin aukeavat kalliot luovat erilaisia mikroilmastoja, joten kasvillisuus on poikkeuksellisen monipuolista: harvinainen Lathyrus sphaericus -kasvi tavataan Ruotsissa vain täällä ja yhdessä muussa paikassa. Niemen läntisessä kärjessä on Kullenin majakka, jota pidetään Ruotsin kirkkaimpana.
+
+### 30.1
+KYSYMYS: Miksi Kullabergin kallioilla kasvaa lajeja, joita ei tapaa monessa muussa paikassa Ruotsissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kullaberg (luonto · vuori)
+Tietoruudun teksti: Kullaberg on Kattegatiin työntyvä niemi ja luonnonsuojelualue Skånessa Möllen kaupungin lähellä. Jyrkät kalliot nousevat suoraan merestä, ja korkein kohta, Håkull, yltää 188 metriin. Alueella on asuttu jo kivikaudella, ja kivikehiä, hautakumpuja ja muinaisten kylien jäänteitä on yhä nähtävissä. Eri ilmansuuntiin aukeavat kalliot luovat erilaisia mikroilmastoja, joten kasvillisuus on poikkeuksellisen monipuolista: harvinainen Lathyrus sphaericus -kasvi tavataan Ruotsissa vain täällä ja yhdessä muussa paikassa. Niemen läntisessä kärjessä on Kullenin majakka, jota pidetään Ruotsin kirkkaimpana.
+
+### 30.2
+KYSYMYS: Mitä kivikehät ja hautakummut kertovat siitä, keitä Kullabergissa on asunut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kullaberg (luonto · vuori)
+Tietoruudun teksti: Kullaberg on Kattegatiin työntyvä niemi ja luonnonsuojelualue Skånessa Möllen kaupungin lähellä. Jyrkät kalliot nousevat suoraan merestä, ja korkein kohta, Håkull, yltää 188 metriin. Alueella on asuttu jo kivikaudella, ja kivikehiä, hautakumpuja ja muinaisten kylien jäänteitä on yhä nähtävissä. Eri ilmansuuntiin aukeavat kalliot luovat erilaisia mikroilmastoja, joten kasvillisuus on poikkeuksellisen monipuolista: harvinainen Lathyrus sphaericus -kasvi tavataan Ruotsissa vain täällä ja yhdessä muussa paikassa. Niemen läntisessä kärjessä on Kullenin majakka, jota pidetään Ruotsin kirkkaimpana.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

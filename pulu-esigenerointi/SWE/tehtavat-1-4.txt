@@ -1,0 +1,217 @@
+================ KOHTA 16 (kohde:lundintuomiokirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+
+### 16.1
+KYSYMYS: Kenen maassa kirkko rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+
+### 16.2
+KYSYMYS: Mitä kirkolle tehtiin 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Mumbai — kohdekartta / Kohdekartta: St. Thomasin katedraali] peruskivi 1676, vihitty 1718 Kaupungin vanhin kirkko sai alkunsa kuvernööri Gerald Aungierin aikana. Hän rakennutti Bombay Greenin laidalle sairaalan, oikeussalin ja kirkon, ja kirkon peruskivi laskettiin 1676 — mutta rakentaminen keskeytyi yli neljäksikymmeneksi vuodeksi. Pappi Richard Cobbe sai työn valmiiksi vuosina 1715–1718, ja kirkko avattiin jumalanpalvelukseen jouluna 1718. Pyhälle Tuomaalle se omistettiin 1816 ja katedraaliksi vihittiin heinäkuussa 1837; torni ja kello lisättiin 1838, ja kuoria laajennettiin vuoteen 1865 mennessä. Linnoituksen portti, joka johti kirkolle, sai nimen Churchgate. Portti ja muurit purettiin 1860-luvulla, ja portin paikalle nousi Flora Fountain — mutta …
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:tornionjoki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Kuiseb-joen näkymätön raja] Kuiseb-joki on Namibin näkymätön raja: sen eteläpuolella leviää valtava hiekkameri punertavine dyyneineen, kun taas pohjoispuolella maasto muuttuu karuksi soratasangoksi. Joki itse virtaa harvoin pintavettä – suurimman osan vuodesta sen uoma on kuiva hiekkajuova syvän kanjonin pohjalla – mutta maan alla kulkeva vesi riittää ylläpitämään kapean vihreän käytävän akaasioita joen varrella. Vuosisatojen ajan alueen paimentolaiset, topnaar-namat, ovat laiduntaneet karjaansa juuri tällä kapealla vyöhykkeellä, ainoalla paikalla, jossa aavikko tarjoaa edes vähän vettä ja varjoa.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria: Kun Punainen joki nousee] Kaupunki on Punaisenjoen laakson pohjalla, ja tulvatasanko on niin tasainen, ettei vedellä ole minne mennä. Joki nousi korkeimmilleen 1826. Vuoden 1950 suurtulva pakotti joukkoevakuointeihin, ja liittovaltio arvioi vahingot yli 26 miljoonaksi dollariksi — maakunnan mukaan vähintään kaksinkertaisiksi. Se sai pääministeri Duff Roblinin ajamaan tulvakanavan rakentamista kaupungin ohi. Vuonna 1997 patoja korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin vahingoin, kun taas padoton Grand Forks rajan takana ei. Tulvia oli myös 2009 ja 2011.
+
+### 17.1
+KYSYMYS: Mistä Tornionjoki saa alkunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Izmir — kaupunkilehti / İzmir: Puisto sai alkunsa Moskovan-matkasta] Apulaispormestari Suat Yurtkoru esitti pormestari Behçet Uzille, että İzmir tarvitsee Moskovan Gorki-puiston kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen 14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi arkkitehtia laati suunnitelman. Perustus laskettiin 1. tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna 1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni 1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. Nykyään siellä pidetään İzmirin kansainväliset messut ja kirjamessut.
+
+### 17.2
+KYSYMYS: Miksi joki on myös raja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Kuiseb-joen näkymätön raja] Kuiseb-joki on Namibin näkymätön raja: sen eteläpuolella leviää valtava hiekkameri punertavine dyyneineen, kun taas pohjoispuolella maasto muuttuu karuksi soratasangoksi. Joki itse virtaa harvoin pintavettä – suurimman osan vuodesta sen uoma on kuiva hiekkajuova syvän kanjonin pohjalla – mutta maan alla kulkeva vesi riittää ylläpitämään kapean vihreän käytävän akaasioita joen varrella. Vuosisatojen ajan alueen paimentolaiset, topnaar-namat, ovat laiduntaneet karjaansa juuri tällä kapealla vyöhykkeellä, ainoalla paikalla, jossa aavikko tarjoaa edes vähän vettä ja varjoa.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria: Kun Punainen joki nousee] Kaupunki on Punaisenjoen laakson pohjalla, ja tulvatasanko on niin tasainen, ettei vedellä ole minne mennä. Joki nousi korkeimmilleen 1826. Vuoden 1950 suurtulva pakotti joukkoevakuointeihin, ja liittovaltio arvioi vahingot yli 26 miljoonaksi dollariksi — maakunnan mukaan vähintään kaksinkertaisiksi. Se sai pääministeri Duff Roblinin ajamaan tulvakanavan rakentamista kaupungin ohi. Vuonna 1997 patoja korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin vahingoin, kun taas padoton Grand Forks rajan takana ei. Tulvia oli myös 2009 ja 2011.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:salanhopeakaivos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Irkutsk: Ruhtinas kaivoksesta ja talo Volkonskin kujalla] Sergei Volkonski oli ainoa palveluksessa ollut kenraali, joka osallistui joulukuun 1825 kapinaan. Hänet tuomittiin mestattavaksi, mutta tuomio lievennettiin kahdenkymmenen vuoden pakkotyöksi ja sitä seuraavaksi ikuiseksi karkotukseksi; pakkotyöaika lyhennettiin myöhemmin kymmeneen vuoteen. Työhön hänet lähetettiin Nertšinskin kaivoksille Baikalin taakse, ja Siperiassa hän vietti kolmekymmentä vuotta. Vaimo Maria Rajevskaja seurasi häntä ja jätti pienen poikansa isänsä huostaan. Volkonskin kujan puutalo rakennettiin 1838 Urikin kylään ja siirrettiin Irkutskiin 1847; se oli ruhtinaan koti vuoteen 1856, jolloin Aleksanteri II salli dekabristien palata.
+- [Ruotsi — maalehti / Historia: Maailman suurin viikinkihopea] 1999 — Gotlannin Spillingsissä eräs maanviljelijä oli kyntänyt vuosikymmeniä pellon yli, jonka alla makasi suurin tunnettu viikinkiaikainen hopeakätkö. Kun arkeologit tutkivat paikan 1999 metallinilmaisimella, maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.
+
+### 18.1
+KYSYMYS: Kuinka paljon hopeaa kaivoksesta tuli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Irkutsk: Ruhtinas kaivoksesta ja talo Volkonskin kujalla] Sergei Volkonski oli ainoa palveluksessa ollut kenraali, joka osallistui joulukuun 1825 kapinaan. Hänet tuomittiin mestattavaksi, mutta tuomio lievennettiin kahdenkymmenen vuoden pakkotyöksi ja sitä seuraavaksi ikuiseksi karkotukseksi; pakkotyöaika lyhennettiin myöhemmin kymmeneen vuoteen. Työhön hänet lähetettiin Nertšinskin kaivoksille Baikalin taakse, ja Siperiassa hän vietti kolmekymmentä vuotta. Vaimo Maria Rajevskaja seurasi häntä ja jätti pienen poikansa isänsä huostaan. Volkonskin kujan puutalo rakennettiin 1838 Urikin kylään ja siirrettiin Irkutskiin 1847; se oli ruhtinaan koti vuoteen 1856, jolloin Aleksanteri II salli dekabristien palata.
+- [Ruotsi — maalehti / Historia: Maailman suurin viikinkihopea] 1999 — Gotlannin Spillingsissä eräs maanviljelijä oli kyntänyt vuosikymmeniä pellon yli, jonka alla makasi suurin tunnettu viikinkiaikainen hopeakätkö. Kun arkeologit tutkivat paikan 1999 metallinilmaisimella, maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.
+
+### 18.2
+KYSYMYS: Miksi Salan ympärillä on niin monta patoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kohdekartta / Kohdekartta: Bund] 1843– Sana bund on lainattu englantiin hindustanista, ja se tarkoitti alun perin patoa tai pengerrystä. Kiinan sopimussatamissa se alkoi tarkoittaa juuri rannan suuntaista pengerrettyä laituria. Kiinalainen nimi Waitan ei liity siihen mitenkään: se tarkoittaa ulkorantaa ja erottaa tämän pätkän vanhan kaupungin puoleisesta sisärannasta. Shanghai avattiin ulkomaiselle kaupalle vuonna 1843, ja ranta oli aluksi brittiläinen siirtokunta. Vuonna 1863 brittien ja amerikkalaisten alueet yhdistettiin kansainväliseksi asutusalueeksi. Isoisän matkan aikaan rannassa oli jo kauppahuoneiden konttoreita; kivinen julkisivurivi, joka siellä nyt seisoo, nousi vasta 1900-luvun alussa, kun Bundista tuli Itä-Aa…
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:marbacka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Roviran aukio] Se ruudukko ei ollut kaupungin oma valinta. Muurien sisällä asui vuonna 1850 satakahdeksankymmentäseitsemäntuhatta ihmistä runsaan kahden neliökilometrin alalla, ja siitä alasta neljäkymmentä prosenttia oli kasarmeja, sairaaloita, luostareita ja kirkkoja: seitsemän kasarmia, yksitoista sairaalaa, neljäkymmentä luostaria ja kaksikymmentäseitsemän kirkkoa. Varakas eli keskimäärin kolmeenkymmeneenkuuteen ikävuoteen, päivätyöläinen kahteenkymmeneenkolmeen. Muurit määrättiin purettaviksi elokuussa 1854, ja niiden takana odotti tyhjä kenttä. Sitten tuli kaksi kaavaa. Insinööri Ildefons Cerdà sai helmikuussa 1859 Madridin hallitukselta tehtäväkseen laatia laajennuksen vuodessa, ja kaupunki vastasi…
+- [Anchorage — kohdekartta / Kohdekartta: Anchorage Museum] 1968 Museo avattiin 1968 kymmenentuhannen neliöjalan rakennuksessa. Ensimmäisessä näyttelyssä oli kuusikymmentä lainattua alaskalaista maalausta, kokoelmassa 2 500 esinettä ja henkilökuntaa kaksi. Museota on laajennettu kolmesti, viimeksi 2010, ja nyt se on 170 000 neliöjalkaa, kokoelmassa on 25 000 esinettä ja puoli miljoonaa historiallista valokuvaa. Talo on taiteen, historian, etnografian, ekologian ja tieteen museo yhdessä. Alaska Gallery esittelee yli tuhat esinettä pienoismalleineen, ja taidepuolella on kokonainen galleria Sydney Laurencen maalauksia. Vuonna 1992 taloon tuli Smithsonianin Arctic Studies Centerin Alaskan-toimisto, ja uuden siiven myötä 600 alaskalaisen alkuperäiskansan…
+
+### 19.1
+KYSYMYS: Millä rahalla Lagerlöf osti tilan takaisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+
+### 19.2
+KYSYMYS: Kuka suunnitteli päärakennuksen laajennuksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Roviran aukio] Se ruudukko ei ollut kaupungin oma valinta. Muurien sisällä asui vuonna 1850 satakahdeksankymmentäseitsemäntuhatta ihmistä runsaan kahden neliökilometrin alalla, ja siitä alasta neljäkymmentä prosenttia oli kasarmeja, sairaaloita, luostareita ja kirkkoja: seitsemän kasarmia, yksitoista sairaalaa, neljäkymmentä luostaria ja kaksikymmentäseitsemän kirkkoa. Varakas eli keskimäärin kolmeenkymmeneenkuuteen ikävuoteen, päivätyöläinen kahteenkymmeneenkolmeen. Muurit määrättiin purettaviksi elokuussa 1854, ja niiden takana odotti tyhjä kenttä. Sitten tuli kaksi kaavaa. Insinööri Ildefons Cerdà sai helmikuussa 1859 Madridin hallitukselta tehtäväkseen laatia laajennuksen vuodessa, ja kaupunki vastasi…
+- [Anchorage — kohdekartta / Kohdekartta: Anchorage Museum] 1968 Museo avattiin 1968 kymmenentuhannen neliöjalan rakennuksessa. Ensimmäisessä näyttelyssä oli kuusikymmentä lainattua alaskalaista maalausta, kokoelmassa 2 500 esinettä ja henkilökuntaa kaksi. Museota on laajennettu kolmesti, viimeksi 2010, ja nyt se on 170 000 neliöjalkaa, kokoelmassa on 25 000 esinettä ja puoli miljoonaa historiallista valokuvaa. Talo on taiteen, historian, etnografian, ekologian ja tieteen museo yhdessä. Alaska Gallery esittelee yli tuhat esinettä pienoismalleineen, ja taidepuolella on kokonainen galleria Sydney Laurencen maalauksia. Vuonna 1992 taloon tuli Smithsonianin Arctic Studies Centerin Alaskan-toimisto, ja uuden siiven myötä 600 alaskalaisen alkuperäiskansan…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-tre-kronor) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tre Kronor (historia)
+Tietoruudun teksti: Tre Kronor oli Tukholman keskiaikainen kuninkaanlinna ja Vaasa-suvun hallintokeskus. Tulipalo 7. toukokuuta 1697 tuhosi linnan lähes kokonaan sekä suuren osan varhaisesta kansallisarkistosta. Nykyinen kuninkaanlinna rakennettiin tilalle.
+
+### 20.1
+KYSYMYS: Miltä Tre Kronor näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tre Kronor (historia)
+Tietoruudun teksti: Tre Kronor oli Tukholman keskiaikainen kuninkaanlinna ja Vaasa-suvun hallintokeskus. Tulipalo 7. toukokuuta 1697 tuhosi linnan lähes kokonaan sekä suuren osan varhaisesta kansallisarkistosta. Nykyinen kuninkaanlinna rakennettiin tilalle.
+
+### 20.2
+KYSYMYS: Miksi Tre Kronor katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tre Kronor (historia)
+Tietoruudun teksti: Tre Kronor oli Tukholman keskiaikainen kuninkaanlinna ja Vaasa-suvun hallintokeskus. Tulipalo 7. toukokuuta 1697 tuhosi linnan lähes kokonaan sekä suuren osan varhaisesta kansallisarkistosta. Nykyinen kuninkaanlinna rakennettiin tilalle.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

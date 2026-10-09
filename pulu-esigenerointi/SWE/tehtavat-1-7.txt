@@ -1,0 +1,186 @@
+================ KOHTA 31 (kohde:hahmotelma-skokloster) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skoklosterin linna (historia)
+Tietoruudun teksti: Skoklosterin linna on barokkilinna Mälarjärven niemellä Tukholman ja Uppsalan välillä. Sotapäällikkö, kreivi Carl Gustaf Wrangel rakennutti sen vuosina 1654–1676 Ruotsin suurvalta-ajan muistomerkiksi. Wrangelin kuoltua vuonna 1676 linna jäi keskeneräiseksi, ja suuri juhlasali on säilynyt lähes sellaisena kuin rakentajat sen jättivät. Se tunnetaan nimellä Keskeneräinen sali. Nykyään linna on valtion museo, jonka noin 20 000 esineen kokoelmiin kuuluvat maalaukset, huonekalut, tekstiilit, aseet ja kirjat, muun muassa Giuseppe Arcimboldon Vertumnus-maalaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Ruoka: Naisten tori on kaupungin vanhin kauppapaikka] Zhenski pazar eli Naisten tori on Sofian vanhin ja tunnetuin ulkoilmamarkkina, ja se sai nimensä siitä, että naiset kävivät siellä perinteisesti hoitamassa perheen päivittäiset ostokset. Kauppapaikka on ollut samalla kadulla jo osmaniajalta asti, ja nykyään sen kojuissa myydään kaikkea tuoreista vihanneksista ja hedelmistä bulgarialaiseen valkoiseen juustoon, siriseen ja kuivattuihin yrtteihin. Tori on yhä keskustan asukkaiden arkinen ruokakauppa, ei turistinähtävyys.
+
+### 31.1
+KYSYMYS: Miksi Skoklosterin suuri sali on yhä keskeneräinen, ja mitä se kertoo 1600-luvun rakennustyömaasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skoklosterin linna (historia)
+Tietoruudun teksti: Skoklosterin linna on barokkilinna Mälarjärven niemellä Tukholman ja Uppsalan välillä. Sotapäällikkö, kreivi Carl Gustaf Wrangel rakennutti sen vuosina 1654–1676 Ruotsin suurvalta-ajan muistomerkiksi. Wrangelin kuoltua vuonna 1676 linna jäi keskeneräiseksi, ja suuri juhlasali on säilynyt lähes sellaisena kuin rakentajat sen jättivät. Se tunnetaan nimellä Keskeneräinen sali. Nykyään linna on valtion museo, jonka noin 20 000 esineen kokoelmiin kuuluvat maalaukset, huonekalut, tekstiilit, aseet ja kirjat, muun muassa Giuseppe Arcimboldon Vertumnus-maalaus.
+
+### 31.2
+KYSYMYS: Miksi Arcimboldon maalauksessa keisarin kasvot on tehty hedelmistä ja vihanneksista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skoklosterin linna (historia)
+Tietoruudun teksti: Skoklosterin linna on barokkilinna Mälarjärven niemellä Tukholman ja Uppsalan välillä. Sotapäällikkö, kreivi Carl Gustaf Wrangel rakennutti sen vuosina 1654–1676 Ruotsin suurvalta-ajan muistomerkiksi. Wrangelin kuoltua vuonna 1676 linna jäi keskeneräiseksi, ja suuri juhlasali on säilynyt lähes sellaisena kuin rakentajat sen jättivät. Se tunnetaan nimellä Keskeneräinen sali. Nykyään linna on valtion museo, jonka noin 20 000 esineen kokoelmiin kuuluvat maalaukset, huonekalut, tekstiilit, aseet ja kirjat, muun muassa Giuseppe Arcimboldon Vertumnus-maalaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Ruoka: Naisten tori on kaupungin vanhin kauppapaikka] Zhenski pazar eli Naisten tori on Sofian vanhin ja tunnetuin ulkoilmamarkkina, ja se sai nimensä siitä, että naiset kävivät siellä perinteisesti hoitamassa perheen päivittäiset ostokset. Kauppapaikka on ollut samalla kadulla jo osmaniajalta asti, ja nykyään sen kojuissa myydään kaikkea tuoreista vihanneksista ja hedelmistä bulgarialaiseen valkoiseen juustoon, siriseen ja kuivattuihin yrtteihin. Tori on yhä keskustan asukkaiden arkinen ruokakauppa, ei turistinähtävyys.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-sigtuna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sigtuna (historia)
+Tietoruudun teksti: Sigtuna perustettiin Mälarjärven rannalle runsaat tuhat vuotta sitten, satamakaupunkina noin vuoden 980 tienoilla. Se toimi noin 250 vuotta kuninkaallisena ja kaupallisena keskuksena ja oli yksi Ruotsin tärkeimmistä kaupungeista. Lyhyen aikaa 900-luvun lopulla ja 1000-luvun alussa täällä lyötiin Ruotsin ensimmäiset kolikot. Kaupunki alkoi menettää merkitystään 1200-luvulla, koska jääkauden jälkeinen maankohoaminen vaikeutti laivaliikennettä. Vanhasta kukoistuksesta kertovat yhä useiden kirkkojen rauniot, kuten 1000-luvun puolivälistä peräisin olevan Pyhän Olavin kirkon rauniot, sekä vanha pääkatu Stora gatan.
+
+### 32.1
+KYSYMYS: Miksi Sigtuna oli aikoinaan tärkeä kaupunki, vaikka se on nykyään pieni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sigtuna (historia)
+Tietoruudun teksti: Sigtuna perustettiin Mälarjärven rannalle runsaat tuhat vuotta sitten, satamakaupunkina noin vuoden 980 tienoilla. Se toimi noin 250 vuotta kuninkaallisena ja kaupallisena keskuksena ja oli yksi Ruotsin tärkeimmistä kaupungeista. Lyhyen aikaa 900-luvun lopulla ja 1000-luvun alussa täällä lyötiin Ruotsin ensimmäiset kolikot. Kaupunki alkoi menettää merkitystään 1200-luvulla, koska jääkauden jälkeinen maankohoaminen vaikeutti laivaliikennettä. Vanhasta kukoistuksesta kertovat yhä useiden kirkkojen rauniot, kuten 1000-luvun puolivälistä peräisin olevan Pyhän Olavin kirkon rauniot, sekä vanha pääkatu Stora gatan.
+
+### 32.2
+KYSYMYS: Miten maankohoaminen voi tehdä satamakaupungista tarpeettoman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sigtuna (historia)
+Tietoruudun teksti: Sigtuna perustettiin Mälarjärven rannalle runsaat tuhat vuotta sitten, satamakaupunkina noin vuoden 980 tienoilla. Se toimi noin 250 vuotta kuninkaallisena ja kaupallisena keskuksena ja oli yksi Ruotsin tärkeimmistä kaupungeista. Lyhyen aikaa 900-luvun lopulla ja 1000-luvun alussa täällä lyötiin Ruotsin ensimmäiset kolikot. Kaupunki alkoi menettää merkitystään 1200-luvulla, koska jääkauden jälkeinen maankohoaminen vaikeutti laivaliikennettä. Vanhasta kukoistuksesta kertovat yhä useiden kirkkojen rauniot, kuten 1000-luvun puolivälistä peräisin olevan Pyhän Olavin kirkon rauniot, sekä vanha pääkatu Stora gatan.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-gripsholm) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gripsholmin linna (historia)
+Tietoruudun teksti: Gripsholmin linna sijaitsee Mariefredissä Mälarjärven rannalla, noin 60 kilometriä Tukholmasta länteen. Ensimmäisen linnoituksen rakennutti 1370-luvulla Bo Jonsson Grip, ja 1400-luvun lopulta noin 30 vuoden ajan paikalla toimi kartusiaaniluostari. Luostari lakkautettiin uskonpuhdistuksen aikana vuonna 1526, ja kuningas Kustaa Vaasa rakennutti nykyisen linnan vuosina 1537–1545 yhdeksi kuningassuvun pääasunnoista. Kustaa III:n aikana linnaan lisättiin teatteri yhteen torneista. Vuodesta 1822 rakennuksessa on toiminut Ruotsin kansallinen muotokuvagalleria, joka on yksi maailman vanhimmista muotokuvakokoelmista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+
+### 33.1
+KYSYMYS: Mitä kartusiaaniluostarille tapahtui, kun Ruotsi siirtyi uskonpuhdistukseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gripsholmin linna (historia)
+Tietoruudun teksti: Gripsholmin linna sijaitsee Mariefredissä Mälarjärven rannalla, noin 60 kilometriä Tukholmasta länteen. Ensimmäisen linnoituksen rakennutti 1370-luvulla Bo Jonsson Grip, ja 1400-luvun lopulta noin 30 vuoden ajan paikalla toimi kartusiaaniluostari. Luostari lakkautettiin uskonpuhdistuksen aikana vuonna 1526, ja kuningas Kustaa Vaasa rakennutti nykyisen linnan vuosina 1537–1545 yhdeksi kuningassuvun pääasunnoista. Kustaa III:n aikana linnaan lisättiin teatteri yhteen torneista. Vuodesta 1822 rakennuksessa on toiminut Ruotsin kansallinen muotokuvagalleria, joka on yksi maailman vanhimmista muotokuvakokoelmista.
+
+### 33.2
+KYSYMYS: Miksi kuningas Kustaa III rakennutti linnaan oman teatterin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gripsholmin linna (historia)
+Tietoruudun teksti: Gripsholmin linna sijaitsee Mariefredissä Mälarjärven rannalla, noin 60 kilometriä Tukholmasta länteen. Ensimmäisen linnoituksen rakennutti 1370-luvulla Bo Jonsson Grip, ja 1400-luvun lopulta noin 30 vuoden ajan paikalla toimi kartusiaaniluostari. Luostari lakkautettiin uskonpuhdistuksen aikana vuonna 1526, ja kuningas Kustaa Vaasa rakennutti nykyisen linnan vuosina 1537–1545 yhdeksi kuningassuvun pääasunnoista. Kustaa III:n aikana linnaan lisättiin teatteri yhteen torneista. Vuodesta 1822 rakennuksessa on toiminut Ruotsin kansallinen muotokuvagalleria, joka on yksi maailman vanhimmista muotokuvakokoelmista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-ystad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ystad (historia)
+Tietoruudun teksti: Ystad on kaupunki Skånessa Etelä-Ruotsissa. Asutus syntyi 1000-luvulla, kun kalastajaperheet asettuivat Vassa-joen suulle ja sillinkalastuksesta tuli tärkein elinkeino. Kaupunki mainitaan asiakirjoissa ensimmäisen kerran vuonna 1244, ja 1300-luvulla se liittyi Hansaliittoon. Tanskalle kuulunut Skåne siirtyi Ruotsille Roskilden rauhassa 1658. Vanhassa kaupungissa on säilynyt keskiaikaista rakennuskantaa, kuten fransiskaanien luostari ja Neitsyt Marian kirkko, jotka edustavat tiiligotiikkaa.
+
+### 34.1
+KYSYMYS: Miksi Ystad kuului ensin Tanskalle ja sitten Ruotsille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ystad (historia)
+Tietoruudun teksti: Ystad on kaupunki Skånessa Etelä-Ruotsissa. Asutus syntyi 1000-luvulla, kun kalastajaperheet asettuivat Vassa-joen suulle ja sillinkalastuksesta tuli tärkein elinkeino. Kaupunki mainitaan asiakirjoissa ensimmäisen kerran vuonna 1244, ja 1300-luvulla se liittyi Hansaliittoon. Tanskalle kuulunut Skåne siirtyi Ruotsille Roskilden rauhassa 1658. Vanhassa kaupungissa on säilynyt keskiaikaista rakennuskantaa, kuten fransiskaanien luostari ja Neitsyt Marian kirkko, jotka edustavat tiiligotiikkaa.
+
+### 34.2
+KYSYMYS: Mitä on tiiligotiikka, ja mistä sen tunnistaa Ystadin kirkoista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ystad (historia)
+Tietoruudun teksti: Ystad on kaupunki Skånessa Etelä-Ruotsissa. Asutus syntyi 1000-luvulla, kun kalastajaperheet asettuivat Vassa-joen suulle ja sillinkalastuksesta tuli tärkein elinkeino. Kaupunki mainitaan asiakirjoissa ensimmäisen kerran vuonna 1244, ja 1300-luvulla se liittyi Hansaliittoon. Tanskalle kuulunut Skåne siirtyi Ruotsille Roskilden rauhassa 1658. Vanhassa kaupungissa on säilynyt keskiaikaista rakennuskantaa, kuten fransiskaanien luostari ja Neitsyt Marian kirkko, jotka edustavat tiiligotiikkaa.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-lacko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Läckön linna (historia)
+Tietoruudun teksti: Läckön linna on keskiaikainen linna Vänern-järven Kållandsön saarella Länsi-Götanmaalla, noin 25 kilometriä Lidköpingistä pohjoiseen. Skaran piispa Brynolf Algotsson laski sen perustukset vuonna 1298: alun perin kyse oli muurin ympäröimästä linnakkeesta, jossa oli kaksi tai kolme rakennusta. Kustaa Vaasa otti linnan haltuunsa uskonpuhdistuksen jälkeen 1527, ja 1600-luvulla De la Gardien suku laajensi sitä ja koristeli sen maalauksin ja stukkein; huoneita on noin 248. Kalliossa on 27 metriä syvä Fläskgraven-kuilu, jonka Olaus Magnus kertoi vuonna 1554 syntyneen kuumentamalla kalliota palavalla sianlihalla. Nykyään linna on kansallismonumentti, ja sen sisäpihalla esitetään joka heinäkuu ooppera.
+
+### 35.1
+KYSYMYS: Mitä Fläskgraven on, ja miksi sen kerrotaan syntyneen sianlihan avulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Läckön linna (historia)
+Tietoruudun teksti: Läckön linna on keskiaikainen linna Vänern-järven Kållandsön saarella Länsi-Götanmaalla, noin 25 kilometriä Lidköpingistä pohjoiseen. Skaran piispa Brynolf Algotsson laski sen perustukset vuonna 1298: alun perin kyse oli muurin ympäröimästä linnakkeesta, jossa oli kaksi tai kolme rakennusta. Kustaa Vaasa otti linnan haltuunsa uskonpuhdistuksen jälkeen 1527, ja 1600-luvulla De la Gardien suku laajensi sitä ja koristeli sen maalauksin ja stukkein; huoneita on noin 248. Kalliossa on 27 metriä syvä Fläskgraven-kuilu, jonka Olaus Magnus kertoi vuonna 1554 syntyneen kuumentamalla kalliota palavalla sianlihalla. Nykyään linna on kansallismonumentti, ja sen sisäpihalla esitetään joka heinäkuu ooppera.
+
+### 35.2
+KYSYMYS: Mitä Läckölle tapahtui uskonpuhdistuksen jälkeen, ja kuka teki siitä loistavan aatelislinnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Läckön linna (historia)
+Tietoruudun teksti: Läckön linna on keskiaikainen linna Vänern-järven Kållandsön saarella Länsi-Götanmaalla, noin 25 kilometriä Lidköpingistä pohjoiseen. Skaran piispa Brynolf Algotsson laski sen perustukset vuonna 1298: alun perin kyse oli muurin ympäröimästä linnakkeesta, jossa oli kaksi tai kolme rakennusta. Kustaa Vaasa otti linnan haltuunsa uskonpuhdistuksen jälkeen 1527, ja 1600-luvulla De la Gardien suku laajensi sitä ja koristeli sen maalauksin ja stukkein; huoneita on noin 248. Kalliossa on 27 metriä syvä Fläskgraven-kuilu, jonka Olaus Magnus kertoi vuonna 1554 syntyneen kuumentamalla kalliota palavalla sianlihalla. Nykyään linna on kansallismonumentti, ja sen sisäpihalla esitetään joka heinäkuu ooppera.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

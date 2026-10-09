@@ -1,0 +1,199 @@
+================ KOHTA 21 (kohde:hahmotelma-klara-kloster) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klara kloster (historia)
+Tietoruudun teksti: Sankta Klaran klarissaluostari perustettiin Tukholmaan 1280-luvulla. Kustaa Vaasa määräsi sen purettavaksi vuonna 1527 uskonpuhdistuksen alkaessa, ja tiiliä käytettiin kaupungin puolustusrakenteisiin. Nykyinen kirkko on myöhempi.
+
+### 21.1
+KYSYMYS: Miltä Klara kloster näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klara kloster (historia)
+Tietoruudun teksti: Sankta Klaran klarissaluostari perustettiin Tukholmaan 1280-luvulla. Kustaa Vaasa määräsi sen purettavaksi vuonna 1527 uskonpuhdistuksen alkaessa, ja tiiliä käytettiin kaupungin puolustusrakenteisiin. Nykyinen kirkko on myöhempi.
+
+### 21.2
+KYSYMYS: Miksi Klara kloster katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klara kloster (historia)
+Tietoruudun teksti: Sankta Klaran klarissaluostari perustettiin Tukholmaan 1280-luvulla. Kustaa Vaasa määräsi sen purettavaksi vuonna 1527 uskonpuhdistuksen alkaessa, ja tiiliä käytettiin kaupungin puolustusrakenteisiin. Nykyinen kirkko on myöhempi.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-industripalatset-1897) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Industripalatset (historia)
+Tietoruudun teksti: Kuningas Oscar II avasi Tukholman suuren taide- ja teollisuusnäyttelyn Djurgårdenilla 15.5.1897. Arkkitehti Ferdinand Bobergin suunnittelema Industripalatset oli näyttelyn näyttävin rakennus, 16 820 m² puinen halli, jonka 100-metrinen kupoli ja neljä minareettia hallitsivat koko saarta. Tilapäiseksi tarkoitettu jättiläinen purettiin näyttelyn päätyttyä.
+
+### 22.1
+KYSYMYS: Miltä Industripalatset näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Industripalatset (historia)
+Tietoruudun teksti: Kuningas Oscar II avasi Tukholman suuren taide- ja teollisuusnäyttelyn Djurgårdenilla 15.5.1897. Arkkitehti Ferdinand Bobergin suunnittelema Industripalatset oli näyttelyn näyttävin rakennus, 16 820 m² puinen halli, jonka 100-metrinen kupoli ja neljä minareettia hallitsivat koko saarta. Tilapäiseksi tarkoitettu jättiläinen purettiin näyttelyn päätyttyä.
+
+### 22.2
+KYSYMYS: Miksi Industripalatset katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Industripalatset (historia)
+Tietoruudun teksti: Kuningas Oscar II avasi Tukholman suuren taide- ja teollisuusnäyttelyn Djurgårdenilla 15.5.1897. Arkkitehti Ferdinand Bobergin suunnittelema Industripalatset oli näyttelyn näyttävin rakennus, 16 820 m² puinen halli, jonka 100-metrinen kupoli ja neljä minareettia hallitsivat koko saarta. Tilapäiseksi tarkoitettu jättiläinen purettiin näyttelyn päätyttyä.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-sarek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarekin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Sarekin kansallispuisto sijaitsee Ruotsin Lapissa Jokkmokkin kunnassa, napapiirin pohjoispuolella, ja se perustettiin vuonna 1909 Euroopan vanhimpien kansallispuistojen joukossa. Alue on Ruotsin vuoristoisin: puistossa on kuusi maan kolmestatoista yli 2 000 metrin huipusta, korkeimpana Sarektjåkkå (2 089 m), sekä noin sata jäätikköä. Merkittyjä polkuja tai majoitusta ei ole, sillatkin ovat harvassa ja sadetta tulee poikkeuksellisen paljon, joten vaellus on vaativaa. Rapajoen suisto on yksi Euroopan tunnetuimmista maisemista: jäätiköistä syntyvä joki kuljettaa mukanaan runsaasti maa-ainesta, joka värjää sen harmaanvihreäksi ja muodostaa laajoja suistoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Erämaa ilman polkuja] Sarek perustettiin kansallispuistoksi 1909, samana vuonna kuin Euroopan ensimmäiset kansallispuistot ylipäätään. Se on lähes tienotonta ja polutonta tunturimaata: parisataa yli 1800-metristä huippua, kymmeniä jäätiköitä eikä juuri lainkaan siltoja. Sisään mennään omin voimin ja ulos samoin. Kuuluisin näkymä on Rapadalen, jossa jäätiköiden liete on kasannut jokeen suistoja kuin punos — vihreä laakso keskellä harmaita vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten kaikki tarvittava kannetaan selässä.
+
+### 23.1
+KYSYMYS: Miksi juuri Sarekin vuoristomaisema haluttiin suojella jo Euroopan ensimmäisten kansallispuistojen joukossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarekin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Sarekin kansallispuisto sijaitsee Ruotsin Lapissa Jokkmokkin kunnassa, napapiirin pohjoispuolella, ja se perustettiin vuonna 1909 Euroopan vanhimpien kansallispuistojen joukossa. Alue on Ruotsin vuoristoisin: puistossa on kuusi maan kolmestatoista yli 2 000 metrin huipusta, korkeimpana Sarektjåkkå (2 089 m), sekä noin sata jäätikköä. Merkittyjä polkuja tai majoitusta ei ole, sillatkin ovat harvassa ja sadetta tulee poikkeuksellisen paljon, joten vaellus on vaativaa. Rapajoen suisto on yksi Euroopan tunnetuimmista maisemista: jäätiköistä syntyvä joki kuljettaa mukanaan runsaasti maa-ainesta, joka värjää sen harmaanvihreäksi ja muodostaa laajoja suistoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Erämaa ilman polkuja] Sarek perustettiin kansallispuistoksi 1909, samana vuonna kuin Euroopan ensimmäiset kansallispuistot ylipäätään. Se on lähes tienotonta ja polutonta tunturimaata: parisataa yli 1800-metristä huippua, kymmeniä jäätiköitä eikä juuri lainkaan siltoja. Sisään mennään omin voimin ja ulos samoin. Kuuluisin näkymä on Rapadalen, jossa jäätiköiden liete on kasannut jokeen suistoja kuin punos — vihreä laakso keskellä harmaita vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten kaikki tarvittava kannetaan selässä.
+
+### 23.2
+KYSYMYS: Mikä saa Rapajoen suiston näyttämään ylhäältä katsottuna niin erikoiselta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarekin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Sarekin kansallispuisto sijaitsee Ruotsin Lapissa Jokkmokkin kunnassa, napapiirin pohjoispuolella, ja se perustettiin vuonna 1909 Euroopan vanhimpien kansallispuistojen joukossa. Alue on Ruotsin vuoristoisin: puistossa on kuusi maan kolmestatoista yli 2 000 metrin huipusta, korkeimpana Sarektjåkkå (2 089 m), sekä noin sata jäätikköä. Merkittyjä polkuja tai majoitusta ei ole, sillatkin ovat harvassa ja sadetta tulee poikkeuksellisen paljon, joten vaellus on vaativaa. Rapajoen suisto on yksi Euroopan tunnetuimmista maisemista: jäätiköistä syntyvä joki kuljettaa mukanaan runsaasti maa-ainesta, joka värjää sen harmaanvihreäksi ja muodostaa laajoja suistoja.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-abisko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Abiskon kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Abiskon kansallispuisto sijaitsee Ruotsin Lapissa Torneträsk-järven rannalla, noin 195 kilometriä napapiirin pohjoispuolella. Sen ehdotti ja perusti vuonna 1909 joukko tunnettuja ruotsalaisia tiedemiehiä, joukossaan geologi Fredrik Svenonius, samana vuonna kun maan ensimmäiset luonnonsuojelulait säädettiin. Tarkoitus oli säilyttää pohjoista tunturiluontoa alkuperäisessä tilassaan tutkimuksen käyttöön, ja puistosta haluttiin myös matkailukohde. Abiskon tutkimusasema perustettiin ensin Vassijaureen vuonna 1903 ja rakennettiin tulipalon jälkeen uudelleen Abiskoon. Kesällä siellä voi nähdä keskiyön auringon ja talvella valosaasteettomalla taivaalla revontulia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Rovaniemi — kaupunkilehti / Tunturi] Tunturissa eläminen on aina ollut liikkumista ja lämmön säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat kulkivat ahkiossa, ja talo kaivettiin maahan.
+
+### 24.1
+KYSYMYS: Miksi tiedemiehet halusivat suojella juuri Abiskon tunturiluontoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Abiskon kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Abiskon kansallispuisto sijaitsee Ruotsin Lapissa Torneträsk-järven rannalla, noin 195 kilometriä napapiirin pohjoispuolella. Sen ehdotti ja perusti vuonna 1909 joukko tunnettuja ruotsalaisia tiedemiehiä, joukossaan geologi Fredrik Svenonius, samana vuonna kun maan ensimmäiset luonnonsuojelulait säädettiin. Tarkoitus oli säilyttää pohjoista tunturiluontoa alkuperäisessä tilassaan tutkimuksen käyttöön, ja puistosta haluttiin myös matkailukohde. Abiskon tutkimusasema perustettiin ensin Vassijaureen vuonna 1903 ja rakennettiin tulipalon jälkeen uudelleen Abiskoon. Kesällä siellä voi nähdä keskiyön auringon ja talvella valosaasteettomalla taivaalla revontulia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Rovaniemi — kaupunkilehti / Tunturi] Tunturissa eläminen on aina ollut liikkumista ja lämmön säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat kulkivat ahkiossa, ja talo kaivettiin maahan.
+
+### 24.2
+KYSYMYS: Mitä hyötyä tutkijoille on siitä, että Abisko on kaukana pohjoisessa ja vapaa valosaasteesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Abiskon kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Abiskon kansallispuisto sijaitsee Ruotsin Lapissa Torneträsk-järven rannalla, noin 195 kilometriä napapiirin pohjoispuolella. Sen ehdotti ja perusti vuonna 1909 joukko tunnettuja ruotsalaisia tiedemiehiä, joukossaan geologi Fredrik Svenonius, samana vuonna kun maan ensimmäiset luonnonsuojelulait säädettiin. Tarkoitus oli säilyttää pohjoista tunturiluontoa alkuperäisessä tilassaan tutkimuksen käyttöön, ja puistosta haluttiin myös matkailukohde. Abiskon tutkimusasema perustettiin ensin Vassijaureen vuonna 1903 ja rakennettiin tulipalon jälkeen uudelleen Abiskoon. Kesällä siellä voi nähdä keskiyön auringon ja talvella valosaasteettomalla taivaalla revontulia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-vattern) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vättern (luonto · järvi)
+Tietoruudun teksti: Vättern on Ruotsin toiseksi suurin järvi Vänernin jälkeen ja Euroopan kuudenneksi suurin. Se on pitkä, sormen muotoinen järvi Etelä-Ruotsissa, ja sen pinta-ala on noin 1 900 neliökilometriä. Vättern on paljon Vänerniä syvempi: syvin kohta on 128 metriä merenpinnan alapuolella, ja siksi vettä on noin puolet Vänernin määrästä, vaikka pinta-ala on vain kolmannes. Rannoilla ovat muun muassa Jönköping, Vadstena ja Gränna, jonka edustalla on Visingsö-saari. Vesi on niin kirkasta, että monet ympäristön kunnat ottavat juomavetensä suoraan järvestä. Vedet laskevat Motala ström -virtaa pitkin Itämereen, ja vuodesta 1832 lähtien Götan kanava on yhdistänyt järven myös Vänerniin ja Kattegatiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Saksalaisperintö: Perämangkit, kukkuloiden oma kansa] Perämangkit ovat Adelaide Hillsin perinteinen kansa, ja Barossan laakso on osa heidän maataan. Tuhansien vuosien läsnäolosta kertovat esineet, arpeutuneet puut ja suojapaikkojen maalaukset. Kansa ei kuitenkaan jäänyt maisemaan pelkiksi jäljiksi: sukuryhmien nimet Poonawatta, Tarrawatta ja Karrawatta ovat säilyneet, monessa perheessä perämangkien sukujuuri kulkee edelleen, ja viime vuosikymmeninä jälkeläisiä on etsitty sukututkimuksella. Adelaide Hillsin koulut, kirkot ja kunnat pyytävät nykyään usein perämangkien vanhimpia ja taiteilijoita pitämään tervetuliaisseremonian.
+
+### 25.1
+KYSYMYS: Miksi monet Vätternin ympäristön kunnat ottavat juomavetensä lähes sellaisenaan järvestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vättern (luonto · järvi)
+Tietoruudun teksti: Vättern on Ruotsin toiseksi suurin järvi Vänernin jälkeen ja Euroopan kuudenneksi suurin. Se on pitkä, sormen muotoinen järvi Etelä-Ruotsissa, ja sen pinta-ala on noin 1 900 neliökilometriä. Vättern on paljon Vänerniä syvempi: syvin kohta on 128 metriä merenpinnan alapuolella, ja siksi vettä on noin puolet Vänernin määrästä, vaikka pinta-ala on vain kolmannes. Rannoilla ovat muun muassa Jönköping, Vadstena ja Gränna, jonka edustalla on Visingsö-saari. Vesi on niin kirkasta, että monet ympäristön kunnat ottavat juomavetensä suoraan järvestä. Vedet laskevat Motala ström -virtaa pitkin Itämereen, ja vuodesta 1832 lähtien Götan kanava on yhdistänyt järven myös Vänerniin ja Kattegatiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Saksalaisperintö: Perämangkit, kukkuloiden oma kansa] Perämangkit ovat Adelaide Hillsin perinteinen kansa, ja Barossan laakso on osa heidän maataan. Tuhansien vuosien läsnäolosta kertovat esineet, arpeutuneet puut ja suojapaikkojen maalaukset. Kansa ei kuitenkaan jäänyt maisemaan pelkiksi jäljiksi: sukuryhmien nimet Poonawatta, Tarrawatta ja Karrawatta ovat säilyneet, monessa perheessä perämangkien sukujuuri kulkee edelleen, ja viime vuosikymmeninä jälkeläisiä on etsitty sukututkimuksella. Adelaide Hillsin koulut, kirkot ja kunnat pyytävät nykyään usein perämangkien vanhimpia ja taiteilijoita pitämään tervetuliaisseremonian.
+
+### 25.2
+KYSYMYS: Mihin vedet virtaavat Vätternistä, kun järvi on yhteydessä sekä Motala strömiin että Götan kanavaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vättern (luonto · järvi)
+Tietoruudun teksti: Vättern on Ruotsin toiseksi suurin järvi Vänernin jälkeen ja Euroopan kuudenneksi suurin. Se on pitkä, sormen muotoinen järvi Etelä-Ruotsissa, ja sen pinta-ala on noin 1 900 neliökilometriä. Vättern on paljon Vänerniä syvempi: syvin kohta on 128 metriä merenpinnan alapuolella, ja siksi vettä on noin puolet Vänernin määrästä, vaikka pinta-ala on vain kolmannes. Rannoilla ovat muun muassa Jönköping, Vadstena ja Gränna, jonka edustalla on Visingsö-saari. Vesi on niin kirkasta, että monet ympäristön kunnat ottavat juomavetensä suoraan järvestä. Vedet laskevat Motala ström -virtaa pitkin Itämereen, ja vuodesta 1832 lähtien Götan kanava on yhdistänyt järven myös Vänerniin ja Kattegatiin.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

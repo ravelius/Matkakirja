@@ -1,0 +1,289 @@
+================ KOHTA 6 (kohde:gamla-uppsala) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+
+### 6.1
+KYSYMYS: Mitä kuningas julisti Uppsalan käräjillä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+
+### 6.2
+KYSYMYS: Mikä Disting oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:birka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birka (kauppa)
+Tietoruudun teksti: Birka oli viikinkiajan tärkeä kauppapaikka Björkön saarella Mälarenissa, kolmisenkymmentä kilometriä nykyisestä Tukholmasta länteen. Se perustettiin noin vuonna 750 ja kukoisti yli kahdensadan vuoden ajan; hylätyksi se jäi noin 975, suunnilleen samaan aikaan kun Sigtuna perustettiin kristityksi kaupungiksi. Asukkaita arvioidaan olleen 500–1 000.
+
+Birka oli Itämeren pää Dneprin kauppareitillä, joka kulki Laatokan ja Novgorodin kautta Bysantin valtakuntaan ja Abbasidien kalifaattiin. Kauppatavaraa olivat turkikset, rautaesineet ja käsityötuotteet — karhun, ketun, näädän, saukon ja majavan nahkoja saatiin saamelaisilta, suomalaisilta ja Luoteis-Venäjän asukkailta. Myös poronsarvet, mursunhampaat, meripihka ja hunaja kulkivat kauppaa.
+
+Haudoista on löytynyt lasia ja metalliesineitä, Reininmaan keramiikkaa, kiinalaista silkkiä, bysanttilaista kultalankakirjontaa ja korkealaatuisia punoksia.
+…
+
+### 7.1
+KYSYMYS: Mihin asti Birkan kauppareitti ulottui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birka (kauppa)
+Tietoruudun teksti: Birka oli viikinkiajan tärkeä kauppapaikka Björkön saarella Mälarenissa, kolmisenkymmentä kilometriä nykyisestä Tukholmasta länteen. Se perustettiin noin vuonna 750 ja kukoisti yli kahdensadan vuoden ajan; hylätyksi se jäi noin 975, suunnilleen samaan aikaan kun Sigtuna perustettiin kristityksi kaupungiksi. Asukkaita arvioidaan olleen 500–1 000.
+
+Birka oli Itämeren pää Dneprin kauppareitillä, joka kulki Laatokan ja Novgorodin kautta Bysantin valtakuntaan ja Abbasidien kalifaattiin. Kauppatavaraa olivat turkikset, rautaesineet ja käsityötuotteet — karhun, ketun, näädän, saukon ja majavan nahkoja saatiin saamelaisilta, suomalaisilta ja Luoteis-Venäjän asukkailta. Myös poronsarvet, mursunhampaat, meripihka ja hunaja kulkivat kauppaa.
+
+Haudoista on löytynyt lasia ja metalliesineitä, Reininmaan keramiikkaa, kiinalaista silkkiä, bysanttilaista kultalankakirjontaa ja korkealaatuisia punoksia.
+…
+
+### 7.2
+KYSYMYS: Milloin Birka hylättiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birka (kauppa)
+Tietoruudun teksti: Birka oli viikinkiajan tärkeä kauppapaikka Björkön saarella Mälarenissa, kolmisenkymmentä kilometriä nykyisestä Tukholmasta länteen. Se perustettiin noin vuonna 750 ja kukoisti yli kahdensadan vuoden ajan; hylätyksi se jäi noin 975, suunnilleen samaan aikaan kun Sigtuna perustettiin kristityksi kaupungiksi. Asukkaita arvioidaan olleen 500–1 000.
+
+Birka oli Itämeren pää Dneprin kauppareitillä, joka kulki Laatokan ja Novgorodin kautta Bysantin valtakuntaan ja Abbasidien kalifaattiin. Kauppatavaraa olivat turkikset, rautaesineet ja käsityötuotteet — karhun, ketun, näädän, saukon ja majavan nahkoja saatiin saamelaisilta, suomalaisilta ja Luoteis-Venäjän asukkailta. Myös poronsarvet, mursunhampaat, meripihka ja hunaja kulkivat kauppaa.
+
+Haudoista on löytynyt lasia ja metalliesineitä, Reininmaan keramiikkaa, kiinalaista silkkiä, bysanttilaista kultalankakirjontaa ja korkealaatuisia punoksia.
+…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:falunin-kaivos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Falunin kaivos (tekniikka)
+Tietoruudun teksti: Falunin kaivos toimi vuosituhannen ajan: arviolta 900-luvulta vuoteen 1992. Parhaimmillaan se tuotti kaksi kolmasosaa koko Euroopan kuparintarpeesta ja rahoitti monta Ruotsin 1600-luvun sotaa. Kaivoksessa kehitetyt menetelmät vaikuttivat kaivostoimintaan maailmanlaajuisesti kahden vuosisadan ajan.
+
+Alussa toiminta oli pientä: paikalliset talonpojat keräsivät malmia, sulattivat sen ja käyttivät metallin kotitarpeisiin. Maunu Ladonlukon aikaan 1200-luvun lopulla aatelisto ja lyypekkiläiset kauppiaat ottivat toiminnan haltuunsa. Ensimmäinen kirjallinen maininta on vuodelta 1288: Västeråsin piispa sai kartanoa vastaan 12,5 prosentin osuuden kaivoksesta.
+
+Kuparia irrotettiin tulittamalla. Kalliota kuumennettiin suurilla nuotioilla, ja kun kivi jäähtyi, se haurastui ja halkeili niin että kiilat ja moukarit purivat siihen. Tulittaminen oli päämenetelmä satojen vuosien ajan.
+
+Malmi pasutettiin …
+
+### 8.1
+KYSYMYS: Mitä tulittaminen kaivoksessa tarkoitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Falunin kaivos (tekniikka)
+Tietoruudun teksti: Falunin kaivos toimi vuosituhannen ajan: arviolta 900-luvulta vuoteen 1992. Parhaimmillaan se tuotti kaksi kolmasosaa koko Euroopan kuparintarpeesta ja rahoitti monta Ruotsin 1600-luvun sotaa. Kaivoksessa kehitetyt menetelmät vaikuttivat kaivostoimintaan maailmanlaajuisesti kahden vuosisadan ajan.
+
+Alussa toiminta oli pientä: paikalliset talonpojat keräsivät malmia, sulattivat sen ja käyttivät metallin kotitarpeisiin. Maunu Ladonlukon aikaan 1200-luvun lopulla aatelisto ja lyypekkiläiset kauppiaat ottivat toiminnan haltuunsa. Ensimmäinen kirjallinen maininta on vuodelta 1288: Västeråsin piispa sai kartanoa vastaan 12,5 prosentin osuuden kaivoksesta.
+
+Kuparia irrotettiin tulittamalla. Kalliota kuumennettiin suurilla nuotioilla, ja kun kivi jäähtyi, se haurastui ja halkeili niin että kiilat ja moukarit purivat siihen. Tulittaminen oli päämenetelmä satojen vuosien ajan.
+
+Malmi pasutettiin …
+
+### 8.2
+KYSYMYS: Kuinka suuri osa Euroopan kuparista tuli Falunista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Falunin kaivos (tekniikka)
+Tietoruudun teksti: Falunin kaivos toimi vuosituhannen ajan: arviolta 900-luvulta vuoteen 1992. Parhaimmillaan se tuotti kaksi kolmasosaa koko Euroopan kuparintarpeesta ja rahoitti monta Ruotsin 1600-luvun sotaa. Kaivoksessa kehitetyt menetelmät vaikuttivat kaivostoimintaan maailmanlaajuisesti kahden vuosisadan ajan.
+
+Alussa toiminta oli pientä: paikalliset talonpojat keräsivät malmia, sulattivat sen ja käyttivät metallin kotitarpeisiin. Maunu Ladonlukon aikaan 1200-luvun lopulla aatelisto ja lyypekkiläiset kauppiaat ottivat toiminnan haltuunsa. Ensimmäinen kirjallinen maininta on vuodelta 1288: Västeråsin piispa sai kartanoa vastaan 12,5 prosentin osuuden kaivoksesta.
+
+Kuparia irrotettiin tulittamalla. Kalliota kuumennettiin suurilla nuotioilla, ja kun kivi jäähtyi, se haurastui ja halkeili niin että kiilat ja moukarit purivat siihen. Tulittaminen oli päämenetelmä satojen vuosien ajan.
+
+Malmi pasutettiin …
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:gota-kanava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta-kanava (tekniikka)
+Tietoruudun teksti: Göta-kanava on 1800-luvun alussa rakennettu kanava. Se on 190 kilometriä pitkä, ja siitä 87 kilometriä on kaivettu tai louhittu; leveys vaihtelee seitsemästä neljääntoista metriin ja suurin syvyys on noin kolme metriä.
+
+Kanava on osa 390 kilometrin vesitietä, joka yhdistää järviä ja jokia niin, että reitti kulkee Göteborgista länsirannikolta Söderköpingiin Itämerelle Trollhätte-kanavan ja Göta älvin kautta sekä suurten Vänernin ja Vätternin läpi. Vesitietä on kutsuttu Ruotsin siniseksi nauhaksi.
+
+Ajatuksen esitti jo vuonna 1516 Linköpingin piispa Hans Brask, mutta työhön ryhtyi vasta 1800-luvun alussa Baltzar von Platen. Hanke aloitettiin 11. huhtikuuta 1810, ja se oli ylivoimaisesti suurin rakennusurakka, jota Ruotsissa oli siihen mennessä yritetty: 22 vuotta työtä ja yli 58 000 työntekijää.
+
+Osaaminen ja välineet piti hankkia ulkomailta. Skotlantilainen insinööri Thomas Telford, joka …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+- [Valparaíso — kaupunkilehti / Valparaíso: Kanava joka vei aseman] Panaman kanavan avaaminen 1914 käänsi kaiken: laivat alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, sataman liikenne väheni ja kaupungin talous taantui. 1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat perheet muuttivat pois. 2000-luvulla San Antonion satama ohitti sen käsitellyssä konttimäärässä. Laituri on silti vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.
+
+### 9.1
+KYSYMYS: Kuka piirsi kanavan ensimmäiset suunnitelmat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta-kanava (tekniikka)
+Tietoruudun teksti: Göta-kanava on 1800-luvun alussa rakennettu kanava. Se on 190 kilometriä pitkä, ja siitä 87 kilometriä on kaivettu tai louhittu; leveys vaihtelee seitsemästä neljääntoista metriin ja suurin syvyys on noin kolme metriä.
+
+Kanava on osa 390 kilometrin vesitietä, joka yhdistää järviä ja jokia niin, että reitti kulkee Göteborgista länsirannikolta Söderköpingiin Itämerelle Trollhätte-kanavan ja Göta älvin kautta sekä suurten Vänernin ja Vätternin läpi. Vesitietä on kutsuttu Ruotsin siniseksi nauhaksi.
+
+Ajatuksen esitti jo vuonna 1516 Linköpingin piispa Hans Brask, mutta työhön ryhtyi vasta 1800-luvun alussa Baltzar von Platen. Hanke aloitettiin 11. huhtikuuta 1810, ja se oli ylivoimaisesti suurin rakennusurakka, jota Ruotsissa oli siihen mennessä yritetty: 22 vuotta työtä ja yli 58 000 työntekijää.
+
+Osaaminen ja välineet piti hankkia ulkomailta. Skotlantilainen insinööri Thomas Telford, joka …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kaupunkilehti / Valparaíso: Kanava joka vei aseman] Panaman kanavan avaaminen 1914 käänsi kaiken: laivat alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, sataman liikenne väheni ja kaupungin talous taantui. 1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat perheet muuttivat pois. 2000-luvulla San Antonion satama ohitti sen käsitellyssä konttimäärässä. Laituri on silti vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.
+- [Egypti — maalehti / Historia: Kanava, jota maailma vahtii] 1869 — Suezin kanava avattiin 1869, ja se lyhensi merimatkan Euroopasta Aasiaan tuhansilla kilometreillä — laivojen ei enää tarvinnut kiertää koko Afrikkaa. Nykyään kanavan kautta kulkee yli kymmenesosa maailmankaupasta. Keväällä 2021 koko maailma sai muistutuksen kapeikon merkityksestä, kun 400-metrinen konttilaiva Ever Given juuttui poikittain kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja kaivinkone kaivoi keulaa irti hiekasta koko maailman seuratessa.
+
+### 9.2
+KYSYMYS: Kuinka kauan kanavan kaivaminen kesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta-kanava (tekniikka)
+Tietoruudun teksti: Göta-kanava on 1800-luvun alussa rakennettu kanava. Se on 190 kilometriä pitkä, ja siitä 87 kilometriä on kaivettu tai louhittu; leveys vaihtelee seitsemästä neljääntoista metriin ja suurin syvyys on noin kolme metriä.
+
+Kanava on osa 390 kilometrin vesitietä, joka yhdistää järviä ja jokia niin, että reitti kulkee Göteborgista länsirannikolta Söderköpingiin Itämerelle Trollhätte-kanavan ja Göta älvin kautta sekä suurten Vänernin ja Vätternin läpi. Vesitietä on kutsuttu Ruotsin siniseksi nauhaksi.
+
+Ajatuksen esitti jo vuonna 1516 Linköpingin piispa Hans Brask, mutta työhön ryhtyi vasta 1800-luvun alussa Baltzar von Platen. Hanke aloitettiin 11. huhtikuuta 1810, ja se oli ylivoimaisesti suurin rakennusurakka, jota Ruotsissa oli siihen mennessä yritetty: 22 vuotta työtä ja yli 58 000 työntekijää.
+
+Osaaminen ja välineet piti hankkia ulkomailta. Skotlantilainen insinööri Thomas Telford, joka …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:vadstenan-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vadstenan luostari (kulttuuri)
+Tietoruudun teksti: Vadstenan luostari on rakennusryhmä Vätternin rannalla. Pyhä Birgitta perusti sen vuonna 1346 kuningas Maunu Eerikinpojan ja kuningatar Blankan avulla: kuningaspari lahjoitti testamentillaan luostarille kymmenen tilaa, niiden joukossa Vadstenan.
+
+Luostarikirkko alkoi puukirkkona, joka paloi vuonna 1388. Se rakennettiin uudelleen 1300-luvun lopulla Birgitan ohjeiden mukaan; hän kertoi saaneensa ohjeet Jeesukselta ja tahtoi, että kirkko olisi varustukseltaan yksinkertainen. Kirkko vihittiin 16. helmikuuta 1430.
+
+Birgitan tytär, pyhä Katariina, saapui luostariin 1374 äitinsä jäännösten kanssa ja löysi sieltä vain muutaman noviisin; hänet valittiin abbedissaksi. Birgitan pyhäksi julistaminen 1391 ja hänen jäännöstensä siirto luostarikirkkoon 1394 toivat yhteisölle mainetta ja rikkautta.
+
+Luostari toimi birgittalaisten nunnien luostarina vuodesta 1346 vuoteen 1605, jolloin sen viimeinen ruot…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino: Ulkoa koruton, sisältä joka pinta maalattu] Korttelin katedraalin nimi on Pyhän Vapahtajan katedraali, mutta se tunnetaan sanasta vank, joka tarkoittaa armeniaksi luostaria. Se perustettiin 1606 ja sai lopullisen muotonsa vuosina 1655–1664 arkkipiispa Davidin valvonnassa. Pohjakaava yhdistää kahta perinnettä: kupolisali on kuin iranilaisessa moskeijassa, mutta siihen liittyy puolikkaan kahdeksankulmion muotoinen apsis ja koroke, jollainen kuuluu länsimaiseen kirkkoon. Ulkoa talo on paljasta tiiltä ja koruton. Sisällä kupolin keskiössä on luomiskertomus, holvikulmissa kerubin pää siipien välissä ja seinillä kaksi kuvanauhaa päällekkäin. Pihalla seisoo erillinen kellotorni.
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 10.1
+KYSYMYS: Kuka luostarin perusti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vadstenan luostari (kulttuuri)
+Tietoruudun teksti: Vadstenan luostari on rakennusryhmä Vätternin rannalla. Pyhä Birgitta perusti sen vuonna 1346 kuningas Maunu Eerikinpojan ja kuningatar Blankan avulla: kuningaspari lahjoitti testamentillaan luostarille kymmenen tilaa, niiden joukossa Vadstenan.
+
+Luostarikirkko alkoi puukirkkona, joka paloi vuonna 1388. Se rakennettiin uudelleen 1300-luvun lopulla Birgitan ohjeiden mukaan; hän kertoi saaneensa ohjeet Jeesukselta ja tahtoi, että kirkko olisi varustukseltaan yksinkertainen. Kirkko vihittiin 16. helmikuuta 1430.
+
+Birgitan tytär, pyhä Katariina, saapui luostariin 1374 äitinsä jäännösten kanssa ja löysi sieltä vain muutaman noviisin; hänet valittiin abbedissaksi. Birgitan pyhäksi julistaminen 1391 ja hänen jäännöstensä siirto luostarikirkkoon 1394 toivat yhteisölle mainetta ja rikkautta.
+
+Luostari toimi birgittalaisten nunnien luostarina vuodesta 1346 vuoteen 1605, jolloin sen viimeinen ruot…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+
+### 10.2
+KYSYMYS: Miksi kirkko on niin koruton?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vadstenan luostari (kulttuuri)
+Tietoruudun teksti: Vadstenan luostari on rakennusryhmä Vätternin rannalla. Pyhä Birgitta perusti sen vuonna 1346 kuningas Maunu Eerikinpojan ja kuningatar Blankan avulla: kuningaspari lahjoitti testamentillaan luostarille kymmenen tilaa, niiden joukossa Vadstenan.
+
+Luostarikirkko alkoi puukirkkona, joka paloi vuonna 1388. Se rakennettiin uudelleen 1300-luvun lopulla Birgitan ohjeiden mukaan; hän kertoi saaneensa ohjeet Jeesukselta ja tahtoi, että kirkko olisi varustukseltaan yksinkertainen. Kirkko vihittiin 16. helmikuuta 1430.
+
+Birgitan tytär, pyhä Katariina, saapui luostariin 1374 äitinsä jäännösten kanssa ja löysi sieltä vain muutaman noviisin; hänet valittiin abbedissaksi. Birgitan pyhäksi julistaminen 1391 ja hänen jäännöstensä siirto luostarikirkkoon 1394 toivat yhteisölle mainetta ja rikkautta.
+
+Luostari toimi birgittalaisten nunnien luostarina vuodesta 1346 vuoteen 1605, jolloin sen viimeinen ruot…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino: Ulkoa koruton, sisältä joka pinta maalattu] Korttelin katedraalin nimi on Pyhän Vapahtajan katedraali, mutta se tunnetaan sanasta vank, joka tarkoittaa armeniaksi luostaria. Se perustettiin 1606 ja sai lopullisen muotonsa vuosina 1655–1664 arkkipiispa Davidin valvonnassa. Pohjakaava yhdistää kahta perinnettä: kupolisali on kuin iranilaisessa moskeijassa, mutta siihen liittyy puolikkaan kahdeksankulmion muotoinen apsis ja koroke, jollainen kuuluu länsimaiseen kirkkoon. Ulkoa talo on paljasta tiiltä ja koruton. Sisällä kupolin keskiössä on luomiskertomus, holvikulmissa kerubin pää siipien välissä ja seinillä kaksi kuvanauhaa päällekkäin. Pihalla seisoo erillinen kellotorni.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

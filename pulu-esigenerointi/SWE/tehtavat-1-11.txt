@@ -1,0 +1,68 @@
+================ KOHTA 51 (nosto:vasaloppet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+- [Suomi — maalehti / Arki: Metsä on kaikkien] Elokuussa — Suomessa saa kävellä, hiihtää ja poimia marjoja ja sieniä toisenkin omistamassa metsässä ilman lupaa. Oikeutta sanotaan jokamiehenoikeudeksi, ja se koskee myös ulkomaalaisia. Rajat ovat selvät: pihaan, peltoon ja istutuksiin ei mennä, tulta ei tehdä ilman lupaa eikä puita saa vahingoittaa. Metsissä kasvaa vuosittain satoja miljoonia kiloja marjoja, mutta niistä poimitaan vain pieni osa. Poimituin on mustikka, jota kerätään ämpäriin loppukesästä.
+
+### 51.1
+KYSYMYS: Miksi Kustaa Vaasa pakeni Taalainmaalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+
+### 51.2
+KYSYMYS: Kuinka moni hiihtää Vasaloppetin nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Arki: Metsä on kaikkien] Elokuussa — Suomessa saa kävellä, hiihtää ja poimia marjoja ja sieniä toisenkin omistamassa metsässä ilman lupaa. Oikeutta sanotaan jokamiehenoikeudeksi, ja se koskee myös ulkomaalaisia. Rajat ovat selvät: pihaan, peltoon ja istutuksiin ei mennä, tulta ei tehdä ilman lupaa eikä puita saa vahingoittaa. Metsissä kasvaa vuosittain satoja miljoonia kiloja marjoja, mutta niistä poimitaan vain pieni osa. Poimituin on mustikka, jota kerätään ämpäriin loppukesästä.
+
+### 51.3
+KYSYMYS: Miksi naiset kiellettiin Vasaloppetista vuonna 1924?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
