@@ -337,6 +337,8 @@ namespace Matkakirja.Linssit.Kierros
         /// jatkaa samaan suuntaan keskeytyksettä kokonaiskiertoon PalloKaariKokoAst asti.
         /// </summary>
         public const double PalloLentoKaariAst = 45, PalloLentoKaariS = 12, PalloKaariKokoAst = 80, PalloKaariVaraAst = 60, PalloLentoKaariMaxAstS = 4;
+        /// <summary>Pysähdyksen kohdekaari vähintään (°) ja vara seuraavan suuntaan (°).</summary>
+        public const double PalloKaariMinAst = 30, PalloKaariMinVaraAst = 15;
         double lentoKaari, lentoKaariT0, lentoKaariLoppuW, kaariJatkuu; int lentoKaariSuunta;
         const double LentoKaariLoppu = 0.96;
 
@@ -1435,7 +1437,10 @@ namespace Matkakirja.Linssit.Kierros
             double ero = Math.Atan2(kn, ke) - Math.Atan2(e.n, e.e);
             ero -= 2 * Math.PI * Math.Floor((ero + Math.PI) / (2 * Math.PI));
             double r0 = Math.Sqrt(e.e * e.e + e.n * e.n), lK = Math.Sqrt(ke * ke + kn * kn);
-            kaariRaja = lK < r0 ? 0 : OpasKuvaus.KaariOsuusSeuraavaan * Math.Abs(ero) * 180 / Math.PI;   // seuraava kaaren sisällä: ei kiertoa
+            double eroAst = Math.Abs(ero) * 180 / Math.PI;
+            // Vähimmäiskaari (kuva-arkki 9.10., T1: Kuninkaanlinnan pysähdys seisoi, kun seuraava oli lähes samassa suunnassa ja puolikas
+            // kaari jäi ~20°:een): vähintään PalloKaariMinAst, kuitenkin PalloKaariMinVaraAst ennen seuraavan tasaa.
+            kaariRaja = lK < r0 ? 0 : Math.Max(OpasKuvaus.KaariOsuusSeuraavaan * eroAst, Math.Min(PalloKaariMinAst, eroAst - PalloKaariMinVaraAst));   // seuraava kaaren sisällä: ei kiertoa
             // Lennon loppuosan kaarelta saapunut (AsetaLentoKaari): kaari jatkuu samaan suuntaan kokonaiskiertoon PalloKaariKokoAst asti,
             // enintään PalloKaariVaraAst ennen seuraavan tasaa (vauhti ei katkea saapuessa).
             if (kaariJatkuu > 0) kaariRaja = Math.Max(0, Math.Min(Math.Abs(ero) * 180 / Math.PI - PalloKaariVaraAst, PalloKaariKokoAst - kaariJatkuu));
@@ -1502,9 +1507,11 @@ namespace Matkakirja.Linssit.Kierros
                 // ALUN HIDAS KIERTO (Päätoimittaja 9.10.: "alun pyörähdys hitaaksi kierroksi koko aloituksen ajalle + lähestyminen"):
                 // avauskehys kiertää katsepistettä PalloAvausKiertoAst ja lähestyy PalloAvausLahesty-osuuden yhdellä S-käyrällä
                 // PalloAvausKiertoS:ssä (alkaa ja loppuu levosta, joten ensimmäinen lento lähtee levosta).
-                double p = KierrosLento.Smootherstep(Math.Min(1, kierto / PalloAvausKiertoS));
+                // AVAUS LIIKKUU KOKO AJAN (kuva-arkki 9.10., T2: Tukholman 44 s:n avaus ja opastus seisoivat 16 s:n kierron jälkeen
+                // paikallaan): kierto kestää avauksen äänen (+ opastus + lepo, AsetaAvausKesto), kulma kasvaa keston mukana.
+                double p = KierrosLento.Smootherstep(Math.Min(1, kierto / avausKiertoS));
                 var k0 = OpasKuvaus.Pysahdyksella(NykyinenKehys, 0, false);
-                var k1 = new Kuvakulma(k0.Lat, k0.Lon, k0.EtaisyysM * (1 - PalloAvausLahesty * p), k0.Kallistus, KierrosLento.Kiedo(k0.Suuntima + PalloAvausKiertoAst * p), k0.KatseKorkeusM);
+                var k1 = new Kuvakulma(k0.Lat, k0.Lon, k0.EtaisyysM * (1 - PalloAvausLahesty * p), k0.Kallistus, KierrosLento.Kiedo(k0.Suuntima + Math.Min(PalloAvausKiertoMaxAst, PalloAvausKiertoAst * avausKiertoS / PalloAvausKiertoS) * p), k0.KatseKorkeusM);
                 Asento = Ohjaus.Sovella(k1, NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM);
                 return;
             }
@@ -1512,6 +1519,11 @@ namespace Matkakirja.Linssit.Kierros
         }
         /// <summary>Avausnäkymän kierto (°), lähestyminen (osuus etäisyydestä) ja kesto (s; avaus + tauko on yleensä pidempi).</summary>
         public const double PalloAvausKiertoAst = 14, PalloAvausLahesty = 0.15, PalloAvausKiertoS = 16;
+        /// <summary>Avauksen kierto enintään (°), kun avaus on pitkä (kulma kasvaa keston mukana).</summary>
+        public const double PalloAvausKiertoMaxAst = 40;
+        double avausKiertoS = PalloAvausKiertoS;
+        /// <summary>Avauksen kesto (s; sovitin: avauksen ääni + opastus + lepo): avauskehyksen kierto kestää koko avauksen.</summary>
+        public void AsetaAvausKesto(double s) => avausKiertoS = Math.Max(PalloAvausKiertoS, s);
 
         /// <summary>
         /// Lennon suunta kohteeseen (Linssiseppä 9.10., omistaja TF 168: "matkaa seinen puolelta toiselle ihan turhaan"): normaalisti
