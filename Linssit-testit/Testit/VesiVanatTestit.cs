@@ -23,12 +23,12 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void VaahtoPeraanJaKiilaan()
         {
             double pit = 30, n = 6;
-            Oleta.Tosi(VesiVanat.Vaahto(60, 0, pit, n) > 0.2, "keskivana perässä");
-            Oleta.Tosi(VesiVanat.Vaahto(60, 0, pit, n) > VesiVanat.Vaahto(150, 0, pit, n), "häipyy pituuden mukana");
+            Oleta.Tosi(VesiVanat.Vaahto(30, 0, pit, n) > 0.2, "keskivana perässä (lyhyt vana 3,5 × pituus)");
+            Oleta.Tosi(VesiVanat.Vaahto(30, 0, pit, n) > VesiVanat.Vaahto(90, 0, pit, n), "häipyy pituuden mukana");
             Oleta.Sama(0.0, VesiVanat.Vaahto(pit * VesiVanat.PituusKerroin + 1, 0, pit, n), "loppuu");
             double varsi = VesiVanat.KiilaTan * 80 + Math.Max(2, pit * VesiVanat.LeveysOsuus) * 0.5;
             Oleta.Tosi(VesiVanat.Vaahto(80, varsi, pit, n) > VesiVanat.Vaahto(80, varsi * 0.6, pit, n), "kiilan harja 19,5°");
-            Oleta.Tosi(VesiVanat.Vaahto(-pit * 0.5, 0, pit, n) > 0.3, "keula-aalto");
+            Oleta.Tosi(VesiVanat.Vaahto(-pit * 0.5, 0, pit, n) > 0.2, "keula-aalto (hillitty)");
             Oleta.Sama(0.0, VesiVanat.Vaahto(60, 0, pit, 0), "paikallaan ei vanaa");
             Oleta.Sama(VesiVanat.Vaahto(80, 7, pit, n), VesiVanat.Vaahto(80, -7, pit, n), "symmetrinen");
         }
@@ -37,8 +37,8 @@ namespace Matkakirja.Linssit.Testit
         {
             string s = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "VesiPinta.shader"));
             Oleta.Tosi(s.Contains("float4 _VesiVana[16]") && VesiVanat.VanojaMax == 16, "16 vanaa");
-            Oleta.Tosi(s.Contains("L = pit * 6.0") && s.Contains("b.x / 6.0") && s.Contains("pit * 0.18") && s.Contains("0.354 * max(0.0, taakse)"), "samat vakiot");
-            Oleta.Tosi(s.Contains("(keski * 0.6 + kaari * 0.15) * haivy + keula * 0.4 * n"), "sama kaava");
+            Oleta.Tosi(s.Contains("L = pit * 3.5") && s.Contains("b.x / 6.0") && s.Contains("pit * 0.14") && s.Contains("0.354 * max(0.0, taakse)"), "samat vakiot");
+            Oleta.Tosi(s.Contains("(keski * 0.45 + kaari * 0.12) * haivy + keula * 0.25 * n"), "sama kaava");
         }
     }
 }

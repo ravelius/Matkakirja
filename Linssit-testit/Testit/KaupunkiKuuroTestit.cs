@@ -69,6 +69,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(V("VesiPinta.shader").Contains("+ IlmSininenHetki(r)"), "veden heijastus");
         }
 
+        [Testi] static void MuistihataIlmanTilesetinUudelleenluontia()
+        {
+            // Omistaja TF 169 (PT 9.10. 10.0x): tauolla näkymä katosi ja peli kaatui. SSE- ja välimuistiasettimet kutsuvat RecreateTileset():iä.
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            int i = c.IndexOf("void Muistivahti()"), j = c.IndexOf("void PaivitaPysaytys()");
+            Oleta.Tosi(i > 0 && j > i, "Muistivahti ja PaivitaPysaytys");
+            string vahti = c.Substring(i, j - i);
+            Oleta.Tosi(!vahti.Contains("maximumScreenSpaceError") && !vahti.Contains("maximumCachedBytes"), "hädässä ei SSE- eikä välimuistivaihtoa");
+            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;"), "karkea valinta hädässä, suspendUpdate tauolla");
+        }
+
         [Testi] static void LaattojenLeikkausKutenCesium()
         {
             // CesiumUnlitTilesetShader: Alpha = 1 − peitteen R (Lerp mustasta alfalla), raja 0,5, oletuskuva musta (A/B 9.10. 05.0x).
