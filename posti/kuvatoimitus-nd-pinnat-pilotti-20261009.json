@@ -1,0 +1,2899 @@
+{
+  "task": "nd-pinnat-pilotti-20261009",
+  "taskNumber": 57,
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-nd-pinnat-pilotti-20261009.md",
+      "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+      "blob": "2eca65525ee2e292022f86b8864e1870777b6f46"
+    }
+  ],
+  "sourceReadInFull": true,
+  "all27AttachmentsVerifiedAndViewed": true,
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "imageCount": 2,
+  "builtinToolInvocations": 4,
+  "preGenerationValidationRejections": 2,
+  "preGenerationValidationError": "More than5 reference paths rejected before generation; corrected to5 inputs. No extra model generation or image variant.",
+  "productionComplete": true,
+  "partialDelivery": false,
+  "allR2ReadbacksByteExact": true,
+  "projectionPass": false,
+  "allContentConstraintsPassed": false,
+  "assets": [
+    {
+      "id": "nd_etela",
+      "subject": "Notre-Dame eteläjulkisivu",
+      "taskNumber": 57,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/production/nd_etela/nd_etela_codex_v1.png",
+      "file": "nd_etela_codex_v1.png",
+      "sha256": "5d954fc145ad857f0d612452f0233263cf6c67ae2aa9cc55b631dfb932ecd006",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3225bbf9-8c88-45ae-847c-77d89be28449.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/production/nd_etela/original-generation.png",
+      "originalSHA256": "9d628edc75ffbf75487358bc57d74bc563660812d713a0d57f275c572cc7719d",
+      "nativeGeneratedSize": [
+        1469,
+        1071
+      ],
+      "nativeMode": "RGBA",
+      "dimensions": [
+        4088,
+        2981
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationTool": "builtin-imagegen",
+      "generationPrompt": "Use case: product-mockup / photorealistic architectural texture projection. Produce ONE entirely new high-detail photographic surface image for planar projection onto an owner's simplified Notre-Dame model. Every surface is freshly generated; do not paste or repeat photo patches. The first three inputs are ABSOLUTE GEOMETRY constraints: image1 is the exact clean model orthographic view/frame; image2 is the exact white building-silhouette mask; image3 is the exact white aperture mask. KEEP this precise MODEL, its full canvas, outline, proportions, feature positions and aperture centers. Do not repair the simplified model into real-world canonical Notre-Dame architecture. Subsequent photos are ONLY material/color/wear references; ignore their perspective, composition, sky, foreground, background, sunlight and cast shadows. Real-camera-like fine material texture, not a drawing/illustration/cartoon/CGI surface, but rigorously ORTHOGRAPHIC with zero perspective or tilt. Same canvas framing as image1: absolutely no auto centering, fitting, crop, padding, invented margins, rotation or perspective. Preserve every tower, ridge, eave, cornice, buttress, pinnacle and aperture at its exact input pixel-normalized location. Every aperture is on a WHITE input3 mask region; no invented openings and no omitted existing ones. Return a true transparent PNG cutout, genuine alpha outside the white building mask and through existing silhouette holes; no checkerboard drawn into pixels. Photographic restored pale creamy-yellow limestone with individually varied stones and fine mortar, natural non-repeating mineral variation and subtle dirt/runoff streaks; no soot-black look. Pale SILVER-GREY lead roofs, darker blue-grey spire, softly greenish verdigris bronze statues. PERFECTLY EVEN diffuse overcast illumination, no sun, no directional highlights, no cast/projected/ground/contact/AO shadows baked in; only natural dark depth inside openings. No people, vehicles, trees, cranes, scaffolding, utility poles, street lamps, signs, sky, ground, text, letters, numbers, watermarks, caption, ruled/grid lines or reference annotations. Model edges become real material joints, never drawn outline strokes. No repeated tiles, copy-paste blocks or clone patches. This is a high-detail material atlas, not an artistic reconstruction of a different cathedral. All detailed material must be subordinate to EXACT pixel-normalized geometry.\nView: SOUTH ELEVATION, facade square-on ORTHOGRAPHIC, azimuth26degrees, no camera tilt. Exact clean-frame aspect4088:2981 (1.37135), intended minimum4088x2981 PNG. At the LEFT is the visible south-side wall of ONE west tower with its slatted belfry openings exactly where input masks place them; long nave/choir wall runs horizontally toward right. Central existing spire/lead crossing roof stays in its exact silhouette position; do not generate a separate spire view. Flying buttresses and pinnacles at RIGHT stay exactly on model shapes. The facade's defined pointed windows (including11 A-type2.25x7.75m and3 B-type2.25x11.75m, plus other mask types) retain exact counts/shapes/margins and masks; no large circular rose window, no extra doors/windows in blank lower stone wall, no invented decorative gallery openings. Cornice/eave bands exactly at the clean model's heights. Real restored creamy limestone face with individual courses and unique weathering, subtle stone relief and restrained mortar, photographic slate/lead/bronze surfaces. Preserve the model's low exterior wall/roof arrangement and incomplete buttress overlaps, without changing geometry. Geometry must be identical to image1 and masks; only full material appearance changes.\n",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-nd-pinnat-pilotti-20261009.md",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "2eca65525ee2e292022f86b8864e1870777b6f46"
+        }
+      ],
+      "sourceReadInFull": true,
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_ohje.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_ohje.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "e2bf62a7466a0739d85b20ed258f4c115f60cb0b",
+          "sha256": "1d2fe52e912245e59a80704d9eb77ace04831e095d00134683c793ef471a0311",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_puhdas.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_puhdas.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "104ea4343ca958f8715b1aa747ad7378bcd6b89f",
+          "sha256": "31bb750baa6266ba86d516c0e4af2d597e9586fa199e33adefd7c7da1c82b212",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_maski_aukot_kaikki.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_aukot_kaikki.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "9ce80fa3f42239fe5fa8e8bed253ce0e9cc122d1",
+          "sha256": "c18c229892cbcea9603706f50c429d00a20748225e1b6324be66a40994a29047",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_maski_rakennus.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_rakennus.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "f22e3e66405b9e9f04784929814adc1afdb98036",
+          "sha256": "a632fce9730da64733ed95408903aefa1c4e97c3255d7c071d00306370cc7bbe",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_ohje.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_ohje.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "97aa6ccaae9e9beaf8f5a769439303e557b12c1d",
+          "sha256": "f36deb7988fe192e480fd216d279fb423939774eaea5316897e5e6e93fdc0808",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_puhdas.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_puhdas.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "8fa96db049b3156e642b1c4b83bb137c4182ff9a",
+          "sha256": "e912ecd9535b85b267cc529faeb1e2f795ac729612d068de80c397c1b99d9b55",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_maski_aukot_kaikki.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_aukot_kaikki.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "b46b311137c9085dbbed432613086e2b24676c97",
+          "sha256": "5e22cde3a9400198a4f1d496a274cedb45a39eb27d569be7151e8a0b685f5b13",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_maski_rakennus.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_rakennus.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "d98307c158c9e602853ffbc0262c52ac6d627b4a",
+          "sha256": "571ab96007ec5d16497641bae855588cc4d9ca97c1abea2da7c9f545337bb51e",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-apsis-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-apsis-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "44c35723def80a048df594606ef41ffd0927ad43",
+          "sha256": "9d9b432afc3f1aa5c7bb41aa04f020ce95c688cd91b9b77d9ffa50042ca6e320",
+          "dimensions": [
+            960,
+            819
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-apsis-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-apsis-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "0e3f29a006c2a4815d0a5168609386b3c7437416",
+          "sha256": "25a20dd04d59e6eb7e979457f220d6ff2d5293ba5b8317458d83bb224081124f",
+          "dimensions": [
+            875,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-apsis-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-apsis-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "ef84244f34c2601a6e96651cd3b7ccf51276df1c",
+          "sha256": "497ad7e27c290ac4323c196d955d53fa8e169df6fe562dc0a77ebdf7ffb841ef",
+          "dimensions": [
+            933,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "fae2c9f7c5d5b9cdabd08da66529683cc2836020",
+          "sha256": "b7cf33b91a92036d954ff3b4e190e9e863bd16b6abf7e5d28f5a3bd725bde389",
+          "dimensions": [
+            960,
+            641
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "02c8a5641e2ef8db122803bd853f096951964619",
+          "sha256": "2c91913118998287b4dda1963c9111b2ebce3e4a9330206f56222af2adec0d08",
+          "dimensions": [
+            960,
+            660
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "c6f8944976412b80f64f9bc7de580af28607083d",
+          "sha256": "f2b01ed950a5c71058618182e561166534ff9dea6e66a9110cb16f009bbc50fa",
+          "dimensions": [
+            960,
+            721
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-04.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-04.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "cc6ea5b294f24f7f90cd515119c67b5cc4750068",
+          "sha256": "aef84d938209ac2ea13ef4e842eaf1459beac9df1a8aa6ac0ed3f3ce8f4c09b8",
+          "dimensions": [
+            960,
+            638
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-05.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-05.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "b1ee1468cde5394d569484e9459ea7795e9e7dde",
+          "sha256": "cad450d5cae35649214dfd3c6addfa769908cffada4a2f65847ab7d3bc7e9e97",
+          "dimensions": [
+            960,
+            638
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "3b4d4dd4b6ce71a8f5bc2b9b8bc09e80f3725538",
+          "sha256": "a3229ba5e3aff9f17978b1494e19080b2a7b090310bfcd0cd1f0a8935f5a0cc3",
+          "dimensions": [
+            960,
+            640
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "41520ee34f772c0717263669655045a2b3e46412",
+          "sha256": "a2de989a19b2ce64ae1afb9efe6cbd143a699371126aa03d9aeae12b07bb9f65",
+          "dimensions": [
+            960,
+            720
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "cc753d4f9b99987cddd58b9e142012db9c7fa506",
+          "sha256": "144e6cac927b08af9f2813d6bf5cd992c878c9b911642c184e463ee2025e8722",
+          "dimensions": [
+            933,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-04.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-04.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "28434347e838754737ec112da6d52e183d97627d",
+          "sha256": "fc9d47a2a9d73e48924596083296fa1b2e558ae520a754073d0f0e03e79dcb4f",
+          "dimensions": [
+            960,
+            721
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-05.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-05.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "6cf4fefbc43ceed3eb6cfc8f6291ba95eecf4165",
+          "sha256": "dd4c751aed719653916e7fff5f9e21c04bff5535d3d5336eb8629e72f1742ead",
+          "dimensions": [
+            960,
+            640
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-06.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-06.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "4ae9b3f5033f5a6376d90e77cd4c76a12289d2e0",
+          "sha256": "0320bccee09e5396cb1377198ce1abe5b464005f400f6ad263545cd1a1e0bc92",
+          "dimensions": [
+            939,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-07.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-07.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "52a3b10a4d2f7ee471a39892fda5f4b1ae4500d6",
+          "sha256": "27c135c03a58daa64a53872646e305f051cf993df2429e287aaf97fb97897190",
+          "dimensions": [
+            960,
+            640
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-spiira-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-spiira-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "994dfce7df4fa6cae0e9b95b0a1860edd6508068",
+          "sha256": "854633f4ab16df796ca8b3f1a65f309d5f2e2c966d25f27b648f2a9ff820268e",
+          "dimensions": [
+            551,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-spiira-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-spiira-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "d9dc49a013d08c78696eb0e4c862485f26ecb60c",
+          "sha256": "4751906d7f6f8508985d6d6b2ced5237e48274347859bd8935c3d0394490fd05",
+          "dimensions": [
+            933,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-torni-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-torni-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "05f6499ddb37018554a41ffe133169e81c3efb63",
+          "sha256": "1911d4c1699be7969e6a57ebac6fb9d0f087b19ef195af683a111eb74e489fe9",
+          "dimensions": [
+            960,
+            720
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-torni-05.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-torni-05.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "16a1a12b7070fee1c33dd8016eb564d3c915f49c",
+          "sha256": "b4ece63347c1a029a378663f80c6b3a0208fad0548a2d2933debf79cb8a50fc9",
+          "dimensions": [
+            960,
+            870
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_puhdas.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_rakennus.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_aukot_kaikki.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-01.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-04.jpg"
+      ],
+      "referenceRoles": [
+        "absolute-frame-and-geometry",
+        "absolute-building-silhouette",
+        "absolute-aperture-positions",
+        "material-color-wear-only",
+        "material-color-wear-only"
+      ],
+      "sourceImagePixelsCopied": false,
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "resizeTo": [
+          4088,
+          2981
+        ],
+        "nativeSize": [
+          1469,
+          1071
+        ],
+        "scaleX": 2.7828454731109598,
+        "scaleY": 2.783380018674136,
+        "method": "Entire-canvas Lanczos resize to exact model frame; no crop, warp, mask forcing, painting or geometry correction",
+        "originalAlphaPreserved": true,
+        "rawMasksNotUsedToForceQAPass": true
+      },
+      "QA": {
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "projectionPass": false,
+        "fullContentConstraintsPass": false
+      },
+      "editorAcceptance": false,
+      "LRProjectionAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootIndependentReview": {
+        "sha256": "5d954fc145ad857f0d612452f0233263cf6c67ae2aa9cc55b631dfb932ecd006",
+        "sampleDeliveryApproved": true,
+        "projectionPass": false,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Siluetin IoU 0.92043 alittaa 0,97:n. Kehys on 4088 × 2981, mutta generoitu rakennus on hieman liian suuri/siirtynyt alkuperäiseen maskiin nähden.",
+          "Aukkojen automaattisen esitarkistuksen mediaani 0.696 m (0.451 % kuvan leveydestä) ylittää 0,15 m:n. Tämä on tummien alueiden arvio; LR:n lopullinen geometrinen kohdistus on tekemättä.",
+          "Läpinäkyvyyden reunassa on matalan alfan puna/keltahäivettä; täysin peittäviä kylläisiä reunapikseleitä 55. Valkoisella taustalla häive on heikko, mutta alphareunat on tarkistettava projektiossa.",
+          "Valokuvamainen kermankeltainen kivi, hopeanharmaa lyijy ja vihertävä pronssi vastaavat materiaalibriefiä. Ei taivasta, eläviä ihmisiä, ajoneuvoja, telineitä, nostureita, puita, tekstiä, ruudukkoa tai ohjeen merkintöjä havaittu. Patsaat ovat malliin kuuluvia.",
+          "51 tekstuuripalaa tarkistettu; ei tavulleen toistuvia 96 px-paloja. Myöskään selvää suurten laikkujen kopiotoistoa ei havaittu. Tämä ei todista jokaisen yksityiskohdan ainutkertaisuutta.",
+          "Työkalun natiivi [1469, 1071] suurennettu koko kehys säilyttäen minimikokoon. Ei maskipakotusta, geometriakorjausta, paikallista maalausta tai referenssivalokuvien liittämistä.",
+          "Osa ikkunan kivikehyksistä/ikkunalaseista ja spiiran aukot poikkeavat ohjeesta. Keskigableen tuli pieni uusi tumma pystyrako; sen paikkaa ei ole aukkomaskissa. Ei varsinaista suurta ruusuikkunaa lisätty."
+        ],
+        "projectionMeasurement": {
+          "buildingIoU": 0.9204332057878886,
+          "intersectionPixels": 4499014,
+          "unionPixels": 4887931,
+          "buildingMaskPass": false,
+          "transparentAlphaPresent": true,
+          "apertureMethod": "Source mask9px closing groups louver strips; nearest dark connected component(gray<110) within80px. Approximate screening, not LR projection verification. A large roof/spire dark area may produce an ambiguous match.",
+          "apertureExpectedGroupCount": 26,
+          "apertureMatchedCount": 26,
+          "apertureUnmatchedCount": 0,
+          "apertureMedianDistancePixels": 18.433224811472904,
+          "apertureMedianDistanceMetres": 0.695593389112185,
+          "apertureMedianDistancePercentWidth": 0.4509105873647971,
+          "apertureScreeningPass": false,
+          "apertureMatches": [
+            {
+              "id": 1,
+              "expectedCentroid": [
+                2153.0391341991344,
+                1105.3924675324674
+              ],
+              "expectedBox": [
+                2112,
+                1013,
+                2202,
+                1214
+              ],
+              "estimatedGeneratedCentroid": [
+                2162.2340807174887,
+                1120.9756779841982
+              ],
+              "estimatedGeneratedBox": [
+                2059,
+                933,
+                2268,
+                1294
+              ],
+              "deltaPixels": [
+                9.1949465183543,
+                15.583210451730793
+              ],
+              "distancePixels": 18.09374172078091,
+              "distanceMetres": 0.6827827064445626,
+              "distancePercentWidth": 0.4426062064770281,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 2,
+              "expectedCentroid": [
+                489.0075728890572,
+                1293.1987126088602
+              ],
+              "expectedBox": [
+                463,
+                1024,
+                516,
+                1543
+              ],
+              "estimatedGeneratedCentroid": [
+                463.2530974602452,
+                1284.6018991252317
+              ],
+              "estimatedGeneratedBox": [
+                428,
+                1003,
+                495,
+                1549
+              ],
+              "deltaPixels": [
+                -25.754475428811986,
+                -8.596813483628466
+              ],
+              "distancePixels": 27.15139419413995,
+              "distanceMetres": 1.0245809129864132,
+              "distancePercentWidth": 0.6641730478018579,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 3,
+              "expectedCentroid": [
+                617.0190079515335,
+                1293.1982960999621
+              ],
+              "expectedBox": [
+                591,
+                1024,
+                644,
+                1543
+              ],
+              "estimatedGeneratedCentroid": [
+                592.7853263520765,
+                1283.3914598848742
+              ],
+              "estimatedGeneratedBox": [
+                562,
+                1002,
+                623,
+                1547
+              ],
+              "deltaPixels": [
+                -24.233681599456986,
+                -9.80683621508797
+              ],
+              "distancePixels": 26.142787923506187,
+              "distanceMetres": 0.9865202990002335,
+              "distancePercentWidth": 0.6395006830603275,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 4,
+              "expectedCentroid": [
+                2199.1572413793106,
+                1122.6275862068965
+              ],
+              "expectedBox": [
+                2196,
+                1047,
+                2202,
+                1214
+              ],
+              "estimatedGeneratedCentroid": [
+                2185.358535771692,
+                1130.2634883086162
+              ],
+              "estimatedGeneratedBox": [
+                2116,
+                967,
+                2268,
+                1294
+              ],
+              "deltaPixels": [
+                -13.798705607618558,
+                7.635902101719694
+              ],
+              "distancePixels": 15.770582657364663,
+              "distanceMetres": 0.5951163266930062,
+              "distancePercentWidth": 0.38577746226430193,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 5,
+              "expectedCentroid": [
+                2106.0,
+                1406.5
+              ],
+              "expectedBox": [
+                2100,
+                1308,
+                2113,
+                1506
+              ],
+              "estimatedGeneratedCentroid": [
+                2122.3656516938813,
+                1400.0990470102854
+              ],
+              "estimatedGeneratedBox": [
+                2020,
+                1228,
+                2193,
+                1586
+              ],
+              "deltaPixels": [
+                16.36565169388132,
+                -6.400952989714597
+              ],
+              "distancePixels": 17.572898296580924,
+              "distanceMetres": 0.6631282376068273,
+              "distancePercentWidth": 0.4298654182138191,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 6,
+              "expectedCentroid": [
+                2158.0,
+                1406.5
+              ],
+              "expectedBox": [
+                2129,
+                1308,
+                2188,
+                1506
+              ],
+              "estimatedGeneratedCentroid": [
+                2162.810056693964,
+                1401.9763219327824
+              ],
+              "estimatedGeneratedBox": [
+                2049,
+                1228,
+                2268,
+                1586
+              ],
+              "deltaPixels": [
+                4.810056693963816,
+                -4.523678067217588
+              ],
+              "distancePixels": 6.603052979870112,
+              "distanceMetres": 0.2491718105611363,
+              "distancePercentWidth": 0.16152282240386773,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 7,
+              "expectedCentroid": [
+                2209.0,
+                1406.5
+              ],
+              "expectedBox": [
+                2204,
+                1308,
+                2215,
+                1506
+              ],
+              "estimatedGeneratedCentroid": [
+                2199.1567464012983,
+                1405.6259745097518
+              ],
+              "estimatedGeneratedBox": [
+                2124,
+                1228,
+                2295,
+                1586
+              ],
+              "deltaPixels": [
+                -9.843253598701722,
+                -0.8740254902481865
+              ],
+              "distancePixels": 9.88198168213026,
+              "distanceMetres": 0.37290496913699095,
+              "distancePercentWidth": 0.24173145014995742,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 8,
+              "expectedCentroid": [
+                946.5398163052741,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                918,
+                1894,
+                976,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                922.7026505679788,
+                2020.3382153318569
+              ],
+              "estimatedGeneratedBox": [
+                887,
+                1900,
+                959,
+                2120
+              ],
+              "deltaPixels": [
+                -23.837165737295322,
+                13.374291461011353
+              ],
+              "distancePixels": 27.332803414054826,
+              "distanceMetres": 1.0314265439265973,
+              "distancePercentWidth": 0.6686106510287384,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 9,
+              "expectedCentroid": [
+                1108.0162389174054,
+                2007.1845076994866
+              ],
+              "expectedBox": [
+                1079,
+                1894,
+                1138,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1083.9317998194,
+                2008.287343757426
+              ],
+              "estimatedGeneratedBox": [
+                999,
+                1823,
+                1218,
+                2179
+              ],
+              "deltaPixels": [
+                -24.084439098005305,
+                1.1028360579393848
+              ],
+              "distancePixels": 24.109675527393932,
+              "distanceMetres": 0.9097990765054315,
+              "distancePercentWidth": 0.5897670138794994,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 10,
+              "expectedCentroid": [
+                1262.4926150350313,
+                2006.9564476424919
+              ],
+              "expectedBox": [
+                1234,
+                1894,
+                1292,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1242.0064847942756,
+                2020.6291741204532
+              ],
+              "estimatedGeneratedBox": [
+                1208,
+                1900,
+                1278,
+                2120
+              ],
+              "deltaPixels": [
+                -20.486130240755756,
+                13.672726477961305
+              ],
+              "distancePixels": 24.62975804961047,
+              "distanceMetres": 0.9294248320607724,
+              "distancePercentWidth": 0.6024891890804909,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 11,
+              "expectedCentroid": [
+                1411.0086745639398,
+                2007.1329167055312
+              ],
+              "expectedBox": [
+                1382,
+                1894,
+                1441,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1396.598504837291,
+                2019.7318235121666
+              ],
+              "estimatedGeneratedBox": [
+                1362,
+                1900,
+                1433,
+                2119
+              ],
+              "deltaPixels": [
+                -14.410169726648746,
+                12.598906806635341
+              ],
+              "distancePixels": 19.141197566325527,
+              "distanceMetres": 0.7223093421254916,
+              "distancePercentWidth": 0.4682289032858495,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 12,
+              "expectedCentroid": [
+                1558.5398163052741,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                1530,
+                1894,
+                1588,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1548.573164445099,
+                2020.9502908903455
+              ],
+              "estimatedGeneratedBox": [
+                1514,
+                1901,
+                1584,
+                2120
+              ],
+              "deltaPixels": [
+                -9.966651860175034,
+                13.986367019499994
+              ],
+              "distancePixels": 17.174184455341326,
+              "distanceMetres": 0.6480824322770312,
+              "distancePercentWidth": 0.4201121442108935,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 13,
+              "expectedCentroid": [
+                1706.5398163052741,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                1678,
+                1894,
+                1736,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1705.432082794308,
+                2004.5996765847349
+              ],
+              "estimatedGeneratedBox": [
+                1598,
+                1866,
+                1816,
+                2120
+              ],
+              "deltaPixels": [
+                -1.1077335109662272,
+                -2.36424728611064
+              ],
+              "distancePixels": 2.61088850033836,
+              "distanceMetres": 0.09852409435239096,
+              "distancePercentWidth": 0.06386713552686792,
+              "exceeds015Metres": false
+            },
+            {
+              "id": 14,
+              "expectedCentroid": [
+                1856.4926150350313,
+                2006.9564476424919
+              ],
+              "expectedBox": [
+                1828,
+                1894,
+                1886,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1853.470905331561,
+                2020.1171909614532
+              ],
+              "estimatedGeneratedBox": [
+                1819,
+                1900,
+                1890,
+                2119
+              ],
+              "deltaPixels": [
+                -3.0217097034703784,
+                13.160743318961295
+              ],
+              "distancePixels": 13.50318089339069,
+              "distanceMetres": 0.5095539959770071,
+              "distancePercentWidth": 0.33031264416317735,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 15,
+              "expectedCentroid": [
+                2048.51545095221,
+                2060.2399089711344
+              ],
+              "expectedBox": [
+                2020,
+                1894,
+                2078,
+                2205
+              ],
+              "estimatedGeneratedCentroid": [
+                2053.990482731554,
+                2074.3303571428573
+              ],
+              "estimatedGeneratedBox": [
+                2020,
+                1900,
+                2089,
+                2228
+              ],
+              "deltaPixels": [
+                5.475031779344135,
+                14.090448171722983
+              ],
+              "distancePixels": 15.116768922783724,
+              "distanceMetres": 0.5704441102937254,
+              "distancePercentWidth": 0.3697839756062555,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 16,
+              "expectedCentroid": [
+                2176.4895833333335,
+                2060.188098659004
+              ],
+              "expectedBox": [
+                2148,
+                1894,
+                2206,
+                2205
+              ],
+              "estimatedGeneratedCentroid": [
+                2181.310125054319,
+                2074.790401236058
+              ],
+              "estimatedGeneratedBox": [
+                2147,
+                1901,
+                2216,
+                2229
+              ],
+              "deltaPixels": [
+                4.820541720985602,
+                14.60230257705416
+              ],
+              "distancePixels": 15.377414055542806,
+              "distanceMetres": 0.5802797756808606,
+              "distancePercentWidth": 0.3761598350181704,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 17,
+              "expectedCentroid": [
+                2492.4407749889915,
+                1936.166006164685
+              ],
+              "expectedBox": [
+                2471,
+                1894,
+                2517,
+                1970
+              ],
+              "estimatedGeneratedCentroid": [
+                2508.2792980368827,
+                1943.287031528852
+              ],
+              "estimatedGeneratedBox": [
+                2478,
+                1897,
+                2540,
+                1984
+              ],
+              "deltaPixels": [
+                15.838523047891158,
+                7.121025364166826
+              ],
+              "distancePixels": 17.365708006749585,
+              "distanceMetres": 0.655309736103758,
+              "distancePercentWidth": 0.4247971625917218,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 18,
+              "expectedCentroid": [
+                2647.491024682124,
+                1961.7718773373224
+              ],
+              "expectedBox": [
+                2618,
+                1894,
+                2676,
+                2018
+              ],
+              "estimatedGeneratedCentroid": [
+                2664.3881124025306,
+                1969.95130204502
+              ],
+              "estimatedGeneratedBox": [
+                2629,
+                1901,
+                2699,
+                2031
+              ],
+              "deltaPixels": [
+                16.89708772040649,
+                8.179424707697535
+              ],
+              "distancePixels": 18.772707902164903,
+              "distanceMetres": 0.7084040717798077,
+              "distancePercentWidth": 0.45921496825256614,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 19,
+              "expectedCentroid": [
+                2796.453296703297,
+                2007.0065365668813
+              ],
+              "expectedBox": [
+                2768,
+                1894,
+                2826,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2812.368095903508,
+                2021.403177171435
+              ],
+              "estimatedGeneratedBox": [
+                2751,
+                1901,
+                2850,
+                2117
+              ],
+              "deltaPixels": [
+                15.914799200211291,
+                14.396640604553568
+              ],
+              "distancePixels": 21.46029110426339,
+              "distanceMetres": 0.80982230582126,
+              "distancePercentWidth": 0.524958197266717,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 20,
+              "expectedCentroid": [
+                2941.460183694726,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                2913,
+                1894,
+                2971,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2964.146146370636,
+                2019.1950362562607
+              ],
+              "estimatedGeneratedBox": [
+                2930,
+                1901,
+                3000,
+                2117
+              ],
+              "deltaPixels": [
+                22.685962675910105,
+                12.231112385415145
+              ],
+              "distancePixels": 25.773106384707337,
+              "distanceMetres": 0.972570052253107,
+              "distancePercentWidth": 0.6304575925809035,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 21,
+              "expectedCentroid": [
+                3074.9837610825944,
+                2007.1845076994866
+              ],
+              "expectedBox": [
+                3046,
+                1894,
+                3105,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                3104.399187109885,
+                2014.3120917404558
+              ],
+              "estimatedGeneratedBox": [
+                3054,
+                1891,
+                3159,
+                2117
+              ],
+              "deltaPixels": [
+                29.415426027290778,
+                7.127584040969168
+              ],
+              "distancePixels": 30.266644059559926,
+              "distanceMetres": 1.1421375116815067,
+              "distancePercentWidth": 0.7403777901066518,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 22,
+              "expectedCentroid": [
+                3207.4515884305356,
+                2007.1003319108581
+              ],
+              "expectedBox": [
+                3179,
+                1894,
+                3237,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                3187.769230769231,
+                2005.8461538461538
+              ],
+              "estimatedGeneratedBox": [
+                3187,
+                2001,
+                3189,
+                2011
+              ],
+              "deltaPixels": [
+                -19.68235766130465,
+                -1.2541780647043197
+              ],
+              "distancePixels": 19.722275875910043,
+              "distanceMetres": 0.7442368255060393,
+              "distancePercentWidth": 0.4824431476494629,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 23,
+              "expectedCentroid": [
+                2303.5,
+                2060.291397076444
+              ],
+              "expectedBox": [
+                2275,
+                1895,
+                2333,
+                2205
+              ],
+              "estimatedGeneratedCentroid": [
+                2310.1923151001542,
+                2074.387471109399
+              ],
+              "estimatedGeneratedBox": [
+                2276,
+                1901,
+                2345,
+                2229
+              ],
+              "deltaPixels": [
+                6.6923151001542465,
+                14.09607403295513
+              ],
+              "distancePixels": 15.604050260823453,
+              "distanceMetres": 0.5888320853140926,
+              "distancePercentWidth": 0.3817037735035091,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 24,
+              "expectedCentroid": [
+                2492.0181391378574,
+                2046.913358941528
+              ],
+              "expectedBox": [
+                2471,
+                1982,
+                2517,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2505.6673303721855,
+                2060.480318578649
+              ],
+              "estimatedGeneratedBox": [
+                2474,
+                1986,
+                2540,
+                2117
+              ],
+              "deltaPixels": [
+                13.6491912343281,
+                13.566959637121045
+              ],
+              "distancePixels": 19.24481268151318,
+              "distanceMetres": 0.7262193464721955,
+              "distancePercentWidth": 0.4707635196064868,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 25,
+              "expectedCentroid": [
+                2642.087155963303,
+                2074.3795871559632
+              ],
+              "expectedBox": [
+                2618,
+                2034,
+                2676,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2643.186424773225,
+                2087.981076008758
+              ],
+              "estimatedGeneratedBox": [
+                2560,
+                2006,
+                2729,
+                2179
+              ],
+              "deltaPixels": [
+                1.0992688099222505,
+                13.601488852794773
+              ],
+              "distancePixels": 13.645837861017123,
+              "distanceMetres": 0.514937277774231,
+              "distancePercentWidth": 0.333802296013139,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 26,
+              "expectedCentroid": [
+                301.0,
+                2287.0
+              ],
+              "expectedBox": [
+                301,
+                2245,
+                302,
+                2330
+              ],
+              "estimatedGeneratedCentroid": [
+                243.71302094580005,
+                2318.3286547182033
+              ],
+              "estimatedGeneratedBox": [
+                221,
+                2260,
+                268,
+                2410
+              ],
+              "deltaPixels": [
+                -57.286979054199946,
+                31.328654718203325
+              ],
+              "distancePixels": 65.29381728470734,
+              "distanceMetres": 2.463917633385183,
+              "distancePercentWidth": 1.5972068807413735,
+              "exceeds015Metres": true
+            }
+          ],
+          "LRProjectionAcceptance": false,
+          "noMaskForcedOntoOutput": true
+        },
+        "materialScreening": {
+          "id": "nd_etela",
+          "opaqueSaturatedRedYellowPixels": 55,
+          "lowAlphaSaturatedRedYellowPixels": 34552,
+          "opaqueSaturatedRedYellowPercentForeground": 0.0011365879011251189,
+          "testedTextured96pxPatches": 51,
+          "exactRepeatedTexturedPatches": [],
+          "repeatMethod": "Exact hashes of non-overlapping96px native opaque/high-variation patches; visual review also required, not a complete perceptual-repeat detector."
+        },
+        "rootReviewedAt": "2026-10-09T13:04:23.258339+00:00",
+        "viewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/white-background-proof.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/nd_etela-silhouette-difference.png"
+        ],
+        "LRProjectionAcceptance": false,
+        "editorAcceptance": false
+      },
+      "referenceAttributions": [
+        {
+          "file": "ref-etela-01.jpg",
+          "author": "xiquinhosilva",
+          "license": "CC BY2.0",
+          "sourceURL": "https://commons.wikimedia.org/wiki/File:Paris_Notre-Dame_cathedral_south_facade_20170527_(02).jpg"
+        },
+        {
+          "file": "ref-katto-04.jpg",
+          "author": "Schezar",
+          "license": "CC BY2.0",
+          "sourceURL": "https://commons.wikimedia.org/wiki/File:Notre_Dame_(15051055268).jpg"
+        }
+      ],
+      "preGenerationValidationRejection": {
+        "taskNumber": 57,
+        "id": "nd_etela",
+        "tool": "builtin-imagegen",
+        "generationIntent": "complete-new-material-image-with-fixed-reference-geometry",
+        "callsStarted": 1,
+        "generationLimit": 1,
+        "retryCalls": 0,
+        "referencePaths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_puhdas.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_rakennus.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_aukot_kaikki.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-01.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-03.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-torni-03.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-spiira-01.jpg"
+        ],
+        "referenceRoles": [
+          "absolute-frame-and-geometry",
+          "absolute-building-silhouette",
+          "absolute-aperture-positions",
+          "material-color-wear-only",
+          "material-color-wear-only",
+          "material-color-wear-only",
+          "material-color-wear-only"
+        ],
+        "transparentBackgroundRequested": true,
+        "startedAt": "2026-10-09T12:43:20.133265+00:00",
+        "status": "rejected-before-generation",
+        "validationError": "referenced_image_paths must contain at most5 paths",
+        "actualGenerations": 0
+      },
+      "preGenerationValidationRejections": 1,
+      "imageGenerationRetries": 0,
+      "builtinToolInvocations": 2,
+      "r2Key": "julisteet/omat-mallit-pinnat/20261009/nd_etela_codex_v1.png",
+      "rootVisualReview": {
+        "sha256": "5d954fc145ad857f0d612452f0233263cf6c67ae2aa9cc55b631dfb932ecd006",
+        "sampleDeliveryApproved": true,
+        "projectionPass": false,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Siluetin IoU 0.92043 alittaa 0,97:n. Kehys on 4088 × 2981, mutta generoitu rakennus on hieman liian suuri/siirtynyt alkuperäiseen maskiin nähden.",
+          "Aukkojen automaattisen esitarkistuksen mediaani 0.696 m (0.451 % kuvan leveydestä) ylittää 0,15 m:n. Tämä on tummien alueiden arvio; LR:n lopullinen geometrinen kohdistus on tekemättä.",
+          "Läpinäkyvyyden reunassa on matalan alfan puna/keltahäivettä; täysin peittäviä kylläisiä reunapikseleitä 55. Valkoisella taustalla häive on heikko, mutta alphareunat on tarkistettava projektiossa.",
+          "Valokuvamainen kermankeltainen kivi, hopeanharmaa lyijy ja vihertävä pronssi vastaavat materiaalibriefiä. Ei taivasta, eläviä ihmisiä, ajoneuvoja, telineitä, nostureita, puita, tekstiä, ruudukkoa tai ohjeen merkintöjä havaittu. Patsaat ovat malliin kuuluvia.",
+          "51 tekstuuripalaa tarkistettu; ei tavulleen toistuvia 96 px-paloja. Myöskään selvää suurten laikkujen kopiotoistoa ei havaittu. Tämä ei todista jokaisen yksityiskohdan ainutkertaisuutta.",
+          "Työkalun natiivi [1469, 1071] suurennettu koko kehys säilyttäen minimikokoon. Ei maskipakotusta, geometriakorjausta, paikallista maalausta tai referenssivalokuvien liittämistä.",
+          "Osa ikkunan kivikehyksistä/ikkunalaseista ja spiiran aukot poikkeavat ohjeesta. Keskigableen tuli pieni uusi tumma pystyrako; sen paikkaa ei ole aukkomaskissa. Ei varsinaista suurta ruusuikkunaa lisätty."
+        ],
+        "projectionMeasurement": {
+          "buildingIoU": 0.9204332057878886,
+          "intersectionPixels": 4499014,
+          "unionPixels": 4887931,
+          "buildingMaskPass": false,
+          "transparentAlphaPresent": true,
+          "apertureMethod": "Source mask9px closing groups louver strips; nearest dark connected component(gray<110) within80px. Approximate screening, not LR projection verification. A large roof/spire dark area may produce an ambiguous match.",
+          "apertureExpectedGroupCount": 26,
+          "apertureMatchedCount": 26,
+          "apertureUnmatchedCount": 0,
+          "apertureMedianDistancePixels": 18.433224811472904,
+          "apertureMedianDistanceMetres": 0.695593389112185,
+          "apertureMedianDistancePercentWidth": 0.4509105873647971,
+          "apertureScreeningPass": false,
+          "apertureMatches": [
+            {
+              "id": 1,
+              "expectedCentroid": [
+                2153.0391341991344,
+                1105.3924675324674
+              ],
+              "expectedBox": [
+                2112,
+                1013,
+                2202,
+                1214
+              ],
+              "estimatedGeneratedCentroid": [
+                2162.2340807174887,
+                1120.9756779841982
+              ],
+              "estimatedGeneratedBox": [
+                2059,
+                933,
+                2268,
+                1294
+              ],
+              "deltaPixels": [
+                9.1949465183543,
+                15.583210451730793
+              ],
+              "distancePixels": 18.09374172078091,
+              "distanceMetres": 0.6827827064445626,
+              "distancePercentWidth": 0.4426062064770281,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 2,
+              "expectedCentroid": [
+                489.0075728890572,
+                1293.1987126088602
+              ],
+              "expectedBox": [
+                463,
+                1024,
+                516,
+                1543
+              ],
+              "estimatedGeneratedCentroid": [
+                463.2530974602452,
+                1284.6018991252317
+              ],
+              "estimatedGeneratedBox": [
+                428,
+                1003,
+                495,
+                1549
+              ],
+              "deltaPixels": [
+                -25.754475428811986,
+                -8.596813483628466
+              ],
+              "distancePixels": 27.15139419413995,
+              "distanceMetres": 1.0245809129864132,
+              "distancePercentWidth": 0.6641730478018579,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 3,
+              "expectedCentroid": [
+                617.0190079515335,
+                1293.1982960999621
+              ],
+              "expectedBox": [
+                591,
+                1024,
+                644,
+                1543
+              ],
+              "estimatedGeneratedCentroid": [
+                592.7853263520765,
+                1283.3914598848742
+              ],
+              "estimatedGeneratedBox": [
+                562,
+                1002,
+                623,
+                1547
+              ],
+              "deltaPixels": [
+                -24.233681599456986,
+                -9.80683621508797
+              ],
+              "distancePixels": 26.142787923506187,
+              "distanceMetres": 0.9865202990002335,
+              "distancePercentWidth": 0.6395006830603275,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 4,
+              "expectedCentroid": [
+                2199.1572413793106,
+                1122.6275862068965
+              ],
+              "expectedBox": [
+                2196,
+                1047,
+                2202,
+                1214
+              ],
+              "estimatedGeneratedCentroid": [
+                2185.358535771692,
+                1130.2634883086162
+              ],
+              "estimatedGeneratedBox": [
+                2116,
+                967,
+                2268,
+                1294
+              ],
+              "deltaPixels": [
+                -13.798705607618558,
+                7.635902101719694
+              ],
+              "distancePixels": 15.770582657364663,
+              "distanceMetres": 0.5951163266930062,
+              "distancePercentWidth": 0.38577746226430193,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 5,
+              "expectedCentroid": [
+                2106.0,
+                1406.5
+              ],
+              "expectedBox": [
+                2100,
+                1308,
+                2113,
+                1506
+              ],
+              "estimatedGeneratedCentroid": [
+                2122.3656516938813,
+                1400.0990470102854
+              ],
+              "estimatedGeneratedBox": [
+                2020,
+                1228,
+                2193,
+                1586
+              ],
+              "deltaPixels": [
+                16.36565169388132,
+                -6.400952989714597
+              ],
+              "distancePixels": 17.572898296580924,
+              "distanceMetres": 0.6631282376068273,
+              "distancePercentWidth": 0.4298654182138191,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 6,
+              "expectedCentroid": [
+                2158.0,
+                1406.5
+              ],
+              "expectedBox": [
+                2129,
+                1308,
+                2188,
+                1506
+              ],
+              "estimatedGeneratedCentroid": [
+                2162.810056693964,
+                1401.9763219327824
+              ],
+              "estimatedGeneratedBox": [
+                2049,
+                1228,
+                2268,
+                1586
+              ],
+              "deltaPixels": [
+                4.810056693963816,
+                -4.523678067217588
+              ],
+              "distancePixels": 6.603052979870112,
+              "distanceMetres": 0.2491718105611363,
+              "distancePercentWidth": 0.16152282240386773,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 7,
+              "expectedCentroid": [
+                2209.0,
+                1406.5
+              ],
+              "expectedBox": [
+                2204,
+                1308,
+                2215,
+                1506
+              ],
+              "estimatedGeneratedCentroid": [
+                2199.1567464012983,
+                1405.6259745097518
+              ],
+              "estimatedGeneratedBox": [
+                2124,
+                1228,
+                2295,
+                1586
+              ],
+              "deltaPixels": [
+                -9.843253598701722,
+                -0.8740254902481865
+              ],
+              "distancePixels": 9.88198168213026,
+              "distanceMetres": 0.37290496913699095,
+              "distancePercentWidth": 0.24173145014995742,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 8,
+              "expectedCentroid": [
+                946.5398163052741,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                918,
+                1894,
+                976,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                922.7026505679788,
+                2020.3382153318569
+              ],
+              "estimatedGeneratedBox": [
+                887,
+                1900,
+                959,
+                2120
+              ],
+              "deltaPixels": [
+                -23.837165737295322,
+                13.374291461011353
+              ],
+              "distancePixels": 27.332803414054826,
+              "distanceMetres": 1.0314265439265973,
+              "distancePercentWidth": 0.6686106510287384,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 9,
+              "expectedCentroid": [
+                1108.0162389174054,
+                2007.1845076994866
+              ],
+              "expectedBox": [
+                1079,
+                1894,
+                1138,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1083.9317998194,
+                2008.287343757426
+              ],
+              "estimatedGeneratedBox": [
+                999,
+                1823,
+                1218,
+                2179
+              ],
+              "deltaPixels": [
+                -24.084439098005305,
+                1.1028360579393848
+              ],
+              "distancePixels": 24.109675527393932,
+              "distanceMetres": 0.9097990765054315,
+              "distancePercentWidth": 0.5897670138794994,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 10,
+              "expectedCentroid": [
+                1262.4926150350313,
+                2006.9564476424919
+              ],
+              "expectedBox": [
+                1234,
+                1894,
+                1292,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1242.0064847942756,
+                2020.6291741204532
+              ],
+              "estimatedGeneratedBox": [
+                1208,
+                1900,
+                1278,
+                2120
+              ],
+              "deltaPixels": [
+                -20.486130240755756,
+                13.672726477961305
+              ],
+              "distancePixels": 24.62975804961047,
+              "distanceMetres": 0.9294248320607724,
+              "distancePercentWidth": 0.6024891890804909,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 11,
+              "expectedCentroid": [
+                1411.0086745639398,
+                2007.1329167055312
+              ],
+              "expectedBox": [
+                1382,
+                1894,
+                1441,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1396.598504837291,
+                2019.7318235121666
+              ],
+              "estimatedGeneratedBox": [
+                1362,
+                1900,
+                1433,
+                2119
+              ],
+              "deltaPixels": [
+                -14.410169726648746,
+                12.598906806635341
+              ],
+              "distancePixels": 19.141197566325527,
+              "distanceMetres": 0.7223093421254916,
+              "distancePercentWidth": 0.4682289032858495,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 12,
+              "expectedCentroid": [
+                1558.5398163052741,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                1530,
+                1894,
+                1588,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1548.573164445099,
+                2020.9502908903455
+              ],
+              "estimatedGeneratedBox": [
+                1514,
+                1901,
+                1584,
+                2120
+              ],
+              "deltaPixels": [
+                -9.966651860175034,
+                13.986367019499994
+              ],
+              "distancePixels": 17.174184455341326,
+              "distanceMetres": 0.6480824322770312,
+              "distancePercentWidth": 0.4201121442108935,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 13,
+              "expectedCentroid": [
+                1706.5398163052741,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                1678,
+                1894,
+                1736,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1705.432082794308,
+                2004.5996765847349
+              ],
+              "estimatedGeneratedBox": [
+                1598,
+                1866,
+                1816,
+                2120
+              ],
+              "deltaPixels": [
+                -1.1077335109662272,
+                -2.36424728611064
+              ],
+              "distancePixels": 2.61088850033836,
+              "distanceMetres": 0.09852409435239096,
+              "distancePercentWidth": 0.06386713552686792,
+              "exceeds015Metres": false
+            },
+            {
+              "id": 14,
+              "expectedCentroid": [
+                1856.4926150350313,
+                2006.9564476424919
+              ],
+              "expectedBox": [
+                1828,
+                1894,
+                1886,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                1853.470905331561,
+                2020.1171909614532
+              ],
+              "estimatedGeneratedBox": [
+                1819,
+                1900,
+                1890,
+                2119
+              ],
+              "deltaPixels": [
+                -3.0217097034703784,
+                13.160743318961295
+              ],
+              "distancePixels": 13.50318089339069,
+              "distanceMetres": 0.5095539959770071,
+              "distancePercentWidth": 0.33031264416317735,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 15,
+              "expectedCentroid": [
+                2048.51545095221,
+                2060.2399089711344
+              ],
+              "expectedBox": [
+                2020,
+                1894,
+                2078,
+                2205
+              ],
+              "estimatedGeneratedCentroid": [
+                2053.990482731554,
+                2074.3303571428573
+              ],
+              "estimatedGeneratedBox": [
+                2020,
+                1900,
+                2089,
+                2228
+              ],
+              "deltaPixels": [
+                5.475031779344135,
+                14.090448171722983
+              ],
+              "distancePixels": 15.116768922783724,
+              "distanceMetres": 0.5704441102937254,
+              "distancePercentWidth": 0.3697839756062555,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 16,
+              "expectedCentroid": [
+                2176.4895833333335,
+                2060.188098659004
+              ],
+              "expectedBox": [
+                2148,
+                1894,
+                2206,
+                2205
+              ],
+              "estimatedGeneratedCentroid": [
+                2181.310125054319,
+                2074.790401236058
+              ],
+              "estimatedGeneratedBox": [
+                2147,
+                1901,
+                2216,
+                2229
+              ],
+              "deltaPixels": [
+                4.820541720985602,
+                14.60230257705416
+              ],
+              "distancePixels": 15.377414055542806,
+              "distanceMetres": 0.5802797756808606,
+              "distancePercentWidth": 0.3761598350181704,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 17,
+              "expectedCentroid": [
+                2492.4407749889915,
+                1936.166006164685
+              ],
+              "expectedBox": [
+                2471,
+                1894,
+                2517,
+                1970
+              ],
+              "estimatedGeneratedCentroid": [
+                2508.2792980368827,
+                1943.287031528852
+              ],
+              "estimatedGeneratedBox": [
+                2478,
+                1897,
+                2540,
+                1984
+              ],
+              "deltaPixels": [
+                15.838523047891158,
+                7.121025364166826
+              ],
+              "distancePixels": 17.365708006749585,
+              "distanceMetres": 0.655309736103758,
+              "distancePercentWidth": 0.4247971625917218,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 18,
+              "expectedCentroid": [
+                2647.491024682124,
+                1961.7718773373224
+              ],
+              "expectedBox": [
+                2618,
+                1894,
+                2676,
+                2018
+              ],
+              "estimatedGeneratedCentroid": [
+                2664.3881124025306,
+                1969.95130204502
+              ],
+              "estimatedGeneratedBox": [
+                2629,
+                1901,
+                2699,
+                2031
+              ],
+              "deltaPixels": [
+                16.89708772040649,
+                8.179424707697535
+              ],
+              "distancePixels": 18.772707902164903,
+              "distanceMetres": 0.7084040717798077,
+              "distancePercentWidth": 0.45921496825256614,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 19,
+              "expectedCentroid": [
+                2796.453296703297,
+                2007.0065365668813
+              ],
+              "expectedBox": [
+                2768,
+                1894,
+                2826,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2812.368095903508,
+                2021.403177171435
+              ],
+              "estimatedGeneratedBox": [
+                2751,
+                1901,
+                2850,
+                2117
+              ],
+              "deltaPixels": [
+                15.914799200211291,
+                14.396640604553568
+              ],
+              "distancePixels": 21.46029110426339,
+              "distanceMetres": 0.80982230582126,
+              "distancePercentWidth": 0.524958197266717,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 20,
+              "expectedCentroid": [
+                2941.460183694726,
+                2006.9639238708455
+              ],
+              "expectedBox": [
+                2913,
+                1894,
+                2971,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2964.146146370636,
+                2019.1950362562607
+              ],
+              "estimatedGeneratedBox": [
+                2930,
+                1901,
+                3000,
+                2117
+              ],
+              "deltaPixels": [
+                22.685962675910105,
+                12.231112385415145
+              ],
+              "distancePixels": 25.773106384707337,
+              "distanceMetres": 0.972570052253107,
+              "distancePercentWidth": 0.6304575925809035,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 21,
+              "expectedCentroid": [
+                3074.9837610825944,
+                2007.1845076994866
+              ],
+              "expectedBox": [
+                3046,
+                1894,
+                3105,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                3104.399187109885,
+                2014.3120917404558
+              ],
+              "estimatedGeneratedBox": [
+                3054,
+                1891,
+                3159,
+                2117
+              ],
+              "deltaPixels": [
+                29.415426027290778,
+                7.127584040969168
+              ],
+              "distancePixels": 30.266644059559926,
+              "distanceMetres": 1.1421375116815067,
+              "distancePercentWidth": 0.7403777901066518,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 22,
+              "expectedCentroid": [
+                3207.4515884305356,
+                2007.1003319108581
+              ],
+              "expectedBox": [
+                3179,
+                1894,
+                3237,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                3187.769230769231,
+                2005.8461538461538
+              ],
+              "estimatedGeneratedBox": [
+                3187,
+                2001,
+                3189,
+                2011
+              ],
+              "deltaPixels": [
+                -19.68235766130465,
+                -1.2541780647043197
+              ],
+              "distancePixels": 19.722275875910043,
+              "distanceMetres": 0.7442368255060393,
+              "distancePercentWidth": 0.4824431476494629,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 23,
+              "expectedCentroid": [
+                2303.5,
+                2060.291397076444
+              ],
+              "expectedBox": [
+                2275,
+                1895,
+                2333,
+                2205
+              ],
+              "estimatedGeneratedCentroid": [
+                2310.1923151001542,
+                2074.387471109399
+              ],
+              "estimatedGeneratedBox": [
+                2276,
+                1901,
+                2345,
+                2229
+              ],
+              "deltaPixels": [
+                6.6923151001542465,
+                14.09607403295513
+              ],
+              "distancePixels": 15.604050260823453,
+              "distanceMetres": 0.5888320853140926,
+              "distancePercentWidth": 0.3817037735035091,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 24,
+              "expectedCentroid": [
+                2492.0181391378574,
+                2046.913358941528
+              ],
+              "expectedBox": [
+                2471,
+                1982,
+                2517,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2505.6673303721855,
+                2060.480318578649
+              ],
+              "estimatedGeneratedBox": [
+                2474,
+                1986,
+                2540,
+                2117
+              ],
+              "deltaPixels": [
+                13.6491912343281,
+                13.566959637121045
+              ],
+              "distancePixels": 19.24481268151318,
+              "distanceMetres": 0.7262193464721955,
+              "distancePercentWidth": 0.4707635196064868,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 25,
+              "expectedCentroid": [
+                2642.087155963303,
+                2074.3795871559632
+              ],
+              "expectedBox": [
+                2618,
+                2034,
+                2676,
+                2099
+              ],
+              "estimatedGeneratedCentroid": [
+                2643.186424773225,
+                2087.981076008758
+              ],
+              "estimatedGeneratedBox": [
+                2560,
+                2006,
+                2729,
+                2179
+              ],
+              "deltaPixels": [
+                1.0992688099222505,
+                13.601488852794773
+              ],
+              "distancePixels": 13.645837861017123,
+              "distanceMetres": 0.514937277774231,
+              "distancePercentWidth": 0.333802296013139,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 26,
+              "expectedCentroid": [
+                301.0,
+                2287.0
+              ],
+              "expectedBox": [
+                301,
+                2245,
+                302,
+                2330
+              ],
+              "estimatedGeneratedCentroid": [
+                243.71302094580005,
+                2318.3286547182033
+              ],
+              "estimatedGeneratedBox": [
+                221,
+                2260,
+                268,
+                2410
+              ],
+              "deltaPixels": [
+                -57.286979054199946,
+                31.328654718203325
+              ],
+              "distancePixels": 65.29381728470734,
+              "distanceMetres": 2.463917633385183,
+              "distancePercentWidth": 1.5972068807413735,
+              "exceeds015Metres": true
+            }
+          ],
+          "LRProjectionAcceptance": false,
+          "noMaskForcedOntoOutput": true
+        },
+        "materialScreening": {
+          "id": "nd_etela",
+          "opaqueSaturatedRedYellowPixels": 55,
+          "lowAlphaSaturatedRedYellowPixels": 34552,
+          "opaqueSaturatedRedYellowPercentForeground": 0.0011365879011251189,
+          "testedTextured96pxPatches": 51,
+          "exactRepeatedTexturedPatches": [],
+          "repeatMethod": "Exact hashes of non-overlapping96px native opaque/high-variation patches; visual review also required, not a complete perceptual-repeat detector."
+        },
+        "rootReviewedAt": "2026-10-09T13:04:23.258339+00:00",
+        "viewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/white-background-proof.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/nd_etela-silhouette-difference.png"
+        ],
+        "LRProjectionAcceptance": false,
+        "editorAcceptance": false
+      },
+      "fableReceipt": false,
+      "url": "https://media.matkakirja.app/julisteet/omat-mallit-pinnat/20261009/nd_etela_codex_v1.png?t=5d954fc145ad857f",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/omat-mallit-pinnat/20261009/nd_etela_codex_v1.png",
+      "bytes": 7659476,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200
+    },
+    {
+      "id": "nd_katot",
+      "subject": "Notre-Dame katot ylhäältä",
+      "taskNumber": 57,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/production/nd_katot/nd_katot_codex_v1.png",
+      "file": "nd_katot_codex_v1.png",
+      "sha256": "0d8b7e05fb4943db8e60608f33ec7105f002f7624e44d7627d819a022ff2686d",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-38ecbe92-f32a-4032-a353-75dd0ad4ef13.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/production/nd_katot/original-generation.png",
+      "originalSHA256": "38caea9c8d0f179f33077f3604aa11a9eaa2262dcda282f2da9bd4fc231fbf74",
+      "nativeGeneratedSize": [
+        1586,
+        992
+      ],
+      "nativeMode": "RGBA",
+      "dimensions": [
+        4088,
+        2557
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationTool": "builtin-imagegen",
+      "generationPrompt": "Use case: product-mockup / photorealistic architectural texture projection. Produce ONE entirely new high-detail photographic surface image for planar projection onto an owner's simplified Notre-Dame model. Every surface is freshly generated; do not paste or repeat photo patches. The first three inputs are ABSOLUTE GEOMETRY constraints: image1 is the exact clean model orthographic view/frame; image2 is the exact white building-silhouette mask; image3 is the exact white aperture mask. KEEP this precise MODEL, its full canvas, outline, proportions, feature positions and aperture centers. Do not repair the simplified model into real-world canonical Notre-Dame architecture. Subsequent photos are ONLY material/color/wear references; ignore their perspective, composition, sky, foreground, background, sunlight and cast shadows. Real-camera-like fine material texture, not a drawing/illustration/cartoon/CGI surface, but rigorously ORTHOGRAPHIC with zero perspective or tilt. Same canvas framing as image1: absolutely no auto centering, fitting, crop, padding, invented margins, rotation or perspective. Preserve every tower, ridge, eave, cornice, buttress, pinnacle and aperture at its exact input pixel-normalized location. Every aperture is on a WHITE input3 mask region; no invented openings and no omitted existing ones. Return a true transparent PNG cutout, genuine alpha outside the white building mask and through existing silhouette holes; no checkerboard drawn into pixels. Photographic restored pale creamy-yellow limestone with individually varied stones and fine mortar, natural non-repeating mineral variation and subtle dirt/runoff streaks; no soot-black look. Pale SILVER-GREY lead roofs, darker blue-grey spire, softly greenish verdigris bronze statues. PERFECTLY EVEN diffuse overcast illumination, no sun, no directional highlights, no cast/projected/ground/contact/AO shadows baked in; only natural dark depth inside openings. No people, vehicles, trees, cranes, scaffolding, utility poles, street lamps, signs, sky, ground, text, letters, numbers, watermarks, caption, ruled/grid lines or reference annotations. Model edges become real material joints, never drawn outline strokes. No repeated tiles, copy-paste blocks or clone patches. This is a high-detail material atlas, not an artistic reconstruction of a different cathedral. All detailed material must be subordinate to EXACT pixel-normalized geometry.\nView: ROOFS STRAIGHT DOWN, pure orthographic overhead, absolutely no facade perspective, horizon or view angle. Exact clean-frame aspect4088:2557 (1.59875), intended minimum4088x2557 PNG. Image right is azimuth116degrees, LOCK orientation to input1. West-tower roof pyramids at LEFT, long horizontal nave/choir lead roofs across center, semicircular choir roof at RIGHT, and the asymmetric lower-right roof extension all remain exactly positioned in model footprint. Do not turn the model into a generic centered symmetric cruciform cathedral. Match EVERY roof outline/ridge/slope/cornice/buttress/pinnacle tip and dormer shown in input1; do not add dormers absent from the model. Preserve the central octagonal crossing-spire cap from TOP DOWN as an octagonal roof cap, not a tall oblique vertical spike. Lead sheets have physical standing seams running along each roof slope, panels approximately0.5-0.6m wide (at26.5pixels/m about13-16pixels at4088wide); staggered transverse seams, individually varied oxidation shades, delicate runoff marks and darker ridge strips. No copied or repeating patina. Planes use restrained different silver-grey material tones matching model slopes, no illumination/shadows creating extra contrast. Stone exposed parts pale creamy limestone, tiny roof-edge statues verdigris bronze. Existing apertures are ONLY the precise white regions in input3, including the very thin west-edge portal projections; no skylights/window holes invented on otherwise continuous roof planes. Accurate model mask footprint and all inner geometry prevail over familiar Notre-Dame roof photos.\n",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-nd-pinnat-pilotti-20261009.md",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "2eca65525ee2e292022f86b8864e1870777b6f46"
+        }
+      ],
+      "sourceReadInFull": true,
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_ohje.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_ohje.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "e2bf62a7466a0739d85b20ed258f4c115f60cb0b",
+          "sha256": "1d2fe52e912245e59a80704d9eb77ace04831e095d00134683c793ef471a0311",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_puhdas.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_puhdas.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "104ea4343ca958f8715b1aa747ad7378bcd6b89f",
+          "sha256": "31bb750baa6266ba86d516c0e4af2d597e9586fa199e33adefd7c7da1c82b212",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_maski_aukot_kaikki.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_aukot_kaikki.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "9ce80fa3f42239fe5fa8e8bed253ce0e9cc122d1",
+          "sha256": "c18c229892cbcea9603706f50c429d00a20748225e1b6324be66a40994a29047",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_etela_maski_rakennus.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_etela_maski_rakennus.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "f22e3e66405b9e9f04784929814adc1afdb98036",
+          "sha256": "a632fce9730da64733ed95408903aefa1c4e97c3255d7c071d00306370cc7bbe",
+          "dimensions": [
+            4088,
+            2981
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_ohje.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_ohje.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "97aa6ccaae9e9beaf8f5a769439303e557b12c1d",
+          "sha256": "f36deb7988fe192e480fd216d279fb423939774eaea5316897e5e6e93fdc0808",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_puhdas.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_puhdas.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "8fa96db049b3156e642b1c4b83bb137c4182ff9a",
+          "sha256": "e912ecd9535b85b267cc529faeb1e2f795ac729612d068de80c397c1b99d9b55",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_maski_aukot_kaikki.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_aukot_kaikki.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "b46b311137c9085dbbed432613086e2b24676c97",
+          "sha256": "5e22cde3a9400198a4f1d496a274cedb45a39eb27d569be7151e8a0b685f5b13",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/nd_katot_maski_rakennus.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_rakennus.png",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "d98307c158c9e602853ffbc0262c52ac6d627b4a",
+          "sha256": "571ab96007ec5d16497641bae855588cc4d9ca97c1abea2da7c9f545337bb51e",
+          "dimensions": [
+            4088,
+            2557
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-apsis-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-apsis-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "44c35723def80a048df594606ef41ffd0927ad43",
+          "sha256": "9d9b432afc3f1aa5c7bb41aa04f020ce95c688cd91b9b77d9ffa50042ca6e320",
+          "dimensions": [
+            960,
+            819
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-apsis-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-apsis-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "0e3f29a006c2a4815d0a5168609386b3c7437416",
+          "sha256": "25a20dd04d59e6eb7e979457f220d6ff2d5293ba5b8317458d83bb224081124f",
+          "dimensions": [
+            875,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-apsis-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-apsis-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "ef84244f34c2601a6e96651cd3b7ccf51276df1c",
+          "sha256": "497ad7e27c290ac4323c196d955d53fa8e169df6fe562dc0a77ebdf7ffb841ef",
+          "dimensions": [
+            933,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "fae2c9f7c5d5b9cdabd08da66529683cc2836020",
+          "sha256": "b7cf33b91a92036d954ff3b4e190e9e863bd16b6abf7e5d28f5a3bd725bde389",
+          "dimensions": [
+            960,
+            641
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "02c8a5641e2ef8db122803bd853f096951964619",
+          "sha256": "2c91913118998287b4dda1963c9111b2ebce3e4a9330206f56222af2adec0d08",
+          "dimensions": [
+            960,
+            660
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "c6f8944976412b80f64f9bc7de580af28607083d",
+          "sha256": "f2b01ed950a5c71058618182e561166534ff9dea6e66a9110cb16f009bbc50fa",
+          "dimensions": [
+            960,
+            721
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-04.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-04.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "cc6ea5b294f24f7f90cd515119c67b5cc4750068",
+          "sha256": "aef84d938209ac2ea13ef4e842eaf1459beac9df1a8aa6ac0ed3f3ce8f4c09b8",
+          "dimensions": [
+            960,
+            638
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-etela-05.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-etela-05.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "b1ee1468cde5394d569484e9459ea7795e9e7dde",
+          "sha256": "cad450d5cae35649214dfd3c6addfa769908cffada4a2f65847ab7d3bc7e9e97",
+          "dimensions": [
+            960,
+            638
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "3b4d4dd4b6ce71a8f5bc2b9b8bc09e80f3725538",
+          "sha256": "a3229ba5e3aff9f17978b1494e19080b2a7b090310bfcd0cd1f0a8935f5a0cc3",
+          "dimensions": [
+            960,
+            640
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "41520ee34f772c0717263669655045a2b3e46412",
+          "sha256": "a2de989a19b2ce64ae1afb9efe6cbd143a699371126aa03d9aeae12b07bb9f65",
+          "dimensions": [
+            960,
+            720
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "cc753d4f9b99987cddd58b9e142012db9c7fa506",
+          "sha256": "144e6cac927b08af9f2813d6bf5cd992c878c9b911642c184e463ee2025e8722",
+          "dimensions": [
+            933,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-04.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-04.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "28434347e838754737ec112da6d52e183d97627d",
+          "sha256": "fc9d47a2a9d73e48924596083296fa1b2e558ae520a754073d0f0e03e79dcb4f",
+          "dimensions": [
+            960,
+            721
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-05.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-05.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "6cf4fefbc43ceed3eb6cfc8f6291ba95eecf4165",
+          "sha256": "dd4c751aed719653916e7fff5f9e21c04bff5535d3d5336eb8629e72f1742ead",
+          "dimensions": [
+            960,
+            640
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-06.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-06.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "4ae9b3f5033f5a6376d90e77cd4c76a12289d2e0",
+          "sha256": "0320bccee09e5396cb1377198ce1abe5b464005f400f6ad263545cd1a1e0bc92",
+          "dimensions": [
+            939,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-katto-07.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-07.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "52a3b10a4d2f7ee471a39892fda5f4b1ae4500d6",
+          "sha256": "27c135c03a58daa64a53872646e305f051cf993df2429e287aaf97fb97897190",
+          "dimensions": [
+            960,
+            640
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-spiira-01.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-spiira-01.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "994dfce7df4fa6cae0e9b95b0a1860edd6508068",
+          "sha256": "854633f4ab16df796ca8b3f1a65f309d5f2e2c966d25f27b648f2a9ff820268e",
+          "dimensions": [
+            551,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-spiira-02.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-spiira-02.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "d9dc49a013d08c78696eb0e4c862485f26ecb60c",
+          "sha256": "4751906d7f6f8508985d6d6b2ced5237e48274347859bd8935c3d0394490fd05",
+          "dimensions": [
+            933,
+            1400
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-torni-03.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-torni-03.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "05f6499ddb37018554a41ffe133169e81c3efb63",
+          "sha256": "1911d4c1699be7969e6a57ebac6fb9d0f087b19ef195af683a111eb74e489fe9",
+          "dimensions": [
+            960,
+            720
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "posti/liitteet/nd-pinnat/ref-torni-05.jpg",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-torni-05.jpg",
+          "commit": "4b667b8d5eccd58f133065bba37f867f10afefb3",
+          "blob": "16a1a12b7070fee1c33dd8016eb564d3c915f49c",
+          "sha256": "b4ece63347c1a029a378663f80c6b3a0208fad0548a2d2933debf79cb8a50fc9",
+          "dimensions": [
+            960,
+            870
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "referencedImagePathsUsed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_puhdas.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_rakennus.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_aukot_kaikki.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-02.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-04.jpg"
+      ],
+      "referenceRoles": [
+        "absolute-frame-and-geometry",
+        "absolute-building-silhouette",
+        "absolute-aperture-positions",
+        "material-color-wear-only",
+        "material-color-wear-only"
+      ],
+      "sourceImagePixelsCopied": false,
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "resizeTo": [
+          4088,
+          2557
+        ],
+        "nativeSize": [
+          1586,
+          992
+        ],
+        "scaleX": 2.5775535939470364,
+        "scaleY": 2.5776209677419355,
+        "method": "Entire-canvas Lanczos resize to exact model frame; no crop, warp, mask forcing, painting or geometry correction",
+        "originalAlphaPreserved": true,
+        "rawMasksNotUsedToForceQAPass": true
+      },
+      "QA": {
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "projectionPass": false,
+        "fullContentConstraintsPass": false
+      },
+      "editorAcceptance": false,
+      "LRProjectionAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootIndependentReview": {
+        "sha256": "0d8b7e05fb4943db8e60608f33ec7105f002f7624e44d7627d819a022ff2686d",
+        "sampleDeliveryApproved": true,
+        "projectionPass": false,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Siluetin IoU 0.92615 alittaa 0,97:n. Kehys on 4088 × 2557, mutta generoitu rakennus on hieman liian suuri/siirtynyt alkuperäiseen maskiin nähden.",
+          "Aukkojen automaattisen esitarkistuksen mediaani 1.118 m (0.725 % kuvan leveydestä) ylittää 0,15 m:n. Tämä on tummien alueiden arvio; LR:n lopullinen geometrinen kohdistus on tekemättä.",
+          "Läpinäkyvyyden reunassa on matalan alfan puna/keltahäivettä; täysin peittäviä kylläisiä reunapikseleitä 4. Valkoisella taustalla häive on heikko, mutta alphareunat on tarkistettava projektiossa.",
+          "Valokuvamainen kermankeltainen kivi, hopeanharmaa lyijy ja vihertävä pronssi vastaavat materiaalibriefiä. Ei taivasta, eläviä ihmisiä, ajoneuvoja, telineitä, nostureita, puita, tekstiä, ruudukkoa tai ohjeen merkintöjä havaittu. Patsaat ovat malliin kuuluvia.",
+          "68 tekstuuripalaa tarkistettu; ei tavulleen toistuvia 96 px-paloja. Myöskään selvää suurten laikkujen kopiotoistoa ei havaittu. Tämä ei todista jokaisen yksityiskohdan ainutkertaisuutta.",
+          "Työkalun natiivi [1586, 992] suurennettu koko kehys säilyttäen minimikokoon. Ei maskipakotusta, geometriakorjausta, paikallista maalausta tai referenssivalokuvien liittämistä.",
+          "Suoraan ylhäältä ja ohjeen suunta säilyy pääpiirteissään; harjat ja alaoikean uloke tunnistettavia. Paneelien jako on valokuvamainen, mutta 0,5–0,6m levyväliä sekä kaikkia porrastettuja poikkisaumoja ei ole mitattu. Lappeiden liitoksissa on paikallista tummaa syvyysvarjostusta; auringon/ulkopuolisen ympäristön heittovarjoja ei havaittu."
+        ],
+        "projectionMeasurement": {
+          "buildingIoU": 0.9261491599974127,
+          "intersectionPixels": 4882500,
+          "unionPixels": 5271829,
+          "buildingMaskPass": false,
+          "transparentAlphaPresent": true,
+          "apertureMethod": "Source mask9px closing groups louver strips; nearest dark connected component(gray<110) within80px. Approximate screening, not LR projection verification. A large roof/spire dark area may produce an ambiguous match.",
+          "apertureExpectedGroupCount": 2,
+          "apertureMatchedCount": 2,
+          "apertureUnmatchedCount": 0,
+          "apertureMedianDistancePixels": 29.630931311857076,
+          "apertureMedianDistanceMetres": 1.118148351390833,
+          "apertureMedianDistancePercentWidth": 0.7248270868849579,
+          "apertureScreeningPass": false,
+          "apertureMatches": [
+            {
+              "id": 1,
+              "expectedCentroid": [
+                289.0166270783848,
+                573.5605700712589
+              ],
+              "expectedBox": [
+                287,
+                496,
+                292,
+                652
+              ],
+              "estimatedGeneratedCentroid": [
+                274.6041666666667,
+                596.6458333333334
+              ],
+              "estimatedGeneratedBox": [
+                273,
+                590,
+                277,
+                604
+              ],
+              "deltaPixels": [
+                -14.412460411718087,
+                23.085263262074477
+              ],
+              "distancePixels": 27.214856145102562,
+              "distanceMetres": 1.0269757035887759,
+              "distancePercentWidth": 0.6657254438625871,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 2,
+              "expectedCentroid": [
+                299.8205128205128,
+                1295.2948717948718
+              ],
+              "expectedBox": [
+                298,
+                1223,
+                302,
+                1379
+              ],
+              "estimatedGeneratedCentroid": [
+                272.0322580645161,
+                1311.258064516129
+              ],
+              "estimatedGeneratedBox": [
+                270,
+                1308,
+                275,
+                1316
+              ],
+              "deltaPixels": [
+                -27.788254755996718,
+                15.963192721257201
+              ],
+              "distancePixels": 32.047006478611586,
+              "distanceMetres": 1.20932099919289,
+              "distancePercentWidth": 0.7839287299073284,
+              "exceeds015Metres": true
+            }
+          ],
+          "LRProjectionAcceptance": false,
+          "noMaskForcedOntoOutput": true
+        },
+        "materialScreening": {
+          "id": "nd_katot",
+          "opaqueSaturatedRedYellowPixels": 4,
+          "lowAlphaSaturatedRedYellowPixels": 15777,
+          "opaqueSaturatedRedYellowPercentForeground": 7.610642570357536e-05,
+          "testedTextured96pxPatches": 68,
+          "exactRepeatedTexturedPatches": [],
+          "repeatMethod": "Exact hashes of non-overlapping96px native opaque/high-variation patches; visual review also required, not a complete perceptual-repeat detector."
+        },
+        "rootReviewedAt": "2026-10-09T13:04:23.258339+00:00",
+        "viewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/white-background-proof.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/nd_katot-silhouette-difference.png"
+        ],
+        "LRProjectionAcceptance": false,
+        "editorAcceptance": false
+      },
+      "referenceAttributions": [
+        {
+          "file": "ref-katto-02.jpg",
+          "author": "Freedom Wizard",
+          "license": "CC BY3.0",
+          "sourceURL": "https://commons.wikimedia.org/wiki/File:FW_Dach_Notre_Dame_de_Paris.jpg"
+        },
+        {
+          "file": "ref-katto-04.jpg",
+          "author": "Schezar",
+          "license": "CC BY2.0",
+          "sourceURL": "https://commons.wikimedia.org/wiki/File:Notre_Dame_(15051055268).jpg"
+        }
+      ],
+      "preGenerationValidationRejection": {
+        "taskNumber": 57,
+        "id": "nd_katot",
+        "tool": "builtin-imagegen",
+        "generationIntent": "complete-new-material-image-with-fixed-reference-geometry",
+        "callsStarted": 1,
+        "generationLimit": 1,
+        "retryCalls": 0,
+        "referencePaths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_puhdas.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_rakennus.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/nd_katot_maski_aukot_kaikki.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-01.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-02.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-03.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/references/ref-katto-04.jpg"
+        ],
+        "referenceRoles": [
+          "absolute-frame-and-geometry",
+          "absolute-building-silhouette",
+          "absolute-aperture-positions",
+          "material-color-wear-only",
+          "material-color-wear-only",
+          "material-color-wear-only",
+          "material-color-wear-only"
+        ],
+        "transparentBackgroundRequested": true,
+        "startedAt": "2026-10-09T12:43:20.133939+00:00",
+        "status": "rejected-before-generation",
+        "validationError": "referenced_image_paths must contain at most5 paths",
+        "actualGenerations": 0
+      },
+      "preGenerationValidationRejections": 1,
+      "imageGenerationRetries": 0,
+      "builtinToolInvocations": 2,
+      "r2Key": "julisteet/omat-mallit-pinnat/20261009/nd_katot_codex_v1.png",
+      "rootVisualReview": {
+        "sha256": "0d8b7e05fb4943db8e60608f33ec7105f002f7624e44d7627d819a022ff2686d",
+        "sampleDeliveryApproved": true,
+        "projectionPass": false,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Siluetin IoU 0.92615 alittaa 0,97:n. Kehys on 4088 × 2557, mutta generoitu rakennus on hieman liian suuri/siirtynyt alkuperäiseen maskiin nähden.",
+          "Aukkojen automaattisen esitarkistuksen mediaani 1.118 m (0.725 % kuvan leveydestä) ylittää 0,15 m:n. Tämä on tummien alueiden arvio; LR:n lopullinen geometrinen kohdistus on tekemättä.",
+          "Läpinäkyvyyden reunassa on matalan alfan puna/keltahäivettä; täysin peittäviä kylläisiä reunapikseleitä 4. Valkoisella taustalla häive on heikko, mutta alphareunat on tarkistettava projektiossa.",
+          "Valokuvamainen kermankeltainen kivi, hopeanharmaa lyijy ja vihertävä pronssi vastaavat materiaalibriefiä. Ei taivasta, eläviä ihmisiä, ajoneuvoja, telineitä, nostureita, puita, tekstiä, ruudukkoa tai ohjeen merkintöjä havaittu. Patsaat ovat malliin kuuluvia.",
+          "68 tekstuuripalaa tarkistettu; ei tavulleen toistuvia 96 px-paloja. Myöskään selvää suurten laikkujen kopiotoistoa ei havaittu. Tämä ei todista jokaisen yksityiskohdan ainutkertaisuutta.",
+          "Työkalun natiivi [1586, 992] suurennettu koko kehys säilyttäen minimikokoon. Ei maskipakotusta, geometriakorjausta, paikallista maalausta tai referenssivalokuvien liittämistä.",
+          "Suoraan ylhäältä ja ohjeen suunta säilyy pääpiirteissään; harjat ja alaoikean uloke tunnistettavia. Paneelien jako on valokuvamainen, mutta 0,5–0,6m levyväliä sekä kaikkia porrastettuja poikkisaumoja ei ole mitattu. Lappeiden liitoksissa on paikallista tummaa syvyysvarjostusta; auringon/ulkopuolisen ympäristön heittovarjoja ei havaittu."
+        ],
+        "projectionMeasurement": {
+          "buildingIoU": 0.9261491599974127,
+          "intersectionPixels": 4882500,
+          "unionPixels": 5271829,
+          "buildingMaskPass": false,
+          "transparentAlphaPresent": true,
+          "apertureMethod": "Source mask9px closing groups louver strips; nearest dark connected component(gray<110) within80px. Approximate screening, not LR projection verification. A large roof/spire dark area may produce an ambiguous match.",
+          "apertureExpectedGroupCount": 2,
+          "apertureMatchedCount": 2,
+          "apertureUnmatchedCount": 0,
+          "apertureMedianDistancePixels": 29.630931311857076,
+          "apertureMedianDistanceMetres": 1.118148351390833,
+          "apertureMedianDistancePercentWidth": 0.7248270868849579,
+          "apertureScreeningPass": false,
+          "apertureMatches": [
+            {
+              "id": 1,
+              "expectedCentroid": [
+                289.0166270783848,
+                573.5605700712589
+              ],
+              "expectedBox": [
+                287,
+                496,
+                292,
+                652
+              ],
+              "estimatedGeneratedCentroid": [
+                274.6041666666667,
+                596.6458333333334
+              ],
+              "estimatedGeneratedBox": [
+                273,
+                590,
+                277,
+                604
+              ],
+              "deltaPixels": [
+                -14.412460411718087,
+                23.085263262074477
+              ],
+              "distancePixels": 27.214856145102562,
+              "distanceMetres": 1.0269757035887759,
+              "distancePercentWidth": 0.6657254438625871,
+              "exceeds015Metres": true
+            },
+            {
+              "id": 2,
+              "expectedCentroid": [
+                299.8205128205128,
+                1295.2948717948718
+              ],
+              "expectedBox": [
+                298,
+                1223,
+                302,
+                1379
+              ],
+              "estimatedGeneratedCentroid": [
+                272.0322580645161,
+                1311.258064516129
+              ],
+              "estimatedGeneratedBox": [
+                270,
+                1308,
+                275,
+                1316
+              ],
+              "deltaPixels": [
+                -27.788254755996718,
+                15.963192721257201
+              ],
+              "distancePixels": 32.047006478611586,
+              "distanceMetres": 1.20932099919289,
+              "distancePercentWidth": 0.7839287299073284,
+              "exceeds015Metres": true
+            }
+          ],
+          "LRProjectionAcceptance": false,
+          "noMaskForcedOntoOutput": true
+        },
+        "materialScreening": {
+          "id": "nd_katot",
+          "opaqueSaturatedRedYellowPixels": 4,
+          "lowAlphaSaturatedRedYellowPixels": 15777,
+          "opaqueSaturatedRedYellowPercentForeground": 7.610642570357536e-05,
+          "testedTextured96pxPatches": 68,
+          "exactRepeatedTexturedPatches": [],
+          "repeatMethod": "Exact hashes of non-overlapping96px native opaque/high-variation patches; visual review also required, not a complete perceptual-repeat detector."
+        },
+        "rootReviewedAt": "2026-10-09T13:04:23.258339+00:00",
+        "viewedProofs": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/white-background-proof.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/nd-pinnat-pilotti-20261009/qa/nd_katot-silhouette-difference.png"
+        ],
+        "LRProjectionAcceptance": false,
+        "editorAcceptance": false
+      },
+      "fableReceipt": false,
+      "url": "https://media.matkakirja.app/julisteet/omat-mallit-pinnat/20261009/nd_katot_codex_v1.png?t=0d8b7e05fb4943db",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/omat-mallit-pinnat/20261009/nd_katot_codex_v1.png",
+      "bytes": 8139645,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200
+    }
+  ],
+  "allRequestedFilesDelivered": true,
+  "fableReceipt": false,
+  "editorAcceptance": false,
+  "LRProjectionAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "onlyTwoViewPilot": true,
+  "furtherViewsAuthorized": false,
+  "updatedAt": "2026-10-09T13:21:56.356133+00:00"
+}
