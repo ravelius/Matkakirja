@@ -95,7 +95,7 @@ Miten Etelä-Tirol päätyi osaksi Italiaa?
 
 ### 8.4
 KYSYMYS: Miten dolomiittivuoret syntyivät?
-Nyt muistan: tämä tarina on pitkä. Dolomiittien kivi syntyi lämpimässä meressä triaskaudella, kun korallit ja muut merieliöt rakensivat riuttoja ja saarekkeita, joiden kalkkipitoiset kerrostumat muuttuivat ajan myötä dolomiitiksi. Myöhemmin [[Alppien]] vuorenpoimutus nosti merenpohjan kerrokset korkeiksi vuoriksi, ja jäätiköt sekä sää muotoilivat jyrkät huiput. Tarkkoja vuosimääriä en ole varma, mutta kyse on yli kahdestasadasta miljoonasta vuodesta. Onpas siinä aikaa kulunut ennen kuin kukaan on tullut kysymään.
+Nyt muistan: tämä tarina on pitkä. Dolomiittien kivi syntyi lämpimässä meressä triaskaudella, kun korallit ja muut merieliöt rakensivat riuttoja ja saarekkeita, joiden [[kalkkikiveä]] sisältävät kerrostumat muuttuivat ajan myötä dolomiitiksi, kun kivi sai [[magnesiumin]] yhdisteitä. Myöhemmin [[Alppien]] vuorenpoimutus nosti merenpohjan kerrokset korkeiksi vuoriksi, ja jäätiköt sekä sää muotoilivat jyrkät huiput. Tarkkoja vuosimääriä en ole varma, mutta kyse on yli kahdestasadasta miljoonasta vuodesta. Onpas siinä aikaa kulunut ennen kuin kukaan on tullut kysymään.
 JATKOT:
 Millaisia fossiileja Dolomiiteilta löytyy?
 Miten jäätiköt muokkasivat vuoristoa?
@@ -109,7 +109,7 @@ Millaista ruokaa vuoristomajoissa tarjoillaan?
 
 ### 9.1
 KYSYMYS: Kuinka usein Etna purkautuu?
-No jopas, tästä voi puhua pitkään. Etna purkautuu lähes joka vuosi, ja toiminta on usein jatkuvaa: kraattereista nousee kaasua ja tuhkaa, ja välillä tulee voimakkaampia jaksoja, joissa laava virtaa rinteelle. Purkaukset ovat harvoin vaarallisia, koska laava liikkuu yleensä hitaasti. Tuhka voi kuitenkin häiritä lentoliikennettä, ja [[Catanian]] lentokenttä on ajoittain joutunut sulkemaan. Tarkkaa purkausmäärää vuodessa en ole varma. Tämä tulivuori ei kyllä nuku, eikä minunkaan nokkani.
+No jopas, tästä voi puhua pitkään. Etna purkautuu lähes joka vuosi, ja toiminta on usein jatkuvaa: kraattereista nousee kaasua ja tuhkaa, ja välillä tulee voimakkaampia jaksoja, joissa laava virtaa rinteelle. Purkaukset ovat harvoin vaarallisia, koska laava liikkuu yleensä hitaasti. Tuhka voi kuitenkin häiritä lentoliikennettä, ja [[Catanian]] lentokenttä on ajoittain joutunut sulkemaan. Tarkkaa purkausmäärää vuodessa en ole varma. Muinaisen myytin mukaan jättiläinen [[Typhon]] makaa vuoren alla, ja purkaukset selitettiin hänen liikahduksillaan. Tämä tulivuori ei kyllä nuku, eikä minunkaan nokkani.
 JATKOT:
 Miten tuhkapilvet vaikuttavat lentoliikenteeseen?
 Miten Etnaa seurataan?
@@ -123,14 +123,14 @@ Miten laavavirrat ovat uhanneet kyliä?
 
 ### 9.3
 KYSYMYS: Miksi Etnan korkeus muuttuu?
-Kato, hyvä pointti. Etnan korkeus muuttuu, koska purkaukset kasaavat laavaa ja tuhkaa huippukraatterien ympärille ja kasvattavat huippua, kun taas romahdukset ja räjähdykset voivat madaltaa sitä. Syyskuussa 2024 huippu oli 3 403 metrin korkeudessa, mutta luku vaihtelee jatkuvasti. Siksi eri lähteissä näkee hieman erilaisia korkeuksia. Tulivuori on siis eräänlainen elävä rakennus, joka kasvaa ja muuttuu. Kyyhkynä pidän vakaammasta kaiteesta.
+Kato, hyvä pointti. Etnan korkeus muuttuu, koska purkaukset kasaavat laavaa ja tuhkaa huippukraatterien ympärille ja kasvattavat huippua, kun taas romahdukset ja räjähdykset voivat madaltaa sitä. Syyskuussa 2024 huippu oli 3 403 metrin korkeudessa, mutta luku vaihtelee jatkuvasti. Siksi eri lähteissä näkee hieman erilaisia korkeuksia. Tulivuoren tuhkainen maa on hedelmällistä, ja sen rinteillä viljellään muun muassa [[appelsiineja]] ja [[pistaasipähkinöitä]]. Tulivuori on siis eräänlainen elävä rakennus, joka kasvaa ja muuttuu. Kyyhkynä pidän vakaammasta kaiteesta.
 JATKOT:
 Miten Etnan huipun korkeutta mitataan?
 Miten Etna eroaa Vesuviuksesta?
 
 ### 9.4
 KYSYMYS: Voiko Etnalle kiivetä?
-Tost minä osaan kertoo. Etnalle voi kiivetä, ja monet nousevat rinteille opastetuilla retkillä. Joillekin korkeammille osille pääsee [[köysiradalla]] ja maastoautolla, mutta huippukraatterien läheisyyteen pääsy riippuu purkaustilanteesta: viranomaiset rajoittavat sitä, kun vuori on aktiivinen. Siksi kannattaa tarkistaa ajantasainen tieto, sillä minun tietoni voi olla vanhentunutta. Kaikki retkeilijät eivät sovi kaikille reiteille, ja opas tuntee olosuhteet parhaiten. Minä pysyn ilmassa, kiitos vain.
+Tost minä osaan kertoo. Etnalle voi kiivetä, ja monet nousevat rinteille opastetuilla retkillä, joita järjestetään muun muassa [[Catanian]] suunnasta. Joillekin korkeammille osille pääsee [[köysiradalla]] ja maastoautolla, mutta huippukraatterien läheisyyteen pääsy riippuu purkaustilanteesta: viranomaiset rajoittavat sitä, kun vuori on aktiivinen. Siksi kannattaa tarkistaa ajantasainen tieto, sillä minun tietoni voi olla vanhentunutta. Kaikki retkeilijät eivät sovi kaikille reiteille, ja opas tuntee olosuhteet parhaiten. Minä pysyn ilmassa, kiitos vain.
 JATKOT:
 Millaisia varusteita Etnalle tarvitaan?
 Miten opastetut retket Etnalla toimivat?

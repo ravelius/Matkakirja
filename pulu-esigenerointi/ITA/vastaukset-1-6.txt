@@ -51,7 +51,7 @@ Voiko Domus Aureaan päästä sisään nykyään?
 
 ### 27.3
 KYSYMYS: Mikä yhteys Colosseumilla on Neron palatsiin?
-Tuota niin. Colosseum rakennettiin sen tekojärven paikalle, joka kuului Neron palatsialueeseen. Keisari [[Vespasianus]] aloitti rakennustyöt 70-luvulla, ja amfiteatteri vihittiin käyttöön vuonna 80. Näin Neron yksityinen huvialue muutettiin kaikille avoimeksi kansan hyödyksi. Colosseumin nimen alkuperää selitetään usein läheisellä Neron jättipatsaalla, mutta selitys on kiistelty, enkä ole siitä varma.
+Tuota niin. Colosseum rakennettiin sen tekojärven paikalle, joka kuului [[Neron]] palatsialueeseen. Keisari [[Vespasianus]] aloitti rakennustyöt 70-luvulla, ja amfiteatteri vihittiin käyttöön vuonna 80. Näin Neron yksityinen huvialue muutettiin kaikille avoimeksi kansan hyödyksi. Colosseumin nimen alkuperää selitetään usein läheisellä Neron jättipatsaalla, mutta selitys on kiistelty, enkä ole siitä varma.
 
 Minä katselin Colosseumin kaarta ylhäältä, ja pidän huomattavana, että kuuluisin rakennus nousi yhden keisarin ylellisyyden tilalle. Mut siihen oli hyvä syy.
 JATKOT:
@@ -182,7 +182,7 @@ Mikä on jäätikön railo?
 
 ### 30.5
 KYSYMYS: Miten alppikauris pystyy kiipeämään jyrkillä kallioilla?
-Kato, kauriin sorkat on tehty kiipeämiseen. Alppikauriin sorkan reunat ovat kovat ja terävät, kun taas keskiosa on pehmeä ja kumimainen, joten se pitää hyvin kiinni epätasaisessa kalliossa. Eläimen jalat ovat vahvat ja tasapainoaisti erinomainen, ja se pystyy hyppäämään kallioiden välillä jyrkillä rinteillä. Kesällä lauma liikkuu korkealla niityillä ja talvella laskeutuu usein alemmas suojaisammille rinteille. Näin alppikauris selviytyy vuoristossa, jossa muut eläimet eivät pärjää. Ja minä lennän, kun en kiipeä.
+Kato, kauriin sorkat on tehty kiipeämiseen. [[Alppikauriin]] sorkan reunat ovat kovat ja terävät, kun taas keskiosa on pehmeä ja kumimainen, joten se pitää hyvin kiinni epätasaisessa kalliossa. Eläimen jalat ovat vahvat ja tasapainoaisti erinomainen, ja se pystyy hyppäämään kallioiden välillä jyrkillä rinteillä. [[Alpeilla]] lauma liikkuu kesällä korkealla niityillä ja talvella laskeutuu usein alemmas suojaisammille rinteille. Näin alppikauris selviytyy vuoristossa, jossa muut eläimet eivät pärjää. Ja minä lennän, kun en kiipeä.
 JATKOT:
 Mitä alppikauris syö vuoristossa?
 Miten kauriita seurataan Gran Paradison puistossa?

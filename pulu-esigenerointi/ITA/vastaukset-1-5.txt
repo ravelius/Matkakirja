@@ -37,7 +37,7 @@ Mitä Liparisaarilla on?
 
 ### 21.5
 KYSYMYS: Mikä on Tropean punasipuli?
-Ai se, tuo kuuluisa sipuli. [[Tropean punasipuli]], italiaksi cipolla rossa di Tropea, on Calabrian rannikolla viljelty makea punainen sipuli, joka tunnetaan miedosta ja hieman sokeriselta maistuvasta mausta. Sitä syödään usein raakana salaateissa, ja siitä tehdään myös hilloa ja suolakurkun kaltaisia säilykkeitä. Tuotteella on Euroopan unionin suojattu maantieteellinen merkintä, mutta tarkkaa merkinnän vuotta en ole varma. Kaupungin torilla sipulit riippuvat usein nippuina, ja ne ovat tavallinen matkamuisto.
+Ai se, tuo kuuluisa sipuli. [[Tropean punasipuli]], italiaksi cipolla rossa di Tropea, on [[Calabrian]] rannikolla viljelty makea punainen sipuli, joka tunnetaan miedosta ja hieman sokeriselta maistuvasta mausta. Sitä syödään usein raakana salaateissa, ja siitä tehdään myös hilloa ja suolakurkun kaltaisia säilykkeitä. Tuotteella on Euroopan unionin suojattu maantieteellinen merkintä, mutta tarkkaa merkinnän vuotta en ole varma. Kaupungin torilla sipulit riippuvat usein nippuina, ja ne ovat tavallinen matkamuisto.
 
 Nimi on ehkä liioiteltu, mutta sipulista minä en pullaa tee.
 
@@ -73,7 +73,7 @@ Mikä on Magna Graecia?
 
 ### 22.4
 KYSYMYS: Mikä krypta on?
-Odotas vähän, annas kun muistelen. [[Krypta]] on kirkon alla oleva tila, usein holvattu, jossa säilytettiin alun perin pyhimysten ja tärkeiden henkilöiden hautoja ja pyhäinjäännöksiä. Keskiajalla kryptoja rakennettiin kirkkojen kuorin alle, ja niissä pidettiin myös jumalanpalveluksia. Geracen tuomiokirkossa kryptaan pääsee alas, ja se on yksi kirkon nähtävyyksistä. Kryptojen koko ja koristelu vaihtelevat paljon eri maissa. Tarkkaa vuotta Geracen krypan rakentamiselle en ole varma.
+Odotas vähän, annas kun muistelen. [[Krypta]] on kirkon alla oleva tila, usein holvattu, jossa säilytettiin alun perin pyhimysten ja tärkeiden henkilöiden hautoja ja pyhäinjäännöksiä. Keskiajalla kryptoja rakennettiin kirkkojen kuorin alle, ja niissä pidettiin myös jumalanpalveluksia. Geracen tuomiokirkossa kryptaan pääsee alas, ja se on yksi kirkon nähtävyyksistä. Kryptojen koko ja koristelu vaihtelevat paljon eri maissa. Geracen kirkko liitetään usein [[normannien]] aikaan [[Calabrian]] historiassa, mutta tarkkaa vuotta krypan rakentamiselle en ole varma.
 
 JATKOT:
 Mitä pyhäinjäännökset ovat?
@@ -129,7 +129,7 @@ Mihin roomalaiset teatterit rakennettiin?
 
 ### 23.5
 KYSYMYS: Millaisia teattereita roomalaiset rakensivat?
-Selvä juttu, tämä on kiinnostava. Roomalaiset teatterit olivat yleensä puoliympyrän muotoisia, ja katsomo nojasi usein holveihin eikä rinteeseen, toisin kuin kreikkalaisissa. Edessä oli näyttämö ja sen takana koristeellinen seinä. Teattereita rakennettiin ympäri [[Rooman valtakuntaa]], ja ne olivat tärkeitä kaupunkien kulttuurielämälle. Tarkka istumapaikkamäärä vaihteli kaupungista toiseen, enkä ole varma Saepinumin teatterin mitoista.
+Selvä juttu, tämä on kiinnostava. Roomalaiset teatterit olivat yleensä puoliympyrän muotoisia, ja katsomo nojasi usein holveihin eikä rinteeseen, toisin kuin kreikkalaisissa. Edessä oli näyttämö ja sen takana koristeellinen seinä. Teattereita rakennettiin ympäri [[Rooman valtakuntaa]], ja ne olivat tärkeitä kaupunkien kulttuurielämälle. Tarkka istumapaikkamäärä vaihteli kaupungista toiseen, enkä ole varma kaikista mitoista. [[Molisessa]] sijaitsevassa Saepinumissa [[teatteri]] on säilynyt osittain.
 
 JATKOT:
 Mikä erottaa kreikkalaisen teatterin roomalaisesta?
@@ -195,7 +195,7 @@ Mikä oli spina?
 
 ### 25.2
 KYSYMYS: Miksi Circus Maximus katosi?
-No niin, tähän ei ole yhtä syytä. Viimeiset kisat järjestettiin vuonna 549, ja sen jälkeen rakenteet alkoivat rapistua ja muuttuivat [[kivilouhokseksi]]. Rooman kaupunki pieneni myöhäisantiikissa ja keskiajalla huomattavasti, eikä valtavan radan ylläpitoon enää ollut varaa. Kiviä käytettiin uusiin rakennuksiin, ja alue peittyi myöhemmin maahan. Tarkkoja yksityiskohtia, kuten tulvien tai maanjäristysten osuutta, en ole varma. Nykyään paikalla on avoin nurmikenttä Rooman keskustassa.
+No niin, tähän ei ole yhtä syytä. Viimeiset kisat järjestettiin vuonna 549, ja sen jälkeen rakenteet alkoivat rapistua ja muuttuivat [[kivilouhokseksi]]. [[Rooman]] kaupunki pieneni myöhäisantiikissa ja keskiajalla huomattavasti, eikä valtavan radan ylläpitoon enää ollut varaa. Kiviä käytettiin uusiin rakennuksiin, ja alue peittyi myöhemmin maahan. Tarkkoja yksityiskohtia, kuten tulvien tai maanjäristysten osuutta, en ole varma. Nykyään paikalla on avoin nurmikenttä Rooman keskustassa.
 
 Onpas siitä pitkä aika, kun kaikki joutui kierrätykseen.
 
@@ -205,7 +205,7 @@ Milloin Rooman kaupunki pieneni?
 
 ### 25.3
 KYSYMYS: Miten vaunukilpailut käytiin?
-Joo, tän minä tiedän. Vaunukilpailuissa useita vaunuja ajettiin yhtä aikaa radalla, ja kilpailijat kiersivät keskiosan ympäri sovitun määrän kierroksia; yleisin luku lähteissä on seitsemän. Vaunuja vetivät tavallisesti neljä hevosta, ja ajajat edustivat eri ryhmittymiä, joilla oli omat värinsä. Kilpailut olivat vaarallisia, ja kolarit olivat tavallisia, etenkin käännöksissä. [[Circus Maximuksessa]] kilpailuja järjestettiin lähes tuhannen vuoden ajan. Tarkkoja sääntöjä en ole varma, koska ne vaihtelivat ajan mittaan.
+Joo, tän minä tiedän. Vaunukilpailuissa useita vaunuja ajettiin yhtä aikaa radalla, ja kilpailijat kiersivät keskiosan ympäri sovitun määrän kierroksia; yleisin luku lähteissä on seitsemän. Vaunuja vetivät tavallisesti neljä hevosta, ja ajajat edustivat eri ryhmittymiä, joilla oli omat värinsä. Kilpailut olivat vaarallisia, ja kolarit olivat tavallisia, etenkin käännöksissä. [[Circus Maximuksessa]] kilpailuja järjestettiin lähes tuhannen vuoden ajan. [[Circus Maximuksen]] rata oli pitkä, kapea ja toisesta päästä pyöristetty. Tarkkoja sääntöjä en ole varma, koska ne vaihtelivat ajan mittaan.
 
 JATKOT:
 Keitä vaunujen ajajat olivat?
@@ -213,7 +213,7 @@ Mitä värit tarkoittivat?
 
 ### 25.4
 KYSYMYS: Mitä Circus Maximuksesta on nykyään jäljellä?
-Odotas vähän, katsotaas. [[Circus Maximuksen]] paikalla on nykyään pitkä, avoin ruohoalue Rooman keskustassa, jossa voi kävellä ja jossa järjestetään välillä konsertteja ja tapahtumia. Katsomoista on näkyvissä vain vähän, ja suurin osa rakenteista on maan alla tai kadonnut kokonaan sen jälkeen, kun kivi on käytetty uudelleen muualla. Radan muoto on silti helposti tunnistettavissa maastosta. Tarkkoja nykyisiä kaivaustietoja en ole varma.
+Odotas vähän, katsotaas. [[Circus Maximuksen]] paikalla on nykyään pitkä, avoin ruohoalue [[Rooman]] keskustassa, jossa voi kävellä ja jossa järjestetään välillä konsertteja ja tapahtumia. Katsomoista on näkyvissä vain vähän, ja suurin osa rakenteista on maan alla tai kadonnut kokonaan sen jälkeen, kun kivi on käytetty uudelleen muualla. Radan muoto on silti helposti tunnistettavissa maastosta. Tarkkoja nykyisiä kaivaustietoja en ole varma.
 
 Ja minä kun odotin kunnon katsomoa.
 
@@ -223,7 +223,7 @@ Mikä Palatinus on?
 
 ### 25.5
 KYSYMYS: Keitä vaunujen ajajat olivat?
-Mmm— tästä riittää tarinaa. Vaunujen ajajat olivat roomalaisessa yhteiskunnassa usein orjia tai vapautettuja, mutta menestyneimmät saattoivat saavuttaa suuren maineen ja vaurauden. He ajoivat jonkin ryhmittymän väreissä, ja yleisö kannatti heitä kiihkeästi. Ura oli vaarallinen, ja moni kuoli nuorena. Tunnetuimpia ajajia oli esimerkiksi [[Gaius Appuleius Diocles]], jonka urasta on säilynyt kirjoitus; tarkat voittomäärät en ole varma, joten jätän ne pois.
+Mmm— tästä riittää tarinaa. Vaunujen ajajat olivat [[Rooman]] yhteiskunnassa usein orjia tai vapautettuja, mutta menestyneimmät saattoivat saavuttaa suuren maineen ja vaurauden. He ajoivat jonkin ryhmittymän väreissä, ja yleisö kannatti heitä kiihkeästi. Ura oli vaarallinen, ja moni kuoli nuorena. Tunnetuimpia ajajia oli esimerkiksi [[Gaius Appuleius Diocles]], jonka urasta on säilynyt kirjoitus; tarkoista voittomääristä en ole varma, joten jätän ne pois.
 
 Hyvä että minä olen lintu, ei tarvitse ajaa vaunuja.
 

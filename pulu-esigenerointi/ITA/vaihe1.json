@@ -568,8 +568,10 @@
   "kohde": "kohde:dolomiitit",
   "kysymys": "Miten dolomiittivuoret syntyivät?",
   "uusi": true,
-  "vastaus": "Nyt muistan: tämä tarina on pitkä. Dolomiittien kivi syntyi lämpimässä meressä triaskaudella, kun korallit ja muut merieliöt rakensivat riuttoja ja saarekkeita, joiden kalkkipitoiset kerrostumat muuttuivat ajan myötä dolomiitiksi. Myöhemmin [[Alppien]] vuorenpoimutus nosti merenpohjan kerrokset korkeiksi vuoriksi, ja jäätiköt sekä sää muotoilivat jyrkät huiput. Tarkkoja vuosimääriä en ole varma, mutta kyse on yli kahdestasadasta miljoonasta vuodesta. Onpas siinä aikaa kulunut ennen kuin kukaan on tullut kysymään.",
+  "vastaus": "Nyt muistan: tämä tarina on pitkä. Dolomiittien kivi syntyi lämpimässä meressä triaskaudella, kun korallit ja muut merieliöt rakensivat riuttoja ja saarekkeita, joiden [[kalkkikiveä]] sisältävät kerrostumat muuttuivat ajan myötä dolomiitiksi, kun kivi sai [[magnesiumin]] yhdisteitä. Myöhemmin [[Alppien]] vuorenpoimutus nosti merenpohjan kerrokset korkeiksi vuoriksi, ja jäätiköt sekä sää muotoilivat jyrkät huiput. Tarkkoja vuosimääriä en ole varma, mutta kyse on yli kahdestasadasta miljoonasta vuodesta. Onpas siinä aikaa kulunut ennen kuin kukaan on tullut kysymään.",
   "linkit": [
+   "kalkkikiveä",
+   "magnesiumin",
    "Alppien"
   ],
   "jatkot": [
@@ -595,9 +597,10 @@
   "kohde": "kohde:etna",
   "kysymys": "Kuinka usein Etna purkautuu?",
   "uusi": false,
-  "vastaus": "No jopas, tästä voi puhua pitkään. Etna purkautuu lähes joka vuosi, ja toiminta on usein jatkuvaa: kraattereista nousee kaasua ja tuhkaa, ja välillä tulee voimakkaampia jaksoja, joissa laava virtaa rinteelle. Purkaukset ovat harvoin vaarallisia, koska laava liikkuu yleensä hitaasti. Tuhka voi kuitenkin häiritä lentoliikennettä, ja [[Catanian]] lentokenttä on ajoittain joutunut sulkemaan. Tarkkaa purkausmäärää vuodessa en ole varma. Tämä tulivuori ei kyllä nuku, eikä minunkaan nokkani.",
+  "vastaus": "No jopas, tästä voi puhua pitkään. Etna purkautuu lähes joka vuosi, ja toiminta on usein jatkuvaa: kraattereista nousee kaasua ja tuhkaa, ja välillä tulee voimakkaampia jaksoja, joissa laava virtaa rinteelle. Purkaukset ovat harvoin vaarallisia, koska laava liikkuu yleensä hitaasti. Tuhka voi kuitenkin häiritä lentoliikennettä, ja [[Catanian]] lentokenttä on ajoittain joutunut sulkemaan. Tarkkaa purkausmäärää vuodessa en ole varma. Muinaisen myytin mukaan jättiläinen [[Typhon]] makaa vuoren alla, ja purkaukset selitettiin hänen liikahduksillaan. Tämä tulivuori ei kyllä nuku, eikä minunkaan nokkani.",
   "linkit": [
-   "Catanian"
+   "Catanian",
+   "Typhon"
   ],
   "jatkot": [
    "Miten tuhkapilvet vaikuttavat lentoliikenteeseen?",
@@ -622,8 +625,11 @@
   "kohde": "kohde:etna",
   "kysymys": "Miksi Etnan korkeus muuttuu?",
   "uusi": true,
-  "vastaus": "Kato, hyvä pointti. Etnan korkeus muuttuu, koska purkaukset kasaavat laavaa ja tuhkaa huippukraatterien ympärille ja kasvattavat huippua, kun taas romahdukset ja räjähdykset voivat madaltaa sitä. Syyskuussa 2024 huippu oli 3 403 metrin korkeudessa, mutta luku vaihtelee jatkuvasti. Siksi eri lähteissä näkee hieman erilaisia korkeuksia. Tulivuori on siis eräänlainen elävä rakennus, joka kasvaa ja muuttuu. Kyyhkynä pidän vakaammasta kaiteesta.",
-  "linkit": [],
+  "vastaus": "Kato, hyvä pointti. Etnan korkeus muuttuu, koska purkaukset kasaavat laavaa ja tuhkaa huippukraatterien ympärille ja kasvattavat huippua, kun taas romahdukset ja räjähdykset voivat madaltaa sitä. Syyskuussa 2024 huippu oli 3 403 metrin korkeudessa, mutta luku vaihtelee jatkuvasti. Siksi eri lähteissä näkee hieman erilaisia korkeuksia. Tulivuoren tuhkainen maa on hedelmällistä, ja sen rinteillä viljellään muun muassa [[appelsiineja]] ja [[pistaasipähkinöitä]]. Tulivuori on siis eräänlainen elävä rakennus, joka kasvaa ja muuttuu. Kyyhkynä pidän vakaammasta kaiteesta.",
+  "linkit": [
+   "appelsiineja",
+   "pistaasipähkinöitä"
+  ],
   "jatkot": [
    "Miten Etnan huipun korkeutta mitataan?",
    "Miten Etna eroaa Vesuviuksesta?"
@@ -633,8 +639,9 @@
   "kohde": "kohde:etna",
   "kysymys": "Voiko Etnalle kiivetä?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Etnalle voi kiivetä, ja monet nousevat rinteille opastetuilla retkillä. Joillekin korkeammille osille pääsee [[köysiradalla]] ja maastoautolla, mutta huippukraatterien läheisyyteen pääsy riippuu purkaustilanteesta: viranomaiset rajoittavat sitä, kun vuori on aktiivinen. Siksi kannattaa tarkistaa ajantasainen tieto, sillä minun tietoni voi olla vanhentunutta. Kaikki retkeilijät eivät sovi kaikille reiteille, ja opas tuntee olosuhteet parhaiten. Minä pysyn ilmassa, kiitos vain.",
+  "vastaus": "Tost minä osaan kertoo. Etnalle voi kiivetä, ja monet nousevat rinteille opastetuilla retkillä, joita järjestetään muun muassa [[Catanian]] suunnasta. Joillekin korkeammille osille pääsee [[köysiradalla]] ja maastoautolla, mutta huippukraatterien läheisyyteen pääsy riippuu purkaustilanteesta: viranomaiset rajoittavat sitä, kun vuori on aktiivinen. Siksi kannattaa tarkistaa ajantasainen tieto, sillä minun tietoni voi olla vanhentunutta. Kaikki retkeilijät eivät sovi kaikille reiteille, ja opas tuntee olosuhteet parhaiten. Minä pysyn ilmassa, kiitos vain.",
   "linkit": [
+   "Catanian",
    "köysiradalla"
   ],
   "jatkot": [
@@ -986,9 +993,10 @@
   "kohde": "kohde:sardinia",
   "kysymys": "Mikä on casu marzu?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. [[Casu marzu]] on sardinialainen pecorino-juusto, jota käsitellään niin, että sen sisällä kasvaa juustokärpäsen toukkia, jotka hajottavat juuston rasvaa ja tekevät siitä pehmeän ja voimakkaan makuisen. Juusto on perinteinen paikallinen erikoisuus, mutta sen myynti on Euroopan unionin elintarvikesääntöjen vuoksi kielletty, vaikka sitä edelleen valmistetaan ja nautitaan saarella. Terveysviranomaiset varoittavat, että elävien toukkien syöminen voi aiheuttaa vatsavaivoja. Minä pysyn leivässä, kiitos.",
+  "vastaus": "Hetkinen ny. [[Casu marzu]] on sardinialainen pecorino-juusto, jota käsitellään niin, että sen sisällä kasvaa juustokärpäsen toukkia, jotka hajottavat juuston rasvaa ja tekevät siitä pehmeän ja voimakkaan makuisen. Juusto on perinteinen paikallinen erikoisuus, mutta sen myynti on Euroopan unionin elintarvikesääntöjen vuoksi kielletty, vaikka sitä edelleen valmistetaan ja nautitaan [[Sardinian]] saarella. Terveysviranomaiset varoittavat, että elävien toukkien syöminen voi aiheuttaa vatsavaivoja. Minä pysyn leivässä, kiitos.",
   "linkit": [
-   "Casu marzu"
+   "Casu marzu",
+   "Sardinian"
   ],
   "jatkot": [
    "Mitä muita juustoja Sardiniassa valmistetaan?",
@@ -1335,7 +1343,7 @@
   "kohde": "kohde:aquileia",
   "kysymys": "Miksi pikkukaupungissa on niin suuri basilika?",
   "uusi": false,
-  "vastaus": "Kas vaan, hyvä huomio. Aquileia oli antiikissa yksi Rooman valtakunnan merkittävistä kaupungeista: roomalaiset perustivat sen sotilassiirtokunnaksi vuosina 180–181 eaa., ja toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Kaupungista tuli myös kristillinen keskus, ja [[Aquileian patriarkaatti]] säilyi vuoteen 1751 asti vaikutusvaltaisena kirkollisena toimijana. Nykyisen basilikan rakennutti [[Poppo]] vuonna 1031, ja se uudistettiin goottilaiseen tyyliin vuosina 1365–1381. Kaupungin asema heikkeni myöhäisantiikissa muun muassa [[Attilan]] hunnien hyökkäyksen myötä, ja suuri kirkko kertoo vanhasta asemasta.\n\nIso kirkko pienen kaupungin keskellä kertoo, että kaupungilla on ollut joskus paljon sanottavaa. Ylhäältä sen näkee heti: kaikki muu on pientä, ja kirkko vain jatkaa.",
+  "vastaus": "Kas vaan, hyvä huomio. Aquileia oli antiikissa yksi Rooman valtakunnan merkittävistä kaupungeista: roomalaiset perustivat sen sotilassiirtokunnaksi vuosina 180–181 eaa., ja toisella vuosisadalla kaupungissa asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Kaupungista tuli myös kristillinen keskus, ja [[Aquileian patriarkaatti]] säilyi vuoteen 1751 asti vaikutusvaltaisena kirkollisena toimijana. Nykyisen basilikan rakennutti [[Poppo]] vuonna 1031, ja se uudistettiin goottilaiseen tyyliin vuosina 1365–1381. Kaupungin asema heikkeni myöhäisantiikissa muun muassa [[Attilan]] hunnien hyökkäyksen myötä, ja suuri kirkko kertoo vanhasta asemasta.\n\nIso kirkko pienen kaupungin keskellä kertoo, että kaupungilla on ollut joskus paljon sanottavaa. Ylhäältä sen näkee heti: kaikki muu on pientä, ja kirkko vain jatkaa.",
   "linkit": [
    "Aquileian patriarkaatti",
    "Poppo",
@@ -1546,9 +1554,10 @@
   "kohde": "kohde:tropea",
   "kysymys": "Mikä on Tropean punasipuli?",
   "uusi": true,
-  "vastaus": "Ai se, tuo kuuluisa sipuli. [[Tropean punasipuli]], italiaksi cipolla rossa di Tropea, on Calabrian rannikolla viljelty makea punainen sipuli, joka tunnetaan miedosta ja hieman sokeriselta maistuvasta mausta. Sitä syödään usein raakana salaateissa, ja siitä tehdään myös hilloa ja suolakurkun kaltaisia säilykkeitä. Tuotteella on Euroopan unionin suojattu maantieteellinen merkintä, mutta tarkkaa merkinnän vuotta en ole varma. Kaupungin torilla sipulit riippuvat usein nippuina, ja ne ovat tavallinen matkamuisto.\n\nNimi on ehkä liioiteltu, mutta sipulista minä en pullaa tee.",
+  "vastaus": "Ai se, tuo kuuluisa sipuli. [[Tropean punasipuli]], italiaksi cipolla rossa di Tropea, on [[Calabrian]] rannikolla viljelty makea punainen sipuli, joka tunnetaan miedosta ja hieman sokeriselta maistuvasta mausta. Sitä syödään usein raakana salaateissa, ja siitä tehdään myös hilloa ja suolakurkun kaltaisia säilykkeitä. Tuotteella on Euroopan unionin suojattu maantieteellinen merkintä, mutta tarkkaa merkinnän vuotta en ole varma. Kaupungin torilla sipulit riippuvat usein nippuina, ja ne ovat tavallinen matkamuisto.\n\nNimi on ehkä liioiteltu, mutta sipulista minä en pullaa tee.",
   "linkit": [
-   "Tropean punasipuli"
+   "Tropean punasipuli",
+   "Calabrian"
   ],
   "jatkot": [
    "Mitä muuta Calabriassa syödään?",
@@ -1602,9 +1611,11 @@
   "kohde": "kohde:gerace",
   "kysymys": "Mikä krypta on?",
   "uusi": true,
-  "vastaus": "Odotas vähän, annas kun muistelen. [[Krypta]] on kirkon alla oleva tila, usein holvattu, jossa säilytettiin alun perin pyhimysten ja tärkeiden henkilöiden hautoja ja pyhäinjäännöksiä. Keskiajalla kryptoja rakennettiin kirkkojen kuorin alle, ja niissä pidettiin myös jumalanpalveluksia. Geracen tuomiokirkossa kryptaan pääsee alas, ja se on yksi kirkon nähtävyyksistä. Kryptojen koko ja koristelu vaihtelevat paljon eri maissa. Tarkkaa vuotta Geracen krypan rakentamiselle en ole varma.",
+  "vastaus": "Odotas vähän, annas kun muistelen. [[Krypta]] on kirkon alla oleva tila, usein holvattu, jossa säilytettiin alun perin pyhimysten ja tärkeiden henkilöiden hautoja ja pyhäinjäännöksiä. Keskiajalla kryptoja rakennettiin kirkkojen kuorin alle, ja niissä pidettiin myös jumalanpalveluksia. Geracen tuomiokirkossa kryptaan pääsee alas, ja se on yksi kirkon nähtävyyksistä. Kryptojen koko ja koristelu vaihtelevat paljon eri maissa. Geracen kirkko liitetään usein [[normannien]] aikaan [[Calabrian]] historiassa, mutta tarkkaa vuotta krypan rakentamiselle en ole varma.",
   "linkit": [
-   "Krypta"
+   "Krypta",
+   "normannien",
+   "Calabrian"
   ],
   "jatkot": [
    "Mitä pyhäinjäännökset ovat?",
@@ -1690,9 +1701,11 @@
   "kohde": "kohde:saepinum",
   "kysymys": "Millaisia teattereita roomalaiset rakensivat?",
   "uusi": true,
-  "vastaus": "Selvä juttu, tämä on kiinnostava. Roomalaiset teatterit olivat yleensä puoliympyrän muotoisia, ja katsomo nojasi usein holveihin eikä rinteeseen, toisin kuin kreikkalaisissa. Edessä oli näyttämö ja sen takana koristeellinen seinä. Teattereita rakennettiin ympäri [[Rooman valtakuntaa]], ja ne olivat tärkeitä kaupunkien kulttuurielämälle. Tarkka istumapaikkamäärä vaihteli kaupungista toiseen, enkä ole varma Saepinumin teatterin mitoista.",
+  "vastaus": "Selvä juttu, tämä on kiinnostava. Roomalaiset teatterit olivat yleensä puoliympyrän muotoisia, ja katsomo nojasi usein holveihin eikä rinteeseen, toisin kuin kreikkalaisissa. Edessä oli näyttämö ja sen takana koristeellinen seinä. Teattereita rakennettiin ympäri [[Rooman valtakuntaa]], ja ne olivat tärkeitä kaupunkien kulttuurielämälle. Tarkka istumapaikkamäärä vaihteli kaupungista toiseen, enkä ole varma kaikista mitoista. [[Molisessa]] sijaitsevassa Saepinumissa [[teatteri]] on säilynyt osittain.",
   "linkit": [
-   "Rooman valtakuntaa"
+   "Rooman valtakuntaa",
+   "Molisessa",
+   "teatteri"
   ],
   "jatkot": [
    "Mikä erottaa kreikkalaisen teatterin roomalaisesta?",
@@ -1789,9 +1802,10 @@
   "kohde": "kohde:hahmotelma-circus-maximus",
   "kysymys": "Miksi Circus Maximus katosi?",
   "uusi": false,
-  "vastaus": "No niin, tähän ei ole yhtä syytä. Viimeiset kisat järjestettiin vuonna 549, ja sen jälkeen rakenteet alkoivat rapistua ja muuttuivat [[kivilouhokseksi]]. Rooman kaupunki pieneni myöhäisantiikissa ja keskiajalla huomattavasti, eikä valtavan radan ylläpitoon enää ollut varaa. Kiviä käytettiin uusiin rakennuksiin, ja alue peittyi myöhemmin maahan. Tarkkoja yksityiskohtia, kuten tulvien tai maanjäristysten osuutta, en ole varma. Nykyään paikalla on avoin nurmikenttä Rooman keskustassa.\n\nOnpas siitä pitkä aika, kun kaikki joutui kierrätykseen.",
+  "vastaus": "No niin, tähän ei ole yhtä syytä. Viimeiset kisat järjestettiin vuonna 549, ja sen jälkeen rakenteet alkoivat rapistua ja muuttuivat [[kivilouhokseksi]]. [[Rooman]] kaupunki pieneni myöhäisantiikissa ja keskiajalla huomattavasti, eikä valtavan radan ylläpitoon enää ollut varaa. Kiviä käytettiin uusiin rakennuksiin, ja alue peittyi myöhemmin maahan. Tarkkoja yksityiskohtia, kuten tulvien tai maanjäristysten osuutta, en ole varma. Nykyään paikalla on avoin nurmikenttä Rooman keskustassa.\n\nOnpas siitä pitkä aika, kun kaikki joutui kierrätykseen.",
   "linkit": [
-   "kivilouhokseksi"
+   "kivilouhokseksi",
+   "Rooman"
   ],
   "jatkot": [
    "Mitä Circus Maximuksesta on nykyään jäljellä?",
@@ -1802,9 +1816,10 @@
   "kohde": "kohde:hahmotelma-circus-maximus",
   "kysymys": "Miten vaunukilpailut käytiin?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Vaunukilpailuissa useita vaunuja ajettiin yhtä aikaa radalla, ja kilpailijat kiersivät keskiosan ympäri sovitun määrän kierroksia; yleisin luku lähteissä on seitsemän. Vaunuja vetivät tavallisesti neljä hevosta, ja ajajat edustivat eri ryhmittymiä, joilla oli omat värinsä. Kilpailut olivat vaarallisia, ja kolarit olivat tavallisia, etenkin käännöksissä. [[Circus Maximuksessa]] kilpailuja järjestettiin lähes tuhannen vuoden ajan. Tarkkoja sääntöjä en ole varma, koska ne vaihtelivat ajan mittaan.",
+  "vastaus": "Joo, tän minä tiedän. Vaunukilpailuissa useita vaunuja ajettiin yhtä aikaa radalla, ja kilpailijat kiersivät keskiosan ympäri sovitun määrän kierroksia; yleisin luku lähteissä on seitsemän. Vaunuja vetivät tavallisesti neljä hevosta, ja ajajat edustivat eri ryhmittymiä, joilla oli omat värinsä. Kilpailut olivat vaarallisia, ja kolarit olivat tavallisia, etenkin käännöksissä. [[Circus Maximuksessa]] kilpailuja järjestettiin lähes tuhannen vuoden ajan. [[Circus Maximuksen]] rata oli pitkä, kapea ja toisesta päästä pyöristetty. Tarkkoja sääntöjä en ole varma, koska ne vaihtelivat ajan mittaan.",
   "linkit": [
-   "Circus Maximuksessa"
+   "Circus Maximuksessa",
+   "Circus Maximuksen"
   ],
   "jatkot": [
    "Keitä vaunujen ajajat olivat?",
@@ -1815,9 +1830,10 @@
   "kohde": "kohde:hahmotelma-circus-maximus",
   "kysymys": "Mitä Circus Maximuksesta on nykyään jäljellä?",
   "uusi": true,
-  "vastaus": "Odotas vähän, katsotaas. [[Circus Maximuksen]] paikalla on nykyään pitkä, avoin ruohoalue Rooman keskustassa, jossa voi kävellä ja jossa järjestetään välillä konsertteja ja tapahtumia. Katsomoista on näkyvissä vain vähän, ja suurin osa rakenteista on maan alla tai kadonnut kokonaan sen jälkeen, kun kivi on käytetty uudelleen muualla. Radan muoto on silti helposti tunnistettavissa maastosta. Tarkkoja nykyisiä kaivaustietoja en ole varma.\n\nJa minä kun odotin kunnon katsomoa.",
+  "vastaus": "Odotas vähän, katsotaas. [[Circus Maximuksen]] paikalla on nykyään pitkä, avoin ruohoalue [[Rooman]] keskustassa, jossa voi kävellä ja jossa järjestetään välillä konsertteja ja tapahtumia. Katsomoista on näkyvissä vain vähän, ja suurin osa rakenteista on maan alla tai kadonnut kokonaan sen jälkeen, kun kivi on käytetty uudelleen muualla. Radan muoto on silti helposti tunnistettavissa maastosta. Tarkkoja nykyisiä kaivaustietoja en ole varma.\n\nJa minä kun odotin kunnon katsomoa.",
   "linkit": [
-   "Circus Maximuksen"
+   "Circus Maximuksen",
+   "Rooman"
   ],
   "jatkot": [
    "Mitä Rooman nähtävyyksiä lähellä on?",
@@ -1828,8 +1844,9 @@
   "kohde": "kohde:hahmotelma-circus-maximus",
   "kysymys": "Keitä vaunujen ajajat olivat?",
   "uusi": true,
-  "vastaus": "Mmm— tästä riittää tarinaa. Vaunujen ajajat olivat roomalaisessa yhteiskunnassa usein orjia tai vapautettuja, mutta menestyneimmät saattoivat saavuttaa suuren maineen ja vaurauden. He ajoivat jonkin ryhmittymän väreissä, ja yleisö kannatti heitä kiihkeästi. Ura oli vaarallinen, ja moni kuoli nuorena. Tunnetuimpia ajajia oli esimerkiksi [[Gaius Appuleius Diocles]], jonka urasta on säilynyt kirjoitus; tarkat voittomäärät en ole varma, joten jätän ne pois.\n\nHyvä että minä olen lintu, ei tarvitse ajaa vaunuja.",
+  "vastaus": "Mmm— tästä riittää tarinaa. Vaunujen ajajat olivat [[Rooman]] yhteiskunnassa usein orjia tai vapautettuja, mutta menestyneimmät saattoivat saavuttaa suuren maineen ja vaurauden. He ajoivat jonkin ryhmittymän väreissä, ja yleisö kannatti heitä kiihkeästi. Ura oli vaarallinen, ja moni kuoli nuorena. Tunnetuimpia ajajia oli esimerkiksi [[Gaius Appuleius Diocles]], jonka urasta on säilynyt kirjoitus; tarkoista voittomääristä en ole varma, joten jätän ne pois.\n\nHyvä että minä olen lintu, ei tarvitse ajaa vaunuja.",
   "linkit": [
+   "Rooman",
    "Gaius Appuleius Diocles"
   ],
   "jatkot": [
@@ -1945,8 +1962,9 @@
   "kohde": "kohde:hahmotelma-domus-aurea",
   "kysymys": "Mikä yhteys Colosseumilla on Neron palatsiin?",
   "uusi": true,
-  "vastaus": "Tuota niin. Colosseum rakennettiin sen tekojärven paikalle, joka kuului Neron palatsialueeseen. Keisari [[Vespasianus]] aloitti rakennustyöt 70-luvulla, ja amfiteatteri vihittiin käyttöön vuonna 80. Näin Neron yksityinen huvialue muutettiin kaikille avoimeksi kansan hyödyksi. Colosseumin nimen alkuperää selitetään usein läheisellä Neron jättipatsaalla, mutta selitys on kiistelty, enkä ole siitä varma.\n\nMinä katselin Colosseumin kaarta ylhäältä, ja pidän huomattavana, että kuuluisin rakennus nousi yhden keisarin ylellisyyden tilalle. Mut siihen oli hyvä syy.",
+  "vastaus": "Tuota niin. Colosseum rakennettiin sen tekojärven paikalle, joka kuului [[Neron]] palatsialueeseen. Keisari [[Vespasianus]] aloitti rakennustyöt 70-luvulla, ja amfiteatteri vihittiin käyttöön vuonna 80. Näin Neron yksityinen huvialue muutettiin kaikille avoimeksi kansan hyödyksi. Colosseumin nimen alkuperää selitetään usein läheisellä Neron jättipatsaalla, mutta selitys on kiistelty, enkä ole siitä varma.\n\nMinä katselin Colosseumin kaarta ylhäältä, ja pidän huomattavana, että kuuluisin rakennus nousi yhden keisarin ylellisyyden tilalle. Mut siihen oli hyvä syy.",
   "linkit": [
+   "Neron",
    "Vespasianus"
   ],
   "jatkot": [
@@ -2201,8 +2219,11 @@
   "kohde": "kohde:hahmotelma-gran-paradiso",
   "kysymys": "Miten alppikauris pystyy kiipeämään jyrkillä kallioilla?",
   "uusi": true,
-  "vastaus": "Kato, kauriin sorkat on tehty kiipeämiseen. Alppikauriin sorkan reunat ovat kovat ja terävät, kun taas keskiosa on pehmeä ja kumimainen, joten se pitää hyvin kiinni epätasaisessa kalliossa. Eläimen jalat ovat vahvat ja tasapainoaisti erinomainen, ja se pystyy hyppäämään kallioiden välillä jyrkillä rinteillä. Kesällä lauma liikkuu korkealla niityillä ja talvella laskeutuu usein alemmas suojaisammille rinteille. Näin alppikauris selviytyy vuoristossa, jossa muut eläimet eivät pärjää. Ja minä lennän, kun en kiipeä.",
-  "linkit": [],
+  "vastaus": "Kato, kauriin sorkat on tehty kiipeämiseen. [[Alppikauriin]] sorkan reunat ovat kovat ja terävät, kun taas keskiosa on pehmeä ja kumimainen, joten se pitää hyvin kiinni epätasaisessa kalliossa. Eläimen jalat ovat vahvat ja tasapainoaisti erinomainen, ja se pystyy hyppäämään kallioiden välillä jyrkillä rinteillä. [[Alpeilla]] lauma liikkuu kesällä korkealla niityillä ja talvella laskeutuu usein alemmas suojaisammille rinteille. Näin alppikauris selviytyy vuoristossa, jossa muut eläimet eivät pärjää. Ja minä lennän, kun en kiipeä.",
+  "linkit": [
+   "Alppikauriin",
+   "Alpeilla"
+  ],
   "jatkot": [
    "Mitä alppikauris syö vuoristossa?",
    "Miten kauriita seurataan Gran Paradison puistossa?"
@@ -2383,9 +2404,11 @@
   "kohde": "kohde:hahmotelma-elba",
   "kysymys": "Miten Elballe pääsee mantereelta?",
   "uusi": true,
-  "vastaus": "Tuota niin. Elballe pääsee lautalla Piombinon satamasta [[Portoferraion]] satamaan, ja matka kestää aluksesta riippuen noin puolesta tunnista tuntiin. Piombino on mantereella Toscanan rannikolla, noin kymmenen kilometrin päässä saaresta. Yhteyksien aikataulut kannattaa tarkistaa varustamoilta. Itse lentäisin, mut lautalla voi ainakin istua.",
+  "vastaus": "Tuota niin. Elballe pääsee lautalla Piombinon satamasta [[Portoferraion]] satamaan, ja matka kestää aluksesta riippuen noin puolesta tunnista tuntiin. Piombino on mantereella Toscanan rannikolla, noin kymmenen kilometrin päässä saaresta. Elba on Toscanan saariston suurin saari, ja lähellä ovat myös [[Giglio]] ja [[Capraia]]. Yhteyksien aikataulut kannattaa tarkistaa varustamoilta. Itse lentäisin, mut lautalla voi ainakin istua.",
   "linkit": [
-   "Portoferraion"
+   "Portoferraion",
+   "Giglio",
+   "Capraia"
   ],
   "jatkot": [
    "Millainen kaupunki Portoferraio on?",
@@ -2482,7 +2505,7 @@
   "kohde": "kohde:hahmotelma-villa-adriana",
   "kysymys": "Mitä Pompeijille tapahtui?",
   "uusi": true,
-  "vastaus": "Joo. Tuo on vakava aihe. Pompeiji oli roomalainen kaupunki [[Vesuviuksen]] juurella Napolin lähellä, ja se tuhoutui vuonna 79 jKr. tulivuoren purkauksessa, jossa kaupunki hautautui tuhkan ja kiviaineksen alle. Tapahtuma sijoittuu Rooman keisarikunnan aikaan, yli 1900 vuotta sitten, ja monet asukkaat menehtyivät. Paksu tuhkakerros säilytti rakennuksia ja esineitä poikkeuksellisen hyvin, ja kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä. Myös [[Herculaneum]] tuhoutui samassa purkauksessa. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Joo. Tuo on vakava aihe. Pompeiji oli roomalainen kaupunki [[Vesuviuksen]] juurella Napolin lähellä, ja se tuhoutui vuonna 79 tulivuoren purkauksessa, jossa kaupunki hautautui tuhkan ja kiviaineksen alle. Tapahtuma sijoittuu Rooman keisarikunnan aikaan, yli 1900 vuotta sitten, ja monet asukkaat menehtyivät. Paksu tuhkakerros säilytti rakennuksia ja esineitä poikkeuksellisen hyvin, ja kaivaukset alkoivat 1700-luvulla ja jatkuvat yhä. Myös [[Herculaneum]] tuhoutui samassa purkauksessa. Onpas siit onneksi pitkä aika.",
   "linkit": [
    "Vesuviuksen",
    "Herculaneum"
@@ -3649,8 +3672,9 @@
   "kohde": "kohde:hahmotelma-brennero",
   "kysymys": "Miksi rautatiessä ei ole suurta tunnelia?",
   "uusi": false,
-  "vastaus": "Tost minä osaan kertoo. Brennerin sola on Itäalppien solista matalin, joten rautatie pystyttiin johtamaan sen yli korkeimmillaan 1 371 metrin korkeudessa ilman suurta tunnelia. Reitti seurasi maastoa solan kautta, ja radan kaltevuus pysyi hallittavana. Täsmällisiä rakennusteknisiä perusteita en tunne, mutta matala sola on tavallisesti syynä siihen, ettei pitkää tunnelia tarvita. Nykyisin on rakenteilla [[Brennerin pohjatunneli]]; sen valmistumisaikataulusta en ole varma.\n\nMinä en tunneleita ole koskaan ymmärtänyt, koska ylhäältä näkee aina enemmän. Solan yli lentäisin mieluummin kuin ajaisin junalla, vaikka juna on kyllä lämpimämpi.",
+  "vastaus": "Tost minä osaan kertoo. Brennerin sola on Itäalppien solista yksi matalimmista, joten [[Brennerin rautatie]] pystyttiin johtamaan sen yli korkeimmillaan 1 371 metrin korkeudessa ilman suurta tunnelia. Reitti seurasi maastoa solan kautta, ja radan kaltevuus pysyi hallittavana. Täsmällisiä rakennusteknisiä perusteita en tunne, mutta matala sola on tavallisesti syynä siihen, ettei pitkää tunnelia tarvita. Nykyisin on rakenteilla [[Brennerin pohjatunneli]]; sen valmistumisaikataulusta en ole varma.\n\nMinä en tunneleita ole koskaan ymmärtänyt, koska ylhäältä näkee aina enemmän. Solan yli lentäisin mieluummin kuin ajaisin junalla, vaikka juna on kyllä lämpimämpi.",
   "linkit": [
+   "Brennerin rautatie",
    "Brennerin pohjatunneli"
   ],
   "jatkot": [
@@ -4294,8 +4318,9 @@
   "kohde": "kohde:colosseum",
   "kysymys": "Mitä Colosseumille tapahtui keskiajalla?",
   "uusi": true,
-  "vastaus": "Nyt muistan: tähän liittyy kiviä. Keskiajalla Colosseumin holveissa asuttiin ja tehtiin työtä, eli rakennus sai uutta käyttöä. Vuoden 1349 [[maanjäristys]] kaatoi eteläisen ulkomuurin, ja sen kiviä kannettiin muualle Roomaan rakennusaineeksi, ja marmoria poltettiin lähteiden mukaan kalkiksi. Rakennus on silti yhä pystyssä, mikä on kyyhkyn silmään vaikuttavaa.",
+  "vastaus": "Nyt muistan: tähän liittyy kiviä. Keskiajalla [[Colosseumin]] holveissa asuttiin ja tehtiin työtä, eli rakennus sai uutta käyttöä. Vuoden 1349 [[maanjäristys]] kaatoi eteläisen ulkomuurin, ja sen kiviä kannettiin muualle Roomaan rakennusaineeksi, ja marmoria poltettiin lähteiden mukaan kalkiksi. Rakennus on silti yhä pystyssä, mikä on kyyhkyn silmään vaikuttavaa.",
   "linkit": [
+   "Colosseumin",
    "maanjäristys"
   ],
   "jatkot": [

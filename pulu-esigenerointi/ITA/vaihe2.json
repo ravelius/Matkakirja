@@ -1241,8 +1241,9 @@
   "kohde": "kohde:matera",
   "kasite": "luolakodit",
   "kysymys": "Kerro lisää: luolakodit",
-  "vastaus": "Materan luolakodit rakennettiin pehmeään kalkkipitoiseen kiveen, jota paikallisesti kutsutaan tufiksi. Kivi on helppo työstää, ja osa asunnoista kaivettiin suoraan kallioon, osa rakennettiin kallion eteen louhituista kivilohkareista. Paksut kiviseinät pitävät sisälämpötilan tasaisena, mikä on selittänyt luolakotien viileyttä kesällä. Perheet asuivat usein yhdessä tilassa, ja talouden eläimet saattoivat olla samassa tilassa tai lähellä. Vettä kerättiin [[sisternoihin]], ja kaupungin vanhimmassa osassa asuntoja oli kerrostunut rinteelle toistensa päälle.",
+  "vastaus": "Materan luolakodit rakennettiin pehmeään kalkkipitoiseen kiveen, jota paikallisesti kutsutaan [[tufiksi]]. Kivi on helppo työstää, ja osa asunnoista kaivettiin suoraan kallioon, osa rakennettiin kallion eteen louhituista kivilohkareista. Paksut kiviseinät pitävät sisälämpötilan tasaisena, mikä selittää luolakotien viileyttä kesällä. Perheet asuivat usein yhdessä tilassa, ja talouden eläimet saattoivat olla samassa tilassa tai lähellä. Vettä kerättiin [[sisternoihin]], ja kaupungin vanhimmassa osassa asuntoja oli kerrostunut rinteelle toistensa päälle.",
   "linkit": [
+   "tufiksi",
    "sisternoihin"
   ],
   "jatkot": [
@@ -1298,8 +1299,11 @@
   "kohde": "kohde:matera",
   "kasite": "Sasso Barisanoon",
   "kysymys": "Kerro lisää: Sasso Barisanoon",
-  "vastaus": "Sasso Barisano on toinen Sassien kahdesta suuresta kaupunginosasta, ja se sijaitsee Civitan niemekkeen toisella puolella Sasso Caveosoon nähden. Nimen uskotaan viittaavan [[Bariin]], jonka suuntaan tämä rinne katsoo, mutta en ole varma nimen täsmällisestä alkuperästä. Barisano on kuulunut niihin Sassien osiin, joissa vanhoja taloja on kunnostettu hotelleiksi, ravintoloiksi ja asunnoiksi. Sen kapeat kujat ja portaat kulkevat rinteen mukaan, ja monet rakennukset ovat osin kalliota, osin kivimuuria. Kaupungin vanhan keskustan käsityöläiset ja kauppiaat pitivät toimintaansa täällä.",
+  "vastaus": "Sasso Barisano on toinen [[Sassien]] kahdesta suuresta kaupunginosasta, ja se sijaitsee [[Civitan]] niemekkeen toisella puolella [[Sasso Caveosoon]] nähden. Nimen uskotaan viittaavan [[Bariin]], jonka suuntaan tämä rinne katsoo, mutta en ole varma nimen täsmällisestä alkuperästä. Barisano on kuulunut niihin Sassien osiin, joissa vanhoja taloja on kunnostettu hotelleiksi, ravintoloiksi ja asunnoiksi. Sen kapeat kujat ja portaat kulkevat rinteen mukaan, ja monet rakennukset ovat osin kalliota, osin kivimuuria. Kaupungin vanhan keskustan käsityöläiset ja kauppiaat pitivät toimintaansa täällä.",
   "linkit": [
+   "Sassien",
+   "Civitan",
+   "Sasso Caveosoon",
    "Bariin"
   ],
   "jatkot": [
@@ -1339,8 +1343,11 @@
   "kohde": "kohde:matera",
   "kasite": "Palombaro Lungo",
   "kysymys": "Kerro lisää: Palombaro Lungo",
-  "vastaus": "Palombaro Lungo on Materan suuri maanalainen vesisäiliö, joka sijaitsee Piazza Vittorio Veneton alla. Se on kaivettu kallioon, ja sinne johdettiin sadevettä kaupungin vanhan osan katoilta ja kaduilta. Lähteiden mukaan säiliö on noin viisitoista metriä syvä ja sen tilavuus on useita miljoonia litroja, mutta en ole varma tarkoista luvuista. Säiliön rakennusajasta tiedot vaihtelevat, ja osa rakenteesta voi olla vanhempaa kuin nykyinen muoto. Kun vesijohto tuli kaupunkiin, säiliö jäi pois käytöstä, ja se avattiin myöhemmin kävijöille tutustuttavaksi.",
-  "linkit": [],
+  "vastaus": "Palombaro Lungo on [[Materan]] suuri maanalainen vesisäiliö, joka sijaitsee [[Piazza Vittorio Veneton]] alla. Se on kaivettu kallioon, ja sinne johdettiin sadevettä kaupungin vanhan osan katoilta ja kaduilta. Lähteiden mukaan säiliö on noin viisitoista metriä syvä ja sen tilavuus on useita miljoonia litroja, mutta en ole varma tarkoista luvuista. Säiliön rakennusajasta tiedot vaihtelevat, ja osa rakenteesta voi olla vanhempaa kuin nykyinen muoto. Kun vesijohto tuli kaupunkiin, säiliö jäi pois käytöstä, ja se avattiin myöhemmin kävijöille tutustuttavaksi.",
+  "linkit": [
+   "Materan",
+   "Piazza Vittorio Veneton"
+  ],
   "jatkot": [
    "Milloin kaupunki sai vesijohdon?",
    "Voiko sisternoihin tutustua opastetulla kierroksella?"
@@ -1393,9 +1400,11 @@
   "kohde": "kohde:dolomiitit",
   "kasite": "Monti Pallidi",
   "kysymys": "Kerro lisää: Monti Pallidi",
-  "vastaus": "Monti Pallidi tarkoittaa italiaksi kalpeita vuoria, ja nimi viittaa Dolomiittien vaaleaan kallioon. Karbonaattikivi näyttää päivällä harmaanvalkoiselta, mutta auringon laskiessa se saa punertavan ja purppuraisen hehkun. Nimen taustalla on ranskalaisen mineralogin [[Déodat Gratet de Dolomieun]] 1700-luvun lopulla tutkima kivilaji, joka sai vuoriston nykyisen nimen. Ladininkielisessä perinteessä on myös tarina kuun prinssistä, joka kaipasi kotiaan, ja vuoret selitetään kalpeiksi kuun valon vuoksi. Tarinan tarkasta muodosta en ole varma.",
+  "vastaus": "Monti Pallidi tarkoittaa italiaksi kalpeita vuoria, ja nimi viittaa [[Dolomiittien]] vaaleaan kallioon. Karbonaattikivi näyttää päivällä harmaanvalkoiselta, mutta auringon laskiessa se saa punertavan ja purppuraisen hehkun. Nimen taustalla on ranskalaisen mineralogin [[Déodat Gratet de Dolomieun]] 1700-luvun lopulla tutkima kivilaji, joka sai vuoriston nykyisen nimen. [[Ladininkielisessä]] perinteessä on myös tarina kuun prinssistä, joka kaipasi kotiaan, ja vuoret selitetään kalpeiksi kuun valon vuoksi. Tarinan tarkasta muodosta en ole varma.",
   "linkit": [
-   "Déodat Gratet de Dolomieun"
+   "Dolomiittien",
+   "Déodat Gratet de Dolomieun",
+   "Ladininkielisessä"
   ],
   "jatkot": [
    "Kuka Déodat de Dolomieu oli?",
@@ -1565,8 +1574,10 @@
   "kohde": "kohde:etna",
   "kasite": "Empedokleesta",
   "kysymys": "Kerro lisää: Empedokleesta",
-  "vastaus": "Empedokles oli antiikin kreikkalainen filosofi ja runoilija, joka asui Sisilian Akragaksessa, nykyisessä Agrigentossa, noin 400-luvulla eaa. Hänen mukaansa kaikki aine koostuu neljästä alkuaineesta: maasta, vedestä, ilmasta ja tulesta, joita liikuttavat kaksi voimaa, rakkaus ja riita. Hänen kuolemastaan kerrotaan tarina, jonka mukaan hän heittäytyi Etnan kraatteriin, jotta hänet luultaisiin jumalaksi, mutta tulivuori heitti esiin hänen sandaalinsa ja paljasti totuuden. Tarinan on välittänyt [[Diogenes Laertios]], ja se on todennäköisesti myöhempää syntyä. Tosiasiallinen kuolinpaikka ei ole tiedossa.",
+  "vastaus": "Empedokles oli antiikin kreikkalainen filosofi ja runoilija, joka asui Sisilian [[Akragaksessa]], nykyisessä Agrigentossa, noin viidennellä vuosisadalla eaa. Hänen mukaansa kaikki aine koostuu neljästä alkuaineesta: maasta, vedestä, ilmasta ja tulesta, joita liikuttavat kaksi voimaa, rakkaus ja riita. Hänen kuolemastaan kerrotaan tarina, jonka mukaan hän heittäytyi [[Etnan]] kraatteriin, jotta hänet luultaisiin jumalaksi, mutta tulivuori heitti esiin hänen sandaalinsa ja paljasti totuuden. Tarinan on välittänyt [[Diogenes Laertios]], ja se on todennäköisesti myöhempää syntyä. Tarkasta kuolinpaikasta en ole varma.",
   "linkit": [
+   "Akragaksessa",
+   "Etnan",
    "Diogenes Laertios"
   ],
   "jatkot": [
@@ -1653,8 +1664,10 @@
   "kohde": "kohde:milano",
   "kasite": "Madonnina",
   "kysymys": "Kerro lisää: Madonnina",
-  "vastaus": "Madonnina on kullattu patsas, joka kohoaa Milanon Duomon korkeimman tornin huipulla. Se esittää Neitsyt Mariaa, ja se asennettiin paikalleen vuonna 1774. Patsas on valmistettu kuparista ja kullattu, ja sen korkeus on noin neljä metriä. Perinteen mukaan Milanossa ei saanut rakentaa Madonninaa korkeampia rakennuksia, ennen kuin [[Pirellin pilvenpiirtäjä]] valmistui 1950-luvun lopulla; sen katolle vietiin kunnianosoituksena patsaan kopio. Madonnina on milanolaisille rakas symboli, ja siitä on tehty laulukin.",
+  "vastaus": "Madonnina on kullattu patsas, joka kohoaa [[Milanon Duomon]] korkeimman tornin huipulla. Se esittää [[Neitsyt Mariaa]], ja se asennettiin paikalleen vuonna 1774. Patsas on valmistettu kuparista ja kullattu, ja sen korkeus on noin neljä metriä. Perinteen mukaan Milanossa ei saanut rakentaa Madonninaa korkeampia rakennuksia, ennen kuin [[Pirellin pilvenpiirtäjä]] valmistui 1950-luvun lopulla; sen katolle vietiin kunnianosoituksena patsaan kopio. Madonnina on milanolaisille rakas symboli, ja siitä on tehty laulukin.",
   "linkit": [
+   "Milanon Duomon",
+   "Neitsyt Mariaa",
    "Pirellin pilvenpiirtäjä"
   ],
   "jatkot": [
@@ -1787,8 +1800,9 @@
   "kohde": "kohde:torino",
   "kasite": "Alessandro Antonelli",
   "kysymys": "Kerro lisää: Alessandro Antonelli",
-  "vastaus": "Alessandro Antonelli syntyi vuonna 1798 Ghemmessä Piemontessa ja kuoli Torinossa vuonna 1888. Hän työskenteli arkkitehtina ja insinöörinä pääosin Piemontessa. Hänen tunnetuimpia töitään ovat Torinon Mole Antonelliana sekä [[Novaran]] San Gaudenzion basilikan kupoli ja torni. Antonelli rakensi korkeita, kevyen näköisiä tiilirakenteita, ja hänen suunnitelmansa kasvoivat usein rakennustöiden aikana. Mole Antonellianan korkeus on noin 167 metriä, mutta tarkka luku vaihtelee lähteissä. Rakennus valmistui vasta hänen kuolemansa jälkeen.",
+  "vastaus": "Alessandro Antonelli syntyi vuonna 1798 Ghemmessä Piemontessa ja kuoli Torinossa vuonna 1888. Hän työskenteli arkkitehtina ja insinöörinä pääosin Piemontessa. Hänen tunnetuimpia töitään ovat Torinon [[Mole Antonelliana]] sekä [[Novaran]] San Gaudenzion basilikan kupoli ja torni. Antonelli rakensi korkeita, kevyen näköisiä tiilirakenteita, ja hänen suunnitelmansa kasvoivat usein rakennustöiden aikana. Mole Antonellianan korkeus on noin 167 metriä, mutta tarkka luku vaihtelee lähteissä. Rakennus valmistui vasta hänen kuolemansa jälkeen.",
   "linkit": [
+   "Mole Antonelliana",
    "Novaran"
   ],
   "jatkot": [
@@ -1829,8 +1843,10 @@
   "kohde": "kohde:torino",
   "kasite": "Sardinian kuningaskuntaa",
   "kysymys": "Kerro lisää: Sardinian kuningaskuntaa",
-  "vastaus": "Sardinian kuningaskunta syntyi, kun Savoijin herttua sai vuonna 1720 Sardinian saaren ja kuninkaan arvon vaihdettuaan aiemmin saamansa Sisilian siihen. Kuningaskunnan keskus oli kuitenkin mantereella Torinossa, ja siihen kuuluivat Piemonte, Savoija, Nizza ja Aostan laakso sekä Sardinia. Wienin kongressi liitti vuonna 1815 kuningaskuntaan myös [[Genovan]] tasavallan alueen. Vuonna 1848 kuningas Kaarle Albert antoi maalle perustuslain, ja kuningaskunta johti Italian yhdistymisliikettä. Vuonna 1861 kuningaskunnasta tuli Italian kuningaskunta.",
+  "vastaus": "Sardinian kuningaskunta syntyi, kun [[Savoijin]] herttua sai vuonna 1720 Sardinian saaren ja kuninkaan arvon vaihdettuaan aiemmin saamansa Sisilian siihen. Kuningaskunnan keskus oli kuitenkin mantereella Torinossa, ja siihen kuuluivat Piemonte, Savoija, Nizza ja Aostan laakso sekä Sardinia. [[Wienin kongressi]] liitti vuonna 1815 kuningaskuntaan myös [[Genovan]] tasavallan alueen. Vuonna 1848 kuningas Kaarle Albert antoi maalle perustuslain, ja kuningaskunta johti Italian yhdistymisliikettä. Vuonna 1861 kuningaskunnasta tuli Italian kuningaskunta.",
   "linkit": [
+   "Savoijin",
+   "Wienin kongressi",
    "Genovan"
   ],
   "jatkot": [
@@ -1842,8 +1858,10 @@
   "kohde": "kohde:torino",
   "kasite": "Viktor Emanuel II",
   "kysymys": "Kerro lisää: Viktor Emanuel II",
-  "vastaus": "Viktor Emanuel II syntyi vuonna 1820 Torinossa ja nousi Sardinian kuninkaaksi vuonna 1849, kun hänen isänsä Kaarle Albert luopui kruunusta Itävallan voitettua taistelussa. Vuonna 1861 hänet julistettiin Italian kuninkaaksi, ja hän hallitsi kuolemaansa asti tammikuussa 1878. Vuonna 1860 hän tapasi Giuseppe Garibaldin Teanon lähellä, ja Garibaldi luovutti valloittamansa etelän hänelle. Hänen lempinimensä oli il re galantuomo, kunnon kuningas. Roomassa hänen muistoaan kunnioittaa suuri [[Vittoriano]]-muistomerkki.",
+  "vastaus": "Viktor Emanuel II syntyi vuonna 1820 Torinossa ja nousi Sardinian kuninkaaksi vuonna 1849, kun hänen isänsä Kaarle Albert luopui kruunusta Itävallan voitettua taistelussa. Vuonna 1861 hänet julistettiin Italian kuninkaaksi, ja hän hallitsi kuolemaansa asti tammikuussa 1878. Vuonna 1860 hän tapasi [[Giuseppe Garibaldin]] [[Teanon]] lähellä, ja Garibaldi luovutti valloittamansa etelän hänelle. Hänen lempinimensä oli il re galantuomo, kunnon kuningas. Roomassa hänen muistoaan kunnioittaa suuri [[Vittoriano]]-muistomerkki.",
   "linkit": [
+   "Giuseppe Garibaldin",
+   "Teanon",
    "Vittoriano"
   ],
   "jatkot": [
@@ -1972,8 +1990,10 @@
   "kohde": "kohde:comojarvi",
   "kasite": "Euroopan",
   "kysymys": "Kerro lisää: Euroopan",
-  "vastaus": "Eurooppa on maanosa, jonka rajat kulkevat idässä Uralvuorten ja Kaspianmeren kautta, etelässä Mustanmeren ja Välimeren kautta, ja lännessä Atlantin rannalla. Rajan tulkinnasta on erilaisia käsityksiä, joten maiden lukumäärä vaihtelee lähteestä riippuen. Eurooppa on pinta-alaltaan melko pieni maanosa, mutta sen rannikko on pitkä ja vaihteleva, ja siellä on useita syviä jääkauden muovaamia järviä. Comojärvi on yli 400 metriä syvä; syvin järvi lienee Norjan [[Hornindalsvatnet]], jonka syvyydeksi ilmoitetaan noin 500 metriä, mutta en ole varma tarkasta luvusta.",
+  "vastaus": "Eurooppa on maanosa, jonka rajat kulkevat idässä [[Uralvuorten]] ja Kaspianmeren kautta, etelässä [[Mustanmeren]] ja Välimeren kautta, ja lännessä Atlantin rannalla. Rajan tulkinnasta on erilaisia käsityksiä, joten maiden lukumäärä vaihtelee lähteestä riippuen. Eurooppa on pinta-alaltaan melko pieni maanosa, mutta sen rannikko on pitkä ja vaihteleva, ja siellä on useita syviä jääkauden muovaamia järviä. Comojärvi on yli 400 metriä syvä; syvin järvi lienee Norjan [[Hornindalsvatnet]], jonka syvyydeksi ilmoitetaan noin 500 metriä, mutta en ole varma tarkasta luvusta.",
   "linkit": [
+   "Uralvuorten",
+   "Mustanmeren",
    "Hornindalsvatnet"
   ],
   "jatkot": [
@@ -2224,8 +2244,10 @@
   "kohde": "kohde:po",
   "kasite": "Alpeille",
   "kysymys": "Kerro lisää: Alpeille",
-  "vastaus": "Alpit ovat Pon tärkein vesilähde. Joen pohjoispuoliset sivujoet, kuten Ticino, Adda ja Oglio, tuovat vuoristosta jäätiköiden ja lumen sulamisvesiä, ja Po-joen länsi- ja pohjoispuolelle laskevat myös [[Dora Baltea]] ja muut Alppien jokien vedet. Siksi Pon virtaama on suurimmillaan keväällä ja alkukesällä lumen sulaessa sekä syksyllä sateiden aikaan. Alppien jäätiköiden pieneneminen vaikuttaa tulevaisuudessa joen vesimäärään: vuonna 2022 Po kärsi poikkeuksellisen pahasta kuivuudesta, mikä vaikutti maatalouteen ja sähköntuotantoon. Pon lähde sijaitsee Cottian Alpeilla.",
+  "vastaus": "Alpit ovat Pon tärkeä vesilähde. Joen pohjoispuoliset sivujoet, kuten [[Ticino]], [[Adda]] ja Oglio, tuovat vuoristosta jäätiköiden ja lumen sulamisvesiä, ja myös [[Dora Baltea]] tuo Alppien vesiä Poon. Siksi Pon virtaama on suurimmillaan keväällä ja alkukesällä lumen sulaessa sekä syksyllä sateiden aikaan. Alppien jäätiköiden pieneneminen vaikuttaa tulevaisuudessa joen vesimäärään: vuonna 2022 Po kärsi poikkeuksellisen pahasta kuivuudesta, mikä vaikutti maatalouteen ja sähköntuotantoon. Pon lähde sijaitsee Cottian Alpeilla.",
   "linkit": [
+   "Ticino",
+   "Adda",
    "Dora Baltea"
   ],
   "jatkot": [
@@ -2251,8 +2273,11 @@
   "kohde": "kohde:po",
   "kasite": "Monviso",
   "kysymys": "Kerro lisää: Monviso",
-  "vastaus": "Monviso on Piemonten Cottian Alppien korkein huippu, 3 841 metriä, ja se kohoaa pyramidin muotoisena Cuneon maakunnassa. Ensimmäisen kirjatun nousun huipulle teki vuonna 1861 englantilainen William Mathews yhdessä Frederick Jacombin ja oppaiden kanssa. Vuoren latinankielinen nimi on Vesulus, ja jo antiikin kirjoittajat mainitsivat sen Po-joen lähteenä. Vuoren juurella kulkee [[Buco di Viso]] -tunneli, joka louhittiin Alppien alle 1400-luvun lopulla ja jota pidetään yhtenä varhaisimmista alppitunneleista. Tunnelin tarkasta vuodesta en ole varma.",
+  "vastaus": "Monviso on Piemonten [[Cottian Alppien]] korkein huippu, 3 841 metriä, ja se kohoaa pyramidin muotoisena [[Cuneon]] maakunnassa. Ensimmäisen kirjatun nousun huipulle teki vuonna 1861 englantilainen William Mathews yhdessä Frederick Jacombin ja oppaiden kanssa. Vuoren latinankielinen nimi on [[Vesulus]], ja jo antiikin kirjoittajat mainitsivat sen Po-joen lähteenä. Vuoren juurella kulkee [[Buco di Viso]] -tunneli, joka louhittiin Alppien alle 1400-luvun lopulla ja jota pidetään yhtenä varhaisimmista alppitunneleista. Tunnelin tarkasta vuodesta en ole varma.",
   "linkit": [
+   "Cottian Alppien",
+   "Cuneon",
+   "Vesulus",
    "Buco di Viso"
   ],
   "jatkot": [
@@ -2264,9 +2289,11 @@
   "kohde": "kohde:po",
   "kasite": "Pian del Re",
   "kysymys": "Kerro lisää: Pian del Re",
-  "vastaus": "Pian del Re on korkealla, noin 2 000 metrin korkeudessa Monvison juurella sijaitseva tasanko [[Crissolon]] kunnassa Piemontessa. Sieltä löytyy Po-joen perinteinen lähde, josta vesi virtaa alas laaksoon. Alue kuuluu Monviso-vuoren suojeltuun luontoalueeseen, ja se on suosittu vaellus- ja retkikohde. Kesäisin lähteelle pääsee tietä pitkin, ja talvella alue on lumen peitossa. Tarkkaa lähteen korkeutta en ole varma, sillä lähteet antavat hieman vaihtelevia lukuja.",
+  "vastaus": "Pian del Re on korkealla, noin 2 000 metrin korkeudessa [[Monvison]] juurella sijaitseva tasanko [[Crissolon]] kunnassa Piemontessa. Sieltä löytyy [[Po-joen]] perinteinen lähde, josta vesi virtaa alas laaksoon. Alue kuuluu Monviso-vuoren suojeltuun luontoalueeseen, ja se on suosittu vaellus- ja retkikohde. Kesäisin lähteelle pääsee tietä pitkin, ja talvella alue on lumen peitossa. Tarkkaa lähteen korkeutta en ole varma, sillä lähteet antavat hieman vaihtelevia lukuja.",
   "linkit": [
-   "Crissolon"
+   "Monvison",
+   "Crissolon",
+   "Po-joen"
   ],
   "jatkot": [
    "Mistä Po-joen vesi tulee lähteeltä?",
@@ -2292,9 +2319,11 @@
   "kohde": "kohde:po",
   "kasite": "Po-suiston alueellisena puistona",
   "kysymys": "Kerro lisää: Po-suiston alueellisena puistona",
-  "vastaus": "Pon suiston alue on jaettu kahteen alueelliseen puistoon: Emilia-Romagnan puisto ja Veneton puisto. Ne suojelevat jokien, laguunien ja kosteikkojen luontoa, ja alueella pesii ja levähtää suuri joukko lintuja. Emilia-Romagnan puolella sijaitsevat [[Comacchion]] laguunit, jotka tunnetaan ankeriaankalastuksesta ja lintuvesistä. Alue kuuluu myös Unescon maailmanperintöön yhdessä Ferraran kaupungin kanssa, ja laajempi suistoalue on saanut Unescon biosfäärialueen aseman. Puistoissa voi retkeillä veneellä ja pyörällä, ja linnustoa seurataan opastetuilla retkillä.",
+  "vastaus": "Pon suiston alue on jaettu kahteen alueelliseen puistoon: [[Emilia-Romagnan]] puisto ja Veneton puisto. Ne suojelevat jokien, laguunien ja kosteikkojen luontoa, ja alueella pesii ja levähtää suuri joukko lintuja. Emilia-Romagnan puolella sijaitsevat [[Comacchion]] laguunit, jotka tunnetaan ankeriaankalastuksesta ja lintuvesistä. Alue kuuluu myös Unescon maailmanperintöön yhdessä [[Ferraran]] kaupungin kanssa, ja laajempi suistoalue on saanut Unescon biosfäärialueen aseman. Puistoissa voi retkeillä veneellä ja pyörällä, ja linnustoa seurataan opastetuilla retkillä.",
   "linkit": [
-   "Comacchion"
+   "Emilia-Romagnan",
+   "Comacchion",
+   "Ferraran"
   ],
   "jatkot": [
    "Miksi Comacchion laguunit ovat tärkeitä linnuille?",
@@ -3079,8 +3108,10 @@
   "kohde": "kohde:ligurianmeri",
   "kasite": "sillivalas",
   "kysymys": "Kerro lisää: sillivalas",
-  "vastaus": "Sillivalas on sinivalaan jälkeen maailman toiseksi suurin eläin, ja Välimeren yksilöt kasvavat noin 20 metrin pituisiksi. Hampaiden sijaan sillä on suussa valaanluulevyt, joilla se suodattaa vedestä ravintoa. Välimerellä sen pääravintoa on [[krilli]], pieni katkarapumainen äyriäinen. Välimeren sillivalaskanta on pieni, arviolta muutamia tuhansia yksilöitä, ja se on luokiteltu uhanalaiseksi. Suurin uhka ovat alusten törmäykset, sillä sillivalaat viettävät paljon aikaa pinnan lähellä ja kulkevat vilkkaiden laivareittien poikki. Myös vedenalainen melu ja saasteet haittaavat niitä.",
+  "vastaus": "Sillivalas on [[sinivalaan]] jälkeen maailman toiseksi suurin eläin, ja Välimeren yksilöt kasvavat noin 20 metrin pituisiksi. Hampaiden sijaan sillä on suussa [[valaanluulevyt]], joilla se suodattaa vedestä ravintoa. Välimerellä sen pääravintoa on [[krilli]], pieni katkarapumainen äyriäinen. Välimeren sillivalaskanta on pieni, arviolta muutamia tuhansia yksilöitä, ja se on luokiteltu uhanalaiseksi. Suurin uhka ovat alusten törmäykset, sillä sillivalaat viettävät paljon aikaa pinnan lähellä ja kulkevat vilkkaiden laivareittien poikki. Myös vedenalainen melu ja saasteet haittaavat niitä.",
   "linkit": [
+   "sinivalaan",
+   "valaanluulevyt",
    "krilli"
   ],
   "jatkot": [
@@ -3330,8 +3361,12 @@
   "kohde": "kohde:messinansalmi",
   "kasite": "tähystysmasto",
   "kysymys": "Kerro lisää: tähystysmasto",
-  "vastaus": "Tähystysmasto on korkea masto, jonka huipulta kalastaja etsii miekkakalaa merenpinnalta. Lähteiden mukaan salmen perinteinen miekkakalavene on nimeltään feluca, ja siinä on korkean masto lisäksi pitkä ulokkeena keulasta työntyvä kävelysilta, passerella, jonka päästä harppuunamies iskee. Tähystäjä huutaa ohjeita ruorimiehelle, kun kala on näkyvissä, ja vene lähestyy sitä hiljaa. Pyynti ajoittuu kesään, jolloin miekkakalat uivat salmen läpi. Perinteinen menetelmä on nykyään harvinaisempi, ja sääntöjä on tiukennettu. Tarkkoja mittoja mastosta en ole varma.",
-  "linkit": [],
+  "vastaus": "Tähystysmasto on korkea masto, jonka huipulta kalastaja etsii [[miekkakalaa]] merenpinnalta. Lähteiden mukaan salmen perinteinen miekkakalavene on nimeltään [[feluca]], ja siinä on korkean mastorakenteen lisäksi keulasta työntyvä pitkä kävelysilta, [[passerella]], jonka päästä harppuunamies iskee. Tähystäjä huutaa ohjeita ruorimiehelle, kun kala on näkyvissä, ja vene lähestyy sitä hiljaa. Pyynti ajoittuu kesään, jolloin miekkakalat uivat salmen läpi. Perinteinen menetelmä on nykyään harvinaisempi, ja sääntöjä on tiukennettu. Tarkkoja mittoja mastosta en ole varma.",
+  "linkit": [
+   "miekkakalaa",
+   "feluca",
+   "passerella"
+  ],
   "jatkot": [
    "Miksi miekkakala uiskentelee Messinansalmessa?",
    "Onko harppuunapyynti nykyään sallittua?"
@@ -5913,7 +5948,7 @@
   "kohde": "kohde:hahmotelma-villa-adriana",
   "kasite": "Vesuviuksen",
   "kysymys": "Kerro lisää: Vesuviuksen",
-  "vastaus": "Vesuvius on [[Napolinlahden]] rannalla kohoava tulivuori, jonka korkeus on noin 1 280 metriä. Se on tunnettu etenkin vuoden 79 jKr. purkauksesta, jonka silminnäkijäkuvauksen jätti jälkeensä roomalainen kirjailija [[Plinius nuorempi]]. Viimeisin suuri purkaus ajoittuu vuoteen 1944, ja tulivuori on sen jälkeen ollut hiljaa. Vuoren juurella asuu hyvin paljon ihmisiä, joten sitä seurataan tarkasti ja alueelle on laadittu evakuointisuunnitelmia. Vesuviuksen rinteiden tuhkamaa on silti ollut viljelyksille hyvin hedelmällistä.",
+  "vastaus": "Vesuvius on [[Napolinlahden]] rannalla kohoava tulivuori, jonka korkeus on noin 1 280 metriä. Se on tunnettu etenkin vuoden 79 purkauksesta, jonka silminnäkijäkuvauksen jätti jälkeensä roomalainen kirjailija [[Plinius nuorempi]]. Viimeisin suuri purkaus ajoittuu vuoteen 1944, ja tulivuori on sen jälkeen ollut hiljaa. Vuoren juurella asuu hyvin paljon ihmisiä, joten sitä seurataan tarkasti ja alueelle on laadittu evakuointisuunnitelmia. Vesuviuksen rinteiden tuhkamaa on silti ollut viljelyksille hyvin hedelmällistä.",
   "linkit": [
    "Napolinlahden",
    "Plinius nuorempi"
@@ -5927,7 +5962,7 @@
   "kohde": "kohde:hahmotelma-villa-adriana",
   "kasite": "Herculaneum",
   "kysymys": "Kerro lisää: Herculaneum",
-  "vastaus": "Herculaneum oli rannikkokaupunki Vesuviuksen länsipuolella, ja sen paikalla on nykyisin [[Ercolanon]] kaupunki. Purkauksessa vuonna 79 jKr. kaupunki hautautui kuumien tuhka- ja kaasuvirtausten sekä mudan alle, ja sen päälle kertyi useiden kymmenien metrien paksuinen kerros. Siksi myös orgaanista materiaalia, kuten puuta ja kangasta, on säilynyt poikkeuksellisen hyvin. Tunnetuin löytö on [[Villa dei Papiri]], jonka kirjastosta on löytynyt satoja hiiltyneitä papyruskääröjä. Kaivaukset alkoivat 1700-luvun alkupuolella, ja suuri osa kaupungista on yhä maan alla.",
+  "vastaus": "Herculaneum oli rannikkokaupunki Vesuviuksen länsipuolella, ja sen paikalla on nykyisin [[Ercolanon]] kaupunki. Purkauksessa vuonna 79 kaupunki hautautui kuumien tuhka- ja kaasuvirtausten sekä mudan alle, ja sen päälle kertyi useiden kymmenien metrien paksuinen kerros. Siksi myös orgaanista materiaalia, kuten puuta ja kangasta, on säilynyt poikkeuksellisen hyvin. Tunnetuin löytö on [[Villa dei Papiri]], jonka kirjastosta on löytynyt satoja hiiltyneitä papyruskääröjä. Kaivaukset alkoivat 1700-luvun alkupuolella, ja suuri osa kaupungista on yhä maan alla.",
   "linkit": [
    "Ercolanon",
    "Villa dei Papiri"
@@ -6117,7 +6152,7 @@
   "kohde": "kohde:hahmotelma-paestum",
   "kasite": "Ovidius",
   "kysymys": "Kerro lisää: Ovidius",
-  "vastaus": "Publius Ovidius Naso, eli Ovidius, eli vuosina 43 eaa.–17 tai 18 jKr. ja oli keisari [[Augustuksen]] ajan roomalaisia runoilijoita. Hänen tunnetuin teoksensa on [[Metamorfoosit]], myyttien muodonmuutoksista kertova runoelma. Metamorfooseissa viitataan Paestumin ruusuihin, jotka mainitaan seudun tunnusmerkkinä. Ovidius karkotettiin vuonna 8 jKr. Tomisiin, nykyisen [[Constanțan]] seudulle Mustanmeren rannalle, eikä hän koskaan palannut Roomaan. Karkotuksen syy tiedetään vain osittain.",
+  "vastaus": "Publius Ovidius Naso, eli Ovidius, oli keisari [[Augustuksen]] ajan roomalainen runoilija. Hän syntyi Sulmossa vuonna 43 eaa. Kuolinvuosi on 17 tai 18. Hänen tunnetuin teoksensa on [[Metamorfoosit]], myyttien muodonmuutoksista kertova runoelma. Metamorfooseissa viitataan Paestumin ruusuihin, jotka mainitaan seudun tunnusmerkkinä. Ovidius karkotettiin vuonna 8 jKr. Tomisiin, nykyisen [[Constanțan]] seudulle Mustanmeren rannalle, eikä hän koskaan palannut Roomaan. Karkotuksen syy tiedetään vain osittain.",
   "linkit": [
    "Augustuksen",
    "Metamorfoosit",
@@ -10562,8 +10597,10 @@
   "kohde": "nosto:colosseumin-kellari",
   "kasite": "harena",
   "kysymys": "Kerro lisää: harena",
-  "vastaus": "Latinan sana harena, myös arena, tarkoittaa hiekkaa. Amfiteatterin keskellä olevaa taistelukenttää kutsuttiin hiekaksi, koska sen päälle levitettiin hiekkakerros, ja nimi siirtyi lopulta koko tilaan. Sana kulkeutui [[italiaan]] ja sieltä moniin muihin kieliin, ja suomessakin areena tarkoittaa nykyään kilpailun tai esityksen näyttämöä. Alkuperäinen merkitys on kuitenkin yksinkertainen: hiekkaa, jolla puulattia peitettiin.",
+  "vastaus": "[[Latinan]] sana harena, myös arena, tarkoittaa hiekkaa. [[Amfiteatterin]] keskellä olevaa taistelutilaa kutsuttiin hiekaksi, koska sen päälle levitettiin hiekkakerros, ja nimi siirtyi lopulta koko tilaan. Sana kulkeutui [[italiaan]] ja sieltä moniin muihin kieliin, ja suomessakin areena tarkoittaa nykyään kilpailun tai esityksen näyttämöä. Alkuperäinen merkitys on kuitenkin yksinkertainen: hiekkaa, jolla puulattia peitettiin.",
   "linkit": [
+   "Latinan",
+   "Amfiteatterin",
    "italiaan"
   ],
   "jatkot": [
@@ -10575,8 +10612,10 @@
   "kohde": "nosto:colosseumin-kellari",
   "kasite": "areena",
   "kysymys": "Kerro lisää: areena",
-  "vastaus": "Suomen sana areena on lainattu latinan sanasta harena, hiekka, ja se tarkoittaa alun perin amfiteatterin hiekkapeitteistä taistelutilaa. Nykykielessä areenalla tarkoitetaan urheilun, konserttien ja muiden yleisötapahtumien suurta näyttämöä, ja sanaa käytetään myös kuvaannollisesti, esimerkiksi politiikan areenasta. Colosseumin virallinen nimi oli [[Flavialaisten amfiteatteri]], ja sen katsomoon mahtui lähteiden mukaan 50 000–80 000 katsojaa. Nykyaikaisista areenoista monet noudattavat yhä samaa perusmuotoa: katsomo kiertää keskellä olevaa tilaa joka puolelta.",
+  "vastaus": "Suomen sana areena on lainattu [[latinan]] sanasta harena, hiekka, ja se tarkoittaa alun perin amfiteatterin hiekkapeitteistä taistelutilaa. Nykykielessä areenalla tarkoitetaan urheilun, konserttien ja muiden yleisötapahtumien suurta näyttämöä, ja sanaa käytetään myös kuvaannollisesti, esimerkiksi politiikan areenasta. [[Colosseumin]] virallinen nimi oli [[Flavialaisten amfiteatteri]], ja sen katsomoon mahtui lähteiden mukaan 50 000–80 000 katsojaa. Nykyaikaisista areenoista monet noudattavat yhä samaa perusmuotoa: katsomo kiertää keskellä olevaa tilaa joka puolelta.",
   "linkit": [
+   "latinan",
+   "Colosseumin",
    "Flavialaisten amfiteatteri"
   ],
   "jatkot": [
@@ -10604,8 +10643,10 @@
   "kohde": "nosto:colosseumin-kellari",
   "kasite": "velariumia",
   "kysymys": "Kerro lisää: velariumia",
-  "vastaus": "Velarium oli amfiteatterin yläpuolelle vedettävä kangaskatto, joka suojasi katsojia auringolta ja sateelta. Se muodostui purjemaisista kangaspaneeleista, joita liikuteltiin köysillä ja katsomon yläreunan mastoihin kiinnitetyillä rakenteilla. Sotalaivaston merimiehet olivat tottuneita käsittelemään köysiä ja purjeita, minkä vuoksi tehtävä annettiin heille. Tutkijat eivät ole täysin yksimielisiä siitä, miten tarkasti katto peitti katsomon. Kangaskatoista on säilynyt todisteita muissakin amfiteattereissa, esimerkiksi [[Pompeijin]] areenan mainoksissa.",
+  "vastaus": "Velarium oli [[amfiteatterin]] yläpuolelle vedettävä kangaskatto, joka suojasi katsojia auringolta ja sateelta. Se muodostui purjemaisista kangaspaneeleista, joita liikuteltiin köysillä ja katsomon yläreunan mastoihin kiinnitetyillä rakenteilla. [[Sotalaivaston]] merimiehet olivat tottuneita käsittelemään köysiä ja purjeita, minkä vuoksi tehtävä annettiin heille. Tutkijat eivät ole täysin yksimielisiä siitä, miten tarkasti katto peitti katsomon. Kangaskatoista on säilynyt todisteita muissakin amfiteattereissa, esimerkiksi [[Pompeijin]] areenan mainoksissa.",
   "linkit": [
+   "amfiteatterin",
+   "Sotalaivaston",
    "Pompeijin"
   ],
   "jatkot": [
@@ -10645,9 +10686,11 @@
   "kohde": "nosto:colosseumin-kellari",
   "kasite": "sarvikuonoja",
   "kysymys": "Kerro lisää: sarvikuonoja",
-  "vastaus": "Sarvikuonot olivat harvinaisempia kuin leijonat tai norsut, ja niiden esiintyminen areenalla oli erityinen nähtävyys. Runoilija [[Martialis]] kuvaa Rooman keisariajalta peräisin olevissa epigrammeissaan sarvikuonon taistelua areenalla. Eläimet tuotiin kaukaa Afrikasta, mikä teki niistä kalliita ja arvostettuja. Tällaiset näytökset kuuluivat siihen, että keisarit halusivat osoittaa valtansa ulottuvan kauas. Colosseumin avajaisia vietettiin pitkään, ja ohjelmassa oli lähteiden mukaan gladiaattoritaisteluita ja eläinesityksiä.",
+  "vastaus": "Sarvikuonot olivat harvinaisempia kuin leijonat tai norsut, ja niiden esiintyminen areenalla oli erityinen nähtävyys. Runoilija [[Martialis]] kuvaa Rooman keisariajalta peräisin olevissa epigrammeissaan sarvikuonon taistelua areenalla. Eläimet tuotiin kaukaa Afrikasta, mikä teki niistä kalliita ja arvostettuja. Tällaiset näytökset kuuluivat siihen, että keisarit halusivat osoittaa valtansa ulottuvan kauas. [[Colosseumin]] avajaisia vietettiin pitkään, ja ohjelmassa oli lähteiden mukaan [[gladiaattoritaisteluita]] ja eläinesityksiä.",
   "linkit": [
-   "Martialis"
+   "Martialis",
+   "Colosseumin",
+   "gladiaattoritaisteluita"
   ],
   "jatkot": [
    "Kuka oli runoilija Martialis?",
@@ -10658,8 +10701,10 @@
   "kohde": "nosto:colosseumin-kellari",
   "kasite": "kreikasta",
   "kysymys": "Kerro lisää: kreikasta",
-  "vastaus": "Hypogeum on muodostettu kreikan sanoista hypo, alla, ja gē, maa. Kreikan kieli vaikutti latinaan voimakkaasti, ja roomalaiset lainasivat siitä runsaasti sanoja esimerkiksi rakentamisen, tieteen, filosofian ja lääketieteen aloilta. Antiikin Rooman koulutettu yläluokka puhui usein kreikkaa toisena kieltään. Nykyiset eurooppalaiset kielet ovat perineet suuren määrän kreikkalaisia sanoja [[latinan]] kautta. Hypogeum tarkoittaa siis kirjaimellisesti maanalaista tilaa.",
+  "vastaus": "Hypogeum on muodostettu kreikan sanoista hypo, alla, ja gē, maa. [[Kreikan]] kieli vaikutti latinaan voimakkaasti, ja roomalaiset lainasivat siitä runsaasti sanoja esimerkiksi rakentamisen, tieteen, filosofian ja lääketieteen aloilta. [[Antiikin Rooman]] koulutettu yläluokka puhui usein kreikkaa toisena kieltään. Nykyiset eurooppalaiset kielet ovat perineet suuren määrän kreikkalaisia sanoja [[latinan]] kautta. Hypogeum tarkoittaa siis kirjaimellisesti maanalaista tilaa.",
   "linkit": [
+   "Kreikan",
+   "Antiikin Rooman",
    "latinan"
   ],
   "jatkot": [
@@ -10800,8 +10845,12 @@
   "kohde": "nosto:minervan-norsu",
   "kasite": "oculus",
   "kysymys": "Kerro lisää: oculus",
-  "vastaus": "Oculus on latinaa ja tarkoittaa silmää. Pantheonin kupolin huipulla oleva pyöreä aukko on noin yhdeksän metriä leveä, ja se on rakennuksen ainoa valonlähde. Kupoli on halkaisijaltaan 43 metriä, ja se on yhä maailman suurin raudoittamaton betonikupoli. Roomalaiset käyttivät kupolin yläosassa kevyempää kiveä kuin alaosassa, jotta rakenne ei romahtaisi omaan painoonsa, ja kupolin sisäpintaa keventävät kasettikuviot. Aukko on avoin, joten sade tulee sisään ja valuu lattian kaltevuuden ja reikien kautta viemäriin. Auringon valokiila liikkuu seinää pitkin päivän mittaan.",
-  "linkit": [],
+  "vastaus": "Oculus on latinaa ja tarkoittaa silmää. [[Pantheonin]] kupolin huipulla oleva pyöreä aukko on noin kahdeksan ja puoli metriä leveä, ja se on rakennuksen ainoa valonlähde. Kupoli on halkaisijaltaan 43 metriä, ja sitä pidetään yhä maailman suurimpana raudoittamattomana [[betonikupolina]]. Roomalaiset käyttivät kupolin yläosassa kevyempää kiveä kuin alaosassa, jotta rakenne ei romahtaisi omaan painoonsa, ja kupolin sisäpintaa keventävät [[kasettikuviot]]. Aukko on avoin, joten sade tulee sisään ja valuu lattian kaltevuuden ja reikien kautta viemäriin. Auringon valokiila liikkuu seinää pitkin päivän mittaan.",
+  "linkit": [
+   "Pantheonin",
+   "betonikupolina",
+   "kasettikuviot"
+  ],
   "jatkot": [
    "Miten Pantheonin betoni valmistettiin?",
    "Miksi rakennuksessa lukee Agrippan nimi?"
@@ -10827,9 +10876,11 @@
   "kohde": "nosto:aqua-virgo",
   "kasite": "chorobates",
   "kysymys": "Kerro lisää: chorobates",
-  "vastaus": "Chorobates oli roomalaisten käyttämä vaaituspöytä, jonka kuvaus on säilynyt [[Vitruviuksen]] rakennusoppaassa. Se oli pitkä, noin kuusi metriä pitkä puinen rakenne, jonka päissä oli jalat ja jonka yläpinnassa oli vesiuoma. Kun vesi asettui uoman molemmin puolin samalle tasolle, pöytä oli vaakasuorassa. Pöydän jalkoihin oli kiinnitetty luotilankoja, joilla tarkistettiin asento myös tuulisella säällä. Vaaituksella mitattiin korkeuseroja matkan eri kohdissa, ja siten akvedukteille voitiin suunnitella hyvin tasainen kallistus. Tarkat yksityiskohdat ja se, miten laajasti laitetta käytettiin, tunnetaan osin vain Vitruviuksen kuvauksesta.",
+  "vastaus": "Chorobates oli roomalaisten käyttämä [[vaaituspöytä]], jonka kuvaus on säilynyt [[Vitruviuksen]] rakennusoppaassa. Se oli noin kuusi metriä pitkä puinen rakenne, jonka päissä oli jalat ja jonka yläpinnassa oli vesiuoma. Kun vesi asettui uoman molemmin puolin samalle tasolle, pöytä oli vaakasuorassa. Pöydän jalkoihin oli kiinnitetty luotilankoja, joilla tarkistettiin asento myös tuulisella säällä. Vaaituksella mitattiin korkeuseroja matkan eri kohdissa, ja siten [[akvedukteille]] voitiin suunnitella hyvin tasainen kallistus. Tarkat yksityiskohdat ja se, miten laajasti laitetta käytettiin, tunnetaan osin vain Vitruviuksen kuvauksesta.",
   "linkit": [
-   "Vitruviuksen"
+   "vaaituspöytä",
+   "Vitruviuksen",
+   "akvedukteille"
   ],
   "jatkot": [
    "Millä muilla välineillä roomalaiset mittasivat?",
@@ -10855,9 +10906,11 @@
   "kohde": "nosto:aqua-virgo",
   "kasite": "groma",
   "kysymys": "Kerro lisää: groma",
-  "vastaus": "Groma oli roomalaisten maanmittareiden käyttämä väline suorien linjojen ja suorien kulmien merkitsemiseen. Se koostui pystysuorasta sauvasta, jonka päälle oli kiinnitetty ristikkäiset vaakavarret, ja jokaisen varren päästä riippui luotilanka. Kun mittaaja tähtäsi luotilankojen kautta, hän sai selville suoran linjan ja suoran kulman. Gromaa käyttivät [[agrimensorit]], eli maanmittarit, joiden työtä olivat esimerkiksi teiden, sotaleirien ja kaupunkien asemakaavojen merkitseminen sekä viljelysmaan jakaminen. Siksi roomalaisille kaupungeille ja teille on ominaista ruudukkomainen, suora asettelu.",
+  "vastaus": "Groma oli roomalaisten [[maanmittareiden]] käyttämä väline suorien linjojen ja suorien kulmien merkitsemiseen. Se koostui pystysuorasta sauvasta, jonka päälle oli kiinnitetty ristikkäiset vaakavarret, ja jokaisen varren päästä riippui luotilanka. Kun mittaaja tähtäsi luotilankojen kautta, hän sai selville suoran linjan ja suoran kulman. Gromaa käyttivät [[agrimensorit]], eli maanmittarit, joiden työtä olivat esimerkiksi teiden, [[sotaleirien]] ja kaupunkien asemakaavojen merkitseminen sekä viljelysmaan jakaminen. Siksi roomalaisille kaupungeille ja teille on ominaista ruudukkomainen, suora asettelu.",
   "linkit": [
-   "agrimensorit"
+   "maanmittareiden",
+   "agrimensorit",
+   "sotaleirien"
   ],
   "jatkot": [
    "Miten roomalaiset tiet rakennettiin?",
@@ -10940,8 +10993,10 @@
   "kohde": "nosto:aqua-virgo",
   "kasite": "Palazzo Polin",
   "kysymys": "Kerro lisää: Palazzo Polin",
-  "vastaus": "Palazzo Poli on Rooman keskustassa sijaitseva palatsi, jonka julkisivuun Trevin lähde nojaa. Arkkitehti Nicola Salvi suunnitteli julkisivun osaksi suihkulähdettä, niin että palatsi toimii veistoksellisen kokonaisuuden taustana. Palatsin julkisivu muistuttaa roomalaista voittokaarta, ja sen edessä kohoavat veistokset ja vesialtaat. Nykyisin palatsissa toimii [[Istituto Nazionale per la Grafica]], eli kansallinen grafiikan laitos. Tarkat tiedot palatsin aiemmista omistajista ja rakennusvaiheista vaihtelevat lähteittäin.",
+  "vastaus": "Palazzo Poli on Rooman keskustassa sijaitseva palatsi, jonka julkisivuun [[Trevin lähde]] nojaa. Arkkitehti [[Nicola Salvi]] suunnitteli julkisivun osaksi suihkulähdettä, niin että palatsi toimii veistoksellisen kokonaisuuden taustana. Palatsin julkisivu muistuttaa roomalaista voittokaarta, ja sen edessä kohoavat veistokset ja vesialtaat. Nykyisin palatsissa toimii [[Istituto Nazionale per la Grafica]], eli kansallinen grafiikan laitos. Tarkat tiedot palatsin aiemmista omistajista ja rakennusvaiheista vaihtelevat lähteittäin.",
   "linkit": [
+   "Trevin lähde",
+   "Nicola Salvi",
    "Istituto Nazionale per la Grafica"
   ],
   "jatkot": [
@@ -10953,9 +11008,11 @@
   "kohde": "nosto:aqua-virgo",
   "kasite": "hypokaustum",
   "kysymys": "Kerro lisää: hypokaustum",
-  "vastaus": "Hypokaustum oli roomalainen lattialämmitysjärjestelmä. Lattia rakennettiin tiilipilareiden, latinaksi pilae, varaan, jolloin sen alle jäi ontelo. Uunissa, latinaksi praefurnium, tuotettu kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Perimätiedon mukaan järjestelmän keksi liikemies [[Sergius Orata]] noin vuonna 100 eaa. Hypokaustumia käytettiin kylpylöiden lisäksi myös rikkaiden asuintaloissa eri puolilla valtakuntaa.",
+  "vastaus": "Hypokaustum oli roomalainen lattialämmitysjärjestelmä. Lattia rakennettiin tiilipilareiden, latinaksi pilae, varaan, jolloin sen alle jäi ontelo. Uunissa, latinaksi [[praefurnium]], tuotettu kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Perimätiedon mukaan järjestelmän keksi liikemies [[Sergius Orata]] noin vuonna 100 eaa. Hypokaustumia käytettiin [[kylpylöiden]] lisäksi myös rikkaiden asuintaloissa eri puolilla valtakuntaa.",
   "linkit": [
-   "Sergius Orata"
+   "praefurnium",
+   "Sergius Orata",
+   "kylpylöiden"
   ],
   "jatkot": [
    "Millaisia kylpylöitä roomalaisilla oli?",
