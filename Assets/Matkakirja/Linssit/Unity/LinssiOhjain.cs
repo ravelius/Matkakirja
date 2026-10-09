@@ -2228,6 +2228,12 @@ namespace Matkakirja.Natiivi
                         for (int i = 2; i + 1 < osat.Length; i += 2) pp.Add((Luku(osat[i]), Luku(osat[i + 1])));
                         Kirjaa($"opas: pinta → {OpasSovitin.Pinta(pp)}");
                     }
+                    // Pariisin nykyintro (OpasSovitin.Intro): "opas intro 0|1" kytkin (seuraava esitys), "tila", "ohita" (= napautus).
+                    else if (osat.Length > 2 && osat[1] == "intro")
+                    {
+                        if (osat[2] == "ohita") Kirjaa($"opas: intro ohita → {(OpasSovitin.IntroOhita() ? "ok" : "ei käynnissä")}");
+                        else { if (osat[2] != "tila") OpasSovitin.IntroPaalla = osat[2] == "1"; Kirjaa("opas: " + OpasSovitin.IntroTila()); }
+                    }
                     else if (osat.Length > 2 && osat[1] == "opastus" && osat[2] == "nollaa") { OpasSovitin.OpastusKuultu = false; Kirjaa("opas: opastus nollattu (seuraava kyyti soittaa)"); }
                     else if (osat.Length > 2 && osat[1] == "kaupunkitila") Kirjaa($"opas: kaupunkitila → {OpasSovitin.AvaaKaupunkitila(string.Join(" ", osat.Skip(2)))}");
                     else if (osat.Length > 2 && osat[1] == "liiku")
