@@ -710,6 +710,7 @@ namespace Matkakirja.Natiivi
                 SijoitaOtsikko(w / 2f, ylin, w - t.x - t.z);
                 paneeli.style.left = t.x + m; paneeli.style.right = t.z + m; paneeli.style.width = StyleKeyword.Auto;
                 paneeli.style.top = yla + lw * Suhde + m; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.maxHeight = StyleKeyword.Null;
             }
             else
             {
@@ -721,7 +722,10 @@ namespace Matkakirja.Natiivi
                 Sijoita(lauta, vasen, ylin + oKork, lw, lh);
                 SijoitaOtsikko(vasen + lw / 2f, ylin, lw);
                 paneeli.style.left = StyleKeyword.Auto; paneeli.style.right = t.z + m; paneeli.style.width = pw;
-                paneeli.style.top = ylin + oKork; paneeli.style.bottom = StyleKeyword.Auto;
+                // Oikea palsta ylimmästä kohdasta ja enintään turva-alueen alareunaan kuten Myllyssä (asettelutesti 10.10.2026:
+                // iPhone vaaka, paneelin rivi y 380–399 turva-alueen alla).
+                paneeli.style.top = ylin; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.maxHeight = Mathf.Max(0f, h - ylin - t.w - m);
             }
         }
 
