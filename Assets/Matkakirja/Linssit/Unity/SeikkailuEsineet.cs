@@ -815,6 +815,7 @@ namespace Matkakirja.Natiivi
             {
                 // Torkkuva vartija herää eväisiin (pelattavuusmalli 8.1 huone 4): tarjotin hänelle, käteen jää kynttilä.
                 var t = kadessa; kadessa = null; t.Go.SetActive(false); p.KasiEle("laske");
+                SeikkailuAanet.SoitaTaiVara("tarjotin", null, p.transform.position + p.Hahmo.forward * 0.6f + Vector3.up, 0.8f);   // aanet-lapi-v2
                 kirjaa?.Invoke("seikkailu: tarjotin annettu vartijalle");
             }
             else if (kadessa != null) { if (kadessa.Laji == Laji.Heitettava) Heita(p); else Laske(p); }
@@ -846,6 +847,7 @@ namespace Matkakirja.Natiivi
 
         void Poimi(SeikkailuPelaaja p, Esine e)
         {
+            if (e.Go != null) SeikkailuAanet.SoitaTaiVara("hanska", null, e.Go.transform.position, 0.6f);   // hanska tarttuu (aanet-lapi-v2)
             if (e.Id == Nyytti)
             {
                 // Fogg avaa nyytin: liina pois, kalkki, pateeni ja liuskekivi esiin syvennyksen pohjalle.
@@ -1019,6 +1021,8 @@ namespace Matkakirja.Natiivi
             Kolahti?.Invoke(kohta);
             if (e.Laji == Laji.Irrotettava || e.Id.StartsWith("kivi", StringComparison.Ordinal)) SeikkailuAanet.Soita("kivi-kolahdus", kohta);
             else if (e.Id.StartsWith("savipurkki", StringComparison.Ordinal) && SeikkailuAanet.Klippi("savipurkki") != null) SeikkailuAanet.Soita("savipurkki", kohta);   // rikkoutuu (aanet-lapi-v1)
+            else if ((e.Id.StartsWith("nauris", StringComparison.Ordinal) || e.Id == Tarjotin) && SeikkailuAanet.Klippi(e.Id == Tarjotin ? "tarjotin" : "nauris") != null)
+                SeikkailuAanet.Soita(e.Id == Tarjotin ? "tarjotin" : "nauris", kohta);   // aanet-lapi-v2
             else if (KolahdusKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);

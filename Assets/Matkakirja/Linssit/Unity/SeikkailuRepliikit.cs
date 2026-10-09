@@ -17,7 +17,7 @@ namespace Matkakirja.Natiivi
         public static SeikkailuRepliikit Aktiivinen { get; private set; }
         public const float Voimakkuus = 1f;
 
-        sealed class Repliikki { public string Tunnus, Hahmo, Aani; public double KestoS; public AudioClip Klippi; public bool Haussa; }
+        sealed class Repliikki { public string Tunnus, Hahmo, Aani, Juuri; public double KestoS; public AudioClip Klippi; public bool Haussa; }
         readonly Dictionary<string, Repliikki> repliikit = new Dictionary<string, Repliikki>(StringComparer.Ordinal);
         readonly Dictionary<string, AudioSource> puhujat = new Dictionary<string, AudioSource>(StringComparer.Ordinal);
         string juuri;
@@ -38,21 +38,26 @@ namespace Matkakirja.Natiivi
             return r;
         }
 
-        IEnumerator LataaManifest(string url)
+        /// <summary>Lisämanifest (repliikit-lapi-v1, Pelikoodarin aja-generointi.sh omistajan luvalla): uudet tunnukset omalla juurellaan,
+        /// olemassa olevia ei korvata. Puuttuva manifest (404) = ei uusia repliikkejä, ei virhettä.</summary>
+        public static void LisaaManifest(string url) { var r = Aktiivinen; if (r != null && !string.IsNullOrEmpty(url)) r.StartCoroutine(r.LataaManifest(url, true)); }
+
+        IEnumerator LataaManifest(string url, bool lisa = false)
         {
+            string oma = url.Substring(0, url.LastIndexOf('/') + 1);
             using var q = UnityWebRequest.Get(url + "?v=1");
             q.timeout = 20;
             yield return q.SendWebRequest();
-            if (q.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: repliikit: manifest ei latautunut ({q.error})"); yield break; }
+            if (q.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: repliikit: manifest ei latautunut ({q.error}{(lisa ? ", lisämanifest: ei vielä ämpärissä" : "")})"); yield break; }
             object j;
             try { j = MiniJson.Jasenna(q.downloadHandler.text); } catch (Exception e) { kirjaa?.Invoke("seikkailu: repliikit: manifest virhe " + e.Message); yield break; }
             foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(j), "repliikit")))
             {
                 var o = MiniJson.ObjektiTaiNull(x); string t = MiniJson.Teksti(o, "tunnus");
-                if (string.IsNullOrEmpty(t)) continue;
-                repliikit[t] = new Repliikki { Tunnus = t, Hahmo = MiniJson.Teksti(o, "hahmo"), Aani = MiniJson.Teksti(o, "aani"), KestoS = MiniJson.Luku(o, "kesto_s") ?? 0 };
+                if (string.IsNullOrEmpty(t) || lisa && repliikit.ContainsKey(t)) continue;
+                repliikit[t] = new Repliikki { Tunnus = t, Hahmo = MiniJson.Teksti(o, "hahmo"), Aani = MiniJson.Teksti(o, "aani"), KestoS = MiniJson.Luku(o, "kesto_s") ?? 0, Juuri = oma };
             }
-            Valmis = true;
+            if (!lisa) Valmis = true;
             kirjaa?.Invoke($"seikkailu: repliikit {repliikit.Count} ({juuri})");
         }
 
@@ -62,7 +67,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Hae(Repliikki r)
         {
             r.Haussa = true;
-            using var p = UnityWebRequestMultimedia.GetAudioClip(juuri + r.Aani, AudioType.MPEG);
+            using var p = UnityWebRequestMultimedia.GetAudioClip((r.Juuri ?? juuri) + r.Aani, AudioType.MPEG);
             var dh = (DownloadHandlerAudioClip)p.downloadHandler; dh.streamAudio = false; dh.compressed = false;
             yield return p.SendWebRequest();
             r.Haussa = false;

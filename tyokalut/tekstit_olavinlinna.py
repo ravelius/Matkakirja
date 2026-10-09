@@ -110,8 +110,28 @@ def esittely(r, t):
             L(A('tila', tid, 'etsinta', i, 'pulu'), v.get('pulu')); L(A('tila', tid, 'etsinta', i, 'rivi'), v.get('rivi'))
 
 
+SYOTE = '/Users/Shared/Claude/proto-3d/_tyo/olavinlinna-puuttuvat/syote-historia-animaatio.json'   # Pelikoodarin aja-generointi.sh
+HISTORIA_AVAIMET = ['jaakausi', 'kivikausi', '1475', '1477', '1499', '1500', '1743', '1847', '1872']   # rivit 1–9
+
+
+def kertoja_sha(t):
+    """Historian kertojan äänitunnisteet (olavinlinna.historia.<avain>.kertoja.aani) Pelikoodarin puhesanat.js:llä (origin/main)."""
+    import subprocess, tempfile
+    if not os.path.exists(SYOTE): print(f'varoitus: {SYOTE} puuttuu, kertojan äänitunnisteet ennallaan'); return
+    repo = '/Users/Shared/Claude/Matkakirja-siirtoseppa'
+    subprocess.run(['git', '-C', repo, 'fetch', '-q', 'origin', 'main'], check=False)
+    with tempfile.TemporaryDirectory() as d:
+        ps = os.path.join(d, 'puhesanat.js')
+        open(ps, 'w', encoding='utf-8').write(subprocess.run(['git', '-C', repo, 'show', 'origin/main:tools/pollo/puhesanat.js'], capture_output=True, text=True, check=True).stdout)
+        r = subprocess.run(['node', os.path.join(JUURI, 'tyokalut/historia_kertoja_sha.mjs'), ps, SYOTE], capture_output=True, text=True, check=True)
+    sha = json.loads(r.stdout)
+    for i, avain in enumerate(HISTORIA_AVAIMET, 1):
+        if f'olavinlinna-historia-{i}' in sha: t[f'olavinlinna.historia.{avain}.kertoja.aani'] = sha[f'olavinlinna-historia-{i}']
+
+
 def main():
     t = dict(KOODI)
+    kertoja_sha(t)
     hash_ = re.search(r'Hash = "([0-9a-f]+)"', open(os.path.join(JUURI, 'Assets/Matkakirja/Linssit/Ydin/Seikkailu/PelattavaPala.cs'), encoding='utf-8').read()).group(1)
     r = hae(f'{MEDIA}/dioraama/olavinlinna/{hash_}/rakennus.json')
     for j in (r.get('kertoja') or {}).get('jaksot', []):
