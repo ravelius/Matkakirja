@@ -9,11 +9,11 @@
  */
 
 :root {
-    --mk-kysymys-muste: #3b2a18;
-    --mk-kysymys-kaupunki: #7a6039;
-    --mk-kysymys-oikea: #2f6b3f;
-    --mk-kysymys-oikea-teksti: #21532f;
-    --mk-kysymys-merkki: #b03a2b;
+    --mk-kysymys-muste: #3b2a18; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
+    --mk-kysymys-kaupunki: #7a6039; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
+    --mk-kysymys-oikea: #2f6b3f; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
+    --mk-kysymys-oikea-teksti: #21532f; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
+    --mk-kysymys-merkki: #b03a2b; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
 }
 
 /* --- kortti ja himmennys ------------------------------------------------ */

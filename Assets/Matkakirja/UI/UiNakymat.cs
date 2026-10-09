@@ -72,6 +72,7 @@ namespace Matkakirja.Natiivi
         public readonly Nahtavyysarkki Nahtavyydet;
         public readonly Nahtavyysnakyma Nahtavyysnakyma;
         public readonly PieniLiike Liike;
+        public readonly KaupunkiKoosteKuva KaupunkiKooste;
         public readonly Noppa Noppa;
         public readonly Leima Leima;
 
@@ -447,6 +448,8 @@ namespace Matkakirja.Natiivi
             Wiki = new WikiIkkuna(kerros); // kaikkien edellisten päälle (sama kerros, myöhemmin; avaus tuo eteen)
             Saapumiskortti = new Saapumiskortti(kerros, () => Tilarivi.Alareuna); // karttaruudun päälle, myös lennon kaistaleen
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
+            LiputIso.Lataa();   // isojen lippujen luettelo (terävyys 9.10.2026)
+            KaupunkiKooste = new KaupunkiKoosteKuva(kerros); // kerros 4: TAA-koosteen kuva (LS1), kaiken UI:n alla
             Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
             Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.

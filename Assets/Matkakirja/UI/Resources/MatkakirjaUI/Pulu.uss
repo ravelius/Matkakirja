@@ -261,15 +261,15 @@
     border-color: var(--tk-kuulto-paperi-korostus-32);
     border-radius: var(--tk-kulma-kortti);
     background-color: var(--lapinakyva);
-    text-shadow: 0 1px 2px rgba(247, 237, 216, 0.9);
+    text-shadow: 0 1px 2px rgba(247, 237, 216, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     overflow: hidden;
     /* Löydös 139 (omistaja, build 16): avattu matkakirja samalla vaalealla pohjalla kuin pienennetty lappu
      * (.mk-matkakirja--pieni rgba(244, 231, 202)), ei tummana nahkapaneelina. Teeman muuttujat määritellään kortin
      * sisällä uudelleen, joten kaikki kortin tekstit vaihtuvat tummiksi; tumma liukumakuva peitetään sävyllä. */
-    --panel: rgba(244, 231, 202, 0.94);
-    --line: rgba(122, 85, 20, 0.32);
-    --ink-light: #46331f;   /* web --map-ink */
-    --muted: #8a6c46;       /* web --map-ink-soft */
+    --panel: rgba(244, 231, 202, 0.94); /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
+    --line: rgba(122, 85, 20, 0.32); /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
+    --ink-light: #46331f; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */   /* web --map-ink */
+    --muted: #8a6c46; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */       /* web --map-ink-soft */
     --accent: var(--tk-paperi-korostus);
     -unity-background-image-tint-color: var(--valkoinen);
     -unity-background-scale-mode: stretch-to-fill;
@@ -942,7 +942,7 @@
 
 .mk-traileri__kirjain {
     color: var(--valkoinen);
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     opacity: 0;
     scale: 0.05 0.05;
     transition-property: opacity, scale, translate;
@@ -969,7 +969,7 @@
     font-size: 19px; /* fonttipoikkeus: 19 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 5.26px; /* web 1px */
     color: var(--valkoinen);
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-center;
     opacity: 0;

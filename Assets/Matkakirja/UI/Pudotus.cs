@@ -20,6 +20,9 @@ namespace Matkakirja.Natiivi
         readonly Func<float> alareuna;
 
         public bool Auki { get; private set; }
+
+        /// <summary>Kertaluonteinen yläreuna (pt) seuraavalle avaukselle, esim. oppaan ☰:n alle; null = yläpalkin alle.</summary>
+        public float? YlaOhitus;
         public event Action<bool> AukiMuuttui;
 
         protected Pudotus(UiKerros kerros, Func<float> ylapalkinAlareuna, string luokka)
@@ -48,9 +51,10 @@ namespace Matkakirja.Natiivi
         protected virtual void Asettele()
         {
             var r = kerros.Reunat(UiKerros.Valikot);
-            Paneeli.style.top = alareuna() + 6;
+            float yla = YlaOhitus ?? alareuna() + 6;
+            Paneeli.style.top = yla;
             Paneeli.style.right = r.z + 10;
-            Paneeli.style.maxHeight = new Length(Mathf.Max(200, kerros.Juuri(UiKerros.Valikot).resolvedStyle.height - alareuna() - r.w - 24), LengthUnit.Pixel);
+            Paneeli.style.maxHeight = new Length(Mathf.Max(200, kerros.Juuri(UiKerros.Valikot).resolvedStyle.height - yla - r.w - 18), LengthUnit.Pixel);
         }
 
         /// <summary>Päivittää rivien tilat juuri ennen avaamista.</summary>
@@ -73,6 +77,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = false;
+            YlaOhitus = null;
             Sulkija.style.display = DisplayStyle.None;
             Ponnahdus.Sulje(Paneeli);
             SyoteLukko.Vapauta(this);

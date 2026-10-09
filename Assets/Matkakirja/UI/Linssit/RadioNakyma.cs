@@ -139,7 +139,7 @@ namespace Matkakirja.Natiivi
             pinnat = RadioPinnat.Kotelo(kotelo);
             if (pinnat) juuri.AddToClassList("mk-radio--pinnat"); else Rakenne.Tausta(kotelo, Puu);
             var varjo = Rakenne.El("mk-radio__varjo", kotelo, PickingMode.Ignore);
-            Rakenne.Tausta(varjo, Kuviot.Pysty("radio-varjo", (Color)Tyylikirja.Kehys.Lapinakyva, new Color(0.05f, 0.03f, 0.01f, Pistenaytto.Peitto(0.32f, Color.black, new Color(0.5f, 0.45f, 0.35f)))));
+            Rakenne.Tausta(varjo, Kuviot.Pysty("radio-varjo", (Color)Tyylikirja.Kehys.Lapinakyva, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti1, Pistenaytto.Peitto(0.32f, Color.black, new Color(0.5f, 0.45f, 0.35f)))));
             keskio = Rakenne.El("mk-radio__keskio", kotelo, PickingMode.Ignore);
             // Rivi 1: VU | LCD | lamppu (radiouudistus: sama rivi kaikilla leveyksillä).
             var rivi = Rakenne.El("mk-radio__nayttorivi", keskio, PickingMode.Ignore);
@@ -157,10 +157,10 @@ namespace Matkakirja.Natiivi
             var lcdKehys = Rakenne.El("mk-radio__kehys mk-radio__lcdkehys", rivi, PickingMode.Ignore);
             RadioPinnat.Kehys(lcdKehys);
             lasi = Rakenne.El("mk-radio__naytto", lcdKehys, PickingMode.Ignore);
-            var lasiVari = new Color32(0x22, 0x12, 0x04, 255);
+            var lasiVari = Tyylikirja.Erikois.Radiopaletti5;
             Rakenne.Tausta(lasi, Kuviot.Pysty("radio-lasi",
-                new Color(1, 1, 1, Pistenaytto.Peitto(0.10f, Color.white, lasiVari)),
-                new Color(0, 0, 0, Pistenaytto.Peitto(0.22f, Color.black, new Color32(0x6e, 0x5a, 0x40, 255)))));
+                Kuviot.Alfalla(Color.white, Pistenaytto.Peitto(0.10f, Color.white, lasiVari)),
+                Kuviot.Alfalla(Color.black, Pistenaytto.Peitto(0.22f, Color.black, new Color32(0x6e, 0x5a, 0x40, 255)))));
             // Kaksi riviä tasaisin sisämarginaalein: 16 merkin rivi täyttää leveyden isompana, 22 merkin rivi samalla
             // leveydellä pienempänä (Pistenaytto sovittaa ruudukon laatikkoonsa kuvasuhde säilyen, vasen reuna tasattu).
             var rivit = Rakenne.El("mk-radio__pisteet mk-radio__rivit", lasi, PickingMode.Ignore);
@@ -357,7 +357,7 @@ namespace Matkakirja.Natiivi
             foreach (RadioVaihe v in System.Enum.GetValues(typeof(RadioVaihe)))
                 juuri.EnableInClassList("mk-radio--" + v.ToString().ToLowerInvariant(), v == vaihe);
             naytto.Himmea = naytto2.Himmea = vaihe == RadioVaihe.Hiljaa;
-            naytto.Lasi = naytto2.Lasi = vaihe == RadioVaihe.Virhe ? new Color32(0x3a, 0x14, 0x08, 255) : new Color32(0x22, 0x12, 0x04, 255);
+            naytto.Lasi = naytto2.Lasi = vaihe == RadioVaihe.Virhe ? Tyylikirja.Erikois.Radiopaletti6 : Tyylikirja.Erikois.Radiopaletti5;
             naytto.NaytaTeksti(t.Rivi1 ?? "");
             naytto2.NaytaTeksti(t.Rivi2 ?? "");
             lamppu.Vaihe = vaihe;
@@ -1041,7 +1041,7 @@ namespace Matkakirja.Natiivi
 
         static Texture2D puu, paperi;
 
-        static Color Paalle(Color alla, Color c) => Color.Lerp(alla, new Color(c.r, c.g, c.b, 1), c.a);
+        static Color Paalle(Color alla, Color c) => Color.Lerp(alla, Kuviot.Alfalla(c, 1), c.a);
 
         /// <summary>radial-gradient(rx ry at cx cy, c, transparent loppu): peitto pisteessä (u, v).</summary>
         static float Laikka(float u, float v, float cx, float cy, float rx, float ry, float loppu)
@@ -1080,17 +1080,17 @@ namespace Matkakirja.Natiivi
                     // Syyt (repeating-linear-gradient 90,6° / 89,4° / 90°), hieman vinossa.
                     int x1 = (int)(x + v * H * 0.0105f), x2 = (int)(x - v * H * 0.0105f);
                     int m7 = ((x1 % 7) + 7) % 7, m23 = ((x2 % 23) + 23) % 23, m61 = x % 61;
-                    if (m7 == 0) c = Paalle(c, new Color(0, 0, 0, 0.07f));
-                    else if (m7 == 1) c = Paalle(c, new Color(1f, 0.94f, 0.84f, 0.045f));
-                    if (m23 < 2) c = Paalle(c, new Color(0, 0, 0, 0.06f));
-                    if (m61 < 3) c = Paalle(c, new Color(0.094f, 0.047f, 0.016f, 0.09f));
-                    c = Paalle(c, new Color(0, 0, 0, syyKohina[x1 < 0 ? 0 : x1 % W] * 0.035f));
+                    if (m7 == 0) c = Paalle(c, Kuviot.Alfalla(Color.black, 0.07f));
+                    else if (m7 == 1) c = Paalle(c, (Color)Tyylikirja.Erikois.Radiopaletti22A04);
+                    if (m23 < 2) c = Paalle(c, Kuviot.Alfalla(Color.black, 0.06f));
+                    if (m61 < 3) c = Paalle(c, (Color)Tyylikirja.Erikois.Radiopaletti3A09);
+                    c = Paalle(c, Kuviot.Alfalla(Color.black, syyKohina[x1 < 0 ? 0 : x1 % W] * 0.035f));
                     // Valo- ja varjoläikät (.radio-kotelo background-image).
-                    c = Paalle(c, new Color(1f, 0.933f, 0.816f, 0.14f * Laikka(u, v, 0.04f, 0.06f, 0.21f, 0.88f, 0.74f)));
-                    c = Paalle(c, new Color(1f, 0.94f, 0.84f, 0.10f * Laikka(u, v, 0.98f, 0.28f, 0.11f, 1.30f, 0.76f)));
-                    c = Paalle(c, new Color(1f, 0.925f, 0.8f, 0.08f * Laikka(u, v, 0.43f, -0.10f, 0.27f, 0.44f, 0.72f)));
-                    c = Paalle(c, new Color(0.086f, 0.043f, 0.012f, 0.20f * Laikka(u, v, 0.69f, 1.08f, 0.38f, 0.50f, 0.74f)));
-                    c = Paalle(c, new Color(0.086f, 0.043f, 0.012f, 0.16f * Laikka(u, v, 0.14f, 1.04f, 0.17f, 0.40f, 0.76f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti20, 0.14f * Laikka(u, v, 0.04f, 0.06f, 0.21f, 0.88f, 0.74f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti22, 0.10f * Laikka(u, v, 0.98f, 0.28f, 0.11f, 1.30f, 0.76f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti18, 0.08f * Laikka(u, v, 0.43f, -0.10f, 0.27f, 0.44f, 0.72f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti2, 0.20f * Laikka(u, v, 0.69f, 1.08f, 0.38f, 0.50f, 0.74f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti2, 0.16f * Laikka(u, v, 0.14f, 1.04f, 0.17f, 0.40f, 0.76f)));
                     px[y * W + x] = c;
                 }
                 puu.SetPixels(px);
@@ -1114,18 +1114,18 @@ namespace Matkakirja.Natiivi
                 {
                     float u = (x + 0.5f) / W, v = 1f - (y + 0.5f) / H;
                     var c = v < 0.52f ? Color.Lerp(p1, p2, v / 0.52f) : Color.Lerp(p2, p3, (v - 0.52f) / 0.48f);
-                    c = Paalle(c, new Color(1f, 0.957f, 0.816f, 0.82f * Laikka(u, v, 0.30f, 0f, 0.40f, 1.08f, 0.82f) * 0.6f));
-                    c = Paalle(c, new Color(1f, 0.937f, 0.753f, 0.56f * Laikka(u, v, 0.66f, 0.04f, 0.26f, 0.78f, 0.78f) * 0.6f));
-                    c = Paalle(c, new Color(1f, 0.894f, 0.651f, 0.24f * Laikka(u, v, 0.11f, 0.62f, 0.16f, 0.50f, 0.82f)));
-                    c = Paalle(c, new Color(1f, 0.953f, 0.8f, 0.30f * Laikka(u, v, 0.88f, 0.26f, 0.11f, 0.38f, 0.84f)));
-                    c = Paalle(c, new Color(0.29f, 0.18f, 0.07f, 0.12f * Laikka(u, v, 0.49f, 0.34f, 0.13f, 0.74f, 0.82f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti21, 0.82f * Laikka(u, v, 0.30f, 0f, 0.40f, 1.08f, 0.82f) * 0.6f));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti17, 0.56f * Laikka(u, v, 0.66f, 0.04f, 0.26f, 0.78f, 0.78f) * 0.6f));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti16, 0.24f * Laikka(u, v, 0.11f, 0.62f, 0.16f, 0.50f, 0.82f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti19, 0.30f * Laikka(u, v, 0.88f, 0.26f, 0.11f, 0.38f, 0.84f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti7, 0.12f * Laikka(u, v, 0.49f, 0.34f, 0.13f, 0.74f, 0.82f)));
                     // Reunojen varjo (radial 94 % 150 % at 40 % 10 %) ja alanurkat.
                     float dx = (u - 0.40f) / 0.94f, dy = (v - 0.10f) / 1.50f;
                     float r = Mathf.Sqrt(dx * dx + dy * dy);
                     float varjo = r < 0.22f ? 0 : r < 0.62f ? Mathf.Lerp(0, 0.22f, (r - 0.22f) / 0.40f) : Mathf.Lerp(0.22f, 0.46f, Mathf.Clamp01((r - 0.62f) / 0.38f));
-                    c = Paalle(c, new Color(0.33f, 0.2f, 0.063f, varjo));
-                    c = Paalle(c, new Color(0.376f, 0.227f, 0.07f, 0.44f * Laikka(u, v, 0.02f, 1.06f, 0.44f, 0.96f, 0.74f)));
-                    c = Paalle(c, new Color(0.376f, 0.227f, 0.07f, 0.40f * Laikka(u, v, 0.98f, 1.08f, 0.40f, 0.88f, 0.72f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti8, varjo));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti10, 0.44f * Laikka(u, v, 0.02f, 1.06f, 0.44f, 0.96f, 0.74f)));
+                    c = Paalle(c, Kuviot.Alfalla(Tyylikirja.Erikois.Radiopaletti10, 0.40f * Laikka(u, v, 0.98f, 1.08f, 0.40f, 0.88f, 0.72f)));
                     px[y * W + x] = c;
                 }
                 paperi.SetPixels(px);
@@ -1233,7 +1233,7 @@ namespace Matkakirja.Natiivi
                         p.MoveTo(new Vector2(x, r.yMax));
                         p.LineTo(new Vector2(x, r.yMax - korkeus));
                     }
-                    p.strokeColor = new Color(Viiva.r, Viiva.g, Viiva.b, alfa);
+                    p.strokeColor = Kuviot.Alfalla(Viiva, alfa);
                     p.Stroke();
                 }
                 // Kevyemmät jakoviivat (Päätoimittajan katselmus 29.9.): nimet ja viisari erottuvat.
@@ -1242,7 +1242,7 @@ namespace Matkakirja.Natiivi
                 p.BeginPath();
                 p.MoveTo(new Vector2(r.xMin, r.yMax - 0.5f));
                 p.LineTo(new Vector2(r.xMax, r.yMax - 0.5f));
-                p.strokeColor = new Color(Viiva.r, Viiva.g, Viiva.b, 0.55f);
+                p.strokeColor = Kuviot.Alfalla(Viiva, 0.55f);
                 p.Stroke();
             }
         }
@@ -1254,7 +1254,7 @@ namespace Matkakirja.Natiivi
     /// </summary>
     public sealed class RadioLamppu : VisualElement
     {
-        static readonly Color Puu = new Color32(0x6b, 0x44, 0x23, 255);
+        static readonly Color Puu = Tyylikirja.Erikois.Radiopaletti11;
         RadioVaihe vaihe = RadioVaihe.Hiljaa;
         bool tauko;
         float halkaisija = 22f;
@@ -1337,7 +1337,7 @@ namespace Matkakirja.Natiivi
             if (hehkuPeitto > 0)
             {
                 bool meripihka = vaihe == RadioVaihe.Viritys;
-                var perus = meripihka ? new Color(1f, 196 / 255f, 88 / 255f) : new Color(1f, 110 / 255f, 70 / 255f);
+                var perus = meripihka ? (Color)Tyylikirja.Erikois.Radiopaletti15 : (Color)Tyylikirja.Erikois.Radiopaletti13;
                 float[] asemat = { 0.40f, 0.56f, 0.76f, 1f };
                 float[] alfat = meripihka ? new[] { 0.42f, 0.22f, 0.06f, 0f } : new[] { 0.46f, 0.24f, 0.07f, 0f };
                 float H = R + (halkaisija > 24 ? 20f : 16f);
@@ -1357,7 +1357,7 @@ namespace Matkakirja.Natiivi
             }
 
             // Varjo 0 1px 2px ja kromirengas (.radio-lamppu-kehys).
-            Ympyra(p, c + new Vector2(0, 1), R + 0.8f, new Color(0, 0, 0, Pistenaytto.Peitto(0.45f, Color.black, Puu)));
+            Ympyra(p, c + new Vector2(0, 1), R + 0.8f, Kuviot.Alfalla(Color.black, Pistenaytto.Peitto(0.45f, Color.black, Puu)));
             Ympyra(p, c, R, V("#4c4943"));
             Ympyra(p, c + new Vector2(0, -0.35f), R - 0.6f, V("#79736a"));
             Ympyra(p, c + new Vector2(0, -0.9f), R - 1.6f, V("#8b857a"));
@@ -1378,8 +1378,8 @@ namespace Matkakirja.Natiivi
 
             // Heijastus (::after): kallistettu ellipsi, valkoinen .75 → .05.
             var e = c + new Vector2((0.18f + 0.19f - 0.5f) * 2 * lasiR, (0.12f + 0.13f - 0.5f) * 2 * lasiR);
-            Ellipsi(p, e, 0.38f * lasiR, 0.26f * lasiR, -24f, new Color(1, 1, 1, Pistenaytto.Peitto(tauko ? 0.2f : 0.38f, Color.white, V("#a8564a"))));
-            Ellipsi(p, e + new Vector2(0, -0.06f * lasiR), 0.26f * lasiR, 0.14f * lasiR, -24f, new Color(1, 1, 1, Pistenaytto.Peitto(tauko ? 0.25f : 0.5f, Color.white, V("#d59d92"))));
+            Ellipsi(p, e, 0.38f * lasiR, 0.26f * lasiR, -24f, Kuviot.Alfalla(Color.white, Pistenaytto.Peitto(tauko ? 0.2f : 0.38f, Color.white, V("#a8564a"))));
+            Ellipsi(p, e + new Vector2(0, -0.06f * lasiR), 0.26f * lasiR, 0.14f * lasiR, -24f, Kuviot.Alfalla(Color.white, Pistenaytto.Peitto(tauko ? 0.25f : 0.5f, Color.white, V("#d59d92"))));
 
             // Virtasymboli (IEC 5009): kaari, jonka yläosassa rako, ja pystyviiva raon läpi; vaalea kaiverrus lasissa.
             float vs = lasiR * 0.52f;
@@ -1417,14 +1417,14 @@ namespace Matkakirja.Natiivi
     public sealed class RadioNapit
     {
         const float Laatikko = 44f, Rengas = 13f, Hehku = 21f, Ulkokeha = 17f, Kolmio = 4.6f;
-        static readonly Color Muste = new Color32(0x46, 0x33, 0x1f, 255), Punainen = new Color32(0xc2, 0x45, 0x2f, 255);
+        static readonly Color Muste = Tyylikirja.Kehys.MapInk, Punainen = Tyylikirja.Erikois.Radiopaletti12;
 
         // YKSINKERTAINEN KARTTA (omistaja 29.9.2026, RadioLinssi.Yksinkertainen): asteikon asemat pieninä meripihkaisina
         // pisteinä nimineen hämärän kartan päällä, muut himmeinä; viritetty isompana, kirkkaana ja yhdellä hillityllä
         // sykkivällä renkaalla (2,4 s, 8 → 24 pt, vähennetty liike: paikallaan oleva rengas). Nimet eivät mene päällekkäin
         // (viritetty ensin, sitten asteikon järjestyksessä).
         const float Piste = 3.2f, PisteSoi = 5.2f, SykeAlku = 8f, SykeLoppu = 24f, SykeS = 2.4f;
-        static readonly Color Meripihka = new Color32(0xf2, 0xc0, 0x5e, 255), Varjo = new Color32(0x1a, 0x10, 0x06, 255);
+        static readonly Color Meripihka = Tyylikirja.Erikois.Radiopaletti14, Varjo = Tyylikirja.Erikois.Radiopaletti4;
         static bool Yksinkertainen => RadioLinssi.Yksinkertainen;
 
         sealed class Nappi : VisualElement
@@ -1442,13 +1442,13 @@ namespace Matkakirja.Natiivi
                 if (Yksinkertainen) { PiirraMerkki(p, c, d); return; }
                 if (d.Soi)
                 {
-                    p.fillColor = new Color(Punainen.r, Punainen.g, Punainen.b, 0.16f);
+                    p.fillColor = Kuviot.Alfalla(Punainen, 0.16f);
                     p.BeginPath();
                     p.Arc(c, Hehku, Angle.Degrees(0f), Angle.Degrees(360f));
                     p.Fill();
                 }
                 var rengas = d.Soi ? Punainen : Muste;
-                p.strokeColor = new Color(rengas.r, rengas.g, rengas.b, d.OnKanava ? 0.85f : 0.34f);
+                p.strokeColor = Kuviot.Alfalla(rengas, d.OnKanava ? 0.85f : 0.34f);
                 p.lineWidth = d.Soi ? 2.4f : 1.4f;
                 if (d.OnKanava)
                 {
@@ -1469,7 +1469,7 @@ namespace Matkakirja.Natiivi
                 }
                 if (d.Soi)
                 {
-                    p.strokeColor = new Color(Punainen.r, Punainen.g, Punainen.b, 0.62f);
+                    p.strokeColor = Kuviot.Alfalla(Punainen, 0.62f);
                     p.lineWidth = 1.2f;
                     p.BeginPath();
                     p.Arc(c, Ulkokeha, Angle.Degrees(0f), Angle.Degrees(360f));
@@ -1479,7 +1479,7 @@ namespace Matkakirja.Natiivi
                 {
                     // Optisesti keskitetty kolmio: massa vasemmalla, kärki yli.
                     var t = d.Soi ? Punainen : Muste;
-                    p.fillColor = new Color(t.r, t.g, t.b, d.Soi ? 1f : 0.72f);
+                    p.fillColor = Kuviot.Alfalla(t, d.Soi ? 1f : 0.72f);
                     p.BeginPath();
                     p.MoveTo(c + new Vector2(-Kolmio * 0.55f, -Kolmio));
                     p.LineTo(c + new Vector2(Kolmio, 0f));
@@ -1496,18 +1496,18 @@ namespace Matkakirja.Natiivi
             {
                 // Yksi hillitty sykkivä rengas (vähennetty liike: paikallaan keskikoossa).
                 float u = LinssiUi.VahennettyLiike() ? 0.4f : Time.realtimeSinceStartup / SykeS % 1f;
-                p.strokeColor = new Color(Meripihka.r, Meripihka.g, Meripihka.b, 0.55f * (1f - u));
+                p.strokeColor = Kuviot.Alfalla(Meripihka, 0.55f * (1f - u));
                 p.lineWidth = 1.4f;
                 p.BeginPath();
                 p.Arc(c, Mathf.Lerp(SykeAlku, SykeLoppu, u), Angle.Degrees(0f), Angle.Degrees(360f));
                 p.Stroke();
             }
             float r = d.Soi ? PisteSoi : Piste;
-            p.fillColor = new Color(Varjo.r, Varjo.g, Varjo.b, d.Soi ? 0.7f : 0.5f);
+            p.fillColor = Kuviot.Alfalla(Varjo, d.Soi ? 0.7f : 0.5f);
             p.BeginPath();
             p.Arc(c, r + 1.2f, Angle.Degrees(0f), Angle.Degrees(360f));
             p.Fill();
-            p.fillColor = new Color(Meripihka.r, Meripihka.g, Meripihka.b, d.Soi ? 1f : 0.62f);
+            p.fillColor = Kuviot.Alfalla(Meripihka, d.Soi ? 1f : 0.62f);
             p.BeginPath();
             p.Arc(c, r, Angle.Degrees(0f), Angle.Degrees(360f));
             p.Fill();

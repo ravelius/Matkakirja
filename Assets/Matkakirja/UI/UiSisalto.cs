@@ -80,7 +80,7 @@ namespace Matkakirja.Natiivi
             : "https://media.matkakirja.app/julisteet/" + Tiedosto;
 
         /// <summary>
-        /// Gallerian pikkukuva (web #3859 julistePikkuUrl): tuotanto/tuot-x.png → tuotanto/pieni/tuot-x.jpg (360 px JPEG). Täysikokoinen
+        /// Gallerian pikkukuva (web #3859 julistePikkuUrl): tuotanto/tuot-x.png → tuotanto/pieni-480/tuot-x.jpg (480 × 720 JPEG; oli pieni/ 360 px). Täysikokoinen
         /// (~4 Mt PNG) vasta suurennokseen; muu kuin tuotantopolku sellaisenaan (Päätoimittaja 2.10.: Moskova ja Lontoo jäivät tyhjiksi).
         /// </summary>
         public string PikkuUrl
@@ -93,7 +93,8 @@ namespace Matkakirja.Natiivi
                 if (i < 0 || !u.Substring(0, i + 1).EndsWith("/tuotanto/", System.StringComparison.Ordinal)) return u;
                 var nimi = u.Substring(i + 1);
                 if (nimi.EndsWith(".png", System.StringComparison.OrdinalIgnoreCase)) nimi = nimi.Substring(0, nimi.Length - 4) + ".jpg";
-                return u.Substring(0, i + 1) + "pieni/" + nimi;
+                // 480 × 720 (Julkaisija 9.10.2026, terävyys: ~105 pt × 3 vaatii 315 px leveyttä; pieni/ oli 360 px pitkä sivu).
+                return u.Substring(0, i + 1) + "pieni-480/" + nimi;
             }
         }
     }
