@@ -21,7 +21,7 @@ app lokit/natiiviseppa-app-169-e9802f2d1). iOS TF 169 ajo 37864329025 (Julkaisij
 453/419/1122, unity 0, tarkista 0. ODOTTAA: simukäännös (Julkaisijan NYT, varjostinehto), Siirtoseppä 778202265 (LS2:n muistitestin jälkeen), kuvaparit.
 FILMI-kuvapari: käännös 2fa4e772e (03.20), ajo filmi-ajo.sh scratchpadissa → arkit lokit/filmi170-arkki-{tukholma,pariisi}-2fa4e772.png → PT.
 JUNA 172 kärki: Siirtoseppä e00415cea (PT 04.3x; otetyypit tulevat päälle).
-JUNA 171 kärki: **Siirtoseppä 9bd44cca6** (⊇ NUI 2a0d607be: napautus ei lopeta historiaa, avainsana 4 s) ← 2a0d607be (04.2x, ⊇ 49786e8dc; historian Ohita-nappi, VoiceOver) ← 49786e8dc = 516ff1b32 (puut identtiset, kumpi tahansa; PT/Siirtoseppä/NUI viestivät ristiin; ⊇ 90a93e5ad + a918d7e97: alkuvalinta, ☰ Linnan historia, tuuli-metsa, luuta);
+JUNA 171 kärjet: + Pelikoodari 7ccdcdf16 (lautapelien äänet, Sonniss; PT 04.4x); **Siirtoseppä 9bd44cca6** (⊇ NUI 2a0d607be: napautus ei lopeta historiaa, avainsana 4 s) ← 2a0d607be (04.2x, ⊇ 49786e8dc; historian Ohita-nappi, VoiceOver) ← 49786e8dc = 516ff1b32 (puut identtiset, kumpi tahansa; PT/Siirtoseppä/NUI viestivät ristiin; ⊇ 90a93e5ad + a918d7e97: alkuvalinta, ☰ Linnan historia, tuuli-metsa, luuta);
 jatkokärjet sen päälle.
 JUNA 170 runko nyt **9851acae5** (+ Siirtoseppä 778202265: v45x, K3, äänet, historia-animaatio; LS2:n muistitesti +0 Mt; Linssit 1130; v45x-data ämpäriin ennen junaa) ← 8b7a0d42f (+ filmi 6764bd924: rae 0,32 / yö 0,36, PT: 0,45 taivaalla likainen; Linssit 1122). PT 03.2x: 170 EI yöllä, TF omistajan
 TF 169 -palautteen jälkeen (iltapäivä). Kärkiä tulossa: LS1 lopullinen (vapaa lento, historiaosiot, Tukholman kierros),
