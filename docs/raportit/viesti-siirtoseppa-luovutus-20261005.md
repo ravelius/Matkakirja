@@ -35,6 +35,16 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 9.10. 06.1x — JUNA 172 kärki 18227438d (PT kuittasi), JUNA 173 valmistelu 0a4c4c34c (siirtoseppa/juna173, wt kello)
+
+- Juna 172 lisäksi: askel-puu (8299456a9), lokalisointi NUI:n muotoon (48f43330f: yksi lataaja Natiivi.Kieli, Resources/Tekstit/*.fi.json,
+  Ydin Kielitaulu.Hae/TaiData; olavinlinna.fi.json = tyokalut/tekstit_olavinlinna.py), linnan esittelyn tekstit (18227438d:
+  DioraamaData.Tekstikohteet + Lokalisoi, 172 tekstiä, kultaiset/olavinlinna-v45y-rakennus.json). Kielivahti kattaa pelitekstit
+  (poikkeus // kieli: ei). Pulu jää linnan esittelyyn (PT 9.10.).
+- Juna 173: historian 1872–1878 / 1961–1975 jako, vaihemallien solmuvuodet; odottaa LR:n restaurointi.glb:tä (vaiheet.json += restaurointi).
+- Odottaa: LS2:n botti (huone 8 kesto, NavMesh-saari pelaaja-8), omistajan TF 169 -palaute. Taulu päivitetään generaattorilla,
+  kun repliikit/tietokortit/rakennus.json muuttuvat (testi kaatuu, jos rakennus-kopio ja taulu eroavat — päivitä kopio samalla).
+
 ## TILA 9.10. 05.0x — JUNA 171 kärki 9bd44cca6 (siirtoseppa/juna171-b, wt face), JUNA 172 kärki 0fbf20001 (siirtoseppa/juna172, wt kello)
 
 - Juna 171: NUI:n 2a0d607be (⏭ Ohita) + 9bd44cca6 (napautus ei lopeta historiaa, avainsana 4 s). SHA Natiivisepälle (varakanava).
