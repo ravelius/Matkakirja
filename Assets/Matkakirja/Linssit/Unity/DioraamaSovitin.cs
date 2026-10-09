@@ -2325,6 +2325,13 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: drift " + (arvo == "1" ? "päällä" : "pois"));
                 return;
             }
+            // "poikki kadet kierto 0|1": kämmenen kierto kadet[]-datasta (PT 9.10., juna 174).
+            if (mita == "kadet" && arvo == "kierto")
+            {
+                if (osat.Length > 3) DioraamaHahmot3D.KadetKierto = osat[3] != "0";
+                o.Kirjaa("poikki: kadet kierto " + (DioraamaHahmot3D.KadetKierto ? "päällä" : "pois"));
+                return;
+            }
             if (mita == "hahmokorvaus")
             {
                 // "poikki hahmokorvaus vouti-1500-faceit.glb /polku/vouti-1500-mh.glb" | "poikki hahmokorvaus pois"; sitten "poikki lataa".

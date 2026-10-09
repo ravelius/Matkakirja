@@ -107,6 +107,7 @@ namespace Matkakirja.Natiivi
             var kadet = e.Hahmo.Kadet;
             if (kadet == null || kadet.Count == 0) return;
             float tavoiteR = 0f, tavoiteL = 0f;
+            bool kiertoR = false, kiertoL = false;
             foreach (var k in kadet)
             {
                 if (k.Tyyppi != "tartu") continue;
@@ -114,13 +115,48 @@ namespace Matkakirja.Natiivi
                 if (!voimassa) continue;
                 var eff = k.Kasi == "l" ? e.Ik.solver.leftHandEffector : e.Ik.solver.rightHandEffector;
                 eff.position = DioraamaNayttamo.UnityPiste(k.Paikka);
-                if (k.Kasi == "l") tavoiteL = (float)k.Paino; else tavoiteR = (float)k.Paino;
+                bool kierto = KadetKierto && k.Kierto != null && KammenKierto(e, k.Kasi, k.Kierto) is Quaternion q && SetRot(eff, q);
+                if (k.Kasi == "l") { tavoiteL = (float)k.Paino; kiertoL = kierto; } else { tavoiteR = (float)k.Paino; kiertoR = kierto; }
             }
             float askel = Time.unscaledDeltaTime / 0.3f;
             e.KasiPainoR = Mathf.MoveTowards(e.KasiPainoR, tavoiteR, askel);
             e.KasiPainoL = Mathf.MoveTowards(e.KasiPainoL, tavoiteL, askel);
             e.Ik.solver.rightHandEffector.positionWeight = e.KasiPainoR;
             e.Ik.solver.leftHandEffector.positionWeight = e.KasiPainoL;
+            e.Ik.solver.rightHandEffector.rotationWeight = kiertoR ? e.KasiPainoR : 0f;
+            e.Ik.solver.leftHandEffector.rotationWeight = kiertoL ? e.KasiPainoL : 0f;
+        }
+        static bool SetRot(IKEffector eff, Quaternion q) { eff.rotation = q; return true; }
+
+        /// <summary>Kämmenen kierto datasta ("poikki kadet kierto 0|1"; PT 9.10., juna 174: kädet kirjalle ja pulpetille).</summary>
+        public static bool KadetKierto = true;
+
+        /// <summary>
+        /// KÄMMENEN KIERTO (`kadet[].kierto`, kämmenen kehys: kämmen −Y, sormet +Z, sijoitettuna kuten paikka): käden luun tavoitekierto
+        /// = (datan kehys) · (luista laskettu nykyinen kehys)⁻¹ · luun nykyinen kierto, joten erillistä kalibrointia ei tarvita.
+        /// Luista: sormet = middle_01 − hand, peukalon puoli = index_01 − pinky_01, kämmenen normaali = sormet × peukalon puoli
+        /// (oikea) tai peukalon puoli × sormet (vasen) Unityn vasenkätisessä tilassa. Data peilataan z:ssä kuten UnityPiste.
+        /// null = luita ei löydy (nivelhahmo tai eri luusto).
+        /// </summary>
+        static Quaternion? KammenKierto(Esiintyma e, string kasi, double[] kierto)
+        {
+            string p = kasi == "l" ? "_l" : "_r";
+            Transform kasiLuu = null, keski = null, etu = null, pikku = null;
+            foreach (var tr in e.SolmuT)
+            {
+                if (tr == null) continue;
+                string n = tr.name;
+                if (n == "hand" + p) kasiLuu = tr; else if (n == "middle_01" + p) keski = tr; else if (n == "index_01" + p) etu = tr; else if (n == "pinky_01" + p) pikku = tr;
+            }
+            if (kasiLuu == null || keski == null || etu == null || pikku == null) return null;
+            Vector3 sormet = keski.position - kasiLuu.position, peukalo = etu.position - pikku.position;
+            Vector3 normaali = kasi == "l" ? Vector3.Cross(peukalo, sormet) : Vector3.Cross(sormet, peukalo);
+            if (sormet.sqrMagnitude < 1e-8f || normaali.sqrMagnitude < 1e-8f) return null;
+            var nyt = Quaternion.LookRotation(sormet, -normaali);
+            var r = new Quaternion((float)kierto[0], (float)kierto[1], (float)kierto[2], (float)kierto[3]);
+            Vector3 Peili(Vector3 v) => new Vector3(v.x, v.y, -v.z);   // kanoninen → Unity (DioraamaNayttamo.UnityPiste)
+            var tavoite = Quaternion.LookRotation(Peili(r * Vector3.forward), Peili(r * Vector3.up));   // kämmen −Y → kämmenselkä +Y
+            return tavoite * Quaternion.Inverse(nyt) * kasiLuu.rotation;
         }
 
         /// <summary>A/B-mittari: 2 s välein kummankin nilkan korkeus lattiasta (säde IkKerrokseen) lokiin, IK päällä tai pois.
