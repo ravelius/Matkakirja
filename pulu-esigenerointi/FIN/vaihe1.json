@@ -1,0 +1,374 @@
+[
+ {
+  "kohde": "kohde:halti",
+  "kysymys": "Miksi Suomen korkein kohta ei ole huippu?",
+  "uusi": false,
+  "vastaus": "Kato, tässä on ny pieni karttavitsi. Suomen korkein kohta on [[Hálditšohkka]], 1 324 metrin korkeudessa [[Haltin]] rinteellä, eikä se ole huippu siksi, että tunturin varsinainen huippu [[Ráisduottarháldi]] sijaitsee Norjan puolella, noin kilometrin päässä rajasta. Raja kulkee niin, että se jättää huipun Norjalle mutta antaa Suomelle rinteen korkeimman kohdan. Tunturi on siis yhteinen, mutta sen kruunu on naapurin. Ylhäältä raja ei näy, mut kartalla kyl.",
+  "linkit": [
+   "Hálditšohkka",
+   "Haltin",
+   "Ráisduottarháldi"
+  ],
+  "jatkot": [
+   "Missä päin Lappia Halti sijaitsee?",
+   "Voiko Haltille vaeltaa kesällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:halti",
+  "kysymys": "Mikä on korkein kokonaan Suomessa oleva tunturi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Lähteiden mukaan korkein kokonaan Suomen puolella oleva tunturi on [[Ridnitšohkka]] [[Enontekiön]] Käsivarressa, noin 1 316 metriä, mutta en ole luvusta aivan varma. Halti ei kelpaa tähän, koska sen huippu on Norjan puolella ja Suomen osuus on vain rinnettä. Käsivarren alueella on useita lähes yhtä korkeita tuntureita, joten järjestys riippuu tarkasta mittauksesta. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Ridnitšohkka",
+   "Enontekiön"
+  ],
+  "jatkot": [
+   "Mikä erottaa tunturin vaarasta?",
+   "Miksi Käsivarsi on saanut nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:halti",
+  "kysymys": "Miksi Suomen pohjoisosaa kutsutaan Käsivarreksi?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Nimi tulee Suomen kartan muodosta: Enontekiön kapea alue työntyy Norjan ja Ruotsin väliin kuin käsi, ja kun maata ajatellaan naisen hahmoksi, [[Suomi-neidoksi]], se muodostaa neidon ojennetun käsivarren. Alue kuuluu [[Enontekiön]] kuntaan, ja sen länsiosassa sijaitsee Halti. Käsivarressa on Suomen korkeimpia tuntureita. Tämä kaikki lentäen ja ilman karttaa.",
+  "linkit": [
+   "Suomi-neidoksi",
+   "Enontekiön"
+  ],
+  "jatkot": [
+   "Mikä on tunturi?",
+   "Kuinka kauan Käsivarressa on lunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:halti",
+  "kysymys": "Mikä ero tunturilla ja vaaralla on?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on hyvä kysymys. [[Tunturi]] on puuton tai lähes puuton, paljakkaan nouseva korkea mäki- tai vuorimuodostuma, joka kohoaa metsänrajan yläpuolelle, ja Halti on tästä kunnon esimerkki. [[Vaara]] taas on metsän peittämä, pyöreähkö ja yleensä matalampi kumpu, jollaisia on paljon Itä- ja Pohjois-Suomessa. Raja ei ole tarkka, koska metsänraja nousee ja laskee leveysasteen mukaan, ja joskus nimi on vain vakiintunut paikallisessa käytössä. Selvä, kyyhky selvisi.",
+  "linkit": [
+   "Tunturi",
+   "Vaara"
+  ],
+  "jatkot": [
+   "Mikä on metsänraja?",
+   "Mikä on Suomen korkein vaara?"
+  ]
+ },
+ {
+  "kohde": "kohde:halti",
+  "kysymys": "Mistä nimi Halti tulee?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Nimen uskotaan juontuvan saamen sanasta háldi, joka tarkoittaa luonnonhaltijaa tai tietyn paikan henkeä; en kuitenkaan ole nimen alkuperästä aivan varma, joten pidä tätä lähteiden mukaan -tietona. Saamelaisessa perinteessä [[haltija]] oli paikkaan sidottu henki, joka vartioi aluetta, ja tunturinimissä näkyy tämä vanha maisemakäsitys. Pohjoisen paikannimistö on muutenkin pitkälti [[saamen]]kielistä.\n\nMinä en ole hengistä kovin varma, mutta tunturin päällä kyl tuntee itsensä vähän vieraaksi.",
+  "linkit": [
+   "haltija",
+   "saamen"
+  ],
+  "jatkot": [
+   "Mitä muita saamelaisperäisiä paikannimiä Lapissa on?",
+   "Keitä saamelaiset ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:pohjanlahti",
+  "kysymys": "Mikä Merenkurkku on?",
+  "uusi": false,
+  "vastaus": "Ai se. [[Merenkurkku]] on Pohjanlahden kapein kohta, jossa lahti kapenee [[Perämeren]] ja [[Selkämeren]] välillä, ja siellä Suomen ja Ruotsin rannikot ovat lähimpänä toisiaan. Alue on matala, täynnä saaria ja kareja, ja maankohoaminen on siellä nopeinta: lähes sentin vuodessa. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde. Onpas kapea kurkku, siivin menee sekunnissa.",
+  "linkit": [
+   "Merenkurkku",
+   "Perämeren",
+   "Selkämeren",
+   "Merenkurkun saaristo"
+  ],
+  "jatkot": [
+   "Mikä Unescon maailmanperintökohde on?",
+   "Miksi Merenkurkussa maa nousee nopeimmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:pohjanlahti",
+  "kysymys": "Miksi Pohjanlahden rannat nousevat yhä?",
+  "uusi": false,
+  "vastaus": "Mmm— Hyvä kysymys tuo. Rannat nousevat, koska viime [[jääkauden]] mannerjää painoi maankuoren lähes kilometrin verran alaspäin, ja kun jää suli, kuori alkoi palautua entiselleen. Palautuminen on hidasta, sillä sen alla oleva kallioperä ja vaippa joustavat vain verkkaisesti; nousu on noin 80 senttiä vuosisadassa ja [[Merenkurkussa]] lähes sentin vuodessa. Ilmiötä kutsutaan nimellä [[maankohoaminen]]. Hidas juttu, ja silti minä huomaan sen rannoilla.",
+  "linkit": [
+   "jääkauden",
+   "Merenkurkussa",
+   "maankohoaminen"
+  ],
+  "jatkot": [
+   "Mitä tapahtuu Perämerelle kahden tuhannen vuoden kuluttua?",
+   "Mitä muuta jääkausi muutti Suomen maisemassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:pohjanlahti",
+  "kysymys": "Millainen on Ahvenanmaan erityisasema?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Ahvenanmaa]] on Suomen autonominen maakunta [[Ahvenanmeren]] ja [[Saaristomeren]] välissä, ja sen asukkaat puhuvat pääosin ruotsia. Maakunnalla on oma lainsäädäntövalta tietyissä asioissa, oma lippu ja oma maakuntapäivien eli lagtingin valitsema hallinto. Alue on demilitarisoitu ja neutralisoitu kansainvälisten sopimusten nojalla, ja sen asema ratkaistiin [[Kansainliitossa]] vuonna 1921. Tarkat yksityiskohdat vaihtelevat, joten tarkista ne vielä virallisesta lähteestä. Mut sanotaan, että tää on hyvin järjestetty.",
+  "linkit": [
+   "Ahvenanmaa",
+   "Ahvenanmeren",
+   "Saaristomeren",
+   "Kansainliitossa"
+  ],
+  "jatkot": [
+   "Mikä on Kansainliitto?",
+   "Millä kielellä Ahvenanmaalla opiskellaan koulussa?"
+  ]
+ },
+ {
+  "kohde": "kohde:pohjanlahti",
+  "kysymys": "Miksi Perämeri jäätyy lähes joka talvi?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Perämeri on Pohjanlahden pohjoisin ja matalin osa, ja sen vesi on vähäsuolaista, koska siihen laskee paljon jokivesiä. Makea vesi jäätyy helpommin kuin suolainen, ja matala vesi jäähtyy nopeasti, joten talvella lähes koko [[Perämeri]] peittyy jäällä. Jää pysyy tavallisesti kevääseen asti, ja alueella kulkee jäänmurtajia, jotka pitävät [[Tornion]] ja [[Kemin]] satamat auki. Jääpeite vaihtelee talvittain, eikä jokaisen talven jään laajuutta voi ennustaa. Onpas ollu kylmä vastaus.",
+  "linkit": [
+   "Perämeri",
+   "Tornion",
+   "Kemin"
+  ],
+  "jatkot": [
+   "Miten jäänmurtaja toimii?",
+   "Mitä kaloja Perämeressä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:pohjanlahti",
+  "kysymys": "Mikä Vanha Rauma on?",
+  "uusi": true,
+  "vastaus": "No jopas. [[Vanha Rauma]] on Rauman historiallinen puukaupunginosa, jossa on matalia, väriltään vaihtelevia puutaloja kapeilla kujilla, ja se on yksi Pohjoismaiden laajimmista yhtenäisistä puukaupunkialueista. Alue kuuluu [[Unescon]] maailmanperintöluetteloon, ja sen asukkaat puhuvat perinteisesti [[rauman kieltä]], omaa murrettaan, joka eroaa selvästi ympäröivistä murteista. [[Rauma]] on myös tunnettu pitsistään, ja siellä järjestetään vuosittain pitsiviikko. Tää oli lyhyt, minä olin yllättyny.",
+  "linkit": [
+   "Vanha Rauma",
+   "Unescon",
+   "rauman kieltä",
+   "Rauma"
+  ],
+  "jatkot": [
+   "Mikä tekee rauman kielestä erilaisen?",
+   "Miten Rauman pitsiperinne syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti~2",
+  "kysymys": "Mikä joki laskee Suomenlahden pohjukkaan?",
+  "uusi": false,
+  "vastaus": "Joo, tähän minä osaan vastata. Suomenlahden itäpäähän, Pietarin kohdalle, laskee [[Neva]]-joki, joka tuo vetensä [[Laatokasta]]. Joki on lyhyt mutta vesirikas, ja sen suistoon rakennettiin [[Pietari]]. Neva on yksi Euroopan runsasvetisimmistä joista, ja sen virtaus vaikuttaa koko lahden itäosan veden laatuun ja suolaisuuteen. Aika hyvä muisti kyyhkyltä.",
+  "linkit": [
+   "Neva",
+   "Laatokasta",
+   "Pietari"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Neva-joki on?",
+   "Miksi Pietari rakennettiin suistoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti~2",
+  "kysymys": "Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. [[Suomenlahti]] on matala ja pitkä, joten veden vaihtuminen [[Itämeren]] päävesimassan kanssa on hidasta ja lahden vesi lämpenee ja sakkautuu helposti. Lahteen tulee ravinteita ympäröivien suurten kaupunkien, jokien ja maatalouden mukana, ja ravinteet lisäävät levien kasvua. Kun levä hajoaa, se kuluttaa pohjan happea, ja syvänteet voivat jäädä ilman happea. Siksi ongelmat näkyvät täällä selvemmin kuin avoimemmilla vesialueilla. Ei se oo kyyhkyn vika, vaikka kaikkea näkee ylhäältä.",
+  "linkit": [
+   "Suomenlahti",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Mikä on rehevöityminen?",
+   "Mitä Itämeren suojelemiseksi on tehty?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti~2",
+  "kysymys": "Kuinka kaukana Helsinki on Tallinnasta?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Helsingin]] ja [[Tallinnan]] välinen matka Suomenlahden yli on noin 80 kilometriä, ja se kulkee yleensä lautalla tai laivalla noin kahdessa tunnissa, nopeimmillaan vähän lyhyemmässä ajassa. Kaupungit ovat toistensa lähimmät pääkaupunkimaiden suuret satamat, ja liikenne on vilkasta ympäri vuoden. Talvella jääolosuhteet voivat vaikuttaa aikatauluihin. Lintuna minä lentäisin sen tunnissa, mut kyllä lautta on mukavampi.",
+  "linkit": [
+   "Helsingin",
+   "Tallinnan"
+  ],
+  "jatkot": [
+   "Mikä on Tallinnan vanhakaupunki?",
+   "Millaisia laivoja Suomenlahdella liikennöi?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti~2",
+  "kysymys": "Mikä Suomenlinna on?",
+  "uusi": true,
+  "vastaus": "Hmm, tän minä muistan hyvin. [[Suomenlinna]] on Helsingin edustalla sijaitseva merilinnoitus, jonka rakentaminen aloitettiin [[Ruotsin]] vallan aikana 1700-luvun puolivälissä nimellä Sveaborg. Linnoitus levittäytyy usealle saarelle, ja se siirtyi Venäjän hallintaan vuoden 1808 sodan jälkeen. Nykyisin se on asuttu kaupunginosa, museoalue ja [[Unescon]] maailmanperintökohde, jonne kulkee lautta Kauppatorilta. Siellä asuu edelleen ihmisiä, ja minä näin sen ylhäältä viimeksi viime kesänä.",
+  "linkit": [
+   "Suomenlinna",
+   "Ruotsin",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Miksi Ruotsi rakensi Suomenlinnan?",
+   "Mitä Venäjän aika toi Suomelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti~2",
+  "kysymys": "Jäätyykö Suomenlahti talvisin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Suomenlahti jäätyy ainakin osittain lähes joka talvi, ja itäinen osa jäätyy ensin, koska se on matalampi ja sen vesi on vähemmän suolaista kuin länsiosan. Kovina talvina jääpeite voi ulottua pitkälle merelle, ja laivaliikenne turvautuu [[jäänmurtajiin]]. Peite vaihtelee suuresti vuodesta toiseen, eikä tarkkaa vuosittaista laajuutta voi ennustaa. [[Pietarin]] ja [[Helsingin]] satamat pysyvät kuitenkin käytössä talven yli. Vilu tulee jo muistellessa.",
+  "linkit": [
+   "jäänmurtajiin",
+   "Pietarin",
+   "Helsingin"
+  ],
+  "jatkot": [
+   "Kuinka paksua jää voi olla?",
+   "Miten jäänmurtajat pitävät väylät auki?"
+  ]
+ },
+ {
+  "kohde": "kohde:kemijoki",
+  "kysymys": "Miksi Ounasjoki rauhoitettiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. [[Ounasjoki]] rauhoitettiin lailla vuonna 1983, ja laki esti vesivoimalaitosten rakentamisen siihen. Sitä ennen [[Kemijoen]] vesistöön oli jo rakennettu runsaasti voimalaitoksia, ja haluttiin säilyttää yksi suuri sivujoki koskemattomana. Tarkkoja perusteluja en ole varma kaikilta osin, mutta yleensä mainitaan luonnon, kalastuksen ja vapaana virtaavan joen arvo. Joki yhtyy Kemijokeen [[Rovaniemellä]]. Hyvä, että yksi jäi vapaaksi.",
+  "linkit": [
+   "Ounasjoki",
+   "Kemijoen",
+   "Rovaniemellä"
+  ],
+  "jatkot": [
+   "Miten vesivoimalaitos vaikuttaa jokeen?",
+   "Missä Ounasjoki virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kemijoki",
+  "kysymys": "Milloin Kemijoen uitto loppui?",
+  "uusi": false,
+  "vastaus": "Kas vaan. [[Kemijoen]] uitto päättyi kesällä 1991, kun viimeiset tukit uitettiin joessa. Uitto oli alkanut 1860-luvulla, joten se kesti noin sata kolmekymmentä vuotta, kunnes kuljetus siirtyi maanteille ja rautateille. [[Tukinuitto]] oli pitkään tärkeä tapa kuljettaa puuta metsistä sahoille ja tehtaille, ja jokien varrella eli koko uittokulttuuri. Sata kolmekymmentä vuotta, ja minä muistan vain lopun.",
+  "linkit": [
+   "Kemijoen",
+   "Tukinuitto"
+  ],
+  "jatkot": [
+   "Miten tukkeja uitettiin?",
+   "Miksi uitto lopetettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:kemijoki",
+  "kysymys": "Mihin Kemijoki laskee?",
+  "uusi": true,
+  "vastaus": "Just niin, tästä minä pidän. [[Kemijoki]] laskee [[Pohjanlahteen]] Kemin kohdalla, tarkemmin sanoen sen pohjoisosaan eli [[Perämereen]]. Joki on 550 kilometrin pituisena Suomen pisin, ja sen valuma-alue kattaa suuren osan Lappia. Suisto on laaja ja kaupunki on rakennettu sen ympärille. Pitkä joki, lyhyt lento.",
+  "linkit": [
+   "Kemijoki",
+   "Pohjanlahteen",
+   "Perämereen"
+  ],
+  "jatkot": [
+   "Mikä on Suomen pisin joki?",
+   "Millainen kaupunki Kemi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kemijoki",
+  "kysymys": "Miten vesivoimalaitos tuottaa sähköä?",
+  "uusi": true,
+  "vastaus": "Ai tota. Vesivoimalaitoksessa padottu vesi johdetaan putkea pitkin turbiiniin, joka alkaa pyöriä veden virtauksen voimasta. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi, ja sähkö siirretään voimajohtoja pitkin kuluttajille. Laitoksen teho riippuu veden määrästä ja putouskorkeudesta eli siitä, kuinka korkealta vesi tulee. [[Vesivoima]] on uusiutuvaa energiaa, mutta pato muuttaa joen luontoa. Selvisin tästä ilman jäänteitä.",
+  "linkit": [
+   "generaattoriin",
+   "Vesivoima"
+  ],
+  "jatkot": [
+   "Miten pato vaikuttaa kaloihin?",
+   "Kuinka paljon sähköstä tulee vesivoimasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:kemijoki",
+  "kysymys": "Missä Rovaniemi sijaitsee?",
+  "uusi": true,
+  "vastaus": "No niin, tämän minä tiedän. [[Rovaniemi]] sijaitsee Lapissa, napapiirin tuntumassa, Kemijoen ja Ounasjoen yhtymäkohdassa. Kaupunki on Lapin maakunnan keskus ja yksi Suomen pinta-alaltaan suurimmista kunnista; en ole varma tarkasta järjestyksestä, joten jätän sen tähän. Napapiiri kulkee kaupungin pohjoispuolella, ja turistit tuntevat sen [[Joulupukin]] kotina. Kauempaa katsottuna sinne kyl löytää, kun seuraa jokea.",
+  "linkit": [
+   "Rovaniemi",
+   "Joulupukin"
+  ],
+  "jatkot": [
+   "Mikä on napapiiri?",
+   "Miksi Rovaniemeä kutsutaan Joulupukin kaupungiksi?"
+  ],
+  "paikka": {
+   "nimi": "Rovaniemi",
+   "lat": 66.5,
+   "lon": 25.73,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:olavinlinna",
+  "kysymys": "Mikä Pähkinäsaaren rauha oli?",
+  "uusi": false,
+  "vastaus": "Ai se. [[Pähkinäsaaren rauha]] oli vuonna 1323 tehty sopimus Ruotsin ja [[Novgorodin]] tasavallan välillä, ja sitä pidetään ensimmäisenä Ruotsin ja Novgorodin välisenä rajasopimuksena. Raja kulki Suomenlahden pohjukasta Pohjanlahdelle asti, ja sen tarkka kulku Pohjois-Suomessa on ollut historiantutkijoiden kiistakysymys. Sopimus nimettiin Pähkinäsaaren eli Nevan lähteen linnoituksen mukaan. Minä muistan tämän suvun kertomana, ja sukuni oli silloin jo vanha.",
+  "linkit": [
+   "Pähkinäsaaren rauha",
+   "Novgorodin"
+  ],
+  "jatkot": [
+   "Missä Pähkinäsaari sijaitsee?",
+   "Mikä oli Novgorodin tasavalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:olavinlinna",
+  "kysymys": "Miksi linna rakennettiin keskelle salmea?",
+  "uusi": false,
+  "vastaus": "Katotaas. [[Olavinlinna]] rakennettiin Kyrönsalmen saarelle, koska paikka oli sekä rajan lähellä että järvien verkon solmukohta. Vesistö hidasti hyökkääjää ja kapea salmi teki linnasta helposti vartioitavan, joten kulku [[Haukiveden]] ja [[Pihlajaveden]] välillä kulki linnan ohi. Tott perusti linnan vuonna 1475 vahvistamaan Ruotsin asemaa idässä, ja paikka vei rajaa Savosta itään. Linnaa ei koskaan vallattu väkisin. Hyvä paikka linnalle, mut huono paikka pulla-ostoksille.",
+  "linkit": [
+   "Olavinlinna",
+   "Haukiveden",
+   "Pihlajaveden"
+  ],
+  "jatkot": [
+   "Kuka Erik Axelsson Tott oli?",
+   "Miten linnaa on korjattu vuosisatojen aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:olavinlinna",
+  "kysymys": "Millainen on Savonlinnan oopperajuhlat?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: [[Savonlinnan oopperajuhlat]] ovat vuosittain heinäkuussa järjestettävä oopperafestivaali, jonka päänäyttämönä toimii Olavinlinnan sisäpiha. Juhlat perusti laulajatar [[Aino Ackté]] vuonna 1912, ja ne ovat sittemmin kasvaneet kansainvälisesti tunnetuksi tapahtumaksi. Esityksiä on kymmeniä, ja ohjelmistossa on sekä klassikoita että uutta oopperaa. Linnan akustiikka ja miljöö tekevät kokemuksesta erityisen, mutta sää voi vaikuttaa esityksiin. Hienoa musiikkia, ja minä istuin ylimpänä.",
+  "linkit": [
+   "Savonlinnan oopperajuhlat",
+   "Aino Ackté"
+  ],
+  "jatkot": [
+   "Kuka Aino Ackté oli?",
+   "Milloin Savonlinnassa kannattaa vierailla?"
+  ]
+ },
+ {
+  "kohde": "kohde:olavinlinna",
+  "kysymys": "Miksi keskiaikaisten linnojen tornit tehtiin pyöreiksi?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Pyöreä torni kestää tykinkuulia paremmin kuin kulmikas, koska kuula osuu kaarevaan pintaan viistosti ja kimpoaa helpommin pois. Lisäksi kulmat ovat rakenteen heikkoja kohtia, jotka murtuvat helposti, ja pyöreässä tornissa puolustajalla on parempi näkyvyys joka suuntaan. Siksi [[Olavinlinnan]] paksut pyöreät tornit suunniteltiin kestämään [[tykkitulta]]. Aiemmin linnat oli rakennettu nuolia ja heittokoneita ajatellen. No olipas teknistä.",
+  "linkit": [
+   "Olavinlinnan",
+   "tykkitulta"
+  ],
+  "jatkot": [
+   "Milloin tykit tulivat sodankäyntiin?",
+   "Mikä on linnan vallihauta?"
+  ]
+ },
+ {
+  "kohde": "kohde:olavinlinna",
+  "kysymys": "Kuka oli Iivana III?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Iivana III]] eli Iivana Suuri oli Moskovan suuriruhtinas, joka laajensi Moskovan valtaa yhdistämällä ympäröiviä ruhtinaskuntia, ja hän valloitti [[Novgorodin]] tasavallan 1400-luvun lopulla. Hänen aikanaan Moskova vapautui [[Kultaisen ordan]] ylivallasta, ja venäläinen valtio vahvistui. Novgorodin kaatuminen vaikutti myös Suomen rajaseutuun, koska se muutti alueen vallansuhteita. Tarkat vuosiluvut vaihtelevat lähteittäin, joten en niitä tähän ota. Tää oli lyhyt, mut painava.",
+  "linkit": [
+   "Iivana III",
+   "Novgorodin",
+   "Kultaisen ordan"
+  ],
+  "jatkot": [
+   "Mikä oli Kultainen ordu?",
+   "Miten Novgorodin valtaus vaikutti Suomeen?"
+  ]
+ }
+]
