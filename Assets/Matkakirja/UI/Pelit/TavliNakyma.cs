@@ -246,6 +246,9 @@ namespace Matkakirja.Natiivi
             var c = Resources.Load<AudioClip>(TavliLauta.Kansio + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA tavli: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
+            // Äänimikseri (Natiivi-UI 9.10.): lautapelien tehosteet kontekstiin "lautapelit" (Aanet.Tehoste lukee äänen kertoimen).
+            Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Rekisteroi("lautapelit", "tehosteet", Aanet.MikseriId("tehoste/", nimi), nimi,
+                Aanet.MikseriId("tehoste/", nimi), c.name);
             Aanet.RekisteroiTehoste(nimi, c, Vahvistus, omaIsku: true);
         }
 
