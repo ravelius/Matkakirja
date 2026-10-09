@@ -254,12 +254,15 @@ namespace Matkakirja.Linssit.Kierros
         /// pystysuunnassa, lähikohteisiin 0,3), vähintään MinKorkeusM kohteen yläpuolella kesken lennon, kallistus liukuu a → b
         /// hieman jyrkempänä keskellä, sijainti ease-in-out (smootherstep). Katse lentosuuntaan keskellä, lopuksi kohteeseen.
         /// </summary>
-        public static Kuvakulma Lennossa(Kuvakulma a, Kuvakulma b, double t)
+        public static Kuvakulma Lennossa(Kuvakulma a, Kuvakulma b, double t) => Lennossa(a, b, t, 0);
+
+        /// <summary>Lento a → b; rhoMin = pallolennon kaaren vähimmäiskorkeus (van Wijk–Nuij rho, NopeusRho), 0 = oletus.</summary>
+        public static Kuvakulma Lennossa(Kuvakulma a, Kuvakulma b, double t, double rhoMin)
         {
             t = Math.Max(0, Math.Min(1, t));
             double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
             if (matka >= LahiRajaM) return OpasSilmukka.Lennossa(a, b, t);
-            if (OpasSilmukka.PalloLento) return PalloLennossa(a, b, t, matka);
+            if (OpasSilmukka.PalloLento) return PalloLennossa(a, b, t, matka, rhoMin);
             double s = Eteneminen(t, matka);
             // Nousukaari etenemisen mukaan (Päätoimittaja 8.10. 07.5x, juna 164 -video: lepo → huippu 1–1,5 s ja viimeinen 0,5 s
             // jyrkkä): ajasta laskettu sin²(πt) aloitti nousun täydellä kiihtyvyydellä (h'' = 2π² hetkellä 0) ja päätti laskun
@@ -332,7 +335,39 @@ namespace Matkakirja.Linssit.Kierros
         // kaari samalla etäisyydellä ennallaan, sumennusten ohitus nostaa yhä tarvittaessa (SumennusRho).
         // Päätoimittaja 9.10. (omistaja: "siirtymälento matalammaksi, nousu vain esteiden yli") → 0,42 → 0,3.
         public const double ZoomRho = 0.3;
-        static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka)
+        /// <summary>
+        /// NOPEA LENTO NOUSEE KAARESSA (omistaja 9.10. 13.1x: "lento voi olla nopea … kiihdytys pehmeää, samoin jarrutus"; PT: jos
+        /// matala nopea ohitus sumentaa, nosta lentoa kaaressa matkan keskellä nopeuden sijaan; kuva-arkki 9.10.: Champs → Sacré-Cœur
+        /// 416 m/s noin 250 m:n korkeudella, laatat sumeat): pienin rho (ZoomRho … SumennusRhoMax), jolla kuvan nopeus (silmän nopeus
+        /// / katse-etäisyys) on enintään PalloKuvaNopeusMax. Kesto ei muutu; lisäkorkeus menee keskelle matkaa (pystysuoraan, ei taaksepäin).
+        /// </summary>
+        public static double NopeusRho(Kuvakulma a, Kuvakulma b, double kestoS)
+        {
+            if (!OpasSilmukka.PalloLento || kestoS <= 0) return 0;
+            double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
+            if (matka >= LahiRajaM || matka < 1) return 0;
+            for (double r = ZoomRho; r < SumennusRhoMax + 1e-9; r += 0.05)
+                if (KuvanNopeus(a, b, kestoS, r, matka) <= PalloKuvaNopeusMax) return r <= ZoomRho + 1e-9 ? 0 : r;
+            return SumennusRhoMax;
+        }
+        /// <summary>Pallolennon suurin kuvan nopeus (rad/s).</summary>
+        public const double PalloKuvaNopeusMax = 1.0;
+        /// <summary>Pallolennon a → b suurin kuvan nopeus (rad/s = silmän nopeus / katse-etäisyys) kestolla kestoS ja kaarella rho.</summary>
+        public static double KuvanNopeus(Kuvakulma a, Kuvakulma b, double kestoS, double rho, double matka)
+        {
+            const int N = 120;
+            var p0 = KameraPaikka(PalloLennossa(a, b, 0, matka, rho), a.Lat, a.Lon); double suurin = 0, dt = kestoS / N;
+            for (int i = 1; i <= N; i++)
+            {
+                var k = PalloLennossa(a, b, (double)i / N, matka, rho); var p = KameraPaikka(k, a.Lat, a.Lon);
+                double de = p.e - p0.e, dn = p.n - p0.n, du = p.u - p0.u;
+                suurin = Math.Max(suurin, Math.Sqrt(de * de + dn * dn + du * du) / dt / Math.Max(1, k.EtaisyysM));
+                p0 = p;
+            }
+            return suurin;
+        }
+
+        static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka, double rhoMin = 0)
         {
             double p = Eteneminen(t, matka);
             double w0 = Math.Max(1, a.EtaisyysM), w1 = Math.Max(1, b.EtaisyysM);
@@ -344,7 +379,7 @@ namespace Matkakirja.Linssit.Kierros
             // van Wijk–Nuij-kaarta niin, että ohituskohdassa katse-etäisyys on SumennusEtM, ja kuvan nopeudella on yhä yksi kumpu.
             // Silmän vaakaetäisyys kohteesta pidetään peruspolun mukaisena (et·sin(kall)), jolloin lisänousu menee suoraan ylös eikä
             // silmä liiku taaksepäin; kallistus jyrkkenee nousun ajaksi.
-            double rho = SumennusRho(a, b, w0, w1, matka);
+            double rho = Math.Max(SumennusRho(a, b, w0, w1, matka), rhoMin);
             if (rho > ZoomRho) et = Math.Max(et, ZoomPolku(w0, w1, matka, p, rho).leveys);
             // ZOOMAUS PYSTYSUUNNASSA (PalloKaupungitTestit 8.10.: 37 kaupungissa silmä kulki taaksepäin 1–75 m, kun pallo lähti
             // kaaren päästä katsoen kohteesta poispäin tai saapui kääntörajan takia sivuttain/taaksepäin; zoomauskaari työnsi silmää
