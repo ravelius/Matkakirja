@@ -74,8 +74,8 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(k.X == 100 && k.Y == KaupunkiAanet.KelloKorkeusM && k.Taso > 0 && k.Taso <= PalloKaupunkiAanet.KirkkoTaso, "kirkossa, taso");
                 Oleta.Tosi(Math.Abs(k.EtaisyysM - Math.Sqrt(100 * 100 + 50 * 50)) < 1e-9, "3D-etäisyys");
             }
-            Oleta.Sama(PalloKaupunkiAanet.KirkkoTaso, PalloKaupunkiAanet.KirkkoTaso * PalloElavaAanet.Etaisyystaso(70, KaupunkiAanet.KirkkoTaysiM, KaupunkiAanet.KirkkoHiljaM), "täysi 80 m:ssä");
-            Oleta.Tosi(PalloElavaAanet.Etaisyystaso(450, KaupunkiAanet.KirkkoTaysiM, KaupunkiAanet.KirkkoHiljaM) == 0, "hiljaa 450 m:ssä");
+            Oleta.Sama(PalloKaupunkiAanet.KirkkoTaso, PalloKaupunkiAanet.KirkkoTaso * PalloElavaAanet.Etaisyystaso(45, KaupunkiAanet.KirkkoTaysiM, KaupunkiAanet.KirkkoHiljaM), "täysi 50 m:ssä");
+            Oleta.Tosi(PalloElavaAanet.Etaisyystaso(250, KaupunkiAanet.KirkkoTaysiM, KaupunkiAanet.KirkkoHiljaM) == 0, "hiljaa 250 m:ssä");
             var kaukana = Tyhja(); kaukana.Kirkot.Add((100, 0)); kaukana.Indeksoi();
             Oleta.Sama(0, AjaKellot(kaukana, 520, 50, 3600).Count, "kirkko 420 m:n päässä: ei kelloja");
             var korkealla = Tyhja(); korkealla.Kirkot.Add((100, 0)); korkealla.Indeksoi();
@@ -184,7 +184,7 @@ namespace Matkakirja.Linssit.Testit
         static KaupunkiAanet Kahvilat(int baareja, int kahviloita)
         {
             var a = Tyhja(4);
-            for (int i = 0; i < kahviloita; i++) a.Kahvilat.Add((20 + 15 * i, 30, i < baareja));
+            for (int i = 0; i < kahviloita; i++) a.Kahvilat.Add((20 + 6 * i, 30, i < baareja));   // 6 m:n välein: yhdeksän mahtuu 80 m:n säteelle
             a.Indeksoi();
             return a;
         }
@@ -226,7 +226,7 @@ namespace Matkakirja.Linssit.Testit
                     if (k.Tunnus == PalloKaupunkiAanet.Maitovaahdotin)
                     {
                         ajat.Add(t);
-                        Oleta.Tosi(Math.Abs(k.X - (20 + 15 * 3)) < 1e-9 && k.EtaisyysM < KaupunkiAanet.MaitoM && k.Taso > 0, $"lähin café ({k.X}, {k.EtaisyysM:F0} m)");
+                        Oleta.Tosi(Math.Abs(k.X - (20 + 6 * 3)) < 1e-9 && k.EtaisyysM < KaupunkiAanet.MaitoM && k.Taso > 0, $"lähin café ({k.X}, {k.EtaisyysM:F0} m)");
                     }
             }
             Oleta.Tosi(ajat.Count >= 14 && ajat.Count <= 31, $"tunnissa {ajat.Count} maitovaahdotinta");
@@ -345,6 +345,36 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(teksti.Substring(0, ti) == mAlku, $"{id}: muut kentät ennallaan ({mAlku.Length} merkkiä)");
                 foreach (var avain in new[] { "\"kadut\":", "\"reitit\":", "\"parvet\":", "\"piiput\":", "\"liput\":", "\"aukiot\":", "\"krediitti\":" })
                     Oleta.Tosi(teksti.Substring(0, ti).Contains(avain), $"{id}: {avain} tallella");
+            }
+        }
+
+        /// <summary>
+        /// KERTOJAN ALLA (PT 9.10.: "uudet pisteäänet asettuvat kertojan alle samoin kuin 3058fb964:ssä"): pahin tapaus (lähde täydellä
+        /// tasolla, puhe soi → väistö) mitatuista leikevoimakkuuksista (kultaiset/pallo-kaupunkiaanet-tasot-20261009.json) ja ketjusta
+        /// OpasAanitasot.Maisema × lähteen taso. Tapahtumat (kello, vene, maitovaahdotin) momentaarihuippu ≥ 6 dB ja taustat
+        /// integroitu ≥ 10 dB kertojan alla, kuten PalloKaupungitTestit.AanitasotKaikissaKaupungeissa.
+        /// </summary>
+        [Testi] static void KertojanAllaKutenMuutPallonAanet()
+        {
+            string Polku(string n) => System.IO.Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", n);
+            var g = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(System.IO.File.ReadAllText(Polku("pallo-kaupunkiaanet-tasot-20261009.json")));
+            var k = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(System.IO.File.ReadAllText(Polku("pallo-aanitasot-20261008.json")));
+            double L(Dictionary<string, object> d, string lahde, string kentta) => Convert.ToDouble(((Dictionary<string, object>)d[lahde])[kentta], System.Globalization.CultureInfo.InvariantCulture);
+            double Db(double x) => 20 * Math.Log10(Math.Max(1e-9, x));
+            double kertoja = L(k, "kertoja", "integroitu_lufs") + Db(OpasAanitasot.Kertoja(0.9));
+            var tapahtumat = new[] { ("kirkonkello", PalloKaupunkiAanet.KirkkoTaso), ("vene_ohi", PalloKaupunkiAanet.VeneTaso), ("maitovaahdotin", PalloKaupunkiAanet.MaitoTaso) };
+            var taustat = new[] { ("kahvila", PalloKaupunkiAanet.KahvilaTaso), ("tori", PalloKaupunkiAanet.ToriTaso), ("suihkulahde", PalloKaupunkiAanet.SuihkuTaso), ("satama", PalloKaupunkiAanet.SatamaTaso), ("halli", PalloKaupunkiAanet.HalliTaso) };
+            foreach (var (n, taso) in tapahtumat)
+            {
+                double m = kertoja - (L(g, n, "momentaari_max_lufs") + Db(OpasAanitasot.Maisema(taso, true)));
+                Console.WriteLine($"      {n}: {m:F1} dB kertojan alla (tapahtuma, ≥ 6)");
+                Oleta.Tosi(m >= 6, $"{n}: {m:F1} dB kertojan alla (≥ 6)");
+            }
+            foreach (var (n, taso) in taustat)
+            {
+                double m = kertoja - (L(g, n, "integroitu_lufs") + Db(OpasAanitasot.Maisema(taso, true)));
+                Console.WriteLine($"      {n}: {m:F1} dB kertojan alla (tausta, ≥ 10)");
+                Oleta.Tosi(m >= 10, $"{n}: {m:F1} dB kertojan alla (≥ 10)");
             }
         }
     }

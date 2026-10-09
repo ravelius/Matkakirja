@@ -28,11 +28,13 @@ namespace Matkakirja.Linssit.Elava
     public sealed class KaupunkiAanet
     {
         public const double KorkeusRajaM = IhmisAanet.KorkeusRajaM;
-        public const double KirkkoLahinM = 400, KirkkoTaysiM = 80, KirkkoHiljaM = 450, KelloValiMinS = 180, KelloValiMaxS = 360, KelloKorkeusM = 25;
+        // Kellot ja kahvila vain lähellä lähdettä (PT 9.10.): kello täysi 50 m:ssä, hiljaa 250 m:ssä; kahvilatausta 80 m:n säteeltä ja
+        // vain alle 80 m:n korkeudella (ennen 450 m / 150 m: Pariisissa kello kuului 90 %:ssa kaupunkia).
+        public const double KirkkoLahinM = 250, KirkkoTaysiM = 50, KirkkoHiljaM = 250, KelloValiMinS = 180, KelloValiMaxS = 360, KelloKorkeusM = 25;
         public const double SuihkuM = 120, SuihkuTaysiM = 15, SuihkuHiljaM = 170, SuihkuHaivytysS = 1.0;
         public const double SatamaM = 120, SatamaTaysiM = 20, SatamaHiljaM = 170;
         public const int SuihkujaEnintaan = 2, KahvilaVahintaan = 3;
-        public const double KahvilaSadeM = 150, KahvilaTaysiKorkeusM = 20, BaariTunti = 18, MaitoM = 100, MaitoTaysiM = 15, MaitoValiMinS = 120, MaitoValiMaxS = 240;
+        public const double KahvilaSadeM = 80, KahvilaTaysiKorkeusM = 20, KahvilaHiljaKorkeusM = 80, BaariTunti = 18, MaitoM = 100, MaitoTaysiM = 15, MaitoValiMinS = 120, MaitoValiMaxS = 240;
         public const double ToriM = 120, ToriAlaM2 = 2000, ToriTaysiM = 40, ToriHiljaM = 160;
         public const double HalliM = 60, HalliKorkeusM = 80, HalliTaysiM = 25, HalliHiljaM = 100;
         public const double TaustaLiukuS = 2.5;
@@ -191,7 +193,7 @@ namespace Matkakirja.Linssit.Elava
                 {
                     bool baari = BaarejaLahella * 2 > KahviloitaLahella || Ilta(tunti);
                     double tiheys = Math.Min(1, 0.4 + 0.6 * (KahviloitaLahella - KahvilaVahintaan) / 9.0);
-                    tavoite[baari ? Baari : Rauhallinen] = PalloKaupunkiAanet.KahvilaTaso * tiheys * PalloElavaAanet.Etaisyystaso(korkeus, KahvilaTaysiKorkeusM, KorkeusRajaM);
+                    tavoite[baari ? Baari : Rauhallinen] = PalloKaupunkiAanet.KahvilaTaso * tiheys * PalloElavaAanet.Etaisyystaso(korkeus, KahvilaTaysiKorkeusM, KahvilaHiljaKorkeusM);
                 }
                 if (cafe >= 0)
                 {
