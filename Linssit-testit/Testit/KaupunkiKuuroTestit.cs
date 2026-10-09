@@ -112,6 +112,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Contains("\"white\" {}") && v.Contains("_metallicRoughnessFactor (\"Metalli, karheus\", Vector) = (0, 1, 0, 0)"), "oletus: ei metallia, karhea (vanhat mallit ennallaan)");
             // PT 9.10.: ND kauempaa harmaa → valo kaupungin auringosta (_IlmAurinko), ei kameraa seuraavasta kartan päävalosta.
             Oleta.Tosi(v.Contains("valo.direction = kaupunki ? normalize(_IlmAurinko.xyz) : valo.direction;"), "kaupungin aurinko");
+            // Uusi data (PBR, alfa, COLOR_0) vain 173+: oma osoitin uusin-3.json (vanhat buildit lukevat uusin-2:ta).
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumOmatMallit.cs"));
+            Oleta.Tosi(c.Contains("omat-mallit/uusin-3.json\";"), "osoitin uusin-3");
         }
 
         [Testi] static void SadepilvetJaSalama()
