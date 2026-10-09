@@ -21,9 +21,12 @@ namespace Matkakirja.Natiivi
         public const string Juuri = KaupunkiAanimaisemaSoitin.Juuri + "pallo-aanimaisema-v1/";
         public static readonly string[] Juuret = { Juuri, KaupunkiAanimaisemaSoitin.Juuri + "pariisi-seine-v1/" };
         public const float OmaSilmukkaTaso = 0.45f;
-        /// <summary>Pallon tuuli korkealla (Pelikoodari 9.10., Sonniss, aanet/sonniss-tuulet-v1): kylmä, ohut ja puuskainen ilman lintuja;
-        /// korvaa kaupungin äänimaiseman tuulikerroksen kaikissa kaupungeissa (taso korkeuden mukaan ja ☰ Sää ennallaan).</summary>
-        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "sonniss-tuulet-v1/tuuli-korkea.mp3";
+        /// <summary>Pallon tuuli (Pelikoodari 9.10. 16.0x, Soundly, aanet/pallo-tuuli-soundly-v1; korvaa Sonnissin tuuli-korkean 20 s:n
+        /// silmukan): puhdas tasainen tuuli ilman lehtiä ja mikrofonijyrinää, kaksi 50 s:n jaksoa samasta äänitteestä (−23 LUFS kuten ennen,
+        /// joten tasot ennallaan). Soitin vuorottelee ne ristihäivytyksellä (SilmukanPari: 01 → 02 → 01), joten toistojakso on 100 s.
+        /// Korvaa kaupungin äänimaiseman tuulikerroksen kaikissa kaupungeissa (taso korkeuden mukaan ja ☰ Sää ennallaan).</summary>
+        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v1/tuuli-puhdas-01.mp3",
+            TuuliPariUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v1/tuuli-puhdas-02.mp3";
         readonly Dictionary<string, AudioSource> omat = new Dictionary<string, AudioSource>();
         static PalloAanimaisema manifesti; static bool haettu;
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>();
@@ -125,6 +128,7 @@ namespace Matkakirja.Natiivi
                 var a = id != null && Matkakirja.Linssit.Kehityskaupungit.On(id) ? manifesti.KerroksenAani(id, kerros) : null;
                 return a != null ? a.Osoite : KaupunkiAanimaisemaSoitin.Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
             };
+            KaupunkiAanimaisemaSoitin.SilmukanPari = url => url == TuuliUrl ? TuuliPariUrl : null;
             Debug.Log($"MATKAKIRJA kaupunki: pallon äänimaisema: {manifesti.Kaupungit.Count} kaupunkia");
         }
 
