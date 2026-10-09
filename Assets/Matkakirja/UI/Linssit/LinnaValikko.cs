@@ -268,6 +268,8 @@ namespace Matkakirja.Natiivi
             foreach (var t in r.Tilat)
                 if (t.Infotaulu != null) foreach (var (_, l) in t.Infotaulu.Rivit) Lisaa(l);
             if (r.Taulu != null) foreach (var k in r.Taulu.Kohdat) Lisaa(k.Lahde);
+            // Olavinlinnan maasto (Siirtosepän v45z, Päätoimittaja 9.10.: rakennus.json:n lähteissä ei ole MML:ää); junassa 173 kielitaulun kautta.
+            if (DioraamaSovitin.RakennusId == DioraamaSovitin.Oletusrakennus) Lisaa("Korkeusmalli 2 m: Maanmittauslaitos, CC BY 4.0");
             return tulos;
         }
 
