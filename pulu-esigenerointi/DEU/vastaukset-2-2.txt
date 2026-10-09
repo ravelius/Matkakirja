@@ -227,13 +227,13 @@ Mikä oli Zollverein-tulliliitto?
 Miten Euroopan unionin tulliliitto toimii?
 
 ### 119
-Pfalzgrafenstein on pieni tullilinna Reinin keskellä Kaubin kaupungin edustalla olevalla saarella. Se rakennettiin 1300-luvun alussa, ja sen tarkoitus oli periä tullia Reinillä kulkevilta aluksilta. Linnan ensimmäinen osa oli viisikulmainen torni, jota ympäröi myöhemmin rakennettu muuri. Rakennus muistuttaa muodoltaan laivaa. Linnan kerrotaan säilyneen valloittamattomana, ja se on säilynyt hyvin. Se kuuluu [[Unescon]] maailmanperintökohteeksi merkittyyn Reinin rotkon alueeseen, ja siellä voi käydä veneellä.
+Pfalzgrafenstein on pieni tullilinna [[Reinin]] keskellä Kaubin kaupungin edustalla olevalla saarella. Se rakennettiin 1300-luvun alussa, ja sen tarkoitus oli periä tullia Reinillä kulkevilta aluksilta. Linnan ensimmäinen osa oli viisikulmainen torni, jota ympäröi myöhemmin rakennettu muuri. Rakennus muistuttaa muodoltaan laivaa. Linnan kerrotaan säilyneen valloittamattomana, ja se on säilynyt hyvin. Se kuuluu [[Unescon]] maailmanperintökohteeksi merkittyyn Reinin rotkon alueeseen, ja siellä voi käydä veneellä.
 JATKOT:
 Miten Pfalzgrafensteinille pääsee?
 Mitä muita linnoja Reinin varrella on?
 
 ### 120
-Schaffhausen on Sveitsin pohjoisosassa sijaitseva kaupunki, joka sijaitsee Reinin rannalla aivan Saksan rajan tuntumassa. Se on samannimisen kantonin pääkaupunki. Kaupungin vanhakaupunki on säilynyt hyvin, ja sen tunnetuin nähtävyys on [[Munot]]-linnoitus, joka rakennettiin 1500-luvulla. Schaffhausen oli keskiajalla tärkeä kauppakaupunki, koska Reinin putous katkaisi laivaliikenteen ja tavarat piti purkaa. Nykyään kaupunki tunnetaan myös kelloteollisuudestaan.
+Schaffhausen on Sveitsin pohjoisosassa sijaitseva kaupunki, joka sijaitsee [[Reinin]] rannalla aivan Saksan rajan tuntumassa. Se on samannimisen kantonin pääkaupunki. Kaupungin vanhakaupunki on säilynyt hyvin, ja sen tunnetuin nähtävyys on [[Munot]]-linnoitus, joka rakennettiin 1500-luvulla. Schaffhausen oli keskiajalla tärkeä kauppakaupunki, koska Reinin putous katkaisi laivaliikenteen ja tavarat piti purkaa. Nykyään kaupunki tunnetaan myös kelloteollisuudestaan.
 JATKOT:
 Millainen linnoitus Munot on?
 Miten Schaffhausenin kelloteollisuus sai alkunsa?
@@ -323,7 +323,7 @@ Millainen on Zwingerin palatsi?
 Kuka oli Augustus Vahva?
 
 ### 135
-Hiekkakivi on [[sedimenttikivilaji]], joka syntyy, kun hiekkajyvät kerrostuvat ja sementoituvat yhteen vuosimiljoonien kuluessa. Jyvät ovat usein kvartsia, ja sidosaineena toimii esimerkiksi kalkki tai piihappo. Kiven väri vaihtelee vaaleasta punertavaan. Sitä on käytetty laajasti rakennusmateriaalina, koska se on helppo työstää. Elben hiekkakiveä louhittiin vuosisatojen ajan, ja sitä käytettiin muun muassa Dresdenin rakennuksissa. Sade ja pakkanen kuluttavat sitä hitaasti.
+Hiekkakivi on [[sedimenttikivilaji]], joka syntyy, kun hiekkajyvät kerrostuvat ja sementoituvat yhteen vuosimiljoonien kuluessa. Jyvät ovat usein kvartsia, ja sidosaineena toimii esimerkiksi kalkki tai piihappo. Kiven väri vaihtelee vaaleasta punertavaan. Sitä on käytetty laajasti rakennusmateriaalina, koska se on helppo työstää. Elben hiekkakiveä louhittiin vuosisatojen ajan, ja sitä käytettiin muun muassa [[Dresdenin]] rakennuksissa. Sade ja pakkanen kuluttavat sitä hitaasti.
 JATKOT:
 Miten sedimenttikivi eroaa magmakivestä?
 Mitä muita rakennuksia on tehty hiekkakivestä?
@@ -353,13 +353,13 @@ Mikä Chilehaus on?
 Miten kohde pääsee maailmanperintöluetteloon?
 
 ### 140
-Jättiläisvuoret eli Krkonoše on Elben syntyalue, ja sen vaikutus tulviin on suuri, koska vuoristossa sataa runsaasti ja talvella kertyy paksu lumipeite. Kevään lumensulaminen tai pitkä sateinen jakso voi nostaa vuoristopurojen vesimäärän nopeasti. Alue on tunnettu myös legendoista, joiden kuuluisin hahmo on vuorihenki [[Rübezahl]], tšekiksi Krakonoš. Vuoristo on kansallispuisto, ja sen kasvillisuus muistuttaa paikoin kauempana pohjoisessa kasvavaa tundraa. Vuoristosta virtaa vettä myös Puolan puolelle.
+Jättiläisvuoret eli Krkonoše on [[Elben]] syntyalue, ja sen vaikutus tulviin on suuri, koska vuoristossa sataa runsaasti ja talvella kertyy paksu lumipeite. Kevään lumensulaminen tai pitkä sateinen jakso voi nostaa vuoristopurojen vesimäärän nopeasti. Alue on tunnettu myös legendoista, joiden kuuluisin hahmo on vuorihenki [[Rübezahl]], tšekiksi Krakonoš. Vuoristo on kansallispuisto, ja sen kasvillisuus muistuttaa paikoin kauempana pohjoisessa kasvavaa tundraa. Vuoristosta virtaa vettä myös Puolan puolelle.
 JATKOT:
 Kuka on vuorihenki Rübezahl?
 Millaista kasvillisuutta Jättiläisvuorilla on?
 
 ### 141
-Tulvasuojelu tarkoittaa toimia, joilla pyritään vähentämään tulvan aiheuttamia vahinkoja. Perinteisiä keinoja ovat [[tulvapenkereet]], padot ja tulvamuurit sekä siirrettävät tulvaesteet, joita voidaan pystyttää uhanalaisiin kohtiin. Uudempi lähestymistapa on antaa joelle takaisin luonnollisia tulva-alueita, jolloin vesi leviää laajalle eikä huippu nouse yhtä korkeaksi alajuoksulla. Saksassa tulvasuojelua kehitettiin voimakkaasti sen jälkeen, kun vuoden 2002 tulva aiheutti suuria vahinkoja Elben varrella. En ole varma, miten laajasti eri hankkeet on toteutettu.
+Tulvasuojelu tarkoittaa toimia, joilla pyritään vähentämään tulvan aiheuttamia vahinkoja. Perinteisiä keinoja ovat [[tulvapenkereet]], padot ja tulvamuurit sekä siirrettävät tulvaesteet, joita voidaan pystyttää uhanalaisiin kohtiin. Uudempi lähestymistapa on antaa joelle takaisin luonnollisia tulva-alueita, jolloin vesi leviää laajalle eikä huippu nouse yhtä korkeaksi alajuoksulla. Saksassa tulvasuojelua kehitettiin voimakkaasti sen jälkeen, kun vuoden 2002 tulva aiheutti suuria vahinkoja [[Elben]] varrella. En ole varma, miten laajasti eri hankkeet on toteutettu.
 JATKOT:
 Miten luonnollinen tulva-alue vähentää tulvia?
 Mitä vuoden 2002 tulva aiheutti Dresdenissä?
@@ -383,7 +383,7 @@ Mitä meripihka on?
 Mikä oli Aquileia?
 
 ### 145
-Donaueschingen on pieni kaupunki Baden-Württembergin osavaltiossa Schwarzwaldin itäpuolella. Siellä Bregin ja Brigachin yhtyessä syntyy joki, jota kutsutaan Tonavaksi. Kaupungissa on myös [[Fürstenbergin]] ruhtinassuvun linnapuisto, jossa on Tonavan lähteeksi kutsuttu kaivomainen allas. Allasta on pidetty perinteisesti Tonavan alkuna, vaikka veden pisin matka alkaa muualta. Kaupunki tunnetaan myös musiikkijuhlista ja Fürstenbergin panimosta.
+Donaueschingen on pieni kaupunki Baden-Württembergin osavaltiossa Schwarzwaldin itäpuolella. Siellä Bregin ja [[Brigachin]] yhtyessä syntyy joki, jota kutsutaan Tonavaksi. Kaupungissa on myös [[Fürstenbergin]] ruhtinassuvun linnapuisto, jossa on Tonavan lähteeksi kutsuttu kaivomainen allas. Allasta on pidetty perinteisesti Tonavan alkuna, vaikka veden pisin matka alkaa muualta. Kaupunki tunnetaan myös musiikkijuhlista ja Fürstenbergin panimosta.
 JATKOT:
 Mikä on Schwarzwald?
 Mitkä ovat Brigach ja Breg?
