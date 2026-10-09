@@ -46,7 +46,7 @@ Mitä tarkkuusinstrumentit ovat ja mihin niitä käytetään?
 
 ### 47.2
 KYSYMYS: Miksi Eskilstunaa on verrattu englantilaiseen Sheffieldiin?
-Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja terästeollisuuden keskuksina. Eskilstunassa valmistettiin aterimia, saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.
+Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja [[terästeollisuuden]] keskuksina. Eskilstunassa valmistettiin [[aterimia]], saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.
 JATKOT:
 Miten teräs valmistetaan raudasta?
 Mitä terästeollisuus tarkoittaa nykyään Ruotsissa?
@@ -60,7 +60,7 @@ Mitä Karl Gustavs Stadille tapahtui myöhemmin?
 
 ### 47.4
 KYSYMYS: Mitä vapaakaupunki tarkoitti Eskilstunan käsityöläisille?
-Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.
+Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa [[käsityöläiset]] ja valmistajat saivat perustaa [[verovapaita pajoja]] ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.
 JATKOT:
 Mikä teollinen vallankumous oli?
 Miksi verovapaus houkutteli yrittäjiä?
@@ -88,14 +88,14 @@ Miten kaupungit ovat suojautuneet tulipaloilta?
 
 ### 48.3
 KYSYMYS: Kuka oli Louis De Geer ja miten hän tuki Norrköpingiä?
-No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 asetehdas, ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.
+No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 [[asetehdas]], ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 [[Norrköpingissä]] oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.
 JATKOT:
 Mitä tekstiilituotanto tarkoittaa?
 Kuinka paljon asukkaita Norrköpingissä on nykyään?
 
 ### 48.4
 KYSYMYS: Miksi puutalot kiellettiin Norrköpingissä tulipalojen jälkeen?
-Joo, tän minä tiedän. Keskiaikainen kaupunki oli tuhoutunut tulipaloissa ja vuonna 1719 venäläisten polttamana, ja palojen jälkeen [[puutalot]] kiellettiin. Kiellon tarkoitus oli vähentää uusien tulipalojen vaaraa, sillä puurakennukset syttyvät ja palavat helposti. Kaupunki rakennettiin uudelleen, ja 1800-luvulla teollisuus kasvoi Motala ströminin varrella. Puu on kyyhkyn ystävä, mutta ei tulen.
+Joo, tän minä tiedän. Keskiaikainen kaupunki oli tuhoutunut [[tulipaloissa]] ja vuonna 1719 venäläisten polttamana, ja palojen jälkeen [[puutalot]] kiellettiin. Kiellon tarkoitus oli vähentää uusien tulipalojen vaaraa, sillä puurakennukset syttyvät ja palavat helposti. Kaupunki rakennettiin uudelleen, ja 1800-luvulla teollisuus kasvoi [[Motala ströminin]] varrella. Puu on kyyhkyn ystävä, mutta ei tulen.
 JATKOT:
 Mistä materiaaleista kaupunkeja rakennettiin palojen jälkeen?
 Miksi puutalot syttyvät niin helposti?
@@ -116,7 +116,7 @@ Millainen kaupunki Luleå on nykyään?
 
 ### 49.2
 KYSYMYS: Miksi kirkkokylän talot olivat käytössä vain sunnuntaisin ja juhlapäivinä?
-Kas vaan. Kirkkomajat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.
+Kas vaan. [[Kirkkomajat]] olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet [[kirkkovieraat]] eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.
 JATKOT:
 Kuinka pitkiä kirkkomatkat olivat ennen?
 Millaisia kirkkomajat ovat sisältä?
@@ -137,7 +137,7 @@ Mitkä muut kirkkokylät Pohjoismaissa ovat säilyneet?
 
 ### 49.5
 KYSYMYS: Kuinka monta kirkkomajaa Gammelstadissa on?
-Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun kivikirkkoa. Kylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.
+Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun [[kivikirkkoa]]. Kylä sijaitsee noin kymmenen kilometriä [[Luleån]] pohjoispuolella [[Pohjanlahden]] pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.
 JATKOT:
 Mistä kirkkomajat on rakennettu?
 Miten kirkkomajoja on hoidettu ja säilytetty?
@@ -153,14 +153,14 @@ Mitä IKEA-museossa voi nähdä?
 
 ### 50.2
 KYSYMYS: Millainen paikka Råshult on, ja kuka siellä syntyi?
-Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila Älmhultin seudulla, ja nykyään se on museo. Linné oli kasvitieteilijä, joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.
+Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila [[Älmhultin]] seudulla, ja nykyään se on museo. Linné oli [[kasvitieteilijä]], joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.
 JATKOT:
 Mistä Carl von Linné tunnetaan?
 Miten kasvit nimetään tieteessä?
 
 ### 50.3
 KYSYMYS: Mitä Älmhultin IKEA-museossa esitellään?
-Hyvä kysymys tuo. Älmhultin [[IKEA-museo]] esittelee IKEAn historiaa, ja museo avattiin kaupunkiin vuonna 2016. Se sopii paikkaan hyvin, sillä ensimmäinen IKEA-myymälä rakennettiin Älmhultiin ja yhtiöllä on yhä suuri toiminta paikkakunnalla. Hyllyistä ja ruuveista tulee yllättävän pitkä tarina.
+Hyvä kysymys tuo. Älmhultin [[IKEA-museo]] esittelee [[IKEAn]] historiaa, ja museo avattiin kaupunkiin vuonna 2016. Se sopii paikkaan hyvin, sillä ensimmäinen [[IKEA-myymälä]] rakennettiin Älmhultiin ja yhtiöllä on yhä suuri toiminta paikkakunnalla. Hyllyistä ja ruuveista tulee yllättävän pitkä tarina.
 JATKOT:
 Miten IKEA kasvoi pienestä yrityksestä maailmanlaajuiseksi?
 Mistä IKEAn tuotteiden nimet tulevat?

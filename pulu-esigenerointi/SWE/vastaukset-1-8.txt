@@ -30,7 +30,7 @@ Millainen on Bohuslänin rannikon luonto?
 
 ### 36.5
 KYSYMYS: Mitä kaupunkioikeudet tarkoittivat keskiajalla?
-Ai se. Kaupunkioikeudet tarkoittivat sitä, että paikka sai hallitsijalta oikeuden harjoittaa kauppaa ja käsityötä sekä pitää markkinoita. Usein [[kaupunkioikeudet]] toivat mukanaan myös oman hallinnon, oman oikeuden ja alueen, jolla vain kaupungin porvarit saivat käydä kauppaa. Ruotsissa kauppaa pyrittiin pitkään keskittämään kaupunkeihin, joten oikeus oli taloudellisesti arvokas. Marstrandin kaupunkioikeudet ovat lähteiden mukaan peräisin noin vuodelta 1200, vaikka paikka on nykyään pieni kylä. Pieni kylä, mutta kaupunki se on silti.
+Ai se. Kaupunkioikeudet tarkoittivat sitä, että paikka sai hallitsijalta oikeuden harjoittaa kauppaa ja käsityötä sekä pitää [[markkinoita]]. Usein kaupunkioikeudet toivat mukanaan myös oman hallinnon, oman oikeuden ja alueen, jolla vain kaupungin [[porvarit]] saivat käydä kauppaa. Ruotsissa kauppaa pyrittiin pitkään keskittämään kaupunkeihin, joten oikeus oli taloudellisesti arvokas. [[Marstrandin]] kaupunkioikeudet ovat lähteiden mukaan peräisin noin vuodelta 1200, vaikka paikka on nykyään pieni kylä. Pieni kylä, mutta kaupunki se on silti.
 JATKOT:
 Mikä erotti kaupungin maaseudusta keskiajalla?
 Miten markkinat toimivat ennen kauppakeskuksia?
@@ -118,7 +118,7 @@ Miten hevosia käytettiin kuljetukseen ennen autoja?
 
 ### 39.2
 KYSYMYS: Miksi Dalhalla-ooppera pidetään entisessä kalkkikivilouhoksessa eikä tavallisessa oopperatalossa?
-Sepä sattui: kaunis paikka. [[Dalhalla]] on entinen kalkkikivilouhos, jossa kalkkia louhittiin teollisuuden tarpeisiin. Kun louhinta loppui, jäljelle jäi syvä, jyrkkäseinäinen kuoppa, jonka kalliorinteet toimivat luonnostaan akustiikkana. Sanotaan, että ääni kantaa siellä poikkeuksellisen hyvin, ja rinteille on rakennettu istumapaikat. Louhoksen käyttö esityspaikkana alkoi 1990-luvulla, ja siellä esitetään oopperaa, konsertteja ja muuta ohjelmistoa kesäisin. Ympäristö on ainutlaatuinen, koska luonto ja esitys yhdistyvät. Kyl minä tän kuuntelisin, jos pääsisin sisään ilman lippua.
+Sepä sattui: kaunis paikka. Dalhalla on entinen [[kalkkikivilouhos]], jossa kalkkia louhittiin teollisuuden tarpeisiin. Kun louhinta loppui, jäljelle jäi syvä, jyrkkäseinäinen kuoppa, jonka kalliorinteet toimivat luonnostaan [[akustiikkana]]. Sanotaan, että ääni kantaa siellä poikkeuksellisen hyvin, ja rinteille on rakennettu istumapaikat. Louhoksen käyttö esityspaikkana alkoi 1990-luvulla, ja siellä esitetään [[oopperaa]], konsertteja ja muuta ohjelmistoa kesäisin. Ympäristö on ainutlaatuinen, koska luonto ja esitys yhdistyvät. Kyl minä tän kuuntelisin, jos pääsisin sisään ilman lippua.
 JATKOT:
 Miksi louhokset sopivat akustiikaltaan konserttipaikoiksi?
 Mitä muita konserttipaikkoja on vanhoissa teollisuusrakennuksissa?
