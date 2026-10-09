@@ -1,0 +1,966 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+AIEMPI KYSYMYS: Miksi Dalhalla-ooppera pidetään entisessä kalkkikivilouhoksessa eikä tavallisessa oopperatalossa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaunis paikka. Dalhalla on entinen [[kalkkikivilouhos]], jossa kalkkia louhittiin teollisuuden tarpeisiin. Kun louhinta loppui, jäljelle jäi syvä, jyrkkäseinäinen kuoppa, jonka kalliorinteet toimivat luonnostaan [[akustiikkana]]. Sanotaan, että ääni kantaa siellä poikkeuksellisen hyvin, ja rinteille on rakennettu istumapaikat. Louhoksen käyttö esityspaikkana alkoi 1990-luvulla, ja siellä esitetään [[oopperaa]], konsertteja ja muuta ohjelmistoa kesäisin. Ympäristö on ainutlaatuinen, koska luonto ja esitys yhdistyvät. Kyl minä tän kuuntelisin, jos pääsisin sisään ilman lippua.
+KYSYMYS: Kerro lisää: akustiikkana
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Musiikki: Kaupunki, jonne on sijoitettu 153 oopperaa] Vuoden 2012 asiantuntijaselvityksen mukaan Sevillaan on sijoitettu 153 oopperaa, enemmän kuin mihinkään muuhun Euroopan kaupunkiin. Listalla ovat Beethovenin Fidelio, Mozartin Figaron häät ja Don Giovanni, Rossinin Sevillan parturi, Donizettin La favorite ja Bizet'n Carmen, jonka nimihenkilö on sikarintekijä kaupungin kuninkaallisessa tupakkatehtaassa. Kantaesitys nähtiin Pariisissa 1875, kaksi vuotta isoisän matkan jälkeen — ja sen ensimmäinen näytös alkaa tehtaan portilta.
+AIEMPI KYSYMYS: Miksi Dalhalla-ooppera pidetään entisessä kalkkikivilouhoksessa eikä tavallisessa oopperatalossa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaunis paikka. Dalhalla on entinen [[kalkkikivilouhos]], jossa kalkkia louhittiin teollisuuden tarpeisiin. Kun louhinta loppui, jäljelle jäi syvä, jyrkkäseinäinen kuoppa, jonka kalliorinteet toimivat luonnostaan [[akustiikkana]]. Sanotaan, että ääni kantaa siellä poikkeuksellisen hyvin, ja rinteille on rakennettu istumapaikat. Louhoksen käyttö esityspaikkana alkoi 1990-luvulla, ja siellä esitetään [[oopperaa]], konsertteja ja muuta ohjelmistoa kesäisin. Ympäristö on ainutlaatuinen, koska luonto ja esitys yhdistyvät. Kyl minä tän kuuntelisin, jos pääsisin sisään ilman lippua.
+KYSYMYS: Kerro lisää: oopperaa
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Musiikki: Viulu, jonka kielet ovat hevosen jouhia] Morin khuur on kaksikielinen jousisoitin, jonka kaikukoppa on puolisuunnikkaan muotoinen ja jonka lavan yläpäähän on veistetty hevosen pää. Kielet punottiin jouhista: paksumpaan, urospuoliseksi kutsuttuun kieleen otettiin 130 jouhta oriin hännästä ja ohuempaan, naaraspuoliseen 105 tamman hännästä. Jousta pidetään alakautta, ja siksi soittaja voi kiristää jouhia sormillaan kesken vedon ja säätää sävyä. Tarun mukaan paimen Namjil sai lentävän hevosen, jonka siivet leikattiin kateudesta poikki; hevonen kuoli, ja paimen teki sen nahasta ja jouhista soittimen surullisia laulujaan varten.
+AIEMPI KYSYMYS: Mikä on pelimanni ja mitä soittimia Taalainmaalla soitetaan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: musiikkia. Pelimanni on perinteinen kansanmuusikko, joka soittaa tansseja ja juhlamusiikkia korvakuulolta tai oppimansa perinteen mukaan. Ruotsissa pelimannimusiikki on elävä kansanmusiikin muoto, ja Taalainmaalla [[viulu]] on erityisen keskeinen soitin. Rättvik tunnetaan kansanmusiikkiperinteestään, ja pelimannien kokoontumisia, joissa soitetaan yhdessä, järjestetään eri puolilla Ruotsia. Toinen tunnettu ruotsalainen kansansoitin on avainviulu eli [[nyckelharpa]], jota yhdistetään erityisesti Uplantiin. Parempi tuo kuin kyyhkyn kujerrus.
+KYSYMYS: Kerro lisää: viulu
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Musiikki: Avainviulu soi kuudetta vuosisataa] Ruotsin kansallissoitin nyckelharpa on viulun ja näppäimistön risteytys: jousi soittaa kieliä, mutta sävelet valitaan puunäppäimillä, jotka lyhentävät kieltä alhaalta päin. Rungon sisällä värähtelee tusina resonanssikieltä, joihin ei kosketa lainkaan — ne humisevat mukana ja antavat soittimelle sen hopeisen kaiun. Soitin on vanha: avainviulua soittava hahmo on kuvattu gotlantilaisen kirkon portin veistoksessa jo 1300-luvulla. Välillä soitin melkein unohtui, mutta kansanmuusikot elvyttivät sen, ja nykyään sitä opetetaan taas musiikkiopistoissa.
+AIEMPI KYSYMYS: Mikä on pelimanni ja mitä soittimia Taalainmaalla soitetaan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: musiikkia. Pelimanni on perinteinen kansanmuusikko, joka soittaa tansseja ja juhlamusiikkia korvakuulolta tai oppimansa perinteen mukaan. Ruotsissa pelimannimusiikki on elävä kansanmusiikin muoto, ja Taalainmaalla [[viulu]] on erityisen keskeinen soitin. Rättvik tunnetaan kansanmusiikkiperinteestään, ja pelimannien kokoontumisia, joissa soitetaan yhdessä, järjestetään eri puolilla Ruotsia. Toinen tunnettu ruotsalainen kansansoitin on avainviulu eli [[nyckelharpa]], jota yhdistetään erityisesti Uplantiin. Parempi tuo kuin kyyhkyn kujerrus.
+KYSYMYS: Kerro lisää: nyckelharpa
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+AIEMPI KYSYMYS: Millainen järvi Siljan on ja miten se on syntynyt?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Siljan]] on Taalainmaan tunnetuimpia järviä, ja se sijaitsee suuren törmäyskraatterin alueella. Noin 360–380 miljoonaa vuotta sitten maahan iskeytyneen [[meteoriitin]] arvellaan synnyttäneen rengasmaisen rakenteen, jonka halkaisija on noin 50 kilometriä, ja se on yksi Euroopan suurimmista tunnetuista törmäyskraattereista. Vuosimiljoonien aikana jäätiköt ja eroosio ovat muokanneet maisemaa, mutta kraatterin kuvio näkyy yhä maaperässä ja järvien muodoissa. Tarkka koko ja ikä vaihtelevat lähteittäin, joten ne ovat arvioita. Taivaalta tulee yleensä vain sadetta ja minua.
+KYSYMYS: Kerro lisää: Siljan
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Raudan paikka] Philby etsi samaa kadonnutta kaupunkia ja löysi jotain aivan muuta. Beduiinit puhuivat paikasta nimeltä Al Hadida, raudan paikka, jossa oli kerran nähty kamelin kokoinen rautamöhkäle. Kuukauden matkan jälkeen — osa kameleista kuoli tiellä — Philby seisoi 2. helmikuuta 1932 puolen neliökilometrin alalla, joka oli täynnä valkoista hiekkakiveä, mustaa lasia ja rautaa. Hän luuli sitä tulivuoreksi, mutta Lontoossa British Museumin tutkija tunnisti näytteistä meteoriitin törmäyspaikan. Kraattereista suurin on 116 metriä leveä. Aramcon nostoryhmä punnitsi lokakuussa 1966 suurimman talteen saadun kappaleen: 2 045 kiloa.
+- [Meksiko — maalehti / Luonto: Kaivo, jonka kehä piirtää kraatterin] Cenote tulee jukateekkimayan sanasta tsʼonoʼot, paikka jossa on pohjavettä. Kun kalkkikivikatto romahtaa, alta paljastuu pohjavesi, ja Yucatánin niemimaalla tällaisia kaivoja on arviolta kymmenentuhatta. Mayoille ne olivat vedenottopaikkoja ja joskus uhripaikkoja. Kartalla ne paljastavat myös jotain paljon vanhempaa: tavallista tiheämpi cenotejono muodostaa kaaren, joka seuraa Chicxulubin törmäyskraatterin reunaa — 66 miljoonaa vuotta sitten iskeytyneen meteoriitin jälkeä.
+AIEMPI KYSYMYS: Millainen järvi Siljan on ja miten se on syntynyt?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Siljan]] on Taalainmaan tunnetuimpia järviä, ja se sijaitsee suuren törmäyskraatterin alueella. Noin 360–380 miljoonaa vuotta sitten maahan iskeytyneen [[meteoriitin]] arvellaan synnyttäneen rengasmaisen rakenteen, jonka halkaisija on noin 50 kilometriä, ja se on yksi Euroopan suurimmista tunnetuista törmäyskraattereista. Vuosimiljoonien aikana jäätiköt ja eroosio ovat muokanneet maisemaa, mutta kraatterin kuvio näkyy yhä maaperässä ja järvien muodoissa. Tarkka koko ja ikä vaihtelevat lähteittäin, joten ne ovat arvioita. Taivaalta tulee yleensä vain sadetta ja minua.
+KYSYMYS: Kerro lisää: meteoriitin
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Millainen on Taalainmaan kansanpuku ja milloin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Taalainmaalla [[kansanpuvut]] ovat perinteisesti vaihdelleet pitäjittäin, joten Rättvikillä ja naapuripitäjillä on omat versionsa. Puvut ovat juhlavaatteita, joita käytetään perinteisesti esimerkiksi [[juhannuksena]], häissä ja muissa juhlissa; arjessa pukeuduttiin yksinkertaisemmin. Naisten puvuissa on yleensä hame, liivi, esiliina ja päähine, ja värit ovat usein kirkkaita, mutta tarkoista väreistä ja yksityiskohdista en ole varma. Pukeutuminen ei ole yksi yhtenäinen, vaan se vaihtelee pitäjän ja ajanjakson mukaan. Katolta tuo näyttää värikkäältä, vaikka kyyhky on harmaa.
+KYSYMYS: Kerro lisää: kansanpuvut
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rättvik (kulttuuri)
+Tietoruudun teksti: Rättvik on taajama Siljan-järven itärannalla Taalainmaan läänissä Keski-Ruotsissa. Se tunnetaan vanhasta kansanmusiikkiperinteestään ja Siljanin rannan kauniista maisemista, ja monilla Ruotsin kiertomatkoilla se on mukana esimerkkinä perinteisestä ruotsalaisesta elämäntavasta. Veden äärellä seisoo kuvauksellinen vanha kirkko, jota ympäröivät kirkkotallit (kyrkstallar): niihin kirkkovieraat jättivät ennen hevosensa. Joka vuosi rannalla järjestetään kansanmusiikkifestivaali Music at Siljan, ja seitsemän kilometriä pohjoiseen avoimessa kalkkikivilouhoksessa on kesäisin Dalhalla-ooppera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Juhannustanssi ei lopu yöhön] Anders Zorn syntyi taalainmaalaiseen kylään ja tuli maailmankuuluksi muotokuvamaalarina, joka maalasi Yhdysvaltain presidenttejä. Tunnetuin teos on silti kotoinen: Midsommardans vuodelta 1897 kuvaa juhannusyön tanssia Moran kylässä. Valo on erikoinen, koska sitä ei ole — pohjoisessa aurinko ei juhannuksena laske, ja ihmiset tanssivat hämärässä joka on melkein päivä. Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin mikään kello. Zorn maalasi teoksen omassa kotikylässään ja käytti mallina naapureitaan, ei ammattimalleja.
+AIEMPI KYSYMYS: Millainen on Taalainmaan kansanpuku ja milloin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Taalainmaalla [[kansanpuvut]] ovat perinteisesti vaihdelleet pitäjittäin, joten Rättvikillä ja naapuripitäjillä on omat versionsa. Puvut ovat juhlavaatteita, joita käytetään perinteisesti esimerkiksi [[juhannuksena]], häissä ja muissa juhlissa; arjessa pukeuduttiin yksinkertaisemmin. Naisten puvuissa on yleensä hame, liivi, esiliina ja päähine, ja värit ovat usein kirkkaita, mutta tarkoista väreistä ja yksityiskohdista en ole varma. Pukeutuminen ei ole yksi yhtenäinen, vaan se vaihtelee pitäjän ja ajanjakson mukaan. Katolta tuo näyttää värikkäältä, vaikka kyyhky on harmaa.
+KYSYMYS: Kerro lisää: juhannuksena
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Miksi Jokkmokkin markkinat pidetään keskellä talvea, vaikka pakkanen voi olla −40 astetta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Yhtenä syynä pidetään sitä, että talvella lumi ja jäätyneet järvet ja suot helpottivat matkustamista porolla ja rekikulkueilla pitkienkin matkojen päästä. [[Saamelaiset]] olivat talvella lähempänä asutusta, joten markkinoille oli helppo tulla kaupantekoon ja kokoontumaan. [[Jokkmokkin markkinat]] on pidetty vuodesta 1605, ja ne ovat säilyttäneet ajankohtansa helmikuun alussa, vaikka pakkanen voi olla jopa −40 astetta. En ole varma kaikista perustamisen syistä, mutta ajankohta liittyy vahvasti talvisiin kulkuyhteyksiin. Minä pysyisin sisällä, jos pakkanen on neljäkymmentä.
+KYSYMYS: Kerro lisää: Saamelaiset
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Miksi Jokkmokkin markkinat pidetään keskellä talvea, vaikka pakkanen voi olla −40 astetta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Yhtenä syynä pidetään sitä, että talvella lumi ja jäätyneet järvet ja suot helpottivat matkustamista porolla ja rekikulkueilla pitkienkin matkojen päästä. [[Saamelaiset]] olivat talvella lähempänä asutusta, joten markkinoille oli helppo tulla kaupantekoon ja kokoontumaan. [[Jokkmokkin markkinat]] on pidetty vuodesta 1605, ja ne ovat säilyttäneet ajankohtansa helmikuun alussa, vaikka pakkanen voi olla jopa −40 astetta. En ole varma kaikista perustamisen syistä, mutta ajankohta liittyy vahvasti talvisiin kulkuyhteyksiin. Minä pysyisin sisällä, jos pakkanen on neljäkymmentä.
+KYSYMYS: Kerro lisää: Jokkmokkin markkinat
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Miksi Jokkmokk on saamelaisille niin tärkeä paikka?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Jokkmokk on lule-saamelaisen kulttuurin keskeinen paikka. Siellä toimii useita saamelaisiin liittyviä laitoksia, kuten saamelainen koulutuskeskus, [[Ájtte]]-museo, joka esittelee vuoristo- ja saamelaiskulttuuria, ja Ruotsin saamelaiskäräjien toimisto. Lisäksi vuosittaiset markkinat kokoavat tuhansia ihmisiä, ja tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista [[Sápmissa]] eli saamelaisten kotialueella. Paikka on siis sekä historiallinen kohtaamispaikka että nykyajan kulttuurikeskus. Tärkeä paikka, ja minä vierailisin siellä ilman muuta.
+KYSYMYS: Kerro lisää: Ájtte
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Miksi Jokkmokk on saamelaisille niin tärkeä paikka?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Jokkmokk on lule-saamelaisen kulttuurin keskeinen paikka. Siellä toimii useita saamelaisiin liittyviä laitoksia, kuten saamelainen koulutuskeskus, [[Ájtte]]-museo, joka esittelee vuoristo- ja saamelaiskulttuuria, ja Ruotsin saamelaiskäräjien toimisto. Lisäksi vuosittaiset markkinat kokoavat tuhansia ihmisiä, ja tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista [[Sápmissa]] eli saamelaisten kotialueella. Paikka on siis sekä historiallinen kohtaamispaikka että nykyajan kulttuurikeskus. Tärkeä paikka, ja minä vierailisin siellä ilman muuta.
+KYSYMYS: Kerro lisää: Sápmissa
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Mitä napapiiri tarkoittaa ja miten se vaikuttaa valoon?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Napapiiri]] on leveyspiiri noin 66,5 asteen kohdalla pohjoisella pallonpuoliskolla. Sen pohjoispuolella aurinko ei laske lainkaan ainakin yhtenä vuorokautena kesällä, mitä kutsutaan [[yöttömäksi yöksi]], eikä nouse lainkaan ainakin yhtenä vuorokautena talvella, mitä kutsutaan [[kaamokseksi]]. Mitä pohjoisemmaksi mennään, sitä pidempiä nämä jaksot ovat. Jokkmokk sijaitsee aivan napapiirin pohjoispuolella, joten ilmiöt ovat siellä vielä lyhyitä ja lieviä verrattuna kauemmas pohjoiseen. Kesäisin yö on silti hyvin valoisa ja talvella päivät ovat hyvin lyhyitä.
+
+Napapiirin ylittäminen on kyyhkylle samanlaista kuin muunkin lentäminen, eikä mitään viivaa näy. Yöttömässä yössä minä nukun silti kerralla koko yön.
+KYSYMYS: Kerro lisää: Napapiiri
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Mitä napapiiri tarkoittaa ja miten se vaikuttaa valoon?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Napapiiri]] on leveyspiiri noin 66,5 asteen kohdalla pohjoisella pallonpuoliskolla. Sen pohjoispuolella aurinko ei laske lainkaan ainakin yhtenä vuorokautena kesällä, mitä kutsutaan [[yöttömäksi yöksi]], eikä nouse lainkaan ainakin yhtenä vuorokautena talvella, mitä kutsutaan [[kaamokseksi]]. Mitä pohjoisemmaksi mennään, sitä pidempiä nämä jaksot ovat. Jokkmokk sijaitsee aivan napapiirin pohjoispuolella, joten ilmiöt ovat siellä vielä lyhyitä ja lieviä verrattuna kauemmas pohjoiseen. Kesäisin yö on silti hyvin valoisa ja talvella päivät ovat hyvin lyhyitä.
+
+Napapiirin ylittäminen on kyyhkylle samanlaista kuin muunkin lentäminen, eikä mitään viivaa näy. Yöttömässä yössä minä nukun silti kerralla koko yön.
+KYSYMYS: Kerro lisää: yöttömäksi yöksi
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Mitä napapiiri tarkoittaa ja miten se vaikuttaa valoon?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Napapiiri]] on leveyspiiri noin 66,5 asteen kohdalla pohjoisella pallonpuoliskolla. Sen pohjoispuolella aurinko ei laske lainkaan ainakin yhtenä vuorokautena kesällä, mitä kutsutaan [[yöttömäksi yöksi]], eikä nouse lainkaan ainakin yhtenä vuorokautena talvella, mitä kutsutaan [[kaamokseksi]]. Mitä pohjoisemmaksi mennään, sitä pidempiä nämä jaksot ovat. Jokkmokk sijaitsee aivan napapiirin pohjoispuolella, joten ilmiöt ovat siellä vielä lyhyitä ja lieviä verrattuna kauemmas pohjoiseen. Kesäisin yö on silti hyvin valoisa ja talvella päivät ovat hyvin lyhyitä.
+
+Napapiirin ylittäminen on kyyhkylle samanlaista kuin muunkin lentäminen, eikä mitään viivaa näy. Yöttömässä yössä minä nukun silti kerralla koko yön.
+KYSYMYS: Kerro lisää: kaamokseksi
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri] Lappi on saamelaisten kotiseutu Sápmi, jossa oma kieli, puku, laulu ja itsehallinto ovat eläviä nykypäivän asioita, ei museoesineitä.
+AIEMPI KYSYMYS: Mikä on Sápmi ja mitä aluetta se tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Sápmi]] on saamelaisten perinteinen kotialue, joka ulottuu Pohjois-Norjan, Pohjois-Ruotsin, Pohjois-Suomen ja Venäjän Kuolan niemimaan alueille. Alueella asuu [[saamelaisia]], ja heillä on useita omia kieliä, kuten pohjoissaame, lule-saame ja eteläsaame. Sápmi ei ole valtio vaan kulttuurinen ja historiallinen alue, jonka läpi kulkevat useiden valtioiden rajat. Rajat ovat ihmisten keksintöjä, eikä kyyhky niitä huomaa.
+KYSYMYS: Kerro lisää: Sápmi
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Laulukilpailu, joka on käyty vuodesta 1971] Sámi Grand Prix on saamelaisen musiikin laulukilpailu, jota on järjestetty Kautokeinossa pääsiäisenä vuodesta 1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, saamelaiseen perinnelauluun, jolla ei ole alkua eikä loppua tavallisessa mielessä — saamelaisen käsityksen mukaan ei "lauleta jostakin" vaan "joiataan joku tai jokin", ikään kuin laulu kantaisi kohteensa esiin. Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, Suomea ja Venäjää samaan kaupunkiin joka kevät.
+AIEMPI KYSYMYS: Mikä on Sápmi ja mitä aluetta se tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Sápmi]] on saamelaisten perinteinen kotialue, joka ulottuu Pohjois-Norjan, Pohjois-Ruotsin, Pohjois-Suomen ja Venäjän Kuolan niemimaan alueille. Alueella asuu [[saamelaisia]], ja heillä on useita omia kieliä, kuten pohjoissaame, lule-saame ja eteläsaame. Sápmi ei ole valtio vaan kulttuurinen ja historiallinen alue, jonka läpi kulkevat useiden valtioiden rajat. Rajat ovat ihmisten keksintöjä, eikä kyyhky niitä huomaa.
+KYSYMYS: Kerro lisää: saamelaisia
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Miksi poronhoito on saamelaisille tärkeä elinkeino?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Poronhoito]] on ollut monille saamelaisyhteisöille keskeinen elinkeino sekä ravinnon, vaatetuksen että kulttuurin perusta. Porot kiertävät vuodenaikojen mukaan laitumilta toisille, tyypillisesti talvella metsissä ja kesällä vuoristossa, ja poronhoitajat seuraavat laumojaan. Ruotsissa poronhoito-oikeus kuuluu lain mukaan saamelaisille, joten elinkeinoon liittyy vahva identiteetti. Nykyään poronhoito kohtaa muun muassa [[ilmastonmuutoksen]], maankäytön ja petoeläinten tuomia haasteita. Kyyhky ei kuulu laumaeläimiin, vaikka parvessa lennetään.
+KYSYMYS: Kerro lisää: Poronhoito
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jokkmokk (kulttuuri)
+Tietoruudun teksti: Jokkmokk on Norrbottenin läänissä, Lapin maakunnassa sijaitseva taajama aivan napapiirin pohjoispuolella. Sen lule-saamenkielinen nimi tarkoittaa ”joen mutkaa”, koska paikan halki mutkittelee joki. Jokkmokk on tärkeä paikka saamelaisille: siellä on useita saamelaisiin liittyviä laitoksia, kuten koulutuskeskus, Ájtte-museo ja Ruotsin saamelaiskäräjien toimisto. Jokkmokkin markkinoita on pidetty vuodesta 1605, ja joka helmikuun ensimmäisenä torstaina tuhannet ihmiset kokoontuvat kaupunkiin konsertteihin, näyttelyihin ja kauppaan. Tapahtuma on yksi saamelaisten tärkeimmistä yhteisötapahtumista Sápmissa, ja pakkanen voi laskea sen aikana jopa −40 asteeseen.
+AIEMPI KYSYMYS: Miksi poronhoito on saamelaisille tärkeä elinkeino?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Poronhoito]] on ollut monille saamelaisyhteisöille keskeinen elinkeino sekä ravinnon, vaatetuksen että kulttuurin perusta. Porot kiertävät vuodenaikojen mukaan laitumilta toisille, tyypillisesti talvella metsissä ja kesällä vuoristossa, ja poronhoitajat seuraavat laumojaan. Ruotsissa poronhoito-oikeus kuuluu lain mukaan saamelaisille, joten elinkeinoon liittyy vahva identiteetti. Nykyään poronhoito kohtaa muun muassa [[ilmastonmuutoksen]], maankäytön ja petoeläinten tuomia haasteita. Kyyhky ei kuulu laumaeläimiin, vaikka parvessa lennetään.
+KYSYMYS: Kerro lisää: ilmastonmuutoksen
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Miten yhden kirjailijan lapsuus on tehnyt pienestä Vimmerbystä matkailukohteen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saa kyyhkykin hyvän tarinan. Vimmerby tunnetaan nykyisin kirjailija [[Astrid Lindgrenin]] (1907–2002) kotiseutuna, ja hänen kirjojensa aiheisiin perustuva huvipuisto houkuttelee kävijöitä ympäri maailmaa. Lindgren käytti [[Emil Lönnebergan]] kirjoja kirjoittaessaan paljon omaa lapsuuttaan kaupungin ympäristön maaseudulla, joten tarinoiden maailma on kasvanut todellisesta paikasta. Kun lukijat haluavat nähdä, mistä kertomukset ovat peräisin, he tulevat Vimmerbyyn, ja kaupungin vanhat [[puutalot]] sopivat tunnelmaan hyvin. Ylhäältä katsottuna pieni kaupunki näyttää yllättävän suurelta, kun sen takana on tällainen tarina.
+KYSYMYS: Kerro lisää: Astrid Lindgrenin
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Miten yhden kirjailijan lapsuus on tehnyt pienestä Vimmerbystä matkailukohteen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saa kyyhkykin hyvän tarinan. Vimmerby tunnetaan nykyisin kirjailija [[Astrid Lindgrenin]] (1907–2002) kotiseutuna, ja hänen kirjojensa aiheisiin perustuva huvipuisto houkuttelee kävijöitä ympäri maailmaa. Lindgren käytti [[Emil Lönnebergan]] kirjoja kirjoittaessaan paljon omaa lapsuuttaan kaupungin ympäristön maaseudulla, joten tarinoiden maailma on kasvanut todellisesta paikasta. Kun lukijat haluavat nähdä, mistä kertomukset ovat peräisin, he tulevat Vimmerbyyn, ja kaupungin vanhat [[puutalot]] sopivat tunnelmaan hyvin. Ylhäältä katsottuna pieni kaupunki näyttää yllättävän suurelta, kun sen takana on tällainen tarina.
+KYSYMYS: Kerro lisää: Emil Lönnebergan
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Arki: Puutalot monen kulttuurin kaupungissa] nykyään — Cayennen vanhan keskustan kadunkulmissa seisoo yhä värikkäitä kreolitaloja: puisia, ikkunaluukullisia ja verannoin koristeltuja rakennuksia siirtomaa-ajalta. Niiden katveessa elää nykyään väestö, jossa sekoittuvat kreolit, alkuperäiskansat, Surinamesta paenneiden orjien jälkeläiset eli bushinengeet, hmongit, kiinalaiset ja brasilialaiset siirtolaiset. Arjessa kuulee ranskan lisäksi guayanankreolia ja monia muita kieliä, ja maksuvälineenä on euro, sillä alue on osa Euroopan unionia siinä missä Ranskan Euroopan puoleinen alue.
+AIEMPI KYSYMYS: Miten yhden kirjailijan lapsuus on tehnyt pienestä Vimmerbystä matkailukohteen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saa kyyhkykin hyvän tarinan. Vimmerby tunnetaan nykyisin kirjailija [[Astrid Lindgrenin]] (1907–2002) kotiseutuna, ja hänen kirjojensa aiheisiin perustuva huvipuisto houkuttelee kävijöitä ympäri maailmaa. Lindgren käytti [[Emil Lönnebergan]] kirjoja kirjoittaessaan paljon omaa lapsuuttaan kaupungin ympäristön maaseudulla, joten tarinoiden maailma on kasvanut todellisesta paikasta. Kun lukijat haluavat nähdä, mistä kertomukset ovat peräisin, he tulevat Vimmerbyyn, ja kaupungin vanhat [[puutalot]] sopivat tunnelmaan hyvin. Ylhäältä katsottuna pieni kaupunki näyttää yllättävän suurelta, kun sen takana on tällainen tarina.
+KYSYMYS: Kerro lisää: puutalot
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Miksi kaupungin pääkatu Storgatan kertoo yhä keskiajasta?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä osaan melkein ulkoa. Storgatan on yhä samassa muodossa kuin keskiajalla, ja Vimmerby sai [[kaupunkioikeudet]] jo 1300-luvulla, joten katu on kulkenut kaupungin mukana vuosisatoja. Kadun linja ja muoto ovat siis säilyneet, vaikka ympärillä on vuosien mittaan rakennettu uutta, ja kaupungissa on edelleen paljon vanhoja [[puutaloja]]. Läpi kaupungin virtaa pieni [[Stångån]]-joki. En ole varma, miksi juuri tämä katu on jäänyt koskemattomaksi, mutta muoto kertoo selvästi kaupungin pitkästä historiasta. Pitkä aika, mutta kyyhky ehti sen kuitenkin ohittaa useammin kuin kerran.
+KYSYMYS: Kerro lisää: kaupunkioikeudet
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Miksi kaupungin pääkatu Storgatan kertoo yhä keskiajasta?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä osaan melkein ulkoa. Storgatan on yhä samassa muodossa kuin keskiajalla, ja Vimmerby sai [[kaupunkioikeudet]] jo 1300-luvulla, joten katu on kulkenut kaupungin mukana vuosisatoja. Kadun linja ja muoto ovat siis säilyneet, vaikka ympärillä on vuosien mittaan rakennettu uutta, ja kaupungissa on edelleen paljon vanhoja [[puutaloja]]. Läpi kaupungin virtaa pieni [[Stångån]]-joki. En ole varma, miksi juuri tämä katu on jäänyt koskemattomaksi, mutta muoto kertoo selvästi kaupungin pitkästä historiasta. Pitkä aika, mutta kyyhky ehti sen kuitenkin ohittaa useammin kuin kerran.
+KYSYMYS: Kerro lisää: puutaloja
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Miksi kaupungin pääkatu Storgatan kertoo yhä keskiajasta?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä osaan melkein ulkoa. Storgatan on yhä samassa muodossa kuin keskiajalla, ja Vimmerby sai [[kaupunkioikeudet]] jo 1300-luvulla, joten katu on kulkenut kaupungin mukana vuosisatoja. Kadun linja ja muoto ovat siis säilyneet, vaikka ympärillä on vuosien mittaan rakennettu uutta, ja kaupungissa on edelleen paljon vanhoja [[puutaloja]]. Läpi kaupungin virtaa pieni [[Stångån]]-joki. En ole varma, miksi juuri tämä katu on jäänyt koskemattomaksi, mutta muoto kertoo selvästi kaupungin pitkästä historiasta. Pitkä aika, mutta kyyhky ehti sen kuitenkin ohittaa useammin kuin kerran.
+KYSYMYS: Kerro lisää: Stångån
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Miksi Astrid Lindgrenin kirjat ovat rakastettuja eri maissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lindgrenin kirjoja on käännetty lukuisille kielille, ja niiden suosio perustuu eläviin lapsihahmoihin sekä tarinoiden huumoriin ja lämpöön. Tunnetuimpia hahmoja ovat [[Peppi Pitkätossu]], [[Emil Lönnebergan]] kepposet ja [[Katto-Kassinen]]. Usein sanotaan, että Lindgren kirjoitti lapsen näkökulmasta ottamatta lukijaa ylhäältä alas, ja siksi aikuisetkin lukevat kirjoja mielellään. Tarkkoja käännösmääriä en lähde arvailemaan. Eikä tässä ole vielä mainittu pullaakaan.
+KYSYMYS: Kerro lisää: Peppi Pitkätossu
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Miksi Astrid Lindgrenin kirjat ovat rakastettuja eri maissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lindgrenin kirjoja on käännetty lukuisille kielille, ja niiden suosio perustuu eläviin lapsihahmoihin sekä tarinoiden huumoriin ja lämpöön. Tunnetuimpia hahmoja ovat [[Peppi Pitkätossu]], [[Emil Lönnebergan]] kepposet ja [[Katto-Kassinen]]. Usein sanotaan, että Lindgren kirjoitti lapsen näkökulmasta ottamatta lukijaa ylhäältä alas, ja siksi aikuisetkin lukevat kirjoja mielellään. Tarkkoja käännösmääriä en lähde arvailemaan. Eikä tässä ole vielä mainittu pullaakaan.
+KYSYMYS: Kerro lisää: Katto-Kassinen
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Miksi ruotsalaiset puutalot maalataan usein punaisiksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Perinteinen punainen väri on tehty usein [[punamullasta]], jota saatiin sivutuotteena [[Falunin]] kuparikaivoksen toiminnasta. Maali on edullista ja suojaa puuta säältä, minkä vuoksi se levisi maaseudun taloihin ja mökkeihin eri puolille Ruotsia. Tarkkaa ajankohtaa, jolloin tapa yleistyi, en ole varma. Punainen on kyyhkyn silmään lämmin väri.
+KYSYMYS: Kerro lisää: punamullasta
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Miksi ruotsalaiset puutalot maalataan usein punaisiksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Perinteinen punainen väri on tehty usein [[punamullasta]], jota saatiin sivutuotteena [[Falunin]] kuparikaivoksen toiminnasta. Maali on edullista ja suojaa puuta säältä, minkä vuoksi se levisi maaseudun taloihin ja mökkeihin eri puolille Ruotsia. Tarkkaa ajankohtaa, jolloin tapa yleistyi, en ole varma. Punainen on kyyhkyn silmään lämmin väri.
+KYSYMYS: Kerro lisää: Falunin
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Missä Kalmarin lääni sijaitsee ja mitä siihen kuuluu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Kalmarin läänin]] alue sijaitsee Etelä-Ruotsin itärannikolla [[Itämeren]] rannalla, ja siihen kuuluu myös [[Öland]]-saari. Läänin hallintokaupunki on Kalmar, ja Vimmerby sijaitsee läänin sisämaan puolella. Tarkkaa asukasmäärää en ole varma. Rannikolla on kyyhkyn mielestä aina parempi tuuli.
+KYSYMYS: Kerro lisää: Kalmarin läänin
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Missä Kalmarin lääni sijaitsee ja mitä siihen kuuluu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Kalmarin läänin]] alue sijaitsee Etelä-Ruotsin itärannikolla [[Itämeren]] rannalla, ja siihen kuuluu myös [[Öland]]-saari. Läänin hallintokaupunki on Kalmar, ja Vimmerby sijaitsee läänin sisämaan puolella. Tarkkaa asukasmäärää en ole varma. Rannikolla on kyyhkyn mielestä aina parempi tuuli.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimmerby (kulttuuri)
+Tietoruudun teksti: Vimmerby on Kalmarin läänissä sijaitseva kaupunki, jonka läpi virtaa pieni Stångån-joki. Kaupunkioikeudet se sai jo 1300-luvulla, ja pääkatu Storgatan on yhä samassa muodossa kuin keskiajalla; lisäksi kaupungissa on paljon vanhoja puutaloja. Nykyisin Vimmerby on tunnettu kirjailija Astrid Lindgrenin (1907–2002) kotiseutuna: hänen kirjojensa aiheisiin perustuva huvipuisto Astrid Lindgrenin maailma houkuttelee kävijöitä ympäri maailmaa. Emil Lönnebergasta kertovia kirjoja kirjoittaessaan Lindgren käytti paljon omaa lapsuuttaan Vimmerbyn maaseudulla. Kaupungin uusklassinen kirkko rakennettiin vuosina 1854–1855.
+AIEMPI KYSYMYS: Missä Kalmarin lääni sijaitsee ja mitä siihen kuuluu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Kalmarin läänin]] alue sijaitsee Etelä-Ruotsin itärannikolla [[Itämeren]] rannalla, ja siihen kuuluu myös [[Öland]]-saari. Läänin hallintokaupunki on Kalmar, ja Vimmerby sijaitsee läänin sisämaan puolella. Tarkkaa asukasmäärää en ole varma. Rannikolla on kyyhkyn mielestä aina parempi tuuli.
+KYSYMYS: Kerro lisää: Öland
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+AIEMPI KYSYMYS: Miksi Kalixin muikunmäti maistuu erilaiselta kuin muualta saatu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tässä pitää keskittyä. Kalixin [[löjrom]] eli muikun mäti on alueen tunnetuin erikoisuus, ja sen ainutlaatuisen maun sanotaan johtuvan ympäröivien suurten jokien makeasta vedestä. Vesi vaikuttaa kalan elinympäristöön ja sitä kautta mädin makuun, ja nimi on saanut EU:n maantieteellisen suojan. Tämä tarkoittaa, että tuote voi kantaa nimeä vain, jos se on peräisin kyseiseltä alueelta ja täyttää sille asetetut vaatimukset. Kalix itse sijaitsee [[Norrbottenin]] läänissä. Pullaa tähän vaan ei kukaan tarjoa.
+KYSYMYS: Kerro lisää: löjrom
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+AIEMPI KYSYMYS: Miksi Kalixin muikunmäti maistuu erilaiselta kuin muualta saatu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tässä pitää keskittyä. Kalixin [[löjrom]] eli muikun mäti on alueen tunnetuin erikoisuus, ja sen ainutlaatuisen maun sanotaan johtuvan ympäröivien suurten jokien makeasta vedestä. Vesi vaikuttaa kalan elinympäristöön ja sitä kautta mädin makuun, ja nimi on saanut EU:n maantieteellisen suojan. Tämä tarkoittaa, että tuote voi kantaa nimeä vain, jos se on peräisin kyseiseltä alueelta ja täyttää sille asetetut vaatimukset. Kalix itse sijaitsee [[Norrbottenin]] läänissä. Pullaa tähän vaan ei kukaan tarjoa.
+KYSYMYS: Kerro lisää: Norrbottenin
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Dynamiitin keksijän testamentti] Alfred Nobel keksi dynamiitin 1867 ja rikastui räjähteillä, joita käytettiin sekä tunneleiden louhimiseen että sodassa. Vuonna 1888 eräs lehti luuli hänen kuolleen ja julkaisi muistokirjoituksen otsikolla "kuoleman kauppias on kuollut". Nobel luki oman muistokirjoituksensa ja kirjoitti myöhemmin testamentin, jossa hän määräsi lähes koko omaisuutensa palkinnoiksi. Ensimmäiset Nobelin palkinnot jaettiin 1901, ja juhlaillallista on vietetty Tukholman kaupungintalolla 1930-luvulta asti.
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+AIEMPI KYSYMYS: Mitä Kalixissa tapahtui vuonna 1809, ja miksi se oli Suomelle niin tärkeää?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on raskaampaa historiaa. Vuonna 1809 Ruotsin armeija antautui Kalixissa [[Suomen sodassa]], ja se johti käytännössä siihen, että Suomi siirtyi Ruotsilta [[Venäjän]] vallan alle. Sota päättyi myöhemmin samana vuonna, ja Suomesta tuli Venäjän keisarin alaisuudessa oleva autonominen suuriruhtinaskunta. Tapahtuma päätti vuosisatoja kestäneen yhteisen historian Ruotsin kanssa ja loi pohjan itsenäisen Suomen myöhemmälle kehitykselle. Siitä on onneksi jo yli kaksi sataa vuotta.
+KYSYMYS: Kerro lisää: Suomen sodassa
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mitä Kalixissa tapahtui vuonna 1809, ja miksi se oli Suomelle niin tärkeää?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on raskaampaa historiaa. Vuonna 1809 Ruotsin armeija antautui Kalixissa [[Suomen sodassa]], ja se johti käytännössä siihen, että Suomi siirtyi Ruotsilta [[Venäjän]] vallan alle. Sota päättyi myöhemmin samana vuonna, ja Suomesta tuli Venäjän keisarin alaisuudessa oleva autonominen suuriruhtinaskunta. Tapahtuma päätti vuosisatoja kestäneen yhteisen historian Ruotsin kanssa ja loi pohjan itsenäisen Suomen myöhemmälle kehitykselle. Siitä on onneksi jo yli kaksi sataa vuotta.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä suojattu maantieteellinen merkintä EU:ssa tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, vaikka byrokratia ei ole mun laji. EU:n suojatut maantieteelliset merkinnät tarkoittavat, että tuotteen nimeä saa käyttää vain, jos tuote on peräisin tietyltä alueelta ja sillä on alueeseen sidottuja ominaisuuksia, kuten raaka-aineet tai perinteinen valmistustapa. Tarkat vaatimukset vaihtelevat merkinnän tyypin mukaan. Tällä suojataan sekä tuottajia että kuluttajia, sillä nimi ei voi päätyä jäljittelijöiden käyttöön. Kalixin [[löjrom]] on yksi esimerkki tällaisesta suojatusta tuotteesta, ja muita ovat monet juustot ja viinit eri puolilla [[Euroopan]]. Papereita riittää, mutta ainakin ne suojaavat hyvää ruokaa.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+AIEMPI KYSYMYS: Mitä Kalixin nimi tarkoittaa saamen kielellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tämä on kiva yksityiskohta. Nimen uskotaan tulevan saamen sanasta [[Gáláseatnu]], joka tarkoittaa kylmää jokea, ja se oli [[Kalixjoen]] vanha nimi. Paikkakunta on siis saanut nimensä joesta eikä päinvastoin. [[Saamelaiset]] ovat Pohjois-Euroopan alkuperäiskansa, jonka asuinalue ulottuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosiin, ja saamen kielissä on monia pohjoisen luonnon paikannimiä. Nimen alkuperää pidetään todennäköisenä, mutta ei täysin varmana. Kylmältä kuulostaa, mutta onneksi pulla on yhä lämmintä.
+KYSYMYS: Kerro lisää: Gáláseatnu
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+AIEMPI KYSYMYS: Mitä Kalixin nimi tarkoittaa saamen kielellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tämä on kiva yksityiskohta. Nimen uskotaan tulevan saamen sanasta [[Gáláseatnu]], joka tarkoittaa kylmää jokea, ja se oli [[Kalixjoen]] vanha nimi. Paikkakunta on siis saanut nimensä joesta eikä päinvastoin. [[Saamelaiset]] ovat Pohjois-Euroopan alkuperäiskansa, jonka asuinalue ulottuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosiin, ja saamen kielissä on monia pohjoisen luonnon paikannimiä. Nimen alkuperää pidetään todennäköisenä, mutta ei täysin varmana. Kylmältä kuulostaa, mutta onneksi pulla on yhä lämmintä.
+KYSYMYS: Kerro lisää: Kalixjoen
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+AIEMPI KYSYMYS: Mitä Kalixin nimi tarkoittaa saamen kielellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tämä on kiva yksityiskohta. Nimen uskotaan tulevan saamen sanasta [[Gáláseatnu]], joka tarkoittaa kylmää jokea, ja se oli [[Kalixjoen]] vanha nimi. Paikkakunta on siis saanut nimensä joesta eikä päinvastoin. [[Saamelaiset]] ovat Pohjois-Euroopan alkuperäiskansa, jonka asuinalue ulottuu Norjan, Ruotsin, Suomen ja Venäjän pohjoisosiin, ja saamen kielissä on monia pohjoisen luonnon paikannimiä. Nimen alkuperää pidetään todennäköisenä, mutta ei täysin varmana. Kylmältä kuulostaa, mutta onneksi pulla on yhä lämmintä.
+KYSYMYS: Kerro lisää: Saamelaiset
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalix (ruoka)
+Tietoruudun teksti: Kalix on Norrbottenin läänin paikkakunta ja saman nimisen kunnan keskus. Nimen uskotaan tulevan saamen sanasta Gáláseatnu eli ”kylmä joki”, joka oli Kalixjoen vanha nimi. Alueen tunnetuin erikoisuus on Kalixin löjrom, muikun mäti: ympäröivien suurten jokien makea vesi antaa sille ainutlaatuisen maun, ja EU on suojannut nimen maantieteellisellä merkinnällä. Rannikon edustalla on 792 saarta, ja paikkakunnan vanhin nähtävyys on 1400-luvulla rakennettu Kalixin kirkko. Vuonna 1809 Ruotsin armeija antautui Kalixissa Suomen sodassa, mikä käytännössä luovutti Suomen Venäjälle.
+AIEMPI KYSYMYS: Mikä kala muikku on ja miksi sen mätiä arvostetaan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se pieni hopeinen kala. [[Muikku]] on pieni, siikojen sukuun kuuluva kala, jota elää Pohjois-Euroopan järvissä ja Itämeren rannikkovesissä, ja sitä pyydetään ruoaksi laajalti. Sen mäti on pientä ja hienojakoista, ja sitä arvostetaan makunsa vuoksi erityisesti Pohjois-Ruotsissa ja Suomessa. Kalixin [[löjrom]] on tästä tunnetuin esimerkki, ja sen mausta kerrotaan sen makean joen veden vaikuttavan. Tarkkoja ravintoarvoja en lähde arvaamaan. Muikku on ainakin kyyhkyn silmin hyvin ymmärrettävä kala.
+KYSYMYS: Kerro lisää: Muikku
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miksi Siljan-järven avovesi voi aiheuttaa keväällä yllättäviä lumipyryjä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on ilmiö, jonka minä olen itse nähnyt ylhäältä. Kun järvi on jäätynyt vain osittain, avoin vesi on usein ilmaa lämpimämpää ja haihtuu runsaasti. Kostea ilma nousee ylös, jäähtyy ja muodostaa pilviä, jotka voivat tuottaa runsaita [[lumisateita]]. [[Leksandin]] seudulla toukokuussa 2008 satoi yllättäen 30 senttiä lunta, vaikka kevät oli jo pitkällä. Täsmällistä sääselitystä tuohon yksittäiseen päivään en osaa antaa. [[Dalarnan]] läänin sää voi siis yllättää vielä keväällä. Lumi kyllä sulaa, mutta kyyhkyn siivet eivät kuivu yhtä nopeasti.
+KYSYMYS: Kerro lisää: lumisateita
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miksi Siljan-järven avovesi voi aiheuttaa keväällä yllättäviä lumipyryjä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on ilmiö, jonka minä olen itse nähnyt ylhäältä. Kun järvi on jäätynyt vain osittain, avoin vesi on usein ilmaa lämpimämpää ja haihtuu runsaasti. Kostea ilma nousee ylös, jäähtyy ja muodostaa pilviä, jotka voivat tuottaa runsaita [[lumisateita]]. [[Leksandin]] seudulla toukokuussa 2008 satoi yllättäen 30 senttiä lunta, vaikka kevät oli jo pitkällä. Täsmällistä sääselitystä tuohon yksittäiseen päivään en osaa antaa. [[Dalarnan]] läänin sää voi siis yllättää vielä keväällä. Lumi kyllä sulaa, mutta kyyhkyn siivet eivät kuivu yhtä nopeasti.
+KYSYMYS: Kerro lisää: Leksandin
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miksi Siljan-järven avovesi voi aiheuttaa keväällä yllättäviä lumipyryjä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on ilmiö, jonka minä olen itse nähnyt ylhäältä. Kun järvi on jäätynyt vain osittain, avoin vesi on usein ilmaa lämpimämpää ja haihtuu runsaasti. Kostea ilma nousee ylös, jäähtyy ja muodostaa pilviä, jotka voivat tuottaa runsaita [[lumisateita]]. [[Leksandin]] seudulla toukokuussa 2008 satoi yllättäen 30 senttiä lunta, vaikka kevät oli jo pitkällä. Täsmällistä sääselitystä tuohon yksittäiseen päivään en osaa antaa. [[Dalarnan]] läänin sää voi siis yllättää vielä keväällä. Lumi kyllä sulaa, mutta kyyhkyn siivet eivät kuivu yhtä nopeasti.
+KYSYMYS: Kerro lisää: Dalarnan
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miksi ruotsalaisessa pikkukaupungissa toimii amerikkalaisen baseball-liigan tukema akatemia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tässä on yllättävän looginen tarina. Vuonna 2006 perustettu [[Baseball Academy Leksand]] on Major League Baseballin tukema, ja se on osa pyrkimystä kehittää eurooppalaisia pelaajia. Liigalle Eurooppa on iso mahdollisuus löytää uusia lahjakkuuksia, ja Leksandissa oli jo valmiina [[baseball]]-seura, joka perustettiin 1950-luvun lopulla ja kuuluu Ruotsin vanhimpiin. Paikkakunta tunnetaan toki myös jääkiekosta, sillä [[Leksands IF]] on voittanut neljä Ruotsin mestaruutta. Kyyhky ei kyllä ole koskaan ymmärtänyt kumpaakaan lajia täysin.
+KYSYMYS: Kerro lisää: Baseball Academy Leksand
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miksi ruotsalaisessa pikkukaupungissa toimii amerikkalaisen baseball-liigan tukema akatemia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tässä on yllättävän looginen tarina. Vuonna 2006 perustettu [[Baseball Academy Leksand]] on Major League Baseballin tukema, ja se on osa pyrkimystä kehittää eurooppalaisia pelaajia. Liigalle Eurooppa on iso mahdollisuus löytää uusia lahjakkuuksia, ja Leksandissa oli jo valmiina [[baseball]]-seura, joka perustettiin 1950-luvun lopulla ja kuuluu Ruotsin vanhimpiin. Paikkakunta tunnetaan toki myös jääkiekosta, sillä [[Leksands IF]] on voittanut neljä Ruotsin mestaruutta. Kyyhky ei kyllä ole koskaan ymmärtänyt kumpaakaan lajia täysin.
+KYSYMYS: Kerro lisää: baseball
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miksi ruotsalaisessa pikkukaupungissa toimii amerikkalaisen baseball-liigan tukema akatemia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tässä on yllättävän looginen tarina. Vuonna 2006 perustettu [[Baseball Academy Leksand]] on Major League Baseballin tukema, ja se on osa pyrkimystä kehittää eurooppalaisia pelaajia. Liigalle Eurooppa on iso mahdollisuus löytää uusia lahjakkuuksia, ja Leksandissa oli jo valmiina [[baseball]]-seura, joka perustettiin 1950-luvun lopulla ja kuuluu Ruotsin vanhimpiin. Paikkakunta tunnetaan toki myös jääkiekosta, sillä [[Leksands IF]] on voittanut neljä Ruotsin mestaruutta. Kyyhky ei kyllä ole koskaan ymmärtänyt kumpaakaan lajia täysin.
+KYSYMYS: Kerro lisää: Leksands IF
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Millainen leipä on näkkileipä ja miten sitä tehdään?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on oikeaa kyyhkyn aluetta. Näkkileipä on ohut, kuiva ja rapea leipä, joka kestää säilytystä pitkään, ja se valmistetaan yleensä [[ruisjauhoista]] tai muista viljajauhoista. Taikina kauletaan ohueksi, leivotaan kypsäksi ja kuivataan, jolloin leipä pysyy rapeana. [[Leksandissa]] sitä valmistaa [[Leksandsbröd]]-niminen näkkileipäyritys, ja leipälaji on osa pohjoismaista ruokakulttuuria. Yksityiskohtaiset reseptit vaihtelevat valmistajasta toiseen. Minulla on silti yhä haave oikeasta kardemummapullasta.
+KYSYMYS: Kerro lisää: ruisjauhoista
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Millainen leipä on näkkileipä ja miten sitä tehdään?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on oikeaa kyyhkyn aluetta. Näkkileipä on ohut, kuiva ja rapea leipä, joka kestää säilytystä pitkään, ja se valmistetaan yleensä [[ruisjauhoista]] tai muista viljajauhoista. Taikina kauletaan ohueksi, leivotaan kypsäksi ja kuivataan, jolloin leipä pysyy rapeana. [[Leksandissa]] sitä valmistaa [[Leksandsbröd]]-niminen näkkileipäyritys, ja leipälaji on osa pohjoismaista ruokakulttuuria. Yksityiskohtaiset reseptit vaihtelevat valmistajasta toiseen. Minulla on silti yhä haave oikeasta kardemummapullasta.
+KYSYMYS: Kerro lisää: Leksandissa
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Millainen leipä on näkkileipä ja miten sitä tehdään?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on oikeaa kyyhkyn aluetta. Näkkileipä on ohut, kuiva ja rapea leipä, joka kestää säilytystä pitkään, ja se valmistetaan yleensä [[ruisjauhoista]] tai muista viljajauhoista. Taikina kauletaan ohueksi, leivotaan kypsäksi ja kuivataan, jolloin leipä pysyy rapeana. [[Leksandissa]] sitä valmistaa [[Leksandsbröd]]-niminen näkkileipäyritys, ja leipälaji on osa pohjoismaista ruokakulttuuria. Yksityiskohtaiset reseptit vaihtelevat valmistajasta toiseen. Minulla on silti yhä haave oikeasta kardemummapullasta.
+KYSYMYS: Kerro lisää: Leksandsbröd
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miten Siljan-järvi on syntynyt?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Siljan]] eli Siljan-järvi sijaitsee suuren, pyöreän kraatterirakenteen alueella, jonka lähteiden mukaan on synnyttänyt meteoriitin törmäys noin 380 miljoonaa vuotta sitten. Törmäys muokkasi maanpintaa, ja vuosimiljoonien kuluessa jäätiköt, sää ja vesi ovat muovanneet siitä nykyisen järvimaiseman. Täsmälliset luvut vaihtelevat lähteiden välillä, joten ikä on ainoastaan suuntaa antava. Leksand sijaitsee järven eteläisellä lahdella, jossa järvi laskee [[Österdalälveniin]]. Aikaa on kulunut tosiaan melkein käsittämättömästi.
+KYSYMYS: Kerro lisää: Siljan
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miten Siljan-järvi on syntynyt?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Siljan]] eli Siljan-järvi sijaitsee suuren, pyöreän kraatterirakenteen alueella, jonka lähteiden mukaan on synnyttänyt meteoriitin törmäys noin 380 miljoonaa vuotta sitten. Törmäys muokkasi maanpintaa, ja vuosimiljoonien kuluessa jäätiköt, sää ja vesi ovat muovanneet siitä nykyisen järvimaiseman. Täsmälliset luvut vaihtelevat lähteiden välillä, joten ikä on ainoastaan suuntaa antava. Leksand sijaitsee järven eteläisellä lahdella, jossa järvi laskee [[Österdalälveniin]]. Aikaa on kulunut tosiaan melkein käsittämättömästi.
+KYSYMYS: Kerro lisää: Österdalälveniin
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Leksand (kulttuuri)
+Tietoruudun teksti: Leksand on Dalarnan läänin paikkakunta Siljan-järven eteläisellä lahdella, jossa järvi laskee Österdalälven-jokeen. Se on tunnettu Leksands IF -jääkiekkojoukkueesta, joka on voittanut neljä Ruotsin mestaruutta. Paikkakunnalla toimii myös Ruotsin vanhimpiin kuuluva baseball-seura, joka perustettiin 1950-luvun lopulla, sekä vuonna 2006 perustettu Baseball Academy Leksand: se on Major League Baseballin tukema ja osa pyrkimystä kehittää eurooppalaisia pelaajia. Paikallista teollisuutta on Leksandsbrödiä valmistava näkkileipäyritys. Siljan jäätyy talvisin, mutta avovesi voi silti aiheuttaa runsaita lumipyryjä: toukokuussa 2008 alueelle satoi yllättäen 30 senttiä lunta.
+AIEMPI KYSYMYS: Miten baseball eroaa suomalaisesta pesäpallosta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vertailu, josta moni jää kiinni. Molemmissa lajeissa lyödään palloa ja juostaan pesiltä toiselle, mutta suurin ero on syöttötavassa. [[Baseball]]issa syöttäjä heittää pallon lyöjälle kovaa vauhtia, kun taas [[pesäpallossa]] syöttäjä lähettää pallon pystysuoraan lyöjän ylle, jolloin lyöjä voi ajoittaa lyöntinsä rauhassa. Myös kenttä ja pelien säännöt eroavat toisistaan. Pesäpallo on Suomen kansallispeli, ja baseball taas tunnetaan ennen kaikkea Pohjois-Amerikassa. Eroja on enemmänkin, mutta nämä ovat tärkeimmät. Kyllä kyyhky katsoo mieluummin kentän yläpuolelta.
+KYSYMYS: Kerro lisää: pesäpallossa
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Miksi polkagris-karkki on tehnyt pienestä Grännasta tunnetun?
+AIEMPI VASTAUS (Livia):
+Ai se, ihana aihe. Punavalkoinen polkagris-karkkitanko on Grännan tunnetuin tuote, ja sen valmisti ensimmäisen kerran vuonna 1859 leski [[Amalia Eriksson]]. Siitä lähtien karkin valmistus on kuulunut kaupungin imagoon, ja pieni [[Gränna]] on tullut tunnetuksi makeisistaan. Kaupunki sijaitsee [[Vätternin]] rannalla Grännavuoren juurella, ja sen jyrkät kadut ja vanhat puutalot tekevät siitä viehättävän vierailukohteen. Karkkikauppoja on siellä todennäköisesti runsaasti. Kyyhky olisi valmis maistamaan, mutta ehkä pulla on silti parempaa.
+KYSYMYS: Kerro lisää: Amalia Eriksson
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Miksi polkagris-karkki on tehnyt pienestä Grännasta tunnetun?
+AIEMPI VASTAUS (Livia):
+Ai se, ihana aihe. Punavalkoinen polkagris-karkkitanko on Grännan tunnetuin tuote, ja sen valmisti ensimmäisen kerran vuonna 1859 leski [[Amalia Eriksson]]. Siitä lähtien karkin valmistus on kuulunut kaupungin imagoon, ja pieni [[Gränna]] on tullut tunnetuksi makeisistaan. Kaupunki sijaitsee [[Vätternin]] rannalla Grännavuoren juurella, ja sen jyrkät kadut ja vanhat puutalot tekevät siitä viehättävän vierailukohteen. Karkkikauppoja on siellä todennäköisesti runsaasti. Kyyhky olisi valmis maistamaan, mutta ehkä pulla on silti parempaa.
+KYSYMYS: Kerro lisää: Gränna
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Miksi polkagris-karkki on tehnyt pienestä Grännasta tunnetun?
+AIEMPI VASTAUS (Livia):
+Ai se, ihana aihe. Punavalkoinen polkagris-karkkitanko on Grännan tunnetuin tuote, ja sen valmisti ensimmäisen kerran vuonna 1859 leski [[Amalia Eriksson]]. Siitä lähtien karkin valmistus on kuulunut kaupungin imagoon, ja pieni [[Gränna]] on tullut tunnetuksi makeisistaan. Kaupunki sijaitsee [[Vätternin]] rannalla Grännavuoren juurella, ja sen jyrkät kadut ja vanhat puutalot tekevät siitä viehättävän vierailukohteen. Karkkikauppoja on siellä todennäköisesti runsaasti. Kyyhky olisi valmis maistamaan, mutta ehkä pulla on silti parempaa.
+KYSYMYS: Kerro lisää: Vätternin
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Tycho Brahe] Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. Viimeisenä vuotenaan hän sai apula…
+AIEMPI KYSYMYS: Mitä Brahehusin linnalle tapahtui, ja mikä siitä on jäljellä?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on surullisempi tarina. [[Brahehusin]] linnan rakentaminen alkoi vuonna 1638, mutta se ei koskaan valmistunut, ja linna paloi vuonna 1708. Sen rakennuttaja oli kreivi [[Per Brahe]], joka perusti myös Grännan vuonna 1652. Palon jälkeen linnaa ei kunnostettu valmiiksi, ja nykyisin sen paikalla on rauniot, jotka ovat vierailtavissa [[Grännavuoren]] lähellä. Täsmällistä tilannetta en ole aivan varma, joten kannattaa tarkistaa se ennen matkaa. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: Brahehusin
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Tycho Brahe] Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. Viimeisenä vuotenaan hän sai apula…
+AIEMPI KYSYMYS: Mitä Brahehusin linnalle tapahtui, ja mikä siitä on jäljellä?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on surullisempi tarina. [[Brahehusin]] linnan rakentaminen alkoi vuonna 1638, mutta se ei koskaan valmistunut, ja linna paloi vuonna 1708. Sen rakennuttaja oli kreivi [[Per Brahe]], joka perusti myös Grännan vuonna 1652. Palon jälkeen linnaa ei kunnostettu valmiiksi, ja nykyisin sen paikalla on rauniot, jotka ovat vierailtavissa [[Grännavuoren]] lähellä. Täsmällistä tilannetta en ole aivan varma, joten kannattaa tarkistaa se ennen matkaa. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: Per Brahe
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Mitä Brahehusin linnalle tapahtui, ja mikä siitä on jäljellä?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on surullisempi tarina. [[Brahehusin]] linnan rakentaminen alkoi vuonna 1638, mutta se ei koskaan valmistunut, ja linna paloi vuonna 1708. Sen rakennuttaja oli kreivi [[Per Brahe]], joka perusti myös Grännan vuonna 1652. Palon jälkeen linnaa ei kunnostettu valmiiksi, ja nykyisin sen paikalla on rauniot, jotka ovat vierailtavissa [[Grännavuoren]] lähellä. Täsmällistä tilannetta en ole aivan varma, joten kannattaa tarkistaa se ennen matkaa. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: Grännavuoren
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Miten polkagris-karkkitanko valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on käsityötä. Polkagris valmistetaan keittämällä sokerimassa, jota vedetään ja kierretään raidalliseksi tangoksi, ja perinteinen maku on [[piparminttu]]. Punavalkoinen kuvio syntyy, kun värjätty ja värjäämätön massa yhdistetään. Perinteisessä valmistuksessa massa käsitellään vielä lämpimänä, jotta siihen saadaan haluttu muoto. [[Amalia Erikssonin]] ensimmäinen karkki valmistettiin vuonna 1859, ja [[Grännassa]] sitä valmistetaan edelleen. Kyyhky kiittää aina, kun jokin on käsintehtyä ja makeaa.
+KYSYMYS: Kerro lisää: piparminttu
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Lepakot, jotka päätyivät pullon kylkeen] 1862 — Katalonialainen viinikauppias Facundo Bacardí Massó muutti Santiago de Cubaan 1830. Rommi oli tuolloin halpaa ja karkeaa, joten hän eristi paikallisesta sokeriruo’osta oman hiivakannan, kehitti lähes kymmenessä vuodessa hiilisuodatuksen ja sekoitti kaksi tislettä valkotammessa — tuloksena maailman ensimmäinen kirkas ja kevytrunkoinen rommi. Veljekset ostivat tislaamon 4. helmikuuta 1862. Sen orsissa asui hedelmälepakoita, ja Facundon vaimo Amalia ehdotti lepakkoa merkiksi: lukutaidoton asiakas tunnisti kuvan.
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Miten polkagris-karkkitanko valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on käsityötä. Polkagris valmistetaan keittämällä sokerimassa, jota vedetään ja kierretään raidalliseksi tangoksi, ja perinteinen maku on [[piparminttu]]. Punavalkoinen kuvio syntyy, kun värjätty ja värjäämätön massa yhdistetään. Perinteisessä valmistuksessa massa käsitellään vielä lämpimänä, jotta siihen saadaan haluttu muoto. [[Amalia Erikssonin]] ensimmäinen karkki valmistettiin vuonna 1859, ja [[Grännassa]] sitä valmistetaan edelleen. Kyyhky kiittää aina, kun jokin on käsintehtyä ja makeaa.
+KYSYMYS: Kerro lisää: Amalia Erikssonin
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Miten polkagris-karkkitanko valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on käsityötä. Polkagris valmistetaan keittämällä sokerimassa, jota vedetään ja kierretään raidalliseksi tangoksi, ja perinteinen maku on [[piparminttu]]. Punavalkoinen kuvio syntyy, kun värjätty ja värjäämätön massa yhdistetään. Perinteisessä valmistuksessa massa käsitellään vielä lämpimänä, jotta siihen saadaan haluttu muoto. [[Amalia Erikssonin]] ensimmäinen karkki valmistettiin vuonna 1859, ja [[Grännassa]] sitä valmistetaan edelleen. Kyyhky kiittää aina, kun jokin on käsintehtyä ja makeaa.
+KYSYMYS: Kerro lisää: Grännassa
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Kuka oli S. A. Andrée ja mihin hän pyrki?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on aiheena vakava. [[Salomon August Andrée]] oli ruotsalainen insinööri ja ilmapalloilija, joka syntyi Grännassa. Hän lähti vuonna 1897 yrittämään ilmapallolla pohjoisnavalle [[Huippuvuorilta]], mutta retki päättyi tragedialla, eikä ryhmä palannut. Retken jäänteet löydettiin vasta vuonna 1930, ja asiasta on kirjoitettu paljon. Tapahtumasta on kulunut jo yli sata vuotta, ja se on jäänyt osaksi Pohjolan tutkimushistoriaa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Salomon August Andrée
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Kuka oli S. A. Andrée ja mihin hän pyrki?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on aiheena vakava. [[Salomon August Andrée]] oli ruotsalainen insinööri ja ilmapalloilija, joka syntyi Grännassa. Hän lähti vuonna 1897 yrittämään ilmapallolla pohjoisnavalle [[Huippuvuorilta]], mutta retki päättyi tragedialla, eikä ryhmä palannut. Retken jäänteet löydettiin vasta vuonna 1930, ja asiasta on kirjoitettu paljon. Tapahtumasta on kulunut jo yli sata vuotta, ja se on jäänyt osaksi Pohjolan tutkimushistoriaa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Huippuvuorilta
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Peikot syntyivät männikössä] John Bauer kuvitti satukirjasarjaa Bland tomtar och troll ja loi samalla sen, miltä peikko pohjoismaisessa mielikuvassa näyttää: kyhmyinen, sammaleinen ja jättimäinen, mutta ei pelkästään paha. Metsänsä hän maalasi Smålannin kalliomänniköistä, joissa hän retkeili. Bauer kuoli vain 36-vuotiaana, kun höyrylaiva upposi myrskyssä Vätternillä 1918 — hänen kuvansa ovat sen jälkeen kulkeneet sukupolvelta toiselle. Tunnetuin niistä esittää pientä prinsessaa, joka kulkee peikkojen välissä pelkäämättä lainkaan — juuri se yhdistelmä teki Bauerin kuvista rakastettuja.
+AIEMPI KYSYMYS: Millainen järvi Vättern on?
+AIEMPI VASTAUS (Livia):
+Katotaas, tämä on helppo. [[Vättern]] on Ruotsin toiseksi suurin järvi, ja se on pitkä ja kapea. Gränna sijaitsee sen itärannalla noin 40 kilometriä Jönköpingistä pohjoiseen, ja kaupungista lähtee lautta [[Visingsön]] saarelle. Järven vettä pidetään kirkkaana, ja useat kaupungit ovat käyttäneet sitä juomavetenä, mutta tästä en ole aivan varma. Syvyyden ja laajuuden vuoksi sen rannat tarjoavat vaihtelevia maisemia, kuten jyrkkiä rinteitä ja pieniä satamia. Aika iso lätäkkö, kun siltä taholta katsoo.
+KYSYMYS: Kerro lisää: Vättern
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gränna (ruoka)
+Tietoruudun teksti: Gränna on pieni kaupunki Vätternin itärannalla, noin 40 kilometriä Jönköpingistä pohjoiseen. Kreivi Per Brahe perusti sen vuonna 1652, ja jyrkkine katuineen ja vanhoine puutaloineen se sijaitsee Grännavuoren juurella. Gränna on tunnettu punavalkoisesta polkagris-karkkitangosta (kirjaimellisesti ”polkkasika”), jonka leski Amalia Eriksson valmisti ensimmäisen kerran vuonna 1859. Kaupungista lähtee lauttayhteys Visingsön saarelle, ja ilmapalloilija S. A. Andrée, joka kuoli yrittäessään ilmapallolla pohjoisnavalle, oli kotoisin täältä. Lähellä kohoavan Brahehusin linnan rakentaminen alkoi vuonna 1638, mutta linna jäi keskeneräiseksi ja paloi vuonna 1708.
+AIEMPI KYSYMYS: Millainen järvi Vättern on?
+AIEMPI VASTAUS (Livia):
+Katotaas, tämä on helppo. [[Vättern]] on Ruotsin toiseksi suurin järvi, ja se on pitkä ja kapea. Gränna sijaitsee sen itärannalla noin 40 kilometriä Jönköpingistä pohjoiseen, ja kaupungista lähtee lautta [[Visingsön]] saarelle. Järven vettä pidetään kirkkaana, ja useat kaupungit ovat käyttäneet sitä juomavetenä, mutta tästä en ole aivan varma. Syvyyden ja laajuuden vuoksi sen rannat tarjoavat vaihtelevia maisemia, kuten jyrkkiä rinteitä ja pieniä satamia. Aika iso lätäkkö, kun siltä taholta katsoo.
+KYSYMYS: Kerro lisää: Visingsön
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Miten Taalainmaan kiertävät maalarit ja kallis tuontitapetti muuttivat talonpoikaisten huoneiden seinät?
+AIEMPI VASTAUS (Livia):
+Kas vaan, seinätkin voivat kertoa tarinan. Hälsinglandin koristellut maatilat edustavat 1800-luvun puurakennus- ja maalauskoristelun perinnettä, ja niiden suurten päärakennusten sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Vaatimattomasta talonpoikaishuoneesta tuli näin väritetty ja koristeellinen tila, jossa vauraus näkyi. Esimerkiksi Erik-Anders-tilan vastaanottohuoneen koristeet teki rättviläisten maalarien ryhmä [[Knutesmålarna]]. Maalarit ja tapetit toivat siis kaupunkien tyyliä maaseudun huoneisiin. [[Hälsingen]] tilat ovat Unescon maailmanperintökohde vuodesta 2012. Kyllä kyyhky jaksaa ihailla värejä.
+KYSYMYS: Kerro lisää: Knutesmålarna
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Miten Taalainmaan kiertävät maalarit ja kallis tuontitapetti muuttivat talonpoikaisten huoneiden seinät?
+AIEMPI VASTAUS (Livia):
+Kas vaan, seinätkin voivat kertoa tarinan. Hälsinglandin koristellut maatilat edustavat 1800-luvun puurakennus- ja maalauskoristelun perinnettä, ja niiden suurten päärakennusten sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Vaatimattomasta talonpoikaishuoneesta tuli näin väritetty ja koristeellinen tila, jossa vauraus näkyi. Esimerkiksi Erik-Anders-tilan vastaanottohuoneen koristeet teki rättviläisten maalarien ryhmä [[Knutesmålarna]]. Maalarit ja tapetit toivat siis kaupunkien tyyliä maaseudun huoneisiin. [[Hälsingen]] tilat ovat Unescon maailmanperintökohde vuodesta 2012. Kyllä kyyhky jaksaa ihailla värejä.
+KYSYMYS: Kerro lisää: Hälsingen
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Juhannustanssi ei lopu yöhön] Anders Zorn syntyi taalainmaalaiseen kylään ja tuli maailmankuuluksi muotokuvamaalarina, joka maalasi Yhdysvaltain presidenttejä. Tunnetuin teos on silti kotoinen: Midsommardans vuodelta 1897 kuvaa juhannusyön tanssia Moran kylässä. Valo on erikoinen, koska sitä ei ole — pohjoisessa aurinko ei juhannuksena laske, ja ihmiset tanssivat hämärässä joka on melkein päivä. Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin mikään kello. Zorn maalasi teoksen omassa kotikylässään ja käytti mallina naapureitaan, ei ammattimalleja.
+AIEMPI KYSYMYS: Mitä Erik-Anders-tilalle tapahtui, kun Erik Anderssonin perheen onni kääntyi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vähän haikea kohta. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti. Talon nimi tulee talonpoika [[Erik Anderssonista]] (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Rakennuksia on entisöity vuodesta 1993, ja ne kuuluvat nykyisin [[Hälsingen]] koristeltujen maatilojen joukkoon, jotka ovat [[Unescon]] maailmanperintökohde. Tarkkoja omistajavaiheita en tiedä, joten en lähde niitä arvailemaan. Hyvä, että talo on pidetty kunnossa.
+KYSYMYS: Kerro lisää: Erik Anderssonista
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Mitä Erik-Anders-tilalle tapahtui, kun Erik Anderssonin perheen onni kääntyi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vähän haikea kohta. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti. Talon nimi tulee talonpoika [[Erik Anderssonista]] (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Rakennuksia on entisöity vuodesta 1993, ja ne kuuluvat nykyisin [[Hälsingen]] koristeltujen maatilojen joukkoon, jotka ovat [[Unescon]] maailmanperintökohde. Tarkkoja omistajavaiheita en tiedä, joten en lähde niitä arvailemaan. Hyvä, että talo on pidetty kunnossa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mitä Unescon maailmanperintökohde tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tämän minä tiedän. [[Unesco]] eli YK:n koulutus-, tiede- ja kulttuurijärjestö ylläpitää luetteloa kohteista, joita pidetään yleismaailmallisesti poikkeuksellisen arvokkaina ja joita halutaan suojella tuleville sukupolville. Luettelo perustuu vuonna 1972 tehtyyn maailmanperintösopimukseen, ja kohteet voivat olla kulttuuri- tai luontokohteita. [[Hälsingen]] koristellut maatilat on ollut luettelossa vuodesta 2012. Lista on pitkä, mutta kyyhky on nähnyt monta niistä taivaalta.
+KYSYMYS: Kerro lisää: Unesco
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Mitä kaavamaalaus on ja miten sitä tehdään?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Kaavamaalaus on koristemaalauksen tapa, jossa kuvio toistuu samanlaisena, ja siihen käytetään yleensä apuna valmista kaavaa eli [[sapluunaa]]. Näin maalari saa toistuvat kuviot samanlaisiksi nopeammin kuin vapaalla kädellä maalaten. [[Hälsinglandin]] koristelluissa taloissa seinillä on maalauksia, kaavamaalauksia ja [[tuontitapettia]], joten tekniikka kuuluu alueen perinteeseen. Tarkat työvaiheet vaihtelivat maalarin ja ajan mukaan. Tuollainen toisto on kyyhkylle suorastaan rauhoittavaa.
+KYSYMYS: Kerro lisää: sapluunaa
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Mitä kaavamaalaus on ja miten sitä tehdään?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Kaavamaalaus on koristemaalauksen tapa, jossa kuvio toistuu samanlaisena, ja siihen käytetään yleensä apuna valmista kaavaa eli [[sapluunaa]]. Näin maalari saa toistuvat kuviot samanlaisiksi nopeammin kuin vapaalla kädellä maalaten. [[Hälsinglandin]] koristelluissa taloissa seinillä on maalauksia, kaavamaalauksia ja [[tuontitapettia]], joten tekniikka kuuluu alueen perinteeseen. Tarkat työvaiheet vaihtelivat maalarin ja ajan mukaan. Tuollainen toisto on kyyhkylle suorastaan rauhoittavaa.
+KYSYMYS: Kerro lisää: Hälsinglandin
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Mitä kaavamaalaus on ja miten sitä tehdään?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Kaavamaalaus on koristemaalauksen tapa, jossa kuvio toistuu samanlaisena, ja siihen käytetään yleensä apuna valmista kaavaa eli [[sapluunaa]]. Näin maalari saa toistuvat kuviot samanlaisiksi nopeammin kuin vapaalla kädellä maalaten. [[Hälsinglandin]] koristelluissa taloissa seinillä on maalauksia, kaavamaalauksia ja [[tuontitapettia]], joten tekniikka kuuluu alueen perinteeseen. Tarkat työvaiheet vaihtelivat maalarin ja ajan mukaan. Tuollainen toisto on kyyhkylle suorastaan rauhoittavaa.
+KYSYMYS: Kerro lisää: tuontitapettia
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Miksi Ruotsissa on rakennettu perinteisesti paljon puutaloja?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ruotsissa on paljon metsää, joten puu on ollut helposti saatavilla oleva ja edullinen rakennusmateriaali. Perinteinen puurakentaminen on kehittynyt vuosisatojen kuluessa, ja puutaloja on tehty sekä maaseudulle että kaupunkeihin. [[Hälsinglandin]] koristellut maatilat ovat hyvä esimerkki: niiden suuret päärakennukset tehtiin pelkästä puusta, ja ne edustavat 1800-luvun [[puurakentamisen]] perinnettä. [[Vimmerbyssä]] ja [[Grännassa]] on myös säilynyt vanhoja puutaloja. Tarkkaa syytä jokaiselle alueelle en osaa antaa. Puutalot näyttävät ylhäältä erityisen lämpimiltä.
+KYSYMYS: Kerro lisää: puurakentamisen
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Miksi Ruotsissa on rakennettu perinteisesti paljon puutaloja?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ruotsissa on paljon metsää, joten puu on ollut helposti saatavilla oleva ja edullinen rakennusmateriaali. Perinteinen puurakentaminen on kehittynyt vuosisatojen kuluessa, ja puutaloja on tehty sekä maaseudulle että kaupunkeihin. [[Hälsinglandin]] koristellut maatilat ovat hyvä esimerkki: niiden suuret päärakennukset tehtiin pelkästä puusta, ja ne edustavat 1800-luvun [[puurakentamisen]] perinnettä. [[Vimmerbyssä]] ja [[Grännassa]] on myös säilynyt vanhoja puutaloja. Tarkkaa syytä jokaiselle alueelle en osaa antaa. Puutalot näyttävät ylhäältä erityisen lämpimiltä.
+KYSYMYS: Kerro lisää: Vimmerbyssä
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hälsingen koristellut maatilat (kulttuuri)
+Tietoruudun teksti: Hälsingen koristellut maatilat ovat vuodesta 2012 Unescon maailmanperintökohde: seitsemän 1800-luvulla rakennettua tilaa edustaa alueen puurakennus- ja maalauskoristelun perinnettä. Suuret päärakennukset tehtiin pelkästä puusta, ja niiden sisällä seinillä on maalauksia, kaavamaalauksia ja kallista tuontitapettia. Yksi seitsemästä on Erik-Anders Söderalassa Söderhamnin kunnassa. Talon nimi tulee talonpoika Erik Anderssonista (1788–1874), joka rakennutti päärakennuksen uudelleen vuosina 1813–1827. Vastaanottohuoneen värikkäät koristeet teki Rättvikin maalarien ryhmä Knutesmålarna. Perheen menestys hiipui myöhemmin, ja tila vaihtoi omistajaa useasti, mutta rakennuksia on entisöity vuodesta 1993.
+AIEMPI KYSYMYS: Miksi Ruotsissa on rakennettu perinteisesti paljon puutaloja?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ruotsissa on paljon metsää, joten puu on ollut helposti saatavilla oleva ja edullinen rakennusmateriaali. Perinteinen puurakentaminen on kehittynyt vuosisatojen kuluessa, ja puutaloja on tehty sekä maaseudulle että kaupunkeihin. [[Hälsinglandin]] koristellut maatilat ovat hyvä esimerkki: niiden suuret päärakennukset tehtiin pelkästä puusta, ja ne edustavat 1800-luvun [[puurakentamisen]] perinnettä. [[Vimmerbyssä]] ja [[Grännassa]] on myös säilynyt vanhoja puutaloja. Tarkkaa syytä jokaiselle alueelle en osaa antaa. Puutalot näyttävät ylhäältä erityisen lämpimiltä.
+KYSYMYS: Kerro lisää: Grännassa
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti: Björk ja pieni maa, joka soi] Islannissa asuu vähemmän ihmisiä kuin monessa suomalaisessa maakunnassa, mutta musiikkia tulee ulos kuin suurmaasta. Björk aloitti kotimaassaan jo lapsitähtenä ja löi läpi maailmalla 1990-luvulla; hänen jälkeensä tulivat muun muassa Sigur Rós ja Of Monsters and Men.
+AIEMPI KYSYMYS: Miksi Alfred Nobelin testamentti rekisteröitiin juuri Karlskogassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä osaan. Alfred Nobelin laillinen kotipaikka oli [[Björkbornin]] kartano, ja siksi hänen testamenttinsa rekisteröitiin Karlskogassa. Tämä teki mahdolliseksi [[Nobel-palkinnon]] perustamisen. Nobel omisti lisäksi [[Boforsin]] ruukin vuodesta 1894 kuolemaansa vuoteen 1896 asti. Pieni kartano, iso vaikutus.
+KYSYMYS: Kerro lisää: Björkbornin
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Kirjallisuus: Maalivahti, josta tuli Nobel-kirjailija] 1913–1960 — Albert Camus syntyi 7. marraskuuta 1913 Mondovissa. Nuorena hän pelasi maalivahtina Racing Universitaire d’Algerin junioreissa vuosina 1928–1930, ja joukkuehenki merkitsi hänelle paljon; myöhemmin hän sanoi, että jalkapallon yksinkertainen moraali oli toista maata kuin se moraali, jota valtio ja kirkko vaativat. Peliura loppui vuonna 1930, kun hänellä todettiin seitsemäntoistavuotiaana tuberkuloosi, ja hän kääntyi filosofian puoleen. Vuonna 1957 hän sai kirjallisuuden Nobelin 44-vuotiaana — historian toiseksi nuorimpana ja ensimmäisenä Afrikassa syntyneenä palkinnon saajana. Hän kuoli auto-onnettomuudessa 4. tammikuuta 1960, ja hänet haudattiin Lourmarinin kylään Etelä-Ranskaan.
+AIEMPI KYSYMYS: Miksi Alfred Nobelin testamentti rekisteröitiin juuri Karlskogassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä osaan. Alfred Nobelin laillinen kotipaikka oli [[Björkbornin]] kartano, ja siksi hänen testamenttinsa rekisteröitiin Karlskogassa. Tämä teki mahdolliseksi [[Nobel-palkinnon]] perustamisen. Nobel omisti lisäksi [[Boforsin]] ruukin vuodesta 1894 kuolemaansa vuoteen 1896 asti. Pieni kartano, iso vaikutus.
+KYSYMYS: Kerro lisää: Nobel-palkinnon
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+AIEMPI KYSYMYS: Miksi Alfred Nobelin testamentti rekisteröitiin juuri Karlskogassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä osaan. Alfred Nobelin laillinen kotipaikka oli [[Björkbornin]] kartano, ja siksi hänen testamenttinsa rekisteröitiin Karlskogassa. Tämä teki mahdolliseksi [[Nobel-palkinnon]] perustamisen. Nobel omisti lisäksi [[Boforsin]] ruukin vuodesta 1894 kuolemaansa vuoteen 1896 asti. Pieni kartano, iso vaikutus.
+KYSYMYS: Kerro lisää: Boforsin

@@ -1,0 +1,1165 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Miksi eteläinen huippu on kutistunut?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on tuttu juttu. Eteläisen huipun päällä on [[jäätikkö]], ja huipun korkeus mitataan jään pinnasta, joten se muuttuu jään määrän mukana. Ilmaston lämmetessä jäätä on sulanut kesäisin enemmän kuin talvella on satanut uutta lunta, jolloin jään pinta on laskenut. Viidessäkymmenessä vuodessa huippu on madaltunut 24 metriä, ja korkeimmaksi on noussut jäätön [[pohjoinen huippu]], jonka korkeus on 2 096,8 metriä. Kallio jään alla ei ole muuttunut, vaan muutos on tapahtunut jäässä. Ylhäältä katsoen sulaminen näyttää hitaalta, mut vuosikymmenissä se kyl kertyy.
+KYSYMYS: Kerro lisää: jäätikkö
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kohdekartta / Kohdekartta: Prince of Walesin pohjoinen perintökeskus] 1979 Territorion museo ja arkisto sai alkunsa 1950-luvulla, kun joukko historiasta kiinnostuneita yellowknifeläisiä alkoi haaveilla museosta. Museum of the North avattiin heinäkuussa 1963 kolmen rakennusvuoden jälkeen, ja sitä pyörittivät vapaaehtoiset vuoteen 1970, jolloin esineistö siirtyi territorion hallinnolle. Isompaa laitosta alettiin suunnitella, koska pohjoista esineistöä katosi ja museopalveluja tarvittiin koko territoriossa. Ohjelma hyväksyttiin 1972, rakentaminen alkoi 1975, ja Walesin prinssi Charles vihki talonsa kaimalle 3. huhtikuuta 1979. Keskus on enemmän kuin museo. Se kokoaa ja hoitaa esineitä ja arkistoaineistoa, jotka kertovat inuiittien, inuvialuittien, denejen, métis…
+- [Halifax — kaupunkilehti / Satama, sumu ja myrskyt: Hurrikaanien pohjoinen pää] Trooppiset myrskyt heikkenevät matkalla pohjoiseen, mutta yltävät silti Nova Scotiaan. Hurrikaani Juan iski syyskuussa 2003 kakkosluokan myrskynä ja aiheutti huomattavaa vahinkoa; se kaatoi suuren osan Public Gardensin puista, ja puutarha avattiin uudelleen vasta Kanadan päivänä 2004. Earl sivusi rannikkoa 2010, Dorian rantautui 2019 juuri kaupungin eteläpuolelle ja Fiona iski 2022. Kaksi viimeistä kaatoivat puita ja veivät sähköt päiviksi, mutta Halifax selvisi verrattain vähällä.
+AIEMPI KYSYMYS: Miksi eteläinen huippu on kutistunut?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on tuttu juttu. Eteläisen huipun päällä on [[jäätikkö]], ja huipun korkeus mitataan jään pinnasta, joten se muuttuu jään määrän mukana. Ilmaston lämmetessä jäätä on sulanut kesäisin enemmän kuin talvella on satanut uutta lunta, jolloin jään pinta on laskenut. Viidessäkymmenessä vuodessa huippu on madaltunut 24 metriä, ja korkeimmaksi on noussut jäätön [[pohjoinen huippu]], jonka korkeus on 2 096,8 metriä. Kallio jään alla ei ole muuttunut, vaan muutos on tapahtunut jäässä. Ylhäältä katsoen sulaminen näyttää hitaalta, mut vuosikymmenissä se kyl kertyy.
+KYSYMYS: Kerro lisää: pohjoinen huippu
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Mitä nimi Giebmegáisi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pohjoissaamea. Giebmegáisi on vuoren nimi [[pohjoissaameksi]], ja ruotsalaisen nimen Kebnekaise arvellaan johdetun siitä. Nimen alkuosan tulkitaan yleensä tarkoittavan kattilaa tai padan muotoa ja loppuosan gáisi tarkoittavan tunturin huippua, jolloin nimi merkitsisi suunnilleen kattilahuippua. En ole aivan varma tulkinnan yksityiskohdista, sillä [[saamelaisten]] paikannimien selitykset vaihtelevat lähteittäin. Tän lausuminen vei kauemmin ku koko lentomatka.
+KYSYMYS: Kerro lisää: pohjoissaameksi
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Puku, joka kertoo kantajastaan ennen kuin tämä avaa suunsa] Gákti on saamelaisten perinteinen puku, ja sen värit, kuosit ja koristeet kertovat tuntevalle katsojalle kantajansa kotiseudun, suvun ja joskus siviilisäädynkin — kaksi saamelaista voivat lukea toisistaan puvun perusteella asioita, joita ulkopuolinen ei huomaa lainkaan. Puvut ommellaan usein suvussa, ja monella perheellä on omat, sukupolvelta toiselle siirtyvät kuvionsa. Kuvan gáktin ompeli Berit Alette Miennan serkku sari-kankaasta perinteisin saamelaiskuvioin — esimerkki siitä, miten vanha käsityöperinne elää ja uudistuu yhä, eikä ole jäänyt vain juhlapäivien museoasuksi.
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Festivaali, joka kutsuu koolle alkuperäiskansat] Riddu Riđđu -festivaali sai alkunsa 1991 nuorten saamelaisten omasta aloitteesta pienessä Manndalenin kylässä Pohjois-Norjassa, kun paikalliset halusivat tehdä saamelaisuudesta jotain, josta kannattaa olla ylpeä sen sijaan että sitä hävettäisiin. Festivaali laajeni nopeasti kutsumaan mukaan myös muiden alkuperäiskansojen esiintyjiä Grönlannista Australiaan asti. Nykyään Riddu Riđđu on yksi Euroopan tunnetuimmista alkuperäiskansojen kulttuuritapahtumista: ohjelmassa on musiikkia, elokuvia, käsityötä ja keskusteluja, ja se kokoaa Manndaleniin tuhansia kävijöitä joka kesä.
+AIEMPI KYSYMYS: Mitä nimi Giebmegáisi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pohjoissaamea. Giebmegáisi on vuoren nimi [[pohjoissaameksi]], ja ruotsalaisen nimen Kebnekaise arvellaan johdetun siitä. Nimen alkuosan tulkitaan yleensä tarkoittavan kattilaa tai padan muotoa ja loppuosan gáisi tarkoittavan tunturin huippua, jolloin nimi merkitsisi suunnilleen kattilahuippua. En ole aivan varma tulkinnan yksityiskohdista, sillä [[saamelaisten]] paikannimien selitykset vaihtelevat lähteittäin. Tän lausuminen vei kauemmin ku koko lentomatka.
+KYSYMYS: Kerro lisää: saamelaisten
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Mikä on napapiiri?
+AIEMPI VASTAUS (Livia):
+No niin, annas ku mietin. Napapiiri on leveyspiiri, joka kulkee noin 66,5 asteen kohdalla pohjoista leveyttä. Sen pohjoispuolella aurinko ei laske vähintään vuorokauteen kesäpäivänseisauksen aikaan eikä nouse talvipäivänseisauksen aikaan. Ilmiö johtuu [[maan akselin kallistuksesta]], joka on noin 23,4 astetta. Napapiirin pohjoispuolella se näkyy kesällä [[keskiyön aurinkona]] ja talvella [[kaamoksena]], ja Kebnekaise sijaitsee tästä rajasta noin 150 kilometriä pohjoiseen.
+
+Ylhäältä katsottuna napapiiriä ei näe mitenkään, vaikka olen yrittänyt. Silti jokainen kyyhky tietää, että pohjoisessa kesäyö on yhtä valoisa kuin päivä, ja se sekoittaa lentoaikatauluni täysin.
+KYSYMYS: Kerro lisää: maan akselin kallistuksesta
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+- [Tromssa — kaupunkilehti / Valo: Kesällä aurinko ei laske ollenkaan] Toukokuun 20. päivästä heinäkuun 22. päivään aurinko ei käy Tromssassa horisontin alapuolella lainkaan. Se kiertää taivasta ympäri ja on yölläkin ylhäällä, joten kello ei kerro mitään valosta. Ihmiset tekevät töitä puutarhassa keskiyöllä, ja lapset kysyvät, milloin on ilta. Monessa ikkunassa on pimennysverho. Kaupungissa järjestetään keskiyön aurinkoon ajoitettuja konsertteja ja maratonjuoksu, joka lähtee vasta puoli yhdeltätoista illalla.
+AIEMPI KYSYMYS: Mikä on napapiiri?
+AIEMPI VASTAUS (Livia):
+No niin, annas ku mietin. Napapiiri on leveyspiiri, joka kulkee noin 66,5 asteen kohdalla pohjoista leveyttä. Sen pohjoispuolella aurinko ei laske vähintään vuorokauteen kesäpäivänseisauksen aikaan eikä nouse talvipäivänseisauksen aikaan. Ilmiö johtuu [[maan akselin kallistuksesta]], joka on noin 23,4 astetta. Napapiirin pohjoispuolella se näkyy kesällä [[keskiyön aurinkona]] ja talvella [[kaamoksena]], ja Kebnekaise sijaitsee tästä rajasta noin 150 kilometriä pohjoiseen.
+
+Ylhäältä katsottuna napapiiriä ei näe mitenkään, vaikka olen yrittänyt. Silti jokainen kyyhky tietää, että pohjoisessa kesäyö on yhtä valoisa kuin päivä, ja se sekoittaa lentoaikatauluni täysin.
+KYSYMYS: Kerro lisää: keskiyön aurinkona
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Tromssa: Syntikat soivat kaamoksen läpi] Tromssassa alettiin 1980-luvulla tehdä elektronista musiikkia kellareissa silloin, kun ulkona oli pimeää. Kaupungissa perustettiin Bel Canto vuonna 1985, samasta porukasta tuli Biosphere, ja lapsuudenystävät Svein Berge ja Torbjørn Brundtland perustivat Röyksoppin 1998. Pieni kaupunki kuuluu yhä maailman festivaaleilla.
+AIEMPI KYSYMYS: Mikä on napapiiri?
+AIEMPI VASTAUS (Livia):
+No niin, annas ku mietin. Napapiiri on leveyspiiri, joka kulkee noin 66,5 asteen kohdalla pohjoista leveyttä. Sen pohjoispuolella aurinko ei laske vähintään vuorokauteen kesäpäivänseisauksen aikaan eikä nouse talvipäivänseisauksen aikaan. Ilmiö johtuu [[maan akselin kallistuksesta]], joka on noin 23,4 astetta. Napapiirin pohjoispuolella se näkyy kesällä [[keskiyön aurinkona]] ja talvella [[kaamoksena]], ja Kebnekaise sijaitsee tästä rajasta noin 150 kilometriä pohjoiseen.
+
+Ylhäältä katsottuna napapiiriä ei näe mitenkään, vaikka olen yrittänyt. Silti jokainen kyyhky tietää, että pohjoisessa kesäyö on yhtä valoisa kuin päivä, ja se sekoittaa lentoaikatauluni täysin.
+KYSYMYS: Kerro lisää: kaamoksena
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+AIEMPI KYSYMYS: Millainen vaellusreitti Kungsleden on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kungsleden, suomeksi Kuninkaanpolku, on yksi Ruotsin Lapin tunnetuimmista vaellusreiteistä. Se kulkee noin 440 kilometrin matkan pohjoisesta [[Abiskosta]] etelään [[Hemavaniin]], ja reitin varrella on majoja, joissa voi yöpyä. Maisema vaihtelee tunturikoivikoista avotunturiin, ja reitin varrelta pääsee Kebnekaisen juurelle. Vaeltajat kulkevat sitä pääosin kesällä ja syksyllä, ja talvella osuuksia hiihdetään. Kävellen se kestäisi kauan, lentäen tuosta tulis pieni retki.
+KYSYMYS: Kerro lisää: Abiskosta
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+AIEMPI KYSYMYS: Millainen vaellusreitti Kungsleden on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kungsleden, suomeksi Kuninkaanpolku, on yksi Ruotsin Lapin tunnetuimmista vaellusreiteistä. Se kulkee noin 440 kilometrin matkan pohjoisesta [[Abiskosta]] etelään [[Hemavaniin]], ja reitin varrella on majoja, joissa voi yöpyä. Maisema vaihtelee tunturikoivikoista avotunturiin, ja reitin varrelta pääsee Kebnekaisen juurelle. Vaeltajat kulkevat sitä pääosin kesällä ja syksyllä, ja talvella osuuksia hiihdetään. Kävellen se kestäisi kauan, lentäen tuosta tulis pieni retki.
+KYSYMYS: Kerro lisää: Hemavaniin
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+AIEMPI KYSYMYS: Miten jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+Ai se. Jäätikkö syntyy alueella, jolla talvella satanut lumi ei ehdi kesän aikana kokonaan sulaa. Lumi kerrostuu vuosi vuodelta, ja alempien kerrosten paino puristaa sen ensin rakeiseksi [[firniksi]] ja lopulta jääksi. Kun jääkerros on riittävän paksu, jää alkaa virrata hitaasti alamäkeen [[painovoiman]] vaikutuksesta. Vuoristojäätiköt ovat pieniä verrattuna mannerjäätiköihin, ja ne reagoivat herkästi ilmaston muutoksiin. Hitaasti ne syntyy, melkein yhtä hitaasti ku pullataikina kohoaa.
+KYSYMYS: Kerro lisää: firniksi
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kebnekaise (luonto · vuori)
+Tietoruudun teksti: Kebnekaise on Ruotsin korkein vuori, ja sen massiivissa on kaksi päähuippua. Jäätikön peittämä eteläinen huippu oli ennen korkein 2 120 metrissä, mutta se on kutistunut viidessäkymmenessä vuodessa 24 metriä, joten korkein on nyt jäätön pohjoinen huippu 2 096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, Kirunasta länteen Kungsledenin vaellusreitin varrella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Miten jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+Ai se. Jäätikkö syntyy alueella, jolla talvella satanut lumi ei ehdi kesän aikana kokonaan sulaa. Lumi kerrostuu vuosi vuodelta, ja alempien kerrosten paino puristaa sen ensin rakeiseksi [[firniksi]] ja lopulta jääksi. Kun jääkerros on riittävän paksu, jää alkaa virrata hitaasti alamäkeen [[painovoiman]] vaikutuksesta. Vuoristojäätiköt ovat pieniä verrattuna mannerjäätiköihin, ja ne reagoivat herkästi ilmaston muutoksiin. Hitaasti ne syntyy, melkein yhtä hitaasti ku pullataikina kohoaa.
+KYSYMYS: Kerro lisää: painovoiman
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itämeri on lähes suljettu allas, jonka yhteys [[Atlantin]] valtamereen kulkee vain kapeiden Tanskan salmien, muun muassa [[Juutinrauman]], kautta. Siksi suolaista merivettä virtaa sisään vähän. Samaan aikaan meren ympäristöstä laskee suuri määrä jokia, jotka tuovat makeaa vettä, ja viileässä ilmastossa haihtuminen on vähäistä. Tuloksena on murtovesi, jonka suolapitoisuus on selvästi valtamerten arvoa pienempi ja laskee pohjoiseen ja itään päin mentäessä. Vähäsuolaisuuden vuoksi [[laivamato]] ei viihdy Itämeressä, ja siksi vanhat puuhylyt säilyvät pohjassa.
+
+Vähäsuolaisuus on tehnyt Itämerestä melkein laivojen säilytyskomeron. Minä pidän ajatuksesta, että pohjassa makaa yhä aikaa, jota kukaan ei ole ehtinyt syödä.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itämeri on lähes suljettu allas, jonka yhteys [[Atlantin]] valtamereen kulkee vain kapeiden Tanskan salmien, muun muassa [[Juutinrauman]], kautta. Siksi suolaista merivettä virtaa sisään vähän. Samaan aikaan meren ympäristöstä laskee suuri määrä jokia, jotka tuovat makeaa vettä, ja viileässä ilmastossa haihtuminen on vähäistä. Tuloksena on murtovesi, jonka suolapitoisuus on selvästi valtamerten arvoa pienempi ja laskee pohjoiseen ja itään päin mentäessä. Vähäsuolaisuuden vuoksi [[laivamato]] ei viihdy Itämeressä, ja siksi vanhat puuhylyt säilyvät pohjassa.
+
+Vähäsuolaisuus on tehnyt Itämerestä melkein laivojen säilytyskomeron. Minä pidän ajatuksesta, että pohjassa makaa yhä aikaa, jota kukaan ei ole ehtinyt syödä.
+KYSYMYS: Kerro lisää: Juutinrauman
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itämeri on lähes suljettu allas, jonka yhteys [[Atlantin]] valtamereen kulkee vain kapeiden Tanskan salmien, muun muassa [[Juutinrauman]], kautta. Siksi suolaista merivettä virtaa sisään vähän. Samaan aikaan meren ympäristöstä laskee suuri määrä jokia, jotka tuovat makeaa vettä, ja viileässä ilmastossa haihtuminen on vähäistä. Tuloksena on murtovesi, jonka suolapitoisuus on selvästi valtamerten arvoa pienempi ja laskee pohjoiseen ja itään päin mentäessä. Vähäsuolaisuuden vuoksi [[laivamato]] ei viihdy Itämeressä, ja siksi vanhat puuhylyt säilyvät pohjassa.
+
+Vähäsuolaisuus on tehnyt Itämerestä melkein laivojen säilytyskomeron. Minä pidän ajatuksesta, että pohjassa makaa yhä aikaa, jota kukaan ei ole ehtinyt syödä.
+KYSYMYS: Kerro lisää: laivamato
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+AIEMPI KYSYMYS: Miksi Gotlanti oli kauppareittien risteys?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Gotlanti sijaitsee keskellä Itämerta, joten reitit Länsi-Euroopan, Skandinavian ja Itä-Euroopan välillä kulkivat sen ohi. Saari oli luonteva välisatama ja kauppapaikka jo viikinkiaikana. Löydöt osoittavat laajoja yhteyksiä: [[Spillingsin]] hopeakätkössä on 67 kiloa hopeaa ja noin neljätoistatuhatta kolikkoa, joista suuri osa on lyöty islamilaisissa maissa, mikä viittaa kauppaan Venäjän jokia pitkin Kaspianmerelle saakka. Myöhemmin [[Visby]] kukoisti [[Hansaliiton]] kauppakaupunkina. Kyl sinne olis kiva laskeutua.
+KYSYMYS: Kerro lisää: Spillingsin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+AIEMPI KYSYMYS: Miksi Gotlanti oli kauppareittien risteys?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Gotlanti sijaitsee keskellä Itämerta, joten reitit Länsi-Euroopan, Skandinavian ja Itä-Euroopan välillä kulkivat sen ohi. Saari oli luonteva välisatama ja kauppapaikka jo viikinkiaikana. Löydöt osoittavat laajoja yhteyksiä: [[Spillingsin]] hopeakätkössä on 67 kiloa hopeaa ja noin neljätoistatuhatta kolikkoa, joista suuri osa on lyöty islamilaisissa maissa, mikä viittaa kauppaan Venäjän jokia pitkin Kaspianmerelle saakka. Myöhemmin [[Visby]] kukoisti [[Hansaliiton]] kauppakaupunkina. Kyl sinne olis kiva laskeutua.
+KYSYMYS: Kerro lisää: Visby
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Miksi Gotlanti oli kauppareittien risteys?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Gotlanti sijaitsee keskellä Itämerta, joten reitit Länsi-Euroopan, Skandinavian ja Itä-Euroopan välillä kulkivat sen ohi. Saari oli luonteva välisatama ja kauppapaikka jo viikinkiaikana. Löydöt osoittavat laajoja yhteyksiä: [[Spillingsin]] hopeakätkössä on 67 kiloa hopeaa ja noin neljätoistatuhatta kolikkoa, joista suuri osa on lyöty islamilaisissa maissa, mikä viittaa kauppaan Venäjän jokia pitkin Kaspianmerelle saakka. Myöhemmin [[Visby]] kukoisti [[Hansaliiton]] kauppakaupunkina. Kyl sinne olis kiva laskeutua.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy talvisin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Itämeri jäätyy talvisin, koska se on matala ja sen vesi on vähäsuolaista. Murtoveden jäätymispiste on lähempänä nollaa kuin merivedessä, ja matalassa altaassa vesimassa viilenee nopeasti. [[Perämeri]] jäätyy tavallisesti joka talvi, ja [[Suomenlahdella]] on jäätä usein ainakin osan talvesta. Jääpeitteen laajuus vaihtelee talvesta toiseen, ja ankarina talvina jäätä on ollut suurella osalla merta. Liikennettä pitävät auki [[jäänmurtajat]]. Viisas Pöllö lupasi palata ennen ensijäitä, mut kyl hän varmaan ehtii vielä.
+KYSYMYS: Kerro lisää: Perämeri
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy talvisin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Itämeri jäätyy talvisin, koska se on matala ja sen vesi on vähäsuolaista. Murtoveden jäätymispiste on lähempänä nollaa kuin merivedessä, ja matalassa altaassa vesimassa viilenee nopeasti. [[Perämeri]] jäätyy tavallisesti joka talvi, ja [[Suomenlahdella]] on jäätä usein ainakin osan talvesta. Jääpeitteen laajuus vaihtelee talvesta toiseen, ja ankarina talvina jäätä on ollut suurella osalla merta. Liikennettä pitävät auki [[jäänmurtajat]]. Viisas Pöllö lupasi palata ennen ensijäitä, mut kyl hän varmaan ehtii vielä.
+KYSYMYS: Kerro lisää: Suomenlahdella
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kohdekartta / Kohdekartta: Jäänmurtaja Angara] 1900 Angara tilattiin vuonna 1898 Newcastlesta, Sir W. G. Armstrong, Whitworth & Co:n telakalta, ja se otettiin käyttöön 1. elokuuta 1900. Laiva rakennettiin Baikalia varten, ja sen tehtävä oli suora seuraus siitä, että Transsiperian rata oli järven kohdalla poikki: junat ajettiin lautalle, lautta ylitti järven, ja matka jatkui toiselta rannalta. Työparista suurempi oli lauttamurtaja Baikal, jonka kannella oli kolme rinnakkaista raidetta vaunuja varten; Angara oli pienempi eikä kantanut junia lainkaan vaan matkustajia ja tavaraa. Talvella 1903–1904 jää kävi liian paksuksi molemmille, ja silloin jäälle laskettiin kiskot ja vaunuja vedettiin hevosilla. Lauttayhteyttä tarvittiin vain muutama v…
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy talvisin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Itämeri jäätyy talvisin, koska se on matala ja sen vesi on vähäsuolaista. Murtoveden jäätymispiste on lähempänä nollaa kuin merivedessä, ja matalassa altaassa vesimassa viilenee nopeasti. [[Perämeri]] jäätyy tavallisesti joka talvi, ja [[Suomenlahdella]] on jäätä usein ainakin osan talvesta. Jääpeitteen laajuus vaihtelee talvesta toiseen, ja ankarina talvina jäätä on ollut suurella osalla merta. Liikennettä pitävät auki [[jäänmurtajat]]. Viisas Pöllö lupasi palata ennen ensijäitä, mut kyl hän varmaan ehtii vielä.
+KYSYMYS: Kerro lisää: jäänmurtajat
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma] Neljäntoista saaren pääkaupunki, jossa vesi on katua ja kaupungin laidalta lähtee höyrylaiva kolmenkymmenentuhannen saaren saaristoon.
+AIEMPI KYSYMYS: Keitä Vitaaliveljet olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vitaaliveljet olivat merirosvojoukko, joka toimi Itämerellä 1300-luvun lopulla. Nimi viittaa muonaan: joukko kutsuttiin alun perin kuljettamaan ruokatarvikkeita saarretulle [[Tukholmalle]] sotien keskellä. Kun tehtävä päättyi, joukko jatkoi merirosvousta ja otti [[Gotlannin]] hallintaansa. Noin vuonna 1398 [[Saksalaisen ritarikunnan]] joukot valtasivat saaren heiltä. Merirosvojen kanssa minä en kyl kauppaa tee.
+KYSYMYS: Kerro lisää: Tukholmalle
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Maailman suurin viikinkihopea] 1999 — Gotlannin Spillingsissä eräs maanviljelijä oli kyntänyt vuosikymmeniä pellon yli, jonka alla makasi suurin tunnettu viikinkiaikainen hopeakätkö. Kun arkeologit tutkivat paikan 1999 metallinilmaisimella, maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.
+AIEMPI KYSYMYS: Keitä Vitaaliveljet olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vitaaliveljet olivat merirosvojoukko, joka toimi Itämerellä 1300-luvun lopulla. Nimi viittaa muonaan: joukko kutsuttiin alun perin kuljettamaan ruokatarvikkeita saarretulle [[Tukholmalle]] sotien keskellä. Kun tehtävä päättyi, joukko jatkoi merirosvousta ja otti [[Gotlannin]] hallintaansa. Noin vuonna 1398 [[Saksalaisen ritarikunnan]] joukot valtasivat saaren heiltä. Merirosvojen kanssa minä en kyl kauppaa tee.
+KYSYMYS: Kerro lisää: Gotlannin
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Keitä Vitaaliveljet olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vitaaliveljet olivat merirosvojoukko, joka toimi Itämerellä 1300-luvun lopulla. Nimi viittaa muonaan: joukko kutsuttiin alun perin kuljettamaan ruokatarvikkeita saarretulle [[Tukholmalle]] sotien keskellä. Kun tehtävä päättyi, joukko jatkoi merirosvousta ja otti [[Gotlannin]] hallintaansa. Noin vuonna 1398 [[Saksalaisen ritarikunnan]] joukot valtasivat saaren heiltä. Merirosvojen kanssa minä en kyl kauppaa tee.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Luonto: Puu, joka elää toisten juurista] Valkosantelipuu on neljästä yhdeksään metriä korkea ainavihanta puu, joka ei tule toimeen yksin: sen juurissa on imujuuria, joilla se kiinnittyy naapuripuiden juuriin ja ottaa niistä fosforia, typpeä ja kaliumia sekä varjon. Isäntälajeja tunnetaan kolmisensataa, eikä niille koidu siitä sanottavaa vahinkoa. Arvo on ytimessä: vain sydänpuu tuoksuu, ja siitä veistetään ja tislataan öljyä, kun taas vaalea pintapuu on hajuton. Hedelmiä puu tekee kolmen vuoden ikäisenä ja itämiskykyisiä siemeniä viiden, ja linnut levittävät ne. Timor kuuluu lajin alkuperäiseen levinneisyysalueeseen.
+- [Zimbabwe — maalehti / Ruoka: Ruoka, jonka pavut kypsyvät maan alla] Mutakura on sekoitus, jossa on maapähkinöitä eli nzungua, keitettyä ja auringossa kuivattua maissia, silmupapuja eli nyembaa ja nyimoa. Nyimo on bambaranmaapähkinä, palkokasvi, jonka kukan varsi kääntyy hedelmöityksen jälkeen alaspäin ja työntyy maahan: palot kypsyvät mullan alla, ja sato nostetaan varsista kiinni kuin peruna. Kasvi kestää kuumuutta ja karua maata ja jättää maaperään typpeä seuraavalle viljelylle. Afrikassa sitä viljelevät, myyvät ja käsittelevät enimmäkseen naiset.
+AIEMPI KYSYMYS: Mitä Itämeren rehevöityminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Rehevöityminen tarkoittaa, että vesistöön päätyy liikaa ravinteita, erityisesti [[typpeä]] ja [[fosforia]]. Ravinteita huuhtoutuu Itämereen maataloudesta, jätevesistä ja liikenteen päästöistä. Kesäisin ravinteet ruokkivat levän kasvua, ja runsaat [[sinilevien]] kukinnat sameuttavat vettä. Kuollut levä vajoaa pohjaan, ja sen hajotessa pohjan happi kuluu loppuun, jolloin syvänteisiin syntyy happikato. Koska Itämeren vesi vaihtuu hitaasti, tilanne korjaantuu vain vuosikymmenten kuluessa.
+
+Ylhäältä katsottuna levälautat näyttävät melkein maalauksilta, ja se on niissä hankalinta. Kauneus ei kerro mitään veden voinnista.
+KYSYMYS: Kerro lisää: typpeä
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Tulitikku, joka syttyy vain omasta rasiastaan] Vanhat tulitikut syttyivät mistä tahansa hankauksesta ja sisälsivät valkoista fosforia, joka sairastutti tehtaiden työntekijät. Ruotsalainen Gustaf Erik Pasch keksi 1844 jakaa syttyminen kahtia: tikun päähän jää osa aineista ja loput siirretään rasian kylkeen. Johan Edvard Lundström kehitti ideasta Jönköpingissä valmistuskelpoisen tuotteen 1850-luvulla. Turvatulitikku syttyy vain omaa raapaisupintaansa vasten — siksi tikut eivät syty taskussa.
+AIEMPI KYSYMYS: Mitä Itämeren rehevöityminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Rehevöityminen tarkoittaa, että vesistöön päätyy liikaa ravinteita, erityisesti [[typpeä]] ja [[fosforia]]. Ravinteita huuhtoutuu Itämereen maataloudesta, jätevesistä ja liikenteen päästöistä. Kesäisin ravinteet ruokkivat levän kasvua, ja runsaat [[sinilevien]] kukinnat sameuttavat vettä. Kuollut levä vajoaa pohjaan, ja sen hajotessa pohjan happi kuluu loppuun, jolloin syvänteisiin syntyy happikato. Koska Itämeren vesi vaihtuu hitaasti, tilanne korjaantuu vain vuosikymmenten kuluessa.
+
+Ylhäältä katsottuna levälautat näyttävät melkein maalauksilta, ja se on niissä hankalinta. Kauneus ei kerro mitään veden voinnista.
+KYSYMYS: Kerro lisää: fosforia
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten varhaiskeskiajalta asti rautaa ja hopeaa.
+AIEMPI KYSYMYS: Mitä Itämeren rehevöityminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Rehevöityminen tarkoittaa, että vesistöön päätyy liikaa ravinteita, erityisesti [[typpeä]] ja [[fosforia]]. Ravinteita huuhtoutuu Itämereen maataloudesta, jätevesistä ja liikenteen päästöistä. Kesäisin ravinteet ruokkivat levän kasvua, ja runsaat [[sinilevien]] kukinnat sameuttavat vettä. Kuollut levä vajoaa pohjaan, ja sen hajotessa pohjan happi kuluu loppuun, jolloin syvänteisiin syntyy happikato. Koska Itämeren vesi vaihtuu hitaasti, tilanne korjaantuu vain vuosikymmenten kuluessa.
+
+Ylhäältä katsottuna levälautat näyttävät melkein maalauksilta, ja se on niissä hankalinta. Kauneus ei kerro mitään veden voinnista.
+KYSYMYS: Kerro lisää: sinilevien
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Reloncavín selkä] Puerto Montt sijaitsee juuri siinä kohdassa, jossa Reloncavín selkä avautuu pohjoiseen - paikassa jota pidetään Chilen keskilaakson ja Tyynenmeren fjordivyöhykkeen rajana. Etelään avautuu Calbucon saaristo Tenglon, Maillénin ja Huarin saarineen, ja Carretera Austral, Patagonian pääväylä, kulkee selän itärantaa pitkin ennen kuin katkeaa lautalle. Vuonon vesi vaihtelee makean jokiveden ja suolaisen merenveden välillä, mikä tekee siitä ainutlaatuisen elinympäristön monille kaloille ja äyriäisille. Sään mukana selän pinta vaihtaa nopeasti väriään tyynen sinisestä myrskyn harmaaseen.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Merenkurkku on Pohjanlahden kapein kohta, joka erottaa [[Selkämeren]] ja [[Perämeren]] toisistaan. Se sijaitsee Suomen [[Vaasan]] ja Ruotsin [[Umeån]] seuduilla. Alueella on laaja saaristo, ja maa nousee siellä nopeimmillaan lähes sentin vuodessa, joten uutta maata paljastuu silminnähden. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde yhdessä Ruotsin puolella sijaitsevan Korkean rannikon kanssa. Kapea kohta, mut ylhäältä sen näkee yhdellä silmäyksellä.
+KYSYMYS: Kerro lisää: Selkämeren
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Merenkurkku on Pohjanlahden kapein kohta, joka erottaa [[Selkämeren]] ja [[Perämeren]] toisistaan. Se sijaitsee Suomen [[Vaasan]] ja Ruotsin [[Umeån]] seuduilla. Alueella on laaja saaristo, ja maa nousee siellä nopeimmillaan lähes sentin vuodessa, joten uutta maata paljastuu silminnähden. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde yhdessä Ruotsin puolella sijaitsevan Korkean rannikon kanssa. Kapea kohta, mut ylhäältä sen näkee yhdellä silmäyksellä.
+KYSYMYS: Kerro lisää: Perämeren
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Merenkurkku on Pohjanlahden kapein kohta, joka erottaa [[Selkämeren]] ja [[Perämeren]] toisistaan. Se sijaitsee Suomen [[Vaasan]] ja Ruotsin [[Umeån]] seuduilla. Alueella on laaja saaristo, ja maa nousee siellä nopeimmillaan lähes sentin vuodessa, joten uutta maata paljastuu silminnähden. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde yhdessä Ruotsin puolella sijaitsevan Korkean rannikon kanssa. Kapea kohta, mut ylhäältä sen näkee yhdellä silmäyksellä.
+KYSYMYS: Kerro lisää: Vaasan
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Merenkurkku on Pohjanlahden kapein kohta, joka erottaa [[Selkämeren]] ja [[Perämeren]] toisistaan. Se sijaitsee Suomen [[Vaasan]] ja Ruotsin [[Umeån]] seuduilla. Alueella on laaja saaristo, ja maa nousee siellä nopeimmillaan lähes sentin vuodessa, joten uutta maata paljastuu silminnähden. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde yhdessä Ruotsin puolella sijaitsevan Korkean rannikon kanssa. Kapea kohta, mut ylhäältä sen näkee yhdellä silmäyksellä.
+KYSYMYS: Kerro lisää: Umeån
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [NFK — maalehti / Tiede: Saari joka nousi merestä] n. 3,1–2,3 milj. vuotta sitten — Norfolkinsaari ja pieni Phillipinsaari syntyivät, kun merenalainen kilpitulivuori purkautui toistuvasti noin 3,1–2,3 miljoonan vuoden ajan basalttilaavaa. Suurin osa alkuperäisestä tulivuoresta on sittemmin kulunut mereen, ja jäljellä on saaren korkein kohta, 319 metriä merenpinnan yläpuolelle kohoava Mount Bates, sekä rannikon jyrkät basalttikalliot ja irralliset kalliosaarekkeet. Saari on osa Norfolkinharjannetta, tuhat kilometriä pitkää enimmäkseen vedenalaista vuoristoa, joka ulottuu Uuden-Seelannin ja Uuden-Kaledonian väliin – Norfolkinsaari ja Phillipinsaari ovat harvoja kohtia, joissa harjanne kohoaa meren pinnan yläpuolelle.
+AIEMPI KYSYMYS: Mikä Merenkurkku on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Merenkurkku on Pohjanlahden kapein kohta, joka erottaa [[Selkämeren]] ja [[Perämeren]] toisistaan. Se sijaitsee Suomen [[Vaasan]] ja Ruotsin [[Umeån]] seuduilla. Alueella on laaja saaristo, ja maa nousee siellä nopeimmillaan lähes sentin vuodessa, joten uutta maata paljastuu silminnähden. [[Merenkurkun saaristo]] on Unescon maailmanperintökohde yhdessä Ruotsin puolella sijaitsevan Korkean rannikon kanssa. Kapea kohta, mut ylhäältä sen näkee yhdellä silmäyksellä.
+KYSYMYS: Kerro lisää: Merenkurkun saaristo
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on jääkauden perintöä. Jääkauden aikana alueen päällä oli lähes kilometrin paksuinen [[mannerjää]], jonka paino painoi [[maankuorta]] alas. Kun jää suli noin 10 000 vuotta sitten, kuori alkoi palautua entiseen asentoonsa, mutta liike on hidasta, koska alla oleva [[vaippa]] vaatii aikaa virratakseen. Siksi maa nousee yhä: Pohjanlahden rannikolla noin 80 senttiä vuosisadassa ja Merenkurkussa melkein sentin vuodessa. Ilmiö tunnetaan nimellä [[maannousu]]. Maa nousee ja minä pysyn ilmassa, ei paha työnjako.
+KYSYMYS: Kerro lisää: mannerjää
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on jääkauden perintöä. Jääkauden aikana alueen päällä oli lähes kilometrin paksuinen [[mannerjää]], jonka paino painoi [[maankuorta]] alas. Kun jää suli noin 10 000 vuotta sitten, kuori alkoi palautua entiseen asentoonsa, mutta liike on hidasta, koska alla oleva [[vaippa]] vaatii aikaa virratakseen. Siksi maa nousee yhä: Pohjanlahden rannikolla noin 80 senttiä vuosisadassa ja Merenkurkussa melkein sentin vuodessa. Ilmiö tunnetaan nimellä [[maannousu]]. Maa nousee ja minä pysyn ilmassa, ei paha työnjako.
+KYSYMYS: Kerro lisää: maankuorta
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on jääkauden perintöä. Jääkauden aikana alueen päällä oli lähes kilometrin paksuinen [[mannerjää]], jonka paino painoi [[maankuorta]] alas. Kun jää suli noin 10 000 vuotta sitten, kuori alkoi palautua entiseen asentoonsa, mutta liike on hidasta, koska alla oleva [[vaippa]] vaatii aikaa virratakseen. Siksi maa nousee yhä: Pohjanlahden rannikolla noin 80 senttiä vuosisadassa ja Merenkurkussa melkein sentin vuodessa. Ilmiö tunnetaan nimellä [[maannousu]]. Maa nousee ja minä pysyn ilmassa, ei paha työnjako.
+KYSYMYS: Kerro lisää: vaippa
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Miksi Pohjanlahden rannat nousevat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on jääkauden perintöä. Jääkauden aikana alueen päällä oli lähes kilometrin paksuinen [[mannerjää]], jonka paino painoi [[maankuorta]] alas. Kun jää suli noin 10 000 vuotta sitten, kuori alkoi palautua entiseen asentoonsa, mutta liike on hidasta, koska alla oleva [[vaippa]] vaatii aikaa virratakseen. Siksi maa nousee yhä: Pohjanlahden rannikolla noin 80 senttiä vuosisadassa ja Merenkurkussa melkein sentin vuodessa. Ilmiö tunnetaan nimellä [[maannousu]]. Maa nousee ja minä pysyn ilmassa, ei paha työnjako.
+KYSYMYS: Kerro lisää: maannousu
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi Itämerellä on vähän vuorovettä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Itämerellä vuorovesi on hyvin pieni, vain muutamia senttejä. Meri on yhteydessä Atlanttiin vain kapeiden Tanskan salmien kautta, joten [[Atlantin]] vuorovesiaalto ei pääse etenemään sisään. Lisäksi Itämeri on suhteellisen pieni allas, jossa [[Kuun]] vetovoiman vaikutus jää vähäiseksi. Veden korkeuteen vaikuttavat paljon enemmän [[ilmanpaine]] ja tuuli: tuulen ajaessa vettä rannikolle pinta voi nousta tuntuvasti.
+
+Laituri pysyy Itämerellä samalla korkeudella päivästä toiseen, ja se sopii minulle. Laskeutuminen on helpompaa, kun rantaviiva ei liiku.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Miksi Itämerellä on vähän vuorovettä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Itämerellä vuorovesi on hyvin pieni, vain muutamia senttejä. Meri on yhteydessä Atlanttiin vain kapeiden Tanskan salmien kautta, joten [[Atlantin]] vuorovesiaalto ei pääse etenemään sisään. Lisäksi Itämeri on suhteellisen pieni allas, jossa [[Kuun]] vetovoiman vaikutus jää vähäiseksi. Veden korkeuteen vaikuttavat paljon enemmän [[ilmanpaine]] ja tuuli: tuulen ajaessa vettä rannikolle pinta voi nousta tuntuvasti.
+
+Laituri pysyy Itämerellä samalla korkeudella päivästä toiseen, ja se sopii minulle. Laskeutuminen on helpompaa, kun rantaviiva ei liiku.
+KYSYMYS: Kerro lisää: Kuun
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Miksi Itämerellä on vähän vuorovettä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Itämerellä vuorovesi on hyvin pieni, vain muutamia senttejä. Meri on yhteydessä Atlanttiin vain kapeiden Tanskan salmien kautta, joten [[Atlantin]] vuorovesiaalto ei pääse etenemään sisään. Lisäksi Itämeri on suhteellisen pieni allas, jossa [[Kuun]] vetovoiman vaikutus jää vähäiseksi. Veden korkeuteen vaikuttavat paljon enemmän [[ilmanpaine]] ja tuuli: tuulen ajaessa vettä rannikolle pinta voi nousta tuntuvasti.
+
+Laituri pysyy Itämerellä samalla korkeudella päivästä toiseen, ja se sopii minulle. Laskeutuminen on helpompaa, kun rantaviiva ei liiku.
+KYSYMYS: Kerro lisää: ilmanpaine
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mistä Luleån satamaan tulee rautamalmi?
+AIEMPI VASTAUS (Livia):
+Just niin, tän kyllä tiedän. Luleån satamaan tuleva rautamalmi louhitaan Pohjois-Ruotsin kaivoksissa, erityisesti [[Kirunassa]] ja [[Gällivaressa]]. Malmi kuljetetaan satamaan junalla, ja se lastataan laivoihin rautamalmipelletteinä eli rakeistettuina kuulina, jotka soveltuvat terästehtaiden raaka-aineeksi. Osa malmista kulkee toiseen suuntaan Norjan [[Narvikin]] satamaan, joka ei jäädy talvisin. Luleån edustalla Pohjanlahti jäätyy, joten laivoja avustavat jäänmurtajat. Rautaa ja jäätä, ei oikein kyyhkyn ala.
+KYSYMYS: Kerro lisää: Kirunassa
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mistä Luleån satamaan tulee rautamalmi?
+AIEMPI VASTAUS (Livia):
+Just niin, tän kyllä tiedän. Luleån satamaan tuleva rautamalmi louhitaan Pohjois-Ruotsin kaivoksissa, erityisesti [[Kirunassa]] ja [[Gällivaressa]]. Malmi kuljetetaan satamaan junalla, ja se lastataan laivoihin rautamalmipelletteinä eli rakeistettuina kuulina, jotka soveltuvat terästehtaiden raaka-aineeksi. Osa malmista kulkee toiseen suuntaan Norjan [[Narvikin]] satamaan, joka ei jäädy talvisin. Luleån edustalla Pohjanlahti jäätyy, joten laivoja avustavat jäänmurtajat. Rautaa ja jäätä, ei oikein kyyhkyn ala.
+KYSYMYS: Kerro lisää: Gällivaressa
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mistä Luleån satamaan tulee rautamalmi?
+AIEMPI VASTAUS (Livia):
+Just niin, tän kyllä tiedän. Luleån satamaan tuleva rautamalmi louhitaan Pohjois-Ruotsin kaivoksissa, erityisesti [[Kirunassa]] ja [[Gällivaressa]]. Malmi kuljetetaan satamaan junalla, ja se lastataan laivoihin rautamalmipelletteinä eli rakeistettuina kuulina, jotka soveltuvat terästehtaiden raaka-aineeksi. Osa malmista kulkee toiseen suuntaan Norjan [[Narvikin]] satamaan, joka ei jäädy talvisin. Luleån edustalla Pohjanlahti jäätyy, joten laivoja avustavat jäänmurtajat. Rautaa ja jäätä, ei oikein kyyhkyn ala.
+KYSYMYS: Kerro lisää: Narvikin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mikä Selkämeri on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Selkämeri on Pohjanlahden eteläosa, joka sijaitsee [[Ahvenanmeren]] ja [[Merenkurkun]] välissä. Sen itärannalla on Suomen länsirannikko ja länsirannalla Ruotsin itärannikko. Meri on Perämerta syvempi ja suolaisempi. Suomen puolella alue tunnetaan saaristostaan, ja sinne on perustettu [[Selkämeren kansallispuisto]]. Nimenä Selkämeri on minusta osuva, kun selkä on vettä ja rannat kaukana.
+KYSYMYS: Kerro lisää: Ahvenanmeren
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+AIEMPI KYSYMYS: Mikä Selkämeri on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Selkämeri on Pohjanlahden eteläosa, joka sijaitsee [[Ahvenanmeren]] ja [[Merenkurkun]] välissä. Sen itärannalla on Suomen länsirannikko ja länsirannalla Ruotsin itärannikko. Meri on Perämerta syvempi ja suolaisempi. Suomen puolella alue tunnetaan saaristostaan, ja sinne on perustettu [[Selkämeren kansallispuisto]]. Nimenä Selkämeri on minusta osuva, kun selkä on vettä ja rannat kaukana.
+KYSYMYS: Kerro lisää: Merenkurkun
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja Sundsvall.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Reloncavín selkä] Puerto Montt sijaitsee juuri siinä kohdassa, jossa Reloncavín selkä avautuu pohjoiseen - paikassa jota pidetään Chilen keskilaakson ja Tyynenmeren fjordivyöhykkeen rajana. Etelään avautuu Calbucon saaristo Tenglon, Maillénin ja Huarin saarineen, ja Carretera Austral, Patagonian pääväylä, kulkee selän itärantaa pitkin ennen kuin katkeaa lautalle. Vuonon vesi vaihtelee makean jokiveden ja suolaisen merenveden välillä, mikä tekee siitä ainutlaatuisen elinympäristön monille kaloille ja äyriäisille. Sään mukana selän pinta vaihtaa nopeasti väriään tyynen sinisestä myrskyn harmaaseen.
+AIEMPI KYSYMYS: Mikä Selkämeri on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Selkämeri on Pohjanlahden eteläosa, joka sijaitsee [[Ahvenanmeren]] ja [[Merenkurkun]] välissä. Sen itärannalla on Suomen länsirannikko ja länsirannalla Ruotsin itärannikko. Meri on Perämerta syvempi ja suolaisempi. Suomen puolella alue tunnetaan saaristostaan, ja sinne on perustettu [[Selkämeren kansallispuisto]]. Nimenä Selkämeri on minusta osuva, kun selkä on vettä ja rannat kaukana.
+KYSYMYS: Kerro lisää: Selkämeren kansallispuisto
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Luonto: Kolmekymmentätuhatta saarta yhden kaupungin edustalla] Tukholman saaristo koostuu noin kolmestakymmenestä tuhannesta saaresta, luodosta ja karista, jotka levittäytyvät yli 80 kilometrin matkalle mantereelta itään avomerelle. Lähempänä kaupunkia saaret ovat metsäisiä ja niillä on kesämökkejä; mitä kauemmas ulapalle mennään, sitä paljaammiksi ja puuttomammiksi kalliosaaret muuttuvat, kunnes jäljellä on vain merenjäätämien kallioiden ja majakoiden nauha. Saaristo syntyi mannerjään sulaessa: maa kohoaa täällä yhä noin puoli senttiä vuodessa, ja uusia luotoja nousee merestä hitaasti koko ajan.
+AIEMPI KYSYMYS: Mikä oli Itämeren jääkausijärvi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Itämeren jääjärvi oli makeavetinen järvi, joka syntyi jääkauden lopulla, kun [[mannerjään]] sulamisvedet keräytyivät jään reunan eteen nykyisen Itämeren altaaseen. Järvi oli erillään valtamerestä, ja kun jää väistyi, sen vedet purkautuivat Atlanttiin muun muassa Göta älvin kautta. Tämän jälkeen altaan vaiheet seurasivat toisiaan: [[Yoldiameri]], [[Ancylusjärvi]] ja lopulta [[Litorinameri]], joka muistuttaa nykyistä merta. Ei paha muistiksi, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: mannerjään
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä oli Itämeren jääkausijärvi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Itämeren jääjärvi oli makeavetinen järvi, joka syntyi jääkauden lopulla, kun [[mannerjään]] sulamisvedet keräytyivät jään reunan eteen nykyisen Itämeren altaaseen. Järvi oli erillään valtamerestä, ja kun jää väistyi, sen vedet purkautuivat Atlanttiin muun muassa Göta älvin kautta. Tämän jälkeen altaan vaiheet seurasivat toisiaan: [[Yoldiameri]], [[Ancylusjärvi]] ja lopulta [[Litorinameri]], joka muistuttaa nykyistä merta. Ei paha muistiksi, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Yoldiameri
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä oli Itämeren jääkausijärvi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Itämeren jääjärvi oli makeavetinen järvi, joka syntyi jääkauden lopulla, kun [[mannerjään]] sulamisvedet keräytyivät jään reunan eteen nykyisen Itämeren altaaseen. Järvi oli erillään valtamerestä, ja kun jää väistyi, sen vedet purkautuivat Atlanttiin muun muassa Göta älvin kautta. Tämän jälkeen altaan vaiheet seurasivat toisiaan: [[Yoldiameri]], [[Ancylusjärvi]] ja lopulta [[Litorinameri]], joka muistuttaa nykyistä merta. Ei paha muistiksi, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Ancylusjärvi
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä oli Itämeren jääkausijärvi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Itämeren jääjärvi oli makeavetinen järvi, joka syntyi jääkauden lopulla, kun [[mannerjään]] sulamisvedet keräytyivät jään reunan eteen nykyisen Itämeren altaaseen. Järvi oli erillään valtamerestä, ja kun jää väistyi, sen vedet purkautuivat Atlanttiin muun muassa Göta älvin kautta. Tämän jälkeen altaan vaiheet seurasivat toisiaan: [[Yoldiameri]], [[Ancylusjärvi]] ja lopulta [[Litorinameri]], joka muistuttaa nykyistä merta. Ei paha muistiksi, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Litorinameri
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä on Trollhätten kanava?
+AIEMPI VASTAUS (Livia):
+No jopas, sulkuja. Trollhätten kanava on vesiväylä, jonka avulla alukset pääsevät [[Kattegatilta]] Göta älviä pitkin [[Vänerniin]] ohi Trollhättanin kosken. Kosken kohdalla on pato, sulkuja ja voimalaitos, ja sulkujen ansiosta jokea voivat nousta jopa 88 metriä pitkät rahtialukset. Voimalaitoksen sähkö toi koskelle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja yleisö kerääntyy katsomaan, kun vesi ryöppyää alas.
+
+Sulkuportit ovat minusta järjestelmällisintä, mitä ihmiset ovat keksineet: vesi nostaa laivan ylös ja kaikki ovat tyytyväisiä. Minä nousen aina siivillä, ilman jonoa.
+KYSYMYS: Kerro lisää: Kattegatilta
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä on Trollhätten kanava?
+AIEMPI VASTAUS (Livia):
+No jopas, sulkuja. Trollhätten kanava on vesiväylä, jonka avulla alukset pääsevät [[Kattegatilta]] Göta älviä pitkin [[Vänerniin]] ohi Trollhättanin kosken. Kosken kohdalla on pato, sulkuja ja voimalaitos, ja sulkujen ansiosta jokea voivat nousta jopa 88 metriä pitkät rahtialukset. Voimalaitoksen sähkö toi koskelle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja yleisö kerääntyy katsomaan, kun vesi ryöppyää alas.
+
+Sulkuportit ovat minusta järjestelmällisintä, mitä ihmiset ovat keksineet: vesi nostaa laivan ylös ja kaikki ovat tyytyväisiä. Minä nousen aina siivillä, ilman jonoa.
+KYSYMYS: Kerro lisää: Vänerniin
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä on Vänern?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vänern on Ruotsin suurin järvi, ja sen pinta-ala on noin 5 600 neliökilometriä. Se sijaitsee Länsi-Ruotsissa, ja sen vedet laskevat [[Göta älvin]] kautta Kattegatiin. Järveen laskee useita jokia, muun muassa Klarälven. Rannalla sijaitsevat muun muassa [[Karlstad]] pohjoisessa ja [[Vänersborg]] eteläpäässä. Järvi on niin iso, että sen yli lentäminen vie oikeasti aikaa.
+KYSYMYS: Kerro lisää: Göta älvin
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä on Vänern?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vänern on Ruotsin suurin järvi, ja sen pinta-ala on noin 5 600 neliökilometriä. Se sijaitsee Länsi-Ruotsissa, ja sen vedet laskevat [[Göta älvin]] kautta Kattegatiin. Järveen laskee useita jokia, muun muassa Klarälven. Rannalla sijaitsevat muun muassa [[Karlstad]] pohjoisessa ja [[Vänersborg]] eteläpäässä. Järvi on niin iso, että sen yli lentäminen vie oikeasti aikaa.
+KYSYMYS: Kerro lisää: Karlstad
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mikä on Vänern?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vänern on Ruotsin suurin järvi, ja sen pinta-ala on noin 5 600 neliökilometriä. Se sijaitsee Länsi-Ruotsissa, ja sen vedet laskevat [[Göta älvin]] kautta Kattegatiin. Järveen laskee useita jokia, muun muassa Klarälven. Rannalla sijaitsevat muun muassa [[Karlstad]] pohjoisessa ja [[Vänersborg]] eteläpäässä. Järvi on niin iso, että sen yli lentäminen vie oikeasti aikaa.
+KYSYMYS: Kerro lisää: Vänersborg
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Milloin ja miksi Göteborg perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli kuninkaan hanke. Göteborgin perusti kuningas [[Kustaa II Aadolf]] vuonna 1621 Göta älvin suulle. Ruotsi tarvitsi länsirannikolle satamakaupungin, jolla oli yhteys Pohjanmerelle ja Atlantille, ja kaupungin rakentamisessa käytettiin paljon [[hollantilaisia]] osaajia, minkä vuoksi keskustassa on [[kanavia]]. Kaupungista tuli merkittävä merikauppasatama. Kanavia ja satama, kyyhkyn silmin se näyttää ihan Amsterdamilta.
+KYSYMYS: Kerro lisää: Kustaa II Aadolf
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kohdekartta / Kohdekartta: Wolvendaalin kirkko] 1749–1757 Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei tullut, ja pattitilanne aukesi vasta kuvernööri Julius Valentyn Stein van Gollenessen tultua virkaan 1743: hän päätti, että uusi kirkko nousee muurien ulkopuolelle suomaalle. Eurooppalaiset luulivat seudun sakaaleja susiksi, ja alue sai nimen Wolvendaal eli suden laakso. Perustukset laskettiin 1749, ja rakentaminen kesti kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. Rakennus on doorilainen ja pohjaltaan tasavartinen risti. Seinät ovat lähes puolitoista metri…
+- [Dili — kaupunkilehti / Dili: Puolueeton satama kahden sotajoukon välissä] Portugali ja sen siirtomaat pysyivät toisessa maailmansodassa puolueettomina, mutta liittoutuneet pitivät Itä-Timoria mahdollisena japanilaisten kohteena. Kun Tyynenmeren sota alkoi, australialaisia ja hollantilaisia joukkoja lähetettiin Diliin Portugalin vastalauseista huolimatta, ja 400 miehen osasto miehitti Portugalin Timorin 17. joulukuuta 1941. Kuvernööri julisti itsensä vangiksi säilyttääkseen puolueettomuuden näön. Japanilaiset nousivat maihin Dilissä 19.–20. helmikuuta 1942. Australialainen komppania vetäytyi vuorille ja teki sieltä iskuja timorilaisten oppaiden, kantajien ja vuoriponien avulla. Kun Japani antautui syyskuussa 1945, Dilin keskusta oli molempien osapuolten pommituste…
+AIEMPI KYSYMYS: Milloin ja miksi Göteborg perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli kuninkaan hanke. Göteborgin perusti kuningas [[Kustaa II Aadolf]] vuonna 1621 Göta älvin suulle. Ruotsi tarvitsi länsirannikolle satamakaupungin, jolla oli yhteys Pohjanmerelle ja Atlantille, ja kaupungin rakentamisessa käytettiin paljon [[hollantilaisia]] osaajia, minkä vuoksi keskustassa on [[kanavia]]. Kaupungista tuli merkittävä merikauppasatama. Kanavia ja satama, kyyhkyn silmin se näyttää ihan Amsterdamilta.
+KYSYMYS: Kerro lisää: hollantilaisia
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Muinaisuus: Puoli miljoonaa hehtaaria kaivettuja kanavia] 200 eaa. – 1000 jaa. — San Jorgen, Caucan, Magdalenan ja Nechín muodostama sisämaan suisto tulvi joka vuosi huhtikuusta marraskuuhun. Zenút alkoivat 200-luvulla eaa. kaivaa kanavia, jotka ohjasivat tulvaveden ja tekivät alueesta viljelykelpoisen; laajimmillaan verkosto kattoi puoli miljoonaa hehtaaria. Noin vuonna 950 San Jorgen altaassa asui 160 ihmistä neliökilometrillä. Väki väheni 1100-luvun jälkeen tuntemattomasta syystä ja siirtyi ylemmäs. Zenúille maailma oli suuri punos, ja sama kuvio toistuu heidän kultatöissään.
+AIEMPI KYSYMYS: Milloin ja miksi Göteborg perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli kuninkaan hanke. Göteborgin perusti kuningas [[Kustaa II Aadolf]] vuonna 1621 Göta älvin suulle. Ruotsi tarvitsi länsirannikolle satamakaupungin, jolla oli yhteys Pohjanmerelle ja Atlantille, ja kaupungin rakentamisessa käytettiin paljon [[hollantilaisia]] osaajia, minkä vuoksi keskustassa on [[kanavia]]. Kaupungista tuli merkittävä merikauppasatama. Kanavia ja satama, kyyhkyn silmin se näyttää ihan Amsterdamilta.
+KYSYMYS: Kerro lisää: kanavia
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mitä valuma-alue tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valuma-alue on alue, jolta sade- ja sulamisvedet kerääntyvät samaan jokeen tai vesistöön. Göta älvin valuma-alue on Skandinavian laajin, vaikka itse joki on vain 93 kilometriä pitkä, sillä joen alkulähteenä on [[Vänern]], johon laskee useita jokia, muun muassa [[Klarälven]], jonka vesistö ulottuu Norjan puolelle. Kun vedet kerääntyvät laajalta alueelta yhteen järveen ja sieltä jokeen, lyhytkin joki voi kuljettaa valtavan vesimäärän [[Kattegatiin]]. Kyl tää oli enemmän kartanlukua ku lentämistä.
+KYSYMYS: Kerro lisää: Vänern
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mitä valuma-alue tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valuma-alue on alue, jolta sade- ja sulamisvedet kerääntyvät samaan jokeen tai vesistöön. Göta älvin valuma-alue on Skandinavian laajin, vaikka itse joki on vain 93 kilometriä pitkä, sillä joen alkulähteenä on [[Vänern]], johon laskee useita jokia, muun muassa [[Klarälven]], jonka vesistö ulottuu Norjan puolelle. Kun vedet kerääntyvät laajalta alueelta yhteen järveen ja sieltä jokeen, lyhytkin joki voi kuljettaa valtavan vesimäärän [[Kattegatiin]]. Kyl tää oli enemmän kartanlukua ku lentämistä.
+KYSYMYS: Kerro lisää: Klarälven
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göta älv (luonto · joki)
+Tietoruudun teksti: Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy katsomaan, kun vesi ryöppyää alas.
+AIEMPI KYSYMYS: Mitä valuma-alue tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valuma-alue on alue, jolta sade- ja sulamisvedet kerääntyvät samaan jokeen tai vesistöön. Göta älvin valuma-alue on Skandinavian laajin, vaikka itse joki on vain 93 kilometriä pitkä, sillä joen alkulähteenä on [[Vänern]], johon laskee useita jokia, muun muassa [[Klarälven]], jonka vesistö ulottuu Norjan puolelle. Kun vedet kerääntyvät laajalta alueelta yhteen järveen ja sieltä jokeen, lyhytkin joki voi kuljettaa valtavan vesimäärän [[Kattegatiin]]. Kyl tää oli enemmän kartanlukua ku lentämistä.
+KYSYMYS: Kerro lisää: Kattegatiin
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+AIEMPI KYSYMYS: Mistä nimi Visby tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Visby tulee [[muinaisnorjan]] sanoista vis, joka tarkoittaa uhripaikkaa, ja by, joka tarkoittaa kylää. Nimi viittaa siis kylään, jossa oli esikristillinen uhripaikka. Kaupunki oli kauppapaikka jo noin vuonna 900, ja siitä kasvoi [[Hansaliiton]] aikana varakas kauppakaupunki. Nykyään se on [[Gotlannin]] pääkaupunki ja Unescon maailmanperintökohde. Viisas Pöllö parantelee viel siipeään, joten tää jäi minun hoidettavakseni.
+KYSYMYS: Kerro lisää: muinaisnorjan
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Mistä nimi Visby tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Visby tulee [[muinaisnorjan]] sanoista vis, joka tarkoittaa uhripaikkaa, ja by, joka tarkoittaa kylää. Nimi viittaa siis kylään, jossa oli esikristillinen uhripaikka. Kaupunki oli kauppapaikka jo noin vuonna 900, ja siitä kasvoi [[Hansaliiton]] aikana varakas kauppakaupunki. Nykyään se on [[Gotlannin]] pääkaupunki ja Unescon maailmanperintökohde. Viisas Pöllö parantelee viel siipeään, joten tää jäi minun hoidettavakseni.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Maailman suurin viikinkihopea] 1999 — Gotlannin Spillingsissä eräs maanviljelijä oli kyntänyt vuosikymmeniä pellon yli, jonka alla makasi suurin tunnettu viikinkiaikainen hopeakätkö. Kun arkeologit tutkivat paikan 1999 metallinilmaisimella, maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.
+AIEMPI KYSYMYS: Mistä nimi Visby tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Visby tulee [[muinaisnorjan]] sanoista vis, joka tarkoittaa uhripaikkaa, ja by, joka tarkoittaa kylää. Nimi viittaa siis kylään, jossa oli esikristillinen uhripaikka. Kaupunki oli kauppapaikka jo noin vuonna 900, ja siitä kasvoi [[Hansaliiton]] aikana varakas kauppakaupunki. Nykyään se on [[Gotlannin]] pääkaupunki ja Unescon maailmanperintökohde. Viisas Pöllö parantelee viel siipeään, joten tää jäi minun hoidettavakseni.
+KYSYMYS: Kerro lisää: Gotlannin
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+AIEMPI KYSYMYS: Miksi keskiaikaiset kivitalot säilyivät?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivitalot säilyivät, koska Visbyn kukoistus päättyi ennen kuin kaupunkia ehdittiin uudistaa. Kaupunki rikastui [[Hansaliiton]] kaupalla ja sai kivitaloja ja kirkkoja, mutta myöhäiskeskiajan taantuman aikana rahaa uuteen rakentamiseen ei ollut, ja vanhat talot jäivät alkuperäiseen asuunsa. Kaupunkia ei myöskään purettu ja rakennettu uudelleen myöhempinä vuosisatoina, ja 3,4 kilometriä pitkä [[kaupunginmuuri]] on yhä lähes ehjä. Kaupunki on ollut [[Unescon]] maailmanperintökohde vuodesta 1995.
+
+Kiva ajatus, että kaupungin pelasti se, ettei kenelläkään ollut varaa purkaa sitä. Minä en tiedä muusta niin sympaattisesta syystä säilyä.
+KYSYMYS: Kerro lisää: kaupunginmuuri
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+AIEMPI KYSYMYS: Miksi keskiaikaiset kivitalot säilyivät?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivitalot säilyivät, koska Visbyn kukoistus päättyi ennen kuin kaupunkia ehdittiin uudistaa. Kaupunki rikastui [[Hansaliiton]] kaupalla ja sai kivitaloja ja kirkkoja, mutta myöhäiskeskiajan taantuman aikana rahaa uuteen rakentamiseen ei ollut, ja vanhat talot jäivät alkuperäiseen asuunsa. Kaupunkia ei myöskään purettu ja rakennettu uudelleen myöhempinä vuosisatoina, ja 3,4 kilometriä pitkä [[kaupunginmuuri]] on yhä lähes ehjä. Kaupunki on ollut [[Unescon]] maailmanperintökohde vuodesta 1995.
+
+Kiva ajatus, että kaupungin pelasti se, ettei kenelläkään ollut varaa purkaa sitä. Minä en tiedä muusta niin sympaattisesta syystä säilyä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi Visbyä kutsutaan ruusujen kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: ruusuja. Visbyä kutsutaan ruusujen kaupungiksi, koska ruusuja kasvaa siellä runsaasti taloja pitkin ja [[keskiaikaisten kirkkojen]] raunioiden seinustoilla. [[Gotlannin]] leuto ilmasto kesäisin sopii niille hyvin, ja kesällä ruusut kukkivat kaupungissa laajalti. Nimitys kuvaa siis kaupungin ilmettä, jossa harmaa kivi ja kukkivat ruusut ovat vastakohtia. En ole varma, mistä nimitys on alun perin lähtenyt liikkeelle. Kauniilta se näyttää katolta, ja hyvältä se kuulemma tuoksuu.
+KYSYMYS: Kerro lisää: keskiaikaisten kirkkojen
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+AIEMPI KYSYMYS: Miten Gotlantiin pääsee Manner-Ruotsista?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gotlantiin pääsee Manner-Ruotsista lautalla tai lentäen. Lautat kulkevat Visbyyn muun muassa [[Nynäshamnista]] Tukholman eteläpuolelta ja [[Oskarshamnista]] Ruotsin kaakkoisrannikolta, ja matka kestää muutaman tunnin. Lentoja on Visbyn lentokentälle muun muassa [[Tukholmasta]]. Kesäaikaan liikenne on vilkasta, koska saari on suosittu lomakohde. Minä menisin lentäen, mut en tarvitse lippua.
+KYSYMYS: Kerro lisää: Nynäshamnista
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+AIEMPI KYSYMYS: Miten Gotlantiin pääsee Manner-Ruotsista?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gotlantiin pääsee Manner-Ruotsista lautalla tai lentäen. Lautat kulkevat Visbyyn muun muassa [[Nynäshamnista]] Tukholman eteläpuolelta ja [[Oskarshamnista]] Ruotsin kaakkoisrannikolta, ja matka kestää muutaman tunnin. Lentoja on Visbyn lentokentälle muun muassa [[Tukholmasta]]. Kesäaikaan liikenne on vilkasta, koska saari on suosittu lomakohde. Minä menisin lentäen, mut en tarvitse lippua.
+KYSYMYS: Kerro lisää: Oskarshamnista
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Taivaalla paloi kuusi aurinkoa] 1535 — Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, ja pappi Olaus Petri teetti siitä maalauksen. Samalla syntyi vanhin tunnettu värikuva Tukholmasta: kaupunki muureineen, kirkontorneineen ja ympäröivine hirsiaitoineen. Alkuperäinen taulu on kadonnut — Storkyrkanissa riippuu vuoden 1636 kopio.
+AIEMPI KYSYMYS: Miten Gotlantiin pääsee Manner-Ruotsista?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gotlantiin pääsee Manner-Ruotsista lautalla tai lentäen. Lautat kulkevat Visbyyn muun muassa [[Nynäshamnista]] Tukholman eteläpuolelta ja [[Oskarshamnista]] Ruotsin kaakkoisrannikolta, ja matka kestää muutaman tunnin. Lentoja on Visbyn lentokentälle muun muassa [[Tukholmasta]]. Kesäaikaan liikenne on vilkasta, koska saari on suosittu lomakohde. Minä menisin lentäen, mut en tarvitse lippua.
+KYSYMYS: Kerro lisää: Tukholmasta
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visby (kaupungit)
+Tietoruudun teksti: Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.
+
+Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes ehjä.
+
+Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot jäivät alkuperäiseen keskiaikaiseen asuunsa.
+
+Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä kutsutaan joskus ruusujen kaupungiksi ja jo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Calton Hill] 1807–1831 Calton Hill on 103 metrin korkuinen kukkula aivan Edinburghin keskustan kupeessa, ja se kuuluu kaupungin Unescon maailmanperintökohteeseen. Jo vuonna 1456 kuningas Jaakko II antoi kukkulan kaupunkilaisten käyttöön urheilua ja turnajaisia varten. Kukkulan huipulla seisoo outo joukko pylväikköjä. Kuuluisin on Kansallismonumentti, joka aloitettiin vuonna 1826 antiikin Parthenonin mallin mukaan mutta jäi rahapulan takia kesken vain 12 pylvään kohdalla — edinburghilaiset ristivät sen pilkkanimellä "Edinburghin häpeä". Vieressä kohoaa amiraali Nelsonin muistoksi rakennettu torni. Huhtikuun viimeisenä iltana kukkulalla juhlitaan kelttiläistä Beltane-tulijuhlaa, johon kokoontuu yli 12 000…
+- [Pariisi — kohdekartta / Kohdekartta: Place des Vosges] 1612 Place des Vosges on Pariisin vanhin aukio. Se rakennettiin kuningas Henrik IV:n määräyksestä hovielämän julkiseksi keskukseksi, mutta valmistui vasta kuninkaan kuoleman jälkeen — vihkiäisiä vietettiin 1612 Ludvig XIII:n ja Anna Itävaltalaisen häiden yhteydessä, eikä kuningaspari koskaan asunut siellä. Aukiota ympäröi 36 kolmikerroksista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja aumakatto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia. Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin Vosgesin departementin mukaan. Aukion laidalla asui kuusitoista v…
+AIEMPI KYSYMYS: Mikä on Visbyn keskiaikaviikko?
+AIEMPI VASTAUS (Livia):
+Katotaas. Keskiaikaviikko on Visbyssä elokuussa järjestettävä vuosittainen tapahtuma, jossa kaupunki muuttuu keskiaikaiseksi. Vierailijat ja asukkaat pukeutuvat keskiaikaisiin asuihin, ja kaduilla ja muurin tuntumassa on markkinoita, esityksiä ja [[turnajaisia]]. Tapahtuma ammentaa kaupungin keskiaikaisesta historiasta ja siitä, että vanha [[kaupunginmuuri]] ja kivitalot ovat yhä paikoillaan. Pukeutumista siinä katselee mielellään, vaikka minä pärjään omissa höyhenissäni.
+KYSYMYS: Kerro lisää: turnajaisia
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mitä kuningas julisti Uppsalan käräjillä?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. [[Upplannin lain]] mukaan kuningas julisti käräjillä, että [[laivasto]] kutsutaan kesän sotaretkelle. Samoilla käräjillä päätettiin myös miehistöt, soutajat, päälliköt ja laivat. Käräjät olivat kaikkien [[svealaisten]] yleiskokous, joka kokoontui helmikuun lopussa tai maaliskuun alussa. Ei paha kyyhkyltä, noin kaukaa muistaa.
+KYSYMYS: Kerro lisää: Upplannin lain
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mitä kuningas julisti Uppsalan käräjillä?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. [[Upplannin lain]] mukaan kuningas julisti käräjillä, että [[laivasto]] kutsutaan kesän sotaretkelle. Samoilla käräjillä päätettiin myös miehistöt, soutajat, päälliköt ja laivat. Käräjät olivat kaikkien [[svealaisten]] yleiskokous, joka kokoontui helmikuun lopussa tai maaliskuun alussa. Ei paha kyyhkyltä, noin kaukaa muistaa.
+KYSYMYS: Kerro lisää: laivasto
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mitä kuningas julisti Uppsalan käräjillä?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. [[Upplannin lain]] mukaan kuningas julisti käräjillä, että [[laivasto]] kutsutaan kesän sotaretkelle. Samoilla käräjillä päätettiin myös miehistöt, soutajat, päälliköt ja laivat. Käräjät olivat kaikkien [[svealaisten]] yleiskokous, joka kokoontui helmikuun lopussa tai maaliskuun alussa. Ei paha kyyhkyltä, noin kaukaa muistaa.
+KYSYMYS: Kerro lisää: svealaisten
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mikä Disting oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: vanha markkinaperinne. Disting oli suuri markkinatapahtuma, joka järjestettiin svealaisten [[käräjien]] yhteydessä helmikuun lopussa tai maaliskuun alussa. Samaan aikaan vietettiin [[Dísablót]]-nimistä uhrijuhlaa, joten kokoontuminen oli yhtä aikaa kauppaa, lainkäyttöä ja uskonnollista juhlaa. Tapahtumapaikka oli Gamla Uppsala, joka oli esihistoriasta keskiajalle tärkeä uskonnollinen, taloudellinen ja poliittinen keskus. Markkinoilla minä olisin kyl katsonut ensin pullatelttaa.
+KYSYMYS: Kerro lisää: käräjien
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mikä Disting oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: vanha markkinaperinne. Disting oli suuri markkinatapahtuma, joka järjestettiin svealaisten [[käräjien]] yhteydessä helmikuun lopussa tai maaliskuun alussa. Samaan aikaan vietettiin [[Dísablót]]-nimistä uhrijuhlaa, joten kokoontuminen oli yhtä aikaa kauppaa, lainkäyttöä ja uskonnollista juhlaa. Tapahtumapaikka oli Gamla Uppsala, joka oli esihistoriasta keskiajalle tärkeä uskonnollinen, taloudellinen ja poliittinen keskus. Markkinoilla minä olisin kyl katsonut ensin pullatelttaa.
+KYSYMYS: Kerro lisää: Dísablót
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mikä on Ynglingatal?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on vanhaa tavaraa. [[Ynglinga]]tal on skaldirunoutta edustava runo, joka luettelee Ynglinga-suvun legendaarisia kuninkaita ja kertoo heidän kuolemistaan. Se on yksi vanhimmista skandinaavisista lähteistä, jotka puhuvat svealaisten kuninkaasta Uppsalan kuninkaana. [[Snorri Sturluson]] käytti runoa lähteenä Ynglinga-sagassaan, joka kuuluu [[Heimskringla]]-kokoelmaan; tekijäksi mainitaan perinteisesti skaldi Þjóðólfr Hvinilainen, mutta runon tarkasta ajoituksesta en ole varma. No siinä oli taas nimi, joka ei mahdu kyyhkyn nokkaan.
+KYSYMYS: Kerro lisää: Ynglinga
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mikä on Ynglingatal?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on vanhaa tavaraa. [[Ynglinga]]tal on skaldirunoutta edustava runo, joka luettelee Ynglinga-suvun legendaarisia kuninkaita ja kertoo heidän kuolemistaan. Se on yksi vanhimmista skandinaavisista lähteistä, jotka puhuvat svealaisten kuninkaasta Uppsalan kuninkaana. [[Snorri Sturluson]] käytti runoa lähteenä Ynglinga-sagassaan, joka kuuluu [[Heimskringla]]-kokoelmaan; tekijäksi mainitaan perinteisesti skaldi Þjóðólfr Hvinilainen, mutta runon tarkasta ajoituksesta en ole varma. No siinä oli taas nimi, joka ei mahdu kyyhkyn nokkaan.
+KYSYMYS: Kerro lisää: Snorri Sturluson
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+AIEMPI KYSYMYS: Mikä on Ynglingatal?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on vanhaa tavaraa. [[Ynglinga]]tal on skaldirunoutta edustava runo, joka luettelee Ynglinga-suvun legendaarisia kuninkaita ja kertoo heidän kuolemistaan. Se on yksi vanhimmista skandinaavisista lähteistä, jotka puhuvat svealaisten kuninkaasta Uppsalan kuninkaana. [[Snorri Sturluson]] käytti runoa lähteenä Ynglinga-sagassaan, joka kuuluu [[Heimskringla]]-kokoelmaan; tekijäksi mainitaan perinteisesti skaldi Þjóðólfr Hvinilainen, mutta runon tarkasta ajoituksesta en ole varma. No siinä oli taas nimi, joka ei mahdu kyyhkyn nokkaan.
+KYSYMYS: Kerro lisää: Heimskringla
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Tyhjä hauta Geraniumilaaksossa] Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.
+AIEMPI KYSYMYS: Mitä kuninkaankumpuja Gamla Uppsalassa on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kumpuja siellä riittää. Gamla Uppsalan tunnetuimmat muinaismuistot ovat kolme suurta kuninkaankumpua, jotka ajoitetaan yleensä 500-luvulle tai sen tienoille. Niiden ympärillä on laajempi [[hautakumpujen]] alue, joka muistuttaa ajasta, jolloin Uppsala oli [[svealaisten]] kuninkaiden keskus. Kumpuja on perinteisesti nimitetty muinaisten kuninkaiden mukaan, mutta nimet ovat myöhempiä, eikä niiden luotettavuudesta ole varmuutta. Ylhäältä ne näkyisivät varmasti hyvin, minähän tiedän.
+KYSYMYS: Kerro lisää: hautakumpujen
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+AIEMPI KYSYMYS: Miten Linné nimesi kasvit ja eläimet?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen [[Carl von Linnéä]] kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen, jossa ensin tulee suku ja sitten laji, kuten [[Homo sapiens]] ja [[Alces alces]]. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Hänen kotinsa on yhä nähtävissä [[Uppsalan kasvitieteellisessä puutarhassa]]. Columba livia, siis oma nimeni, on muuten ihan samaa kaksiosaista sorttia.
+KYSYMYS: Kerro lisää: Carl von Linnéä
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamla Uppsala (historia)
+Tietoruudun teksti: Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.
+
+Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta "Uppsalan kuninkaana".
+
+Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin miehistöt, soutajat, päälliköt ja laivat.
+
+Gamla Uppsala ei ollut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+AIEMPI KYSYMYS: Miten Linné nimesi kasvit ja eläimet?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen [[Carl von Linnéä]] kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen, jossa ensin tulee suku ja sitten laji, kuten [[Homo sapiens]] ja [[Alces alces]]. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Hänen kotinsa on yhä nähtävissä [[Uppsalan kasvitieteellisessä puutarhassa]]. Columba livia, siis oma nimeni, on muuten ihan samaa kaksiosaista sorttia.
+KYSYMYS: Kerro lisää: Homo sapiens

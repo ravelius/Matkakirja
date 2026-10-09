@@ -1,0 +1,910 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+AIEMPI KYSYMYS: Miksi Karlskogan seutu kehittyi rautateollisuuden alueeksi eikä pelkäksi maatalousseuduksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä [[ruukkia]] sekä kahdeksan vesivoimalla toimivaa [[vasaraa]]. Niihin kuuluivat muun muassa Björkbornin ja [[Boforsin]] ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, joten rauta oli seudun pitkäaikainen elinkeino. Rauta voitti viljan, eikä kukaan kysynyt minulta.
+KYSYMYS: Kerro lisää: ruukkia
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Linnanportin kellotorni] 1884 Linnaan mennään yhä samasta paikasta kuin ennen: ulomman muurin pääportista. Portille noustaan jyrkkää katua, sillä kukkula kohoaa 150 metriä Ankarajoen rannan yläpuolelle. Portin vieressä kohoaa pyöreä muuritorni, ja sen päälle on rakennettu kellotorni — torni tornin päälle, vanhan varustuksen jatkoksi. Itse porttiaukon kaari on ladottu vuorotellen vaaleista ja tummista kivistä. Kellotorni on vuodelta 1884. Turkin vanhin pystyssä oleva kellotorni on Safranbolussa vuodelta 1797, ja Keski-Anatolia on maan kellotornirikkain alue. Osmanien kellotornit tehtiin kolmiosaisiksi: jalusta, runko ja ylin kamari. Jalustassa on huone ja portaat, rungossa kierre- tai siksakportaikko, ylhäällä konei…
+- [Nicaragua — maalehti / Musiikki: Marimba, jota soitetaan polvien päällä] Nicaraguan marimba eroaa muun Väli-Amerikan marimboista soittotavaltaan: soittaja istuu ja pitää soitinta polvillaan sen sijaan että seisoisi sen ääressä. Mukana on tavallisesti basso, kitara ja guitarrilla, pieni mandoliinia muistuttava kitara, ja kokoonpano soittaa juhlissa taustamusiikkina. Soittimen kielet ovat kovaa puuta, ja ne on ladottu eri mittaisten bambu- tai metalliputkien päälle; lyömiseen käytetään kahta tai neljää vasaraa.
+AIEMPI KYSYMYS: Miksi Karlskogan seutu kehittyi rautateollisuuden alueeksi eikä pelkäksi maatalousseuduksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä [[ruukkia]] sekä kahdeksan vesivoimalla toimivaa [[vasaraa]]. Niihin kuuluivat muun muassa Björkbornin ja [[Boforsin]] ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, joten rauta oli seudun pitkäaikainen elinkeino. Rauta voitti viljan, eikä kukaan kysynyt minulta.
+KYSYMYS: Kerro lisää: vasaraa
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+AIEMPI KYSYMYS: Mikä ruukki tuotti eniten rautaa Ruotsissa vuonna 1871?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonna 1871 hallitseva ruukki oli [[Bofors]]: se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873, ja 1880-luvulta lähtien se erikoistui [[tykkien]] valmistukseen. Kaupunki kasvoi yhtiön ympärille, ja [[Karlskoga]] sai sen myötä teollisen leimansa.
+
+Kuusituhatta tonnia on aika paljon rautaa. Minä olen kantanut elämässäni korkeintaan muutaman gramman kirjeitä, ja sekin tuntui jo raskaalta.
+KYSYMYS: Kerro lisää: Bofors
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Fort Canningin kukkula] linnoitus 1861, purettu 1907 Kaupungin keskellä kohoava 48 metrin kukkula tunnettiin malaijiksi nimellä Bukit Larangan, Kielletty kukkula. Perimätiedon mukaan siellä lepäsivät muinaisen Singapuran kuninkaat, ja paikkaa pidettiin aavemaisena. Rinteen länsipuolella pulppusi lähde, jota kutsuttiin kielletyksi lähteeksi; 1800-luvun alussa siitä otettiin juomavesi jokaiseen satamaan poikkeavaan laivaan, kunnes kysyntä ylitti sen tuoton ja lähde kuivui kaivojen myötä. Kun sopimus oli allekirjoitettu 6. helmikuuta 1819, majuri William Farquhar nousi kukkulalle, veti sinne ensimmäisen tykin ja nosti lipun. Raffles rakennutti laelle asuinrakennuksen, jonka piirsi George Drumgoole Coleman: puinen bun…
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+AIEMPI KYSYMYS: Mikä ruukki tuotti eniten rautaa Ruotsissa vuonna 1871?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonna 1871 hallitseva ruukki oli [[Bofors]]: se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873, ja 1880-luvulta lähtien se erikoistui [[tykkien]] valmistukseen. Kaupunki kasvoi yhtiön ympärille, ja [[Karlskoga]] sai sen myötä teollisen leimansa.
+
+Kuusituhatta tonnia on aika paljon rautaa. Minä olen kantanut elämässäni korkeintaan muutaman gramman kirjeitä, ja sekin tuntui jo raskaalta.
+KYSYMYS: Kerro lisää: tykkien
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+AIEMPI KYSYMYS: Mikä ruukki tuotti eniten rautaa Ruotsissa vuonna 1871?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonna 1871 hallitseva ruukki oli [[Bofors]]: se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873, ja 1880-luvulta lähtien se erikoistui [[tykkien]] valmistukseen. Kaupunki kasvoi yhtiön ympärille, ja [[Karlskoga]] sai sen myötä teollisen leimansa.
+
+Kuusituhatta tonnia on aika paljon rautaa. Minä olen kantanut elämässäni korkeintaan muutaman gramman kirjeitä, ja sekin tuntui jo raskaalta.
+KYSYMYS: Kerro lisää: Karlskoga
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskoga (tekniikka)
+Tietoruudun teksti: Karlskoga on kaupunki Örebron läänissä Möckeln-järven pohjarannalla. Seudun metsät ja kukkulat sopivat maanviljelyä paremmin rautatyöhön, ja 1600-luvulla alueelle perustettiin neljätoista pientä ruukkia ja kahdeksan vesivoimalla toimivaa vasaraa, muun muassa Björkbornin ja Boforsin ruukit. Useimmat ruukit toimivat vielä 1860-luvulla, mutta hallitseva oli Bofors: vuonna 1871 se tuotti 6 124 tonnia rautaa, enemmän kuin mikään muu ruukki Ruotsissa. Yhtiö perustettiin osakeyhtiönä 1873 ja erikoistui 1880-luvulta lähtien tykkien valmistukseen, ja kaupunki kasvoi sen ympärille. Alfred Nobel omisti Boforsin vuodesta 1894 kuolemaansa 1896 asti. Hänen laillinen kotipaikkansa oli Björkbornin kartano, joten hänen testamenttinsa rekisteröitiin Karlskogassa, ja Nobel-palkinnon perustaminen tuli mahdolliseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Dynamiitin keksijän testamentti] Alfred Nobel keksi dynamiitin 1867 ja rikastui räjähteillä, joita käytettiin sekä tunneleiden louhimiseen että sodassa. Vuonna 1888 eräs lehti luuli hänen kuolleen ja julkaisi muistokirjoituksen otsikolla "kuoleman kauppias on kuollut". Nobel luki oman muistokirjoituksensa ja kirjoitti myöhemmin testamentin, jossa hän määräsi lähes koko omaisuutensa palkinnoiksi. Ensimmäiset Nobelin palkinnot jaettiin 1901, ja juhlaillallista on vietetty Tukholman kaupungintalolla 1930-luvulta asti.
+AIEMPI KYSYMYS: Milloin Alfred Nobel omisti Boforsin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Alfred Nobel omisti [[Boforsin]] vuodesta 1894 kuolemaansa vuoteen 1896 asti. Hänet tunnetaan [[dynamiitin]] keksijänä, ja hänen laillinen kotipaikkansa oli Karlskogan [[Björkbornin]] kartano. Lyhyt omistusaika, mutta jälki jäi pitkäksi.
+KYSYMYS: Kerro lisää: dynamiitin
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Mitä kaikkea Eskilstunan pajoissa ja tehtaissa valmistettiin aseiden lisäksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: aseiden lisäksi Eskilstunassa valmistettiin talttoja, aterimia, saksia, avaimia, [[työstökoneita]] ja [[tarkkuusinstrumentteja]]. Kaupungin ensimmäisiä tuotteita olivat kuitenkin pienaseet ja tykit. Teollisen vallankumouksen aikana [[Eskilstunasta]] kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista.
+
+Saksia ja avaimia, instrumentteja ja talttoja. Ylhäältä katsoen koko kaupunki oli varmaan yhtä isoa työpajaa, ja kyl minä sellaisen tunnistaisin ilman karttaa.
+KYSYMYS: Kerro lisää: työstökoneita
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Mitä kaikkea Eskilstunan pajoissa ja tehtaissa valmistettiin aseiden lisäksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: aseiden lisäksi Eskilstunassa valmistettiin talttoja, aterimia, saksia, avaimia, [[työstökoneita]] ja [[tarkkuusinstrumentteja]]. Kaupungin ensimmäisiä tuotteita olivat kuitenkin pienaseet ja tykit. Teollisen vallankumouksen aikana [[Eskilstunasta]] kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista.
+
+Saksia ja avaimia, instrumentteja ja talttoja. Ylhäältä katsoen koko kaupunki oli varmaan yhtä isoa työpajaa, ja kyl minä sellaisen tunnistaisin ilman karttaa.
+KYSYMYS: Kerro lisää: tarkkuusinstrumentteja
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Mitä kaikkea Eskilstunan pajoissa ja tehtaissa valmistettiin aseiden lisäksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: aseiden lisäksi Eskilstunassa valmistettiin talttoja, aterimia, saksia, avaimia, [[työstökoneita]] ja [[tarkkuusinstrumentteja]]. Kaupungin ensimmäisiä tuotteita olivat kuitenkin pienaseet ja tykit. Teollisen vallankumouksen aikana [[Eskilstunasta]] kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista.
+
+Saksia ja avaimia, instrumentteja ja talttoja. Ylhäältä katsoen koko kaupunki oli varmaan yhtä isoa työpajaa, ja kyl minä sellaisen tunnistaisin ilman karttaa.
+KYSYMYS: Kerro lisää: Eskilstunasta
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Miksi Eskilstunaa on verrattu englantilaiseen Sheffieldiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja [[terästeollisuuden]] keskuksina. Eskilstunassa valmistettiin [[aterimia]], saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.
+KYSYMYS: Kerro lisää: terästeollisuuden
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Ruoka: Ruoka, joka sai nimensä lääkemainoksesta] 1914 — Vigorón on Granadan oma ruoka ja yksi maan tunnetuimmista. Osia on kolme: keitettyä kassavaa eli yucaa, rapeaksi paistettua chicharrónia ja curtidoa eli kaalisalaattia, johon tulee tomaattia, sipulia ja chiliä etikkaan ja suolaan marinoituna. Kaikki tarjotaan banaaninlehden päällä ja syödään ilman aterimia. Nimi on peräisin sattumasta: María Luisa Cisneros Lacayo kehitti annoksen Granadassa 1914 ja nimesi sen nähtyään julisteen, jossa mainostettiin Vigorón-nimistä lääkejuomaa.
+- [BHR — maalehti / Ruoka: Leipä on lautanen ja lusikka] Bahrainilaisella pöydällä leipä tulee ensin. Se paistetaan litteänä kiekkona kuumassa uunissa, ja se tuodaan pöytään korissa vielä pehmeänä. Leipää ei leikata veitsellä vaan revitään käsin pala kerrallaan, ja palasta taivutetaan sormin pieni kauha, jolla otetaan hummusta, jogurttikastiketta tai lihaa. Näin ruokailu sujuu ilman aterimia, ja pöydän keskellä olevat kulhot ovat kaikkien yhteisiä. Aterian lopuksi jäljelle jäänyt leipä käytetään kulhojen puhtaaksi pyyhkimiseen.
+- [BHR — maalehti / Ruoka: Grilliliha tuodaan leivän päällä] Ruokapaikassa grillattu kana tai lammas tuodaan pöytään suoraan leivän päälle aseteltuna: leipä imee mehut ja toimii samalla lautasena. Mausteena on usein kuivattu limetti eli loomi, joka on koko lahden keittiön tunnusmauste — kokonainen limetti keitetään suolavedessä ja kuivataan auringossa kovaksi, ja se rikotaan pataan antamaan hapokkuutta. Lisukkeeksi tulee salaattia ja iso lasillinen tuoremehua. Aterimia ei välttämättä tuoda pöytään lainkaan, koska leipä riittää.
+AIEMPI KYSYMYS: Miksi Eskilstunaa on verrattu englantilaiseen Sheffieldiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja [[terästeollisuuden]] keskuksina. Eskilstunassa valmistettiin [[aterimia]], saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.
+KYSYMYS: Kerro lisää: aterimia
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Miksi Eskilstunaa on verrattu englantilaiseen Sheffieldiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vertailu liittyy kaupunkien yhteiseen maineeseen metallityön ja [[terästeollisuuden]] keskuksina. Eskilstunassa valmistettiin [[aterimia]], saksia, avaimia ja työkaluja, ja kaupunki sai lempinimen [[Stålstaden]] eli teräksen kaupunki. Sheffield tunnetaan vastaavasti terästeollisuudestaan ja aterinvalmistuksestaan, mutta en ole varma, kuka vertailun ensimmäisenä esitti. Sheffieldin yli en oo vielä lentänyt.
+KYSYMYS: Kerro lisää: Stålstaden
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Kuka oli Reinhold Rademacher ja mitä hän perusti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Reinhold Rademacher oli seppä, jonka takomot muodostivat 1600-luvulla perustetun [[Karl Gustavs Stadin]] ytimen Eskilstunaanjoen länsirannalla. Hanketta tuki kuningas [[Kaarle X Kustaa]]. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879. Siinä oli sepän vasara, joka kasvatti kaupungin.
+KYSYMYS: Kerro lisää: Karl Gustavs Stadin
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Kuka oli Reinhold Rademacher ja mitä hän perusti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Reinhold Rademacher oli seppä, jonka takomot muodostivat 1600-luvulla perustetun [[Karl Gustavs Stadin]] ytimen Eskilstunaanjoen länsirannalla. Hanketta tuki kuningas [[Kaarle X Kustaa]]. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879. Siinä oli sepän vasara, joka kasvatti kaupungin.
+KYSYMYS: Kerro lisää: Kaarle X Kustaa
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Musiikki: Runoutta, jota lauloivat käsityöläiset] 1400-luvulta — Malhun tarkoittaa melodista runoa. Se syntyi Tafilaltin keitailla 1400-luvulla puhtaana runoutena ja levisi sieltä kaupunkeihin, joissa siitä tuli käsityöläiskiltojen miesten oma laji: suutarit, satulasepät ja kutojat lauloivat sitä työn ääressä ja juhlissa. Runo eli qasida rakentuu soolona lauletuista säkeistä, joita katkoo harba-kertosäe; lopussa tulee drīdka, joka kiihdyttää tahdin ja ilmoittaa, että runo päättyy. Vanhoista tekijöistä tunnetuin on Abderrahman El Majdoub, joka kuoli 1568. Unesco otti malhunin aineettoman kulttuuriperinnön luetteloon joulukuussa 2023.
+AIEMPI KYSYMYS: Mitä vapaakaupunki tarkoitti Eskilstunan käsityöläisille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa [[käsityöläiset]] ja valmistajat saivat perustaa [[verovapaita pajoja]] ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.
+KYSYMYS: Kerro lisää: käsityöläiset
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Mitä vapaakaupunki tarkoitti Eskilstunan käsityöläisille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa [[käsityöläiset]] ja valmistajat saivat perustaa [[verovapaita pajoja]] ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.
+KYSYMYS: Kerro lisää: verovapaita pajoja
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Medina — kohdekartta / Kohdekartta: Hidžaz-radan asema] 1908 Tämä oli radan pääte, viimeinen asema ennen kuin kiskot loppuvat. Asema rakennettiin Anbariyan kaupunginosaan lähelle Profeetan moskeijaa, ja siihen kuului useita rakennuksia: halli, sivurakennuksia ja oma raiteistonsa. Ensimmäinen juna kaartoi laiturille 1. syyskuuta 1908, ja kortteli oli kaupungille aivan uudenlainen — mitään vastaavaa teollisen ajan rakennusryhmää täällä ei ollut ennen nähty. Junat lakkasivat tulemasta vuoden 1920 tienoilla, mutta rakennukset jäivät. Entisöityyn asemakortteliin avattiin vuonna 2006 Hidžaz-radan museo: siellä on pätkä alkuperäistä rataa, vaunuhalli, vetureita ja liikkuvaa kalustoa sekä aseman omia työkaluja. Osa esineistä on tuotu muualta radan varre…
+- [Taiwan — maalehti / Tekniikka: Kamferi ja suomalainen kemisti] 1903 — Kamferipuun suuret metsiköt olivat 1800-luvun alkuun mennessä kaadettu lähes kaikkialta muualta, ja jäljellä olivat Japani ja Taiwan — Taiwan selvästi suurempana. Kamferista tuli teollisuuden raaka-aine, koska juuri se pehmitti nitroselluloosan selluloidiksi: elokuvafilmin ja varhaisen muovin ainekseksi. Kysyntä nosti hinnan, ja hallinnot pitivät kauppaa monopolissaan. Sitten suomalainen kemisti Gustaf Komppa julkaisi 1903 ensimmäisen täydellisen synteesin kamferihaposta ja aloitti 1907 teollisen valmistuksen Tainionkoskella. Formosan kamferi maksoi tavallisesti noin 50 senttiä naulalta, vuonna 1918 jo 3,75 dollaria.
+AIEMPI KYSYMYS: Mitä vapaakaupunki tarkoitti Eskilstunan käsityöläisille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuodesta 1771 alue oli vapaakaupunki, jossa [[käsityöläiset]] ja valmistajat saivat perustaa [[verovapaita pajoja]] ja tehtaita. Tämä helpotti yrittäjien aloittamista ja loi pohjan alueen kasvulle, ja [[teollisen vallankumouksen]] aikana kaupungista tuli yksi Ruotsin tärkeimmistä teollisuuskaupungeista. Veroton paja kuulostaa kyyhkyn korvaan unelmalta.
+KYSYMYS: Kerro lisää: teollisen vallankumouksen
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+AIEMPI KYSYMYS: Minkä kahden järven välillä Eskilstunaån-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Eskilstunaån-joki yhdistää [[Hjälmaren]]-järven ja [[Mälaren]]-järven. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, ja koko kaupunki kasvoi joen varrelle. Vesi oli pajoille ja työpajoille tärkeä tekijä. Vettä, vettä ja vähän rautaa.
+KYSYMYS: Kerro lisää: Hjälmaren
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eskilstuna (tekniikka)
+Tietoruudun teksti: Eskilstuna sijaitsee Eskilstunaån-joen varrella, joka yhdistää Hjälmaren- ja Mälaren-järvet. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, jonka ydin oli seppä Reinhold Rademacherin takomot; hanketta tuki kuningas Kaarle X Kustaa. Ensimmäisiä tuotteita olivat pienaseet ja tykit. Vuodesta 1771 alue oli vapaakaupunki, jossa käsityöläiset ja valmistajat saivat perustaa verovapaita pajoja ja tehtaita. Teollisen vallankumouksen aikana Eskilstunasta kasvoi yksi Ruotsin tärkeimmistä teollisuuskaupungeista, ja se sai lempinimen Stålstaden eli teräksen kaupunki. Aseiden lisäksi täällä valmistettiin taltta, aterimia, saksia, avaimia, työstökoneita ja tarkkuusinstrumentteja. Karl Gustavs Stad liitettiin Eskilstunaan vuonna 1879.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Polhem sai sulkutyön 83-vuotiaana] Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, työ annettiin 1744 Christopher Polhemille, joka oli silloin 83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai sulun valmiiksi 1755.
+AIEMPI KYSYMYS: Minkä kahden järven välillä Eskilstunaån-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Eskilstunaån-joki yhdistää [[Hjälmaren]]-järven ja [[Mälaren]]-järven. Joen länsirannalle perustettiin 1600-luvulla Karl Gustavs Stad, ja koko kaupunki kasvoi joen varrelle. Vesi oli pajoille ja työpajoille tärkeä tekijä. Vettä, vettä ja vähän rautaa.
+KYSYMYS: Kerro lisää: Mälaren
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Miksi Norrköpingistä kasvoi juuri Motala ströminin suulle merkittävä teollisuuskaupunki?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Norrköping sijaitsee joen suulla [[Bråvikenin]] lahden pohjukassa, ja siellä yhdistyivät kaksi tärkeää tekijää. Joen [[vesivoima]] antoi koneille käyttövoimaa, ja hyvä satama edisti kauppaa ja kaupungin nopeaa kasvua. Kaupungista tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki, ja vuonna 1618 sinne perustettiin asetehdas. Tärkeä tukija oli teollisuusmies [[Louis De Geer]]. Joki töihin ja laiva satamaan, vähemmän kyyhkyjä.
+KYSYMYS: Kerro lisää: Bråvikenin
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Miksi Norrköpingistä kasvoi juuri Motala ströminin suulle merkittävä teollisuuskaupunki?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Norrköping sijaitsee joen suulla [[Bråvikenin]] lahden pohjukassa, ja siellä yhdistyivät kaksi tärkeää tekijää. Joen [[vesivoima]] antoi koneille käyttövoimaa, ja hyvä satama edisti kauppaa ja kaupungin nopeaa kasvua. Kaupungista tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki, ja vuonna 1618 sinne perustettiin asetehdas. Tärkeä tukija oli teollisuusmies [[Louis De Geer]]. Joki töihin ja laiva satamaan, vähemmän kyyhkyjä.
+KYSYMYS: Kerro lisää: vesivoima
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Miksi Norrköpingistä kasvoi juuri Motala ströminin suulle merkittävä teollisuuskaupunki?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Norrköping sijaitsee joen suulla [[Bråvikenin]] lahden pohjukassa, ja siellä yhdistyivät kaksi tärkeää tekijää. Joen [[vesivoima]] antoi koneille käyttövoimaa, ja hyvä satama edisti kauppaa ja kaupungin nopeaa kasvua. Kaupungista tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki, ja vuonna 1618 sinne perustettiin asetehdas. Tärkeä tukija oli teollisuusmies [[Louis De Geer]]. Joki töihin ja laiva satamaan, vähemmän kyyhkyjä.
+KYSYMYS: Kerro lisää: Louis De Geer
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Miksi keskiaikaisesta Norrköpingistä ei ole nykyään jäljellä mitään?
+AIEMPI VASTAUS (Livia):
+Mmm— Keskiaikaisen kaupungin hävittivät tulipalot sekä vuonna 1719 venäläisten polttama kaupunki, joten siitä ei ole jäljellä mitään. Tapahtuma ajoittuu [[Suuren Pohjan sodan]] aikaan, yli kolmesataa vuotta sitten, jolloin Ruotsi oli vielä suurvalta ja sodankäynti kohdistui usein myös kaupunkeihin. Palojen jälkeen [[puutalot]] kiellettiin, jotta tulipalojen vaara pienenisi, ja 1800-luvulla teollisuus kasvoi kaupungissa edelleen. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Suuren Pohjan sodan
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Arki: Puutalot monen kulttuurin kaupungissa] nykyään — Cayennen vanhan keskustan kadunkulmissa seisoo yhä värikkäitä kreolitaloja: puisia, ikkunaluukullisia ja verannoin koristeltuja rakennuksia siirtomaa-ajalta. Niiden katveessa elää nykyään väestö, jossa sekoittuvat kreolit, alkuperäiskansat, Surinamesta paenneiden orjien jälkeläiset eli bushinengeet, hmongit, kiinalaiset ja brasilialaiset siirtolaiset. Arjessa kuulee ranskan lisäksi guayanankreolia ja monia muita kieliä, ja maksuvälineenä on euro, sillä alue on osa Euroopan unionia siinä missä Ranskan Euroopan puoleinen alue.
+AIEMPI KYSYMYS: Miksi keskiaikaisesta Norrköpingistä ei ole nykyään jäljellä mitään?
+AIEMPI VASTAUS (Livia):
+Mmm— Keskiaikaisen kaupungin hävittivät tulipalot sekä vuonna 1719 venäläisten polttama kaupunki, joten siitä ei ole jäljellä mitään. Tapahtuma ajoittuu [[Suuren Pohjan sodan]] aikaan, yli kolmesataa vuotta sitten, jolloin Ruotsi oli vielä suurvalta ja sodankäynti kohdistui usein myös kaupunkeihin. Palojen jälkeen [[puutalot]] kiellettiin, jotta tulipalojen vaara pienenisi, ja 1800-luvulla teollisuus kasvoi kaupungissa edelleen. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: puutalot
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Kuka oli Louis De Geer ja miten hän tuki Norrköpingiä?
+AIEMPI VASTAUS (Livia):
+No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 [[asetehdas]], ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 [[Norrköpingissä]] oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.
+KYSYMYS: Kerro lisää: asetehdas
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+AIEMPI KYSYMYS: Kuka oli Louis De Geer ja miten hän tuki Norrköpingiä?
+AIEMPI VASTAUS (Livia):
+No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 [[asetehdas]], ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 [[Norrköpingissä]] oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.
+KYSYMYS: Kerro lisää: tekstiilituotanto
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Kuka oli Louis De Geer ja miten hän tuki Norrköpingiä?
+AIEMPI VASTAUS (Livia):
+No niin, Louis De Geer oli teollisuusmies, joka oli Norrköpingin tärkeä tukija. Kaupunkiin perustettiin vuonna 1618 [[asetehdas]], ja samaan aikaan käynnistyi laaja [[tekstiilituotanto]]. Hänen kuollessaan 1652 [[Norrköpingissä]] oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Kuusituhatta asukasta kuulostaa nykyään pieneltä, mutta silloin se oli paljon.
+KYSYMYS: Kerro lisää: Norrköpingissä
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Miksi puutalot kiellettiin Norrköpingissä tulipalojen jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keskiaikainen kaupunki oli tuhoutunut [[tulipaloissa]] ja vuonna 1719 venäläisten polttamana, ja palojen jälkeen [[puutalot]] kiellettiin. Kiellon tarkoitus oli vähentää uusien tulipalojen vaaraa, sillä puurakennukset syttyvät ja palavat helposti. Kaupunki rakennettiin uudelleen, ja 1800-luvulla teollisuus kasvoi [[Motala ströminin]] varrella. Puu on kyyhkyn ystävä, mutta ei tulen.
+KYSYMYS: Kerro lisää: tulipaloissa
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+AIEMPI KYSYMYS: Miksi puutalot kiellettiin Norrköpingissä tulipalojen jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keskiaikainen kaupunki oli tuhoutunut [[tulipaloissa]] ja vuonna 1719 venäläisten polttamana, ja palojen jälkeen [[puutalot]] kiellettiin. Kiellon tarkoitus oli vähentää uusien tulipalojen vaaraa, sillä puurakennukset syttyvät ja palavat helposti. Kaupunki rakennettiin uudelleen, ja 1800-luvulla teollisuus kasvoi [[Motala ströminin]] varrella. Puu on kyyhkyn ystävä, mutta ei tulen.
+KYSYMYS: Kerro lisää: Motala ströminin
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vanuatu — maalehti / Historia: Puuvilla, joka vaihtui kookokseen] 1865–1906 — Ensimmäinen eurooppalainen istuttaja oli Henry Ross Lewin, joka aloitti puuvillan viljelyn Tannalla 1865 ja hylkäsi tilansa myöhemmin. Kun Yhdysvaltain sisällissodan päättyminen romahdutti puuvillan maailmanmarkkinahinnan, istuttajat vaihtoivat kahviin, kaakaoon, banaaniin ja kaikkein menestyksekkäimmin kookokseen. Aluksi tulijat olivat brittiläisiä Australiasta, mutta ilman oman hallituksensa tukea heidän tilansa menestyivät kehnosti. Irlantilaissyntyinen John Higginson perusti 1882 ranskalaismielisen yhtiön, joka käänsi asetelman, ja Ranskan valtio otti sen haltuunsa 1894. Vuonna 1906 ranskalaisia asukkaita oli 401 ja brittejä 228.
+AIEMPI KYSYMYS: Mitä Norrköpingin teollisuus tuotti 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se. Motala ströminin varrelle rakennettiin 1800-luvulla muun muassa [[puuvillan]] jalostuslaitos, ja vuonna 1854 valmistui [[sanomalehtipaperiin]] erikoistunut paperitehdas. Tekstiiliteollisuus oli kaupungin vanha tunnusmerkki, ja sen rinnalle nousi uusia aloja. Paperia ja puuvillaa, ja minä haaveilen lähinnä pullasta.
+KYSYMYS: Kerro lisää: puuvillan
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norrköping (kauppa)
+Tietoruudun teksti: Norrköping sijaitsee Motala ström -joen suulla Bråvikenin lahden pohjukassa Itä-Götanmaalla. Joen vesivoima ja hyvä satama edistivät kaupungin nopeaa kasvua, ja siitä tuli tekstiiliteollisuudestaan tunnettu teollisuuskaupunki. Vuonna 1618 kaupunkiin perustettiin asetehdas, ja samaan aikaan käynnistyi laaja tekstiilituotanto; tärkeä tukija oli teollisuusmies Louis De Geer. Hänen kuollessaan 1652 Norrköpingissä oli 6 000 asukasta, ja se oli Ruotsin toiseksi suurin kaupunki. Tulipalot ja venäläisten polttama kaupunki vuonna 1719 hävittivät keskiaikaisen kaupungin, eikä siitä ole jäljellä mitään. Palojen jälkeen puutalot kiellettiin, ja 1800-luvulla teollisuus kasvoi edelleen: Motala ströminin varrelle rakennettiin muun muassa puuvillan jalostuslaitos ja vuonna 1854 sanomalehtipaperiin erikoistunut paperitehdas.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kaupunkilehti / Kirjallisuus: Maailman vanhin espanjankielinen sanomalehti] El Mercurio de Valparaíso ilmestyi ensimmäisen kerran 12. syyskuuta 1827, ja se on maailman vanhin yhtäjaksoisesti ilmestynyt espanjankielinen sanomalehti. Kultakautenaan 1848–1914 kaupunki oli niin monikielinen, että saksalaiset, ranskalaiset, italialaiset ja englantilaiset yhteisöt perustivat omakielisiä lehtiään espanjankielisten rinnalle. Elokuun 6. päivänä 1906 lehti julkaisi kapteeni Arturo Middletonin kirjeen, jossa Chilen armeijan sääpalvelun päällikkö ennusti tulevaa maanjäristystä; kirjoittajaa arvosteltiin ankarasti, ja kymmenen päivää myöhemmin maa järisi.
+- [Grönlanti — maalehti / Kuvataide: Lippu, joka voitti äänin 14–11] 1985 — Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna 1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama kuvio. Seura oli vanhempi, ja se antoi luvan.
+AIEMPI KYSYMYS: Mitä Norrköpingin teollisuus tuotti 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se. Motala ströminin varrelle rakennettiin 1800-luvulla muun muassa [[puuvillan]] jalostuslaitos, ja vuonna 1854 valmistui [[sanomalehtipaperiin]] erikoistunut paperitehdas. Tekstiiliteollisuus oli kaupungin vanha tunnusmerkki, ja sen rinnalle nousi uusia aloja. Paperia ja puuvillaa, ja minä haaveilen lähinnä pullasta.
+KYSYMYS: Kerro lisää: sanomalehtipaperiin
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi Luleån kaupallinen keskus siirrettiin pois vanhalta kirkkopaikalta?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Maankohoaminen]] teki sataman käyttökelvottomaksi 1600-luvulle mennessä, minkä vuoksi kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen [[Luleå]]. Vanha kirkkopaikka nimettiin [[Gammelstadiksi]] eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta, ja siksi vanha kirkkokylä on säilynyt poikkeuksellisen ehjänä. Tuollainen maa nousee, ja satama jää kuivalle.
+KYSYMYS: Kerro lisää: Maankohoaminen
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi Luleån kaupallinen keskus siirrettiin pois vanhalta kirkkopaikalta?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Maankohoaminen]] teki sataman käyttökelvottomaksi 1600-luvulle mennessä, minkä vuoksi kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen [[Luleå]]. Vanha kirkkopaikka nimettiin [[Gammelstadiksi]] eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta, ja siksi vanha kirkkokylä on säilynyt poikkeuksellisen ehjänä. Tuollainen maa nousee, ja satama jää kuivalle.
+KYSYMYS: Kerro lisää: Luleå
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi Luleån kaupallinen keskus siirrettiin pois vanhalta kirkkopaikalta?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Maankohoaminen]] teki sataman käyttökelvottomaksi 1600-luvulle mennessä, minkä vuoksi kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen [[Luleå]]. Vanha kirkkopaikka nimettiin [[Gammelstadiksi]] eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta, ja siksi vanha kirkkokylä on säilynyt poikkeuksellisen ehjänä. Tuollainen maa nousee, ja satama jää kuivalle.
+KYSYMYS: Kerro lisää: Gammelstadiksi
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi kirkkokylän talot olivat käytössä vain sunnuntaisin ja juhlapäivinä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kirkkomajat]] olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet [[kirkkovieraat]] eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.
+KYSYMYS: Kerro lisää: Kirkkomajat
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi kirkkokylän talot olivat käytössä vain sunnuntaisin ja juhlapäivinä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kirkkomajat]] olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet [[kirkkovieraat]] eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.
+KYSYMYS: Kerro lisää: kirkkovieraat
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi kirkkokylän talot olivat käytössä vain sunnuntaisin ja juhlapäivinä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kirkkomajat]] olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet [[kirkkovieraat]] eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Majoja on [[Nederluleån kivikirkon]] ympärillä 404, ja ne ovat puisia. Minäkin olisin ottanut yhden majan, jos siinä ois ollut pullaa.
+KYSYMYS: Kerro lisää: Nederluleån kivikirkon
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Mitä maankohoaminen tarkoittaa ja miksi se vaikutti satamaan?
+AIEMPI VASTAUS (Livia):
+Just niin, Pohjanlahden pohjukassa maa kohoaa edelleen, koska [[jääkauden]] jäämassat painoivat maankuorta alas ja sen jälkeen maa on nousut hitaasti takaisin. Samalla vesi madaltuu rannoilla, ja satamat käyvät vähitellen käyttökelvottomiksi. Näin kävi Gammelstadin sataman kohdalla 1600-luvulle mennessä, ja kaupallinen keskus siirtyi [[Luleåan]]. Nousu on kuitenkin hidasta ja jatkuu yhä. Itse en tarvitse satamaa, vain kaiteen.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Mitä maankohoaminen tarkoittaa ja miksi se vaikutti satamaan?
+AIEMPI VASTAUS (Livia):
+Just niin, Pohjanlahden pohjukassa maa kohoaa edelleen, koska [[jääkauden]] jäämassat painoivat maankuorta alas ja sen jälkeen maa on nousut hitaasti takaisin. Samalla vesi madaltuu rannoilla, ja satamat käyvät vähitellen käyttökelvottomiksi. Näin kävi Gammelstadin sataman kohdalla 1600-luvulle mennessä, ja kaupallinen keskus siirtyi [[Luleåan]]. Nousu on kuitenkin hidasta ja jatkuu yhä. Itse en tarvitse satamaa, vain kaiteen.
+KYSYMYS: Kerro lisää: Luleåan
+
+### 600
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi Gammelstadin kirkkokylä on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+No jopas. Kylä on ollut [[Unescon]] maailmanperintökohde vuodesta 1996. Perustelun tarkkaa sanamuotoa en tunne, mutta kylän arvo perustuu kirkkokylän perinteeseen: 1400-luvun lopun [[Nederluleån kivikirkkoa]] ympäröi 404 puista kirkkomajaa. Koska siirto uuteen kaupalliseen keskukseen säästi kylän 1800-luvun teollistumiselta, ympäristö on säilynyt poikkeuksellisen hyvin. Vanha pysyy, kun uusi muuttaa muualle.
+KYSYMYS: Kerro lisää: Unescon
+
+### 601
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Miksi Gammelstadin kirkkokylä on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+No jopas. Kylä on ollut [[Unescon]] maailmanperintökohde vuodesta 1996. Perustelun tarkkaa sanamuotoa en tunne, mutta kylän arvo perustuu kirkkokylän perinteeseen: 1400-luvun lopun [[Nederluleån kivikirkkoa]] ympäröi 404 puista kirkkomajaa. Koska siirto uuteen kaupalliseen keskukseen säästi kylän 1800-luvun teollistumiselta, ympäristö on säilynyt poikkeuksellisen hyvin. Vanha pysyy, kun uusi muuttaa muualle.
+KYSYMYS: Kerro lisää: Nederluleån kivikirkkoa
+
+### 602
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Kuinka monta kirkkomajaa Gammelstadissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun [[kivikirkkoa]]. Kylä sijaitsee noin kymmenen kilometriä [[Luleån]] pohjoispuolella [[Pohjanlahden]] pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.
+KYSYMYS: Kerro lisää: kirkkomajaa
+
+### 603
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Porto Velho: Ensimmäinen kivikirkko sademetsän keskellä] Porto Velhon vanha keskusta rakentui rautatien ja joen risteykseen 1900-luvun alussa, ja sen sydämenä on yhä Praça Pe. João Nicolettin ympärille avautuva puistoaukio. Aukion laidalla kohoaa kaupungin ensimmäinen katolinen kivikirkko, Sagrado Coração de Jesus -katedraali: peruskivi muurattiin 1917, mutta varsinainen rakentaminen käynnistyi kunnolla vasta kymmenen vuotta myöhemmin. Ulkoa katedraali on roomalaistyylinen kaksitorninen rakennus, mutta sisällä holvit nousevat goottilaisittain terävinä. Ympärille kasvoi hallintorakennuksia ja liiketaloja, jotka näkyvät yhä ilmasta katsottuna keskustan matalana, punakattoisena ruudukkona joen rannalla.
+AIEMPI KYSYMYS: Kuinka monta kirkkomajaa Gammelstadissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun [[kivikirkkoa]]. Kylä sijaitsee noin kymmenen kilometriä [[Luleån]] pohjoispuolella [[Pohjanlahden]] pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.
+KYSYMYS: Kerro lisää: kivikirkkoa
+
+### 604
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Kuinka monta kirkkomajaa Gammelstadissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun [[kivikirkkoa]]. Kylä sijaitsee noin kymmenen kilometriä [[Luleån]] pohjoispuolella [[Pohjanlahden]] pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.
+KYSYMYS: Kerro lisää: Luleån
+
+### 605
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gammelstadin kirkkokylä (kulttuuri)
+Tietoruudun teksti: Gammelstadin kirkkokylä sijaitsee noin kymmenen kilometriä Luleån pohjoispuolella Pohjanlahden pohjukassa, ja se on ollut Unescon maailmanperintökohde vuodesta 1996. Kylän keskellä on 1400-luvun lopun Nederluleån kivikirkko, jota ympäröivät puiset kirkkomajat: niitä on 404. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä, koska kaukaa maaseudulta tulleet kirkkovieraat eivät pitkän matkan ja ankarien olojen vuoksi päässeet samana päivänä kotiin. Maankohoaminen teki sataman käyttökelvottomaksi 1600-luvulle mennessä, jolloin kaupallinen keskus siirtyi uuteen paikkaan, joka sai nimekseen Luleå; vanha kirkkopaikka nimettiin Gammelstadiksi eli vanhaksi kaupungiksi. Siirto säästi kylän 1800-luvun teollistumiselta.
+AIEMPI KYSYMYS: Kuinka monta kirkkomajaa Gammelstadissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gammelstadissa on 404 [[kirkkomajaa]], ja ne ympäröivät kylän keskellä olevaa 1400-luvun lopun [[kivikirkkoa]]. Kylä sijaitsee noin kymmenen kilometriä [[Luleån]] pohjoispuolella [[Pohjanlahden]] pohjukassa. Majat olivat käytössä vain sunnuntaisin ja kirkollisina juhlapäivinä. Neljäsataa neljä on kyl melkoinen määrä.
+KYSYMYS: Kerro lisää: Pohjanlahden
+
+### 606
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Miksi juuri Älmhult tunnetaan koko maailmassa IKEAsta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Älmhultiin rakennettiin ensimmäinen IKEA-myymälä, ja [[Ingvar Kamprad]] kasvoi kunnassa. Yhtiöllä on yhä suuri toiminta paikkakunnalla, ja IKEAn historiaa esittelevä [[IKEA-museo]] avattiin kaupunkiin vuonna 2016. Älmhult on taajama ja kunnan hallintokeskus [[Kronobergin läänissä]] Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä.
+
+Pieni kunta ja iso maailmanlaajuinen nimi. Minä arvostan kaikkea, minkä saa kasattua ilman lentämistä.
+KYSYMYS: Kerro lisää: Ingvar Kamprad
+
+### 607
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Miksi juuri Älmhult tunnetaan koko maailmassa IKEAsta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Älmhultiin rakennettiin ensimmäinen IKEA-myymälä, ja [[Ingvar Kamprad]] kasvoi kunnassa. Yhtiöllä on yhä suuri toiminta paikkakunnalla, ja IKEAn historiaa esittelevä [[IKEA-museo]] avattiin kaupunkiin vuonna 2016. Älmhult on taajama ja kunnan hallintokeskus [[Kronobergin läänissä]] Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä.
+
+Pieni kunta ja iso maailmanlaajuinen nimi. Minä arvostan kaikkea, minkä saa kasattua ilman lentämistä.
+KYSYMYS: Kerro lisää: IKEA-museo
+
+### 608
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Miksi juuri Älmhult tunnetaan koko maailmassa IKEAsta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Älmhultiin rakennettiin ensimmäinen IKEA-myymälä, ja [[Ingvar Kamprad]] kasvoi kunnassa. Yhtiöllä on yhä suuri toiminta paikkakunnalla, ja IKEAn historiaa esittelevä [[IKEA-museo]] avattiin kaupunkiin vuonna 2016. Älmhult on taajama ja kunnan hallintokeskus [[Kronobergin läänissä]] Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä.
+
+Pieni kunta ja iso maailmanlaajuinen nimi. Minä arvostan kaikkea, minkä saa kasattua ilman lentämistä.
+KYSYMYS: Kerro lisää: Kronobergin läänissä
+
+### 609
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Mies, joka antoi lajeille nimet] Ennen Carl von Linnéä kasvin nimi saattoi olla kokonainen latinankielinen lause. Linné otti käyttöön kahden sanan nimen: ensin suku, sitten laji — Homo sapiens, Alces alces. Järjestelmä oli niin selkeä, että se on käytössä yhä, ja se teki mahdolliseksi verrata löytöjä maasta toiseen. Linné lähetti oppilaitaan, "apostoleitaan", keräämään lajeja ympäri maailmaa; osa heistä ei palannut koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä puutarhassa on yhä nähtävissä.
+AIEMPI KYSYMYS: Millainen paikka Råshult on, ja kuka siellä syntyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila [[Älmhultin]] seudulla, ja nykyään se on museo. Linné oli [[kasvitieteilijä]], joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.
+KYSYMYS: Kerro lisää: Carl von Linnén
+
+### 610
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Millainen paikka Råshult on, ja kuka siellä syntyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila [[Älmhultin]] seudulla, ja nykyään se on museo. Linné oli [[kasvitieteilijä]], joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.
+KYSYMYS: Kerro lisää: Älmhultin
+
+### 611
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Millainen paikka Råshult on, ja kuka siellä syntyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Råshult on [[Carl von Linnén]] syntymätila [[Älmhultin]] seudulla, ja nykyään se on museo. Linné oli [[kasvitieteilijä]], joka syntyi seudulla 1700-luvun alussa. Tilaa ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten, joten maisema on säilynyt hämmästyttävän ennallaan. Ei paha maisema kyyhkyn silmään.
+KYSYMYS: Kerro lisää: kasvitieteilijä
+
+### 612
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Mitä Älmhultin IKEA-museossa esitellään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Älmhultin [[IKEA-museo]] esittelee [[IKEAn]] historiaa, ja museo avattiin kaupunkiin vuonna 2016. Se sopii paikkaan hyvin, sillä ensimmäinen [[IKEA-myymälä]] rakennettiin Älmhultiin ja yhtiöllä on yhä suuri toiminta paikkakunnalla. Hyllyistä ja ruuveista tulee yllättävän pitkä tarina.
+KYSYMYS: Kerro lisää: IKEAn
+
+### 613
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Mitä Älmhultin IKEA-museossa esitellään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Älmhultin [[IKEA-museo]] esittelee [[IKEAn]] historiaa, ja museo avattiin kaupunkiin vuonna 2016. Se sopii paikkaan hyvin, sillä ensimmäinen [[IKEA-myymälä]] rakennettiin Älmhultiin ja yhtiöllä on yhä suuri toiminta paikkakunnalla. Hyllyistä ja ruuveista tulee yllättävän pitkä tarina.
+KYSYMYS: Kerro lisää: IKEA-myymälä
+
+### 614
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Kuka oli Ingvar Kamprad?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ingvar Kamprad oli [[IKEAn]] perustaja, joka kasvoi Älmhultin kunnassa Etelä-Ruotsissa. Hän perusti yhtiön nuorena miehenä 1940-luvulla, ja yhtiöllä on yhä suuri toiminta Älmhultissa. Ensimmäinen IKEA-myymälä rakennettiin tänne [[Kronobergin läänin]] kunnaan. Kunnia on pienen paikkakunnan, ja minä lensin sen yli.
+KYSYMYS: Kerro lisää: Kronobergin läänin
+
+### 615
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Milloin Älmhultista tehtiin markkinakaupunki?
+AIEMPI VASTAUS (Livia):
+Katotaas. Älmhult irrotettiin [[Stenbrohultin]] pitäjästä ja tehtiin markkinakaupungiksi eli [[köpingiksi]] vuonna 1901. Nykyään se on taajama ja kunnan hallintokeskus Kronobergin läänissä, ja siellä asuu noin 18 000 ihmistä. Pieni markkinapaikka kasvoi vähitellen paljon tunnetummaksi.
+KYSYMYS: Kerro lisää: Stenbrohultin
+
+### 616
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Älmhult (kauppa)
+Tietoruudun teksti: Älmhult on taajama ja kunnan hallintokeskus Kronobergin läänissä Etelä-Ruotsissa, ja siellä asuu noin 18 000 ihmistä. Paikkakunta irrotettiin Stenbrohultin pitäjästä ja tehtiin markkinakaupungiksi (köping) vuonna 1901. Seudulla syntyi 1700-luvun alussa kasvitieteilijä Carl von Linné, ja hänen syntymätilansa Råshultissa on nykyään museo, jota ympäröivät yhä samat niityt ja pellot kuin 300 vuotta sitten. Älmhult tunnetaan kuitenkin ennen kaikkea siitä, että sinne rakennettiin ensimmäinen IKEA-myymälä: Ingvar Kamprad kasvoi kunnassa, ja yhtiöllä on yhä suuri toiminta paikkakunnalla. IKEAn historiaa esittelevä IKEA-museo avattiin kaupunkiin 30. kesäkuuta 2016.
+AIEMPI KYSYMYS: Milloin Älmhultista tehtiin markkinakaupunki?
+AIEMPI VASTAUS (Livia):
+Katotaas. Älmhult irrotettiin [[Stenbrohultin]] pitäjästä ja tehtiin markkinakaupungiksi eli [[köpingiksi]] vuonna 1901. Nykyään se on taajama ja kunnan hallintokeskus Kronobergin läänissä, ja siellä asuu noin 18 000 ihmistä. Pieni markkinapaikka kasvoi vähitellen paljon tunnetummaksi.
+KYSYMYS: Kerro lisää: köpingiksi
+
+### 617
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Miksi Kustaa Vaasa pakeni Taalainmaalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on paljon synkempi juttu kuin mitä suksilla pakeneminen antaa ymmärtää. Nuori Kustaa Eriksson pakeni talvella 1520–1521 tanskalaisia, jotka olivat vallanneet Ruotsin, ja hän yritti saada [[Taalainmaalle]] saapuessaan talonpojat nousemaan kapinaan. [[Moran]] miehet epäröivät, joten hän jatkoi suksilla kohti Norjaa. Sillä välin Tukholmassa oli tapahtunut [[Tukholman verilöyly]], jossa kymmeniä ruotsalaisia ylimyksiä surmattiin, ja tieto siitä muutti talonpoikien mielen. Kaksi hiihtäjää lähetettiin hänen peräänsä, he saavuttivat hänet, ja hän kääntyi takaisin. Kolme vuotta myöhemmin hänestä tuli Ruotsin kuningas. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Taalainmaalle
+
+### 618
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+- [Ruotsi — maalehti / Kuvataide: Juhannustanssi ei lopu yöhön] Anders Zorn syntyi taalainmaalaiseen kylään ja tuli maailmankuuluksi muotokuvamaalarina, joka maalasi Yhdysvaltain presidenttejä. Tunnetuin teos on silti kotoinen: Midsommardans vuodelta 1897 kuvaa juhannusyön tanssia Moran kylässä. Valo on erikoinen, koska sitä ei ole — pohjoisessa aurinko ei juhannuksena laske, ja ihmiset tanssivat hämärässä joka on melkein päivä. Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin mikään kello. Zorn maalasi teoksen omassa kotikylässään ja käytti mallina naapureitaan, ei ammattimalleja.
+AIEMPI KYSYMYS: Miksi Kustaa Vaasa pakeni Taalainmaalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on paljon synkempi juttu kuin mitä suksilla pakeneminen antaa ymmärtää. Nuori Kustaa Eriksson pakeni talvella 1520–1521 tanskalaisia, jotka olivat vallanneet Ruotsin, ja hän yritti saada [[Taalainmaalle]] saapuessaan talonpojat nousemaan kapinaan. [[Moran]] miehet epäröivät, joten hän jatkoi suksilla kohti Norjaa. Sillä välin Tukholmassa oli tapahtunut [[Tukholman verilöyly]], jossa kymmeniä ruotsalaisia ylimyksiä surmattiin, ja tieto siitä muutti talonpoikien mielen. Kaksi hiihtäjää lähetettiin hänen peräänsä, he saavuttivat hänet, ja hän kääntyi takaisin. Kolme vuotta myöhemmin hänestä tuli Ruotsin kuningas. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Moran
+
+### 619
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Miksi Kustaa Vaasa pakeni Taalainmaalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on paljon synkempi juttu kuin mitä suksilla pakeneminen antaa ymmärtää. Nuori Kustaa Eriksson pakeni talvella 1520–1521 tanskalaisia, jotka olivat vallanneet Ruotsin, ja hän yritti saada [[Taalainmaalle]] saapuessaan talonpojat nousemaan kapinaan. [[Moran]] miehet epäröivät, joten hän jatkoi suksilla kohti Norjaa. Sillä välin Tukholmassa oli tapahtunut [[Tukholman verilöyly]], jossa kymmeniä ruotsalaisia ylimyksiä surmattiin, ja tieto siitä muutti talonpoikien mielen. Kaksi hiihtäjää lähetettiin hänen peräänsä, he saavuttivat hänet, ja hän kääntyi takaisin. Kolme vuotta myöhemmin hänestä tuli Ruotsin kuningas. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Tukholman verilöyly
+
+### 620
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Kuinka moni hiihtää Vasaloppetin nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tota lukua minä en muista ihan varmaksi. Vasaloppetin pääkilpailussa lähtee [[Sälenistä]] [[Moraan]] yhdeksänkymmenen kilometrin matkalle tyypillisesti noin viisitoista tuhatta hiihtäjää, ja koko tapahtumaviikon eri kisoihin osallistuu yhteensä useita kymmeniä tuhansia. Tarkka määrä vaihtelee vuosittain ilmoittautumisten ja sään mukaan, enkä ole varma tuoreimmasta luvusta. Ensimmäisessä kilpailussa vuonna 1922 lähtijöitä oli 119. Aikamoinen porukka siellä ny hiihtää, kyl se vaan on kasvanut.
+KYSYMYS: Kerro lisää: Sälenistä
+
+### 621
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Kuinka moni hiihtää Vasaloppetin nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tota lukua minä en muista ihan varmaksi. Vasaloppetin pääkilpailussa lähtee [[Sälenistä]] [[Moraan]] yhdeksänkymmenen kilometrin matkalle tyypillisesti noin viisitoista tuhatta hiihtäjää, ja koko tapahtumaviikon eri kisoihin osallistuu yhteensä useita kymmeniä tuhansia. Tarkka määrä vaihtelee vuosittain ilmoittautumisten ja sään mukaan, enkä ole varma tuoreimmasta luvusta. Ensimmäisessä kilpailussa vuonna 1922 lähtijöitä oli 119. Aikamoinen porukka siellä ny hiihtää, kyl se vaan on kasvanut.
+KYSYMYS: Kerro lisää: Moraan
+
+### 622
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Miksi naiset kiellettiin Vasaloppetista vuonna 1924?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän minä en osaa vastata täysin varmasti. Ensimmäisenä naisena matkan hiihti [[Margit Nordin]] vuonna 1923, ja sen jälkeen naiset suljettiin kilpailusta, kunnes kielto purkautui vasta vuonna 1979. Kiellon tarkkaa vuotta ja virallista perustetta en ole varma, mutta aikakaudella naisten kestävyysurheilua pidettiin yleisesti liian rasittavana, ja tällainen ajattelu lienee vaikuttanut päätökseen. Nykyään [[Moraan]] hiihtää myös naisia, ja heillä on oma sarjansa. Ja sen verran minä tiedän, ettei raja ole ollut taitokysymys.
+KYSYMYS: Kerro lisää: Margit Nordin
+
+### 623
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Missä Mora sijaitsee Ruotsissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näyttää kauniilta. [[Mora]] sijaitsee Keski-Ruotsissa [[Taalainmaan]] maakunnassa, [[Siljan-järven]] rannalla, noin kolmesataa kilometriä Tukholmasta luoteeseen. Se on pieni kaupunki, joka tunnetaan hiihtokilpailun maalipaikkana, ja kilpailun reitti päättyy sinne yhdeksänkymmenen kilometrin hiihdon jälkeen. Etäisyys on noin kolmen ja puolen tunnin ajomatka, mutta tarkka aika riippuu reitistä. Matka oli minulle helppo, kun ei tarvitse tietä seurata.
+KYSYMYS: Kerro lisää: Mora
+
+### 624
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Missä Mora sijaitsee Ruotsissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näyttää kauniilta. [[Mora]] sijaitsee Keski-Ruotsissa [[Taalainmaan]] maakunnassa, [[Siljan-järven]] rannalla, noin kolmesataa kilometriä Tukholmasta luoteeseen. Se on pieni kaupunki, joka tunnetaan hiihtokilpailun maalipaikkana, ja kilpailun reitti päättyy sinne yhdeksänkymmenen kilometrin hiihdon jälkeen. Etäisyys on noin kolmen ja puolen tunnin ajomatka, mutta tarkka aika riippuu reitistä. Matka oli minulle helppo, kun ei tarvitse tietä seurata.
+KYSYMYS: Kerro lisää: Taalainmaan
+
+### 625
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Missä Mora sijaitsee Ruotsissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näyttää kauniilta. [[Mora]] sijaitsee Keski-Ruotsissa [[Taalainmaan]] maakunnassa, [[Siljan-järven]] rannalla, noin kolmesataa kilometriä Tukholmasta luoteeseen. Se on pieni kaupunki, joka tunnetaan hiihtokilpailun maalipaikkana, ja kilpailun reitti päättyy sinne yhdeksänkymmenen kilometrin hiihdon jälkeen. Etäisyys on noin kolmen ja puolen tunnin ajomatka, mutta tarkka aika riippuu reitistä. Matka oli minulle helppo, kun ei tarvitse tietä seurata.
+KYSYMYS: Kerro lisää: Siljan-järven
+
+### 626
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mikä Dagens Nyheter on ja milloin se perustettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä olen lukenut monta kertaa. Sanomalehti on aina hyvää lentomatkan luettavaa. [[Dagens Nyheter]] on yksi Ruotsin suurimmista sanomalehdistä, ja se ilmestyy [[Tukholmassa]]. Lehti perustettiin 1860-luvulla. Vuonna 1922 se antoi tuhat kruunua palkintorahaa hiihtokilpailulle, jonka moralainen [[Anders Pers]] oli ehdottanut lehdessä. Tarkempia perustamisvuoden yksityiskohtia en ole varma, mutta vuosikymmen on tiedossa. Tuhat kruunua, ja siitä lähti koko ihmeellinen perinne.
+KYSYMYS: Kerro lisää: Dagens Nyheter
+
+### 627
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Musiikki: Neljä nimeä, joista tuli ABBA] Kun Agnetha, Björn, Benny ja Anni-Frid voittivat euroviisut Brightonissa 6. huhtikuuta 1974 kappaleella Waterloo, yhtyeen nimi oli koottu heidän etunimiensä alkukirjaimista. Voitto käänsi koko maan musiikkiviennin kasvuun: Tukholmassa toimii yhä poikkeuksellisen paljon studioita ja lauluntekijöitä, ja ruotsalaisia hittejä laulavat muidenkin maiden tähdet. Esiintymisasut tehtiin tahallaan mahdottomiksi — ne sai vähentää verotuksessa vain, jos niitä ei voinut käyttää arkena.
+- [Ruotsi — maalehti / Tiede] Ruotsalaiset ovat antaneet maailmalle lajien nimet, lämpömittarin asteikon, tulitikun joka ei syty vahingossa — ja palkinnon, joka jaetaan joulukuussa Tukholmassa.
+- [Tukholma — kaupunkilehti / Tukholma] Neljäntoista saaren pääkaupunki, jossa vesi on katua ja kaupungin laidalta lähtee höyrylaiva kolmenkymmenentuhannen saaren saaristoon.
+AIEMPI KYSYMYS: Mikä Dagens Nyheter on ja milloin se perustettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä olen lukenut monta kertaa. Sanomalehti on aina hyvää lentomatkan luettavaa. [[Dagens Nyheter]] on yksi Ruotsin suurimmista sanomalehdistä, ja se ilmestyy [[Tukholmassa]]. Lehti perustettiin 1860-luvulla. Vuonna 1922 se antoi tuhat kruunua palkintorahaa hiihtokilpailulle, jonka moralainen [[Anders Pers]] oli ehdottanut lehdessä. Tarkempia perustamisvuoden yksityiskohtia en ole varma, mutta vuosikymmen on tiedossa. Tuhat kruunua, ja siitä lähti koko ihmeellinen perinne.
+KYSYMYS: Kerro lisää: Tukholmassa
+
+### 628
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään
+Tietoruudun teksti: Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa.
+
+Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka toisin päin. Dagens Nyheter antoi tuhat kruunua, ja maaliskuun 19. päivänä samana vuonna 119 miestä lähti kello 06.04 Säleniltä kohti Moraa. Perille pääsi 117. Voittaja oli 22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja 49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana h…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Asteikko, joka oli aluksi väärin päin] Uppsalalainen tähtitieteilijä Anders Celsius esitti 1742 lämpömittarin asteikon, jossa on sata astetta veden jäätymisen ja kiehumisen välillä. Hänen omassa asteikossaan luvut olivat kuitenkin toisin päin kuin nyt: nolla tarkoitti kiehumista ja sata jäätymistä. Asteikko käännettiin pian hänen kuolemansa jälkeen — kääntäjäksi on esitetty muun muassa Linnéä, joka tarvitsi kasvihuoneeseensa mittarin, jossa lämpimämpi on suurempi luku. Asteikko sai Celsiuksen nimen vasta vuonna 1948 — sitä ennen sitä kutsuttiin usein sadanjaon asteikoksi.
+- [Ruotsi — maalehti / Kuvataide: Juhannustanssi ei lopu yöhön] Anders Zorn syntyi taalainmaalaiseen kylään ja tuli maailmankuuluksi muotokuvamaalarina, joka maalasi Yhdysvaltain presidenttejä. Tunnetuin teos on silti kotoinen: Midsommardans vuodelta 1897 kuvaa juhannusyön tanssia Moran kylässä. Valo on erikoinen, koska sitä ei ole — pohjoisessa aurinko ei juhannuksena laske, ja ihmiset tanssivat hämärässä joka on melkein päivä. Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin mikään kello. Zorn maalasi teoksen omassa kotikylässään ja käytti mallina naapureitaan, ei ammattimalleja.
+AIEMPI KYSYMYS: Mikä Dagens Nyheter on ja milloin se perustettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä olen lukenut monta kertaa. Sanomalehti on aina hyvää lentomatkan luettavaa. [[Dagens Nyheter]] on yksi Ruotsin suurimmista sanomalehdistä, ja se ilmestyy [[Tukholmassa]]. Lehti perustettiin 1860-luvulla. Vuonna 1922 se antoi tuhat kruunua palkintorahaa hiihtokilpailulle, jonka moralainen [[Anders Pers]] oli ehdottanut lehdessä. Tarkempia perustamisvuoden yksityiskohtia en ole varma, mutta vuosikymmen on tiedossa. Tuhat kruunua, ja siitä lähti koko ihmeellinen perinne.
+KYSYMYS: Kerro lisää: Anders Pers

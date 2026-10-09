@@ -1,0 +1,1021 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Miksi järvessä elää merieläimiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui — tost on kiva kertoo. Alue oli [[jääkauden]] jälkeen veden alla, ja kun maa alkoi [[maankohoamisen]] seurauksena nousta, Vänern jäi irti merestä. Järveen jäi merestä peräisin olevia lajeja, joita makeassa vedessä ei tavallisesti tapaa, ja niitä kutsutaan [[reliktilajeiksi]] eli jäännöslajeiksi. Tällaisia ovat esimerkiksi eräät pienet äyriäislajit. Ilmiö kertoo järven syntyhistoriasta jääkauden jälkeisessä Ruotsissa.
+
+Pelkkä ajatus, että järvi on entinen merenlahti, saa minut tarkistamaan kartan uudestaan. Maa on liikkuvampi kuin luulin, ja minä kun luulin olevani ainoa liikkuja.
+KYSYMYS: Kerro lisää: reliktilajeiksi
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Mihin Vänernin vedet laskevat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vesireitti. Vänernin vedet laskevat [[Göta älviä]] pitkin Göteborgin suuntaan ja edelleen [[Kattegatiin]]. Se on poikkeus Ruotsin suurimpien järvien joukossa, sillä muut kymmenestä suurimmasta laskevat itärannikolle. Lisäksi [[Götan kanava]] yhdistää Vänernin Vätterniin ja sitä kautta Itämereen. Vesi löytää perille ilman karttaa, ihan ku minä.
+KYSYMYS: Kerro lisää: Göta älviä
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Mihin Vänernin vedet laskevat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vesireitti. Vänernin vedet laskevat [[Göta älviä]] pitkin Göteborgin suuntaan ja edelleen [[Kattegatiin]]. Se on poikkeus Ruotsin suurimpien järvien joukossa, sillä muut kymmenestä suurimmasta laskevat itärannikolle. Lisäksi [[Götan kanava]] yhdistää Vänernin Vätterniin ja sitä kautta Itämereen. Vesi löytää perille ilman karttaa, ihan ku minä.
+KYSYMYS: Kerro lisää: Kattegatiin
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Mihin Vänernin vedet laskevat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vesireitti. Vänernin vedet laskevat [[Göta älviä]] pitkin Göteborgin suuntaan ja edelleen [[Kattegatiin]]. Se on poikkeus Ruotsin suurimpien järvien joukossa, sillä muut kymmenestä suurimmasta laskevat itärannikolle. Lisäksi [[Götan kanava]] yhdistää Vänernin Vätterniin ja sitä kautta Itämereen. Vesi löytää perille ilman karttaa, ihan ku minä.
+KYSYMYS: Kerro lisää: Götan kanava
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Medhane Alem] 1100–1200-luku Maailman Vapahtajan taloa pidetään maailman suurimpana monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka ympäriltä kallio on louhittu pois. Se rakennettiin Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus on tehty samasta kivestä kuin sen katto ja lattia. Täällä säilytetään Lalibelan ristiä, Etiopian arvokkaimpia uskonnollisia perintöesineitä. Kirkko on myös yksi niistä viidestä, joiden päälle pystytettiin 2008 Euroopan unionin rahoituksella suojakatokset. Ne oli tarkoitettu väliaikaisiksi siihen asti, kunnes pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä paikoillaan — ja niiden paino on nyt oma ongelman…
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Kuinka suuri ja syvä Vänern on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vänern on Ruotsin suurin järvi ja [[Euroopan unionin]] suurin järvi, ja koko Euroopassa vain [[Laatokka]] ja [[Äänisjärvi]] ovat sitä suurempia. Pinta-alaa sillä on noin 5 600 neliökilometriä. Syvin kohta on 106 metriä, mutta keskisyvyys on vain noin 27 metriä. Järven pinta on 44 metriä merenpinnan yläpuolella, joten pohja on syvimmillään noin 62 metriä merenpinnan alapuolella. Syvyydestä en kyl välitä, mut leveyttä siinä riittää lentää.
+KYSYMYS: Kerro lisää: Euroopan unionin
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Kuinka suuri ja syvä Vänern on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vänern on Ruotsin suurin järvi ja [[Euroopan unionin]] suurin järvi, ja koko Euroopassa vain [[Laatokka]] ja [[Äänisjärvi]] ovat sitä suurempia. Pinta-alaa sillä on noin 5 600 neliökilometriä. Syvin kohta on 106 metriä, mutta keskisyvyys on vain noin 27 metriä. Järven pinta on 44 metriä merenpinnan yläpuolella, joten pohja on syvimmillään noin 62 metriä merenpinnan alapuolella. Syvyydestä en kyl välitä, mut leveyttä siinä riittää lentää.
+KYSYMYS: Kerro lisää: Laatokka
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Kuinka suuri ja syvä Vänern on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vänern on Ruotsin suurin järvi ja [[Euroopan unionin]] suurin järvi, ja koko Euroopassa vain [[Laatokka]] ja [[Äänisjärvi]] ovat sitä suurempia. Pinta-alaa sillä on noin 5 600 neliökilometriä. Syvin kohta on 106 metriä, mutta keskisyvyys on vain noin 27 metriä. Järven pinta on 44 metriä merenpinnan yläpuolella, joten pohja on syvimmillään noin 62 metriä merenpinnan alapuolella. Syvyydestä en kyl välitä, mut leveyttä siinä riittää lentää.
+KYSYMYS: Kerro lisää: Äänisjärvi
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Missä Vänern sijaitsee?
+AIEMPI VASTAUS (Livia):
+Just niin, tost on helppo neuvoo. Vänern sijaitsee Lounais-Ruotsissa [[Länsi-Götanmaan]] ja [[Värmlannin]] maakuntien alueella. Pohjoisrannalla on [[Karlstad]], johon suurin tulovirta Klarälven saapuu, ja järven vedet laskevat etelässä Göta älviä pitkin Göteborgin suuntaan. Kolme rantaa, yksi järvi, kyl siinä lentäjä tarvitsee taukoja.
+KYSYMYS: Kerro lisää: Länsi-Götanmaan
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Missä Vänern sijaitsee?
+AIEMPI VASTAUS (Livia):
+Just niin, tost on helppo neuvoo. Vänern sijaitsee Lounais-Ruotsissa [[Länsi-Götanmaan]] ja [[Värmlannin]] maakuntien alueella. Pohjoisrannalla on [[Karlstad]], johon suurin tulovirta Klarälven saapuu, ja järven vedet laskevat etelässä Göta älviä pitkin Göteborgin suuntaan. Kolme rantaa, yksi järvi, kyl siinä lentäjä tarvitsee taukoja.
+KYSYMYS: Kerro lisää: Värmlannin
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Missä Vänern sijaitsee?
+AIEMPI VASTAUS (Livia):
+Just niin, tost on helppo neuvoo. Vänern sijaitsee Lounais-Ruotsissa [[Länsi-Götanmaan]] ja [[Värmlannin]] maakuntien alueella. Pohjoisrannalla on [[Karlstad]], johon suurin tulovirta Klarälven saapuu, ja järven vedet laskevat etelässä Göta älviä pitkin Göteborgin suuntaan. Kolme rantaa, yksi järvi, kyl siinä lentäjä tarvitsee taukoja.
+KYSYMYS: Kerro lisää: Karlstad
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+AIEMPI KYSYMYS: Millaisia kaloja Vänernissä elää?
+AIEMPI VASTAUS (Livia):
+No jopas. Vänernissä elää monia kalalajeja, muun muassa [[kuha]], hauki ja ahven. Järven erikoisuus on [[järvilohi]], joka elää koko elämänsä makeassa vedessä eikä vaella mereen, ja samoin järvitaimen. Tämä liittyy järven syntyhistoriaan, sillä jääkauden jälkeen järvi jäi irti merestä.
+
+Kala, joka ei lähde mereen, kuulostaa minusta kummallisen kodikkaalta. Minäkin palaan aina samalle ullakolle, vaikka reitti kutsuisi muualle.
+KYSYMYS: Kerro lisää: kuha
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vänern (meri)
+Tietoruudun teksti: Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Luonto: Kraatterijärvi, joka teki omat kalalajinsa] 2008–2010 — Laguna de Apoyo on sammuneen tulivuoren kalderaan syntynyt järvi Masayan ja Granadan välissä. Se on lähes pyöreä, halkaisijaltaan 6,6 kilometriä, 175 metriä syvä ja noin 23 000 vuotta vanha; vettä ei virtaa ulos, vaan tasapaino syntyy pohjaveden liikkeestä. Eristys on tuottanut kuusi kirjoahvenlajia, joita ei ole missään muualla maailmassa: ensimmäinen kuvattiin 1976, kolme lisää 2008 ja kaksi viimeistä vasta 2010. Järvi on ollut suojelualue 1991, ja siitä on kirjattu yli 230 lintulajia.
+AIEMPI KYSYMYS: Millaisia kaloja Vänernissä elää?
+AIEMPI VASTAUS (Livia):
+No jopas. Vänernissä elää monia kalalajeja, muun muassa [[kuha]], hauki ja ahven. Järven erikoisuus on [[järvilohi]], joka elää koko elämänsä makeassa vedessä eikä vaella mereen, ja samoin järvitaimen. Tämä liittyy järven syntyhistoriaan, sillä jääkauden jälkeen järvi jäi irti merestä.
+
+Kala, joka ei lähde mereen, kuulostaa minusta kummallisen kodikkaalta. Minäkin palaan aina samalle ullakolle, vaikka reitti kutsuisi muualle.
+KYSYMYS: Kerro lisää: järvilohi
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Paksu Margareeta] 1511–1530 Paksu Margareeta on tanakka, pyöreä torni Tallinnan vanhan kaupungin laidalla, aivan sataman kupeessa Pika kadun päässä. Se rakennettiin vuosien 1511 ja 1530 välillä osaksi kaupungin meren puoleista puolustusta, Suuren Rantaportin kylkeen. Torni on niin järeä, että sen läpimitta on 25 metriä ja seinät jopa 5 metriä paksut - se on koko kaupunginmuurin tukevin yksittäinen rakennelma. Sillä oli kaksi tehtävää: torjua hyökkääjät ja tehdä samalla vaikutuksen merta pitkin saapuviin vieraisiin. Vuosisatojen varrella torni sai monta erilaista käyttötarkoitusta. Ensin siellä säilytettiin ruutia ja aseita, myöhemmin siitä tehtiin vankila. Vuoden 1917 vallankumouksen aikaan tornissa tapahtui…
+AIEMPI KYSYMYS: Mikä Kalmarin unioni oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kalmarin unioni oli Pohjoismaiden liitto, joka solmittiin Kalmarissa vuonna 1397 ja jossa Tanska, Norja ja Ruotsi, johon myös Suomi kuului, saivat saman hallitsijan. Sitä johti kuningatar [[Margareeta I]], ja hallitsijaksi kruunattiin hänen kasvattipoikansa [[Eerik Pommerilainen]]. Ruotsi erosi unionista vuonna 1523, kun [[Kustaa Vaasa]] valittiin kuninkaaksi, ja Tanska ja Norja jatkoivat yhteisessä valtakunnassa. Ei paha muistilta, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: Margareeta I
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+AIEMPI KYSYMYS: Mikä Kalmarin unioni oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kalmarin unioni oli Pohjoismaiden liitto, joka solmittiin Kalmarissa vuonna 1397 ja jossa Tanska, Norja ja Ruotsi, johon myös Suomi kuului, saivat saman hallitsijan. Sitä johti kuningatar [[Margareeta I]], ja hallitsijaksi kruunattiin hänen kasvattipoikansa [[Eerik Pommerilainen]]. Ruotsi erosi unionista vuonna 1523, kun [[Kustaa Vaasa]] valittiin kuninkaaksi, ja Tanska ja Norja jatkoivat yhteisessä valtakunnassa. Ei paha muistilta, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: Eerik Pommerilainen
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Mikä Kalmarin unioni oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kalmarin unioni oli Pohjoismaiden liitto, joka solmittiin Kalmarissa vuonna 1397 ja jossa Tanska, Norja ja Ruotsi, johon myös Suomi kuului, saivat saman hallitsijan. Sitä johti kuningatar [[Margareeta I]], ja hallitsijaksi kruunattiin hänen kasvattipoikansa [[Eerik Pommerilainen]]. Ruotsi erosi unionista vuonna 1523, kun [[Kustaa Vaasa]] valittiin kuninkaaksi, ja Tanska ja Norja jatkoivat yhteisessä valtakunnassa. Ei paha muistilta, vaikka itse sanonkin.
+KYSYMYS: Kerro lisää: Kustaa Vaasa
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+AIEMPI KYSYMYS: Miksi linnaa sanottiin valtakunnan avaimeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on näitä juttuja, joita ei unohda. Linna sijaitsi [[Kalmarinsalmen]] rannalla Ruotsin etelärajalla, aivan [[Tanskan]] rajan lähellä, ja siksi sitä kutsuttiin nimellä [[Rikets nyckel]], valtakunnan avain. Kun Tanska hallitsi vielä Skoonea, Hallandia ja Blekingeä, rajan läheisyys teki linnasta tärkeän puolustuskohteen. Kun raja siirtyi etelään 1650-luvun lopulla, linnan sotilaallinen merkitys väheni.
+
+Avain on hyvä vertaus: minäkin olen kantanut avaimia kirjeissä, mutta ne ovat aina olleet pienempiä ja vähemmän linnamaisia.
+KYSYMYS: Kerro lisää: Kalmarinsalmen
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi linnaa sanottiin valtakunnan avaimeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on näitä juttuja, joita ei unohda. Linna sijaitsi [[Kalmarinsalmen]] rannalla Ruotsin etelärajalla, aivan [[Tanskan]] rajan lähellä, ja siksi sitä kutsuttiin nimellä [[Rikets nyckel]], valtakunnan avain. Kun Tanska hallitsi vielä Skoonea, Hallandia ja Blekingeä, rajan läheisyys teki linnasta tärkeän puolustuskohteen. Kun raja siirtyi etelään 1650-luvun lopulla, linnan sotilaallinen merkitys väheni.
+
+Avain on hyvä vertaus: minäkin olen kantanut avaimia kirjeissä, mutta ne ovat aina olleet pienempiä ja vähemmän linnamaisia.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Musiikki: Avainviulu soi kuudetta vuosisataa] Ruotsin kansallissoitin nyckelharpa on viulun ja näppäimistön risteytys: jousi soittaa kieliä, mutta sävelet valitaan puunäppäimillä, jotka lyhentävät kieltä alhaalta päin. Rungon sisällä värähtelee tusina resonanssikieltä, joihin ei kosketa lainkaan — ne humisevat mukana ja antavat soittimelle sen hopeisen kaiun. Soitin on vanha: avainviulua soittava hahmo on kuvattu gotlantilaisen kirkon portin veistoksessa jo 1300-luvulla. Välillä soitin melkein unohtui, mutta kansanmuusikot elvyttivät sen, ja nykyään sitä opetetaan taas musiikkiopistoissa.
+AIEMPI KYSYMYS: Miksi linnaa sanottiin valtakunnan avaimeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on näitä juttuja, joita ei unohda. Linna sijaitsi [[Kalmarinsalmen]] rannalla Ruotsin etelärajalla, aivan [[Tanskan]] rajan lähellä, ja siksi sitä kutsuttiin nimellä [[Rikets nyckel]], valtakunnan avain. Kun Tanska hallitsi vielä Skoonea, Hallandia ja Blekingeä, rajan läheisyys teki linnasta tärkeän puolustuskohteen. Kun raja siirtyi etelään 1650-luvun lopulla, linnan sotilaallinen merkitys väheni.
+
+Avain on hyvä vertaus: minäkin olen kantanut avaimia kirjeissä, mutta ne ovat aina olleet pienempiä ja vähemmän linnamaisia.
+KYSYMYS: Kerro lisää: Rikets nyckel
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: San Thomen basilika] 1523, nykyinen rakennus 1896 Portugalilaiset lähettivät 1521 lähetyssaarnaajia etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana III:n tuella sinne rakennettiin kirkko, joka vihittiin käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 ja asui noin vuoden sen pappilassa. Paavi Paavali V teki kirkosta katedraalin 1606. Nykyinen rakennus on vuodelta 1896, jolloin britit rakensivat kirkon uudelleen uusgoottilaiseen tyyliin kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja ikkunoita on kuusitoista ja v…
+AIEMPI KYSYMYS: Miten Juhana III muutti Kalmarin linnaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Juhana III]] käynnisti kruunauksensa jälkeen laajan muutostyön, jolla keskiaikainen linnoitus muuttui [[renessanssipalatsiksi]]. Arkkitehti [[Domenicus Pahr]] alkoi toteuttaa työtä vuonna 1574. Tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Linnaa pidetään yhtenä Pohjoismaiden parhaiten säilyneistä renessanssilinnoista. Valkoinen seinä ja punainen katto, kyl siinä lentäjäkin pysähtyy.
+KYSYMYS: Kerro lisää: Juhana III
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Oslo — kohdekartta / Kohdekartta: Akershusin linnoitus] 1290-luku Akershusin linnoitus kohoaa kalliolla Oslon rannalla, ja se on vartioinut kaupunkia jo yli 700 vuotta. Kuningas Haakon V käski rakentaa sen 1290-luvun lopulla, sen jälkeen kun kaupunki oli osoittautunut liian helposti hyökättäväksi vuonna 1287. Linnoitusta on piiritetty monta kertaa – ruotsalaiset yrittivät vuonna 1308 ja Kaarle Knuutinpoika vuosina 1449–1450 – mutta mikään vieras armeija ei ole koskaan onnistunut valtaamaan sitä taistelemalla. Kuningas Kristian IV muutti vanhan linnan 1600-luvulla hienoksi renessanssipalatsiksi. Toisen maailmansodan aikana saksalaiset miehittivät linnoituksen ja teloittivat siellä vankeja, mutta Norjan vastarintaliike vapautti sen 11. toukokuuta …
+AIEMPI KYSYMYS: Miten Juhana III muutti Kalmarin linnaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Juhana III]] käynnisti kruunauksensa jälkeen laajan muutostyön, jolla keskiaikainen linnoitus muuttui [[renessanssipalatsiksi]]. Arkkitehti [[Domenicus Pahr]] alkoi toteuttaa työtä vuonna 1574. Tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Linnaa pidetään yhtenä Pohjoismaiden parhaiten säilyneistä renessanssilinnoista. Valkoinen seinä ja punainen katto, kyl siinä lentäjäkin pysähtyy.
+KYSYMYS: Kerro lisää: renessanssipalatsiksi
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+AIEMPI KYSYMYS: Miten Juhana III muutti Kalmarin linnaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Juhana III]] käynnisti kruunauksensa jälkeen laajan muutostyön, jolla keskiaikainen linnoitus muuttui [[renessanssipalatsiksi]]. Arkkitehti [[Domenicus Pahr]] alkoi toteuttaa työtä vuonna 1574. Tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Linnaa pidetään yhtenä Pohjoismaiden parhaiten säilyneistä renessanssilinnoista. Valkoinen seinä ja punainen katto, kyl siinä lentäjäkin pysähtyy.
+KYSYMYS: Kerro lisää: Domenicus Pahr
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+AIEMPI KYSYMYS: Missä Kalmarin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kalmarin linna sijaitsee Kalmarin kaupungissa Ruotsin kaakkoisrannikolla, [[Smoolannin]] maakunnassa [[Kalmarinsalmen]] rannalla. Salmen toisella puolella on [[Öölanti]], ja kaupungin ja saaren välillä kulkee noin kuuden kilometrin pituinen silta. Salmi ja silta näkyvät ylhäältä kuin kartta.
+KYSYMYS: Kerro lisää: Smoolannin
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+AIEMPI KYSYMYS: Missä Kalmarin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kalmarin linna sijaitsee Kalmarin kaupungissa Ruotsin kaakkoisrannikolla, [[Smoolannin]] maakunnassa [[Kalmarinsalmen]] rannalla. Salmen toisella puolella on [[Öölanti]], ja kaupungin ja saaren välillä kulkee noin kuuden kilometrin pituinen silta. Salmi ja silta näkyvät ylhäältä kuin kartta.
+KYSYMYS: Kerro lisää: Öölanti
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Ruotsi — maalehti / Historia: Kuninkaan pakoreitti hiihdetään joka vuosi] 1520 — Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia Taalainmaalle ja yritti saada talonpojat kapinaan. Moran miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää lähetettiin hänen peräänsä — he saivat hänet kiinni ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. Ensimmäinen kilpailu järjestettiin sanomalehden ehdotuksesta, ja siihen osallistui 119 hiihtäjää.
+AIEMPI KYSYMYS: Keitä Vaasa-suvun kuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Vaasa-suku hallitsi Ruotsia 1500-luvun alkupuolelta 1600-luvun puoliväliin. Ensimmäinen oli [[Kustaa Vaasa]], jonka valtakausi alkoi vuonna 1523. Hänen poikiaan olivat Eerik XIV, [[Juhana III]] ja Kaarle IX, jotka kaikki istuivat valtaistuimella, ja Kaarle IX:n poika oli [[Kustaa II Aadolf]]. Suvun hallinta päättyi, kun kuningatar [[Kristiina]] luopui kruunusta vuonna 1654. Tuli ny kyl pullan mieli, vaikkei yhteyttä ole.
+KYSYMYS: Kerro lisää: Kustaa II Aadolf
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmarin linna (historia)
+Tietoruudun teksti: Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna 1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä renessan…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Riddarholmenin kirkko] 1835 Riddarholmenin kirkko on yksi Tukholman vanhimmista rakennuksista — se rakennettiin fransiskaanimunkkien luostariksi jo 1200-luvun lopulla. Uskonpuhdistuksen jälkeen munkit lähtivät, ja kirkosta tuli vähitellen kuninkaallisten hautakirkko. Melkein kaikki Ruotsin kuninkaat Kustaa II Aadolfista Kustaa V:een lepäävät kirkon holveissa, samoin kaksi keskiaikaista kuningasta. Vain kuningatar Kristiina on haudattu muualle, Roomaan. Alkuperäisen tornin huipun suunnitteli flaamilainen arkkitehti Willem Boy 1500-luvulla, mutta salama tuhosi sen 28. heinäkuuta 1835. Nykyinen valurautahuippu on rakennettu sen tilalle. Seurakunta lakkautettiin jo 1807, joten kirkkoa käytetään enää hautajaisiin ja m…
+AIEMPI KYSYMYS: Keitä Vaasa-suvun kuninkaat olivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Vaasa-suku hallitsi Ruotsia 1500-luvun alkupuolelta 1600-luvun puoliväliin. Ensimmäinen oli [[Kustaa Vaasa]], jonka valtakausi alkoi vuonna 1523. Hänen poikiaan olivat Eerik XIV, [[Juhana III]] ja Kaarle IX, jotka kaikki istuivat valtaistuimella, ja Kaarle IX:n poika oli [[Kustaa II Aadolf]]. Suvun hallinta päättyi, kun kuningatar [[Kristiina]] luopui kruunusta vuonna 1654. Tuli ny kyl pullan mieli, vaikkei yhteyttä ole.
+KYSYMYS: Kerro lisää: Kristiina
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi laivasto muutti pois Tukholmasta?
+AIEMPI VASTAUS (Livia):
+Aivan, käytännön asioita. Kun Skoonen sota päättyi vuonna 1679, kuningas [[Kaarle XI]] päätti perustaa laivastolle pysyvän tukikohdan lähemmäs Tanskaa, joka oli koko 1600-luvun ollut Ruotsin päävihollinen. Tukikohta tarvitsi myös telakan, varastot ja kasarmit. Paikalla oli lisäksi etu: [[Karlskrona]] on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunki sai kaupunkioikeudet vuonna 1680, ja sen rakentaminen aloitettiin [[Trossön]] saarelle. Jäätön satama kuulostaa kyl kyyhkynkin mielestä järkevältä.
+KYSYMYS: Kerro lisää: Kaarle XI
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Miksi laivasto muutti pois Tukholmasta?
+AIEMPI VASTAUS (Livia):
+Aivan, käytännön asioita. Kun Skoonen sota päättyi vuonna 1679, kuningas [[Kaarle XI]] päätti perustaa laivastolle pysyvän tukikohdan lähemmäs Tanskaa, joka oli koko 1600-luvun ollut Ruotsin päävihollinen. Tukikohta tarvitsi myös telakan, varastot ja kasarmit. Paikalla oli lisäksi etu: [[Karlskrona]] on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunki sai kaupunkioikeudet vuonna 1680, ja sen rakentaminen aloitettiin [[Trossön]] saarelle. Jäätön satama kuulostaa kyl kyyhkynkin mielestä järkevältä.
+KYSYMYS: Kerro lisää: Karlskrona
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Miksi laivasto muutti pois Tukholmasta?
+AIEMPI VASTAUS (Livia):
+Aivan, käytännön asioita. Kun Skoonen sota päättyi vuonna 1679, kuningas [[Kaarle XI]] päätti perustaa laivastolle pysyvän tukikohdan lähemmäs Tanskaa, joka oli koko 1600-luvun ollut Ruotsin päävihollinen. Tukikohta tarvitsi myös telakan, varastot ja kasarmit. Paikalla oli lisäksi etu: [[Karlskrona]] on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunki sai kaupunkioikeudet vuonna 1680, ja sen rakentaminen aloitettiin [[Trossön]] saarelle. Jäätön satama kuulostaa kyl kyyhkynkin mielestä järkevältä.
+KYSYMYS: Kerro lisää: Trossön
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Mikä on maan pisin puurakennus?
+AIEMPI VASTAUS (Livia):
+Aha, köyttä ja puuta. Karlskronan telakan alueella on [[Repslagarbanan]], köysirata, jota pidetään Ruotsin pisimpänä puurakennuksena. Sen pitkässä hallissa valmistettiin laivojen köysiä, ja rakennus on noin 300 metriä pitkä. Karlskronan laivastosatama on ollut vuodesta 1998 [[maailmanperintökohde]].
+
+Kolmesataa metriä pelkkää puuta ja köyttä. Minä en jaksaisi lentää sitä päästä päähän ilman taukoa, mutta vaikuttava rakennus se on.
+KYSYMYS: Kerro lisää: Repslagarbanan
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on maan pisin puurakennus?
+AIEMPI VASTAUS (Livia):
+Aha, köyttä ja puuta. Karlskronan telakan alueella on [[Repslagarbanan]], köysirata, jota pidetään Ruotsin pisimpänä puurakennuksena. Sen pitkässä hallissa valmistettiin laivojen köysiä, ja rakennus on noin 300 metriä pitkä. Karlskronan laivastosatama on ollut vuodesta 1998 [[maailmanperintökohde]].
+
+Kolmesataa metriä pelkkää puuta ja köyttä. Minä en jaksaisi lentää sitä päästä päähän ilman taukoa, mutta vaikuttava rakennus se on.
+KYSYMYS: Kerro lisää: maailmanperintökohde
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Missä Karlskrona sijaitsee?
+AIEMPI VASTAUS (Livia):
+Sepä helppo. Karlskrona sijaitsee Ruotsin eteläosassa [[Blekingen]] maakunnassa [[Itämeren]] rannalla. Kaupunki on rakennettu saaristoon, ja vanha keskusta on [[Trossön]] saarella. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Ruotsissakin on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Blekingen
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Missä Karlskrona sijaitsee?
+AIEMPI VASTAUS (Livia):
+Sepä helppo. Karlskrona sijaitsee Ruotsin eteläosassa [[Blekingen]] maakunnassa [[Itämeren]] rannalla. Kaupunki on rakennettu saaristoon, ja vanha keskusta on [[Trossön]] saarella. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Ruotsissakin on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+AIEMPI KYSYMYS: Onko Karlskrona yhä laivaston tukikohta?
+AIEMPI VASTAUS (Livia):
+Ai niin, hyvä. Kyllä, Karlskrona on yhä yksi Ruotsin [[laivaston]] tärkeimmistä tukikohdista. Kaupungissa toimii myös [[Saab Kockums]] -telakkayhtiö, joka tunnetaan [[sukellusveneistä]]. Vanha laivastosatama on lisäksi maailmanperintökohde. Yli kolmesataa vuotta samassa tehtävässä, ei paha.
+KYSYMYS: Kerro lisää: laivaston
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Onko Karlskrona yhä laivaston tukikohta?
+AIEMPI VASTAUS (Livia):
+Ai niin, hyvä. Kyllä, Karlskrona on yhä yksi Ruotsin [[laivaston]] tärkeimmistä tukikohdista. Kaupungissa toimii myös [[Saab Kockums]] -telakkayhtiö, joka tunnetaan [[sukellusveneistä]]. Vanha laivastosatama on lisäksi maailmanperintökohde. Yli kolmesataa vuotta samassa tehtävässä, ei paha.
+KYSYMYS: Kerro lisää: Saab Kockums
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Sukellusvene S-56] vesille 1939, museona 1975 Korabelnajan rantakadulla makaa kuivalla maalla kokonainen sukellusvene. S-56 aloitti matkansa erikoisesti: runko rakennettiin Leningradissa 1936, kuljetettiin osina rautateitse halki mantereen ja koottiin Dalzavodin telakalla, ja vesille vene laskettiin joulukuussa 1939. Sota vei sen vielä pidemmälle: Tyynenmeren laivastosta vene siirrettiin pohjoiseen Tyynenmeren ja Atlantin yli Panaman kanavan kautta. Pohjoisilla vesillä se upotti neljä alusta, ja palveluksestaan se sai kaartin arvon ja Punalipun kunniamerkin. Museolaivaksi vene nostettiin vuonna 1975; sisällä pääsee kulkemaan osastosta toiseen lähes vapaasti. Sama rantakatu on pieni ulkoilmamuseo muutenkin. Ai…
+AIEMPI KYSYMYS: Onko Karlskrona yhä laivaston tukikohta?
+AIEMPI VASTAUS (Livia):
+Ai niin, hyvä. Kyllä, Karlskrona on yhä yksi Ruotsin [[laivaston]] tärkeimmistä tukikohdista. Kaupungissa toimii myös [[Saab Kockums]] -telakkayhtiö, joka tunnetaan [[sukellusveneistä]]. Vanha laivastosatama on lisäksi maailmanperintökohde. Yli kolmesataa vuotta samassa tehtävässä, ei paha.
+KYSYMYS: Kerro lisää: sukellusveneistä
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Milloin Skoonen sota käytiin ja kuka voitti?
+AIEMPI VASTAUS (Livia):
+Hmm, vanhaa historiaa. Skoonen sota käytiin vuosina 1675–1679 Ruotsin ja [[Tanskan]] välillä. Tanska pyrki saamaan takaisin Skoonen, jonka se oli menettänyt vuonna 1658. [[Ranska]] tuki Ruotsia, ja sota päättyi rauhaan, jossa Skoone jäi Ruotsille. Sodan jälkeen Ruotsi perusti [[Karlskronan]] laivaston tukikohdaksi. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Milloin Skoonen sota käytiin ja kuka voitti?
+AIEMPI VASTAUS (Livia):
+Hmm, vanhaa historiaa. Skoonen sota käytiin vuosina 1675–1679 Ruotsin ja [[Tanskan]] välillä. Tanska pyrki saamaan takaisin Skoonen, jonka se oli menettänyt vuonna 1658. [[Ranska]] tuki Ruotsia, ja sota päättyi rauhaan, jossa Skoone jäi Ruotsille. Sodan jälkeen Ruotsi perusti [[Karlskronan]] laivaston tukikohdaksi. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ranska
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlskrona (merenkulku)
+Tietoruudun teksti: Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma 1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on maan pisin puurakennus.
+AIEMPI KYSYMYS: Milloin Skoonen sota käytiin ja kuka voitti?
+AIEMPI VASTAUS (Livia):
+Hmm, vanhaa historiaa. Skoonen sota käytiin vuosina 1675–1679 Ruotsin ja [[Tanskan]] välillä. Tanska pyrki saamaan takaisin Skoonen, jonka se oli menettänyt vuonna 1658. [[Ranska]] tuki Ruotsia, ja sota päättyi rauhaan, jossa Skoone jäi Ruotsille. Sodan jälkeen Ruotsi perusti [[Karlskronan]] laivaston tukikohdaksi. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Karlskronan
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Kenen maassa kirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kirkko rakennettiin [[Tanskan]] valtakunnan maalle, sillä Lund kuului keskiajalla Tanskalle eikä Ruotsille. Se oli koko Pohjolan arkkipiispanistuimen katedraali, ja sen pääalttari vihittiin vuonna 1145. Alue siirtyi Ruotsille vasta [[Roskilden rauhassa]] 1658, jolloin kirkko jäi [[Skånen]] maakunnan mukana ruotsalaiseksi. Kivet vaan pysyi paikallaan, kun rajat liikkui.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Kenen maassa kirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kirkko rakennettiin [[Tanskan]] valtakunnan maalle, sillä Lund kuului keskiajalla Tanskalle eikä Ruotsille. Se oli koko Pohjolan arkkipiispanistuimen katedraali, ja sen pääalttari vihittiin vuonna 1145. Alue siirtyi Ruotsille vasta [[Roskilden rauhassa]] 1658, jolloin kirkko jäi [[Skånen]] maakunnan mukana ruotsalaiseksi. Kivet vaan pysyi paikallaan, kun rajat liikkui.
+KYSYMYS: Kerro lisää: Roskilden rauhassa
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+AIEMPI KYSYMYS: Kenen maassa kirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kirkko rakennettiin [[Tanskan]] valtakunnan maalle, sillä Lund kuului keskiajalla Tanskalle eikä Ruotsille. Se oli koko Pohjolan arkkipiispanistuimen katedraali, ja sen pääalttari vihittiin vuonna 1145. Alue siirtyi Ruotsille vasta [[Roskilden rauhassa]] 1658, jolloin kirkko jäi [[Skånen]] maakunnan mukana ruotsalaiseksi. Kivet vaan pysyi paikallaan, kun rajat liikkui.
+KYSYMYS: Kerro lisää: Skånen
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+AIEMPI KYSYMYS: Mitä kirkolle tehtiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kirkko oli 1800-luvulla työmaa: vuonna 1832 suositeltiin täydellistä korjausta, ja sitä tehtiin läpi vuosisadan. Työtä johti ensin arkkitehti [[Carl Georg Brunius]] ja myöhemmin [[Helgo Zettervall]], joka tunnetaan useista ruotsalaisten kirkkojen restauroinneista. Korjausten tarkkoja yksityiskohtia en ole varma.
+
+Sata vuotta telineissä. Katolta katsoen sellainen työmaa on kyyhkyn mielestä paras mahdollinen pesäpaikka, joskin tuskin kovin rauhallinen.
+KYSYMYS: Kerro lisää: Carl Georg Brunius
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+AIEMPI KYSYMYS: Mitä kirkolle tehtiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kirkko oli 1800-luvulla työmaa: vuonna 1832 suositeltiin täydellistä korjausta, ja sitä tehtiin läpi vuosisadan. Työtä johti ensin arkkitehti [[Carl Georg Brunius]] ja myöhemmin [[Helgo Zettervall]], joka tunnetaan useista ruotsalaisten kirkkojen restauroinneista. Korjausten tarkkoja yksityiskohtia en ole varma.
+
+Sata vuotta telineissä. Katolta katsoen sellainen työmaa on kyyhkyn mielestä paras mahdollinen pesäpaikka, joskin tuskin kovin rauhallinen.
+KYSYMYS: Kerro lisää: Helgo Zettervall
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä on Finn-jättiläinen Lundin kryptassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Finn-jättiläinen on kivipatsas Lundin tuomiokirkon [[kryptassa]], ja hänen vieressään on vaimonsa patsas. Kyse on kansantarusta, jonka mukaan jättiläinen liittyy kirkon rakentamiseen ja muuttui lopulta kiveksi; tarinasta on useita versioita, enkä ole varma yksityiskohdista. Kirkko on pyhitetty [[Pyhälle Laurentiukselle]], jonka nimeen tarun kerrotaan usein liittyvän. Kivijättiläinen kryptassa kuulostaa minusta ihan hyvältä vartijalta.
+KYSYMYS: Kerro lisää: kryptassa
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä on Finn-jättiläinen Lundin kryptassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Finn-jättiläinen on kivipatsas Lundin tuomiokirkon [[kryptassa]], ja hänen vieressään on vaimonsa patsas. Kyse on kansantarusta, jonka mukaan jättiläinen liittyy kirkon rakentamiseen ja muuttui lopulta kiveksi; tarinasta on useita versioita, enkä ole varma yksityiskohdista. Kirkko on pyhitetty [[Pyhälle Laurentiukselle]], jonka nimeen tarun kerrotaan usein liittyvän. Kivijättiläinen kryptassa kuulostaa minusta ihan hyvältä vartijalta.
+KYSYMYS: Kerro lisää: Pyhälle Laurentiukselle
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+AIEMPI KYSYMYS: Mitä Lundin astronominen kello näyttää?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kello esittää ajan lisäksi taivaankappaleiden liikkeitä ja kalenteria. Se tunnetaan latinankielisellä nimellä [[Horologium mirabile Lundense]], ja se on peräisin keskiajalta, todennäköisesti 1400-luvulta. Perimätiedon mukaan määrättyinä hetkinä kellon figuurit liikkuvat ja sävelmä [[In dulci jubilo]] soi, mutta tarkkoja aikoja en ole varma. Aikataulut kuuluvat kyyhkyn ammattiin.
+KYSYMYS: Kerro lisää: Horologium mirabile Lundense
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+AIEMPI KYSYMYS: Mitä Lundin astronominen kello näyttää?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kello esittää ajan lisäksi taivaankappaleiden liikkeitä ja kalenteria. Se tunnetaan latinankielisellä nimellä [[Horologium mirabile Lundense]], ja se on peräisin keskiajalta, todennäköisesti 1400-luvulta. Perimätiedon mukaan määrättyinä hetkinä kellon figuurit liikkuvat ja sävelmä [[In dulci jubilo]] soi, mutta tarkkoja aikoja en ole varma. Aikataulut kuuluvat kyyhkyn ammattiin.
+KYSYMYS: Kerro lisää: In dulci jubilo
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lundin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten He…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Milloin Lundin yliopisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kaksi vuosilukua. Yliopiston toiminta alkoi vuonna 1668 tuomiokirkossa pidetyssä tilaisuudessa, mutta kuninkaan perustamispäätös ajoitetaan usein vuoteen 1666. Päättäjänä pidetään kuningas [[Kaarle XI:n]] hallintoa. Alue oli siirtynyt Ruotsille vasta [[Roskilden rauhassa]] vuonna 1658, ja yliopiston arvellaan vahvistaneen uuden maakunnan asemaa osana Ruotsia; painotuksesta en ole varma. Ei huono paikka aloittaa opinnot, kyyhkyn mielestä.
+KYSYMYS: Kerro lisää: Kaarle XI:n
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+AIEMPI KYSYMYS: Mistä Tornionjoki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Mmm— Tornionjoki saa alkunsa [[Torneträsk-järvestä]] lähellä Norjan rajaa, ja sieltä se virtaa 522 kilometriä kaakkoon [[Pohjanlahteen]]. Lähde on yllättävän lähellä Atlanttia: vedenjakajan toisella puolella on norjalainen [[Narvik]], vaikka joen vesi valuu Pohjanlahden suuntaan. Vesiteitse paikkojen väliin jää useita tuhansia kilometrejä. Kyyhkyn siivillä se matka olis paljon lyhyempi.
+KYSYMYS: Kerro lisää: Torneträsk-järvestä
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Mistä Tornionjoki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Mmm— Tornionjoki saa alkunsa [[Torneträsk-järvestä]] lähellä Norjan rajaa, ja sieltä se virtaa 522 kilometriä kaakkoon [[Pohjanlahteen]]. Lähde on yllättävän lähellä Atlanttia: vedenjakajan toisella puolella on norjalainen [[Narvik]], vaikka joen vesi valuu Pohjanlahden suuntaan. Vesiteitse paikkojen väliin jää useita tuhansia kilometrejä. Kyyhkyn siivillä se matka olis paljon lyhyempi.
+KYSYMYS: Kerro lisää: Pohjanlahteen
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Mistä Tornionjoki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Mmm— Tornionjoki saa alkunsa [[Torneträsk-järvestä]] lähellä Norjan rajaa, ja sieltä se virtaa 522 kilometriä kaakkoon [[Pohjanlahteen]]. Lähde on yllättävän lähellä Atlanttia: vedenjakajan toisella puolella on norjalainen [[Narvik]], vaikka joen vesi valuu Pohjanlahden suuntaan. Vesiteitse paikkojen väliin jää useita tuhansia kilometrejä. Kyyhkyn siivillä se matka olis paljon lyhyempi.
+KYSYMYS: Kerro lisää: Narvik
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Miksi joki on myös raja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tornionjoki on raja, koska Ruotsi luovutti Suomen Venäjälle [[Haminan rauhassa]] 1809, ja uusi raja vedettiin jokilaaksojen mukaan. Noin puolet joen pituudesta toimii kahden valtakunnan rajana: yläjuoksulla joki on kokonaan Ruotsin puolella, mutta [[Muonionjoen]] yhtymäkohdasta alaspäin se erottaa Ruotsin ja Suomen. Joki oli rajaksi selkeä luonnonmuoto. Minulle raja on pelkkä viiva vedessä.
+KYSYMYS: Kerro lisää: Haminan rauhassa
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Miksi joki on myös raja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tornionjoki on raja, koska Ruotsi luovutti Suomen Venäjälle [[Haminan rauhassa]] 1809, ja uusi raja vedettiin jokilaaksojen mukaan. Noin puolet joen pituudesta toimii kahden valtakunnan rajana: yläjuoksulla joki on kokonaan Ruotsin puolella, mutta [[Muonionjoen]] yhtymäkohdasta alaspäin se erottaa Ruotsin ja Suomen. Joki oli rajaksi selkeä luonnonmuoto. Minulle raja on pelkkä viiva vedessä.
+KYSYMYS: Kerro lisää: Muonionjoen
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Eläimet kaupungissa: Lohi ui eduskuntatalon ohi] 2000 — Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä. Siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes 22 kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Kalat palasivat 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen.
+AIEMPI KYSYMYS: Millainen lohijoki Tornionjoki on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornionjoki on tunnettu lohijoki: siinä ei ole vesivoimalaitoksia, joten [[lohi]] pääsee nousemaan Pohjanlahdelta kauas yläjuoksulle. Joen lohikanta on yksi [[Itämeren]] merkittävimmistä luonnonvaraisista kannoista, mutta tarkkaa osuutta en ole varma. Lohta on kalastettu joella vuosisatojen ajan.
+
+Lohi palaa samaan jokeen, josta se on lähtenyt, ja se on kyyhkyn mielestä oikein: koti on koti. Kalat vain eivät kanna kirjeitä.
+KYSYMYS: Kerro lisää: lohi
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Millainen lohijoki Tornionjoki on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tornionjoki on tunnettu lohijoki: siinä ei ole vesivoimalaitoksia, joten [[lohi]] pääsee nousemaan Pohjanlahdelta kauas yläjuoksulle. Joen lohikanta on yksi [[Itämeren]] merkittävimmistä luonnonvaraisista kannoista, mutta tarkkaa osuutta en ole varma. Lohta on kalastettu joella vuosisatojen ajan.
+
+Lohi palaa samaan jokeen, josta se on lähtenyt, ja se on kyyhkyn mielestä oikein: koti on koti. Kalat vain eivät kanna kirjeitä.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Tornionjoen suulla rajan molemmin puolin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Joen suulla [[Pohjanlahden]] pohjukassa ovat vastakkain suomalainen [[Tornio]] ja ruotsalainen [[Haaparanta]], ja raja kulkee niiden välissä. Kaupungit ovat läheisiä naapureita, ja rajan yli kuljetaan helposti. Kellojen ero on tunti, sillä Suomen aika on Ruotsin aikaa tunnin edellä. Ylhäältä ne näyttävät yhdeltä kaupungilta.
+KYSYMYS: Kerro lisää: Pohjanlahden
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Tornionjoen suulla rajan molemmin puolin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Joen suulla [[Pohjanlahden]] pohjukassa ovat vastakkain suomalainen [[Tornio]] ja ruotsalainen [[Haaparanta]], ja raja kulkee niiden välissä. Kaupungit ovat läheisiä naapureita, ja rajan yli kuljetaan helposti. Kellojen ero on tunti, sillä Suomen aika on Ruotsin aikaa tunnin edellä. Ylhäältä ne näyttävät yhdeltä kaupungilta.
+KYSYMYS: Kerro lisää: Tornio
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Tornionjoen suulla rajan molemmin puolin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Joen suulla [[Pohjanlahden]] pohjukassa ovat vastakkain suomalainen [[Tornio]] ja ruotsalainen [[Haaparanta]], ja raja kulkee niiden välissä. Kaupungit ovat läheisiä naapureita, ja rajan yli kuljetaan helposti. Kellojen ero on tunti, sillä Suomen aika on Ruotsin aikaa tunnin edellä. Ylhäältä ne näyttävät yhdeltä kaupungilta.
+KYSYMYS: Kerro lisää: Haaparanta
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Mistä Narvik tunnetaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Narvik on Norjan pohjoisosan satamakaupunki, joka tunnetaan malmin viennistä: ruotsalaisen [[Kiirunan]] kaivosten rautamalmia kuljetetaan rautateitse Narvikiin ja sieltä laivoilla maailmalle. Satama pysyy talvellakin yleensä sulana [[Golfvirran]] ansiosta, mikä erottaa sen Pohjanlahden jäätyvästä rannikosta. Kaupunki sijaitsee [[Ofotinvuonon]] rannalla, joka avautuu Atlantille. Malmi lähtee laivoilla, kirjeet minun siivillä.
+KYSYMYS: Kerro lisää: Kiirunan
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Kolmio joka ei ole niin salaperäinen] 1945–1970-luku — Joulukuussa 1945 viisi Yhdysvaltain laivaston pommikonetta katosi harjoituslennolla Bermudan, Floridan ja Puerto Ricon rajaamalta merialueelta, eikä niistä tai etsintään lähteneestä pelastuskoneesta löytynyt koskaan jälkeäkään. Tapaus ruokki 1950–70-lukujen lehtijuttuja ja kirjoja, jotka nivoivat yhteen kymmeniä erillisiä onnettomuuksia "Bermudan kolmioksi". Yhdysvaltain merivoimien mukaan alueella ei kuitenkaan katoa aluksia sen enempää kuin muillakaan vilkkailla ja myrskyisillä merialueilla – tilastot vain koottiin näyttävästi yhteen. Osa kadonneista selittyy hirmumyrskyillä, ihmisen virheillä ja Golfvirran oikuilla, ei yliluonnollisilla voimilla.
+- [St. John’s — kaupunkilehti / St. John’s: Turska, ja mitä sen jälkeen tuli] Kaupungin edustalla ovat Grand Banks, vedenalaiset tasangot, joilla kylmä Labradorin virta kohtaa lämpimän Golfvirran. Sekoittuminen nostaa ravinteet pintaan ja teki alueesta yhden maailman rikkaimmista kalavesistä. Vuonna 1992 pohjoisen turskan kanta oli pudonnut prosenttiin historiallisesta tasosta, ja kalastus, joka oli muovannut rannikon elämää viisisataa vuotta, kiellettiin; Grand Banks pysyi suljettuna vuoteen 2024. Sen jälkeen meri elättää kaupunkia toisin: Hibernian, Terra Novan ja White Rosen öljykentät ovat aivan rannikon edustalla, ja St. John’sin alue vastaa noin puolta koko maakunnan taloudesta.
+AIEMPI KYSYMYS: Mistä Narvik tunnetaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Narvik on Norjan pohjoisosan satamakaupunki, joka tunnetaan malmin viennistä: ruotsalaisen [[Kiirunan]] kaivosten rautamalmia kuljetetaan rautateitse Narvikiin ja sieltä laivoilla maailmalle. Satama pysyy talvellakin yleensä sulana [[Golfvirran]] ansiosta, mikä erottaa sen Pohjanlahden jäätyvästä rannikosta. Kaupunki sijaitsee [[Ofotinvuonon]] rannalla, joka avautuu Atlantille. Malmi lähtee laivoilla, kirjeet minun siivillä.
+KYSYMYS: Kerro lisää: Golfvirran
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornionjoki (luonto · joki)
+Tietoruudun teksti: Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.
+AIEMPI KYSYMYS: Mistä Narvik tunnetaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Narvik on Norjan pohjoisosan satamakaupunki, joka tunnetaan malmin viennistä: ruotsalaisen [[Kiirunan]] kaivosten rautamalmia kuljetetaan rautateitse Narvikiin ja sieltä laivoilla maailmalle. Satama pysyy talvellakin yleensä sulana [[Golfvirran]] ansiosta, mikä erottaa sen Pohjanlahden jäätyvästä rannikosta. Kaupunki sijaitsee [[Ofotinvuonon]] rannalla, joka avautuu Atlantille. Malmi lähtee laivoilla, kirjeet minun siivillä.
+KYSYMYS: Kerro lisää: Ofotinvuonon
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Kuinka paljon hopeaa kaivoksesta tuli?
+AIEMPI VASTAUS (Livia):
+No jopas. Salan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin lähteiden mukaan yli 200 miljoonaa unssia hopeaa sekä noin 35 000 tonnia lyijyä. Hopeaa ei yleensä näy paljain silmin, sillä se piilee [[lyijyhohteen]] ja [[sinkkivälkkeen]] seassa [[Västmanlandissa]] sijaitsevassa malmissa. Lukujen tarkkuudesta en ole varma, sillä eri lähteet esittävät tuotannon eri tavoin. Siinä on enemmän hopeaa kuin minä jaksan kuvitella.
+KYSYMYS: Kerro lisää: lyijyhohteen
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+AIEMPI KYSYMYS: Kuinka paljon hopeaa kaivoksesta tuli?
+AIEMPI VASTAUS (Livia):
+No jopas. Salan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin lähteiden mukaan yli 200 miljoonaa unssia hopeaa sekä noin 35 000 tonnia lyijyä. Hopeaa ei yleensä näy paljain silmin, sillä se piilee [[lyijyhohteen]] ja [[sinkkivälkkeen]] seassa [[Västmanlandissa]] sijaitsevassa malmissa. Lukujen tarkkuudesta en ole varma, sillä eri lähteet esittävät tuotannon eri tavoin. Siinä on enemmän hopeaa kuin minä jaksan kuvitella.
+KYSYMYS: Kerro lisää: sinkkivälkkeen
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+AIEMPI KYSYMYS: Kuinka paljon hopeaa kaivoksesta tuli?
+AIEMPI VASTAUS (Livia):
+No jopas. Salan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin lähteiden mukaan yli 200 miljoonaa unssia hopeaa sekä noin 35 000 tonnia lyijyä. Hopeaa ei yleensä näy paljain silmin, sillä se piilee [[lyijyhohteen]] ja [[sinkkivälkkeen]] seassa [[Västmanlandissa]] sijaitsevassa malmissa. Lukujen tarkkuudesta en ole varma, sillä eri lähteet esittävät tuotannon eri tavoin. Siinä on enemmän hopeaa kuin minä jaksan kuvitella.
+KYSYMYS: Kerro lisää: Västmanlandissa
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+AIEMPI KYSYMYS: Miksi Salan ympärillä on niin monta patoa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaivoksilla [[vesivoima]] oli keskeinen energianlähde: [[vesipyörät]] pyörittivät pumppuja ja nostolaitteita, ja vettä varastoitiin patojen taakse lammikoiksi. Ruotsin kaivosseuduilla tällainen järjestelmä oli yleinen, mutta Salan patojen tarkkaa määrää tai sijaintia en ole varma. Kaivoksen syvetessä myös pohjavettä oli pumpattava pois jatkuvasti. Ylhäältä ne näyttävät lähinnä isoilta lätäköiltä.
+KYSYMYS: Kerro lisää: vesivoima
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Tampere: Koski, joka putoaa kahdeksantoista metriä] Tampere on rakennettu kapealle kannakselle kahden järven väliin. Näsijärvi on pohjoisessa ja Pyhäjärvi etelässä, ja niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero purkautuu keskustan halki juoksevana Tammerkoskena, ja juuri sen partaalle kaupunki syntyi. Koski oli ensimmäinen voimalaitos: vesipyörät ja myöhemmin turbiinit pyörittivät tehdassaleja aivan rannassa, ja myöhemmin sama vesi tuotti sähkön. Tammerkoski on nykyään yksi Suomen kansallismaisemista, ja sen rantoja pitkin kävellään tehtaalta toiselle.
+AIEMPI KYSYMYS: Miksi Salan ympärillä on niin monta patoa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaivoksilla [[vesivoima]] oli keskeinen energianlähde: [[vesipyörät]] pyörittivät pumppuja ja nostolaitteita, ja vettä varastoitiin patojen taakse lammikoiksi. Ruotsin kaivosseuduilla tällainen järjestelmä oli yleinen, mutta Salan patojen tarkkaa määrää tai sijaintia en ole varma. Kaivoksen syvetessä myös pohjavettä oli pumpattava pois jatkuvasti. Ylhäältä ne näyttävät lähinnä isoilta lätäköiltä.
+KYSYMYS: Kerro lisää: vesipyörät
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+AIEMPI KYSYMYS: Miten hopea erotetaan lyijyhohteesta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on vanha kikka. Malmi murskattiin ja rikastettiin, minkä jälkeen se sulatettiin, ja syntyneestä lyijyn ja hopean seoksesta lyijy hapetettiin pois, jolloin hopea jäi jäljelle. Menetelmää kutsutaan [[kupeloinniksi]]. Salan kaivoksella otettiin 1800-luvun lopulla käyttöön myös uusia menetelmiä, kuten hopean liuottaminen vanhasta [[rikastushiekasta]]. Kärsivällisyyttä se vaati, kuten kirjepostikin.
+KYSYMYS: Kerro lisää: kupeloinniksi
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+AIEMPI KYSYMYS: Miten hopea erotetaan lyijyhohteesta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on vanha kikka. Malmi murskattiin ja rikastettiin, minkä jälkeen se sulatettiin, ja syntyneestä lyijyn ja hopean seoksesta lyijy hapetettiin pois, jolloin hopea jäi jäljelle. Menetelmää kutsutaan [[kupeloinniksi]]. Salan kaivoksella otettiin 1800-luvun lopulla käyttöön myös uusia menetelmiä, kuten hopean liuottaminen vanhasta [[rikastushiekasta]]. Kärsivällisyyttä se vaati, kuten kirjepostikin.
+KYSYMYS: Kerro lisää: rikastushiekasta
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Kaksi suurvaltaa kirjoitti sodan loppuun] n. 1259 eaa — Hattusa oli heettiläisten pääkaupunki Keski-Anatoliassa. Sieltä johdettiin valtakuntaa, joka taisteli Egyptiä vastaan Kadeshissa ja teki taistelun jälkeen sopimuksen, jota pidetään maailman vanhimpana säilyneenä rauhansopimuksena. Erikoisinta on, että siitä on tallella molempien osapuolten oma versio: egyptiläinen hakattuna temppelin seinään ja heettiläinen poltettuun savitauluun. Savitaulu löytyi Hattusan raunioista vuonna 1906, ja se on kirjoitettu akkadiksi, ajan yleiskielellä. Suurennettu jäljennös sopimuksesta on esillä YK:n päämajassa New Yorkissa.
+- [Libya — maalehti / Historia: Tasavalta, jonka pääkaupunki oli pikkukaupunki] 1918–1920 — Syksyllä 1918 Tripolitanian johtajat julistivat oman tasavallan ja veivät asiansa Pariisin rauhankonferenssiin. Pääkaupungiksi tuli Aziziya, pikkukaupunki noin neljäkymmentä kilometriä Tripolista etelään, ja alue ulottui laajimmillaan Nafusa-vuorilta Misrataan. Johdossa oli neljä miestä — Sulayman al-Baruni, Ramadan Asswehly, Abdul Nabi Belkheir ja Ahmad Almarid — jotka toimivat kukin omillaan, ja heidän rinnallaan neuvoa-antava kokous. Se oli ensimmäinen muodollisesti julistettu tasavaltalainen hallitusmuoto koko arabimaailmassa, mutta yksikään suurvalta ei tunnustanut sitä. Vuonna 1920 edustajat kokoontuivat Aziziyaan kansalliskongressiin.
+AIEMPI KYSYMYS: Kuka oli kuningas Kustaa II Aadolf?
+AIEMPI VASTAUS (Livia):
+Ai se. Kustaa II Aadolf oli Ruotsin kuningas vuosina 1611–1632. Hänen aikanaan Ruotsista kasvoi [[suurvalta-ajan]] valtio, ja hän uudisti armeijaa sekä osallistui [[Kolmikymmenvuotiseen sotaan]]. Hän myönsi kaupunkioikeudet myös Salalle vuonna 1624. Hän kuoli vuonna 1632.
+
+Kaupungin sijoittaminen kaivoksen viereen oli mielestäni viisasta, sillä rahan lähelle kannattaa mennä. Minä lennän aina leivän perässä samalla periaatteella.
+KYSYMYS: Kerro lisää: suurvalta-ajan
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+AIEMPI KYSYMYS: Kuka oli kuningas Kustaa II Aadolf?
+AIEMPI VASTAUS (Livia):
+Ai se. Kustaa II Aadolf oli Ruotsin kuningas vuosina 1611–1632. Hänen aikanaan Ruotsista kasvoi [[suurvalta-ajan]] valtio, ja hän uudisti armeijaa sekä osallistui [[Kolmikymmenvuotiseen sotaan]]. Hän myönsi kaupunkioikeudet myös Salalle vuonna 1624. Hän kuoli vuonna 1632.
+
+Kaupungin sijoittaminen kaivoksen viereen oli mielestäni viisasta, sillä rahan lähelle kannattaa mennä. Minä lennän aina leivän perässä samalla periaatteella.
+KYSYMYS: Kerro lisää: Kolmikymmenvuotiseen sotaan
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salan hopeakaivos (tekniikka)
+Tietoruudun teksti: Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Voiko Salan kaivokseen nykyään mennä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kyllä, Salan hopeakaivos on nykyään matkailukohde, jossa vierailijat pääsevät opastetulle kierrokselle maan alle. Kaivoksessa louhittiin hopeaa [[Västmanlandissa]] vuoteen 1908 asti, ja viereinen kaupunki sai kaupunkioikeudet [[Kustaa II Aadolfilta]] vuonna 1624. Kierrosten sisällöstä ja aukioloajoista en ole varma, joten ne kannattaa tarkistaa ennen matkaa. Sinne ois kiva laskeutua, mut minä pysyn mieluummin taivaalla.
+KYSYMYS: Kerro lisää: Kustaa II Aadolfilta
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Kirjat: Pieni maa sai Nobelin] Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955. Hänen kirjansa kertovat tavallisista islantilaisista: lampaista, sitkeydestä ja köyhyydestä, mutta niin että lukija nauraa ja liikuttuu samaan aikaan. Tunnetuin on Sallittu ihminen eli Sjálfstætt fólk, tarina lampuriperheestä, joka ei suostu ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle sataseitsemänkymmentätuhatta asukasta — pienin maa, josta kirjallisuuden Nobel oli siihen asti tullut.
+AIEMPI KYSYMYS: Millä rahalla Lagerlöf osti tilan takaisin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lagerlöf sai [[Nobelin kirjallisuuspalkinnon]] vuonna 1909 ensimmäisenä naisena, ja palkintorahoilla hän osti koko tilan takaisin vuonna 1910. Tila sijaitsee [[Värmlandissa]], ja suku oli menettänyt sen konkurssissa 1889. Päärakennuksen hän oli lunastanut jo 1907, ennen Nobel-palkintoa, joten sen rahoituksesta en ole täysin varma; todennäköisesti kyse oli kirjojen tuloista. Nobel-rahat meni kotitilaan, mikä on kyyhkyn mielestä sympaattista.
+KYSYMYS: Kerro lisää: Nobelin kirjallisuuspalkinnon
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+AIEMPI KYSYMYS: Millä rahalla Lagerlöf osti tilan takaisin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lagerlöf sai [[Nobelin kirjallisuuspalkinnon]] vuonna 1909 ensimmäisenä naisena, ja palkintorahoilla hän osti koko tilan takaisin vuonna 1910. Tila sijaitsee [[Värmlandissa]], ja suku oli menettänyt sen konkurssissa 1889. Päärakennuksen hän oli lunastanut jo 1907, ennen Nobel-palkintoa, joten sen rahoituksesta en ole täysin varma; todennäköisesti kyse oli kirjojen tuloista. Nobel-rahat meni kotitilaan, mikä on kyyhkyn mielestä sympaattista.
+KYSYMYS: Kerro lisää: Värmlandissa
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+AIEMPI KYSYMYS: Kuka suunnitteli päärakennuksen laajennuksen?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Päärakennuksen muutoksen vuosina 1921–1923 suunnitteli arkkitehti [[Isak Gustaf Clason]]. Muutoksessa taloon tuli uusi kerros, ullakko ja edustava julkisivu. Clason tunnetaan myös tukholmalaisen [[Nordiska museetin]] suunnittelijana. Aika komea talo siitä tuli.
+KYSYMYS: Kerro lisää: Isak Gustaf Clason
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+AIEMPI KYSYMYS: Kuka suunnitteli päärakennuksen laajennuksen?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Päärakennuksen muutoksen vuosina 1921–1923 suunnitteli arkkitehti [[Isak Gustaf Clason]]. Muutoksessa taloon tuli uusi kerros, ullakko ja edustava julkisivu. Clason tunnetaan myös tukholmalaisen [[Nordiska museetin]] suunnittelijana. Aika komea talo siitä tuli.
+KYSYMYS: Kerro lisää: Nordiska museetin
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+AIEMPI KYSYMYS: Minkä teosten kirjoittajana Selma Lagerlöf tunnetaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Selma Lagerlöf tunnetaan ennen kaikkea romaanista [[Gösta Berlingin taru]] ja teoksesta [[Nils Holgerssonin ihmeellinen matka]]. Jälkimmäinen tilattiin alun perin koulujen maantiedon lukukirjaksi, ja se kuljettaa pojan villihanhien mukana halki Ruotsin. Lagerlöf sai [[Nobelin kirjallisuuspalkinnon]] vuonna 1909. Hanhi vei pojan läpi Ruotsin, mut kyyhky ois ollu nopeampi.
+KYSYMYS: Kerro lisää: Gösta Berlingin taru
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Historian hetki: Machu Picchu 1911 — poika, joka näytti tien] 24.7.1911 — Polku on märkä ja jyrkkä, ja edellä kulkee yksitoistavuotias Pablito Richarte, joka on kulkenut sen sata kertaa. Hänen perässään hengästyy Yalen yliopiston historianlehtori Hiram Bingham, 35, joka on maksanut Urubamban laaksossa asuvalle Melchor Arteagalle yhden solin oppaan palkkiona ja saanut kuulla, että vuoren harjanteella on vanhoja raunioita. Harjanteella asuu kaksi perhettä, Richarte ja Álvarez; he viljelevät inkojen terasseja, ja lapset leikkivät köynnösten peittämien muurien välissä. Bingham näkee sinä päivänä graniittiseinät, jotka on hakattu niin tarkasti, ettei saumaan mahdu veistä, ja kirjoittaa päiväkirjaansa, että paikka on ihmeellinen. Hän uskoo löytäneensä inkoj…
+AIEMPI KYSYMYS: Minkä teosten kirjoittajana Selma Lagerlöf tunnetaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Selma Lagerlöf tunnetaan ennen kaikkea romaanista [[Gösta Berlingin taru]] ja teoksesta [[Nils Holgerssonin ihmeellinen matka]]. Jälkimmäinen tilattiin alun perin koulujen maantiedon lukukirjaksi, ja se kuljettaa pojan villihanhien mukana halki Ruotsin. Lagerlöf sai [[Nobelin kirjallisuuspalkinnon]] vuonna 1909. Hanhi vei pojan läpi Ruotsin, mut kyyhky ois ollu nopeampi.
+KYSYMYS: Kerro lisää: Nils Holgerssonin ihmeellinen matka
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+AIEMPI KYSYMYS: Millainen maakunta Värmland on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Värmland on Länsi-Ruotsin metsäinen ja järvinen maakunta Norjan rajan tuntumassa. Sen eteläosa rajautuu [[Vänern-järveen]], ja maakunnan halki virtaa [[Klarälven]]. Siellä asutettiin 1600-luvulla [[metsäsuomalaisia]], jotka tulivat Savosta kaskeamaan, ja heidän jälkensä näkyy yhä paikannimissä.
+
+Metsää ja järveä niin pitkälle kuin silmä kantaa, ja ylhäältä se on kyyhkyn silmään parasta katseltavaa. Mårbackan kahvilassa on varmasti omat leivonnaisensa, en vaan tiedä niiden nimeä.
+KYSYMYS: Kerro lisää: Vänern-järveen
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+AIEMPI KYSYMYS: Millainen maakunta Värmland on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Värmland on Länsi-Ruotsin metsäinen ja järvinen maakunta Norjan rajan tuntumassa. Sen eteläosa rajautuu [[Vänern-järveen]], ja maakunnan halki virtaa [[Klarälven]]. Siellä asutettiin 1600-luvulla [[metsäsuomalaisia]], jotka tulivat Savosta kaskeamaan, ja heidän jälkensä näkyy yhä paikannimissä.
+
+Metsää ja järveä niin pitkälle kuin silmä kantaa, ja ylhäältä se on kyyhkyn silmään parasta katseltavaa. Mårbackan kahvilassa on varmasti omat leivonnaisensa, en vaan tiedä niiden nimeä.
+KYSYMYS: Kerro lisää: Klarälven
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mårbacka (kulttuuri)
+Tietoruudun teksti: Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan 1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina 1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, puutarha ja kahvila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+AIEMPI KYSYMYS: Millainen maakunta Värmland on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Värmland on Länsi-Ruotsin metsäinen ja järvinen maakunta Norjan rajan tuntumassa. Sen eteläosa rajautuu [[Vänern-järveen]], ja maakunnan halki virtaa [[Klarälven]]. Siellä asutettiin 1600-luvulla [[metsäsuomalaisia]], jotka tulivat Savosta kaskeamaan, ja heidän jälkensä näkyy yhä paikannimissä.
+
+Metsää ja järveä niin pitkälle kuin silmä kantaa, ja ylhäältä se on kyyhkyn silmään parasta katseltavaa. Mårbackan kahvilassa on varmasti omat leivonnaisensa, en vaan tiedä niiden nimeä.
+KYSYMYS: Kerro lisää: metsäsuomalaisia
