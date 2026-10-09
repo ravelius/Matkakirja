@@ -22,7 +22,7 @@ namespace Matkakirja.Linssit.Testit
             Lahella(1.3, KaupunkiMuistibudjetti.Valitse(12, 1.6, false).Kerroin, "kevennetty iPad, paljon muistia");
             Lahella(1.0, KaupunkiMuistibudjetti.Valitse(8, 1.0, false).Kerroin, "kevennetty iPhone");
             Oleta.Sama(KaupunkiMuistibudjetti.ValimuistiPerus, KaupunkiMuistibudjetti.Valitse(12, 1.6, false).Valimuisti);
-            Lahella(1.6, KaupunkiMuistibudjetti.Valitse(1.5, 1.6, false).Kerroin, "budjetti loppu → näyttökerroin");
+            Lahella(1.6 * KaupunkiMuistibudjetti.KarkeinLisa, KaupunkiMuistibudjetti.Valitse(1.5, 1.6, false).Kerroin, "budjetti loppu → karkein (näyttö × KarkeinLisa)");
         }
 
         [Testi] static void TaysiTerävoityyMuistinMukaan()
@@ -62,6 +62,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.0, KaupunkiMuistibudjetti.ValitseLahella(12, 1.6, false, 1.5).Lahi, "kevennetty ei");
             Oleta.Sama(1.0, KaupunkiMuistibudjetti.ValitseLahella(-1, 1.71, true, 1.5).Lahi, "tuntematon ei");
             Oleta.Sama(1.0, KaupunkiMuistibudjetti.ValitseLahella(14, 1.71, true, 1.5).Lahi, "16 Gt: koko kuva jo SSE 8, ei lähikameraa");
+        }
+
+        // Juna 173 (iPad Pro 13 M1 8 Gt, jetsam Pariisissa): vapaa 3,02 Gt kaupungin avautuessa → budjetti 1,52 Gt ei riitä
+        // näyttökertoimella (kasvu 2,4 Gt) → kerroin karkenee yli näyttökertoimen, enintään ×KarkeinLisa, ja kasvu pienenee.
+        [Testi] static void VahaMuistiKarkeneeYliNayttokertoimen()
+        {
+            var t = KaupunkiMuistibudjetti.Valitse(3.02, 1.70, true);
+            Oleta.Tosi(t.Kerroin > 1.70 + 1e-6 && t.Kerroin <= 1.70 * KaupunkiMuistibudjetti.KarkeinLisa + 1e-9, "iPad 3,02 Gt: " + t.Kerroin);
+            Oleta.Tosi(KaupunkiMuistibudjetti.Kasvu(t.Kerroin, 1.70) < KaupunkiMuistibudjetti.Kasvu(1.70, 1.70) * 0.75, "kasvu pienenee vähintään 25 %");
+            // Riittävällä muistilla ennallaan (ei karkeampi kuin ennen).
+            Oleta.Tosi(KaupunkiMuistibudjetti.Valitse(5.5, 1.71, true).Kerroin < 1.0, "M-iPad 5,5 Gt ennallaan");
         }
     }
 }

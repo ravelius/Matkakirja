@@ -217,7 +217,7 @@ namespace Matkakirja.Natiivi
         /// laattojen ja tekstuurien mitattu riippuvuus (1396 → 743 laattaa, 1450 → 942 Mt kertoimella 1,71). Hätävahti: jos
         /// vapaa muisti laskee alle HataGt:n näkymän aikana, kerroin nousee kerran ×1,3 (laatat latautuvat uudelleen, ei kaatumista).
         /// </summary>
-        public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8, HataGt = 0.7;
+        public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8, HataGt = 1.0;   // HataGt 0,7 → 1,0 (juna 173, PT: kaupungissa aina ~0,8–1 Gt vapaata)
 
         /// <summary>Prosessin vapaa muisti ennen jetsam-rajaa (tavua); −1 = ei tiedossa (editori, simu palauttaa 0).</summary>
         public static long VapaaMuisti()
@@ -272,7 +272,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Muistihädän vapautusraja: lataus jatkuu, kun vapaata on taas HataGt + tämä (Gt).</summary>
         public const double HataPalautusGt = 0.3;
         /// <summary>Karkean valinnan pikselikerroin muistihädässä (myös iPadilla, jossa KarkeaSkaala voi olla 1).</summary>
-        public const float HataSkaala = 0.6f;
+        public const float HataSkaala = 0.5f;   // 0,6 → 0,5 (juna 173: 0,6 ei vapauttanut tarpeeksi ennen jetsamia)
         float KarkeaNyt => muistiPysaytys ? Mathf.Min(KarkeaSkaala, HataSkaala) : KarkeaSkaala;
 
         /// <summary>Kerran 2 s:ssa näkymän aikana. MUISTIHÄTÄ (omistaja TF 169 10.0x: tauolla Kuninkaanlinnan kohdalla koko näkymä katosi,

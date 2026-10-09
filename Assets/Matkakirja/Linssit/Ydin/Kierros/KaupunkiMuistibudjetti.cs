@@ -16,6 +16,10 @@ namespace Matkakirja.Linssit.Kierros
     {
         public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8;
         public const double AlarajaKerroin = 1.3, TaysiLattia = 0.5;
+        /// <summary>Karkein kerroin näyttökertoimeen nähden, kun budjetti ei riitä näyttökertoimellakaan (juna 173: iPad Pro 13 kaatui
+        /// Pariisissa jetsamiin, vapaa 3,02 Gt kaupungin avautuessa → kasvu näyttökertoimella 2,4 Gt > budjetti 1,5 Gt). Ennen 173:a
+        /// kerroin pysähtyi näyttökertoimeen; nyt se karkenee enintään ×1,6 (esim. iPad 1,70 → 2,72, Google-SSE 27 → 44).</summary>
+        public const double KarkeinLisa = 1.6;
         public const long ValimuistiPerus = 256L << 20, ValimuistiMax = 1536L << 20;
 
         /// <summary>Kaupungin arvioitu muistin kasvu (Gt) kertoimella k.</summary>
@@ -27,10 +31,10 @@ namespace Matkakirja.Linssit.Kierros
             naytto = Math.Max(1.0, naytto);
             double lattia = taysi ? TaysiLattia : Math.Min(naytto, AlarajaKerroin);
             if (vapaaGt <= 0) return (Math.Min(naytto, Math.Max(AlarajaKerroin, naytto)), ValimuistiPerus);   // entinen: näyttökerroin
-            double budjetti = vapaaGt - MarginaaliGt;
-            if (budjetti <= 0.1) return (naytto, ValimuistiPerus);
+            double budjetti = vapaaGt - MarginaaliGt, karkein = naytto * KarkeinLisa;
+            if (budjetti <= 0.1) return (karkein, ValimuistiPerus);
             double k = naytto * Math.Pow(KaupunkiGt / budjetti, 1.0 / Eksponentti);
-            k = Math.Min(naytto, Math.Max(lattia, k));
+            k = Math.Min(karkein, Math.Max(lattia, k));
             long valimuisti = ValimuistiPerus;
             if (taysi)
             {
