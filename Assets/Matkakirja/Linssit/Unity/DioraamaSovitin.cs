@@ -396,8 +396,8 @@ namespace Matkakirja.Natiivi
                 PelattavaPalaPyydetty = false;
                 // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
                 var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
-                // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku suoraan;
-                // puuttuva rajapinta kaatuu käännökseen). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
+                // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut:
+                // puuttuva rajapinta kaataa käännöksen). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
                 if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
                 alkuValittu = false; pelattavaPala = true;
                 PelattavaPalaJatka = false;
@@ -943,8 +943,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Automaattiajot (botti, todistusajo): "poikki kavely alkuvalinta 0" ohittaa valinnan suoraan peliin.</summary>
         public static bool AlkuValintaPaalla = true;
 
-        /// <summary>Näyttää alun valinnan, jos valintaa ei ole tehty (Natiivi-UI:n OlavinlinnaAlku suoraan, PT 9.10.: heijastus pois);
-        /// true = valinta auki (pala odottaa). Pelaa → pala alkaa; Historia → linnan historia, lopussa kortti "Pelaa".</summary>
+        /// <summary>Näyttää alun valinnan (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut), jos valintaa ei ole tehty; true = valinta auki
+        /// (pala odottaa). Pelaa → pala alkaa; Historia → linnan historia, lopussa kortti "Pelaa".</summary>
         bool AlunValinta()
         {
             if (!AlkuValintaPaalla || OlavinlinnaAlku.Nahty) return false;
@@ -1217,6 +1217,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v3/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot … (v3: sukellus ja köysi uusittu, Pelikoodari 8.10.)
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v3/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen, märät askeleet, vihje-kimallus
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-tuulet-v1/manifest.json");   // Pelikoodari 9.10.: tuuli-korkea, tuuli-kostea
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-aanet-v2/manifest.json", "tuuli-metsa");   // PT 9.10.: vain tuuli-metsa (kirkonkellot eivät linnaan)
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuSade.Luo(nayttamo.transform);
             }

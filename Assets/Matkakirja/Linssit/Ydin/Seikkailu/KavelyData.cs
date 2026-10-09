@@ -46,6 +46,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public string Nimi, Laji, Tunnus, Osa, Tyyppi, Glb;
         /// <summary>partio: henkilo ja profiili (pelattavuusmalli 3.1: vartija, portinvartija, kokki, apulainen, renki).</summary>
         public string Henkilo, Profiili;
+        /// <summary>lakaisu (LR v45y): tehosteen tunnus (esim. "luuta"), soi kun henkilö seisoo merkillä; null jos puuttuu.</summary>
+        public string Aani;
         /// <summary>partio: kantaa lyhtyä tai soihtua (v44m; pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu).</summary>
         public bool Lyhty, Soihtu;
         /// <summary>leikkaus:vain-1499(-b) (v44r/v44x): aina leikattavien kuorileikkausten nimet (vuoden 1499 näkymä kävelyssä); null jos puuttuu.</summary>
@@ -168,7 +170,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Yla = MiniJson.Kentta(o, "yla") is object ya ? Vektori(ya) : null,
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
                 Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
-                Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
+                Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"), Aani = MiniJson.Teksti(o, "aani"),
                 Puettava = MiniJson.Kentta(o, "puettava") is bool pub && pub, Lukko = MiniJson.Kentta(o, "lukko") is bool lub && lub, Avain = MiniJson.Teksti(o, "avain"),
                 AaniNopeaM = MiniJson.Luku(o, "aani_nopea_m") ?? 0, Raapaisut = MiniJson.Luku(o, "raapaisut") ?? 0, KestoS = MiniJson.Luku(o, "kesto_s") ?? 0,
                 KaantoAste = MiniJson.Luku(o, "kaanto_aste") ?? 0, KaantyyS = MiniJson.Luku(o, "kaantyy_s") ?? 0, SallittuAste = MiniJson.Luku(o, "sallittu_aste") ?? 0,
