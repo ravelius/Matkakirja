@@ -61,7 +61,7 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
    MATID:ssä) → tumma puu ~70/50/38. Sitten aja_tekseli_v3.zsh (portti 0) → **luovuta glb:t LS2:lle** (testipaketti ilman osoitinta + pelikuva
    samasta eteläkulmasta PT:lle). Muista: omistajalle vain pelistä otettu kuva.
 **2) v46q:n harjat tornin kivipinnalla:** aja_tornit.zsh muutettu (lähde s4 nykyinen = tornin valokuvapinta kohdemaskilla, sävy 0,75 × mediaani,
-   pohjana v46p-talteen/). **Ajo käynnistettiin 03.0x taustalle** (`linna-laatu/ulkokuori-v25-koe/tornit-1499/aja_tornit.log`) – jos lokissa ei ole
+   pohjana v46p-talteen/). **Ajo VALMIS 02.4x** (`tornit-1499/aja_tornit.log`: Kijl 16,5, laatta nyt 112 px kohdassa 2992/1712, lähde s4-valokuva) – (jos lokissa ei olisi
    "TORNIT KOKO VALMIS", aja uudelleen. Sitten tarkistus (scratchpad ol_lahi.py -malli: kamera tornin harjalle), `tornit-1499/kokoa_v46q.zsh`
    (kopioi glb:t + 8k:t v25-kansioon, 4k/2k + ASTC), MUUTOKSET v46r, vie-blender.sh → commit v45e → peiliajo → Siirtoseppä + PT 8 suuntaa.
 **3) a) Kijlin torni kulmatorniksi (PT KYLLÄ, TULKINTA):** kuori_tornit_1499.py:ssä jo leikkaus 20,5 → **16,5** (kehämuuri ympärillä ~14,2 m;
