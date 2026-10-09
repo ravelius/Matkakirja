@@ -5,6 +5,16 @@ Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Workt
 Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
 (`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
 
+## TILA 14.1x
+- Juna 172: osoitin uusin-2 → v6b (v6 ilman Vasaa, ämpärissä 13.28, URLit 37/37) julkaisussa. v8 ämpärissä, ei käytössä.
+- JUNAAN 173 valmiina (SHA:t Natiivisepälle kun 173 avautuu): linssiseppa2/pbr-173 2f641e53c (OmaMalli normal/MR/AO + työkalun
+  instanssilaatikko; simu 4ae2d581f ok) ja linssiseppa2/talvi-173 b64cb3b75 (talvi/v1 ISS:iin, talvella S2 vain Euroopassa).
+  Worktreet wt/proto-linssiseppa2-pbr ja -talvi.
+- Omistajan kuvat: ND v6 valmiit lokit/linssiseppa2-omistaja3-172c/omistajalle/ (PT:llä). KL v2 HYLÄTTY: Googlen telineseinä
+  kaakkoissiiven läpi (leikkaus liian tiukka) → LR korjaa → kuvaa KL lähi+yleis (omistaja3-tukholma.txt, kuvat-omistaja.sh, VIENTI uusi).
+- Putki: sijainnit.json = ND, KL v2 -leikkaus, prefektuuri, EI Vasaa (varmuudet sijainnit-ennen-*.json). Uusin vienti26.
+  v9 (v8 + ND v6 + KL v2 + prefektuuri, ilman Vasaa) vasta PT:n luvalla omistajan hyväksynnän jälkeen.
+
 ## TILA 13.3x (iltapäivä)
 - omavalo-172 ja laivat-171 ovat junassa 172 (Natiivisepän juna-172 sisältää ne). Tarvearvio on PR #4283 (worktree wt/linssiseppa2-tarvearvio, poisto mergen jälkeen).
 - Omistajan kuvat: lokit/linssiseppa2-omistaja2-20261009/omistajalle/ (ND v5c + prefektuuri v1, KL v1.8; app 172c = 3d42614c) ovat PT:llä.
