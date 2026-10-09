@@ -189,7 +189,7 @@ namespace Matkakirja.Natiivi
                 foreach (var e in t.Esineet) Lisaa(e.Tiedosto);
                 if (t.Hahmot != null && r.Henkilot != null)
                     foreach (var hahmo in t.Hahmot)
-                        if (r.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) Lisaa(henkilo.Malli3d?.NatiiviGlb);
+                        if (r.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) Lisaa(DioraamaSovitin.HahmonLahde(henkilo.Malli3d?.NatiiviGlb));
             }
             if (r.Pinnat != null)
                 foreach (var pinta in r.Pinnat.Values) Lisaa(pieni && !string.IsNullOrEmpty(pinta.TekstuuriPuoli) ? pinta.TekstuuriPuoli : pinta.Tekstuuri);
