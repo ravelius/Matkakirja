@@ -38,7 +38,7 @@ namespace Matkakirja.Editori
             "Mikä tehtävä katedraalin gargoileilla on?",
         };
 
-        enum Vaihe { Aloita, OdotaPelia, Kysy, OdotaKysy, Napit, OdotaNapit, Lopeta, OdotaLoppua, Valmis }
+        enum Vaihe { Aloita, OdotaPelia, Kysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Lopeta, OdotaLoppua, Valmis }
 
         static int kokoNro, kehyksia;
         static double vaiheAlku;
@@ -106,6 +106,16 @@ namespace Matkakirja.Editori
                 case Vaihe.OdotaNapit:
                     if (kehyksia < 20) return;
                     TarkistaNapit();
+                    Siirry(Vaihe.NytRivi);
+                    break;
+                case Vaihe.NytRivi:
+                    Matkakirja.Natiivi.NytRivi.Nayta("Pariisi", 48.8566, 2.3522, "pariisi");
+                    Siirry(Vaihe.OdotaNytRivi);
+                    break;
+                case Vaihe.OdotaNytRivi:
+                    // Sää odottaa enintään NytRivi.SaanOdotusS; rivi näkyy ~3 s (Nimikyltti).
+                    if (Kulunut < Matkakirja.Natiivi.NytRivi.SaanOdotusS + 0.8) return;
+                    TarkistaNytRivi();
                     Siirry(Vaihe.Lopeta);
                     break;
                 case Vaihe.Lopeta:
@@ -149,6 +159,21 @@ namespace Matkakirja.Editori
                 if (e == null || e.panel == null || e.resolvedStyle.display == DisplayStyle.None || e.resolvedStyle.visibility == Visibility.Hidden)
                 { Kirjaa($"-- {nimi}: ei näkyvissä"); continue; }
                 Kokonaan(e, turva, nimi);
+            }
+        }
+
+        static void TarkistaNytRivi()
+        {
+            var e = Matkakirja.Natiivi.NytRivi.TestiLappu;
+            if (e?.panel == null) { Virhe("nyt-rivi ei syntynyt"); return; }
+            if (e.resolvedStyle.visibility == Visibility.Hidden || e.resolvedStyle.opacity < 0.5f) { Virhe("nyt-rivi ei näkyvissä"); return; }
+            var turva = TurvaAlue(OpasValikko.Hae().TestiJuuri);
+            Kokonaan(e, turva, "nyt-rivi");
+            var b = e.worldBound;
+            foreach (var (nimi, n) in OpasValikko.Hae().TestiAvainnapit())
+            {
+                if (n == null || n.panel == null || n.resolvedStyle.display == DisplayStyle.None || n.resolvedStyle.visibility == Visibility.Hidden) continue;
+                if (b.Overlaps(n.worldBound)) Virhe($"nyt-rivi {Laatikko(b)} on päällekkäin: {nimi} {Laatikko(n.worldBound)}");
             }
         }
 
