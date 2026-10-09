@@ -51,6 +51,15 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261009-ilta.md`. Aloitusv
 - **Vienti:** 1499-kuori (v25) ja nykyasu (v24, drone-loppukuva) tarvitsevat pelissä kumpikin oman tiedostonsa. Sovi Siirtosepän kanssa,
   miten peli valitsee kuoren.
 
+## Lisäys 9.10. klo 20.3x (PT: Olavinlinnan 1499-katot jonoon seinien jälkeen)
+
+- `kuori_ohje.py` sai kattonäkymän (seinä 6, `katsoo='alas'`): katot ylhäältä, oikea = itä ja ylös = pohjoinen, 42,5 px/m, kohde |n_z|
+  välillä 0,35–0,985 ja y > 6. Ohjeet ovat kansiossa `olavinlinna-codex-ohje-v25/seina6`.
+- Kohdemaski on siivottu: avaus 1,5 m, yli 15 m²:n osat ja reunat palautettu raakamaskista (raakamaski on `maskit/*_raaka.png`).
+  Tulos: 1 688 m², 5 osaa (tornit, palatsi, pitkä katto, gallerian katto). Muurien harjat on rajattu pois.
+- Karttaseppä on saanut paanu- ja lautakehotteen ja kiellon (metalli, vihreä, kupari). Projisointi tehdään `kuori_projisoi.py`:llä kuten
+  seinille.
+
 ## Työkalut (`_valmiit/kaupunkipinnat-v1/lahde/`)
 
 - **`tekoaly_syotteet.py <näkymä> [--pxm 25 --ulos <kansio>]`** tuottaa:
