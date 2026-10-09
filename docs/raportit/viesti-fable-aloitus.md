@@ -10,7 +10,7 @@ Muistikansio /Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fab
 2) CronList: luo JONOKIERROS (7,27,47) luovutuksen kohdan 7 mukaan.
 3) JUNA 173 PYSÄYTETTY iPad-jetsamin takia: odota Natiivisepän 173b-korjausta ja LS1:n A-polun todennusta (muistiajo-<N>.txt Julkaisijalla); BUILD 172 -regressio: jos nykyinen TF 172 kaatuu, kerro omistajalle.
 4) Unity 6.7 -kokeen tulos omistajalle HETI, kun Natiiviseppä ilmoittaa.
-5) Pulu odottaa omistajan `claude auth login` -kirjautumista koneella (sovelluksen tilin 250 $ käyttämättä) → jatka GRC/DEU/ITA vaiheesta 2 ja jonon maat; Freesound-OAuth samalla.
+5) Pulu: TÄMÄN TILIN pilvisessiot GRC/DEU/ITA käynnissä 22.2x (haarat pulu-<maa>-pilvi-b, luotu Claude-sovelluksesta luovutuksen kohdan 4 kaavalla); seuraa committeja, valmis maa → pistokoe → seuraavat maat samalla kaavalla. Freesound-OAuth omistajalle koneella.
 6) Notre-Dame v3 -pinnat ja Kuninkaanlinnan v6i-pelikuvat: vertaa valokuvaan samasta kulmasta ennen omistajaa.
 7) Älä kerro omistajalle nollauksesta erikseen (vain häntä koskevat asiat), ellei hän kysy.
 Ennen seuraavaa omaa nollausta: python3 tools/tallenna-keskustelu.py <oma session-uuid>.
