@@ -96,6 +96,15 @@ namespace Matkakirja.Linssit
                     osoitin = m as string;
                 else Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin ei latautunut ({r.responseCode})");
             }
+            // DIAGNOSTIIKKA (Natiiviseppä 10.10., juna 173 jetsam): Documents/omat-mallit-osoitin.txt (esim. "v6h2/mallit.json") ohittaa
+            // ämpärin osoittimen, jotta korjattu data voidaan ajaa laitteella ennen osoitinvaihtoa. Tyhjä tiedosto = ei ohitusta.
+            try
+            {
+                var po = Path.Combine(Application.persistentDataPath, "omat-mallit-osoitin.txt");
+                string ohitus = File.Exists(po) ? File.ReadAllText(po).Trim() : null;
+                if (!string.IsNullOrEmpty(ohitus)) { Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin ohitettu (testi) {osoitin} → {ohitus}"); osoitin = ohitus; }
+            }
+            catch (Exception) { }
             if (!string.IsNullOrEmpty(osoitin) && !osoitin.Contains("..") && !osoitin.StartsWith("/"))
             {
                 string url = new Uri(new Uri(VerkkoOsoitin), osoitin).AbsoluteUri;
