@@ -59,6 +59,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(V("IlmakehaLaatat.shader").Contains("_IlmSaa.x"), "märät kadut");
         }
 
+        [Testi] static void LaattojenLeikkausKutenCesium()
+        {
+            // CesiumUnlitTilesetShader: Alpha = 1 − peitteen R (Lerp mustasta alfalla), raja 0,5, oletuskuva musta (A/B 9.10. 05.0x).
+            string s = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "IlmakehaLaatat.shader"));
+            Oleta.Tosi(s.Contains("clip(0.5 - m.r * m.a)"), "1 − r·a ≥ 0,5 säilyy");
+            Oleta.Tosi(s.Contains("_overlayTexture_Clipping (\"Leikkaus\", 2D) = \"black\""), "ilman peitettä ei leikata");
+        }
+
         [Testi] static void SateenkaariVainKuuronJalkeen()
         {
             KaupunkiKuuro.Nollaa();

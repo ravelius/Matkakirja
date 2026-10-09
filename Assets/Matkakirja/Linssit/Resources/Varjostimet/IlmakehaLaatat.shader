@@ -11,7 +11,7 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
         _baseColorTexture ("Perusväri", 2D) = "white" {}
         _baseColorFactor ("Perusvärin kerroin", Color) = (1, 1, 1, 1)
         _baseColorTextureCoordinateIndex ("UV-kanava", Float) = 0
-        _overlayTexture_Clipping ("Leikkaus", 2D) = "white" {}
+        _overlayTexture_Clipping ("Leikkaus", 2D) = "black" {}
         _overlayTextureCoordinateIndex_Clipping ("Leikkauksen UV-kanava", Float) = 0
         _overlayTranslationAndScale_Clipping ("Leikkauksen siirto ja skaala", Vector) = (0, 0, 1, 1)
     }
@@ -26,14 +26,16 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
         CBUFFER_END
         TEXTURE2D(_overlayTexture_Clipping); SAMPLER(sampler_overlayTexture_Clipping);
         float2 Kanava(float2 a, float2 b, float2 c, float2 d, float i) { return i < 0.5 ? a : i < 1.5 ? b : i < 2.5 ? c : d; }
-        /// Cesiumin leikkaus kuten CesiumUnlitTilesetShader (Alpha = peitteen alfa, AlphaClipThreshold 0,5): pikseli säilyy, kun alfa ≥ 0,5;
-        /// polygonin sisällä alfa 0 → pois. Oletuskuva valkoinen: laatat ilman leikkauspeitettä säilyvät kokonaan.
-        /// (9.10. 02.3x: käänteinen ehto ja musta oletus poistivat Concorden testissä koko Googlen kaupungin polygonin ulkopuolelta.)
+        /// Cesiumin leikkaus kuten CesiumUnlitTilesetShader: peite → Lerp(musta, näyte, näyte.a) → Split R → OneMinus → Alpha,
+        /// AlphaClipThreshold 0,5. Pikseli säilyy, kun 1 − r·a ≥ 0,5; polygonin sisällä peite valkoinen → pois. Oletuskuva musta
+        /// (Cesiumin oletus): laatat ilman leikkauspeitettä säilyvät. (9.10. 05.0x A/B: alfaehto ei leikannut mitään, koska peitteen
+        /// alfa on 1 kaikkialla; Concorden teltat jäivät.)
         void Leikkaa(float2 uv)
         {
             float4 t = _overlayTranslationAndScale_Clipping;
             float2 q = uv * t.zw + t.xy; q.y = 1.0 - q.y;
-            clip(SAMPLE_TEXTURE2D(_overlayTexture_Clipping, sampler_overlayTexture_Clipping, q).a - 0.5);
+            half4 m = SAMPLE_TEXTURE2D(_overlayTexture_Clipping, sampler_overlayTexture_Clipping, q);
+            clip(0.5 - m.r * m.a);
         }
         ENDHLSL
         Pass
