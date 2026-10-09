@@ -1519,7 +1519,12 @@ namespace Matkakirja.Linssit.Kierros
                 double A0 = Math.PI / 180, rr = NykyinenKehys.EtaisyysM * Math.Sin(NykyinenKehys.Kallistus * A0), hh = NykyinenKehys.EtaisyysM * Math.Cos(NykyinenKehys.Kallistus * A0);
                 double tau = Math.Max(OpasKuvaus.SpiraaliAikaS, 0.86 * (rr * OpasKuvaus.SpiraaliLahesty + hh * OpasKuvaus.SpiraaliLasku) / OpasKuvaus.SpiraaliMaxMS);
                 double q = 1 - Math.Exp(-Math.Pow(lipumisRaaka / tau, 2));
-                Asento = Ohjaus.Sovella(OpasKuvaus.Spiraali(perus, kaariKulma, q, NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM), NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM);
+                // Oma katsesuunta (PT 9.10. Vasa: "matalimmassa kohdassa etualan tummat katot peittävät mastojen juuren"): kierre lähestyy
+                // mutta ei laske saapumiskorkeutta alemmas, joten valittu näkymä pysyy esteettä.
+                double kattoK = NykyinenKehys.KattoYlaM;
+                if (Nykyinen != null && !double.IsNaN(Nykyinen.KatseSuunta))
+                    kattoK = Math.Max(kattoK, perus.KatseKorkeusM + perus.EtaisyysM * Math.Cos(perus.Kallistus * A0) - NykyinenKehys.MaaM - 5);
+                Asento = Ohjaus.Sovella(OpasKuvaus.Spiraali(perus, kaariKulma, q, NykyinenKehys.MaaM, kattoK), NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM);
                 return;
             }
             // Pallon avausnäkymä (kehys ilman kohdetta; omistaja TF 168: "parin kertojan lauseen jälkeen kip kääntyy kovalla vauhdilla
