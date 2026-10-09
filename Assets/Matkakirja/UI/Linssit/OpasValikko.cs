@@ -271,6 +271,12 @@ namespace Matkakirja.Natiivi
             // ☀ suoraan oikeaan ryhmään ☰:n vasemmalle (SijoitaAikaNappi); erillinen vasen ryhmä jäi tyhjäksi (poistettu 9.10.).
             aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], Kieli.T("ui.opas.aika-ja-saa"), () => { SuljeSaaVihje(); if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, ryhma);
             aikaNappi.RemoveFromHierarchy(); ryhma.Insert(0, aikaNappi);   // ☀ ■ ☰ -järjestys
+            // iPhone pystyssä ☀ Dynamic Islandin vasemmalle (OHJAUSNAPPI-ryhmän vasen muunnelma, SijoitaAikaNappi).
+            ryhmaVasen = Ohjausnappi.Ryhma(Juuri);
+            ryhmaVasen.AddToClassList("mk-ohjausryhma--vasen");
+            ryhmaVasen.style.display = DisplayStyle.None;
+            // Kartan "© OpenStreetMap" -maininnan napautus avaa ☰ › Lähteet (omistaja 9.10. 09.5x, KrediititTiivis).
+            KrediititTiivis.AvaaLahteet = () => { Avaa(Nakyma.Lahteet); };
             LueSaatila();
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
@@ -484,12 +490,40 @@ namespace Matkakirja.Natiivi
         /// <summary>Vuorokausinappi: iPhonella oikean yläkulman ryhmään ■ ≡ -nappien vasemmalle (omistaja 12.3x), iPadilla vasemmalle.</summary>
         void SijoitaAikaNappi()
         {
-            if (float.IsNaN(Juuri.layout.width) || Juuri.layout.width <= 0) return;
-            var isa = ryhma;   // omistaja 14.2x: myös iPadilla oikean ryhmän riviin (metrolinja vasempaan yläkulmaan)
-            if (aikaNappi.parent == isa && isa.IndexOf(aikaNappi) == 0) return;
-            aikaNappi.RemoveFromHierarchy();
-            isa.Insert(0, aikaNappi);
+            if (float.IsNaN(Juuri.layout.width) || Juuri.layout.width <= 0 || Juuri.panel == null) return;
+            bool pysty = PuhelinPysty;
+            // IPHONE PYSTY (omistajan TF 169 -palaute 9.10.2026, pallo Pariisissa): ☀ ja ☰ ylös Dynamic Islandin vasemmalle ja oikealle
+            // puolelle, ■ alas ⏸:n vasemmalle (ohjainrivi alariville, PaivitaTapit). Muualla ☀ ■ ☰ oikeassa ryhmässä kuten ennen.
+            var isa = pysty ? ryhmaVasen : ryhma;   // omistaja 14.2x: myös iPadilla oikean ryhmän riviin (metrolinja vasempaan yläkulmaan)
+            if (aikaNappi.parent != isa || isa.IndexOf(aikaNappi) != 0) { aikaNappi.RemoveFromHierarchy(); isa.Insert(0, aikaNappi); }
+            var lopetaIsa = pysty ? ohjainRivi : ryhma;
+            if (lopetaNappi.parent != lopetaIsa)
+            {
+                lopetaNappi.RemoveFromHierarchy();
+                if (pysty) ohjainRivi.Insert(0, lopetaNappi); else ryhma.Insert(Mathf.Max(0, ryhma.IndexOf(nappi)), lopetaNappi);
+            }
+            if (pysty)
+            {
+                var t = UiKerros.Hae().Reunat(kerrosNro);
+                float pw = Juuri.panel.visualTree.layout.width;
+                float yla = Mathf.Max(10f, t.y - 50f) - t.y;   // Islandin tasolle (kuten PuhelinMetro), turva-alueen koordinaateissa
+                float napinLeveys = Tyylikirja.Vali.S + Tyylikirja.Nappi.Ohjaus;   // .mk-ohjausnappi: vasen marginaali + nappi
+                float vasen = pw * 0.5f - IslandLeveysPt * 0.5f - KuvaRako - napinLeveys - t.x;
+                float oikea = pw * 0.5f + IslandLeveysPt * 0.5f + KuvaRako - Tyylikirja.Vali.S - t.x;
+                ryhmaVasen.style.top = yla; ryhmaVasen.style.left = vasen; ryhmaVasen.style.right = StyleKeyword.Auto;
+                ryhma.style.top = yla; ryhma.style.left = oikea; ryhma.style.right = StyleKeyword.Auto;
+                ryhmaVasen.style.display = DisplayStyle.Flex;
+            }
+            else if (ryhma.style.left.keyword != StyleKeyword.Null)
+            {
+                ryhma.style.top = StyleKeyword.Null; ryhma.style.left = StyleKeyword.Null; ryhma.style.right = StyleKeyword.Null;
+                ryhmaVasen.style.display = DisplayStyle.None;
+            }
         }
+
+        /// <summary>iPhone pystyssä (puhelin = ei LeveaRuutu): ☀/☰ Islandin vierellä, Kysy-rivi vasemmalla ja ■ ⏸ ⏭ oikealla alarivillä.</summary>
+        bool PuhelinPysty => !LeveaRuutu && Juuri.layout.height > Juuri.layout.width;
+        VisualElement ryhmaVasen;
 
         /// <summary>
         /// Metrolinja kierroksen ajan (ei valikon tai chatin aikana) vasempaan reunaan keskelle: kaistaan otsikon (☾A:n alla, ~57 pt)
@@ -546,10 +580,10 @@ namespace Matkakirja.Natiivi
             float x, y, korkeus, leveys;
             if (pysty)
             {
-                // Island ylhäällä keskellä (~126 × 37 pt, yläreuna ~11 pt): vasen ylänurkka Islandin tasolta alaspäin.
-                x = KulmaVaraPt; y = Mathf.Max(10f, t.y - 50f);
-                // Islandin tasolla (yläreuna ~11, alareuna ~48 pt) nimi Islandin vasemmalle puolelle; alemmat rivit leveämpinä.
-                metro.IslandAlaY = 52f; metro.IslandKapea = pw * 0.5f - IslandLeveysPt * 0.5f - KuvaRako - x;
+                // Island ylhäällä keskellä (~126 × 37 pt, yläreuna ~11 pt). TF 169 (9.10.2026): ☀ Islandin vasemmalla, joten linja
+                // alkaa Islandin alapuolelta (alareuna ~48 pt) vasemmasta ylänurkasta; ei kavennettuja Island-rivejä.
+                x = KulmaVaraPt; y = Mathf.Max(56f, t.y - 50f);
+                metro.IslandAlaY = 0f;
                 leveys = pw * 0.48f;
                 korkeus = Mathf.Min(ph * 0.4f, OpasMetrolinja.AsemaValiPt * metro.Maara);
             }
@@ -1325,6 +1359,12 @@ namespace Matkakirja.Natiivi
             if (esitysRivi.style.display != ed) esitysRivi.style.display = ed;
             esitysNakyy = esitys;
             if (esitys) { esitysRivi.style.bottom = krediittiAla; napitNakyy = false; }
+            // TF 169 (9.10.2026): iPhone pystyssä Kysy, mikrofoni ja näppäimistö vasempaan reunaan (oikealla samalla korkeudella ■ ⏸ ⏭).
+            bool vasemmalle = PuhelinPysty;
+            var jc = vasemmalle ? new StyleEnum<Justify>(Justify.FlexStart) : new StyleEnum<Justify>(StyleKeyword.Null);
+            if (esitysRivi.style.justifyContent != jc) esitysRivi.style.justifyContent = jc;
+            var pl = vasemmalle ? new StyleLength(OpasTapit.Reuna - Tyylikirja.Vali.Xs) : new StyleLength(StyleKeyword.Null);
+            if (esitysRivi.style.paddingLeft != pl) esitysRivi.style.paddingLeft = pl;
             if (napitNakyy != nappiNakyy)
             {
                 nappiNakyy = napitNakyy;
@@ -1471,6 +1511,18 @@ namespace Matkakirja.Natiivi
             ohjainAla = tappiAla - KuvaRako - rivi;
             // Rivin oikea reuna tapin keskilinjalle niin, että rivi on tapin alla keskellä; ei ruudun reunan yli.
             float riviOikea = Mathf.Max(OpasTapit.Reuna, sivu + OpasTapit.Halkaisija * 0.5f - riviLeveys * 0.5f);
+            if (PuhelinPysty && !float.IsNaN(w))
+            {
+                // TF 169 (9.10.2026): ■ ⏸ ⏭ samalle korkeudelle kuin Kysy-rivi oikeaan reunaan; jos rivi ei mahdu Kysy-rivin viereen
+                // (vapaa lento -nappi mukana kapealla puhelimella), sen yläpuolelle oikeaan reunaan.
+                riviOikea = OpasTapit.Reuna;
+                ohjainAla = krediittiAla + (NappiriviKorkeus - rivi) * 0.5f;
+                float esitysOikea = 0f;
+                if (esitysNakyy)
+                    foreach (var c in esitysRivi.Children())
+                        if (c.resolvedStyle.display != DisplayStyle.None) esitysOikea = Mathf.Max(esitysOikea, Juuri.WorldToLocal(c.worldBound).xMax);
+                if (esitysOikea + KuvaRako > w - riviOikea - riviLeveys) ohjainAla = krediittiAla + NappiriviKorkeus + KuvaRako;
+            }
             if (ohjainRivi.style.right.value.value != riviOikea) ohjainRivi.style.right = riviOikea;
             if (ohjainRivi.style.bottom.value.value != ohjainAla) ohjainRivi.style.bottom = ohjainAla;
 
@@ -1738,7 +1790,8 @@ namespace Matkakirja.Natiivi
                     // MIKSERI (omistaja 9.10.2026 klo 00.5x: "mikseriin pitäisi päästä kun ollaan kuumailmapallossa"): sama Äänentasot-
                     // paneeli kuin päävalikon Peli › Mikseri (kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää);
                     // aukeaa pallon päälle (Valikot-kerros), lento jatkuu taustalla.
-                    Komento(Kieli.T("ui.opas.mikseri"), () =>
+                    // Omistaja 9.10. 09.5x: vain kehittäjäkoodilla.
+                    if (Asetukset.Kehittaja) Komento(Kieli.T("ui.opas.mikseri"), () =>
                     {
                         var at = UiNakymat.Hae()?.Aanentasot;
                         if (at == null) return;
@@ -1766,6 +1819,9 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Oma vesipinta (LS2: OSM, ESA WorldCover) kartan ruudulta tänne (omistaja 9.10. 09.5x: ruudulla vain © OpenStreetMap).
+                    string vesi = KaupunkiVesi.KrediittiNyt;
+                    if (!string.IsNullOrWhiteSpace(vesi)) Kirjasimet.Aseta(Rakenne.Teksti(vesi.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     // Omat 3D-mallit (Päätoimittaja 9.10.2026: Concorde, Riddarholmen, Notre-Dame, Giza): mallit.json:n kohdekohtaiset
                     // tekijärivit (LS2 0bf2ed7b2: CesiumOmatMallit.Lahderivit; tyhjä, kunnes json on saapunut).
                     foreach (var m in Matkakirja.Linssit.CesiumOmatMallit.Lahderivit)
@@ -2331,7 +2387,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Nykyisen kaupungin yksityiskohtakuvien tekijät (LS1: OpasSovitin.KuvaLahteet, (Kohde, Tekija, Lisenssi, Havainnekuva)
-        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Tekoälyllä tuotettu havainnekuva"; kukin kerran.
+        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Havainnekuva"; kukin kerran.
         /// </summary>
         static List<string> KuvaLahteet()
         {
@@ -2380,7 +2436,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; +3 elävän kaupungin lokit ja kyyhkyt = 54; lisenssikatselmus +19 Pulun tehosteet, äänimaisema v2 ja Ihmisen matka v2 = 73; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; +3 elävän kaupungin lokit ja kyyhkyt = 54; lisenssikatselmus +19 Pulun tehosteet, äänimaisema v2 ja Ihmisen matka v2 = 73; +2 Pariisin lapset ja raitiovaunu = 75; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<(string Ryhma, List<string> Rivit)> AaniLahteet()
@@ -2577,6 +2633,22 @@ namespace Matkakirja.Natiivi
                 case "jatka":
                     testiJatka = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");
+                case "pysty":
+                {
+                    // ui opasvalikko pysty: iPhone-pystyasettelun tarkistus (TF 169): ☀/☰ Islandin vierellä, ■ ⏸ ⏭ ja Kysy-rivi samalla korkeudella.
+                    Rect B(VisualElement e) => e.worldBound;
+                    float pw = Juuri.panel?.visualTree.layout.width ?? 0f;
+                    Rect island = new Rect(pw * 0.5f - IslandLeveysPt * 0.5f, 11f, IslandLeveysPt, 37f);
+                    Rect ra = B(aikaNappi), rv = B(nappi), ro = B(ohjainRivi), re = B(esitysRivi);
+                    float esitysY = 0f; int n = 0;
+                    foreach (var lapsi in esitysRivi.Children()) if (lapsi.resolvedStyle.display != DisplayStyle.None) { esitysY += lapsi.worldBound.center.y; n++; }
+                    esitysY = n > 0 ? esitysY / n : float.NaN;
+                    bool islandOk = !ra.Overlaps(island) && !rv.Overlaps(island) && ra.xMax <= island.xMin && rv.xMin >= island.xMax;
+                    bool riviOk = n > 0 && Mathf.Abs(ro.center.y - esitysY) < 2f;
+                    return $"opas: pysty {PuhelinPysty}, ☀ {ra.xMin:0},{ra.yMin:0} ☰ {rv.xMin:0},{rv.yMin:0} island {island.xMin:0}–{island.xMax:0} {(islandOk ? "ok" : "VIKA")}; "
+                         + $"■ {(lopetaNappi.parent == ohjainRivi ? "ohjainrivillä" : "ylhäällä")}, ohjainrivi y {ro.center.y:0} vs Kysy-rivi y {esitysY:0} "
+                         + $"{(riviOk ? "samalla korkeudella ok" : "eri korkeudella")} (Kysy-rivi {re.xMin:0}–, ohjainrivi {ro.xMin:0}–{ro.xMax:0})";
+                }
                 case "napit":
                 {
                     var r = napit.worldBound;

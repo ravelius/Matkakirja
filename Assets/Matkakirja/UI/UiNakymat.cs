@@ -234,7 +234,8 @@ namespace Matkakirja.Natiivi
             v.LisaLuetteloRivi(peli, "Asetukset", Ikonit.PilleriAsetukset, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Asetukset));
             // MIKSERI (omistaja 8.10.2026 klo 17.5x: "hampurilaisen alle mikserinapin, millä voisin itse säätää kaikki eri äänitasot"):
             // Äänentasot-paneelin liukusäätimet (kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää, Pulu).
-            v.LisaLuetteloRivi(peli, "Mikseri", Ikonit.Mikseri, () => { v.Sulje(); Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet); });
+            // Omistaja 9.10.2026 klo 09.5x: mikseri vain kehittäjäkoodilla ("Muille … näitä miksereitä ei näy").
+            v.LisaLuetteloRivi(peli, "Mikseri", Ikonit.Mikseri, () => { v.Sulje(); Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet); }, () => Asetukset.Kehittaja);
             v.LisaErotin();
             // Alarivi yhdellä rivillä (omistaja 14.37): Uusi peli vasemmalla, versio oikealla (natiivissa ei päivitä-nappia).
             v.LisaAlarivinNappi("Uusi peli", Valikko.KysyUusiPeli);
@@ -266,8 +267,8 @@ namespace Matkakirja.Natiivi
             // ASETUKSET-näkymä: äänentasot, kartta (Pieni liike, Kuljettu reitti, kehittäjän maailmatilassa Näytä huntu), muut
             // (Offline-kartat ja Ehdota toimintoina, Kehittäjä kytkimenä koodilukolla; päällä myös Kehittäjätyökalut).
             var a = v.AsetusKohde;
-            v.LisaOsioOtsikko("Äänentasot", a);
-            v.LisaSaatimet(a);
+            // Äänentasot vain kehittäjäkoodilla (omistaja 9.10.2026 klo 09.5x: muille mikseriä ei näy, tasot tulevat valmiina).
+            v.LisaSaatimet(a, v.LisaOsioOtsikko("Äänentasot", a));
             v.LisaOsioOtsikko("Kartta", a);
             var kartta = v.LisaNappirivi(a);
             foreach (var (k, ikoni) in new[] { (Kytkin.PieniLiike, Ikonit.PieniLiike), (Kytkin.KuljettuReitti, Ikonit.KuljettuReitti) })

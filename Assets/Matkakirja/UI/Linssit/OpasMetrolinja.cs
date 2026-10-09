@@ -78,6 +78,16 @@ namespace Matkakirja.Natiivi
             juuri.style.display = DisplayStyle.None;
             viiva = Rakenne.El("mk-metrolinja__viiva", juuri, PickingMode.Ignore);
             kuljettu = Rakenne.El("mk-metrolinja__kuljettu", juuri, PickingMode.Ignore);
+            // KYLTTI (omistaja 9.10.2026: "metrokartan voisi myös nimetä "kaupunki kierros" kyltillä sen yläpuolelle"): linjan
+            // yläpuolelle asemanimien tyylillä (sama valkoinen, varjo ja ääriviiva), lihavana; linja siirtyy kyltin verran alas.
+            kyltti = Rakenne.Teksti(Kieli.T("ui.opas.metro.kaupunkikierros"), "mk-metrolinja__nimi", juuri);
+            kyltti.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(kyltti, Kirjasin.ModerniLihava);
+            kyltti.style.position = Position.Absolute;
+            kyltti.style.left = 0; kyltti.style.top = -KylttiKorkeus; kyltti.style.marginLeft = 0;
+            kyltti.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
+            kyltti.style.unityTextOutlineWidth = 0.8f;
+            kyltti.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
             OpasSovitin.KierrosVaihtui += () => likainen = true;
             // Lähtö: seuraava korostuu jo lennon alussa (omistaja 12.3x).
             OpasSovitin.KierrosLahtee += (nyk, seur, kesto) => Kohdista(seur);
@@ -107,9 +117,14 @@ namespace Matkakirja.Natiivi
         /// <summary>Aseman taso 0–2: 2 = nykyinen, 1 = viereinen, 0 = muut.</summary>
         static float Taso(int k, int i) => k == i ? 2f : Mathf.Abs(k - i) == 1 ? 1f : 0f;
 
+        readonly Label kyltti;
+        /// <summary>Kaupunkikierros-kyltin rivi linjan yläpuolella (pt).</summary>
+        public const float KylttiKorkeus = 18f;
+
         /// <summary>Joka ruudulla: näkyvyys, pystykaista (yla…ala paneelin pisteinä), enimmäiskorkeus ja nimien enimmäisleveys.</summary>
         public void Paivita(bool nayta, float yla, float ala, float maksimi, float maksimiLeveys, float vasen)
         {
+            yla += KylttiKorkeus;   // kyltti linjan yläpuolelle kaistan sisään
             var nimet = nayta ? Nimet() : null;
             nayta = nayta && nimet != null && nimet.Count > 1;
             if (nayta != nakyy)

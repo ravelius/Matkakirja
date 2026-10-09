@@ -235,8 +235,12 @@ namespace Matkakirja.Natiivi
                     Kytkinrivi(Kytkin.Kertoja, Kieli.T("ui.linna.kertoja"));
                     Kytkinrivi(Kytkin.Musiikki, Kieli.T("ui.linna.musiikki"));   // sama nimi kuin mikserissä (Päätoimittaja 8.10.2026)
                     Kytkinrivi(Kytkin.Aanimaisema, Kieli.T("ui.linna.aanimaisema"));
+                    // Mikseri (omistaja 9.10.2026 klo 09.5x, vain kehittäjäkoodilla): sama konteksti-mikseri kuin pallossa (Olavinlinnan tasot,
+                    // ryhmät ja äänet); Pelikoodarin huone- ja kaikupaneeli on Akustiikka.
+                    if (Asetukset.Kehittaja)
+                        Komento(Kieli.T("ui.linna.mikseri"), () => UiNakymat.Hae()?.Aanentasot?.AvaaOsa(Aanentasot.Osa.Aanet));
                     if (Asetukset.Kehittaja && MikseriPaneeli.Viimeisin != null)
-                        Komento(Kieli.T("ui.linna.mikseri"), () => MikseriPaneeli.Viimeisin.Avaa(true));
+                        Komento(Kieli.T("ui.linna.akustiikka"), () => MikseriPaneeli.Viimeisin.Avaa(true));
                     break;
                 case Nakyma.Lahteet:
                     Takaisin(Kieli.T("ui.linna.lahteet"));
@@ -278,6 +282,14 @@ namespace Matkakirja.Natiivi
             foreach (var t in r.Tilat)
                 if (t.Infotaulu != null) foreach (var (_, l) in t.Infotaulu.Rivit) Lisaa(l);
             if (r.Taulu != null) foreach (var k in r.Taulu.Kohdat) Lisaa(k.Lahde);
+            // Linnan historian restaurointivaihe (Päätoimittaja 9.10.2026, juna 173): Museoviraston valokuvat 1959–1975, CC BY 4.0
+            // (Sisältökirjurin olavinlinna-restaurointi-1961-75/MANIFEST.json: kuvaajat Per-Olof Welin ja Teuvo Kanerva, osa nimeämättä).
+            // Olavinlinnan maasto (Siirtosepän v45z, Päätoimittaja 9.10.: rakennus.json:n lähteissä ei ole MML:ää).
+            if (DioraamaSovitin.RakennusId == DioraamaSovitin.Oletusrakennus)
+            {
+                Lisaa(Kieli.T("ui.linna.lahde.restaurointi"));
+                Lisaa(Kieli.T("ui.linna.lahde.korkeusmalli"));
+            }
             return tulos;
         }
 

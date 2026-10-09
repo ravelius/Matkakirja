@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
                 var b = new PalloNappi(() => Avaa(id)) { text = "" };
                 b.RemoveFromClassList(Button.ussClassName);
                 b.AddToClassList("mk-erikoisnosto-paa");
-                b.tooltip = k.Nimi + ": kaupunkiopas";   // vain VoiceOverille ja vihjeenä
+                b.tooltip = Kieli.T("ui.pallo.kaupunkiopas", k.Nimi);   // vain VoiceOverille ja vihjeenä
                 b.name = "kaupunkipallo-" + id;   // todistusajon haku (tap-teksti kaupunkipallo-<id>)
                 b.style.display = DisplayStyle.None;
                 juuri.Add(b);
