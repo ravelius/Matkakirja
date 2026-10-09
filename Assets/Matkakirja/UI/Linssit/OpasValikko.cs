@@ -1781,9 +1781,14 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Aanet:
                     Takaisin("Äänet", Nakyma.Lahteet);
                     Vieritys();
+                    // Ryhmät (Päätoimittaja 9.10.2026, juna 171): väliotsikko (sama pohja kuin "MIKÄ TÄMÄ ON?") ja rivit aakkosittain.
                     var aanet = AaniLahteet();
                     if (aanet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei äänilähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
-                    foreach (var l in aanet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    foreach (var (ryhma, ryhmanRivit) in aanet)
+                    {
+                        Kirjasimet.Aseta(Rakenne.Teksti(ryhma.ToUpperInvariant(), "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
+                        foreach (var l in ryhmanRivit) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    }
                     break;
                 case Nakyma.Kysy:
                     RakennaKysy();
@@ -2371,7 +2376,7 @@ namespace Matkakirja.Natiivi
         /// <summary>LS1:n ElavaKaupunki.Krediitti suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen); null = ei riviä.</summary>
         static string ElavaKrediitti() => ElavaKaupunki.Krediitti;
 
-        [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url; }
+        [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url, ryhma; }
         [Serializable] sealed class AaniLahdeTiedosto { public AaniNimeaminen[] nimeamiset; }
 
         /// <summary>
@@ -2379,23 +2384,23 @@ namespace Matkakirja.Natiivi
         /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; +3 elävän kaupungin lokit ja kyyhkyt = 54; lisenssikatselmus +19 Pulun tehosteet, äänimaisema v2 ja Ihmisen matka v2 = 73; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
-        static List<string> AaniLahteet()
+        static List<(string Ryhma, List<string> Rivit)> AaniLahteet()
         {
-            var tulos = new List<string>();
+            var tulos = new List<(string ryhma, string rivi)>();
             var ta = Resources.Load<TextAsset>("Lahteet/aanilahteet");
-            if (ta == null) return tulos;
+            if (ta == null) return new List<(string, List<string>)>();
             AaniLahdeTiedosto d = null;
             try { d = JsonUtility.FromJson<AaniLahdeTiedosto>(ta.text); }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: aanilahteet.json: " + e.Message); }
-            if (d?.nimeamiset == null) return tulos;
+            if (d?.nimeamiset == null) return new List<(string, List<string>)>();
             foreach (var a in d.nimeamiset)
             {
                 var osat = new[] { a?.nimi, a?.tekija, a?.lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x.Trim()).ToList();
                 if (osat.Count < 2) continue;
-                string rivi = string.Join(" · ", osat);
-                if (!tulos.Contains(rivi)) tulos.Add(rivi);
+                tulos.Add((a.ryhma, string.Join(" · ", osat)));
             }
-            return tulos;
+            // Ryhmät kiinteässä järjestyksessä, rivit aakkosittain (Ydin AaniLahdeRyhmat; puuttuva "ryhma" → Muut).
+            return Matkakirja.Linssit.Kierros.AaniLahdeRyhmat.Ryhmittele(tulos);
         }
 
         void Vieritys()
