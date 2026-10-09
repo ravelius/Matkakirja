@@ -247,7 +247,11 @@ namespace Matkakirja.Natiivi
                     foreach (var tr in e.SolmuT)
                         if (tr != null && tr.name == luu)
                         {
-                            float d = Vector3.Distance(tr.position, DioraamaNayttamo.UnityPiste(k.Paikka)) * 100f;
+                            // Kannettuun esineeseen tarttuva käsi: kohde esineen kehyksessä (Kadet), muuten sijoitettu maailman paikka.
+                            var kohde = Kannettu(e.Hahmo.Kadet, k)
+                                ? (e.KannettavaValmis ? Peili(e.KannettavaPaikkaC + e.KannettavaKiertoC * new Vector3((float)k.Paikka.X, (float)k.Paikka.Y, (float)k.Paikka.Z)) : tr.position)
+                                : DioraamaNayttamo.UnityPiste(k.Paikka);
+                            float d = Vector3.Distance(tr.position, kohde) * 100f;
                             Debug.Log($"MATKAKIRJA linssit: ik käsi {e.HahmoId} {k.Kasi} {k.Esine} ik={(IkPaalla ? 1 : 0)} silmukka {e.Silmukka} paino {(k.Kasi == "l" ? e.KasiPainoL : e.KasiPainoR):0.00} etäisyys {d:0} cm");
                             break;
                         }
