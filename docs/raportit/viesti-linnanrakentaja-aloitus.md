@@ -30,6 +30,12 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      - Huppu: kallistus 4° taakse, kapeampi kasvojen kohdalta, etureuna silmän ulkonurkan taakse. Kasvot ja ilme näkyvät pelin kulmasta.
      - Olkasuojan yläosa seuraa 60 % solisluuta (oli kokonaan olkavarressa).
      - Tarkistusarkki (v3/v4 pelin kulmasta + ilmeet): `esikatselu/vouti_mh_v4_arkki.jpg`. ASTC-kuvat ovat samat kuin v3:ssa.
+   - **KL v3c** (9.10. ilta, LS2:n v6g-palaute) on tiedostoissa `kuninkaanlinna-v1/glb`, ja v3b on tallessa kansiossa `glb-v3b/`.
+     - Risaliitin AO-laikut on poistettu: isot hiekkakivipinnat on jaettu 2 m:n ruudukkoon (`syvyys.leivo ruudukko_isot`), ja
+       kauko-AO:sta on pois seinänsuuntaiset säteet (`kauko_min_cos`).
+     - Kattosaumat kulkevat lappeen suuntaan (`_uv_lappeet`). pelti_kl:n arkkisävy on 0,025, ja katoilla on patinalaikut.
+     - LS2 tekee v6h:n ja kuvaparin. Vertailukuva: `esikatselu/kl_v3c_vertailu.jpg`. `KL_SYVYYS` tuottaa syvyyskuvat esikatseluista
+       Karttasepän tekoälypintakokeeseen (`_tyo/karttaseppa/tekoalypinnat-koe/`).
    - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
    - **Riddarholmen v2** on valmis ja odottaa PT:tä ja omistajaa. Vertailukuva:
      `riddarholmen-v1/esikatselu/riddarholmen_v2_vertailu_valokuva.jpg`. v1 on tallessa kansiossa `glb-v1/`.
