@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "35b6b52e5705792c";
-        public const string Versio = "v45z";   // v45y + historian restaurointivaihe 1961–1975 (9 telineryhmää; krediitit lahteet-listassa: Museovirasto ja MML CC BY 4.0; LR 9.10.)
+        public const string Hash = "460ceacae1645a3a";
+        public const string Versio = "v46a";   // v45z + Codex-rekvisiitta 12 merkkiä (voudin sali, Linnantupa, keittiö, tyrmä; seinäesineet seina: true) ja tammiovien lehdet ovi-tammi-100x190/200.glb (pääovi, muurikäytävä, Kellotorni, tyrmä; LR 9.10.)
     }
 }

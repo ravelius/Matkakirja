@@ -59,7 +59,9 @@ namespace Matkakirja.Natiivi
         public bool Naamio => puetut.Contains("esiliina") && puetut.Contains("myssy");
         /// <summary>Avaimet laukussa (avainrengas voudin pöydältä): lukitut ovet merkin avain-kentän mukaan.</summary>
         public readonly HashSet<string> Avaimet = new HashSet<string>(StringComparer.Ordinal);
-        sealed class Ovi { public KavelyMerkki M; public GameObject Go; public bool Auki; public Vector3 Paikka; }
+        sealed class Ovi { public KavelyMerkki M; public GameObject Go; public bool Auki; public Vector3 Paikka; public Transform Sarana; public Quaternion Kiinni; public float Kulma; public Coroutine Kaanto; }
+        /// <summary>Ovilehden avauskulma ja kesto (LR v46a ovi-tammi-*.glb: origo saranalla, +X leveys, +Y ylös, +Z ulos; PT: 90° 1,5 s:ssa).</summary>
+        public const float OviAukiAste = 90f, OviHidasS = 1.5f, OviNopeaS = 0.8f, OviRaollaanAste = 18f;
         // Huone 8: köysi sakaraan (koysi:sakara, köysikieppi kädessä) → ote-kiipeily ote:kellotorni-1…N takakuvassa, puuskat tuuli:puuska-N.
         Vector3? sakara; readonly List<(Vector3 P, Vector3 Ulos)> otteet = new List<(Vector3, Vector3)>(); readonly List<int> puuskat = new List<int>();
         readonly List<int> kapeatOtteet = new List<int>(), lepoOtteet = new List<int>();
@@ -150,7 +152,7 @@ namespace Matkakirja.Natiivi
         {
             foreach (var x in m.Puettu) { puetut.Add(x); var e = esineet.Find(y => y.Id == x); if (e?.Go != null) e.Go.SetActive(false); }
             if (m.Avainrengas) { Avaimet.Add("avainrengas"); var e = esineet.Find(y => y.Id == "avainrengas"); if (e?.Go != null) e.Go.SetActive(false); }
-            foreach (var o in ovet) if (m.AvatutOvet.Contains(o.M.Tunnus)) { o.Auki = true; if (o.Go != null) o.Go.SetActive(false); }
+            foreach (var o in ovet) if (m.AvatutOvet.Contains(o.M.Tunnus)) { o.Auki = true; if (o.Go != null) o.Go.SetActive(false); AsetaLehti(o, OviAukiAste); }
             if (m.Koysi && sakara is Vector3) { koysiKiinni = true; var e = esineet.Find(y => y.Id == Koysikieppi); if (e?.Go != null) KieppiSakaraan(e); }
             kirjaa?.Invoke($"seikkailu: M-tila palautettu (puettu {m.Puettu.Count}, avainrengas {m.Avainrengas}, ovia {m.AvatutOvet.Count}, köysi {m.Koysi})");
         }
@@ -189,6 +191,59 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Ovilehdet (LR v46a): merkin glb (ovi-tammi-100x190/200.glb) saranaan, joka on aukon reunassa (merkki = aukon keskikohta
+        /// lattiatasossa, kierto_y aukon suunta). Avaus kääntää saranaa 90° pehmeästi (AvaaOvi); tallennuksesta palautettu ovi on heti auki.</summary>
+        IEnumerator LuoOvilehdet(Transform isa, Action<string> kirjaa)
+        {
+            int n = 0;
+            foreach (var o in ovet)
+            {
+                if (string.IsNullOrEmpty(o.M.Glb)) continue;
+                GameObject lehti = null;
+                yield return LataaMalli(o.M, isa, luodut, g => lehti = g, kirjaa);
+                if (lehti == null) continue;
+                float w = o.M.Leveys > 0 ? (float)o.M.Leveys : 1f;
+                var s = new GameObject("Ovisarana:" + o.M.Tunnus) { layer = DioraamaNayttamo.Kerros }.transform;
+                s.SetParent(isa, false);
+                s.SetPositionAndRotation(lehti.transform.position + lehti.transform.rotation * new Vector3(-w / 2f, 0f, 0f), lehti.transform.rotation);
+                lehti.transform.SetParent(s, true);
+                lehti.transform.localPosition = Vector3.zero; lehti.transform.localRotation = Quaternion.identity;
+                lehti.name = "Ovilehti:" + o.M.Tunnus;
+                o.Sarana = s; o.Kiinni = s.localRotation; n++;
+                if (o.Auki) AsetaLehti(o, OviAukiAste);
+            }
+            if (n > 0) kirjaa?.Invoke($"seikkailu: ovilehtiä {n}");
+        }
+
+        /// <summary>Kääntää ovilehteä saranasta kulmaan (0 = kiinni) pehmeästi (smootherstep); ei muuta törmäystä eikä lukkoa.</summary>
+        void KaannaLehti(Ovi o, float aste, float s)
+        {
+            if (o?.Sarana == null) return;
+            if (o.Kaanto != null) StopCoroutine(o.Kaanto);
+            o.Kaanto = StartCoroutine(Kaanna(o, aste, s));
+        }
+
+        IEnumerator Kaanna(Ovi o, float aste, float kesto)
+        {
+            float alku = o.Kulma;
+            for (float t = 0f; t < kesto && o.Sarana != null; t += Time.deltaTime)
+            {
+                float u = t / kesto; u = u * u * u * (u * (u * 6f - 15f) + 10f);
+                AsetaLehti(o, Mathf.Lerp(alku, aste, u));
+                yield return null;
+            }
+            AsetaLehti(o, aste);
+            o.Kaanto = null;
+        }
+
+        static void AsetaLehti(Ovi o, float aste) { if (o.Sarana == null) return; o.Kulma = aste; o.Sarana.localRotation = o.Kiinni * Quaternion.Euler(0f, aste, 0f); }
+
+        /// <summary>Ovilehti auki tai raolleen koodista (tyrmä: avaimella auki, vesipoika jättää raolleen); vain näkymä.</summary>
+        public void OviLehti(string tunnus, bool raollaan)
+        {
+            foreach (var o in ovet) if (o.M.Tunnus == tunnus) KaannaLehti(o, raollaan ? OviRaollaanAste : OviAukiAste, OviHidasS);
+        }
+
         /// <summary>Onko lukittu ovi (ovi:&lt;tunnus&gt;) auki (LS2:n vihjeportaat).</summary>
         public bool OviAuki(string tunnus) { foreach (var o in ovet) if (o.M.Tunnus == tunnus) return o.Auki; return false; }
 
@@ -214,6 +269,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             o.Auki = true; if (o.Go != null) o.Go.SetActive(false);
+            KaannaLehti(o, OviAukiAste, tulos == OviTulos.AukiNarahtaa ? OviNopeaS : OviHidasS);
             // Lukko vain lukitussa ovessa (hidas avaus: avain raapii, sitten lukko aukeaa); portti narahtaa omalla äänellään (sonniss-aanet-v3).
             bool portti = o.M.Tunnus.StartsWith("vesiportti", StringComparison.Ordinal);
             if (o.M.Lukko) { if (tulos == OviTulos.AukiHiljaa) SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoRaapaisu, null, c, 0.5f); SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", c, 0.8f); }
@@ -297,7 +353,7 @@ namespace Matkakirja.Natiivi
                 if (rg == null) continue;
                 rg.name = "Rekvisiitta:" + m.Tunnus; rekvisiittaa++;
                 // Törmäys vain isoille (≥ 0,35 m korkea): pöytätavarat (kulhot, omenat) eivät estä esineiden napautusta eivätkä kulkua.
-                if (varasto.TryGetValue(m.Glb, out var rv) && rv.Malli != null && RekvisiitanLaatikko(rv.Malli) is Vector3 koko && koko.y >= 0.35f)
+                if (!m.Seina && varasto.TryGetValue(m.Glb, out var rv) && rv.Malli != null && RekvisiitanLaatikko(rv.Malli) is Vector3 koko && koko.y >= 0.35f)
                 {
                     var bc = rg.AddComponent<BoxCollider>(); bc.size = koko; bc.center = new Vector3(0f, koko.y * 0.5f, 0f);
                     var ob = rg.AddComponent<UnityEngine.AI.NavMeshObstacle>(); ob.shape = UnityEngine.AI.NavMeshObstacleShape.Box;
@@ -306,6 +362,7 @@ namespace Matkakirja.Natiivi
             }
             if (rekvisiittaa > 0) kirjaa?.Invoke($"seikkailu: rekvisiitta {rekvisiittaa} mallia");
             se.LuoOvet(d); se.LuoKiipeily(d);
+            yield return se.LuoOvilehdet(go.transform, kirjaa);
             SeikkailuKomero.Luo(d, go.transform, kirjaa);   // huone 9: tiilet ja arkun kilpilukko
             SeikkailuPako.Luo(d, go.transform, kirjaa);     // huone 10: kello, köysilasku, sukellus, uinti, vene
             SeikkailuSali.Luo(d, go.transform, kirjaa);     // huone 6: kulho voudin pöytään, kiista, avaimet

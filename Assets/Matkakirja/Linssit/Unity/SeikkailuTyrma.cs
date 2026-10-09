@@ -89,6 +89,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaTaiVara("salpa-2", null, ovi + Vector3.up, 0.6f);         // salpa auki (sonniss-aanet-v3)
                 SeikkailuRepliikit.SoitaTaiVara("tyrma-vesipoika-1", null, ovi + Vector3.up * 1.4f);   // "Vettä sinulle. Ovi taisi jäädä auki."
                 SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", ovi + Vector3.up, 0.8f);   // ovi jää raolleen
+                SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", true);
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
@@ -110,6 +111,7 @@ namespace Matkakirja.Natiivi
             p.KasiEle("luukku");
             SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f);
             if (avainId != null) SeikkailuEsineet.Aktiivinen?.Piilota(avainId);
+            SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false);
             kirjaa?.Invoke("seikkailu: tyrmä: ovi auki");
         }
 
