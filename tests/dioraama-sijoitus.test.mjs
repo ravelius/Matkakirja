@@ -187,3 +187,27 @@ test('taulun kohtien napautuskohde (kohtaukset v2) siirtyy kuten hahmo; kohdat i
   assert.equal('kohde' in u.taulu.kohdat[1], false);
   assert.deepEqual(taulu.kohdat[0].kohde.paikka, [2, 1, 1], 'alkuperäistä ei muuteta');
 });
+
+test('hahmon kädet (kadet[]): tartu-paikka ja kämmenen kierto sijoittuvat kuten hahmo; kanna ei muutu', () => {
+  const kierra = ([x, y, z, w], v) => {   // kvaternio · vektori
+    const t = [2 * (y * v[2] - z * v[1]), 2 * (z * v[0] - x * v[2]), 2 * (x * v[1] - y * v[0])];
+    return [v[0] + w * t[0] + (y * t[2] - z * t[1]), v[1] + w * t[1] + (z * t[0] - x * t[2]), v[2] + w * t[2] + (x * t[1] - y * t[0])];
+  };
+  const q0 = [0.2, 0.3, -0.1, Math.sqrt(1 - 0.04 - 0.09 - 0.01)];
+  const t0 = tila();
+  t0.hahmot[0].kadet = [
+    { tyyppi: 'tartu', kasi: 'r', paikka: [1, 1, 0], kierto: q0, milloin: 'tyo' },
+    { kasi: 'l', paikka: [0, 1, 1] },
+    { tyyppi: 'kanna', kasi: 'r', esine: 'kirja', siirto: [0.1, 0, 0], kierto: [0, 0, 0, 1] },
+  ];
+  const sij = { ankkuri: [0, 0, 0], paikka: [10, 0.2, -5], suunta: 90 };
+  const t = sijoitaTila({ ...t0, sijoitus: sij });
+  const [r, l, kanna] = t.hahmot[0].kadet;
+  lahella(r.paikka, [10, 1.2, -4], 'tartu r: +x → +z');
+  lahella(l.paikka, [9, 1.2, -5], 'tartu l (oletustyyppi): +z → −x');
+  assert.deepEqual(kanna, t0.hahmot[0].kadet[2], 'kanna ennallaan');
+  for (const v of [[0, 0, 1], [0, -1, 0], [1, 0, 0]]) {   // sormet, kämmen ja sivu kiertyvät kuten pisteet (ilman siirtoa)
+    const a = kierra(q0, v); const odotus = [-a[2], a[1], a[0]];   // suunta 90: (x, z) → (−z, x)
+    lahella(kierra(r.kierto, v), odotus, `kierto ${v}`);
+  }
+});

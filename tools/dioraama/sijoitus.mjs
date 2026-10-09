@@ -40,7 +40,12 @@ function muunnin({ ankkuri = [0, 0, 0], paikka = [0, 0, 0], suunta = 0 }) {
       max: [0, 1, 2].map((i) => Math.max(...kaikki.map((k) => k[i]))),
     };
   };
-  return { piste, laatikko, suunta };
+  // Kvaternio [x, y, z, w] samaan kiertoon kuin piste(): x' = x·c − z·s, z' = x·s + z·c on kierto −suunta y-akselin ympäri.
+  const kierra = ([x, y, z, w]) => {
+    const h = -suunta * RAD / 2, qy = Math.sin(h), qw = Math.cos(h);
+    return [qw * x + qy * z, qw * y + qy * w, qw * z - qy * x, qw * w - qy * y].map(pyorista);
+  };
+  return { piste, laatikko, suunta, kierra };
 }
 
 const onPiste = (p) => Array.isArray(p) && p.length === 3 && p.every((x) => typeof x === 'number');
@@ -75,6 +80,13 @@ export function sijoitaTila(tila) {
     pisteeksi(h, 'paikka');
     if (typeof h.suunta === 'number') h.suunta = suuntaan(h.suunta);
     if (Array.isArray(h.reitti?.pisteet)) h.reitti.pisteet = h.reitti.pisteet.map((p) => (onPiste(p) ? m.piste(p) : p));
+    // Final IK (9.10., juna 174, kädet kirjalle): "tartu"-kohteen paikka ja kämmenen kierto samaan sijoitukseen kuin hahmo.
+    // "kanna" (siirto ja kierto käden paikallisessa) ei muutu.
+    for (const k of h.kadet ?? []) {
+      if ((k.tyyppi ?? 'tartu') === 'kanna') continue;
+      pisteeksi(k, 'paikka');
+      if (Array.isArray(k.kierto) && k.kierto.length === 4) k.kierto = m.kierra(k.kierto);
+    }
   }
   for (const v of t.valot ?? []) { pisteeksi(v, 'paikka'); pisteeksi(v, 'kohti'); }
   for (const l of t.liekit ?? []) pisteeksi(l, 'paikka');
