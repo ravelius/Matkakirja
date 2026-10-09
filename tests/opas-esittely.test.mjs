@@ -298,3 +298,8 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(OPAS_AINEISTOT.historia_polut, { tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json' });
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
+
+test('esittely_polut: Pariisi v1c (Concorden kysymys kesällä 2024), äänet ennallaan', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1c/pariisi.json');
+});
