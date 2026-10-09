@@ -35,7 +35,16 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 03.0x (uusin)
+## TILA 9.10. klo 04.2x (uusin)
+- JUNA 170 KUITATTU (PT 04.1x): laivat-170 a9095d78f + omat-mallit-korkeus b1e23a065 → Natiiviseppä. Jatkoparannus 6ac9faba7
+  (aamusumu harsoksi, ilta Valissa 0,75, vesipaloja 4/kehys) odottaa simukuvaa → PT, sitten Natiisepälle (170 tai 171).
+- OMAT MALLIT ÄMPÄRISSÄ (Julkaisija 04.01): kartta/omat-mallit/uusin-2.json → v2/ (Giza N 15,35 + helmat, Riddarholmen v1).
+  uusin.json EI muutettu (168/169 käänteinen leikkaus!). Vienti _valmiit/omat-mallit-vienti-20261009.
+- 171: Concorde v2.2 (_tyo/linssiseppa2/concorde-putki/vienti7, reunus 30 m) simutestiin; Notre-Dame v2 LR:llä (oma maa parvis +
+  Jean-XXIII, julkisivut 60–120 k). Botin uusinta junalla 171 (Siirtoseppä 290f5d4ae jumirivit). Muistitesti v45x +0 (fa4d48758).
+- Kuurot: LS1:n OpasSovitin.KuuroVoima heijastuksella KaupunkiKuuroon (a9095d78f).
+
+## TILA 9.10. klo 03.0x
 - JUNA 170 (PT kuittasi ehdoin): proto linssiseppa2/laivat-170 (kärki git logista; avaus-170 + ilmakeha-170 + master): vanat (VesiVanat,
   hillitty e5edd5e60), savu (VeneSavu), TarkatVeneet (saaristolaiva, höyrylaiva, lautta, pendelbat) + ElavaKaupunki-kytkentä (LS1 sovittu),
   KaupunkiKuuro (LS1 asettaa Voiman; märät kadut, pilvien tummuus, sateenkaari), kauko-utu 1,4, aamusumu, välke, pilvet oletuksena
