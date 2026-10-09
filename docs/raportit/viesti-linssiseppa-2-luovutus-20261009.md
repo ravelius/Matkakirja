@@ -5,6 +5,8 @@ Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Workt
 Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
 (`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
 
+## TILA 12.2x: omavalo-172 51799391e (juna-172 yhdistetty) + laivat-171 657676845 Natiivisepällä, PT kuittasi 172:een; 172b-kuvat peruttu (PT: ei still-sarjoja)
+
 ## OMISTAJAN LINJA: kaikki suunniteltu → yksi iso JUNA 172 (julkaistaan kun valmis)
 
 ### Lähetetty Natiivisepälle / kuitattu
@@ -21,7 +23,7 @@ Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Kään
 | linssiseppa2/laivat-171 | b8da55364 (+657676845 vana) | Pariisin jokilaiva (bateau-mouche) ja kiertoajelu tarkkoina (TarkatVeneet) | simukuva: laivat eivät osuneet kuviin → uusi laaja kulma (aja-172b) |
 | linssiseppa2/omavalo-172 | c5d86a7e2 (sis. kaukomaa-171b) | OmaMalli-varjostin omille malleille (aurinko+SH+varjot, ilma, ilta: julkisivuvalo + lasien hehku ×5, alfaleikkaus kaksipuolisena); kaukomaa: aluskerros > 1200 m (de07812c1, myös PidaMaskista), yön kaukoutu korkeuden mukaan (c783cc796) | kuvaparit ND v5 / KL v1.7 päivä-ilta omavalo 0/1; aluskerroksen loki 12 km:ssä; yö 12 km |
 | linssiseppa2/sade-171 | ad5b874b3 | Sadepilvet, Salama-API, yöpilvet näyttöarvona | LS1 yhdisti kierros-170:een (3fdf75648); konflikti muistihata-171:n kanssa vain testitiedostossa |
-| Seinen vaalea läikkä (Pont Saint-Michel) | – | EI omasta vedestä (näkyy vesi 0:lla) | testi ilmakeha 0/1 (aja-172b) → syy → korjaus |
+| Seinen vaalea läikkä (Pont Saint-Michel) | – | SELVITETTY 9.10. 12.2x kuvista lokit/linssiseppa2-seine-laikka v0/v1: läikkä on Pariisin poliisiprefektuurin kortteli (Quai du Marché Neuf – Rue de la Cité – Bd du Palais – Rue de Lutèce), jonka Googlen 3D-laatat antavat litteänä ja sumennettuna (arkaluonteinen kohde). Se ei johdu meidän vedestä, ilmakehästä tai valosta | ei koodikorjausta; vaihtoehto on LR:n kevyt korttelimalli + leikkaus (PT päättää) |
 
 ### SEURAAVA SIMUVUORO (Julkaisijan jonossa ~11.50)
 `scratchpad/kaanna-ja-kuvaa-172b.sh` = KÄÄNNÖS juna-171 + omavalo-172 + laivat-171 → `lokit/linssiseppa2-app-172b`, sitten
