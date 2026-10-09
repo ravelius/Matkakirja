@@ -50,3 +50,16 @@ Auki (itse tarkistettu pelikuvista): kaakkoissiiven sahalaitakolmiot räystään
 jakautuvat projektion ja varapinnan kesken), portiikin juurella muutama valkoinen läikkä (maanrajan pinnat näytteistävät tekoälykuvan
 valkoista taustaa), ohuet vaaleat vaakaviivat listojen kohdalla, itäjulkisivun tekoälykuva haaleampi (ikkunat ääriviivamaisia),
 Logårdenin nurmi tasainen ilman kuviota.
+
+## v6j, PT:n korjauskierros (9.10. 23.5x)
+Arkki omistajan korttia varten: `kaappaukset/linssiseppa2-kl6i-20261009/omistajalle-kl-valokuva-v6h-v6j.jpg`.
+1. **Beige/lohenpunainen-raja:** luokkamaski oikein (kivikoriste = keskirisaliitti 45 m, 9 akselia; sivut seinäluokkaa). Risaliitti
+   on 30 m kehyksen keskeltä länteen (siivet), joten lähikuvan kamera keskitettiin siihen (59.32628, 18.07181).
+2. **Kaakkoissiiven sahalaita:** Logårdenin siipien vastakkaiset julkisivut eivät näy yhdestäkään ortonäkymästä; kolmiot jakautuivat
+   projektion ja v3c:n kesken. Projisoi-kopioon tasoittainen enemmistö (normaali 0,05, etäisyys 0,3 m): taso joko kokonaan v3c:lle
+   tai kokonaan enemmistönäkymästä. Samalla sisäpihan puoleiset kattolappeet v3c:n kuparille.
+3. **Valkoiset läikät:** tekoälyn valkoinen maavyö täytetty alimmasta 2 m:stä sarakkeen värillä (savyta.py); kattonäkymä ei kelpaa maan
+   lähellä (< 2,5 m) oleville vaakapinnoille. Portiikin edessä terassilla näkyy vielä kaksi vaaleaa kappaletta, joita mallin
+   Blender-renderissä ei ole (todennäköisesti Googlen esineitä leikkauksen ulkopuolella).
+4. **Vaakaviivat:** kattonäkymä vain kattomaskin pinnoille ja toinen kierros vain julkisivunäkymistä (listojen ja ikkunalautojen
+   yläpinnat saivat kattokuvan vaalean taustan); viivat vaimenivat. Logårdenin nurmi ennallaan (tasainen).
