@@ -136,6 +136,9 @@ namespace Matkakirja.Natiivi
         {
             string polku = osoite;
             using var r = UnityWebRequestMultimedia.GetAudioClip(osoite, AudioType.MPEG);
+            // Pakattuna muistiin (juna 174, muisti): kaupunkisilmukat-v1:n 90 s kyyhkyt purettuna ~16 Mt, pakattuna ~2 Mt
+            // (vanha 30 s purettuna ~5 Mt). SaumatonSilmukka ristihäivyttää pakatun silmukan.
+            ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
             r.timeout = 30;
             yield return r.SendWebRequest();
             ladataan.Remove(polku);

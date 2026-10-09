@@ -567,6 +567,8 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < nimet.Length; i++)
                 using (var r = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniJuuri + nimet[i] + ".mp3", AudioType.MPEG))
                 {
+                    // Pakattuna (juna 174, muisti): kaupunkisilmukat-v1:n 110 s lokkiparvi purettuna ~19 Mt, pakattuna ~2,6 Mt.
+                    ((UnityEngine.Networking.DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
                     r.timeout = 20;
                     yield return r.SendWebRequest();
                     if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klipit[i] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(r);
