@@ -13,8 +13,8 @@
 // vain liikkeen muutoksissa (kiihtyvyys ylittää NarinaKiihtyvyyden, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
 // alussa kankaan huokaus. Kaupungin äänimaisema korkeuden mukaan Siirtosepän KaupunkiAanimaisemaSoitin.Kamera-Funcilla
 // (heijastus, kunnes siirtoseppa/aanimaisema on mainissa). Leikkeet Resources/Aanet/Pallokori: eleven-* (ElevenLabs-ääniefektit,
-// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
-// eleven|kirjasto` (puuttuva kirjastoääni → eleven).
+// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md; korin narina 8.10. alkaen
+// Freesound 264306 "Floor Creak 1", olliehahn12, CC0); A/B `opas kori aanet eleven|kirjasto` (puuttuva → toinen sarja).
 // KUPU (Linssiseppä 8.10.2026, Linnanrakentajan kupu_nakyma.glb, _valmiit/ilmapallo-v1/kupu): sama origo kuin korilla (korin pohjan
 // keskellä, +Y ylös), mutta kupu riippuu maailman pystysuunnassa kameran (silmä 1,5 m korin pohjasta) yläpuolella eikä käänny katseen
 // mukana: näkyy, kun katse nousee (~35° ylös), suun läpi sisäpinta. Kangas ja nauhat kaksipuolisia, auringon läpikuulto; polttimen
@@ -237,7 +237,9 @@ namespace Matkakirja.Natiivi
         {
             AudioClip c = null;
             if (AaniSarja == "kirjasto") c = Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
-            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+            // Kumpi tahansa sarja kelpaa varana (korin narina on vain kirjastossa: Freesound 264306, CC0, Pelikoodari PR #4255).
+            if (c == null) c = Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
         }
 
         void Soita(string nimi, float taso)
