@@ -33,7 +33,7 @@ namespace Matkakirja.Natiivi
             {
                 var res = frameData.Get<UniversalResourceData>();
                 var cam = frameData.Get<UniversalCameraData>();
-                tila = $"{nimi}: {cam.camera.name}, takapuskuri {res.isActiveTargetBackBuffer}, syvyys {res.cameraDepthTexture.IsValid()}";
+                tila = $"{nimi}: {cam.camera.name}, tapahtuma {renderPassEvent}, takapuskuri {res.isActiveTargetBackBuffer}, syvyys {res.cameraDepthTexture.IsValid()}";
                 if (materiaali == null || res.isActiveTargetBackBuffer) return;
                 var kuvaus = rg.GetTextureDesc(res.activeColorTexture);
                 kuvaus.name = "Matkakirja " + nimi + " kopio"; kuvaus.clearBuffer = false; kuvaus.msaaSamples = MSAASamples.None;
@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
         static readonly Dictionary<string, Vaihe> aktiiviset = new Dictionary<string, Vaihe>();
         /// <summary>Kaupungin peruskamera (KaupunkiYovalot.Paivita asettaa joka kehys).</summary>
         public static Camera Kamera;
+        /// <summary>Diagnoosi: passin tapahtuma (opas yovalotvaihe N); null = BeforeRenderingPostProcessing.</summary>
+        public static RenderPassEvent? Tapahtuma;
         static bool kytketty;
 
         /// <summary>Passi (nimi) päälle tällä materiaalilla seuraavista kehyksistä alkaen; null = pois.</summary>
@@ -77,7 +79,7 @@ namespace Matkakirja.Natiivi
             if (c == null || c != Kamera || aktiiviset.Count == 0) return;
             var r = c.GetUniversalAdditionalCameraData()?.scriptableRenderer;
             if (r == null) return;
-            foreach (var v in aktiiviset.Values) r.EnqueuePass(v);
+            foreach (var v in aktiiviset.Values) { if (Tapahtuma.HasValue) v.renderPassEvent = Tapahtuma.Value; r.EnqueuePass(v); }
         }
 
         public static string Tila(string nimi) => vaiheet.TryGetValue(nimi, out var v) ? (v.tila ?? $"{nimi}: ei vielä ajettu") + (aktiiviset.ContainsKey(nimi) ? "" : " (pois)") : $"{nimi}: ei luotu";
