@@ -95,7 +95,7 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 if (_IlmHamara.x > 0.001)
                 {
                     float3 dv = kohti / max(1e-4, length(kohti));
-                    float3 ranta = IlmSininenHetki(normalize(float3(dv.x, 0.02, dv.z))) / _IlmHamara.x;
+                    float3 ranta = IlmSininenHetki(normalize(float3(dv.x, -0.2, dv.z))) / _IlmHamara.x;   // sama "maa" kuin taivaan alapuolisko (laattojen reuna sulautuu)
                     c = lerp(c, ranta, saturate((etM - 2500.0) / 11500.0) * 0.85 * _IlmHamara.x);
                 }
                 return half4(MixFog((half3)c, v.sumu), 1);
