@@ -10,7 +10,7 @@ ajo-id:llä (mac-tf-odottaja.sh 4. arg = ajo-id, korjattu 9.10.: peruttu yöajo 
 juna/b13 → e1386897 10.36. Taukokaatumisen syy: CesiumKaupunki.Muistivahti asetti SSE:n → Cesium RecreateTileset (Cesium3DTileset.cs:255);
 korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauolla). Hätätoisto: scratchpad hata-ajo.sh <app> <tunniste>.
 **JUNA 172 = YKSI ISO JUNA (omistaja 10.3x: 172–175 yhdessä, ei välijunia/TF:iä ennen PT:n ilmoitusta)** — runko natiiviseppa/juna-172
-(wt/proto-natiiviseppa-j172) **3e88366df** BUILD 171:n päällä; 453/420/1177, unity 0, tarkista 0. TARKISTUSLISTA:
+(wt/proto-natiiviseppa-j172) **cd52611b8** BUILD 171:n päällä; 453/420/1188, unity 0, tarkista 0. TARKISTUSLISTA:
   [x] 172 NUI cd4553c8d (⊇ Siirtoseppä 18227438d + pysty + krediitit + ef56acf4e)
   [x] 173 Siirtoseppä f5346bac4 (⊇ 5d8e362f7 ⊇ bed0c2d97, v45z, äänet; ⊇ 174:n Siirtoseppä-osa)
   [x] 173–175 NUI 1fce56a22 (⊇ 2bb472819 ⊇ 500126589 mikseri ⊇ c00f125a9 ⊇ 9ca6e2795 ⊇ 54182ab06 ⊇ 17ee84663 ⊇ becff9f1b); konfliktit
@@ -18,12 +18,14 @@ korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauol
   [x] LS2 ddbee4e70 (äänirekisteri Cupola/avaruuskävely)
   [x] Pelikoodari ade5ad9f3 (lyria-v2, data ämpärissä) + 2cb133c61 (mikserirekisteröinnit, ⊇ NUI c79d12fd6 nostoluennat — omistaja hyväksyi, PT:lle tiedoksi)
   [x] OMA 86a016ed5 näyttönimi "Matkakirja" (iOS plist + Mac plutil; productName ennallaan) — Editor-koodi, todentuu käännöksessä
-  [ ] LS1:n 171-erä (savu, liput, iltaikkunat, salamat, märät kadut, mikseri, kori ja köydet) + pallon korjaukset
+  [x] LS1 bd217b509 (merge 17e01cf2a: 171-erän osat + pallon mikserirekisteröinti; konflikti KaupunkiAanimaisemaSoitin → LS1:n versio kokonaan,
+      KaupunkiKuuroTestit → molemmat testit)
+  [x] Siirtoseppä 9950cb17e (historia-elokuva + 3 korjausta, loppumusiikki, hahmokorvaus, glb sparse, linnan äänet mikseriin)
+  [ ] LS1:n kamera/kohtauslista-korjaukset
   [ ] LS2 laivat-171 (vana 657676845 = 7f1a0c6f2 sisältö) + kaukomaa-171b
-  [ ] Siirtoseppä: historia + äänirekisteri
+  [ ] Siirtoseppä: historia-arvio 2:n korjaukset, v45-pinnat ("valmis 172:een" -rivi tulee)
   [ ] LR: Codex-pinnat
   [ ] Pelikoodari: musiikkisekvenssi
-  [ ] muut mikserirekisteröinnit
   [ ] simukäännös + PT:n muutosloki + lukitus (vasta PT:n "lista täynnä")
 
 ## TILA 9.10. 09.5x
