@@ -556,9 +556,12 @@
   "kohde": "kohde:rhone~2",
   "kysymys": "Miten Rhône muuttuu Genevenjärvessä?",
   "uusi": false,
-  "vastaus": "Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.\nRhône tuo Alpeilta mukanaan hienoa maa-ainesta, jota jäätiköiden sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä Genevessä poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.\nNäin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.",
+  "vastaus": "Tuota niin. Tästä saa kyllä hyvän kuvan joen elämästä.\nRhône tuo [[Alpeilta]] mukanaan hienoa maa-ainesta, jota [[jäätiköiden]] sulamisvedet kuljettavat. Järveen virratessaan joki hidastuu, ja suurin osa aineksesta laskeutuu pohjaan; järven itäpäähän muodostuu [[suisto]]. Järvestä [[Genevessä]] poistuva vesi on selvästi kirkkaampaa kuin sisään tuleva. Järvi toimii siis eräänlaisena lietealtaana, joka tasaa joen virtausta.\nNäin kirkasta vettä olisi mukava juoda, vaikka minä tyydyn lätäköihin.",
   "linkit": [
-   "suisto"
+   "Alpeilta",
+   "jäätiköiden",
+   "suisto",
+   "Genevessä"
   ],
   "jatkot": [
    "Kuinka suuri Genevenjärvi on?",
@@ -1267,9 +1270,11 @@
   "kohde": "kohde:douaumont",
   "kysymys": "Kuka aloitti luukammion rakentamisen?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Luukammio rakennettiin Verdunin piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.",
+  "vastaus": "Annas ku mietin. Luukammio rakennettiin [[Verdunin]] piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden [[ranskalaisten]] nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.",
   "linkit": [
-   "Charles Ginistyn"
+   "Verdunin",
+   "Charles Ginistyn",
+   "ranskalaisten"
   ],
   "jatkot": [
    "Miten tunnistamattomia sotilaita on muistettu eri maissa?",
@@ -1325,9 +1330,11 @@
   "kohde": "kohde:bayeux-seinavaate",
   "kysymys": "Kuinka monta kohtausta seinävaatteessa on?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen latinankielinen teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.",
+  "vastaus": "Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen [[latinankielinen]] teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy [[Hastingsin taisteluun]]. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.",
   "linkit": [
-   "Edvard Tunnustajan"
+   "latinankielinen",
+   "Edvard Tunnustajan",
+   "Hastingsin taisteluun"
   ],
   "jatkot": [
    "Miksi tekstit on kirjoitettu latinaksi?",
@@ -1456,8 +1463,10 @@
   "kohde": "kohde:camargue",
   "kysymys": "Miksi juuri gardianit paimentavat härkiä ratsain?",
   "uusi": false,
-  "vastaus": "Tost minä osaan kertoo. Gardianit ovat Camarguen paimenia, jotka kokoavat alueen mustia härkiä ratsain. Hevonen sopii työhön, koska camarguenhevoset ovat pieniä mutta kantavat aikuisen miehen, ja niiden leveät, kovat kaviot sopivat [[upottavaan suohon]]. Härät ja hevoset elävät laumoina ulkona ympäri vuoden laajoilla suomailla, joten ratsain paimennus on käytännöllinen tapa kokoa laumat. Tarkemmasta perinteen historiasta en ole varma. Suo ei minulle sovi, siivet ovat parempia.",
+  "vastaus": "Tost minä osaan kertoo. Gardianit ovat [[Camarguen]] paimenia, jotka kokoavat alueen mustia härkiä ratsain. Hevonen sopii työhön, koska [[camarguenhevoset]] ovat pieniä mutta kantavat aikuisen miehen, ja niiden leveät, kovat kaviot sopivat [[upottavaan suohon]]. Härät ja hevoset elävät laumoina ulkona ympäri vuoden laajoilla suomailla, joten ratsain paimennus on käytännöllinen tapa kokoa laumat. Tarkemmasta perinteen historiasta en ole varma. Suo ei minulle sovi, siivet ovat parempia.",
   "linkit": [
+   "Camarguen",
+   "camarguenhevoset",
    "upottavaan suohon"
   ],
   "jatkot": [
@@ -2120,9 +2129,10 @@
   "kohde": "kohde:hahmotelma-pointe-du-raz",
   "kysymys": "Mikä majakka näkyy kärjestä merelle?",
   "uusi": false,
-  "vastaus": "Katotaas. Niemeltä erottuu [[La Vieillen majakka]], joka opastaa laivoja Raz de Sein -salmessa. Salmi on vaarallista vettä, joten kiintopiste merellä on merenkulkijalle tärkeä. Majakka seisoo kallion varassa vesillä, kärjestä katsottuna selvästi näkyvissä. Hyvä kiintopiste, jos kyyhky eksyy.",
+  "vastaus": "Katotaas. Niemeltä erottuu [[La Vieillen majakka]], joka opastaa laivoja [[Raz de Sein]] -salmessa. Salmi on vaarallista vettä, joten kiintopiste merellä on merenkulkijalle tärkeä. Majakka seisoo kallion varassa vesillä, kärjestä katsottuna selvästi näkyvissä. Hyvä kiintopiste, jos kyyhky eksyy.",
   "linkit": [
-   "La Vieillen majakka"
+   "La Vieillen majakka",
+   "Raz de Sein"
   ],
   "jatkot": [
    "Mikä on Pointe de Corsen?",
@@ -2435,9 +2445,11 @@
   "kohde": "kohde:hahmotelma-vezelay",
   "kysymys": "Millaista elämää benediktiinimunkit elivät luostareissa?",
   "uusi": true,
-  "vastaus": "No niin, tää on tuttu aihe. Benediktiinimunkit elivät [[Benedictuksen sääntöä]] noudattaen, ja sen tunnetuin ajatus on rukouksen ja työn yhdistäminen. Päivä jakautui jumalanpalvelusten, työn ja lukemisen välille, ja yhteisen elämän johtajana oli apotti. Luostareissa kopioitiin käsikirjoituksia, hoidettiin sairaita ja viljeltiin maata. Cluny oli keskiajalla vaikutusvaltainen luostariuudistuksen keskus, ja Vézelayn luostari kuului cluniacensilaiseen suuntaan. Luostarit toimivat myös koulutuksen ja tiedon säilyttäjinä. Kirjeitä kantavana kyyhkynä arvostan käsin kirjoittajia kovasti.",
+  "vastaus": "No niin, tää on tuttu aihe. Benediktiinimunkit elivät [[Benedictuksen sääntöä]] noudattaen, ja sen tunnetuin ajatus on rukouksen ja työn yhdistäminen. Päivä jakautui jumalanpalvelusten, työn ja lukemisen välille, ja yhteisen elämän johtajana oli apotti. Luostareissa kopioitiin käsikirjoituksia, hoidettiin sairaita ja viljeltiin maata. [[Cluny]] oli keskiajalla vaikutusvaltainen luostariuudistuksen keskus, ja [[Vézelayn]] luostari kuului cluniacensilaiseen suuntaan. Luostarit toimivat myös koulutuksen ja tiedon säilyttäjinä. Kirjeitä kantavana kyyhkynä arvostan käsin kirjoittajia kovasti.",
   "linkit": [
-   "Benedictuksen sääntöä"
+   "Benedictuksen sääntöä",
+   "Cluny",
+   "Vézelayn"
   ],
   "jatkot": [
    "Mikä Cluny oli keskiajalla?",
@@ -2518,9 +2530,11 @@
   "kohde": "kohde:hahmotelma-beaune",
   "kysymys": "Millainen on Hôtel-Dieun kuuluisa värikäs katto?",
   "uusi": true,
-  "vastaus": "Kato, tää on kuuluisa näky. Hôtel-Dieun katto on peitetty [[lasitetuilla laatoilla]], jotka muodostavat geometrisia kuvioita. Värit ovat keltaista, vihreää, punaista ja mustaa, ja kuviot tekevät katosta Burgundin tunnetuimpia rakennuskuvia. Tällaiset värikkäät laattakatot ovat tyypillisiä burgundilaiselle ja flaamilaiselle tyylille, ja Hôtel-Dieun katto on yksi sen tunnetuimmista esimerkeistä. Rakennuksen katto on entisöity myöhemmin, joten nykyinen ulkoasu ei ole kaikilta osin alkuperäinen. Ylhäältä se erottuu hienosti, vaikka murujen kokoa ei näe.",
+  "vastaus": "Kato, tää on kuuluisa näky. Hôtel-Dieun katto on peitetty [[lasitetuilla laatoilla]], jotka muodostavat geometrisia kuvioita. Värit ovat keltaista, vihreää, punaista ja mustaa, ja kuviot tekevät katosta [[Burgundin]] tunnetuimpia rakennuskuvia. Tällaiset värikkäät laattakatot ovat tyypillisiä burgundilaiselle ja [[flaamilaiselle]] tyylille, ja Hôtel-Dieun katto on yksi sen tunnetuimmista esimerkeistä. Rakennuksen katto on entisöity myöhemmin, joten nykyinen ulkoasu ei ole kaikilta osin alkuperäinen. Ylhäältä se erottuu hienosti, vaikka murujen kokoa ei näe.",
   "linkit": [
-   "lasitetuilla laatoilla"
+   "lasitetuilla laatoilla",
+   "Burgundin",
+   "flaamilaiselle"
   ],
   "jatkot": [
    "Miten lasitettuja kattolaattoja valmistetaan?",
@@ -2546,8 +2560,13 @@
   "kohde": "kohde:hahmotelma-ajaccio",
   "kysymys": "Kuinka kaukana manner-Ranska on täältä?",
   "uusi": false,
-  "vastaus": "Katotaas. Annettu matka on tässä kätevä. Ajaccio sijaitsee Korsikan länsirannikolla noin 390 kilometriä Marseillesta kaakkoon. Manner-Ranskan ja Korsikan välillä on Välimeri, joten matka tehdään lentäen tai laivalla. Etäisyys ei ole sama kaikkiin mantereen kohtiin, sillä lyhin merimatka on jonkin verran pienempi kuin matka Marseilleen. Marseille on silti tärkeä yhteys Korsikalle. En ole varma muista tarkoista etäisyyksistä, joten en arvaa lukuja. Mennäänpä vaan sitä lentoreittiä.",
-  "linkit": [],
+  "vastaus": "Katotaas. Annettu matka on tässä kätevä. [[Ajaccio]] sijaitsee [[Korsikan]] länsirannikolla noin 390 kilometriä [[Marseillesta]] kaakkoon. Manner-Ranskan ja Korsikan välillä on [[Välimeri]], joten matka tehdään lentäen tai laivalla. Etäisyys ei ole sama kaikkiin mantereen kohtiin, sillä lyhin merimatka on jonkin verran pienempi kuin matka Marseilleen. Marseille on silti tärkeä yhteys Korsikalle. En ole varma muista tarkoista etäisyyksistä, joten en arvaa lukuja. Mennäänpä vaan sitä lentoreittiä.",
+  "linkit": [
+   "Ajaccio",
+   "Korsikan",
+   "Marseillesta",
+   "Välimeri"
+  ],
   "jatkot": [
    "Miten Korsikalle matkustetaan Ranskan mantereelta?",
    "Mikä Marseille on kaupunkina?"

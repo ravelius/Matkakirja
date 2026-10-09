@@ -57,7 +57,7 @@ Miten ensimmäisen maailmansodan sotilaat muistetaan nykyään?
 
 ### 17.4
 KYSYMYS: Kuka aloitti luukammion rakentamisen?
-Annas ku mietin. Luukammio rakennettiin Verdunin piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.
+Annas ku mietin. Luukammio rakennettiin [[Verdunin]] piispan [[Charles Ginistyn]] aloitteesta. Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä peittävät laatat, joissa on taistelussa kaatuneiden [[ranskalaisten]] nimiä, ja kunkin sotilaan laatan kustansi hänen perheensä. Paikka on tärkeä monelle, sen minä tiedän.
 JATKOT:
 Miten tunnistamattomia sotilaita on muistettu eri maissa?
 Millainen on Verdunin kaupunki nykyään?
@@ -85,7 +85,7 @@ Kuka oli Vilhelm Valloittaja?
 
 ### 18.3
 KYSYMYS: Kuinka monta kohtausta seinävaatteessa on?
-Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen latinankielinen teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy Hastingsin taisteluun. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.
+Hyvä kysymys tuo. Seinävaate jakautuu 58 kohtaukseen, ja kaikilla niillä on keskiaikainen [[latinankielinen]] teksti. Kertomus alkaa [[Edvard Tunnustajan]] hallituskauden viimeisistä vuosista 1064 ja päättyy [[Hastingsin taisteluun]]. Lähes puolet kohtauksista käsittelee valloitusta edeltäneitä tapahtumia, ja kangas on lähes seitsemänkymmentä metriä pitkä. Pitkä kangas, ja minä kävin sen läpi yhdellä hengenvedolla.
 JATKOT:
 Miksi tekstit on kirjoitettu latinaksi?
 Kuka Edvard Tunnustaja oli?
@@ -148,7 +148,7 @@ Mitä camarguenhärät ovat?
 
 ### 20.2
 KYSYMYS: Miksi juuri gardianit paimentavat härkiä ratsain?
-Tost minä osaan kertoo. Gardianit ovat Camarguen paimenia, jotka kokoavat alueen mustia härkiä ratsain. Hevonen sopii työhön, koska camarguenhevoset ovat pieniä mutta kantavat aikuisen miehen, ja niiden leveät, kovat kaviot sopivat [[upottavaan suohon]]. Härät ja hevoset elävät laumoina ulkona ympäri vuoden laajoilla suomailla, joten ratsain paimennus on käytännöllinen tapa kokoa laumat. Tarkemmasta perinteen historiasta en ole varma. Suo ei minulle sovi, siivet ovat parempia.
+Tost minä osaan kertoo. Gardianit ovat [[Camarguen]] paimenia, jotka kokoavat alueen mustia härkiä ratsain. Hevonen sopii työhön, koska [[camarguenhevoset]] ovat pieniä mutta kantavat aikuisen miehen, ja niiden leveät, kovat kaviot sopivat [[upottavaan suohon]]. Härät ja hevoset elävät laumoina ulkona ympäri vuoden laajoilla suomailla, joten ratsain paimennus on käytännöllinen tapa kokoa laumat. Tarkemmasta perinteen historiasta en ole varma. Suo ei minulle sovi, siivet ovat parempia.
 JATKOT:
 Miten gardianit pukeutuvat?
 Millaisia kilpailuja ja juhlia Camarguessa järjestetään?
