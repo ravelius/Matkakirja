@@ -40,6 +40,8 @@ namespace Matkakirja.Natiivi
         public const int IrrotusNapautukset = 3;
         /// <summary>Koputuksen ääni (ontto kohta); Sovitin asettaa.</summary>
         public static AudioClip OnttoKlippi;
+        /// <summary>Varaklippien mikseritunnukset (DioraamaSovitin rekisteröi ladatessaan: pikari-1, ovi-puu).</summary>
+        public const string Kolahdus = "kolahdus", Koputus = "koputus";
         readonly List<Esine> esineet = new List<Esine>();
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
         Esine kadessa;
@@ -479,7 +481,7 @@ namespace Matkakirja.Natiivi
             else
             {
                 SeikkailuAanet.Soita("kivi-kolahdus", e.Go.transform.position, 1f, 0.8f);
-                if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f);
+                if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f * SeikkailuAanet.Taso("tehosteet", Kolahdus));
             }
             Kolahti?.Invoke(e.Go.transform.position);
             kirjaa?.Invoke($"seikkailu: kaadettu {e.Id} (kuuluu {e.AaniM:F0} m)");
@@ -1007,7 +1009,7 @@ namespace Matkakirja.Natiivi
             else if (OnttoKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Koputus", 1.5f, 15f); SeikkailuKuulija.Aseta(a, c);
-                a.clip = OnttoKlippi; a.pitch = 0.75f; a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
+                a.clip = OnttoKlippi; a.pitch = 0.75f; a.volume = SeikkailuAanet.Taso("tehosteet", Koputus); a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
             }
             Aanteli?.Invoke(c);
             kirjaa?.Invoke("seikkailu: koputus kuulostaa ontolta");
@@ -1027,7 +1029,7 @@ namespace Matkakirja.Natiivi
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);
                 SeikkailuKuulija.Aseta(a, kohta);
-                a.clip = KolahdusKlippi; a.pitch = UnityEngine.Random.Range(0.9f, 1.1f); a.Play();
+                a.clip = KolahdusKlippi; a.pitch = UnityEngine.Random.Range(0.9f, 1.1f); a.volume = SeikkailuAanet.Taso("tehosteet", Kolahdus); a.Play();
                 Destroy(a.gameObject, KolahdusKlippi.length + 0.2f);
             }
             kirjaa?.Invoke($"seikkailu: kolahdus {e.Id} ({nopeus:F1} m/s) @ {kohta} → vartijoille {KuuluuM} m");

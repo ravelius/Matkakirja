@@ -42,7 +42,7 @@ namespace Matkakirja.Natiivi
         /// masterissa lisäksi DioraamaLimitteri (−1 dBFS).</summary>
         public const float PuheTaso = 0.708f;
         /// <summary>Hahmojen repliikit ja kuunnelman rivit ☰-mikserin "Hahmojen repliikit" -tasolla (Natiivi-UI 8.10., Voima.Repliikit).</summary>
-        static float RepliikkiTaso => Asetukset.Taso(Voima.Repliikit);
+        static float RepliikkiTaso => SeikkailuAanet.Taso("repliikit", null);
         // ☰-mikseri (PT 8.10. 22.17): silmukat soivat Aanisoittimen poolissa, joka kertoo jo Tausta-tasolla (TaustanKerroin), joten
         // sääsilmukat (AaniLuokka.OnkoSaa: tuuli, sade …) saavat tässä lisäksi Sää-tason; omat kertaäänet saavat Tehosteet-tason.
         static int mikseriRuutu = -1; static float mSaa = 1f, mTehosteet = 1f;
@@ -50,9 +50,41 @@ namespace Matkakirja.Natiivi
         {
             if (Time.frameCount == mikseriRuutu) return;
             mikseriRuutu = Time.frameCount;
-            mSaa = Asetukset.Taso(Voima.Saa); mTehosteet = Asetukset.Taso(Voima.Tehosteet);
+            mSaa = SeikkailuAanet.Taso("saa", null); mTehosteet = SeikkailuAanet.Taso("tehosteet", null);
         }
-        static float MaisemaTaso(string aaniId) { LueMikseri(); return Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(aaniId) ? mSaa : 1f; }
+        static float MaisemaTaso(string aaniId) { LueMikseri(); return (Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(aaniId) ? mSaa : 1f) * SeikkailuAanet.AanenKerroin(aaniId); }
+
+        // ÄÄNIREKISTERI (omistaja 9.10.2026 klo 09.5x, Natiivi-UI:n konteksti-mikseri): äänipankin äänet kontekstiin "linna". Ryhmä:
+        // kertojan jaksot ja taulun kohdat puhe, Pulu pulu, hahmojen repliikit ja kuunnelman rivit repliikit, silmukat sää tai maisema,
+        // muut tehosteet. Klippien nimet = URL (Aanisoittimen silmukat ja LataaKlippi nimeävät URL:lla; äänivahti).
+        readonly Dictionary<string, string> rekisteriRyhma = new Dictionary<string, string>(StringComparer.Ordinal);
+        void RekisteroiAanet(Rakennus rak)
+        {
+            if (rak?.Aanet == null || sovitin == null) return;
+            var puhe = new HashSet<string>(StringComparer.Ordinal); var repliikit = new HashSet<string>(StringComparer.Ordinal);
+            foreach (var j in rak.Kertoja) if (j?.Aani != null) puhe.Add(j.Aani);
+            if (rak.Taulu?.Kohdat != null) foreach (var k in rak.Taulu.Kohdat) if (k?.Aani != null) puhe.Add(k.Aani);
+            foreach (var t in rak.Tilat)
+            {
+                foreach (var kr in t.Kuunnelma) if (kr?.Aani != null) repliikit.Add(kr.Aani);
+                foreach (var h in t.Hahmot)
+                {
+                    foreach (var r in h.Repliikit) if (r?.Aani != null) repliikit.Add(r.Aani);
+                    if (h.Reaktio?.Aani != null) repliikit.Add(h.Reaktio.Aani);
+                }
+            }
+            foreach (var kv in rak.Aanet)
+            {
+                var a = kv.Value; if (a == null) continue;
+                string ryhma = kv.Key == rak.PuluAani ? "pulu" : puhe.Contains(kv.Key) ? "puhe" : repliikit.Contains(kv.Key) ? "repliikit"
+                    : a.Silmukka ? (Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(kv.Key) ? "saa" : "maisema") : "tehosteet";
+                rekisteriRyhma[kv.Key] = ryhma;
+                SeikkailuAanet.Rekisteroi(ryhma, kv.Key, Url(a.Tiedosto), Url(a.Kuiva), Url(a.Kaiku), Url(a.KaikuPitka));
+            }
+        }
+        string Url(string tiedosto) => string.IsNullOrEmpty(tiedosto) ? null : sovitin.AaniUrl(tiedosto);
+        /// <summary>Puheäänen taso: rekisterin ryhmä (puhe, repliikit, pulu) × äänen kerroin; tuntematon = repliikit.</summary>
+        float PuheenTaso(string aaniId) => SeikkailuAanet.Taso(aaniId != null && rekisteriRyhma.TryGetValue(aaniId, out var r) ? r : "repliikit", aaniId);
         static float TehosteTaso { get { LueMikseri(); return mTehosteet; } }
 
         // --- MIKSERIKOUKUT (Pelikoodarin AaniMikseri, omistajan kehittäjämikseri 30.9.2026) ------------------------------------
@@ -178,6 +210,7 @@ namespace Matkakirja.Natiivi
             if (rakennus?.Taulu?.Kohdat != null)
                 foreach (var k in rakennus.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
             EsilataaKertoja();
+            RekisteroiAanet(rakennus);
             viimeJakso = -1;
         }
 
@@ -194,6 +227,7 @@ namespace Matkakirja.Natiivi
         public void RakennusValmis(Rakennus rak)
         {
             rakennus = rak;
+            RekisteroiAanet(rak);
             if (rakennus?.Taulu?.Kohdat != null)
                 foreach (var k in rakennus.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
             EsilataaKertoja();
@@ -205,6 +239,7 @@ namespace Matkakirja.Natiivi
         public void TilaValmis(Tila tila)
         {
             if (tila == null) return;
+            RekisteroiAanet(rakennus);
             foreach (var jakso in tila.Tehosteet)
                 foreach (var id in jakso.AaniIdt) VarmistaLadattuAaniId(id);
             foreach (var h in tila.Hahmot)
@@ -423,7 +458,7 @@ namespace Matkakirja.Natiivi
             var lahde = kertaLahteet.TryGetValue(Ryhma(aaniId, false), out var rl) && rl != null ? rl : kertaAaniLahde;
             if (klipit.TryGetValue(url, out var klippi) && klippi != null)
             {
-                lahde.PlayOneShot(klippi, voimakkuus);
+                lahde.PlayOneShot(klippi, voimakkuus * SeikkailuAanet.AanenKerroin(aaniId));
                 Debug.Log($"MATKAKIRJA linssit: poikki: kertaääni {aaniId} ({Ryhma(aaniId, false)}) {voimakkuus:0.00} × {lahde.volume:0.00}");
             }
             else VarmistaLadattu(url);
@@ -462,10 +497,10 @@ namespace Matkakirja.Natiivi
                 {
                     double hetki = AudioSettings.dspTime + 0.05;
                     if (!AloitaPuhe(kayttaja, aaniId)) return false;
-                    puheTauolla = false; puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso * RepliikkiTaso; puheKuiva.PlayScheduled(hetki);
+                    puheTauolla = false; puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso * PuheenTaso(aaniId); puheKuiva.PlayScheduled(hetki);
                     float kaikuTaso = KaikuPois ? 0f : Kerroin(KaikuKerroin, NykyinenHuone ?? "", 1f);
                     if (kaiku != null && kaikuTaso > 0.001f)
-                    { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso * RepliikkiTaso; puheKaiku.PlayScheduled(hetki); }
+                    { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso * PuheenTaso(aaniId); puheKaiku.PlayScheduled(hetki); }
                     puheLoppuu = Time.unscaledTime + Math.Max(kuiva.length, kaiku != null ? kaiku.length : 0f) + 0.05f;
                     Debug.Log($"MATKAKIRJA linssit: poikki: mikseri {aaniId}: kuiva {kuiva.length:F3} s + kaiku {(kaiku != null && kaikuTaso > 0.001f ? kaiku.length.ToString("F3") + " s × " + kaikuTaso.ToString("F2") : "pois")}, dsp {hetki:F3}");
                     return true;
@@ -478,7 +513,7 @@ namespace Matkakirja.Natiivi
             // Ennen PlayOneShot kertaäänilähteeltä: repliikkiä ei voinut katkaista, ja seuraava puhe (vartija, kortti,
             // kertoja, Pulu) soi sen päälle. Nyt sama pysäytettävä puhelähde kuin kertojalla.
             if (!AloitaPuhe(kayttaja, aaniId)) return false;
-            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso * RepliikkiTaso; puheKuiva.Play();
+            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso * PuheenTaso(aaniId); puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
             return true;
         }
@@ -625,7 +660,7 @@ namespace Matkakirja.Natiivi
             var k = Klippi(aani.Tiedosto);
             if (k == null) { VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto)); return false; }
             if (!AloitaPuhe(kayttaja, aaniId)) return false;
-            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
+            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso * PuheenTaso(aaniId); puheKuiva.Play();   // ennen ohi mikserin (Natiivi-UI:n kartoitus)
             puheLoppuu = Time.unscaledTime + k.length;
             erillinenId = aaniId;
             Debug.Log($"MATKAKIRJA linssit: poikki: erillinen puhe {aaniId} {k.length:F1} s");
@@ -753,7 +788,9 @@ namespace Matkakirja.Natiivi
             yield return p.SendWebRequest();
             klipitJonossa.Remove(url);
             if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa("poikki: ääni " + url + " ei latautunut: " + p.error); yield break; }
-            klipit[url] = DownloadHandlerAudioClip.GetContent(p);
+            var ladattu = DownloadHandlerAudioClip.GetContent(p);
+            if (ladattu != null) ladattu.name = url;   // äänirekisterin klippinimi (RekisteroiAanet)
+            klipit[url] = ladattu;
         }
 
         /// <summary>Soivien silmukoiden tunnukset "tila/ääni" (Laitetestaajan ehdotus 30.9.: laineet näkyviin raportissa).</summary>

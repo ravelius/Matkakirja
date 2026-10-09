@@ -56,10 +56,14 @@ namespace Matkakirja.Natiivi
                 var o = MiniJson.ObjektiTaiNull(x); string t = MiniJson.Teksti(o, "tunnus");
                 if (string.IsNullOrEmpty(t) || lisa && repliikit.ContainsKey(t)) continue;
                 repliikit[t] = new Repliikki { Tunnus = t, Hahmo = MiniJson.Teksti(o, "hahmo"), Aani = MiniJson.Teksti(o, "aani"), KestoS = MiniJson.Luku(o, "kesto_s") ?? 0, Juuri = oma };
+                SeikkailuAanet.Rekisteroi("repliikit", HahmonId(repliikit[t].Hahmo), "Repliikki:" + t);   // mikserissä hahmoittain
             }
             if (!lisa) Valmis = true;
             kirjaa?.Invoke($"seikkailu: repliikit {repliikit.Count} ({juuri})");
         }
+
+        /// <summary>Mikserin tunnus hahmolle ("vartija" → "repliikit-vartija").</summary>
+        public static string HahmonId(string hahmo) => "repliikit-" + (string.IsNullOrEmpty(hahmo) ? "muut" : hahmo);
 
         /// <summary>Hakee äänen etukäteen (ensimmäinen soitto ei viivy).</summary>
         public void Esilataa(string tunnus) { if (repliikit.TryGetValue(tunnus, out var r) && r.Klippi == null && !r.Haussa) StartCoroutine(Hae(r)); }
@@ -116,7 +120,7 @@ namespace Matkakirja.Natiivi
                 puhujat[avain] = a;
             }
             puhujaT[avain] = puhuja;
-            a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus * Asetukset.Taso(Voima.Repliikit); a.Play();   // ☰-mikseri "Hahmojen repliikit"
+            a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus * SeikkailuAanet.Taso("repliikit", HahmonId(r.Hahmo)); a.Play();   // ☰-mikseri "Hahmojen repliikit", hahmoittain
             kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ({r.Hahmo}, {r.KestoS:F1} s)");
         }
 

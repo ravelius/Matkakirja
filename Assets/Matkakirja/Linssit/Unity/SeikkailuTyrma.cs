@@ -75,7 +75,7 @@ namespace Matkakirja.Natiivi
             {
                 ydin.PuluPudotti = false;
                 // Pulu pois videopelistä (omistaja 8.10. 19.0x): avaimet pudotetaan ilmaraosta (askeleet ja avainnipun helinä raossa).
-                if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, rako, 0.5f);
+                if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, rako, 0.5f * SeikkailuAanet.Taso("tehosteet", SeikkailuVartijat.VartijanAskeleet));
                 SeikkailuAanet.SoitaTaiVara("avainnippu", "avain-lukko", rako, 0.8f);
                 if (avainId != null) SeikkailuEsineet.Aktiivinen?.Nayta(avainId, avaimet);
                 SeikkailuAanet.Soita("kivi-lasku", avaimet, 0.4f, 1.6f);   // avaimet kilahtavat olkiin
@@ -84,7 +84,7 @@ namespace Matkakirja.Natiivi
             if (ydin.VesipoikaAvasi)
             {
                 ydin.VesipoikaAvasi = false;
-                if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, ovi, 0.6f);
+                if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, ovi, 0.6f * SeikkailuAanet.Taso("tehosteet", SeikkailuVartijat.VartijanAskeleet));
                 SeikkailuAanet.Soita("kivi-kolahdus", ovi + Vector3.up * 0.3f, 0.7f, 0.7f);   // sanko kolahtaa
                 SeikkailuAanet.SoitaTaiVara("salpa-2", null, ovi + Vector3.up, 0.6f);         // salpa auki (sonniss-aanet-v3)
                 SeikkailuRepliikit.SoitaTaiVara("tyrma-vesipoika-1", null, ovi + Vector3.up * 1.4f);   // "Vettä sinulle. Ovi taisi jäädä auki."
