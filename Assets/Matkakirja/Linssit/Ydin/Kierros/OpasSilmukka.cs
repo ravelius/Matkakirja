@@ -238,6 +238,8 @@ namespace Matkakirja.Linssit.Kierros
         public Kuvakulma Asento { get; private set; }
         public double VaiheAika { get; private set; }
         public double LentoKestoS { get; private set; }
+        /// <summary>Lennon kaaren vähimmäiskorkeus (rho; OpasKuvaus.NopeusRho), 0 = oletus.</summary>
+        double lentoRho;
         /// <summary>Alkaneen lennon mittari (OpasKuvaus.Mittari): suurin kiihtyvyys m/s² ja suurin laskunopeus m/s; siirrossa (0, 0).</summary>
         public (double kiihtyvyys, double lasku) LentoMittari { get; private set; }
         /// <summary>Lähtevä pyyntö: toive (tai null) — sovitin lähettää workerille. Palauttaa pyynnön järjestysnumeron.</summary>
@@ -1224,7 +1226,7 @@ namespace Matkakirja.Linssit.Kierros
                     }
                     kehysVaihto = Math.Min(1, kehysVaihto + Math.Max(0, dt) / kehysVaihtoS);
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
-                    Asento = suoraLasku ? OpasKuvaus.SuoraLasku(lahto, KohdeAsento(), t) : OpasKuvaus.Lennossa(lahto, Kierretty(KohdeAsento(), LentoKaariKulma(t)), t);
+                    Asento = suoraLasku ? OpasKuvaus.SuoraLasku(lahto, KohdeAsento(), t) : OpasKuvaus.Lennossa(lahto, Kierretty(KohdeAsento(), LentoKaariKulma(t)), t, lentoRho);
                     // Panorointi lennolla (omistaja 9.10.: "hieman orbit panoroiden … myös siirtymien aikana"): kamera kääntyy silmän
                     // ympäri (silmän rata ennallaan) sin²-kummulla enintään PalloPanAst ja palaa kehykseen saapuessa, vuorotellen.
                     if (panLento && !siirto && !suoraLasku)
@@ -1578,12 +1580,12 @@ namespace Matkakirja.Linssit.Kierros
         public int ReittiEsilataus(Func<OpasKohde, double> maaKorkeus, Kuvakulma[] ulos)
         {
             if (ulos == null || VapaaTila || Siirtymassa || Tauolla) return 0;
-            Kuvakulma a, b; double t0;
+            Kuvakulma a, b; double t0, rho = 0;   // seuraavan lennon nousua (NopeusRho) ei vielä tiedetä: esilataus matalalta
             if (Vaihe == OpasVaihe.Lentaa)
             {
                 // Myös siirtymälento (kierroksen aloitus yleiskuvasta arviokehykseen, video4 5–12 s karkeana).
                 if (siirto || kohdeKehys == null || avausViive > 0 || VaiheAika >= LentoKestoS) return 0;
-                a = lahto; b = KohdeAsento(); t0 = VaiheAika / Math.Max(0.01, LentoKestoS);
+                a = lahto; b = KohdeAsento(); t0 = VaiheAika / Math.Max(0.01, LentoKestoS); rho = lentoRho;
             }
             else if (Seuraava != null && !Seuraava.Kysymys && !PakotaSiirto)
             {
@@ -1596,7 +1598,7 @@ namespace Matkakirja.Linssit.Kierros
             else return 0;
             int n = 0;
             foreach (var t in ReittiNaytteet)
-                if (t > t0 && n < ulos.Length) ulos[n++] = OpasKuvaus.Lennossa(a, b, t);
+                if (t > t0 && n < ulos.Length) ulos[n++] = OpasKuvaus.Lennossa(a, b, t, rho);
             return n;
         }
 
@@ -1649,7 +1651,8 @@ namespace Matkakirja.Linssit.Kierros
             AsetaSuoraLasku();
             panSuunta = -panSuunta; panLento = PalloLento && !siirto && LentoKestoS > 8;
             AsetaLentoKaari(k);
-            LentoMittari = siirto ? (0, 0) : OpasKuvaus.Mittari(lahto, KohdeAsento(), LentoKestoS);
+            lentoRho = siirto || suoraLasku ? 0 : OpasKuvaus.NopeusRho(lahto, KohdeAsento(), LentoKestoS);   // nopea lento nousee kaaressa
+            LentoMittari = siirto ? (0, 0) : OpasKuvaus.Mittari(lahto, KohdeAsento(), LentoKestoS, (x, y, u) => OpasKuvaus.Lennossa(x, y, u, lentoRho));
             LentoAlkaa?.Invoke(k, matka, toiveesta);
             toiveesta = false;
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
