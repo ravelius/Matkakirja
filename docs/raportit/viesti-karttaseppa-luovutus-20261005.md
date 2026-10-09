@@ -25,7 +25,7 @@
   - concorde-ign.mjs on yleistetty (--nimi, --orto-kerros, --orto-vuosi).
 - **Talvi3: osa1 VALMIS (91/91), osa2 53/78 (02.15).**
   **UUSINTA KÄYNNISSÄ** 02.16 vapautuneella paikalla: `kaudet/aja-talvi3-uusinta.sh` → `s2-eurooppa-talvi3-uusinta/` (20 lohkoa, lohkot.txt, pk2-koodi; junalukko ja STOP huomioidaan). Swap-vahti: `vahti-uusinta.sh` (> 14 Gt → STOP).
-  Valmistuttua: `python3 kaudet/talvi3-ennen-jalkeen.py <_tyo/karttaseppa/talvi3-sauma-20261008>` (ennen/jälkeen-kuvat PT:lle), `suorat-reunat.py` kerroksilla uusinta, osa1 ja osa2, sitten `kokoa-kausi.py talvi v1 /Users/Shared/Claude/proto-3d/_valmiit/s2-eurooppa-talvi-vienti-<pvm> "<uusinta/laatat>:<osa1/laatat>:<osa2/laatat>" "<kuvaus>"` + LAHTEET.md (pohjana kevät) ja Julkaisija.
+  Valmistuttua: `python3 kaudet/talvi3-ennen-jalkeen.py <_tyo/karttaseppa/talvi3-sauma-20261008>` (ennen/jälkeen-kuvat PT:lle), `suorat-reunat.py` kerroksilla uusinta, osa1 ja osa2, sitten `kokoa-kausi.py talvi v1 /Users/Shared/Claude/proto-3d/_valmiit/s2-eurooppa-talvi-vienti-<pvm> "<uusinta/laatat>:<osa1/laatat>:<osa2b/laatat>:<osa2/laatat>" "<kuvaus>"` + LAHTEET.md (pohjana kevät) ja Julkaisija.
 
 ---
 
