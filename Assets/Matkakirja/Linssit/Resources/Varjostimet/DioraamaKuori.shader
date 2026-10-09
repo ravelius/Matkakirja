@@ -182,7 +182,10 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
 
             half4 frag(Vali i) : SV_Target
             {
-                half3 vari = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb * _Kirkkaus;
+                half3 raaka = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb;
+                // Historia (arvio 7–8): kuvaamattomat mustat tekselit maan tasolla kalliosävyllä ennen valoa ja kirkkautta (ei valaistua tummaa).
+                if (_DioraamaMustaKorvaus.a > 0.5 && i.paikkaW.y < _DioraamaMustaKorvaus.a && max(raaka.r, max(raaka.g, raaka.b)) < 0.012h) raaka = _DioraamaMustaKorvaus.rgb;
+                half3 vari = raaka * _Kirkkaus;
                 vari = Detalji(vari, i.uv, i.paikkaW, i.normaaliW);
                 if (_KuoriLahi.z > 0.5)
                 {
@@ -201,7 +204,6 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
                     // viivana); leikattu kivi erottuu, mutta seuraa päivän/hämärän kirkkautta.
                     if (Leikkauksessa(i.paikkaW, 0.12)) vari = vari * 1.45h + half3(0.02h, 0.018h, 0.015h);
                 }
-                if (_DioraamaMustaKorvaus.a > 0.5 && i.paikkaW.y < _DioraamaMustaKorvaus.a && max(vari.r, max(vari.g, vari.b)) < 0.012h) vari = _DioraamaMustaKorvaus.rgb;
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 return half4(lerp(vari, _DioraamaSumuVari.rgb, sumu), 1);

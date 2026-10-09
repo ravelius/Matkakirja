@@ -184,7 +184,7 @@ namespace Matkakirja.Natiivi
         // porttikäytävän pimeässä valoatlaksessa, jotka myöhempien rakenteiden leikkaus paljastaa. Historian ajan maan tasolla (y < 4 m)
         // lähes mustat tekselit kalliosävyllä (DioraamaKuori ja DioraamaLeivottu, globaali; oletus 0 = pois).
         static readonly int IdMustaKorvaus = Shader.PropertyToID("_DioraamaMustaKorvaus");
-        static readonly Vector4 MustaKorvaus = new Vector4(0.30f, 0.31f, 0.32f, 4f);
+        static readonly Vector4 MustaKorvaus = new Vector4(0.27f, 0.28f, 0.29f, 4f);   // raakakuvan sävy (ennen valoa); arvio 8: valaistun värin kynnys vaalensi yön tummat pinnat
         static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
         static void TasainenRanta(Renderer r)
         {
