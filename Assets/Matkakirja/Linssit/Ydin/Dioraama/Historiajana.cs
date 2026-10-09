@@ -44,7 +44,24 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string Id, Glb, Leikkaukset;
         public double? Vuodesta, Vuoteen;
-        public bool Nakyy(double vuosi) => (Vuodesta == null || vuosi >= Vuodesta) && (Vuoteen == null || vuosi < Vuoteen);
+        public bool Nakyy(double vuosi) => Valilla(vuosi, Vuodesta, Vuoteen);
+        /// <summary>Vuosi välillä [vuodesta, vuoteen); null = avoin pää (myös glb-solmujen extras, LR:n restaurointitelineet).</summary>
+        public static bool Valilla(double vuosi, double? vuodesta, double? vuoteen) => (vuodesta == null || vuosi >= vuodesta) && (vuoteen == null || vuosi < vuoteen);
+
+        /// <summary>Solmujen perityt vuodet: oma extras "vuodesta"/"vuoteen" tai lähimmän esivanhemman (LR: teline-kellotorni 1961–1964
+        /// lapsineen). vanhempi[i] = −1 juurelle; puuttuva = (null, null).</summary>
+        public static (double? Vuodesta, double? Vuoteen)[] SolmujenVuodet(IReadOnlyList<int> vanhempi, IReadOnlyList<(double? Vuodesta, double? Vuoteen)> omat)
+        {
+            var v = new (double?, double?)[vanhempi.Count];
+            for (int i = 0; i < v.Length; i++)
+            {
+                (double? a, double? b) = (null, null);
+                for (int j = i, n = 0; j >= 0 && n < 64; j = vanhempi[j], n++)
+                    if (omat[j].Vuodesta != null || omat[j].Vuoteen != null) { (a, b) = omat[j]; break; }
+                v[i] = (a, b);
+            }
+            return v;
+        }
     }
 
     public sealed class Historiajana
@@ -220,8 +237,10 @@ namespace Matkakirja.Linssit.Dioraama
             new HistoriaVaihe(1550, 25, 24, 1.9, "1500"),
             new HistoriaVaihe(1743, 15, 30, 2.2, "1743"),
             new HistoriaVaihe(1847, 15, 26, 2.0, "1847"),
-            new HistoriaVaihe(1872, 20, 20, 1.8, "1872"),
-        }, 2026);
+            new HistoriaVaihe(1872, 10, 22, 1.9, "1872"),
+            // Suuri restaurointi omaksi jaksokseen (LR:n restaurointivaihe 1961–1975, juna 173): telineet näkyvät noin 7 s.
+            new HistoriaVaihe(1961, 12, 18, 1.6, "1961"),
+        }, 1985);
 
         /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
         public static readonly Historiajana K2Lyhyt = new Historiajana(new[]

@@ -36,7 +36,8 @@ KOODI = {
     'olavinlinna.historia.1500.vuosi': '1500–1600-luvut', 'olavinlinna.historia.1500.sanat': 'Tornien korotus, uusi esilinna',   # Kijlin tornin vuosi epävarma (#4259)
     'olavinlinna.historia.1743.vuosi': '1743', 'olavinlinna.historia.1743.sanat': 'Turun rauha: linna Venäjälle, bastionit 1750-luvulla',
     'olavinlinna.historia.1847.vuosi': '1847–1869', 'olavinlinna.historia.1847.sanat': 'Varuskunta lähtee, palot 1868 ja 1869',
-    'olavinlinna.historia.1872.vuosi': '1872–1975', 'olavinlinna.historia.1872.sanat': 'Restauroinnit, oopperajuhlat vuodesta 1967',
+    'olavinlinna.historia.1872.vuosi': '1872–1878', 'olavinlinna.historia.1872.sanat': 'Ensimmäinen restaurointi (Kiseleff)',
+    'olavinlinna.historia.1961.vuosi': '1961–1975', 'olavinlinna.historia.1961.sanat': 'Suuri restaurointi, oopperajuhlat vuodesta 1967',
     # Historian kertoja (9 riviä; Sisältökirjuri #4249, rivi 6 #4259). Ääni vasta omistajan luvalla.
     'olavinlinna.historia.jaakausi.kertoja': 'Kun jää suli, Saimaa nousi esiin, ja sen vedet kulkevat yhä ahtaan Kyrönsalmen läpi.',
     'olavinlinna.historia.kivikausi.kertoja': 'Rannoilla asui ihmisiä jo kivikaudella; he jättivät maahan saviastioiden palasia ja palanutta luuta.',

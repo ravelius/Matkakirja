@@ -19,7 +19,7 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void KestotSuunnitelmanMukaan()
         {
             var h = Historiajana.Olavinlinna;
-            Oleta.Sama(9, h.Vaiheet.Count);
+            Oleta.Sama(10, h.Vaiheet.Count);
             Oleta.Tosi(h.Kesto >= 150 && h.Kesto <= 200, $"historia noin 3 min ({h.Kesto} s)");
             Oleta.Sama(8.0, Historiajana.K2Lyhyt.Kesto);
             for (int i = 1; i < h.Vaiheet.Count; i++) Oleta.Tosi(h.Vaiheet[i].Vuosi > h.Vaiheet[i - 1].Vuosi, $"vuodet kasvavat ({i})");
@@ -33,7 +33,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(-7500.0, h.Vuosi(0));
             Oleta.Sama(1475.0, h.Vuosi(h.VaiheenAlku(2)));
             Oleta.Sama(1499.0, h.Vuosi(h.VaiheenAlku(4)));
-            Oleta.Sama(2026.0, h.Vuosi(h.Kesto + 5));
+            Oleta.Sama(h.LoppuVuosi, h.Vuosi(h.Kesto + 5));
             double alku = h.VaiheenAlku(3), kesto = h.Vaiheet[3].KestoS;
             Oleta.Tosi(Math.Abs(h.Vuosi(alku + kesto / 2) - 1488) < 1e-9, "vaiheen puolivälissä puolet vuosista (1477 → 1499)");
             double e = h.Vuosi(0);
@@ -154,6 +154,18 @@ namespace Matkakirja.Linssit.Testit
                 double n = 0; for (double t = 0; t < h.Kesto; t += 0.05) if (m.Nakyy(h.Vuosi(t))) n += 0.05;
                 Oleta.Tosi(n >= 2, $"{m.Id} näkyy {n:F1} s");
             }
+        }
+
+        [Testi] static void SolmujenVuodetPeriytyvat()
+        {
+            // juuri(0) ← teline-kellotorni(1, 1961–1964) ← putki(2); muu(3) ilman vuosia.
+            var v = HistoriaVaihemalli.SolmujenVuodet(new[] { -1, 0, 1, 0 }, new (double?, double?)[] { (null, null), (1961, 1964), (null, null), (null, null) });
+            Oleta.Tosi(v[1] == (1961, 1964) && v[2] == (1961, 1964) && v[3] == (null, null) && v[0] == (null, null), "lapsi perii, muu avoin");
+            Oleta.Tosi(HistoriaVaihemalli.Valilla(1962, 1961, 1964) && !HistoriaVaihemalli.Valilla(1964, 1961, 1964) && HistoriaVaihemalli.Valilla(1970, null, null), "väli [a, b)");
+            // Restauroinnin jakso: 1961–1975 näkyy vähintään 6 s (telineet).
+            var h = Historiajana.Olavinlinna; double n = 0;
+            for (double t = 0; t < h.Kesto; t += 0.05) if (HistoriaVaihemalli.Valilla(h.Vuosi(t), 1961, 1975)) n += 0.05;
+            Oleta.Tosi(n >= 6, $"restaurointi näkyy {n:F1} s");
         }
 
         [Testi] static void K2KasvattaaKaikkiOsat()
