@@ -19,6 +19,7 @@ namespace Matkakirja.Natiivi
             sealed class Data { public TextureHandle lahde; public Material materiaali; }
             static readonly MaterialPropertyBlock lohko = new MaterialPropertyBlock();
             static readonly int IdBlit = Shader.PropertyToID("_BlitTexture"), IdSkaala = Shader.PropertyToID("_BlitScaleBias");
+            static readonly int IdInvVP = Shader.PropertyToID("_KaupunkiInvVP"), IdKamera = Shader.PropertyToID("_KaupunkiKamera");
 
             public Vaihe(string n)
             {
@@ -37,6 +38,10 @@ namespace Matkakirja.Natiivi
                 var cam = frameData.Get<UniversalCameraData>();
                 tila = $"{nimi}: {cam.camera.name}, tapahtuma {renderPassEvent}, takapuskuri {res.isActiveTargetBackBuffer}, syvyys {res.cameraDepthTexture.IsValid()}";
                 if (materiaali == null || res.isActiveTargetBackBuffer) return;
+                // Kameran matriisit itse (jälkikäsittelyn jälkeen globaalit voivat olla koko ruudun piirron).
+                var vp = cam.GetGPUProjectionMatrix(0) * cam.GetViewMatrix(0);
+                materiaali.SetMatrix(IdInvVP, vp.inverse);
+                materiaali.SetVector(IdKamera, cam.camera.transform.position);
                 var kuvaus = rg.GetTextureDesc(res.activeColorTexture);
                 kuvaus.name = "Matkakirja " + nimi + " kopio"; kuvaus.clearBuffer = false; kuvaus.msaaSamples = MSAASamples.None;
                 var kopio = rg.CreateTexture(kuvaus);

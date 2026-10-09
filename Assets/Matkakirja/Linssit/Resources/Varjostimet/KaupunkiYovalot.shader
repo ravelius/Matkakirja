@@ -30,6 +30,10 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
             #include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
+            // Kaupunkikameran käänteinen näkymä-projektio ja paikka (KaupunkiPassi asettaa): passi on jälkikäsittelyn jälkeen, jolloin
+            // URP:n UNITY_MATRIX_I_VP ja _WorldSpaceCameraPos eivät enää ole kaupunkikameran (9.10. simu: maailmanpaikka tyhjä).
+            float4x4 _KaupunkiInvVP;
+            float4 _KaupunkiKamera;
 
             TEXTURE2D(_Valot); SAMPLER(sampler_Valot);
             float4x4 _MaailmaPaikallinen;   // Unityn maailma → paikallinen ENU (m): x itä, y ylös, z pohjoinen
@@ -84,7 +88,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float3 Paikka(float2 uv)
             {
                 float d = SampleSceneDepth(uv);
-                return mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, d, UNITY_MATRIX_I_VP), 1.0)).xyz;
+                return mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, d, _KaupunkiInvVP), 1.0)).xyz;
             }
 
             half4 frag(Varyings i) : SV_Target
@@ -101,8 +105,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 #else
                 if (syvyys >= 1.0 - 1e-7) return c;
                 #endif
-                float3 pw = ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP);
-                if (distance(pw, _WorldSpaceCameraPos) < 30.0) return c;   // päällyskameran kori ja kupu (v8: passi myös niille)
+                float3 pw = ComputeWorldSpacePosition(uv, syvyys, _KaupunkiInvVP);
+                if (distance(pw, _KaupunkiKamera.xyz) < 30.0) return c;   // päällyskameran kori ja kupu (v8: passi myös niille)
                 float3 p = mul(_MaailmaPaikallinen, float4(pw, 1.0)).xyz;
                 if (_ValoDebug.x > 1.5 && _ValoDebug.x < 2.5) return half4((half3)frac(float3(p.x / 200.0, p.y / 50.0, p.z / 200.0)), 1.0h);
                 float bm = BlackMarble(p);
