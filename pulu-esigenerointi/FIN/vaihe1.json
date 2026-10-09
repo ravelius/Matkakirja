@@ -2937,5 +2937,365 @@
    "Miksi vanhat puukaupungit ovat harvinaisia?",
    "Mitä Selkämerestä tiedetään?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mariehamn",
+  "kysymys": "Miksi Maarianhamina on nimetty Venäjän keisarinnan mukaan?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Maarianhamina perustettiin 21. helmikuuta 1861 [[Övernäsin]] kylän maille, ja se nimettiin Venäjän keisarinnan [[Maria Aleksandrovnan]] mukaan. Nimeäminen liittyy aikaan, jolloin Suomi kuului suuriruhtinaskuntana Venäjän keisarikuntaan ja Maria Aleksandrovna oli keisari Aleksanteri II:n puoliso. Kaupunki rakennettiin suunnitellun asemakaavan pohjalta, ja nykyisen [[Ahvenanmaan]] pääkaupungin nimi on pysynyt samana siitä asti. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Övernäsin",
+   "Maria Aleksandrovnan",
+   "Ahvenanmaan"
+  ],
+  "jatkot": [
+   "Kuka oli keisarinna Maria Aleksandrovna?",
+   "Milloin Ahvenanmaasta tuli autonominen maakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mariehamn",
+  "kysymys": "Mitä nelimastoparkki Pommern kertoo Maarianhaminan merenkulusta?",
+  "uusi": false,
+  "vastaus": "No niin, tost laivasta riittää juttua. Parkki on suuri purjelaiva, ja Maarianhaminassa se kertoo purjelaivojen aikakaudesta, jolloin merenkulusta tuli kaupungin elinkeinoelämän keskus 1800-luvun lopulla. Laivanvarustajat ja [[telakat]] asettuivat kaupunkiin, ja laiva on kiinnitettynä [[Länsisatamassa]] osana [[Ahvenanmaan merenkulkumuseota]]. Näin vierailija voi nähdä kaupungin merenkulkuperinteen konkreettisesti eikä pelkästään kuvauksina. Kyyhky ei kyllä itse tohtisi laskeutua kolmannelle mastolle.",
+  "linkit": [
+   "telakat",
+   "Länsisatamassa",
+   "Ahvenanmaan merenkulkumuseota"
+  ],
+  "jatkot": [
+   "Millainen laiva on parkki?",
+   "Miksi purjelaivoja käytettiin vielä höyrylaivojen aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mariehamn",
+  "kysymys": "Mikä on asemakaava ja miksi sellainen tehtiin Maarianhaminalle?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Asemakaava on suunnitelma siitä, miten kaupungin kadut, korttelit ja tontit sijoitetaan. Maarianhamina perustettiin vuonna 1861 uudelle paikalle [[Övernäsin]] kylän maille, joten kaupunki saattoi kasvaa suunnitellun asemakaavan pohjalta eikä vanhan, itsestään syntyneen rakenteen varassa. Kaava on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla [[Södragatanilla]] on yhä 1800-luvun puutaloja. Siivin katsottuna ruudukko näyttää kyllä tosi siistiltä.",
+  "linkit": [
+   "Övernäsin",
+   "Södragatanilla"
+  ],
+  "jatkot": [
+   "Millainen katu on Södragatan?",
+   "Miten asemakaava vaikuttaa kaupungin ilmeeseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mariehamn",
+  "kysymys": "Mitä tarkoittaa, että Ahvenanmaa on autonominen maakunta?",
+  "uusi": true,
+  "vastaus": "Ai se. Autonomia tarkoittaa laajaa itsehallintoa: Ahvenanmaa kuuluu Suomeen, mutta sillä on oma [[parlamentti]] ja oma hallitus, jotka sijaitsevat Maarianhaminassa. Maakunnan virallinen kieli on ruotsi, ja alue on lisäksi [[demilitarisoitu]]. [[Ahvenanmaan]] itsehallinnon perusta luotiin 1900-luvun alkupuolella, mutta tarkan vuoden jätän tässä mainitsematta, koska en ole siitä varma. Tämän verran kyyhky muistaa, loppu on lakimiesten alaa.",
+  "linkit": [
+   "parlamentti",
+   "demilitarisoitu",
+   "Ahvenanmaan"
+  ],
+  "jatkot": [
+   "Mitä kieltä Ahvenanmaalla puhutaan?",
+   "Miten Ahvenanmaalle pääsee Suomen mantereelta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mariehamn",
+  "kysymys": "Miksi merenkulusta tuli Maarianhaminalle tärkeä elinkeino?",
+  "uusi": true,
+  "vastaus": "Katotaas. Maarianhamina sijaitsee saaristomaakunnassa, jossa meri on luonteva kulkureitti, ja 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus. Kaupunkiin asettuivat silloin [[laivanvarustajat]] sekä [[telakat]], ja nykyään tästä perinteestä muistuttaa muun muassa [[Ahvenanmaan merenkulkumuseo]]. Tarkempia lukuja laivojen määristä en ole varma, joten jätän ne pois. Kyl tää kaupunki tuoksuu merelle vielä nykyäänkin.",
+  "linkit": [
+   "laivanvarustajat",
+   "telakat",
+   "Ahvenanmaan merenkulkumuseo"
+  ],
+  "jatkot": [
+   "Mitä telakalla tehdään?",
+   "Miten purjelaivat eroavat höyrylaivoista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilomantsi",
+  "kysymys": "Miksi Ilomantsissa on niin paljon ortodokseja muuhun Suomeen verrattuna?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: kyse on idän ja lännen rajasta. Ilomantsi sijaitsee Karjalassa Suomen itärajan tuntumassa, ja ortodoksisuus levisi [[Karjalan]] alueelle idästä, lähteiden mukaan [[Novgorodin]] vaikutuspiiristä. Paikallinen ortodoksiyhteisö on yli 500 vuotta vanha, ja Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista. Alueella on Profeetta Elialle omistettu puukirkko sekä viisi [[tsasounaa]]. Tarkempaa kehityskulkua vuosisadoilta en ole varma. Pitkä historia, lyhyt kyyhky.",
+  "linkit": [
+   "Karjalan",
+   "Novgorodin",
+   "tsasounaa"
+  ],
+  "jatkot": [
+   "Mikä erottaa ortodoksisen kirkon luterilaisesta?",
+   "Missä Karjalan rajat ovat kulkeneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilomantsi",
+  "kysymys": "Mikä tekee Parppeinvaaran runokylästä erityisen?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tost minä osaan kertoo vähän. Parppeinvaaran runokylä on Ilomantsin nähtävyys, ja sen nimi viittaa karjalaiseen [[runolauluperinteeseen]], jota yhdistetään [[Kalevalan]] kaltaisiin runoihin. Tarkkoja yksityiskohtia kylän tapahtumista ja historiasta en ole varma, joten niiden kohdalla kannattaa tarkistaa ajantasainen tieto paikallisilta. Runolaulu on kuitenkin yksi Karjalan tunnetuimmista kulttuuriperinteistä, ja Ilomantsi liittyy siihen vahvasti. Runosta riittäisi kyllä pullaakin pidempi tarina.",
+  "linkit": [
+   "runolauluperinteeseen",
+   "Kalevalan"
+  ],
+  "jatkot": [
+   "Mitä runolaulu on ja miten sitä esitettiin?",
+   "Mikä on Kalevala?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilomantsi",
+  "kysymys": "Mitä tsasouna on ja miten se eroaa tavallisesta kirkosta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Tsasouna on pieni ortodoksinen rukoushuone, joka on tavallisesti kirkkoa vaatimattomampi eikä välttämättä ole jatkuvassa jumalanpalveluskäytössä. Sinne tullaan rukoilemaan, sytyttämään kynttilä ja katsomaan [[ikoneja]], ja jumalanpalvelus pidetään siellä yleensä vain erityisinä päivinä. Ilomantsissa on viisi tsasounaa, ja ne kuuluvat alueen vanhaan [[ortodoksiseen]] kulttuuriin. Näin kyyhkyn ymmärrys asiasta, pienet rakennukset ovat minun kokoani.",
+  "linkit": [
+   "ikoneja",
+   "ortodoksiseen"
+  ],
+  "jatkot": [
+   "Mitä ikoni on ortodoksisessa perinteessä?",
+   "Mitä ortodoksinen jumalanpalvelus pitää sisällään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilomantsi",
+  "kysymys": "Millaisia ovat Petkeljärven ja Patvinsuon kansallispuistot?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kunnan maisemaa hallitsevat metsät ja [[suot]], ja nämä kaksi kansallispuistoa edustavat sitä luontoa hyvin. [[Patvinsuo]] on nimensä mukaisesti suoluonnon aluetta, kun taas [[Petkeljärvi]] tunnetaan lähteiden mukaan harjumaisemista ja järvistä. Tarkkoja pinta-aloja ja reittien pituuksia en ole varma, joten jätän ne mainitsematta. Kansallispuistot ovat yleisesti ottaen luonnonsuojelualueita, joilla kulkeminen on mahdollista merkityillä poluilla. Paljon lintuja siellä varmaan on, minä en ole käynyt.",
+  "linkit": [
+   "suot",
+   "Patvinsuo",
+   "Petkeljärvi"
+  ],
+  "jatkot": [
+   "Mikä on kansallispuisto?",
+   "Millaisia lintuja Suomen soilla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilomantsi",
+  "kysymys": "Kuka oli Mateli Kuivalatar ja miksi hänet muistetaan?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Mateli Kuivalatar]] oli ilomantsilainen kansanlaulaja, joka eli vuosina 1771–1846. Hänet lasketaan [[Ilomantsin]] tunnetuimpiin henkilöihin, mikä kertoo siitä, että laulu- ja runoperinne on ollut Ilomantsissa tärkeä osa kulttuuria. Tarkempia elämäkerrallisia yksityiskohtia en ole varma, joten en lähde niitä arvailemaan. [[Kansanlaulajat]] välittivät perinnettä suullisesti sukupolvelta toiselle, koska kaikkea ei ollut kirjattu muistiin. Suullinen perinne kuulostaa kyllä kyyhkyn kaltaiselta viestinviejältä.",
+  "linkit": [
+   "Mateli Kuivalatar",
+   "Ilomantsin",
+   "Kansanlaulajat"
+  ],
+  "jatkot": [
+   "Mitä suullinen perinne tarkoittaa?",
+   "Miten kansanlauluja on tallennettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kysymys": "Miksi Fiskarsin tuotteille tarvittiin kapearaiteinen rautatie Pohjankurun satamaan?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Ruukin tuotteita, kuten saksia, puukkoja ja auroja, oli kuljetettava merelle, josta ne pääsivät laivoilla markkinoille, ja siksi tarvittiin yhteys [[Pohjankurun]] satamaan. Kapearaiteinen rautatie oli rakennus- ja ylläpitokustannuksiltaan tavallista raidetta kevyempi vaihtoehto, ja se toimi vuosina 1891–1952. Tarkkoja syitä juuri kapean raiteen valintaan en ole varma, mutta kustannukset olivat yleensä keskeinen peruste. Rautatie oli osa [[Fiskarsin]] ruukkiyhteisön arkea. Kyyhky olisi tietysti lentänyt suoraan.",
+  "linkit": [
+   "Pohjankurun",
+   "Fiskarsin"
+  ],
+  "jatkot": [
+   "Mikä on kapearaiteinen rautatie?",
+   "Mitä Pohjankurun satamassa tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kysymys": "Mitä kaikkea ruukissa ja sen pajoissa osattiin valmistaa?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Fiskarsin tehtaissa ja pajoissa tehtiin arjen tarvekaluja, kuten [[saksista]] ja [[puukoista]] sekä [[auroihin]] ja voimansiirtolaitteisiin asti. Ruukissa valmistettiin lisäksi kuparia, ja John Jacob von Julinin aikana vuonna 1836 perustettiin Suomen ensimmäinen työpaja. Tuotteet kulkivat Pohjankurun satamaan kapearaiteista rautatietä pitkin. Tämä kertoo ruukista, joka palveli sekä talonpoikien että teollisuuden tarpeita. Lista venähti, mutta sakset ovat kyllä Fiskarsin tunnetuin tuote.",
+  "linkit": [
+   "saksista",
+   "puukoista",
+   "auroihin"
+  ],
+  "jatkot": [
+   "Miten sakset valmistetaan?",
+   "Mitä tarkoittaa voimansiirtolaite?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kysymys": "Kuka oli Petter Thorwöste ja miksi ruukkeja perustettiin Suomeen?",
+  "uusi": true,
+  "vastaus": "Ai tota. Petter Thorwöste oli saksalaissyntyinen perustaja, joka perusti Fiskarsin [[rautaruukin]] vuonna 1649. Ruukkeja perustettiin Suomeen yleisesti siksi, että rautaa voitiin valmistaa paikallisesta malmista, ja tarvittiin lisäksi runsaasti puuhiiltä sekä vesivoimaa koneiden käyttöön. Suomi kuului tuolloin [[Ruotsin]] valtakuntaan, jossa rautateollisuutta pidettiin tärkeänä. Thorwösteen liittyviä yksityiskohtia en ole varma. Ruukki on vanha ja kunnioitettava sana, ei lainkaan lintuaiheinen.",
+  "linkit": [
+   "rautaruukin",
+   "Ruotsin"
+  ],
+  "jatkot": [
+   "Mistä rautaa saatiin ennen ruukkeja?",
+   "Mitä Ruotsin valtakunta tarkoitti Suomelle 1600-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kysymys": "Miten Fiskars on muuttunut tehdaskylästä taiteilijakyläksi?",
+  "uusi": true,
+  "vastaus": "Mmm— tää on kaunis muutos. Fiskars on nykyään alle tuhannen asukkaan kylä, joka on suosittu matkailukohde. Siellä asuu ja työskentelee [[taiteilijoita]] ja [[käsityöläisiä]], ja vanhan ruukkiyhteisön perintö näkyy kylän ilmeessä. Tarkkaa ajankohtaa ja kehityksen vaiheita en ole varma, joten niitä en lähde arvailemaan. Muutos on kuitenkin tyypillinen: entinen tuotantoyhteisö löytää uuden roolin kulttuurin ja matkailun kautta. Kyllä taiteilijakylässä kyyhkykin viihtyisi, jos ikkunalaudalla olisi pullaa.",
+  "linkit": [
+   "taiteilijoita",
+   "käsityöläisiä"
+  ],
+  "jatkot": [
+   "Mitä käsityöläiset Fiskarsissa tekevät?",
+   "Mikä on ruukkikylä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kysymys": "Kuka oli John Jacob von Julin ja mitä hän teki Fiskarsille?",
+  "uusi": true,
+  "vastaus": "Niin, tost on hyvä tarina. John Jacob von Julin osti [[Fiskarsin ruukin]] vuonna 1822. Hänen aikanaan kylään perustettiin vuonna 1836 Suomen ensimmäinen [[työpaja]], mikä vahvisti ruukin roolia teollisuuden ja käsityön keskuksena. Julinin muista vaiheista en ole varma, joten niitä en kerro arvauksena. Omistajan ratkaisut muovasivat ruukkiyhteisöä pitkään. Hyvä, että joku omisti ruukin, minä en omista edes pesää.",
+  "linkit": [
+   "Fiskarsin ruukin",
+   "työpaja"
+  ],
+  "jatkot": [
+   "Mikä on ruukinpatruuna?",
+   "Miten teollinen vallankumous näkyi Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kysymys": "Miksi Noormarkusta tuli Ahlström-yhtiön syntysija?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. [[Antti Ahlström]] osti Noormarkusta vuonna 1870 sahan, [[rautaruukin]] ja [[kartanon]], ja liiketoiminta lähti sen jälkeen nopeaan kasvuun. Noormarkku oli siis paikka, jossa hänen yritystoimintansa sai perustansa, ja siksi sitä kutsutaan yhtiön syntysijaksi. Ahlström kehitti kylää myös laajasti rakentamalla tieverkkoa ja perustamalla yhden Suomen ensimmäisistä suomenkielisistä kouluista. Nykyisin ruukkialueen omistaa A. Ahlström Osakeyhtiö. Siitä sahasta kasvoi kyllä paljon enemmän kuin kyyhky osaisi laskea.",
+  "linkit": [
+   "Antti Ahlström",
+   "rautaruukin",
+   "kartanon"
+  ],
+  "jatkot": [
+   "Millainen yritys A. Ahlström nykyään on?",
+   "Mitä ruukkialueella voi tehdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kysymys": "Miksi suomenkielinen koulu oli erityinen asia 1800-luvun Suomessa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Vielä 1800-luvun alkupuolella Suomessa hallinnon, opetuksen ja sivistyneistön kielenä oli pääosin [[ruotsi]], ja suomea puhui valtaosa väestöstä. Suomen kielen asema vahvistui vasta vähitellen vuosisadan aikana, kun [[suomen kielen]] käyttöä ryhdyttiin edistämään hallinnossa ja koulutuksessa. Siksi suomenkielinen koulu oli merkittävä askel: se antoi tavallisten suomenkielisten lasten mahdollisuuden oppia omalla kielellään. Tarkkoja vuosilukuja en ole varma, joten jätän ne pois. Sanoja riittää, kuten aina.",
+  "linkit": [
+   "ruotsi",
+   "suomen kielen"
+  ],
+  "jatkot": [
+   "Milloin suomen kielestä tuli virallinen kieli?",
+   "Mikä oli fennomania?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kysymys": "Mitä tarkoittaa, että Noormarkku liitettiin Poriin vuonna 2010?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Noormarkku oli ennen oma kunta, mutta vuoden 2010 alussa se liitettiin [[Porin]] kaupunkiin. Kyseessä on [[kuntaliitos]], jossa kaksi tai useampi kunta yhdistetään hallinnollisesti yhdeksi. Noormarkku ei siis enää ole itsenäinen kunta, mutta paikka on edelleen olemassa kylänä Satakunnassa ja sen historialliset kohteet ovat säilyneet. Kartalla raja on siis kadonnut, mutta kylä ei. Siivin katsottuna rajat ovat muutenkin pelkkää väriä.",
+  "linkit": [
+   "Porin",
+   "kuntaliitos"
+  ],
+  "jatkot": [
+   "Miksi kuntia on yhdistetty Suomessa?",
+   "Missä Satakunta sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kysymys": "Mitä Noormarkun ruukin alueella voi nähdä?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tähän riittää nähtävää. Ruukin puistoalueella on paljon kulttuurihistoriallisesti arvokkaita rakennuksia, ja se on Noormarkun suosituin nähtävyys. Alueeseen liittyy myös [[Alvar Aallon]] suunnittelema [[Villa Mairea]], joka tunnetaan modernin arkkitehtuurin merkkiteoksena. Tarkkoja rakennuksia ja aukioloaikoja en ole varma, joten ajantasaisen tiedon kannattaa tarkistaa paikan omilta sivuilta. Alueen omistaa nykyisin A. Ahlström Osakeyhtiö. Puisto on vihreä ja kauniimpi kuin yksikään kaupungin katto.",
+  "linkit": [
+   "Alvar Aallon",
+   "Villa Mairea"
+  ],
+  "jatkot": [
+   "Kuka oli arkkitehti Alvar Aalto?",
+   "Mitä modernismi tarkoittaa arkkitehtuurissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kysymys": "Miksi ruukkiyhteisö tarvitsi hyvät tiet 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Ruukin ja sahan toiminta perustui painaviin ja isoihin kuormiin, kuten rautaan ja puutavaraan, joita oli kuljetettava hevosilla ja kärryillä. Siksi tarvittiin hyvä [[tieverkko]], jotta raaka-aineet saapuivat tehtaalle ja valmiit tuotteet pääsivät eteenpäin. Noormarkussa Antti Ahlström rakennutti [[tieverkkoa]] kylän kehittämiseksi, mikä kuvastaa sitä, kuinka tärkeä yhteys oli teollisen toiminnan edellytys. Kyllä tiet ovat tärkeitä, vaikka kyyhky itse lentää ylitse.",
+  "linkit": [
+   "tieverkko",
+   "tieverkkoa"
+  ],
+  "jatkot": [
+   "Miten tavaraa kuljetettiin ennen rautateitä?",
+   "Mitä saha tekee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kysymys": "Miksi tehtaat rakennettiin juuri Varkauteen, salmien ja koskien äärelle?",
+  "uusi": false,
+  "vastaus": "Ai se. Varkaus kehittyi 1800-luvun aikana merkittäväksi teollisuuskeskukseksi, koska siellä oli saatavilla [[vesivoiman]] lähde ja hyvä sijainti vesireitin varrella. Vesivoimaa voitiin käyttää koneiden käyttövoimana, ja [[Saimaan]] vesiteitä pitkin raaka-aineet ja tuotteet pääsivät liikkumaan. Varkaudessa oli puu- ja paperiteollisuutta sekä laivanrakennusta. Kaupungin sijainti salmilla teki siitä luontevan teollisuuspaikan, ja kulkureitit yhdistyivät [[Taipaleen kanavan]] kautta. Hyvä paikka tehtaalle, ei ehkä pesälle.",
+  "linkit": [
+   "vesivoiman",
+   "Saimaan",
+   "Taipaleen kanavan"
+  ],
+  "jatkot": [
+   "Miten vesivoimaa muutetaan sähköksi?",
+   "Mikä Saimaa on ja miten se syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kysymys": "Mitä sulkukanava tekee, ja miksi Taipaleen kanava oli tärkeä?",
+  "uusi": false,
+  "vastaus": "No niin, ihan selvä juttu. Sulkukanava on vesiväylä, jossa alus nostetaan tai lasketaan sulkujen avulla vesistön eri korkeuksien välillä. Taipaleen kanava oli ensimmäinen Suomessa rakennettu sulkukanava, ja se yhdisti [[Leppävirran]] reitin [[Saimaan]] vesiteihin. Tämä laajensi laivaliikenteen mahdollisuuksia ja helpotti kuljetuksia seudulla. Tarkempia teknisiä yksityiskohtia, kuten sulkujen mittoja, en ole varma. Vesi kulkee ylös ja alas, ja kyyhky vain katsoo kiinnostuneena.",
+  "linkit": [
+   "Leppävirran",
+   "Saimaan"
+  ],
+  "jatkot": [
+   "Miten kanavan sulku toimii vaihe vaiheelta?",
+   "Mitä muita kanavia Suomessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kysymys": "Mitä sana varkaus tarkoitti vanhassa suomessa?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tää on hauska. Vanhassa suomessa sana varkaus tarkoitti [[salmea]], ja nimi sopii kaupunkiin, joka sijaitsee [[Saimaan]] kahden osan välisillä salmilla. Nykysuomessa sana tarkoittaa varastamista, joten merkitys on muuttunut aikojen kuluessa. Tarkkaa sanahistoriaa ja sen vaiheita en ole varma, joten jätän ne mainitsematta. Kaupungin nimi kertoo siis maantieteestä eikä rikoksista. Kyyhky ei kyllä koskaan ole varastanut kuin pullanmuruja.",
+  "linkit": [
+   "salmea",
+   "Saimaan"
+  ],
+  "jatkot": [
+   "Miten kielen sanojen merkitykset muuttuvat?",
+   "Mitä muita paikannimiä salmi on antanut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kysymys": "Kuka oli Walter Ahlström ja millaista kaupunkia hän halusi rakentaa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Walter Ahlström oli [[Antti Ahlströmin]] poika, ja Varkauden ruukki siirtyi 1900-luvun alussa [[A. Ahlström Osakeyhtiölle]]. Hän halusi rakentaa tehtaiden ympärille kokonaisen teollisuuskaupungin, jossa työ, asuminen ja palvelut muodostaisivat yhtenäisen kokonaisuuden. Varkaus tuli itsenäiseksi kauppalaksi vuonna 1929 ja kaupungiksi vuonna 1962. Hänen henkilöhistoriastaan en ole varma muita yksityiskohtia, joten niitä en lisää. Ei paha suunnitelma, jos kyyhky saisi päättää, sinne tulisi leipomo.",
+  "linkit": [
+   "Antti Ahlströmin",
+   "A. Ahlström Osakeyhtiölle"
+  ],
+  "jatkot": [
+   "Miksi yritykset rakensivat asuntoja työntekijöilleen?",
+   "Mitä tehtaita Varkaudessa on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kysymys": "Mitä tarkoittaa kauppala ja miten se erosi kaupungista?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä muistan. [[Kauppala]] oli Suomessa kuntamuoto, joka sijoittui [[maalaiskunnan]] ja kaupungin väliin: se oli tiheästi asuttu, kaupallinen tai teollinen taajama, mutta sillä ei ollut kaupungin oikeuksia. Varkaus oli itsenäinen kauppala vuodesta 1929, ja kaupungiksi siitä tuli vuonna 1962. Kauppalat poistuivat lopulta käytöstä kuntalainsäädännön uudistuksen myötä 1970-luvulla, mutta tarkan vuoden en ole varma. Virallisia nimikkeitä riittää, kyyhky erottaa ne huonosti.",
+  "linkit": [
+   "Kauppala",
+   "maalaiskunnan"
+  ],
+  "jatkot": [
+   "Mitkä muut kuntamuodot Suomessa on ollut?",
+   "Milloin Varkaus sai kaupunginoikeudet?"
+  ]
  }
 ]
