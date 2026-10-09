@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "8e2fb63c11487a69",
-  "kansio": "dioraama/olavinlinna/blender/8e2fb63c11487a69/",
+  "hash": "dce1939b72af62b9",
+  "kansio": "dioraama/olavinlinna/blender/dce1939b72af62b9/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2885,8 +2885,8 @@
     },
     {
       "polku": "vaiheet/tyhja-saari.glb",
-      "sha256": "afa48662c62e4c504c286a1525e4c9ee27277e10cf494b85275eeceb87f7b4ca",
-      "tavuja": 1064160
+      "sha256": "9b1d8ffc742f74da73721ffcd3d0cf32ed6efcafc413e04249688043c34f2d70",
+      "tavuja": 1102964
     },
     {
       "polku": "vaiheet/vaiheet.json",
