@@ -131,6 +131,19 @@ namespace Matkakirja.Peli
         public string Valinta => Alku != null ? Url + "#alku=" + Alku : Url;
     }
 
+    /// <summary>
+    /// KAUPUNKIMUSIIKIN JAKSO (omistaja 9.10.2026: "nopea → tauko → hidas → vähäeleinen tausta"): saavuttaessa nopea nykyversio
+    /// kerran, tauko, kaupungin hidas kappale kerran ja sitten vähäeleinen tausta silmukkana. Tunnukset ilman päätettä (MusaPolku).
+    /// Hidas null = kaupungin tavallinen raita (ketjun valinta), Tausta null = Pohjaraita.
+    /// </summary>
+    public sealed class KaupunkiJakso
+    {
+        public string Nopea;
+        public int TaukoMs = 3000;
+        public string Hidas;
+        public string Tausta;
+    }
+
     public sealed class AaniTaulut
     {
         /// <summary>Laudan tunnus (web game.pack.id): natiivi pelaa maailmankarttaa.</summary>
@@ -150,6 +163,8 @@ namespace Matkakirja.Peli
         /// <summary>Pulun tehosteet paketista (nimi → tehoste) lisäysjärjestyksessä; oletuksessa tyhjä.</summary>
         public Dictionary<string, PuluAani> Pulut = new Dictionary<string, PuluAani>();
         public HashSet<string> Kaupunkiraidat = new HashSet<string>();
+        /// <summary>Kaupunkikohtaiset musiikkijaksot (KaupunkiJakso); muut kaupungit soittavat ketjun kuten ennen.</summary>
+        public Dictionary<string, KaupunkiJakso> Jaksot = new Dictionary<string, KaupunkiJakso>();
         public Dictionary<string, string> KaupunginAlue = new Dictionary<string, string>();
         public HashSet<string> Alueraidat = new HashSet<string>();
         public Dictionary<string, string> AlueenMaat = new Dictionary<string, string>();
@@ -226,6 +241,8 @@ namespace Matkakirja.Peli
             t.Kaupunkiraidat.Add("ateena");
             // Vaihe 3 (omistaja 26.9. klo 11.0x): tunnuskaupungit (web KAUPUNKIRAIDAT).
             foreach (var k in new[] { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" }) t.Kaupunkiraidat.Add(k);
+            // Kaupunkijakson pilotti (PT 9.10., omistajan valinta "Pariisi nyt 2: nopea nu-jazz" avaukseen): nopea → 3 s → hidas → pohja.
+            t.Jaksot["pariisi"] = new KaupunkiJakso { Nopea = "musa-kaupunki-pariisi-nopea", TaukoMs = 3000 };
             t.KaupunginAlue["marseille"] = "valimeri";
             foreach (var a in new[] { "britteinsaaret", "pohjola", "keski-eurooppa", "valimeri", "balkan", "ita-eurooppa" }) t.Alueraidat.Add(a);
             void Alue(string alue, params string[] maat) { foreach (var m in maat) t.AlueenMaat[m] = alue; }
