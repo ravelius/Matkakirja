@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "af2f13bfbff521a7",
-  "kansio": "dioraama/olavinlinna/blender/af2f13bfbff521a7/",
+  "hash": "e94eefb2d2a22fe6",
+  "kansio": "dioraama/olavinlinna/blender/e94eefb2d2a22fe6/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -830,7 +830,7 @@
     },
     {
       "polku": "hahmot/vouti-1500-mh.glb",
-      "sha256": "b0faef1e7dfb6b5f167fc916ac16134f642b980574d34f78adcd724331627167",
+      "sha256": "01916ac243bff3f517eb794b62cd5df9f9b4ea274a87e172ed1a00531c47fe43",
       "tavuja": 12694468
     },
     {
