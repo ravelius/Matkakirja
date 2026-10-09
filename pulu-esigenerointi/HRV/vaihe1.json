@@ -1,0 +1,3502 @@
+[
+ {
+  "kohde": "kohde:zagreb",
+  "kysymys": "Miksi kaksi kaupunkia riiteli sillasta?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tää on kyl vanha riita. Gradec ja Kaptol olivat vuosisatoja kaksi eri kaupunkia: [[Gradec]] oli porvarien ja [[Kaptol]] piispan kaupunki, ja niiden välissä virtasi puro. Lähteiden mukaan kiista koski lähinnä valtaa ja etuoikeuksia, mutta yksittäisten riitojen syistä en ole varma. Sillan ylittäneet välikohtaukset olivat niin tavallisia, että katu on yhä nimeltään [[Krvavi most]], Verinen silta. Kaupungit yhdistettiin yhdeksi vasta vuonna 1850, ja siitä lähtien on ollut vain yksi [[Zagreb]]. Ny se on onneks pelkkä katu.",
+  "linkit": [
+   "Gradec",
+   "Kaptol",
+   "Krvavi most",
+   "Zagreb"
+  ],
+  "jatkot": [
+   "Mikä Kaptol on nykyään Zagrebissa?",
+   "Miten Zagrebin kaksi kukkulaa liittyvät toisiinsa nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:zagreb",
+  "kysymys": "Kuka oli ban?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä muistan. Ban oli Kroatian käskynhaltija, hallitsijan nimittämä korkein virkamies, joka johti maata kuninkaan puolesta. Virkanimike on keskiaikainen ja säilyi vuosisatoja. Vuonna 1873 [[Kroatia-Slavonian kuningaskunta]] kuului [[Unkarin kruunun]] alaisuuteen, ja lähteiden mukaan baanin nimitti hallitsija Unkarin hallituksen esityksestä. Samana vuonna virkaan nimitettiin [[Ivan Mažuranić]], joka toimi baanina vuosikymmenen lopulle. Kolme kirjainta, ja vallaa vaikka muille jakaa.",
+  "linkit": [
+   "Kroatia-Slavonian kuningaskunta",
+   "Unkarin kruunun",
+   "Ivan Mažuranić"
+  ],
+  "jatkot": [
+   "Mitä Sabor eli Kroatian maapäivät tekivät?",
+   "Millainen oli Ivan Mažuranić baanina?"
+  ]
+ },
+ {
+  "kohde": "kohde:zagreb",
+  "kysymys": "Mikä oli vuoden 1868 Unkarin ja Kroatian sopimus?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny, tää vaatii vähän kaivelua. Sopimus tunnetaan nimellä [[Nagodba]], ja se solmittiin vuonna 1868 Unkarin ja Kroatian välillä [[Itävalta-Unkarin]] kaksoismonarkian aikana. Sen perusteella Kroatia-Slavonia sai autonomian sisäisissä asioissa, esimerkiksi oikeus-, opetus- ja kirkollisissa kysymyksissä, ja oma maapäivä kokoontui [[Zagrebissa]]. Rahaan, liikenteeseen ja ulkoasioihin liittyvä päätösvalta oli pitkälti Unkarilla, mistä syntyi jatkuvaa kitkaa; yksityiskohtia en ole aivan varma. Paperilla se oli yksinkertaista, käytännössä ei ihan.",
+  "linkit": [
+   "Nagodba",
+   "Itävalta-Unkarin",
+   "Zagrebissa"
+  ],
+  "jatkot": [
+   "Mitä Unkarin ja Kroatian suhteesta tuli myöhemmin?",
+   "Mikä Itävalta-Unkarin kaksoismonarkia oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:zagreb",
+  "kysymys": "Millainen kirkko hallitsee Kaptolin kukkulaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Sen tornit näkyy hyvin ylhäältä. Zagrebin katedraali on [[Neitsyt Marian taivaaseenotolle]] omistettu kirkko Kaptolin kukkulalla. Rakennus on alkujaan goottilainen, ja nykyisen uusgoottilaisen ilmeensä se sai suurelta osin 1800-luvun lopulla, kun sitä korjattiin [[Zagrebin maanjäristyksen]] jälkeen vuonna 1880 arkkitehti [[Hermann Bollén]] johdolla.\n\nMinun kantani katedraaliin on käytännöllinen: tornit ovat erinomaisia maamerkkejä, ja kun niitä on kaksi, perille löytäminen on lähes varmaa. Sukuni on aina pitänyt kirkontornien reunoja hyvinä lepopaikkoina.",
+  "linkit": [
+   "Neitsyt Marian taivaaseenotolle",
+   "Zagrebin maanjäristyksen",
+   "Hermann Bollén"
+  ],
+  "jatkot": [
+   "Mikä Zagrebin maanjäristys vuonna 1880 oli?",
+   "Millainen arkkitehti Hermann Bollé oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:zagreb",
+  "kysymys": "Miksi Zagrebissa ammutaan tykki joka päivä keskipäivällä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tost tulee mieleen pamaus. Tykki laukaistaan joka päivä keskipäivällä [[Lotrščak-tornista]] [[Gradecin]] kukkulalta, ja pamaus kuuluu pitkälle yli vanhankaupungin. Perinne on lähteiden mukaan alkanut 1800-luvun loppupuolella, ja sen tarkoituksena oli alun perin merkitä kaupunkilaisille keskipäivän aikaa. Nykyään laukaus on ennen kaikkea vakiintunut tapa, jonka tuntevat sekä kaupunkilaiset että matkailijat. Meikäläiset ei säpsähdä, ollaan tottuneita.",
+  "linkit": [
+   "Lotrščak-tornista",
+   "Gradecin"
+  ],
+  "jatkot": [
+   "Mikä Lotrščak-torni on ja miksi se on tärkeä?",
+   "Miten keskipäivän tykki liittyy Zagrebin vanhaankaupunkiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:split",
+  "kysymys": "Kuka oli Diocletianus?",
+  "uusi": false,
+  "vastaus": "Kas vaan, suoraan keisarin kimppuun. Diocletianus oli Rooman keisari, joka nousi valtaan vuonna 284 ja jakoi myöhemmin vallan useamman hallitsijan kesken, jotta valtavaa [[Rooman keisarikunnan]] aluetta olisi helpompi johtaa; järjestelyä kutsutaan [[tetrarkiaksi]]. Lähteiden mukaan hän oli kotoisin Dalmatian seudulta. Hänet tunnetaan harvinaisesta teosta: hän luopui vallasta vapaaehtoisesti vuonna 305 ja vetäytyi rakennuttamaansa linnoitettuun palatsiin Adrianmeren rannalle, nykyisen [[Splitin]] kaupungin alueelle. Ei hassumpi eläkeasunto.",
+  "linkit": [
+   "Rooman keisarikunnan",
+   "tetrarkiaksi",
+   "Splitin"
+  ],
+  "jatkot": [
+   "Miksi Diocletianus luopui vallasta vapaaehtoisesti?",
+   "Mikä oli tetrarkia eli neljän hallitsijan järjestelmä?"
+  ]
+ },
+ {
+  "kohde": "kohde:split",
+  "kysymys": "Miltä tuntuisi asua palatsin sisällä?",
+  "uusi": false,
+  "vastaus": "Annas ku katon. Asuminen [[Diocletianuksen palatsissa]] tarkoittaa elämää keskellä kaupunkia, joka on kasvanut vanhojen muurien sisään ja ympärille. Palatsin sisällä on katuja, kauppoja ja koteja, ja siellä asuu yhä tuhansia ihmisiä. Taloja on rakennettu vanhojen seinien väliin ja päälle, joten kodin seinänä voi olla vuosisatoja vanhaa roomalaista kiveä. Keskellä on pylväiden reunustama aukio, [[Peristyyli]], ja keisarin mausoleumista tehty [[Pyhän Dujen katedraali]] kuuluu samaan kokonaisuuteen. Arjesta yksittäisen asukkaan kannalta en osaa sanoa tarkemmin. Ei ihan tavallinen osoite, tunnustan.",
+  "linkit": [
+   "Diocletianuksen palatsissa",
+   "Peristyyli",
+   "Pyhän Dujen katedraali"
+  ],
+  "jatkot": [
+   "Mikä Peristyyli on ja mitä siellä tapahtuu?",
+   "Miten palatsin muurit ja portit ovat säilyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:split",
+  "kysymys": "Kenen mukaan Splitin katedraali on nimetty?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Katedraali on nimetty [[Pyhän Dujen]] mukaan, jonka latinankielinen nimi on Domnius. Hän oli Salonan piispa ja kristitty marttyyri, joka sai surmansa Rooman valtakunnan kristittyjen vainoissa 300-luvun alussa, ja hänet kunnioitetaan Splitin suojelupyhimyksenä. Katedraali toimii keisari [[Diocletianuksen]] entisessä mausoleumissa, ja Pyhän Dujen päivää vietetään kaupungissa toukokuussa. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Pyhän Dujen",
+   "Diocletianuksen"
+  ],
+  "jatkot": [
+   "Milloin Pyhän Dujen päivää vietetään Splitissä?",
+   "Miten mausoleumista tuli kristillinen kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:split",
+  "kysymys": "Mikä kaupunki Salona oli?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Salona oli [[Rooman]] Dalmatian maakunnan tärkeä kaupunki muutaman kilometrin päässä nykyisestä Splitistä. Se tuhoutui 600-luvulla, mutta tuhon tarkoista vaiheista en ole varma, ja kaupungin pakolaiset hakeutuivat läheisen palatsin muurien suojaan, mistä Splitin vanhakaupunki sai alkunsa. Salonan rauniot ovat yhä nähtävissä [[Solinin]] kaupungin alueella, ja alue on arkeologinen kohde, joka kertoo [[Dalmatian]] roomalaisesta ajasta. Ihmiset muutti, kaupunki jäi.",
+  "linkit": [
+   "Rooman",
+   "Solinin",
+   "Dalmatian"
+  ],
+  "jatkot": [
+   "Mitä Salonan raunioilla on nykyään nähtävää?",
+   "Miten Solin liittyy Splitin kaupunkiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:split",
+  "kysymys": "Mistä kivestä Diocletianuksen palatsi rakennettiin?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tähän vastaus on onneksi tiedossa. Palatsin pääasiallinen rakennuskivi oli lähteiden mukaan valkoinen kalkkikivi läheiseltä [[Bračin]] saarelta. Lisäksi palatsiin tuotiin marmoria ja koristeaineksia kauempaa, ja [[Peristyylin]] aukiolla on yhä yksi Egyptistä tuotu sfinksi. Tarkkoja osuuksia eri kivilajeille en ole varma, mutta Bračin kivi oli se, joka hallitsi. Kantaisin mieluummin kirjeitä kuin kiviä.",
+  "linkit": [
+   "Bračin",
+   "Peristyylin"
+  ],
+  "jatkot": [
+   "Millainen saari Brač on?",
+   "Mistä sfinksit Diocletianuksen palatsiin tuotiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:rijeka",
+  "kysymys": "Miten torpedo toimi?",
+  "uusi": false,
+  "vastaus": "Katotaas, tähän tarvitaan vähän insinöörin päätä. Rijekassa kehitetty torpedo oli veden alla kulkeva, räjähdyspanoksella varustettu laite, jota ajoi [[paineilmalla]] toimiva moottori. Idean oli alun perin piirtänyt itävaltalainen upseeri [[Giovanni Luppis]], ja englantilainen insinööri [[Robert Whitehead]] sai sen kulkemaan vuonna 1866 suoraa linjaa veden alla; ratkaisevaa oli mekanismi, joka piti laitteen sovitussa syvyydessä. Tarkkaa rakennetta ja ensimmäisten mallien nopeuksia en ole varma, mutta periaate oli, että laite kulki itse kohti kohdetta ja räjähti osuessaan. Onpas siitä pitkä aika.",
+  "linkit": [
+   "paineilmalla",
+   "Giovanni Luppis",
+   "Robert Whitehead"
+  ],
+  "jatkot": [
+   "Miten torpedon syvyyden säätö toimi?",
+   "Milloin torpedo yleistyi laivastoissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:rijeka",
+  "kysymys": "Mikä oli corpus separatum?",
+  "uusi": false,
+  "vastaus": "No jopas, latinaa. Latinaksi nimi tarkoittaa erillistä ruumista eli erillisaluetta. Rijeka oli sellainen: kaupunki oli liitetty suoraan [[Unkarin kruunuun]] eikä kuulunut ympäröivään Kroatiaan, joten Unkarilla oli sen kautta oma pääsy [[Adrianmerelle]]. Asema juontaa lähteiden mukaan juurensa 1700-luvun lopulle, mutta sen tulkinnasta Unkari ja Kroatia olivat eri mieltä, enkä osaa kertoa riidan yksityiskohtia luotettavasti. Latinaa on suvussa puhuttu, joten tää oli helppo.",
+  "linkit": [
+   "Unkarin kruunuun",
+   "Adrianmerelle"
+  ],
+  "jatkot": [
+   "Miksi Unkarille oli tärkeää päästä merelle?",
+   "Milloin Rijeka lakkasi olemasta erillisalue?"
+  ]
+ },
+ {
+  "kohde": "kohde:rijeka",
+  "kysymys": "Minkä lahden rannalla Rijeka on?",
+  "uusi": true,
+  "vastaus": "Ai tota, ylhäältä se näyttää hyvältä. Rijeka sijaitsee [[Kvarnerinlahden]] pohjukassa Adrianmeren pohjoisosassa, Istrian niemimaan itäpuolella. Lahdessa on useita saaria, muun muassa [[Krk]], [[Cres]] ja [[Lošinj]], ja ne tekevät rannikosta hyvin rikkonaisen.\n\nYlhäältä saaret näyttävät pullanmuruilta, ja minulle se on ammatillinen vaisto. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimeä.",
+  "linkit": [
+   "Kvarnerinlahden",
+   "Krk",
+   "Cres",
+   "Lošinj"
+  ],
+  "jatkot": [
+   "Millaisia saaria Krk ja Cres ovat?",
+   "Mikä Istrian niemimaa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:rijeka",
+  "kysymys": "Miksi Rijekaa kutsutaan myös nimellä Fiume?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: nimiä on kaksi. Rijeka tarkoittaa kroatiaksi jokea, ja Fiume on saman sanan italiankielinen vastine. Nimi viittaa [[Rječina]]-jokeen, joka virtaa kaupungin kautta mereen. Italian kieltä on Rijekassa puhuttu pitkään, ja nimi Fiume oli historiallisesti laajasti käytössä myös [[Itävalta-Unkarin]] aikana; sen käytöstä eri aikoina en tiedä tarkemmin. Minulla on vaan yksi nimi, ja sekin on latinaa.",
+  "linkit": [
+   "Rječina",
+   "Itävalta-Unkarin"
+  ],
+  "jatkot": [
+   "Mikä on Rječina-joki?",
+   "Mitä kieliä Rijekassa on puhuttu?"
+  ]
+ },
+ {
+  "kohde": "kohde:rijeka",
+  "kysymys": "Kenelle Whitehead myi torpedojaan?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin, tähän on pari varmaa palaa. Whitehead perusti torpedojen valmistusta varten tehtaan Rijekaan, ja keksintö kiinnosti pian monia merivoimia Euroopassa. Lähteiden mukaan torpedoja ja valmistuslupia myytiin 1870-luvulla muun muassa [[Britannian kuninkaalliselle laivastolle]] ja [[Itävalta-Unkarin]] merivoimille sekä useille muille eurooppalaisille laivastoille. Tarkkoja ostajamääriä ja vuosilukuja en ole varma. Aikaa on kulunut, ja kaupunki on rauhoittunut.",
+  "linkit": [
+   "Britannian kuninkaalliselle laivastolle",
+   "Itävalta-Unkarin"
+  ],
+  "jatkot": [
+   "Mikä Whiteheadin tehdas Rijekassa oli?",
+   "Miten torpedoa kehitettiin 1800-luvun lopulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:zadar",
+  "kysymys": "Mikä oli forum?",
+  "uusi": false,
+  "vastaus": "Kato, tää on helppo: Rooman perintöä. Forum oli roomalaisen kaupungin keskusaukio ja sen jokapäiväisen elämän keskus. Siellä pidettiin puheita, kuljettiin juhlakulkueissa, hoidettiin kauppoja ja käytiin oikeutta, ja aukion ympärillä oli temppeleitä ja hallintorakennuksia. Tunnetuin on [[Forum Romanum]] Roomassa, mutta forum rakennettiin myös maakuntakaupunkeihin, esimerkiksi [[Zadariin]], jossa roomalainen forum on yhä näkyvissä keskustassa ja jonka kivistä pystytettiin 800-luvulla [[Pyhän Donatuksen kirkko]]. Siis niin kuin tori, mut marmorilla.",
+  "linkit": [
+   "Forum Romanum",
+   "Zadariin",
+   "Pyhän Donatuksen kirkko"
+  ],
+  "jatkot": [
+   "Mikä oli Rooman Forum Romanum?",
+   "Mitä Zadarin roomalaisesta forumista on jäljellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:zadar",
+  "kysymys": "Mistä maraskino tehdään?",
+  "uusi": false,
+  "vastaus": "Mmm— kirsikkaa, hyvä. Maraskino on kirsikkalikööri, joka valmistetaan [[marasca]]-hapankirsikasta, jota kasvatetaan [[Dalmatian]] rannikolla. Lähteiden mukaan valmistuksessa käytetään hedelmien lisäksi myös kiviä, minkä jälkeen neste tislataan, makeutetaan ja annetaan kypsyä. Tarkkaa reseptiä en ole varma, koska valmistajat pitävät omansa omana tietonaan. Cocktailkirsikat ovat eri tuote. [[Zadarissa]] likööriä valmistettiin tehdasmaisesti vuodesta 1821. Ei pullaa, mut kirsikkaa kuitenkin.",
+  "linkit": [
+   "marasca",
+   "Dalmatian",
+   "Zadarissa"
+  ],
+  "jatkot": [
+   "Mikä on marasca-kirsikka?",
+   "Miten maraskinoa on käytetty ruoanlaitossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:zadar",
+  "kysymys": "Mikä on Zadarin meriurut?",
+  "uusi": true,
+  "vastaus": "Ai se, sen kuulen aina kun lennän ohi. Meriurut ovat satamapromenadilla sijaitseva arkkitehtuuriteos, jonka suunnitteli arkkitehti [[Nikola Bašić]] ja joka avattiin vuonna 2005. Marmoriportaiden alla on putkia, ja [[Adrianmeren]] aaltojen liike työntää niihin ilmaa, jolloin syntyy sointuja. Soinnut vaihtelevat meren mukaan, joten sama paikka ei soi kahdesti samalla tavalla.\n\nMinä pidän siitä, että aallot soittavat ilman kapellimestaria. Jos joku kysyy, mikä kaupunki kuulostaa parhaalta ylhäältä, vastaan tämä.",
+  "linkit": [
+   "Nikola Bašić",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Kuka Nikola Bašić on?",
+   "Mikä on Aurinkoa tervehtimään -teos Zadarissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:zadar",
+  "kysymys": "Miten Pyhän Donatuksen kirkko sai nimensä?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo jotain. Pyhän Donatuksen kirkko on nimetty [[piispa Donatuksen]] mukaan, jonka kerrotaan rakennuttaneen kirkon 800-luvulla ja joka oli [[Zadarin]] piispa. Lähteiden mukaan kirkko oli alun perin omistettu pyhälle kolminaisuudelle ja Donatuksen nimi tuli käyttöön vasta myöhemmin, mutta tämän ajankohdasta en ole varma. Kirkko on pyöreä ja rakennettu [[roomalaisen forumin]] kivistä, joten seinistä voi yhä lukea roomalaisia kirjoituksia. Pyöreä kirkko, helppo kiertää lentäen.",
+  "linkit": [
+   "piispa Donatuksen",
+   "Zadarin",
+   "roomalaisen forumin"
+  ],
+  "jatkot": [
+   "Millaista roomalaista kirjoitusta kirkon seinissä on?",
+   "Miksi kirkko rakennettiin pyöreäksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:zadar",
+  "kysymys": "Kuka hallitsi Zadaria ennen kuin Itävalta sai sen?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tähän tarvitaan koko historiakirja. Zadaria hallitsi vuosisatoja [[Venetsian tasavalta]]: lähteiden mukaan kaupunki joutui Venetsian vallan alle 1400-luvun alussa ja pysyi sen hallinnassa vuoteen 1797, jolloin tasavalta lakkasi ja alue siirtyi [[Habsburgien]] Itävallalle. Aiemmin Zadar oli kuulunut vuorotellen muun muassa Unkarin ja Kroatian kuninkaille sekä Venetsialle, sillä kaupunki vaihtoi herraa usein, eivätkä lähteet ole aina yhtä mieltä vaiheista. Itävallan hallinnon aikana Zadar oli [[Dalmatian]] hallinnollinen keskus. Monta lippua on nähty, taivas pysyy samana.",
+  "linkit": [
+   "Venetsian tasavalta",
+   "Habsburgien",
+   "Dalmatian"
+  ],
+  "jatkot": [
+   "Mikä oli Venetsian tasavalta?",
+   "Mitä tapahtui Zadarille ennen Venetsian valtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:osijek",
+  "kysymys": "Miten kahdeksan kilometrin puusilta rakennettiin?",
+  "uusi": false,
+  "vastaus": "Mmm— tästä on tarkkoja tietoja harvassa. [[Suleiman Suuren]] insinöörit rakensivat vuonna 1566 [[Dravan]] soiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä. Rakennus liittyi lähteiden mukaan sulttaanin sotaretkeen Unkariin, ja sen oli tarkoitus mahdollistaa armeijan kulku soiden yli. Rakennustekniikan yksityiskohdista en ole varma, mutta aikalaiset ihailivat työtä niin, että sitä kutsuttiin maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana. Kahdeksan kilometriä puuta, ei paha urakka.",
+  "linkit": [
+   "Suleiman Suuren",
+   "Dravan"
+  ],
+  "jatkot": [
+   "Kuka oli Suleiman Suuri?",
+   "Mitä Szigetvárin piiritys oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:osijek",
+  "kysymys": "Mitä varten Tvrđa rakennettiin?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Itävaltalaiset rakensivat linnoituksen sen jälkeen, kun [[Habsburgien]] joukot olivat ajaneet [[osmanit]] pois Osijekista 1600-luvun lopulla. Tarkoitus oli suojata kaupunkia ja koko rajaseutua mahdolliselta uudelta hyökkäykseltä sekä pitää hallussa tärkeä ylityspaikka Dravan yli; rakentaminen alkoi lähteiden mukaan 1700-luvun alussa. Linnoitus on barokkityylinen ja seisoo yhä, ja nykyään se on osa kaupunkia, jossa asutaan ja vietetään aikaa. Seisoo yhä, ei kaikki pysy pystyssä.",
+  "linkit": [
+   "Habsburgien",
+   "osmanit"
+  ],
+  "jatkot": [
+   "Mitä Osijekin Tvrđassa voi nähdä nykyään?",
+   "Miten osmanit hallitsivat Osijekia?"
+  ]
+ },
+ {
+  "kohde": "kohde:osijek",
+  "kysymys": "Mihin jokeen Drava laskee?",
+  "uusi": true,
+  "vastaus": "No niin, joet minä tunnen ylhäältä. Drava on [[Tonavaan]] laskeva sivujoki, joka saa alkunsa [[Alpeilta]], virtaa Itävallan ja Slovenian kautta ja muodostaa pitkän osan Kroatian ja Unkarin rajasta. Se yhtyy Tonavaan Osijekin itäpuolella, lähellä Aljmašin kylää. Lähellä laskukohtaa on [[Kopački rit]] -luonnonpuisto, laaja kosteikkoalue. Kyl joki jaksaa lähteä kauas.",
+  "linkit": [
+   "Tonavaan",
+   "Alpeilta",
+   "Kopački rit"
+  ],
+  "jatkot": [
+   "Mikä Kopački rit on?",
+   "Minkä maiden läpi Tonava virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:osijek",
+  "kysymys": "Mikä alue Slavonia on?",
+  "uusi": true,
+  "vastaus": "Ai tota, sehän on tämän seudun nimi. Slavonia on Kroatian itäosan tasankoalue [[Savan]], [[Dravan]] ja [[Tonavan]] välissä, ja Osijek on sen keskeisiä kaupunkeja. Alue on viljavaa maatalousmaata ja tunnetaan laajoista tammimetsistä; lähteiden mukaan [[Slavonian tammesta]] on perinteisesti valmistettu muun muassa viinitynnyreitä. Tasaista maata, helppo lentää.",
+  "linkit": [
+   "Savan",
+   "Dravan",
+   "Tonavan",
+   "Slavonian tammesta"
+  ],
+  "jatkot": [
+   "Mitä Slavonian tammi tarkoittaa?",
+   "Mikä on Baranja?"
+  ]
+ },
+ {
+  "kohde": "kohde:osijek",
+  "kysymys": "Mitä ruokaa Osijekin seudulla syödään?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo, vatsa kurisee jo. Osijekin seudulla eli Slavoniassa ja [[Baranjassa]] tunnetaan etenkin [[kulen]], paprikalla maustettu säilykemakkara, sekä [[fiš-paprikaš]], paprikalla maustettu kalakeitto, jota perinteisesti keitetään padassa jokikalasta. Paprika on alueen ruoanlaitossa tärkeä mauste, ja ruoat ovat usein reheviä ja tulisia. Tarkempaa reseptiä tai ruokien alkuperää en ole varma, ja monella perheellä on oma versionsa.\n\nKalakeitto padassa kuulostaa hyvältä, mutta sanon suoraan, että minun makuuni sopisi paremmin paikallinen leivonnainen. En vaan tiedä, mikä se on, enkä aio arvata.",
+  "linkit": [
+   "Baranjassa",
+   "kulen",
+   "fiš-paprikaš"
+  ],
+  "jatkot": [
+   "Mistä kulen-makkara on tehty?",
+   "Miten fiš-paprikaš valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:dinara",
+  "kysymys": "Mitä karsti tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kivikin voi sulaa, jos sille antaa aikaa. Karsti on maanpinnan muoto, joka syntyy, kun sadevesi liuottaa hitaasti [[kalkkikiveä]] tai muuta helposti liukenevaa kiveä. Vesi syövyttää kallioon rakoja, jotka laajenevat ajan mittaan rotkoiksi, kuiluiksi ja luoliksi, ja pinta jää usein paljaaksi, koska vesi katoaa maan alle. Siksi karstialueella joet voivat kulkea osan matkaansa maanalaisina, kuten Dinaaristen alppien alueella. Serbialainen maantieteilijä [[Jovan Cvijić]] väitteli aiheesta Wienin yliopistossa vuonna 1893, ja hänen työtään pidetään karstitutkimuksen uranuurtajana. Karstin tutkimus alkoi siis juuri tästä osasta [[Dinaaristen alppien]] maailmaa. Ei paha kyyhkyltä, joka ei edes kuulu kivenmurtajiin.",
+  "linkit": [
+   "kalkkikiveä",
+   "Jovan Cvijić",
+   "Dinaaristen alppien"
+  ],
+  "jatkot": [
+   "Minne maan alle kadonnut joki päätyy?",
+   "Miten luolat syntyvät kalkkikiveen?"
+  ]
+ },
+ {
+  "kohde": "kohde:dinara",
+  "kysymys": "Miksi kokonainen vuoristo on nimetty yhden huipun mukaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Nimistä ei aina löydy tarkkaa syytä. Dinaaristen alppien nimi on lähtöisin [[Dinara]]-vuoresta, jonka korkein huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Nimi siirtyi vuorelta koko Adrianmeren itärantaa seuraavalle vuoristolle, joka ulottuu Sloveniasta Albaniaan. Vuoristoja nimetään usein jonkin tunnetun tai hyvin näkyvän kohteen mukaan, mutta en ole varma, miksi juuri Dinara valikoitui koko jonon nimeksi. Luotettavasti voidaan sanoa vain, että nimi on vuoren ja vuoristo on saanut sen siltä. Vuoriston kivi on suurelta osin kalkkikiveä, ja siksi alue on tunnettu [[karstista]].No, jonkun huipun nimi pitää aina jäädä historiaan.",
+  "linkit": [
+   "Dinara",
+   "karstista"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Dinaaristen alppien vuoristo on?",
+   "Mitä muuta Dinaaristen alppien alueella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:dinara",
+  "kysymys": "Minne maan alle kadonnut joki päätyy?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Joet eivät katoa mihinkään, ne vain vaihtavat reittiä. Karstialueella joen vesi valuu rakoihin ja kuiluihin ja jatkaa matkaansa maanalaisissa käytävissä, jotka vesi on itse liuottanut kalkkikiveen. Usein vesi purkautuu myöhemmin maan pinnalle lähteenä tai virtaa edelleen toiseen jokeen tai mereen, mutta tarkka reitti vaihtelee paikasta toiseen ja sitä voidaan selvittää esimerkiksi värjäämällä vettä. [[Dinaran]] alueella ilmiö on tuttu: maanalaiset vedet kulkevat [[luolastoissa]], joihin ihminen ei aina pääse. Siksi karstialueen vesistöt ovat vaikeita tutkia ja helppoja saastuttaa, sillä kivi ei suodata vettä juuri lainkaan. Ja minä kun luulin, että vain posti katoaa.",
+  "linkit": [
+   "Dinaran",
+   "luolastoissa"
+  ],
+  "jatkot": [
+   "Miten karstialueen vesi pysyy puhtaana?",
+   "Millaisia luolia Dinaaristen alppien alueella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:dinara",
+  "kysymys": "Miten luolat syntyvät kalkkikiveen?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tästä minä olen kuullut tarinoita. Sadevesi imee ilmasta ja maaperästä hiilidioksidia ja muuttuu hieman happamaksi, jolloin se liuottaa [[kalkkikiveä]]. Vesi virtaa kallion rakoihin ja laajentaa niitä vuosituhansien ja satojentuhansien vuosien kuluessa, kunnes rakoihin syntyy käytäviä ja saleja. Kun luolaan tippuva vesi myöhemmin luovuttaa liuenneen kalkin takaisin, syntyvät [[tippukivet]], eli kattoa kohti kasvavat ja lattiasta nousevat kivipylväät. Prosessi on hidas, eikä sen tarkkaa kestoa voi sanoa yleisesti. Dinaaristen alppien [[karstialue]] on täynnä tällaisia luolia ja kuiluja. Itse pidän katosta, jossa on tilaa istua.",
+  "linkit": [
+   "kalkkikiveä",
+   "tippukivet",
+   "karstialue"
+  ],
+  "jatkot": [
+   "Miten tippukivet kasvavat?",
+   "Elääkö luolissa omia eläinlajejaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:dinara",
+  "kysymys": "Millaista elämää karstimaisemassa on?",
+  "uusi": true,
+  "vastaus": "No niin, hyvä kysymys tuo. Karstimaisema on ensi silmäyksellä karu, mutta elämää löytyy sieltä yllättävän paljon. Pinnalla maaperä on ohutta ja vesi valuu nopeasti rakoihin, joten kasvillisuus on usein niukkaa ja kuivuutta kestävää, ja kalliorakoihin juurtuu sitkeitä kasveja. Maan alla luolissa elää eläimiä, jotka ovat sopeutuneet pimeään, kuten [[olmi]], sokea luolasalamanteri, jonka elinalueeseen kuuluu myös Dinaaristen alppien karstia. En ole varma, missä kaikkialla sitä tavataan. Kaiken kaikkiaan vesi, kivi ja pimeys luovat [[luolastojen]] ja kuilujen ympärille omat ekosysteeminsä. Kyyhkynä minä pidän ilmasta.",
+  "linkit": [
+   "olmi",
+   "luolastojen"
+  ],
+  "jatkot": [
+   "Mikä on olmi?",
+   "Miten kasvit selviävät ohuessa maaperässä?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveti-jure",
+  "kysymys": "Miltä näyttää, kun vuori nousee suoraan merestä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Tuon kuvan minä tunnen katolta. [[Biokovon]] vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure, 1762 metriä, on vain muutaman kilometrin päässä aallonmurtajasta. Rinne on seinämäinen, ja samassa vuoressa kohtaavat kaksi ilmastoa: rannalla kasvaa viikunoita, mutta huipulla voi olla lunta vielä huhtikuussa. Selkeällä säällä huipulta näkyy toiselle puolelle [[Adrianmerta]], Italian rannikolle asti. Huipulle rakennetun [[kappelin]] pyhä Yrjö on antanut vuorelle sen nimen.\n\nKroatian rannikolla on varmasti omat pullansa, mutta en tiedä, mikä niistä on se oikea. Silti tuo näkymä jäisi mieleen ilman pullaakin.",
+  "linkit": [
+   "Biokovon",
+   "Adrianmerta",
+   "kappelin"
+  ],
+  "jatkot": [
+   "Miksi huipulla on lunta vielä huhtikuussa?",
+   "Millaista kasvillisuutta Biokovolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveti-jure",
+  "kysymys": "Kuka oli pyhä Yrjö?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tarina on vanha. Pyhä Yrjö oli perimätiedon mukaan [[Rooman armeijan]] sotilas, joka kuoli kristittynä marttyyrina noin 300-luvun alussa [[Diocletianuksen]] vainojen aikaan. Tarkkoja elämäntapahtumia ei tunneta varmasti, ja lähteet ovat osin legendaa. Tunnetuin kertomus, jossa Yrjö surmaa [[lohikäärmeen]], on peräisin keskiajalta eikä kuulu varhaisimpiin lähteisiin. Hänestä tuli monen maan ja kaupungin suojeluspyhimys, muun muassa Englannin. Siksi hänen nimeään kantavia kappeleita ja kirkkoja löytyy ympäri Eurooppaa, myös Biokovon huipulta. Ja minä kun luulin, että Yrjö oli vain ratsastaja.",
+  "linkit": [
+   "Rooman armeijan",
+   "Diocletianuksen",
+   "lohikäärmeen"
+  ],
+  "jatkot": [
+   "Miksi Yrjö on Englannin suojeluspyhimys?",
+   "Mistä lohikäärmetarina on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveti-jure",
+  "kysymys": "Miksi huipulla on lunta vielä huhtikuussa?",
+  "uusi": true,
+  "vastaus": "Kato, ihan yksinkertainen juttu. Ilma viilenee korkeuden mukana, yleensä noin puoli astetta jokaista sataa metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Kun [[Sveti Jure]] kohoaa 1762 metriin ja rannikko on lähellä merenpintaa, lämpötilaero rannan ja huipun välillä on useita asteita. Talvella huipulle kertyy lunta, jota keväinen aurinko ei ehdi sulattaa pois ennen huhtikuuta. Rannalla on lämmintä, ja [[viikunoita]] kasvaa, sillä [[Adrianmeri]] tasoittaa lämpötilaa. Vuoristo on myös tuulinen, mikä hidastaa sulamista. Jos kyyhky saisi päättää, lumi tulisi vasta joulukuussa.",
+  "linkit": [
+   "Sveti Jure",
+   "viikunoita",
+   "Adrianmeri"
+  ],
+  "jatkot": [
+   "Miten viikuna kestää Välimeren kuivaa kesää?",
+   "Mikä on Biokovon luonnonpuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveti-jure",
+  "kysymys": "Mikä on Adrianmeri?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Katolta se näkyy hyvin. Adrianmeri on Välimeren pohjoinen sivumeri, joka sijaitsee Italian niemimaan ja Balkanin niemimaan välissä. Sen itäranta on Kroatian, Slovenian, Montenegron ja Albanian puolella vuorista ja saaria täynnä, kun taas länsiranta Italian puolella on matalampi. [[Venetsia]] on sen pohjukassa. Selkeällä säällä [[Sveti Juren]] huipulta voi nähdä Italian rannikon toiselta puolelta. Sen rannoilla puhutaan eri kieliä, mutta samat tuulet puhaltavat kaikille.",
+  "linkit": [
+   "Venetsia",
+   "Sveti Juren"
+  ],
+  "jatkot": [
+   "Millaiset tuulet Adrianmerellä puhaltavat?",
+   "Miksi Adrianmeren itäranta on niin saarten täyttämä?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveti-jure",
+  "kysymys": "Miksi viikuna viihtyy Välimeren rannikolla?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Viikuna on kotoisin lämpimiltä seuduilta ja viihtyy siellä, missä talvet ovat leutoja ja kesät pitkiä ja aurinkoisia. Välimeren ilmasto sopii sille, sillä [[viikunapuu]] kestää kuivuutta ja pärjää kivisessäkin maassa, koska sen juuret etsivät vettä syvältä. Hieman viileämmällä seudulla puu voi paleltua talvella, ja siksi viikunoita ei Suomessa näe pihoilla, ellei niitä suojaa. Makarskan rannikolla ilmasto on kuitenkin sen verran suotuisa, että viikunoita kasvaa aivan meren äärellä, kun taas [[Biokovon]] huipulla on lunta huhtikuussa. Kyllä viikuna kelpaisi minullekin, mutta pulla on parempi.",
+  "linkit": [
+   "viikunapuu",
+   "Biokovon"
+  ],
+  "jatkot": [
+   "Mitä muuta Välimeren ilmastossa kasvaa?",
+   "Miten viikunoita käytetään ruoanlaitossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:vaganski-vrh",
+  "kysymys": "Mikä on bura?",
+  "uusi": false,
+  "vastaus": "Kato, tuo tuuli on tuttu. Bura on kylmä laskutuuli, joka syöksyy talvella [[Velebitin]] vuorijonon yli kohti Adrianmerta. Kylmä ilma virtaa vuoren rinnettä alas ja kiihtyy solissa niin kovaksi, että se voi kaataa kuormia ja pysäyttää lautat. Tuuli on myös tärkeä osa paikallista ruokakulttuuria: Pagin saarella bura kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumet ohuella suolakerroksella. Lampaiden maito saa siitä suolaisen ja yrttisen maun, joka siirtyy kovaan, pitkään kypsytettyyn juustoon nimeltä [[Paški sir]]. Kroatiassa se kuuluu arvostetuimpiin juustoihin. Tuuli sekä kaataa että ruokkii.",
+  "linkit": [
+   "Velebitin",
+   "Paški sir"
+  ],
+  "jatkot": [
+   "Mikä on laskutuuli?",
+   "Missä muualla Euroopassa on vastaavia tuulia?"
+  ]
+ },
+ {
+  "kohde": "kohde:vaganski-vrh",
+  "kysymys": "Miksi vuorijono erottaa rannikon sisämaasta?",
+  "uusi": false,
+  "vastaus": "No niin, selitän. [[Velebit]] on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja se kohoaa meren ja sisämaan väliin niin, että yli pääseminen vaatii solia tai kiertämistä. Vuoriston kaksi puolta eroavat selvästi: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Ilmastokin eroaa, sillä jono estää merellisen ja sisämaan ilman vapaan sekoittumisen, ja talvella sen yli syöksyy [[bura]]-tuuli. Siksi rannikolla ja sisämaassa ovat omat luontonsa ja omat tapansa, eikä niitä ole aina yhdistänyt kuin tuuli. Kyyhky lentää muurin yli, mutta kuorma-auto joutuu odottamaan.",
+  "linkit": [
+   "Velebit",
+   "bura"
+  ],
+  "jatkot": [
+   "Millaisia solia Velebitin yli kulkee?",
+   "Miksi meren puoli on paljasta kiveä?"
+  ]
+ },
+ {
+  "kohde": "kohde:vaganski-vrh",
+  "kysymys": "Mikä on laskutuuli?",
+  "uusi": true,
+  "vastaus": "Ai se. Sehän on yksinkertaista. Laskutuuli on tuuli, joka syntyy, kun vuoren rinteellä tai korkealla tasangolla viilentynyt raskas ilma valuu alaspäin painovoiman vetämänä. Kun ilma laskeutuu, se voi kiihtyä, etenkin soissa ja laaksoissa, jotka pakottavat sen kapeaan väylään. Tuulen lämpötila riippuu alkuperäisestä ilmasta: kylmästä ilmasta syntyy kylmä tuuli, kuten Adrianmeren rannikon [[bura]], joka syöksyy [[Velebitin]] yli talvella. Lämmin föhn-tuuli on eri ilmiö. Minä en ole koskaan tykännyt tuulesta, joka tulee takaa.",
+  "linkit": [
+   "bura",
+   "Velebitin"
+  ],
+  "jatkot": [
+   "Mikä on föhn-tuuli?",
+   "Miksi bura on erityisen voimakas Adrianmerellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:vaganski-vrh",
+  "kysymys": "Miksi voimakas tuuli pysäyttää lautat?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Eikö kyyhky tiedä? Lautat on tehty kulkemaan tasaisessa merenkäynnissä, ja kun [[bura]] puhaltaa kovaa, meri nousee aaltoon ja laituriin kiinnittyminen vaikeutuu. Aallokko heittelee alusta, ja kova sivutuuli voi kaataa kuormia ja ajoneuvoja, joten liikenne keskeytetään matkustajien ja lastin turvallisuuden vuoksi. Tuuli on voimakkainta [[Velebitin]] tuntumassa ja solissa, joissa laskutuuli kiihtyy, ja ilmiö toistuu talvella. Tarkkoja päätöskriteerejä en tunne, mutta periaate on aina sama: turvallisuus ensin. Lautta odottaa, ja kyyhky vielä enemmän.",
+  "linkit": [
+   "bura",
+   "Velebitin"
+  ],
+  "jatkot": [
+   "Kuinka kovaa bura voi puhaltaa?",
+   "Miten purjehtijat varautuvat buraan?"
+  ]
+ },
+ {
+  "kohde": "kohde:vaganski-vrh",
+  "kysymys": "Millainen ilmasto Adrianmeren rannikolla on?",
+  "uusi": true,
+  "vastaus": "Joo, muistan. Adrianmeren rannikolla on pääosin Välimeren ilmasto, jossa kesät ovat kuumia ja kuivia ja talvet leutoja ja sateisia. Vuoristo muuttaa kuvaa: [[Velebit]] ja muut rannikon suuntaiset jonot erottavat meren ilmaston sisämaan ilmastosta, ja siksi sisämaa on viileämpi ja metsäisempi kuin meren puoli. Talvella kylmä [[bura]] voi laskea rannikolle ja tuoda äkillisiä pakkasia ja kovia puuskia. Eri paikkojen ilmastoissa on kuitenkin eroja, enkä ole varma, miten tarkasti rajat kulkevat. Siksi viikunoita kasvaa rannalla, mutta lunta on vuorella. Kyllä se aurinko on kyyhkyn ystävä.",
+  "linkit": [
+   "Velebit",
+   "bura"
+  ],
+  "jatkot": [
+   "Miksi sisämaa on viileämpi kuin rannikko?",
+   "Milloin Adrianmerellä on parasta aikaa uida?"
+  ]
+ },
+ {
+  "kohde": "kohde:risnjak",
+  "kysymys": "Eläkö Euroopassa yhä ilveksiä?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Kyllä, ilveksiä elää Euroopassa yhä, vaikka ne ovat monin paikoin harvinaisia. [[Risnjakin]] metsissä ilveskanta hävisi aikanaan mutta palautettiin 1970-luvulla, ja laji elää siellä yhä. Espanjassa elää [[iberianilves]], jota laskettiin vuonna 2002 koko maailmassa alle sata yksilöä, ja se oli silloin uhanalaisin kissaeläin. Pelastus tehtiin hoitamalla kanikantoja, kasvattamalla ilveksiä tarhoissa ja rakentamalla teille alikulkuja. Nyt niitä on yli kaksituhatta, ja laji on siirretty luokasta äärimmäisen uhanalainen luokkaan vaarantunut. Yleisemmin ilveksiä on myös Pohjois-Euroopassa, mutta tarkkoja määriä en tiedä.\n\nIlves on kissa, ja kissoille minulla on tietty varauksellinen suhde. Mutta kunnioitan sitä, joka ei hyökkää kuvaruudulta.",
+  "linkit": [
+   "Risnjakin",
+   "iberianilves"
+  ],
+  "jatkot": [
+   "Miksi iberianilves on niin riippuvainen kaneista?",
+   "Miten ilves saalistaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:risnjak",
+  "kysymys": "Miksi metsä muuttuu korkeuden mukaan?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Korkeus muuttaa kasvuolosuhteet. Ylöspäin mentäessä ilma viilenee, kasvukausi lyhenee, tuuli voimistuu ja maaperä ohenee, joten kaikki puulajit eivät pärjää kaikkialla. [[Risnjakin]] rinteillä metsä vaihtuu korkeuden mukaan [[pyökistä]] [[kuuseen]] ja lopulta [[vuorimännyn]] pensaikoksi. Pyökki viihtyy alempana, missä on leudompaa, kuusi kestää kylmempää, ja ylimpänä sitkeä vuorimänty kasvaa matalana pensaana, jota tuuli ja lumi eivät kaada. Tarkat rajat riippuvat paikasta, enkä ole varma luvuista tälle vuorelle. Kyllä sen huomaa ilman mittaria, kun lentää ylös.",
+  "linkit": [
+   "Risnjakin",
+   "pyökistä",
+   "kuuseen",
+   "vuorimännyn"
+  ],
+  "jatkot": [
+   "Mikä on metsänraja?",
+   "Millaisia kasveja vuorilla kasvaa metsänrajan yläpuolella?"
+  ]
+ },
+ {
+  "kohde": "kohde:risnjak",
+  "kysymys": "Miksi ilves katosi Gorski kotarin metsistä?",
+  "uusi": true,
+  "vastaus": "Mmm— tarkkaa syytä en tiedä. Ilveksiä on hävitetty Euroopassa monin paikoin metsästyksellä, ja metsien väheneminen sekä saaliseläinten, kuten kauriiden, väheneminen ovat vähentäneet kantoja. Todennäköisesti sama pätee [[Risnjakin]] alueeseen: ilveskanta eli siellä vielä isoisän matkan aikaan, mutta hävisi myöhemmin, ja se palautettiin alueelle 1970-luvulla. En ole varma, tapahtuiko häviäminen yhdessä vaiheessa vai vähitellen, tai mikä tekijä oli ratkaiseva. [[Gorski kotarin]] metsät ovat nykyään jälleen ilveksen kotia, ja niiden suojelu on osa laajempaa Euroopan luonnonsuojelua. Ilves ei ole kyyhkyn ystävä, sanotaan vaikka niin.",
+  "linkit": [
+   "Risnjakin",
+   "Gorski kotarin"
+  ],
+  "jatkot": [
+   "Miten ilveskanta palautetaan alueelle?",
+   "Mikä on Risnjakin kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:risnjak",
+  "kysymys": "Mikä on Pannonian tasanko?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Pannonian tasanko on laaja matala alanko Keski-Euroopassa, jota ympäröivät vuoret. Sen keskus on Unkarissa, mutta se ulottuu myös Serbian, Kroatian, Slovakian, Romanian ja Itävallan alueille. Tasangon halki virtaa [[Tonava]], ja maaperä on viljavaa, minkä vuoksi alue on tunnettu maanviljelystä. [[Risnjak]] sijaitsee siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat, joten vuoren ympärillä on kolmen erilaisen maiseman raja. En ole varma, miten tasangon rajat vedetään tarkasti, sillä lähteet voivat poiketa toisistaan. Tasanko on kyyhkylle mukavaa maata, kun näkee kauas.",
+  "linkit": [
+   "Tonava",
+   "Risnjak"
+  ],
+  "jatkot": [
+   "Mikä tekee Tonavasta niin tärkeän joen?",
+   "Mitä Pannonian tasangolla viljellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:risnjak",
+  "kysymys": "Miten ilves saalistaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin, katotaas. Ilves on yksin saalistava, hiipivä kissaeläin, joka lähestyy saalista huomaamatta ja hyökkää lyhyellä syöksyllä sen sijaan, että jahtaisi sitä pitkään. Saaliina on yleensä keskikokoisia eläimiä, esimerkiksi [[metsäkauriita]] ja jäniksiä, mutta ravinto vaihtelee alueen mukaan. [[Iberianilves]] on tästä poikkeus, sillä se syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilveskin joutui vaikeuksiin. Ilves metsästää usein hämärässä ja piilossa, ja tarkkoja tapoja on vaikea nähdä, koska laji on hyvin arka. Se osaa pysyä näkymättömänä paremmin kuin minä.",
+  "linkit": [
+   "metsäkauriita",
+   "Iberianilves"
+  ],
+  "jatkot": [
+   "Miksi ilves on niin arka ihmiselle?",
+   "Kuinka suuri ilves on?"
+  ]
+ },
+ {
+  "kohde": "kohde:vojak",
+  "kysymys": "Mitä Istrian niemellä kasvaa?",
+  "uusi": false,
+  "vastaus": "Kato, vihreä niemi. Istrian sisäosa on vihreä, ja siellä kasvaa muun muassa metsää, jossa kuuluisin kasvi on oikeastaan sieni: [[valkotryffeli]]. Mirna-joen varren metsissä sitä kasvaa samaa lajia kuin Italian kuuluisaa Alban tryffeliä. Paikallinen metsästäjä Giancarlo Zigante löysi koiransa Dianan avulla vuonna 1999 Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin, joka oli lähteiden mukaan sen ajan suurin koskaan löydetty. Löytö teki [[Motovunin]] kukkulakaupungista maailmankuulun, ja siellä järjestetään joka syksy kansainvälinen tryffelifestivaali. Vuosisatojen ajan Istriassa kasvoi myös [[tammea]], jota kuljetettiin Venetsiaan. Tryffeli vain kasvaa maan alla eikä näy katolle.",
+  "linkit": [
+   "valkotryffeli",
+   "Motovunin",
+   "tammea"
+  ],
+  "jatkot": [
+   "Miksi tryffeliä etsitään koiran avulla?",
+   "Mistä Motovunin tryffelifestivaali on tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:vojak",
+  "kysymys": "Miksi vuorelle rakennetaan näkötorni?",
+  "uusi": false,
+  "vastaus": "No jopas, helppo vastata. Näkötorni nostaa katsojan puiden ja huipun yläpuolelle, joten maisema avautuu laajemmalle kuin pelkältä maan tasolta. [[Vojakin]] huipulta näkyy selkeällä säällä Venetsian lahdelle asti, ja siellä seisoo kivinen näkötorni, joka pystytettiin 1911. Tornit ovat myös matkailun kohteita: Prahan [[Petřínin]] näkötorni nousi vuonna 1891 juhlanäyttelyä varten, kun prahalaiset olivat nähneet Pariisin [[Eiffel-tornin]]. Tampereen [[Pyynikin]] torni on 26 metriä korkea ja valmistui 1929, ja sen tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Minulle ei tornia tarvita, minulla on siivet.",
+  "linkit": [
+   "Vojakin",
+   "Petřínin",
+   "Eiffel-tornin",
+   "Pyynikin"
+  ],
+  "jatkot": [
+   "Mistä Petřínin torni on saanut mallinsa?",
+   "Miksi Pyynikin torni on tunnettu munkkikahvilastaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:vojak",
+  "kysymys": "Miten Venetsia käytti Istrian kiveä ja tammea?",
+  "uusi": true,
+  "vastaus": "Ai tota. Venetsia rakennettiin lagunin matalaan veteen, ja rakennusaineet tulivat usein meritse Adrianmeren toiselta puolelta. Lähteiden mukaan Istrian kalkkikiveä käytettiin rakennusten perustuksissa ja julkisivuissa, koska se kestää kosteutta hyvin. [[Istrian kiveä]] ja [[tammea]] kuljetettiin vuosisatoja Venetsian rakennustyömaille samaa merta pitkin, jonka näkee [[Vojakin]] huipulta. Tammi sopi vahvuutensa vuoksi rakentamiseen ja laivanrakennukseen, mutta tarkkoja käyttötapoja en ole varma. Näin Istrian metsät ja louhokset ovat olleet osa [[Venetsian]] historiaa. Venetsiassa ei taida olla ainuttakaan puuta ilman pitkää matkaa.",
+  "linkit": [
+   "Istrian kiveä",
+   "tammea",
+   "Vojakin",
+   "Venetsian"
+  ],
+  "jatkot": [
+   "Miksi Venetsia rakennettiin veteen?",
+   "Mihin Istrian kivi sopii rakennusaineeksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:vojak",
+  "kysymys": "Mikä on Kvarnerinlahti?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kvarnerinlahti on Adrianmeren pohjoinen lahti Istrian niemen ja Kroatian mantereen rannikon välissä. Siihen kuuluu useita saaria, kuten Krk, Cres, Lošinj ja Rab, ja rannikolla sijaitsee Rijeka. [[Vojak]] erottaa Istrian niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja sen takia lahden ilmasto ja maisema eroavat sisämaasta. Laivaliikenne kulkee lahden halki, ja kovalla [[buralla]] liikenne voi keskeytyä. En ole varma, miten tarkasti lahden rajat on määritelty, sillä eri lähteet voivat vetää ne eri kohtiin. Lahti on muuten paljon kauniimpi ylhäältä.",
+  "linkit": [
+   "Vojak",
+   "buralla"
+  ],
+  "jatkot": [
+   "Mitä Krkin saarella on nähtävää?",
+   "Miten Rijeka on kehittynyt satamakaupungiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:vojak",
+  "kysymys": "Miksi tryffeliä etsitään koiran avulla?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Tryffeli kasvaa maan alla puiden juurten yhteydessä, joten sitä ei näe päältä. Sen voimakas tuoksu kantautuu kuitenkin maaperän läpi, ja koulutettu koira haistaa sen ja osoittaa paikan. Koira merkitsee kohdan, ja metsästäjä nostaa tryffelin varovasti maasta. Motovunin metsästä löytyi vuonna 1999 koiran avulla lähes 1,3 kilon painoinen [[valkotryffeli]], ja siitä lähtien [[Motovunissa]] on pidetty tryffelifestivaalia. Aiemmin tryffelin etsimiseen on käytetty myös sikoja, mutta en ole varma, kuinka laajasti. Hajuaistissa koira voittaa kyyhkyn, vaikka en sitä ääneen myönnä.",
+  "linkit": [
+   "valkotryffeli",
+   "Motovunissa"
+  ],
+  "jatkot": [
+   "Miten tryffelikoira koulutetaan?",
+   "Mitä tryffelin kasvu vaatii metsältä?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri~2",
+  "kysymys": "Miksi Kroatian rannikolla on niin paljon saaria?",
+  "uusi": false,
+  "vastaus": "Kato, tost on hyvä nähdä ylhäältä. Kroatian rannikolla vuoristoharjanteet kulkevat rannan suuntaisesti, ja viimeisen jääkauden jälkeen merenpinta nousi ja tulvi laaksojen yli. Vesi peitti laaksot, ja entisten harjanteiden huiput jäivät näkyviin saarina, luotoina ja kareina. Näin [[kalkkikiven]] rikkoma rannikko pirstoutui lukemattomiksi osiksi, ja saaria, luotoja ja karia on yli tuhat, enemmän kuin missään muualla [[Välimerellä]]. Tällaista rantatyyppiä kutsutaan usein [[Dalmatian]] mukaan dalmatialaiseksi rannikoksi. Ei ihme, ettei kukaan ole saanut niitä laskettua yhdellä lennolla.",
+  "linkit": [
+   "kalkkikiven",
+   "Välimerellä",
+   "Dalmatian"
+  ],
+  "jatkot": [
+   "Mikä Dalmatia on?",
+   "Mitä karstialue tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri~2",
+  "kysymys": "Mihin Adrianmeri johtaa?",
+  "uusi": false,
+  "vastaus": "No niin, tää on helppo. Adrianmeri on Välimeren pohjoisin haara, ja se johtaa etelässä [[Otranton salmen]] kautta [[Joonianmerelle]] ja siitä edelleen Välimeren pääaltaaseen. Pohjoisessa se päättyy [[Venetsian]] ja Trieston seuduille, missä rannat kaartuvat yhteen. Meri on siis umpinaisen oloinen kuja, jonka ainoa merkittävä yhteys avomerelle on eteläpää.\n\nYlhäältä katsottuna koko meri näyttää suppilolta, jonka kapea pää osoittaa kohti etelää. Minä lensin sen pituuden kerran läpi, ja sen jälkeen siipiä väsytti.",
+  "linkit": [
+   "Otranton salmen",
+   "Joonianmerelle",
+   "Venetsian"
+  ],
+  "jatkot": [
+   "Mikä Otranton salmi on?",
+   "Mikä Venetsian laguuni on?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri~2",
+  "kysymys": "Kuinka syvä Adrianmeri on?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Viisas Pöllö parantelee siipeään, joten tämä jää minulle. [[Pohjois-Adrianmeri]] on matala: sen pohjoisosa on vain muutamia kymmeniä metrejä syvä, ja pohja laskee vähitellen kohti etelää. [[Etelä-Adrianmeren]] syvänne on yli tuhat metriä, ja syvimmän kohdan arvioidaan olevan noin 1200 metriä, mutta en ole varma tarkasta luvusta. Matala pohjoisosa lämpenee kesällä nopeasti ja jäähtyy talvella, mikä erottaa sen eteläosan syvästä vedestä. Kyyhky ei kuitenkaan sukella, joten syvyys on minulle pelkkä huhu.",
+  "linkit": [
+   "Pohjois-Adrianmeri",
+   "Etelä-Adrianmeren"
+  ],
+  "jatkot": [
+   "Mitä kaloja Adrianmerellä pyydetään?",
+   "Miten Po-joki vaikuttaa Adrianmereen?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri~2",
+  "kysymys": "Mikä on bura?",
+  "uusi": true,
+  "vastaus": "Ai se, bura. Sen minä tunnen valitettavan hyvin. Bura on kylmä, kuiva ja puuskainen koillistuuli, joka puhaltaa Adrianmeren itärannikolla vuoristosta kohti merta. Kylmä ilma valuu [[Dinaarien vuorten]] yli [[Kroatian]] rannikolle, ja tuuli voi olla hyvin voimakas ja puuskittainen erityisesti talvella. Tuuli on vuosisatojen ajan otettu huomioon kaupunkien rakentamisessa ja laivaliikenteessä, ja usein se jättää taivaan kirkkaaksi. Meikäläiset pysyvät sillon mieluummin maassa.",
+  "linkit": [
+   "Dinaarien vuorten",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Mikä on jugo-tuuli?",
+   "Miten kaupunki voi suojautua tuulelta?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri~2",
+  "kysymys": "Mitä kaupunkeja Adrianmeren rannalla on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän, katoilta näkee ne kaikki. Adrianmeren italialaisella rannalla ovat muun muassa [[Venetsia]], Rimini, Ancona ja [[Bari]], ja Kroatian puolella tunnetuimpia ovat Rijeka, Zadar, [[Split]] ja [[Dubrovnik]]. Pohjukassa on myös Trieste, ja eteläisellä Balkanin rannikolla on esimerkiksi Durrës. Ja jokaisessa niistä on varmasti oma pullansa, vaikka en kaikkien nimeä tiedäkään.",
+  "linkit": [
+   "Venetsia",
+   "Bari",
+   "Split",
+   "Dubrovnik"
+  ],
+  "jatkot": [
+   "Mikä Diocletianuksen palatsi Splitissä on?",
+   "Miten Venetsia on rakennettu veden päälle?"
+  ]
+ },
+ {
+  "kohde": "kohde:sava",
+  "kysymys": "Mihin Sava laskee?",
+  "uusi": false,
+  "vastaus": "Sepä sattui. Sava laskee Tonavaan [[Belgradin]] kohdalla. Joki saa alkunsa Slovenian Alpeilta ja kulkee [[Zagrebin]] läpi, ja sen pituudeksi mainitaan noin 990 kilometriä. Se tuo [[Tonavaan]] enemmän vettä kuin yksikään toinen sivujoki. Ylhäältä sen näkee ihan hyvin, kun tietää mistä katsoa.",
+  "linkit": [
+   "Belgradin",
+   "Zagrebin",
+   "Tonavaan"
+  ],
+  "jatkot": [
+   "Montako maata Tonava kulkee?",
+   "Mikä Belgrad on miltä kaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:sava",
+  "kysymys": "Miksi tulvametsä on hyväksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Tulvametsä toimii luonnon omana vesivarastona: kun joki nousee, vesi leviää metsään ja laitumille ja virtaus hidastuu, jolloin alajuoksun tulvahuippu pienenee. Samalla vesi tuo mukanaan ravinteita ja lietettä, jotka lisäävät maan hedelmällisyyttä, ja [[kosteikko]] suodattaa vettä. Tulvametsä on myös monen eläin- ja kasvilajin elinympäristö, ja vaihtelevaa vedenpintaa tarvitsevat lajit eivät viihdy säännöstellyissä joissa. [[Lonjsko poljen]] kaltaisia säilyneitä tulvametsiä on Euroopassa jäljellä vähän. Tulvametsä on kyl siivekkään unelma, aina jotain syötävää.",
+  "linkit": [
+   "kosteikko",
+   "Lonjsko poljen"
+  ],
+  "jatkot": [
+   "Miksi jokien suoristaminen lisää tulvia?",
+   "Mikä on kosteikon merkitys ilmastolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:sava",
+  "kysymys": "Mitä lintuja Lonjsko poljella pesii?",
+  "uusi": true,
+  "vastaus": "Ai haikarat. Ne on vähän ylpeää väkeä. Alueella pesii muun muassa [[kattohaikara]], ja alueen kylissä pesät rakennetaan usein talojen katoille. Tulvatasanko on hyvä ruokapaikka, koska kosteat niityt ja metsät tarjoavat sammakoita, kaloja ja hyönteisiä. Alue on suojeltu [[luonnonpuistona]], ja sen linnusto on laaja, vaikka en ole varma tarkoista lajimääristä. Haikaroilla on kyl korkeammat katot kuin kyyhkyllä.",
+  "linkit": [
+   "kattohaikara",
+   "luonnonpuistona"
+  ],
+  "jatkot": [
+   "Minne kattohaikarat muuttavat talveksi?",
+   "Mitä muita eläimiä tulvatasangolla laiduntaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:sava",
+  "kysymys": "Miksi Sava tulvii keväisin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Sava tulvii keväisin, koska sen vesi kertyy sekä vuoristojen sulavasta lumesta että sateista. [[Alppien]] ja muiden vuoristojen lumi sulaa keväällä, ja samaan aikaan sateet kasvattavat virtaamaa, joten vesimäärä nousee nopeasti ja joki leviää tulvatasangolle. Kroatiassa joki saa yhä levitä luonnollisesti, ja siksi [[Lonjsko poljen]] kaltainen tulva on osa alueen vuotuista kiertokulkua.\n\nMinä pidän tulvasta siksi, että silloin vesilinnut tulevat lähemmäs. Toisaalta pullataikinan nouseminenkin muistuttaa tulvaa, ja siitä minä pidän vielä enemmän.",
+  "linkit": [
+   "Alppien",
+   "Lonjsko poljen"
+  ],
+  "jatkot": [
+   "Miten tulvia ennustetaan?",
+   "Mitä padot tekevät joen luonnolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:sava",
+  "kysymys": "Minkä kaupunkien kautta Sava virtaa?",
+  "uusi": true,
+  "vastaus": "Kas vaan, reittikysymys. Sava virtaa [[Zagrebin]] ja [[Belgradin]] kautta, ja niiden välillä sen rannoilla ovat myös muun muassa [[Sisak]] ja Slavonski Brod. Suuri osa Kroatian ja Bosnia ja Hertsegovinan välisestä rajasta kulkee Savaa pitkin. Belgradissa joki yhtyy Tonavaan. Joenvarsikaupungit ovat kyl pulun parasta aluetta, sillä siltojen alla on aina leivänmuruja.",
+  "linkit": [
+   "Zagrebin",
+   "Belgradin",
+   "Sisak"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Sisak on?",
+   "Missä Tonava ja Sava kohtaavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:drava",
+  "kysymys": "Mistä Drava saa alkunsa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Drava saa alkunsa Etelä-Tirolin vuorilta Italiasta. Sieltä joki virtaa [[Itävallan]] ja Slovenian kautta Kroatiaan ja laskee Tonavaan Osijekin alapuolella, yhteensä noin 710 kilometrin matkan. Sloveniassa joen rannalla ovat muun muassa [[Maribor]] ja [[Ptuj]], ja Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Matka on pitkä, mutta onneksi joki kulkee itse.",
+  "linkit": [
+   "Itävallan",
+   "Maribor",
+   "Ptuj"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Maribor on?",
+   "Mikä Ptujin linna on?"
+  ]
+ },
+ {
+  "kohde": "kohde:drava",
+  "kysymys": "Miksi joki kelpaa rajaksi?",
+  "uusi": false,
+  "vastaus": "Tuota niin, hyvä kysymys. Joki sopii rajaksi, koska se on näkyvä, pysyvä ja vaikeasti ylitettävä maastonkohta, jonka sijainnin kaikki osapuolet tuntevat. Rantaviivaa on helppo seurata, eikä rajaa tarvitse merkitä erikseen, ja joen ylitys vaatii sillan tai lautan, jolloin liikennettä on helppo valvoa. Samalla joki voi tuottaa ongelmia: esimerkiksi [[Drava]] siirtää soraa ja hiekkaa, ja uoma voi muuttaa paikkaa, jolloin rajan tarkka kulku voi muuttua tai jäädä epäselväksi. Kroatian ja [[Unkarin]] välillä raja on kuitenkin kulkenut joella vuosisatoja. Kyyhkylle raja on pelkkä ajatus, minä lennän yli milloin haluan.",
+  "linkit": [
+   "Drava",
+   "Unkarin"
+  ],
+  "jatkot": [
+   "Miten joen uoma muuttuu ajan myötä?",
+   "Mitkä maat rajoittuvat Kroatiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:drava",
+  "kysymys": "Mikä kaupunki Osijek on?",
+  "uusi": true,
+  "vastaus": "Ai Osijek, joo. Osijek on Itä-Kroatian [[Slavonian]] suurimpia kaupunkeja, ja se sijaitsee Drava-joen rannalla melko lähellä paikkaa, jossa joki laskee [[Tonavaan]]. Kaupungin vanhin osa, [[Tvrđa]], on barokkiaikainen linnoituskaupunginosa.\n\nVanhat linnoitukset ovat kyyhkylle mukavia, koska muureilla on aina lämmin kohta. Sukuni on kuulemma kantanut viestejä sellaisten muurien yli ennenkin.",
+  "linkit": [
+   "Slavonian",
+   "Tonavaan",
+   "Tvrđa"
+  ],
+  "jatkot": [
+   "Mikä Slavonia on?",
+   "Miksi linnoituskaupunkeja rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:drava",
+  "kysymys": "Mikä on Mura–Drava–Tonava-biosfäärialue?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Joo, nyt muistan. Mura–Drava–Tonava on useamman maan yhteinen [[Unescon]] biosfäärialue, johon kuuluu jokien varsia Itävallasta, Sloveniasta, Kroatiasta, Unkarista ja Serbiasta. Sen ydintä ovat [[Muran]] ja Dravan luonnonmukaiset tulva-alueet, soraharjut ja [[tulvametsät]], ja alue on suojeltu yhdessä rajojen yli. En ole varma alueen tarkasta pinta-alasta tai perustamisvuodesta. Yksi alue, viisi maata, ja linnut ei välitä rajoista.",
+  "linkit": [
+   "Unescon",
+   "Muran",
+   "tulvametsät"
+  ],
+  "jatkot": [
+   "Mikä biosfäärialue on?",
+   "Miksi rajat ylittävä suojelu on tärkeää?"
+  ]
+ },
+ {
+  "kohde": "kohde:drava",
+  "kysymys": "Onko Dravalla vesivoimaa?",
+  "uusi": true,
+  "vastaus": "Ai se. No sitä minä en ole itse laskenut. Drava on vesivoimalla vahvasti valjastettu joki: Itävallan, Slovenian ja Kroatian puolella joessa on useita [[vesivoimalaitoksia]] padotuksineen. Padot säätelevät virtaamaa ja muuttavat joen luontoa, sillä ne vähentävät [[tulvia]] ja pysäyttävät [[soraa]]. Siksi vapaasti virtaavia jaksoja on yhä vähemmän, ja ne ovat luonnonsuojelun kannalta arvokkaita. Padot ovat kyl ihmisen tapa kertoa joelle, että tässä sinä pysähdyt.",
+  "linkit": [
+   "vesivoimalaitoksia",
+   "tulvia",
+   "soraa"
+  ],
+  "jatkot": [
+   "Miten vesivoimala toimii?",
+   "Mitä kalaportaat ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hvar",
+  "kysymys": "Keitä olivat Paroksen siirtolaiset?",
+  "uusi": false,
+  "vastaus": "Kas vaan, antiikkia. Paroksen siirtolaiset olivat antiikin kreikkalaisia, jotka lähtivät [[Paroksen]] saarelta Egeanmereltä perustamaan uutta kaupunkia Hvarille vuonna 384 eaa. Paros kuuluu Kykladien saariin ja tunnetaan vanhastaan marmoristaan. Kaupunki sijaitsi nykyisen [[Stari Gradin]] kohdalla, ja siirtolaisten jakama peltotasanko on yhä paikallaan. Merimatka Egeanmereltä tänne ei olisi ollut kyyhkylle kovin pitkä.",
+  "linkit": [
+   "Paroksen",
+   "Stari Gradin"
+  ],
+  "jatkot": [
+   "Mikä Stari Gradin tasanko on?",
+   "Miksi Paros oli kuuluisa marmoristaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hvar",
+  "kysymys": "Miksi pellot jaettiin suorakaiteisiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, mietitäänpä. Kreikkalaiset perustivat [[siirtokuntia]] suunnitelmallisesti, ja maa jaettiin usein tasaisesti asukkaiden kesken. Suorakaiteiset tilat olivat helppo mitata ja merkitä, ja ne antoivat kaikille samankokoisen osuuden tasangosta. Rajoina toimineet [[kuivamuurit]] ovat kestäneet lähes 2400 vuotta, ja samat polut ja viljelykaistat ovat yhä käytössä. Lähes 2400 vuotta samalla pellolla, ja minä valitan jo kahden tunnin lennosta.",
+  "linkit": [
+   "siirtokuntia",
+   "kuivamuurit"
+  ],
+  "jatkot": [
+   "Mitä antiikin siirtokuntia Adrianmeren rannoilla oli?",
+   "Mitä viljelykasveja tasangolla kasvatettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hvar",
+  "kysymys": "Mitä Hvarin tasangolla viljellään?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän, katoilta näkee rivit. Hvarin tasangolla viljellään perinteisesti [[viiniköynnöstä]] ja [[oliivipuita]], ja saari tunnetaan myös [[laventelista]]. Rinteillä kasvaa laventelia ja muita tuoksuvia kasveja, ja viini ja oliiviöljy ovat tärkeitä paikallisia tuotteita. En ole varma tämän päivän viljelyaloista. Laventelin tuoksu nousee ylös asti, mutta pullan tuoksu olisi parempi.",
+  "linkit": [
+   "viiniköynnöstä",
+   "oliivipuita",
+   "laventelista"
+  ],
+  "jatkot": [
+   "Miten oliiviöljy valmistetaan?",
+   "Miksi laventeli viihtyy kuivilla rinteillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hvar",
+  "kysymys": "Kuinka pitkä saari Hvar on?",
+  "uusi": true,
+  "vastaus": "Mmm—. Viisas Pöllö lupasi palata jo Dubrovnikissa, mutta tämä hoituu ilmankin. Hvar on noin 70 kilometriä pitkä mutta kapea, ja lähteet voivat antaa hieman erilaisia lukuja, joten en ole varma tarkasta pituudesta. Saari sijaitsee [[Dalmatiassa]] [[Bračin]] eteläpuolella, ja sen toisella puolella on [[Korčulan]] saari. Pituus ei vaivaa kyyhkyä, korkeintaan ruokataukojen puute.",
+  "linkit": [
+   "Dalmatiassa",
+   "Bračin",
+   "Korčulan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Hvar on?",
+   "Miten Hvarille pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hvar",
+  "kysymys": "Miten kuivamuuri rakennetaan?",
+  "uusi": true,
+  "vastaus": "Ai kuivamuuri, no sehän on kivinen juttu. Kuivamuuri on kivistä ilman laastia kasattu muuri: kivet valitaan ja asetetaan niin, että ne tukevat toisiaan ja muuri pysyy pystyssä pelkän painon ja asettelun ansiosta. Isommat kivet menevät pohjalle, ja pienemmillä täytetään välit. Kuivamuurausperinne on kirjattu [[Unescon]] [[aineettomaan kulttuuriperintöön]] vuonna 2018, ja taito on peräisin monesta Euroopan maasta, Kroatia mukaan lukien.\n\nMinä olen istunut sellaisella muurilla monta kertaa. Se on kyyhkylle ihanteellinen: raot ovat juuri sopivan kokoisia, eikä kukaan häädä.",
+  "linkit": [
+   "Unescon",
+   "aineettomaan kulttuuriperintöön"
+  ],
+  "jatkot": [
+   "Mitä aineeton kulttuuriperintö tarkoittaa?",
+   "Mihin kuivamuuria on käytetty ennen?"
+  ]
+ },
+ {
+  "kohde": "kohde:korcula",
+  "kysymys": "Syntyikö Marco Polo oikeasti täällä?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tää on arka aihe. Varmaa näyttöä siitä, että Marco Polo olisi syntynyt Korčulassa, ei ole. Yleisimmin hänen kerrotaan syntyneen [[Venetsiassa]], jossa Polon kauppiassuku vaikutti, ja Venetsia pitää omastaan kiinni. [[Korčulan]] väite perustuu paikalliseen perimätietoon, jota saarelaiset ovat vaalineet vuosisatoja, enkä ole varma sen tarkoista perusteista. Syntymäpaikka on siis säilynyt kiistana. Minä en ota kantaa, mutta pullaa saa kumpikin kaupunki leipoa.",
+  "linkit": [
+   "Venetsiassa",
+   "Korčulan"
+  ],
+  "jatkot": [
+   "Kuka Marco Polo oli?",
+   "Mikä Venetsia oli keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:korcula",
+  "kysymys": "Mikä on moreška?",
+  "uusi": false,
+  "vastaus": "Ai moreška, joo. Moreška on [[miekkatanssi]], joka esittää kahden armeijan taistelua, ja sitä on esitetty [[Korčulassa]] 1500-luvulta asti. Perinteisen tarinan mukaan mustat ja valkoiset kuninkaat taistelevat neidosta, ja miehet tanssivat miekat käsissä musiikin tahtiin. Esitys on osa saaren identiteettiä, ja nykyään sitä esitetään myös matkailijoille. Minun suku ei ikinä riitele noin näyttävästi.",
+  "linkit": [
+   "miekkatanssi",
+   "Korčulassa"
+  ],
+  "jatkot": [
+   "Mistä moreškan perinne on peräisin?",
+   "Missä muualla Euroopassa miekkatansseja tanssitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:korcula",
+  "kysymys": "Mitä viiniä Korčulalla tuotetaan?",
+  "uusi": true,
+  "vastaus": "Sepä sattui, tähän minä osaan vastata. Korčulan tunnetuimpia viinejä ovat valkoviinit [[pošip]] ja [[grk]]. Pošipia kasvatetaan saaren sisäosissa Čaran seudulla, ja grkia [[Lumbardan]] kylän hiekkamailla. Saarella tehdään myös punaviiniä, mutta en ole varma sen lajikkeista. Viini on kyl pulun pahin heikkous heti pullan jälkeen.",
+  "linkit": [
+   "pošip",
+   "grk",
+   "Lumbardan"
+  ],
+  "jatkot": [
+   "Mitä viiniä Pelješacilla tehdään?",
+   "Miksi hiekkamaa sopii viiniköynnökselle?"
+  ]
+ },
+ {
+  "kohde": "kohde:korcula",
+  "kysymys": "Miten Korčulalle pääsee?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Korčulalle pääsee laivalla. Lyhin yhteys on lautta [[Orebićista]] [[Pelješacin]] niemimaalta saarelle, ja merimatka on lyhyt. Lisäksi on laiva- ja lauttayhteyksiä [[Splitistä]] ja muista Dalmatian satamista, mutta aikataulut vaihtelevat kausittain ja kannattaa tarkistaa ajantasaisesti. Minä lennän, joten lautta jää vähemmälle.",
+  "linkit": [
+   "Orebićista",
+   "Pelješacin",
+   "Splitistä"
+  ],
+  "jatkot": [
+   "Mikä Pelješac on?",
+   "Miten Splitistä pääsee muille saarille?"
+  ]
+ },
+ {
+  "kohde": "kohde:korcula",
+  "kysymys": "Mitä nähtävää Korčulan vanhassakaupungissa on?",
+  "uusi": true,
+  "vastaus": "Kas vaan, kierros vanhassakaupungissa. Korčulan vanhakaupunki on rakennettu niemelle, ja sitä ympäröi keskiaikainen muuri torneineen. Kaupungin keskellä kohoaa [[Pyhän Markuksen katedraali]], jonka tyyli on goottilaisen ja renessanssin sekoitus, ja kaupunki kuului pitkään [[Venetsian tasavallalle]], mikä näkyy rakennuksissa. Kalanruodon muotoinen katuverkko on nähtävyys sinänsä.\n\nMinä olen istunut katedraalin kattoharjalla ja voin sanoa, että kalanruoto näkyy sieltä ihan selvästi. Se on harvinaisen hyvä kaupunki sellaiselle, joka katsoo ylhäältä.",
+  "linkit": [
+   "Pyhän Markuksen katedraali",
+   "Venetsian tasavallalle"
+  ],
+  "jatkot": [
+   "Milloin Korčula kuului Venetsialle?",
+   "Mikä Venetsian tasavalta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:mljet",
+  "kysymys": "Miten meri pääsee saaren sisälle järveksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Mljetin länsipäässä sijaitsevat Veliko jezero ja Malo jezero, ja niitä yhdistää mereen kapea kanava. Kanavan kautta [[Adrianmeren]] suolainen vesi pääsee järviin, minkä vuoksi ne ovat suolajärviä eivätkä makeavetisiä. [[Vuorovesi]] kääntää virran suuntaa: nousuveden aikana vesi virtaa kanavasta järviin ja laskuveden aikana takaisin mereen. Ja tän kaiken minä muistin ilman karttaa.",
+  "linkit": [
+   "Adrianmeren",
+   "Vuorovesi"
+  ],
+  "jatkot": [
+   "Millainen luostari ison järven saarella on?",
+   "Onko Mljet todella Homeroksen Ogygia?"
+  ]
+ },
+ {
+  "kohde": "kohde:mljet",
+  "kysymys": "Kuka oli Kalypso?",
+  "uusi": false,
+  "vastaus": "Ai se. Kalypso oli [[Homeroksen]] [[Odysseiassa]] esiintyvä nymfi, jumalatar-hahmo, joka asui Ogygian saarella. Hän piti haaksirikkoutunutta [[Odysseusta]] luonaan seitsemän vuotta ja lupasi tälle kuolemattomuuden, mutta Odysseus halusi kotiin. Lopulta jumalat määräsivät Kalypson päästämään hänet lähtemään. Seitsemän vuotta samalla saarella, minä olisin kyllästynyt viikossa.",
+  "linkit": [
+   "Homeroksen",
+   "Odysseiassa",
+   "Odysseusta"
+  ],
+  "jatkot": [
+   "Kuka oli Odysseus?",
+   "Mistä Odysseia kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:mljet",
+  "kysymys": "Keitä benediktiinit olivat?",
+  "uusi": true,
+  "vastaus": "No niin, tästä asiasta riittää kerrottavaa. Benediktiinit ovat munkkeja ja nunnia, jotka noudattavat [[Benedictus Nursialaisen]] 500-luvulla laatimaa luostarisääntöä. Sääntö jakaa päivän rukoukseen, työhön ja lepoon, ja sen tunnuslause on [[ora et labora]], rukoile ja työskentele. Benediktiiniluostareista tuli keskiajan Euroopassa tärkeitä oppineisuuden ja käsikirjoitusten kopioinnin keskuksia. Kyyhkynä minä kunnioitan ihmisiä, jotka osaavat pitää aikataulusta kiinni.",
+  "linkit": [
+   "Benedictus Nursialaisen",
+   "ora et labora"
+  ],
+  "jatkot": [
+   "Mikä oli keskiajan luostareiden tehtävä?",
+   "Mistä Benedictus Nursialainen tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:mljet",
+  "kysymys": "Mikä on Adrianmeri?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Adrianmeri on [[Välimeren]] pohjoinen lahti, joka ulottuu Italian niemimaan ja Balkanin niemimaan väliin. Sen etelässä [[Otranton salmi]] yhdistää sen Joonianmereen, ja pohjoisessa sen rannalla on muun muassa Venetsia. Rannikkoa ovat jakaneet Italia, Slovenia, Kroatia, Bosnia ja Hertsegovina, Montenegro ja Albania. Ylhäältä katsottuna se näyttää ihan kapealta siniseltä käytävältä.",
+  "linkit": [
+   "Välimeren",
+   "Otranton salmi"
+  ],
+  "jatkot": [
+   "Mitkä maat rajoittuvat Adrianmereen?",
+   "Miksi Kroatian rannikolla on niin paljon saaria?"
+  ]
+ },
+ {
+  "kohde": "kohde:mljet",
+  "kysymys": "Mikä saa vuoroveden aikaan?",
+  "uusi": true,
+  "vastaus": "Katotaas. Vuoroveden aiheuttaa pääasiassa [[Kuun]] vetovoima, joka vetää maapallon merivettä puoleensa. Myös [[Auringon]] painovoima vaikuttaa, mutta sen vaikutus on Kuun vaikutusta pienempi. Kun Maa pyörii, vesi nousee ja laskee rannoilla yleensä noin kaksi kertaa vuorokaudessa. Vuoroveden korkeus vaihtelee suuresti paikasta riippuen, ja suljetuilla merialueilla, kuten Välimerellä, se on usein vähäinen. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Kuun",
+   "Auringon"
+  ],
+  "jatkot": [
+   "Miksi vuorovesi on Itämerellä hyvin pieni?",
+   "Mikä on äärimmäisen suuri vuorovesi ja missä sitä esiintyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:plitvicen-jarvet",
+  "kysymys": "Miten vesi voi rakentaa padon?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä minä pidän. Plitvicen vesi tuo mukanaan liuennutta kalkkia, ja kun vesi putoaa [[sammalten]] ja levien yli, kalkki saostuu niiden pinnalle [[travertiiniksi]]. Näin kalkkikerros kasvaa kerros kerrokselta ja muodostaa padon, joka nostaa veden pintaa ja synnyttää järven. Pato kasvaa noin sentin vuodessa, joten sen muoto muuttuu koko ajan ja vanhat putoukset voivat kuivua uusien syntyessä. Hitaasti mutta varmasti, kuten hyvä postinkuljetus.",
+  "linkit": [
+   "sammalten",
+   "travertiiniksi"
+  ],
+  "jatkot": [
+   "Miten kalkkikivi liukenee veteen?",
+   "Montako järveä Plitvicellä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plitvicen-jarvet",
+  "kysymys": "Kuinka nopeasti travertiini kasvaa?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Plitvicen padoilla [[travertiini]] kasvaa noin sentin vuodessa, eli kymmenessä vuodessa noin kymmenen senttiä ja sadassa vuodessa noin metrin. Kasvunopeus riippuu kuitenkin muun muassa veden [[kalkkipitoisuudesta]], lämpötilasta ja siitä, miten hyvin [[sammalet]] ja levät kasvavat. Siksi eri paikkojen lukemat voivat poiketa toisistaan, eikä yksi luku päde kaikkialle. Sentti vuodessa, minä en jaksaisi odottaa.",
+  "linkit": [
+   "travertiini",
+   "kalkkipitoisuudesta",
+   "sammalet"
+  ],
+  "jatkot": [
+   "Miksi sammalet auttavat kalkin saostumisessa?",
+   "Millaisia järviä Plitvicellä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plitvicen-jarvet",
+  "kysymys": "Miten kalkkikivi liukenee veteen?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Sadevesi ja maaperän vesi sitovat itseensä [[hiilidioksidia]], jolloin syntyy heikkoa hiilihappoa. Tämä hapan vesi liuottaa kalkkikiveä, jonka pääaineosa on kalsiumkarbonaatti, ja vesi kuljettaa liuenneen kalkin mukanaan. Kun vesi myöhemmin vapauttaa hiilidioksidia esimerkiksi putoamalla vesiputouksessa, kalkki alkaa saostua takaisin kiinteäksi aineeksi. Tästä syntyvät [[tippukivet]] luolissa ja travertiinipadot joissa. Siinä oli kemiaa kerrakseen.",
+  "linkit": [
+   "hiilidioksidia",
+   "tippukivet"
+  ],
+  "jatkot": [
+   "Miten tippukivet syntyvät luolissa?",
+   "Mitä tarkoittaa karsti?"
+  ]
+ },
+ {
+  "kohde": "kohde:plitvicen-jarvet",
+  "kysymys": "Mikä on sammal?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Sammalet ovat pieniä, ruohomaisia kasveja, joilla ei ole oikeita juuria eikä juurikaan kuljetussolukkoa. Ne ottavat veden ja ravinteet suoraan lehtimäisten osiensa kautta, ja siksi ne viihtyvät kosteissa paikoissa. [[Sammalet]] lisääntyvät [[itiöillä]], eivät siemenillä. Ne kasvavat kivillä, puiden rungoilla ja maassa, ja ne voivat sitoa pinnalleen kosteutta ja pölyä. Pieni kasvi, mutta minä muistan senkin.",
+  "linkit": [
+   "Sammalet",
+   "itiöillä"
+  ],
+  "jatkot": [
+   "Miksi sammalet kasvavat vain kosteissa paikoissa?",
+   "Mitä ovat levät?"
+  ]
+ },
+ {
+  "kohde": "kohde:plitvicen-jarvet",
+  "kysymys": "Mitä tarkoittaa karsti?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Karsti on maisematyyppi, joka syntyy, kun vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kiveä. Sille ovat tyypillisiä [[luolat]], maanalaiset joet, syvät kuopat eli dolinat ja pinnalta äkkiä katoava vesi. Nimi tulee [[Krasin]] ylängöstä Sloveniassa ja Italian rajaseudulla, ja sana on levinnyt sieltä kansainväliseksi tieteen termiksi. Kroatian rannikon sisämaa on tunnettu karstialue. Ja tähän piti vain tiivistää satojen tuhansien vuosien työ.",
+  "linkit": [
+   "luolat",
+   "Krasin"
+  ],
+  "jatkot": [
+   "Mitä ovat dolinat?",
+   "Miten luolat syntyvät kalkkikiveen?"
+  ]
+ },
+ {
+  "kohde": "kohde:pulan-areena",
+  "kysymys": "Miten amfiteatteri rakennettiin?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Roomalaiset amfiteatterit rakennettiin yleensä [[kaarien]] ja holvien varaan: ulkomuuri nousi useina kerroksina kaariaukkoineen, ja niiden sisäpuolelle rakennettiin rinnemäisesti nouseva katsomo. Rakentamisessa käytettiin usein paikallista kiveä, ja sitä yhdistettiin [[roomalaiseen betoniin]]. Käytäviä ja portaita suunniteltiin niin, että väki pääsi sisään ja ulos nopeasti. Pulan areenan tarkat työvaiheet eivät ole minulle selvillä, mutta rakennus valmistui noin ensimmäisen vuosisadan aikana. Onpas siinä nykyään hieno ulkomuuri.",
+  "linkit": [
+   "kaarien",
+   "roomalaiseen betoniin"
+  ],
+  "jatkot": [
+   "Mikä ero on teatterilla ja amfiteatterilla?",
+   "Millaista betonia roomalaiset käyttivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:pulan-areena",
+  "kysymys": "Miksi Venetsia halusi purkaa sen?",
+  "uusi": false,
+  "vastaus": "Mmm— Pula kuului vuonna 1583 [[Venetsian]] tasavallan alueeseen, ja Venetsian [[senaatti]] käsitteli silloin ehdotusta areenan purkamisesta ja kivien siirtämisestä Venetsiaan kivi kerrallaan. En ole varma ehdotuksen tarkoista perusteista, mutta kyse oli ilmeisesti arvokkaan rakennuskiven käyttämisestä toisaalla. Äänestys hävisi, ja amfiteatteri jäi paikalleen. Hyvä, että jäi, sillä muuten sitä ei nyt voisi katsoa katolta.",
+  "linkit": [
+   "Venetsian",
+   "senaatti"
+  ],
+  "jatkot": [
+   "Mikä oli Venetsian tasavalta?",
+   "Miksi roomalaisia rakennuksia purettiin rakennusaineeksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:pulan-areena",
+  "kysymys": "Mikä ero on teatterilla ja amfiteatterilla?",
+  "uusi": true,
+  "vastaus": "Just niin, tämä menee usein sekaisin. Roomalainen [[teatteri]] oli muodoltaan puoliympyrä, jossa katsomo kaartui näyttämön ympärille vain yhdeltä puolelta. [[Amfiteatteri]] sen sijaan oli soikea tai pyöreä, ja katsomo ympäröi areenaa joka puolelta, mistä nimi tuleekin: kreikan sana amphi tarkoittaa molemmin puolin tai ympärillä. Teattereissa esitettiin näytelmiä, amfiteattereissa taas julkisia esityksiä ja kilpailuja, ja tunnetuin esimerkki on [[Colosseum]] Roomassa. Kaiken tämän erotan ylhäältäkin.",
+  "linkit": [
+   "teatteri",
+   "Amfiteatteri",
+   "Colosseum"
+  ],
+  "jatkot": [
+   "Mikä on Colosseum?",
+   "Miten antiikin teatterissa kuuli näyttelijät?"
+  ]
+ },
+ {
+  "kohde": "kohde:pulan-areena",
+  "kysymys": "Mikä oli Venetsian tasavalta?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on tuttu. Venetsian tasavalta oli Venetsian kaupungin ympärille kasvanut merellinen kaupunkivaltio, jota johti vaaleilla valittu [[doge]]. Se vaurastui kaupalla Välimerellä, ja sen valtaan kuuluivat aikanaan rannikkoalueita Adrianmeren itärannalla, myös Istriassa ja Dalmatiassa. Tasavalta kesti noin tuhat vuotta, ja se päättyi vuonna 1797, kun [[Napoleon Bonaparten]] joukot valtasivat Venetsian. Yli tuhat vuotta, minä olen kantanut kirjeitä lyhyemmän ajan.",
+  "linkit": [
+   "doge",
+   "Napoleon Bonaparten"
+  ],
+  "jatkot": [
+   "Mikä on doge?",
+   "Miksi Venetsia on rakennettu veden päälle?"
+  ]
+ },
+ {
+  "kohde": "kohde:pulan-areena",
+  "kysymys": "Millaista betonia roomalaiset käyttivät?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Roomalainen betoni valmistettiin sekoittamalla kalkkia, vettä ja soraa tai kivenmurskaa, ja tärkeä lisäaine oli vulkaaninen tuhka eli [[pozzolana]]. Tuhka teki betonista kestävää, ja osa seoksista kovettui jopa veden alla, joten sitä käytettiin satamien ja siltojen rakentamiseen. Betonia valettiin muottien sisään, ja pintaa verhottiin usein tiilellä tai kivellä. Tunnettu esimerkki on [[Pantheonin]] betonikupoli Roomassa. Ja tähän asti betoni on pitänyt, kuten minä.",
+  "linkit": [
+   "pozzolana",
+   "Pantheonin"
+  ],
+  "jatkot": [
+   "Miten Pantheonin kupoli rakennettiin?",
+   "Miksi roomalainen betoni kestää niin hyvin?"
+  ]
+ },
+ {
+  "kohde": "kohde:stonin-muurit",
+  "kysymys": "Miksi suola oli niin arvokasta?",
+  "uusi": false,
+  "vastaus": "Ai tota. Suola oli arvokasta, koska ihminen tarvitsee sitä elääkseen ja koska se on ollut keskeinen ruoan [[säilömisessä]] ennen jääkaappeja: suolaamalla lihaa ja kalaa saatiin kestämään kuukausia. Lisäksi suola tekee ruoasta maukasta, ja sen tuotanto vaati työtä ja sopivia olosuhteita. Siksi sillä käytiin kauppaa pitkien matkojen päähän. [[Ragusan]] tasavallalle suola oli yksi varmimmista tulonlähteistä, joten sitä oli syytä suojella muurein. Kyllä minäkin pidän hyvästä suolasta, vaikka kyyhky ei niin sano.",
+  "linkit": [
+   "säilömisessä",
+   "Ragusan"
+  ],
+  "jatkot": [
+   "Miten suolaa on säilötty ennen jääkaappeja?",
+   "Miten merivedestä saadaan suolaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:stonin-muurit",
+  "kysymys": "Mikä oli Ragusan tasavalta?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Ragusan tasavalta oli [[Dubrovnikin]] ympärille keskiajalla muodostunut itsenäinen kaupunkivaltio Adrianmeren itärannalla. Se vaurastui merikaupalla ja diplomatialla, ja kaupungin vapaus oli sen ylpeyden aihe. Tasavalta säilyi itsenäisenä aina 1800-luvun alkuun saakka, jolloin [[Napoleonin]] aikainen Ranska lopetti sen itsenäisyyden. Stonin muurit ja suolapannut kuuluivat sen tärkeään puolustukseen ja talouteen. Pitkä oli tasavallan taival, ja minä ehdin tähän väliin vain tulla perille.",
+  "linkit": [
+   "Dubrovnikin",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Mikä on Dubrovnik?",
+   "Miten Napoleon valloitti Euroopan?"
+  ]
+ },
+ {
+  "kohde": "kohde:stonin-muurit",
+  "kysymys": "Miten merivedestä saadaan suolaa?",
+  "uusi": true,
+  "vastaus": "Kato, tämä on helppo. Merivedestä suola saadaan [[haihduttamalla]]: vesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli höyrystävät veden pois. Kun vettä on haihtunut tarpeeksi, jäljelle jää [[suolakiteitä]], jotka kerätään talteen. Prosessi toimii parhaiten lämpimillä ja tuulisilla rannikoilla. Stonissa suolaa tehdään tähän tapaan yhä, ja samoja altaita käytetään edelleen. Kroatiassa on kyllä fritule, ja jos joku jättää niitä altaan reunalle, minä en pahastu.",
+  "linkit": [
+   "haihduttamalla",
+   "suolakiteitä"
+  ],
+  "jatkot": [
+   "Mistä suola koostuu?",
+   "Miksi Adrianmeri on suolainen?"
+  ]
+ },
+ {
+  "kohde": "kohde:stonin-muurit",
+  "kysymys": "Miten keskiajan linnoitusmuurit toimivat?",
+  "uusi": true,
+  "vastaus": "No jopas, hyvä kysymys. Keskiajan linnoitusmuurit toimivat estämällä vihollisen pääsyn sisään ja antamalla puolustajille etulyöntiaseman. Korkea ja paksu muuri vaikeutti kiipeämistä ja murtamista, [[tornit]] mahdollistivat ampumisen muurin edustalle ja [[vallihauta]] piti hyökkääjät kauempana. Portit olivat ahtaita ja tarkasti vartioituja. Ruudin ja tykkien yleistyessä muurit tehtiin matalammiksi ja paksummiksi. Muurin ylhäältä katsottuna kaikki näyttää paljon pienemmältä kuin alhaalta.",
+  "linkit": [
+   "tornit",
+   "vallihauta"
+  ],
+  "jatkot": [
+   "Miten tykit muuttivat linnoituksia?",
+   "Mikä on linnoitus?"
+  ]
+ },
+ {
+  "kohde": "kohde:stonin-muurit",
+  "kysymys": "Mistä suola koostuu?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tavallinen ruokasuola koostuu pääasiassa [[natriumkloridista]], jossa yhdistyvät natrium ja kloori. Merisuolassa on lisäksi pieniä määriä muita aineita, kuten magnesiumia ja kalsiumia. [[Merivesi]] sisältää suolaa keskimäärin noin kolme ja puoli prosenttia, mutta pitoisuus vaihtelee alueittain. Jauhettu suola liukenee veteen, ja kun vesi haihtuu, suola kiteytyy takaisin. Siinä oli tosi suolainen vastaus.",
+  "linkit": [
+   "natriumkloridista",
+   "Merivesi"
+  ],
+  "jatkot": [
+   "Miksi merivesi on suolaista?",
+   "Miten suola vaikuttaa ihmisen terveyteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-porta-caesarea",
+  "kysymys": "Miltä Salonan Porta Caesarea näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Mmm— tähän en voi vastata tarkasti. Porta Caesarea oli yksi [[Salonan]] kaupunginmuurin porteista, ja Salona oli Rooman [[Dalmatian]] provinssin pääkaupunki. En ole varma portin tarkasta ulkonäöstä loistoaikana. Roomalaiset kaupunginportit olivat yleensä kaarimaisia, usein tornien kyljittämiä ja rakennettuja kivestä, ja niistä kuljettiin sisään tarkastettuna. Siinä on arvaus, ei tieto, ja minä en arvaile.",
+  "linkit": [
+   "Salonan",
+   "Dalmatian"
+  ],
+  "jatkot": [
+   "Mikä oli Salona?",
+   "Miltä roomalaiset kaupunginportit yleensä näyttivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-porta-caesarea",
+  "kysymys": "Miksi Salonan Porta Caesarea katosi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Salonan kaupunki tuhoutui 600-luvulla, kun [[avaarit]] ja [[slaavit]] hyökkäsivät sinne. Asukkaat pakenivat [[Diocletianuksen palatsiin]], jonka ympärille kasvoi myöhemmin [[Split]], ja Salona jäi raunioiksi. En ole varma siitä, kuinka paljon Porta Caesareasta on jäljellä, mutta kaupungin muureja ja rakennusten jäännöksiä on säilynyt raunioalueella. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "avaarit",
+   "slaavit",
+   "Diocletianuksen palatsiin",
+   "Split"
+  ],
+  "jatkot": [
+   "Keitä avaarit olivat?",
+   "Miten Split kasvoi palatsin ympärille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-porta-caesarea",
+  "kysymys": "Kuka oli keisari Diocletianus?",
+  "uusi": true,
+  "vastaus": "Ai se. Diocletianus hallitsi Rooman keisarikuntaa vuosina 284–305. Hän uudisti valtion hallintoa jakamalla vallan useiden hallitsijoiden kesken järjestelmässä, jota kutsutaan [[tetrarkiaksi]], jotta laaja valtakunta olisi helpompi hallita ja puolustaa. Vuonna 305 hän luopui vallasta vapaaehtoisesti ja vetäytyi rakennuttamaansa palatsiin nykyisen [[Splitin]] seudulle. Hänen aikanaan kristittyjä vainottiin laajasti, mikä on osa hänen perintöään. Kauan sitten, mutta vieläkin siitä puhutaan.",
+  "linkit": [
+   "tetrarkiaksi",
+   "Splitin"
+  ],
+  "jatkot": [
+   "Mikä oli tetrarkia?",
+   "Miten Rooman keisarikunta romahti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-porta-caesarea",
+  "kysymys": "Keitä avaarit olivat?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Avaarit olivat Euraasian aroilta Eurooppaan 500-luvulla saapunut ratsastajakansa, joka muodosti vallan [[Pannonian]] tasangolle nykyisen Unkarin seudulle. He hyökkäsivät Bysantin alueille Balkanilla ja yhdessä slaavien kanssa myös Dalmatiaan. Avaarien valta heikkeni vähitellen, ja [[Kaarle Suuren]] sotaretket 700-luvun lopulla ja 800-luvun alussa tekivät siitä lopun. Tämä oli pitkä matka arolta Adrianmerelle, ja minä lensin sen yhdessä hengenvedossa.",
+  "linkit": [
+   "Pannonian",
+   "Kaarle Suuren"
+  ],
+  "jatkot": [
+   "Mikä oli Bysantti?",
+   "Millainen oli Kaarle Suuren valtakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-porta-caesarea",
+  "kysymys": "Miten roomalaisia provinsseja hallittiin?",
+  "uusi": true,
+  "vastaus": "No niin, hallinto oli järjestelmällistä. Rooman [[provinssi]] oli valtakunnan hallintoalue, jota johti keisarin tai senaatin nimittämä kuvernööri. Hän vastasi järjestyksestä, oikeudenkäytöstä ja verojen keräämisestä, ja hänen tukenaan oli virkamiehiä sekä tarvittaessa sotaväkeä. Provinssien suuremmat kaupungit, kuten Dalmatian pääkaupunki [[Salona]], toimivat hallinnon keskuksina. Hallintoa tuki tiestö, jota pitkin viestit ja joukot liikkuivat. Ja viestit, ne olivat ennen minun alaani.",
+  "linkit": [
+   "provinssi",
+   "Salona"
+  ],
+  "jatkot": [
+   "Miten roomalaiset tiet rakennettiin?",
+   "Mistä Rooman verotulot tulivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krka",
+  "kysymys": "Minä vuonna Krka julistettiin kansallispuistoksi?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Krka julistettiin kansallispuistoksi vuonna 1985, ja siitä tuli Kroatian seitsemäs kansallispuisto. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä [[Šibenikin]] kaupunkia Dalmatian keskiosassa. Tunnetuin näky on [[Skradinski buk]], jossa joki putoaa sarjana putouksia sammaleisten kivikynnysten yli; kynnykset syntyvät [[travertiinin]] kerrostumisesta, samasta ilmiöstä kuin [[Plitvicen]] padot. Vuosiluvun minä muistin heti, ei paha kyyhkyltä.",
+  "linkit": [
+   "Šibenikin",
+   "Skradinski buk",
+   "travertiinin",
+   "Plitvicen"
+  ],
+  "jatkot": [
+   "Miten travertiini syntyy ja miksi se muodostaa putouksia?",
+   "Millainen Plitvicen kansallispuisto on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krka",
+  "kysymys": "Kuinka monta kasvilajia tai alalajia Krkan puistossa on tunnistettu?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Krkan puistossa on tunnistettu 860 kasvilajia tai alalajia, ja lisäksi alueella tavataan 222 lintulajia. Joessa elää kahdeksantoista kalalajia, joista kymmenen on [[endeemisiä]], eli ne esiintyvät luonnostaan vain rajatulla alueella. Puisto sijaitsee [[Dalmatian]] keskiosassa, ja siihen kuuluu myös [[Čikola-joen]] alaosa. Putousten ympäristössä kasvaa runsaasti laventelia, minkä vuoksi paikalla on paljon ampiaisia ja mehiläisiä.\n\nLaventelia ja ampiaisia samassa paikassa, siinä on kyyhkyn mielestä jo ihan tarpeeksi syytä pysytellä ylhäällä. Mut tuoksun uskon olevan hyvä.",
+  "linkit": [
+   "endeemisiä",
+   "Dalmatian",
+   "Čikola-joen"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa, että laji on endeeminen?",
+   "Mitkä ovat Kroatian muut kansallispuistot?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krka",
+  "kysymys": "Mikä travertiini on ja miten se syntyy?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Travertiini on kalkkikiveä, joka saostuu kalkkipitoisesta vedestä, kun vesi virtaa ja sen sisältämä hiilidioksidi vapautuu. Krka-joella saostuminen rakentaa vähitellen kivikynnyksiä, joiden yli joki putoaa sarjana pieniä ja suuria putouksia; näin syntyvät [[Skradinski bukin]] kaltaiset näyt. Sama ilmiö on muodostanut myös [[Plitvicen]] padot, ja sammalet ja muu kasvillisuus ovat yleensä mukana prosessissa. Kynnykset kasvavat hyvin hitaasti. Kemiaa tuli taas enemmän kuin kyyhky yleensä jaksaa.",
+  "linkit": [
+   "Skradinski bukin",
+   "Plitvicen"
+  ],
+  "jatkot": [
+   "Missä Plitvicen järvet sijaitsevat?",
+   "Mitä karstialue tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krka",
+  "kysymys": "Miksi putousten ympärillä on paljon mehiläisiä?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Putousten ympäristössä kasvaa kerrotusti Euroopan toiseksi tiheimmin [[laventelia]], ja juuri siksi alueella on paljon ampiaisia ja mehiläisiä. Kukkiessaan laventeli on hyvä mesikasvi, jota [[mehiläiset]] ja muut [[pölyttäjät]] käyttävät ravintonaan. Kukinnan aikaan kannattaa siis varautua hyönteisten seuraan. Ampiaisten kanssa minä en neuvottele.",
+  "linkit": [
+   "laventelia",
+   "mehiläiset",
+   "pölyttäjät"
+  ],
+  "jatkot": [
+   "Miten mehiläiset pölyttävät kasveja?",
+   "Milloin laventeli kukkii Välimeren alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krka",
+  "kysymys": "Mikä alue Dalmatia on ja missä se sijaitsee?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Dalmatia on Kroatian rannikkoalue Adrianmeren itärannalla, ja siihen kuuluu pitkä rannikkokaista sekä sen edustan saaria. Alueen tunnettuja kaupunkeja ovat muun muassa [[Zadar]], [[Split]] ja [[Dubrovnik]]. Krkan kansallispuisto on Dalmatian keskiosassa lähellä Šibenikiä, ja samalla seudulla ovat myös [[Kornatin]] saaret. Alueen tarkkoja rajoja en ole varma sanomaan, koska ne ovat vaihdelleet historian kuluessa. Onpas sitä rantaviivaa, ylhäältä katsoen ihan loputtomiin.",
+  "linkit": [
+   "Zadar",
+   "Split",
+   "Dubrovnik",
+   "Kornatin"
+  ],
+  "jatkot": [
+   "Millainen Splitin vanhakaupunki on?",
+   "Mikä tekee Dubrovnikin muureista tunnetut?"
+  ],
+  "paikka": {
+   "nimi": "Dalmatia",
+   "lat": 43.5,
+   "lon": 16.4,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornati",
+  "kysymys": "Minkä saaren nimestä Kornatin saariston nimi on peräisin?",
+  "uusi": false,
+  "vastaus": "No niin. Kornatin saariston nimi tulee sen suurimmasta saaresta, Kornatista, ja saariston nimi on suurimman saaren nimen monikko. Saaristo sijaitsee Pohjois-Dalmatiassa [[Zadarista]] etelään ja [[Šibenikistä]] länteen, ja se koostuu 89 saaresta noin 320 neliökilometrin merialueella. Se on yksi Välimeren tiheimpiä saaristoja. Saaret ovat enimmäkseen paljasta [[karstikalkkikiveä]], jonka jyrkät valkoiset kalliot nousevat suoraan merestä, ja alue on suosittu [[purjehtijoiden]] ja sukeltajien kohde. Ylhäältä katsottuna se on varmaan ihan sirpaleinen näky.",
+  "linkit": [
+   "Zadarista",
+   "Šibenikistä",
+   "karstikalkkikiveä",
+   "purjehtijoiden"
+  ],
+  "jatkot": [
+   "Asuuko Kornatin saarilla ketään pysyvästi?",
+   "Miksi karstimaisema on niin paljas ja kasvitonta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornati",
+  "kysymys": "Mistä kunnasta kansallispuistoa hallinnoidaan?",
+  "uusi": false,
+  "vastaus": "Ai tota. En oo ihan varma tästä. Puiston hallinto on uskoakseni [[Murterin]] saarella, mutta tämä kannattaa tarkistaa. Saariston maanomistajat ovat enimmäkseen peräisin Murterin ja [[Dugi Otokin]] saarilta, ja heidän käytössään on suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Murterin asukkaat ostivat saaret 1800-luvun lopulla, ja osasta perustettiin kansallispuisto vuonna 1980. Hallintokuvioissa kyyhky ei aina pysy mukana.",
+  "linkit": [
+   "Murterin",
+   "Dugi Otokin"
+  ],
+  "jatkot": [
+   "Mikä on kansallispuiston ja luonnonpuiston ero?",
+   "Miten Kornateille pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornati",
+  "kysymys": "Asuuko Kornatin saarilla ketään pysyvästi?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Pysyviä asutuskeskuksia saaristossa ei ole. Mantereen maanomistajat, enimmäkseen [[Murterin]] ja [[Dugi Otokin]] saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Murterin asukkaat ostivat saaret 1800-luvun lopulla, ja vuonna 1980 osasta perustettiin kansallispuisto.\n\nKalliosaari ja pieni talo poukamassa kuulostaa minusta oikein hyvältä kyyhkyn katolta katsottuna. Mutta pullatoimitusten järjestämisestä en ota mitään vastuuta.",
+  "linkit": [
+   "Murterin",
+   "Dugi Otokin"
+  ],
+  "jatkot": [
+   "Millaisia roomalaisia jäänteitä Kornatilla on?",
+   "Miten Adrianmeren saaristoissa elämä on ennen järjestetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornati",
+  "kysymys": "Mikä Toreta-torni on ja miltä ajalta se on?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Toreta on Kornatin saarella oleva pieni torni, joka on luultavasti 500-luvulta eli [[myöhäisantiikin]] ajalta. Saarella on lisäksi jäänteitä [[roomalaisista huviloista]], joten sitä on käytetty jo antiikin aikana. Tornin tarkasta käyttötarkoituksesta en ole varma.\n\nPuolitoista tuhatta vuotta ja torni on yhä siellä, sitä täytyy arvostaa. Omakin sukuni on kantanut kirjeitä Rooman ajoista asti.",
+  "linkit": [
+   "myöhäisantiikin",
+   "roomalaisista huviloista"
+  ],
+  "jatkot": [
+   "Mitä myöhäisantiikki tarkoittaa Euroopan historiassa?",
+   "Millaisia roomalaisia huviloita Adrianmeren rannalla oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornati",
+  "kysymys": "Millainen maisema Kornatin saarilla on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Saaret ovat enimmäkseen paljasta ja kasvitonta [[kalkkikiveä]], ja jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Tuulet ja aallot ovat kuluttaneet maiseman, ja ilmasta kuvattuna se näyttää kartalta revityiltä palasilta. Alue on suosittu [[purjehtijoiden]] ja [[sukeltajien]] kohde, ja asutus rajoittuu suojaisten poukamien yksinkertaisiin majoihin. Kyllä siitä kelpaa lentää ohi.",
+  "linkit": [
+   "kalkkikiveä",
+   "purjehtijoiden",
+   "sukeltajien"
+  ],
+  "jatkot": [
+   "Mitä karst-maisema tarkoittaa?",
+   "Millaisia purjehdusreittejä Dalmatian rannikolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lonjsko-polje",
+  "kysymys": "Kuinka suuri Lonjsko polje on neliökilometreinä?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Lonjsko polje on pinta-alaltaan 505,6 neliökilometriä. Sitä pidetään Kroatian suurimpana suojeltuna kosteikkona, ja lähteiden mukaan se on suurin myös koko [[Tonavan]] vesistöalueella. Alue ulottuu [[Sava-joen]] varrella [[Sisakin]] itäpuolelta Nova Gradiškan länsipuolelle, ja se on luonnonpuisto, jonka hallinto perustettiin vuonna 1998.\n\nYli viisisataa neliökilometriä märkää maata, ja minä vain lennän sen yli kuivin jaloin. Siinä on kyyhkyn etu.",
+  "linkit": [
+   "Tonavan",
+   "Sava-joen",
+   "Sisakin"
+  ],
+  "jatkot": [
+   "Mihin Sava-joki laskee?",
+   "Mitä Tonavan vesistöalueeseen kuuluu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lonjsko-polje",
+  "kysymys": "Minkä joen varrella kosteikko sijaitsee?",
+  "uusi": false,
+  "vastaus": "Just niin. Kosteikko sijaitsee [[Sava-joen]] varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle. Nimi tulee alajuoksulla virtaavasta [[Lonja-joesta]], ja alueeseen kuuluu myös Veliki Strug -joen varsi. Sava on [[Tonavan]] sivujoki. Onpas siinä sitä vettä.",
+  "linkit": [
+   "Sava-joen",
+   "Lonja-joesta",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Missä Sisak sijaitsee?",
+   "Mitä kaikkia maita Sava-joki virtaa läpi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lonjsko-polje",
+  "kysymys": "Milloin luonnonpuiston hallinto perustettiin?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: hallinto perustettiin vuonna 1998, ja sen toimipaikka on [[Krapjen]] kylä. Alue on luonnonpuisto, kroatiaksi park prirode, ja Euroopan unionin [[lintudirektiivin]] kriteerien mukaan se on lisäksi tärkeä lintualue. Hallinnon vuosiluvun minä muistan, kylän oikeaa lausuntaa en niinkään.",
+  "linkit": [
+   "Krapjen",
+   "lintudirektiivin"
+  ],
+  "jatkot": [
+   "Mikä on lintudirektiivi?",
+   "Mitä luonnonpuisto tarkoittaa Kroatiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lonjsko-polje",
+  "kysymys": "Miksi Lonjsko polje on tärkeä lintualue?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Euroopan unionin [[lintudirektiivin]] kriteerien mukaan puisto täyttää tärkeän lintualueen ehdot. Kosteikko on laaja [[tulva-alue]], jossa vesi, ruohikko ja metsät tarjoavat linnuille ruokaa ja pesäpaikkoja; yksittäisistä lajeista en ole varma, joten jätän luettelon antamatta. Alue kuuluu [[Tonavan]] vesistöalueeseen. Linnut tietävät hyvän pysähdyspaikan, ja sen minä kyllä ymmärrän.",
+  "linkit": [
+   "lintudirektiivin",
+   "tulva-alue",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Mitkä linnut talvehtivat Euroopan kosteikoilla?",
+   "Miksi linnut muuttavat syksyllä etelään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lonjsko-polje",
+  "kysymys": "Miksi kosteikot ovat tärkeitä luonnolle?",
+  "uusi": true,
+  "vastaus": "Mmm— kosteikko on alue, jossa vesi pysyy maan pinnalla tai lähellä sitä pitkiä aikoja, ja siksi se tarjoaa elinympäristön monille kasveille, linnuille ja kaloille. Kosteikot hillitsevät [[tulvia]], koska ne varastoivat vettä, ja ne puhdistavat sitä pidättämällä ravinteita. Lisäksi turpeen ja kasvillisuuden kerrokset sitovat [[hiiltä]]. Lonjsko polje on hyvä esimerkki, sillä se on laaja suojeltu kosteikko [[Sava-joen]] varrella. Märkää mutta tärkeää, sanoisin minä.",
+  "linkit": [
+   "tulvia",
+   "hiiltä",
+   "Sava-joen"
+  ],
+  "jatkot": [
+   "Mikä on turve ja miten se syntyy?",
+   "Mitä Ramsarin sopimus tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kopacki-rit",
+  "kysymys": "Kuinka monta lintulajia Kopački ritillä pesii?",
+  "uusi": false,
+  "vastaus": "Ai se. Kopački ritillä pesii noin 260 lintulajia, muun muassa [[merikotka]], [[valkoinen haikara]] ja [[mustahaikara]]. Vesissä elää lisäksi noin 40 kalalajia. Puisto on luonnonpuisto Itä-Kroatiassa [[Tonavan]] ja Dravan yhtymäkohdan luoteispuolella, ja sitä pidetään yhtenä Euroopan tärkeimmistä koskemattomina säilyneistä kosteikoista.\n\nNoin kaksisataakuusikymmentä lintulajia samalla alueella, ja minä olen tottunut jakamaan katon korkeintaan kolmen kanssa. Hurja naapurusto.",
+  "linkit": [
+   "merikotka",
+   "valkoinen haikara",
+   "mustahaikara",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Mitä merikotka syö?",
+   "Milloin haikarat muuttavat etelään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kopacki-rit",
+  "kysymys": "Minkä jokien yhtymäkohdan luoteispuolella luonnonpuisto on?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Luonnonpuisto on [[Dravan]] ja [[Tonavan]] yhtymäkohdan luoteispuolella Itä-Kroatiassa, lähellä Serbian rajaa. Se sijaitsee Bilje- ja Kneževi Vinogradi -kuntien alueella, ja lähellä on [[Osijek]], josta puistoon on hyvät yhteydet. Alueella on runsaasti Tonavan sivuvesiä ja lampia. Joet kohtaavat siinä ylhäältä katsoen ihan kauniisti.",
+  "linkit": [
+   "Dravan",
+   "Tonavan",
+   "Osijek"
+  ],
+  "jatkot": [
+   "Minkä maiden läpi Drava virtaa?",
+   "Millainen kaupunki Osijek on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kopacki-rit",
+  "kysymys": "Miten Kopački ritille voi tutustua retkellä?",
+  "uusi": true,
+  "vastaus": "No jopas. Kävijät tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan. [[Osijekin]] läheisyys ja hyvät yhteydet tuovat alueelle paljon kävijöitä. Kosteikon vesillä ja lammilla näkee erityisesti lintuja, sillä siellä pesii noin 260 lajia, ja vesistö on osa [[Tonavan]] sivuvesiä. Itse valitsisin siivet, mutta ne eivät kuulu vuokravälineisiin.",
+  "linkit": [
+   "Osijekin",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Milloin kosteikolla kannattaa vierailla?",
+   "Miten lintuja kannattaa havainnoida?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kopacki-rit",
+  "kysymys": "Miksi Tonavan varrella on paljon sivuvesiä ja lampia?",
+  "uusi": true,
+  "vastaus": "Kato. Suuri joki muodostaa tulvatasangoille mutkia, sivu-uomia ja lampia, kun vedenkorkeus vaihtelee ja joki muuttaa uomaansa. Kopački ritin kaltainen [[tulva-alue]] syntyy erityisesti paikkaan, jossa [[Drava]] yhtyy Tonavaan, ja tulvavesi täyttää matalat painanteet. Tarkkoja syitä juuri tälle alueelle en ole varma sanomaan.\n\nJoki ei tykkää pysyä uomassaan, ja minä ymmärrän sitä täysin. Minäkään en pysy samalla katolla kovin kauan.",
+  "linkit": [
+   "tulva-alue",
+   "Drava"
+  ],
+  "jatkot": [
+   "Mikä on meanderi?",
+   "Miten tulvat vaikuttavat kosteikon eläimiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kopacki-rit",
+  "kysymys": "Millainen lintu mustahaikara on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Mustahaikara on suuri, arka ja yksinäinen lintu, joka pesii vanhoissa metsissä kosteikkojen ja jokien lähellä. Se on [[muuttolintu]], joka talvehtii Afrikassa, ja sitä tavataan pesimälintuna myös Suomessa, joskin harvinaisena. Sukulaisensa [[valkoinen haikara]] on seuranhakuisempi ja pesii usein ihmisasutuksen lähellä. Itse olen harmaa, ja ylpeä siitä.",
+  "linkit": [
+   "muuttolintu",
+   "valkoinen haikara"
+  ],
+  "jatkot": [
+   "Mihin mustahaikara talvehtii?",
+   "Miksi linnut muuttavat syksyllä etelään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krk",
+  "kysymys": "Mikä saari on Adrianmeren väkirikkain?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Adrianmeren väkirikkain saari on Krk, jossa asukkaita oli vuonna 2021 yhteensä 19 916. Krk on [[Cresin]] kanssa Adrianmeren suurin saari mittaustavasta riippuen, joten kumpikaan ei yksiselitteisesti ole toista suurempi. Saari sijaitsee Pohjois-Adrianmerellä [[Kvarnerin]] lahdella lähellä [[Rijekaa]].\n\nMelkein kaksikymmentätuhatta asukasta tarkoittaa varmasti myös paljon leivonnaisia, ja yksi kroatialainen pullalaji on fritule. En tosin tiedä, tehdäänkö niitä juuri Krkillä.",
+  "linkit": [
+   "Cresin",
+   "Kvarnerin",
+   "Rijekaa"
+  ],
+  "jatkot": [
+   "Mitä eroa on Krkin ja Cresin saarilla?",
+   "Missä Kvarnerin lahti sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krk",
+  "kysymys": "Minä vuonna silta mantereelle valmistui?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Saaren pohjoispäätä mantereeseen yhdistävä silta valmistui heinäkuussa 1980. Krk on [[Adrianmeren]] saari [[Kvarnerin]] lahdella lähellä [[Rijekaa]], ja silta tekee siitä helposti tavoitettavan. Ei paha kyyhkyltä, kuukausikin meni oikein.",
+  "linkit": [
+   "Adrianmeren",
+   "Kvarnerin",
+   "Rijekaa"
+  ],
+  "jatkot": [
+   "Miten Krkin saarelle pääsee autolla?",
+   "Mitä muita siltoja Kroatian rannikolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krk",
+  "kysymys": "Mikä Curicum oli ja mitä siellä on löydetty?",
+  "uusi": true,
+  "vastaus": "Ai tota. Curicum oli nykyisen Krkin kaupungin kohdalla sijainnut roomalainen kaupunki. Sieltä on löydetty [[Venuksen]] temppeli 1. vuosisadalta eaa., jonka kerrotaan olevan ainoa laatuaan tunnettu [[Adrianmeren]] itärannikolta. Saarella on asuttu keskeytyksettä [[neoliittiselta kaudelta]] asti, joten roomalaisaika on vain yksi kerros pitkässä historiassa. Venuksen lintu on perinteisesti kyyhkynen, joten minä tunnen oloni siellä kotoisaksi.",
+  "linkit": [
+   "Venuksen",
+   "Adrianmeren",
+   "neoliittiselta kaudelta"
+  ],
+  "jatkot": [
+   "Kuka Venus oli roomalaisessa uskonnossa?",
+   "Mitä neoliittinen kausi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krk",
+  "kysymys": "Keitä Frankopanit olivat?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Frankopanit olivat Kroatian mahtavimpiin kuuluva aatelissuku. Krkin kreivit ottivat nimen Frankopan vuonna 1430, ja he kuuluivat Kroatian mahtavimpiin [[aatelissukuihin]]. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa [[Venetsiaan]]. Suvun vaiheista en osaa kertoa tämän enempää.\n\nSeitsemän vuosisataa Venetsian kanssa, ja minun sukuni on kantanut kirjeitä sinne ja takaisin. Mut en tiedä, onko Frankopanien viestejä koskaan ollut meikäläisten laukussa.",
+  "linkit": [
+   "aatelissukuihin",
+   "Venetsiaan"
+  ],
+  "jatkot": [
+   "Mikä oli Venetsian tasavalta?",
+   "Miten Venetsia hallitsi Adrianmeren rannikkoa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-krk",
+  "kysymys": "Kuinka kauan Krkin saarella on asuttu?",
+  "uusi": true,
+  "vastaus": "No niin. Krkin saarella on asuttu keskeytyksettä [[neoliittiselta kaudelta]] eli nuoremmalta kivikaudelta alkaen. Roomalaisaikana saarella oli [[Curicum]], jonka Venuksen temppeli on 1. vuosisadalta eaa., ja myöhemmin saaren historia oli seitsemän vuosisataa tiiviisti sidoksissa [[Venetsiaan]]. No olipas pitkä historia, ja kaiken minä kannoin päässäni.",
+  "linkit": [
+   "neoliittiselta kaudelta",
+   "Curicum",
+   "Venetsiaan"
+  ],
+  "jatkot": [
+   "Mikä oli nuorempi kivikausi Euroopassa?",
+   "Millaisia roomalaisia kaupunkeja Adrianmeren saarilla oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vis",
+  "kysymys": "Mikä on Kroatian mantereesta kaukaisin asuttu saari?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, annas ku mietin. Tän minä tiedän. Kroatian mantereesta kaukaisin asuttu saari on [[Vis]], joka sijaitsee [[Adrianmeren]] avovesillä kaukana rannikosta. Saaren pinta-ala on noin 90 neliökilometriä, ja sen korkein kohta on 587 metrin korkuinen [[Hum]]. Asukkaita siellä oli vuonna 2021 yhteensä 3 313, ja pääelinkeinoja ovat viininviljely, kalastus ja matkailu. Ei paha, kun vielä muistin luvutkin.\n\nKyyhkyn silmin tuollainen yksinäinen saari on paras mahdollinen laskeutumispaikka: ei ketään kiusaamassa, vain meri joka suuntaan. Kunhan joku muistaisi tuoda sinne pullaa.",
+  "linkit": [
+   "Vis",
+   "Adrianmeren",
+   "Hum"
+  ],
+  "jatkot": [
+   "Millä tavalla Visille pääsee mantereelta?",
+   "Mitä viiniä Visillä viljellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vis",
+  "kysymys": "Kuka johti Itävallan laivastoa vuonna 1866?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Joo, tän minä muistan. Itävallan laivastoa johti vuonna 1866 amiraali [[Wilhelm von Tegetthoff]]. Hänen johtamansa laivasto kohtasi 20. heinäkuuta 1866 Lissan saaren edustalla suuremman [[Italian]] laivaston ja voitti sen. Taistelussa upposi italialainen alus [[Re d’Italia]]. Onpa siitä jo pitkä aika, ja hyvä niin.",
+  "linkit": [
+   "Wilhelm von Tegetthoff",
+   "Italian",
+   "Re d’Italia"
+  ],
+  "jatkot": [
+   "Miksi Itävalta ja Italia sotivat keskenään vuonna 1866?",
+   "Millainen laivasto Itävallalla oli 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vis",
+  "kysymys": "Kuka perusti Issan siirtokunnan Visin saarelle?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Antiikki, hyvä kysymys. Issan siirtokunnan perusti saarelle Syrakusan tyranni [[Dionysios Vanhempi]] 300-luvulla eaa. [[Syrakusa]] oli yksi [[Sisilian]] kreikkalaisista kaupungeista, ja siirtokunta kuului sen toimintaan Adrianmerellä. Myöhemmin saari kuului Venetsian vallan päätyttyä Itävallalle vuodesta 1814, ja silloin sen nimi oli Lissa. Siinä oli aikamoinen aikajana yhteen hengenvetoon.",
+  "linkit": [
+   "Dionysios Vanhempi",
+   "Syrakusa",
+   "Sisilian"
+  ],
+  "jatkot": [
+   "Millainen kaupunki antiikin Syrakusa oli?",
+   "Miksi kreikkalaiset perustivat siirtokuntia Adrianmeren rannoille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vis",
+  "kysymys": "Mitä tapahtui Lissan edustalla heinäkuussa 1866?",
+  "uusi": true,
+  "vastaus": "Hmm, tämä on vakava asia. Heinäkuun 20. päivänä 1866 Lissan saaren pohjoispuolella käytiin meritaistelu, jossa Wilhelm von [[Tegetthoffin]] johtama Itävallan laivasto löi suuremman italialaisen laivaston. Italialaisten alus [[Re d’Italian]] upotettiin taistelussa. Sota oli osa [[Itävallan ja Preussin sotaa]], jonka rinnalla Italia pyrki saamaan lisää alueita, ja siitä on nyt yli sataviisikymmentä vuotta. Onpa siitä onneksi pitkä aika.",
+  "linkit": [
+   "Tegetthoffin",
+   "Re d’Italian",
+   "Itävallan ja Preussin sotaa"
+  ],
+  "jatkot": [
+   "Mitä Itävalta ja Italia saivat sodan päätyttyä?",
+   "Mikä oli Lissan taistelu vuonna 1811?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vis",
+  "kysymys": "Mistä Visin asukkaat saavat nykyään elantonsa?",
+  "uusi": true,
+  "vastaus": "Ai se. Selvä juttu. Visin pääelinkeinot ovat [[viininviljely]], [[kalastus]] ja [[matkailu]]. Saari sijaitsee Adrianmerellä, joten meri ja aurinko ovat sen tärkeimpiä voimavaroja. Asukkaita oli vuonna 2021 yhteensä 3 313. Kalastajien torilla on varmaan joka päivä jotain kiinnostavaa nähtävää, ainakin kyyhkyn mielestä.",
+  "linkit": [
+   "viininviljely",
+   "kalastus",
+   "matkailu"
+  ],
+  "jatkot": [
+   "Millaista viiniä Adrianmeren saarilla viljellään?",
+   "Miten matkailu on muuttanut Kroatian saaria?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pag",
+  "kysymys": "Minkä lempinimen Pag on saanut maisemansa vuoksi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Pagia kutsutaan kuun saareksi sen karun, kuunmaisen maiseman vuoksi. Saari on Pohjois-[[Adrianmeren]] saari ja [[Kroatian]] rannikon viidenneksi suurin, ja sen rantaviiva on 269 kilometriä pitkä. Pinta-ala on noin 284 neliökilometriä. Hyvä kysymys tuokin oli.",
+  "linkit": [
+   "Adrianmeren",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Miksi Pagin maisema on niin karu?",
+   "Mitä Pagilla tehdään suolalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pag",
+  "kysymys": "Kuinka pitkä silta yhdistää saaren mantereeseen?",
+  "uusi": false,
+  "vastaus": "Katotaas. Nyt muistan: Pagin eteläosan ja mantereen yhdistää 300 metrin pituinen [[kaarisilta]]. Silta kulkee [[Adrianmeren]] salmen yli ja tekee saaren tavoittamisesta helppoa autolla. Pag kuuluu muuten kahteen lääniin, mikä on [[Kroatian]] saarten joukossa poikkeuksellista. Ei paha kyyhkyltä.",
+  "linkit": [
+   "kaarisilta",
+   "Adrianmeren",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Miten suuri Pagin saari on Kroatian saarten joukossa?",
+   "Mihin kahteen lääniin Pag kuuluu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pag",
+  "kysymys": "Kuka kirjoitti ensimmäisen kroatian kieliopin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tost minä osaan kertoo. Ensimmäisen kroatian kieliopin kirjoitti pagilainen [[jesuiitta]] [[Bartol Kašić]]. Hän oli kotoisin Pagin saarelta, joten saari on antanut [[kroatian kielen]] tutkimukselle suuren panoksen. Tarkkaa vuotta en tähän uskalla arvata, joten jätän sen pois. Eipä sitä kyyhkynen joka päivä pääse kielitieteestä puhumaan.",
+  "linkit": [
+   "jesuiitta",
+   "Bartol Kašić",
+   "kroatian kielen"
+  ],
+  "jatkot": [
+   "Millainen kieli kroatia on?",
+   "Keitä muita tunnettuja pagilaisia on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pag",
+  "kysymys": "Kuinka kauan Pagilla on valmistettu suolaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tuota niin. Pagilla on valmistettu suolaa yli tuhat vuotta. [[Suolantuotanto]] liittyy myös [[Pagin kaupungin]] syntyyn, sillä suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Vanhin kirjallinen maininta saaren suolasta on vuodelta 999. Saari on siis ollut suolan tärkeä tuottaja jo keskiajalta lähtien.\n\nSuola on minulle sellainen asia, josta en tiedä muuta kuin että pullassa sitä on aina liian vähän. Mutta kyllä minä arvostan sitä, joka tuon kaiken on tuhat vuotta kauhonut.",
+  "linkit": [
+   "Suolantuotanto",
+   "Pagin kaupungin"
+  ],
+  "jatkot": [
+   "Miten merisuolaa valmistetaan?",
+   "Miksi suola oli keskiajalla niin arvokasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pag",
+  "kysymys": "Mitkä kaksi kaupunkia Pagin saarella on?",
+  "uusi": true,
+  "vastaus": "No niin, katsotaas. Pagin saarella on kaksi kaupunkia: [[Novalja]] ja saaren oma kaupunki, Pag. Saari kuuluu myös kahteen lääniin, mikä tekee siitä Kroatian saarten joukossa erikoisen. Eteläosan yhdistää mantereeseen [[Pagin sillaksi]] kutsuttava kaarisilta, joka on 300 metriä pitkä. Pitkälti tuossa se kaupunkikuva on.",
+  "linkit": [
+   "Novalja",
+   "Pagin sillaksi"
+  ],
+  "jatkot": [
+   "Millainen on Pagin vanha kaupunki?",
+   "Mikä Novalja on tunnettu paikka?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lastovo",
+  "kysymys": "Kuinka monta saarta Lastovon saaristoon kuuluu?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tää on helppo. Lastovon kunta ja saaristo koostuvat 46 saaresta, joiden yhteenlaskettu maa-ala on noin 53 neliökilometriä. Pääsaari sijaitsee 13 kilometriä [[Korčulan]] saaresta etelään, ja yksi Adrianmeren syrjäisimmistä asutuista saarista. Asukkaita on 792. Saaristo kuuluu [[Dubrovnik-Neretvan]] lääniin.\n\nPienet saaret ovat kyyhkyn silmin kuin tarjottimelle kaadettuja muruja, ja niitä on tuolla ihan riittämiin. Saisi sieltä leivän vielä lisäksi.",
+  "linkit": [
+   "Korčulan",
+   "Dubrovnik-Neretvan"
+  ],
+  "jatkot": [
+   "Millainen on Lastovon luonto?",
+   "Miten Lastovolle pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lastovo",
+  "kysymys": "Minä vuonna saaristo julistettiin luonnonpuistoksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Lastovon saaristo julistettiin [[luonnonpuistoksi]] vuonna 2006. Alue sijaitsee [[Adrianmeren]] syrjäisessä osassa Dubrovnik-Neretvan läänissä, ja siihen kuuluu 46 saarta. Pääkylä on rakennettu rinteille poispäin merestä, mikä on Adrianmerellä epätavallista. Ja siinä se, hyvä että muistin.",
+  "linkit": [
+   "luonnonpuistoksi",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Mitä luonnonpuisto tarkoittaa Kroatiassa?",
+   "Millaisia eläimiä Adrianmeren saarilla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lastovo",
+  "kysymys": "Minkä tasavallan osa Lastovo oli 1200-luvulta lähtien?",
+  "uusi": true,
+  "vastaus": "Mmm— odotas vähän. Lastovo liittyi 1200-luvulla [[Dubrovnikin tasavaltaan]], jota kutsuttiin myös nimellä Ragusa. Saarella oli tasavallan alaisena tietynasteista itsehallintoa aina [[Napoleonin]] valtaukseen asti. Sen jälkeen saarta hallitsivat Itävalta ja myöhemmin Itävalta-Unkari. Pitkää historiaa on mahtunut kyyhkyn päähän tuohon.",
+  "linkit": [
+   "Dubrovnikin tasavaltaan",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Millainen valtio Dubrovnikin tasavalta oli?",
+   "Miksi Napoleon valloitti Adrianmeren rannikkoa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lastovo",
+  "kysymys": "Miksi venetsialaiset hyökkäsivät Lastovolle vuonna 1000?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tää on vakava asia. Vuonna 1000, siis yli tuhat vuotta sitten, venetsialaiset hyökkäsivät Lastovolle ja tuhosivat asutuksen, koska saarelaiset harjoittivat [[merirosvousta]]. Aikana, jolloin [[Adrianmeren]] kauppareitit olivat kiistan kohteena, tällaiset välienselvittelyt olivat tavallisia. Saari asutettiin myöhemmin uudelleen ja se on tänään rauhallinen paikka. Onpa siitä onneksi pitkä aika.",
+  "linkit": [
+   "merirosvousta",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Miten merirosvous vaikutti Adrianmeren kauppaan?",
+   "Millainen merivalta Venetsia oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lastovo",
+  "kysymys": "Mikä on Lastovon suurin kulttuuritapahtuma?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Lastovon suurin kulttuuritapahtuma on [[Poklade-karnevaali]]. Karnevaali kuuluu yleisesti ennen [[paastoa]] vietettäviin juhliin, mutta Lastovon omista perinteistä en ole varma, joten en lähde arvailemaan yksityiskohtia. Saaristo kuuluu [[Dubrovnik-Neretvan]] lääniin. Olisinpa itse paikalla, jos pullaa olisi tarjolla.",
+  "linkit": [
+   "Poklade-karnevaali",
+   "paastoa",
+   "Dubrovnik-Neretvan"
+  ],
+  "jatkot": [
+   "Mitä karnevaalit ovat Euroopassa?",
+   "Miten paastoa on vietetty Kroatiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mali-losinj",
+  "kysymys": "Kuinka monta laivatelakkaa kaupungissa oli vuonna 1868?",
+  "uusi": false,
+  "vastaus": "No niin, katotaas. Mali Lošinjin kulta-aikana vuonna 1868 kaupungissa oli yksitoista laivatelakkaa. Kaupungissa oli myös [[Adrianmeren]] suurin ja kehittynein kauppalaivasto, jopa [[Rijekan]], [[Triesten]] ja Venetsian edellä. Amerikkalaisen kirjailijan mukaan saarella asui 1930-luvulla neljäsataa merikapteenia.\n\nYksitoista telakkaa on aika paljon puuta, mutta kyllä minä sellaista kyyhkynä katselisin mielelläni. Telakan ylle ei kai oikein pesää rakenneta, mutta kyllä siellä olisi mukava istuskella.",
+  "linkit": [
+   "Adrianmeren",
+   "Rijekan",
+   "Triesten"
+  ],
+  "jatkot": [
+   "Miksi Mali Lošinjin laivasto oli niin suuri?",
+   "Millaisia aluksia Adrianmerellä purjehdittiin 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mali-losinj",
+  "kysymys": "Minä vuonna Mali Lošinj mainitaan ensi kerran?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Joo. Mali Lošinj mainitaan ensimmäisen kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Kaupunki on kasvanut sen jälkeen merkittäväksi satamaksi [[Lošinjin]] saarella [[Kvarnerin]] alueella Länsi-Kroatiassa. Kaupungin asukasluku oli vuonna 2021 yhteensä 7 537. Ihan kunnioitettava ikä, sanon minä.",
+  "linkit": [
+   "Lošinjin",
+   "Kvarnerin"
+  ],
+  "jatkot": [
+   "Mikä Kvarner on?",
+   "Millainen Lošinjin saari on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mali-losinj",
+  "kysymys": "Mikä pysäytti Mali Lošinjin kulta-ajan?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: kulta-ajan pysäytti kaksi asiaa. [[Höyrykoneen]] keksiminen muutti merenkulkua ja vei purjelaivojen aseman, ja [[viiniköynnöstaudin]] puhkeaminen pysäytti myös viljelyn kehityksen. Mali Lošinj oli vuonna 1868 Adrianmeren suurin kauppalaivastopaikka, ja sitä seurannut taantuma muutti kaupungin luonteen. Näin kyllä kävi monelle muullekin satamakaupungille. Kyllä purjeetkin silti ansaitsisivat muistamista.",
+  "linkit": [
+   "Höyrykoneen",
+   "viiniköynnöstaudin"
+  ],
+  "jatkot": [
+   "Miten höyrylaivat syrjäyttivät purjelaivat?",
+   "Mikä on viiniköynnöstauti ja miten se levisi Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mali-losinj",
+  "kysymys": "Kuka kirjoitti saarella asuneen neljäsataa merikapteenia?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tuota niin. Luvun esitti amerikkalainen kirjailija [[Kenneth Roberts]], joka kirjoitti vuonna 1938, että saarella asui neljäsataa [[merikapteenia]]. Se on hänen arvionsa, eikä lukua voi pitää tarkasti tarkistettuna. Kaupunki oli kuitenkin Adrianmeren merenkulun keskus, jonka [[kauppalaivasto]] oli 1800-luvulla alueen suurin. Vaikuttava lukumäärä, vaikka kyyhky ei kapteeneja laske.",
+  "linkit": [
+   "Kenneth Roberts",
+   "merikapteenia",
+   "kauppalaivasto"
+  ],
+  "jatkot": [
+   "Millainen oli merikapteenin ura 1800-luvulla?",
+   "Missä merikapteenit saivat koulutuksensa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mali-losinj",
+  "kysymys": "Kuinka monta asukasta Mali Lošinjissa oli vuonna 2021?",
+  "uusi": true,
+  "vastaus": "No niin, tää on helppo. Mali Lošinjin asukasluku oli vuonna 2021 yhteensä 7 537. Kaupunki sijaitsee Lošinjin saarella [[Kvarnerin]] alueella Länsi-Kroatiassa, saaren aurinkoisella itäpuolella ja [[Lošinjin lahden]] suojaisimmassa osassa. Tämä kaupunki oli aikoinaan paljon vilkkaampi kuin luku antaa ymmärtää. Hyvin pärjää pieni kaupunki.",
+  "linkit": [
+   "Kvarnerin",
+   "Lošinjin lahden"
+  ],
+  "jatkot": [
+   "Mitä Mali Lošinjissa tehdään nykyään?",
+   "Miksi Mali Lošinjin sijainti on ollut merenkululle hyvä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-neretva",
+  "kysymys": "Kuinka pitkä Neretva on kokonaisuudessaan?",
+  "uusi": false,
+  "vastaus": "Odotas vähän, nyt muistan. [[Neretvan]] pituudeksi ilmoitetaan 225 kilometriä, ja se on [[Dinaaristen Alppien]] suurin karstijoki sekä Adrianmeren itäisen valuma-alueen suurimpia jokia. Osien luvut eivät täsmää täysin: noin 208 kilometriä sijaitsee Bosnia ja Hertsegovinassa ja noin 22 kilometriä Kroatiassa, joten tarkkaa pituutta en uskalla vannoa. Joen lähde on 1 227 metrin korkeudessa. Pitkä joki, ja siitä riitti jutella.",
+  "linkit": [
+   "Neretvan",
+   "Dinaaristen Alppien"
+  ],
+  "jatkot": [
+   "Mikä tekee joesta karstijoen?",
+   "Mihin kaupunkeihin Neretva virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-neretva",
+  "kysymys": "Minä vuonna Neretvan suisto tuli Ramsar-alueeksi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Neretvan suisto on ollut [[Ramsar-alue]] vuodesta 1992. Yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Suisto on leveä tulvatasanko noin 30 kilometrin matkalla ennen [[Adrianmerta]]. Sopiva paikka kyyhkyllekin levähtää.",
+  "linkit": [
+   "Ramsar-alue",
+   "Hutovo Blaton",
+   "Adrianmerta"
+  ],
+  "jatkot": [
+   "Mitkä linnut pesivät Neretvan suistossa?",
+   "Mitä tarkoittaa Ramsar-sopimus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-neretva",
+  "kysymys": "Minkä vuorten juurella Neretva saa alkunsa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Joo. Neretvan lähde on [[Zelengoran]] ja [[Lebršnikin]] vuorten juurella, 1 227 metrin korkeudessa. Vuoret kuuluvat [[Dinaaristen Alppien]] vuoristoon, ja joki laskee sieltä lopulta Adrianmereen. Joen pituus on 225 kilometriä. Pitkä matka vuorilta mereen, ja kyyhky lentäisi sen nopeammin.",
+  "linkit": [
+   "Zelengoran",
+   "Lebršnikin",
+   "Dinaaristen Alppien"
+  ],
+  "jatkot": [
+   "Millainen vuoristo Dinaariset Alpit on?",
+   "Miten Neretva muuttuu matkallaan merelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-neretva",
+  "kysymys": "Kuinka suuri osa Neretvasta on Kroatian puolella?",
+  "uusi": true,
+  "vastaus": "Selvä juttu, katotaas. Neretvasta noin 22 kilometriä kulkee Kroatiassa [[Dubrovnik-Neretvan]] läänissä ja noin 208 kilometriä [[Bosnia ja Hertsegovinassa]]. Luvut eivät aivan täsmää kokonaispituuden kanssa, joka on 225 kilometriä, joten en ole varma tarkasta jaosta. Joen viimeiset noin 30 kilometriä muodostavat suiston ennen merta. Rajan tuolla puolen vettä riittää kyllä.",
+  "linkit": [
+   "Dubrovnik-Neretvan",
+   "Bosnia ja Hertsegovinassa"
+  ],
+  "jatkot": [
+   "Mikä on Dubrovnik-Neretvan läänin pääkaupunki?",
+   "Missä Neretvan suisto sijaitsee Kroatiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-neretva",
+  "kysymys": "Mitä tarkoittaa, että Neretvan suisto on Ramsar-alue?",
+  "uusi": true,
+  "vastaus": "Ai se. Hyvä kysymys tuo. [[Ramsar-sopimus]] on kansainvälinen sopimus [[kosteikkojen]] suojelusta, ja Ramsar-alueeksi nimetty kohde on kansainvälisesti tärkeä kosteikko. Neretvan suisto on ollut sellainen vuodesta 1992, ja yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Sopimuksen tarkemmista ehdoista en ole varma.\n\nKosteikko on kyyhkylle vähän vieras ympäristö, koska minä pidän kivistä ja kattoharjoista. Mutta kyllä kosteikon linnut ansaitsevat suojelun, ihan niin kuin muutkin.",
+  "linkit": [
+   "Ramsar-sopimus",
+   "kosteikkojen",
+   "Hutovo Blaton"
+  ],
+  "jatkot": [
+   "Miksi kosteikot ovat tärkeitä linnuille?",
+   "Mitä muita Ramsar-alueita Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-omis",
+  "kysymys": "Millä nimellä Omišin merirosvojen alukset tunnettiin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Omišin eli Almissan merirosvojen alukset tunnettiin nimellä [[sagittat]], mikä tarkoittaa nuolia. Ne rakennettiin nopeiksi, jotta niillä voitiin hyökätä ja vetäytyä äkkiä [[Cetinan]] suulle, joka suojeli kaupunkia. Merirosvojen ystäviä ja liittolaisia olivat [[Poljican ruhtinaskunnan]] ylämaalaiset. Nopeat nuolet, ja minä kun luulin olevani nopea.",
+  "linkit": [
+   "sagittat",
+   "Cetinan",
+   "Poljican ruhtinaskunnan"
+  ],
+  "jatkot": [
+   "Mikä Poljican ruhtinaskunta oli?",
+   "Milloin Omiš joutui Venetsian hallintaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-omis",
+  "kysymys": "Mikä joki laskee Adrianmereen Omišin kohdalla?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Omišin kohdalla [[Adrianmereen]] laskee Cetina-joki, ja kaupunki sijaitsee juuri sen suulla Dalmatiassa, noin 25 kilometriä [[Splitistä]] kaakkoon. Joen suu suojasi kaupunkia aikoinaan, ja sinne [[Almissan]] merirosvot vetäytyivät nopeilla aluksillaan. Lyhyt vastaus, mut kelpaa.",
+  "linkit": [
+   "Adrianmereen",
+   "Splitistä",
+   "Almissan"
+  ],
+  "jatkot": [
+   "Mistä Cetina-joki saa alkunsa?",
+   "Miten Split on kehittynyt Dalmatian keskukseksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-omis",
+  "kysymys": "Mikä alue Dalmatia on ja missä se sijaitsee?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Dalmatia on historiallinen alue Kroatian Adrianmeren rannikolla, pitkä ja kapea kaistale, jonka edustalla on lukuisia saaria. Sen tunnetuimpia kaupunkeja ovat [[Split]], [[Zadar]] ja [[Dubrovnik]]. Suuri osa rannikosta kuului pitkään Venetsian hallintaan, minkä vuoksi monilla kaupungeilla on myös italialainen nimi; Dubrovnik oli aikoinaan itsenäinen kaupunkivaltio.\n\nDalmatiankoira on saanut nimensä tästä seudusta, vaikka sen alkuperästä on kiistelty. Minä en ota kantaa, mutta pilkullinen takki on kyllä ylhäältä helppo tunnistaa.",
+  "linkit": [
+   "Split",
+   "Zadar",
+   "Dubrovnik"
+  ],
+  "jatkot": [
+   "Mistä dalmatiankoira on saanut alkuperänsä?",
+   "Mitkä saaret kuuluvat Dalmatian rannikkoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-omis",
+  "kysymys": "Mitä tarkoittaa a cappella -laulu?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. A cappella tarkoittaa laulua ilman soitinsäestystä, pelkillä äänillä. Termi tulee italian kielestä ja viittaa kirjaimellisesti kappelin tapaan laulamiseen. Dalmatiassa tällaisella moniäänisellä laululla on vahva perinne, ja se tunnetaan nimellä [[klapa]]. Muistaakseni [[Unescon]] aineettoman kulttuuriperinnön luettelossa on mukana myös tämä dalmatialainen laulutapa, mutta en ole varma tarkasta vuodesta. Kyllä kyyhkykin tykkää laulusta, jossa ei tarvita soittimia.",
+  "linkit": [
+   "klapa",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mikä on klapa-laulun historia?",
+   "Mitä Unescon aineeton kulttuuriperintö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-omis",
+  "kysymys": "Mitä esiromaaninen tarkoittaa rakennustaiteessa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Esiromaanisella tarkoitetaan varhaiskeskiajan rakennustaidetta, joka edelsi romaanisen tyylin vakiintumista noin vuoden 1000 tienoilla. Rakennukset olivat usein pieniä kivikirkkoja, joissa oli paksut seinät, yksinkertaiset muodot ja vähän koristelua. Omišin 900-luvun [[Pyhän Pietarin kirkko]] edustaa tätä tyyliä, ja Kroatian rannikolla on useita muitakin varhaiskeskiaikaisia kirkkoja. Tyylin jälkeen tuli [[romaanisen tyylin]] vaihe. Vanhaa tavaraa, ja silti seisoo.",
+  "linkit": [
+   "Pyhän Pietarin kirkko",
+   "romaanisen tyylin"
+  ],
+  "jatkot": [
+   "Mitkä ovat romaanisen tyylin tunnusmerkit?",
+   "Mitä muita esiromaanisia kirkkoja Kroatiassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-motovun",
+  "kysymys": "Millä kukkulalla Motovun sijaitsee?",
+  "uusi": false,
+  "vastaus": "Katotaas. Motovun sijaitsee [[Istrian]] keskiosassa Länsi-Kroatiassa kukkulalla, joka kohoaa noin 270 metriä merenpinnan yläpuolelle. Kukkulan alla virtaa [[Mirna]]-joki, ja sen toisella puolella on tryffeleistään tunnettu metsä. Kukkulan mahdollisesta omasta nimestä en ole varma, joten kerron mieluummin sen, minkä tiedän: keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja [[Venetsia]] otti sen haltuunsa vuonna 1278. Ylhäältä katsoen näkymä on kyllä komea.",
+  "linkit": [
+   "Istrian",
+   "Mirna",
+   "Venetsia"
+  ],
+  "jatkot": [
+   "Mitä Motovunin muurit nykyään tarjoavat kävijälle?",
+   "Miten Venetsia sai valtaansa Istrian kaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-motovun",
+  "kysymys": "Millä eläimillä tryffeleitä etsitään?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä minä tiedän. Motovunin metsässä tryffeleitä etsitään nykyään koulutetuilla koirilla, jotka haistavat maan alla kasvavan sienen tuoksun. Tunnettu esimerkki on paikallinen tryffelinmetsästäjä [[Giancarlo Zigante]], joka löysi vuonna 1999 koiransa [[Dianan]] avulla lähes 1,3 kilon painoisen [[valkotryffelin]]. Joissain maissa on perinteisesti käytetty myös sikoja. Koira siinä pääsee makkaran sijaan sienelle.",
+  "linkit": [
+   "Giancarlo Zigante",
+   "Dianan",
+   "valkotryffelin"
+  ],
+  "jatkot": [
+   "Miksi koirat ovat nykyään sikoja suositumpia tryffelinhaussa?",
+   "Milloin Motovunin tryffelifestivaali järjestetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-motovun",
+  "kysymys": "Miksi valkotryffeli on niin arvostettu ja kallis?",
+  "uusi": true,
+  "vastaus": "Mmm— Valkotryffeli on arvostettu, koska sitä ei ole onnistuttu viljelemään luotettavasti. Se kasvaa luonnossa maan alla ja muodostaa puiden juurten kanssa [[mykorritsan]], eli sienen ja puun välisen yhteistoiminnan, jota ei voi helposti jäljitellä. Lisäksi sen tuoksu on erittäin voimakas, ja sesonki on lyhyt ja osuu syksyyn. Istrian valkotryffeli on samaa lajia kuin [[Alban]] kuuluisa tryffeli Italiassa. Tarkkoja hintoja en lähde arvailemaan. Minä en ole koskaan maistanut, ja se on sääli.",
+  "linkit": [
+   "mykorritsan",
+   "Alban"
+  ],
+  "jatkot": [
+   "Millaisissa metsissä valkotryffeli kasvaa?",
+   "Miten mykorritsa toimii sienen ja puun välillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-motovun",
+  "kysymys": "Kuka oli arkkitehti Andrea Palladio?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Andrea Palladio oli 1500-luvun italialainen arkkitehti, joka vaikutti pääasiassa Pohjois-Italiassa [[Vicenzan]] ympäristössä ja [[Venetsian]] alueella. Hän suunnitteli kaupunkipalatseja, kirkkoja ja maaseutuhuviloita, joista tunnetuin lienee [[Villa Rotonda]]. Hänen kirjansa rakennustaiteesta levitti tyyliä Euroopassa ja sen ulkopuolelle, ja siitä syntyi palladiolaisuus. Motovunin [[Pyhän Tapanin kirkon]] luonnosten on arveltu olevan hänen käsialaansa, mutta varmaa tietoa en tästä ole. Vähän kyl arkkitehtikin on kuin kyyhky: asuu korkealla ja katsoo alas.",
+  "linkit": [
+   "Vicenzan",
+   "Venetsian",
+   "Villa Rotonda",
+   "Pyhän Tapanin kirkon"
+  ],
+  "jatkot": [
+   "Mikä on palladiolainen tyyli?",
+   "Missä Palladion tunnetuimmat huvilat sijaitsevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-motovun",
+  "kysymys": "Mikä erottaa goottilaisen tyylin romaanisesta?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Romaaninen tyyli tunnetaan paksuista muureista, pyöreistä kaarista ja pienistä ikkunoista, kun taas goottilaiselle tyylille ovat ominaisia [[suippokaaret]], korkeat holvit ja suuret ikkunat, jotka päästävät sisään enemmän valoa. Goottilainen tyyli syntyi 1100-luvun puolivälin tienoilla Pohjois-[[Ranskassa]], ja sen suuriin kirkkoihin kuuluvat usein ulkopuoliset [[tukikaaret]], jotka kannattelevat korkeaa rakennetta. Motovunin tornit ja portit yhdistävät näitä tyylejä. Ei tämä ihan lyhyt asia ollut.",
+  "linkit": [
+   "suippokaaret",
+   "Ranskassa",
+   "tukikaaret"
+  ],
+  "jatkot": [
+   "Mitä tarkoittavat tukikaaret goottilaisessa kirkossa?",
+   "Mikä on renessanssityylin tunnusmerkki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trogir",
+  "kysymys": "Minkä saaren välissä Trogirin vanhakaupunki sijaitsee?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä muistan. Trogirin vanhakaupunki sijaitsee pienellä saarella mantereen ja [[Čiovon]] saaren välissä Dalmatian rannikolla, 27 kilometriä [[Splitistä]] länteen. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset [[Visin]] saarelta nimellä [[Tragurion]]. Vanha keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997. Tämä on mukava kaupunki katsoa ylhäältä.",
+  "linkit": [
+   "Čiovon",
+   "Splitistä",
+   "Visin",
+   "Tragurion"
+  ],
+  "jatkot": [
+   "Millainen on Trogirin vanhankaupungin katuverkko?",
+   "Miten Trogirin ja mantereen välinen silta on rakennettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trogir",
+  "kysymys": "Kuka teki Trogirin katedraalin kuuluisan portaalin?",
+  "uusi": false,
+  "vastaus": "Ai se. Trogirin katedraalin kuuluisan portaalin teki mestari [[Radovan]], ja se on vanhan kaupungin 1200-luvun katedraalissa. Katedraali on pyhitetty Pyhälle Laurentiukselle. Portaali on Trogirin tunnetuimpia taideteoksia, ja se kuuluu [[Unescon]] maailmanperintökohteena suojeltuun historialliseen keskustaan. Tarkemmasta valmistumisvuodesta en ole varma. Ihan kunnon mestarityö kuulemma.",
+  "linkit": [
+   "Radovan",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Millaisia kohokuvia portaalissa on?",
+   "Mikä on romaanisen portaalin rakenne?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trogir",
+  "kysymys": "Ketä saraseenit olivat keskiajan Euroopassa?",
+  "uusi": true,
+  "vastaus": "Hmm. Saraseeni oli keskiajalla käytetty yleisnimitys, jolla eurooppalaiset kristityt kutsuivat Välimeren alueen muslimeja, ei yhtä yksittäistä kansaa. Nimeä käytettiin esimerkiksi arabeista ja muista Pohjois-Afrikan asukkaista, ja muslimien hallinto ulottui keskiajalla myös [[Sisiliassa]] ja Etelä-Italiaan. Nimitys liitettiin usein [[ristiretkien]] aikaiseen kuvaan vastapuolesta, ja nykyään sitä käytetään lähinnä historiantutkimuksessa. Trogirin kohdalla on mainittu vuoden 1123 hyökkäys. Onpas siit pitkä aika.",
+  "linkit": [
+   "Sisiliassa",
+   "ristiretkien"
+  ],
+  "jatkot": [
+   "Miten muslimien hallinto vaikutti Sisilian kulttuuriin?",
+   "Mitkä asiat sytyttivät ristiretket?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trogir",
+  "kysymys": "Mikä oli Salona ja miksi se tuhoutui?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Salona oli muinainen roomalainen kaupunki lähellä nykyistä Splitiä, nykyisen [[Solinin]] kaupungin kohdalla, ja se oli Dalmatian roomalaisprovinssin tärkeä keskus. Kaupunki tuhoutui noin 600-luvun alussa, kun [[avaarien]] ja slaavien hyökkäykset ajoivat sen asukkaat pakoon; tarkka vuosi vaihtelee lähteissä. Osa pakolaisista asettui [[Diocletianuksen]] palatsin muurien suojaan, mistä Split kasvoi, ja osa Trogiriin. Siitä on jo noin tuhat neljäsataa vuotta.",
+  "linkit": [
+   "Solinin",
+   "avaarien",
+   "Diocletianuksen"
+  ],
+  "jatkot": [
+   "Mitä Salonan raunioista on jäljellä?",
+   "Miten Split syntyi Diocletianuksen palatsin ympärille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trogir",
+  "kysymys": "Mikä on Unescon maailmanperintöluettelo?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Maailmanperintöluettelo on Unescon ylläpitämä luettelo kulttuuri- ja luontokohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Se perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]], ja kohteet suojellaan niin, että niiden säilyminen tuleville sukupolville turvataan. Kroatiassa luettelossa ovat muun muassa Trogirin lisäksi [[Dubrovnikin]] vanha kaupunki ja [[Plitvicen]] järvet. Luetteloon pääsy vaatii maan omaa hakemusta ja kansainvälisen arvioinnin.\n\nMinä olen lentänyt monen luetteloidun kohteen yli. Tuntuu aina siltä, että lintu pitäisi myös suojella.",
+  "linkit": [
+   "maailmanperintösopimukseen",
+   "Dubrovnikin",
+   "Plitvicen"
+  ],
+  "jatkot": [
+   "Miten kohde pääsee maailmanperintöluetteloon?",
+   "Mitkä muut Kroatian kohteet ovat luettelossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rovinj",
+  "kysymys": "Millä nimellä Rovinjia kutsutaan italiaksi?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Rovinjia kutsutaan italiaksi nimellä [[Rovigno]], ja kaupunki on virallisesti kaksikielinen. Se sijaitsee [[Istrian]] länsirannikolla Pohjois-Adrianmerellä, ja alueella ennen laajasti puhuttu romaaninen [[istriotti]]-kieli on yhä joidenkin kotikieli. Kaksikielinen kaupunki, ja minä kun osaan vain yhtä.",
+  "linkit": [
+   "Rovigno",
+   "Istrian",
+   "istriotti"
+  ],
+  "jatkot": [
+   "Miksi Istriassa puhutaan italiaa?",
+   "Mikä on Rovinjin kaupungin historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rovinj",
+  "kysymys": "Minä vuonna Rovinjin saari yhdistettiin mantereeseen?",
+  "uusi": false,
+  "vastaus": "Just niin, Rovinjin saari yhdistettiin mantereeseen vuonna 1763, kun salmi täytettiin umpeen. Kaupunki oli rakennettu saarelle, ja [[Venetsian]] hallinnon aikana 1283–1797 se oli yksi Istrian tärkeimmistä kaupungeista. Vanhoja jäänteitä ovat kahden muurikehän jäänteet, laiturin [[Balbin kaari]] vuodelta 1680 sekä [[Pyhän Euphemian kirkko]]. Hyvä ajoitus, jos minulta kysytään.",
+  "linkit": [
+   "Venetsian",
+   "Balbin kaari",
+   "Pyhän Euphemian kirkko"
+  ],
+  "jatkot": [
+   "Miten Venetsia hallitsi Istrian rannikkokaupunkeja?",
+   "Mikä on Balbin kaari?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rovinj",
+  "kysymys": "Millainen kieli istriotti on?",
+  "uusi": true,
+  "vastaus": "Ai tota. Istriotti on romaaninen kieli, joka on ennen ollut laajasti käytössä Istrian länsiosissa, mutta jota nykyään puhuu enää pieni joukko ihmisiä. Se kuuluu [[romaanisiin kieliin]] kuten italia ja ranska, mutta sitä pidetään omana kielenään eikä pelkästään italian murteena, vaikka tutkijat ovat kiistelleet sen tarkasta luokittelusta. Siihen on vaikuttanut vahvasti myös [[venetsian kielen]] läheisyys. Kieltä pidetään uhanalaisena, ja Rovinjissa se on yhä joidenkin kotikieli. Pieni kieli, mut elävä.",
+  "linkit": [
+   "romaanisiin kieliin",
+   "venetsian kielen"
+  ],
+  "jatkot": [
+   "Miten uhanalaisia kieliä pyritään säilyttämään?",
+   "Mikä erottaa venetsian kielen italiasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rovinj",
+  "kysymys": "Kuka oli Pyhä Euphemia, jonka mukaan kirkko on nimetty?",
+  "uusi": true,
+  "vastaus": "Hetkinen. Euphemia oli Khalkedonin kaupungista kotoisin oleva nuori nainen, joka kuoli marttyyrina noin vuoden 303 tienoilla [[Diocletianuksen]] vainojen aikana. Hänet muistetaan kristillisessä perinteessä pyhimyksenä, ja hän on Rovinjin [[suojeluspyhimys]]. Kaupungin vuosisatoja vanha [[Pyhän Euphemian kirkko]] on nimetty hänen mukaansa. Siitä on yli tuhat seitsemänsataa vuotta.",
+  "linkit": [
+   "Diocletianuksen",
+   "suojeluspyhimys",
+   "Pyhän Euphemian kirkko"
+  ],
+  "jatkot": [
+   "Miten Euphemian kunnioitus levisi Adrianmeren rannikolle?",
+   "Mitä Diocletianuksen vainot olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rovinj",
+  "kysymys": "Mikä Istria on ja mitkä maat jakavat sen?",
+  "uusi": true,
+  "vastaus": "No niin, Istria on Pohjois-Adrianmerelle työntyvä niemimaa, jonka suurin osa kuuluu [[Kroatialle]]. Pienempi osa kuuluu [[Sloveniaan]] ja aivan pieni kaistale [[Italiaan]]. Alueen tunnettuja kohteita ovat muun muassa [[Pulan]] roomalainen amfiteatteri sekä rannikon vanhat satamakaupungit, joissa Venetsian vaikutus näkyy yhä. Alueella käytetään sekä kroatiaa että italiaa, ja monet paikat ovat virallisesti kaksikielisiä.\n\nPula ja pulla. Nimi on vaarallisen lähellä, enkä minä ole koskaan vastustanut kumpaakaan.",
+  "linkit": [
+   "Kroatialle",
+   "Sloveniaan",
+   "Italiaan",
+   "Pulan"
+  ],
+  "jatkot": [
+   "Mikä on Pulan amfiteatterin historia?",
+   "Miksi Istriassa on sekä kroatian- että italiankielisiä paikannimiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vukovar",
+  "kysymys": "Missä joessa Vukovarin satama sijaitsee Vukan yhtymäkohdassa?",
+  "uusi": false,
+  "vastaus": "Annas kun katson. Vukovarin satama sijaitsee [[Tonavan]] varrella, siinä missä [[Vuka]]-joki yhtyy siihen. Kaupunki on [[Slavonian]] itäosassa, ja satamaa pidetään Kroatian suurimpana jokisatamana. Nimi Vukovar tarkoittaa Vukan varren linnaa. Joki kuljettaa tavaraa pitkälle.",
+  "linkit": [
+   "Tonavan",
+   "Vuka",
+   "Slavonian"
+  ],
+  "jatkot": [
+   "Minne Tonavaa pitkin voi purjehtia Vukovarista?",
+   "Mikä on Vuka-joen reitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vukovar",
+  "kysymys": "Minkä suvun kreivit ostivat suuren osan seudusta ottomaanien jälkeen?",
+  "uusi": false,
+  "vastaus": "Mmm— Suuren osan seudusta ostivat saksalaiset [[Eltzin]] kreivit. Mainzin arkkipiispa [[Philip Karl Eltz]] osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa, ja suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Kaupungin kulttuuriperintöön kuuluu 1700-luvun [[Eltzin kartano]]. Pitkä suku, pitkä vastaus.",
+  "linkit": [
+   "Eltzin",
+   "Philip Karl Eltz",
+   "Eltzin kartano"
+  ],
+  "jatkot": [
+   "Millainen on Eltzin kartanon historia?",
+   "Mikä on vapaa kuninkaallinen kaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vukovar",
+  "kysymys": "Mikä oli Vučedolin kyyhky?",
+  "uusi": true,
+  "vastaus": "Kas, kyyhky. Vučedolin kyyhky on Vukovarin lähistöltä vuonna 1938 löydetty esine [[Vučedolin kulttuurin]] ajalta, ja siitä on tullut kaupungin tunnus. Kulttuuri kuuluu [[kuparikauden]] Eurooppaan, ja sen asuinpaikkoja tunnetaan Tonavan varrelta. Tarkan iän lähteet ilmoittavat vaihtelevasti, mutta kyse on karkeasti ottaen kolmannen vuosituhannen eaa. tienoista. Löytö on yksi seudun tunnetuimmista arkeologisista aarteista.\n\nKaupunki on ottanut tunnukseksi kyyhkyn, ja sen minä hyväksyn. Pieni lintu, suuri maine.",
+  "linkit": [
+   "Vučedolin kulttuurin",
+   "kuparikauden"
+  ],
+  "jatkot": [
+   "Mitä muita löytöjä Vučedolista on tehty?",
+   "Mikä kuparikausi oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vukovar",
+  "kysymys": "Mistä Tonava saa alkunsa ja minne se virtaa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tonava saa alkunsa Saksan [[Schwarzwaldin]] alueella, jossa Breg- ja Brigach-purot yhtyvät. Joki virtaa kymmenen maan kautta ja laskee [[Mustaanmereen]] muodostaen suuren [[suiston]] Romanian ja Ukrainan rajaseuduille. Pituudeksi mainitaan noin 2 850 kilometriä. Vukovarin kohdalla se virtaa Kroatian ja Serbian rajaseudulla. Pitkä matka, ja minä kun olen lentänyt vain osan.",
+  "linkit": [
+   "Schwarzwaldin",
+   "Mustaanmereen",
+   "suiston"
+  ],
+  "jatkot": [
+   "Mitkä maat Tonava kulkee läpi?",
+   "Millainen on Tonavan suisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vukovar",
+  "kysymys": "Mikä alue Slavonia on?",
+  "uusi": true,
+  "vastaus": "Joo, tän tiedän. Slavonia on Kroatian itäosan historiallinen alue Sava- ja Drava-jokien sekä Tonavan välissä. Se on pääosin tasaista viljelysmaata, ja sen keskeinen kaupunki on [[Osijek]]. Itäosa liittyy [[Tonavan]] varteen ja [[Sremin]] alueeseen, johon Vukovar kuuluu. Seudulla on pitkä historia, ja sen nimi tulee slaaveista. Kroatiassa on paljon muutakin kuin rannikko.",
+  "linkit": [
+   "Osijek",
+   "Tonavan",
+   "Sremin"
+  ],
+  "jatkot": [
+   "Mitä Osijekin kaupunki tunnetaan?",
+   "Mikä on Sremin alue?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varazdin",
+  "kysymys": "Minä vuonna Varaždinin suuri palo tuhosi suuren osan kaupunkia?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Suuri tulipalo syttyi huhtikuussa 1776, ja se päätti ajanjakson, jolloin Varaždin oli koko [[Kroatian]] pääkaupunki ja siellä kokoontuivat valtiopäivät sekä [[Maria Teresian]] perustama Kuninkaallinen neuvosto. Palossa tuhoutui kokonaan 70 muurien sisäisestä 113 rakennuksesta. Pääkaupunkiasema kesti 1700-luvun puolivälin tienoilta, mutta tarkka alkuvuosi vaihtelee lähteissä: mainitaan sekä 1756 että 1766. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Kroatian",
+   "Maria Teresian"
+  ],
+  "jatkot": [
+   "Mistä Varaždin tunnetaan nykyään?",
+   "Milloin Varaždin sai vapaan kuninkaallisen kaupungin aseman?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varazdin",
+  "kysymys": "Mikä vanhan linnan nykyinen käyttö on?",
+  "uusi": false,
+  "vastaus": "No niin, tää on helppo. Varaždinin [[Vanhassa linnassa]] toimii nykyään kaupunginmuseo. Linnan rakentaminen aloitettiin 1300-luvulla, ja sen pyöreät tornit lisättiin seuraavalla vuosisadalla, kun kaupunki oli rakennettu puolustusasentoon vanhan linnoituksen ympärille [[ottomaanien]] ryöstöretkien vuoksi. Museo on siis nykyisin vanhan puolustusrakennuksen sisällä. Siinä meni nopeasti, ei paha kyyhkyltä.",
+  "linkit": [
+   "Vanhassa linnassa",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Miksi Varaždin rakennettiin puolustusasentoon?",
+   "Milloin Varaždin oli Kroatian pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varazdin",
+  "kysymys": "Mistä Varaždin tunnetaan nykyään?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Varaždin tunnetaan ennen kaikkea [[barokkirakennuksistaan]], mutta myös musiikistaan, tekstiiliteollisuudestaan ja ruoastaan. Kaupunki sijaitsee Pohjois-Kroatiassa, noin 81 kilometriä [[Zagrebista]] koilliseen, ja sen historiallinen ydin on säilyttänyt linnoituskaupungin ilmeensä.\n\nMinä katsoin kerran Varaždinia ylhäältä, ja kattorivi näytti juuri siltä kuin barokkikaupungin kuuluu näyttää. Ruoasta en osaa sanoa mitään, koska kukaan ei antanut minulle murustakaan.",
+  "linkit": [
+   "barokkirakennuksistaan",
+   "Zagrebista"
+  ],
+  "jatkot": [
+   "Milloin Varaždin mainitaan ensimmäisen kerran?",
+   "Kuinka kaukana Varaždin on Zagrebista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varazdin",
+  "kysymys": "Milloin Varaždin sai vapaan kuninkaallisen kaupungin aseman?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Unkarin kuningas [[Andreas II]] julisti Varaždinin vapaaksi kuninkaalliseksi kaupungiksi vuonna 1209. [[Varaždinin]] ensimmäinen kirjallinen maininta on vielä vanhempi, 20. elokuuta 1181. Vapaa kuninkaallinen kaupunki tarkoitti yleensä sitä, että kaupungilla oli omia oikeuksia ja suora yhteys kuninkaaseen, vaikka yksityiskohdat vaihtelivat alueittain ja ajoittain. Ei tarvinnut edes tarkistaa kalenterista, tää oli tallessa.",
+  "linkit": [
+   "Andreas II",
+   "Varaždinin"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Varaždin oli 1700-luvulla?",
+   "Mikä on Varaždinin Vanha linna?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varazdin",
+  "kysymys": "Miksi Varaždin rakennettiin puolustusasentoon?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Syynä olivat [[ottomaanien]] ryöstöretket, jotka uhkasivat seutua keskiajan lopulla ja uuden ajan alussa. Siksi kaupunki rakennettiin puolustusasentoon vanhan linnoituksen ympärille. [[Vanhan linnan]] rakentaminen oli aloitettu 1300-luvulla, ja sen pyöreät tornit lisättiin seuraavalla vuosisadalla, joten linnasta tuli osa kaupungin puolustusta. Nyt siellä on museo, ja sepä on kyllä rauhallisempaa työtä.",
+  "linkit": [
+   "ottomaanien",
+   "Vanhan linnan"
+  ],
+  "jatkot": [
+   "Mikä oli Ottomaanien valtakunta?",
+   "Mitä Vanhassa linnassa on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakoscan",
+  "kysymys": "Minä vuonna Trakošćanin nimi mainitaan ensi kerran?",
+  "uusi": false,
+  "vastaus": "Ai se. Trakošćanin nimi mainitaan ensimmäisen kerran vuonna 1334. Linnan alku on kuitenkin 1200-luvulla, joten rakennus on vanhempi kuin ensimmäinen nimimaininta. Linna sijaitsee [[Varaždinin läänissä]] Pohjois-Kroatiassa, ja sitä pidetään yhtenä [[Kroatian]] parhaiten säilyneistä ja kauneimmista linnoista. Ihan hyvin muistin vuosiluvunkin.",
+  "linkit": [
+   "Varaždinin läänissä",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Mihin tarkoitukseen Trakošćanin linna rakennettiin?",
+   "Milloin Trakošćanista tuli museo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakoscan",
+  "kysymys": "Minkä suvun omistukseen linna tuli vuonna 1584?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Linnan omistajaksi tuli vuonna 1584 [[Drašković-suku]]. Suku asui linnassa vuoteen 1944 asti, vaikka [[Trakošćanin]] linna hylättiin ja rapistui 1700-luvun jälkipuoliskolla. Vasta 1800-luvun puolivälissä Juraj V. Drašković kunnosti sen asuinkartanoksi. Siinä on sukua, joka pysyi kiinni kotilinnassaan melkein neljäsataa vuotta.",
+  "linkit": [
+   "Drašković-suku",
+   "Trakošćanin"
+  ],
+  "jatkot": [
+   "Kuka kunnosti Trakošćanin linnan 1800-luvulla?",
+   "Mitä linnalle tapahtui 1700-luvun lopulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakoscan",
+  "kysymys": "Mihin tarkoitukseen Trakošćanin linna alun perin rakennettiin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Trakošćan rakennettiin 1200-luvulla pieneksi tähystyslinnoitukseksi. Sen tehtävä oli valvoa [[Ptujin]] ja [[Bednjan]] laakson välistä tietä, joten sijainti valittiin näkyvyyden ja liikenteen valvonnan vuoksi. Nykyinen romanttinen ulkonäkö on peräisin paljon myöhemmältä ajalta, 1800-luvun puolivälin kunnostuksesta. Vähän pienempi homma se oli alussa kuin nykyään.",
+  "linkit": [
+   "Ptujin",
+   "Bednjan"
+  ],
+  "jatkot": [
+   "Millainen linna Trakošćan on nykyään?",
+   "Mitä romantiikka tarkoitti 1800-luvun rakentamisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakoscan",
+  "kysymys": "Kuka kunnosti Trakošćanin linnan 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: linnan kunnosti 1800-luvun puolivälissä [[Juraj V. Drašković]]. Hän muutti rapistuneen linnan romantiikan hengessä, luontoon ja sukuperinteeseen palaten, asuinkartanoksi ja muutti ympäröivän puiston huvipuistoksi. Työ pelasti linnan, joka oli jäänyt 1700-luvun jälkipuoliskolla hylättynä rapistumaan, ja siitä tuli osa [[Drašković-suvun]] kotia. Kyllä tästä pitää antaa pisteet sille miehelle.",
+  "linkit": [
+   "Juraj V. Drašković",
+   "Drašković-suvun"
+  ],
+  "jatkot": [
+   "Milloin Trakošćanin museo perustettiin?",
+   "Miksi linna hylättiin 1700-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakoscan",
+  "kysymys": "Milloin Trakošćanin linnasta tuli museo?",
+  "uusi": true,
+  "vastaus": "Katotaas. Museo perustettiin Trakošćanin linnaan vuonna 1953. Drašković-suku oli asunut linnassa vuoteen 1944 asti, joten museon perustaminen tuli noin yhdeksän vuotta suvun asumisen päättymisen jälkeen. Nykyään [[Trakošćanin]] linna on museona, ja sitä pidetään yhtenä [[Kroatian]] parhaiten säilyneistä linnoista. Ihan kelpo päättely kyyhkyltä.",
+  "linkit": [
+   "Trakošćanin",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Kuka Trakošćanin linnassa asui ennen museota?",
+   "Missä Trakošćan sijaitsee Kroatiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovac",
+  "kysymys": "Minä vuonna Karlovacin rakentaminen aloitettiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Karlovacin rakentaminen aloitettiin vuonna 1579, tarkemmin 13. heinäkuuta, [[arkkiherttua Kaarle II:n]] käskystä. Itävaltalaiset rakensivat kaupungin tyhjästä vahvistaakseen eteläistä puolustustaan [[ottomaanien]] hyökkäyksiä vastaan. Kaupunki sai nimensä Kaarlelta. Hyvä, että päivämäärä pysyi päässä.",
+  "linkit": [
+   "arkkiherttua Kaarle II:n",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Minkä muotoinen linnoitus Karlovacissa on?",
+   "Miksi Karlovacin paikka valittiin tulvaiseksi maastoksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovac",
+  "kysymys": "Minkä muotoinen linnoitus Karlovacissa on?",
+  "uusi": false,
+  "vastaus": "Mmm— Karlovacin linnoitus on kuusikärkinen [[tähtilinnoitus]]. Se rakennettiin [[Kupan]] ja [[Koranan]] yhtymäkohtaan, ja tähden muoto näkyy kaupungissa yhä. Tähtimuotoinen suunnitelma oli tyypillinen uuden ajan linnoitusrakentamiselle, koska teräväkärkiset bastionit mahdollistivat tulenavauksen joka suuntaan. Ylhäältä katsottuna se on kyllä aika komea näky.",
+  "linkit": [
+   "tähtilinnoitus",
+   "Kupan",
+   "Koranan"
+  ],
+  "jatkot": [
+   "Mistä Karlovacin nimi tulee?",
+   "Kuinka monta asukasta Karlovacissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovac",
+  "kysymys": "Miksi Karlovac rakennettiin tulville alttiille paikalle?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Karlovacin paikka valittiin tahallaan tulville ja epäterveelliselle vedelle alttiiksi maastoksi, jotta [[ottomaanien]] eteneminen hidastuisi. Märkä ja vaikeakulkuinen maasto toimi osana puolustusta, ja linnoitus rakennettiin [[Kupan]] ja Koranan yhtymäkohtaan. Asukkaille paikka ei välttämättä ollut mukavin, mutta puolustuksen kannalta ajatus oli selvä. Kyllä siinä hieman varoin sijoitettiin asumuksia.",
+  "linkit": [
+   "ottomaanien",
+   "Kupan"
+  ],
+  "jatkot": [
+   "Mikä oli Sotilasraja, jonka päämajoja Karlovac oli?",
+   "Minkä muotoinen linnoitus Karlovacissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovac",
+  "kysymys": "Mistä Karlovacin nimi tulee?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: Karlovac sai nimensä [[arkkiherttua Kaarle II:n]] mukaan. Kaarle antoi käskyn kaupungin rakentamisesta vuonna 1579, ja siksi kaupungin nimi tarkoittaa Kaarlen kaupunkia. Saksaksi kaupunki on [[Karlstadt]]. Nimi säilyy siis samana kuin perustajan nimi, vain eri kielellä. Sain tämän kerralla ulos, ilman yhtään mutkaa.",
+  "linkit": [
+   "arkkiherttua Kaarle II:n",
+   "Karlstadt"
+  ],
+  "jatkot": [
+   "Kuka oli arkkiherttua Kaarle II?",
+   "Milloin Karlovacin rakentaminen aloitettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovac",
+  "kysymys": "Mikä oli Sotilasraja, jonka päämajoja Karlovac oli?",
+  "uusi": true,
+  "vastaus": "Ai tota. [[Sotilasraja]] oli Habsburgien monarkian puolustusvyöhyke ottomaanien rajalla, ja Karlovac oli yksi sen yleiskomennon ensimmäisistä päämajoista. Vyöhykkeen asukkaat velvoitettiin tavallisesti sotilaspalvelukseen vastineeksi maasta ja oikeuksista, mutta en ole varma kaikista yksityiskohdista. Sotilasraja kuului [[Habsburgien]] monarkian puolustukseen uuden ajan alusta 1800-luvulle saakka, ja Karlovacin rooli oli tärkeä. Pitkä tarina, mutta eipä se tästä parane.",
+  "linkit": [
+   "Sotilasraja",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Milloin Sotilasraja lakkautettiin?",
+   "Miksi Karlovac perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slavonski-brod",
+  "kysymys": "Mitä sana brod tarkoittaa muinaisslaaviksi?",
+  "uusi": false,
+  "vastaus": "No jopas. Sana brod tarkoittaa muinaisslaaviksi kahluupaikkaa. Slavonski Brodin nimi viittaa siihen, että [[Slavonski Brodin]] kaupunki kehittyi strategisesti tärkeään [[Savan]] ylityskohtaan, jossa joki pystyttiin ylittämään. Kaupungin nimi kertoo siis suoraan sen alkuperäisestä tehtävästä. Näin kyyhkynä ylitys on onneksi helpompaa.",
+  "linkit": [
+   "Slavonski Brodin",
+   "Savan"
+  ],
+  "jatkot": [
+   "Milloin Slavonski Brod mainitaan ensimmäisen kerran?",
+   "Millainen on Brodin linnoitus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slavonski-brod",
+  "kysymys": "Mihin vuoteen asti kaupunki oli Sotilasrajan hallinnossa?",
+  "uusi": false,
+  "vastaus": "Just niin, vuoteen 1881. Slavonski Brod kuului [[Slavonian]] sotilasrajaan vuoteen 1881 asti, ja ennen vuotta 1850 kaupungista käytettiin nimeä Brood. Vuoteen 1918 saakka kaupunki kuului [[Itävallan]] monarkiaan. Sotilasraja oli siis hallinnollinen järjestelmä, joka päättyi 1800-luvun lopulla. Ei kovin hullusti kyyhkyltä.",
+  "linkit": [
+   "Slavonian",
+   "Itävallan"
+  ],
+  "jatkot": [
+   "Milloin ottomaanit hallitsivat Slavonski Brodia?",
+   "Mikä oli Sotilasraja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slavonski-brod",
+  "kysymys": "Millainen linnoitus Slavonski Brodissa on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Brodin linnoitus on suuri, barokkiajan [[Vauban-tyylinen]] linnoitus. Se rakennettiin suojaksi [[ottomaaneja]] vastaan Savan vastarannalle, ja sitä pidetään yhtenä Euroopan parhaiten säilyneistä linnoituksista. Barokkiajan linnoitukset suunniteltiin tyypillisesti kulmikkain, tähtimäisin muodoin, jotta puolustajat pystyivät ampumaan sivusuunnasta hyökkääjiä vastaan.\n\nLinnoituksia katsoo siivin mielellään, koska niistä näkee heti, mihin muotoon ihmiset ovat luottaneet. Minun sukuni on aina luottanut taivaaseen.",
+  "linkit": [
+   "Vauban-tyylinen",
+   "ottomaaneja"
+  ],
+  "jatkot": [
+   "Miksi linnoitus rakennettiin Savan vastarannalle?",
+   "Mikä Sava-joki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slavonski-brod",
+  "kysymys": "Milloin ottomaanit hallitsivat Slavonski Brodia?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Ottomaanit]] hallitsivat asutusta vuodesta 1536 vuoteen 1691. Sen jälkeen Slavonski Brod siirtyi osaksi [[Habsburgien]] hallitsemaa aluetta, ja kaupunki kuului Itävallan monarkiaan vuoteen 1918. Ottomaanien kausi kesti noin puolitoista vuosisataa, ja se vaikutti seudun rakentamiseen ja puolustukseen. Siinä ajassa kyyhkynkin suku ehtii vaihtaa monta sukupolvea.",
+  "linkit": [
+   "Ottomaanit",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Mihin vuoteen asti kaupunki oli Sotilasrajan hallinnossa?",
+   "Mitä sana brod tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slavonski-brod",
+  "kysymys": "Milloin Slavonski Brodin nimi mainitaan ensimmäisen kerran?",
+  "uusi": true,
+  "vastaus": "Kato, kirje on tallessa. Slavonski Brodin nimi mainitaan ensimmäisen kerran Unkarin kuninkaan [[Béla IV:n]] kirjeessä vuodelta 1224. Kaupunki on siis vanha, ja sen nimi tulee sanasta brod, joka tarkoittaa kahluupaikkaa [[Savan]] ylityskohdassa. Ihan hyvä, että asiakirja on säilynyt. Kyyhkynä arvostan kyllä kirjeitä.",
+  "linkit": [
+   "Béla IV:n",
+   "Savan"
+  ],
+  "jatkot": [
+   "Kuka oli Béla IV?",
+   "Mitä sana brod tarkoittaa muinaisslaaviksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sisak",
+  "kysymys": "Millä nimellä roomalaiset kutsuivat Sisakia?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Roomalaiset kutsuivat Sisakia nimellä [[Siscia]]. Se oli Ylä-[[Pannonian]] tärkeimpiä paikkoja, koska se sijaitsi kahden purjehduskelpoisen joen varrella. [[Augustus]] ja Tiberius johtivat sieltä hankkeitaan pannonialaisia ja illyrialaisia vastaan. Suku tuntee roomalaiset hyvin, kyllä tää osui kohdalleen.",
+  "linkit": [
+   "Siscia",
+   "Pannonian",
+   "Augustus"
+  ],
+  "jatkot": [
+   "Miksi Siscia oli roomalaisille tärkeä?",
+   "Millainen satamakaupunki Sisak on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sisak",
+  "kysymys": "Kuka johti kroatialaisten puolustusta vuonna 1593?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Puolustusta johti ban [[Thomas Erdődy]], joka tuli tunnetuksi koko Euroopassa [[Sisakin taistelussa]] vuonna 1593. Se oli yli nelisataa vuotta sitten, aikana jolloin Euroopan kaakkoisreunalla käytiin jatkuvasti taisteluja [[ottomaanien]] ja Habsburgien välillä. Taistelun tarkemmista vaiheista en ole varma, mutta Erdődyn nimi on jäänyt kroatialaiseen historiaan. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Thomas Erdődy",
+   "Sisakin taistelussa",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Keitä Sisakin taistelussa taisteli ottomaaneja vastaan?",
+   "Mikä oli ban?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sisak",
+  "kysymys": "Millainen satamakaupunki Sisak on nykyään?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Sisak on Keski-Kroatian kaupunki [[Kupan]], [[Savan]] ja Odran yhtymäkohdassa, noin 57 kilometriä Zagrebista kaakkoon. Se on merkittävä jokisatama, ja jokien risteys on määrittänyt kaupungin asemaa jo antiikin ajoista. Sijainti vesiteiden varrella on tehnyt siitä liikenteen ja kaupan solmukohdan. Vesistöt ovat kyyhkynkin silmälle helppoja merkkejä.",
+  "linkit": [
+   "Kupan",
+   "Savan"
+  ],
+  "jatkot": [
+   "Mikä merkitys Siscialla oli roomalaisille?",
+   "Kuinka kaukana Sisak on Zagrebista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sisak",
+  "kysymys": "Miksi roomalaiset pitivät Siscia-kaupunkia tärkeänä paikkana?",
+  "uusi": true,
+  "vastaus": "Mmm— Siscia oli Ylä-Pannonian tärkeimpiä paikkoja, koska se sijaitsi kahden purjehduskelpoisen joen varrella. Vesiyhteydet helpottivat joukkojen ja tarvikkeiden kuljetusta, ja siksi [[Augustus]] ja [[Tiberius]] johtivat sieltä hankkeitaan pannonialaisia ja [[illyrialaisia]] vastaan. Kaupunki oli siis roomalaisille sekä liikenteen että sotilaallisen toiminnan tukikohta. Roomalaiset osasivat valita paikkansa, sen minun on myönnettävä.",
+  "linkit": [
+   "Augustus",
+   "Tiberius",
+   "illyrialaisia"
+  ],
+  "jatkot": [
+   "Mitä Sisciasta tuli myöhemmin?",
+   "Millainen Sisak on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sisak",
+  "kysymys": "Keitä taisteli ottomaaneja vastaan Sisakin taistelussa 1593?",
+  "uusi": true,
+  "vastaus": "Ai tota. Sisakin taistelussa vuonna 1593 ottomaaneja vastaan taistelivat [[kroaattien]], itävaltalaisten ja [[krainilaisten]] yhteisjoukot. Taistelu oli yli nelisataa vuotta sitten, ja sitä pidetään ottomaanien armeijan ensimmäisiä merkittäviä tappioita Euroopan maaperällä, vaikka en ole varma siitä, miten tarkasti tämä väite pitää paikkansa. Puolustusta johti ban [[Thomas Erdődy]]. Onneksi se on nyt vain historiaa.",
+  "linkit": [
+   "kroaattien",
+   "krainilaisten",
+   "Thomas Erdődy"
+  ],
+  "jatkot": [
+   "Kuka oli Thomas Erdődy?",
+   "Mitä Sisakille tapahtui taistelun jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilok",
+  "kysymys": "Minkä joen rannalla Ilok sijaitsee?",
+  "uusi": false,
+  "vastaus": "Ai tota, tän minä tiedän. Ilok sijaitsee [[Tonavan]] rannalla Kroatian itäisimmässä kolkassa, [[Fruška Goran]] kukkulan rinteillä. Kaupunki kuuluu [[Sremin]] alueeseen, ja Tonava toimii kyseisellä kohdalla Kroatian ja Serbian välisenä rajana. Kaupunkia ympäröi Serbian [[Vojvodina]]. Katolta se näkyy kyl hienosti.",
+  "linkit": [
+   "Tonavan",
+   "Fruška Goran",
+   "Sremin",
+   "Vojvodina"
+  ],
+  "jatkot": [
+   "Missä kulkee Kroatian ja Serbian raja?",
+   "Millaisia viinejä Ilokin seudulla tehdään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilok",
+  "kysymys": "Minä vuonna Habsburgit ottivat kaupungin lopullisesti takaisin ottomaaneilta?",
+  "uusi": false,
+  "vastaus": "Kas vaan, vuosilukukysymys. [[Habsburgit]] ottivat Ilokin lopullisesti takaisin [[ottomaaneilta]] vuonna 1697. Ottomaanit olivat valloittaneet kaupungin jo vuonna 1526, joten heidän kautensa kesti reilun puolentoista vuosisadan ajan. Kaupunki kuului tämän jälkeen Habsburgien hallitsemaan [[Sremin]] alueeseen. Hyvin muistin, vaikka itse sanonkin.",
+  "linkit": [
+   "Habsburgit",
+   "ottomaaneilta",
+   "Sremin"
+  ],
+  "jatkot": [
+   "Mitä Ilokin seudulla tapahtui vuonna 1526?",
+   "Mikä oli Habsburgien monarkia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilok",
+  "kysymys": "Mikä suku hallitsi Ilokia keskiajalla?",
+  "uusi": true,
+  "vastaus": "No niin, sukuasiat kiinnostavat aina. Keskiajalla Ilokia hallitsi [[Iločkien]] suku, jota kutsutaan myös nimellä [[Újlakien]] suku. Heidän aikanaan kaupunki oli Ylä-Sremin puolittain itsenäisen valtion pääkaupunki 1200- ja 1300-luvuilla. Suvun linna on säilynyt kaupungin nähtävyytenä, ja nykyään kaupungissa on myös [[Iločin linna]]. Meikäläisten suku ei ole yhtä pitkään pysynyt paikallaan.",
+  "linkit": [
+   "Iločkien",
+   "Újlakien",
+   "Iločin linna"
+  ],
+  "jatkot": [
+   "Mikä oli Ylä-Sremin valtio?",
+   "Millainen Iločin linna on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilok",
+  "kysymys": "Mikä oli Cuccium?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tää on roomalaista kamaa. Cuccium oli roomalaisten perustama linnoitus nykyisen Ilokin paikalla, ja sen kerrotaan olleen Tonavan ensimmäinen rajalinnoitus. Se perustettiin ensimmäisellä tai toisella vuosisadalla jaa., kun [[Rooman valtakunta]] vartioi pohjoista rajaansa [[Tonavan]] varrella. Raja-alueen linnoitukset sijaitsivat jokivarressa, koska joki oli luontainen raja. Suku on vanhaa roomalaista, joten tää tuntuu melkein kotoisalta.",
+  "linkit": [
+   "Rooman valtakunta",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Mikä oli Rooman valtakunnan pohjoinen raja?",
+   "Mitä roomalaiset rakensivat Tonavan varteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilok",
+  "kysymys": "Mikä Fruška Gora on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Fruška Gora on matala vuoristo Pohjois-Serbiassa [[Vojvodinan]] alueella [[Tonavan]] varrella, Sremin eteläosassa. Alue on suojeltu kansallispuistona, ja sen rinteillä on tunnettuja luostareita sekä viinitarhoja, kuten lähteissä kerrotaan. Ilokin kaupunki sijaitsee vuoriston länsipäässä, ja vuorten [[luostarit]] kuuluvat alueen kulttuuriperintöön. Mukava mäki, ylhäältä käsin.",
+  "linkit": [
+   "Vojvodinan",
+   "Tonavan",
+   "luostarit"
+  ],
+  "jatkot": [
+   "Millaisia luostareita Fruška Gorassa on?",
+   "Mikä Vojvodina on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-djakovo",
+  "kysymys": "Kuka johti Đakovon katedraalin rakentamista?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Đakovon Pyhän Pietarin katedraalin rakentamista johti piispa [[Josip Juraj Strossmayer]], Đakovon ja Sremin katolinen piispa. Katedraali rakennettiin vuosina 1866–1882, ja se on koko [[Slavonian]] tärkein sakraalirakennus. Se kohoaa hedelmällisen Đakovon seudun keskellä, ja sen vuoksi sitä pidetään kaupungin tunnuksena. Pitkä rakennustyö, minä en jaksaisi.",
+  "linkit": [
+   "Josip Juraj Strossmayer",
+   "Slavonian"
+  ],
+  "jatkot": [
+   "Kuka Strossmayer oli?",
+   "Millainen Slavonia on maantieteellisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-djakovo",
+  "kysymys": "Minä vuonna lipizzanhevoslauma evakuoitiin Đakovoon?",
+  "uusi": false,
+  "vastaus": "Selvä juttu, vuosiluku tulee heti. [[Lipizzanhevoslauma]] evakuoitiin Đakovoon vuonna 1805, kun [[Napoleon]] oli hyökännyt Itävaltaan ja Unkariin. Osa laumasta jäi sinne pysyvästi, ja sen vuoksi Đakovo on yhä tunnettu hevosistaan. Evakuointi oli sotilaallinen varotoimi, jolla arvokkaat siitoseläimet pyrittiin pitämään poissa taistelujen tieltä. Hevoset pääsivät pakoon, kyyhkyt kyllä lentävät.",
+  "linkit": [
+   "Lipizzanhevoslauma",
+   "Napoleon"
+  ],
+  "jatkot": [
+   "Mistä lipizzanhevoset ovat peräisin?",
+   "Mitä Napoleonin sodat merkitsivät Itävallalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-djakovo",
+  "kysymys": "Mikä on lipizzanhevonen?",
+  "uusi": true,
+  "vastaus": "Ai se jalo ratsu. Lipizzanhevonen on hevosrotu, joka on saanut nimensä Lipican tallista nykyisen Slovenian alueella, ja rotu syntyi 1500-luvun lopulla [[Habsburgien]] hallitsijasuvun käyttöön. Tunnetuin esimerkki on Wienin [[Espanjalainen ratsastuskoulu]], jossa lipizzanit esittävät korkeakoulun ratsastusta. Hevoset syntyvät tummina ja muuttuvat tavallisesti harmaiksi tai valkoisiksi vasta aikuisiässä. Aika fiini joukko, vaikka minä olen pulu.",
+  "linkit": [
+   "Habsburgien",
+   "Espanjalainen ratsastuskoulu"
+  ],
+  "jatkot": [
+   "Miten lipizzanit harjoitellaan?",
+   "Missä Lipica sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-djakovo",
+  "kysymys": "Mikä on Đakovački vezovi?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Đakovački vezovi on Đakovon perinnetapahtuma, jossa esitellään [[Slavonian]] kansanperinnettä ja erityisesti [[kirjontaa]]. Sana vez tarkoittaa kroatiaksi kirjontaa, ja tapahtumassa nähdään kansanpukuja, lauluja ja tansseja. Tapahtuma on kaupungin tärkein kulttuuritapahtuma ja kokoaa paikallisia esiintyjiä sekä yleisöä. Värejä siinä on varmasti riittämiin, kunhan joku kuvaisi ne ylhäältä.",
+  "linkit": [
+   "Slavonian",
+   "kirjontaa"
+  ],
+  "jatkot": [
+   "Millaisia ovat slavonialaiset kansanpuvut?",
+   "Mitä kirjonta on perinteenä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-djakovo",
+  "kysymys": "Kuka oli Josip Juraj Strossmayer?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Josip Juraj Strossmayer oli Đakovon ja Sremin katolinen piispa, joka vaikutti vahvasti Kroatian kulttuuri- ja sivistyselämään 1800-luvulla. Hänen johdollaan rakennettiin [[Đakovon katedraali]], ja hänet muistetaan myös [[Jugoslavian tiede- ja taideakatemian]] perustajana Zagrebissa sekä yliopistohankkeen tukijana. Tarkat vuosiluvut jätän nyt omaan arvoonsa, koska en ole niistä täysin varma. Pitkä ura, lyhyt vastaus.",
+  "linkit": [
+   "Đakovon katedraali",
+   "Jugoslavian tiede- ja taideakatemian"
+  ],
+  "jatkot": [
+   "Mikä on Zagrebin yliopiston historia?",
+   "Mitä katolinen hiippakunta tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-samobor",
+  "kysymys": "Minä vuonna Franz Liszt vieraili Samborissa?",
+  "uusi": false,
+  "vastaus": "Oho, tässä pitää korjata pieni nimi: kyseessä on Samobor, ei Sambor. Franz Liszt vieraili Samoborissa vuonna 1846, ystävänsä [[Ferdo Livadićin]] luona. Livadić kuului [[illyrialaiseen liikkeeseen]], ja hän kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun. Säveltäjä [[Franz Liszt]] oli tuolloin Euroopan kuuluisimpia pianisteja, joka kiersi konsertoimassa laajalti. Nimet ovat vähän kinkkisiä, mutta onneksi pulu osaa.",
+  "linkit": [
+   "Ferdo Livadićin",
+   "illyrialaiseen liikkeeseen",
+   "Franz Liszt"
+  ],
+  "jatkot": [
+   "Millainen säveltäjä Franz Liszt oli?",
+   "Kuka Ferdo Livadić oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-samobor",
+  "kysymys": "Milloin Samobor sai vapaan kuninkaallisen kaupungin aseman?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Samobor on ollut [[vapaa kuninkaallinen kaupunki]] vuodesta 1242, kun [[Béla IV:n]] lahjakirja myönsi sille aseman. Myöhemmin Karlowitzin rauhan jälkeen vuonna 1699 kaupunki kuului [[Habsburgien]] monarkiaan. Kuninkaallisen kaupungin asema merkitsi tavallisesti omia oikeuksia ja vapauksia, vaikka tarkat yksityiskohdat vaihtelivat. Ei hassumpi vuosiluku.",
+  "linkit": [
+   "vapaa kuninkaallinen kaupunki",
+   "Béla IV:n",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Mikä oli Béla IV?",
+   "Mitä vapaa kuninkaallinen kaupunki tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-samobor",
+  "kysymys": "Mikä on Još Hrvatska ni propala?",
+  "uusi": true,
+  "vastaus": "Kas vaan, laulukysymys. Još Hrvatska ni propala on kroatialainen isänmaallinen laulu, jonka suomennos on likimain \"Kroatia ei ole vielä tuhoutunut\". Sen on säveltänyt [[Ferdo Livadić]] 1830-luvulla, ja se on peräisin [[illyrialaisen liikkeen]] ajalta. Laulua pidetään 1800-luvun tunnetuimpana kroatialaisena isänmaallisena laulunumerona. Samoborissa laulu on tietysti erityisen tuttu, ja minä hyräilen mukana.",
+  "linkit": [
+   "Ferdo Livadić",
+   "illyrialaisen liikkeen"
+  ],
+  "jatkot": [
+   "Mikä on Kroatian kansallislaulu?",
+   "Mitä illyrialainen liike halusi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-samobor",
+  "kysymys": "Mikä oli illyrialainen liike?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on isoa historiaa. Illyrialainen liike oli kroatialainen kansallinen herätysliike 1800-luvulla, jonka johtohahmo oli [[Ljudevit Gaj]]. Liike uudisti kirjakieltä ja kirjoitusasua, ja se vahvisti kroatialaista kulttuuria ja kansallistunnetta [[Habsburgien]] monarkian sisällä. Ferdo Livadić kuului liikkeeseen, ja se vaikutti myös musiikkiin ja kirjallisuuteen. Pitkä aihe, mutta ei se lintua väsytä.",
+  "linkit": [
+   "Ljudevit Gaj",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Kuka Ljudevit Gaj oli?",
+   "Miten kroatian kirjakieli syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-samobor",
+  "kysymys": "Mikä on Karlowitzin rauha?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tän muistan. Karlowitzin rauha tehtiin vuonna 1699, ja se päätti suuren [[Turkin sodan]] [[Osmanien valtakunnan]] sekä [[Habsburgien]] johtaman liittouman välillä. Rauhassa Habsburgit saivat hallintaansa suuren osan Unkarista ja Slavoniaa, joten rajat siirtyivät merkittävästi. Samoborin kaltaiset kaupungit kuuluivat siitä lähtien vakaammin Habsburgien monarkiaan. Siinäpä oli rauhaa, kyyhkyn mieleen.",
+  "linkit": [
+   "Turkin sodan",
+   "Osmanien valtakunnan",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Mitä Suuri Turkin sota oli?",
+   "Mihin Itävalta laajeni rauhan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kumrovec",
+  "kysymys": "Minkä joen varrella Kumrovec sijaitsee?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kumrovec sijaitsee [[Sutla]]-joen varrella Pohjois-Kroatiassa [[Krapina-Zagorjen]] läänissä. Joki kulkee kyseisellä kohdalla Kroatian ja [[Slovenian]] rajalla, joten kylä on aivan rajan tuntumassa. Kylässä on vain 245 asukasta, ja kunnassa on 1 412 asukasta vuoden 2021 mukaan. Pieni paikka, mutta iso kartalla.",
+  "linkit": [
+   "Sutla",
+   "Krapina-Zagorjen",
+   "Slovenian"
+  ],
+  "jatkot": [
+   "Missä Kroatian ja Slovenian raja kulkee?",
+   "Mikä Zagorje on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kumrovec",
+  "kysymys": "Minä vuonna Staro Selon talojen kunnostus alkoi?",
+  "uusi": false,
+  "vastaus": "Ai tota, vuosiluku. [[Staro Selon]] talojen kunnostus aloitettiin vuonna 1977. Staro Selo on Kumrovecin vanha osa, joka on nykyään etnologinen museo, ja kunnostettuja taloja ja tilarakennuksia on yli neljäkymmentä. Talot ovat [[Zagorjen]] talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta. Kunnostus on kestänyt kauan, mutta tulos kai kelpaa.",
+  "linkit": [
+   "Staro Selon",
+   "Zagorjen"
+  ],
+  "jatkot": [
+   "Millaisia Zagorjen talonpoikaistalot ovat?",
+   "Mitä etnologinen museo tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kumrovec",
+  "kysymys": "Mikä on Lijepa naša domovino?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tää on iso juttu. Lijepa naša domovino on Kroatian kansallislaulu, jonka suomennos on \"Kaunis kotimaamme\". Sanat on kirjoittanut [[Antun Mihanović]] ja ne julkaistiin 1830-luvulla, ja sävel liitetään yleensä [[Josip Runjaniniin]], vaikka en ole varma kaikista yksityiskohdista. Kumrovecissa on laulun muistomerkki, joka pystytettiin vuonna 1935 satavuotisjuhlan kunniaksi. Pieni kylä, suuri laulu.",
+  "linkit": [
+   "Antun Mihanović",
+   "Josip Runjaniniin"
+  ],
+  "jatkot": [
+   "Milloin laulusta tuli virallinen kansallislaulu?",
+   "Kuka Antun Mihanović oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kumrovec",
+  "kysymys": "Mitä Staro Selossa voi nähdä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Staro Selossa voi nähdä hyvin säilyneitä [[Zagorjen]] talonpoikaistaloja sekä näyttelyitä perinteisistä töistä. Esillä on esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi -prosessi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kunnostus on tehnyt museosta kokonaisen [[ulkomuseon]], jossa vierailija pääsee tutustumaan entiseen arkeen. Leipäosasto kiinnostaa kyyhkyä erityisesti.",
+  "linkit": [
+   "Zagorjen",
+   "ulkomuseon"
+  ],
+  "jatkot": [
+   "Mitä ulkomuseo tarkoittaa?",
+   "Miten hamppu muuttuu pellavaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kumrovec",
+  "kysymys": "Kuka tunnettu henkilö on syntynyt Kumrovecissa?",
+  "uusi": true,
+  "vastaus": "Joo, tän tiedän kyllä. Kumrovecissa syntyi vuonna 1892 [[Josip Broz Tito]], joka johti [[Jugoslaviaa]] toisen maailmansodan jälkeen kuolemaansa vuonna 1980 asti. Hänen syntymäkotinsa on osa [[Staro Selon]] museoaluetta, ja kylä tunnetaan hänestä edelleen. Tito on kiistelty hahmo, ja hänen perintönsä arvioidaan entisen Jugoslavian alueella eri tavoin. Tämän kylän kuuluisuus on siis kotoisin sieltä, minä uskon.",
+  "linkit": [
+   "Josip Broz Tito",
+   "Jugoslaviaa",
+   "Staro Selon"
+  ],
+  "jatkot": [
+   "Mikä Jugoslavia oli?",
+   "Milloin Jugoslavia hajosi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sinj",
+  "kysymys": "Minä vuonna turkkilaisten piiritys Sinjissä epäonnistui?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Turkkilaisten piiritys Sinjissä epäonnistui vuonna 1715, kun turkkilaiset yrittivät ottaa kaupungin takaisin. Piiritys päättyi 15. elokuuta yöllä, jolloin turkkilaiset pakenivat [[Livnoon]]. Voitto on kaupungin tärkeä muisto, ja sen kunniaksi järjestetään [[Sinjska alka]] -ritariturnaus. Kyyhky ei olisi yöllä uskaltanut lentää.",
+  "linkit": [
+   "Livnoon",
+   "Sinjska alka"
+  ],
+  "jatkot": [
+   "Mikä Livno on?",
+   "Miten Sinjska alka järjestetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sinj",
+  "kysymys": "Millä nimellä Sinjin ympäristön seutua kutsutaan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Sinjin ympäristön seutua kutsutaan nimellä [[Cetinska krajina]], ja Sinj on sen keskus. Seutu on hedelmällistä [[Sinjsko poljea]], joka on karstikenttä, ja sitä ympäröivät Svilajan, Dinaran, Kamešnican ja Visokan vuoret. Seutu sijaitsee Split-Dalmatian läänin sisämaassa, noin Adrianmeren rannikkoa taaempana. Neljä vuorta yhdellä lauseella, ei paha.",
+  "linkit": [
+   "Cetinska krajina",
+   "Sinjsko poljea"
+  ],
+  "jatkot": [
+   "Mikä Dinara on?",
+   "Mikä Split-Dalmatian lääni on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sinj",
+  "kysymys": "Mikä on Sinjska alka?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tästä saa kertoa. Sinjska alka on ritariturnaus, jota on järjestetty Sinjissä 1700-luvun alusta lähtien voiton merkiksi [[ottomaaneista]]. Ratsastajat kilpailevat ratsain ja tähtäävät keihäällä rengasmaaliin, ja kilpailua pidetään vuosittain elokuussa. Perinne on tunnustettu myös [[UNESCOn]] aineettomaksi kulttuuriperinnöksi, vaikka en ole varma tarkasta vuodesta. Kisan kuvaaminen ylhäältä on makeaa.",
+  "linkit": [
+   "ottomaaneista",
+   "UNESCOn"
+  ],
+  "jatkot": [
+   "Mikä UNESCOn aineeton kulttuuriperintö on?",
+   "Miten ratsastajat harjoittelevat turnaukseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sinj",
+  "kysymys": "Mikä on karstikenttä eli polje?",
+  "uusi": true,
+  "vastaus": "Tuota niin, hyvä kysymys. Polje on karstialueen suuri, tasapohjainen ja suljettu painanne, joka syntyy kalkkikiven liukenemisen seurauksena. Sinjsko polje on tällainen [[karstikenttä]], ja sen maaperä on hedelmällistä, joten alue sopii viljelyyn. Kentät voivat tulvia kosteina kausina, koska vesi poistuu maan alaisten [[luolien]] kautta. Tuollainen on täällä Dinaran juurella tavallista.",
+  "linkit": [
+   "karstikenttä",
+   "luolien"
+  ],
+  "jatkot": [
+   "Mikä on karstimaisema?",
+   "Miksi karstialueilla on paljon luolia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sinj",
+  "kysymys": "Mikä on Sinjin Neitsyt Marian pyhäkkö?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tän muistan. Sinjin Neitsyt Marian pyhäkkö on kaupungin tärkeä katolinen pyhiinvaelluskohde, jossa kunnioitetaan Neitsyt Marian kuvaa. Perimätiedon mukaan kuva liittyy vuoden 1715 voittoon, ja sen vuoksi pyhäkkö ja [[Sinjska alka]] kuuluvat läheisesti yhteen kaupungin historiassa. Pyhäkköä hoitavat [[fransiskaanit]], ja elokuun puolivälin juhla kokoaa tavallisesti paljon vierailijoita. Tämän tiedon olen kuullut, en kyllä nähnyt.",
+  "linkit": [
+   "Sinjska alka",
+   "fransiskaanit"
+  ],
+  "jatkot": [
+   "Keitä fransiskaanit ovat?",
+   "Mitä pyhiinvaellus tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durdevac",
+  "kysymys": "Millä nimellä asukkaat kutsuvat itseään?",
+  "uusi": false,
+  "vastaus": "Kato, tää on hauska juttu. [[Đurđevacin]] asukkaat kutsuvat itseään leikillisesti [[picokeiksi]]. Kaupungin tunnetuimpiin nähtävyyksiin kuuluu [[Picokijada]], joka perustuu kukkojen legendaan, ja kaupunki sai vuonna 2008 EU:n [[EDEN-tunnustuksen]] epätavallisena matkailukohteena. Kyyhkynä minä kunnioitan kyl kaikkia siivekkäitä.",
+  "linkit": [
+   "Đurđevacin",
+   "picokeiksi",
+   "Picokijada",
+   "EDEN-tunnustuksen"
+  ],
+  "jatkot": [
+   "Mikä Picokijada on?",
+   "Mitä EDEN-tunnustus tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durdevac",
+  "kysymys": "Minä vuonna Đurđevac sai EU:n EDEN-tunnustuksen?",
+  "uusi": false,
+  "vastaus": "Mmm— tän minä muistan. [[Đurđevac]] sai EU:n [[EDEN-tunnustuksen]] vuonna 2008, ja tunnustus myönnettiin kaupungille epätavallisena matkailukohteena. Kaupungin nähtävyyksiin kuuluu muun muassa [[Picokijada]], joka perustuu kukkojen legendaan. Helppo vuosiluku, ei tarvinnut räpytellä siipiäkään.",
+  "linkit": [
+   "Đurđevac",
+   "EDEN-tunnustuksen",
+   "Picokijada"
+  ],
+  "jatkot": [
+   "Mitä EDEN-tunnustus tarkoittaa?",
+   "Mihin kukkojen legenda perustuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durdevac",
+  "kysymys": "Mikä oli Kroatian sotilasraja?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kroatian [[sotilasraja]] oli [[Habsburgien]] monarkian puolustusvyöhyke [[osmanien]] valtakunnan rajalla, ja sen asukkaat palvelivat sotilaina saadakseen maata käyttöönsä. Đurđevac kuului sotilasrajaan Varaždin–Sankt Georgen -rykmentti nro VI:n alueena, ja ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Aikamoinen nimi, pidempi ku koko häntäni.",
+  "linkit": [
+   "sotilasraja",
+   "Habsburgien",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Milloin sotilasraja lakkautettiin?",
+   "Miksi sotilasraja perustettiin osmanien rajalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durdevac",
+  "kysymys": "Kuka oli Pyhä Yrjö, jonka mukaan kirkko on nimetty?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Pyhä Yrjö]] oli perimätiedon mukaan sotilas, joka kuoli [[marttyyrina]] noin 300-luvun alussa. Häntä kunnioitetaan monissa kirkoissa, ja keskiajalla hänestä kertova [[lohikäärmelegenda]] levisi laajalle Eurooppaan. Đurđevacin Pyhän Yrjön kirkko on nimetty hänen mukaansa, ja kaupungin entinen saksankielinen nimi Militär Sanct Georgen viittaa samaan pyhimykseen. Onpas siit pitkä aika.",
+  "linkit": [
+   "Pyhä Yrjö",
+   "marttyyrina",
+   "lohikäärmelegenda"
+  ],
+  "jatkot": [
+   "Miksi Pyhä Yrjö on monen maan suojeluspyhimys?",
+   "Mitä lohikäärmelegenda kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durdevac",
+  "kysymys": "Mikä oli vuoden 1867 sovinto Itävallan ja Unkarin välillä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Vuoden 1867 sovinnossa Habsburgien keisarikunta muuttui [[kaksoismonarkiaksi]], jossa Itävallalla ja Unkarilla oli omat hallituksensa ja parlamenttinsa mutta yhteinen hallitsija, keisari [[Frans Joosef]]. Yhteisiä asioita olivat muun muassa ulkopolitiikka ja puolustus. [[Kroatia-Slavonian]] kuningaskunta oli osa tätä kokonaisuutta, ja Đurđevac kuului siihen vuoteen 1918 asti. Politiikkaa, mut minä tykkään enemmän reiteistä.",
+  "linkit": [
+   "kaksoismonarkiaksi",
+   "Frans Joosef",
+   "Kroatia-Slavonian"
+  ],
+  "jatkot": [
+   "Miksi Itävalta-Unkari hajosi vuonna 1918?",
+   "Millainen hallitsija Frans Joosef oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-amfiteatteri",
+  "kysymys": "Kuinka monta katsojaa amfiteatteriin mahtui parhaimmillaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. [[Salonan]] amfiteatterin kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa, joten luku on arvio eikä tarkka määrä. Rakennuksen ulkomitat olivat noin 125 x 100 metriä, ja se rakennettiin [[Dalmatian]] provinssin pääkaupunkiin 100-luvun jälkipuoliskolla. Siinä ois ollut kyyhkyllekin tilaa kierrellä.",
+  "linkit": [
+   "Salonan",
+   "Dalmatian"
+  ],
+  "jatkot": [
+   "Mitä Salonassa tapahtui 600-luvulla?",
+   "Millaisia gladiaattoriottelut olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-amfiteatteri",
+  "kysymys": "Miksi venetsialaiset purkivat amfiteatterin 1600-luvulla?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. [[Venetsialaiset]] purkivat amfiteatteria tarkoituksella 1600-luvun [[turkkilaissodissa]], jotta [[osmanit]] eivät voisi linnoittautua sen muureihin. Rakennus oli selvinnyt Salonan tuhosta 600-luvulla paremmin kuin muu kaupunki, joten sen pahimmat vauriot syntyivät vasta tuolloin. Onpas siit jo pitkä aika.",
+  "linkit": [
+   "Venetsialaiset",
+   "turkkilaissodissa",
+   "osmanit"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Salona oli roomalaisaikana?",
+   "Miksi osmanit ja Venetsia sotivat keskenään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-amfiteatteri",
+  "kysymys": "Mikä on Diocletianuksen palatsi?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on hyvä kysymys. [[Diocletianuksen palatsi]] on roomalaisen keisarin rakennuttama linnoitusmainen palatsi nykyisen [[Splitin]] keskustassa, ja keisarin kerrotaan viettäneen siellä eläkevuosiaan. Kun [[Salona]] tuhoutui 600-luvulla, asukkaat pakenivat palatsin muurien suojaan, ja siitä kehittyi nykyinen Split. Koko kaupunki yhden palatsin sisällä, melkein kuin kyyhkyslakka.",
+  "linkit": [
+   "Diocletianuksen palatsi",
+   "Splitin",
+   "Salona"
+  ],
+  "jatkot": [
+   "Kuka Diocletianus oli?",
+   "Miten Split on kehittynyt palatsin ympärille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-amfiteatteri",
+  "kysymys": "Mitä gladiaattoriottelut olivat roomalaisessa yhteiskunnassa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. [[Gladiaattoriottelut]] olivat roomalaisten julkista viihdettä: koulutetut taistelijat esiintyivät areenalla yleisön katsellessa. Niitä järjestettiin eri puolilla [[Rooman]] valtakuntaa amfiteattereissa, [[Salona]] mukaan lukien, ja Salonassa ottelut jatkuivat 400-luvulle asti, kunnes ne kiellettiin. Tuolloin lait ja tavat olivat toiset kuin nykyään, ja asiasta on kulunut yli tuhat vuotta. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Gladiaattoriottelut",
+   "Rooman",
+   "Salona"
+  ],
+  "jatkot": [
+   "Miten gladiaattorit koulutettiin?",
+   "Missä muualla Euroopassa on säilynyt amfiteattereita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-salona-amfiteatteri",
+  "kysymys": "Keitä avaarit olivat?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Avaarit]] olivat Keski-Aasian aroilta Eurooppaan 500-luvun puolivälin jälkeen saapunut hevosratsastajakansa, joka asettui [[Pannonian]] alueelle Tonavan varrelle. Avaarit ja [[slaavit]] valtasivat ja tuhosivat Salonan 600-luvulla, minkä jälkeen kaupungin asukkaat pakenivat Diocletianuksen palatsin suojaan. Tapahtumasta on kulunut yli tuhat vuotta, ja Euroopan kartta on muuttunut sen jälkeen moneen kertaan. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Avaarit",
+   "Pannonian",
+   "slaavit"
+  ],
+  "jatkot": [
+   "Mitä tiedetään Pannonian alueesta?",
+   "Keitä slaavit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cacvina",
+  "kysymys": "Minä vuonna osmanit valtasivat Čačvinan?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: [[Osmanit]] valtasivat [[Čačvinan]] linnan vuonna 1513. Linna kuului sen jälkeen [[Hertsegovinan sandžakin]] osana osmanien hallintaan vuoteen 1718 asti, jolloin alue siirtyi [[Venetsian]] Dalmatiaan. Aika monta isäntää yhdellä linnalla.",
+  "linkit": [
+   "Osmanit",
+   "Čačvinan",
+   "Hertsegovinan sandžakin",
+   "Venetsian"
+  ],
+  "jatkot": [
+   "Mitä sandžakki tarkoittaa?",
+   "Mikä Čačvinan linna oli alun perin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cacvina",
+  "kysymys": "Kuka purki linnan ja minä vuonna?",
+  "uusi": false,
+  "vastaus": "Just niin, tän minä tiedän puoliksi. [[Čačvinan]] linna purettiin kokonaan vuonna 1808, [[Ranskan]] vallan aikana, [[Napoleonin]] sotien aikoihin. En ole varma, kuka tarkalleen purkamisen määräsi. Linna oli autioitunut jo 1700-luvun puolivälissä, ennen purkamista. Ja minä kun luulin linnojen olevan ikuisia.",
+  "linkit": [
+   "Čačvinan",
+   "Ranskan",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Miksi Ranska hallitsi Dalmatiaa 1800-luvun alussa?",
+   "Mitä Čačvinan linnasta on jäljellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cacvina",
+  "kysymys": "Mitä Dinaridit ovat?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Dinaridit]] ovat vuoristo Balkanin luoteisosassa, [[Adrianmeren]] itärannikon suuntaisesti Sloveniasta Albaniaan, ja ne erottavat rannikon sisämaasta. Čačvinan linna sijaitsi 705 metrin korkeudessa vuoriston solassa, jossa se vartioi kauppareittiä rannikon [[Dalmatian]] ja Bosnian välillä. Vuoret ovat kyyhkyn kauhu, aina pitää lentää yli.",
+  "linkit": [
+   "Dinaridit",
+   "Adrianmeren",
+   "Dalmatian"
+  ],
+  "jatkot": [
+   "Mitkä ovat Dinaridien korkeimmat huiput?",
+   "Miten vuoristo on vaikuttanut Balkanin historiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cacvina",
+  "kysymys": "Mikä on sandžakki?",
+  "uusi": true,
+  "vastaus": "Ai se. [[Sandžakki]] oli [[osmanien]] hallinnon aluejaon yksikkö: suurempien maakuntien osa, jota hallitsi nimitetty virkamies. Čačvina kuului vuosina 1513–1718 Hertsegovinan sandžakkiin, ja sen jälkeen alue siirtyi Venetsian Dalmatiaan. Byrokratiaa, mut tarkkaa.",
+  "linkit": [
+   "Sandžakki",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Miten osmanien hallinto oli järjestetty?",
+   "Mitä Hertsegovina nykyään on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cacvina",
+  "kysymys": "Keitä Frankopanit olivat?",
+  "uusi": true,
+  "vastaus": "Katotaas. [[Frankopanit]] olivat merkittävä kroatialainen aatelissuku, jonka valta oli keskiajalla vahvimmillaan [[Krkin]] saarella ja Kvarnerin alueella. Suku kertoi polveutuvansa roomalaisesta Frangipani-suvusta. [[Čačvinan]] linna siirtyi heidän haltuunsa vuonna 1435, mutta omistus vaihtui pian uudelleen. Roomalaisia sukuja, kuten minunkin.",
+  "linkit": [
+   "Frankopanit",
+   "Krkin",
+   "Čačvinan"
+  ],
+  "jatkot": [
+   "Mikä Krkin saari on?",
+   "Miksi aatelissuvut taistelivat linnoista?"
+  ]
+ }
+]
