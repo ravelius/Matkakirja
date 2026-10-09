@@ -355,8 +355,26 @@ namespace Matkakirja.Linssit.Kierros
             if (matka < LyhytSuoraM && TryLyhytSuora(a, b, sv, ha, hb, out double h2, out double s2)) { hv = h2; suunta = s2; }
             et = Math.Max(et, Math.Sqrt(hv * hv + uv * uv));
             kall = Math.Asin(Math.Min(1, hv / et)) / A;
-            return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, kall, suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
+            double kLat = V(a.Lat, b.Lat), kLon = V(a.Lon, b.Lon);
+            // VIISTO KATSE LENNOLLA (kuva-arkki 9.10., elokuvalinja: Concorde → Eiffel ja Champs → Sacré-Cœur katsoivat lähes suoraan
+            // alas sumeiden laattojen yli, kun zoomauskaaren lisäetäisyys meni ylös ja kallistus putosi ~10°:een): kallistus enintään
+            // PalloLentoJyrkennysMaxAst kehysten kallistusta jyrkempi. Silmä pysyy paikallaan (ei taaksepäin nykäisyä), katsepiste
+            // siirtyy suuntimaa pitkin eteenpäin; pehmeä siirtymä ±8° rajan ympärillä, lennon päissä ei vaikutusta.
+            double kMin = V(a.Kallistus, b.Kallistus) - PalloLentoJyrkennysMaxAst;
+            if (kall < kMin + 8)
+            {
+                double x = Math.Max(0, Math.Min(1, (kMin + 8 - kall) / 16)), sx = x * x * (3 - 2 * x);
+                double kUusi = kall + (kMin - kall) * sx, korkeus = et * Math.Cos(kall * A);
+                double siirto = korkeus * Math.Tan(kUusi * A) - et * Math.Sin(kall * A);
+                const double R = 6371000;
+                kLat += siirto * Math.Cos(suunta * A) / R / A;
+                kLon += siirto * Math.Sin(suunta * A) / (R * Math.Cos(kLat * A)) / A;
+                et = korkeus / Math.Cos(kUusi * A); kall = kUusi;
+            }
+            return new Kuvakulma(kLat, kLon, et, kall, suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
         }
+        /// <summary>Pallolennon kallistus enintään näin monta astetta kehysten kallistusta jyrkempi (katse viistossa, ei suoraan alas).</summary>
+        public const double PalloLentoJyrkennysMaxAst = 20;
 
         public const double LyhytSuoraM = 1500;
         static bool TryLyhytSuora(Kuvakulma a, Kuvakulma b, double sv, double ha, double hb, out double h, out double suunta)
