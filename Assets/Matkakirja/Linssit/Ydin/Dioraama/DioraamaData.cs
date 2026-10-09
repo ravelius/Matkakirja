@@ -166,7 +166,9 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Detalji
     {
         public string Pinta, Albedo, Normaali, Karheus, AstcAlbedo, AstcNormaali, AstcKarheus;
-        public double M = 1.5, Voima = 0.6;
+        /// <summary>Parallaksi (LR v45s): korkeuskartta (lineaarinen, 1 = ylin) ja sen syvyys metreinä; null / 0 = ei POM:ia.</summary>
+        public string Korkeus, AstcKorkeus;
+        public double M = 1.5, Voima = 0.6, SyvyysM;
     }
 
     public sealed class Pinta
@@ -1210,6 +1212,7 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     Pinta = pari.Key, Albedo = MiniJson.Teksti(o, "albedo"), Normaali = MiniJson.Teksti(o, "normaali"), Karheus = MiniJson.Teksti(o, "karheus"),
                     AstcAlbedo = MiniJson.Teksti(astc, "albedo"), AstcNormaali = MiniJson.Teksti(astc, "normaali"), AstcKarheus = MiniJson.Teksti(astc, "karheus"),
+                    Korkeus = MiniJson.Teksti(o, "korkeus"), AstcKorkeus = MiniJson.Teksti(astc, "korkeus"), SyvyysM = Math.Max(0, MiniJson.Luku(o, "syvyys_m") ?? 0),
                     M = MiniJson.Luku(o, "m") is double m && m > 0.05 ? m : 1.5, Voima = Math.Max(0, Math.Min(1, MiniJson.Luku(o, "voima") ?? 0.6)),
                 };
             }

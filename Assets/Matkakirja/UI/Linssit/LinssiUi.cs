@@ -341,6 +341,10 @@ namespace Matkakirja.Natiivi
             // lisäksi yläpalkki, paikkapilleri ja taikalasit pois (Linssiseppä 2, laitekuva vuosi1 07-pohja.png).
             bool vuosi = id == MaapallonVuosiLinssi.Id;
             portti |= vuosi;
+            // Linnan dioraama ja pelattava pala (Muurien sisällä, "poikkileikkaus"; LS2:n botti BUILD 169 9.10.2026: 65 Ranskan
+            // nostomerkkiä kerroksessa 12 linnan päällä): koko ruudun 3D-näyttämö, joten kartan nostot, nimet ja kartussi pois kuten
+            // porttilinsseissä. Liikkumisen esto (Linssirekisteri.EstaaKartan) ennallaan.
+            portti |= id == "poikkileikkaus";
             pelielementit = (portti, vertailu, radio, paalla);
             PaivitaPelielementit();
             // Web piirraLinssiSelite: kerroksellinen linssi (radio on kerrokseton) kutistaa päiväkirjan lapuksi.

@@ -660,6 +660,7 @@ namespace Matkakirja.Natiivi
             ladatutValoAtlakset.Clear();
             foreach (var dk in ladatutDetaljit) if (dk != null) UnityEngine.Object.Destroy(dk);
             ladatutDetaljit.Clear();
+            Shader.SetGlobalVector("_KuoriLahi", Vector4.zero);   // kuoren lähidetalji pois (tekstuurit tuhottu)
         }
 
         string edellinenPeili = "pois (ämpäri)";
@@ -802,6 +803,14 @@ namespace Matkakirja.Natiivi
         public static string LatausVirhe { get; private set; }
 
         /// <summary>Ajaa latauksen loppuun ja laskee sen käsitellyksi (myös yield break -perääntyminen ja virhe).</summary>
+        /// <summary>Hahmon glb latautumaan kerran ja LASKETTUNA (BUILD 167 -löydös 9.10.: seikkailun hahmot lisättiin odotettaviin ilman
+        /// laskuria, joten kuormitetulla laitteella odotus jäi 99 %:iin "hahmot 10/13" ja 60 s:n aikaraja sulki linnan karttaan).</summary>
+        void AloitaHahmoGlb(string glb)
+        {
+            if (string.IsNullOrEmpty(glb) || !hahmoGlbJonossaTaiValmiit.Add(glb)) return;
+            o.StartCoroutine(Kasitelty(LataaHahmoGlb(glb), () => hahmojaKasitelty++));
+        }
+
         IEnumerator Kasitelty(IEnumerator lataus, Action valmis)
         {
             int kerta = avauskerta;
@@ -1034,7 +1043,7 @@ namespace Matkakirja.Natiivi
             var irrallisetGlb = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(irrallisetGlb);
             foreach (var glb in irrallisetGlb)
-                if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                AloitaHahmoGlb(glb);
             o.Kirjaa($"poikki: vene päällä ({lahde}, {reitti.Count} pistettä, {ydin.Pituus:F0} m, {ydin.KestoS:F0} s)");
         }
 
@@ -1083,14 +1092,14 @@ namespace Matkakirja.Natiivi
                     nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, kid, sp.Silmat, sp.KadetLeike, Quaternion.Euler(0f, 180f, 0f));
                     var h3 = nayttamo.Hahmot3D; sp.KadetSolmu = n => h3 != null ? h3.IrrallisenSolmu(kid, n) : null;
                     var kg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(kg);
-                    foreach (var glb in kg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                    foreach (var glb in kg) AloitaHahmoGlb(glb);
                 }
                 // Takakuvan hahmo (M-osa: ulkoseinä, köysilasku): Fogg asu v2 piilossa, kunnes pelaaja on takakuvassa.
                 if (sp.TakakuvaHahmo != null)
                 {
                     nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.TakakuvaHahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
                     var tg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(tg);
-                    foreach (var glb in tg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                    foreach (var glb in tg) AloitaHahmoGlb(glb);
                 }
                 o.StartCoroutine(EsineetPaalle());
                 o.Kirjaa("seikkailu: ensimmäinen persoona (ei pelaajahahmoa)");
@@ -1099,7 +1108,7 @@ namespace Matkakirja.Natiivi
             nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.Hahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
             var glbt = new List<string>();
             nayttamo.Hahmot3D.IrrallistenGlb(glbt);
-            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+            foreach (var glb in glbt) AloitaHahmoGlb(glb);
             sp.KapseliPiiloon();
             o.StartCoroutine(EsineetPaalle());
             o.Kirjaa($"seikkailu: pelaajahahmo {pm.Nimi} ({pm.Glb}, {pm.Leikkeet.Count} leikettä)");
@@ -1136,6 +1145,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1b/manifest.json");   // Pelikoodari (v1b 8.10.: askel-porras-1 uusittu): askeleet, kantele (puuttuva ohitetaan)
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v3/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot … (v3: sukellus ja köysi uusittu, Pelikoodari 8.10.)
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v3/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen, märät askeleet, vihje-kimallus
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-tuulet-v1/manifest.json");   // Pelikoodari 9.10.: tuuli-korkea, tuuli-kostea
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }
@@ -1161,7 +1171,7 @@ namespace Matkakirja.Natiivi
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
-            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+            foreach (var glb in glbt) AloitaHahmoGlb(glb);
         }
 
         IEnumerator VartijatPaalle()
@@ -1187,7 +1197,7 @@ namespace Matkakirja.Natiivi
                 }
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
-            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+            foreach (var glb in glbt) AloitaHahmoGlb(glb);
         }
 
         IEnumerator VeneLaituriin()
@@ -1458,9 +1468,7 @@ namespace Matkakirja.Natiivi
                 nayttamo.Hahmot3D?.TarvittavatGlb(rakennus, tila, hahmoGlbt);
                 foreach (var glb in hahmoGlbt)
                 {
-                    if (hahmoGlbJonossaTaiValmiit.Contains(glb)) continue;
-                    hahmoGlbJonossaTaiValmiit.Add(glb);
-                    o.StartCoroutine(Kasitelty(LataaHahmoGlb(glb), () => hahmojaKasitelty++));
+                    AloitaHahmoGlb(glb);
                 }
             }
         }
@@ -1551,7 +1559,7 @@ namespace Matkakirja.Natiivi
             string polku = iso && !string.IsNullOrEmpty(jpgIso) ? jpgIso : puoli ? atlasPuoli : atlas;
             // ASTC-mipketju ensin (valoatlas.astc / astcPuoli / astcIso), JPEG varalla.
             string astcPolku = iso ? astcIso : puoli ? astcPuoliP : astcTaysi;
-            if (!string.IsNullOrEmpty(astcPolku))
+            if (!string.IsNullOrEmpty(astcPolku) && DioraamaAstc.AstcTuettu)
             {
                 // Linnan piikit (iPad 2.10.): 8 valoatlasta (4096² ASTC, ~22 Mt) latautui peräkkäin kukin yhdessä ruudussa →
                 // 108 ms:n ruutu. Nyt natiivimuistiin ja kaistoina yhteisellä ruutubudjetilla (DioraamaAstc.LueKaistoina).
@@ -1612,20 +1620,33 @@ namespace Matkakirja.Natiivi
                 yield return LataaDetaljiKuva(d.AstcAlbedo, d.Albedo, "Detalji:" + d.Pinta + ":albedo", t => a = t);
                 yield return LataaDetaljiKuva(d.AstcNormaali, d.Normaali, "Detalji:" + d.Pinta + ":normaali", t => n = t);
                 yield return LataaDetaljiKuva(d.AstcKarheus, d.Karheus, "Detalji:" + d.Pinta + ":karheus", t => k = t);
+                Texture2D h = null;   // POM-korkeus vain Ultralle (LR v45s)
+                if (Laatutaso.Ultra && d.SyvyysM > 0) yield return LataaDetaljiKuva(d.AstcKorkeus, d.Korkeus, "Detalji:" + d.Pinta + ":korkeus", t => h = t);
                 if (kerta != avauskerta || rakennus3D == null)
                 {
-                    foreach (var t in new[] { a, n, k }) if (t != null) UnityEngine.Object.Destroy(t);
+                    foreach (var t in new[] { a, n, k, h }) if (t != null) UnityEngine.Object.Destroy(t);
                     yield break;
                 }
-                foreach (var t in new[] { a, n, k }) if (t != null) ladatutDetaljit.Add(t);
-                rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima);
+                foreach (var t in new[] { a, n, k, h }) if (t != null) ladatutDetaljit.Add(t);
+                rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima, h, d.SyvyysM);
+                if (d.Pinta == "kuori") AsetaKuorenLahidetalji(a, n, k, d.M, d.Voima);
                 o.Kirjaa($"poikki: detalji {d.Pinta} ({(a != null ? "albedo " : "")}{(n != null ? "normaali " : "")}{(k != null ? "karheus " : "")}m {d.M:F1}, voima {d.Voima:F2})");
             }
         }
 
+        /// <summary>Kuoren lähidetalji (LR:n "kuori"-alias): globaalit DioraamaKuori-varjostimelle; null = pois.</summary>
+        static void AsetaKuorenLahidetalji(Texture2D a, Texture2D n, Texture2D k, double m, double voima)
+        {
+            bool paalla = a != null || n != null;
+            if (a != null) Shader.SetGlobalTexture("_KuoriLahiAlbedo", a);
+            if (n != null) Shader.SetGlobalTexture("_KuoriLahiNormaali", n);
+            if (k != null) Shader.SetGlobalTexture("_KuoriLahiKarheus", k);
+            Shader.SetGlobalVector("_KuoriLahi", new Vector4(1f / (float)Math.Max(0.05, m), (float)voima, paalla ? 1f : 0f, 0f));
+        }
+
         IEnumerator LataaDetaljiKuva(string astc, string jpg, string nimi, Action<Texture2D> valmis)
         {
-            if (!string.IsNullOrEmpty(astc))
+            if (!string.IsNullOrEmpty(astc) && DioraamaAstc.AstcTuettu)
             {
                 byte[] tavut = null;
                 yield return HaeTavut(peili(paketinJuuri + astc), t => tavut = t);
@@ -1672,7 +1693,10 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { o.Kirjaa($"poikki: hahmo3d {glbPolku} virhe: {e.Message}"); yield break; }
             // Hahmon kuvat ASTC 6×6:na (juna 169: <glb>-<kuva>-6x6.astcm, vain jos paketin manifestissa), muuten glb:n kuva.
             Texture2D[] astcKuvat = null;
-            if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase))
+            // Normaalikartat (LR v45t) puretaan lineaarisina; muut kuvat sRGB:nä.
+            var normaaliKuvat = new HashSet<int>();
+            foreach (var sm in malli.Solmut) foreach (var os in sm.Osat) if (os.NormaaliKuva >= 0) normaaliKuvat.Add(os.NormaaliKuva);
+            if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) && DioraamaAstc.AstcTuettu)
                 for (int ki = 0; ki < malli.Kuvat.Count; ki++)
                 {
                     string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
@@ -1680,7 +1704,7 @@ namespace Matkakirja.Natiivi
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
                     string syy = "ei latautunut";
-                    var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat) : null;
+                    var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat, 0, normaaliKuvat.Contains(ki)) : null;
                     if (k == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} kuva {ki} ASTC ei käytössä ({syy}), glb:n kuva"); continue; }
                     astcKuvat ??= new Texture2D[malli.Kuvat.Count];
                     astcKuvat[ki] = k;

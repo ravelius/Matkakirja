@@ -39,6 +39,18 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            // Kuoren LÄHIDETALJI (LR:n "kuori"-alias, #3; juna 170): kivi m 2,0 triplanaarisesti makrodetaljin päälle vain lähellä
+            // (häivytys 6–12 m), globaaleista (DioraamaSovitin.LataaDetaljit). Nimet uudelleen, ettei törmää tilojen materiaaliarvoihin.
+            #define _DetaljiAlbedo _KuoriLahiAlbedo
+            #define sampler_DetaljiAlbedo sampler_KuoriLahiAlbedo
+            #define _DetaljiNormaali _KuoriLahiNormaali
+            #define sampler_DetaljiNormaali sampler_KuoriLahiNormaali
+            #define _DetaljiKarheus _KuoriLahiKarheus
+            #define sampler_DetaljiKarheus sampler_KuoriLahiKarheus
+            #define _DetaljiKorkeus _KuoriLahiKorkeus
+            #define sampler_DetaljiKorkeus sampler_KuoriLahiKorkeus
+            #include "DioraamaDetalji.hlsl"
+            float4 _KuoriLahi;   // x = 1 / toistoväli m, y = voima, z = päällä
 
             half4 _DioraamaSumuVari;
             float4 _DioraamaSumu;
@@ -171,6 +183,15 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             {
                 half3 vari = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb * _Kirkkaus;
                 vari = Detalji(vari, i.uv, i.paikkaW, i.normaaliW);
+                if (_KuoriLahi.z > 0.5)
+                {
+                    float lahi = saturate((12.0 - length(_WorldSpaceCameraPos - i.paikkaW)) / 6.0);
+                    if (lahi > 0.01)
+                    {
+                        DetaljiTulos dk = DioraamaDetalji(float4(_KuoriLahi.x, _KuoriLahi.y * lahi, 1, 0), i.paikkaW, normalize(i.normaaliW), float4(0, 0, 0, 0));
+                        vari *= dk.albedo * dk.valo;
+                    }
+                }
                 if (_KavelyLeikkausN > 0.5 && KavelyLeikattu(i.paikkaW)) discard;
                 if (_DioraamaLeikkausMin.w > 0.001)
                 {

@@ -513,6 +513,8 @@ namespace Matkakirja.Natiivi
             // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
             // vasemmalle puolelle; pystysuunnassa ennallaan.
             if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
+            // Omistaja 9.10.2026: "aavistuksen irti vasemmasta reunasta lisää ainakin ipadilla vaakamuodossa".
+            if (LeveaRuutu && w > h) vasen += IpadVaakaLisaPt;
             metro.Kompakti = false; metro.IslandAlaY = 0f;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             // Omistaja 14.2x: iPadilla vasempaan yläkulmaan 6 pt reunasta, linja ja kaikki nimet köyden päällä (ei rajausta).
@@ -562,7 +564,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
         /// <summary>iPadin metrolinjan marginaali ruudun vasemmasta reunasta (pt).</summary>
-        const float ReunaPt = 6f;
+        const float ReunaPt = 6f, IpadVaakaLisaPt = 12f;
         const float KulmaVaraPt = 22f, IslandLeveysPt = 126f, IslandOikeaPt = 48f;
 
         VisualElement esitysRivi;
@@ -2346,7 +2348,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<string> AaniLahteet()

@@ -45,6 +45,7 @@ namespace Matkakirja.Natiivi
         static readonly int IdVari = Shader.PropertyToID("_Vari"), IdTila = Shader.PropertyToID("_Tila"),
             IdKuvioTyyppi = Shader.PropertyToID("_KuvioTyyppi"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva");
         static Shader varjostin;
+        static readonly int IdNormaaliKuva = Shader.PropertyToID("_NormaaliKuva"), IdNormaaliPaalla = Shader.PropertyToID("_NormaaliPaalla");
         static Shader Varjostin() => varjostin ??= Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
         static readonly double[] Lepo = { 0, 0, 0 };
         const double RAD = Math.PI / 180;
@@ -594,6 +595,7 @@ namespace Matkakirja.Natiivi
         /// (glTF vasen ylä → Unity vasen ala, sama kuin DioraamaUlkokuori).</summary>
         static SolmuMalli RakennaSkinMalli(GlbMalli malli, GlbSolmu s, HenkiloMalli hm, Dictionary<string, Material> materiaaliCache)
         {
+            bool normaalikartta = false;
             var skin = malli.Skinit[s.Skin];
             int kaikki = 0;
             foreach (var osa in s.Osat) kaikki += (osa.Paikat?.Length ?? 0) / 3;
@@ -624,7 +626,8 @@ namespace Matkakirja.Natiivi
                 for (int i = 0; i < lahde.Length; i++) kolmiot[i] = lahde[i] + kv;
                 kolmiotOsittain[oi] = kolmiot;
                 materiaalit[oi] = osa.Kuva >= 0 && osa.Kuva < malli.Kuvat.Count && malli.Kuvat[osa.Kuva] != null
-                    ? KuvaMateriaali(malli, osa.Kuva, hm, materiaaliCache) : MateriaaliOsalle(osa, materiaaliCache);
+                    ? KuvaMateriaali(malli, osa.Kuva, hm, materiaaliCache, osa.NormaaliKuva) : MateriaaliOsalle(osa, materiaaliCache);
+                if (osa.NormaaliKuva >= 0) normaalikartta = true;
                 kv += n;
             }
             var bindposet = new Matrix4x4[skin.Nivelet.Length];
@@ -645,6 +648,7 @@ namespace Matkakirja.Natiivi
             mesh.bindposes = bindposet;
             LisaaMuodot(mesh, s.Osat, kaikki);
             mesh.RecalculateBounds();
+            if (normaalikartta) mesh.RecalculateTangents();   // hahmojen normaalikartat (LR v45t, UV0)
             return new SolmuMalli { Mesh = mesh, Materiaalit = materiaalit };
         }
 
@@ -724,9 +728,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Upotetun perusvärikuvan materiaali (_Tila 1, _PohjaKuva sRGB) — yksi per kuva-indeksi.</summary>
-        static Material KuvaMateriaali(GlbMalli malli, int kuva, HenkiloMalli hm, Dictionary<string, Material> cache)
+        static Material KuvaMateriaali(GlbMalli malli, int kuva, HenkiloMalli hm, Dictionary<string, Material> cache, int normaaliKuva = -1)
         {
-            string avain = "kuva:" + kuva;
+            if (normaaliKuva >= malli.Kuvat.Count || normaaliKuva >= 0 && malli.Kuvat[normaaliKuva] == null && (hm.AstcKuvat == null || normaaliKuva >= hm.AstcKuvat.Length || hm.AstcKuvat[normaaliKuva] == null)) normaaliKuva = -1;
+            string avain = "kuva:" + kuva + (normaaliKuva >= 0 ? "|n:" + normaaliKuva : "");
             if (cache.TryGetValue(avain, out var m)) return m;
             // ASTC 6×6 + mipit (Natiiviseppä/LS2 8.10.: RGBA32-hahmot veivät 66 Mt), muuten glb:n kuva RGBA32:na kuten ennen.
             var tex = hm.AstcKuvat != null && kuva < hm.AstcKuvat.Length ? hm.AstcKuvat[kuva] : null;
@@ -742,6 +747,25 @@ namespace Matkakirja.Natiivi
             if (tex != null) { m.SetTexture(IdPohjaKuva, tex); m.SetFloat(IdTila, 1f); }
             else m.SetFloat(IdTila, 0f);
             m.SetFloat(IdKuvioTyyppi, 0f);
+            // Normaalikartta (LR v45t: kankaat ja nahka 2k, UV0, OpenGL Y+): ASTC lineaarisena (LataaHahmoGlb), muuten glb:n PNG lineaarisena.
+            if (normaaliKuva >= 0)
+            {
+                string nNimi = "Hahmo3D-normaali:" + normaaliKuva;
+                Texture2D nt = null;
+                foreach (var t in hm.Tekstuurit) if (t != null && t.name == nNimi) { nt = t; break; }
+                if (nt == null)
+                {
+                    nt = hm.AstcKuvat != null && normaaliKuva < hm.AstcKuvat.Length ? hm.AstcKuvat[normaaliKuva] : null;
+                    if (nt == null)
+                    {
+                        nt = new Texture2D(2, 2, TextureFormat.RGBA32, true, true);
+                        if (!nt.LoadImage(malli.Kuvat[normaaliKuva], false)) { UnityEngine.Object.Destroy(nt); nt = null; }
+                        else nt.Apply(true, true);
+                    }
+                    if (nt != null) { nt.name = nNimi; nt.wrapMode = TextureWrapMode.Repeat; if (!hm.Tekstuurit.Contains(nt)) hm.Tekstuurit.Add(nt); }
+                }
+                if (nt != null) { m.SetTexture(IdNormaaliKuva, nt); m.SetFloat(IdNormaaliPaalla, 1f); }
+            }
             cache[avain] = m;
             return m;
         }
