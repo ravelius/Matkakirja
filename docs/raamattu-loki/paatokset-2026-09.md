@@ -12021,3 +12021,23 @@ Omistaja: "Luulisin, että joku on tehnyt tällaista samaa juttua aiemminkin, ni
 ## GOOGLEN SUMENNUKSET JA OMAT MALLIT (PÄÄTOIMITTAJA 9.10.2026 KLO 18.1x) (9.10.2026 klo 18.13)
 
 Ristiriita korjattu: Raamatussa luki 8.–9.10. "Googlen omia sumennuksia ei silti peitetä" ja "poliisiprefektuuri … ohitetaan korkeammalta lentämällä eikä niitä peitetä", mutta PT päätti 9.10. ennen klo 13, että LR mallintaa prefektuurin korttelin (Pariisin avausnäkymän sumennusläiskä, LS1:n nykyintroarvio #4300 virhe 3), ja v6c–v6e (uusin-3 → v6e 16.25) sisältävät sen. PT tarkisti Map Tiles -ehdot (developers.google.com/maps/documentation/tile/policies, 9.10.2026): omat 3D-objektit laattojen päällä ovat sallittuja, kun niitä ei ole jäljitetty tai johdettu laatoista ja käyttöliittymä kertoo Googlen osuuden; sumennuksista ei ole kieltoa. Linja: oman mallin saa tehdä myös sumennetun kohteen kohdalle vain julkisista vapaista lähteistä (OSM, Commons); erillistä peittokerrosta tai laikkua sumennuksen päälle ei tehdä, ja muut sumennukset (Élysée) ohitetaan korkeammalta lentämällä.
+
+## KUNINKAANLINNA JA RIDDARHOLMEN PELIIN (OMISTAJA 9.10.2026 KLO 18.3x) (9.10.2026 klo 18.53)
+
+Omistajan kortti "Otetaanko Kuninkaanlinnan ja Riddarholmenin kirkon uudet mallit peliin?" → "Kyllä, peliin (suositus)". v6h = KL v3c + Riddarholmen v2b (LS2:n kuva-arkki 93307e6f4: valokuva | nyt pelissä | uusi, kaakosta 650 m / 420 m, klo 13; eteläjulkisivu v6h 143/137/129, valokuva 153/146/131). PT:n tarkistus: katon tummat raidat ovat todelliset aurinkopaneelit (SFV 2010, laajennukset 2016 ja 2023), muoto (sisäpiha, länsikaari, Logården) oikea; Riddarholmenin tornin tiili vielä valokuvaa tummempi. uusin-3 → v6h (Julkaisija, LS2:n stillien jälkeen), uusin-2 pysyy v6b. Kuvat talteen proto-3d/_valmiit/hyvaksytyt-mallit/kl-ridd-v6h-20261009/.
+
+## KUVALAKI: KREIKKA JA RANSKAN DOMAANIT VAROVASTI (OMISTAJA 9.10.2026 KLO 18.5x) (9.10.2026 klo 18.53)
+
+Omistaja 18.2x: "Selitätkö, mitä se kuvalakiraportti nyt sanoikaan? Varsinkaan en ymmärtänyt sitä Kreikan 20 % -juttua. Ja voit muutenkin vähän tarkemmin selittää." PT selitti #4303:n (Kreikan laki 4858/2021 art. 46: valtion muistomerkkien ja museoesineiden kuvien kaupallinen käyttö luvanvaraista, mitos.gov.gr-hinnastossa sovellus 20 % vähittäismyyntihinnasta; Ranskan 21 domaania opetusvapautuksella; Eiffelin yövalaistus suojattu; Saksan drone-kulma auki). Kortti "Kyllä, varovainen (suositus)": uusia valokuvia Kreikan valtion muistomerkeistä ja museoesineistä ei lisätä (havainnekuva tai oma 3D tilalle); juristi ennen julkaisua (Kreikan maksu, Ranskan opetusvapautus); Sisältökirjuri tekee kuvainventaarion (Kreikka + Ranskan domaanit) ilman poistoja; ei näitä kohteita mainoskuviin. Raamattu ELÄVÄ OPAS → KUVIEN KÄYTTÖOIKEUS.
+
+## KYSYMYKSET AINA KORTTINA, YÖLLÄ AAMUN KORTTIIN (OMISTAJA 9.10.2026 KLO 18.5x) (9.10.2026 klo 18.53)
+
+Omistaja sanatarkasti: "Jos tulee kysymyksiä, niin anna aina kortit." (PT oli kysynyt kuvalinjasta tekstinä "Jos tämä sopii, kirjaan sen linjaksi.") Tarkennus kortilla "Annanko kysymykset korttina myös yöllä, kun nukut?" → "Yöllä aamun korttiin (suositus)". Linja: jokainen kysymys omistajalle AskUserQuestion-korttina (vuoron viimeinen toimi); yöllä (00–07) työ jatkuu oletuksella ja kysymykset kootaan aamun korttiin. Raamattu Ydinajatus kohta 2 E) KYSYMYKSET AINA KORTTINA.
+
+## KONE VAPAA TIISTAIHIN 13.10. (OMISTAJA 9.10.2026 KLO 18.5x) (9.10.2026 klo 18.53)
+
+Omistaja sanatarkasti: "Tarvitsen konetta seuraavan kerran vasta ensi viikon tiistaina, joten saat käyttää resursseja vapaasti." PT (Postivahti välitti rooleille): ma 12.10. asti simulaattoreita 2 yhtä aikaa (swap < 12 Gt, vapaata muistia > 20 Gt), Mac GUI -automaatio ilman joutoaikaehtoa, GPU-ajot täydellä teholla; nice 15, paistot yksi kerrallaan ja junan käännös etusijalla ennallaan; ennen ti 13.10. aamua GUI-ajot pois ja Unreal suljettu, levy > 100 Gi.
+
+## OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT (OMISTAJA 9.10.2026 KLO 19.0x) (9.10.2026 klo 18.58)
+
+Omistaja sanatarkasti: "Raportoi jatkossa vain minua koskevat asiat." (PT oli raportoinut chattiin roolien nollaukset, laattavarjopäätöksen ja jonokierroksen.) Linja: chattiin vain omistajan päätöstä, tointa tai hyväksyntää vaativat asiat sekä hänelle valmiina näkyvät (TF valmis, hyväksyttävät pelikuvat, vastaukset hänen kysymyksiinsä); muu lokiin ja tyojonot.md:hen. Raamattu Ydinajatus kohta 2 E. Samalla: GOOGLEN LAATOILLE EI VARJOJA (PT 19.0x, LS2:n laattavarjokoe ce615b071): leivotut varjot eivät käänny kellonajan mukana; omien mallien varjot (varjot-173) riittävät.
