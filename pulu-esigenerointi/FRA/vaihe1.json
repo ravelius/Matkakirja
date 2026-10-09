@@ -2619,9 +2619,12 @@
   "kohde": "kohde:hahmotelma-bonifacio",
   "kysymys": "Mikä salmi erottaa Korsikan Sardiniasta?",
   "uusi": false,
-  "vastaus": "Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan Bonifacion kaupungin mukaan. Kaupunki ja sen linnoitus on rakennettu korkealle kalkkikivitörmälle, ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.",
+  "vastaus": "Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan [[Bonifacion]] kaupungin mukaan. Kaupunki ja sen [[linnoitus]] on rakennettu korkealle [[kalkkikivitörmälle]], ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.",
   "linkit": [
-   "Bonifacionsalmi"
+   "Bonifacionsalmi",
+   "Bonifacion",
+   "linnoitus",
+   "kalkkikivitörmälle"
   ],
   "jatkot": [
    "Kuinka leveä Bonifacionsalmi on kapeimmillaan?",
@@ -2632,8 +2635,13 @@
   "kohde": "kohde:hahmotelma-bonifacio",
   "kysymys": "Miksi kaupunki rakennettiin kallion päälle?",
   "uusi": false,
-  "vastaus": "No niin, tämä on hyvä kysymys kyyhkyn mielestä, koska kallion päältä näkee kauas. Bonifacion kaupunki ja sitä suojaava linnoitus rakennettiin korkealle kalkkikivitörmälle, koska korkea paikka antoi suojan ja näkymän. Törmä suojaa myös kaupungin luonnonsatamaa, joten laivat saattoivat ankkuroitua turvassa. Lisäksi sijainti oli strategisesti hyvä: sieltä voitiin valvoa sotilaallisesti tärkeitä laivareittejä. Kallio antoi siis kaupungille sekä puolustuksen että näköalapaikan merelle. Onpas kiva, kun kysytään jotain, mihin vastaus näkyy suoraan ylhäältä.",
-  "linkit": [],
+  "vastaus": "No niin, tämä on hyvä kysymys kyyhkyn mielestä, koska kallion päältä näkee kauas. [[Bonifacion]] kaupunki ja sitä suojaava [[linnoitus]] rakennettiin korkealle [[kalkkikivitörmälle]], koska korkea paikka antoi suojan ja näkymän. Törmä suojaa myös kaupungin [[luonnonsatamaa]], joten laivat saattoivat ankkuroitua turvassa. Lisäksi sijainti oli strategisesti hyvä: sieltä voitiin valvoa sotilaallisesti tärkeitä laivareittejä. Kallio antoi siis kaupungille sekä puolustuksen että näköalapaikan merelle. Onpas kiva, kun kysytään jotain, mihin vastaus näkyy suoraan ylhäältä.",
+  "linkit": [
+   "Bonifacion",
+   "linnoitus",
+   "kalkkikivitörmälle",
+   "luonnonsatamaa"
+  ],
   "jatkot": [
    "Miksi linnoitukset rakennettiin usein korkeille paikoille?",
    "Mikä on luonnonsatama?"
@@ -2657,9 +2665,11 @@
   "kohde": "kohde:hahmotelma-bonifacio",
   "kysymys": "Kuinka leveä Bonifacionsalmi on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. [[Bonifacionsalmi]] on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee Korsikan eteläkärjen ja Sardinian pohjoiskärjen välissä. Kapea väylä on tunnettu merenkulun kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.",
+  "vastaus": "Annas ku mietin. Bonifacionsalmi on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee [[Korsikan]] eteläkärjen ja [[Sardinian]] pohjoiskärjen välissä. Kapea väylä on tunnettu [[merenkulun]] kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.",
   "linkit": [
-   "Bonifacionsalmi"
+   "Korsikan",
+   "Sardinian",
+   "merenkulun"
   ],
   "jatkot": [
    "Millaisia laivareittejä salmen kautta kulkee?",
@@ -2670,9 +2680,12 @@
   "kohde": "kohde:hahmotelma-bonifacio",
   "kysymys": "Mikä on Korsikan pääkaupunki?",
   "uusi": true,
-  "vastaus": "Ai tota, helppo kysymys, vaikka vastauksen perään voisi mennä pidemmälle. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on Corse-du-Sudin departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että Napoleon syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. Bonifacio puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, sillä sen nimeä en tiedä.",
+  "vastaus": "Ai tota, tän minä tiedän. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on [[Corse-du-Sudin]] departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että [[Napoleon]] syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. [[Bonifacio]] puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, vaikka pullakin kiinnostaisi.",
   "linkit": [
-   "Ajaccio"
+   "Ajaccio",
+   "Corse-du-Sudin",
+   "Napoleon",
+   "Bonifacio"
   ],
   "jatkot": [
    "Mitä kieltä Korsikalla puhutaan?",
@@ -2711,9 +2724,11 @@
   "kohde": "kohde:hahmotelma-place-stanislas",
   "kysymys": "Missä päin Ranskaa Nancy sijaitsee?",
   "uusi": true,
-  "vastaus": "No jopas, nyt mennään karttaan. [[Nancy]] sijaitsee Koillis-Ranskassa Lorrainen historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on Place Stanislas, joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja arkkitehtuuristaan. Lorraine on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi alueen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.",
+  "vastaus": "No jopas, nyt mennään karttaan. Nancy sijaitsee Koillis-Ranskassa [[Lorrainen]] historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on [[Place Stanislas]], joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja [[arkkitehtuuristaan]]. Alue on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi sen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.",
   "linkit": [
-   "Nancy"
+   "Lorrainen",
+   "Place Stanislas",
+   "arkkitehtuuristaan"
   ],
   "jatkot": [
    "Mikä Lorraine on, ja miksi se on historiallisesti tärkeä?",
@@ -2759,8 +2774,12 @@
   "kohde": "kohde:hahmotelma-mont-ventoux",
   "kysymys": "Miksi huippu on puuton ja valkoinen?",
   "uusi": false,
-  "vastaus": "Ai se, tän näkee kauas. Mont Ventoux'n lisänimi on \"Kalju vuori\", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedän tässä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla kasvillisuus yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.",
-  "linkit": [],
+  "vastaus": "Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on \"[[Kalju vuori]]\", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla [[kasvillisuus]] yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.",
+  "linkit": [
+   "Mont Ventoux'n",
+   "Kalju vuori",
+   "kasvillisuus"
+  ],
   "jatkot": [
    "Miten kasvillisuus muuttuu vuorella ylöspäin mentäessä?",
    "Mikä on puuraja?"
@@ -2770,9 +2789,11 @@
   "kohde": "kohde:hahmotelma-mont-ventoux",
   "kysymys": "Kuinka kovaa siellä tuulee?",
   "uusi": false,
-  "vastaus": "Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on Provencessa sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. Ranskan ympäriajon pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.",
+  "vastaus": "Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on [[Provencessa]] sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. [[Ranskan ympäriajon]] pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.",
   "linkit": [
-   "Mont Ventoux"
+   "Mont Ventoux",
+   "Provencessa",
+   "Ranskan ympäriajon"
   ],
   "jatkot": [
    "Mitä tarkoittaa, että vuori on Ranskan ympäriajon etappi?",
@@ -2839,14 +2860,15 @@
   "kohde": "kohde:hahmotelma-puy-de-sancy",
   "kysymys": "Mikä Massif Central oikein on?",
   "uusi": false,
-  "vastaus": "Ai tota. [[Massif Central]] on Ranskan keskiylänkö, vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Alueen korkein huippu on [[Puy de Sancy]], jonka korkeus on 1 886 metriä. Alueella on tulivuoritoiminnan jättämiä rinteitä, ja siellä sijaitsee rivi sammuneita tulivuoria. Rajat ja tarkka laajuus ovat kohta, jossa en ole aivan varma, joten en anna lukuja. Kyyhky pitää tasaisista maista, mutta kyllä ylängöltäkin on kaunis näköala.",
+  "vastaus": "Ai tota. Massif Central on Ranskan [[keskiylänkö]], vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Alueen korkein huippu on [[Puy de Sancy]], jonka korkeus on 1 886 metriä. Alueella on [[tulivuoritoiminnan]] jättämiä rinteitä, ja siellä sijaitsee rivi sammuneita tulivuoria. Rajat ja tarkka laajuus ovat kohta, jossa en ole aivan varma, joten en anna lukuja. Kyyhky pitää tasaisista maista, mutta kyllä ylängöltäkin on kaunis näköala.",
   "linkit": [
-   "Massif Central",
-   "Puy de Sancy"
+   "keskiylänkö",
+   "Puy de Sancy",
+   "tulivuoritoiminnan"
   ],
   "jatkot": [
    "Mitä vuoristo tarkoittaa, kun puhutaan massiivista?",
-   "Miten sammuneet tulivuoret ovat vaikuttaneet Massif Centralin maisemaan?"
+   "Miten sammuneet tulivuoret ovat muokanneet maisemaa?"
   ]
  },
  {
@@ -2910,9 +2932,11 @@
   "kohde": "kohde:hahmotelma-amboise",
   "kysymys": "Miksi linnasta purettiin suurin osa?",
   "uusi": false,
-  "vastaus": "Tuota niin, hyvä kysymys. [[Amboisen linna]] alkoi rappeutua 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin. Tarkkaa syytä purkamiselle en ole varma, mutta rappeutuminen oli sen taustalla. Osa linnasta säilyi, ja sitä on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840. Linna on siis hävinnyt vähän kuin kyyhkyn sukupuu: osa on vielä pystyssä.",
+  "vastaus": "Tuota niin, hyvä kysymys. [[Amboisen linna]] alkoi rappeutua 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin. Tarkkaa syytä purkamiselle en ole varma, mutta rappeutuminen oli sen taustalla. Osa linnasta säilyi, ja sitä on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. [[Ranskan kulttuuriministeriö]] on luokitellut linnan [[historialliseksi monumentiksi]] vuodesta 1840. Linna on siis hävinnyt vähän kuin kyyhkyn sukupuu: osa on vielä pystyssä.",
   "linkit": [
-   "Amboisen linna"
+   "Amboisen linna",
+   "Ranskan kulttuuriministeriö",
+   "historialliseksi monumentiksi"
   ],
   "jatkot": [
    "Mitä historiallisen monumentin luokitus tarkoittaa?",
@@ -2938,9 +2962,11 @@
   "kohde": "kohde:hahmotelma-amboise",
   "kysymys": "Missä Leonardo da Vinci vietti viimeiset vuotensa?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. [[Leonardo da Vinci]] vietti viimeiset vuotensa Amboisen kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. Ranskan kuningas oli kutsunut hänet maahan, ja hän asui Clos Lucén kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.",
+  "vastaus": "Joo, tän minä tiedän. Leonardo da Vinci vietti viimeiset vuotensa [[Amboisen]] kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. [[Ranskan kuningas]] oli kutsunut hänet maahan, ja hän asui [[Clos Lucén]] kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.",
   "linkit": [
-   "Leonardo da Vinci"
+   "Amboisen",
+   "Ranskan kuningas",
+   "Clos Lucén"
   ],
   "jatkot": [
    "Mitä Leonardo da Vinci teki Ranskassa?",
@@ -3093,8 +3119,10 @@
   "kohde": "kohde:hahmotelma-rouen",
   "kysymys": "Mitä tarkoittaa, että kirkko on arkkipiispan istuinkirkko?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Sana kertoo enemmän kuin luulisi. Istuinkirkko eli tuomiokirkko on kirkko, jossa hiippakunnan johtajan istuin sijaitsee, ja latinassa istuinta kutsutaan nimellä cathedra. [[Arkkipiispa]] johtaa suurempaa kirkollista aluetta, joka käsittää yleensä useita hiippakuntia. Rouenin tuomiokirkko on [[Normandian]] arkkipiispan kirkko, joten se on alueen kirkollinen keskus. Istuinkirkko on usein alueen suurin ja komein kirkko, koska se kuvastaa koko hiippakunnan arvoa. Tämän verran minä sain irti pöllön ohjeista, vaikka hän on edelleen kuulemma matkoilla.",
+  "vastaus": "Selvä juttu. Sana kertoo enemmän kuin luulisi. Istuinkirkko eli [[tuomiokirkko]] on kirkko, jossa hiippakunnan johtajan istuin sijaitsee, ja latinassa istuinta kutsutaan nimellä [[cathedra]]. [[Arkkipiispa]] johtaa suurempaa kirkollista aluetta, joka käsittää yleensä useita hiippakuntia. Rouenin tuomiokirkko on [[Normandian]] arkkipiispan kirkko, joten se on alueen kirkollinen keskus. Istuinkirkko on usein alueen suurin ja komein kirkko, koska se kuvastaa koko hiippakunnan arvoa. Tämän verran minä sain päähäni mahtumaan, vaikka pöllö on edelleen kuulemma matkoilla.",
   "linkit": [
+   "tuomiokirkko",
+   "cathedra",
    "Arkkipiispa",
    "Normandian"
   ],

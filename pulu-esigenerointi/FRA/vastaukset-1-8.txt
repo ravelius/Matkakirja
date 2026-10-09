@@ -1,13 +1,13 @@
 ### 36.1
 KYSYMYS: Mikä salmi erottaa Korsikan Sardiniasta?
-Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan Bonifacion kaupungin mukaan. Kaupunki ja sen linnoitus on rakennettu korkealle kalkkikivitörmälle, ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.
+Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan [[Bonifacion]] kaupungin mukaan. Kaupunki ja sen [[linnoitus]] on rakennettu korkealle [[kalkkikivitörmälle]], ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.
 JATKOT:
 Kuinka leveä Bonifacionsalmi on kapeimmillaan?
 Mihin valtioon Sardinia kuuluu?
 
 ### 36.2
 KYSYMYS: Miksi kaupunki rakennettiin kallion päälle?
-No niin, tämä on hyvä kysymys kyyhkyn mielestä, koska kallion päältä näkee kauas. Bonifacion kaupunki ja sitä suojaava linnoitus rakennettiin korkealle kalkkikivitörmälle, koska korkea paikka antoi suojan ja näkymän. Törmä suojaa myös kaupungin luonnonsatamaa, joten laivat saattoivat ankkuroitua turvassa. Lisäksi sijainti oli strategisesti hyvä: sieltä voitiin valvoa sotilaallisesti tärkeitä laivareittejä. Kallio antoi siis kaupungille sekä puolustuksen että näköalapaikan merelle. Onpas kiva, kun kysytään jotain, mihin vastaus näkyy suoraan ylhäältä.
+No niin, tämä on hyvä kysymys kyyhkyn mielestä, koska kallion päältä näkee kauas. [[Bonifacion]] kaupunki ja sitä suojaava [[linnoitus]] rakennettiin korkealle [[kalkkikivitörmälle]], koska korkea paikka antoi suojan ja näkymän. Törmä suojaa myös kaupungin [[luonnonsatamaa]], joten laivat saattoivat ankkuroitua turvassa. Lisäksi sijainti oli strategisesti hyvä: sieltä voitiin valvoa sotilaallisesti tärkeitä laivareittejä. Kallio antoi siis kaupungille sekä puolustuksen että näköalapaikan merelle. Onpas kiva, kun kysytään jotain, mihin vastaus näkyy suoraan ylhäältä.
 JATKOT:
 Miksi linnoitukset rakennettiin usein korkeille paikoille?
 Mikä on luonnonsatama?
@@ -21,14 +21,14 @@ Missä Napoleon vietti viimeiset vuotensa?
 
 ### 36.4
 KYSYMYS: Kuinka leveä Bonifacionsalmi on?
-Annas ku mietin. [[Bonifacionsalmi]] on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee Korsikan eteläkärjen ja Sardinian pohjoiskärjen välissä. Kapea väylä on tunnettu merenkulun kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.
+Annas ku mietin. Bonifacionsalmi on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee [[Korsikan]] eteläkärjen ja [[Sardinian]] pohjoiskärjen välissä. Kapea väylä on tunnettu [[merenkulun]] kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.
 JATKOT:
 Millaisia laivareittejä salmen kautta kulkee?
 Miten Korsika ja Sardinia ovat syntyneet saariksi?
 
 ### 36.5
 KYSYMYS: Mikä on Korsikan pääkaupunki?
-Ai tota, helppo kysymys, vaikka vastauksen perään voisi mennä pidemmälle. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on Corse-du-Sudin departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että Napoleon syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. Bonifacio puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, sillä sen nimeä en tiedä.
+Ai tota, tän minä tiedän. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on [[Corse-du-Sudin]] departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että [[Napoleon]] syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. [[Bonifacio]] puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, vaikka pullakin kiinnostaisi.
 JATKOT:
 Mitä kieltä Korsikalla puhutaan?
 Kuinka monta asukasta Korsikalla on?
@@ -49,7 +49,7 @@ Mikä ero on aukiolla ja torilla?
 
 ### 37.3
 KYSYMYS: Missä päin Ranskaa Nancy sijaitsee?
-No jopas, nyt mennään karttaan. [[Nancy]] sijaitsee Koillis-Ranskassa Lorrainen historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on Place Stanislas, joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja arkkitehtuuristaan. Lorraine on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi alueen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.
+No jopas, nyt mennään karttaan. Nancy sijaitsee Koillis-Ranskassa [[Lorrainen]] historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on [[Place Stanislas]], joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja [[arkkitehtuuristaan]]. Alue on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi sen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.
 JATKOT:
 Mikä Lorraine on, ja miksi se on historiallisesti tärkeä?
 Mitä Nancyssa kannattaa nähdä Place Stanislasin lisäksi?
@@ -71,14 +71,14 @@ Mitä muita jugend-kaupunkeja Euroopassa on?
 
 ### 38.1
 KYSYMYS: Miksi huippu on puuton ja valkoinen?
-Ai se, tän näkee kauas. Mont Ventoux'n lisänimi on "Kalju vuori", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedän tässä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla kasvillisuus yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.
+Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on "[[Kalju vuori]]", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla [[kasvillisuus]] yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.
 JATKOT:
 Miten kasvillisuus muuttuu vuorella ylöspäin mentäessä?
 Mikä on puuraja?
 
 ### 38.2
 KYSYMYS: Kuinka kovaa siellä tuulee?
-Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on Provencessa sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. Ranskan ympäriajon pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.
+Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on [[Provencessa]] sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. [[Ranskan ympäriajon]] pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.
 JATKOT:
 Mitä tarkoittaa, että vuori on Ranskan ympäriajon etappi?
 Miten korkeus vaikuttaa säähän vuorilla?
@@ -113,10 +113,10 @@ Mitä tulivuori jättää jälkeensä maisemaan?
 
 ### 39.2
 KYSYMYS: Mikä Massif Central oikein on?
-Ai tota. [[Massif Central]] on Ranskan keskiylänkö, vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Alueen korkein huippu on [[Puy de Sancy]], jonka korkeus on 1 886 metriä. Alueella on tulivuoritoiminnan jättämiä rinteitä, ja siellä sijaitsee rivi sammuneita tulivuoria. Rajat ja tarkka laajuus ovat kohta, jossa en ole aivan varma, joten en anna lukuja. Kyyhky pitää tasaisista maista, mutta kyllä ylängöltäkin on kaunis näköala.
+Ai tota. Massif Central on Ranskan [[keskiylänkö]], vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Alueen korkein huippu on [[Puy de Sancy]], jonka korkeus on 1 886 metriä. Alueella on [[tulivuoritoiminnan]] jättämiä rinteitä, ja siellä sijaitsee rivi sammuneita tulivuoria. Rajat ja tarkka laajuus ovat kohta, jossa en ole aivan varma, joten en anna lukuja. Kyyhky pitää tasaisista maista, mutta kyllä ylängöltäkin on kaunis näköala.
 JATKOT:
 Mitä vuoristo tarkoittaa, kun puhutaan massiivista?
-Miten sammuneet tulivuoret ovat vaikuttaneet Massif Centralin maisemaan?
+Miten sammuneet tulivuoret ovat muokanneet maisemaa?
 
 ### 39.3
 KYSYMYS: Mikä on kerrostulivuori?
@@ -148,7 +148,7 @@ Miksi 1400-luvun kuninkaat asuivat Loiren linnoissa?
 
 ### 40.2
 KYSYMYS: Miksi linnasta purettiin suurin osa?
-Tuota niin, hyvä kysymys. [[Amboisen linna]] alkoi rappeutua 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin. Tarkkaa syytä purkamiselle en ole varma, mutta rappeutuminen oli sen taustalla. Osa linnasta säilyi, ja sitä on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840. Linna on siis hävinnyt vähän kuin kyyhkyn sukupuu: osa on vielä pystyssä.
+Tuota niin, hyvä kysymys. [[Amboisen linna]] alkoi rappeutua 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin. Tarkkaa syytä purkamiselle en ole varma, mutta rappeutuminen oli sen taustalla. Osa linnasta säilyi, ja sitä on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. [[Ranskan kulttuuriministeriö]] on luokitellut linnan [[historialliseksi monumentiksi]] vuodesta 1840. Linna on siis hävinnyt vähän kuin kyyhkyn sukupuu: osa on vielä pystyssä.
 JATKOT:
 Mitä historiallisen monumentin luokitus tarkoittaa?
 Miksi linnoja jätettiin rappeutumaan vuosisatojen kuluessa?
@@ -162,7 +162,7 @@ Mistä Loire-joki saa alkunsa?
 
 ### 40.4
 KYSYMYS: Missä Leonardo da Vinci vietti viimeiset vuotensa?
-Joo, tän minä tiedän. [[Leonardo da Vinci]] vietti viimeiset vuotensa Amboisen kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. Ranskan kuningas oli kutsunut hänet maahan, ja hän asui Clos Lucén kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.
+Joo, tän minä tiedän. Leonardo da Vinci vietti viimeiset vuotensa [[Amboisen]] kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. [[Ranskan kuningas]] oli kutsunut hänet maahan, ja hän asui [[Clos Lucén]] kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.
 JATKOT:
 Mitä Leonardo da Vinci teki Ranskassa?
 Mikä on Clos Lucé?
