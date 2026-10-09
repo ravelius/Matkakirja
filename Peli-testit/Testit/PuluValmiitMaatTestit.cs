@@ -37,15 +37,6 @@ namespace Matkakirja.Peli.Testit
             "kohde:hahmotelma-enkhuizen / itä-intian merikaupan",                                     // NLD
         };
 
-        // TUNNETUT VIAT (raportoitu NUI:lle ja PT:lle 10.10.2026 klo 01.1x): jatkosiru näyttää tekstin sellaisenaan (PuluChat.Sirut),
-        // joten [[…]] näkyisi pelaajalle hakasulkeina. Poista rivi, kun paketti tai lataaja on korjattu (testi kertoo, jos rivi vanhenee).
-        static readonly HashSet<string> TunnetutRikkinaisetJatkot = new HashSet<string>
-        {
-            "kohde:hahmotelma-saint-cloud / Millaisia [[Ranskan]] puutarhoja 1600-luvulla suunniteltiin?",   // FRA
-            "kohde:hahmotelma-retezat / Mitä [[kultakotka]] syö Retezatissa?",                              // ROU
-            "kohde:hahmotelma-ceahlau / Mitä [[uhanalaiset lajit]] tarkoittavat?",                          // ROU
-        };
-
         static void Maa(string maa, int kohtia, int kysymyksia, int lisaa)
         {
             string json = Lue("pulu-" + maa.ToLowerInvariant() + ".json");
@@ -88,9 +79,8 @@ namespace Matkakirja.Peli.Testit
                     foreach (string j in v.Jatkot)
                     {
                         jatkoja++;
-                        bool ehja = j.Length >= 8 && j.Length <= 70 && j.EndsWith("?") && !j.Contains("[[") && !j.Contains("]]");
-                        if (TunnetutRikkinaisetJatkot.Contains(id + " / " + j)) { tunnetut.Add(id + " / " + j); Oleta.Tosi(!ehja, "tunnettu vika korjattu, poista listalta: " + j); }
-                        else Oleta.Tosi(ehja, missa + ": jatko rikki: " + j);
+                        // [[ ]] puretaan lukuvaiheessa (PuluValmiit.PuraLinkit, NUI 569ffce3d: FRA saint-cloud, ROU retezat ja ceahlau).
+                        Oleta.Tosi(j.Length >= 8 && j.Length <= 70 && j.EndsWith("?") && !j.Contains("[[") && !j.Contains("]]"), missa + ": jatko rikki: " + j);
                         Oleta.Tosi(j != v.Kysymys, missa + ": jatko = sama kysymys");
                         if (kysymykset.Contains(j)) jatkoValmiiseen++;
                     }
@@ -104,8 +94,6 @@ namespace Matkakirja.Peli.Testit
             System.Console.WriteLine($"      {maa}: linkit {linkkeja} (kaikki valmiita), 2. tason linkit {toisenTason} (valmiita {toisenTasonValmiit}, muut livenä), " +
                 $"jatkot {jatkoja} (valmiiseen kysymykseen {jatkoValmiiseen}, muut livenä)");
         }
-
-        static readonly HashSet<string> tunnetut = new HashSet<string>();
 
         [Testi] static void RanskanPaketti() => Maa("FRA", 59, 295, 654);
         [Testi] static void KreikanPaketti() => Maa("GRC", 78, 390, 930);
