@@ -389,19 +389,19 @@ Mikä oli markkraavin asema keskiajalla?
 Millainen on Zeitzin kaupungin historia?
 
 ### 306
-Uta von Ballenstedt oli Ekkehard II:n puoliso, ja hän eli 1000-luvulla. Hän oli kotoisin Ballenstedtin kreivisuvusta. Naumburgin veistos, joka kuvaa hänet arvokkaana ja pohtivana naisena korkeassa kauluksessa, on yksi keskiajan tunnetuimmista naiskuvista. Veistos syntyi 1200-luvulla, joten kyse on taiteilijan tulkinnasta eikä muotokuvasta. Sitä kerrotaan käytetyn myöhemmin esikuvana populaarikulttuurissa, mutta en ole varma yksityiskohdista.
+Uta von Ballenstedt oli [[Ekkehard II]]:n puoliso, ja hän eli 1000-luvulla. Hän oli kotoisin [[Ballenstedtin]] kreivisuvusta. Naumburgin veistos, joka kuvaa hänet arvokkaana ja pohtivana naisena korkeassa kauluksessa, on yksi keskiajan tunnetuimmista naiskuvista. Veistos syntyi 1200-luvulla, joten kyse on taiteilijan tulkinnasta eikä muotokuvasta. Sitä kerrotaan käytetyn myöhemmin esikuvana populaarikulttuurissa, mutta en ole varma yksityiskohdista.
 JATKOT:
 Millainen paikka Ballenstedt on?
 Miten keskiaikaiset hahmot on kuvattu Naumburgin veistoksissa?
 
 ### 307
-Naumburgin mestari on tuntemattomaksi jäänyt kuvanveistäjä tai kuvanveistäjä ja hänen työpajansa, joka toimi 1200-luvun puolivälissä. Mestarin uskotaan saaneen koulutuksensa ranskalaisissa katedraalityömaissa, esimerkiksi [[Reimsissä]]. Hänen töitään ovat Naumburgin länsikuoron lahjoittajahahmot ja kuoriaita, jossa on kärsimyskuvia, sekä veistoksia [[Mainzin]] tuomiokirkossa. Hän on tunnettu elävistä ilmeistä ja luonnollisista asennoista, jotka erottavat hänen työnsä aiemmasta jäykemmästä veistotaiteesta.
+Naumburgin mestari on tuntemattomaksi jäänyt kuvanveistäjä tai hänen työpajansa, joka toimi 1200-luvun puolivälissä. Mestarin uskotaan saaneen koulutuksensa ranskalaisissa katedraalityömaissa, esimerkiksi [[Reimsissä]]. Hänen töitään ovat Naumburgin länsikuoron lahjoittajahahmot ja kuoriaita, jossa on kärsimyskuvia, sekä veistoksia [[Mainzin]] tuomiokirkossa. Hän on tunnettu elävistä ilmeistä ja luonnollisista asennoista, jotka erottavat hänen työnsä aiemmasta jäykemmästä veistotaiteesta.
 JATKOT:
 Millainen on Reimsin katedraali?
 Mitä muuta Naumburgin mestari on veistänyt?
 
 ### 308
-Sivulaivat ovat kirkon keskilaivan sivuilla kulkevia matalampia ja kapeampia tiloja, jotka erottuvat keskilaivasta pylväiden tai pilarien kannattamalla [[arkadilla]]. Niiden kautta kuljettiin kirkossa kulkueissa, ja niiden varrella olivat usein sivualtarit. Sivulaivojen katot ovat matalampia, joten keskilaivan yläosan ikkunat pääsevät päästämään valoa sisään. Suurissa kirkoissa sivulaivoja voi olla molemmin puolin kaksikin.
+Sivulaivat ovat kirkon [[keskilaivan]] sivuilla kulkevia matalampia ja kapeampia tiloja, jotka erottuvat keskilaivasta pylväiden tai pilarien kannattamalla [[arkadilla]]. Niiden kautta kuljettiin kirkossa kulkueissa, ja niiden varrella olivat usein sivualtarit. Sivulaivojen katot ovat matalampia, joten keskilaivan yläosan ikkunat pääsevät päästämään valoa sisään. Suurissa kirkoissa sivulaivoja voi olla molemmin puolin kaksikin.
 JATKOT:
 Mitä arkadi tarkoittaa?
 Mitä ovat kirkon sivukappelit?
@@ -447,4 +447,34 @@ Kaksipäinen kotka oli Pyhän saksalais-roomalaisen keisarikunnan tunnus. Roland
 JATKOT:
 Miksi kotka on ollut vallan symboli?
 Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+
+### 316
+Bremen on Weser-joen varrella Pohjois-Saksassa sijaitseva kaupunki, joka muodostaa yhdessä [[Bremerhavenin]] kanssa Bremenin vapaan hansakaupungin eli yhden Saksan pienimmistä osavaltioista. Kaupunki oli keskiajalla Hansaliiton jäsen ja kasvoi merikaupan avulla. Raatihuoneen kupeessa on pronssipatsas, joka esittää Grimmin sadun [[Bremenin soittajia]]: aasi, koira, kissa ja kukko seisovat päällekkäin. Patsas on vuodelta 1951, ja aasin etujalat kiiltävät, koska niistä pidetään kiinni onnen toivossa. Kaupungissa on myös vanha kauppiaskatu [[Böttcherstraße]].
+JATKOT:
+Mistä Bremenin soittajien tarina kertoo?
+Miten Bremen on säilyttänyt asemansa vapaana kaupunkina?
+
+### 317
+Kaarle Suuri (noin 748–814) oli frankkien kuningas vuodesta 768 ja keisari vuodesta 800, jolloin paavi [[Leo III]] kruunasi hänet Roomassa. Hänen valtakuntansa kattoi suuren osan Länsi- ja Keski-Eurooppaa, ja hänen hovinsa pääpaikka oli [[Aachen]]. Kaarle edisti oppineisuutta ja koulutusta, ja aikaa kutsutaan karolingiseksi renessanssiksi. Hänen hallintoaan leimasivat myös pitkät Saksin sodat, joilla alue liitettiin valtakuntaan ja käännytettiin kristinuskoon. Ritari Roland on hahmo keskiaikaisessa eepoksessa [[Rolandin laulu]], jossa hän palvelee Kaarlea.
+JATKOT:
+Miksi Aachen oli Kaarle Suuren hovin keskus?
+Mitä Rolandin laulussa tapahtuu?
+
+### 318
+Weser on Pohjois-Saksan joki, jonka pituus on noin 450 kilometriä. Se syntyy Hannoversch Mündenin kaupungin kohdalla, kun [[Werra]] ja [[Fulda]] yhtyvät. Weser virtaa Weserbergland-vuoristoalueen ja Bremenin kautta Pohjanmereen [[Bremerhavenin]] lähellä. Joen varrella on historiallisia kaupunkeja, joissa näkyy Weserin renessanssin tyyli, ja joki on ollut tärkeä kauppa- ja kuljetusreitti.
+JATKOT:
+Millainen alue Weserbergland on?
+Miksi Bremerhaven on tärkeä satama?
+
+### 319
+Erkkeri on rakennuksen seinästä ulos työntyvä ikkunallinen osa, joka on tavallisesti yläkerroksessa ja jota kannattavat kannakkeet. Se tuo huoneeseen lisää valoa, näkymiä katukuvaan ja tilaa. Erkkereitä rakennettiin paljon keskiajan lopulta [[renessanssiin]], ja ne ovat tyypillisiä saksalaisille kaupunkitaloille, esimerkiksi [[Nürnbergin]] vanhoilla kaduilla. Weserin renessanssissa erkkerit koristettiin runsaasti, ja ne kuuluvat tyylin tunnusomaisiin piirteisiin.
+JATKOT:
+Miksi erkkerit olivat suosittuja kaupunkitaloissa?
+Millainen on Nürnbergin vanhakaupunki?
+
+### 320
+Güldenkammer on Bremenin raatihuoneen sisätila, jonka nimi tarkoittaa suunnilleen kultaista kammiota. Huone sisustettiin vuonna 1905 jugendtyylillä taiteilija [[Heinrich Vogelerin]] johdolla. Jugendtyylille ovat tyypillisiä kaarevat linjat, kasvimuodot ja koristeellisuus. Vogeler kuului taiteilijayhteisöön, joka toimi [[Worpswedessa]] lähellä Bremeniä. Huoneen yksityiskohdista en ole varma.
+JATKOT:
+Millainen on Worpsweden taiteilijayhteisö?
+Mitä muuta jugendtyylistä Bremenissä näkyy?
 
