@@ -176,6 +176,13 @@
     opacity: 1;
 }
 
+/* NYT-RIVI (Päätoimittaja 9.10.2026, loki #4288): sama nimilappu ilman viivaa ja nastaa vasempaan alakulmaan (NytRivi.cs);
+ * näkyvissä --nakyy-luokalla Nimikyltin ajan, häivytys Nimikyltin omalla opasiteetilla. */
+.mk-opas-nimilappu--nytrivi {
+    left: var(--tk-vali-xl);
+    bottom: var(--tk-vali-xl);
+}
+
 /* OPPAAN NELJÄ NAPPIA (omistaja 6.10.2026 klo 11.5x): Kysy, Liiku, mikrofoni ja näppäimistö keskellä alhaalla krediittien
  * yläpuolella. Pohja LIIKU-nappi (.mk-liiku__nappi, pyöristetty neliö), teema rivin tk-teema-harmaasta; teksti ja kuvake
  * keskitettyinä. VAIN --tk-*-tokenit. */
