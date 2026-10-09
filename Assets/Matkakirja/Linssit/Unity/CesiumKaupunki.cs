@@ -274,6 +274,13 @@ namespace Matkakirja.Natiivi
         public bool Tauko;
         /// <summary>Muistihädän vapautusraja: lataus jatkuu, kun vapaata on taas HataGt + tämä (Gt).</summary>
         public const double HataPalautusGt = 0.3;
+        /// <summary>PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus R6–R11): kaupunki toimii 8 Gt:n iPadilla 0,7–1,0 Gt vapaalla, joten
+        /// raja 1,0 / palautus 1,3 pysäytti laattojen latauksen pysyvästi ensimmäisen kohteen jälkeen (Orsay ja Concorde jäivät vedeksi).
+        /// ND-puiden korjauksen jälkeen suurin 1 s:n nousu on 0,14–0,54 Gt, joten pienellä muistilla: seis alle HataPieniGt, jatkuu yli
+        /// HataPieniGt + HataPieniPalautusGt, tarkistus 0,5 s välein. Asetus "hataraja Gt" (testi).</summary>
+        public static double HataPieniGt = 0.6, HataPieniPalautusGt = 0.2;
+        static double HataRaja => KaupunkiKuva.PieniMuisti ? HataPieniGt : HataGt;
+        static double HataPalautus => KaupunkiKuva.PieniMuisti ? HataPieniPalautusGt : HataPalautusGt;
         /// <summary>Karkean valinnan pikselikerroin muistihädässä (myös iPadilla, jossa KarkeaSkaala voi olla 1).</summary>
         public const float HataSkaala = 0.5f;   // 0,6 → 0,5 (juna 173: 0,6 ei vapauttanut tarpeeksi ennen jetsamia)
         float KarkeaNyt => muistiPysaytys ? Mathf.Min(KarkeaSkaala, HataSkaala) : KarkeaSkaala;
@@ -285,7 +292,7 @@ namespace Matkakirja.Natiivi
         /// yli HataGt + HataPalautusGt → tarkentuu normaalisti. Testi: Documents/kaupunki-vapaa-muisti.txt "0.5".</summary>
         void Muistivahti()
         {
-            if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
+            if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < (KaupunkiKuva.PieniMuisti ? 0.5f : 2f)) return;
             muistiTarkistettu = Time.realtimeSinceStartup;
             long v = VapaaMuisti();
             if (v > 0 && v < minVapaa) minVapaa = v;
@@ -293,7 +300,7 @@ namespace Matkakirja.Natiivi
             if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
             { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
             if (v <= 0) return;
-            if (!muistiPysaytys && v / 1e9 < HataGt)
+            if (!muistiPysaytys && v / 1e9 < HataRaja)
             {
                 muistiPysaytys = hataKaytetty = true;
                 // Pienellä muistilla ei karkeaa kameraa (LS1 iPad 23.1x: karkea valinta latasi uudet laatat vanhojen päälle → jetsam
@@ -302,7 +309,7 @@ namespace Matkakirja.Natiivi
                 else { karkeaKaytossa = false; Karkeaksi(); }   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
                 kirjaa(KaupunkiKuva.PieniMuisti ? $"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattojen lataus seis (pieni muisti)" : $"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
             }
-            else if (muistiPysaytys && v / 1e9 > HataGt + HataPalautusGt)
+            else if (muistiPysaytys && v / 1e9 > HataRaja + HataPalautus)
             { muistiPysaytys = false; hataSeis = false; kirjaa($"kaupunki: muisti vapaa {v / 1e9:F2} Gt → hätä ohi, tarkentuu normaalisti"); }
             if (muistiPysaytys && !hataSeis && v / 1e9 < HataSeisGt)
             { hataSeis = true; kirjaa($"kaupunki: MUISTIHÄTÄ 2 vapaa {v / 1e9:F2} Gt → laattojen lataus seis"); }
