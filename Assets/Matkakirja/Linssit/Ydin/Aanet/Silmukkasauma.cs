@@ -52,9 +52,10 @@ namespace Matkakirja.Linssit.Aanet
         public static (long alku, long loppu) VaraAlue(long hiljaisuus, long naytteita)
             => naytteita > 0 && naytteita % 1152 == 0 ? (Math.Min(Math.Max(0, hiljaisuus), FmodOhitus), naytteita) : (0, Math.Max(0, naytteita));
 
-        /// <summary>Tapa klipin tiedoista: pakattu → Risti (FMOD:n pakatun MP3:n haku ei ole näytetarkka), muuten Liitos, kun alue on tiedossa
-        /// tai kyse on PCM:stä (WAV); pakattu lyhyt (alle RistiMinS) → Tavallinen.</summary>
-        public static Tapa Valitse(bool pakattu, double pituusS) => !pakattu ? Tapa.Liitos : pituusS >= RistiMinS ? Tapa.Risti : Tapa.Tavallinen;
+        /// <summary>Tapa klipin tiedoista: PCM (myös WAV) → Liitos; pakattu, jonka LAME-tagi on tiedossa → Liitos (hakuton jatko ei tarvitse
+        /// pakatun MP3:n hakua, joka ei ole näytetarkka; juna 174: pakatut laivat ja lyhyet pankkisilmukat); pakattu ilman tagia → Risti
+        /// (≥ RistiMinS) tai Tavallinen.</summary>
+        public static Tapa Valitse(bool pakattu, double pituusS, bool tagi = false) => !pakattu || tagi ? Tapa.Liitos : pituusS >= RistiMinS ? Tapa.Risti : Tapa.Tavallinen;
 
         /// <summary>Soivan kierroksen kohta (näytteet) dsp-hetkellä nyt: kierros alkoi hetkellä t0 kohdasta kohta0, sävelkorkeus savel.</summary>
         public static double Kohta(double kohta0, double t0, double nyt, int taajuus, double savel) => kohta0 + Math.Max(0, nyt - t0) * taajuus * savel;

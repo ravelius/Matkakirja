@@ -54,6 +54,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(Silmukkasauma.Tapa.Liitos, Silmukkasauma.Valitse(false, 60));
             Oleta.Sama(Silmukkasauma.Tapa.Risti, Silmukkasauma.Valitse(true, 20));      // lokkiparvi, laivat: pakattu
             Oleta.Sama(Silmukkasauma.Tapa.Tavallinen, Silmukkasauma.Valitse(true, 5));
+            Oleta.Sama(Silmukkasauma.Tapa.Liitos, Silmukkasauma.Valitse(true, 6, tagi: true), "pakattu höyrykone 6 s tagilla: hakuton liitos");
+            Oleta.Sama(Silmukkasauma.Tapa.Liitos, Silmukkasauma.Valitse(true, 30, tagi: true));
         }
 
         [Testi] static void LiitosAjastetaanLopunHetkeen()

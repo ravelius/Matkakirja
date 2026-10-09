@@ -137,14 +137,15 @@ namespace Matkakirja.Natiivi
             string polku = osoite;
             using var r = UnityWebRequestMultimedia.GetAudioClip(osoite, AudioType.MPEG);
             // Pakattuna muistiin (juna 174, muisti): kaupunkisilmukat-v1:n 90 s kyyhkyt purettuna ~16 Mt, pakattuna ~2 Mt
-            // (vanha 30 s purettuna ~5 Mt). SaumatonSilmukka ristihäivyttää pakatun silmukan.
+            // (vanha 30 s purettuna ~5 Mt). SaumatonSilmukka jatkaa pakatun silmukan hakuttomasti tagin mukaan.
             ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
             r.timeout = 30;
             yield return r.SendWebRequest();
-            ladataan.Remove(polku);
-            klipit[polku] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
-            if (klipit[polku] != null && osoitteenId.TryGetValue(polku, out var id)) klipit[polku].name = id;
-            if (klipit[polku] != null) yield return SaumatonSilmukka.HaeTagi(r.url, klipit[polku]);   // pyynnön todellinen osoite (LS1:n kaupunkisilmukat-ohjaus)
+            var c = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
+            if (c != null && osoitteenId.TryGetValue(polku, out var id)) c.name = id;
+            // Tagi ennen käyttöönottoa (pyynnön todellinen osoite, LS1:n kaupunkisilmukat-ohjaus), jotta silmukka alkaa saumattomana.
+            if (c != null) yield return SaumatonSilmukka.HaeTagi(r.url, c);
+            ladataan.Remove(polku); klipit[polku] = c;
         }
 
         public void Sulje()

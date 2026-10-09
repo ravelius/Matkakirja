@@ -6,8 +6,9 @@
 //   Liitos (PCM-klippi, compressed = false; WAV; pakotettuna myös pakattu musiikki): kierros [Alku, Loppu) LAME-tagista
 //     (AsetaTagi/HaeTagi) tai varalla alun hiljaisuudesta; edellinen päättyy SetScheduledEndTime Lopun hetkellä ja seuraava
 //     PlayScheduled klipin ALUSTA Alun verran aiemmin (hakuton: alkuviive soi hiljaisuutena edellisen lopun alla).
-//   Risti (pakattu klippi, ≥ 7,5 s): 1,2 s tasatehoinen ristihäivytys kuten KaupunkiAanimaisemaSoitin ja ElavaSilmukka.
-//   Tavallinen (pakattu < 7,5 s tai striimattu): ohjauslähde soi itse kuten ennen.
+//     Pakattu klippi saa Liitoksen, kun sen LAME-tagi on tiedossa (hakuton jatko).
+//   Risti (pakattu ilman tagia, ≥ 7,5 s): 1,2 s tasatehoinen ristihäivytys kuten KaupunkiAanimaisemaSoitin ja ElavaSilmukka.
+//   Tavallinen (pakattu ilman tagia < 7,5 s tai striimattu): ohjauslähde soi itse kuten ennen.
 // MUISTI: ei PCM-kopioita; kaksi lisä-AudioSourcea per silmukka samalla klipillä (pakatulla klipillä ristihäivytyksen ajan kaksi
 // dekooderia). Tagin haku: 8 kt Range-pyyntö per klippi. ÄÄNET: ohjauslähde mykistettynä prioriteetilla 256 (virtualisoituu ensin).
 using System.Collections;
@@ -110,7 +111,7 @@ namespace Matkakirja.Natiivi
             klippi = c; soi = true;
             bool pakattu = c.loadType != AudioClipLoadType.DecompressOnLoad;
             tapa = c.loadType == AudioClipLoadType.Streaming ? Silmukkasauma.Tapa.Tavallinen
-                : pakotaLiitos ? Silmukkasauma.Tapa.Liitos : Silmukkasauma.Valitse(pakattu, c.length);
+                : pakotaLiitos ? Silmukkasauma.Tapa.Liitos : Silmukkasauma.Valitse(pakattu, c.length, tagit.TryGetValue(c, out var tg) && tg.HasValue);
             ohjaus.mute = tapa != Silmukkasauma.Tapa.Tavallinen; ohjaus.priority = ohjaus.mute ? 256 : a.priority;
             if (tapa == Silmukkasauma.Tapa.Tavallinen) return;
             (alku, loppu) = Alue(c);

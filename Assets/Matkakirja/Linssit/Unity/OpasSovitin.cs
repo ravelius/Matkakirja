@@ -868,6 +868,7 @@ namespace Matkakirja.Natiivi
             if (kelloKlippi == null)
             {
                 using var p = UnityWebRequestMultimedia.GetAudioClip(KelloOsoite, AudioType.MPEG);
+                ((DownloadHandlerAudioClip)p.downloadHandler).compressed = true;   // 30 s stereo: PCM:nä 5 Mt, pakattuna 0,7 Mt (juna 174, muisti)
                 p.timeout = 20;
                 yield return p.SendWebRequest();
                 if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"opas: kirkonkellot ei latautunut ({p.responseCode})"); yield break; }
