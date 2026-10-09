@@ -257,6 +257,9 @@ namespace Matkakirja.Natiivi
                         case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot automaattisesti)
                         case "markyys": Matkakirja.Linssit.Kierros.KaupunkiKuuro.AsetaMarkyys(v); break;
                         case "kaukoutu": KaupunkiIlmakeha.KaukoUtu = v; break;
+                        case "aerosoli": KaupunkiIlmakeha.Aerosoli = v != 0; break;   // LS2 9.10.: mitattu utu (AERONET) ämpäristä
+                        case "kaukoutumitattu": KaupunkiIlmakeha.KaukoUtuMitattu = v; break;
+                        case "apvoimamitattu": KaupunkiIlmakeha.ApVoimaMitattu = v; break;
                         case "aamusumu": KaupunkiIlmakeha.Aamusumu = v; break;
                         case "pilvipaksuus": KaupunkiIlmakeha.PilviPaksuusM = v; break;
                         case "vesi": KaupunkiVesi.Pakotettu = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
