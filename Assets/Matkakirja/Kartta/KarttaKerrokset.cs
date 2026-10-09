@@ -1718,6 +1718,7 @@ namespace Matkakirja
                     new Matkakirja.Linssit.Nakyma(Math.Max(-55.0, Math.Min(55.0, t.Lat)), t.Lon, kierto.KokoPallonKorkeus()), fov, kuvasuhde,
                     Screen.height, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, Laattapalvelin.Ampari, SaapumisLinssiKatto);
             var e = new Laattapalvelin.Esilataus { Tausta = !kiire, Saapuminen = kiire };
+            if (!kiire) { taustaSaapumiset.RemoveAll(x => x.Peruttu || Valmis(x)); taustaSaapumiset.Add(e); }
             float alku = Time.realtimeSinceStartup;
             Debug.Log($"MATKAKIRJA saapumislaatat: {kaupunki} ({maa}, {taso}{(kiire ? ", KIIRE" : "")}{(maaRajaus ? "" : ", kaupunkinäkymä")}) " +
                       $"pohja {pohjaN} (z{SaapumisLaatat.Tasot(rasteri).min}–{rasteri}{(z10Ohi > 0 ? $", Z{KaupunkiRasteri.Taso} vanhemmasta {z10Ohi}" : "")}), " +
@@ -1726,6 +1727,18 @@ namespace Matkakirja
             StartCoroutine(Esilataaja.Tehtava(taso, "saapuminen-" + kaupunki,
                 () => SaapumisEra(polut, maa, ala, rasteri, reliefi, e, kaupunki, alku), laatta: true, peruttu: () => e.Peruttu));
             return e;
+        }
+
+        static readonly List<Laattapalvelin.Esilataus> taustaSaapumiset = new List<Laattapalvelin.Esilataus>();
+        /// <summary>Kaupunkinäkymän avaus (juna 174): käynnissä olevat taustan saapumislaatat (muut kohdekaupungit) perutaan, jotta
+        /// muisti jää kaupungin laatoille. Palauttaa perutut. Seuraava saapuminen pyytää ne uudelleen tarvittaessa.</summary>
+        static bool Valmis(Laattapalvelin.Esilataus x) => x.Yhteensa > 0 && x.Valmis + x.Epaonnistui >= x.Yhteensa;
+        public static int PeruTaustaSaapumiset()
+        {
+            int n = 0;
+            foreach (var x in taustaSaapumiset) if (!x.Peruttu && !Valmis(x)) { x.Peru(); n++; }
+            taustaSaapumiset.Clear();
+            return n;
         }
 
         [Serializable] class KermaAlue { public double lon0, lon1, lat0, lat1; }

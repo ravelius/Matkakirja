@@ -72,7 +72,10 @@ namespace Matkakirja
         public static event Action Joutilas;
 
         /// <summary>Virransäästö tai kuumuus: kohdat 4–5 (joutilas ja ennakointi) seis (Raamattu, LÄMPÖ kohta 2).</summary>
-        public static bool Seis => Lampo.Kuuma;
+        public static bool Seis => Lampo.Kuuma || KaupunkiAuki;
+        /// <summary>Kaupunkinäkymä auki (CesiumKaupunki, juna 174): taustan esilataus seis, koska Googlen laatat tarvitsevat muistin
+        /// (iPad Pro 13 M1 8 Gt jetsam 9.10.: Brysselin saapumislaatat latautuivat Pariisin avauksen aikana).</summary>
+        public static bool KaupunkiAuki;
 
         static float joutilasAlku = -1f;
         static bool joutilasViritetty = true;

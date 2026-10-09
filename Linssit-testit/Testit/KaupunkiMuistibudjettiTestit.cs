@@ -74,5 +74,15 @@ namespace Matkakirja.Linssit.Testit
             // Riittävällä muistilla ennallaan (ei karkeampi kuin ennen).
             Oleta.Tosi(KaupunkiMuistibudjetti.Valitse(5.5, 1.71, true).Kerroin < 1.0, "M-iPad 5,5 Gt ennallaan");
         }
+
+        // Juna 174: kehityskaupungin oma sisältö (0,3 Gt) vähennetään budjetista → kerroin karkeampi, kasvu mahtuu jäljelle jäävään.
+        [Testi] static void OmaSisaltoVahennetaanBudjetista()
+        {
+            var ilman = KaupunkiMuistibudjetti.Valitse(5.5, 1.71, true);
+            var oma = KaupunkiMuistibudjetti.Valitse(5.5, 1.71, true, KaupunkiMuistibudjetti.OmaSisaltoGt);
+            Oleta.Tosi(oma.Kerroin > ilman.Kerroin, $"oma sisältö karkentaa: {ilman.Kerroin:F3} → {oma.Kerroin:F3}");
+            Oleta.Tosi(KaupunkiMuistibudjetti.Kasvu(oma.Kerroin, 1.71) <= 5.5 - KaupunkiMuistibudjetti.MarginaaliGt - KaupunkiMuistibudjetti.OmaSisaltoGt + 1e-6, "kasvu mahtuu");
+            Lahella(ilman.Kerroin, KaupunkiMuistibudjetti.Valitse(5.5, 1.71, true, 0).Kerroin, "omaGt 0 = ennallaan");
+        }
     }
 }

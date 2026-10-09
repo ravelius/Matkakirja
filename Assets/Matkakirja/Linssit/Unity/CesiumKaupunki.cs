@@ -482,6 +482,10 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
             avausAika = Time.realtimeSinceStartup;
+            // Juna 174 (iPad-jetsam 9.10.): taustan esilataus seis ja muiden kohdekaupunkien saapumislaatat perutaan kaupungin ajaksi.
+            Matkakirja.Esilataaja.KaupunkiAuki = true;
+            int perutut = Matkakirja.KarttaKerrokset.PeruTaustaSaapumiset();
+            if (perutut > 0) kirjaa($"kaupunki: taustan saapumislaatat peruttu ({perutut} erää), esilataus seis kaupungin ajaksi");
             googleUusinnat = 0;
             // Tarkkuus muistin mukaan ennen tilesettien luontia (LuoTileset käyttää SseKerrointa).
             long vapaa = VapaaMuisti();
@@ -490,7 +494,9 @@ namespace Matkakirja.Natiivi
             // Täysi laiteluokka (omistaja 8.10. 19.5x "lisää muistin käyttöä"; juna 170): lattia 0,5 (SSE 8) ja välimuisti ylijäämästä
             // (KaupunkiMuistibudjetti, Ydin; muut laitteet ja tuntematon vapaa täsmälleen ennallaan).
             // A3 (Linssiseppä): lähikamera samasta budjetista (KaupunkiMuistibudjetti.ValitseLahella; yksi muistibudjetti, PT 22.4x).
-            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.ValitseLahella(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka);
+            // Juna 174: kehityskaupungin oma sisältö (omat mallit, vesi, ilmakehä, äänet, intro) kiinteänä eränä budjetista.
+            double omaGt = Kehityskaupungit.Lahella(origoLat, origoLon) != null ? Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.OmaSisaltoGt : 0;
+            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.ValitseLahella(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka, -1, omaGt);
             kerroin = pakotettu > 0 ? pakotettu : (float)valinta.Kerroin;
             googleValimuisti = valinta.Valimuisti;
             lahiBudjetti = pakotettu > 0 ? 1f : (float)valinta.Lahi;
@@ -947,6 +953,7 @@ namespace Matkakirja.Natiivi
             if (!auki) return;
             Suljettu?.Invoke(this);
             auki = false;
+            Matkakirja.Esilataaja.KaupunkiAuki = false;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
             Application.logMessageReceivedThreaded -= LokiRivi;
             PoistaAluskerros();

@@ -20,18 +20,21 @@ namespace Matkakirja.Linssit.Kierros
         /// Pariisissa jetsamiin, vapaa 3,02 Gt kaupungin avautuessa → kasvu näyttökertoimella 2,4 Gt > budjetti 1,5 Gt). Ennen 173:a
         /// kerroin pysähtyi näyttökertoimeen; nyt se karkenee enintään ×1,6 (esim. iPad 1,70 → 2,72, Google-SSE 27 → 44).</summary>
         public const double KarkeinLisa = 1.6;
+        /// <summary>Kehityskaupungin oma sisältö (omat mallit, vesi, ilmakehän taulukot, äänet, intro; juna 174, Opus-erittely 9.10.:
+        /// ~0,3 Gt), joka ei ole Googlen laattoja: vähennetään budjetista ennen kertoimen valintaa.</summary>
+        public const double OmaSisaltoGt = 0.3;
         public const long ValimuistiPerus = 256L << 20, ValimuistiMax = 1536L << 20;
 
         /// <summary>Kaupungin arvioitu muistin kasvu (Gt) kertoimella k.</summary>
         public static double Kasvu(double k, double naytto) => KaupunkiGt * Math.Pow(Math.Max(1.0, naytto) / k, Eksponentti);
 
         /// <summary>SSE-kerroin ja Googlen välimuisti (tavua). vapaaGt ≤ 0 = ei tiedossa.</summary>
-        public static (double Kerroin, long Valimuisti) Valitse(double vapaaGt, double naytto, bool taysi)
+        public static (double Kerroin, long Valimuisti) Valitse(double vapaaGt, double naytto, bool taysi, double omaGt = 0)
         {
             naytto = Math.Max(1.0, naytto);
             double lattia = taysi ? TaysiLattia : Math.Min(naytto, AlarajaKerroin);
             if (vapaaGt <= 0) return (Math.Min(naytto, Math.Max(AlarajaKerroin, naytto)), ValimuistiPerus);   // entinen: näyttökerroin
-            double budjetti = vapaaGt - MarginaaliGt, karkein = naytto * KarkeinLisa;
+            double budjetti = vapaaGt - MarginaaliGt - Math.Max(0, omaGt), karkein = naytto * KarkeinLisa;
             if (budjetti <= 0.1) return (karkein, ValimuistiPerus);
             double k = naytto * Math.Pow(KaupunkiGt / budjetti, 1.0 / Eksponentti);
             k = Math.Min(karkein, Math.Max(lattia, k));
@@ -60,13 +63,13 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>SSE-kerroin, välimuisti ja lähikameran kerroin L samasta budjetista.</summary>
         public static double Karkeneminen = 1.0;
 
-        public static (double Kerroin, long Valimuisti, double Lahi) ValitseLahella(double vapaaGt, double naytto, bool taysi, double karkeneminen = -1)
+        public static (double Kerroin, long Valimuisti, double Lahi) ValitseLahella(double vapaaGt, double naytto, bool taysi, double karkeneminen = -1, double omaGt = 0)
         {
             if (karkeneminen <= 0) karkeneminen = Karkeneminen;
-            var (k0, v0) = Valitse(vapaaGt, naytto, taysi);
+            var (k0, v0) = Valitse(vapaaGt, naytto, taysi, omaGt);
             naytto = Math.Max(1.0, naytto);
             if (!taysi || vapaaGt <= 0 || k0 <= TaysiLattia * 1.05) return (k0, v0, 1.0);
-            double budjetti = vapaaGt - MarginaaliGt;
+            double budjetti = vapaaGt - MarginaaliGt - Math.Max(0, omaGt);
             for (double l = 1.1; l <= LahiMax + 1e-9; l += 0.05)
             {
                 double k = l * TaysiLattia;
