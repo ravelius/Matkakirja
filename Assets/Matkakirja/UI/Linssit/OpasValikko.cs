@@ -554,8 +554,6 @@ namespace Matkakirja.Natiivi
             // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
             // vasemmalle puolelle; pystysuunnassa ennallaan.
             if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
-            // Omistaja 9.10.2026: "aavistuksen irti vasemmasta reunasta lisää ainakin ipadilla vaakamuodossa".
-            if (LeveaRuutu && w > h) vasen += IpadVaakaLisaPt;
             metro.Kompakti = false; metro.IslandAlaY = 0f;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             // Omistaja 14.2x: iPadilla vasempaan yläkulmaan 6 pt reunasta, linja ja kaikki nimet köyden päällä (ei rajausta).
@@ -605,7 +603,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
         /// <summary>iPadin metrolinjan marginaali ruudun vasemmasta reunasta (pt).</summary>
-        const float ReunaPt = 6f, IpadVaakaLisaPt = 12f;
+        const float ReunaPt = 6f;
         const float KulmaVaraPt = 22f, IslandLeveysPt = 126f, IslandOikeaPt = 48f;
 
         VisualElement esitysRivi;
@@ -1721,9 +1719,15 @@ namespace Matkakirja.Natiivi
         Kuvasuurennos latausSuurennos;
         const float LatausKuvaOsuus = 0.8f;
 
+        // OMISTAJA TF 169 (9.10.2026 klo 10.0x): "Älä enää avaa niitä melkein koko ruudun kuvia automaattisesti isolle, vaan pidä niitä vain
+        // alareunassa klikattavina" → ei automaattista suurennosta koskaan, ei myöskään latauksen varakuvana. Kohteen kuvat ovat oikean
+        // alareunan kuvakortissa (lisäkuvat, napautus suurentaa) ja kertojan tarinakuvat kuvanostossa (lentävät näkyviin).
+        public static bool LatausKuvaAuto = false;
+
         void LatausKuvaVaihtui(OpasKuva k)
         {
             if (k == null) { if (latausSuurennos?.Auki ?? false) { latausSuurennos.Sulje(); Debug.Log("MATKAKIRJA opas: latauskuva suljettu"); } return; }
+            if (!LatausKuvaAuto) { Debug.Log("MATKAKIRJA opas: latauskuva ei suurennu automaattisesti (TF 169) " + k.Url); return; }
             if (!nakyy || !KuvatPaalla || (suurennos?.Auki ?? false)) return;
             latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus, Lahentyy = true };
             latausSuurennos.Avaa(new[] { Lehtikuvaksi(k, OpasSovitin.Viimeisin?.Silmukka?.Nykyinen?.Nimi) }, 0);
@@ -1792,7 +1796,8 @@ namespace Matkakirja.Natiivi
                     // MIKSERI (omistaja 9.10.2026 klo 00.5x: "mikseriin pitäisi päästä kun ollaan kuumailmapallossa"): sama Äänentasot-
                     // paneeli kuin päävalikon Peli › Mikseri (kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää);
                     // aukeaa pallon päälle (Valikot-kerros), lento jatkuu taustalla.
-                    Komento(Kieli.T("ui.opas.mikseri"), () =>
+                    // Omistaja 9.10. 09.5x: vain kehittäjäkoodilla.
+                    if (Asetukset.Kehittaja) Komento(Kieli.T("ui.opas.mikseri"), () =>
                     {
                         var at = UiNakymat.Hae()?.Aanentasot;
                         if (at == null) return;
@@ -2388,7 +2393,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Nykyisen kaupungin yksityiskohtakuvien tekijät (LS1: OpasSovitin.KuvaLahteet, (Kohde, Tekija, Lisenssi, Havainnekuva)
-        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Tekoälyllä tuotettu havainnekuva"; kukin kerran.
+        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Havainnekuva"; kukin kerran.
         /// </summary>
         static List<string> KuvaLahteet()
         {

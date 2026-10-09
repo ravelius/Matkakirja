@@ -387,7 +387,22 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
         /// <summary>KESKENERÄISET-osio auki (oletuksena kiinni; istunnon ajan, testikomento ui pilleri kesken).</summary>
         public static bool KeskenAuki;
-        static string EsikatselunKuva(LinssiTiedot t) => string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(t.Id) : t.Havainnekuva;
+        static string EsikatselunKuva(LinssiTiedot t) => !string.IsNullOrEmpty(t.Havainnekuva) ? t.Havainnekuva
+            : KatalogiKuvat.TryGetValue(t.Id, out var k) ? k : Matkalaukku.VarusteKuva(t.Id);
+
+        /// <summary>
+        /// LINSSIKATALOGIN HAVAINNEKUVAT (Codex, fotorealistiset, 1600 × 900; Päätoimittaja hyväksyi 9.10.2026, Sisältökirjuri): linssin tai
+        /// pelin esikatselukuva, kun sillä ei ole omaa kuvaa. Merkintä "havainnekuva" kuvan alle (Raamattu, KUVAT). Puuttuvat (yokartta,
+        /// maapallon-vuosi, tavli) tulevat uusintana (-havainne-v2.jpg).
+        /// </summary>
+        internal static readonly Dictionary<string, string> KatalogiKuvat = new Dictionary<string, string>
+        {
+            ["tahdet"] = KatalogiJuuri + "tahtitaivas-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
+            ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-havainne.jpg", ["mylly"] = KatalogiJuuri + "mylly-havainne.jpg",
+            ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg",
+        };
+        const string KatalogiJuuri = "https://media.matkakirja.app/linssikatalogi/";
+        internal static bool OnKatalogiKuva(string url) => url != null && url.StartsWith(KatalogiJuuri, System.StringComparison.Ordinal);
         static string EsikatselunTeksti(LinssiTiedot t) => string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely;
 
         /// <summary>"Ei linssiä" -rivin tunnus rivilistassa (web linssiRivi(null)).</summary>
