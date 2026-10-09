@@ -78,7 +78,7 @@
   },
   "ranta-1499": {
    "kolmiot": {
-    "nakyva": 13280,
+    "nakyva": 13298,
     "-tormays": 13280,
     "-kavely": 9944
    },
@@ -238,14 +238,14 @@
    "varmuus": "V kerrokset, A porras",
    "rajat": {
     "min": [
-     -85.75,
+     -98.48,
      -7.77,
-     -8.25
+     -8.6
     ],
     "max": [
-     -16.25,
+     -16.0,
      0.19,
-     65.75
+     66.0
     ]
    },
    "naapurit": [
@@ -262,7 +262,7 @@
     "kavely": "ranta-1499-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 13280,
+    "kolmiot_nakyva": 13298,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
