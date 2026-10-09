@@ -1,3 +1,13 @@
+# TILANNE 9.10. klo 03.5x
+
+- **Swap 15,4 Gt (03.48)** → vahdit pysäyttivät osa2:n (60/78) ja uusinnan (5/20). Muistia vievät myös muiden Blender ja simulaattorit.
+- Vanhat vahdit lopetettiin hallitusti (osa2/ajo.log "OSA VALMIS (lopetettu hallitusti …)" ja uusinta/ajo.log "UUSINTA VALMIS (…)" ovat MERKKEJÄ, eivät oikeita valmistumisia).
+- **AJOSSA:** `kaudet/aja-talvi3-loput.sh` (PID 53599): yksi prosessi, joka odottaa ennen jokaista lohkoa vapaa + inaktiivinen ≥ 16 Gt ja tyhjää junalukkoa.
+  Lista `s2-eurooppa-talvi3-loput.txt`: osa2:n 18 → **s2-eurooppa-talvi3-osa2b/**, sitten uusinnan 15 → uusinta/. Pysäytys: `touch s2-eurooppa-talvi3-loput.STOP`. Loki: talvi3-vahti.log ("loput: …", "LOPUT VALMIS").
+- **Kerrokset pakettiin:** uusinta → osa1 → osa2b → osa2. Arvio noin 33 × 13 min ≈ 7 h + odotukset → noin 11–12.
+
+---
+
 # TILANNE 9.10. klo 02.3x
 
 - **Giza (LS2, juna 170: omien mallien korkeus omasta korkeusmallista):** _tyo/karttaseppa/giza-korkeudet-20261009.json (vesimaski/giza-korkeudet.mjs).
