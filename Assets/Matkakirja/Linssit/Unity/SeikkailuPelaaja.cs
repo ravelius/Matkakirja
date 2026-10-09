@@ -249,7 +249,7 @@ namespace Matkakirja.Natiivi
             var polku = new NavMeshPath();
             bool ok = NavMesh.SamplePosition(kohde, out var k, 1.0f, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, k.position, NavMesh.AllAreas, polku)
                 && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1;
-            BottiReitti = ok ? polku.status.ToString() : "ei reittiä";
+            BottiReitti = ok ? polku.status.ToString() : "ei reittiä";   // tekninen
             if (ok) for (int i = 1; i < polku.corners.Length; i++) napautusReitti.Add(polku.corners[i]); else napautusReitti.Add(kohde);
             jumiAika = 0; jumiPaikka = transform.position;
             return ok;
@@ -322,7 +322,7 @@ namespace Matkakirja.Natiivi
                 if (kahva != null)
                 {
                     Kasi.SetParent(kahva, false); Kasi.localPosition = Vector3.zero; Kasi.localRotation = Quaternion.identity;
-                    var kv = KadetSolmu("Kontaktivarjo"); if (kv != null) kv.gameObject.SetActive(false);
+                    var kv = KadetSolmu("Kontaktivarjo"); if (kv != null) kv.gameObject.SetActive(false);   // tekninen
                     foreach (var smr in olka.GetComponentsInChildren<SkinnedMeshRenderer>(true))   // kädet ovat silmien lapsina (Hahmot3D: Juuri → Isa)
                         smr.localBounds = new Bounds(Vector3.zero, new Vector3(3f, 3f, 3f));
                     Debug.Log("MATKAKIRJA seikkailu: kädet kiinni (kahva_oikea)");
@@ -357,7 +357,7 @@ namespace Matkakirja.Natiivi
         public static SeikkailuPelaaja Luo(Transform isa, Vector3 paikka, float yaw, int kerros)
         {
             Poista();
-            var go = new GameObject("Seikkailu pelaaja") { layer = kerros, tag = "Player" };
+            var go = new GameObject("Seikkailu pelaaja") { layer = kerros, tag = "Player" };   // tekninen
             go.transform.SetParent(isa, false);
             go.transform.position = paikka;
             var p = go.AddComponent<SeikkailuPelaaja>();
@@ -370,11 +370,11 @@ namespace Matkakirja.Natiivi
             // Hahmo (väliaikainen kapseli; Fogg-glb myöhemmin).
             // Hahmosolmu (kääntö, skaalaamaton: Fogg, kynttilä ja esineet sen lapsina) ja kapseli sen lapsena (7.10.: Fogg peri kapselin
             // skaalan 0,6 / 0,875 / 0,6 ja oli kapea ja 1,58 m).
-            var hs = new GameObject("hahmo") { layer = kerros, tag = "Player" };
+            var hs = new GameObject("hahmo") { layer = kerros, tag = "Player" };   // tekninen
             hs.transform.SetParent(go.transform, false);
             var h = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             Destroy(h.GetComponent<Collider>());
-            h.name = "kapseli"; h.layer = kerros; h.tag = "Player";
+            h.name = "kapseli"; h.layer = kerros; h.tag = "Player";   // tekninen
             h.transform.SetParent(hs.transform, false);
             h.transform.localPosition = new Vector3(0, Korkeus / 2, 0); h.transform.localScale = new Vector3(Sade * 2, Korkeus / 2, Sade * 2);
             var sh = Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
@@ -389,7 +389,7 @@ namespace Matkakirja.Natiivi
             if (Ensimmainen)
             {
                 // Takakuvan hahmo (pelattavuusmalli 7): Fogg asu v2 näkyy vain takakuvassa ja kaukokuvissa.
-                p.TakakuvaHahmo = new GameObject("takakuvan hahmo") { layer = kerros, tag = "Player" }.transform;
+                p.TakakuvaHahmo = new GameObject("takakuvan hahmo") { layer = kerros, tag = "Player" }.transform;   // tekninen
                 p.TakakuvaHahmo.SetParent(hs.transform, false); p.TakakuvaHahmo.gameObject.SetActive(false);
             }
             else { p.Kasi.SetParent(hs.transform, false); p.Kasi.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
@@ -420,7 +420,7 @@ namespace Matkakirja.Natiivi
             tpf.ShoulderOffset = new Vector3(OlkaX, 0.35f, 0f); tpf.VerticalArmLength = 0.4f; tpf.CameraSide = 1f; tpf.CameraDistance = KameraEtaisyys;
             tpf.Damping = new Vector3(0.1f, 0.25f, 0.3f);
             var es = tpf.AvoidObstacles;   // oletukset komponentista (Default on internal)
-            es.Enabled = true; es.CollisionFilter = 1 << kerros; es.IgnoreTag = "Player"; es.CameraRadius = 0.3f;   // pallopyyhkäisy varressa
+            es.Enabled = true; es.CollisionFilter = 1 << kerros; es.IgnoreTag = "Player"; es.CameraRadius = 0.3f;   // pallopyyhkäisy varressa   // tekninen
             tpf.AvoidObstacles = es;
             // Täytevalo (Päätoimittaja: keittiön lattia ja esineet erottuvat): lämmin pehmeä pistevalo pään yläpuolella hieman takana,
             // ei varjoja (URP:n lisävalo, DioraamaValaistu lukee sen kuten tilojen pistevalot).

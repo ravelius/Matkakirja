@@ -68,7 +68,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Toimintonapin verbi kävellessä (Kiinnitä krampin luona kellon jälkeen) tai null.</summary>
-        public string Verbi(SeikkailuPelaaja p) => ydin.Vaihe == PakoVaihe.Kello && p != null && (p.transform.position + Vector3.up - krampi).sqrMagnitude < KramppiM * KramppiM * 2f ? "Kiinnitä" : null;
+        public string Verbi(SeikkailuPelaaja p) => ydin.Vaihe == PakoVaihe.Kello && p != null && (p.transform.position + Vector3.up - krampi).sqrMagnitude < KramppiM * KramppiM * 2f ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.kiinnita") : null;
 
         public bool Toimi(SeikkailuPelaaja p)
         {
@@ -166,7 +166,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kiinnijäänti köysilaskussa tai kalliolla: pako takaisin Kello-vaiheeseen (Kiinnitä taas krampin luona, 45 s alusta).</summary>
         void Kiinni(string osa) { if (ydin.Kiinni()) kirjaa?.Invoke("seikkailu: pako keskeytyi kiinnijääntiin → köysi kramppiin uudelleen"); }
 
-        void AsetaKoysi(bool paalla) { OhjattuVerbi = paalla ? "Katkaise" : null; OhjattuToimi = paalla ? (Action)Katkaise : null; }
+        void AsetaKoysi(bool paalla) { OhjattuVerbi = paalla ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.katkaise") : null; OhjattuToimi = paalla ? (Action)Katkaise : null; }
 
         void Katkaise() { if (ydin.Katkaise()) Katkaistu(); }
 

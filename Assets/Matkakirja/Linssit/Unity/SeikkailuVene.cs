@@ -40,7 +40,7 @@ namespace Matkakirja.Natiivi
             juuri = new GameObject("Seikkailu vene") { layer = kerros };
             juuri.transform.SetParent(isa, false);
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
-            var mat = varjostin != null ? new Material(varjostin) { name = "Vene" } : null;
+            var mat = varjostin != null ? new Material(varjostin) { name = "Vene" } : null;   // tekninen
             if (mat != null) { if (kuva != null) mat.SetTexture(IdKuva, kuva); luodut.Add(mat); }
             if (kuva != null) luodut.Add(kuva);
             solmut = new Transform[malli.Solmut.Count];
@@ -56,7 +56,7 @@ namespace Matkakirja.Natiivi
                 if (maski && g.Osat.Count > 0)
                 {
                     // Vesimaski (LR v45e, omistajan palaute 4): vain syvyys ennen vettä, ettei vesi näy pohjan läpi; ei varjoja.
-                    if (maskiMat == null) { var mv = Shader.Find("Matkakirja/Linssit/DioraamaVesimaski"); if (mv != null) { maskiMat = new Material(mv) { name = "Vesimaski" }; luodut.Add(maskiMat); } }
+                    if (maskiMat == null) { var mv = Shader.Find("Matkakirja/Linssit/DioraamaVesimaski"); if (mv != null) { maskiMat = new Material(mv) { name = "Vesimaski" }; luodut.Add(maskiMat); } }   // tekninen
                     if (maskiMat != null)
                     {
                         var m = Mesh(g); luodut.Add(m);
@@ -178,7 +178,7 @@ namespace Matkakirja.Natiivi
             Texture2D kuva = null;
             if (m.Kuvat.Count > 0 && m.Kuvat[0] != null)
             {
-                kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Vene", filterMode = FilterMode.Trilinear, anisoLevel = 4 };
+                kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Vene", filterMode = FilterMode.Trilinear, anisoLevel = 4 };   // tekninen
                 if (kuva.LoadImage(m.Kuvat[0], false)) { kuva.Compress(true); kuva.Apply(true, true); }
                 else { UnityEngine.Object.Destroy(kuva); kuva = null; }
             }

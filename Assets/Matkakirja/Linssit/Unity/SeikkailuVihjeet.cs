@@ -54,7 +54,7 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen; if (p == null) return false;
             int taso = ydin.Pyyda(Vaara(p));
             if (taso == 0) return true;   // liian pian: napautus käytetty, ei uutta vihjettä
-            Nayta(p, taso, "pyyntö");
+            Nayta(p, taso, "pyyntö");   // tekninen
             return true;
         }
 

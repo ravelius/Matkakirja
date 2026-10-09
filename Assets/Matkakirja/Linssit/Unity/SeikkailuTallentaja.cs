@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
         }
 
         void Tarkistus(string osa, Vector3 p) { t.OnTarkistus = true; t.X = p.x; t.Y = p.y; t.Z = p.z; t.TarkistusOsa = osa; Tallenna("tarkistuspiste " + osa); }
-        void Kiinni(string osa) { string h = osa ?? "?"; t.Kiinnijaamiset[h] = (t.Kiinnijaamiset.TryGetValue(h, out var n) ? n : 0) + 1; Tallenna("kiinnijäänti " + h); }
+        void Kiinni(string osa) { string h = osa ?? "?"; t.Kiinnijaamiset[h] = (t.Kiinnijaamiset.TryGetValue(h, out var n) ? n : 0) + 1; Tallenna("kiinnijäänti " + h); }   // tekninen
         void Nosto(string id) { t.Arvoitus["loyto"] = 1; Tallenna("nosto " + id); }
         void Alttari(string id) { if (id == "liuskekivi") { if (!t.Laukku.Contains(id)) t.Laukku.Add(id); } else t.Arvoitus["alttari-" + id] = 1; Tallenna("alttari " + id); }
 

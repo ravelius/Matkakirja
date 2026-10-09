@@ -60,7 +60,7 @@ namespace Matkakirja.Linssit.Seikkailu
         static void Merkkijono(StringBuilder b, string s)
         {
             b.Append('"');
-            foreach (char c in s) { if (c == '"' || c == '\\') b.Append('\\').Append(c); else if (c < 0x20) b.Append("\\u").Append(((int)c).ToString("x4")); else b.Append(c); }
+            foreach (char c in s) { if (c == '"' || c == '\\') b.Append('\\').Append(c); else if (c < 0x20) b.Append("\\u").Append(((int)c).ToString("x4")); else b.Append(c); }   // tekninen
             b.Append('"');
         }
         static void Kentta(StringBuilder b, string nimi, string arvo) { if (arvo == null) return; b.Append(", \"").Append(nimi).Append("\": "); Merkkijono(b, arvo); }

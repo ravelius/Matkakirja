@@ -124,9 +124,9 @@ namespace Matkakirja.Natiivi
         public string Verbi(SeikkailuPelaaja p)
         {
             if (p == null || ydin == null) return null;
-            if (LahinTiili(p) >= 0) return "Raavi";
+            if (LahinTiili(p) >= 0) return Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.raavi");
             int k = LahinKilpi(p);
-            return k == 0 || k == 1 ? "Käännä" : k == 2 ? "Avaa" : null;
+            return k == 0 || k == 1 ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.kaanna") : k == 2 ? Matkakirja.Peli.Tekstit.T("olavinlinna.verbi.avaa") : null;
         }
 
         public bool Toimi(SeikkailuPelaaja p)
@@ -187,7 +187,7 @@ namespace Matkakirja.Natiivi
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); ArkkuAuki?.Invoke(); yield break; }
             // Teksti on paikkamerkki (M-osan käsikirjoitus ja Sisältökirjurin tarkistus puuttuvat).
-            try { m.Invoke(null, new object[] { "Kellotornin arkku", "Arkun pohjalla kuunvalossa hopea välkkyy.", null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: arkun löytö kuitattu"); ArkkuAuki?.Invoke(); }) }); }
+            try { m.Invoke(null, new object[] { Matkakirja.Peli.Tekstit.T("olavinlinna.loyto.arkku.otsikko"), Matkakirja.Peli.Tekstit.T("olavinlinna.loyto.arkku.teksti"), null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: arkun löytö kuitattu"); ArkkuAuki?.Invoke(); }) }); }
             catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); ArkkuAuki?.Invoke(); }
         }
 

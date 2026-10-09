@@ -190,7 +190,7 @@ namespace Matkakirja.Natiivi
             {
                 a.Tallennettiin = false;
                 kirjaa?.Invoke($"seikkailu: kappelin vaihe {a.Vaihe}");
-                var t = SeikkailuTallentaja.Aktiivinen; if (t != null) { a.Kirjoita(t.Tila); t.Tallenna($"kappeli vaihe {a.Vaihe}"); }
+                var t = SeikkailuTallentaja.Aktiivinen; if (t != null) { a.Kirjoita(t.Tila); t.Tallenna($"kappeli vaihe {a.Vaihe}"); }   // tekninen
             }
         }
 
@@ -354,8 +354,8 @@ namespace Matkakirja.Natiivi
             if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); return; }
             try
             {
-                m.Invoke(null, new object[] { "Kappelin kätkö",
-                    "Liinaan kääritty hopeinen kalkki ja pateeni sekä liuskekivi, johon on kaiverrettu kaksi toisiaan kohti kallistuvaa kilpeä, kaari ja pieni kello.",
+                m.Invoke(null, new object[] { Matkakirja.Peli.Tekstit.T("olavinlinna.loyto.kappeli.otsikko"),
+                    Matkakirja.Peli.Tekstit.T("olavinlinna.loyto.kappeli.teksti"),
                     null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: löytö kuitattu (Jatka matkaa)"); StartCoroutine(Alttarille()); }) });
             }
             catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); }

@@ -59,7 +59,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
-            bool Jaa(Transform t) { for (; t != null && t != n.transform; t = t.parent) if (t.name.StartsWith("Ymparisto", StringComparison.Ordinal) || t.name.StartsWith("Vaihe:", StringComparison.Ordinal) || t.name == "Ulkokuori:vesi") return true; return false; }
+            bool Jaa(Transform t) { for (; t != null && t != n.transform; t = t.parent) if (t.name.StartsWith("Ymparisto", StringComparison.Ordinal) || t.name.StartsWith("Vaihe:", StringComparison.Ordinal) || t.name == "Ulkokuori:vesi") return true; return false; }   // tekninen
             foreach (var r in n.GetComponentsInChildren<Renderer>(false)) if (r.enabled && !Jaa(r.transform)) { r.enabled = false; piilotetut.Add(r); }
             foreach (var l in n.GetComponentsInChildren<Light>(false)) if (l.enabled && l.type != LightType.Directional && !Jaa(l.transform)) { l.enabled = false; sammutetut.Add(l); }
         }

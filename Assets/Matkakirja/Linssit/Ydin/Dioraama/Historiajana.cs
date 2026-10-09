@@ -22,10 +22,12 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class HistoriaVaihe
     {
         public readonly double Vuosi, KestoS, Korkeus, EtaisyysKerroin;
-        /// <summary>Avainsana: vuosiluku (teksti, esim. "n. 9000 eaa.") ja muutama sana; null = ei avainsanaa.</summary>
-        public readonly string VuosiTeksti, Sanat;
-        public HistoriaVaihe(double vuosi, double kestoS, double korkeus, double etaisyysKerroin, string vuosiTeksti = null, string sanat = null)
-        { Vuosi = vuosi; KestoS = kestoS; Korkeus = korkeus; EtaisyysKerroin = etaisyysKerroin; VuosiTeksti = vuosiTeksti; Sanat = sanat; }
+        /// <summary>Avainsanan tekstiavain (olavinlinna.historia.&lt;Avain&gt;.vuosi / .sanat, Tekstit-taulu); null = ei avainsanaa.</summary>
+        public readonly string Avain;
+        public string VuosiTeksti => Avain != null ? Tekstit.T("olavinlinna.historia." + Avain + ".vuosi") : null;
+        public string Sanat => Avain != null ? Tekstit.T("olavinlinna.historia." + Avain + ".sanat") : null;
+        public HistoriaVaihe(double vuosi, double kestoS, double korkeus, double etaisyysKerroin, string avain = null)
+        { Vuosi = vuosi; KestoS = kestoS; Korkeus = korkeus; EtaisyysKerroin = etaisyysKerroin; Avain = avain; }
     }
 
     public sealed class HistoriaOsa
@@ -131,7 +133,7 @@ namespace Matkakirja.Linssit.Dioraama
             var (i, _) = Kohta(t);
             double s = t - alut[i];
             var v = Vaiheet[i];
-            return v.Sanat != null && s >= AvainsanaAlkuS && s < AvainsanaAlkuS + AvainsanaS ? v : null;
+            return v.Avain != null && s >= AvainsanaAlkuS && s < AvainsanaAlkuS + AvainsanaS ? v : null;
         }
 
         /// <summary>
@@ -210,15 +212,15 @@ namespace Matkakirja.Linssit.Dioraama
         /// 9.10.; epävarmat vuodet (Kyrönsalmen synty, kivikauden ensiasutus, Kellobastioni) ilman lukua.</summary>
         public static readonly Historiajana Olavinlinna = new Historiajana(new[]
         {
-            new HistoriaVaihe(-7500, 20, 35, 3.2, "jääkauden jälkeen", "Saimaa nousee esiin, vesi virtaa Kyrönsalmen läpi"),
-            new HistoriaVaihe(-3900, 15, 28, 2.6, "kivikausi", "Asukkaita Saimaan rannoilla"),
-            new HistoriaVaihe(1475, 25, 22, 2.0, "1475", "Erik Akselinpoika Tott aloittaa linnan, ensin puuvarustus"),
-            new HistoriaVaihe(1477, 20, 18, 1.7, "1477–1480-luku", "Kivilinna: kolme tornia ja muurit"),
-            new HistoriaVaihe(1499, 15, 14, 1.5, "1499", "Erik Turesson Bielke linnan haltijaksi"),
-            new HistoriaVaihe(1550, 25, 24, 1.9, "1500–1600-luvut", "Tornit korotetaan, uusi esilinna ja Kijlin torni"),
-            new HistoriaVaihe(1743, 15, 30, 2.2, "1743", "Turun rauha: linna Venäjälle, bastionit 1750-luvulla"),
-            new HistoriaVaihe(1847, 15, 26, 2.0, "1847–1869", "Varuskunta lähtee, palot 1868 ja 1869"),
-            new HistoriaVaihe(1872, 20, 20, 1.8, "1872–1975", "Restauroinnit, oopperajuhlat vuodesta 1967"),
+            new HistoriaVaihe(-7500, 20, 35, 3.2, "jaakausi"),
+            new HistoriaVaihe(-3900, 15, 28, 2.6, "kivikausi"),
+            new HistoriaVaihe(1475, 25, 22, 2.0, "1475"),
+            new HistoriaVaihe(1477, 20, 18, 1.7, "1477"),
+            new HistoriaVaihe(1499, 15, 14, 1.5, "1499"),
+            new HistoriaVaihe(1550, 25, 24, 1.9, "1500"),
+            new HistoriaVaihe(1743, 15, 30, 2.2, "1743"),
+            new HistoriaVaihe(1847, 15, 26, 2.0, "1847"),
+            new HistoriaVaihe(1872, 20, 20, 1.8, "1872"),
         }, 2026);
 
         /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
