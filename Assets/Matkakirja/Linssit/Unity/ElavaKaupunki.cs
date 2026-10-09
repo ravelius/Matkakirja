@@ -179,6 +179,7 @@ namespace Matkakirja.Natiivi
                     piippu.localPosition = new Vector3(piippuP[0], piippuP[1], piippuP[2]);
                     VeneSavu.Liita(piippu, VeneMallit.Tyypit[t]);
                 }
+                VeneAanet.Liita(this, g, VeneMallit.Tyypit[t]);   // LS2: laivan ääni (Pelikoodarin elava-kaupunki-v1)
                 veneet.Add(new VeneOlio { T = g.transform, K = k, Vaihe = (i++ * 2.399f) % 6.283f, Pituus = m.bounds.size.z });
             }
             int s = 1;
@@ -270,6 +271,7 @@ namespace Matkakirja.Natiivi
             if (kamera == null || !kamera.isActiveAndEnabled) kamera = Camera.main;
             float dt = Time.deltaTime, t = Time.time;
             AsetaValo();
+            VeneAanet.Paivita();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
             RakennaKatu();
             if (katu != null)

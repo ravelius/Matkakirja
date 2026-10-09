@@ -32,7 +32,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Yötila = loppuilta (omistaja 9.10.: "taivaassa näkyisi vielä purppuraa"): yövalinnalla ilmakehän aurinko enintään
         /// IltaAurinkoAst horisontin alla (sininen hetki, purppura ja iltarusko taivaanrannassa); kaupungin valot LS1:n yötilan mukaan.</summary>
         public static float IltaAurinkoAst = -7f;
+        /// <summary>Valotuksen kerroin hämärässä (aurinko −7°): taivaan purppura ja iltarusko näkyviin (LUT:n radianssi on pieni).</summary>
+        public static float HamaraValotus = 18f;
+        static float taivasValotus = 1f;
         public static bool IltaYolla = true;
+        /// <summary>Kaupungin valojen osuus 0–1 (KaupunkiKuva, LS1:n KaupunkiYovalot): valojen heijastus omaan veteen (Natiiviseppä 9.10.:
+        /// Seine yöllä lähes musta).</summary>
+        public static float YoOsuus;
         public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PohjaM;
         /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a; omistaja 9.10. "pilviä voisi vähän lisätä taivaalle"): oletus
         /// päällä kehityskaupungeissa (kuten ilmakehä), asetus "pilvet 0|1" pakottaa. Pohja = PilviKorkeusM, paksuus PilviPaksuusM.</summary>
@@ -99,7 +105,11 @@ namespace Matkakirja.Natiivi
             float k = aurinkoKorkeusAst * Mathf.Deg2Rad, a = aurinkoAtsimuuttiAst * Mathf.Deg2Rad;
             var s = new Vector3(Mathf.Cos(k) * Mathf.Sin(a), Mathf.Sin(k), Mathf.Cos(k) * Mathf.Cos(a));
             Shader.SetGlobalVector(IdAurinko, new Vector4(s.x, s.y, s.z, 90f - aurinkoKorkeusAst));
+            // Hämärän valotus (simu 9.10. 03.5x: loppuillan taivas täysin musta): silmä sopeutuu, joten valotus kasvaa auringon laskiessa
+            // horisontin alle (−7°: ×HamaraValotus), muuten hämärätaivaan radianssi (~1/100 päivästä) häviää mustaan.
+            float hamara = Mathf.Clamp01(-aurinkoKorkeusAst / 7f);
             Shader.SetGlobalVector(IdParam, new Vector4(Mathf.Max(0f, korkeusM), Valotus, ApVoima * voima, voima));
+            taivasValotus = Mathf.Lerp(1f, HamaraValotus, hamara * hamara);   // vain taivas ja veden heijastus (_IlmMaailma.w)
             // Kuuro (LS1): peitto lähes täyteen, pilvet tummuvat, varjot vahvistuvat; märkyys laattoihin (Ydin KaupunkiKuuro).
             pilvisyys = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Peitto(Mathf.Clamp01(pilvisyys));
             float tumma = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Tummuus;
@@ -108,7 +118,7 @@ namespace Matkakirja.Natiivi
                 (float)Matkakirja.Linssit.Ilmakeha.AamuSumu.Voima(aurinkoKorkeusAst, aurinkoAtsimuuttiAst) * Aamusumu,
                 (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Sateenkaari(aurinkoKorkeusAst) * voima));
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
-            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), 0f, 0f));
+            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), YoOsuus, taivasValotus));
             Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));
         }
 

@@ -224,9 +224,10 @@ namespace Matkakirja.Natiivi
                         case "sumu": Sumu = v != 0; break;
                         case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
+                        case "hamaravalotus": KaupunkiIlmakeha.HamaraValotus = v; break;
                         case "pilvet": KaupunkiIlmakeha.PilvetPakotettu = v != 0; break;   // LS2: pallon pilvikerros (kohta 6a), oletus kehityskaupungeissa
                         case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
-                        case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot asettavat muuten)
+                        case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot automaattisesti)
                         case "markyys": Matkakirja.Linssit.Kierros.KaupunkiKuuro.AsetaMarkyys(v); break;
                         case "kaukoutu": KaupunkiIlmakeha.KaukoUtu = v; break;
                         case "aamusumu": KaupunkiIlmakeha.Aamusumu = v; break;
@@ -387,12 +388,19 @@ namespace Matkakirja.Natiivi
             // Oletus: auringon todellinen korkeus kohteessa; pelaajan valinta tai asetuksen tunti avainkuvista.
             var savy = !KaupunkiKuva.SavyKaytossa ? KaupunkiValo.Paiva
                 : pakko >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
+            // LOPPUILTA YÖN SIJAAN (omistaja 9.10.: "yö voisi olla ennemmin loppu ilta niin että taivaassa näkyisi vielä purppuraa"; PT:
+            // yötila lähes musta): kehityskaupungeissa (ilmakehä päällä) yön sävy on illan ja yön välissä (~−1,1 EV, lämmin taivaanranta);
+            // ilmakehän aurinko −7° (KaupunkiIlmakeha.IltaAurinkoAst), kaupungin valot täysillä kuten yöllä.
+            bool yoNyt = pakko >= 0 ? (tunti >= 21 || tunti < 5) : aurinko <= -8;
+            if (KaupunkiKuva.SavyKaytossa && yoNyt && KaupunkiIlmakeha.IltaYolla && KaupunkiIlmakeha.Paalla)
+                savy = Matkakirja.Linssit.Kierros.Savy.Valissa(KaupunkiValo.Ilta, KaupunkiValo.Yo, 0.55);
             KaupunkiKuva.AsetaNyt(pakko >= 0 ? (tunti >= 21 || tunti < 5 ? "yo" : tunti < 9.5 ? "aamu" : tunti < 16 ? "paiva" : "ilta")
                 : aurinko <= -8 ? "yo" : aurinko < 15 ? (aamupaiva ? "aamu" : "ilta") : "paiva");
             // Yövalot (kuvanlaatujärjestys kohta 2): hämärästä yöhön auringon tai valitun kellonajan mukaan.
             double yoOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusTunnista(tunti)
                 : Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusAuringosta(aurinko);
             KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus);
+            KaupunkiIlmakeha.YoOsuus = (float)yoOsuus;   // LS2: kaupungin valojen heijastus omaan veteen
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
             float harmaus = Mathf.SmoothStep(0f, 1f, (float)KaupunkiKuva.Saa.Harmaus);
@@ -425,6 +433,8 @@ namespace Matkakirja.Natiivi
             {
                 var gr = kaupunki.Georef; float mt = gr != null ? gr.transform.lossyScale.x : 1f;
                 float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
+                // LS1:n automaattiset kuurot (kierros-170 PalloKuurot, OpasSovitin.KuuroVoima): heijastuksella, ettei haara riipu toisesta.
+                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = System.Math.Max(OpasKuuroVoima(), Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima);
                 Matkakirja.Linssit.Kierros.KaupunkiKuuro.Paivita(Time.deltaTime);
                 KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.45f, 0.95f, harmaus),
                     KaupunkiIlmakeha.TuuliMs * Time.time, mt);
@@ -477,6 +487,25 @@ namespace Matkakirja.Natiivi
             }
             RenderSettings.fogStartDistance = alku * mitta;
             RenderSettings.fogEndDistance = loppu * mitta;
+        }
+
+        static System.Reflection.MemberInfo kuuroJasen; static bool kuuroHaettu;
+        /// <summary>OpasSovitin.KuuroVoima (LS1, kierros-170), 0 jos ei vielä käännöksessä.</summary>
+        static double OpasKuuroVoima()
+        {
+            if (!kuuroHaettu)
+            {
+                kuuroHaettu = true;
+                var t = typeof(OpasSovitin);
+                kuuroJasen = (System.Reflection.MemberInfo)t.GetField("KuuroVoima", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)
+                    ?? t.GetProperty("KuuroVoima", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            }
+            try
+            {
+                object v = kuuroJasen is System.Reflection.FieldInfo f ? f.GetValue(null) : kuuroJasen is System.Reflection.PropertyInfo p ? p.GetValue(null) : null;
+                return v is double d ? d : v is float fl ? fl : 0;
+            }
+            catch (System.Exception) { return 0; }
         }
     }
 }
