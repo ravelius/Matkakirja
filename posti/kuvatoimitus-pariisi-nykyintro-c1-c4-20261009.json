@@ -1,0 +1,745 @@
+{
+  "task": "pariisi-nykyintro-c1-c4-20261009",
+  "taskNumber": 52,
+  "sourcePath": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+  "sourceCommit": "85858700ee3b0c337ab25b254173910875dd343c",
+  "sourceBlob": "5a954439d109d2591662b82f81f623e571bb8057",
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+      "commit": "85858700ee3b0c337ab25b254173910875dd343c",
+      "blob": "5a954439d109d2591662b82f81f623e571bb8057"
+    }
+  ],
+  "sourceReadInFull": true,
+  "storyboard": {
+    "path": "docs/kohtaukset/pallokierros/pariisi-nykyintro.md",
+    "commit": "576475ac44476368ecffbbf7be8a9d90573b8210",
+    "blob": "b88c344be9ec515190e8d6f70f2dc136dd42983f",
+    "readInFull": true,
+    "section": 3
+  },
+  "generationCalls": 4,
+  "generationLimit": 4,
+  "imageCount": 4,
+  "requestedImages": 4,
+  "productionComplete": true,
+  "partialDelivery": false,
+  "allR2ReadbacksByteExact": true,
+  "allContentConstraintsPassed": false,
+  "c5Excluded": true,
+  "assets": [
+    {
+      "id": "c1",
+      "subject": "C1",
+      "taskNumber": 52,
+      "style": "photorealistic-natural",
+      "form": "intro-4:3",
+      "file": "pariisi-nykyintro-c1.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c1/pariisi-nykyintro-c1.jpg",
+      "sha256": "d278248c36fc6f1d505a4671f5a4cd6f4cd5f371a095e5e62507cf8b7edf04e8",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5b93d3b6-6dbe-4992-b908-17ff855a6508.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c1/original-generation.png",
+      "originalSHA256": "51c7ba5cc7eb4ab45d0f71fda5cd6149bf2d327bc9ecb67964a9f54db42f2f2f",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: a contemporary Paris film-intro still for a game, one complete new image, not a collage. Landscape 4:3 composition, intended final 2048 x 1536. Looks convincingly photographed with a real full-frame camera: natural optical perspective, subtle grain, real textures, restrained exposure and natural light, no HDR, no painterly/illustrated/CGI look. Early autumn in contemporary Paris, coherent muted stone/leaf colors, warm amber light balanced with cool blue shadows across the series. Keep the main subject centrally or lower-centrally composed and at least 12 percent away from every frame edge, so 3-5 percent zoom plus small side drift retains it. No writing, readable text, digits, logos, trademarks, watermarks or graphic overlay anywhere. No identifiable faces. Omit Eiffel Tower entirely, Louvre pyramid, Grande Arche and Centre Pompidou. Only traditional Paris architecture in background. Do not add arbitrary extra subjects. No border. Do not place the required metadata label in visible image pixels.\nPrimary request C1: The Seine LEFT-bank stone riverside street in late afternoon, photographed at a standing person's eye height (about 1.6m), a natural 35mm documentary street-camera view. Worn green bouquiniste book boxes attached along the stone parapet; some boxes open with closed books showing only blank covers and blank spines, no printed covers, text or signs. Exactly TWO small distant cyclists ride away from the camera, both seen only from behind, in the middle-lower central area. Mature plane trees cast long believable sideways shadows onto the stone street. The river is visible beyond the parapet and Pont Neuf's recognizable low traditional stone arches are in the background, modest scale. Low afternoon sunlight from the side, warm but still clearly daytime; believable depth and natural urban proportions. Safe margins retain the two cyclists, the main book-box cluster and distant bridge during a slow zoom. No other people, no parked branded vehicles, no modern protected landmarks.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "sourceCommit": "85858700ee3b0c337ab25b254173910875dd343c",
+        "sourceBlob": "5a954439d109d2591662b82f81f623e571bb8057"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "docs/kohtaukset/pallokierros/pariisi-nykyintro.md"
+      ],
+      "kuvateksti": "Seinen rantakatu ja pyöräilijät iltapäivällä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1448,
+          1086
+        ],
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "d278248c36fc6f1d505a4671f5a4cd6f4cd5f371a095e5e62507cf8b7edf04e8",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Vihreät kirjakojut, kaksi pyöräilijää selin, kivinen rantakatu, silmänkorkuinen kamera ja lämmin sivuvalo näkyvät. Ei luettavaa tekstiä tai tunnistettavia kasvoja havaittu.",
+          "Pyöräilijät ovat briefin kaukaista hahmoa suurempia; taustalla on lisäksi pieniä jalankulkijoita. Lehtien keltaisuus on voimakkaampi kuin aivan alkusyksyllä. Sillan tarkkaa arkkitehtuuria ei ole mitattu."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c1/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+          "commit": "85858700ee3b0c337ab25b254173910875dd343c",
+          "blob": "5a954439d109d2591662b82f81f623e571bb8057"
+        }
+      ],
+      "storyboard": {
+        "path": "docs/kohtaukset/pallokierros/pariisi-nykyintro.md",
+        "commit": "576475ac44476368ecffbbf7be8a9d90573b8210",
+        "blob": "b88c344be9ec515190e8d6f70f2dc136dd42983f",
+        "readInFull": true,
+        "section": 3
+      },
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "referenceImagePathsUsed": [],
+      "completeNewGeneration": true,
+      "rootVisualReview": {
+        "sha256": "d278248c36fc6f1d505a4671f5a4cd6f4cd5f371a095e5e62507cf8b7edf04e8",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Vihreät kirjakojut, kaksi pyöräilijää selin, kivinen rantakatu, silmänkorkuinen kamera ja lämmin sivuvalo näkyvät. Ei luettavaa tekstiä tai tunnistettavia kasvoja havaittu.",
+          "Pyöräilijät ovat briefin kaukaista hahmoa suurempia; taustalla on lisäksi pieniä jalankulkijoita. Lehtien keltaisuus on voimakkaampi kuin aivan alkusyksyllä. Sillan tarkkaa arkkitehtuuria ei ole mitattu."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c1/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c1.jpg",
+      "fableReceipt": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c1.jpg?t=d278248c36fc6f1d",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c1.jpg",
+      "bytes": 1115796,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    },
+    {
+      "id": "c2",
+      "subject": "C2",
+      "taskNumber": 52,
+      "style": "photorealistic-natural",
+      "form": "intro-4:3",
+      "file": "pariisi-nykyintro-c2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c2/pariisi-nykyintro-c2.jpg",
+      "sha256": "744a090d170ae03686f35ac1d06c8dc57074ffdd6ae0a4fd24194b2c21f49761",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-24e89c14-c084-41ce-81ee-63ed253a0884.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c2/original-generation.png",
+      "originalSHA256": "174f2392c33f17fef192e8b48735cd55a39618a86bc65ba81c6f1eded578f90e",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: a contemporary Paris film-intro still for a game, one complete new image, not a collage. Landscape 4:3 composition, intended final 2048 x 1536. Looks convincingly photographed with a real full-frame camera: natural optical perspective, subtle grain, real textures, restrained exposure and natural light, no HDR, no painterly/illustrated/CGI look. Early autumn in contemporary Paris, coherent muted stone/leaf colors, warm amber light balanced with cool blue shadows across the series. Keep the main subject centrally or lower-centrally composed and at least 12 percent away from every frame edge, so 3-5 percent zoom plus small side drift retains it. No writing, readable text, digits, logos, trademarks, watermarks or graphic overlay anywhere. No identifiable faces. Omit Eiffel Tower entirely, Louvre pyramid, Grande Arche and Centre Pompidou. Only traditional Paris architecture in background. Do not add arbitrary extra subjects. No border. Do not place the required metadata label in visible image pixels.\nPrimary request C2: Parisian bistro outdoor terrace at GOLDEN HOUR, eye-level seated/street camera, natural 50mm perspective and shallow optical depth of field. Round white-grey marble cafe tables and traditional woven bistro chairs with neutral cream/red-brown weave. Exactly TWO delicate clear unbranded wine glasses, containing a modest amount of red wine, sharply focused on one foreground round marble table near the lower center; both complete glasses including stems and feet have broad safety margins, nothing cut by frame edges. A few distant passersby moving in the background are naturally motion-blurred and turned away; no distinct facial features. Warm low golden side sunlight glows through the glasses, cool gentle shadows, quiet traditional cream-stone Paris frontage out of focus. No signage, no menu cards, no bottles, no labels, no chairs/glass branding, no readable writing or digits. A genuine documentary photograph, not a glossy advertising render.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "sourceCommit": "85858700ee3b0c337ab25b254173910875dd343c",
+        "sourceBlob": "5a954439d109d2591662b82f81f623e571bb8057"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "docs/kohtaukset/pallokierros/pariisi-nykyintro.md"
+      ],
+      "kuvateksti": "Bistron terassi kultaisella tunnilla. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1448,
+          1086
+        ],
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": true
+      },
+      "rootIndependentReview": {
+        "sha256": "744a090d170ae03686f35ac1d06c8dc57074ffdd6ae0a4fd24194b2c21f49761",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "Täsmälleen kaksi kokonaista tarkkaa viinilasia, marmoripöydät ja punotut tuolit kultaisessa sivuvalossa. Ohikulkijat epäterävinä; ei tunnistettavia kasvoja, tekstiä, logoja tai numeroita havaittu.",
+          "Lasit jäävät ehjinä 5 prosentin zoomiin ja 3 prosentin sivuliukuun. Pöydän ja sivutuolien ulkoreunat ovat jo peruskuvassa rajautuneita, pääaiheena olevat lasit kokonaiset."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c2/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+          "commit": "85858700ee3b0c337ab25b254173910875dd343c",
+          "blob": "5a954439d109d2591662b82f81f623e571bb8057"
+        }
+      ],
+      "storyboard": {
+        "path": "docs/kohtaukset/pallokierros/pariisi-nykyintro.md",
+        "commit": "576475ac44476368ecffbbf7be8a9d90573b8210",
+        "blob": "b88c344be9ec515190e8d6f70f2dc136dd42983f",
+        "readInFull": true,
+        "section": 3
+      },
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "referenceImagePathsUsed": [],
+      "completeNewGeneration": true,
+      "rootVisualReview": {
+        "sha256": "744a090d170ae03686f35ac1d06c8dc57074ffdd6ae0a4fd24194b2c21f49761",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "Täsmälleen kaksi kokonaista tarkkaa viinilasia, marmoripöydät ja punotut tuolit kultaisessa sivuvalossa. Ohikulkijat epäterävinä; ei tunnistettavia kasvoja, tekstiä, logoja tai numeroita havaittu.",
+          "Lasit jäävät ehjinä 5 prosentin zoomiin ja 3 prosentin sivuliukuun. Pöydän ja sivutuolien ulkoreunat ovat jo peruskuvassa rajautuneita, pääaiheena olevat lasit kokonaiset."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c2/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c2.jpg",
+      "fableReceipt": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c2.jpg?t=744a090d170ae036",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c2.jpg",
+      "bytes": 715412,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    },
+    {
+      "id": "c3",
+      "subject": "C3",
+      "taskNumber": 52,
+      "style": "photorealistic-natural",
+      "form": "intro-4:3",
+      "file": "pariisi-nykyintro-c3.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c3/pariisi-nykyintro-c3.jpg",
+      "sha256": "4af2cebe6de04fe483b34c79405edf66bc55919ec7f00c9da7128a96d34d9f4d",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5ee64060-8c7f-49cf-83f5-e665f1375bda.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c3/original-generation.png",
+      "originalSHA256": "fab73ca3cc9be7826887e59026a775599ac5f9830de2b080e9c43bd2054f2b19",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: a contemporary Paris film-intro still for a game, one complete new image, not a collage. Landscape 4:3 composition, intended final 2048 x 1536. Looks convincingly photographed with a real full-frame camera: natural optical perspective, subtle grain, real textures, restrained exposure and natural light, no HDR, no painterly/illustrated/CGI look. Early autumn in contemporary Paris, coherent muted stone/leaf colors, warm amber light balanced with cool blue shadows across the series. Keep the main subject centrally or lower-centrally composed and at least 12 percent away from every frame edge, so 3-5 percent zoom plus small side drift retains it. No writing, readable text, digits, logos, trademarks, watermarks or graphic overlay anywhere. No identifiable faces. Omit Eiffel Tower entirely, Louvre pyramid, Grande Arche and Centre Pompidou. Only traditional Paris architecture in background. Do not add arbitrary extra subjects. No border. Do not place the required metadata label in visible image pixels.\nPrimary request C3: Champs-Elysees at BLUE-HOUR DUSK, photographed from a LOW tripod near the boulevard's road perspective, a believable natural 35mm long-exposure photo. Long RED tail-light and WHITE headlight trails run along the avenue and converge toward the center; car bodies blur or remain far too small to expose brands, license plates or model emblems. Symmetrical rows of early-autumn trees on both sides and subtle warm traditional street lights. The Arc de Triomphe is SMALL and recognizable at the far end of the central axis, centered below the middle of the image against a cool deep blue twilight sky. Traditional distant buildings only, no shop names, billboards, text, numbers or car logos. Use natural dynamic range and believable smooth optical long-exposure streaks, not neon sci-fi graphics. No identifiable people. Keep the distant arch and the main central trail corridor well inside slow-zoom safety margins.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "sourceCommit": "85858700ee3b0c337ab25b254173910875dd343c",
+        "sourceBlob": "5a954439d109d2591662b82f81f623e571bb8057"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "docs/kohtaukset/pallokierros/pariisi-nykyintro.md"
+      ],
+      "kuvateksti": "Champs-Élysées sinisessä hämärässä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1448,
+          1086
+        ],
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": true
+      },
+      "rootIndependentReview": {
+        "sha256": "4af2cebe6de04fe483b34c79405edf66bc55919ec7f00c9da7128a96d34d9f4d",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "Matala kamera, pitkät punaiset ja valkoiset valoviirut, puurivit ja pieni Riemukaari sinisessä hämärässä. Autojen tunnuksia, luettavia kylttejä tai tunnistettavia kasvoja ei havaittu.",
+          "Riemukaaren ja pääakselin ympärillä on riittävä turvamarginaali. Rakennusten pienet koristeet ja kaaren reliefit eivät ole arkkitehtonisen mittatarkkuuden varmennus."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c3/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+          "commit": "85858700ee3b0c337ab25b254173910875dd343c",
+          "blob": "5a954439d109d2591662b82f81f623e571bb8057"
+        }
+      ],
+      "storyboard": {
+        "path": "docs/kohtaukset/pallokierros/pariisi-nykyintro.md",
+        "commit": "576475ac44476368ecffbbf7be8a9d90573b8210",
+        "blob": "b88c344be9ec515190e8d6f70f2dc136dd42983f",
+        "readInFull": true,
+        "section": 3
+      },
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "referenceImagePathsUsed": [],
+      "completeNewGeneration": true,
+      "rootVisualReview": {
+        "sha256": "4af2cebe6de04fe483b34c79405edf66bc55919ec7f00c9da7128a96d34d9f4d",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": true,
+        "findings": [
+          "Matala kamera, pitkät punaiset ja valkoiset valoviirut, puurivit ja pieni Riemukaari sinisessä hämärässä. Autojen tunnuksia, luettavia kylttejä tai tunnistettavia kasvoja ei havaittu.",
+          "Riemukaaren ja pääakselin ympärillä on riittävä turvamarginaali. Rakennusten pienet koristeet ja kaaren reliefit eivät ole arkkitehtonisen mittatarkkuuden varmennus."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c3/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c3.jpg",
+      "fableReceipt": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c3.jpg?t=4af2cebe6de04fe4",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c3.jpg",
+      "bytes": 998589,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    },
+    {
+      "id": "c4",
+      "subject": "C4",
+      "taskNumber": 52,
+      "style": "photorealistic-natural",
+      "form": "intro-4:3",
+      "file": "pariisi-nykyintro-c4.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c4/pariisi-nykyintro-c4.jpg",
+      "sha256": "6819607855fe8aaa5e1f1571e360fc176b7cda2441f8abaeb7ac077fb2e743a8",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-792d80fb-1a2b-4eaa-8192-da3f79a9d985.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c4/original-generation.png",
+      "originalSHA256": "3d222f7d0725d333cc8f9288ebfef4325fcf7694968c3ea8d038f08e5422651b",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: a contemporary Paris film-intro still for a game, one complete new image, not a collage. Landscape 4:3 composition, intended final 2048 x 1536. Looks convincingly photographed with a real full-frame camera: natural optical perspective, subtle grain, real textures, restrained exposure and natural light, no HDR, no painterly/illustrated/CGI look. Early autumn in contemporary Paris, coherent muted stone/leaf colors, warm amber light balanced with cool blue shadows across the series. Keep the main subject centrally or lower-centrally composed and at least 12 percent away from every frame edge, so 3-5 percent zoom plus small side drift retains it. No writing, readable text, digits, logos, trademarks, watermarks or graphic overlay anywhere. No identifiable faces. Omit Eiffel Tower entirely, Louvre pyramid, Grande Arche and Centre Pompidou. Only traditional Paris architecture in background. Do not add arbitrary extra subjects. No border. Do not place the required metadata label in visible image pixels.\nPrimary request C4: A classic Guimard Art Nouveau Paris metro entrance at BLUE-HOUR DUSK, standing person's eye-level natural 35mm street photograph. Complete green patinated cast-iron curving plant-like entrance arch and railings, with spherical or rounded period lamp globes glowing softly warm, surrounding descending stairs. The arch's station-sign panel is a plain EMPTY slightly aged enamel/glass surface with absolutely no lettering, no Metropolitain lettering or other glyphs. EXACTLY THREE hurried people descending the stairs, seen from behind, naturally motion-blurred bodies, no faces; all three separate silhouettes can be counted. Center/lower-center entrance, broad margins above the complete arch and around lamps and stairs, no clipping under 3-5 percent zoom and side drift. Wet stone pavement reflects warm lamp light against cool blue ambient dusk; early-autumn leaves, traditional old Paris background softly defocused. Real camera photograph and believable optics. No other people, posters, text, letters, numbers, logos, modern protected landmarks, Eiffel Tower or visible national symbols.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "sourceCommit": "85858700ee3b0c337ab25b254173910875dd343c",
+        "sourceBlob": "5a954439d109d2591662b82f81f623e571bb8057"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+        "docs/kohtaukset/pallokierros/pariisi-nykyintro.md"
+      ],
+      "kuvateksti": "Metron sisäänkäynti hämärässä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1448,
+          1086
+        ],
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment",
+        "upscaledFromNative": true
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": false,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false
+      },
+      "rootIndependentReview": {
+        "sha256": "6819607855fe8aaa5e1f1571e360fc176b7cda2441f8abaeb7ac077fb2e743a8",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Vihreä art nouveau -valurautaportti, pyöreät lyhdyt, märkä katu ja täsmälleen kolme selin liike-epäterävää henkilöä portaissa. Kyltti on tyhjä; ei tunnistettavia kasvoja tai luettavaa kirjoitusta havaittu.",
+          "Lyhtyjen yläkoristeiden marginaali on tiukka. 5 prosentin zoomi ja 3 prosentin sivuliuku säilyttävät pääaiheen, mutta suurempaa tai pystysuuntaista liikettä ei ole varmennettu. Kuva on Guimard-henkinen havainne; tietyn oikean metroaseman rakenteellista vastaavuutta ei ole varmennettu."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c4/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c1-c4-20261009.md",
+          "commit": "85858700ee3b0c337ab25b254173910875dd343c",
+          "blob": "5a954439d109d2591662b82f81f623e571bb8057"
+        }
+      ],
+      "storyboard": {
+        "path": "docs/kohtaukset/pallokierros/pariisi-nykyintro.md",
+        "commit": "576475ac44476368ecffbbf7be8a9d90573b8210",
+        "blob": "b88c344be9ec515190e8d6f70f2dc136dd42983f",
+        "readInFull": true,
+        "section": 3
+      },
+      "generationTool": "builtin-imagegen",
+      "actualBuiltinGenerationCalls": 1,
+      "retryCalls": 0,
+      "referenceImagePathsUsed": [],
+      "completeNewGeneration": true,
+      "rootVisualReview": {
+        "sha256": "6819607855fe8aaa5e1f1571e360fc176b7cda2441f8abaeb7ac077fb2e743a8",
+        "sampleDeliveryApproved": true,
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Vihreä art nouveau -valurautaportti, pyöreät lyhdyt, märkä katu ja täsmälleen kolme selin liike-epäterävää henkilöä portaissa. Kyltti on tyhjä; ei tunnistettavia kasvoja tai luettavaa kirjoitusta havaittu.",
+          "Lyhtyjen yläkoristeiden marginaali on tiukka. 5 prosentin zoomi ja 3 prosentin sivuliuku säilyttävät pääaiheen, mutta suurempaa tai pystysuuntaista liikettä ei ole varmennettu. Kuva on Guimard-henkinen havainne; tietyn oikean metroaseman rakenteellista vastaavuutta ei ole varmennettu."
+        ],
+        "noIdentifiableFacesObserved": true,
+        "noReadableWritingLogosDigitsObserved": true,
+        "excludedModernLandmarksObserved": false,
+        "kenBurnsProbe": {
+          "zoom": 1.05,
+          "horizontalShiftImageFraction": 0.03,
+          "cropBoxes": [
+            [
+              -12.678095238095182,
+              36.571428571428555,
+              1937.7980952380951,
+              1499.4285714285716
+            ],
+            [
+              110.20190476190481,
+              36.571428571428555,
+              2060.678095238095,
+              1499.4285714285716
+            ]
+          ],
+          "mainSubjectRetained": true,
+          "verticalPanTested": false
+        },
+        "viewedNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/production/c4/original-generation.png",
+        "viewedFinalProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c1-c4-20261009/qa/root-ken-burns.jpg",
+        "reviewedAt": "2026-10-09T11:04:07.672435+00:00",
+        "editorAcceptance": false
+      },
+      "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c4.jpg",
+      "fableReceipt": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c4.jpg?t=6819607855fe8aaa",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c4.jpg",
+      "bytes": 1018063,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "r2Key": "julisteet/pariisi-nykyintro/20261009/toimitetut-c1-c4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/toimitetut-c1-c4.jpg?t=7359b68ff04cb1bc",
+    "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/toimitetut-c1-c4.jpg",
+    "sha256": "7359b68ff04cb1bc6c0343a2f99d27697328222c7a3a2e66146d61183187e735",
+    "bytes": 680252,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "cacheBustedPreflightHttp": 404,
+    "cacheBustedReadback": true,
+    "byteExactReadback": true
+  },
+  "factualReferences": [
+    {
+      "url": "https://www.paris.fr/pages/les-bouquinistes-et-paris-histoire-d-amour-en-majuscules-7886",
+      "role": "Paris left-bank book-box context, no pixels used"
+    },
+    {
+      "url": "https://www.ratp.fr/decouvrir/patrimoine/hector-guimard",
+      "role": "Guimard entrance structure context, no pixels used"
+    }
+  ],
+  "fableReceipt": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T11:04:44.382321+00:00"
+}
