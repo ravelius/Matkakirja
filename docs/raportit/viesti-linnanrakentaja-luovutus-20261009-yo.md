@@ -122,3 +122,39 @@ Diagnoosi 9.10.:
 - Workbench-maskeissa 0,1 m:n lähitaso aiheuttaa z-taistelua kaukaa, joten käytä 20 m:ä.
 - Fotogrammetrian kuoressa kolmioiden kiertosuunta on sekalainen, joten n·v-testi ei kerro takapinnoista mitään.
 - Kevennetyt LOD-tasot eivät läpäise lod0:n syvyyskuvan 0,25 m:n näkyvyystestiä, joten LOD-tasoille käytetään löysempää toleranssia.
+
+## Lisäys 9.10. klo 21.3x: ND:n muotokorjaus, vaiheet 2–6 tehty (lähde v10, ei vielä vientiä)
+
+Lähde on `notre-dame-v1/lahde/notre_dame.py` (v10). v9 on tallessa kansioissa `lahde-v9-ennen-muotoa/` ja `glb-v9/`.
+Pikaesikatselu: `Blender -b --factory-startup -P lahde/notre_dame.py -- --nopea` (6 s, Workbench, ei maata, puita eikä AO:ta).
+- `ND_ULOS=<etuliite>` ja `ND_NAKYMAT=etela,kuva01,...` ohjaavat ajoa, ja näkymät ovat `lahde/nd_nopea.py`:ssä: ortot sekä
+  kuva01, lansi_p, lahi_laiva, lahi_kuori, lahi_poikki ja lahi_spiira.
+- v9-vertailukuvat: `lahde-v9-ennen-muotoa/notre_dame_v9_nopea.py -- --nopea`. Vertailuarkit: `esikatselu/muotokorjaus/vaihe*.jpg`.
+
+Mitä tehtiin:
+- **Vaihe 2, ruusut:** OSM 79:n päät ovat 2 m julkisivun (osa 6) sisällä. `_poikki()` laskee julkisivutason, ja `poikkipaadyt()` +
+  `_poikki_alaosa()` tekevät julkisivuun nämä:
+  - ruusu ⌀ 12,9 m neliökehyksessä
+  - lasigalleria (9 lansettia)
+  - portaali ja wimperg
+  - päätykolmio 33,4–47 m (pikkuruusu ja krabbit)
+  - kulmapinaakkelit 55 m
+  Osan 6 ikkunat on ohitettu päädyissä.
+- **Vaihe 5, tornit:** osien 7 ja 8 pyramidit on poistettu. `tornin_aukot()` tekee joka sivulle 2 kelloaukkoa (47–63,5 m, 3
+  arkivolttia, säleet ja keskipylväs) sekä sivuille lansetit 30–39 m. Huipulla on tasakatto 69 m, kaide ja kulmapinaakkelit 73 m.
+  Länsijulkisivun tornien osissa on sokeakaari, kaksoislansetti ja okulus.
+- **Vaihe 3, tukikaaret:** syy oli se, että osa 47 (25 m) peitti kaaret.
+  - Osa 47 on nyt 21 m (KORVAUS), ja `tribuunin_katot()` tekee pulpettikaton 21 → 24 m.
+  - OSM-kaaret kulkevat 27 → 31,8 m, ja tukipilari 9–27 m ja pinaakkeli tulevat vain sinne, missä OSM:n 30 m:n pilariosaa ei ole.
+  - `KAARIPAAT` estää kuorin kaksoiskaaret.
+  - Ylälaivan ikkunat ovat 24,5–31 m.
+- **Vaihe 4, alaseinät:** `alaseinat()` tekee kappeli-ikkunat (osa 3, 2,2–7,6 m) ja tribüünin ikkunat (osa 47, 13–18,4 m). Ne
+  puuttuvat poikkilaivasta, torneista ja sakaristosta.
+- **Vaihe 6, spiira:** lyhdyt ovat umpinaiset seinät tummine aukkoineen. Neulan tyvi on r 2,05, tyvellä on pinaakkelikehä 66–72,5 m,
+  krabbit ovat isommat ja apostolit 3,4 m jalustoilla.
+- **Kolmiot lod0** (ilman maata ja puita): 64 k → 84 k.
+
+Seuraavaksi:
+1. Täysi ajo (lod0–2 + AO) → `glb/`, kun muisti sallii (vapaata vähintään 20 Gt ja swap alle 2 Gt).
+2. `codex-ohje` → `codex-ohje-v9/` ja uudet ohjauskuvat (`ortho_ohje.py nd`, `ortho_merkinnat.py`, `tekoaly_syotteet.py`).
+3. Karttaseppä generoi tunnisteella v3.
