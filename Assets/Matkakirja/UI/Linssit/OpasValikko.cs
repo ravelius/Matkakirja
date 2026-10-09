@@ -499,6 +499,8 @@ namespace Matkakirja.Natiivi
         {
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool nayta = nakyy && !Auki && !(chat?.Auki ?? false) && (metro.Testi || OpasSovitin.KierrosIndeksi >= 0);
+            // Historiaosion otsikko lennon aikana (LS1 c50c4dcc5, juna 170); testikomento ohittaa.
+            OpasMetrolinja.HistoriaOtsikko = testiHistoria ? testiHistoriaOtsikko : OpasSovitin.HistoriaOtsikko;
             float h = Juuri.layout.height, w = Juuri.layout.width;
             if (float.IsNaN(h) || h <= 0) return;
             // Omistaja 12.3x: iPhonella (pysty ja vaaka) vasempaan yläkulmaan, vuorokausinappi oikean ryhmän riviin; iPadilla
@@ -1173,6 +1175,8 @@ namespace Matkakirja.Natiivi
             OpasSovitin.PalaaKierrokselle();
         }
         bool? testiJatka;
+        bool testiHistoria;
+        string testiHistoriaOtsikko;
         VisualElement mikaRivi, tahtain;
         Button mikaNappi;
         Label mikaTeksti;
@@ -1767,6 +1771,8 @@ namespace Matkakirja.Natiivi
                     var lahteet = KuvaLahteet();
                     if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    // Historiaosioiden tekstilähteet osion nimellä (LS1 c50c4dcc5: OpasSovitin.HistoriaLahteet; kuvat ovat KuvaLahteissa).
+                    foreach (var l in HistoriaLahteet()) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Aanet:
                     Takaisin("Äänet", Nakyma.Lahteet);
@@ -2339,6 +2345,25 @@ namespace Matkakirja.Natiivi
             return tulos;
         }
 
+        /// <summary>Nykyisen kaupungin historiaosioiden lähteet "otsikko · url" (LS1: OpasSovitin.HistoriaLahteet); kukin kerran.</summary>
+        static List<string> HistoriaLahteet()
+        {
+            var tulos = new List<string>();
+            var lista = OpasSovitin.HistoriaLahteet;
+            if (lista == null) return tulos;
+            foreach (var (otsikko, urlit) in lista)
+            {
+                if (urlit == null) continue;
+                foreach (var u in urlit)
+                {
+                    if (string.IsNullOrWhiteSpace(u)) continue;
+                    string rivi = string.IsNullOrWhiteSpace(otsikko) ? u.Trim() : otsikko.Trim() + " · " + u.Trim();
+                    if (!tulos.Contains(rivi)) tulos.Add(rivi);
+                }
+            }
+            return tulos;
+        }
+
         /// <summary>LS1:n ElavaKaupunki.Krediitti suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen); null = ei riviä.</summary>
         static string ElavaKrediitti() => ElavaKaupunki.Krediitti;
 
@@ -2498,8 +2523,8 @@ namespace Matkakirja.Natiivi
                 case "peitto": return Peitto();
                 case "tapit": return "opas: " + tapit.Kuvaus();
                 case "historia":
-                    // ui opasvalikko historia [otsikko…|pois]: historiaosion otsikko metrolinjaan (testi; LS1:n kytkennän tilalla).
-                    if (o.Length > 1) OpasMetrolinja.HistoriaOtsikko = o[1] == "pois" ? null : string.Join(" ", o, 1, o.Length - 1);
+                    // ui opasvalikko historia [otsikko…|pois]: historiaosion otsikko metrolinjaan (testi ohittaa LS1:n HistoriaOtsikon; pois = LS1).
+                    if (o.Length > 1) { testiHistoria = o[1] != "pois"; testiHistoriaOtsikko = testiHistoria ? string.Join(" ", o, 1, o.Length - 1) : null; }
                     return "opas: " + metro.HistoriaKuvaus();
                 case "vipu":
                     // ui opasvalikko vipu [asento −2…1]: vapaan lennon nopeusvipu (OpasTapit, juna 170).
