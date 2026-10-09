@@ -97,7 +97,9 @@ namespace Matkakirja.Natiivi
             // Kohde indexistä: lähin, jonka säteellä kaupunki on.
             // index-v2.json (Tukholma + Pariisi; Karttaseppä 8.10.: uudet kohteet uuteen versioon, vanha ei ylikirjoitu), varana index.json.
             string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false;
-            foreach (var nimi in new[] { "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
+            // v4 (Karttaseppä 9.10., LS1 + PT: Tuileries'n altaan päällä leijuva kiekko): pienet erilliset altaat ja suihkulähteet poistettu
+            // aineistosta, kanava-altaat (Saint-Martin, Ourcq) suojattu OSM:n vesiväylillä; muoto sama kuin v3.
+            foreach (var nimi in new[] { "index-v4.json", "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
             {
                 using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
                 r0.timeout = 15; yield return r0.SendWebRequest();
