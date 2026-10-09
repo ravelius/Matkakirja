@@ -3297,5 +3297,287 @@
    "Mitkä muut kuntamuodot Suomessa on ollut?",
    "Milloin Varkaus sai kaupunginoikeudet?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kysymys": "Miksi kaupunki perustettiin juuri Kemijoen suulle?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Kemi perustettiin [[Kemijoen]] suulle Perämeren rannalle, koska paikka valittiin syvänmerisataman läheisyyden vuoksi. Kaupungin perusti keisari [[Aleksanteri II:n]] asetus vuonna 1869, ja ensimmäinen asemakaava oli tehty jo kymmenen vuotta aiemmin. Saha- ja paperiteollisuuden kehitys on sittemmin vaikuttanut kaupungin rakennusperintöön yhdessä meren läheisyyden kanssa. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Kemijoen",
+   "Aleksanteri II:n"
+  ],
+  "jatkot": [
+   "Mikä tekee syvästä satamasta hyvän laivoille?",
+   "Miksi asemakaava laaditaan ennen kaupungin perustamista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kysymys": "Miksi Kemin satama saattoi talvella olla jäiden saartama?",
+  "uusi": false,
+  "vastaus": "Ai se. Syynä oli talvinen merijää: [[Perämerellä]] meri jäätyy talvisin, ja ennen jäänmurtaja [[Urhon]] käyttöönottoa vuonna 1975 Kemin satama saattoi olla jäiden saartama joulukuun alusta huhtikuuhun. Jäänmurtaja pitää väylän auki, jotta laivat pääsevät satamaan ja sieltä pois.\n\nYlhäältä katsoen jäätynyt meri on kaunis, mutta rehellisesti sanottuna minä en talvella Perämerelle lennä. Siipiä paleltaa.",
+  "linkit": [
+   "Perämerellä",
+   "Urhon"
+  ],
+  "jatkot": [
+   "Milloin Perämeri yleensä jäätyy?",
+   "Kuinka paksua jää voi Perämerellä olla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kysymys": "Miksi lumilinna rakennetaan joka vuosi uudelleen?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Lumilinna tehdään lumesta ja jäästä, jotka sulavat viimeistään kevään tullen, eikä sama rakennelma siksi säily kesän yli. [[Kemissä]] uusi linna rakennetaan joka talvi [[sataman]] läheisyyteen, ja se tunnetaan lähteiden mukaan maailman suurimpana lumilinnana. Pulla katoaa yhtä nopeasti kuin lumilinna keväällä, mutta sitä ei sentään rakenneta uudelleen.",
+  "linkit": [
+   "Kemissä",
+   "sataman"
+  ],
+  "jatkot": [
+   "Miten lumi muuttuu jääksi?",
+   "Mistä lunta ja jäätä linnaan saadaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kysymys": "Mitä tarkoittaa asemakaava?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Asemakaava on suunnitelma, jossa määrätään, miten kaupungin aluetta käytetään: missä kulkevat kadut ja minne rakennetaan asuinrakennuksia, teollisuutta tai puistoja. [[Kemin]] ensimmäinen asemakaava oli tehty jo kymmenen vuotta ennen kaupungin perustamista, joten [[katuverkon]] ja tonttien jako oli suunniteltu etukäteen. Kaavoitus ohjaa kaupungin kasvua pitkälle tulevaisuuteen. Minä suunnittelen reittini aina ilmasta käsin.",
+  "linkit": [
+   "Kemin",
+   "katuverkon"
+  ],
+  "jatkot": [
+   "Mikä on ruutukaava?",
+   "Kuka päättää nykyään kaupungin kaavoituksesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kysymys": "Miten jäänmurtaja murtaa jäätä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Jäänmurtaja on laiva, jonka runko on vahvistettu ja jonka keula on muotoiltu niin, että alus nousee jään päälle ja murtaa sen oman painonsa voimalla. Murtunut jää työnnetään syrjään, ja laivan perään jää avoin väylä, jota muut alukset voivat seurata. Suomessa tällaista työtä on tehnyt muun muassa [[Urho]], ja tavallisesti sellaiset alukset pitävät talvella esimerkiksi [[Perämeren]] satamat ja reitit auki. Minä tyydyn lentämään jään yli.",
+  "linkit": [
+   "Urho",
+   "Perämeren"
+  ],
+  "jatkot": [
+   "Miksi jäänmurtajan runko on vahvistettu?",
+   "Miten laivat kulkevat jäässä jäänmurtajan perässä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kysymys": "Mistä kaupungin nimi Nokia voi olla peräisin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Nimen alkuperä on epäselvä, mutta yleisimmän teorian mukaan se juontuu vanhasta sanasta, joka tarkoitti [[soopelia]]. Nimi mainitaan kirjallisesti ensimmäisen kerran vuonna 1505, ja kaupunki sijaitsee [[Nokianvirran]] rannalla [[Pirkanmaalla]], noin 15 kilometrin päässä Tampereelta länteen. Soopelilta en ole itse kysynyt, joten pidän tämän teoriana.",
+  "linkit": [
+   "soopelia",
+   "Nokianvirran",
+   "Pirkanmaalla"
+  ],
+  "jatkot": [
+   "Miten paikannimien alkuperää tutkitaan?",
+   "Mitä muita paikannimiä Suomessa on eläimistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kysymys": "Miksi puuhiomo rakennettiin juuri Nokianvirran rannalle?",
+  "uusi": false,
+  "vastaus": "Kato, tähän on järkevä selitys. Puuhiomo tarvitsee toimiakseen vettä ja vesivoimaa, joten virran ranta oli luonteva paikka tällaiselle tehtaalle; tarkkaa perustelua tässä tapauksessa en ole varma. Kaivosinsinööri [[Fredrik Idestam]] perusti Nokianvirran rannalle toisen puuhiomonsa vuonna 1868, ja hänen yrityksensä nimettiin [[Nokia Aktiebolagiksi]] vuonna 1871.\n\nKyyhkynä pidän virran rannoista, koska siellä on aina jotain syötävää.",
+  "linkit": [
+   "Fredrik Idestam",
+   "Nokia Aktiebolagiksi"
+  ],
+  "jatkot": [
+   "Miten vesivoimalla tuotetaan sähköä?",
+   "Mistä tavallinen paperi valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kysymys": "Mikä nuijasota oli?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Nuijasota oli vuosina 1596–1597 käyty talonpoikaiskapina, joka käytiin Suomessa, jonka kuului silloin [[Ruotsin]] kuningaskuntaan. Lähteiden mukaan kapinan taustalla olivat talonpoikien raskaat rasitukset, kuten sotaväen ylläpito. [[Nokian kartanon]] ympärillä käytiin yksi sodan suurimmista taisteluista. Siitä on yli neljäsataa vuotta, ja lait ja oikeudenkäyttö ovat muuttuneet täysin. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Ruotsin",
+   "Nokian kartanon"
+  ],
+  "jatkot": [
+   "Millaista elämä oli Suomessa 1500-luvulla?",
+   "Miten talonpojat olivat asemassa Ruotsin vallan aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kysymys": "Mihin puuhioketta käytetään?",
+  "uusi": true,
+  "vastaus": "No niin. Puuhioke on paperin raaka-ainetta, jota valmistetaan hiomalla puuta vedellä kostutettua kivipintaa vasten. Sitä käytetään muun muassa [[sanomalehtipaperin]] valmistuksessa. Puuhiomot rakennettiin usein virtaavan veden äärelle, koska hionta tarvitsi vettä ja voimaa, ja [[Nokian]] historian alku on juuri tällaisessa tehtaassa. Kyllä minä ihmisiä ihmettelen, kun ne hioo puuta kivellä.",
+  "linkit": [
+   "sanomalehtipaperin",
+   "Nokian"
+  ],
+  "jatkot": [
+   "Miten sanomalehtipaperi eroaa kirjapaperista?",
+   "Mistä puusta paperimassaa tehdään Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kysymys": "Millainen eläin soopeli on?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Soopeli on pieni petoeläin, joka kuuluu [[näätäeläimiin]] ja elää pääasiassa Siperian havumetsissä. Sen turkkia on arvostettu, ja siksi eläintä on metsästetty paljon. [[Nokian]] kaupungin nimen yleisimmän selityksen mukaan nimi voi juontua soopelia tarkoittaneesta vanhasta sanasta. Kyllä kai soopeli sopii kaupungin nimeksi paremmin kuin pulu.",
+  "linkit": [
+   "näätäeläimiin",
+   "Nokian"
+  ],
+  "jatkot": [
+   "Missä muualla Euroopassa elää näätäeläimiä?",
+   "Miksi turkiseläimiä on metsästetty historiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kysymys": "Miksi kirkkoa ei rakennettu uudelleen palon jälkeen?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Elokuun 3. päivänä 1852 syttynyt [[Vaasan suurpalo]] tuhosi lähes koko puisen kaupungin ja kirkon sisustuksen, mutta paksut kivimuurit jäivät pystyyn. Kaupunki rakennettiin palon jälkeen uudelleen noin seitsemän kilometrin päähän nykyiselle paikalleen, joten vanhaa kirkkoa ei enää tarvittu uuden keskustan kirkkona eikä sitä koskaan kunnostettu käyttöön. Muurit jätettiin muistomerkiksi [[Mustasaareen]], ja [[Museoviraston]] toimesta niitä on entisöity viimeksi vuosina 2007–2016. Hyvä, että muurit sentään seisovat.",
+  "linkit": [
+   "Vaasan suurpalo",
+   "Mustasaareen",
+   "Museoviraston"
+  ],
+  "jatkot": [
+   "Miten kivikirkot kestivät paloja puukaupunkeja paremmin?",
+   "Mitä rauniokirkoissa voi nähdä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kysymys": "Kuinka kaukana uusi Vaasa rakennettiin vanhan kaupungin paikalta?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Uusi Vaasa rakennettiin noin seitsemän kilometrin päähän vanhan kaupungin paikalta, nykyiselle paikalleen. Vanha keskusta jäi nykyiseen [[Mustasaareen]], jossa kirkon [[rauniomuurit]] ovat yhä muistomerkkinä.\n\nSiivin se on lyhyt pyrähdys, ja minä olen hyvä pyrähtämään.",
+  "linkit": [
+   "Mustasaareen",
+   "rauniomuurit"
+  ],
+  "jatkot": [
+   "Miksi Vaasa on saanut nimensä?",
+   "Mitä Mustasaaren kunta on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kysymys": "Millainen on ristikirkko?",
+  "uusi": true,
+  "vastaus": "Katotaas. Ristikirkko on kirkko, jonka pohjakaava on ristin muotoinen, eli rakennuksessa on pitkän pääosan lisäksi sitä vastaan kulkevat sivuosat, jotka antavat lisää tilaa seurakunnalle. [[Vanhan Vaasan]] Pyhän Marian kirkko muutettiin ristikirkoksi vuosina 1749–1753 koko maakunnan tarpeisiin, ja se oli rakennettu harmaasta kivestä jo 1500-luvun alkupuolella [[Mustasaaren]] kylän keskukseen. Ristin muotoon minä kyllä pystyn, kunhan levitän siivet.",
+  "linkit": [
+   "Vanhan Vaasan",
+   "Mustasaaren"
+  ],
+  "jatkot": [
+   "Mitä kirkon eri osat tarkoittavat?",
+   "Miksi vanhoja kirkkoja entisöidään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kysymys": "Mitä Museovirasto tekee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Museovirasto on Suomen valtion asiantuntijavirasto, joka vastaa kulttuuriperinnön suojelusta ja tutkimuksesta ja hoitaa muun muassa rakennusperintöä ja [[muinaisjäännöksiä]]. [[Vanhan Vaasan]] kirkon rauniomuureja se on entisöinyt viimeksi vuosina 2007–2016. Minun työni on kuljettaa viestejä, ei entisöidä, mutta arvostan kyllä.",
+  "linkit": [
+   "muinaisjäännöksiä",
+   "Vanhan Vaasan"
+  ],
+  "jatkot": [
+   "Mikä on muinaisjäännös?",
+   "Miten rakennus suojellaan Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kysymys": "Miksi puukaupungit paloivat niin usein?",
+  "uusi": true,
+  "vastaus": "Ai tota. Puukaupungeissa talot olivat puuta ja usein tiiviisti vierekkäin, joten tuli pääsi leviämään rakennuksesta toiseen nopeasti. Syttymislähteitä olivat muun muassa [[tulisijat]] ja avotuli, ja sammutusvälineet olivat aikoinaan vaatimattomat. Esimerkiksi [[Vaasan]] suurpalo 3. elokuuta 1852 tuhosi lähes koko puisen kaupungin. Puukaupungit ovat kyl kauniita, kun ne seisovat.",
+  "linkit": [
+   "tulisijat",
+   "Vaasan"
+  ],
+  "jatkot": [
+   "Miten palokunnat ovat kehittyneet?",
+   "Mitä paloturvallisuus tarkoittaa rakentamisessa?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kysymys": "Miksi terva suojaa puuta vedeltä?",
+  "uusi": false,
+  "vastaus": "Joo, tässä on tervan juju. Terva valmistetaan pihkaisesta männystä polttamalla sitä hapettomassa ja riittävän kuumassa [[tervahaudassa]]. Lopputulos hylkii vettä, joten sillä suojattiin laivojen puuosia ja [[köysistöä]], jotta ne pysyivät kuivina. Veden hylkiminen estää kosteutta tunkeutumasta puuhun, mikä hidastaa lahoamista. Minun höyhenet pysyvät kuivina ilman tervaa.",
+  "linkit": [
+   "tervahaudassa",
+   "köysistöä"
+  ],
+  "jatkot": [
+   "Miten terva poltetaan tervahaudassa?",
+   "Mitä eroa on tervalla ja pihkalla?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kysymys": "Miksi tervatynnyrit piti kuljettaa jokea pitkin?",
+  "uusi": false,
+  "vastaus": "No jopas. Painavia tervatynnyreitä ei yksinkertaisesti saanut liikkumaan maateitse, joten ne laskettiin jokea alas [[tervaveneillä]]. Siksi polttopaikat olivat aina vesistön varrella: vesireitti kantoi kuorman. Vuoden 1617 järjestelmässä monet kaupungit joutuivat viemään tervansa [[Tukholmaan]].\n\nMinä olisin lentänyt suoraan perille, mutta tynnyri ei kulkisi kainalossa.",
+  "linkit": [
+   "tervaveneillä",
+   "Tukholmaan"
+  ],
+  "jatkot": [
+   "Miten joet toimivat kulkuväylinä ennen teitä?",
+   "Miksi Tukholmalla oli tervakaupan yksinoikeus?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kysymys": "Mitä Suomessa tehdään tervalla nykyään?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Suomessa tervaa käytetään nykyäänkin puun suojaamiseen, esimerkiksi perinteisten [[puuveneiden]] ja vanhojen puurakennusten käsittelyyn. Lisäksi sitä on muun muassa [[tervasaippuassa]], ja tervan maku tunnetaan myös eräissä makeisissa. Terva ei ole mennyt hukkaan, vaikka laivat vaihtuivat.",
+  "linkit": [
+   "puuveneiden",
+   "tervasaippuassa"
+  ],
+  "jatkot": [
+   "Miten puuvene tervataan?",
+   "Mistä tervan maku tulee?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kysymys": "Mitä tarkoittaa tapulikaupunki?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tapulikaupunki oli kaupunki, jolla oli oikeus käydä ulkomaankauppaa suoraan. Vuoden 1617 järjestelmässä ulkomaankauppa sallittiin vain tapulikaupungeille, ja muiden oli vietävä tervansa [[Tukholmaan]], jonka porvareilla oli tervakaupan yksinoikeus. Pohjalaisia järjestelmä suututti, ja monopoli kumottiin vasta vuonna 1765, johon vaikutti myös [[Anders Chydeniuksen]] kannatus vapaakaupalle. Minä olen aina kulkenut ilman yksinoikeutta, kunhan kirje menee perille.",
+  "linkit": [
+   "Tukholmaan",
+   "Anders Chydeniuksen"
+  ],
+  "jatkot": [
+   "Mitä vapaakauppa tarkoittaa?",
+   "Miksi Pohjanmaan kaupungit halusivat vapaakauppaa?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kysymys": "Kuka oli Anders Chydenius?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Anders Chydenius oli kokkolalainen valtiopäivämies ja pappi, joka kannatti [[vapaakauppaa]]. Hänen vaikutuksestaan tervakaupan Tukholman-monopoli kumottiin vuonna 1765, minkä jälkeen tervaraha jäi kotiin [[Pohjanmaan]] kaupunkeihin. Kyllä minä arvostan miestä, joka vapautti kaupan, kun kirjeetkin kulkivat vapaammin.",
+  "linkit": [
+   "vapaakauppaa",
+   "Pohjanmaan"
+  ],
+  "jatkot": [
+   "Mikä oli valtiopäivien tehtävä Ruotsin valtakunnassa?",
+   "Mitä vapaakauppa Pohjanmaalla muutti?"
+  ]
  }
 ]
