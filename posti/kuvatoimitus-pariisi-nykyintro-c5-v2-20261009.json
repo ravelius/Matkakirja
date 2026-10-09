@@ -1,0 +1,730 @@
+{
+  "task": "pariisi-nykyintro-c5-v2-20261009",
+  "taskNumber": 58,
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-v2-20261009.md",
+      "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+      "blob": "135701b7066d28dc87b2ca23f959eaedcd703085"
+    }
+  ],
+  "sourceReadInFull": true,
+  "all3AttachmentsVerifiedAndViewed": true,
+  "imageCount": 1,
+  "deliveryFileCount": 2,
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "selectedAttempt": 1,
+  "selectionScore": 3.0952631553782535,
+  "attempts": [
+    {
+      "taskNumber": 58,
+      "attempt": 1,
+      "id": "pariisi-c5-v2",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/01/candidate.jpg",
+      "sha256": "ab9967ad59c1cbf29b5550f4ff497541d2edea4815a6238b4efeb6a5be9a8b85",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2da69037-7ffc-48cd-980d-cad0f6fd235d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/01/original-generation.png",
+      "originalSHA256": "1a888d8c176acd6f05e9e0a80212824da6c9da03b97cfdd9ada9cc3cc8ab8315",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationTool": "builtin-imagegen",
+      "generationPrompt": "Use case: historical-scene. Generate one wholly NEW photograph-like1870s Paris aerial albumen scene, LANDSCAPE4:3 intended2048x1536. Two input images are the SAME mandatory geographical camera frame: image1 is the clean water/land silhouette with a small red cathedral locator; image2 adds a measuring grid and P1-P6. Neither is a photograph; no Google3D/photo/tile data. Translate ONLY their land/water shapes into realistic nineteenth-century city ground textures and architecture. LOCK every water/land contour, orientation, perspective and full canvas extent of input1. NO zoom, crop, mirror, rotate, reframing, camera change or conventional NotreDame aerial-postcard layout. The city is seen from high/far away (1100m distance,50degrees from vertical,bearing-131degrees,verticalFOV50degrees). Upper half is continuous dense north-bank city ground, not sky. No horizon/sky inserted. The cathedral is a SMALL incidental landmark, not a large hero building: entire cathedral footprint about6-7percent image WIDTH at most, roughly130-145pixels in2048width. This field is2.5times wider than an ordinary close aerial cathedral postcard.\n\nAbsolute spatial structure in final2048x1536: P1 Cite-island WEST confluence tip(553,1029)=(.27,.67). P2 cathedral FOOTPRINT center(1024,983)=(.50,.64), not spire tip: small NotreDame entirely centered there. P3 THIN north river branch centerline atx1024,y860=(.50,.56). P4 same thin north branch centerline x1638,y722=(.80,.47). P5 left-bank/main-river corner atx819,y1321=(.40,.86). P6 BROAD main Seine centerline x1843,y1106=(.90,.72). The six coordinates are placement constraints only, never visible text/dots. North branch is a very NARROW winding ribbon, only about2.3-4percent image HEIGHT thick around the middle/right, versus the much broader southern MAIN RIVER about12-16percent image HEIGHT. Do not make the two branches equal in width. North ribbon runs from left(.0,.79) diagonally upward toward right(1,.46). Broad main river runs from lower-left(.0,.80) toward right(1,.66), with its left-bank bend at(.40,.86). The island is the exact long LENS-shaped land wedge between them: blunt west confluence tip at(.27,.67), broadens toward middle, CONTINUES OUT OF FRAME beyond right edge; do not show a closed eastern island tip anywhere in frame. Mainland city fills the upper image and south-bank city occupies bottom edge. Shapes/widths follow the reference pixels, not a memorized Paris picture.\n\nStyle: a convincing real old-camera high aerial albumen print, monochromatic warm sepia, faint yellow-paper tint, subtle fine film grain and very slight vignette, optical softness in distant roofs, natural daylight, no HDR/painting/engraving/CGI/model look. Build1870s roofs/streets strictly on LAND and river texture/boats on WATER, no cartographic color blocks. Small correct Gothic NotreDame at P2 has two west towers, long nave, tiny1859Viollet-le-Duc crossing spire. Old Hotel-Dieu remains beside its parvis/south-bank side (before1878 demolition), modest stone bridges at plausible reference crossings, narrow streets, many roofs, restrained chimney smoke and a few very small period steam boats/barges/moored craft. No bridge or church dominates the foreground. NO cars, modern buildings, EiffelTower, completedSacreCoeur, neon, recognizable faces, text, signs, numbers, lettering, logos, watermark, grid, marker dots, P labels, paper edge or frame. The reference red dot becomes the little cathedral site, not a red object. Entire canvas is the reference geography from the original high camera; it must not be zoomed in for architectural detail.\n",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-v2-20261009.md",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "135701b7066d28dc87b2ca23f959eaedcd703085"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/c5v2/c5-sommittelu-osm.png",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "9cc2ec51a3f782197a1adc48778df14f6b43a9c5",
+          "sha256": "1ae68ab313da32de9c38eb9a64e68a6a44deff7dc42480ff93216619c8a2242a",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-osm.png",
+          "dimensions": [
+            2752,
+            2064
+          ]
+        },
+        {
+          "path": "posti/liitteet/c5v2/c5-sommittelu-ruudukko.png",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "00f2ffec07f74942473daae359403e0663599404",
+          "sha256": "0c4eabbfae6775f34c9bc466c93e8f76ea50060dff1f042ce52ed130c284056e",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-ruudukko.png",
+          "dimensions": [
+            2752,
+            2064
+          ]
+        },
+        {
+          "path": "posti/liitteet/c5v2/c5-v1-EI-NAIN.jpg",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "26e933582d85a8bd44eee708117b37009275700b",
+          "sha256": "1f3de7ff97de93c53a540072350d3d6b67bb07087211ad295e9a07f0090229b6",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-v1-EI-NAIN.jpg",
+          "dimensions": [
+            2048,
+            1536
+          ]
+        }
+      ],
+      "actualReferencedImagePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-osm.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-ruudukko.png"
+      ],
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Pariisin Cité-saari ja Seine 1870-luvun laajana ilmakuvana. Havainnekuva.",
+      "technicalProcessing": {
+        "method": "Whole-canvas Lanczos resize; no crop, warp, alignment shift or reference compositing into main image",
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "nativeSize": [
+          1448,
+          1086
+        ],
+        "jpegQuality": 90
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generatedAt": "2026-10-09T13:26:40.136589+00:00",
+      "measurement": {
+        "taskNumber": 58,
+        "attempt": 1,
+        "points": {
+          "P1": {
+            "expectedNormalized": [
+              0.27,
+              0.67
+            ],
+            "estimatedObservedNormalized": [
+              0.337,
+              0.707
+            ],
+            "deltaPixels": [
+              137.216,
+              56.83199999999988
+            ],
+            "errorPercentImageWidth": 7.251939395775449,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P2": {
+            "expectedNormalized": [
+              0.5,
+              0.64
+            ],
+            "estimatedObservedNormalized": [
+              0.529,
+              0.641
+            ],
+            "deltaPixels": [
+              59.39200000000005,
+              1.5360000000000014
+            ],
+            "errorPercentImageWidth": 2.9009696654739456,
+            "allowedPercentWidth": 2,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P3": {
+            "expectedNormalized": [
+              0.5,
+              0.56
+            ],
+            "estimatedObservedNormalized": [
+              0.5,
+              0.558
+            ],
+            "deltaPixels": [
+              0.0,
+              -3.0720000000000027
+            ],
+            "errorPercentImageWidth": 0.15000000000000013,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": true,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P4": {
+            "expectedNormalized": [
+              0.8,
+              0.47
+            ],
+            "estimatedObservedNormalized": [
+              0.8,
+              0.487
+            ],
+            "deltaPixels": [
+              0.0,
+              26.112000000000023
+            ],
+            "errorPercentImageWidth": 1.2750000000000012,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": true,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P5": {
+            "expectedNormalized": [
+              0.4,
+              0.86
+            ],
+            "estimatedObservedNormalized": [
+              0.441,
+              0.852
+            ],
+            "deltaPixels": [
+              83.96799999999996,
+              -12.288000000000011
+            ],
+            "errorPercentImageWidth": 4.14366987102013,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P6": {
+            "expectedNormalized": [
+              0.9,
+              0.72
+            ],
+            "estimatedObservedNormalized": [
+              0.9,
+              0.682
+            ],
+            "deltaPixels": [
+              0.0,
+              -58.36799999999988
+            ],
+            "errorPercentImageWidth": 2.8499999999999943,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width.",
+            "matchAmbiguous": true,
+            "ambiguity": "Reference P6 falls on an invented foreground promenade/islet; chosen point is nearest river-channel center, not confirmed same main channel."
+          }
+        },
+        "pointTolerancePass": false,
+        "riverEdgeTolerancePass": false,
+        "extraForegroundIsletObserved": true,
+        "islandEasternTipClosedInsideFrame": true,
+        "cathedralStillTooLarge": true,
+        "fullGeographicCompositionPass": false,
+        "stylePhotographicPass": true,
+        "noReadableTextFacesModernLandmarksObserved": true,
+        "overlayPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/01/overlay-50-grid.jpg",
+        "rawReferenceNotUsedForPixelCompositingIntoMain": true,
+        "findings": [
+          "Laajempi ja pienempi Notre-Dame kuin v1:ssä, mutta länsikärjen noin7,25 % ja Notre-Damen noin2,90 % poikkeamat ylittävät3 % ja2 % rajat.",
+          "P3 ja P4 ovat lähellä tavoitekeskiviivoja, mutta koko jokirajaus ei täsmää: etualalle tuli ylimääräinen puisto-/rantakaistasaari. P6 sijoittuu sen kohdalle, joten lähimmän vesikanavan mittausta ei voi kuitata oikeaksi vastineeksi.",
+          "P5:n alarannan kulma jäi liian oikealle ja saaren itäpää sulkeutuu kuvan sisällä. Ei sellaisenaan saumattomaan ristihäivytykseen.",
+          "Seepiatyyli ja historiallisen kameran vaikutelma toimivat; nykyaikaisia ajoneuvoja/maamerkkejä, luettavaa kirjoitusta tai kasvoja ei havaittu. Vanhan Hôtel-Dieun tarkkaa rakennusidentiteettiä ei varmennettu."
+        ]
+      },
+      "selectionScoreMeanPointErrorPercentWidth": 3.0952631553782535
+    },
+    {
+      "taskNumber": 58,
+      "attempt": 2,
+      "id": "pariisi-c5-v2",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/02/candidate.jpg",
+      "sha256": "7cbe2baac1dbe4ba128f050bfa0960e297d8da8c0c406704eebda62fde9f7e65",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8d394f7d-6d77-4334-8208-c578890df0b5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/02/original-generation.png",
+      "originalSHA256": "b7ba8cf3955c14d31cfedf376aa19e4abbbbfa9db21d8b158eeabdca3e177299",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationTool": "builtin-imagegen",
+      "generationPrompt": "Use case: historical-scene. Generate one wholly NEW photograph-like1870s Paris aerial albumen scene, LANDSCAPE4:3 intended2048x1536. Two input images are the SAME mandatory geographical camera frame: image1 is the clean water/land silhouette with a small red cathedral locator; image2 adds a measuring grid and P1-P6. Neither is a photograph; no Google3D/photo/tile data. Translate ONLY their land/water shapes into realistic nineteenth-century city ground textures and architecture. LOCK every water/land contour, orientation, perspective and full canvas extent of input1. NO zoom, crop, mirror, rotate, reframing, camera change or conventional NotreDame aerial-postcard layout. The city is seen from high/far away (1100m distance,50degrees from vertical,bearing-131degrees,verticalFOV50degrees). Upper half is continuous dense north-bank city ground, not sky. No horizon/sky inserted. The cathedral is a SMALL incidental landmark, not a large hero building: entire cathedral footprint about6-7percent image WIDTH at most, roughly130-145pixels in2048width. This field is2.5times wider than an ordinary close aerial cathedral postcard.\n\nAbsolute spatial structure in final2048x1536: P1 Cite-island WEST confluence tip(553,1029)=(.27,.67). P2 cathedral FOOTPRINT center(1024,983)=(.50,.64), not spire tip: small NotreDame entirely centered there. P3 THIN north river branch centerline atx1024,y860=(.50,.56). P4 same thin north branch centerline x1638,y722=(.80,.47). P5 left-bank/main-river corner atx819,y1321=(.40,.86). P6 BROAD main Seine centerline x1843,y1106=(.90,.72). The six coordinates are placement constraints only, never visible text/dots. North branch is a very NARROW winding ribbon, only about2.3-4percent image HEIGHT thick around the middle/right, versus the much broader southern MAIN RIVER about12-16percent image HEIGHT. Do not make the two branches equal in width. North ribbon runs from left(.0,.79) diagonally upward toward right(1,.46). Broad main river runs from lower-left(.0,.80) toward right(1,.66), with its left-bank bend at(.40,.86). The island is the exact long LENS-shaped land wedge between them: blunt west confluence tip at(.27,.67), broadens toward middle, CONTINUES OUT OF FRAME beyond right edge; do not show a closed eastern island tip anywhere in frame. Mainland city fills the upper image and south-bank city occupies bottom edge. Shapes/widths follow the reference pixels, not a memorized Paris picture.\n\nStyle: a convincing real old-camera high aerial albumen print, monochromatic warm sepia, faint yellow-paper tint, subtle fine film grain and very slight vignette, optical softness in distant roofs, natural daylight, no HDR/painting/engraving/CGI/model look. Build1870s roofs/streets strictly on LAND and river texture/boats on WATER, no cartographic color blocks. Small correct Gothic NotreDame at P2 has two west towers, long nave, tiny1859Viollet-le-Duc crossing spire. Old Hotel-Dieu remains beside its parvis/south-bank side (before1878 demolition), modest stone bridges at plausible reference crossings, narrow streets, many roofs, restrained chimney smoke and a few very small period steam boats/barges/moored craft. No bridge or church dominates the foreground. NO cars, modern buildings, EiffelTower, completedSacreCoeur, neon, recognizable faces, text, signs, numbers, lettering, logos, watermark, grid, marker dots, P labels, paper edge or frame. The reference red dot becomes the little cathedral site, not a red object. Entire canvas is the reference geography from the original high camera; it must not be zoomed in for architectural detail.\n\n\nSECOND AND FINAL AUTHORIZED ALIGNMENT ATTEMPT. Generate the WHOLE image freshly from scratch; no small local patch. Reference images1 and2 remain the ONLY spatial authority. Image3 is attempt1, supplied ONLY for sepia photographic texture/mood and as an example of WRONG GEOGRAPHY, not a layout to keep. Its shoreline/island locations must NOT be followed. Correct the measured failures: the actual Cite west tip was(.337,.707), but it MUST be(.270,.670): move that tip LEFT by6.7percent imagewidth and UP by3.7percent imageheight; do not place the west tip at a convenient bridge in a familiar postcard. Cathedral footprint center was(.529,.641); required(.500,.640): move the entire small cathedral LEFT by2.9percent imagewidth, keep targety.640, reduce its overall footprint to6-7percent imagewidth. Left-bank bend was(.441,.852); required(.400,.860): LEFT by4.1percent imagewidth, DOWN by0.8percent imageheight.\n\nCRITICAL topology: attempt1 invented a separate thin foreground park/prom enade island. REMOVE that invented island COMPLETELY in the new scene: every dark-blue location of reference1 must be WATER, never promenade/trees/buildings/land. AtP6(.900,.720), there MUST be the middle of the BROAD MAIN RIVER, not a tree-lined strip. No extra islet or extra river branch. Just mainland north, ONE long lens-shaped Cite land wedge between the thin north branch and broad main branch, then mainland south at bottom. Any promenades/trees belong on the true banks only. The Cite island CONTINUES BEYOND THE RIGHT FRAME EDGE; do not close it with an eastern tip atx.9-.98, do not show another island joining it. KEEP the thin north branch already nearP3(.500,.560) andP4(.800,.470), but exactly match both bank edges of the clean input, including its very narrow width. Match southern/main river andP5bend to the clean blue silhouette. All SIX grid anchors must match. Do not copy the reference dots/grid/labels into final pixels. Photoreal sepia city fills land only. No compositional freedom, no camera correction, no zoom, no foreground-hero bridge/cathedral. Camera remains the original high/far full-frame view.\n",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-v2-20261009.md",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "135701b7066d28dc87b2ca23f959eaedcd703085"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/c5v2/c5-sommittelu-osm.png",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "9cc2ec51a3f782197a1adc48778df14f6b43a9c5",
+          "sha256": "1ae68ab313da32de9c38eb9a64e68a6a44deff7dc42480ff93216619c8a2242a",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-osm.png",
+          "dimensions": [
+            2752,
+            2064
+          ]
+        },
+        {
+          "path": "posti/liitteet/c5v2/c5-sommittelu-ruudukko.png",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "00f2ffec07f74942473daae359403e0663599404",
+          "sha256": "0c4eabbfae6775f34c9bc466c93e8f76ea50060dff1f042ce52ed130c284056e",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-ruudukko.png",
+          "dimensions": [
+            2752,
+            2064
+          ]
+        },
+        {
+          "path": "posti/liitteet/c5v2/c5-v1-EI-NAIN.jpg",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "26e933582d85a8bd44eee708117b37009275700b",
+          "sha256": "1f3de7ff97de93c53a540072350d3d6b67bb07087211ad295e9a07f0090229b6",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-v1-EI-NAIN.jpg",
+          "dimensions": [
+            2048,
+            1536
+          ]
+        }
+      ],
+      "actualReferencedImagePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-osm.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-ruudukko.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/01/original-generation.png"
+      ],
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Pariisin Cité-saari ja Seine 1870-luvun laajana ilmakuvana. Havainnekuva.",
+      "technicalProcessing": {
+        "method": "Whole-canvas Lanczos resize; no crop, warp, alignment shift or reference compositing into main image",
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "nativeSize": [
+          1448,
+          1086
+        ],
+        "jpegQuality": 90
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generatedAt": "2026-10-09T13:40:02.417768+00:00",
+      "measurement": {
+        "taskNumber": 58,
+        "attempt": 2,
+        "points": {
+          "P1": {
+            "expectedNormalized": [
+              0.27,
+              0.67
+            ],
+            "estimatedObservedNormalized": [
+              0.304,
+              0.661
+            ],
+            "deltaPixels": [
+              69.63199999999995,
+              -13.824000000000012
+            ],
+            "errorPercentImageWidth": 3.4663561559655096,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual estimate from50/50 grid; typical uncertainty0.5-1percent width."
+          },
+          "P2": {
+            "expectedNormalized": [
+              0.5,
+              0.64
+            ],
+            "estimatedObservedNormalized": [
+              0.528,
+              0.6
+            ],
+            "deltaPixels": [
+              57.34400000000005,
+              -61.440000000000055
+            ],
+            "errorPercentImageWidth": 4.103656905736642,
+            "allowedPercentWidth": 2,
+            "withinPointThreshold": false,
+            "method": "Manual estimate from50/50 grid; typical uncertainty0.5-1percent width."
+          },
+          "P3": {
+            "expectedNormalized": [
+              0.5,
+              0.56
+            ],
+            "estimatedObservedNormalized": [
+              0.5,
+              0.522
+            ],
+            "deltaPixels": [
+              0.0,
+              -58.36800000000005
+            ],
+            "errorPercentImageWidth": 2.8500000000000023,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": true,
+            "method": "Manual estimate from50/50 grid; typical uncertainty0.5-1percent width."
+          },
+          "P4": {
+            "expectedNormalized": [
+              0.8,
+              0.47
+            ],
+            "estimatedObservedNormalized": [
+              0.8,
+              0.438
+            ],
+            "deltaPixels": [
+              0.0,
+              -49.15199999999996
+            ],
+            "errorPercentImageWidth": 2.399999999999998,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": true,
+            "method": "Manual estimate from50/50 grid; typical uncertainty0.5-1percent width."
+          },
+          "P5": {
+            "expectedNormalized": [
+              0.4,
+              0.86
+            ],
+            "estimatedObservedNormalized": [
+              0.458,
+              0.846
+            ],
+            "deltaPixels": [
+              118.78399999999999,
+              -21.50400000000002
+            ],
+            "errorPercentImageWidth": 5.89427688525064,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual estimate from50/50 grid; typical uncertainty0.5-1percent width."
+          },
+          "P6": {
+            "expectedNormalized": [
+              0.9,
+              0.72
+            ],
+            "estimatedObservedNormalized": [
+              0.9,
+              0.65
+            ],
+            "deltaPixels": [
+              0.0,
+              -107.51999999999992
+            ],
+            "errorPercentImageWidth": 5.2499999999999964,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual estimate from50/50 grid; typical uncertainty0.5-1percent width.",
+            "matchAmbiguous": true,
+            "ambiguity": "Reference point still lies on an invented foreground islet. Nearest upper/main river center used for estimate; correspondence is not certified."
+          }
+        },
+        "pointTolerancePass": false,
+        "riverEdgeTolerancePass": false,
+        "extraForegroundIsletObserved": true,
+        "islandEasternTipClosedInsideFrame": true,
+        "cathedralStillTooLarge": true,
+        "fullGeographicCompositionPass": false,
+        "stylePhotographicPass": true,
+        "noReadableTextFacesModernLandmarksObserved": true,
+        "findings": [
+          "Molemmissa yrityksissä syntyi ylimääräinen etualan puisto-/rantakaistasaari, jota referenssissä ei ole. P6:n vastine on tästä syystä epävarma.",
+          "Toinen yritys pienensi länsikärjen virhettä, mutta Notre-Dame sekä pohjoinen jokihaara siirtyivät liikaa ylöspäin. Vasen alarannan mutka jäi myös liian oikealle.",
+          "Saaren itäpää sulkeutuu kuvan sisällä, vaikka ohjeessa saari jatkuu oikean reunan yli. Notre-Dame on edelleen tavoitetta suurempi.",
+          "Valokuvamainen seepia, katedraalin kattoratsastaja, pienet höyrylaivat/proomut ja piippusavu näkyvät. Autoja, Eiffeliä, valmista Sacré-Cœuria, tekstiä tai tunnistettavia kasvoja ei havaittu. Vanhan Hôtel-Dieun rakennusidentiteettiä ei ole varmennettu."
+        ],
+        "overlayPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/02/overlay-50-grid.jpg"
+      },
+      "selectionScoreMeanPointErrorPercentWidth": 3.9940483244921317
+    }
+  ],
+  "assets": [
+    {
+      "taskNumber": 58,
+      "attempt": 1,
+      "id": "pariisi-c5-v2",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/production/pariisi-nykyintro-c5-v2.jpg",
+      "sha256": "ab9967ad59c1cbf29b5550f4ff497541d2edea4815a6238b4efeb6a5be9a8b85",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2da69037-7ffc-48cd-980d-cad0f6fd235d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/01/original-generation.png",
+      "originalSHA256": "1a888d8c176acd6f05e9e0a80212824da6c9da03b97cfdd9ada9cc3cc8ab8315",
+      "nativeGeneratedSize": [
+        1448,
+        1086
+      ],
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationTool": "builtin-imagegen",
+      "generationPrompt": "Use case: historical-scene. Generate one wholly NEW photograph-like1870s Paris aerial albumen scene, LANDSCAPE4:3 intended2048x1536. Two input images are the SAME mandatory geographical camera frame: image1 is the clean water/land silhouette with a small red cathedral locator; image2 adds a measuring grid and P1-P6. Neither is a photograph; no Google3D/photo/tile data. Translate ONLY their land/water shapes into realistic nineteenth-century city ground textures and architecture. LOCK every water/land contour, orientation, perspective and full canvas extent of input1. NO zoom, crop, mirror, rotate, reframing, camera change or conventional NotreDame aerial-postcard layout. The city is seen from high/far away (1100m distance,50degrees from vertical,bearing-131degrees,verticalFOV50degrees). Upper half is continuous dense north-bank city ground, not sky. No horizon/sky inserted. The cathedral is a SMALL incidental landmark, not a large hero building: entire cathedral footprint about6-7percent image WIDTH at most, roughly130-145pixels in2048width. This field is2.5times wider than an ordinary close aerial cathedral postcard.\n\nAbsolute spatial structure in final2048x1536: P1 Cite-island WEST confluence tip(553,1029)=(.27,.67). P2 cathedral FOOTPRINT center(1024,983)=(.50,.64), not spire tip: small NotreDame entirely centered there. P3 THIN north river branch centerline atx1024,y860=(.50,.56). P4 same thin north branch centerline x1638,y722=(.80,.47). P5 left-bank/main-river corner atx819,y1321=(.40,.86). P6 BROAD main Seine centerline x1843,y1106=(.90,.72). The six coordinates are placement constraints only, never visible text/dots. North branch is a very NARROW winding ribbon, only about2.3-4percent image HEIGHT thick around the middle/right, versus the much broader southern MAIN RIVER about12-16percent image HEIGHT. Do not make the two branches equal in width. North ribbon runs from left(.0,.79) diagonally upward toward right(1,.46). Broad main river runs from lower-left(.0,.80) toward right(1,.66), with its left-bank bend at(.40,.86). The island is the exact long LENS-shaped land wedge between them: blunt west confluence tip at(.27,.67), broadens toward middle, CONTINUES OUT OF FRAME beyond right edge; do not show a closed eastern island tip anywhere in frame. Mainland city fills the upper image and south-bank city occupies bottom edge. Shapes/widths follow the reference pixels, not a memorized Paris picture.\n\nStyle: a convincing real old-camera high aerial albumen print, monochromatic warm sepia, faint yellow-paper tint, subtle fine film grain and very slight vignette, optical softness in distant roofs, natural daylight, no HDR/painting/engraving/CGI/model look. Build1870s roofs/streets strictly on LAND and river texture/boats on WATER, no cartographic color blocks. Small correct Gothic NotreDame at P2 has two west towers, long nave, tiny1859Viollet-le-Duc crossing spire. Old Hotel-Dieu remains beside its parvis/south-bank side (before1878 demolition), modest stone bridges at plausible reference crossings, narrow streets, many roofs, restrained chimney smoke and a few very small period steam boats/barges/moored craft. No bridge or church dominates the foreground. NO cars, modern buildings, EiffelTower, completedSacreCoeur, neon, recognizable faces, text, signs, numbers, lettering, logos, watermark, grid, marker dots, P labels, paper edge or frame. The reference red dot becomes the little cathedral site, not a red object. Entire canvas is the reference geography from the original high camera; it must not be zoomed in for architectural detail.\n",
+      "sourceVersions": [
+        {
+          "path": "posti/sisaltokirjuri-codex-pariisi-nykyintro-c5-v2-20261009.md",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "135701b7066d28dc87b2ca23f959eaedcd703085"
+        }
+      ],
+      "referencesVerified": [
+        {
+          "path": "posti/liitteet/c5v2/c5-sommittelu-osm.png",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "9cc2ec51a3f782197a1adc48778df14f6b43a9c5",
+          "sha256": "1ae68ab313da32de9c38eb9a64e68a6a44deff7dc42480ff93216619c8a2242a",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-osm.png",
+          "dimensions": [
+            2752,
+            2064
+          ]
+        },
+        {
+          "path": "posti/liitteet/c5v2/c5-sommittelu-ruudukko.png",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "00f2ffec07f74942473daae359403e0663599404",
+          "sha256": "0c4eabbfae6775f34c9bc466c93e8f76ea50060dff1f042ce52ed130c284056e",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-ruudukko.png",
+          "dimensions": [
+            2752,
+            2064
+          ]
+        },
+        {
+          "path": "posti/liitteet/c5v2/c5-v1-EI-NAIN.jpg",
+          "commit": "a267df6223d392c5cbc2491cb8c1b43b1f62a42e",
+          "blob": "26e933582d85a8bd44eee708117b37009275700b",
+          "sha256": "1f3de7ff97de93c53a540072350d3d6b67bb07087211ad295e9a07f0090229b6",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-v1-EI-NAIN.jpg",
+          "dimensions": [
+            2048,
+            1536
+          ]
+        }
+      ],
+      "actualReferencedImagePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-osm.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/references/c5-sommittelu-ruudukko.png"
+      ],
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Pariisin Cité-saari ja Seine 1870-luvun laajana ilmakuvana. Havainnekuva.",
+      "technicalProcessing": {
+        "method": "Whole-canvas Lanczos resize; no crop, warp, alignment shift or reference compositing into main image",
+        "resizeTo": [
+          2048,
+          1536
+        ],
+        "nativeSize": [
+          1448,
+          1086
+        ],
+        "jpegQuality": 90
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generatedAt": "2026-10-09T13:26:40.136589+00:00",
+      "measurement": {
+        "taskNumber": 58,
+        "attempt": 1,
+        "points": {
+          "P1": {
+            "expectedNormalized": [
+              0.27,
+              0.67
+            ],
+            "estimatedObservedNormalized": [
+              0.337,
+              0.707
+            ],
+            "deltaPixels": [
+              137.216,
+              56.83199999999988
+            ],
+            "errorPercentImageWidth": 7.251939395775449,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P2": {
+            "expectedNormalized": [
+              0.5,
+              0.64
+            ],
+            "estimatedObservedNormalized": [
+              0.529,
+              0.641
+            ],
+            "deltaPixels": [
+              59.39200000000005,
+              1.5360000000000014
+            ],
+            "errorPercentImageWidth": 2.9009696654739456,
+            "allowedPercentWidth": 2,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P3": {
+            "expectedNormalized": [
+              0.5,
+              0.56
+            ],
+            "estimatedObservedNormalized": [
+              0.5,
+              0.558
+            ],
+            "deltaPixels": [
+              0.0,
+              -3.0720000000000027
+            ],
+            "errorPercentImageWidth": 0.15000000000000013,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": true,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P4": {
+            "expectedNormalized": [
+              0.8,
+              0.47
+            ],
+            "estimatedObservedNormalized": [
+              0.8,
+              0.487
+            ],
+            "deltaPixels": [
+              0.0,
+              26.112000000000023
+            ],
+            "errorPercentImageWidth": 1.2750000000000012,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": true,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P5": {
+            "expectedNormalized": [
+              0.4,
+              0.86
+            ],
+            "estimatedObservedNormalized": [
+              0.441,
+              0.852
+            ],
+            "deltaPixels": [
+              83.96799999999996,
+              -12.288000000000011
+            ],
+            "errorPercentImageWidth": 4.14366987102013,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width."
+          },
+          "P6": {
+            "expectedNormalized": [
+              0.9,
+              0.72
+            ],
+            "estimatedObservedNormalized": [
+              0.9,
+              0.682
+            ],
+            "deltaPixels": [
+              0.0,
+              -58.36799999999988
+            ],
+            "errorPercentImageWidth": 2.8499999999999943,
+            "allowedPercentWidth": 3,
+            "withinPointThreshold": false,
+            "method": "Manual visual identification on50/50 grid overlay; uncertainty about0.5-1percent image width.",
+            "matchAmbiguous": true,
+            "ambiguity": "Reference P6 falls on an invented foreground promenade/islet; chosen point is nearest river-channel center, not confirmed same main channel."
+          }
+        },
+        "pointTolerancePass": false,
+        "riverEdgeTolerancePass": false,
+        "extraForegroundIsletObserved": true,
+        "islandEasternTipClosedInsideFrame": true,
+        "cathedralStillTooLarge": true,
+        "fullGeographicCompositionPass": false,
+        "stylePhotographicPass": true,
+        "noReadableTextFacesModernLandmarksObserved": true,
+        "overlayPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-nykyintro-c5-v2-20261009/attempts/01/overlay-50-grid.jpg",
+        "rawReferenceNotUsedForPixelCompositingIntoMain": true,
+        "findings": [
+          "Laajempi ja pienempi Notre-Dame kuin v1:ssä, mutta länsikärjen noin7,25 % ja Notre-Damen noin2,90 % poikkeamat ylittävät3 % ja2 % rajat.",
+          "P3 ja P4 ovat lähellä tavoitekeskiviivoja, mutta koko jokirajaus ei täsmää: etualalle tuli ylimääräinen puisto-/rantakaistasaari. P6 sijoittuu sen kohdalle, joten lähimmän vesikanavan mittausta ei voi kuitata oikeaksi vastineeksi.",
+          "P5:n alarannan kulma jäi liian oikealle ja saaren itäpää sulkeutuu kuvan sisällä. Ei sellaisenaan saumattomaan ristihäivytykseen.",
+          "Seepiatyyli ja historiallisen kameran vaikutelma toimivat; nykyaikaisia ajoneuvoja/maamerkkejä, luettavaa kirjoitusta tai kasvoja ei havaittu. Vanhan Hôtel-Dieun tarkkaa rakennusidentiteettiä ei varmennettu."
+        ]
+      },
+      "selectionScoreMeanPointErrorPercentWidth": 3.0952631553782535,
+      "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5-v2.jpg",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5-v2.jpg?t=ab9967ad59c1cbf2",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5-v2.jpg",
+      "bytes": 1028156,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "file": "pariisi-nykyintro-c5-v2.jpg",
+      "selectedAttempt": 1
+    }
+  ],
+  "overlapProof": {
+    "r2Key": "julisteet/pariisi-nykyintro/20261009/pariisi-c5-v2-paallekkain.jpg",
+    "url": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-c5-v2-paallekkain.jpg?t=26ed52e540a80b0a",
+    "canonicalUrl": "https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-c5-v2-paallekkain.jpg",
+    "sha256": "26ed52e540a80b0aeb71ee41a3ceb48966b3e672a40414d3c09ecc1023360007",
+    "bytes": 827861,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "cacheBustedPreflightHttp": 404,
+    "cacheBustedReadback": true,
+    "byteExactReadback": true,
+    "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+    "conditionalIfNoneMatch": "*",
+    "s3PutHttp": 200
+  },
+  "sourceDatasetAttribution": "© OpenStreetMap contributors, ODbL; ESA WorldCover2021, CC BY4.0",
+  "overlapMethod": "Main result50percent + authoritative reference with10percent grid50percent; QA proof only, main has no grid",
+  "allR2ReadbacksByteExact": true,
+  "productionComplete": true,
+  "partialDelivery": false,
+  "alignmentTolerancePass": false,
+  "allContentConstraintsPassed": false,
+  "bestDeliveryRequiredEvenIfToleranceFails": true,
+  "priorV1ObjectNotReplaced": true,
+  "priorV1GameUseIsSourceReported": true,
+  "independentGameVerification": false,
+  "fableReceipt": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T13:44:17.872757+00:00"
+}
