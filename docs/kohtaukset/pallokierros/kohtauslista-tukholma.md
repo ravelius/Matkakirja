@@ -76,4 +76,8 @@ Linjaus: LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA (omistaja 9.10.2026), kohda
 | 29 | Pysähdys: Katarinan kirkko | 669,0–679,2 s | Katarinan kirkko: rakennus, et. ~146 m, kallistus 64°, silmä ~64 m kohteen yllä, saapuu levosta | kaari ≤ 80° kohti seuraavaa, spiraali −35 % korkeudesta | muistettava 1: kaupunki veden ympärillä Södermalmin rinteeltä | 10,2 s (kerronnan loppu + 1 s + jarrutus 2 s) | nyt 78 → 78 m; **tavoite 32–45 m** (H 64,5 m) | +0,0…+7,2 s Katarinan kirkko 2/2 “Kirkko on nimetty prinsessa Katariinan mukaan, ja kirkkomaal…”<br>**TYHJÄ 3,0 s** | viimeinen kohde, pysähdys ~10 s, sitten kierros päättyy |
 | 30 | Loppu | 679,2 s → | Katarinan kirkon kehys | kehys leijuu, kierros päättyy (KierrosKaynnissa = false) | puuttuu: lopetus | – | – | ei lopetuslausetta | **ehdotus uudeksi kohtaukseksi**: hidas nousu yläkuvaan (Södermalmin rinteeltä kohti vanhaakaupunkia) + yksi lopetuslause; muistettava 1 kertaus |
 
+## Odottavat kohtaukset
 
+| Kohtaus | Ehto | Liike |
+|---|---|---|
+| **Kuninkaanlinnan lähilento** (omistaja 9.10., PT: "sama myöhemmin Kuninkaanlinnalle") | Kuninkaanlinnan oma parannettu malli hyväksytty | Kuten Pariisin kohtaus 4b: pehmeä kaari julkisivun ohi puolivälin–katonharjan korkeudella, liikesääntöjen rajoin; kertoja aarrekammion lauseeseen (tarinakuvat "aarrekammio", "Erik neljännentoista kruunu") |
