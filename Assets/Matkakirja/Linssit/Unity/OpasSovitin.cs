@@ -732,6 +732,7 @@ namespace Matkakirja.Natiivi
             {
                 jyrinaLadataan = true;
                 using var r = UnityWebRequestMultimedia.GetAudioClip("https://media.matkakirja.app/aanet/elava-kaupunki-v1/ukkonen-kaukainen.mp3", AudioType.MPEG);
+                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;   // 40 s stereo: PCM:nä 6,8 Mt; PlayOneShot, ei näytetarkkaa alkua (juna 174, muisti)
                 r.timeout = 20;
                 yield return r.SendWebRequest();
                 if (r.result == UnityWebRequest.Result.Success) jyrinaKlippi = Nimea(DownloadHandlerAudioClip.GetContent(r), JyrinaId);
@@ -797,6 +798,7 @@ namespace Matkakirja.Natiivi
             foreach (var url in UkkonenOsoitteet)
                 using (var r = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
                 {
+                    ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;   // 4 kumahdusta PCM:nä 2,2 Mt; PlayOneShot salaman jälkeen (juna 174, muisti)
                     r.timeout = 15;
                     yield return r.SendWebRequest();
                     if (r.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(r) is AudioClip c && ukkosKlipit != null) ukkosKlipit.Add(Nimea(c, UkkonenId));
