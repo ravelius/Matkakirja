@@ -392,14 +392,16 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// LINSSIKATALOGIN HAVAINNEKUVAT (Codex, fotorealistiset, 1600 × 900; Päätoimittaja hyväksyi 9.10.2026, Sisältökirjuri): linssin tai
-        /// pelin esikatselukuva, kun sillä ei ole omaa kuvaa. Merkintä "havainnekuva" kuvan alle (Raamattu, KUVAT). Puuttuvat (yokartta,
-        /// maapallon-vuosi, tavli) tulevat uusintana (-havainne-v2.jpg).
+        /// pelin esikatselukuva, kun sillä ei ole omaa kuvaa. Merkintä "havainnekuva" kuvan alle (Raamattu, KUVAT). Yokartta, maapallon-vuosi
+        /// ja tavli uusintana -havainne-v2.jpg (Sisältökirjuri tarkisti, Päätoimittaja 9.10.2026; yökartan Pohjois-Afrikan ja Niilin valot ovat todellisia).
         /// </summary>
         internal static readonly Dictionary<string, string> KatalogiKuvat = new Dictionary<string, string>
         {
             ["tahdet"] = KatalogiJuuri + "tahtitaivas-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
             ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-havainne.jpg", ["mylly"] = KatalogiJuuri + "mylly-havainne.jpg",
             ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg",
+            ["yokartta"] = KatalogiJuuri + "yokartta-havainne-v2.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-havainne-v2.jpg",
+            ["tavli"] = KatalogiJuuri + "tavli-havainne-v2.jpg",
         };
         const string KatalogiJuuri = "https://media.matkakirja.app/linssikatalogi/";
         internal static bool OnKatalogiKuva(string url) => url != null && url.StartsWith(KatalogiJuuri, System.StringComparison.Ordinal);
