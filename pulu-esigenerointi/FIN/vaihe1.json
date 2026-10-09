@@ -1084,5 +1084,396 @@
    "Kuinka kauan alus kulkee kanavan läpi?",
    "Millaisia aluksia Saimaalla liikennöi?"
   ]
+ },
+ {
+  "kohde": "kohde:hameenlinna",
+  "kysymys": "Miksi linnan ikä on kiistanalainen?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä kiistellään vieläkin. Perinne liittää linnan [[Birger jaarlin]] [[toiseen ristiretkeen]] ja siis 1200-luvun puoliväliin. Kaivauksista ei kuitenkaan ole löytynyt mitään, mikä varmasti olisi 1320-lukua vanhempaa, eikä vuoden 1308 kuninkaallinen asiakirja tunne Hämeestä kuin yhden linnan. Siksi tutkijat eivät ole yksimielisiä siitä, onko linna rakennettu jo 1200-luvulla vai vasta 1300-luvun alkupuolella. Kyl se kaivaminen vielä jotain kertoo.",
+  "linkit": [
+   "Birger jaarlin",
+   "toiseen ristiretkeen"
+  ],
+  "jatkot": [
+   "Mitä Suomen sodan jälkeen linnassa tapahtui?",
+   "Miten rakennuksen ikää voidaan tutkia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hameenlinna",
+  "kysymys": "Mitä linnassa tehtiin 1800-luvulla?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Linnan tehtävä muuttui silloin täysin. [[Suomen sodan]] jälkeen linnasta tehtiin [[vankila]], ja vankilana se toimi vuoteen 1953 asti. Se ei siis enää toiminut puolustusrakennuksena, vaan sen muurien sisällä suoritettiin vankeusrangaistuksia. Linnasta tuli [[museo]] vasta vuonna 1979. Kyl linna on nähnyt kaikenlaista.",
+  "linkit": [
+   "Suomen sodan",
+   "vankila",
+   "museo"
+  ],
+  "jatkot": [
+   "Milloin Suomen sota käytiin?",
+   "Mitä linnassa on nykyään nähtävänä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hameenlinna",
+  "kysymys": "Missä Hämeenlinna sijaitsee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Hämeenlinna sijaitsee Etelä-Suomessa, [[Kanta-Hämeen]] maakuntakeskuksena, [[Vanajaveden]] rannalla. Kaupunki on sisämaassa, ja se on luonteva pysähdyspaikka Helsingistä [[Tampereelle]] johtavan reitin varrella. Hämeen linna kohoaa aivan vesistön rannalla. Katolta katsottuna se on ihan naapuri.",
+  "linkit": [
+   "Kanta-Hämeen",
+   "Vanajaveden",
+   "Tampereelle"
+  ],
+  "jatkot": [
+   "Milloin Hämeenlinna on perustettu?",
+   "Mitä muuta Hämeenlinnassa voi nähdä?"
+  ],
+  "paikka": {
+   "nimi": "Hämeenlinna",
+   "lat": 60.99,
+   "lon": 24.46,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hameenlinna",
+  "kysymys": "Mistä materiaaleista Hämeen linna on rakennettu?",
+  "uusi": true,
+  "vastaus": "No niin, katotaas. Linnan alaosat on rakennettu [[harmaakivestä]] ja yläosat [[punatiilestä]]. Muurissa on lisäksi porttirakennus, [[kahdeksankulmainen tiilitorni]] ja pyöreä tykkitorni. Materiaalien raja viittaa siihen, että linnaa on rakennettu vaiheittain, ja alkuperäisistä viidestä tornista kaksi erottuu yhä.\n\nAlhaalta harmaa ja ylhäältä punaruskea, kuin hieman ylipaistettu pulla. Katolta katsottuna linna on kyllä kaunis, vaikka vankilan historiaa en lähde ihannoimaan.",
+  "linkit": [
+   "harmaakivestä",
+   "punatiilestä",
+   "kahdeksankulmainen tiilitorni"
+  ],
+  "jatkot": [
+   "Miten tiilestä rakennettiin keskiajalla?",
+   "Mikä on tykkitorni?"
+  ]
+ },
+ {
+  "kohde": "kohde:hameenlinna",
+  "kysymys": "Kuka oli Birger jaarli?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Birger jaarli oli 1200-luvun keskivaiheilla vaikuttanut ruotsalainen valtiomies ja jaarli, eli kuninkaan jälkeen valtakunnan voimakkaimpia miehiä. Hän hallitsi käytännössä [[Ruotsia]] poikansa [[Valdemarin]] ollessa kuningas. Perinne liittää hänet toiseen [[ristiretkeen]] Hämeeseen, mutta tutkijat ovat kiistelleet sen ajoituksesta ja jopa siitä, tapahtuiko se niin kuin perinne kertoo. Ei paha muistisuoritus kyyhkyltä.",
+  "linkit": [
+   "Ruotsia",
+   "Valdemarin",
+   "ristiretkeen"
+  ],
+  "jatkot": [
+   "Mitä jaarli tarkoitti keskiajan Ruotsissa?",
+   "Miksi ristiretkiä tehtiin Suomeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruotsinsalmi",
+  "kysymys": "Kuinka suuri taistelu Ruotsinsalmi oli?",
+  "uusi": false,
+  "vastaus": "Mmm— iso juttu tuo. Toinen Ruotsinsalmen taistelu käytiin 9. ja 10. heinäkuuta 1790 [[Suomenlahdella]] nykyisen [[Kotkan]] edustalla. Se on Ruotsin suurin merivoitto ja suurin meritaistelu, joka [[Itämerellä]] on koskaan käyty. Alusten lukumäärällä mitattuna se kuuluu koko maailmanhistorian suurimpien meritaistelujen joukkoon. Taistelusta on kulunut yli kaksisataa vuotta, ja se päätti vuosien 1788–1790 sodan. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Suomenlahdella",
+   "Kotkan",
+   "Itämerellä"
+  ],
+  "jatkot": [
+   "Kuka oli Ruotsin kuningas vuonna 1790?",
+   "Miksi Venäjä ja Ruotsi sotivat 1788?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruotsinsalmi",
+  "kysymys": "Minkä sodan taistelu lopetti?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Taistelu lopetti vuosien 1788–1790 Venäjän ja Ruotsin välisen sodan. [[Ruotsin merivoimat]] löivät [[Venäjän laivaston]] niin perusteellisesti, että rauhaan päästiin pian. Sota päättyi [[Värälän rauhaan]] elokuussa 1790. Hyvä, et rauha sentään tuli.",
+  "linkit": [
+   "Ruotsin merivoimat",
+   "Venäjän laivaston",
+   "Värälän rauhaan"
+  ],
+  "jatkot": [
+   "Mitä Värälän rauhassa sovittiin?",
+   "Mikä oli Suomen asema Ruotsin valtakunnassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruotsinsalmi",
+  "kysymys": "Missä Kotka sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai se. Kotka sijaitsee Kaakkois-Suomessa [[Suomenlahden]] rannalla [[Kymijoen]] suistossa, Helsingistä itään. Sen edustalla käytiin vuonna 1790 [[Ruotsinsalmen taistelu]]. Kaupunki on tunnettu merenkulusta ja satamastaan. Tää on kyyhkyllekin tuttua seutua.",
+  "linkit": [
+   "Suomenlahden",
+   "Kymijoen",
+   "Ruotsinsalmen taistelu"
+  ],
+  "jatkot": [
+   "Mikä Kymijoki on?",
+   "Mitä Kotkassa on nähtävää nykyään?"
+  ],
+  "paikka": {
+   "nimi": "Kotka",
+   "lat": 60.47,
+   "lon": 26.95,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:ruotsinsalmi",
+  "kysymys": "Mitä maita Suomenlahti ympäröi?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Suomenlahti on [[Itämeren]] itäinen haara, jota ympäröivät Suomi pohjoisessa, Viro etelässä ja Venäjä idässä. Sen rannoilla sijaitsevat muun muassa [[Helsinki]], [[Tallinna]] ja [[Pietari]]. Lahti on ollut vuosisatojen ajan vilkas kauppa- ja kulkureitti. Onpas se reitti tuttu, olen lentänyt sitä paljon.",
+  "linkit": [
+   "Itämeren",
+   "Helsinki",
+   "Tallinna",
+   "Pietari"
+  ],
+  "jatkot": [
+   "Millaisia saaria Suomenlahdella on?",
+   "Jäätyykö Suomenlahti talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruotsinsalmi",
+  "kysymys": "Millaisilla laivoilla 1700-luvulla käytiin meritaisteluja?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Suurissa meritaisteluissa taistelivat 1700-luvulla purjekäyttöiset [[linjalaivat]] ja [[fregatit]], joiden tykit ampuivat laidasta. Itämeren matalilla ja saaristoisilla vesillä käytettiin lisäksi kevyempiä soutu- ja purjealuksia, jotka pääsivät kulkemaan salmissa ja karien lomassa. Laivaston koko vaihteli suuresti taistelusta ja valtiosta riippuen. Onpas ne ajat onneksi ohi.",
+  "linkit": [
+   "linjalaivat",
+   "fregatit"
+  ],
+  "jatkot": [
+   "Mikä ero oli linjalaivalla ja fregatilla?",
+   "Miten purjelaivaa ohjattiin taistelussa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kultala",
+  "kysymys": "Mistä Lapin kulta löytyi ensimmäisenä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Norjalainen geologi [[Tellef Dahll]] löysi 1860-luvulla kultaa [[Tenojoesta]], ja hän huomasi lupaavimpien paikkojen olevan Suomen puolella. Suomessa kultaa löydettiin syyskuussa 1868, kun insinööri [[Conrad Lihrin]] johtama retkikunta löysi sitä [[Ivalojoesta]] Inarista. Siitä alkoi Lapin kultaryntäys. Pulla on kyl minulle kultaakin arvokkaampaa.",
+  "linkit": [
+   "Tellef Dahll",
+   "Tenojoesta",
+   "Conrad Lihrin",
+   "Ivalojoesta"
+  ],
+  "jatkot": [
+   "Miten kullankaivajat pääsivät Ivalojoelle?",
+   "Mikä Tenojoki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kultala",
+  "kysymys": "Kuka sai luvan huuhtoa kultaa?",
+  "uusi": false,
+  "vastaus": "Just niin, tähän on selvä vastaus. [[Aleksanteri II]] vahvisti huhtikuussa 1870 lain, joka luopui hallitsijan yksinoikeudesta jalometalleihin. Sen jälkeen huuhdonta avattiin jokaiselle kunnolliselle suuriruhtinaskunnan ja Venäjän keisarikunnan miehelle. Saman kevään ja kesän aikana noin viisisataa kullankaivajaa suuntasi [[Ivalojoen]] ja Sotajoen yhtymäkohtaan, jonne perustettiin Kultalan [[kruununasema]]. Kyl ennen oli lupa-asiat toisin.",
+  "linkit": [
+   "Aleksanteri II",
+   "Ivalojoen",
+   "kruununasema"
+  ],
+  "jatkot": [
+   "Mikä on kruununasema?",
+   "Kuinka kauan Lapin kultaryntäys kesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:kultala",
+  "kysymys": "Mitä kullanhuuhdonta tarkoittaa ja miten se tehdään?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kullanhuuhdonta on tapa erottaa kulta joen sorasta ja hiekasta sen suuren tiheyden avulla. Soraa ja vettä liikutellaan [[huuhdontapannussa]], jolloin kevyempi aines huuhtoutuu pois ja raskas kulta jää pohjalle. Suomessa menetelmä yhdistetään erityisesti [[Ivalojoen]] kultaryntäykseen 1870-luvulla. Kyl siin kärsivällisyys palkitaan.",
+  "linkit": [
+   "huuhdontapannussa",
+   "Ivalojoen"
+  ],
+  "jatkot": [
+   "Miksi kulta on raskasta?",
+   "Voiko kultaa huuhtoa Suomessa vielä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kultala",
+  "kysymys": "Mistä revontulet syntyvät?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on kaunis juttu. Revontulet syntyvät, kun [[Auringosta]] virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan. Happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Maapallon [[magneettikenttä]] ohjaa hiukkaset napojen ympärille kehämäiselle vyöhykkeelle, minkä vuoksi ilmiö näkyy useimmin [[Lapin]] leveysasteilla. Pimeällä minä nukun, mut kyl nuo kuulemma kannattaa nähdä.",
+  "linkit": [
+   "Auringosta",
+   "magneettikenttä",
+   "Lapin"
+  ],
+  "jatkot": [
+   "Milloin revontulia näkee parhaiten?",
+   "Mikä aiheuttaa auringonpilkut?"
+  ]
+ },
+ {
+  "kohde": "kohde:kultala",
+  "kysymys": "Kuka oli keisari Aleksanteri II?",
+  "uusi": true,
+  "vastaus": "Mmm— tähän tarvitaan vähän vuosilukuja. Aleksanteri II oli Venäjän keisari ja Suomen [[suuriruhtinas]] vuosina 1855–1881. Hänen aikanaan Suomessa kutsuttiin koolle [[Suomen säädyt]] vuonna 1863, ja samana vuonna annettiin myös [[kieliasetus]], joka vahvisti suomen kielen asemaa. Hän vahvisti vuonna 1870 kullanhuuhdontaa koskevan lain. Hänet murhattiin Pietarissa vuonna 1881. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "suuriruhtinas",
+   "Suomen säädyt",
+   "kieliasetus"
+  ],
+  "jatkot": [
+   "Mitä Suomen säädyt tekivät?",
+   "Mitä kieliasetus muutti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turun-tuomiokirkon-vanha-torni",
+  "kysymys": "Miltä Turun tuomiokirkon vanha torni näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Katotaas. Keskiaikainen torni sai 1600–1700-luvuilla barokkisen [[sipulikupolin]], joten sen huippu oli muodoltaan selvästi erilainen kuin [[Engelin]] suunnitteleman nykyisen tornin. Yksityiskohdista en ole varma, koska tarkkaa kuvausta kaikista osista ei ole tiedossa. Huippu tuhoutui [[Turun suuressa palossa]] vuonna 1827. Vanhat piirrokset kyl kertois enemmän kuin minä.",
+  "linkit": [
+   "sipulikupolin",
+   "Engelin",
+   "Turun suuressa palossa"
+  ],
+  "jatkot": [
+   "Kuinka korkea nykyinen torni on?",
+   "Miten Turun suuri palo sai alkunsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turun-tuomiokirkon-vanha-torni",
+  "kysymys": "Miksi Turun tuomiokirkon vanha torni katosi?",
+  "uusi": false,
+  "vastaus": "No jopas. Syy oli tulipalo. [[Turun suuri palo]] tuhosi tornin huipun vuonna 1827. Sen jälkeen torni rakennettiin uudelleen, ja [[C. L. Engelin]] suunnittelema nykyinen, entistä korkeampi torni valmistui vuonna 1836. Kyl se uusi torni vähän lohduttaa.",
+  "linkit": [
+   "Turun suuri palo",
+   "C. L. Engelin"
+  ],
+  "jatkot": [
+   "Kuinka suuri osa Turusta paloi vuonna 1827?",
+   "Milloin Turun tuomiokirkko on vihitty käyttöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turun-tuomiokirkon-vanha-torni",
+  "kysymys": "Kuka oli arkkitehti C. L. Engel?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Carl Ludvig Engel oli saksalaissyntyinen arkkitehti, joka syntyi [[Berliinissä]] vuonna 1778 ja kuoli Helsingissä vuonna 1840. Hän suunnitteli Helsingin uuden keskustan [[empiretyyliin]], ja [[Senaatintorin]] ympäristö on hänen tunnetuinta työtään. Turun palon jälkeen hän suunnitteli myös tuomiokirkon uuden tornin. Ja nämä vuosiluvut minä muistin ulkoa.",
+  "linkit": [
+   "Berliinissä",
+   "empiretyyliin",
+   "Senaatintorin"
+  ],
+  "jatkot": [
+   "Mitä empiretyyli tarkoittaa?",
+   "Milloin Helsingistä tuli Suomen pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turun-tuomiokirkon-vanha-torni",
+  "kysymys": "Milloin pääkaupunki siirrettiin Turusta Helsinkiin?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Turku oli keskiajalta lähtien Suomen tärkeimpiä kaupunkeja ja [[piispanistuin]], ja sitä pidettiin maan pääkaupunkina. Keisari [[Aleksanteri I]] siirsi hallinnon [[Helsinkiin]] vuonna 1812. Turun suuri palo vuonna 1827 oli vielä oma iskunsa, ja [[Turun akatemia]] siirrettiin Helsinkiin seuraavana vuonna. Katolta ne pääkaupungit näyttävät kyl melko samoilta.",
+  "linkit": [
+   "piispanistuin",
+   "Aleksanteri I",
+   "Helsinkiin",
+   "Turun akatemia"
+  ],
+  "jatkot": [
+   "Miksi pääkaupunki siirrettiin Helsinkiin?",
+   "Mikä Turun akatemia oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turun-tuomiokirkon-vanha-torni",
+  "kysymys": "Mikä on sipulikupoli?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Sipulikupoli on sipulin muotoinen, kärkeen päättyvä holvikatto. Se on tyypillinen [[ortodoksisille]] kirkoille Itä-Euroopassa sekä Etelä-Saksan ja Itävallan [[barokkikirkoille]]. Turun tuomiokirkon vanha torni sai sellaisen 1600–1700-luvuilla, ennen kuin tuli tuhosi huipun vuonna 1827. Myös [[Turun tuomiokirkon]] torni on siis kuulunut tähän perheeseen.\n\nYlhäältä katsottuna kupoli on huono istumapaikka, siitä liukuu jalka alta. Sen tiedän kokemuksesta.",
+  "linkit": [
+   "ortodoksisille",
+   "barokkikirkoille",
+   "Turun tuomiokirkon"
+  ],
+  "jatkot": [
+   "Miksi ortodoksikirkoissa on kupoleja?",
+   "Mitä barokki tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-punkaharju",
+  "kysymys": "Mikä jääkaudella sai aikaan Punkaharjun kapean harjun?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tämä on hieno juttu. Punkaharju syntyi viimeisen jääkauden aikana [[mannerjäätikön]] vetäytyessä. Jäätikön sisällä ja alla virtasi [[sulavesi]], joka kasasi soraa ja hiekkaa pitkäksi ja kapeaksi harjuksi. Jäätiköstä irronneiden jäälohkareiden sulaessa maahan painui lisäksi kymmeniä [[suppia]]. Jää on tehnyt kyl isoa jälkeä.",
+  "linkit": [
+   "mannerjäätikön",
+   "sulavesi",
+   "suppia"
+  ],
+  "jatkot": [
+   "Miten Punkaharju on suojeltu?",
+   "Mitä muita harjuja Suomessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-punkaharju",
+  "kysymys": "Mitä suppa on ja miten se syntyy?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Suppa on maahan painunut kuoppa, joka syntyy, kun jäätiköstä irronnut [[jäälohkare]] jää hiekan ja soran peittämäksi ja sulaa myöhemmin. Lohkareen sulaessa maa painuu sen paikalle. Monet suppa-alueet ovat täyttyneet vedellä ja muodostavat pieniä [[lampia]], ja [[Punkaharjulla]] suppia on kymmeniä. Muistuttaa vähän pullaa, joka vajoaa uunista otettaessa.",
+  "linkit": [
+   "jäälohkare",
+   "lampia",
+   "Punkaharjulla"
+  ],
+  "jatkot": [
+   "Miten suppa eroaa tavallisesta lammesta?",
+   "Missä muualla Suomessa on suppia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-punkaharju",
+  "kysymys": "Mikä on mannerjäätikkö?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Mannerjäätikkö on laaja, jopa kilometrin paksuinen jäämassa, joka peittää maa-alueita ja liikkuu oman painonsa vaikutuksesta. Viimeisen jääkauden aikana sellainen peitti [[Pohjois-Euroopan]], Suomi mukaan lukien, ja sen sulaessa ja vetäytyessä jäi jälkeen [[harjuja]], kumpuja ja järviä. Hyvä, että se vetäytyi, muuten ois ollut aika kylmää kantaa kirjeitä.",
+  "linkit": [
+   "Pohjois-Euroopan",
+   "harjuja"
+  ],
+  "jatkot": [
+   "Milloin viimeinen jääkausi päättyi?",
+   "Miten jäätikkö muokkaa maisemaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-punkaharju",
+  "kysymys": "Missä Punkaharju sijaitsee?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Punkaharju sijaitsee [[Etelä-Savossa]], [[Savonlinnan]] alueella, Saimaan [[Pihlajaveden]] ja [[Puruveden]] välissä. Harju on noin seitsemän kilometriä pitkä, ja sen yli kulkee yhä tie. Järvet ovat harjun kummallakin puolella. Hyvä laskeutumispaikka, jos saa valita.",
+  "linkit": [
+   "Etelä-Savossa",
+   "Savonlinnan",
+   "Pihlajaveden",
+   "Puruveden"
+  ],
+  "jatkot": [
+   "Mikä Saimaa on?",
+   "Miten Punkaharjulle pääsee?"
+  ],
+  "paikka": {
+   "nimi": "Punkaharju",
+   "lat": 61.77,
+   "lon": 29.33,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-punkaharju",
+  "kysymys": "Mikä on kansallismaisema?",
+  "uusi": true,
+  "vastaus": "Ai se. Kansallismaisema on [[maisema-alue]], joka on valittu edustamaan maan tunnusomaisia ja arvokkaita maisemia. Suomessa kansallismaisemat valittiin 1990-luvun alussa, ja niihin kuuluu sekä luonnon että ihmisen muokkaamia kulttuurimaisemia. [[Punkaharju]] on yksi niistä. Tunnustus on ansaittu, sen näkee ylhäältäkin.",
+  "linkit": [
+   "maisema-alue",
+   "Punkaharju"
+  ],
+  "jatkot": [
+   "Mitä muita kansallismaisemia Suomessa on?",
+   "Miten maisemaa suojellaan?"
+  ]
  }
 ]
