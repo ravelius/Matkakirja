@@ -959,6 +959,31 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>Linnan historia käynnissä (Natiivi-UI: ☰-rivi harmaaksi).</summary>
+        public static bool HistoriaKaynnissa => SeikkailuHistoria.Kaynnissa;
+        /// <summary>Linnan historia käytettävissä: Olavinlinna ladattu, ei historiaa eikä alun valintaa auki (☰ › Linnan historia).</summary>
+        public static bool HistoriaKaytettavissa => aktiivinenSovitin != null && aktiivinenSovitin.rakennus != null && aktiivinenSovitin.nayttamo != null
+            && RakennusId == Oletusrakennus && !SeikkailuHistoria.Kaynnissa && !AlkuValintaAuki && !SaapumisOdotus;
+
+        /// <summary>
+        /// ☰ › Linnan historia (Natiivi-UI). Pelin aikana peli pysähtyy (aika 0, pelaajan ja vartijoiden ohjaus pois), historia soi,
+        /// ja lopussa peli jatkuu samasta kohdasta ilman Pelaa-korttia; sitten valmis(). Napautus/Esc lopettaa historian aiemmin.
+        /// </summary>
+        public static void AloitaHistoria(Action valmis)
+        {
+            var s = aktiivinenSovitin;
+            if (s == null || !HistoriaKaytettavissa) { valmis?.Invoke(); return; }
+            var p = SeikkailuPelaaja.Aktiivinen; var v = SeikkailuVartijat.Aktiivinen;
+            float aika = Time.timeScale;
+            bool pelissa = p != null;
+            if (pelissa) { Time.timeScale = 0f; p.enabled = false; if (v != null) v.enabled = false; }
+            s.o.StartCoroutine(s.Historia(() =>
+            {
+                if (pelissa) { Time.timeScale = aika; if (p != null) p.enabled = true; if (v != null) v.enabled = true; }
+                valmis?.Invoke();
+            }));
+        }
+
         /// <summary>Linnan historia (SeikkailuHistoria): kävelydata ja leikkaukset käyttöön, jotta vuoden 1499 jälkeiset osat kasvavat;
         /// lopuksi leikkaukset ennalleen ja valmis().</summary>
         IEnumerator Historia(Action valmis)
