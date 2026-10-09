@@ -3,6 +3,13 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 19.2x — runko 24ae74fea, Unity 6.7 raportti
+
+- + NUI 3e53e0f82 (linnan latauskuva) + 7b8fe62ce (Kysy vaaka 45 %). Linssit 1248, Peli 442, Kartta 453, unity 0, tarkista 0.
+  ODOTTAA PT:tä: NUI yo-otsikko ebcb70046.
+- Unity 6.7: docs/raportit/unity67-tuonti-20261009.md. Simulaattorikäännös 6000.7.0b4:llä onnistui 7 rivin korjauksilla (proto
+  natiiviseppa/unity-67 931920957, T7). Suositus: ei vaihdeta ennen LTS:ää ja Cesiumin 6.7-tukea.
+
 ## TILA 9.10. 19.0x — runko 69756d35a
 
 - + LS1 64f94e591 (Vasa, korvaa c3dee6f41:n) + Siirtoseppä historia ae435c1b7 (⊇ 4792cf9e4; 1c51f8aeb katse kasvoilla + v46j
